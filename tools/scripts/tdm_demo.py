@@ -33,7 +33,7 @@ NOTE_C4 = 261.6256             # 中央 C
 #     d_k 每减 1，衰减时间常数【减半】
 #     s_lvl = 0 表示"衰减到静音"（钟、马林巴）；非 0 表示"衰减到某个电平后保持"（风琴）
 #
-#   ★ 频率比是这套东西真正的分量所在：
+#   频率比是这套东西真正的分量所在：
 #     谐波（1,2,3,4...）   -> 风琴/钢琴/弦乐
 #     非谐（1,2.76,5.4...） -> 钟、钟琴（金属感就来自这里）
 # ---------------------------------------------------------------------------
@@ -66,7 +66,7 @@ PRESETS["piano"] = {
 
 # --- 3) 钟：非谐泛音（金属体的振动模式）、衰减快、衰减到静音 -------------------
 #     频率比取自真实钟体的前几个模态：1, 2.76, 5.40, 8.93, 13.34, 18.64 ...
-#     ★ 这一条【只有每泛音独立音高】才做得出来 —— 是全并行版也能做的部分；
+#     这一条【只有每泛音独立音高】才做得出来 —— 是全并行版也能做的部分；
 #       但"高次泛音先死"必须靠每泛音独立衰减，那是 TDM 才做得出的部分。
 PRESETS["bell"] = {
     "desc": "钟：非谐泛音 + 快速衰减到静音（撞击瞬间频谱很宽，随后高次逐层消失）",
@@ -114,7 +114,7 @@ def gen_hex(path):
             dk = max(0, min(31, dk))
             slvl = max(0, min(32767, slvl))
             epar = ((slvl & 0xFFFF) << 7) | (3 << 5) | (dk & 0x1F)
-            # ★ 位域必须【互不重叠】：inc 24 + amp 8 + epar 24 = 56 位。
+            # 位域必须【互不重叠】：inc 24 + amp 8 + epar 24 = 56 位。
             #   曾经写成 (inc<<24)|(amp<<16)|epar —— amp 占 [23:16] 而 epar 占 [23:0]，
             #   两者重叠，幅度的高位漏进了 s_lvl。
             #   实测症状：epar_mem 读回 0x5C006F（应为 0x00006F），
@@ -211,7 +211,7 @@ def render(prefix, outdir):
     print("   %-8s %9s %9s %9s" % ("音色", "t=50ms", "t=250ms", "t=450ms"))
     for name, seg in zip(ORDER, segs):
         row = []
-        # ★ 窗口必须落在段内：450ms(=17578) + 4096 = 21674 < 31250 样本（0.8 s）
+        # 窗口必须落在段内：450ms(=17578) + 4096 = 21674 < 31250 样本（0.8 s）
         #   原来取 700ms(27343) + 4096 > 31250，越界 -> 长度不足 -> nan
         for t_ms in (50, 250, 450):
             a = int(t_ms / 1000.0 * FS)
@@ -234,7 +234,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["gen", "render"])
     ap.add_argument("--out", default="sim_build/demo/preset.hex")
-    # ★ render 读 4 个文件 <prefix>_0.txt .. <prefix>_3.txt
+    # render 读 4 个文件 <prefix>_0.txt .. <prefix>_3.txt
     #   （测试台一次只放一个音色：分四次跑，每次都是干净的起音，比较才有意义）
     ap.add_argument("--prefix", default="sim_build/demo/demo_out")
     ap.add_argument("--outdir", default="sim_build/demo")

@@ -39,12 +39,12 @@ def main():
     ap.add_argument("--simdir", default="sim_build/fx")
     ap.add_argument("--dly-len", type=int, default=2048)
     ap.add_argument("--fb", type=float, default=96.0 / 256.0)
-    # ★★ 2026-10-03（第 9/10 轮）默认从 5000 改成 1280000：
+    # 2026-10-03（第 9/10 轮）默认从 5000 改成 1280000：
     #   `imp` 是判据里的"干声冲激幅度"，而 D1 电平对齐修复后（fx_delay.v: `wet_sum <<< 8`），
-    #   湿声已从【线缓冲域（16 位）】抬到【程序域（24 位）】✓ —— 倍数 = 2^8 = 256。
-    #   实测印证 ✓：第 0 个回声 1280000 = 5000 × 256 ✓；相邻比 0.3750/0.3749/0.3741
-    #   = fb(96/256) ✓；回声间距 2048 = dly_len ✓ ⇒ 延迟本身是教科书级的 ✓，
-    #   原来判据红只是因为还停在线缓冲域 ✗。
+    #   湿声已从【线缓冲域（16 位）】抬到【程序域（24 位）】—— 倍数 = 2^8 = 256。
+    #   实测印证 ：第 0 个回声 1280000 = 5000 × 256 ；相邻比 0.3750/0.3749/0.3741
+    #   = fb(96/256) ；回声间距 2048 = dly_len ⇒ 延迟本身是教科书级的 ，
+    #   原来判据红只是因为还停在线缓冲域 。
     ap.add_argument("--imp", type=int, default=1280000,
                     help="干声冲激在【24 位程序域】的幅度（= 线缓冲域值 × 256）")
     ap.add_argument("--cho-base", type=int, default=1024)
@@ -103,7 +103,7 @@ def main():
               % (a.cho_base, a.cho_depth))
         for t in inj:
             # 在 t 之后 CHOBASE±depth 附近找第一个非零
-            #   ★ 容差给 ±6：抽头在动，回声起点会有 1~2 个样本的抖动（最近邻重采样）
+            #   容差给 ±6：抽头在动，回声起点会有 1~2 个样本的抖动（最近邻重采样）
             lo = t + a.cho_base - a.cho_depth - 6
             hi = min(len(y), t + a.cho_base + a.cho_depth + 6)
             hit = next((i for i in range(max(0, lo), hi) if y[i] != 0), None)
@@ -159,7 +159,7 @@ def main():
             segs.append(e)
         if segs:
             print("     分段能量（每 %d 样本）: %s" % (W, segs[:9]))
-            # ★ 判据从【峰值段】开始算衰减，而不是从第 0 段：
+            # 判据从【峰值段】开始算衰减，而不是从第 0 段：
             #   混响尾巴是"逐渐建起来再衰减"的，头一两段当然会上升。
             #   第一版从第 0 段要求单调，把正常的建立过程判成了自激。
             ipk = max(range(len(segs)), key=lambda i: segs[i])

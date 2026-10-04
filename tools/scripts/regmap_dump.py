@@ -49,18 +49,18 @@ def extract(path=RTL):
     for m in re.finditer(r"b_addr\s*<=\s*8'h([0-9A-Fa-f]{2});\s*b_data\s*<=\s*8'h([0-9A-Fa-f]{2})", src):
         boot[int(m.group(1), 16)] = m.group(2).upper()
 
-    # ★ 第 7 轮补：reg_bank 的**初值块**也是权威默认来源 ✓
-    #   背景：0x7F 协议版本只写在初值块里（引导 FSM 不写它 ✓），
-    #   而抽取器原来只扫 R[] 切片与自举写入 ⇒ 把 0x7F 误判成"RTL 里不存在" ✗。
-    #   reg_bank.v 的 `mem[8'hXX] = 8'hYY;` 才是§3 冻结默认表的真身 ✓
+    # (本次)补：reg_bank 的**初值块**也是权威默认来源
+    #   背景：0x7F 协议版本只写在初值块里（引导 FSM 不写它），
+    #   而抽取器原来只扫 R[] 切片与自举写入 ⇒ 把 0x7F 误判成"RTL 里不存在" 。
+    #   reg_bank.v 的 `mem[8'hXX] = 8'hYY;` 才是§3 冻结默认表的真身
     rb = os.path.join(os.path.dirname(RTL), "reg_bank.v")
     if os.path.isfile(rb):
         for m in re.finditer(r"mem\[8'h([0-9A-Fa-f]{2})\]\s*=\s*8'h([0-9A-Fa-f]{2})",
                              open(rb, encoding="utf-8").read()):
             a = int(m.group(1), 16)
-            boot.setdefault(a, m.group(2).upper())     # 自举写的值优先（它最后生效 ✓）
+            boot.setdefault(a, m.group(2).upper())     # 自举写的值优先（它最后生效）
 
-    # ★ 第 7 轮：遥测写通路（电极遥测每 4096 拍刷一遍）也是合法写侧 ✓
+    # (本次)：遥测写通路（电极遥测每 4096 拍刷一遍）也是合法写侧
     for m in re.finditer(r"pmon_addr\s*<=\s*8'h([0-9A-Fa-f]{2})", src):
         boot.setdefault(int(m.group(1), 16), "--")
 

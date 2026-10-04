@@ -5,7 +5,7 @@
 // 屏幕：Sipeed 4.3 寸 RGB 屏，480×272，40P 排线
 //
 // 【两个画面，按键切换】
-//   默认        ：显示图片（image_view，8 色抖动图）
+//   默认：显示图片（image_view，8 色抖动图）
 //   按住按键 S2 ：显示自检图案（test_pattern：彩条 + 白边框 + 二进制计数条）
 //   自检图案留着是为了以后换屏/换线时还能一键回到"已知正确"的画面。
 //
@@ -173,7 +173,7 @@ module bringup_top (
     end
 
     // 注意这里用的是 btn_rst_n（只受按键控制），不是 rst_n（还含 pll_locked）。
-    // 这正是本模块的用意：PLL 锁不锁，LED 都要能工作，才能替我们把话说清楚。
+    // 这正是本模块的用意：PLL 锁不锁，LED 都要能工作，才能替本项目把话说清楚。
     led_heartbeat #(
         .CLK_HZ (27000000)      // 27 MHz 板载晶振
     ) u_led (
@@ -185,7 +185,7 @@ module bringup_top (
     // led[5]：PLL 锁定指示。LED 低电平点亮，所以锁定(1)时输出 1 = 灭；
     // 一旦失锁(0)就输出 0 = 亮，故障现象唯一可辨。
     //
-    // ⚠️ 待核实：官方 IP 配置 gowin_rpll.ipc 里写着 LOCK_EN=false，
+    // 待核实：官方 IP 配置 gowin_rpll.ipc 里写着 LOCK_EN=false，
     //    即官方生成 IP 时没打算用 LOCK 输出（所以官方 wrapper 只有 2 个端口）。
     //    本设计直接从 rPLL 原语把 LOCK 引了出来。上板实测 led[5] 保持熄灭，
     //    与"已锁定"一致；但"LOCK 失效时它会不会亮"这件事**没有被验证过**。

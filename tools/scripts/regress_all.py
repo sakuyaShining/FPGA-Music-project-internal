@@ -62,13 +62,13 @@ def run(cmd, cwd, timeout=600, env_extra=None):
 def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_hex=()):
     """在 sim_build/regress/<name>/ 里编译并运行一个测试台，返回 stdout"""
     d = os.path.join(BUILD, name)
-    # ★ 每次清空运行目录：判据脚本读目录下的产物文件，残留旧代产物会污染判据
-    #   ★★ 2026-10-03（DeepSeek，第 9 轮）：加"遇锁容忍 + 重试" ✗→✓
-    #     本机常驻有工作区监视进程（实测 ZCode 有 16 个进程在跑），它会**持续**
-    #     持有 sim_build/regress/*/rc_*.txt 的句柄 ✗ ⇒ 原来的 shutil.rmtree 直接抛
-    #     PermissionError(WinError 32) ⇒ **整个闸口崩掉** ✗✗，看起来像"套件失败" ✓✗。
+    # 每次清空运行目录：判据脚本读目录下的产物文件，残留旧代产物会污染判据
+    #   2026-10-03（本项目，(本次)）：加"遇锁容忍 + 重试" →
+    #     本机常驻有工作区监视进程（实测 复核 有 16 个进程在跑），它会**持续**
+    #     持有 sim_build/regress/*/rc_*.txt 的句柄 ⇒ 原来的 shutil.rmtree 直接抛
+    #     PermissionError(WinError 32) ⇒ **整个闸口崩掉** ，看起来像"套件失败" 。
     #     修法：重试若干次；仍删不掉就**继续**（残留产物由判据脚本自己按 mtime/内容判断，
-    #     下一轮也会再试），绝不让文件锁把闸口弄崩 ✓。
+    #     下一轮也会再试），绝不让文件锁把闸口弄崩 。
     if os.path.isdir(d):
         for _try in range(10):
             try:
@@ -236,7 +236,7 @@ def main():
     cmd = [os.path.join(IV, "iverilog.exe"), "-g2005", "-o", "sim.vvp", "-s", "tb_osc_additive"] + \
           [rtl(f) for f in files[:3]] + [sim(files[3])]
     rc, log = run(cmd, d1)
-    rc, log = run([os.path.join(IV, "vvp.exe"), "sim.vvp"], d1)   # ★ 生成样本 dump
+    rc, log = run([os.path.join(IV, "vvp.exe"), "sim.vvp"], d1)   # 生成样本 dump
     rc2, log2 = run([sys.executable, os.path.join(ROOT, "tools", "scripts", "synth_engine.py"), "verify",
                      "--simdir", d1, "--meta", os.path.join(d1, "stimulus_meta.json")], BUILD)
     ok = rc2 == 0 and "[PASS]" in log2
@@ -285,7 +285,7 @@ def main():
         results.append(("08 seq", ok, msg.replace("\n", " ")[:120]))
 
     # 09 regctl（每个 test 一次冷启动，判据脚本依赖全部产物）
-    #   ★ 静态表依赖：tb 读 note_inc/preset_part/recip_inc.hex（note_map 综合同样要），
+    #   静态表依赖：tb 读 note_inc/preset_part/recip_inc.hex（note_map 综合同样要），
     #     它们是预生成表，权威副本在 src/gowin/tdm_synth/（综合工程），此处从那里取。
     files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "song_seq.v",
              "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v", "i2s_tx.v",
@@ -347,7 +347,7 @@ def main():
         results.append(("11 tdm", ok, msg))
 
     if args.full:
-        # 12 F1：TDM 测试模式 512 谱栅格（约 8 分钟仿真；判据见 21 号交接清单 §3）
+        # 12 F1：TDM 测试模式 512 谱栅格（约 8 分钟仿真；判据见 21 号移交清单 §3）
         d = os.path.join(BUILD, "12_f1")
         if os.path.isdir(d):
             shutil.rmtree(d)

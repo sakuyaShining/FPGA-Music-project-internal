@@ -100,7 +100,7 @@ with open(p, "w", encoding="utf-8", newline="\n") as fh:
     fh.write(CONTENT)
 print("  已重写 .gitignore：%d 行 / %d 字节" % (CONTENT.count("\n"), len(CONTENT.encode("utf-8"))))
 
-# ---- 用 git 自己验证规则是否命中 ✓ ----
+# ---- 用 git 自己验证规则是否命中 ----
 CASES = [
     ("src/gowin/impl/pnr/led_blink.log", True),
     ("src/gowin/tdm_synth/impl/pnr/tdm_synth.fs", True),
@@ -108,7 +108,7 @@ CASES = [
     ("sim_build/regress/01_additive/osc_additive.vcd", True),
     ("backups/2026-10-01_1646/PROJECT_MEMORY.md", True),
     ("refs/past-years/xxx.pdf", True),
-    # 下面这些**必须不被忽略** ✓（漏了就会让仓库跑不起来）
+    # 下面这些**必须不被忽略** （漏了就会让仓库跑不起来）
     ("src/rtl/tdm_top.v", False),
     ("src/gowin/tdm_synth/note_inc.hex", False),
     ("tools/scripts/dsp_host.py", False),
@@ -119,8 +119,8 @@ CASES = [
 fails = 0
 print("  ---- git check-ignore 验证 ----")
 for path, should_ignore in CASES:
-    #   ★ 必须加 --no-index ✗：对**已在索引里**的路径，check-ignore 默认会跳过不报
-    #     ⇒ 会误判成"规则没生效"（上一轮就是这么被骗的 ✓）
+    #   必须加 --no-index ：对**已在索引里**的路径，check-ignore 默认会跳过不报
+    #     ⇒ 会误判成"规则没生效"（上一轮就是这么被骗的）
     r = subprocess.run(["git", "check-ignore", "-v", "--no-index", path], cwd=ROOT,
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     hit = bool(r.stdout.strip())

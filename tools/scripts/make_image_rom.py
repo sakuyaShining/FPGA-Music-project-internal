@@ -102,7 +102,7 @@ def main():
 
     # 写出 $readmemb 用的二进制文件：
     #   每行 3 个字符（000~111），行数 = ROM_DEPTH
-    #   ⚠️ 数据宽度必须和 Verilog 里存储器位宽完全一致，
+    #   数据宽度必须和 Verilog 里存储器位宽完全一致，
     #      否则 Gowin 会报 EX2526 并**静默丢弃内容**（存储器被整个优化掉）。
     with io.open(out_bin, "w") as f:
         for i in range(ROM_DEPTH):

@@ -68,7 +68,7 @@ new2 = """    print("-" * 74)
 assert old2 in s, "② 未匹配"
 s = s.replace(old2, new2)
 
-# ③ V3 的窗口跟着实测 T60 缩放（原来固定前 200ms，对短 T60 会误判 ✗）
+# ③ V3 的窗口跟着实测 T60 缩放（原来固定前 200ms，对短 T60 会误判）
 s = s.replace("        dens = echo_density(h)",
               "        dens = echo_density(h, win_ms=max(5, int(rows[-1][2] * 1000 / 8)))")
 

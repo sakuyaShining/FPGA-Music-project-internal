@@ -42,15 +42,15 @@ module tb_tdm_equiv;
     localparam N_SAMP  = 2500;
     localparam CLK_HALF= 50;              // 周期 100 ns
 
-    // ★ 隔离开关：0 = 关掉包络，只比"相位→查表→乘幅度→累加"这条纯数据通路
+    // 隔离开关：0 = 关掉包络，只比"相位→查表→乘幅度→累加"这条纯数据通路
     localparam ENV_ON  = 1'b1;
-    // ★ 活跃时隙掩码：只让被置位的时隙有幅度。
+    // 活跃时隙掩码：只让被置位的时隙有幅度。
     //   把 32 个时隙压到 2 个，任何"时隙间串扰"都会变得完全可读 ——
     //   比在 32 个时隙里猜要快得多。
     localparam [NSLOT-1:0] ACTIVE = 32'hFFFFFFFF;  // 只 0、1 号（十六进制便于脚本批量改）
-    // ★ 频谱模式：1 = 每个时隙给一个互不相同的频率，便于在频谱上直接数峰。
+    // 频谱模式：1 = 每个时隙给一个互不相同的频率，便于在频谱上直接数峰。
     //   inc = 21000×(slot+1) → 频率 391 Hz × (slot+1)，即 391~12512 Hz。
-    //   ★ 间隔必须远大于 FFT 分辨率（fs/N = 312500/2500 = 125 Hz），
+    //   间隔必须远大于 FFT 分辨率（fs/N = 312500/2500 = 125 Hz），
     //     否则峰挤在一起根本数不出来 —— 第一版就是栽在这里。
     localparam SPECTRUM = 1'b0;
     function [PHASE_W-1:0] inc_of; input integer sl;
@@ -73,7 +73,7 @@ module tb_tdm_equiv;
     reg t_load_en;
     reg [4:0] t_load_slot;
     reg [PHASE_W-1:0] t_load_inc;
-    // ★ 每时隙包络参数 {s_lvl[15:0], d_m[1:0], d_k[4:0]}
+    // 每时隙包络参数 {s_lvl[15:0], d_m[1:0], d_k[4:0]}
     //   默认值必须与 tdm_engine 的端口默认一致，回归才成立
     reg [22:0]        t_load_epar;
     reg [AMP_W-1:0]   t_load_amp;
@@ -90,7 +90,7 @@ module tb_tdm_equiv;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n)       pc <= 8'd0;
-        // ★ t_pclr 期间【不能】按住 pc：pclr_hold 靠 sample_en 释放，
+        // t_pclr 期间【不能】按住 pc：pclr_hold 靠 sample_en 释放，
         //   按住 pc 就没有 sample_en，冻结永远解除不了
         //   （实测症状：全程输出卡死，不符 2449/2461）。
         //   冻结本身是幂等的，不需要靠"停表"来保证时长。
@@ -148,7 +148,7 @@ module tb_tdm_equiv;
     localparam [ENV_W-1:0] CUTOFF = 16'd100;
 
     //-------------------------------------------------------------------------
-    // ★ 每时隙包络参数（构造泛音结构）—— 测试图案
+    // 每时隙包络参数（构造泛音结构）—— 测试图案
     //   EPAR_MODE = 0 : 全部默认值 {s_lvl=22938, d_m=3, d_k=12}
     //                   → 与全并行完全等价，【回归用】必须逐位一致
     //   EPAR_MODE = 1 : 泛音号每 +1，d_k 减 1 → 衰减时间常数【减半】
@@ -166,7 +166,7 @@ module tb_tdm_equiv;
                 // 用位选 + 显式 5 位中间量：直接写 (5'd14 - sl%8) 在拼接里
                 // 会因 sl%8 是 32 位整数而"宽度不确定"，iverilog 直接报错。
                 dk = 5'd14 - {2'b00, sl[2:0]};
-                // ★ 衰减终点也逐泛音：s_lvl 每高一个泛音减半
+                // 衰减终点也逐泛音：s_lvl 每高一个泛音减半
                 //   → 高次泛音不是"衰减到某个电平停住"，而是【衰减到接近静音】
                 //   这才是钟/马林巴的机理：撞击瞬间频谱很宽，随后高次泛音逐层消失
                 t_epar_of = {(EPAR_SLVL_DEF >> {12'b0, sl[2:0]}), 2'd3, dk};
@@ -177,14 +177,14 @@ module tb_tdm_equiv;
     endfunction
 
     //-------------------------------------------------------------------------
-    // ★ 周期计数与并行侧激励寄存器（2026-10-01）
+    // 周期计数与并行侧激励寄存器（2026-10-01）
     //
     //   旧版激励不对称：并行引擎的 inc/amp/gate 是【组合连线、上电即有效】，
     //   TDM 的参数却要经 load 口装载（落在第 3~4 个样本周期）——两边连
     //   "音符从哪一拍开始"都对不上，起音段逐位比对从根上不成立。
     //
     //   新语义：两边都是【显式音符事件，样本边界生效】——
-    //     · TDM  ：period 0 内一次性装载 inc/amp/epar/gate=1
+    //     · TDM：period 0 内一次性装载 inc/amp/epar/gate=1
     //              （引擎内部样本边界对齐，全部时隙在 period 1 统一生效）
     //     · 并行 ：stim_inc 在 period==0 的 sample_en 边沿置起（period 1 起有效）
     //              stim_gate 在 period==1 的边沿置起（period 2 起有效）
@@ -270,7 +270,7 @@ module tb_tdm_equiv;
     integer fpar, ftdm, fdbg;
     integer i, s, k;
 
-    // ★ 硬超时兜底：仿真必须有确定的终止条件
+    // 硬超时兜底：仿真必须有确定的终止条件
     initial begin
         #50_000_000;
         $display("[TIMEOUT] 到达仿真时间上限，强制结束");
@@ -289,7 +289,7 @@ module tb_tdm_equiv;
         end
     endtask
 
-    // ★ 必须按 TDM 自己的时隙计数器对齐，不能按 pc！
+    // 必须按 TDM 自己的时隙计数器对齐，不能按 pc！
     //   clr / pclr 期间 pc 被按住、而 sc 仍在走 → 两者会失步。
     //   按 pc 对齐就会采到 TDM 周期里的任意位置（部分和），
     //   表现为"输出缓慢单调爬升"的假象 —— 这个坑让我误判过一轮。
@@ -308,7 +308,7 @@ module tb_tdm_equiv;
         rst_n = 1'b0;
         t_clr = 1'b0; t_pclr = 1'b0;
         // t_clr/t_pclr 不使用（引擎里已无这两条通路）
-        // ★ boost_en 已于 2026-10-01 从引擎删除：它要补的"4 周期滞后"
+        // boost_en 已于 2026-10-01 从引擎删除：它要补的"4 周期滞后"
         //   真身是【累加窗口跨两代状态】，现已修复。此处不再有 t_boost。
         t_load_en = 1'b0; t_load_slot = 5'd0;
         t_load_inc = 24'd0; t_load_amp = 8'd0; t_load_gate = 1'b1;
@@ -327,7 +327,7 @@ module tb_tdm_equiv;
         // 1) 等到 period 0 的 sc==0，把 32 个时隙的
         //    inc / amp / epar / gate=1 一次装载完毕（恰好占满一个样本周期）。
         //    引擎内部做样本边界对齐：全部时隙在 period 1 统一生效。
-        //    ★ 上电寂静（门初值 0）—— 起音只来自这次装载的 0→1 门沿。
+        //    上电寂静（门初值 0）—— 起音只来自这次装载的 0→1 门沿。
         //---------------------------------------------------------------------
         wait_slot(0, NSLOT * 2);
         for (s = 0; s < NSLOT; s = s + 1) begin

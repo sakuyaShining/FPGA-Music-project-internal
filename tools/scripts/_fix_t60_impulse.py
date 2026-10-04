@@ -19,7 +19,7 @@ elif new in s:
 else:
     print("  !! 未匹配，请手工检查")
 
-# 把"满幅冲激"那批 dump 另存，保留为 V5（饱和/溢出）证据 ✓
+# 把"满幅冲激"那批 dump 另存，保留为 V5（饱和/溢出）证据
 d = "sim_build/t60"
 for fb in ("40", "80", "c0", "e0"):
     src = os.path.join(d, "t60_fb%s.txt" % fb)

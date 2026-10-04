@@ -14,7 +14,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# 必须在库里（少了 clone 下来就编不过 / 跑不起来 ✗）
+# 必须在库里（少了 clone 下来就编不过 / 跑不起来）
 MUST_HAVE = [
     "src/rtl/tdm_top.v", "src/rtl/note_map.v", "src/rtl/pad_scan.v",
     "src/rtl/fx_delay.v", "src/rtl/reg_bank.v", "src/rtl/song_seq.v",
@@ -26,7 +26,7 @@ MUST_HAVE = [
     "tools/host/dsp_gui.py", "tools/host/theme.qss", "tools/host/build_exe.py",
     ".gitignore",
 ]
-# 绝不能进库（要么巨大、要么可再生成 ✗）
+# 绝不能进库（要么巨大、要么可再生成）
 MUST_NOT = ("/impl/", ".fs", ".vcd", ".vvp", ".exe", "/build/", "/dist/",
             "backups/", "__pycache__", ".spec")
 
@@ -37,7 +37,7 @@ def git(*args, **kw):
 
 
 def main():
-    # core.quotepath=false：中文文件名原样输出，别转义 ✓
+    # core.quotepath=false：中文文件名原样输出，别转义
     git("config", "core.quotepath", "false")
     git("config", "i18n.commitEncoding", "utf-8")
 

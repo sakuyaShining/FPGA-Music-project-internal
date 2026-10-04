@@ -33,7 +33,7 @@ QFrame#TopBar {
     border-bottom: 1px solid #262b34;
 }
 
-/* 模式徽标：真实串口(绿) / 模拟设备(琥珀) —— 必须一眼可分 ✗ */
+/* 模式徽标：真实串口(绿) / 模拟设备(琥珀) —— 必须一眼可分 */
 QLabel#BadgeReal {
     background: #14352a; color: #4ee39b; border: 1px solid #1f6b4f;
     border-radius: 9px; padding: 2px 10px; font-weight: bold;
@@ -47,7 +47,7 @@ QLabel#BadgeOff {
     border-radius: 9px; padding: 2px 10px; font-weight: bold;
 }
 
-/* 字节率数字（等宽，跳动时不抖 ✓） */
+/* 字节率数字（等宽，跳动时不抖） */
 QLabel#Ticker {
     color: #35d0ba; font-family: Consolas, "Cascadia Mono", monospace;
     font-size: 13px; font-weight: bold;

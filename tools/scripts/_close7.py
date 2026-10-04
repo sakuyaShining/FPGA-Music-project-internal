@@ -19,7 +19,7 @@ for ln in lines:
     out.append(ln)
 io.open(p, "w", encoding="utf-8", newline="").write("\n".join(out))
 
-# ---------- ② 任务板 ⑦ → 销账 ----------
+# ---------- ② 任务清单 ⑦ → 关闭 ----------
 p = "refs/素材库/双代理任务板.md"
 s = io.open(p, encoding="utf-8-sig").read()
 old = "| 🔄 **⑦ 混响两缺陷：D1/D2 已修 ✓，但 FX 判据待更新 ⇒ 未销账（第 9 轮）** | 🔄 **未销账** |"

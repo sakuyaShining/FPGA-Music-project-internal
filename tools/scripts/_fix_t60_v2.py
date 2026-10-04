@@ -6,7 +6,7 @@ import io
 p = "src/sim/tb_t60.v"
 s = io.open(p, encoding="utf-8-sig").read()
 
-# 文件名按 fb 值生成（原来写死 ✗，改档位表就对不上了）
+# 文件名按 fb 值生成（原来写死 ，改档位表就对不上了）
 old = """            case (k)
                 0: fout = $fopen("t60_fb40.txt", "w");
                 1: fout = $fopen("t60_fb80.txt", "w");

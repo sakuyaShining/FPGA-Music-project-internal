@@ -5,7 +5,7 @@
 """
 import io
 
-# ---------- ① 任务板：拆开被合并的行 ----------
+# ---------- ① 任务清单：拆开被合并的行 ----------
 p = "refs/素材库/双代理任务板.md"
 lines = io.open(p, encoding="utf-8-sig").read().split("\n")
 out, fixed = [], 0

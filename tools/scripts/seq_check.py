@@ -58,7 +58,7 @@ def check_one(tag, seqfile, ledfile, tempo_inc, nsamp, fails):
 
     # ---- 期望事件 ----
     beats = model_beats(tempo_inc, nsamp)
-    # ★ 步进发生在【拍点那一刻】：RTL 是 `beat_cnt+1 >= step_beats` 就换步，
+    # 步进发生在【拍点那一刻】：RTL 是 `beat_cnt+1 >= step_beats` 就换步，
     #   所以第 0 步只持续到【第一个拍点】（不是等第二个拍点）。
     #   第一版模型把换步放在第二个拍点，于是时间戳正好差一拍 —— 典型的
     #   "模型对了 90% 却全错"。

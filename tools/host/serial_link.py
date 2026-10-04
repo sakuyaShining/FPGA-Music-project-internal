@@ -68,7 +68,7 @@ import dsp_host as dh                      # noqa: E402  （REG / REG_V2 / Frame
 RD_REQ = dh.REG["RD_REQ"]                  # 0x0F
 PROTO_VER = dh.REG["PROTO_VER"]            # 0x7F
 
-# 遥测寄存器（第 7 轮加的，见挂账清单 ⑤）
+# 遥测寄存器（(本次)加的，见待办清单 ⑤）
 TEL = {
     "PAD_BASE_LO": dh.REG["PAD_BASE_LO"],
     "PAD_BASE_HI": dh.REG["PAD_BASE_HI"],
@@ -124,8 +124,8 @@ class SerialLink(LinkBase):
         try:
             import serial                       # 延迟导入：没装 pyserial 也能用 SimLink
         except ImportError:
-            # 打包成 exe 后**不能再**用系统里的 pyserial ✗ ⇒ 必须在打包时已安装 ✓
-            # （本机 pip 因系统代理不可用而装不上，所以 exe 可能只有"模拟设备"能力 ✗）
+            # 打包成 exe 后**不能再**用系统里的 pyserial ⇒ 必须在打包时已安装
+            # （本机 pip 因系统协作不可用而装不上，所以 exe 可能只有"模拟设备"能力）
             raise RuntimeError(
                 "本程序包里没有 pyserial ⇒ 无法使用真实串口 ✗\n\n"
                 "· 想连板子：先在【有网/无代理】的终端执行\n"
@@ -198,7 +198,7 @@ class SimLink(LinkBase):
         self._base = {}
         self._load_defaults(baseline_csv)
 
-    # ---- 初值：优先取 RTL 抽取的基线 ✓（打包后靠 --add-data 带进来，find_file 找得到 ✓）----
+    # ---- 初值：优先取 RTL 抽取的基线 （打包后靠 --add-data 带进来，find_file 找得到）----
     def _load_defaults(self, path):
         docs = os.path.normpath(os.path.join(_HERE, "..", "..", "docs", "02-技术方案"))
         cands = ([path] if path else []) + [find_file("regmap_baseline.csv", extra_dirs=[docs])]
@@ -213,8 +213,8 @@ class SimLink(LinkBase):
                         if not a:
                             continue
                         ai = int(a, 16) if a.lower().startswith("0x") else int(a)
-                        # regmap_baseline.csv 的列名实测是 addr,width,rd,wr_host,wr_boot ✓
-                        #   （引导默认值在 wr_boot ✓；"-" = 无默认值）
+                        # regmap_baseline.csv 的列名实测是 addr,width,rd,wr_host,wr_boot
+                        #   （引导默认值在 wr_boot ；"-" = 无默认值）
                         df = ""
                         for col in ("wr_boot", "default", "boot", "value"):
                             v = str(row.get(col, "") or "").strip()
@@ -250,20 +250,20 @@ class SimLink(LinkBase):
         return n
 
     def read_reg(self, addr, timeout=0.5):
-        self._sent += 2                    # 回读也要发 2 字节（与真实链路一致 ✓）
+        self._sent += 2                    # 回读也要发 2 字节（与真实链路一致）
         if (addr & 0xFF) == RD_REQ:
             return None
         self._refresh_telemetry()
         return self.regs.get(addr & 0xFF, 0)
 
-    # ---- 合成遥测：让"量程判定"这套逻辑在无板时也能演示 ✓ ----
+    # ---- 合成遥测：让"量程判定"这套逻辑在无板时也能演示 ----
     def _refresh_telemetry(self):
         ch = self.sel & 0x0F
         if ch not in self._base:
-            # 每根电极给一个略有差异的基线（模拟真实电极电容不一致 ✓）
+            # 每根电极给一个略有差异的基线（模拟真实电极电容不一致）
             self._base[ch] = 24 + (ch * 7) % 40
         b = self._base[ch]
-        r = b + (58 if self.touch else 0)   # 触摸 ⇒ 放电变慢 ⇒ 计数变大 ✓
+        r = b + (58 if self.touch else 0)   # 触摸 ⇒ 放电变慢 ⇒ 计数变大
         self.regs[TEL["PAD_BASE_LO"]] = b & 0xFF
         self.regs[TEL["PAD_BASE_HI"]] = (b >> 8) & 0x0F
         self.regs[TEL["PAD_RAW_LO"]] = r & 0xFF
@@ -280,7 +280,7 @@ class SimLink(LinkBase):
 
 
 # =============================================================================
-#  量程判定（照着 步骤16 §1 的判据 ✓，界面直接显示结论）
+#  量程判定（照着 步骤16 §1 的判据 ，界面直接显示结论）
 # =============================================================================
 def verdict(base, raw):
     """返回 (文字, 颜色键)。判据来自 refs/素材库/步骤16_上板风险审计.md §1：

@@ -151,7 +151,7 @@ module tb_audio;
             $display(" test=0 协议全链路：UART 下载曲谱 → 定序器播放（带混响）");
             $display("==============================================================");
 
-            // ★ 关掉滑音/颤音（CTRL=0x00）：曲目演示不需要 portamento。
+            // 关掉滑音/颤音（CTRL=0x00）：曲目演示不需要 portamento。
             //   实测发现：滑音是按【时隙】而不是按声部的 —— 时隙被复用时，
             //   gq 初值是对着该时隙【残留的旧音高】算的，于是旋律里会听到
             //   "从上一个占用该时隙的音滑过来"（音频判据测到第 2 个音带低八度能量）。
@@ -180,10 +180,10 @@ module tb_audio;
             wr_reg(8'h50, 8'h05);
             // 帧数：FX_CTRL/REV_FB/REV_DAMP(3) + TEMPO_INC(3) + SEQ_VEL(1)
             //      + SCORE_IDX(1) + 8×2(音高/拍数) + SCORE_LEN(1) + SEQ_CTRL(1) = 26 帧
-            //  ★ 与 `python tools/scripts/dsp_host.py --dry demo-score` 输出的字节流完全一致
+            //  与 `python tools/scripts/dsp_host.py --dry demo-score` 输出的字节流完全一致
             $display("  已通过 UART 下发 26 个两字节帧（与 dsp_host.py demo-score 一致），开始录制…");
 
-            // ★ 探针：如果顶层输出是 x，先在这里分辨"引擎侧 x"还是"效果器侧 x"
+            // 探针：如果顶层输出是 x，先在这里分辨"引擎侧 x"还是"效果器侧 x"
             repeat (2000) @(posedge clk);
             $display("  [探针] sample=%0d  fx_out=%0d  audio=%0d  fx_active=%0d",
                      $signed(u_top.sample), $signed(u_top.fx_out),

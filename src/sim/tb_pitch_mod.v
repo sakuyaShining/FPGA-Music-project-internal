@@ -19,7 +19,7 @@
 // 【时间基准】clk = 5 MHz，NSLOT = 128 → fs = 39062.5 Hz
 //   运行目录必须有三张表：sine256.hex / note_inc.hex / preset_part.hex
 //                        / recip_inc.hex（滑音初值用）
-//   ★ $readmemh 找不到不报错，只是表全 0 —— 这个坑本项目踩过三次。
+//   $readmemh 找不到不报错，只是表全 0 —— 这个坑本项目踩过三次。
 //=============================================================================
 
 `timescale 1ns/1ps
@@ -29,7 +29,7 @@ module tb_pitch_mod;
     localparam NG      = 8;
     localparam P       = 16;
     localparam NSLOT   = NG * P;          // 128
-    // ★ 出货配置下【周期 = 时隙数】（见 tdm_top.v 时钟链注释）。
+    // 出货配置下【周期 = 时隙数】（见 tdm_top.v 时钟链注释）。
     //   测试台与出货配置保持一致：PERIOD == NSLOT。
     //   （曾经为了给"分时复用衰减"腾空闲窗口而做成 NSLOT+64 ——
     //    那个方案反而暴露了 sc 回卷重访的隐藏 bug，现已废弃：
@@ -57,13 +57,13 @@ module tb_pitch_mod;
 
     //-------------------------------------------------------------------------
     // 样本边界：每 NSLOT 拍一次
-    //   ★ 注意不能写成 "pc==0 时 sample_en=1，且 sample_en 时 pc<=0" ——
+    //   注意不能写成 "pc==0 时 sample_en=1，且 sample_en 时 pc<=0" ——
     //     那会让 pc 永远停在 0、sample_en 永远为高，引擎的 sc 每拍被清零，
     //     结果"两个引擎都不推进"。第一版就栽在这里（数据全 0）。
     //     正确写法：pc 数到 NSLOT-1 归零，sample_en = (pc == NSLOT-1)。
     //-------------------------------------------------------------------------
     reg [$clog2(PERIOD)-1:0] pc;
-    //   ★ 不要再对参数做位选（NSLOT[6:0] 对 128 求值是 0，不是 127）——
+    //   不要再对参数做位选（NSLOT[6:0] 对 128 求值是 0，不是 127）——
     //     直接写 PERIOD-1，让比较在 32 位上下文中零扩展。
     wire sample_en = (pc == PERIOD - 1);
 
@@ -110,7 +110,7 @@ module tb_pitch_mod;
         .clk(clk), .rst_n(rst_n),
         .ev_valid(ev_valid), .ev_on(ev_on), .ev_note(ev_note),
         .ev_vel(ev_vel), .preset(preset),
-        // ★ 步③ 新增端口的安全默认（悬空读 z ⇒ 幅度变 x ✗）
+        // 步③ 新增端口的安全默认（悬空读 z ⇒ 幅度变 x）
         .spec_we(1'b0), .spec_addr(4'd0), .spec_wdata(8'd0), .spec_replace(1'b0),
         .pad_mask(16'd0), .refresh_valid(1'b0), .rf_lo(7'd0), .rf_hi(8'd0),
         .load_en(a_load_en), .load_slot(a_load_slot), .load_inc(a_load_inc),
@@ -132,7 +132,7 @@ module tb_pitch_mod;
         .load_en(a_load_en), .load_slot(a_load_slot), .load_inc(a_load_inc),
         .load_amp(a_load_amp), .load_gate(a_load_gate), .load_epar(a_load_epar),
         .load_gq(a_load_gq),
-        // ★ 运行时参数总线（58 位）：
+        // 运行时参数总线（58 位）：
         //   { lfo_inc[23:0], vib_depth[15:0], glide_step[15:0],
         //     vib_en, glide_en }
         //   A 段只开滑音（滑音速率 10/样本 ≈ 93 ms 走完 1400 音分）

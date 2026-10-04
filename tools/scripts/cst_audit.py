@@ -93,7 +93,7 @@ def main():
             fails.append("A3: 引脚 %d 在 1.8V bank 黑名单里" % pin)
 
     # A4（2026-10-02 收紧）：出货顶层 = tdm_ship，ev_*/preset/test_mode 已从网表里去掉
-    #   ⇒ cst 里**完全不应出现**这些名字（出现就会 CT1135 "Can't find object" ✗）
+    #   ⇒ cst 里**完全不应出现**这些名字（出现就会 CT1135 "Can't find object"）
     for p in sorted(set(list(loc) + list(port))):
         base = p.split("[")[0]
         if base in NO_LOC_PORTS:

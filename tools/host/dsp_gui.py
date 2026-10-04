@@ -90,7 +90,7 @@ def card(title):
 
 
 # =============================================================================
-#  电极遥测柱（自绘：base 暗条 + raw 亮条 + 判定颜色 ✓）
+#  电极遥测柱（自绘：base 暗条 + raw 亮条 + 判定颜色）
 # =============================================================================
 class ElectrodeBars(QWidget):
     def __init__(self):
@@ -173,7 +173,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("FPGA 加法合成器 · 上位机  (v1.0 协议)")
         self.resize(1320, 860)
         self.link = None
-        self.journal = []                    # [(addr, data, note)] —— 可导出重放 ✓
+        self.journal = []                    # [(addr, data, note)] —— 可导出重放
         self.sent_total = 0
         self._rate = []                      # [(t, total)]
         self.ele = {}
@@ -373,7 +373,7 @@ class MainWindow(QMainWindow):
         self._fill_ports()
 
     def _load_theme(self):
-        # ★ 打包后 theme.qss 在 _MEIPASS 里 ✗ ⇒ 用 find_file 找（源码/onefile 两用 ✓）
+        # 打包后 theme.qss 在 _MEIPASS 里 ⇒ 用 find_file 找（源码/onefile 两用）
         p = find_file("theme.qss")
         if p:
             with open(p, encoding="utf-8") as fh:
@@ -481,8 +481,8 @@ class MainWindow(QMainWindow):
         vals = [s.value() for s in self.spec]
         mode = "replace" if self.chk_replace.isChecked() else "add"
         self.send_frames(dh.cmd_spectrum(mode, vals), "塑谱（%s）" % mode)
-        # ★ 替换模式：cmd_spectrum 写的是 0x5A=0x00（自动刷新关）⇒ 必须补一条显式刷新 ✓
-        #   （这是 CLI 的既有行为，界面替用户补上，避免"改了没生效" ✗）
+        # 替换模式：cmd_spectrum 写的是 0x5A=0x00（自动刷新关）⇒ 必须补一条显式刷新
+        #   （这是 CLI 的既有行为，界面替用户补上，避免"改了没生效"）
         if mode == "replace":
             self.send_frames(dh.cmd_refresh("all"), "补一次全刷（替换模式必须）")
 
@@ -648,8 +648,8 @@ class MainWindow(QMainWindow):
 # =============================================================================
 def selftest():
     os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
-    # ★ 离屏平台默认找不到字体目录（Qt5 不再自带字体）⇒ 指向系统字体，
-    #   否则截图里没有文字 ✗（stderr 会刷 "Cannot find font directory"）
+    # 离屏平台默认找不到字体目录（Qt5 不再自带字体）⇒ 指向系统字体，
+    #   否则截图里没有文字 （stderr 会刷 "Cannot find font directory"）
     if os.name == "nt" and "QT_QPA_FONTDIR" not in os.environ:
         os.environ["QT_QPA_FONTDIR"] = os.path.join(os.environ.get("WINDIR", r"C:\Windows"),
                                                     "Fonts")
@@ -665,7 +665,7 @@ def selftest():
     w.show()
     app.processEvents()
 
-    # 用模拟设备填充数据（让截图里遥测柱/判定都有东西 ✓）
+    # 用模拟设备填充数据（让截图里遥测柱/判定都有东西）
     w.link = SimLink()
     w.link.open()
     w.badge.setText(w.link.kind)
@@ -701,7 +701,7 @@ def selftest():
     w.grab().save(png)
     say("  已保存界面截图：%s" % png)
 
-    # ---- 帧一致性：界面动作必须与 dsp_host 输出逐字节相同 ✓ ----
+    # ---- 帧一致性：界面动作必须与 dsp_host 输出逐字节相同 ----
     def items(f):
         return [(a, d) for a, d, _n in f.items]
 
@@ -719,7 +719,7 @@ def selftest():
     say("  [帧一致性 ①] 音符 on/off：%s" % ("一致 ✓" if ok else "不一致 ✗"))
     fails += 0 if ok else 1
 
-    # ② 塑谱：界面滑条值 ⇒ 与 cmd_spectrum 相同（替换模式还要多一条全刷 ✓）
+    # ② 塑谱：界面滑条值 ⇒ 与 cmd_spectrum 相同（替换模式还要多一条全刷）
     vals = [s.value() for s in w.spec]
     w.journal = []
     w.send_spectrum()
@@ -733,7 +733,7 @@ def selftest():
              "一致 ✓" if ok else "不一致 ✗"))
     fails += 0 if ok else 1
 
-    # ③ 效果器：界面按钮 ⇒ 与 cmd_fx 相同（顺带核对 RTL 的位定义 ✓ bit6=混响）
+    # ③ 效果器：界面按钮 ⇒ 与 cmd_fx 相同（顺带核对 RTL 的位定义 bit6=混响）
     w.journal = []
     w.set_fx("reverb")
     got = [(a, d) for a, d, _ in w.journal]
@@ -752,8 +752,8 @@ def selftest():
     fails += 0 if ok else 1
 
     say("")
-    # ★ 报一行"打包内是否含 pyserial" ✗→✓：exe 冻结后**不能**再用系统里的 pyserial，
-    #   必须在打包时已安装才会被带进包 ✓。这一行让"exe 能不能连板子"变成可检查的事实 ✓
+    # 报一行"打包内是否含 pyserial" →：exe 冻结后**不能**再用系统里的 pyserial，
+    #   必须在打包时已安装才会被带进包 。这一行让"exe 能不能连板子"变成可检查的事实
     try:
         import serial as _s
         say("打包内含 pyserial = 有（%s）⇒ exe 可连真实串口 ✓" % _s.__version__)
@@ -764,8 +764,8 @@ def selftest():
         say("RESULT gui_selftest=PASS png=%s" % png)
     else:
         say("RESULT gui_selftest=FAIL fails=%d" % fails)
-    # ★ 报告必须在 RESULT 之后再落盘 ✗→✓（否则文件里没有 PASS，外部无法判定 ✓）
-    #   编码用 utf-8-sig（带 BOM）：Windows 记事本/PowerShell 也能正确显示中文 ✓
+    # 报告必须在 RESULT 之后再落盘 →（否则文件里没有 PASS，外部无法判定）
+    #   编码用 utf-8-sig（带 BOM）：Windows 记事本/PowerShell 也能正确显示中文
     rpt = os.path.join(out, "selftest_report.txt")
     with open(rpt, "w", encoding="utf-8-sig") as fh:
         fh.write("\n".join(lines) + "\n")

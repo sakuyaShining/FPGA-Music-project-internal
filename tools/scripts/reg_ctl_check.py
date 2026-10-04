@@ -144,7 +144,7 @@ def main():
         rows = [l.split() for l in open(path) if l.strip()]
         s0 = [int(x[0]) for x in rows]
         gq = [int(x[2]) for x in rows]
-        # ★ 滑音初值是在【装载被消费】那一拍才写进去的，dump 前几拍 gq 还是 0 —— 跳过
+        # 滑音初值是在【装载被消费】那一拍才写进去的，dump 前几拍 gq 还是 0 —— 跳过
         off = next((i for i, g in enumerate(gq) if g != 0), None)
         if off is None:
             return None, None, None, None, None
@@ -154,7 +154,7 @@ def main():
         gq0 = gq[0]
         # L-a：递推逐样本成立
         bad_a = 0
-        # ★ 从 i=1 开始：第 0 对里含【装载写入】那一步（0 → gq0 的跳变不是衰减）
+        # 从 i=1 开始：第 0 对里含【装载写入】那一步（0 → gq0 的跳变不是衰减）
         for i in range(1, len(gq) - 1):
             g, nxt = gq[i], gq[i + 1]
             if g > 0:
@@ -268,7 +268,7 @@ def main():
                 last = n
         print("     LED 指引序列（低 5 位，去重后）= %s" % seq[:12])
         SCORE = [60, 60, 67, 67, 69, 69, 67, 65, 65, 64, 64, 62, 62, 60]
-        # ★ 期望序列也要做同样的"连续去重"：曲谱里有连续同音（60,60 / 67,67 …），
+        # 期望序列也要做同样的"连续去重"：曲谱里有连续同音（60,60 / 67,67 …），
         #   而上面按"值变化"提取，所以不能拿未去重的曲谱去比（第一版就错在这）。
         exp, last = [], None
         for x in SCORE:

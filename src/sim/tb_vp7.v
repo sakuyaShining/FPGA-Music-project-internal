@@ -5,13 +5,13 @@
 //           （test_mode 引脚下拉后=0）、preset=0（行为侧：第一事件响应符合预设 0 的谱）"
 //
 // 本测试台把这条拆成四组可证伪断言：
-//   V1 **上电静音**：复位后不做任何 UART 写，16384 个样本的顶层输出**全为 0** ✓
-//   V2 **不进测试模式**：test_mode 引脚 = 0 且 CTRL[0] = 0 ⇒ 装载走 note_map 通路 ✓
+//   V1 **上电静音**：复位后不做任何 UART 写，16384 个样本的顶层输出**全为 0**
+//   V2 **不进测试模式**：test_mode 引脚 = 0 且 CTRL[0] = 0 ⇒ 装载走 note_map 通路
 //   V3 **上电寄存器表**（直接读 reg_bank）：CTRL/PRESET/FX/DELAY_LEN/SPEC_MODE/
-//      HARM_PADS/SEQ_CTRL/TEMPO/SEQ_VEL/0x7F 必须等于 19 号 §3 的冻结默认 ✓
+//      HARM_PADS/SEQ_CTRL/TEMPO/SEQ_VEL/0x7F 必须等于 19 号 §3 的冻结默认
 //   V4 **preset 默认确实是 0**（行为侧、非循环）：
-//        默认（不写 0x37） 与 显式写 0x37=0 装载出的 16 个幅度 **逐位相同** ✓
-//        而 显式写 0x37=1 时 **必须不同** ✓（证明"默认 0"不是"忽略音色" ✗）
+//        默认（不写 0x37） 与 显式写 0x37=0 装载出的 16 个幅度 **逐位相同**
+//        而 显式写 0x37=1 时 **必须不同** （证明"默认 0"不是"忽略音色"）
 //=============================================================================
 
 `timescale 1ns/1ps
@@ -32,7 +32,7 @@ module tb_vp7;
     tdm_top u_top (
         .clk(clk), .rst_n(rst_n),
         .ev_valid(ev_valid), .ev_on(ev_on), .ev_note(ev_note), .ev_vel(ev_vel),
-        .preset(2'd3), .test_mode(1'b0),   // ★ 引脚故意给 3 与 0：验证寄存器/引脚的优先级与默认
+        .preset(2'd3), .test_mode(1'b0),   // 引脚故意给 3 与 0：验证寄存器/引脚的优先级与默认
         .uart_rx_pin(uart_rx), .uart_tx_pin(uart_tx),
         .led(), .dac_din(), .dac_ws(), .dac_bck(), .pa_en(),
         .pad(pad_bus)
@@ -171,7 +171,7 @@ module tb_vp7;
         else $display("        ⇒ 上电寄存器表与 19 号 §3 冻结默认一致 ✓");
 
         //================= V4：preset 默认 = 0（行为侧）=================
-        // 注：引脚 preset=3，但 CTRL[3]=0 ⇒ preset_src=引脚 ⇒ 默认走引脚(3) ✗
+        // 注：引脚 preset=3，但 CTRL[3]=0 ⇒ preset_src=引脚 ⇒ 默认走引脚(3)
         //     所以本项测的是**寄存器源**：先 CTRL[3]=1 使能寄存器音色，再比较。
         wr(8'h00, 8'h0A);                    // CTRL：preset_src=1（bit3）+ VIB_EN（bit1）
         wait_samples(4);

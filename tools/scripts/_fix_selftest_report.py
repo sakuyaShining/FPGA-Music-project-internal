@@ -10,7 +10,7 @@ lines = io.open(p, encoding="utf-8-sig").read().split("\n")
 i0 = next(i for i, l in enumerate(lines) if l.startswith("def selftest():"))
 i1 = next(i for i, l in enumerate(lines) if l.startswith("def _sel("))
 
-# ① 函数内 print( -> say(
+# ① 函数内 print(-> say(
 n = 0
 for i in range(i0, i1):
     if "print(" in lines[i]:

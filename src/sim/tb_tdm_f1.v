@@ -91,7 +91,7 @@ module tb_tdm_f1;
         rst_n = 1'b1;
         repeat (200) @(posedge clk);
 
-        // ★ A1 对策：清掉上电垃圾参数（效果器全关 + 颤音/滑音清零）
+        // A1 对策：清掉上电垃圾参数（效果器全关 + 颤音/滑音清零）
         reg_write(8'h40, 8'h01);   // FX: 干声直通（bit1/2/6 全灭）
         reg_write(8'h30, 8'h00);   // VIB_INC 清零
         reg_write(8'h31, 8'h00);
@@ -113,7 +113,7 @@ module tb_tdm_f1;
         end
 
         for (n = 0; n < NSAMP; n = n + 1) begin
-            @(posedge dac_ws);  // ★ LRCK 上升沿 = 每帧一次（半帧翻转一次，两个沿都采会把时间轴拉长一倍、频率全部减半——上一轮 55.79% 谱外能量的真因）
+            @(posedge dac_ws);  // LRCK 上升沿 = 每帧一次（半帧翻转一次，两个沿都采会把时间轴拉长一倍、频率全部减半——上一轮 55.79% 谱外能量的真因）
             #1;
             $fdisplay(fd, "%0d", $signed(dut.audio));
         end

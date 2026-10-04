@@ -26,7 +26,7 @@ import os
 import sys
 
 FS_DEFAULT = 2500000.0 / 64.0
-# ★ fs 必须与顶层实际采样率一致：note_inc 里的数字直接含 fs。
+# fs 必须与顶层实际采样率一致：note_inc 里的数字直接含 fs。
 #   本默认值给 tb_note_map / tb_note_music（5 MHz 时钟，128 拍/样本）。
 #   给 tdm_top（27 MHz / 18 / 32 = 46875 Hz）与综合工程用的那份，
 #   必须用 --fs 46875 生成，否则上板所有音符高 3.16 个半音。
@@ -34,7 +34,7 @@ FS = FS_DEFAULT          # 39062.5 Hz，与 tb_tdm_demo 同一时间基准
 
 # ---------------------------------------------------------------------------
 # 音色预设：每个泛音给 (频率比, 幅度, d_k, 衰减终点 s_lvl)
-#   ★ 与 tdm_demo.py 的 PRESETS 保持一致（同一套音色，两种用法）
+#   与 tdm_demo.py 的 PRESETS 保持一致（同一套音色，两种用法）
 # ---------------------------------------------------------------------------
 PRESETS = {
     # 拉杆风琴：谐波、几乎不衰减、保持 —— 对照组，频谱静止
@@ -124,7 +124,7 @@ def gen(outdir):
             dk = max(0, min(31, dk))
             slvl = max(0, min(32767, slvl))
             epar = ((slvl & 0xFFFF) << 7) | (3 << 5) | (dk & 0x1F)
-            # ★ 位域必须互不重叠：ratio_q8 16 + amp 8 + epar 24 = 【48】位
+            # 位域必须互不重叠：ratio_q8 16 + amp 8 + epar 24 = 【48】位
             #   曾写成 (rq8<<24)|(amp<<16)|epar —— amp 占 [23:16] 与 epar[23:0] 重叠，
             #   实测第一行读回 ratio_q8=0x0100FA（应为 0x0100），整表报废。
             #   与 preset.hex 那次是同一个错误，所以这里也写明。
@@ -187,7 +187,7 @@ def main():
     ap.add_argument("--outdir", default="sim_build/notemap")
     ap.add_argument("--dump", default="sim_build/notemap/note_out.txt")
     ap.add_argument("--expect", default="")
-    # ★ 默认 39062.5（仿真时间基准）；给 tdm_top / 综合工程必须传 46875
+    # 默认 39062.5（仿真时间基准）；给 tdm_top / 综合工程必须传 46875
     ap.add_argument("--fs", type=float, default=FS_DEFAULT,
                     help="采样率（默认 39062.5；tdm_top 用 46875）")
     a = ap.parse_args()

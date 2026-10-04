@@ -7,7 +7,7 @@ import io
 p = "tools/scripts/t60_check.py"
 s = io.open(p, encoding="utf-8-sig").read()
 
-# 表头 damp 抄成实际用的最大档（同源 ✓）
+# 表头 damp 抄成实际用的最大档（同源）
 s = s.replace('DAMP     = 3                  # reg_bank.v: 0x49=0x03',
               'DAMP     = 7                  # ★ tb_t60 按判据 V4 用【最大档】7（3 位寄存器）✓')
 

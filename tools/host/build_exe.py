@@ -56,9 +56,9 @@ def need(mod, pkg=None):
 
 
 def main():
-    # ★ 本机 pip 曾因【Windows 系统代理指向一个不存在的代理】而全部失败 ✗
-    #   （报 ProxyError / getaddrinfo failed），而 NO_PROXY=* 可以绕过 ✓
-    #   —— 实测有效：pyserial 用这一条装上了 ✓。放在最前面，免得每次都要手工设 ✓
+    # 本机 pip 曾因【Windows 系统协作指向一个不存在的协作】而全部失败
+    #   （报 ProxyError / getaddrinfo failed），而 NO_PROXY=* 可以绕过
+    #   —— 实测有效：pyserial 用这一条装上了 。放在最前面，免得每次都要手工设
     os.environ.setdefault("NO_PROXY", "*")
     os.environ.setdefault("no_proxy", "*")
 
@@ -70,7 +70,7 @@ def main():
     print("[1/4] 依赖检查")
     if not need("PyInstaller", "pyinstaller"):
         return 1
-    # pyserial 必须**打包时**已安装，否则 exe 里没有串口能力 ✗（冻结后不能再用系统的 ✓）
+    # pyserial 必须**打包时**已安装，否则 exe 里没有串口能力 （冻结后不能再用系统的）
     if not need("serial", "pyserial"):
         print("  ⚠ 继续打包：exe 将只有「模拟设备」可用，真串口不可用 ✗")
 
@@ -86,8 +86,8 @@ def main():
                 print("  ⚠ 删不掉 %s：%s（继续）" % (d, e))
 
     # ---- 3. 打包 ----
-    #   ★ 路径必须用**绝对路径** ✗：PyInstaller 3.6 会把 --add-data 的源路径
-    #     按 **--specpath 目录** 解析 ⇒ 相对路径会拼成 tools\host\tools\host\... 找不到 ✗
+    #   路径必须用**绝对路径** ：PyInstaller 3.6 会把 --add-data 的源路径
+    #     按 **--specpath 目录** 解析 ⇒ 相对路径会拼成 tools\host\tools\host\... 找不到
     def A(p):
         return os.path.join(ROOT, p)
 
@@ -110,7 +110,7 @@ def main():
         return 1
     print("  ✓ 产物：%s（%.1f MB）" % (EXE, os.path.getsize(EXE) / 1048576.0))
 
-    # ---- 4. 自测产物（关键 ✓）----
+    # ---- 4. 自测产物（关键）----
     print("[4/4] 自测产物：运行 exe 的 --selftest 并检查新写的文件")
     png = os.path.join(OUTDIR, "gui_preview.png")
     rpt = os.path.join(OUTDIR, "selftest_report.txt")

@@ -44,15 +44,15 @@ REG = {
     "PRESET":       0x37,     # [1:0] 音色 0–3；默认 0
     "FX_CTRL":      0x40,     # [0]干 [1]延迟 [2]合唱 [5:3]湿声右移；默认 0x01
     "DELAY_LEN":    0x41,     # 16 位小端；冻结表写默认 2048
-                              #   ⚠️ 冲突：线缓冲 AW=11 ⇒ 2048 截断成 0（抽头读到刚写入的样本）。
-                              #   我已把 RTL 默认改 1500；请 ZCode 决定是改表还是改 AW。
+                              #   冲突：线缓冲 AW=11 ⇒ 2048 截断成 0（抽头读到刚写入的样本）。
+                              #   我已把 RTL 默认改 1500；请 复核 决定是改表还是改 AW。
     "FEEDBACK":     0x43,     # Q8；默认 0x60
     "CHORUS_RATE":  0x44,     # 16 位小端；默认 430
     "CHORUS_DEPTH": 0x46,     # 16 位小端；默认 64
     "RV_FB":        0x48,
     "RV_DAMP":      0x49,
     "SEQ_CTRL":     0x50,     # 冻结语义：[0]使能 [1]保持
-                              #   ⚠️ 冲突：本 RTL 还有 [2]=用下载曲谱，冻结表里没有这一位
+                              #   冲突：本 RTL 还有 [2]=用下载曲谱，冻结表里没有这一位
     "TEMPO":        0x51,     # 24 位小端 = 每拍时钟数（不是 BPM！）
     "SEQ_VEL":      0x54,
     # ---- 塑谱（步③）----
@@ -64,7 +64,7 @@ REG = {
     "NOTE_NUM":     0x60,     # [7]=on/off，[6:0] MIDI 音符号
     "NOTE_TRIG":    0x61,     # [3:0] 力度；**写入即触发事件**
     "SPEC_REFRESH": 0x63,     # 修正案 A1：写 0–31 刷新该声部谱形，0xFF 全刷
-    # ---- ★ 第 7 轮：电极遥测（19 号 §5 的 0x64+ 预留区；只读遥测 + 一个选择器）----
+    # ---- (本次)：电极遥测（19 号 §5 的 0x64+ 预留区；只读遥测 + 一个选择器）----
     #   用途：上板 bring-up 第一件事 —— 量 RC 绝对量程（步骤16 §1）
     #   命令：python tools/scripts/dsp_host.py --port COMx padmon
     "PAD_BASE_LO":  0x64,     # 所选通道的基线（低 8 位）
@@ -78,11 +78,11 @@ REG = {
     "SCORE_NOTE":   0x70,
     "SCORE_BEATS":  0x71,
     "SCORE_LEN":    0x73,
-    "PROTO_VER":    0x7F,     # 只读语义，= 0x10（v1.0）★ 默认值在 reg_bank 初值块
+    "PROTO_VER":    0x7F,     # 只读语义，= 0x10（v1.0）默认值在 reg_bank 初值块
 }
 
-# v2 规划中、**当前 RTL 未实现**的地址：放在这里，避免 --check-map 误报 ✗
-#（对应 19 号 §4 的"精细塑形"可选项；实现后搬回 REG ✓）
+# v2 规划中、**当前 RTL 未实现**的地址：放在这里，避免 --check-map 误报
+#（对应 19 号 §4 的"精细塑形"可选项；实现后搬回 REG）
 REG_V2 = {
     "TILT":         0x5C,     # 谱形倾斜（v2）
     "SPREAD":       0x5D,     # 谱形展开（v2）
@@ -164,7 +164,7 @@ def cmd_fx(which):
 
 def cmd_demo_score(bpm=171.4, vel=0xC0):
     f = Frames()
-    # ★ 关滑音/颤音：滑音是按【时隙】的，时隙复用时会从残留旧音高滑过来，
+    # 关滑音/颤音：滑音是按【时隙】的，时隙复用时会从残留旧音高滑过来，
     #   旋律演示里会听到"上个占用该时隙的音"的痕迹。演奏时才需要 portamento。
     f.w("CTRL", 0x00, "关滑音/颤音（曲目演示不需要 portamento）")
     f.w("FX_CTRL", 0x41, "干声 + 混响")
@@ -369,7 +369,7 @@ def main():
     elif a.cmd == "read":
         f = cmd_read(a.arg or "0x00,0x37,0x40,0x50")
     elif a.cmd == "padmon":
-        # ⑤ 电极遥测：交互式，必须给 --port（不经过 Frames ✓）
+        # ⑤ 电极遥测：交互式，必须给 --port（不经过 Frames）
         return cmd_padmon(a.port)
     elif a.cmd == "stop":
         f = cmd_stop()

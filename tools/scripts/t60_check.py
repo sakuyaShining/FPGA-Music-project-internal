@@ -36,7 +36,7 @@ import numpy as np
 
 FS       = 52734.375          # 19 号 §1 冻结
 DLY_LEN  = 1500               # reg_bank.v: 0x41=0xDC, 0x42=0x05
-DAMP     = 7                  # ★ tb_t60 按判据 V4 用【最大档】7（3 位寄存器）✓
+DAMP     = 7                  # tb_t60 按判据 V4 用【最大档】7（3 位寄存器）
 
 
 def load(p):
@@ -175,11 +175,11 @@ def main():
     if rows:
         p = os.path.join(d, "t60_fb%02x.txt" % rows[-1][0])
         h = load(p)
-        wms = max(3, int(rows[-1][2] * 1000 / 6))       # 窗口 ≈ T60/6 ⇒ 10 窗≈1.7×T60 ✓
+        wms = max(3, int(rows[-1][2] * 1000 / 6))       # 窗口 ≈ T60/6 ⇒ 10 窗≈1.7×T60
         dens = echo_density(h, win_ms=wms)
-        # 物理事实：密度先上升（混响建立期）→ 到平台 → 随尾音衰减 ✗
-        #  与实现相符的判据 =「建立期确实在上升」+「峰值落在实测 T60 之内」✓
-        #  （配方原文的"前 200ms 单调增"隐含 T60 远大于 200ms ✗，对本 ~50ms 短混响不成立 ✓）
+        # 物理事实：密度先上升（混响建立期）→ 到平台 → 随尾音衰减
+        #  与实现相符的判据 =「建立期确实在上升」+「峰值落在实测 T60 之内」
+        #  （配方原文的"前 200ms 单调增"隐含 T60 远大于 200ms ，对本 ~50ms 短混响不成立）
         rise = (len(dens) >= 2) and (dens[1] > dens[0]) and (max(dens[:3]) >= dens[0])
         pk = int(np.argmax(dens))
         t60_ms = rows[-1][2] * 1000.0
@@ -211,7 +211,7 @@ def main():
         else:
             print("  [V4] 分频段拟合失败 ✗"); fails.append("V4 拟合失败")
 
-    # ---------------- 审计第 5 条：肉眼看谱 ----------------
+    # ---------------- 复核 5 条：肉眼看谱 ----------------
     if rows:
         h = load(os.path.join(d, "t60_fb%02x.txt" % rows[-1][0]))
         print("-" * 74)

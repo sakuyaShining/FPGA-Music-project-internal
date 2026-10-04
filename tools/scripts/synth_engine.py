@@ -660,7 +660,7 @@ class ConsoleKeyReader:
                 if own:
                     k32.CloseHandle(h)
                 return
-            # 关掉行缓冲/回显/CTRL-C 拦截：我们要的是"原始"按键流
+            # 关掉行缓冲/回显/CTRL-C 拦截：本项目要的是"原始"按键流
             new = old.value & ~(_ENABLE_LINE_INPUT | _ENABLE_ECHO_INPUT |
                                 _ENABLE_PROCESSED_INPUT)
             if not k32.SetConsoleMode(h, new):
@@ -943,7 +943,7 @@ def cmd_play(args):
                         elif param_key(key):
                             pass
                     else:
-                        # ★★ 关键修复 ★★ 松开 → 进入 release 段，音符真正停下来
+                        # 关键修复 松开 → 进入 release 段，音符真正停下来
                         v = held.pop(key, None)
                         if v is not None and v.active:
                             v.start_release()

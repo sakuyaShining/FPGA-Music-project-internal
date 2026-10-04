@@ -4,9 +4,9 @@
 // 【它产出什么】
 //   一段约 15 秒的乐曲，从 RTL 仿真直接渲染成 WAV：
 //     4 小节一轮 I–vi–IV–V（C–Am–F–G），共三轮
-//       第 1 轮：钢琴   (preset 1)
-//       第 2 轮：钟     (preset 2)   ← 同时演示"≥2 种音色自由切换"
-//       第 3 轮：马林巴 (preset 3)
+//       (本次)：钢琴   (preset 1)
+//       (本次)：钟     (preset 2)   ← 同时演示"≥2 种音色自由切换"
+//       (本次)：马林巴 (preset 3)
 //   每小节 1.2 s，共 12 小节。
 //
 // 【为什么用 note_map + tdm_engine 直连，而不是 tdm_top】
@@ -18,7 +18,7 @@
 //
 // 【时间基准】clk = 5 MHz，NSLOT = 128（NG=8 组 × P=16 泛音），fs = 39062.5 Hz
 // 运行目录需有 sine256.hex / note_inc.hex / preset_part.hex
-//   ★ $readmemh 找不到文件时不报错，只是表全 0、输出静音 —— 这个坑踩过三次。
+//   $readmemh 找不到文件时不报错，只是表全 0、输出静音 —— 这个坑踩过三次。
 //=============================================================================
 
 `timescale 1ns/1ps
@@ -57,7 +57,7 @@ module tb_note_music;
     reg                ev_on;
     reg [NB-1:0]       ev_note;
     reg [AMP_W-1:0]    ev_vel;
-    reg [1:0]          preset;          // ★ 逐轮切换
+    reg [1:0]          preset;          // 逐轮切换
 
     wire               load_en;
     wire [$clog2(NSLOT)-1:0] load_slot;
@@ -74,7 +74,7 @@ module tb_note_music;
         .clk(clk), .rst_n(rst_n),
         .ev_valid(ev_valid), .ev_on(ev_on), .ev_note(ev_note), .ev_vel(ev_vel),
         .preset(preset),
-        // ★ 步③ 新增端口的安全默认（悬空读 z ⇒ 幅度变 x ✗）
+        // 步③ 新增端口的安全默认（悬空读 z ⇒ 幅度变 x）
         .spec_we(1'b0), .spec_addr(4'd0), .spec_wdata(8'd0), .spec_replace(1'b0),
         .pad_mask(16'd0), .refresh_valid(1'b0), .rf_lo(7'd0), .rf_hi(8'd0),
         .load_en(load_en), .load_slot(load_slot),
@@ -210,7 +210,7 @@ module tb_note_music;
         $finish;
     end
 
-    // 硬超时：★ 按【仿真时间】算，不是拍数。
+    // 硬超时：按【仿真时间】算，不是拍数。
     //   586500 样本 × 128 拍 × 200 ns ≈ 15.0 s 仿真时间，留一倍余量。
     //   （这个坑本会话踩过两次，两次都是把拍数当成了仿真时间。）
     initial begin

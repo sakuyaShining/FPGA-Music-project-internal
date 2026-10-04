@@ -42,7 +42,7 @@ def main():
 
     X = np.abs(np.fft.rfft(x * np.hanning(n)))
     freqs = np.fft.rfftfreq(n, 1.0 / FS)
-    grid = (71583.0 + 8800.0 * np.arange(NSLOT)) * FS / 2**24   # ★ 精确栅格：直接用 RTL 公式（27.7 的四舍五入会累计漂移 18Hz
+    grid = (71583.0 + 8800.0 * np.arange(NSLOT)) * FS / 2**24   # 精确栅格：直接用 RTL 公式（27.7 的四舍五入会累计漂移 18Hz
 
     # G1：每个栅格点的最近 bin 是否为局部极大
     ok_grid = 0

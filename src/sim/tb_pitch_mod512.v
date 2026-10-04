@@ -27,7 +27,7 @@
 //     表必须用 --fs 48828.125 生成，否则测得的频率对不上期望值）
 //
 // 【运行目录必须有】sine256.hex / note_inc.hex / preset_part.hex / recip_inc.hex
-//   ★ $readmemh 找不到不报错，只是表全 0 —— 这个坑本项目踩过三次。
+//   $readmemh 找不到不报错，只是表全 0 —— 这个坑本项目踩过三次。
 //=============================================================================
 
 `timescale 1ns/1ps
@@ -38,7 +38,7 @@ module tb_pitch_mod512;
     localparam NG      = 32;
     localparam P       = 16;
     localparam NSLOT   = NG * P;          // 512
-    // ★ 周期 = 时隙数 = 512，与出货配置【完全一致】（时钟链 ÷16 × 32）
+    // 周期 = 时隙数 = 512，与出货配置【完全一致】（时钟链 ÷16 × 32）
     localparam PERIOD  = NSLOT;           // 512
     localparam PHASE_W = 24;
     localparam AMP_W   = 8;
@@ -113,7 +113,7 @@ module tb_pitch_mod512;
         .clk(clk), .rst_n(rst_n),
         .ev_valid(ev_valid), .ev_on(ev_on), .ev_note(ev_note),
         .ev_vel(ev_vel), .preset(preset),
-        // ★ 步③ 新增端口的安全默认（悬空读 z ⇒ 幅度变 x ✗）
+        // 步③ 新增端口的安全默认（悬空读 z ⇒ 幅度变 x）
         .spec_we(1'b0), .spec_addr(4'd0), .spec_wdata(8'd0), .spec_replace(1'b0),
         .pad_mask(16'd0), .refresh_valid(1'b0), .rf_lo(7'd0), .rf_hi(8'd0),
         .load_en(a_load_en), .load_slot(a_load_slot), .load_inc(a_load_inc),
@@ -265,7 +265,7 @@ module tb_pitch_mod512;
         $display("==============================================================");
 
         //---- B：装载 slot 0（基频）与 slot 15（第 16 泛音）----
-        //   ★ inc 直接从 note_map 的表里取（表由 --fs 48828.125 生成）——
+        //   inc 直接从 note_map 的表里取（表由 --fs 48828.125 生成）——
         //     手写常量在改时间基准时必然过期，这个坑不留第二次。
         repeat (4) @(posedge clk);
         b_load(9'd0,  u_nm.note_rom[60],        8'd100);   // MIDI 60
@@ -282,7 +282,7 @@ module tb_pitch_mod512;
         //---- E1 观测窗（32 路基频 + 音频）----
         wait_samples(W_AUD1 - W_FUND0);
 
-        //---- A-2：17 次抢占（MIDI 88,87,…,72）→ 第 17 次落在 16 号组 ----
+        //---- A-2：17 次抢占（MIDI 88,87,…,72）→ (本次)落在 16 号组 ----
         for (i = 0; i < 17; i = i + 1) begin
             note_on(88 - i, 8'd200);
             wait_samples(GAP);
