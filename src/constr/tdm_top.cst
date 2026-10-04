@@ -21,7 +21,7 @@
 //
 // *** COMMENTS ARE ASCII-ONLY ON PURPOSE ***
 //     Gowin's constraint parser handles non-ASCII comments inconsistently
-//     across locales (recorded in bringup_top.cst). Keep it ASCII here.
+//     across locales. Keep it ASCII here.
 //
 // 3.3 V banks only. The LCD header pins below are LVCMOS33 in the official
 // LCD example, so 3.3 V sensors/signals are safe there.

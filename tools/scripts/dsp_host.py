@@ -102,7 +102,7 @@ def tempo_inc(bpm):
 def verdict(base, raw):
     """电极 RC 量程判定（唯一实现 —— CLI 的 padmon 与 GUI 都用这一份，防两处漂移）。
 
-    判据来自 refs/素材库/步骤16_上板风险审计.md §1：
+    判据（松手 raw 落在 [20, 2000]；按住 raw ≥ 1.3 × base）：
       ① 松手时 raw ∈ [20, 2000]（既没快到底、也没计数器封顶）
       ② 按住时 raw ≥ 1.3 × base
     返回 (文字, 颜色键, 调整建议)；颜色键 ∈ green/red/dim/gray。

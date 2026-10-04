@@ -86,6 +86,8 @@ refs/
 src/rtl/led_heartbeat.v
 tools/scripts/check_video_timing.py
 tools/scripts/make_image_rom.py
+src/rtl/README.md
+tools/scripts/flash_sram.cmd
 """
 
 PAT_A = re.compile(r"ZCode|DeepSeek|GLM|双代理|交接|会话恢复", re.I)
@@ -158,6 +160,8 @@ def main():
     # 用同一把尺子复核剩余痕迹
     a_hits, b_hits, c_hits = [], [], []
     for f in files:
+        if f == ".gitignore":
+            continue          # 忽略规则本身就写着这些关键词，属误报
         p = os.path.join(ROOT, f)
         if not os.path.isfile(p) or os.path.splitext(f)[1].lower() not in (
                 ".md", ".txt", ".v", ".py", ".ps1", ".cst", ".sdc", ".qss"):

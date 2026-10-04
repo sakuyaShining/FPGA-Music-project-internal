@@ -9,7 +9,7 @@
 
  用法：
    pwsh -File tools\scripts\build_gowin.ps1 `
-        -Project src\gowin\bringup_9k\bringup_9k.gprj -SspiAsGpio
+        -Project src\gowin\tdm_synth\tdm_synth.gprj -SspiAsGpio
 
  产物：
    <工程目录>\impl\pnr\<顶层模块名>.fs     <-- 要烧进 FPGA 的码流文件
