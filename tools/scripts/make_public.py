@@ -120,7 +120,11 @@ def main():
           "不会有整理/修补这类显眼的中间提交）" % a.branch)
     git("checkout", "--orphan", a.branch)
 
-    print("[4] 从索引移除内部材料（**磁盘文件保留** ✓）")
+    print("[4] 清空索引（**文件全部留在磁盘** ✓）")
+    # ★ 必须先清空整个索引 ✗：checkout --orphan 只是让下次提交没有父节点，
+    #   **并不会清空索引** ⇒ 已在索引里的文件不受 .gitignore 约束 ✗✗
+    #   （上一版就是因此把 _*.py / 清理工具全漏进公开版 ✓ git check-ignore 却显示规则命中 ✓）
+    git("rm", "-r", "--cached", "-q", ".")
     for p in EXCLUDE:
         if os.path.exists(os.path.join(ROOT, p)):
             git("rm", "-r", "--cached", "-q", "--ignore-unmatch", p, check=False)
