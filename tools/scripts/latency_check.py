@@ -12,7 +12,7 @@ latency_check.py —— E5（控制→输出延迟）判据脚本
    L4 组号依赖有界：t_load 随组号变化，但始终 ≤ 1 个样本周期 + 固定项
 
 用法：
- python tools/scripts/latency_check.py --file
+   python tools/scripts/latency_check.py --file <tb_latency 输出的 RESULT 文本>
 """
 import argparse
 import re
@@ -35,10 +35,13 @@ def parse(path):
 
 def main():
     ap = argparse.ArgumentParser()
- ap.add_argument("--file", default="")
+    ap.add_argument("--file", default="")
     ap.add_argument("--limit-ms", type=float, default=0.2)
     a = ap.parse_args()
 
+    if not a.file:
+        print("用法：python tools/scripts/latency_check.py --file <tb_latency 的 RESULT 输出文件>")
+        return 2
     recs = parse(a.file)
     if not recs:
         print("没有解析到 RESULT 行"); return 1
