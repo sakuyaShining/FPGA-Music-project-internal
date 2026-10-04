@@ -88,6 +88,9 @@ tools/scripts/check_video_timing.py
 tools/scripts/make_image_rom.py
 src/rtl/README.md
 tools/scripts/flash_sram.cmd
+src/rtl/i2c_master.v
+src/sim/mpr121_model.v
+src/sim/tb_i2c_master.v
 """
 
 PAT_A = re.compile(r"ZCode|DeepSeek|GLM|双代理|交接|会话恢复", re.I)
