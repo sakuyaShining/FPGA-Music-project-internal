@@ -68,9 +68,12 @@ tools/scripts/_*.py
 # 仓库整理/备份工具本身（与本作品的功能无关，且会暴露整理过程）
 tools/scripts/scan_traces.py
 tools/scripts/neutralize_comments.py
+tools/scripts/neutralize_docs.py
 tools/scripts/make_public.py
 tools/scripts/git_precheck.py
 tools/scripts/fix_gitignore.py
+# 图形界面自测报告：生成的调试产物（非源码）
+sim_build/gui/selftest_report.txt
 """
 
 PAT_A = re.compile(r"ZCode|DeepSeek|GLM|双代理|交接|会话恢复", re.I)

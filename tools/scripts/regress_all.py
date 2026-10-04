@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-regress_all.py —— 全项目一键回归门（双代理共同验收闸口）
+regress_all.py —— 全项目一键回归门
 
 【为什么要有它】
   两个代理共用一个工作区，最大风险是"一方改 RTL 时悄悄破坏另一方的已验证性质"。
   本脚本把快速自检串成一条命令，任何 RTL/脚本改动后：
       python tools/scripts/regress_all.py            # 快速门（约 2-4 分钟）
       python tools/scripts/regress_all.py --full     # 加 TDM 8掩码×双配置 扫描
-  全绿才算数 —— 这是《双代理任务板》的销账依据（R0 生命线）。
+  全绿才算数 —— 这是回归基线（R0 生命线）。
 
 【包含的套件】（文件清单以 2026-10-02 实测可用为准）
   01 additive   加法引擎 + Python≡RTL 逐位一致（synth_engine.py verify）
