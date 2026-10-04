@@ -1,0 +1,53 @@
+//=============================================================================
+// tangnano20k.cst —— Tang Nano 20K 物理引脚约束
+//
+// 作用：告诉工具"代码里的信号，对应芯片的哪个物理引脚"
+//       没有这个文件，代码编译得出来，但烧进板子不会有任何反应
+//
+// 语法（Gowin 专有，与 Vivado 的 .xdc 完全不同）：
+//   IO_LOC  "信号名" 引脚号;                           ← 绑定引脚
+//   IO_PORT "信号名" IO_TYPE=电平标准 PULL_MODE=上下拉;  ← 电气属性
+//
+// 注意：引脚号是【纯数字】的封装引脚编号，不是 Vivado 那种行列坐标（如 W5）
+//=============================================================================
+
+// ---- 板载 27 MHz 晶振 ----
+IO_LOC  "clk" 4;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// ---- 5 个板载单色 LED（共阳极，低电平点亮）----
+IO_LOC  "led[0]" 19;
+IO_PORT "led[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[1]" 18;
+IO_PORT "led[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[2]" 17;
+IO_PORT "led[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[3]" 16;
+IO_PORT "led[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[4]" 15;
+IO_PORT "led[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+//=============================================================================
+// 备用引脚（做后续开发时用，现在不需要，先注释掉）
+//=============================================================================
+// 板载按键 S1
+// IO_LOC  "key" 87;
+// IO_PORT "key" IO_TYPE=LVCMOS33 PULL_MODE=DOWN SINGLE_RESISTOR=ON;
+//
+// 板载按键 S2
+// IO_LOC  "rst" 88;
+// IO_PORT "rst" IO_TYPE=LVCMOS33 PULL_MODE=DOWN SINGLE_RESISTOR=ON;
+//
+// WS2812 RGB 灯（单线协议）
+// IO_LOC  "ws2812" 79;
+// IO_PORT "ws2812" IO_TYPE=LVCMOS33 DRIVE=8;
+//
+// ---- 音频通路（MAX98357A I2S DAC + 功放）----
+// IO_LOC  "PA_EN"  51;    // 功放使能，高电平有效
+// IO_LOC  "HP_DIN" 54;    // I2S 串行数据
+// IO_LOC  "HP_WS"  55;    // I2S 左右声道选择
+// IO_LOC  "HP_BCK" 56;    // I2S 位时钟
