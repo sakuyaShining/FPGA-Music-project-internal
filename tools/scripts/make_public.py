@@ -74,10 +74,17 @@ tools/scripts/git_precheck.py
 tools/scripts/fix_gitignore.py
 # 图形界面自测报告：生成的调试产物（非源码）
 sim_build/gui/selftest_report.txt
+# 赛事情报与学习路线：准备阶段的资料（大量引用 refs/ 下的第三方原文），
+# 不是本项目的工程产出，且这些引用在公开版里会全部失效
+docs/01-竞赛情报/
+docs/03-学习路线/
 """
 
 PAT_A = re.compile(r"ZCode|DeepSeek|GLM|双代理|交接|会话恢复", re.I)
 PAT_B = re.compile(r"任务板|挂账|销账|工单|认领|第\s*\d+\s*[轮次]")
+# 指向公开版中不存在路径的悬空引用（点进去 404，同时也是痕迹）
+PAT_C = re.compile(r"refs/|notes/|PROJECT_MEMORY|tools/pylib|素材库|"
+                   r"bringup_top|bringup_9k|image_rom|image_view|lcd_480x272|test_pattern")
 
 
 def git(*args, check=True):
@@ -140,8 +147,8 @@ def main():
     files = [f for f in git("ls-files").splitlines() if f.strip()]
     print("   公开版跟踪文件数 = %d" % len(files))
 
-    # 用同一把尺子复核剩余痕迹 ✓
-    a_hits, b_hits = [], []
+    # 用同一把尺子复核剩余痕迹
+    a_hits, b_hits, c_hits = [], [], []
     for f in files:
         p = os.path.join(ROOT, f)
         if not os.path.isfile(p) or os.path.splitext(f)[1].lower() not in (
@@ -155,13 +162,18 @@ def main():
             a_hits.append(f)
         if PAT_B.search(s):
             b_hits.append(f)
+        if PAT_C.search(s):
+            c_hits.append(f)
 
     print("[6] 痕迹复核（公开版）")
-    print("   身份痕迹(A) 剩余文件数 = %d" % len(a_hits))
+    print("   身份痕迹(A，协作方与工具名) 剩余文件数 = %d" % len(a_hits))
     for f in a_hits[:15]:
         print("       %s" % f)
     print("   工作流术语(B) 剩余文件数 = %d" % len(b_hits))
     for f in b_hits[:15]:
+        print("       %s" % f)
+    print("   悬空引用(C，指向公开版不存在的路径) 剩余文件数 = %d" % len(c_hits))
+    for f in c_hits[:15]:
         print("       %s" % f)
 
     git("commit", "-q", "-m", "公开版快照：移出内部过程材料，只保留作品本体")
