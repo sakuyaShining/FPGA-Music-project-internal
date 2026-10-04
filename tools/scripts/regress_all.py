@@ -91,6 +91,8 @@ def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_
         shutil.copy(os.path.join(BUILD, "_hex", "sine256.hex"), d)
     for h in extra_hex:
         shutil.copy(h, d)
+    # tb 文件归 sim，其余 rtl
+    srcs = []
     for f in files:
         p = sim(f) if f.startswith("tb_") else rtl(f)
         srcs.append(p)
