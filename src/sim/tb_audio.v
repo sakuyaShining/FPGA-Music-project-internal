@@ -176,8 +176,8 @@ module tb_audio;
             put_note(8'd64, 8'd1);   // E
             put_note(8'd62, 8'd2);   // D(2)
             wr_reg(8'h73, 8'd8);               // 步数 = 8
-            // 使能 + 用下载曲谱（SEQ_CTRL[0]=使能, [2]=用 RAM 曲谱）
-            wr_reg(8'h50, 8'h05);
+            // 使能定序器（A6：SCORE_LEN>0 即用下载曲谱，无需额外位）
+            wr_reg(8'h50, 8'h01);               // A6：不写曲谱源位，靠 SCORE_LEN>0
             // 帧数：FX_CTRL/REV_FB/REV_DAMP(3) + TEMPO_INC(3) + SEQ_VEL(1)
             //      + SCORE_IDX(1) + 8×2(音高/拍数) + SCORE_LEN(1) + SEQ_CTRL(1) = 26 帧
             //  与 `python tools/scripts/dsp_host.py --dry demo-score` 输出的字节流完全一致

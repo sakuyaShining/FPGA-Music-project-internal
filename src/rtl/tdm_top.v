@@ -325,7 +325,7 @@ module tdm_top (
     wire [7:0]  r_seqvel  = R[8'h54*8 +: 8];
     wire        seq_en    = r_seqctrl[0];
     wire        seq_hold  = r_seqctrl[1];
-    wire        seq_useram= r_seqctrl[2];    // E8：0 = 内置曲谱, 1 = 下载曲谱
+    wire        seq_useram= (R[8'h73*8 +: 6] != 6'd0);   // 修正案 A6：SCORE_LEN>0 即用下载曲谱
 
     //-------------------------------------------------------------------------
     // E8 的 FPGA 侧：UART 发送 + 寄存器回读 + 曲谱下载

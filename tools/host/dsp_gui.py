@@ -795,7 +795,7 @@ class MainWindow(QMainWindow):
         if enable:
             # SEQ_CTRL=0x05：bit0 使能 + bit2 使用下载曲谱（RTL 现行语义；
             #   冻结文档 A6 与此有分歧，GUI 跟随 RTL/CLI 同款写法）
-            f.w("SEQ_CTRL", 0x05, "使能定序器 + 使用下载曲谱")
+            f.w("SEQ_CTRL", 0x01, "使能定序器（A6：SCORE_LEN>0 即用下载曲谱）")
         return f
 
     def seq_download(self):

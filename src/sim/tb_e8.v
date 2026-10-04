@@ -144,7 +144,7 @@ module tb_e8;
             // 力度
             send_byte(8'h54); send_byte(8'h80);
             // 使能 + 用下载曲谱
-            send_byte(8'h50); send_byte(8'h05);
+            send_byte(8'h50); send_byte(8'h01);   // A6 判据：只写使能位，曲谱源由 SCORE_LEN 决定
             // 逐样本记录 LED 指引（内部信号够用：cur_note 就是"该弹哪个音"）
             for (ns = 0; ns < 12000; ns = ns + 1) begin
                 @(posedge clk);

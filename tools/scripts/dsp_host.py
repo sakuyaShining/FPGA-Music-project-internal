@@ -50,7 +50,7 @@ REG = {
     "CHORUS_DEPTH": 0x46,     # 16 位小端；默认 64
     "RV_FB":        0x48,
     "RV_DAMP":      0x49,
-    "SEQ_CTRL":     0x50,     # RTL 现行语义：[0]使能 [1]保持 [2]=用下载曲谱（写 0x05）
+    "SEQ_CTRL":     0x50,     # 修正案 A6：[0]使能 [1]保持；曲谱源由 SCORE_LEN 决定（写 0x01）
                               #   分歧：冻结文档 A6 写"SCORE_LEN>0 自动启用"。
                               #   实现与文档二选一，未定稿前上位机跟随 RTL（0x05）。
     "TEMPO":        0x51,     # 24 位小端 = 每拍时钟数（不是 BPM！）
@@ -194,7 +194,7 @@ def cmd_demo_score(bpm=171.4, vel=0xC0):
           % (bpm, tempo_inc(bpm)))
     f.w("SEQ_VEL", vel, "力度 0xC0")
     f.score(DEMO_SCORE)
-    f.w("SEQ_CTRL", 0x05, "使能定序器 + 使用下载曲谱")
+    f.w("SEQ_CTRL", 0x01, "使能定序器（A6：SCORE_LEN>0 即用下载曲谱）")
     return f
 
 
