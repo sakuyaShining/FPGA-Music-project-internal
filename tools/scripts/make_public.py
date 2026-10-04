@@ -187,7 +187,8 @@ def main():
     git("commit", "-q", "-m", "公开版快照：移出内部过程材料，只保留作品本体")
     print("[7] 已提交：%s" % git("log", "--oneline", "-1").strip())
     print("    现在可：git push <公开仓库> %s:main" % a.branch)
-    print("    回到主线：git checkout main")
+    print("    已自动切回主线（避免后续提交误落在快照分支上）")
+    git("checkout", "main")
     return 0
 
 
