@@ -56,7 +56,7 @@ def need(mod, pkg=None):
 
 
 def main():
-    # 本机 pip 曾因【Windows 系统协作指向一个不存在的协作】而全部失败
+    # 本机 pip 曾因【Windows 系统代理指向一个不存在的代理】而全部失败
     #   （报 ProxyError / getaddrinfo failed），而 NO_PROXY=* 可以绕过
     #   —— 实测有效：pyserial 用这一条装上了 。放在最前面，免得每次都要手工设
     os.environ.setdefault("NO_PROXY", "*")

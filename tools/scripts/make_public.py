@@ -78,6 +78,8 @@ sim_build/gui/selftest_report.txt
 # 不是本项目的工程产出，且这些引用在公开版里会全部失效
 docs/01-竞赛情报/
 docs/03-学习路线/
+docs/02-技术方案/07-候选架构方案-v1.md
+docs/02-技术方案/09-第一次烧录bring-up指南.md
 """
 
 PAT_A = re.compile(r"ZCode|DeepSeek|GLM|双代理|交接|会话恢复", re.I)

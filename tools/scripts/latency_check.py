@@ -2,7 +2,7 @@
 """
 latency_check.py —— E5（控制→输出延迟）判据脚本
 
-输入：refs/素材库/步骤8_延迟证据/原始测量.txt（由 tb_latency 的 RESULT 行汇总）
+输入：（由 tb_latency 的 RESULT 行汇总）
 
 【判据】
    L1 可复现性：同一相位跑两遍，**逐拍完全相同**（这就是"无抖动"的证据）
@@ -12,7 +12,7 @@ latency_check.py —— E5（控制→输出延迟）判据脚本
    L4 组号依赖有界：t_load 随组号变化，但始终 ≤ 1 个样本周期 + 固定项
 
 用法：
-   python tools/scripts/latency_check.py --file refs/素材库/步骤8_延迟证据/原始测量.txt
+ python tools/scripts/latency_check.py --file
 """
 import argparse
 import re
@@ -35,7 +35,7 @@ def parse(path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--file", default="refs/素材库/步骤8_延迟证据/原始测量.txt")
+ ap.add_argument("--file", default="")
     ap.add_argument("--limit-ms", type=float, default=0.2)
     a = ap.parse_args()
 

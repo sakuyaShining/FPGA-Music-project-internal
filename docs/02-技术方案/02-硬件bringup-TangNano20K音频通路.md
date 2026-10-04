@@ -1,6 +1,6 @@
 # Tang Nano 20K 音频通路 bring-up 笔记
 
-> 来源：Sipeed 官方例程 `github.com/sipeed/TangNano-20K-example` 的 `audio/` 目录（已下载到 `refs/vendor-examples/tang20k-audio/`）
+> 来源：Sipeed 官方例程 `github.com/sipeed/TangNano-20K-example` 的 `audio/` 目录
 > 板卡：Tang Nano 20K（GW2AR-LV18QN88C8/I7）
 
 ---

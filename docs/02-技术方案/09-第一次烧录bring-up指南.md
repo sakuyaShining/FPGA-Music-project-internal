@@ -50,10 +50,10 @@
 
 | 文件 | 说明 |
 |---|---|
-| `src/rtl/bringup_top.v` | 顶层：把 PLL、视频时序、测试图案、LED 拼起来 |
+| - | 顶层：把 PLL、视频时序、测试图案、LED 拼起来 |
 | `src/rtl/gowin_rpll.v` | rPLL 包装：27 MHz → 像素时钟 |
 | `src/rtl/video_timing.v` | 480×272 行场时序发生器 |
-| `src/rtl/test_pattern.v` | 测试图案（彩条 + 边框 + 二进制计数条） |
+| - | 测试图案（彩条 + 边框 + 二进制计数条） |
 | `src/rtl/led_heartbeat.v` | LED 心跳 / 计数器 |
 | `src/constr/bringup_top.cst` | 引脚约束（全部取自 Sipeed 官方例程） |
 | `src/gowin/bringup_9k/bringup_9k.gprj` | Gowin 工程文件 |
@@ -63,9 +63,9 @@
 
 | 文件 | 用途 |
 |---|---|
-| `refs/vendor-examples/tang9k-official/step1_led/9K_LED_project.fs` | 只测 LED。**建议第一个烧这个** |
-| `refs/vendor-examples/tang9k-official/step2_lcd43/Tang_nano_9K_LCD.fs` | 官方 4.3 屏例程。验证板子+屏+线的组合是好的 |
-| `refs/vendor-examples/tang9k-official/step2_lcd43/src/` | 上述例程的官方源码（对照用） |
+| - | 只测 LED。**建议第一个烧这个**|
+| - | 官方 4.3 屏例程。验证板子+屏+线的组合是好的 |
+| - | 上述例程的官方源码（对照用） |
 
 ### 工具
 
@@ -232,7 +232,7 @@ fCLKOUT = fCLKIN × fbdiv_sel / idiv_sel
 | 9K lcd_led | 4 | 23 | 4 | 129.6 MHz → CLKOUTD(÷4)=**32.4 MHz** | 注释说 33.33 MHz ✓，VCO=518.4 ✓ |
 
 **证据文件**（未改动，可随时对照）：
-`refs/vendor-examples/tang9k-official/step2_lcd43/src/gowin_rpll/{gowin_rpll.ipc, gowin_rpll.mod}`
+
 
 > ⚠️ **必须纠正的一条旧结论**：项目早期记的"20K 音频例程 PLL 输出 6 MHz"是**错的**。
 > 该例程参数为 `IDIV_SEL=5 / FBDIV_SEL=0`，按正确公式是 `27 × 1 / 6 = **4.5 MHz**`。
@@ -345,7 +345,7 @@ python tools\scripts\check_video_timing.py
 
 - [x] 完成第一次烧录 —— ✅ 成功，且**全链路验证通过**（详见第十节）
 - [x] **Phase 0**：核对 rPLL 实际输出频率 —— ✅ 已彻底解决，**9 MHz**（见第五节，含公式推导 + 三组官方例程交叉验证）
-- [x] 把 4.3 屏显示通路沉淀成可复用模块 —— ✅ 已抽出 `src/rtl/lcd_480x272.v`，接口契约见 `src/rtl/README.md`
+- [x] 把 4.3 屏显示通路沉淀成可复用模块 —— ✅ 已抽出 ，接口契约见 `src/rtl/README.md`
 
 **仍待办**
 
@@ -423,14 +423,14 @@ FPGA 空片时 IO 浮空/弱上拉 → RGB 数据线全被拉高 = 全 1 → 面
 本轮曾根据用户拍的屏幕照片量出"色条顺序反了"，据此误判画面被镜像，白做了一轮实验。
 **实际是照片本身被镜像/旋转了**（手机前置摄像头会自动镜像，或照片存储时被转 180°）。
 正确做法：**在画面上放两个不可能认错的标记**（左上大黑方块 + 右下小白方块），
-让人的眼睛直接判定。`test_pattern.v` 的 `MARKERS` 参数就是干这个的（默认关闭）。
+让人的眼睛直接判定。 的 `MARKERS` 参数就是干这个的（默认关闭）。
 `(x,y)` 平面上的四种变换（正常 / 水平镜像 / 垂直翻转 / 旋转180°）会被两个方块的位置唯一区分。
 
 **坑 7：组合逻辑与寄存信号混用会错 1 拍。**
-改造前的 `test_pattern.v` 用**寄存后的 `de`** 去门控**组合逻辑算出的颜色**——
+改造前的 用**寄存后的 `de`**去门控**组合逻辑算出的颜色**——
 两者相差 1 拍，有效区边缘错 1 个像素（只差 1 像素又在边缘，肉眼看不出来，但确实是错的）。
 修法：`video_timing.v` 同时输出组合版 `de_comb`，图案模块必须用它。
-重构后打拍收在 `lcd_480x272.v` 一处，客户模块只写纯组合逻辑，**这类错从结构上不可能再发生**。
+重构后打拍收在 一处，客户模块只写纯组合逻辑，**这类错从结构上不可能再发生**。
 
 **坑 8：Windows 设备「问题代码 28」的排查路径。**
 FTDI 驱动明明在驱动仓库里（且 WHQL 签名正常），设备却停在 Code 28（`CM_PROB_FAILED_INSTALL`）。
@@ -476,12 +476,12 @@ C:\Windows\INF\setupapi.dev.log      ← 逐条记录 INF 段落安装、服务�
 ## 十一、图片显示功能（2026-09-21 上板验证通过）
 
 把电脑里的一张图片显示到屏上。**这正是第十节那个"可复用调试显示模块"的第一个真实客户**，
-`lcd_480x272.v` 一行都没改（除了修坐标 bug），只新增了两个模块：
+ 一行都没改（除了修坐标 bug），只新增了两个模块：
 
 | 文件 | 作用 |
 |---|---|
-| `src/rtl/image_rom.v` | 图片像素 ROM，`$readmemb` 加载，综合后占 **24/26 块 BSRAM** |
-| `src/rtl/image_view.v` | 把 8 色索引还原成 RGB565 |
+| - | 图片像素 ROM，`$readmemb` 加载，综合后占**24/26 块 BSRAM**|
+| - | 把 8 色索引还原成 RGB565 |
 | `tools/scripts/make_image_rom.py` | 图片 → 索引数据的转换脚本（可复现） |
 
 ### 硬约束：为什么只有 8 色

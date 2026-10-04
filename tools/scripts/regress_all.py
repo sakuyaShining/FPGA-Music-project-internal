@@ -4,7 +4,7 @@
 regress_all.py —— 全项目一键回归门
 
 【为什么要有它】
-  两个代理共用一个工作区，最大风险是"一方改 RTL 时悄悄破坏另一方的已验证性质"。
+  单一工作区并行改动的最大风险，是一处修改悄悄破坏另一处已验证的性质。
   本脚本把快速自检串成一条命令，任何 RTL/脚本改动后：
       python tools/scripts/regress_all.py            # 快速门（约 2-4 分钟）
       python tools/scripts/regress_all.py --full     # 加 TDM 8掩码×双配置 扫描
