@@ -18,7 +18,7 @@ regmap_dump.py —— 寄存器地址表的【单一事实源】抽取器 + 对�
     python tools/scripts/regmap_dump.py --write-csv     # 把当前表写成基线（冻结时做一次）
     python tools/scripts/regmap_dump.py --check         # 与基线 CSV 对账，不一致则退出码 1
 
-  冻结后的规矩（建议写进任务板）：
+  冻结后的规矩：
     · 任何一方要动地址 ⇒ 先改 RTL + 更新基线 CSV ⇒ 跑 --check 绿 ⇒ 双方知会 ⇒ 用户点头
     · 协议文档不手抄地址，只写"以 regmap_dump.py --dump 的输出为准"
 """

@@ -390,7 +390,7 @@ def main():
         nfail += 0 if ok else 1
     print("=" * 64)
     print(" %d/%d 通过%s" % (len(results) - nfail, len(results),
-                             "" if nfail == 0 else "  —— 存在失败，禁止销账/上板"))
+                             "" if nfail == 0 else "  —— 存在失败，不满足上板条件"))
     return 1 if nfail else 0
 
 

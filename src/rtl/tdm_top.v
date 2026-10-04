@@ -193,7 +193,7 @@ module tdm_top (
                     6'd18: begin b_addr <= 8'h51; b_data <= 8'h7C; end // TEMPO_INC = 636
                     6'd19: begin b_addr <= 8'h52; b_data <= 8'h02; end //   (0x027C ≈ 120 BPM)
                     6'd20: begin b_addr <= 8'h53; b_data <= 8'h00; end
-                    6'd21: begin b_addr <= 8'h48; b_data <= 8'h80; end // REV_FB = 0x80 (0.5) ★ 第 9 轮：0xC0 会让线缓冲饱和削顶（实测 91.9% ✗）
+                    6'd21: begin b_addr <= 8'h48; b_data <= 8'h80; end // REV_FB = 0x80 (0.5) 0xC0 会让线缓冲饱和削顶（实测 91.9% 的样本被限幅）
                     6'd22: begin b_addr <= 8'h49; b_data <= 8'h03; end // REV_DAMP = 3
                     6'd23: begin b_addr <= 8'h54; b_data <= 8'h80; end // SEQ_VEL = 128
                     // 步③：塑谱模式显式上电默认 = 0x02（bit1 自动刷新开、bit0=0 叠加）
