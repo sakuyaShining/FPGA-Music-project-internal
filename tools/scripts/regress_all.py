@@ -54,39 +54,43 @@ def run(cmd, cwd, timeout=600, env_extra=None):
     env["PYTHONIOENCODING"] = "utf-8"
     if env_extra:
         env.update(env_extra)
-    p = subprocess.run(cmd, cwd=cwd, env=env, timeout=timeout,
-                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    try:
+        p = subprocess.run(cmd, cwd=cwd, env=env, timeout=timeout,
+                           stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    except subprocess.TimeoutExpired as e:
+        # 2026-10-04 审计 P1：超时必须变成"该套件标红"，不能让整个闸口崩成
+        #   traceback（原来无捕获，一个仿真挂死 = 门本身崩，掩盖失败原因）。
+        #   返回 rc=None + 日志带 [TIMEOUT]，各 rc!=0 分支自然处理。
+        out = (e.stdout or b"").decode("utf-8", errors="replace")
+        return None, "[TIMEOUT] %ds\n%s" % (timeout, out[-2000:])
     return p.returncode, p.stdout.decode("utf-8", errors="replace")
+
+
+def rmtree_ok(d):
+    """删除目录；遇锁重试（本机常驻监视进程会持有产物句柄）；
+    仍删不掉就容忍继续 —— 绝不让文件锁把闸口弄崩（判据按内容自行判断）。"""
+    for _try in range(10):
+        try:
+            shutil.rmtree(d)
+            return True
+        except OSError:
+            time.sleep(0.5)
+    print("  [warn] 目录被占用，跳过清空：%s" % d)
+    return False
 
 
 def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_hex=()):
     """在 sim_build/regress/<name>/ 里编译并运行一个测试台，返回 stdout"""
     d = os.path.join(BUILD, name)
     # 每次清空运行目录：判据脚本读目录下的产物文件，残留旧代产物会污染判据
-    #   2026-10-03（本项目，(本次)）：加"遇锁容忍 + 重试" →
-    #     本机常驻有工作区监视进程（实测 复核 有 16 个进程在跑），它会**持续**
-    #     持有 sim_build/regress/*/rc_*.txt 的句柄 ⇒ 原来的 shutil.rmtree 直接抛
-    #     PermissionError(WinError 32) ⇒ **整个闸口崩掉** ，看起来像"套件失败" 。
-    #     修法：重试若干次；仍删不掉就**继续**（残留产物由判据脚本自己按 mtime/内容判断，
-    #     下一轮也会再试），绝不让文件锁把闸口弄崩 。
+    #   （遇锁重试机制见 rmtree_ok 的注释，2026-10-03 遇 PermissionError 教训）
     if os.path.isdir(d):
-        for _try in range(10):
-            try:
-                shutil.rmtree(d)
-                break
-            except OSError:
-                time.sleep(0.5)
-        else:
-            print("  [warn] 目录被占用，跳过清空：%s" % d)
+        rmtree_ok(d)
     os.makedirs(d, exist_ok=True)
     if need_hex:
         shutil.copy(os.path.join(BUILD, "_hex", "sine256.hex"), d)
     for h in extra_hex:
         shutil.copy(h, d)
-    srcs = [rtl(f) if f.endswith(".v") and os.path.isfile(rtl(f)) else
-            (sim(f) if f.startswith("tb_") else f) for f in files]
-    # tb 文件归 sim，其余 rtl
-    srcs = []
     for f in files:
         p = sim(f) if f.startswith("tb_") else rtl(f)
         srcs.append(p)
@@ -229,6 +233,10 @@ def main():
 
     # 01 additive（先跑：产出 sine256.hex 供其它套件复制）
     d1 = os.path.join(BUILD, "01_additive")
+    #   2026-10-04 审计 P2：本目录原先只建不清 —— 与"残留产物污染判据"的自定
+    #   原则不一致，补齐（它产出的 hex 会被覆盖，清空安全）。
+    if os.path.isdir(d1):
+        rmtree_ok(d1)
     os.makedirs(d1, exist_ok=True)
     rc, log = run([sys.executable, os.path.join(ROOT, "tools", "scripts", "additive_tool.py"),
                    "gen", "--outdir", d1], BUILD)
@@ -327,7 +335,7 @@ def main():
     # 10 fx（三个测试：0=延迟 1=合唱 2=混响[2026-10-02 加入]；判据脚本读全部产物）
     d = os.path.join(BUILD, "10_fx")
     if os.path.isdir(d):
-        shutil.rmtree(d)
+        rmtree_ok(d)
     os.makedirs(d, exist_ok=True)
     rc, log = run([os.path.join(IV, "iverilog.exe"), "-g2005", "-DSIM_INIT", "-o", "fx.vvp",
                    "-s", "tb_fx", rtl("fx_delay.v"), sim("tb_fx.v")], d)
@@ -350,7 +358,7 @@ def main():
         # 12 F1：TDM 测试模式 512 谱栅格（约 8 分钟仿真；判据见 21 号移交清单 §3）
         d = os.path.join(BUILD, "12_f1")
         if os.path.isdir(d):
-            shutil.rmtree(d)
+            rmtree_ok(d)
         os.makedirs(d, exist_ok=True)
         synth_hex = os.path.join(ROOT, "src", "gowin", "tdm_synth")
         for h in ("sine256.hex", "note_inc.hex", "preset_part.hex", "recip_inc.hex"):
@@ -391,6 +399,18 @@ def main():
     print("=" * 64)
     print(" %d/%d 通过%s" % (len(results) - nfail, len(results),
                              "" if nfail == 0 else "  —— 存在失败，不满足上板条件"))
+    # 结果落盘（2026-10-04 审计 P1："全绿"声明必须可复核，不能只活在 git 提交一句话里）
+    rpt = os.path.join(ROOT, "sim_build", "regress_result.txt")
+    try:
+        with open(rpt, "w", encoding="utf-8-sig") as fh:
+            fh.write("回归门结果：%s 配置  %s\n" % (
+                "全量 --full" if args.full else "快速门",
+                time.strftime("%Y-%m-%d %H:%M:%S")))
+            for name, ok, msg in results:
+                fh.write("  %s  %-18s %s\n" % ("PASS" if ok else "FAIL", name, msg))
+            fh.write("  => %d/%d 通过\n" % (len(results) - nfail, len(results)))
+    except OSError:
+        pass
     return 1 if nfail else 0
 
 
