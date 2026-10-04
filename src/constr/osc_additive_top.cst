@@ -1,0 +1,61 @@
+//=============================================================================
+// osc_additive_top.cst —— 综合顶层的引脚约束
+// 板卡：Tang Nano 20K (GW2AR-LV18QN88C8/I7)
+//
+// 引脚号取自 Sipeed 官方例程（已验证）：
+//   clk     = 4    板载 27 MHz 晶振
+//   led[0..4] = 19,18,17,16,15   板载 5 个单色 LED（共阳极，低电平点亮）
+//   rst_n   = 87   板载按键 S1（按下为低）
+//=============================================================================
+
+// ---- 27 MHz 时钟 ----
+IO_LOC  "clk" 4;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// ---- 板载按键 S1 作复位（按下拉低）----
+IO_LOC  "rst_n" 87;
+IO_PORT "rst_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// ---- 板载按键 S2 作演奏门（按下起音，松开释放）----
+//   ★ 这是 M7/F2「包络控制」在现场可操控的那根线：按住 S2 发声、松开收声。
+IO_LOC  "key" 88;
+IO_PORT "key" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// ---- 5 个板载 LED ----
+IO_LOC  "led[0]" 19;
+IO_PORT "led[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[1]" 18;
+IO_PORT "led[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[2]" 17;
+IO_PORT "led[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[3]" 16;
+IO_PORT "led[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[4]" 15;
+IO_PORT "led[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+// ---- 板载 MAX98357A I2S DAC + 功放（引脚号来自 refs 官方例程，已验证）----
+IO_LOC  "pa_en"   51;
+IO_PORT "pa_en"   IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "dac_din" 54;
+IO_PORT "dac_din" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "dac_ws"  55;
+IO_PORT "dac_ws"  IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "dac_bck" 56;
+IO_PORT "dac_bck" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+// 注：test[3:0] 故意不约束，让工具自动分配到可用引脚。
+//     它们的作用是"让信号被真正使用"，防止综合器把整个设计优化掉。
+//     下一步接 I2S 时，o_lrck/o_bck 会正式约束到 MAX98357A 的引脚
+//     （HP_WS=55 / HP_BCK=56 / HP_DIN=54 / PA_EN=51，见 tangnano20k.cst）。
+
+// ---- 串口接收（两字节一帧：地址 + 数据）----
+// 暂不指定具体引脚（需对照 Tang Nano 20K 原理图确认 BL616 的串口引脚），
+// 但开内部上拉：引脚悬空时读到高电平 = UART 空闲，不会误触发写。
+IO_PORT "uart_rx" IO_TYPE=LVCMOS33 PULL_MODE=UP;

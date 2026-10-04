@@ -1,0 +1,144 @@
+/* =============================================================================
+   theme.qss —— 上位机界面主题（Qt 样式表，语法接近 CSS ✓）
+   改这个文件就能整体换肤 ✓；界面代码里不写死颜色。
+   配色：深色底 + 青(强调) + 琥珀(次要) + 绿/红(判定)
+   ============================================================================= */
+
+QWidget {
+    background: #14161b;
+    color: #d8dee9;
+    font-family: "Microsoft YaHei UI", "Segoe UI", "Noto Sans CJK SC", sans-serif;
+    font-size: 13px;
+}
+
+QMainWindow, QDialog { background: #14161b; }
+
+/* ---- 卡片 ---- */
+QFrame#Card {
+    background: #1b1e25;
+    border: 1px solid #262b34;
+    border-radius: 10px;
+}
+QFrame#Card > QLabel#CardTitle {
+    color: #8b98a8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0 0 2px 0;
+}
+
+/* ---- 顶栏 ---- */
+QFrame#TopBar {
+    background: #1b1e25;
+    border-bottom: 1px solid #262b34;
+}
+
+/* 模式徽标：真实串口(绿) / 模拟设备(琥珀) —— 必须一眼可分 ✗ */
+QLabel#BadgeReal {
+    background: #14352a; color: #4ee39b; border: 1px solid #1f6b4f;
+    border-radius: 9px; padding: 2px 10px; font-weight: bold;
+}
+QLabel#BadgeSim {
+    background: #3a2f14; color: #f0c46a; border: 1px solid #6b551f;
+    border-radius: 9px; padding: 2px 10px; font-weight: bold;
+}
+QLabel#BadgeOff {
+    background: #262b34; color: #8b98a8; border: 1px solid #333a45;
+    border-radius: 9px; padding: 2px 10px; font-weight: bold;
+}
+
+/* 字节率数字（等宽，跳动时不抖 ✓） */
+QLabel#Ticker {
+    color: #35d0ba; font-family: Consolas, "Cascadia Mono", monospace;
+    font-size: 13px; font-weight: bold;
+}
+
+/* ---- 按钮 ---- */
+QPushButton {
+    background: #232833; border: 1px solid #333a45;
+    border-radius: 7px; padding: 6px 14px; color: #d8dee9;
+}
+QPushButton:hover    { background: #2b3140; border-color: #3d4654; }
+QPushButton:pressed  { background: #1d222b; }
+QPushButton:disabled { color: #6b7381; background: #1b1e25; border-color: #262b34; }
+
+QPushButton#Primary {
+    background: #1d6f63; border-color: #2a9c8b; color: #eafff9; font-weight: bold;
+}
+QPushButton#Primary:hover { background: #248578; }
+QPushButton#Danger {
+    background: #6f2b2b; border-color: #9c3a3a; color: #ffecec; font-weight: bold;
+}
+QPushButton#Danger:hover { background: #853434; }
+
+/* 琴键：白键 / 黑键 —— 用 Qt 的 property 选择器（见 gui 里的 setProperty） */
+QPushButton[white="true"] {
+    background: #e8eaee; color: #1b1e25; border: 1px solid #b9bec7;
+    border-radius: 4px; font-weight: bold; min-width: 34px; min-height: 62px;
+}
+QPushButton[white="true"]:pressed { background: #35d0ba; }
+QPushButton[white="false"] {
+    background: #23262e; color: #d8dee9; border: 1px solid #0d0f13;
+    border-radius: 4px; font-weight: bold; min-width: 26px; min-height: 40px;
+}
+QPushButton[white="false"]:pressed { background: #2a9c8b; }
+
+/* ---- 下拉框 / 输入 ---- */
+QComboBox {
+    background: #232833; border: 1px solid #333a45;
+    border-radius: 7px; padding: 5px 10px; min-width: 110px;
+}
+QComboBox:hover { border-color: #3d4654; }
+QComboBox QAbstractItemView {
+    background: #1b1e25; border: 1px solid #333a45; selection-background-color: #1d6f63;
+}
+
+/* ---- 表格（寄存器表）---- */
+QTableWidget {
+    background: #1b1e25; alternate-background-color: #191c22;
+    gridline-color: #262b34; border: none; border-radius: 8px;
+    selection-background-color: #1d6f63; selection-color: #eafff9;
+}
+QHeaderView::section {
+    background: #20242c; color: #8b98a8; border: none;
+    border-bottom: 1px solid #2c323c; padding: 5px 8px; font-weight: bold;
+}
+QTableWidget::item { padding: 3px 6px; }
+
+/* ---- 滑条（塑谱 / 力度）---- */
+QSlider::groove:horizontal {
+    height: 6px; background: #262b34; border-radius: 3px;
+}
+QSlider::sub-page:horizontal { background: #1d6f63; border-radius: 3px; }
+QSlider::handle:horizontal {
+    width: 14px; margin: -5px 0; border-radius: 7px;
+    background: #35d0ba; border: 1px solid #14161b;
+}
+QSlider::handle:horizontal:hover { background: #5ce0cc; }
+
+/* 竖向滑条（16 个泛音）*/
+QSlider::groove:vertical { width: 6px; background: #262b34; border-radius: 3px; }
+QSlider::add-page:vertical { background: #1d6f63; border-radius: 3px; }
+QSlider::handle:vertical {
+    height: 12px; margin: 0 -5px; border-radius: 6px;
+    background: #35d0ba; border: 1px solid #14161b;
+}
+
+/* ---- 复选 / 日志 ---- */
+QCheckBox { spacing: 6px; }
+QCheckBox::indicator {
+    width: 15px; height: 15px; border-radius: 4px;
+    border: 1px solid #3d4654; background: #232833;
+}
+QCheckBox::indicator:checked { background: #35d0ba; border-color: #35d0ba; }
+
+QPlainTextEdit {
+    background: #101216; border: 1px solid #262b34; border-radius: 8px;
+    font-family: Consolas, "Cascadia Mono", monospace; font-size: 12px;
+    color: #9fb0c0;
+}
+
+QStatusBar { background: #1b1e25; color: #8b98a8; border-top: 1px solid #262b34; }
+QToolTip {
+    background: #232833; color: #d8dee9; border: 1px solid #3d4654; padding: 4px 8px;
+}

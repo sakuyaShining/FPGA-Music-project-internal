@@ -1,0 +1,82 @@
+# =============================================================================
+#  .gitignore - FPGA-Music-project
+#
+#  原则：只传源与证据，不传可再生成的产物。
+#    - 源码本体其实只有 ~6 MB（src 去掉 impl/ + tools 去掉产物）
+#    - 不排除的话仓库会到 400+ MB（exe 37 MB / VCD 23 MB / 码流 7 MB ...）
+#
+#  ★ 特别提醒：src/gowin/tdm_synth/*.hex 是【综合用的静态表】
+#    （音高表 note_inc / 预设泛音表 preset_part / 倒数表 recip_inc）
+#    **必须进仓库** —— 少了它们，clone 下来根本编不过。
+#    所以【绝不能】写全局 `*.hex`，只排除 sim_build 里的副本。
+#
+#  ★ 验证方法（可证伪）：
+#      git check-ignore -v src/gowin/impl/pnr/led_blink.log
+#    打印出规则与行号 = 命中 ✓；无输出 = 漏网 ✗
+# =============================================================================
+
+# ---- 1. Gowin 综合/布局布线产物（可再生成）----
+#   ★ 必须用 ** 匹配任意深度：`src/gowin/*/impl/` 只匹配一层子目录，
+#     会漏掉 `src/gowin/impl/`（led_blink 工程的产物）—— 实测漏进 401 个文件里。
+src/gowin/**/impl/
+src/gowin/impl/
+src/gowin/*/impl/
+*.fs
+*.vg
+*.db
+*.log
+*.prj
+*.rsc.xml
+*.bin
+*.binx
+*.timing_paths
+*.rpt.txt
+*.rpt.html
+*.pin.html
+*.power.html
+*.tr.html
+
+# ---- 2. 仿真产物（体积大，且可重跑）----
+#   先排除 sim_build 下的一切，再【放行目录】（gitignore 规则：
+#   父目录被排除时无法再放行子文件，所以必须放行目录本身）
+sim_build/*
+!sim_build/audio/
+!sim_build/show/
+!sim_build/gui/
+sim_build/audio/*.txt
+sim_build/show/*.txt
+sim_build/show/*.hex
+*.vcd
+*.vvp
+*.out
+*.lxt
+*.lxt2
+
+# ---- 3. PyInstaller / Python 产物 ----
+tools/host/build/
+tools/host/dist/
+*.spec
+__pycache__/
+*.pyc
+*.pyo
+
+# ---- 4. 旧快照与临时文件 ----
+#   backups/ 是 2026-10-01 的整目录快照（88 MB，含重复源码）。
+#   想要整目录备份请用云盘/移动硬盘，不要塞进 git。
+backups/
+*.tmp
+*.bak
+*~
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# ---- 5. 第三方参考资料（36+ MB，非本项目产出）----
+#   竞赛官方/往年/官网存档属于别人的资料，不适合放进作品仓库。
+refs/_site-archive/
+refs/candidate-guides/
+refs/past-years/
+refs/official-notices/
+refs/report-template/
+refs/vendor-examples/

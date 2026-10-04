@@ -1,0 +1,167 @@
+//=============================================================================
+// tdm_top.cst -- Physical constraints for Tang Nano 20K (TDM synth top)
+//-----------------------------------------------------------------------------
+// Board : Sipeed Tang Nano 20K
+// FPGA  : GW2AR-LV18QN88C8/I7
+//
+// *** RULE: every pin number below is copied from a Sipeed official example. ***
+//     Nothing here is guessed. Sources (all fetched 2026-10-01):
+//       audio/src/audio.cst        -> clk, rst, PA_EN, HP_DIN, HP_WS, HP_BCK
+//       uart/src/top.cst           -> uart_rx, uart_tx
+//       led/blink_leds/src/*.cst   -> leds[5:0]
+//       rgb_lcd/.../tang_nano_20K_LCD.cst -> the 40-pin header pins 27..42/48/77
+//     Repo: https://github.com/sipeed/TangNano-20K-example
+//
+// *** WHY THIS FILE MATTERS MORE THAN IT LOOKS ***
+//     With no constraint at all, Gowin's placer put the note-event inputs into
+//     whatever bank was free -- and the report showed LVCMOS18 on pins that
+//     landed on GLOBAL CLOCK sites (GCLKT_0/GCLKT_1/GCLKC_4).
+//     The 40-pin header is 3.3 V. Driving it into a 1.8 V bank can damage the
+//     FPGA. So: constrain everything, and state IO_TYPE explicitly.
+//
+// *** COMMENTS ARE ASCII-ONLY ON PURPOSE ***
+//     Gowin's constraint parser handles non-ASCII comments inconsistently
+//     across locales (recorded in bringup_top.cst). Keep it ASCII here.
+//
+// 3.3 V banks only. The LCD header pins below are LVCMOS33 in the official
+// LCD example, so 3.3 V sensors/signals are safe there.
+//=============================================================================
+
+
+//-----------------------------------------------------------------------------
+// Clock -- 27 MHz on-board crystal
+// Official: audio/src/audio.cst -> IO_LOC "clk" 4
+//-----------------------------------------------------------------------------
+IO_LOC  "clk" 4;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+//-----------------------------------------------------------------------------
+// Reset -- on-board button S1 (active low)
+// Official: audio/src/audio.cst uses rst = 87; uart/src/top.cst uses rst = 88.
+// Both are user buttons; audio example uses 87, so we use 87.
+//-----------------------------------------------------------------------------
+IO_LOC  "rst_n" 87;
+IO_PORT "rst_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+//-----------------------------------------------------------------------------
+// 6 mono LEDs -- COMMON ANODE, so a LOW output lights them.
+// Official: led/blink_leds/src/blink_leds.cst
+//     leds[5]=20  leds[4]=19  leds[3]=18  leds[2]=17  leds[1]=16  leds[0]=15
+// NOTE: our earlier cst had led[0..4] = 19,18,17,16,15 -- shifted by one and
+//       missing the 6th LED. Fixed here.
+//-----------------------------------------------------------------------------
+IO_LOC  "led[5]" 20;
+IO_PORT "led[5]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led[4]" 19;
+IO_PORT "led[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led[3]" 18;
+IO_PORT "led[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led[2]" 17;
+IO_PORT "led[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led[1]" 16;
+IO_PORT "led[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "led[0]" 15;
+IO_PORT "led[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+
+//-----------------------------------------------------------------------------
+// On-board MAX98357A I2S DAC + power amplifier
+// Official: audio/src/audio.cst
+//     PA_EN=51  HP_DIN=54  HP_WS=55  HP_BCK=56
+// Our mapping: dac_din=HP_DIN, dac_ws=HP_WS, dac_bck=HP_BCK, pa_en=PA_EN
+//-----------------------------------------------------------------------------
+IO_LOC  "pa_en"   51;
+IO_PORT "pa_en"   IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "dac_din" 54;
+IO_PORT "dac_din" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "dac_ws"  55;
+IO_PORT "dac_ws"  IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "dac_bck" 56;
+IO_PORT "dac_bck" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+
+//-----------------------------------------------------------------------------
+// Note-event interface -- TEST/DEBUG ONLY（A6 冻结条款）
+//
+//   ★ 2026-10-02 步③ 之后：出货顶层改为 **tdm_ship**（src/rtl/tdm_ship.v），
+//     它把 ev_*/preset/test_mode 在 RTL 里接成常量 ⇒ **这些端口根本不进网表** ✓
+//     ⇒ 本文件里不能再为它们写 IO_PORT（工具会报 CT1135 "Can't find object" ✗
+//       —— 实测正是这个报错，反证包装生效 ✓）
+//
+//   为什么必须这么做（"电脑能跑、上板跑不了"的典型）：
+//     端口留在顶层时，PnR 会把它们**自动分配到随机物理引脚**
+//     （实测落到 pin 84/82/52/49/48/26/83/25/63/10/86/85/11/13/53/57 ✗）。
+//     若其中任何一根在板上被别的器件驱动为高 ✗ ⇒ `ev_valid`/`ev_on` 读到 1
+//     ⇒ **幽灵音符事件** ✗✗ —— 仿真里完全看不出 ✓✗
+//
+//   音色与模式现在一律走寄存器：preset ← 0x37 + CTRL[3]；测试模式 ← CTRL[0] ✓
+//-----------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------
+// UART -- 运行时参数通道（2026-10-02 启用）
+// Official: uart/src/top.cst -> uart_rx = 70, uart_tx = 69, both LVCMOS33.
+// These come from the on-board BL616 USB-serial bridge.
+// 现在只用了 rx（两字节一帧：地址 + 数据）。tx 留到 E8 的"演奏录音回传"
+// 需要时再接（那时再启用 69）。
+//-----------------------------------------------------------------------------
+IO_LOC  "uart_rx_pin" 70;
+IO_LOC  "uart_tx_pin" 69;
+IO_PORT "uart_tx_pin" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_PORT "uart_rx_pin" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+//-----------------------------------------------------------------------------
+// ★ 步①b：16 路电容触摸电极（20 号规格书 §1）
+//   左手 pad[7:0]  = 音高键（五声音阶 C4 D4 E4 G4 A4 C5 D5 E5）
+//   右手 pad[15:8] = 泛音键（→ 0x5B HARM_PADS）
+//
+//   ★ PULL_MODE=DOWN 是**功能必需**，不是可选：RTL 推高充电后切高阻，
+//     靠这个内部下拉放电，放电到读 0 的**拍数**就是电容的度量 ✓
+//   ★ 全部 LVCMOS33（40P 排针在 3.3 V bank；1.8 V bank 会损坏 ✗）
+//   ★ 与 1.8V bank 的核对见 tools/scripts/cst_audit.py（PS6 判据）
+//-----------------------------------------------------------------------------
+IO_LOC  "pad[0]"  27;
+IO_LOC  "pad[1]"  28;
+IO_LOC  "pad[2]"  29;
+IO_LOC  "pad[3]"  30;
+IO_LOC  "pad[4]"  31;
+IO_LOC  "pad[5]"  32;
+IO_LOC  "pad[6]"  33;
+IO_LOC  "pad[7]"  34;
+IO_LOC  "pad[8]"  35;
+IO_LOC  "pad[9]"  36;
+IO_LOC  "pad[10]" 37;
+IO_LOC  "pad[11]" 38;
+IO_LOC  "pad[12]" 39;
+IO_LOC  "pad[13]" 40;
+IO_LOC  "pad[14]" 41;
+IO_LOC  "pad[15]" 42;
+
+IO_PORT "pad[0]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[1]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[2]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[3]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[4]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[5]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[6]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[7]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[8]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[9]"  IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[10]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[11]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[12]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[13]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[14]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_PORT "pad[15]" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+
+//-----------------------------------------------------------------------------
+// Still free on the header: 48, 77
+// Reserve them for v2（MPR121 I2C SDA/SCL，或八度切换键）
+//-----------------------------------------------------------------------------

@@ -1,0 +1,18 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="../../rtl/bringup_top.v"   type="file.verilog" enable="1"/>
+        <File path="../../rtl/lcd_480x272.v"   type="file.verilog" enable="1"/>
+        <File path="../../rtl/video_timing.v"  type="file.verilog" enable="1"/>
+        <File path="../../rtl/test_pattern.v"  type="file.verilog" enable="1"/>
+        <File path="../../rtl/image_view.v"    type="file.verilog" enable="1"/>
+        <File path="../../rtl/image_rom.v"     type="file.verilog" enable="1"/>
+        <File path="../../rtl/led_heartbeat.v" type="file.verilog" enable="1"/>
+        <File path="ip/gowin_rpll/gowin_rpll.v" type="file.verilog" enable="1"/>
+        <File path="../../constr/bringup_top.cst" type="file.cst" enable="1"/>
+    </FileList>
+</Project>

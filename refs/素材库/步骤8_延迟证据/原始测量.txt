@@ -1,0 +1,26 @@
+﻿### A. 相位扫描（0 号组，每相位两遍验证可复现）
+RESULT phase=0 prefill=0 t_smp=2052 t_pin=2807 t_load=1022
+RESULT phase=0 prefill=0 t_smp=2052 t_pin=2807 t_load=1022
+RESULT phase=96 prefill=0 t_smp=1956 t_pin=2711 t_load=926
+RESULT phase=96 prefill=0 t_smp=1956 t_pin=2711 t_load=926
+RESULT phase=192 prefill=0 t_smp=1860 t_pin=2615 t_load=830
+RESULT phase=192 prefill=0 t_smp=1860 t_pin=2615 t_load=830
+RESULT phase=288 prefill=0 t_smp=1764 t_pin=2519 t_load=734
+RESULT phase=288 prefill=0 t_smp=1764 t_pin=2519 t_load=734
+RESULT phase=384 prefill=0 t_smp=1668 t_pin=2423 t_load=638
+RESULT phase=384 prefill=0 t_smp=1668 t_pin=2423 t_load=638
+RESULT phase=480 prefill=0 t_smp=1572 t_pin=2327 t_load=542
+RESULT phase=480 prefill=0 t_smp=1572 t_pin=2327 t_load=542
+RESULT phase=520 prefill=0 t_smp=2044 t_pin=2799 t_load=1014
+RESULT phase=520 prefill=0 t_smp=2044 t_pin=2799 t_load=1014
+
+### B. 组号扫描（相位 0；只信 t_load）
+RESULT phase=0 prefill=0 t_smp=2052 t_pin=2807 t_load=1022
+RESULT phase=0 prefill=4 t_smp=1028 t_pin=1783 t_load=574
+RESULT phase=0 prefill=8 t_smp=4 t_pin=759 t_load=638
+RESULT phase=0 prefill=12 t_smp=1 t_pin=1 t_load=702
+RESULT phase=0 prefill=16 t_smp=1 t_pin=1 t_load=766
+RESULT phase=0 prefill=20 t_smp=1 t_pin=1 t_load=830
+RESULT phase=0 prefill=24 t_smp=1 t_pin=1 t_load=894
+RESULT phase=0 prefill=28 t_smp=1 t_pin=1 t_load=958
+RESULT phase=0 prefill=31 t_smp=1 t_pin=1 t_load=1006

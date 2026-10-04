@@ -1,0 +1,101 @@
+//=============================================================================
+// bringup_top.cst - Physical constraints for Tang Nano 9K + 4.3" RGB LCD
+//-----------------------------------------------------------------------------
+// Board : Sipeed Tang Nano 9K (GW1NR-LV9QN88PC6/I5)
+// Screen: Sipeed 4.3 inch RGB LCD, 480x272, 40P FPC
+//
+// Pin numbers below are taken verbatim from Sipeed official examples:
+//   TangNano-9K-example/lcd_4.3/src/Tang_nano_9K_LCD.cst   (LCD pins)
+//   TangNano-9K-example/led/src/9K_LED_project.cst         (LED/clock/button pins)
+// Do not invent pin numbers here - every one of them is copied from a known-good
+// official constraint file. See docs for the "why" of that rule.
+//
+// NOTE: comments in this file are intentionally ASCII-only. Gowin's constraint
+// parser handles non-ASCII comments inconsistently across locales.
+//=============================================================================
+
+//---------------------------------------------------------------------------
+// Clock and buttons
+//---------------------------------------------------------------------------
+// Pin 52 sits in a bank where LVCMOS33 is legal, so IO_TYPE is stated.
+IO_LOC "clk_27m" 52;
+IO_PORT "clk_27m" IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+
+// IMPORTANT: do NOT add IO_TYPE=LVCMOS33 to the pins below.
+// Pins 3, 4 and 10..16 belong to BANK 3, whose VCCIO is fixed at 1.8V by the
+// board / an embedded port. Declaring LVCMOS33 there aborts place & route with:
+//     ERROR (CT1136): Bank 3 vccio(1.8) is locked by other constraint or
+//                     embedded port, conflicting BANK_VCCIO ...
+// This is exactly why the official Sipeed led example omits IO_TYPE on these
+// pins. Copy the official form verbatim.
+IO_LOC "btn_rst_n" 4;
+IO_PORT "btn_rst_n" PULL_MODE=UP;
+
+IO_LOC "btn_user_n" 3;
+IO_PORT "btn_user_n" PULL_MODE=UP;
+
+//---------------------------------------------------------------------------
+// On-board LEDs - ACTIVE LOW (output 0 = lit). Also BANK 3, so no IO_TYPE.
+//---------------------------------------------------------------------------
+IO_LOC "led[5]" 16;
+IO_PORT "led[5]" PULL_MODE=UP DRIVE=8;
+IO_LOC "led[4]" 15;
+IO_PORT "led[4]" PULL_MODE=UP DRIVE=8;
+IO_LOC "led[3]" 14;
+IO_PORT "led[3]" PULL_MODE=UP DRIVE=8;
+IO_LOC "led[2]" 13;
+IO_PORT "led[2]" PULL_MODE=UP DRIVE=8;
+IO_LOC "led[1]" 11;
+IO_PORT "led[1]" PULL_MODE=UP DRIVE=8;
+IO_LOC "led[0]" 10;
+IO_PORT "led[0]" PULL_MODE=UP DRIVE=8;
+
+//---------------------------------------------------------------------------
+// RGB LCD - data bus
+//---------------------------------------------------------------------------
+IO_LOC "lcd_r[4]" 71;
+IO_PORT "lcd_r[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_r[3]" 72;
+IO_PORT "lcd_r[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_r[2]" 73;
+IO_PORT "lcd_r[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_r[1]" 74;
+IO_PORT "lcd_r[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_r[0]" 75;
+IO_PORT "lcd_r[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+
+IO_LOC "lcd_g[5]" 55;
+IO_PORT "lcd_g[5]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_g[4]" 56;
+IO_PORT "lcd_g[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_g[3]" 57;
+IO_PORT "lcd_g[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_g[2]" 68;
+IO_PORT "lcd_g[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_g[1]" 69;
+IO_PORT "lcd_g[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_g[0]" 70;
+IO_PORT "lcd_g[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+
+IO_LOC "lcd_b[4]" 41;
+IO_PORT "lcd_b[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_b[3]" 42;
+IO_PORT "lcd_b[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_b[2]" 51;
+IO_PORT "lcd_b[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_b[1]" 53;
+IO_PORT "lcd_b[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_b[0]" 54;
+IO_PORT "lcd_b[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+
+//---------------------------------------------------------------------------
+// RGB LCD - timing signals
+//---------------------------------------------------------------------------
+IO_LOC "lcd_clk" 35;
+IO_PORT "lcd_clk" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_de" 33;
+IO_PORT "lcd_de" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_hsync" 40;
+IO_PORT "lcd_hsync" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
+IO_LOC "lcd_vsync" 34;
+IO_PORT "lcd_vsync" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=24;
