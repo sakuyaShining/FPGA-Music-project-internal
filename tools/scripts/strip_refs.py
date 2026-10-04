@@ -2,7 +2,7 @@
 """
 strip_refs.py —— 剥掉指向公开版不存在路径的引用
 
-公开版只保留作品本体：`refs/`、`notes/`、`PROJECT_MEMORY.md`、`tools/pylib/` 等都不在其中，
+公开版只保留作品本体：、、、 等都不在其中，
 但代码注释与文档里仍写着这些路径。留着有两个问题：读者点进去找不到东西；这些文件名
 （如内部证据文档名）本身也带着开发过程的痕迹。
 
@@ -23,16 +23,16 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 
 # 整段删除的引用形式（先长后短）
 DROP = [
-    re.compile(r"`refs/[^`]*`"),
-    re.compile(r"`notes/[^`]*`"),
+    re.compile(r"]*`"),
+    re.compile(r"]*`"),
     re.compile(r"`PROJECT_MEMORY\.md`"),
-    re.compile(r"`tools/pylib[^`]*`"),
+    re.compile(r"]*`"),
     re.compile(r"`(?:src/rtl/)?(?:bringup_top|image_rom|image_view|lcd_480x272|test_pattern)\.v`"),
     re.compile(r"refs/[\w\u4e00-\u9fff/\-\.]+"),
     re.compile(r"notes/[\w\u4e00-\u9fff/\-\.]+"),
     re.compile(r"PROJECT_MEMORY\.md"),
-    re.compile(r"tools/pylib[\w/\-\.]*"),
-    re.compile(r"[\w\u4e00-\u9fff/\-]*素材库[\w\u4e00-\u9fff/\-\.]*"),
+    re.compile(r"[\w/\-\.]*"),
+    re.compile(r"[\w\u4e00-\u9fff/\-]*[\w\u4e00-\u9fff/\-\.]*"),
     re.compile(r"`(?:src/rtl/)?(?:bringup_top|image_rom|image_view|lcd_480x272|test_pattern)\.v`"),
 ]
 

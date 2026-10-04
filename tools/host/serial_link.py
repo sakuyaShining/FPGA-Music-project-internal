@@ -280,22 +280,15 @@ class SimLink(LinkBase):
 
 
 # =============================================================================
-#  量程判定（照着 步骤16 §1 的判据 ，界面直接显示结论）
+#  量程判定（判据唯一实现在 dsp_host.verdict —— CLI padmon 与 GUI 共用，防两处漂移）
 # =============================================================================
 def verdict(base, raw):
- """返回 (文字, 颜色键)。判据来自 §1：
+    """返回 (文字, 颜色键)。判据：
        松手时 raw 应落在 [20, 2000]（既没快到底、也没计数器封顶）
        按住时 raw ≥ 1.3 × base
     """
-    if base is None or raw is None:
-        return "无数据", "gray"
-    if raw > 2000:
-        return "封顶风险(RC太慢)", "red"
-    if base < 20 and raw < 20:
-        return "太快(分辨率不足)", "red"
-    if base > 0 and raw >= 1.3 * base:
-        return "触摸 ✓ (%.2f×)" % (raw / float(base)), "green"
-    return "静止 (%.2f×)" % (raw / float(base) if base else 0), "dim"
+    t, col, _hint = dh.verdict(base, raw)
+    return t, col
 
 
 def list_ports():

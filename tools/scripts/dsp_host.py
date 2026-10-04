@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-dsp_host.py —— PC 上位机（UART 协议 v0.9）
+dsp_host.py —— PC 上位机（UART 协议 v1.0 + 修正案 A1–A6）
 
 【它是什么】
   把"人想做的事"翻译成 FPGA 听得懂的**两字节帧**：[地址][数据]。
@@ -43,16 +43,16 @@ REG = {
     "GLIDE_STEP":   0x35,     # 16 位小端（线性滑音每样本步进）
     "PRESET":       0x37,     # [1:0] 音色 0–3；默认 0
     "FX_CTRL":      0x40,     # [0]干 [1]延迟 [2]合唱 [5:3]湿声右移；默认 0x01
-    "DELAY_LEN":    0x41,     # 16 位小端；冻结表写默认 2048
-                              #   冲突：线缓冲 AW=11 ⇒ 2048 截断成 0（抽头读到刚写入的样本）。
-                              #   我已把 RTL 默认改 1500；请 复核 决定是改表还是改 AW。
+    "DELAY_LEN":    0x41,     # 16 位小端；默认 1500（A5 已裁定：AW=11 上限 2048 会
+                              #   截断回绕，表已改为 1500 ≈ 28 ms，别再往 2048 写）
     "FEEDBACK":     0x43,     # Q8；默认 0x60
     "CHORUS_RATE":  0x44,     # 16 位小端；默认 430
     "CHORUS_DEPTH": 0x46,     # 16 位小端；默认 64
     "RV_FB":        0x48,
     "RV_DAMP":      0x49,
-    "SEQ_CTRL":     0x50,     # 冻结语义：[0]使能 [1]保持
-                              #   冲突：本 RTL 还有 [2]=用下载曲谱，冻结表里没有这一位
+    "SEQ_CTRL":     0x50,     # RTL 现行语义：[0]使能 [1]保持 [2]=用下载曲谱（写 0x05）
+                              #   分歧：冻结文档 A6 写"SCORE_LEN>0 自动启用"。
+                              #   实现与文档二选一，未定稿前上位机跟随 RTL（0x05）。
     "TEMPO":        0x51,     # 24 位小端 = 每拍时钟数（不是 BPM！）
     "SEQ_VEL":      0x54,
     # ---- 塑谱（步③）----
@@ -97,6 +97,25 @@ DEMO_SCORE = [(64, 1), (64, 1), (65, 1), (67, 1), (67, 1), (65, 1), (64, 1), (62
 def tempo_inc(bpm):
     """BPM → 每样本拍数（Q24）。RTL 只做加法看进位，除法在这里做掉。"""
     return int(round((bpm / 60.0) * (1 << 24) / FS))
+
+
+def verdict(base, raw):
+    """电极 RC 量程判定（唯一实现 —— CLI 的 padmon 与 GUI 都用这一份，防两处漂移）。
+
+    判据来自 refs/素材库/步骤16_上板风险审计.md §1：
+      ① 松手时 raw ∈ [20, 2000]（既没快到底、也没计数器封顶）
+      ② 按住时 raw ≥ 1.3 × base
+    返回 (文字, 颜色键, 调整建议)；颜色键 ∈ green/red/dim/gray。
+    """
+    if base is None or raw is None:
+        return "无数据", "gray", ""
+    if raw > 2000:
+        return "封顶风险(RC太慢)", "red", "减 R/C 或加外接电阻"
+    if raw < 20:
+        return "太快(分辨率不足)", "red", "加电容"
+    if base > 0 and raw >= 1.3 * base:
+        return "触摸 ✓ (%.2f×)" % (raw / float(base)), "green", ""
+    return "静止 (%.2f×)" % (raw / float(base) if base else 0), "dim", ""
 
 
 def le_bytes(value, n):
@@ -287,15 +306,11 @@ def cmd_padmon(port, baud=115200, nch=16):
         base = (bh << 8) | bl
         raw = (rh << 8) | rl
         ratio = (raw / base) if base else 0.0
-        if raw > 2000:
-            verdict = "✗ 封顶风险（RC 太慢 ⇒ 减 R/C 或加外接电阻）"
+        t, col, hint = verdict(base, raw)          # 唯一判据（与 GUI 同源）
+        if col == "red":
             bad += 1
-        elif raw < 20:
-            verdict = "✗ 太快（分辨率不足 ⇒ 加电容）"
-            bad += 1
-        else:
-            verdict = "✓ 量程可用"
-        print("  %-4d %-8d %-8d %-8.2f %s" % (ch, base, raw, ratio, verdict))
+            t = "✗ %s ⇒ %s" % (t, hint)
+        print("  %-4d %-8d %-8d %-8.2f %s" % (ch, base, raw, ratio, t))
     ser.close()
     print("-" * 62)
     if bad:
