@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "交互层设计 — 泛音构造的三层分工（设计提案）",
+    "locale": "zh-CN",
+    "output": ".archify/architecture-interaction-layers-20261004-1820/interaction-layers.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/sakuyaShining/FPGA-Music-project",
+      "provider": "github",
+      "link_mode": "local-only",
+      "revision": "aa0ae80aba592af4d2328633dedeea44c1baeb64"
+    },
+    "views": [
+      { "id": "layers", "label": "四层输入", "focus": ["set", "spec", "env", "perf", "scope", "mix"], "note": "三种时间尺度，加一条作用范围" },
+      { "id": "now", "label": "已实现部分", "focus": ["spec", "scope", "mix", "tdm", "out"], "note": "谱 RAM、叠加/替换、逐声部刷新均已在 RTL 中" },
+      { "id": "todo", "label": "尚待实现", "focus": ["env", "perf"], "note": "谱形随音符演化与演奏轴（0x5C TILT）仍是提案" }
+    ]
+  },
+  "components": [
+    { "id": "set", "type": "external", "label": "设定面（演前）", "sublabel": "上位机 16 滑条 / 设定模式", "pos": [40, 60], "size": [200, 70], "sources": [{ "path": "tools/host/dsp_gui.py", "label": "图形界面滑条" }] },
+    { "id": "spec", "type": "database", "label": "结构层 · 谱 RAM + 预设表", "sublabel": "16 条泛音 × 8 位 / 声部", "pos": [40, 190], "size": [200, 70], "tag": "演前设定", "sources": [{ "path": "src/rtl/note_map.v", "line": 117, "label": "16×8 谱 RAM" }] },
+    { "id": "env", "type": "backend", "label": "包络层 · 谱形随时间", "sublabel": "起音谱 → 稳态谱 插值", "pos": [40, 320], "size": [200, 70], "tag": "提案", "sources": [{ "path": "src/rtl/osc_env.v", "label": "现有逐槽包络" }, { "path": "docs/02-技术方案/18-交互层决策清单.md", "label": "交互层决策" }] },
+    { "id": "perf", "type": "backend", "label": "演奏层 · 右手位置轴", "sublabel": "位置 = 亮度，抬手回中", "pos": [40, 450], "size": [200, 70], "tag": "提案（0x5C TILT）", "sources": [{ "path": "docs/02-技术方案/19-UART协议v1.0草案.md", "label": "TILT 已声明未实现" }, { "path": "docs/02-技术方案/18-交互层决策清单.md", "label": "交互层决策" }] },
+    { "id": "scope", "type": "backend", "label": "作用范围 · 逐声部刷新", "sublabel": "左手按住哪个音", "pos": [40, 580], "size": [200, 70], "tag": "已实现（A1 / 0x63）", "sources": [{ "path": "docs/02-技术方案/19-UART协议v1.0草案.md", "label": "修正案 A1" }, { "path": "src/rtl/note_map.v", "line": 301, "label": "谱合成" }] },
+
+    { "id": "mix", "type": "backend", "label": "note_map 谱合成", "sublabel": "叠加或替换，逐声部刷新", "pos": [430, 300], "size": [210, 90], "sources": [{ "path": "src/rtl/note_map.v", "line": 301, "label": "spec_eff 与 amp_src" }] },
+    { "id": "tdm", "type": "backend", "label": "tdm_engine", "sublabel": "512 时隙逐槽取幅", "pos": [780, 300], "size": [190, 80], "sources": [{ "path": "src/rtl/tdm_engine.v", "label": "时分复用振荡器阵列" }] },
+    { "id": "out", "type": "external", "label": "I2S → 扬声器", "sublabel": "24 位 / 52734.375 Hz", "pos": [1090, 310], "size": [170, 70] }
+  ],
+  "connections": [
+    { "id": "set-spec", "from": "set", "to": "spec", "label": "演前设定", "fromSide": "bottom", "toSide": "top" },
+    { "id": "spec-mix", "from": "spec", "to": "mix", "label": "基准幅度" },
+    { "id": "env-mix", "from": "env", "to": "mix", "label": "随时间演化" },
+    { "id": "perf-mix", "from": "perf", "to": "mix", "label": "演奏进度" },
+    { "id": "scope-mix", "from": "scope", "to": "mix", "label": "作用声部" },
+    { "id": "mix-tdm", "from": "mix", "to": "tdm", "variant": "emphasis" },
+    { "id": "tdm-out", "from": "tdm", "to": "out", "variant": "emphasis" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "为什么演奏层只有一根轴", "items": [
+      "一只手在不妨碍演奏时，只能稳定控制一到两个连续自由度",
+      "而音色空间是 16 条泛音幅度以上（每条 8 位）；把十几维都交给瞬间动作在人体工程学上不成立",
+      "所以维度不是被丢掉，而是被分配到不同的时间尺度上"
+    ] },
+    { "dot": "emerald", "title": "四个输入各管一件事", "items": [
+      "结构层：一场演出设定一次，决定这把乐器的音色身份",
+      "包络层：每个音符自动走一遍，不需要演奏者动手",
+      "演奏层：每时每刻，右手位置轴（往右更多，抬手回中）",
+      "作用范围：左手按住哪个音，这根轴就只作用于那个声部"
+    ] },
+    { "dot": "violet", "title": "现状与差距", "items": [
+      "已实现：16×8 谱 RAM、叠加/替换、逐声部刷新（A1 / 0x63）、逐槽包络",
+      "未实现：谱形随音符时间演化、演奏轴（0x5C TILT 协议已声明，RTL 尚未实现）",
+      "因此包络层与演奏层是提案，落地需要新增判据与回归"
+    ] },
+    { "dot": "amber", "title": "与拉杆风琴的差别", "items": [
+      "Hammond 拉杆是全局的、且频谱在时间上完全不动",
+      "本方案是逐声部独立塑形，并让谱形随音符自身演化",
+      "谱系是承认真实来源；差别落在控制粒度与时间行为上"
+    ] }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "泛音构造手势 · 提案（尚未实现）",
+    "subtitle": "演奏时改音色：位置轴双向、抬手回中；按住某音即只作用于该声部",
+    "locale": "zh-CN",
+    "output": ".archify/sequence-harm-gestures-20261004-1900/harm-gestures.html",
+    "column_fit": "fixed",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/sakuyaShining/FPGA-Music-project",
+      "provider": "github",
+      "link_mode": "local-only",
+      "revision": "aa0ae80aba592af4d2328633dedeea44c1baeb64"
+    },
+    "views": [
+      { "id": "play", "label": "演奏中改音色", "focus": ["pos", "axis", "bright", "scope"], "note": "一只手推轴，音色实时变" },
+      { "id": "voice", "label": "逐声部", "focus": ["hold", "scope", "voice"], "note": "按住某个音，这根轴只作用于它" },
+      { "id": "set", "label": "演前设定", "focus": ["mode", "pick", "level", "ram"], "note": "右手选泛音，左手选档位" }
+    ]
+  },
+  "participants": [
+    { "id": "player", "type": "external", "label": "演奏者", "sublabel": "双手" },
+    { "id": "axis", "type": "backend", "label": "右手位置轴", "sublabel": "泛音排位置", "sources": [{ "path": "docs/02-技术方案/19-UART协议v1.0草案.md", "label": "0x5C TILT 已声明未实现" }] },
+    { "id": "scope", "type": "backend", "label": "作用范围", "sublabel": "左手按住哪个音", "sources": [{ "path": "docs/02-技术方案/19-UART协议v1.0草案.md", "label": "修正案 A1 / 0x63" }] },
+    { "id": "notemap", "type": "backend", "label": "note_map", "sublabel": "谱合成", "sources": [{ "path": "src/rtl/note_map.v", "line": 301, "label": "谱合成现状" }] },
+    { "id": "engine", "type": "backend", "label": "tdm_engine", "sublabel": "512 时隙", "sources": [{ "path": "src/rtl/tdm_engine.v", "label": "时分复用振荡器阵列" }] },
+    { "id": "out", "type": "external", "label": "I2S → 扬声器", "sublabel": "52734.375 Hz" },
+    { "id": "mode", "type": "backend", "label": "设定模式", "sublabel": "S2 长按进入", "sources": [{ "path": "docs/02-技术方案/18-交互层决策清单.md", "label": "交互层决策" }] }
+  ],
+  "segments": [
+    { "from": 150, "to": 232, "label": "演奏中：推轴改变音色" },
+    { "from": 236, "to": 300, "label": "逐声部：按住某个音" },
+    { "from": 304, "to": 372, "label": "抬手回中" },
+    { "from": 376, "to": 490, "label": "演前：设定模式" }
+  ],
+  "messages": [
+    { "id": "pos", "from": "player", "to": "axis", "y": 165, "label": "手指落在泛音排第 n 格", "variant": "default", "note": "位置是绝对值，不是开关；相邻两格被一根手指桥接时得到中间档" },
+    { "id": "bright", "from": "axis", "to": "notemap", "y": 192, "label": "亮度 = f(位置)，双向", "variant": "emphasis", "note": "往右更亮，往左更暗；量作用于哪条路径由结构层设定决定" },
+    { "id": "hold", "from": "player", "to": "scope", "y": 225, "label": "左手按住某个音", "variant": "default" },
+    { "id": "voice", "from": "scope", "to": "notemap", "y": 252, "label": "只刷新该声部（0x63）", "variant": "emphasis", "note": "引擎已支持逐声部刷新；不按任何音时作用于全局底谱" },
+    { "id": "amp", "from": "notemap", "to": "engine", "y": 282, "label": "随时间变化的 16 条幅度", "variant": "default", "note": "结构层基准 + 包络层插值 + 演奏轴进度" },
+    { "id": "hear", "from": "engine", "to": "out", "y": 309, "label": "音色实时改变", "variant": "default" },
+    { "id": "lift", "from": "player", "to": "axis", "y": 335, "label": "抬手", "variant": "dashed" },
+    { "id": "center", "from": "axis", "to": "notemap", "y": 362, "label": "回中：回到结构层设定值", "variant": "dashed", "note": "像弯音轮回中，是演奏语义，不是撤销" },
+    { "id": "enter", "from": "player", "to": "mode", "y": 393, "label": "长按 S2 进入设定模式", "variant": "dashed" },
+    { "id": "write", "from": "mode", "to": "notemap", "y": 428, "label": "右手选泛音，左手选 8 档电平", "variant": "dashed", "note": "写进谱 RAM，作为新的结构层基准；这一步是演前动作，不占演奏" },
+    { "id": "exit", "from": "player", "to": "mode", "y": 463, "label": "再按一次退出", "variant": "dashed" }
+  ],
+  "activations": [
+    { "participant": "axis", "from": 160, "to": 368, "type": "backend" },
+    { "participant": "scope", "from": 220, "to": 258, "type": "backend" },
+    { "participant": "notemap", "from": 188, "to": 428, "type": "backend" },
+    { "participant": "engine", "from": 278, "to": 315, "type": "backend" },
+    { "participant": "mode", "from": 390, "to": 454, "type": "backend" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "为什么是位置，不是碰与不碰", "items": [
+      "二值触摸键只有单向：能加不能减；想从第 6 档回到第 2 档只能绕圈",
+      "位置是绝对值，因此天然双向；抬手回中像弯音轮，是演奏语义",
+      "一根手指桥接相邻两格可以给出中间档，共 15 档"
+    ] },
+    { "dot": "emerald", "title": "逐声部怎么变成动作", "items": [
+      "左手按住某个音时，右手这根轴只作用于那个声部（0x63，修正案 A1）",
+      "不按任何音时，它作用于全局底谱——也就是所有声部共享的设定",
+      "引擎侧已支持，缺的只是把这个动作接到刷新触发上"
+    ] },
+    { "dot": "violet", "title": "演前与演奏分开", "items": [
+      "演奏面只控制一根连续轴，手上不需要记菜单",
+      "结构（16 条泛音各自多少）由设定模式或上位机在演前定",
+      "这样演奏时不必腾出手去做编辑动作"
+    ] },
+    { "dot": "rose", "title": "全部未实现（诚实标注）", "items": [
+      "0x5C TILT 协议里已声明，RTL 中没有实现",
+      "包络层（谱形随音符时间演化）与设定模式都还是提案",
+      "落地需要新增判据：双向性、回中、位置-亮度对应、桥接分辨率、防掉档"
+    ] }
+  ]
+}

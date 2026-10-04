@@ -284,6 +284,8 @@ module note_map #(
     wire [22:0] p_epar   = pentry[22:0];
 
     // 乘法（共享，每音符 P 次）—— 输入来自寄存器（g_note_r / k）
+    // 位宽说明：note_rom 24 位 x ratio_q8 16 位 = 40 位，声明 [PHASE_W+16-1:0]
+    //   即 [39:0]，宽度本来就是够的（不要把它误读成 39 位而再去加宽）。
     wire [PHASE_W+16-1:0] inc_mul = note_rom[g_note_r] * ratio_q8;
     // 显式切片：inc_mul>>8 是 32 位，直接赋 24 位会触发 EX3791
     wire [PHASE_W-1:0]    inc_cal = inc_mul[PHASE_W+7:8];

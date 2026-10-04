@@ -160,7 +160,7 @@ module pad_scan #(
                         lo = base[i] + (base[i] >> 4) + (base[i] >> 6);
 
                         // ---- 滞回 + 去抖 ----
-                        if (cnt[i] > hi[CW-1:0]) begin
+                        if (cnt[i] > hi) begin                      // 全宽比较：阈值 15 位，切 12 位会在 base>3543 时回绕
                             deb_dn[i] <= 2'd0;
                             if (deb_up[i] == DEB[1:0] - 2'd1) begin
                                 deb_up[i] <= DEB[1:0];        // 饱和，等释放条件
@@ -169,7 +169,7 @@ module pad_scan #(
                             else if (deb_up[i] != DEB[1:0])
                                 deb_up[i] <= deb_up[i] + 2'd1;
                         end
-                        else if (cnt[i] < lo[CW-1:0]) begin
+                        else if (cnt[i] < lo) begin                      // 同上
                             deb_up[i] <= 2'd0;
                             if (deb_dn[i] == DEB[1:0] - 2'd1) begin
                                 deb_dn[i] <= DEB[1:0];

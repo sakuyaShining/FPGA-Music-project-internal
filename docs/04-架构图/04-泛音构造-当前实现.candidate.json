@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "泛音构造交互 · 当前实现（已在 RTL 中）",
+    "locale": "zh-CN",
+    "output": ".archify/architecture-harm-current-20261004-1900/harm-current.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/sakuyaShining/FPGA-Music-project",
+      "provider": "github",
+      "link_mode": "local-only",
+      "revision": "aa0ae80aba592af4d2328633dedeea44c1baeb64"
+    },
+    "views": [
+      { "id": "hand", "label": "用右手摸", "focus": ["rhand", "mask", "notemap", "engine"], "note": "按住生效、松开复原、只有低 8 条" },
+      { "id": "host", "label": "用上位机写", "focus": ["host", "specram", "notemap"], "note": "16 条 × 8 位，目前唯一能做精细构造的地方" },
+      { "id": "all", "label": "全部", "focus": ["lhand", "rhand", "mask", "specram", "host", "notemap", "engine"] }
+    ]
+  },
+  "components": [
+    { "id": "lhand", "type": "external", "label": "左手 8 电极", "sublabel": "音高键", "pos": [40, 130], "size": [200, 70], "tag": "五声音阶 C4–E5", "sources": [{ "path": "src/rtl/pad_scan.v", "line": 218, "label": "电极→音高映射" }] },
+    { "id": "rhand", "type": "external", "label": "右手 8 电极", "sublabel": "泛音键", "pos": [40, 250], "size": [200, 70], "tag": "按住生效，松开复原", "sources": [{ "path": "src/rtl/tdm_top.v", "line": 74, "label": "右手即泛音键" }] },
+    { "id": "host", "type": "external", "label": "上位机 16 滑条", "sublabel": "唯一的精细构造入口", "pos": [40, 400], "size": [200, 70], "sources": [{ "path": "tools/host/dsp_gui.py", "label": "图形界面滑条" }] },
+
+    { "id": "mask", "type": "backend", "label": "泛音掩码", "sublabel": "软件 0x5B ｜ 物理电极", "pos": [340, 250], "size": [200, 70], "tag": "只能触及低 8 条", "sources": [{ "path": "src/rtl/tdm_top.v", "line": 500, "label": "高 8 位恒为 0" }] },
+    { "id": "specram", "type": "database", "label": "谱 RAM", "sublabel": "16 条 × 8 位 / 声部", "pos": [340, 400], "size": [200, 70], "sources": [{ "path": "src/rtl/note_map.v", "line": 117 }] },
+
+    { "id": "notemap", "type": "backend", "label": "note_map", "sublabel": "声部分配 · 音高查表 · 谱合成", "pos": [620, 310], "size": [230, 100], "sources": [{ "path": "src/rtl/note_map.v", "line": 301, "label": "spec_eff 语义" }, { "path": "src/rtl/note_map.v", "line": 304, "label": "叠加与替换" }] },
+    { "id": "engine", "type": "backend", "label": "tdm_engine", "sublabel": "512 时隙 = 32 声部 × 16 泛音", "pos": [930, 320], "size": [210, 80], "sources": [{ "path": "src/rtl/tdm_engine.v", "label": "时分复用振荡器阵列" }] }
+  ],
+  "connections": [
+    { "id": "lhand-note", "from": "lhand", "to": "notemap", "label": "音高与声部" },
+    { "id": "rhand-mask", "from": "rhand", "to": "mask", "label": "按住 = 1", "variant": "emphasis" },
+    { "id": "mask-note", "from": "mask", "to": "notemap", "label": "摸到 = 255", "variant": "emphasis" },
+    { "id": "host-ram", "from": "host", "to": "specram", "label": "16 字节电平" },
+    { "id": "ram-note", "from": "specram", "to": "notemap", "label": "否则读谱 RAM" },
+    { "id": "note-engine", "from": "notemap", "to": "engine", "label": "逐槽幅度", "variant": "emphasis" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "现状一句话", "items": [
+      "左手 8 键弹音；右手 8 键，按住哪根就把那一条泛音在按住期间顶到满幅",
+      "手指离开立刻复原：演奏面没有锁存或保持",
+      "想把谱形从零做出来，只能在上位机的 16 根滑条上做"
+    ] },
+    { "dot": "emerald", "title": "引擎语义（三行代码）", "items": [
+      "spec_eff = pad_mask[k] ? 255 : spec_ram[k]",
+      "默认叠加模式：amp_src = min(255, 预设底谱 + spec_eff)",
+      "替换模式：amp_src = spec_eff（只用谱，不摸就静音）"
+    ] },
+    { "dot": "rose", "title": "能力边界（都是现状，不是缺陷清单）", "items": [
+      "只能触及低 8 条泛音：掩码高 8 位恒为 0",
+      "只有两档：0 或 255；没有中间电平",
+      "谱形作用于所有声部；逐声部刷新（0x63）只能由上位机触发",
+      "谱 RAM 易失，掉电即失；只能靠上位机保存帧序列重发"
+    ] },
+    { "dot": "amber", "title": "证据与边界", "items": [
+      "以上均为 RTL 现状，源码位置见各节点角标，钉在提交 aa0ae80",
+      "相关判据：VP4（摸第 k 根只有第 k 条被 boost）、VP5（电极与软寄存器等效）",
+      "板卡尚未上电；电极真实 RC 量程未实测"
+    ] }
+  ]
+}

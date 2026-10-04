@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "一个音符的完整链路 — 从触摸到 I2S 输出",
+    "subtitle": "采样率 52734.375 Hz（27 MHz ÷ 512），每样本 512 拍",
+    "locale": "zh-CN",
+    "output": ".archify/sequence-note-path-20261004-1820/note-path.html",
+    "column_fit": "fixed",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/sakuyaShining/FPGA-Music-project",
+      "provider": "github",
+      "link_mode": "local-only",
+      "revision": "aa0ae80aba592af4d2328633dedeea44c1baeb64"
+    },
+    "views": [
+      { "id": "press", "label": "按下", "focus": ["touch", "scan-ev", "arb-note", "alloc", "sample"], "note": "从触摸到第一个样本" },
+      { "id": "release", "label": "释放", "focus": ["release-ev", "free"], "note": "松手到声部释放" }
+    ]
+  },
+  "participants": [
+    { "id": "finger", "type": "external", "label": "手指 · 电极", "sublabel": "16 路电容" },
+    { "id": "padscan", "type": "backend", "label": "pad_scan", "sublabel": "RC 扫描", "sources": [{ "path": "src/rtl/pad_scan.v", "line": 218, "label": "电极→音高映射" }] },
+    { "id": "arb", "type": "backend", "label": "事件仲裁", "sublabel": "4 源优先", "sources": [{ "path": "src/rtl/tdm_top.v", "line": 615, "label": "串行事件优先" }] },
+    { "id": "notemap", "type": "backend", "label": "note_map", "sublabel": "声部分配", "sources": [{ "path": "src/rtl/note_map.v", "line": 289, "label": "相位增量查表" }] },
+    { "id": "tdm", "type": "backend", "label": "tdm_engine", "sublabel": "512 时隙", "sources": [{ "path": "src/rtl/tdm_engine.v", "label": "时分复用振荡器阵列" }, { "path": "src/rtl/osc_env.v", "label": "逐槽包络" }] },
+    { "id": "fx", "type": "backend", "label": "fx_delay", "sublabel": "延迟 · 混响", "sources": [{ "path": "src/rtl/fx_delay.v", "line": 212, "label": "湿声求和饱和" }] },
+    { "id": "out", "type": "external", "label": "i2s_tx → DAC", "sublabel": "BCK / WS / DIN", "sources": [{ "path": "src/rtl/i2s_tx.v", "line": 41 }] }
+  ],
+  "segments": [
+    { "from": 150, "to": 205, "label": "触摸与扫描" },
+    { "from": 210, "to": 265, "label": "谱形与声部分配" },
+    { "from": 270, "to": 345, "label": "合成与输出" },
+    { "from": 350, "to": 425, "label": "释放" }
+  ],
+  "messages": [
+    { "id": "touch", "from": "finger", "to": "padscan", "y": 165, "label": "按下：放电计数超过阈值", "variant": "default" },
+    { "id": "scan-ev", "from": "padscan", "to": "arb", "y": 192, "label": "触摸事件：键号 + 按下", "variant": "emphasis" },
+    { "id": "arb-note", "from": "arb", "to": "notemap", "y": 228, "label": "音符事件：MIDI 号 + 力度", "variant": "emphasis", "note": "排针、串口、定序器、电极四源共用这一条通路" },
+    { "id": "alloc", "from": "notemap", "to": "tdm", "y": 255, "label": "分配声部 + 16 条泛音幅度", "variant": "emphasis", "note": "查 128 项音高 ROM 得 24 位相位增量；谱形来自谱 RAM 与预设表" },
+    { "id": "sample", "from": "tdm", "to": "fx", "y": 285, "label": "24 位样本（每 512 拍一个）", "variant": "default", "note": "512 个时隙逐个累加：32 声部 × 16 泛音" },
+    { "id": "mix-out", "from": "fx", "to": "out", "y": 312, "label": "效果后的样本 → BCK / WS / DIN 三线", "variant": "default" },
+    { "id": "release-ev", "from": "padscan", "to": "arb", "y": 365, "label": "松开事件", "variant": "dashed" },
+    { "id": "free", "from": "arb", "to": "notemap", "y": 392, "label": "释放该声部（包络收尾）", "variant": "dashed" }
+  ],
+  "activations": [
+    { "participant": "padscan", "from": 160, "to": 400, "type": "backend" },
+    { "participant": "arb", "from": 188, "to": 398, "type": "backend" },
+    { "participant": "notemap", "from": 224, "to": 396, "type": "backend" },
+    { "participant": "tdm", "from": 251, "to": 345, "type": "backend" },
+    { "participant": "fx", "from": 281, "to": 330, "type": "backend" },
+    { "participant": "out", "from": 308, "to": 330, "type": "external" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "一拍之内", "items": [
+      "fs = 52734.375 Hz，即每个样本 18.963 µs",
+      "每样本 512 拍：一拍算一个振荡器，32 声部 × 16 泛音正好用满",
+      "采样率由 27 MHz ÷ 512 唯一决定"
+    ] },
+    { "dot": "emerald", "title": "上位机不在发声链上", "items": [
+      "两字节帧 @115200 约 174 µs；实测 26 帧 = 52 字节 / 2.84 秒",
+      "主机只写参数与曲谱；音频样本从不经过 PC"
+    ] },
+    { "dot": "violet", "title": "这条链路的判据", "items": [
+      "黄金参考：TDM 与全并行实现逐位一致（不符 0 / 2495）",
+      "音高表覆盖 MIDI 0–127，实测误差小于 0.1 音分",
+      "泛音超过 Nyquist 时静音该泛音，不产生混叠"
+    ] },
+    { "dot": "amber", "title": "待硬件验收", "items": [
+      "以上结论来自仿真与综合；板卡尚未上电",
+      "电极真实 RC 量程未实测，扫描阈值待标定"
+    ] }
+  ]
+}

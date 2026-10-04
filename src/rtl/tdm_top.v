@@ -608,18 +608,22 @@ module tdm_top (
         end
     end
 
-    wire        ev_valid_i = u_ev_valid ? 1'b1      :
-                             seq_en      ? sq_ev_valid :
-                             pd_ev_valid ? 1'b1      : ev_valid;
-    wire        ev_on_i    = u_ev_valid ? u_ev_on   :
-                             seq_en      ? sq_ev_on    :
-                             pd_ev_valid ? pd_ev_on    : ev_on;
-    wire [6:0]  ev_note_i  = u_ev_valid ? u_ev_note :
-                             seq_en      ? sq_ev_note  :
-                             pd_ev_valid ? pd_ev_note  : ev_note;
-    wire [3:0]  ev_vel_i   = u_ev_valid ? u_ev_vel  :
-                             seq_en      ? sq_ev_vel[7:4] :
-                             pd_ev_valid ? 4'd12       : ev_vel;   // pad 力度 v1 固定 12/15
+    // 仲裁选通：定序器只在【正在发事件的这一拍】抢占总线。
+    // 原来用 seq_en（电平）选通 —— 定序器一使能就长期压住 pads 与排针事件，
+    // 16 个触摸键会整体变哑，与本文件"三者互为兜底"的说明矛盾。
+    wire        seq_ev_sel = seq_en & sq_ev_valid;
+    wire        ev_valid_i = u_ev_valid ? 1'b1       :
+                             seq_ev_sel  ? 1'b1       :
+                             pd_ev_valid ? 1'b1       : ev_valid;
+    wire        ev_on_i    = u_ev_valid ? u_ev_on    :
+                             seq_ev_sel  ? sq_ev_on   :
+                             pd_ev_valid ? pd_ev_on   : ev_on;
+    wire [6:0]  ev_note_i  = u_ev_valid ? u_ev_note  :
+                             seq_ev_sel  ? sq_ev_note :
+                             pd_ev_valid ? pd_ev_note : ev_note;
+    wire [3:0]  ev_vel_i   = u_ev_valid ? u_ev_vel   :
+                             seq_ev_sel  ? sq_ev_vel[7:4] :
+                             pd_ev_valid ? 4'd12      : ev_vel;   // pad 力度 v1 固定 12/15
 
     //-------------------------------------------------------------------------
     // 事件打一拍再进 note_map（2026-10-02）

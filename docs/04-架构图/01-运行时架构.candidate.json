@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "FPGA 加法合成电子乐器 — 运行时架构",
+    "output": ".archify/architecture-fpga-runtime-20261004-1755/fpga-runtime.html",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/sakuyaShining/FPGA-Music-project",
+      "provider": "github",
+      "link_mode": "local-only",
+      "revision": "aa0ae80aba592af4d2328633dedeea44c1baeb64"
+    },
+    "views": [
+      { "id": "play", "label": "演奏链", "focus": ["player", "elec", "padscan", "arb", "notemap", "tdm", "fx", "i2s", "dac"], "note": "手指到扬声器的一条实时通路" },
+      { "id": "param", "label": "参数链", "focus": ["host", "regs", "notemap", "seq", "arb"], "note": "主机只发参数与曲谱，不参与发声计算" },
+      { "id": "all", "label": "全部", "focus": ["player", "elec", "padscan", "arb", "notemap", "tdm", "fx", "i2s", "dac", "seq", "regs", "host"] }
+    ]
+  },
+  "components": [
+    { "id": "seq", "type": "backend", "label": "song_seq", "sublabel": "片内定序器", "pos": [700, 20], "size": [150, 64], "sources": [{ "path": "src/rtl/song_seq.v", "line": 109, "label": "曲谱源选择" }] },
+    { "id": "regs", "type": "database", "label": "寄存器堆 · 谱 RAM", "sublabel": "128 × 8 位", "pos": [880, 20], "size": [160, 64], "sources": [{ "path": "src/rtl/reg_bank.v", "line": 152, "label": "写地址按 NW 取模" }] },
+    { "id": "host", "type": "external", "label": "上位机", "sublabel": "PyQt5 GUI / CLI · USB 串口 115200", "pos": [1080, 20], "size": [180, 64], "sources": [{ "path": "tools/host/dsp_gui.py", "label": "图形界面" }, { "path": "src/rtl/uart_rx.v", "line": 33, "label": "串口接收" }] },
+
+    { "id": "player", "type": "external", "label": "演奏者", "sublabel": "双手", "pos": [40, 150], "size": [150, 64] },
+    { "id": "elec", "type": "external", "label": "16 路触摸电极", "sublabel": "左手音高 · 右手泛音", "pos": [260, 150], "size": [160, 64], "tag": "RC 充放电计数" },
+    { "id": "padscan", "type": "backend", "label": "pad_scan", "sublabel": "16 路并行扫描", "pos": [480, 150], "size": [160, 64], "sources": [{ "path": "src/rtl/pad_scan.v", "line": 218, "label": "电极→音高映射" }, { "path": "src/rtl/pad_scan.v", "line": 238, "label": "八度档" }] },
+    { "id": "arb", "type": "backend", "label": "事件仲裁", "sublabel": "4 源优先级", "pos": [700, 150], "size": [150, 64], "sources": [{ "path": "src/rtl/tdm_top.v", "line": 615, "label": "串行事件优先" }] },
+    { "id": "notemap", "type": "backend", "label": "note_map", "sublabel": "声部分配 · 塑谱", "pos": [880, 150], "size": [160, 70], "sources": [{ "path": "src/rtl/note_map.v", "line": 117, "label": "16×8 谱 RAM" }, { "path": "src/rtl/note_map.v", "line": 301, "label": "电极掩码并谱" }] },
+    { "id": "tdm", "type": "backend", "label": "tdm_engine", "sublabel": "512 时隙 = 32 声部 × 16 泛音", "pos": [1100, 140], "size": [180, 80], "tag": "27.0 M 振荡器次/秒", "sources": [{ "path": "src/rtl/tdm_engine.v", "label": "时分复用振荡器阵列" }, { "path": "src/rtl/osc_env.v", "label": "逐槽包络" }] },
+
+    { "id": "fx", "type": "backend", "label": "fx_delay", "sublabel": "延迟 · 合唱 · 8 抽头混响", "pos": [1100, 330], "size": [180, 80], "sources": [{ "path": "src/rtl/fx_delay.v", "line": 212, "label": "湿声求和饱和" }, { "path": "src/rtl/fx_delay.v", "line": 198, "label": "发送电平保号" }] },
+    { "id": "i2s", "type": "backend", "label": "i2s_tx", "sublabel": "BCK / WS / DIN", "pos": [880, 330], "size": [160, 70], "sources": [{ "path": "src/rtl/i2s_tx.v", "line": 41 }] },
+    { "id": "dac", "type": "external", "label": "I2S DAC", "sublabel": "→ 扬声器", "pos": [660, 330], "size": [160, 70], "tag": "52734.375 Hz" }
+  ],
+  "connections": [
+    { "id": "player-elec", "from": "player", "to": "elec", "variant": "emphasis" },
+    { "id": "elec-scan", "from": "elec", "to": "padscan", "variant": "emphasis" },
+    { "id": "scan-arb", "from": "padscan", "to": "arb", "variant": "emphasis" },
+    { "id": "arb-notemap", "from": "arb", "to": "notemap", "variant": "emphasis" },
+    { "id": "notemap-tdm", "from": "notemap", "to": "tdm", "variant": "emphasis" },
+    { "id": "tdm-fx", "from": "tdm", "to": "fx", "label": "24 位样本", "variant": "emphasis", "fromSide": "bottom", "toSide": "top" },
+    { "id": "fx-i2s", "from": "fx", "to": "i2s", "variant": "emphasis" },
+    { "id": "i2s-dac", "from": "i2s", "to": "dac", "variant": "emphasis" },
+
+    { "id": "host-regs", "from": "host", "to": "regs", "variant": "default" },
+    { "id": "regs-notemap", "from": "regs", "to": "notemap", "label": "谱形 · 效果参数", "fromSide": "bottom", "toSide": "top" },
+    { "id": "seq-arb", "from": "seq", "to": "arb", "label": "内建曲谱", "variant": "dashed", "fromSide": "bottom", "toSide": "top" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "全部在 FPGA 内部", "items": [
+      "pad_scan / 事件仲裁 / note_map / tdm_engine / fx_delay / i2s_tx / song_seq / 寄存器堆",
+      "纯 HDL 实现，无软核或 MCU 参与发声通路",
+      "板卡：Tang Nano 20K（GW2AR-LV18Q88C8/I7），27 MHz，无 PLL"
+    ] },
+    { "dot": "emerald", "title": "实时约束", "items": [
+      "fs = 27 MHz ÷ 512 = 52734.375 Hz，每样本 512 拍",
+      "声部数 × 每声部泛音数 ≤ 512：32 × 16 已用满",
+      "采样率由时钟分频唯一决定，不依赖 PLL 锁定"
+    ] },
+    { "dot": "violet", "title": "主机角色与底线", "items": [
+      "音频样本通路不经过 PC：主机只发参数级数据",
+      "实测 26 帧 = 52 字节 / 2.84 秒 ≈ 18 字节每秒",
+      "地址表冻结；A3 回读用于核对写入结果"
+    ] },
+    { "dot": "amber", "title": "结论边界", "items": [
+      "回归套件 12 组，含与全并行参考实现的逐位一致比对",
+      "布局布线时序余量 +17.372 ns，逻辑资源 13690 / 20736",
+      "以上为仿真与综合结论；板上电气与电极量程待硬件验收"
+    ] }
+  ]
+}

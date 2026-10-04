@@ -195,7 +195,7 @@ module fx_delay #(
     wire signed [DW:0]   rev_fbv_w = rev_fbv[DW:0];
     wire signed [DW+8:0] fb_mul = $signed(dl_tap) * $signed({1'b0, fb_q8});   // 25 位
     wire signed [DW:0]   fb_val = fb_mul >>> 8;                               // 17 位
-    wire signed [24:0]   wr_sum = $signed({1'b0, din[23:9]}) + fb_val
+    wire signed [24:0]   wr_sum = ($signed(din) >>> 9) + fb_val
                                 + (rev_en ? rev_fbv_w : 17'sd0);              // 25 位
     wire signed [DW-1:0] wr_val = (wr_sum >  25'sd32767) ?  16'sd32767 :
                                   (wr_sum < -25'sd32768) ? -16'sd32768 :
@@ -204,9 +204,14 @@ module fx_delay #(
 
     // 混合：干声（24 位）+ 湿声（三个来源之和，右移 wet_sh）
     wire signed [22:0] rev_wet = rev_en ? (rev_sum >>> 3) : 23'sd0;
-    wire signed [23:0] wet_sum = (dly_en ? {{8{dl_tap[DW-1]}}, dl_tap} : 24'sd0)
-                               + (cho_en ? {{8{ch_tap[DW-1]}}, ch_tap} : 24'sd0)
-                               + {{1{rev_wet[22]}}, rev_wet};
+    // 三路湿声各可达 +/-8388607，和可达 +/-2.5e7；若直接截成 24 位会回绕成
+    // 极性相反的爆音，而后级 mix_sum 的饱和救不了"已经回绕"的值。先加宽求和再饱和。
+    wire signed [25:0] wet_raw = (dly_en ? {{10{dl_tap[DW-1]}}, dl_tap} : 26'sd0)
+                               + (cho_en ? {{10{ch_tap[DW-1]}}, ch_tap} : 26'sd0)
+                               + {{3{rev_wet[22]}}, rev_wet};
+    wire signed [23:0] wet_sum = (wet_raw >  26'sd8388607) ?  24'sd8388607 :
+                                 (wet_raw < -26'sd8388608) ? -24'sd8388608 :
+                                                              wet_raw[23:0];
     // D1 电平对齐（2026-10-03 (本次)修的真实缺陷）
     //   线缓冲是 16 位、干声是 24 位；原来只把抽头【符号扩展】到 24 位（数值不变）
     //   ⇒ 满幅抽头在 24 位域里只有 1/128 = **42 dB 偏低** ⇒ 混响实际听不见
