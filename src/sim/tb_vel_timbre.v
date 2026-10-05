@@ -108,10 +108,12 @@ module tb_vel_timbre;
         play_and_capture(4'd14, "ident_hi");
 
         //-------------------------------------------------- 第二组：打开倾斜
-        //   bias = -300 (10 位补码 0x2D4 -> lo=0xD4, hi=0x02)，gain = 28 (0x1C)
-        u_top.u_reg.mem[8'h6B] = 8'hD4;
-        u_top.u_reg.mem[8'h6C] = 8'h02;
-        u_top.u_reg.mem[8'h6D] = 8'h1C;
+        //   新语义：0x6B/0x6C = 倾斜偏置（每单位 skew 的增量，10 位补码）
+        //           bias = -16 -> 1024-16 = 1008 = 0x3F0 -> lo=0xF0, hi=0x03
+        //           0x6D = 每档力度的增量 = 2
+        u_top.u_reg.mem[8'h6B] = 8'hF0;
+        u_top.u_reg.mem[8'h6C] = 8'h03;
+        u_top.u_reg.mem[8'h6D] = 8'h02;
         repeat (100) @(posedge clk);
 
         $display(" [B] tilt enabled (bias=-300, gain=28)");
