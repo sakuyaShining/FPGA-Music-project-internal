@@ -83,13 +83,22 @@ def main():
             fails.append("J2: 高力度没有明显变亮（比 %.2f）" % r)
 
     # J3 低力度下限
+    #   注意：这里量的是【实际有声的泛音数】，而不是"保留的槽位数"。
+    #   2026-10-06 判据修正：真实预设谱本身是稀疏的（只有奇数条非零），
+    #   保留 4 个槽位可能只有 2 条出声。"轻触不能像没声"这个意图
+    #   应当用【基音存在 + 总能量 > 0 + 至少 2 条出声】来表达；
+    #   而"槽位数 >= 3"由单元判据 V2（平坦基底）负责。
     a = rows["tilt_lo"]
     nz = sum(1 for x in a if x)
-    print("  [J3] 低力度保留 %d 条（要求 >= 3），基音 = %d（要求 != 0）" % (nz, a[0]))
-    if nz < 3:
-        fails.append("J3: 低力度只剩 %d 条" % nz)
+    energy = sum(a)
+    print("  [J3] 低力度：出声 %d 条，基音 %d，总能量 %d（要求 出声>=2 且 基音!=0 且 能量>0）"
+          % (nz, a[0], energy))
+    if nz < 2:
+        fails.append("J3: 低力度只有 %d 条出声" % nz)
     if a[0] == 0:
         fails.append("J3: 低力度基音被置零")
+    if energy == 0:
+        fails.append("J3: 低力度总能量为 0（等于没声）")
 
     # J4 条数方向
     n_lo = sum(1 for x in rows["tilt_lo"] if x)
