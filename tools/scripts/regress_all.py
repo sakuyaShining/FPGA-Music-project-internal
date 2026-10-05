@@ -323,7 +323,7 @@ def main():
     if missing:
         results.append(("09 regctl", False, "缺静态表: " + ", ".join(os.path.basename(m) for m in missing)))
         files = None
-    log, err = (compile_and_run("09_regctl", files, need_hex=True, extra_hex=tables)
+    log, err = (compile_and_run("09_regctl", files, defines=("SIM_INIT",), need_hex=True, extra_hex=tables)
                 if files else (None, "skipped"))
     if err:
         results.append(("09 regctl", False, err[:120]))
