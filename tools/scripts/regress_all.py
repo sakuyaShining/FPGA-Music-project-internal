@@ -89,10 +89,10 @@ def sine_hex():
     正弦表全 X、音频全 X —— 而 09 regctl 曾因运行目录残留上一次的产物而
     "通过"，把这个缺陷掩盖成了假绿。判据必须建立在本次真实产物上。
     """
-    cache = os.path.join(BUILD, "_hex", "sine256.hex")
-    if os.path.isfile(cache):
-        return cache
-    return os.path.join(ROOT, "src", "gowin", "tdm_synth", "sine256.hex")
+    auth = os.path.join(ROOT, "src", "gowin", "tdm_synth", "sine256.hex")
+    if os.path.isfile(auth):
+        return auth
+    return os.path.join(BUILD, "_hex", "sine256.hex")
 
 
 def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_hex=()):
