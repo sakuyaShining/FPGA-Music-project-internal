@@ -21,6 +21,12 @@ import os
 import re
 import subprocess
 import sys
+import sys as _sys
+try:
+    _sys.stdout.reconfigure(line_buffering=True)
+except Exception:
+    pass
+
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -200,4 +206,22 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    import subprocess as _sp
+
+    def _cur_branch():
+        try:
+            r = _sp.run(["git", "rev-parse", "--abbrev-ref", "HEAD"],
+                        capture_output=True, text=True)
+            return r.stdout.strip()
+        except Exception:
+            return ""
+
+    _orig = _cur_branch()
+    try:
+        _sys.exit(main())
+    finally:
+        # 兜底：main() 里会切到孤立分支 public，一旦中途崩溃，HEAD 会悬空。
+        # 这里保证任何情况下都回到原分支，避免"分支被删、HEAD 无指向"。
+        if _orig and _orig not in ("HEAD", "public"):
+            _sp.run(["git", "checkout", _orig], capture_output=True)
+            print("  [兜底] 已切回分支 %s" % _orig)
