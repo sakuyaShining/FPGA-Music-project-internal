@@ -69,6 +69,7 @@ module i2c_master #(
     reg [7:0]    sh;
     reg [2:0]    rxc;
     reg [31:0]   rdbuf;
+    reg          ack_nack;   // q=2 采到的应答位（1 = 从机未应答）
 
     wire ph_last = (ph == DIV[PW-1:0] - 16'd1);
     wire stretch = (~scl_lo) & (~scl_in);
@@ -79,7 +80,7 @@ module i2c_master #(
             st <= S_IDLE; seq <= Q_START; bitc <= 4'd0; q <= 2'd0; ph <= 16'd0;
             sh <= 8'h00; rxc <= 3'd0; rdbuf <= 32'h0; rd_d <= 32'h0;
             scl_lo <= 1'b0; sda_lo <= 1'b0;
-            busy <= 1'b0; done <= 1'b0; err <= 1'b0;
+            busy <= 1'b0; done <= 1'b0; err <= 1'b0; ack_nack <= 1'b0;
         end else begin
             done <= 1'b0;
 
@@ -125,7 +126,7 @@ module i2c_master #(
                         end else if (q == 2'd1) begin
                             scl_lo <= 1'b0;
                         end else if (q == 2'd2) begin
-                            if (bitc == 4'd8 && sda_in) err <= 1'b1;
+                            if (bitc == 4'd8) ack_nack <= sda_in;   // 先锁存，下一步再判
                         end else begin
                             scl_lo <= 1'b1;
                         end
@@ -168,6 +169,7 @@ module i2c_master #(
                     if (st == S_TX || st == S_RX) begin
                         if (bitc == 4'd8) begin
                             bitc <= 4'd0;
+                            if (st == S_TX && ack_nack) err <= 1'b1;   // 用锁存值判，避免晚一拍
                             if (st == S_RX) begin
                                 rdbuf <= {rdbuf[23:0], sh};
                                 rxc   <= rxc + 3'd1;

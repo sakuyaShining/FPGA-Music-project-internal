@@ -14,7 +14,8 @@
 //   · 支持重复起始位（复合格式读）
 //=============================================================================
 module mpr121_model #(
-    parameter [6:0] ADDR = 7'h5A
+    parameter [6:0] ADDR = 7'h5A,
+    parameter       PROBE = 1'b1
 )(
     input  wire        clk,
     input  wire        rst_n,
@@ -79,6 +80,7 @@ module mpr121_model #(
             for (i = 0; i < 128; i = i + 1) regs[i] <= 8'h00;
         end else begin
             if (cond_start) begin
+                if (PROBE) $display("      [从机] 检测到起始位，位计数归零");
                 st <= S_ADDR; bitc <= 4'd0; sh <= 8'h00;
                 sda_drive_lo <= 1'b0; ack_clked <= 1'b0;
             end else if (cond_stop) begin
@@ -101,9 +103,11 @@ module mpr121_model #(
                                 ack_clked <= 1'b0;
                                 bitc <= 4'd0;
                                 sda_drive_lo <= 1'b0;
+                                if (PROBE) $display("      [从机] 收到地址 0x%02h，%s", {sh[7:1],1'b0}, (sh[7:1]==ADDR) ? "命中" : "不命中");
                                 if (sh[7:1] == ADDR) begin
                                     rw <= sh[0];
                                     if (sh[0]) begin
+                                        if (PROBE) $display("      [从机] 进入发送态，寄存器 0x%02h = 0x%02h", ptr, cur);
                                         st   <= S_TX;
                                         txsh <= cur;
                                         sda_drive_lo <= ~cur[7];
@@ -130,6 +134,7 @@ module mpr121_model #(
                                 ack_clked <= 1'b0;
                                 bitc <= 4'd0;
                                 sda_drive_lo <= 1'b0;
+                                if (PROBE) $display("      [从机] 收到数据字节 0x%02h（first_wr=%b）", sh, first_wr);
                                 if (first_wr) begin
                                     ptr      <= sh[6:0];
                                     first_wr <= 1'b0;

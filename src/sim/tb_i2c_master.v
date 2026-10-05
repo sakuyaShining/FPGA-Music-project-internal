@@ -111,6 +111,17 @@ module tb_i2c_master;
         end
     end
 
+
+    // ---------------- RX 采样跟踪（定位主机接收侧） ----------------
+    integer rx_trace = 0;
+    always @(posedge clk) begin
+        if (u_m.st == 3'd4 && u_m.q == 2'd2 && rx_trace < 30) begin   // S_RX 且处于采样相位
+            rx_trace <= rx_trace + 1;
+            $display("      [主机收] bitc=%0d sda=%b 移位=%b rxc=%0d",
+                     u_m.bitc, sda, u_m.sh, u_m.rxc);
+        end
+    end
+
     // ---------------- 看门狗 ----------------
     initial begin
         #20_000_000;
