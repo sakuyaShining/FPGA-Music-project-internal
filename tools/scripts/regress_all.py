@@ -187,6 +187,15 @@ def judge_regpitch(name):
 def judge_script(name, script):
     rc, log = run([sys.executable, os.path.join(ROOT, "tools", "scripts", script),
                    "--simdir", os.path.join(BUILD, name)], BUILD)
+    # 2026-10-05：把判据的【完整】输出落盘。此前只留最后 400 字符，
+    #   结果判据脚本中途抛异常时，异常信息恰好落在被截掉的部分，
+    #   排查只能靠猜。可诊断性比节省这点字节重要得多。
+    try:
+        with open(os.path.join(BUILD, "%s_judge.log" % name.replace(" ", "_")), "w",
+                  encoding="utf-8") as fh:
+            fh.write(log)
+    except Exception:
+        pass
     return (rc == 0 and ("通过" in log or "PASS" in log or "★★★" in log)), log[-400:]
 
 
