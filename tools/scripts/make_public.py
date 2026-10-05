@@ -222,6 +222,8 @@ if __name__ == "__main__":
     finally:
         # 兜底：main() 里会切到孤立分支 public，一旦中途崩溃，HEAD 会悬空。
         # 这里保证任何情况下都回到原分支，避免"分支被删、HEAD 无指向"。
-        if _orig and _orig not in ("HEAD", "public"):
-            _sp.run(["git", "checkout", _orig], capture_output=True)
-            print("  [兜底] 已切回分支 %s" % _orig)
+        # 兜底分支不能是孤立分支本身，否则会把 HEAD 留在即将被删除的分支上
+        _back = _orig if (_orig and _orig not in ("HEAD", "public")) else "main"
+        if _back:
+            _sp.run(["git", "checkout", _back], capture_output=True)
+            print("  [兜底] 已切回分支 %s" % _back)
