@@ -461,6 +461,42 @@ module tdm_top (
     );
 
     //-------------------------------------------------------------------------
+    // 音高与八度（规格 v2.0）：映射 + 按下锁存（防挂音）+ 扫查式事件
+    //
+    //   v1 接法：下排 8 根电极（pad_state[7:0]）→ 通道 0..7 = C3..G3 全半音
+    //            上排 8 根仍作泛音键（沿用 pad_state[15:8] 与 0x5B 掩码）
+    //            音域条待面板就位后再接：此处 cell_t=0，档位固定为上电默认
+    //   pad_scan 依旧保留，负责遥测（padmon 的 raw/base 与判定）
+    //
+    //   接口适配：pad_pitch 给出 ev_on / ev_off 两个脉冲，
+    //             仲裁器要的是 valid + on 电平 ⇒ 这里合成成
+    //             valid = on | off，on 电平沿用（松开时 valid=1 且 on=0）
+    //-------------------------------------------------------------------------
+    wire        pp_on_p, pp_off_p;
+    wire [6:0]  pp_ev_note;
+    wire [3:0]  pp_ev_vel;
+    wire [7:0]  pp_harm_mask;
+    wire [37:0] pp_touch = {30'b0, pad_state[7:0]};
+
+    wire [2:0]  oct_pos;
+    wire [4:0]  strip_led;
+
+    pad_pitch #(.NCH(38), .NPIT(25), .BASE(48)) u_pitch (
+        .clk(clk), .rst_n(rst_n),
+        .touch(pp_touch), .pos(oct_pos), .vel(4'd12),
+        .ev_on(pp_on_p), .ev_off(pp_off_p), .ev_note(pp_ev_note), .ev_vel(pp_ev_vel),
+        .harm_mask(pp_harm_mask)
+    );
+
+    strip_ctrl #(.CLK_HZ(27000000), .HOLD_MS(100)) u_strip (
+        .clk(clk), .rst_n(rst_n), .cell_t(5'b00000),
+        .pos(oct_pos), .led(strip_led)
+    );
+
+    wire pp_ev_valid = pp_on_p | pp_off_p;
+    wire pp_ev_on    = pp_on_p;
+
+    //-------------------------------------------------------------------------
     // 步③ 塑谱寄存器（19 号 §3/§4 + 修正案 A1）
     //   0x58 SPEC_IDX  谱 RAM 写指针 0–15（写 0x59 后自动 +1）
     //   0x59 SPEC_VAL  谱 RAM 数据（写入即生效）
@@ -614,16 +650,16 @@ module tdm_top (
     wire        seq_ev_sel = seq_en & sq_ev_valid;
     wire        ev_valid_i = u_ev_valid ? 1'b1       :
                              seq_ev_sel  ? 1'b1       :
-                             pd_ev_valid ? 1'b1       : ev_valid;
+                             pp_ev_valid ? 1'b1       : ev_valid;
     wire        ev_on_i    = u_ev_valid ? u_ev_on    :
                              seq_ev_sel  ? sq_ev_on   :
-                             pd_ev_valid ? pd_ev_on   : ev_on;
+                             pp_ev_valid ? pp_ev_on   : ev_on;
     wire [6:0]  ev_note_i  = u_ev_valid ? u_ev_note  :
                              seq_ev_sel  ? sq_ev_note :
-                             pd_ev_valid ? pd_ev_note : ev_note;
+                             pp_ev_valid ? pp_ev_note : ev_note;
     wire [3:0]  ev_vel_i   = u_ev_valid ? u_ev_vel   :
                              seq_ev_sel  ? sq_ev_vel[7:4] :
-                             pd_ev_valid ? 4'd12      : ev_vel;   // pad 力度 v1 固定 12/15
+                             pp_ev_valid ? 4'd12      : ev_vel;   // pad 力度 v1 固定 12/15
 
     //-------------------------------------------------------------------------
     // 事件打一拍再进 note_map（2026-10-02）
@@ -854,10 +890,19 @@ module tdm_top (
     //     · 定序器使能    → [5]=拍点闪, [4:0]=当前应弹音高编号（脱机曲目指引）
     //     · 否则          → 在奏声部数（低 5 位）
     //-------------------------------------------------------------------------
-    wire [5:0] led_bits = test_mode_eff ? 6'b111111 :
-                          (seq_en ? {sq_beat, sq_cur_note[4:0]}
-                                  : {1'b0, nm_active[4:0]});
+    //   改由 led_ind 统一驱动（规格 v2.0 第 6 节）：
+    //     · 曲谱播放中 → led[5]=拍点（已拉长到可见）, led[4:0]=下一个音的音高台阶
+    //     · 手弹时     → led[5]=心跳, led[2:0]=音域档图案, led[3]=定序器, led[4]=测试模式
+    //   测试模式仍保持"6 个全亮"（共阳 = 全 0）
+    wire [5:0] led_ind_o;
 
-    assign led = ~led_bits;      // 共阳极：低电平点亮
+    led_ind #(.CLK_HZ(27000000), .ACTIVE_LOW(1), .BEAT_MS(80)) u_led (
+        .clk(clk), .rst_n(rst_n),
+        .score_mode(seq_en), .beat(sq_beat), .next_note(sq_cur_note),
+        .pos(oct_pos), .seq_run(seq_en), .test_mode(test_mode_eff),
+        .led(led_ind_o)
+    );
+
+    assign led = test_mode_eff ? 6'b000000 : led_ind_o;   // 共阳极：低电平点亮
 
 endmodule
