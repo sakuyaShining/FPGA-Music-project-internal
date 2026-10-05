@@ -82,6 +82,19 @@ def rmtree_ok(d):
     return False
 
 
+def sine_hex():
+    """正弦表来源：优先综合目录的权威副本，其次 01_additive 产出的缓存。
+
+    2026-10-05 教训：原来只认缓存 sim_build/_hex/。缓存缺失时 $readmemh 失败，
+    正弦表全 X、音频全 X —— 而 09 regctl 曾因运行目录残留上一次的产物而
+    "通过"，把这个缺陷掩盖成了假绿。判据必须建立在本次真实产物上。
+    """
+    cache = os.path.join(BUILD, "_hex", "sine256.hex")
+    if os.path.isfile(cache):
+        return cache
+    return os.path.join(ROOT, "src", "gowin", "tdm_synth", "sine256.hex")
+
+
 def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_hex=()):
     """在 sim_build/regress/<name>/ 里编译并运行一个测试台，返回 stdout"""
     d = os.path.join(BUILD, name)
@@ -91,7 +104,7 @@ def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_
         rmtree_ok(d)
     os.makedirs(d, exist_ok=True)
     if need_hex:
-        shutil.copy(os.path.join(BUILD, "_hex", "sine256.hex"), d)
+        shutil.copy(sine_hex(), d)
     for h in extra_hex:
         shutil.copy(h, d)
     # tb 文件归 sim，其余 rtl
@@ -196,7 +209,7 @@ def run_tdm_mask(mask, env_on):
     """--full 用：打补丁的 tb 副本跑指定掩码/包络配置"""
     d = os.path.join(BUILD, "11_tdm_%08X_e%d" % (mask, env_on))
     os.makedirs(d, exist_ok=True)
-    shutil.copy(os.path.join(BUILD, "_hex", "sine256.hex"), d)
+    shutil.copy(sine_hex(), d)
     tb = open(sim("tb_tdm_equiv.v"), encoding="utf-8").read()
     tb = re.sub(r"localparam ENV_ON\s*=\s*1'b[01];", "localparam ENV_ON  = 1'b%d;" % env_on, tb)
     tb = re.sub(r"localparam \[NSLOT-1:0\] ACTIVE = 32'h[0-9A-Fa-f]+;",

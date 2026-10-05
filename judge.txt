@@ -1,0 +1,34 @@
+======================================================================
+ 运行时参数通道验收（拓展 E2 + E3）
+======================================================================
+
+[E3] 音色切换：写 PRESET 寄存器 → 该音 16 个泛音幅度
+     vel = 8<<4 = 128 → 期望 amp = (p_amp × 128) >> 8 = p_amp >> 1
+     预设 0：16 个泛音幅度匹配 16 / 16
+     预设 1：16 个泛音幅度匹配 16 / 16
+     预设 2：16 个泛音幅度匹配 16 / 16
+     预设 3：16 个泛音幅度匹配 16 / 16
+
+[E2a] 颤音深度：写 VIB_DEPTH = 0 / 1000 / 2000
+     段 0：VIB_DEPTH=   0 → 实测峰偏   0.00 音分（期望   0.00），均值  +0.00
+     段 1：VIB_DEPTH=1000 → 实测峰偏  26.31 音分（期望  26.22），均值  -2.80
+     段 2：VIB_DEPTH=2000 → 实测峰偏  52.64 音分（期望  52.04），均值  +0.22
+
+[E2b] 滑音速率：写 GLIDE_STEP 后量时长与轨迹
+     GLIDE_STEP= 20：RTL 的 gq0 = -55215（-3200 音分）
+            L-a 线性递推（每样本减 20，到 0 停）：不符 0 个样本
+            L-b 相位增量 = INC_NEW + (INC_NEW×gq)>>16：滞后 1，不符 0 / 2998
+            L-c 时长：实测 2761 样本，理论 |gq0|/step = 2761 样本
+     GLIDE_STEP=160：RTL 的 gq0 = -55215（-3200 音分）
+            L-a 线性递推（每样本减 160，到 0 停）：不符 0 个样本
+            L-b 相位增量 = INC_NEW + (INC_NEW×gq)>>16：滞后 1，不符 0 / 2998
+            L-c 时长：实测 346 样本，理论 |gq0|/step = 345 样本
+     时长比 (step20)/(step160) 实测 = 7.98（理论 8.0）
+Traceback (most recent call last):
+  File "tools\scripts\reg_ctl_check.py", line 304, in <module>
+    sys.exit(main())
+  File "tools\scripts\reg_ctl_check.py", line 227, in main
+    nz = sum(1 for r in rows if int(r[0]) != 0)
+  File "tools\scripts\reg_ctl_check.py", line 227, in <genexpr>
+    nz = sum(1 for r in rows if int(r[0]) != 0)
+ValueError: invalid literal for int() with base 10: 'X'
