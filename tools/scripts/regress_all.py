@@ -322,7 +322,7 @@ def main():
     # 09 regctl（每个 test 一次冷启动，判据脚本依赖全部产物）
     #   静态表依赖：tb 读 note_inc/preset_part/recip_inc.hex（note_map 综合同样要），
     #     它们是预生成表，权威副本在 src/gowin/tdm_synth/（综合工程），此处从那里取。
-    files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "song_seq.v",
+    files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v", "song_seq.v",
              "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v", "i2s_tx.v",
              "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v", "tb_reg_ctl.v"]
     synth_dir = os.path.join(ROOT, "src", "gowin", "tdm_synth")
@@ -346,7 +346,7 @@ def main():
     # 09b VP7: this test existed separately but was absent from the gate.
     # The stale 0xC0 expectation escaped prior regression after RTL moved to 0x80.
     vp7_files = ["audio_clk_en.v", "osc_env.v", "i2s_tx.v", "tdm_engine.v",
-                 "pitch_mod.v", "note_map.v", "reg_bank.v", "uart_rx.v", "uart_tx.v",
+                 "pitch_mod.v", "note_map.v", "vel_shape.v", "reg_bank.v", "uart_rx.v", "uart_tx.v",
                  "fx_delay.v", "song_seq.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v", "tdm_top.v", "tb_vp7.v"]
     vp7_log, vp7_err = compile_and_run(
         "09_vp7", vp7_files, defines=("SIM_INIT",), need_hex=True,
@@ -390,7 +390,7 @@ def main():
         synth_hex = os.path.join(ROOT, "src", "gowin", "tdm_synth")
         for h in ("sine256.hex", "note_inc.hex", "preset_part.hex", "recip_inc.hex"):
             shutil.copy(os.path.join(synth_hex, h), d)
-        f1_files = ["audio_clk_en.v", "osc_env.v", "pitch_mod.v", "note_map.v",
+        f1_files = ["audio_clk_en.v", "osc_env.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
                     "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v",
                     "fx_delay.v", "i2s_tx.v", "tdm_engine.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v",
                     "tdm_top.v", "tb_tdm_f1.v"]

@@ -61,6 +61,10 @@ module note_map #(
     //---- 音色选择 ----
     input  wire [1:0]          preset,
 
+    //---- 力度->谱形（D-19/D-20；默认 0/0 ⇒ 恒等，既有音频逐位不变）----
+    input  wire signed [9:0]   tilt_vbias,   // 倾斜偏置（负 = 低力度偏暗）
+    input  wire [7:0]          tilt_vgain,
+
     //---- 塑谱（步③，19 号 §3/§4 + 修正案 A1）----
     //   谱 RAM 16×8：上位机经 0x58/0x59 写入（地址由 tdm_top 侧的指针给出）
     input  wire                spec_we,      // 写使能（1 拍）
@@ -302,7 +306,15 @@ module note_map #(
     wire [8:0] amp_add9   = {1'b0, p_amp} + {1'b0, spec_eff};
     wire [7:0] amp_add    = (amp_add9 > 9'd255) ? 8'd255 : amp_add9[7:0];
     wire [7:0] amp_src    = spec_replace ? spec_eff : amp_add;   // 1=替换 / 0=叠加（默认叠加 ⇒ 安全）
-    wire [2*AMP_W-1:0]    amp_mul = amp_src * vel_cur;
+    //   力度->谱形：插在"预设/谱合成"与"力度音量乘法"之间。
+    //   默认 tilt_vbias=0 / tilt_vgain=0 ⇒ 权重恒为 256 ⇒ amp_shaped == amp_src
+    //   ⇒ 与未加本功能时【逐位相同】，既有 30/30 证据不受影响。
+    wire [AMP_W-1:0]      amp_shaped;
+    vel_shape #(.AW(AMP_W)) u_vshape (
+        .vel(vel_cur[AMP_W-1:AMP_W-4]), .part(k[3:0]), .base(amp_src),
+        .tilt_bias(tilt_vbias), .tilt_gain(tilt_vgain), .amp(amp_shaped)
+    );
+    wire [2*AMP_W-1:0]    amp_mul = amp_shaped * vel_cur;
     wire [AMP_W-1:0]      amp_cal = amp_mul[AMP_W+7:8];
 
     //-------------------------------------------------------------------------

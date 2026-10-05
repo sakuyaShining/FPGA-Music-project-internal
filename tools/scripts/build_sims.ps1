@@ -28,7 +28,7 @@ $S_TOP = @(
   "$RTL\audio_clk_en.v", "$RTL\osc_env.v", "$RTL\i2s_tx.v", "$RTL\tdm_engine.v",
   "$RTL\pitch_mod.v", "$RTL\note_map.v", "$RTL\reg_bank.v", "$RTL\uart_rx.v", "$RTL\uart_tx.v",
   "$RTL\fx_delay.v", "$RTL\song_seq.v", "$RTL\pad_scan.v", "$RTL\tdm_top.v",
-    "$RTL\pad_pitch.v", "$RTL\strip_ctrl.v", "$RTL\led_ind.v"
+    "$RTL\pad_pitch.v", "$RTL\strip_ctrl.v", "$RTL\led_ind.v", "$RTL\vel_shape.v"
 )
 $S_PAR = @("$RTL\osc_core.v", "$RTL\osc_env.v", "$RTL\osc_additive.v", "$RTL\mixer.v", "$RTL\synth_top.v")
 $S_NM = @("$RTL\osc_core.v", "$RTL\osc_env.v", "$RTL\tdm_engine.v", "$RTL\pitch_mod.v", "$RTL\note_map.v")

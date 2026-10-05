@@ -508,6 +508,11 @@ module tdm_top (
     //-------------------------------------------------------------------------
     wire [7:0]  r_spec_mode = R[8'h5A*8 +: 8];
     wire [7:0]  r_harm_pads = R[8'h5B*8 +: 8];
+    //   力度->谱形参数（0x6B-0x6D，协议 0x6B-0x6F 保留区；默认 0 ⇒ 恒等）
+    wire [7:0]  r_tilt_vlo   = R[8'h6B*8 +: 8];
+    wire [7:0]  r_tilt_vhi   = R[8'h6C*8 +: 8];
+    wire [7:0]  r_tilt_vgain = R[8'h6D*8 +: 8];
+    wire signed [9:0] tilt_vbias = $signed({r_tilt_vhi[1:0], r_tilt_vlo});
     wire        spec_replace = r_spec_mode[0];      // 1=替换 / 0=叠加
     wire        spec_autorf  = r_spec_mode[1];
 
@@ -759,6 +764,7 @@ module tdm_top (
         // 步③ 塑谱接口
         .spec_we(spec_we), .spec_addr(spec_addr), .spec_wdata(spec_wdata),
         .spec_replace(spec_replace),
+        .tilt_vbias(tilt_vbias), .tilt_vgain(r_tilt_vgain),
         .pad_mask(pad_mask_eff),
         .refresh_valid(rf_pulse), .rf_lo(rf_lo_q), .rf_hi(rf_hi_q),
         .load_en(nm_load_en), .load_slot(nm_load_slot),

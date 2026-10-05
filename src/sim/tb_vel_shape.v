@@ -32,7 +32,7 @@ module tb_vel_shape;
     wire [7:0]         amp;
 
     vel_shape #(.AW(8), .NFLOOR(8'd24), .NPART_PROTECT(4'd3)) dut (
-        .clk(clk), .rst_n(rst_n), .vel(vel), .part(part), .base(base),
+        .vel(vel), .part(part), .base(base),
         .tilt_bias(tilt_bias), .tilt_gain(tilt_gain), .amp(amp)
     );
 
@@ -232,6 +232,37 @@ module tb_vel_shape;
                 $display("  FAIL  V7 条数未随力度增长（%0d -> %0d）—— 置零路径可能仍不可达", c0, c15);
                 errors = errors + 1;
             end
+        end
+
+        //-------------------------------------------------- V8 默认参数恒等
+        //   这一条是【回归护身符】：默认 bias=0/gain=0 时，输出必须与输入逐位相同，
+        //   否则既有"加法引擎逐位一致 / TDM 黄金参考"等证据会全部失效。
+        $display(" V8 identity at default parameters (regression guard)");
+        tilt_bias = 10'sd0;  tilt_gain = 8'd0;
+        begin : v8
+            integer bad8;
+            bad8 = 0;
+            for (v = 0; v < 16; v = v + 1) begin
+                for (i = 0; i < 16; i = i + 1) begin
+                    vel  = v[3:0];
+                    part = i[3:0];
+                    base = (i * 16 + v);      // 覆盖不同幅度
+                    #1;
+                    if (amp !== base) begin
+                        if (bad8 < 3)
+                            $display("  FAIL  V8 v=%0d k=%0d base=%0d amp=%0d", v, i, base, amp);
+                        bad8 = bad8 + 1;
+                    end
+                end
+            end
+            check("V8-identity-256-combinations", bad8, 0);
+            // 边界幅度也要恒等
+            bad8 = 0;
+            vel = 4'd7; part = 4'd5;
+            base = 8'd0;   #1; if (amp !== 8'd0)   bad8 = bad8 + 1;
+            base = 8'd255; #1; if (amp !== 8'd255) bad8 = bad8 + 1;
+            base = 8'd128; #1; if (amp !== 8'd128) bad8 = bad8 + 1;
+            check("V8-identity-boundary-bases", bad8, 0);
         end
 
         $display("==============================================================");

@@ -23,10 +23,8 @@ module vel_shape #(
     parameter NFLOOR = 8'd24,     // 门限：权重低于它则置零（决定"条数"）
     parameter NPART_PROTECT = 4'd3 // 前 N 条恒保留（含基音）
 )(
-    clk, rst_n, vel, part, base, tilt_bias, tilt_gain, amp
+    vel, part, base, tilt_bias, tilt_gain, amp
 );
-    input  wire               clk;
-    input  wire               rst_n;
     input  wire [3:0]         vel;         // 力度 0..15
     input  wire [3:0]         part;        // 泛音序号 0..15（0 = 基音）
     input  wire [AW-1:0]      base;        // 该泛音的预设幅度
@@ -35,7 +33,7 @@ module vel_shape #(
                                           //   而置零需要 bias < -232 ⇒ 置零路径【不可达】。
                                           //   加宽到 [9:0] 后才真正能压低高次泛音。
     input  wire [7:0]         tilt_gain;   // 每档力度的倾斜增量
-    output reg  [AW-1:0]      amp;         // 谱形后的幅度
+    output wire [AW-1:0]      amp;         // 谱形后的幅度（组合输出，零延迟）
 
     //------------------------------------------------------------------
     // 倾斜量：有符号，随力度线性增长
@@ -65,18 +63,13 @@ module vel_shape #(
     // 应用权重（wcl 在 0..511，右移 8 位）
     //------------------------------------------------------------------
     wire [AW+8:0] shaped_full = base * wcl[8:0];
-    reg  [AW-1:0] shaped;
+    // 组合输出（零延迟）：调用方（note_map 的装载通路）自己寄存，
+    //   这样插入到 amp_src 与"力度乘法"之间不会增加流水级。
+    wire [AW-1:0] shaped = (shaped_full[AW+8:8] > {AW{1'b1}})
+                           ? {AW{1'b1}}                  // 饱和，不绕回
+                           : shaped_full[AW+7:8];
 
-    always @(*) begin
-        if (shaped_full[AW+8:8] > {AW{1'b1}})
-            shaped = {AW{1'b1}};                  // 饱和，不绕回
-        else
-            shaped = shaped_full[AW+7:8];
-    end
-
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) amp <= {AW{1'b0}};
-        else        amp <= keep ? shaped : {AW{1'b0}};
-    end
+    // 恒等性：tilt_bias=0 且 tilt_gain=0 ⇒ w=256 ⇒ amp == base（逐位相同）
+    assign amp = keep ? shaped : {AW{1'b0}};
 
 endmodule
