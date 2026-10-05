@@ -49,7 +49,10 @@ def sim(f):
     return os.path.join(SIM, f)
 
 
-def run(cmd, cwd, timeout=600, env_extra=None):
+def run(cmd, cwd, timeout=1800, env_extra=None):
+    # 超时用于抓「卡死」，不是性能门槛。vp7 是合法长测（约 600 秒，
+    # 因为它在 27 MHz 下模拟约 314 ms 音频），600 秒会把它误判成超时。
+    # 提到 1800 秒：留足合法余量，仍能抓住真正的挂死。
     env = dict(os.environ)
     env["PYTHONIOENCODING"] = "utf-8"
     if env_extra:
