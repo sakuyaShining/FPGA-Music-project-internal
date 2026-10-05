@@ -21,213 +21,582 @@
     "implementation": "模块与判据：落到哪个 RTL、哪条判据、多少代价"
   },
   "dimensions": [
-    { "id": "D1", "name": "力度", "gesture": "起音瞬间的接触面积", "source": "I2C 模拟量（待原型）", "scope": "逐声部" },
-    { "id": "D2", "name": "颤音", "gesture": "触后：起音后面积的变化", "source": "I2C 模拟量（待原型）", "scope": "逐声部" },
-    { "id": "D3", "name": "滑音", "gesture": "键间滑动 / legato", "source": "离散事件 + 时间窗", "scope": "声部复用" },
-    { "id": "D4", "name": "亮度", "gesture": "泛音排上滑动", "source": "I2C 模拟量（待原型）", "scope": "逐声部" }
+    {
+      "id": "D1",
+      "name": "力度",
+      "gesture": "起音瞬间的接触面积",
+      "source": "I2C 模拟量（待原型）",
+      "scope": "逐声部"
+    },
+    {
+      "id": "D2",
+      "name": "颤音",
+      "gesture": "触后：起音后面积的变化",
+      "source": "I2C 模拟量（待原型）",
+      "scope": "逐声部"
+    },
+    {
+      "id": "D3",
+      "name": "滑音",
+      "gesture": "键间滑动 / legato",
+      "source": "离散事件 + 时间窗",
+      "scope": "声部复用"
+    },
+    {
+      "id": "D4",
+      "name": "亮度",
+      "gesture": "泛音排上滑动",
+      "source": "I2C 模拟量（待原型）",
+      "scope": "逐声部"
+    }
   ],
   "issues": [
     {
-      "id": "D-01", "impl_id": "I-01", "dimension": "D1", "title": "手指面积因人而异",
+      "id": "D-01",
+      "impl_id": "I-01",
+      "dimension": "D1",
+      "title": "手指面积因人而异",
       "problem": "同一个轻按，不同人、不同湿度下读数差很多，绝对阈值会失效",
       "decision": "不做绝对映射，做相对映射：演奏前标定最轻/最重两端，中间线性插值",
       "rationale": "换人只需重标定，不必改代码",
       "open": "标定动作放在何时（开机 / 进入演奏模式）",
       "status": "decided",
-      "impl": { "module": "expr_map.v", "registers": ["CAL_LO", "CAL_HI"], "depends_on": ["I2C 模拟量"], "criterion": "E2-D1-a" }
+      "impl": {
+        "module": "expr_map.v",
+        "registers": [
+          "CAL_LO",
+          "CAL_HI"
+        ],
+        "depends_on": [
+          "I2C 模拟量"
+        ],
+        "criterion": "E2-D1-a"
+      }
     },
     {
-      "id": "D-02", "impl_id": "I-02", "dimension": "D1", "title": "起音瞬间的面积还在变化",
+      "id": "D-02",
+      "impl_id": "I-02",
+      "dimension": "D1",
+      "title": "起音瞬间的面积还在变化",
       "problem": "手指落下是几十毫秒的过程，按下那一刻测到的是最小值",
       "decision": "取起音窗内（约 10 ms）的峰值，不取瞬时值",
       "rationale": "弹得越轻越不易被误采为无力度",
       "spec_correction": true,
       "status": "decided",
-      "impl": { "module": "expr_map.v", "registers": ["ATK_WIN"], "resource": "32 个声部级保持寄存器（复用，非 38 通道）", "criterion": "E2-D1-b" }
+      "impl": {
+        "module": "expr_map.v",
+        "registers": [
+          "ATK_WIN"
+        ],
+        "resource": "32 个声部级保持寄存器（复用，非 38 通道）",
+        "criterion": "E2-D1-b"
+      }
     },
     {
-      "id": "D-03", "impl_id": "I-03", "dimension": "D1", "title": "力度只改音量会像音量旋钮",
+      "id": "D-03",
+      "impl_id": "I-03",
+      "dimension": "D1",
+      "title": "力度只改音量会像音量旋钮",
       "problem": "只缩放包络峰值，听感是音量旋钮，不像在弹",
       "decision": "力度同时影响音量与音色亮度；可选再影响起音速度",
       "rationale": "真实乐器重击更亮，这是力度最有说服力的部分",
       "open": "是否做重按起音更快（时间/收益权衡）",
       "status": "decided",
-      "impl": { "module": "tdm_engine 声部增益 + 谱形缩放", "depends_on": ["I-13"], "criterion": "E2-D1-c" }
+      "impl": {
+        "module": "tdm_engine 声部增益 + 谱形缩放",
+        "depends_on": [
+          "I-13"
+        ],
+        "criterion": "E2-D1-c"
+      }
     },
     {
-      "id": "D-04", "impl_id": "I-04", "dimension": "D1", "title": "16 档够不够",
+      "id": "D-04",
+      "impl_id": "I-04",
+      "dimension": "D1",
+      "title": "16 档够不够",
       "problem": "档位过多无益，曲线形状才决定手感",
       "decision": "16 档足够；曲线（线性/对数/分段）必须用耳朵定",
       "open": "曲线形状",
       "status": "decided",
-      "impl": { "module": "expr_map.v", "registers": ["VEL_CURVE"], "criterion": "E2-D1-d" }
+      "impl": {
+        "module": "expr_map.v",
+        "registers": [
+          "VEL_CURVE"
+        ],
+        "criterion": "E2-D1-d"
+      }
     },
     {
-      "id": "D-05", "impl_id": "I-05", "dimension": "D2", "title": "颤音触发方式的选择",
+      "id": "D-05",
+      "impl_id": "I-05",
+      "dimension": "D2",
+      "title": "颤音触发方式的选择",
       "problem": "触后依赖模拟量，模拟量可能不可用",
       "decision": "触后为主；不可用时退到长按自动渐入（零传感依赖）",
       "rationale": "长按渐入是可用的兜底，保证 E2 颤音维不落空",
       "status": "decided",
-      "impl": { "module": "输入层模式位", "registers": ["PERF_CTRL"], "criterion": "E2-D2-a" }
+      "impl": {
+        "module": "输入层模式位",
+        "registers": [
+          "PERF_CTRL"
+        ],
+        "criterion": "E2-D2-a"
+      }
     },
     {
-      "id": "D-06", "impl_id": "I-06", "dimension": "D2", "title": "触后与力度共用同一信号",
+      "id": "D-06",
+      "impl_id": "I-06",
+      "dimension": "D2",
+      "title": "触后与力度共用同一信号",
       "problem": "起音窗要最大值，触后要起音之后的变化，信号相同",
       "decision": "时间窗分离：起音窗内归力度；之后的变化归触后，触后从 0 起累计",
       "risk": "同一信号两处判定会不一致 => 必须单点判定",
       "status": "decided",
-      "impl": { "module": "expr_map.v 状态机", "criterion": "E2-X2" }
+      "impl": {
+        "module": "expr_map.v 状态机",
+        "criterion": "E2-X2"
+      }
     },
     {
-      "id": "D-07", "impl_id": "I-07", "dimension": "D2", "title": "颤音渐入时长",
+      "id": "D-07",
+      "impl_id": "I-07",
+      "dimension": "D2",
+      "title": "颤音渐入时长",
       "problem": "渐入太短像开关，太长像没反应",
       "decision": "100-300 ms，默认 200 ms（真实歌唱颤音量级）",
       "spec_correction": true,
       "note": "触后从 0 起 => 天然先直音后加颤，这正是自然乐器行为，不要优化掉",
       "status": "decided",
-      "impl": { "module": "pitch_mod 每声部深度平滑", "registers": ["VIB_IN_MS"], "criterion": "E2-D2-b" }
+      "impl": {
+        "module": "pitch_mod 每声部深度平滑",
+        "registers": [
+          "VIB_IN_MS"
+        ],
+        "criterion": "E2-D2-b"
+      }
     },
     {
-      "id": "D-08", "impl_id": "I-08", "dimension": "D3", "title": "滑音 vs 快速连弹如何区分",
+      "id": "D-08",
+      "impl_id": "I-08",
+      "dimension": "D3",
+      "title": "滑音 vs 快速连弹如何区分",
       "problem": "两种情形在事件层面几乎相同（旧音还在响时出现新音）",
       "decision": "依据手指是否离开面板（I2C 状态位）；拿不到则退化为时间窗 + 位移连续性",
       "status": "decided",
-      "impl": { "module": "输入层", "source": "MPR121 状态位", "criterion": "E2-D3-a" }
+      "impl": {
+        "module": "输入层",
+        "source": "MPR121 状态位",
+        "criterion": "E2-D3-a"
+      }
     },
     {
-      "id": "D-09", "impl_id": "I-09", "dimension": "D3", "title": "电极间隙会造成瞬断",
+      "id": "D-09",
+      "impl_id": "I-09",
+      "dimension": "D3",
+      "title": "电极间隙会造成瞬断",
       "problem": "手指在键间移动必然经过 3 mm 间隙，出现短暂全松",
       "decision": "全松必须持续超过阈值（30-50 ms）才算真的抬手",
       "otherwise": "滑音会变成一串断音",
       "status": "decided",
-      "impl": { "module": "slide_det.v", "registers": ["REL_MS"], "open": "阈值数值待原型", "criterion": "E2-X3" }
+      "impl": {
+        "module": "slide_det.v",
+        "registers": [
+          "REL_MS"
+        ],
+        "open": "阈值数值待原型",
+        "criterion": "E2-X3"
+      }
     },
     {
-      "id": "D-10", "impl_id": "I-10", "dimension": "D3", "title": "快速重复音与滑音争同一个阈值",
+      "id": "D-10",
+      "impl_id": "I-10",
+      "dimension": "D3",
+      "title": "快速重复音与滑音争同一个阈值",
       "problem": "阈值短则滑音易断，长则快速重复音被当成滑音",
       "decision": "承认这是折中，数值靠原型实测；可选增强为相邻键连续经过的加权证据",
       "status": "decided",
-      "impl": { "module": "slide_det.v", "registers": ["SLIDE_WIN"], "criterion": "E2-X4" }
+      "impl": {
+        "module": "slide_det.v",
+        "registers": [
+          "SLIDE_WIN"
+        ],
+        "criterion": "E2-X4"
+      }
     },
     {
-      "id": "D-11", "impl_id": "I-11", "dimension": "D4", "title": "泛音排中间掉格",
+      "id": "D-11",
+      "impl_id": "I-11",
+      "dimension": "D4",
+      "title": "泛音排中间掉格",
       "problem": "8 个键之间也有间隙，与 D-09 同源",
       "decision": "泛音排不发声，只需知道经过了哪几格，可用更宽松判据",
       "status": "decided",
-      "impl": { "module": "slide_det.v", "criterion": "E2-D4-a" }
+      "impl": {
+        "module": "slide_det.v",
+        "criterion": "E2-D4-a"
+      }
     },
     {
-      "id": "D-12", "impl_id": "I-12", "dimension": "D4", "title": "多指同时按泛音排算哪个位置",
+      "id": "D-12",
+      "impl_id": "I-12",
+      "dimension": "D4",
+      "title": "多指同时按泛音排算哪个位置",
       "problem": "两根手指同时落上，位置不唯一",
       "decision": "取最左被按格（可配置为首个落下的格）",
       "open": "最终取最左还是取首落，待手感确认",
       "status": "decided",
-      "impl": { "module": "slide_det.v", "criterion": "E2-D4-b" }
+      "impl": {
+        "module": "slide_det.v",
+        "criterion": "E2-D4-b"
+      }
     },
     {
-      "id": "D-13", "impl_id": "I-13", "dimension": "D4", "title": "亮度的目标谱形从哪来",
+      "id": "D-13",
+      "impl_id": "I-13",
+      "dimension": "D4",
+      "title": "亮度的目标谱形从哪来",
       "problem": "现有泛音开关是离散的，亮度要求连续",
       "decision": "以倾斜轴为主（协议已声明 0x5C TILT），预设插值为补充：倾斜决定怎么变，预设决定变到哪",
       "rejected": "逐条缩放 16 条幅度会变成音量变化，不像亮度",
       "status": "decided",
-      "impl": { "module": "新增 0x5C TILT + note_map 谱形写入", "criterion": "E2-D4-c" }
+      "impl": {
+        "module": "新增 0x5C TILT + note_map 谱形写入",
+        "criterion": "E2-D4-c"
+      }
     },
     {
-      "id": "D-14", "impl_id": "I-14", "dimension": "D4", "title": "亮度只能缓慢推拉",
+      "id": "D-14",
+      "impl_id": "I-14",
+      "dimension": "D4",
+      "title": "亮度只能缓慢推拉",
       "problem": "逐声部谱形刷新（0x63）有几十个周期延迟",
       "decision": "亮度只做手势级缓慢推拉，不做音频级快速摆动",
       "rationale": "这是引擎刷新机制的真实上限，不是实现疏忽",
       "status": "decided",
-      "impl": { "module": "约束性说明", "criterion": "E2-D4-d" }
+      "impl": {
+        "module": "约束性说明",
+        "criterion": "E2-D4-d"
+      }
     },
     {
-      "id": "D-15", "impl_id": "I-15", "dimension": "D4", "title": "泛音键的双重身份会打架",
+      "id": "D-15",
+      "impl_id": "I-15",
+      "dimension": "D4",
+      "title": "泛音键的双重身份会打架",
       "problem": "手指刚按下时，系统不知道是要点还是要滑",
       "decision": "点按加确认延迟 T（默认 150 ms）：稳定按住且无位移 => 点按生效；期间有移动 => 判为滑动，不切换泛音",
       "tradeoff": "泛音键点按有 T 延迟，可接受（它是设定动作，不是演奏动作）",
       "status": "decided",
-      "impl": { "module": "输入层（泛音排专用）", "registers": ["TAP_MS"], "criterion": "E2-X5" }
+      "impl": {
+        "module": "输入层（泛音排专用）",
+        "registers": [
+          "TAP_MS"
+        ],
+        "criterion": "E2-X5"
+      }
     },
     {
-      "id": "D-16", "impl_id": "I-16", "dimension": "D1/D2", "title": "死区与抖动",
+      "id": "D-16",
+      "impl_id": "I-16",
+      "dimension": "D1/D2",
+      "title": "死区与抖动",
       "problem": "手指静止时读数仍抖动，会被误判为力度或触后变化",
       "decision": "设置死区，小于死区的变化不改变力度/触后",
       "open": "死区取噪声的 2-3 倍，待原型量噪声",
       "status": "decided",
-      "impl": { "module": "expr_map.v", "registers": ["DEAD_ZONE"], "criterion": "E2-X6" }
+      "impl": {
+        "module": "expr_map.v",
+        "registers": [
+          "DEAD_ZONE"
+        ],
+        "criterion": "E2-X6"
+      }
     },
     {
-      "id": "D-17", "impl_id": "I-17", "dimension": "all", "title": "表情的冻结与清零",
+      "id": "D-17",
+      "impl_id": "I-17",
+      "dimension": "all",
+      "title": "表情的冻结与清零",
       "problem": "音域切换是设定动作，切换时的受力会污染表情",
       "decision": "音域切换期间冻结表情更新；note-off 时清该声部表情",
       "status": "decided",
-      "impl": { "module": "expr_map.v + 声部表情寄存器", "criterion": "E2-X7" }
+      "impl": {
+        "module": "expr_map.v + 声部表情寄存器",
+        "criterion": "E2-X7"
+      }
     },
     {
-      "id": "D-18", "impl_id": "I-18", "dimension": "all", "title": "逐声部 vs 全局的取舍",
+      "id": "D-18",
+      "impl_id": "I-18",
+      "dimension": "all",
+      "title": "逐声部 vs 全局的取舍",
       "problem": "全局颤音在弹和弦时会一起颤，不自然",
       "decision": "四维全部逐声部",
       "resource": "约 +768（颤音相位）+256（表情寄存器）= 约 1024 个触发器",
-      "prediction": "逻辑占用 66% => 预计 68-70%；时序余量 +16.479 ns，预计影响 < 1 ns",
+      "prediction": "实测更正 2026-10-06：接入 vel_shape 的时序代价 4.6 ns（+16.479 -> +11.872），逻辑 71%，DSP 10.75；含 /15 除法的版本曾跌到 +4.488 ns 被闸口判红。当前关键路径仍部分在 u_vshape 内。",
       "judged_by": "闸口自动判（check_timing.py，slack >= 5 ns）",
       "status": "decided",
-      "impl": { "module": "pitch_mod / tdm_engine", "criterion": "E2-D2-c" }
+      "impl": {
+        "module": "pitch_mod / tdm_engine",
+        "criterion": "E2-D2-c"
+      },
+      "prediction_corrected": true
     }
   ],
   "criteria": [
-    { "id": "E2-D1-a", "text": "相对映射插值正确（表驱动）", "impl_ref": "I-01" },
-    { "id": "E2-D1-b", "text": "起音窗取峰值而非首值", "impl_ref": "I-02" },
-    { "id": "E2-D1-c", "text": "力度上升 => 谱心单调上升", "impl_ref": "I-03" },
-    { "id": "E2-D1-d", "text": "力度曲线选择生效", "impl_ref": "I-04" },
-    { "id": "E2-D2-a", "text": "三种触发模式下颤音来源正确", "impl_ref": "I-05" },
-    { "id": "E2-D2-b", "text": "渐入单调到达、不超调", "impl_ref": "I-07" },
-    { "id": "E2-D2-c", "text": "和弦中两音触后不同 => 频偏独立", "impl_ref": "I-18" },
-    { "id": "E2-D3-a", "text": "滑动不产生 note-on，音高连续变化", "impl_ref": "I-08" },
-    { "id": "E2-D4-a", "text": "泛音排位置序列单调", "impl_ref": "I-11" },
-    { "id": "E2-D4-b", "text": "多指取位符合规则", "impl_ref": "I-12" },
-    { "id": "E2-D4-c", "text": "倾斜上升 => 谱心上升", "impl_ref": "I-13" },
-    { "id": "E2-D4-d", "text": "超出刷新速率上限时行为可预测", "impl_ref": "I-14" },
-    { "id": "E2-X2", "text": "重按 => 力度大、颤音深度不变", "impl_ref": "I-06" },
-    { "id": "E2-X3", "text": "跨越间隙不产生断音", "impl_ref": "I-09" },
-    { "id": "E2-X4", "text": "快速重复音 vs 滑音判定正确", "impl_ref": "I-10" },
-    { "id": "E2-X5", "text": "泛音排点按 vs 滑动消歧", "impl_ref": "I-15" },
-    { "id": "E2-X6", "text": "噪声抖动不改变表情", "impl_ref": "I-16" },
-    { "id": "E2-X7", "text": "音域切换不污染表情", "impl_ref": "I-17" }
+    {
+      "id": "E2-D1-a",
+      "text": "相对映射插值正确（表驱动）",
+      "impl_ref": "I-01"
+    },
+    {
+      "id": "E2-D1-b",
+      "text": "起音窗取峰值而非首值",
+      "impl_ref": "I-02"
+    },
+    {
+      "id": "E2-D1-c",
+      "text": "力度上升 => 谱心单调上升",
+      "impl_ref": "I-03"
+    },
+    {
+      "id": "E2-D1-d",
+      "text": "力度曲线选择生效",
+      "impl_ref": "I-04"
+    },
+    {
+      "id": "E2-D2-a",
+      "text": "三种触发模式下颤音来源正确",
+      "impl_ref": "I-05"
+    },
+    {
+      "id": "E2-D2-b",
+      "text": "渐入单调到达、不超调",
+      "impl_ref": "I-07"
+    },
+    {
+      "id": "E2-D2-c",
+      "text": "和弦中两音触后不同 => 频偏独立",
+      "impl_ref": "I-18"
+    },
+    {
+      "id": "E2-D3-a",
+      "text": "滑动不产生 note-on，音高连续变化",
+      "impl_ref": "I-08"
+    },
+    {
+      "id": "E2-D4-a",
+      "text": "泛音排位置序列单调",
+      "impl_ref": "I-11"
+    },
+    {
+      "id": "E2-D4-b",
+      "text": "多指取位符合规则",
+      "impl_ref": "I-12"
+    },
+    {
+      "id": "E2-D4-c",
+      "text": "倾斜上升 => 谱心上升",
+      "impl_ref": "I-13"
+    },
+    {
+      "id": "E2-D4-d",
+      "text": "超出刷新速率上限时行为可预测",
+      "impl_ref": "I-14"
+    },
+    {
+      "id": "E2-X2",
+      "text": "重按 => 力度大、颤音深度不变",
+      "impl_ref": "I-06"
+    },
+    {
+      "id": "E2-X3",
+      "text": "跨越间隙不产生断音",
+      "impl_ref": "I-09"
+    },
+    {
+      "id": "E2-X4",
+      "text": "快速重复音 vs 滑音判定正确",
+      "impl_ref": "I-10"
+    },
+    {
+      "id": "E2-X5",
+      "text": "泛音排点按 vs 滑动消歧",
+      "impl_ref": "I-15"
+    },
+    {
+      "id": "E2-X6",
+      "text": "噪声抖动不改变表情",
+      "impl_ref": "I-16"
+    },
+    {
+      "id": "E2-X7",
+      "text": "音域切换不污染表情",
+      "impl_ref": "I-17"
+    }
   ],
   "implementation_order": [
-    { "order": 1, "item": "I-13 亮度倾斜通路", "reason": "最独立、风险最小；I-03 依赖它", "needs_hardware": false },
-    { "order": 2, "item": "I-18 逐声部颤音相位 + 表情寄存器", "reason": "E2 颤音维的核心短板", "needs_hardware": false },
-    { "order": 3, "item": "I-06/I-07 时间窗分离 + 渐入平滑", "reason": "与 2 同批", "needs_hardware": false },
-    { "order": 4, "item": "I-03 力度到音色", "reason": "依赖 1", "needs_hardware": false },
-    { "order": 5, "item": "I-01/I-02/I-04/I-16 输入层映射", "reason": "依赖 I2C 原型结果", "needs_hardware": true },
-    { "order": 6, "item": "I-08/I-09/I-10/I-11/I-12/I-15 滑动检测", "reason": "依赖 I2C 原型结果", "needs_hardware": true },
-    { "order": 7, "item": "I-05/I-14/I-17 兜底与冻结", "reason": "收尾", "needs_hardware": false }
+    {
+      "order": 1,
+      "item": "I-13 亮度倾斜通路",
+      "reason": "最独立、风险最小；I-03 依赖它",
+      "needs_hardware": false
+    },
+    {
+      "order": 2,
+      "item": "I-18 逐声部颤音相位 + 表情寄存器",
+      "reason": "E2 颤音维的核心短板",
+      "needs_hardware": false
+    },
+    {
+      "order": 3,
+      "item": "I-06/I-07 时间窗分离 + 渐入平滑",
+      "reason": "与 2 同批",
+      "needs_hardware": false
+    },
+    {
+      "order": 4,
+      "item": "I-03 力度到音色",
+      "reason": "依赖 1",
+      "needs_hardware": false
+    },
+    {
+      "order": 5,
+      "item": "I-01/I-02/I-04/I-16 输入层映射",
+      "reason": "依赖 I2C 原型结果",
+      "needs_hardware": true
+    },
+    {
+      "order": 6,
+      "item": "I-08/I-09/I-10/I-11/I-12/I-15 滑动检测",
+      "reason": "依赖 I2C 原型结果",
+      "needs_hardware": true
+    },
+    {
+      "order": 7,
+      "item": "I-05/I-14/I-17 兜底与冻结",
+      "reason": "收尾",
+      "needs_hardware": false
+    }
   ],
   "existing_capabilities": [
-    { "ability": "力度通路", "status": "exists", "where": "tdm_top / note_map / tdm_engine", "detail": "ev_vel 4->8 位，amp = (p_amp * vel8) >> 8" },
-    { "ability": "滑音", "status": "exists_and_runtime_controllable", "where": "tdm_top:288/294, pitch_mod:182", "detail": "CTRL[2] -> pmod_cfg[0] -> pitch_mod.glide_en，在应用处门控" },
-    { "ability": "滑音速率", "status": "exists", "where": "pitch_mod", "detail": "GLIDE_STEP (0x35-0x36)" },
-    { "ability": "滑音初值", "status": "exists", "where": "note_map:753", "detail": "tdm_top 把 GLIDE_EN 显式设为 1" },
-    { "ability": "颤音", "status": "exists_but_global", "where": "pitch_mod", "detail": "VIB_INC / VIB_DEPTH，单一 LFO 相位" },
-    { "ability": "逐声部谱形刷新", "status": "exists", "where": "tdm_top:619, note_map", "detail": "0x63 SPEC_REFRESH + 谱 RAM 16x8" },
-    { "ability": "亮度轴", "status": "not_implemented", "where": "-", "detail": "协议已声明 0x5C TILT" },
-    { "ability": "输入层模拟量", "status": "absent", "where": "pad_pitch", "detail": "目前只有离散触摸位图" }
+    {
+      "ability": "力度通路",
+      "status": "exists",
+      "where": "tdm_top / note_map / tdm_engine",
+      "detail": "ev_vel 4->8 位，amp = (p_amp * vel8) >> 8"
+    },
+    {
+      "ability": "滑音",
+      "status": "exists_and_runtime_controllable",
+      "where": "tdm_top:288/294, pitch_mod:182",
+      "detail": "CTRL[2] -> pmod_cfg[0] -> pitch_mod.glide_en，在应用处门控"
+    },
+    {
+      "ability": "滑音速率",
+      "status": "exists",
+      "where": "pitch_mod",
+      "detail": "GLIDE_STEP (0x35-0x36)"
+    },
+    {
+      "ability": "滑音初值",
+      "status": "exists",
+      "where": "note_map:753",
+      "detail": "tdm_top 把 GLIDE_EN 显式设为 1"
+    },
+    {
+      "ability": "颤音",
+      "status": "exists_but_global",
+      "where": "pitch_mod",
+      "detail": "VIB_INC / VIB_DEPTH，单一 LFO 相位"
+    },
+    {
+      "ability": "逐声部谱形刷新",
+      "status": "exists",
+      "where": "tdm_top:619, note_map",
+      "detail": "0x63 SPEC_REFRESH + 谱 RAM 16x8"
+    },
+    {
+      "ability": "亮度轴",
+      "status": "not_implemented",
+      "where": "-",
+      "detail": "协议已声明 0x5C TILT"
+    },
+    {
+      "ability": "输入层模拟量",
+      "status": "absent",
+      "where": "pad_pitch",
+      "detail": "目前只有离散触摸位图"
+    }
   ],
   "risks": [
-    { "risk": "I2C 模拟量不可用", "impact": "I-01/02/03/16 全部退化", "mitigation": "固定力度 + 长按渐入（D-05 兜底）" },
-    { "risk": "采样率不足", "impact": "I-08/I-10 退化", "mitigation": "只做 legato，不做滑动" },
-    { "risk": "无 IRQ 引脚", "impact": "延迟预算需重算", "mitigation": "架构级风险，见 28 号文档第 4 节" },
-    { "risk": "逐声部资源超预期", "impact": "逻辑占用 > 70%", "mitigation": "闸口自动判红；届时只保留颤音逐声部，亮度回全局" },
-    { "risk": "同一信号两处判定（I-06）", "impact": "力度与触后不一致", "mitigation": "单点判定，一处产生两个量" }
+    {
+      "risk": "I2C 模拟量不可用",
+      "impact": "I-01/02/03/16 全部退化",
+      "mitigation": "固定力度 + 长按渐入（D-05 兜底）"
+    },
+    {
+      "risk": "采样率不足",
+      "impact": "I-08/I-10 退化",
+      "mitigation": "只做 legato，不做滑动"
+    },
+    {
+      "risk": "无 IRQ 引脚",
+      "impact": "延迟预算需重算",
+      "mitigation": "架构级风险，见 28 号文档第 4 节"
+    },
+    {
+      "risk": "逐声部资源超预期",
+      "impact": "逻辑占用 > 70%",
+      "mitigation": "闸口自动判红；届时只保留颤音逐声部，亮度回全局"
+    },
+    {
+      "risk": "同一信号两处判定（I-06）",
+      "impact": "力度与触后不一致",
+      "mitigation": "单点判定，一处产生两个量"
+    }
   ],
   "open_items": [
-    { "id": "O-1", "item": "力度曲线形状", "decided_by": "耳朵" },
-    { "id": "O-2", "item": "标定动作何时做", "decided_by": "手感（D-01）" },
-    { "id": "O-3", "item": "全松阈值数值", "decided_by": "原型实测（D-09/D-10）" },
-    { "id": "O-4", "item": "点按确认延迟 T", "decided_by": "原型 + 手感（D-15）" },
-    { "id": "O-5", "item": "多指取哪一格", "decided_by": "手感（D-12）" },
-    { "id": "O-6", "item": "颤音渐入 200 ms 是否合适", "decided_by": "耳朵（D-07）" },
-    { "id": "O-7", "item": "死区大小", "decided_by": "原型量噪声（D-16）" },
-    { "id": "O-8", "item": "是否做重按起音更快", "decided_by": "时间/收益权衡（D-03）" }
+    {
+      "id": "O-1",
+      "item": "力度曲线形状",
+      "decided_by": "耳朵"
+    },
+    {
+      "id": "O-2",
+      "item": "标定动作何时做",
+      "decided_by": "手感（D-01）"
+    },
+    {
+      "id": "O-3",
+      "item": "全松阈值数值",
+      "decided_by": "原型实测（D-09/D-10）"
+    },
+    {
+      "id": "O-4",
+      "item": "点按确认延迟 T",
+      "decided_by": "原型 + 手感（D-15）"
+    },
+    {
+      "id": "O-5",
+      "item": "多指取哪一格",
+      "decided_by": "手感（D-12）"
+    },
+    {
+      "id": "O-6",
+      "item": "颤音渐入 200 ms 是否合适",
+      "decided_by": "耳朵（D-07）"
+    },
+    {
+      "id": "O-7",
+      "item": "死区大小",
+      "decided_by": "原型量噪声（D-16）"
+    },
+    {
+      "id": "O-8",
+      "item": "是否做重按起音更快",
+      "decided_by": "时间/收益权衡（D-03）"
+    }
   ]
 }
