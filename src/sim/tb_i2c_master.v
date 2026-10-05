@@ -104,10 +104,10 @@ module tb_i2c_master;
     integer trace_n = 0;
     always @(posedge clk) begin
         scl_p <= scl; sda_p <= sda;
-        if ((scl !== scl_p || sda !== sda_p) && trace_n < 90) begin
+        if ((scl !== scl_p || sda !== sda_p) && trace_n < 200) begin
             trace_n = trace_n + 1;
-            $display("   t=%0t scl=%b sda=%b | st=%0d act=%0d mode=%0d bitc=%0d q=%0d busy=%b err=%b mst=%0d",
-                     $time, scl, sda, u_m.st, u_m.act, u_m.mode, u_m.bitc, u_m.q, busy, err, u_s.st);
+            $display("   t=%0t scl=%b sda=%b | st=%0d seq=%0d bitc=%0d q=%0d busy=%b err=%b mst=%0d sbc=%0d sdr=%b",
+                     $time, scl, sda, u_m.st, u_m.seq, u_m.bitc, u_m.q, busy, err, u_s.st, u_s.bitc, u_s.sda_drive_lo);
         end
     end
 
@@ -134,13 +134,13 @@ module tb_i2c_master;
         do_xfer(1'b0, 7'h5A, 8'h5E, 16'h0024, 2'd1, 3'd1);
         if (err) begin $display("  FAIL  写入时从机未应答"); errors = errors + 1; end
         do_xfer(1'b1, 7'h5A, 8'h5E, 16'h0000, 2'd0, 3'd1);
-        check("寄存器回读", rd_d, 32'h2400_0000);
+        check("reg-readback", rd_d, 32'h2400_0000);
 
         $display(" 用例 2：读触摸状态 2 字节（touch = 0x0F0）");
         touch = 12'h0F0;
         repeat (10) @(posedge clk);
         do_xfer(1'b1, 7'h5A, 8'h00, 16'h0000, 2'd0, 3'd2);
-        check("触摸状态寄存器", rd_d, 32'hF000_0000);
+        check("touch-status", rd_d, 32'hF000_0000);
 
         $display(" 用例 3：访问不存在的从机地址 0x33，应报 err");
         do_xfer(1'b1, 7'h33, 8'h00, 16'h0000, 2'd0, 3'd1);
