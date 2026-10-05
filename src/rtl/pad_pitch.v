@@ -17,7 +17,7 @@
 //   · 换挡本身不产生任何事件（判据 P11）；已在响的音不受换挡影响（判据 P12）
 //=============================================================================
 module pad_pitch #(
-    parameter integer NCH  = 35,
+    parameter integer NCH  = 38,   // 与规格一致：0-11 / 12-23 / 24 / 25-29 / 30-37
     parameter integer NPIT = 25,
     parameter integer BASE = 48
 )(

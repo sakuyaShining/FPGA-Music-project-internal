@@ -30,7 +30,7 @@ module tb_pad_pitch;
     integer i, j;
 
     //--------------------------------------------------------------- 标准实例
-    reg  [34:0] touch = 35'd0;
+    reg  [37:0] touch = 38'd0;
     reg  [2:0]  pos   = 3'd1;                 // 1 = 0 档
     reg  [3:0]  vel   = 4'd12;
 
@@ -39,7 +39,7 @@ module tb_pad_pitch;
     wire [3:0]  ev_vel;
     wire [7:0]  harm_mask;
 
-    pad_pitch #(.NCH(35), .NPIT(25), .BASE(48)) ua (
+    pad_pitch #(.NCH(38), .NPIT(25), .BASE(48)) ua (
         .clk(clk), .rst_n(rst_n), .touch(touch), .pos(pos), .vel(vel),
         .ev_on(ev_on), .ev_off(ev_off), .ev_note(ev_note), .ev_vel(ev_vel),
         .harm_mask(harm_mask)
@@ -61,7 +61,7 @@ module tb_pad_pitch;
     wire        ev_on2, ev_off2;
     wire [6:0]  ev_note2;
     wire [7:0]  harm2;
-    pad_pitch #(.NCH(35), .NPIT(25), .BASE(60)) ub (
+    pad_pitch #(.NCH(38), .NPIT(25), .BASE(60)) ub (
         .clk(clk), .rst_n(rst_n), .touch(touch), .pos(pos), .vel(vel),
         .ev_on(ev_on2), .ev_off(ev_off2), .ev_note(ev_note2), .ev_vel(),
         .harm_mask(harm2)
@@ -94,7 +94,7 @@ module tb_pad_pitch;
     task press_ch;
         input [5:0] ch;
         begin
-            touch = 35'd0;
+            touch = 38'd0;
             wait_cycles(2);
             touch[ch] = 1'b1;
             wait_cycles(40);
@@ -214,7 +214,7 @@ module tb_pad_pitch;
         //========================================================== P6 挂音防护
         $display(" P6 挂音防护（按下→换挡→松开）");
         pos = 3'd1;
-        touch = 35'd0; wait_cycles(2);
+        touch = 38'd0; wait_cycles(2);
         touch[6'd7] = 1'b1; wait_cycles(40);
         got_note = last_on;                       // 按下时的音
         n_off0 = off_cnt;
@@ -226,7 +226,7 @@ module tb_pad_pitch;
 
         //========================================================== P11 换挡不产生事件
         $display(" P11 换挡本身不产生事件");
-        touch = 35'd0; wait_cycles(40);
+        touch = 38'd0; wait_cycles(40);
         n_on0 = on_cnt; n_off0 = off_cnt;
         for (j = 0; j < 5; j = j + 1) begin pos = j; wait_cycles(40); end
         check("P11-no-events-on-switch", (on_cnt - n_on0) + (off_cnt - n_off0), 0);
@@ -234,7 +234,7 @@ module tb_pad_pitch;
         //========================================================== P12 跨档同时发声
         $display(" P12 跨档同时发声");
         pos = 3'd1;
-        touch = 35'd0; wait_cycles(40);
+        touch = 38'd0; wait_cycles(40);
         n_on0 = on_cnt; n_off0 = off_cnt;
         touch[6'd3] = 1'b1; wait_cycles(40);      // 音 A = 48+3+0 = 51
         got_note = last_on;
@@ -269,7 +269,7 @@ module tb_pad_pitch;
 
         //========================================================== P8 非音高键
         $display(" P8 非音高键不发声");
-        touch = 35'd0; wait_cycles(40);
+        touch = 38'd0; wait_cycles(40);
         n_on0 = on_cnt;
         for (i = 30; i < 38; i = i + 1) begin
             touch[i] = 1'b1; wait_cycles(2);
@@ -277,7 +277,7 @@ module tb_pad_pitch;
         wait_cycles(40);
         check("P8-non-pitch-silent", on_cnt - n_on0, 0);
         check("P8-harm-mask", harm_mask, 8'hFF);
-        touch = 35'd0;
+        touch = 38'd0;
 
         //========================================================== 汇总
         $display("==============================================================");
