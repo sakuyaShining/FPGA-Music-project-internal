@@ -25,18 +25,20 @@ $RTL = 'src\rtl'
 
 $S_COMMON = @("$RTL\osc_env.v", "$RTL\tdm_engine.v", "$RTL\pitch_mod.v")
 $S_TOP = @(
-  "$RTL\audio_clk_en.v", "$RTL\osc_env.v", "$RTL\i2s_tx.v", "$RTL\tdm_engine.v",
-  "$RTL\pitch_mod.v", "$RTL\note_map.v", "$RTL\reg_bank.v", "$RTL\uart_rx.v", "$RTL\uart_tx.v",
-  "$RTL\fx_delay.v", "$RTL\song_seq.v", "$RTL\pad_scan.v", "$RTL\tdm_top.v",
-    "$RTL\pad_pitch.v", "$RTL\strip_ctrl.v", "$RTL\led_ind.v", "$RTL\vel_shape.v"
+    "$RTL\audio_clk_en.v", "$RTL\osc_env.v", "$RTL\i2s_tx.v"
+    "$RTL\tdm_engine.v", "$RTL\pitch_mod.v", "$RTL\note_map.v"
+    "$RTL\vel_shape.v", "$RTL\reg_bank.v", "$RTL\uart_rx.v"
+    "$RTL\uart_tx.v", "$RTL\fx_delay.v", "$RTL\song_seq.v"
+    "$RTL\pad_scan.v", "$RTL\tdm_top.v", "$RTL\pad_pitch.v"
+    "$RTL\strip_ctrl.v", "$RTL\led_ind.v"
 )
 $S_PAR = @("$RTL\osc_core.v", "$RTL\osc_env.v", "$RTL\osc_additive.v", "$RTL\mixer.v", "$RTL\synth_top.v")
-$S_NM = @("$RTL\osc_core.v", "$RTL\osc_env.v", "$RTL\tdm_engine.v", "$RTL\pitch_mod.v", "$RTL\note_map.v")
+$S_NM = @("$RTL\osc_core.v", "$RTL\osc_env.v", "$RTL\tdm_engine.v", "$RTL\pitch_mod.v", "$RTL\note_map.v", "$RTL\vel_shape.v")
 
 $targets = @(
   @{ n = 'R0 tdm_equiv'; o = 'sim_build\_recheck\tdm.vvp';     t = 'tb_tdm_equiv';   s = ($S_PAR + @("$RTL\tdm_engine.v", "$RTL\pitch_mod.v", 'src\sim\tb_tdm_equiv.v')) },
-  @{ n = '128 pitch_mod'; o = 'sim_build\pitchmod\pm.vvp';     t = 'tb_pitch_mod';   s = ($S_COMMON + @("$RTL\note_map.v", 'src\sim\tb_pitch_mod.v')) },
-  @{ n = '512 pitch_mod'; o = 'sim_build\pitchmod512\pm512.vvp'; t = 'tb_pitch_mod512'; s = ($S_COMMON + @("$RTL\note_map.v", 'src\sim\tb_pitch_mod512.v')) },
+  @{ n = '128 pitch_mod'; o = 'sim_build\pitchmod\pm.vvp';     t = 'tb_pitch_mod';   s = ($S_COMMON + @("$RTL\note_map.v", "$RTL\vel_shape.v", 'src\sim\tb_pitch_mod.v')) },
+  @{ n = '512 pitch_mod'; o = 'sim_build\pitchmod512\pm512.vvp'; t = 'tb_pitch_mod512'; s = ($S_COMMON + @("$RTL\note_map.v", "$RTL\vel_shape.v", 'src\sim\tb_pitch_mod512.v')) },
   @{ n = 'reg ctl';      o = 'sim_build\latency\rc.vvp';       t = 'tb_reg_ctl';     s = ($S_TOP + @('src\sim\tb_reg_ctl.v')) },
   @{ n = 'power-on VP7'; o = 'sim_build\vp7\vp7.vvp';         t = 'tb_vp7';         s = ($S_TOP + @('src\sim\tb_vp7.v')) },
   @{ n = 'top e2e';      o = 'sim_build\_recheck\top3.vvp';    t = 'tb_tdm_top';     s = ($S_TOP + @('src\sim\tb_tdm_top.v')) },
