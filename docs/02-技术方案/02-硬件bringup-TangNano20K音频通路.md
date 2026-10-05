@@ -1,5 +1,7 @@
 # Tang Nano 20K 音频通路 bring-up 笔记
 
+> **更正注记（2026-10-05）**：本文成文时的采样率决策为 46.875 kHz。工程实现最终采用 **fs = 52734.375 Hz（27 MHz ÷ 512，每样本 512 拍）**，BCK/WS 分频随之改变。下文凡出现 46.875 kHz 之处均属**当时的论证记录**，现行口径以本注记与 `16-板卡bringup一页卡片.md` 为准。
+
 > 来源：Sipeed 官方例程 `github.com/sipeed/TangNano-20K-example` 的 `audio/` 目录
 > 板卡：Tang Nano 20K（GW2AR-LV18QN88C8/I7）
 
