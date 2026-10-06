@@ -105,6 +105,10 @@ def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_
     os.makedirs(d, exist_ok=True)
     if need_hex:
         shutil.copy(sine_hex(), d)
+        # vel_shape 的权重表：与 sine256 同类的运行期依赖，一起拷
+        _wt = os.path.join(ROOT, "src", "gowin", "tdm_synth", "vel_wtab.hex")
+        if os.path.isfile(_wt):
+            shutil.copy(_wt, d)
     for h in extra_hex:
         shutil.copy(h, d)
     # tb 文件归 sim，其余 rtl
@@ -219,6 +223,9 @@ def run_tdm_mask(mask, env_on):
     d = os.path.join(BUILD, "11_tdm_%08X_e%d" % (mask, env_on))
     os.makedirs(d, exist_ok=True)
     shutil.copy(sine_hex(), d)
+    _wt = os.path.join(ROOT, "src", "gowin", "tdm_synth", "vel_wtab.hex")
+    if os.path.isfile(_wt):
+        shutil.copy(_wt, d)
     tb = open(sim("tb_tdm_equiv.v"), encoding="utf-8").read()
     tb = re.sub(r"localparam ENV_ON\s*=\s*1'b[01];", "localparam ENV_ON  = 1'b%d;" % env_on, tb)
     tb = re.sub(r"localparam \[NSLOT-1:0\] ACTIVE = 32'h[0-9A-Fa-f]+;",
