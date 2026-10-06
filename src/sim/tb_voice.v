@@ -106,6 +106,8 @@ module tb_voice;
     integer g1, g2, g3;
     integer diff_12, diff_after;
     integer n_changed;
+    integer commit_fr [0:P-1];
+    integer n_committed, fr_min, fr_max;
 
     initial begin
         $display("==============================================================");
@@ -195,33 +197,82 @@ module tb_voice;
             snap(g1, 0);
             for (s = 0; s < P; s = s + 1) cur[s] = snapA[s];
 
-            //   判据口径：只对"两次幅度确实不同"的槽判定是否混合；
-            //   两次都为 0（或本来就相同）的槽**不该**参与判定 —— 否则会把
-            //   "本来就相同"误报成"还没生效"。（第一版就误判成"旧 11/新 5 持续 400 帧"。）
-            n_changed = 0;
-            for (s = 0; s < P; s = s + 1) cur[s] = snapA[s];
+            //   判据口径（本轮重做）：**不再**用"与旧快照比较"，
+            //   因为部分槽两次幅度本来就相同（vel_wtab 不缩放它们），
+            //   无法区分「该槽未变化」与「该槽尚未提交」。
+            //
+            //   改为**直接测每个槽的提交时刻**：
+            //     待生效区每槽有独立标志 pv_mem 与数据 pa_mem；
+            //     消费条件 `consume = pv1 & (pp1 != ppr1)` 成立时
+            //     `amp_mem[slot] <= pa_mem[slot]` 且 `pv_mem[slot] <= 0`。
+            //     ⇒ 于是 `amp_mem[slot] == pa_mem[slot] && pv_mem[slot]==0`
+            //       正是"该槽已提交"的**充分条件**（与"是否变化"无关）。
+            //
+            //   做法：先等到待生效区**全空**（所有 pv_mem=0）作为起点，
+            //         再发事件触发重装，然后逐帧记录每个槽首次满足上述条件的帧号。
+            //   判据：
+            //     A 若 16 个槽的提交帧号**全相同** ⇒ 整组一次生效（原子）
+            //     B 否则 ⇒ **确证**逐槽分别生效，并给出跨度（最大帧号 - 最小帧号）
+            begin : wait_drain
+                integer dw, allz;
+                dw = 0;
+                allz = 0;
+                while (allz == 0 && dw < 200) begin
+                    repeat (512) @(posedge clk);
+                    allz = 1;
+                    for (s = 0; s < P; s = s + 1)
+                        if (u_top.u_tdm.pv_mem[g1*P + s] != 1'b0) allz = 0;
+                    dw = dw + 1;
+                end
+                $display("      待生效区排空用 %0d 帧（allz=%0d）", dw, allz);
+            end
 
-            //   发事件后，逐帧观察
+            //   重新装载：用**与上次不同的力度**，让尽量多的槽真的换值
             ev_note = 7'd48; ev_on = 1'b1; ev_vel = 4'd1; ev_valid = 1'b1;
             @(posedge clk);
             ev_valid = 1'b0;
 
-            mixed_frames   = 0;
-            partial_frames = 0;
-            for (fr = 0; fr < 400; fr = fr + 1) begin
-                repeat (512) @(posedge clk);        // 一个样本帧 = NSLOT = 512 拍
-                n_old = 0; n_new = 0;
+            //   记录每个槽的提交帧号（-1 = 观察窗口内未提交）
+            for (s = 0; s < P; s = s + 1) commit_fr[s] = -1;
+            n_committed = 0;
+            for (fr = 0; fr < 60; fr = fr + 1) begin
+                repeat (512) @(posedge clk);
                 for (s = 0; s < P; s = s + 1) begin
-                    if (u_top.u_tdm.amp_mem[g1*P + s] == cur[s])      n_old = n_old + 1;
-                    else                                              n_new = n_new + 1;
+                    if (commit_fr[s] < 0
+                        && u_top.u_tdm.pv_mem[g1*P + s] == 1'b0
+                        && u_top.u_tdm.amp_mem[g1*P + s] === u_top.u_tdm.pa_mem[g1*P + s]) begin
+                        commit_fr[s] = fr;
+                        n_committed = n_committed + 1;
+                    end
                 end
-                if (fr == 0)
-                    $display("      装载后该组：与旧值相同的 %0d 个 / 变化的 %0d 个", n_old, n_new);
-                if (n_new > 0 && n_old > 0) mixed_frames = mixed_frames + 1;
             end
-            $display("      观察 400 帧；'既含旧又含新'的帧数 = %0d", mixed_frames);
-            $display("      NOTE 若部分槽两次幅度本来就相同（例如都是 0），它们会永久计入'旧值'；");
-            $display("           上述计数因此不能直接当作'过渡窗口'，需另设判据（见状态表遗留说明）。");
+
+            fr_min = 9999; fr_max = -1;
+            for (s = 0; s < P; s = s + 1) begin
+                if (commit_fr[s] >= 0) begin
+                    if (commit_fr[s] < fr_min) fr_min = commit_fr[s];
+                    if (commit_fr[s] > fr_max) fr_max = commit_fr[s];
+                end
+            end
+            $display("      已提交 %0d/%0d 个槽；提交帧号 最小=%0d 最大=%0d 跨度=%0d",
+                     n_committed, P, fr_min, fr_max,
+                     (fr_max >= fr_min) ? (fr_max - fr_min) : -1);
+            for (s = 0; s < P; s = s + 1)
+                if (s < 8) $display("        槽%0d 提交帧=%0d", s, commit_fr[s]);
+
+            if (n_committed == P && fr_max == fr_min)
+                $display("  PASS  V4 整组在同一帧生效（原子提交）");
+            else if (n_committed == P) begin
+                $display("  NOTE  V4 **确证非原子**：16 个槽分散在 %0d 个帧内生效（跨度 %0d 帧）",
+                         fr_max - fr_min + 1, fr_max - fr_min);
+                $display("       这与 consume = pv1 & (pp1 != ppr1) 的逐时隙语义一致；");
+                $display("       是否可听取决于跨度与包络，需另行评估（已记入状态表）。");
+            end
+            else begin
+                $display("  FAIL  V4 仅 %0d/%0d 个槽在 60 帧内提交（待生效可能卡住）",
+                         n_committed, P);
+                fails = fails + 1;
+            end
         end
 
         $display("==============================================================");
