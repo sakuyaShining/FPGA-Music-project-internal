@@ -598,5 +598,29 @@
       "item": "是否做重按起音更快",
       "decided_by": "时间/收益权衡（D-03）"
     }
-  ]
+  ],
+  "vel_timbre_implementation": {
+    "form": "table lookup (src/rtl/vel_shape.v + src/gowin/tdm_synth/vel_wtab.hex)",
+    "table": "16 velocities x 16 partials x 9-bit weights (256 = 1.0)",
+    "generator": "tools/scripts/gen_vel_wtab.py",
+    "switch_register": "0x6D (nonzero = on; default 0 = identity)",
+    "reserved": [
+      "0x6B",
+      "0x6C"
+    ],
+    "criteria_in_gate": [
+      "13 vel shape (V1-V8)",
+      "14 vel timbre (J1-J4)"
+    ],
+    "timing": {
+      "formula_with_divider_ns": 4.488,
+      "formula_without_divider_ns": 11.872,
+      "table_ns": 15.229,
+      "baseline_before_vel_shape_ns": 16.479
+    },
+    "lessons_synthesis_only": [
+      "sine table copied from a never-created cache dir -> audio all X -> 09 regctl false green on stale artifacts",
+      "vel_wtab.hex entry width 12 vs memory width 9 -> WARN EX2526 -> ROM not initialized on board (simulation fine)"
+    ]
+  }
 }

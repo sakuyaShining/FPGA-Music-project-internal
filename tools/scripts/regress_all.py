@@ -421,6 +421,36 @@ def main():
                 ok, msg = run_tdm_mask(mask, env)
                 results.append(("11 tdm %08X/e%d" % (mask, env), ok, msg))
 
+    # 13 vel_shape：力度->谱形 单元判据（V1-V8；表 = src/gowin/tdm_synth/vel_wtab.hex）
+    d = os.path.join(BUILD, "13_velshape")
+    if os.path.isdir(d):
+        rmtree_ok(d)
+    os.makedirs(d, exist_ok=True)
+    shutil.copy(os.path.join(ROOT, "src", "gowin", "tdm_synth", "vel_wtab.hex"), d)
+    rc, log = run([os.path.join(IV, "iverilog.exe"), "-g2005", "-o", "vs.vvp",
+                   "-s", "tb_vel_shape", rtl("vel_shape.v"), sim("tb_vel_shape.v")], d)
+    ok, msg = False, "compile fail"
+    if rc == 0:
+        rc2, log2 = run([os.path.join(IV, "vvp.exe"), "vs.vvp"], d)
+        ok = "ALL VEL_SHAPE CRITERIA PASS" in log2
+        tail = [l.strip() for l in log2.splitlines() if "  FAIL" in l]
+        msg = "V1-V8 全绿（基音/条数/单调/恒等）" if ok else (" / ".join(tail[:2]) or log2[-120:])
+    results.append(("13 vel shape", ok, msg.replace(chr(10), " ")[:120]))
+
+    # 14 vel_timbre：力度->音色 端到端（穿 tdm_top：端口 + 寄存器 0x6B-0x6D + 装载通路）
+    vt_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v", "i2s_tx.v",
+                "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v",
+                "tb_vel_timbre.v"]
+    log, err = compile_and_run("14_veltimbre", vt_files, defines=("SIM_INIT",), need_hex=True)
+    if err:
+        results.append(("14 vel timbre", False, err[:120]))
+    else:
+        d = os.path.join(BUILD, "14_veltimbre")
+        run([os.path.join(IV, "vvp.exe"), "sim.vvp"], d)
+        ok, msg = judge_script("14_veltimbre", "vel_timbre_check.py")
+        results.append(("14 vel timbre", ok, msg.replace(chr(10), " ")[:120]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
