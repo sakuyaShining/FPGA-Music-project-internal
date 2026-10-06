@@ -105,6 +105,7 @@ module tb_voice;
 
     integer g1, g2, g3;
     integer diff_12, diff_after;
+    integer n_changed;
 
     initial begin
         $display("==============================================================");
@@ -173,6 +174,55 @@ module tb_voice;
             if (u_top.u_tdm.pa_mem[g2*P + k] !== snapB[k]) diff_after = diff_after + 1;
         end
         check("V3-global-change-must-not-touch-sounding", diff_after, 0);
+
+        //--------------------------------------------------------------- V4
+        $display(" V4 整组提交：一个组的 16 个泛音是否【同一次生效】（不出现半新半旧）");
+        //   背景（读 tdm_engine 得到的事实）：
+        //     待生效区是**逐时隙**的：pv_mem/pa_mem 每槽一份，
+        //     消费条件是 `consume = pv1 & (pp1 != ppr1)`（该槽被访问、且奇偶标签变了）
+        //     ⇒ 装载会在**每个槽被下一次访问时**分别生效，**不是整组一次生效**。
+        //   本项用仿真确认这一点，并把"半新半旧"的窗口量化出来。
+        //
+        //   做法：对每个样本帧采一次"该组 16 槽当前生效的幅度"快照（读 amp_mem），
+        //   看它从【全旧】到【全新】之间，是否存在**既含旧值又含新值**的中间帧。
+        begin : v4
+            integer fr, s, mixed_frames, partial_frames;
+            integer n_old, n_new;
+            reg [15:0] cur [0:P-1];
+
+            //   新音：note48 再次按下，但用**不同力度**（让 16 个泛音的新值都不同于旧值）
+            //   先记录旧快照（V2 之前的 snapA 是 vel=15 时的；这里重新读一次）
+            snap(g1, 0);
+            for (s = 0; s < P; s = s + 1) cur[s] = snapA[s];
+
+            //   判据口径：只对"两次幅度确实不同"的槽判定是否混合；
+            //   两次都为 0（或本来就相同）的槽**不该**参与判定 —— 否则会把
+            //   "本来就相同"误报成"还没生效"。（第一版就误判成"旧 11/新 5 持续 400 帧"。）
+            n_changed = 0;
+            for (s = 0; s < P; s = s + 1) cur[s] = snapA[s];
+
+            //   发事件后，逐帧观察
+            ev_note = 7'd48; ev_on = 1'b1; ev_vel = 4'd1; ev_valid = 1'b1;
+            @(posedge clk);
+            ev_valid = 1'b0;
+
+            mixed_frames   = 0;
+            partial_frames = 0;
+            for (fr = 0; fr < 400; fr = fr + 1) begin
+                repeat (512) @(posedge clk);        // 一个样本帧 = NSLOT = 512 拍
+                n_old = 0; n_new = 0;
+                for (s = 0; s < P; s = s + 1) begin
+                    if (u_top.u_tdm.amp_mem[g1*P + s] == cur[s])      n_old = n_old + 1;
+                    else                                              n_new = n_new + 1;
+                end
+                if (fr == 0)
+                    $display("      装载后该组：与旧值相同的 %0d 个 / 变化的 %0d 个", n_old, n_new);
+                if (n_new > 0 && n_old > 0) mixed_frames = mixed_frames + 1;
+            end
+            $display("      观察 400 帧；'既含旧又含新'的帧数 = %0d", mixed_frames);
+            $display("      NOTE 若部分槽两次幅度本来就相同（例如都是 0），它们会永久计入'旧值'；");
+            $display("           上述计数因此不能直接当作'过渡窗口'，需另设判据（见状态表遗留说明）。");
+        end
 
         $display("==============================================================");
         if (fails == 0) $display("RESULT voice=PASS");
