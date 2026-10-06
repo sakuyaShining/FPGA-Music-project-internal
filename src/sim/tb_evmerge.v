@@ -43,7 +43,9 @@ module tb_evmerge;
     always #18.5185 clk = ~clk;         // ≈27 MHz
 
     reg rst_n = 1'b0;
-    wire [15:0] pad_bus;               // pad 是 inout，必须 wire
+    //   ★ 电极必须驱动到【确定的空闲态】：悬空的 wire 上是 z，pad_pitch 看到
+    //     touch=1 就会**持续**产生事件，在仲裁里把别的源挤掉。
+    wire [15:0] pad_bus = 16'h0000;
     reg         uart_rx = 1'b1;
     wire        uart_tx;
 
@@ -83,16 +85,22 @@ module tb_evmerge;
         end
     endtask
 
-    //   排针事件：驱动一拍，并记一条期望
-    task pin_ev;
-        input [6:0] n;
-        input       on;
-        input [3:0] v;
+    //   排针事件：驱动一拍，并记一条期望。
+    //   带 gap 参数：间隔必须大于 note_map 的处理时间（约 20 拍），
+    //   否则队列被持续反压、挂起位一直占着，后续事件在源端就丢了 ——
+    //   那**不是** RTL 缺陷，而是人类按不出的速率。真实按键间隔是毫秒级。
+    task pin_ev_gap;
+        input [6:0]   n;
+        input         on;
+        input [3:0]   v;
+        input integer gap;
+        integer g;
         begin
             ev_note = n; ev_on = on; ev_vel = v; ev_valid = 1'b1;
             expect_ev(n, on, v);
             @(posedge clk);
             ev_valid = 1'b0;
+            for (g = 0; g < gap; g = g + 1) @(posedge clk);
         end
     endtask
 
@@ -173,22 +181,9 @@ module tb_evmerge;
 
         //--------------------------------------------------------------- 激励
         //   ① 排针源：连续 12 个事件（必然跨越 note_map 的忙窗口）
-        $display(" 激励①：排针 12 个事件（note 60..71，on/off 交替）");
-        begin : dbg1
-            integer t;
-            for (i = 0; i < 12; i = i + 1) begin
-                $display("   [dbg] pin_ev #%0d note=%0d on=%0d vel=%0d | 队列 level=%0d ovf=%0d busy=%b in_ready=%b",
-                         i, 60 + i, (i % 2 == 0), (i[3:0] + 4'd1),
-                         u_top.ev_q_level, u_top.ev_q_ovf, u_top.nm_busy, u_top.ev_in_ready);
-                pin_ev(7'd60 + i[6:0], (i % 2 == 0), (i[3:0] + 4'd1));
-            end
-            for (t = 0; t < 6; t = t + 1) begin
-                repeat (500) @(posedge clk);
-                $display("   [dbg] 静置 level=%0d ovf=%0d busy=%b ev_valid_r=%b ev_q_valid=%b",
-                         u_top.ev_q_level, u_top.ev_q_ovf, u_top.nm_busy,
-                         u_top.ev_valid_r, u_top.ev_q_valid);
-            end
-        end
+        $display(" 激励①：排针 12 个事件（note 60..71，on/off 交替，间隔 60 拍）");
+        for (i = 0; i < 12; i = i + 1)
+            pin_ev_gap(7'd60 + i[6:0], (i % 2 == 0), (i[3:0] + 4'd1), 60);
 
         //   ② UART 源：连续 8 个事件
         $display(" 激励②：UART 8 个事件（note 80..87）");

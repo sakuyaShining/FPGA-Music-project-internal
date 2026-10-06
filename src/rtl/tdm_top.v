@@ -699,23 +699,60 @@ module tdm_top #(
     reg        uh_pend;                  // UART(0x61) 挂起
     reg [3:0]  uh_vel;
     reg [6:0]  uh_note;
-
+    //   ★ UART 的"请求"要单独锁存：真实 UART 写是一拍脉冲（wr_en），
+    //     而队列/note_map 可能需要等很多拍才接收。若直接用 u_ev_valid 当请求，
+    //     它下一拍就没了 ⇒ 事件在"还没被接收"时就消失（实测 note 恒为 0）。
+    //     所以：wr 那一拍把请求置起来，被接收（ev_in_ready）才清。
+    reg        uh_req;
+    reg [7:0]  uh_req_note;              // 写入时刻的 0x60 整字节（含 on/off）
+                                                            
     reg        sh_pend;                  // 定序器挂起
     reg        sh_on;   reg [6:0] sh_note;   reg [3:0] sh_vel;
     reg        dh_pend;                  // 排针 ev_* 挂起
     reg        dh_on;   reg [6:0] dh_note;   reg [3:0] dh_vel;
+    //   ★ pads 也必须有挂起位（2026-10-06 实测发现，原因很关键）：
+    //     本优先级 mux **没有仲裁公平性** —— 只要高优先级源的 valid 一直举着，
+    //     低优先级源就**永久得不到服务**。原来所有源都是单拍脉冲，所以看不出来；
+    //     加了队列反压之后，pad_pitch 的 ev_valid 可能持续为高（它在等被接收），
+    //     于是排针事件被**活活饿死**：实测单源 3 条只收到 1 条，
+    //     且第 3 条之后 mh_note 一直停在 62（pads 把 mux 占住了）。
+    //     给 pads 也加挂起位之后，它同样"被接收就撤"，不会长期占线。
+    reg        pp_pend;                  // pads 挂起
+    reg        pp_on_r; reg [6:0] pp_note_r; reg [3:0] pp_vel_r;
 
-    //   汇合后的有效事件（优先级 UART > 定序器 > pads > 排针，与原实现一致）
-    wire        mh_valid = uh_pend | (seq_en & sh_pend) | pp_ev_valid | dh_pend;
-    wire        mh_on    = uh_pend ? r_note_num[7]             :
-                           (seq_en & sh_pend) ? sh_on          :
-                           pp_ev_valid ? pp_ev_on              : dh_on;
-    wire [6:0]  mh_note  = uh_pend ? uh_note                   :
-                           (seq_en & sh_pend) ? sh_note        :
-                           pp_ev_valid ? pp_ev_note            : dh_note;
-    wire [3:0]  mh_vel   = uh_pend ? uh_vel                    :
-                           (seq_en & sh_pend) ? sh_vel         :
-                           pp_ev_valid ? 4'd12                 : dh_vel;
+    //   汇合后的有效事件。**用轮转仲裁而不是固定优先级** ——
+    //   2026-10-06 实测教训：固定优先级 mux 只要高优先级源的 valid 一直举着，
+    //   低优先级源就**永久得不到服务**（无公平性）。原来所有源都是单拍脉冲，
+    //   所以这个缺陷看不出来；加了队列反压之后立刻显形：
+    //     pads 的 valid 可以持续为高（它在等被接收）⇒ 排针事件被活活饿死
+    //     （实测单源 3 条只收到 1 条，mh_note 一直停在 pads 的那一条上）。
+    //   轮转的规则：每次**成功接收**一个事件就转向下一个源；
+    //   当前指向的源若没有挂起事件，就按固定优先级兜底（保证不空转）。
+    //   代价：一个 2 位指针 + 每源的选中项多一次比较，很小。
+    //   收益：**任何一个源都不会被另一个源饿死** —— 这是"不丢事件"能成立的前提。
+    reg [1:0] arb_rr;                    // 0=UART 1=定序器 2=pads 3=排针
+
+    wire arb_u = uh_req;
+    wire arb_s = seq_en & sh_pend;
+    wire arb_p = pp_pend;
+    wire arb_d = dh_pend;
+
+    //   轮转优先：当前指针指向的源若有事，先服务它
+    wire sel_u = arb_u & (arb_rr == 2'd0) | (arb_u & ~(arb_s | arb_p | arb_d));
+    wire sel_s = ~sel_u & (arb_s & (arb_rr == 2'd1) | (arb_s & ~(arb_u | arb_p | arb_d)));
+    wire sel_p = ~sel_u & ~sel_s & (arb_p & (arb_rr == 2'd2) | (arb_p & ~(arb_u | arb_s | arb_d)));
+    wire sel_d = ~sel_u & ~sel_s & ~sel_p & arb_d;
+
+    wire        mh_valid = sel_u | sel_s | sel_p | sel_d;
+    wire        mh_on    = sel_u ? uh_req_note[7] :
+                           sel_s ? sh_on         :
+                           sel_p ? pp_on_r       : dh_on;
+    wire [6:0]  mh_note  = sel_u ? uh_req_note[6:0] :
+                           sel_s ? sh_note       :
+                           sel_p ? pp_note_r     : dh_note;
+    wire [3:0]  mh_vel   = sel_u ? uh_vel        :
+                           sel_s ? sh_vel        :
+                           sel_p ? pp_vel_r      : dh_vel;
 
     wire        ev_in_ready;
     wire        ev_q_valid, ev_q_on;
@@ -727,24 +764,28 @@ module tdm_top #(
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             uh_pend <= 1'b0; uh_vel <= 4'd0; uh_note <= 7'd0;
+            uh_req <= 1'b0; uh_req_note <= 8'd0;
             sh_pend <= 1'b0; sh_on  <= 1'b0; sh_note <= 7'd0; sh_vel <= 4'd0;
             dh_pend <= 1'b0; dh_on  <= 1'b0; dh_note <= 7'd0; dh_vel <= 4'd0;
+            pp_pend <= 1'b0; pp_on_r <= 1'b0; pp_note_r <= 7'd0; pp_vel_r <= 4'd0;
         end
         else begin
-            //   收下就清挂起位（"接收确认"的另一半）
-            if (uh_pend && ev_in_ready) uh_pend <= 1'b0;
+            //   收下就清挂起位（"接收确认"的另一半）。
+            //   UART 用独立的 uh_req：真实 UART 写是一拍脉冲，而队列可能要等
+            //   很多拍才接收；若拿 u_ev_valid 当请求，事件还没被接收就没了
+            //   （实测 note 恒为 0）。所以 wr 那一拍置 uh_req，被接收才清。
+            if (uh_req && ev_in_ready)  uh_req  <= 1'b0;
             if (sh_pend && ev_in_ready && seq_en) sh_pend <= 1'b0;
             if (dh_pend && ev_in_ready) dh_pend <= 1'b0;
+            if (pp_pend && ev_in_ready) pp_pend <= 1'b0;
 
-            //   到达即锁存。该源已有挂起项未被收走时【不覆盖】：
-            //   宁可让新事件在源端继续持有，也不要把旧的挤掉。
-            //   注：UART/定序器/排针都是单拍脉冲，"源端继续持有"实际做不到，
-            //   所以这里用【不覆盖 + 溢出计数】把这种极端情况**如实报出来**，
-            //   而不是静默丢掉（判据读 ev_q_ovf）。
-            if (u_ev_valid && !uh_pend) begin
-                uh_vel  <= u_ev_vel;
-                uh_note <= u_ev_note;
-                uh_pend <= 1'b1;
+            //   到达即锁存。**音符与力度都取写入时刻的值**（不能等到被接收时
+            //   再读：那时 wr_data 早没了，r_note_num 也可能已被下一次写覆盖）。
+            if (u_ev_valid) begin
+                uh_req      <= 1'b1;
+                uh_req_note <= r_note_num;
+                uh_vel      <= u_ev_vel;
+                uh_note     <= u_ev_note;
             end
             if (sq_ev_valid && seq_en && !sh_pend) begin
                 sh_on   <= sq_ev_on;
@@ -757,6 +798,21 @@ module tdm_top #(
                 dh_note <= ev_note;
                 dh_vel  <= ev_vel;
                 dh_pend <= 1'b1;
+            end
+            //   pads：同样锁存（锁存后它就不再占着 mux，低优先级源才有机会）
+            if (pp_ev_valid && !pp_pend) begin
+                pp_on_r   <= pp_ev_on;
+                pp_note_r <= pp_ev_note;
+                pp_vel_r  <= pp_ev_vel;
+                pp_pend   <= 1'b1;
+            end
+
+            //   轮转指针：每**成功接收**一个事件就转向下一个源。
+            if (mh_valid && ev_in_ready) begin
+                if      (sel_u) arb_rr <= 2'd1;
+                else if (sel_s) arb_rr <= 2'd2;
+                else if (sel_p) arb_rr <= 2'd3;
+                else if (sel_d) arb_rr <= 2'd0;
             end
         end
     end
