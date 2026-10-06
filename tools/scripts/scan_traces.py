@@ -21,7 +21,15 @@ import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-PAT_A = re.compile(r"ZCode|DeepSeek|GLM|双代理|代理|交接|会话恢复|prompt|提示词", re.I)
+#   ★ 2026-10-07 给 ASCII 词加词边界。
+#   原来 `GLM` / `prompt` 不带边界，于是**压缩/内联的 base64 数据里**
+#   随便一段 `...ZwGlmTZl...` 都会被算成"过程身份痕迹" —— 实测
+#   docs/04-架构图/*.html 5 个文件各报 A=2，全是这种假命中
+#   （单文件约 750 KB 的 HTML，内嵌图片的 base64 里恰好出现 Glm/GlM）。
+#   这类假阳性有两个害处：① 让 A 列总数虚高，掩盖真正该处理的文件；
+#   ② 会诱导人把**本来就干净的作品文件**移出公开版。
+#   中文词不加 \b（\b 在中文边界的行为不可靠），它们本身不存在这种巧合。
+PAT_A = re.compile(r"\b(?:ZCode|DeepSeek|GLM|prompt)\b|双代理|代理|交接|会话恢复|提示词", re.I)
 PAT_B = re.compile(r"任务板|挂账|审计|认领|销账|工单|第\s*\d+\s*轮|轮次|判据清单|闸口|交接简报")
 PAT_C = re.compile(r"[✓✗★☆⚠]|(?<![A-Za-z])我(?![A-Za-z])|(?<![A-Za-z])你(?![A-Za-z])")
 
@@ -39,6 +47,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--top", type=int, default=30)
     ap.add_argument("--all", action="store_true")
+    #   ★ 退出码必须**有意义**（阶段 4「严格退出码」）。
+    #   本脚本原来是"审计"：无论查出多少身份痕迹都 `return 0`，
+    #   于是它在任何流水线里都**永远绿灯**，只能靠人眼看输出。
+    #   但又不能默认改成"有痕迹就失败" —— 主线（私有）本来就允许存在过程材料，
+    #   那会把正常用法变成红灯。故加一个显式开关：
+    #     --strict  A 列（过程身份）非 0 即返回 1
+    #   这样"审计"与"门禁"两种用法都成立，且退出码都名副其实。
+    ap.add_argument("--strict", action="store_true",
+                    help="只要存在过程身份痕迹(A>0)就返回退出码 1")
     a = ap.parse_args()
 
     rows = []
@@ -79,6 +96,18 @@ def main():
 
     print("\n 提示：A 列（过程身份）非 0 的文件 = 一眼能看出代理参与 ✗，"
           "建议移出公开仓库或改写 ✓")
+    #   ★ 列序核对：rows 的元素是 (分数, A, B, C, 字节, 文件) ——
+    #     即 A 在 **r[1]**，r[0] 是加权总分。
+    #     第一版我写成 r[0] > 0，那会把"只有 B/C 命中、A=0"的文件也当成身份痕迹，
+    #     属于**过度报红**（比漏报好，但会掩盖真正该处理的那些）。
+    a_files = [r for r in rows if r[1] > 0]
+    if a.strict:
+        if a_files:
+            print("\n [--strict] A 列（过程身份）非 0 的文件 %d 个 ⇒ 返回 1" % len(a_files))
+            for r in a_files[:10]:
+                print("     %s  A=%d" % (r[5], r[1]))
+            return 1
+        print("\n [--strict] 无过程身份痕迹 ⇒ 返回 0")
     return 0
 
 
