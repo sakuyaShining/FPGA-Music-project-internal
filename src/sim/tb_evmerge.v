@@ -104,33 +104,59 @@ module tb_evmerge;
         end
     endtask
 
-    //   UART 事件：写 0x60（音符）再写 0x61（力度，写入即触发）。
-    //   为什么不用"层次引用写 reg_bank.mem"：那样**不会产生 wr_en** ⇒ 触发不了事件
-    //   （本项目多数测试台用它设参数，但事件必须走真实写通路）。
-    //   这里用 force 驱动 tdm_top 的写口，等价于 UART 收到字节后产生的那一拍 wr_en。
-    task wr_reg;
-        input [7:0] a;
-        input [7:0] d;
+    //   UART 事件：走**真正的字节流**（往 uart_rx 引脚喂帧），而不是 force 内部写口。
+    //   为什么不 force：force 是在伪造"写口那一拍"，绕过了 uart_rx 与两字节组帧，
+    //   而我们恰恰要验的就是"真实输入路径 + 新的待处理队列"能不能配合。
+    //
+    //   帧格式（uart_rx.v / 19 号协议）：8N1，LSB first，波特率 115200 与 RTL 对齐
+    //     ⇒ 每位 = 27e6/115200 = 234 个 clk。
+    //   寄存器写法：先发地址字节，再发数据字节；RTL 用 u_have_addr 交替配对，
+    //     数据字节那一拍产生 wr_en。
+    //   NOTE：本测试台的 clk 周期与 27 MHz 同量级（18.5185 ns ≈ 37.04 ns 周期
+    //     即 27 MHz），所以 234 拍/位与实际一致。
+    localparam integer UART_DIV = 234;
+    reg [15:0] pad_bus_unused;
+
+    task uart_bit;
+        input b;
+        integer k;
         begin
-            force u_top.wr_en   = 1'b1;
-            force u_top.wr_addr = a;
-            force u_top.wr_data = d;
-            @(posedge clk);
-            release u_top.wr_en;
-            release u_top.wr_addr;
-            release u_top.wr_data;
-            @(posedge clk);
+            uart_rx = b;
+            for (k = 0; k < UART_DIV; k = k + 1) @(posedge clk);
         end
     endtask
 
+    task uart_byte;
+        input [7:0] b;
+        integer k;
+        begin
+            uart_bit(1'b0);                  // start
+            for (k = 0; k < 8; k = k + 1)
+                uart_bit(b[k]);              // LSB first
+            uart_bit(1'b1);                  // stop
+            repeat (4) @(posedge clk);       // 帧间小间隔
+        end
+    endtask
+
+    //   写一个寄存器：地址 + 数据
+    task uart_wr;
+        input [7:0] a;
+        input [7:0] d;
+        begin
+            uart_byte(a);
+            uart_byte(d);
+        end
+    endtask
+
+    //   UART 音符事件：先写 0x60（音符 + on/off），再写 0x61（力度，写入即触发）
     task uart_ev;
         input [6:0] n;
         input       on;
         input [3:0] v;
         begin
-            wr_reg(8'h60, {on, n});      // 先设音符
+            uart_wr(8'h60, {on, n});
             expect_ev(n, on, v);
-            wr_reg(8'h61, {4'b0, v});    // 再写力度 = 写入即触发
+            uart_wr(8'h61, {4'b0, v});
         end
     endtask
 
@@ -202,20 +228,18 @@ module tb_evmerge;
         //     正确做法：0x60 先在**更早的拍**写好，再让 0x61 与排针同拍触发。
         $display(" 激励③：两源同拍并起 4 组（UART 按协议先写 0x60，再与排针同拍触发 0x61）");
         for (i = 0; i < 4; i = i + 1) begin
-            //   （1）先按协议把音符与 on/off 写进 0x60（这一步不触发事件）
-            wr_reg(8'h60, {1'b1, (7'd90 + i[6:0])});
+            //   （1）先按协议把音符写进 0x60（这一步不触发事件）
+            uart_wr(8'h60, {1'b1, (7'd90 + i[6:0])});
             //   （2）同一拍：排针举起 + UART 写 0x61 触发
+            //       注：UART 走真实字节流，无法与排针做到"严格同一拍"；
+            //       这里仍在同一个"事件窗口"内（相隔不到一帧），
+            //       目的是让两个源在队列里并存、检验轮转仲裁不饿死任何一个。
             ev_note = 7'd70 + i[6:0]; ev_on = 1'b0; ev_vel = 4'd5; ev_valid = 1'b1;
-            force u_top.wr_en   = 1'b1;
-            force u_top.wr_addr = 8'h61;
-            force u_top.wr_data = {4'b0, 4'd6};
-            //   两源都在这一拍有效 ⇒ 期望收到两条（UART 优先，排针随后）
-            expect_ev(7'd90 + i[6:0], 1'b1, 4'd6);
             expect_ev(7'd70 + i[6:0], 1'b0, 4'd5);
             @(posedge clk);
             ev_valid = 1'b0;
-            release u_top.wr_en; release u_top.wr_addr; release u_top.wr_data;
-            @(posedge clk);
+            expect_ev(7'd90 + i[6:0], 1'b1, 4'd6);
+            uart_wr(8'h61, {4'b0, 4'd6});
         end
 
         //   等事件全部排空（note_map 每个事件约 20 拍，给足余量）

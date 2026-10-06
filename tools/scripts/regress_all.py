@@ -586,6 +586,29 @@ def main():
                else (" / ".join(tail[:2]) or log2[-160:]))
         results.append(("17 evloss", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 18 evmerge：事件「汇合点 + 待处理队列」端到端（穿 tdm_top）
+    #   为什么要有：阶段 2 的核心主张是"不丢事件，尤其不丢 note-off"。
+    #   两个环节可能丢：① 优先级 mux 同拍只选一个（其余无声丢弃）
+    #                   ② note_map 忙约 20 拍期间到达的单拍脉冲被忽略
+    #   本套件用**真源**验：排针走事件端口、UART 走**真实字节流**（uart_rx 引脚发
+    #   [addr][data] 帧，115200/8N1），然后逐条比对"发出的"与"note_map 收到的"。
+    #   ★ 不要用 force 驱动内部写口 —— 那会绕过 uart_rx 与两字节组帧，
+    #     本套件第一版就是这么写的，结果整段 UART 事件都取不到音符。
+    evm_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v",
+                 "i2s_tx.v", "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v",
+                 "strip_ctrl.v", "led_ind.v", "event_hold.v", "tb_evmerge.v"]
+    log, err = compile_and_run("18_evmerge", evm_files, defines=("SIM_INIT",), need_hex=True)
+    if err:
+        results.append(("18 evmerge", False, err[:160]))
+    else:
+        ok = "RESULT evmerge=PASS" in (log or "")
+        tail = [l.strip() for l in (log or "").splitlines()
+                if ("FAIL" in l or "收到" in l)]
+        msg = ("28 条（排针 12 + UART 8 + 并存 8）一条不丢、note-off 14/14、溢出 0"
+               if ok else (" / ".join(tail[:2]) or (log or "")[-160:]))
+        results.append(("18 evmerge", ok, msg.replace(chr(10), " ")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
