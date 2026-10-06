@@ -46,12 +46,17 @@ module vel_shape #(
     //   恒等保证：tilt_gain = 0 ⇒ 功能关闭 ⇒ 权重恒为 256 ⇒ amp == base
     //     与改造前逐位相同（判据 V8 守着这一条）。
     //=========================================================================
-    reg [8:0] wtab [0:255];
+    //   位宽必须是 12：hex 每项 3 个十六进制位（如 100 / 1D2）。
+    //   2026-10-06 实测教训：原先声明 9 位，综合报
+    //     WARN (EX2526): Entry size 12 ... does not match memory width 9
+    //   仿真侧看不出来（iverilog 按数值读），但【板上 ROM 会装不进去】——
+    //   典型的"仿真绿、上板不响"。这里按 12 位声明，只用低 9 位参与计算。
+    reg [11:0] wtab [0:255];
     initial $readmemh("vel_wtab.hex", wtab);
 
     wire        feat_on = (tilt_gain != 8'd0);
     wire [7:0]  widx    = {vel, part};
-    wire [8:0]  w_rom   = wtab[widx];                  // 异步读：无延迟，无需流水对齐
+    wire [8:0]  w_rom   = wtab[widx][8:0];             // 异步读：无延迟，无需流水对齐
     wire [8:0]  w_raw   = feat_on ? w_rom : 9'd256;    // 关功能 = 恒等
 
     //   保护区再兜一层：即使表里把基音/低次写得很低，也保底不消失。
