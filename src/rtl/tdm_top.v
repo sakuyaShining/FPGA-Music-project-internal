@@ -508,11 +508,28 @@ module tdm_top (
     //-------------------------------------------------------------------------
     wire [7:0]  r_spec_mode = R[8'h5A*8 +: 8];
     wire [7:0]  r_harm_pads = R[8'h5B*8 +: 8];
+    //   独立亮度轴（32 号 D-13 / I-13）：0x5C TILT 早在协议里声明，这里落地。
+    //     0x00 = 最暗 … 0x70 = 恒等 … 0xFF = 最亮（恒等点在 0x70，见 note_map 的表）
+    wire [7:0]  r_tilt      = R[8'h5C*8 +: 8];
     //   力度->谱形参数（0x6B-0x6D，协议 0x6B-0x6F 保留区；默认 0 ⇒ 恒等）
     wire [7:0]  r_tilt_vlo   = R[8'h6B*8 +: 8];
     wire [7:0]  r_tilt_vhi   = R[8'h6C*8 +: 8];
     wire [7:0]  r_tilt_vgain = R[8'h6D*8 +: 8];
     wire signed [9:0] tilt_vbias = $signed({r_tilt_vhi[1:0], r_tilt_vlo});
+    //   力度灵敏度（0x6E，2026-10-06 新增，原为 v1.0 保留）：
+    //     "弹下去会不会变亮"是手感，必须能在演奏中调。只缩放【相对恒等的偏差】，
+    //     不缩放恒等本身 ⇒ 改变灵敏度不会改变整体音量。
+    //       0x00 → 0（关，等同"力度只改音量"）
+    //       0x40 → 128（半灵敏）
+    //       0x80 → 256（一等一，= 与改造前的查表行为逐位相同）
+    //       0xC0 → 511（最灵敏，约 2 倍；表偏差大的档会被 0..511 夹住）
+    //   注：必须用 9 位承载 256/511 —— 用 8 位会把 256 截成 0（"一等一"变成"关"），
+    //     这种"静默截断"本项目已经栽过三次（EX3791/EX2526/组号 4 位），故显式给足。
+    wire [7:0]  r_vel_sens  = R[8'h6E*8 +: 8];
+    wire [8:0]  vel_vscale  = (r_vel_sens == 8'h00) ? 9'd0   :   // 关
+                              (r_vel_sens <  8'h40) ? 9'd128 :   // 低半区 → 半灵敏
+                              (r_vel_sens <  8'hC0) ? 9'd256 :   // 中区   → 一等一
+                                                      9'd511;   // 高半区 → 最灵敏
     wire        spec_replace = r_spec_mode[0];      // 1=替换 / 0=叠加
     wire        spec_autorf  = r_spec_mode[1];
 
@@ -764,7 +781,8 @@ module tdm_top (
         // 步③ 塑谱接口
         .spec_we(spec_we), .spec_addr(spec_addr), .spec_wdata(spec_wdata),
         .spec_replace(spec_replace),
-        .tilt_vbias(tilt_vbias), .tilt_vgain(r_tilt_vgain),
+        .tilt_vbias(tilt_vbias), .tilt_vgain(r_tilt_vgain), .vel_vscale(vel_vscale),
+        .tilt(r_tilt),                     // 0x5C 独立亮度轴（0x70 = 恒等）
         .pad_mask(pad_mask_eff),
         .refresh_valid(rf_pulse), .rf_lo(rf_lo_q), .rf_hi(rf_hi_q),
         .load_en(nm_load_en), .load_slot(nm_load_slot),

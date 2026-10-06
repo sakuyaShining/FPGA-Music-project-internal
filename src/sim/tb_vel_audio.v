@@ -39,7 +39,8 @@ module tb_vel_audio;
         .pad(pad_bus)
     );
 
-    localparam integer NSAMP = 20000;       // ≈0.38 s @ 52734 Hz
+    parameter integer NSAMP = 20000;         // ≈0.38 s @ 52734 Hz（-P 可覆盖）
+    parameter integer CASE_SET = 0;          // 0=四个用例 1=只做 L 对（诊断用）
 
     integer fd;
     integer i;
@@ -76,8 +77,10 @@ module tb_vel_audio;
             @(posedge clk); ev_valid = 1'b0;
             repeat (3000) @(posedge clk);
 
-            // 设置力度->音色开关（层次引用戳 reg_bank 的 mem）
-            u_top.u_reg.mem[8'h6D] = shape_on ? 8'h01 : 8'h00;
+            // 力度->音色的【唯一开关兼灵敏度】= 0x6E：
+            //   0x00 = 关；0x80 = 一等一（与参数表逐位相同）。
+            //   （0x6D 是历史"倾斜斜率"，查表化后已不参与运算，这里不动它。）
+            u_top.u_reg.mem[8'h6E] = shape_on ? 8'h80 : 8'h00;
             repeat (50) @(posedge clk);
 
             // 起音
@@ -99,10 +102,32 @@ module tb_vel_audio;
         rst_n = 1'b1;
         repeat (2000) @(posedge clk);
 
+        //-------------------------------------------------- 采样率自检
+        //   上位机（tools/scripts/vel_audition.py）靠这一行确定 wav 头里的采样率。
+        //   写死数字的风险：本项目采样率随 NSLOT/时钟配置变过多次
+        //   （39062.5 / 46875 / 48828 / 52734…），一旦不匹配，试听就是"音调不对"，
+        //   而人会先怀疑算法、不会怀疑采样率。
+        begin : meas_fs
+            integer t0, t1, w;
+            t0 = 0; t1 = 0; w = 0;
+            while (w < 3) begin
+                @(posedge clk);
+                if (u_top.sample_en) begin
+                    if (w == 0) t0 = $time;
+                    if (w == 2) t1 = $time;
+                    w = w + 1;
+                end
+            end
+            $display(" [采样率自检] 每样本约 %0d ns（3 个样本共 %0d ns）",
+                     (t1 - t0) / 2, (t1 - t0));
+        end
+
         do_case("L_flat",  4'd4,  1'b0);
         do_case("L_shape", 4'd4,  1'b1);
-        do_case("H_flat",  4'd14, 1'b0);
-        do_case("H_shape", 4'd14, 1'b1);
+        if (CASE_SET == 0) begin
+            do_case("H_flat",  4'd14, 1'b0);
+            do_case("H_shape", 4'd14, 1'b1);
+        end
 
         $display("==============================================================");
         $display(" 四个 txt 已写出：L_flat / L_shape / H_flat / H_shape");

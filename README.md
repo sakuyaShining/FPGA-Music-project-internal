@@ -91,6 +91,18 @@ python tools\host\dsp_gui.py
 | 架构决策与候选方案对比 | `docs/02-技术方案/06-架构决策框架-v2.md`、`07-候选架构方案-v1.md` |
 | 协议与寄存器表 | `docs/02-技术方案/19-UART协议v1.0草案.md` |
 | 验收判据与证据 | `docs/02-技术方案/21-验收判据清单.md` |
+| **演奏表情（力度/亮度/滑音/颤音）** | `docs/02-技术方案/31-演奏表情规格.md`（规格）、`32-演奏表情问题总表-设计层.md` / `-实现层.md` / `.json`（问题与落点）、`33-滑音颤音实现方案v1.md`（待拍板方案） |
+| 音高与八度规格 | `docs/02-技术方案/25-音高与八度规格.md` |
+| 触控面板（选型/原型/PCB/装配） | `docs/02-技术方案/28-触控模块选型决策.md`、`29-触控原型验证程序.md`、`30-PCB布局需求单.md`、`26-电极面板装配指南.md` |
+
+### 常用命令
+
+| 目的 | 命令 |
+|---|---|
+| 全量回归闸口 | `python tools/scripts/regress_all.py --full` |
+| **力度-亮度 试听与调音**（出 wav + 对照报告） | `python tools/scripts/vel_audition.py` |
+| 只试一版新的力度权重表 | `python tools/scripts/vel_audition.py --table D:\tmp\my_vel.hex` |
+| 综合与时序 | `powershell -File tools/scripts/build_gowin.ps1 -Project src/gowin/tdm_synth/tdm_synth.gprj` |
 
 ## 命名约定
 

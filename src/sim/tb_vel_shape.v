@@ -29,11 +29,12 @@ module tb_vel_shape;
     reg  [7:0]         base;
     reg  signed [9:0]  tilt_bias;
     reg  [7:0]         tilt_gain;
+    reg  [8:0]         vscale;
     wire [7:0]         amp;
 
     vel_shape #(.AW(8), .NFLOOR(8'd24), .NPART_PROTECT(4'd3)) dut (
         .vel(vel), .part(part), .base(base),
-        .tilt_bias(tilt_bias), .tilt_gain(tilt_gain), .amp(amp)
+        .tilt_bias(tilt_bias), .tilt_gain(tilt_gain), .vscale(vscale), .amp(amp)
     );
 
     //-------------------------------------------------------------- 工具
@@ -105,6 +106,7 @@ module tb_vel_shape;
         base      = 8'd200;                    // 平坦的预设幅度，便于看倾斜效果
         tilt_bias = -10'sd16;                   // 低力度偏暗（新语义：每单位 skew 的增量）
         tilt_gain = 8'd2;                      // 每档 +2（tilt_n 不触 ±16 钳位）
+        vscale    = 9'd256;                    // 灵敏度一等一（= 引入本参数之前的查表行为）
         vel       = 4'd0;
         part      = 4'd0;
         #100;
@@ -196,7 +198,11 @@ module tb_vel_shape;
         end
 
         //-------------------------------------------------- V6 旁路等价
-        $display(" V6 gain=0 bias=0 => velocity has no timbre effect");
+        //   注意语义变化（2026-10-06）：开关现在是 vscale，不再是 tilt_gain。
+        //   这一条保留它原本要证明的性质："力度对音色没有影响时，
+        //   两支频谱逐位相同"——用 vscale=0 来表达那个状态。
+        $display(" V6 velocity has no timbre effect when the feature is off (vscale=0)");
+        vscale = 9'd0;
         tilt_bias = 10'sd0;  tilt_gain = 8'd0;
         read_row(4'd0);  ones = A[15];
         read_row(4'd15);
@@ -214,8 +220,12 @@ module tb_vel_shape;
 
         //-------------------------------------------------- V7 置零路径可达
         //   加宽 bias 之前，这条路径【永远不可达】（数学上到不了门限）。
-        //   用激进参数把高次泛音压到门限以下，验证"条数"真的会随力度增长。
+        //   用"表里的条数档"验证高次泛音真的会被置零、并随力度恢复。
         $display(" V7 muting path reachable (aggressive tilt)");
+        //   ★ V6 把 vscale 置成了 0（旁路），这里必须显式抬回来：
+        //     否则 V7/V8 都在"功能关闭"的状态下运行 —— 测试段之间共享全局状态，
+        //     这种"上一段把状态改坏了、下一段还以为在测别的"是判据最常见的假绿来源。
+        vscale    = 9'd256;
         tilt_bias = -10'sd16;  tilt_gain = 10'sd2;   // 关键在条数表，不在倾斜
         begin : v7
             integer c0, c15, bad7;
@@ -237,9 +247,15 @@ module tb_vel_shape;
         end
 
         //-------------------------------------------------- V8 默认参数恒等
-        //   这一条是【回归护身符】：默认 bias=0/gain=0 时，输出必须与输入逐位相同，
+        //   这一条是【回归护身符】：默认参数下，输出必须与输入逐位相同，
         //   否则既有"加法引擎逐位一致 / TDM 黄金参考"等证据会全部失效。
+        //   ★ 必须显式把 vscale 置回 0：本测试台各段共享全局状态，V7 把它设成了
+        //     256（一等一）。256 时 `amp = (base × wtab) >> 8` 会有 1 的截断误差
+        //     （base=16, w=437 → 15），那是【表在工作】的正常结果，不是恒等。
+        //     实测：漏了这一行 ⇒ V8 报 "v=0 k=1 base=16 amp=15"（差 1）。
+        //     这是"上一段改坏了状态、下一段还以为在测别的"的又一例。
         $display(" V8 identity at default parameters (regression guard)");
+        vscale = 9'd0;                       // 功能关 = 恒等（这一条测的就是它）
         tilt_bias = 10'sd0;  tilt_gain = 8'd0;
         begin : v8
             integer bad8;
@@ -265,6 +281,67 @@ module tb_vel_shape;
             base = 8'd255; #1; if (amp !== 8'd255) bad8 = bad8 + 1;
             base = 8'd128; #1; if (amp !== 8'd128) bad8 = bad8 + 1;
             check("V8-identity-boundary-bases", bad8, 0);
+        end
+
+        //-------------------------------------------------- V9 灵敏度缩放
+        //   2026-10-06 新增 vscale 端口（力度灵敏度，只缩放"相对恒等的偏差"）。
+        //   这一条要证明三件事，缺一条都说明实现做成了别的意思：
+        //     (a) vscale=0 ⇒ 与"没有力度->音色"等价（不是"整体变小"）
+        //     (b) vscale=256 ⇒ 与 wtab 逐位相同（上面的 V8 是"功能关"这条路，
+        //         这里是"功能开、灵敏度一等一"那条路）
+        //     (c) vscale=128 ⇒ 偏差恰好减半，且**恒等部分不动**
+        //         （若误写成 (w*vscale)>>8，整体幅度会掉一半 —— 那是音量旋钮）
+        $display(" V9 velocity sensitivity scales the deviation only");
+        tilt_bias = 10'sd0;  tilt_gain = 8'd1;      // 打开功能
+        begin : v9
+            integer bad9, amp_v256, amp_v128;
+            bad9 = 0;
+
+            // (a) vscale = 0 ⇒ 逐位恒等
+            vscale = 9'd0;
+            for (v = 0; v < 16; v = v + 1) begin
+                for (i = 0; i < 16; i = i + 1) begin
+                    vel = v[3:0]; part = i[3:0]; base = (i * 16 + v);
+                    #1;
+                    if (amp !== base) begin
+                        if (bad9 < 3)
+                            $display("  FAIL  V9a vscale=0 v=%0d k=%0d base=%0d amp=%0d", v, i, base, amp);
+                        bad9 = bad9 + 1;
+                    end
+                end
+            end
+            check("V9a-vscale0-identity-256-combinations", bad9, 0);
+
+            // (b)/(c) 用【解析期望值】而不是"从输出反推权重"：
+            //   反推要除 200，精度会吃掉 ±1，判据就不可信了。
+            //   定标点：vel=15, part=15, base=200。
+            //   本单元测试用 AW=8，输出饱和在 255 —— 所以期望值必须落在 255 以下，
+            //   否则"饱和"会把不同灵敏度的差别抹平（这正是第一次写这条判据时栽的坑：
+            //   期望 364/282 都 > 255，实测两条都是 255，判据自身失效）。
+            //   改用 base=100：
+            //     vscale=256 ⇒ w=467 ⇒ amp = 100×467/256 = 182.4 → 182
+            //     vscale=128 ⇒ w=361 ⇒ amp = 100×361/256 = 141.0 → 141
+            vel = 4'd15; part = 4'd15; base = 8'd100;
+            vscale = 9'd256; #1;
+            amp_v256 = amp;
+            vscale = 9'd128; #1;
+            amp_v128 = amp;
+            $display("       vscale=256 ⇒ amp=%0d（期望 182）；vscale=128 ⇒ amp=%0d（期望 141）",
+                     amp_v256, amp_v128);
+            if (amp_v256 !== 8'd182) begin
+                $display("  FAIL  V9b vscale=256 与表不等价（%0d ≠ 182）", amp_v256);
+                bad9 = bad9 + 1;
+            end
+            if (amp_v128 !== 8'd141) begin
+                $display("  FAIL  V9c vscale=128 未把偏差减半（%0d ≠ 141）", amp_v128);
+                bad9 = bad9 + 1;
+            end
+            // (c2) 恒等部分不动：base=0 时任何灵敏度下输出都必须还是 0
+            vscale = 9'd128; base = 8'd0;  #1; if (amp !== 8'd0) bad9 = bad9 + 1;
+            vscale = 9'd511; base = 8'd0;  #1; if (amp !== 8'd0) bad9 = bad9 + 1;
+            //   判据名与实际断言必须一一对应：这里把"缩放契约"整条只报一行，
+            //   否则通过时日志里根本没有可追溯的 PASS 行（只有失败才打印=不可复核）。
+            check("V9bc-sensitivity-scales-deviation-only", bad9, 0);
         end
 
         $display("==============================================================");

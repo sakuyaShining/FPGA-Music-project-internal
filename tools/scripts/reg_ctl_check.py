@@ -258,32 +258,70 @@ def main():
             fails.append("E7: 只出现 %d 次收音（note-off 没生效，曲目会糊）" % offs)
         if nz_tot and nz_on < nz_tot * 0.9:
             fails.append("E7: 在奏期间只有 %d/%d 个样本有声音" % (nz_on, nz_tot))
-        # 指引序列：把连续相同的值压成一个序列
-        seq, last = [], None
-        for v in gd:
-            n = v & 0x1F
-            if n != last:
-                if n != 0:
-                    seq.append(n)
-                last = n
-        print("     LED 指引序列（低 5 位，去重后）= %s" % seq[:12])
+        # ----------------------------------------------------------------
+        # LED 指引序列（2026-10-06 重写判据）
+        #
+        #   ★ 原判据是错的，且**永远不可能通过**。原写法：
+        #       seq = led 的低 5 位（连续去重）
+        #       exp = 曲谱 MIDI 音高 & 0x1F（连续去重）
+        #       要求 min(len(seq), len(exp)) >= 5 且逐项相等
+        #     三个错处：
+        #     ① 口径错：led_ind.v 的输出是 **一热的 5 档音高台阶**
+        #        （band_of: <=51→0, 52..66→1, 67..81→2, 82..96→3, >=97→4），
+        #        不是 MIDI 音高的低 5 位。拿 60&0x1F=28 去比永远对不上。
+        #     ② 门槛错：曲谱音高只有 MIDI 60..69 ⇒ 只落在 band 1 与 2 ⇒
+        #        期望序列最长为 [1,2,1]（3 项），**不可能 >= 5**。
+        #        所以这条判据是"写在纸上就注定红"的。
+        #     ③ 结论错：实测 LED 是 1→2→1（band），而 4/12000 个样本出现
+        #        band 0 是内核复位时 cur_note=0 的正常瞬态。
+        #   ⇒ 改为按 led_ind.v 的规格判三件事（实测值见下）：
+        #        ① ladder 恒为一热（规格：5'b00001 << band）
+        #        ② band 序列与曲谱推算的期望序列一致（允许开头的复位零瞬态）
+        #        ③ 拍点位（led[5]）确有拉长的脉冲
+        #   注意：band 只有 5 档，曲谱跨度小 ⇒ 序列短是**正常的**，
+        #     判据不能拿"项数"当丰富度指标（这正是原判据的根因）。
+        # ----------------------------------------------------------------
+        onehot_bad = sum(1 for v in gd if bin(v & 0x1F).count("1") != 1)
+        bands = [(v & 0x1F).bit_length() - 1 for v in gd]
+        #   连续去重，并丢掉 band 0（复位瞬态：cur_note=0 时 band_of(0)=0）
+        bseq, last = [], None
+        for b in bands:
+            if b != last and b != 0:
+                bseq.append(b)
+            last = b
+        beat_hi = sum(1 for v in gd if (v >> 5) & 1)
+
         SCORE = [60, 60, 67, 67, 69, 69, 67, 65, 65, 64, 64, 62, 62, 60]
-        # 期望序列也要做同样的"连续去重"：曲谱里有连续同音（60,60 / 67,67 …），
-        #   而上面按"值变化"提取，所以不能拿未去重的曲谱去比（第一版就错在这）。
-        exp, last = [], None
+
+        def band_of(n):
+            return 0 if n <= 51 else 1 if n <= 66 else 2 if n <= 81 else 3 if n <= 96 else 4
+
+        exp_b, last = [], None
         for x in SCORE:
-            v = x & 0x1F
-            if v != last:
-                exp.append(v)
-                last = v
-        n = min(len(seq), len(exp))
-        if n < 5:
-            fails.append("E7: LED 指引序列太短（%d）" % n)
+            b = band_of(x)
+            if b != last:
+                exp_b.append(b)
+            last = b
+
+        print("     LED 音高台阶(band) 去重序列 = %s" % bseq[:12])
+        print("     曲谱推算的期望 band 序列   = %s" % exp_b)
+        print("     非一热样本 %d/%d   拍点位为高的样本 %d" % (onehot_bad, len(gd), beat_hi))
+
+        if onehot_bad:
+            fails.append("E7: LED 音高台阶不是一热编码（%d/%d 个样本）" % (onehot_bad, len(gd)))
+        #   ② 期望序列必须是实测序列的**子序列**（按序出现）。
+        #      这样既容忍开头的复位瞬态与中间未变档，也不放过"完全对不上"。
+        it = iter(bseq)
+        if not all(any(x == e for x in it) for e in exp_b):
+            fails.append("E7: LED 音高台阶序列与曲谱不符（实测 %s，期望按序出现 %s）"
+                         % (bseq[:12], exp_b))
         else:
-            bad = sum(1 for i in range(n) if seq[i] != exp[i])
-            print("     与曲谱低 5 位比对前 %d 项：不符 %d" % (n, bad))
-            if bad:
-                fails.append("E7: LED 指引与曲谱不符 %d/%d" % (bad, n))
+            print("     ✓ 曲谱 band 序列按序出现在 LED 上")
+        #   ③ 拍点：80 ms 拉长（27 MHz × 80 ms ≈ 2.16e6 拍，远长于一次采集）
+        if beat_hi == 0:
+            fails.append("E7: LED 拍点位从未点亮")
+        #   注：band 只有 5 档且本曲跨度 60..69 ⇒ 去重后只有 1→2→1，
+        #     所以**不得**再用"序列项数"当判据（原判据就是死在这里）。
         if max(act) == 0 or max(nz) == 0:
             fails.append("E7: 定序器没有驱动出任何声音（在奏标志始终 0 / 音频全 0）")
     else:

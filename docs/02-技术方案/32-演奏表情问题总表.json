@@ -257,12 +257,16 @@
       "dimension": "D4",
       "title": "亮度的目标谱形从哪来",
       "problem": "现有泛音开关是离散的，亮度要求连续",
-      "decision": "以倾斜轴为主（协议已声明 0x5C TILT），预设插值为补充：倾斜决定怎么变，预设决定变到哪",
+      "decision": "以倾斜轴为主（0x5C TILT），预设插值为补充：倾斜决定怎么变，预设决定变到哪",
       "rejected": "逐条缩放 16 条幅度会变成音量变化，不像亮度",
-      "status": "decided",
+      "status": "implemented",
+      "implemented_on": "2026-10-06",
       "impl": {
-        "module": "新增 0x5C TILT + note_map 谱形写入",
-        "criterion": "E2-D4-c"
+        "module": "note_map.v 的 u_vshape 之前 + tilt_wtab.hex（16 档 × 16 泛音，恒等点 = 0x70）",
+        "register": "0x5C TILT（默认 0x70 = 恒等；写 0 是最暗档，会改掉上电音色）",
+        "generator": "tools/scripts/gen_tilt_wtab.py",
+        "criterion": "E2-D4-c / E2-L2 / E2-L3 / E2-L5 / E2-L6",
+        "criterion_note": "亮度主指标用【高次能量占比】而不是谱心：低力度会砍掉高次泛音，谱心会反向（见 32-实现层 §1c 末）"
       }
     },
     {
@@ -397,13 +401,33 @@
     },
     {
       "id": "E2-D4-c",
-      "text": "倾斜上升 => 谱心上升",
+      "text": "倾斜上升 => 亮度上升（主指标 = 高次能量占比；谱心会反向，不用它当主判据）",
       "impl_ref": "I-13"
     },
     {
       "id": "E2-D4-d",
       "text": "超出刷新速率上限时行为可预测",
       "impl_ref": "I-14"
+    },
+    {
+      "id": "E2-L2",
+      "text": "亮度轴恒等点 0x70 与『亮度维不存在』逐位相同（回归护身符）",
+      "impl_ref": "I-13"
+    },
+    {
+      "id": "E2-L3",
+      "text": "最暗档基音不为 0（最暗不等于没声）",
+      "impl_ref": "I-13"
+    },
+    {
+      "id": "E2-L5",
+      "text": "换预设后亮度轴仍成立（证明它接在预设谱之后）",
+      "impl_ref": "I-13"
+    },
+    {
+      "id": "E2-L6",
+      "text": "同一恒等值写两次结果逐位相同（可复现性）",
+      "impl_ref": "I-13"
     },
     {
       "id": "E2-X2",
@@ -441,43 +465,52 @@
       "order": 1,
       "item": "I-13 亮度倾斜通路",
       "reason": "最独立、风险最小；I-03 依赖它",
-      "needs_hardware": false
+      "needs_hardware": false,
+      "status": "done_2026-10-06"
     },
     {
       "order": 2,
       "item": "I-18 逐声部颤音相位 + 表情寄存器",
-      "reason": "E2 颤音维的核心短板",
-      "needs_hardware": false
+      "reason": "E2 颤音维的核心短板（全局 LFO 下 E2-D2-c 不可能通过）",
+      "needs_hardware": false,
+      "status": "planned",
+      "plan_doc": "docs/02-技术方案/33-滑音颤音实现方案v1.md"
     },
     {
       "order": 3,
       "item": "I-06/I-07 时间窗分离 + 渐入平滑",
       "reason": "与 2 同批",
-      "needs_hardware": false
+      "needs_hardware": false,
+      "status": "planned",
+      "plan_doc": "docs/02-技术方案/33-滑音颤音实现方案v1.md"
     },
     {
       "order": 4,
       "item": "I-03 力度到音色",
       "reason": "依赖 1",
-      "needs_hardware": false
+      "needs_hardware": false,
+      "status": "done_2026-10-06"
     },
     {
       "order": 5,
       "item": "I-01/I-02/I-04/I-16 输入层映射",
       "reason": "依赖 I2C 原型结果",
-      "needs_hardware": true
+      "needs_hardware": true,
+      "status": "blocked_on_prototype"
     },
     {
       "order": 6,
       "item": "I-08/I-09/I-10/I-11/I-12/I-15 滑动检测",
-      "reason": "依赖 I2C 原型结果",
-      "needs_hardware": true
+      "reason": "依赖 I2C 原型结果；但 legato 式滑音零依赖，可先做",
+      "needs_hardware": true,
+      "status": "partially_unblocked"
     },
     {
       "order": 7,
       "item": "I-05/I-14/I-17 兜底与冻结",
-      "reason": "收尾",
-      "needs_hardware": false
+      "reason": "收尾（I-14 已随 I-13 覆盖）",
+      "needs_hardware": false,
+      "status": "partial"
     }
   ],
   "existing_capabilities": [
@@ -486,6 +519,29 @@
       "status": "exists",
       "where": "tdm_top / note_map / tdm_engine",
       "detail": "ev_vel 4->8 位，amp = (p_amp * vel8) >> 8"
+    },
+    {
+      "ability": "力度->亮度（力度->音色）",
+      "status": "implemented",
+      "implemented_on": "2026-10-06",
+      "where": "src/rtl/vel_shape.v + src/gowin/tdm_synth/vel_wtab.hex",
+      "detail": "16x16 权重查表；0x6E VEL_SENS 为唯一开关兼灵敏度（0=关 / 0x80=一等一 / 0xC0+=2倍）",
+      "gate_suites": ["13 vel shape (V1-V9)", "14 vel timbre (J1-J4 + L1-L6)"]
+    },
+    {
+      "ability": "独立亮度轴",
+      "status": "implemented",
+      "implemented_on": "2026-10-06",
+      "where": "src/rtl/note_map.v（u_vshape 之前）+ src/gowin/tdm_synth/tilt_wtab.hex",
+      "detail": "0x5C TILT，16 档 x 16 泛音，恒等点 = 0x70（reg_bank 默认值即 0x70）",
+      "generator": "tools/scripts/gen_tilt_wtab.py"
+    },
+    {
+      "ability": "试听/调音链路",
+      "status": "implemented",
+      "implemented_on": "2026-10-06",
+      "where": "tools/scripts/vel_audition.py",
+      "detail": "一条命令：编译 -> 跑仿真 -> 导 wav -> 出 audition_report.txt（高次能量占比为主判据）"
     },
     {
       "ability": "滑音",
@@ -518,10 +574,12 @@
       "detail": "0x63 SPEC_REFRESH + 谱 RAM 16x8"
     },
     {
-      "ability": "亮度轴",
-      "status": "not_implemented",
-      "where": "-",
-      "detail": "协议已声明 0x5C TILT"
+      "ability": "亮度轴（0x5C TILT）",
+      "status": "implemented",
+      "implemented_on": "2026-10-06",
+      "where": "note_map.v（u_vshape 之前）+ src/gowin/tdm_synth/tilt_wtab.hex + reg_bank.v(0x5C 默认 0x70)",
+      "detail": "16 档 x 16 泛音查表，恒等点 = 0x70；生成器 tools/scripts/gen_tilt_wtab.py",
+      "criterion": "E2-D4-c / E2-L2 / E2-L3 / E2-L5 / E2-L6"
     },
     {
       "ability": "输入层模拟量",
@@ -603,24 +661,46 @@
     "form": "table lookup (src/rtl/vel_shape.v + src/gowin/tdm_synth/vel_wtab.hex)",
     "table": "16 velocities x 16 partials x 9-bit weights (256 = 1.0)",
     "generator": "tools/scripts/gen_vel_wtab.py",
-    "switch_register": "0x6D (nonzero = on; default 0 = identity)",
+    "switch_register": "0x6E VEL_SENS（2026-10-06 由 0x6D 改口：0x6D 换成查表后已不参与运算）",
+    "sensitivity_register": {
+      "addr": "0x6E",
+      "semantics": "只缩放『相对恒等的偏差』：w = 256 + ((wtab-256) * vscale) >> 8",
+      "levels": {"0x00": "关（恒等）", "<0x40": 128, "<0xC0": 256, "else": 511}
+    },
     "reserved": [
       "0x6B",
-      "0x6C"
+      "0x6C",
+      "0x6D(历史倾斜斜率，不参与运算)"
     ],
+    "brightness_axis": {
+      "addr": "0x5C TILT",
+      "table": "src/gowin/tdm_synth/tilt_wtab.hex (16 x 16)",
+      "generator": "tools/scripts/gen_tilt_wtab.py",
+      "identity_point": "0x70（reg_bank 默认值必须是 0x70；写 0 = 最暗档）"
+    },
+    "audition": "python tools/scripts/vel_audition.py（一条命令出 wav + audition_report.txt）",
     "criteria_in_gate": [
-      "13 vel shape (V1-V8)",
-      "14 vel timbre (J1-J4)"
+      "13 vel shape (V1-V9)",
+      "14 vel timbre (J1-J4 + L1-L6)"
     ],
+    "measured_2026_10_06": {
+      "vel_to_brightness_v4_v14": "高次能量占比 49.7% -> 66.6%（1.34 倍）",
+      "brightness_axis_tilt0_tiltFF": "高次占比单调上升，动态范围 1.84 倍（谱心口径）",
+      "identity_check": "0x70 与『亮度维不存在』逐位相同",
+      "metric_warning": "谱心会因『砍掉高次泛音』而反向，亮度主判据必须用高次能量占比"
+    },
     "timing": {
       "formula_with_divider_ns": 4.488,
       "formula_without_divider_ns": 11.872,
       "table_ns": 15.229,
-      "baseline_before_vel_shape_ns": 16.479
+      "baseline_before_vel_shape_ns": 16.479,
+      "note": "加了亮度轴乘法之后需重新综合实测；闸口阈值 slack >= 5 ns"
     },
     "lessons_synthesis_only": [
       "sine table copied from a never-created cache dir -> audio all X -> 09 regctl false green on stale artifacts",
-      "vel_wtab.hex entry width 12 vs memory width 9 -> WARN EX2526 -> ROM not initialized on board (simulation fine)"
+      "vel_wtab.hex entry width 12 vs memory width 9 -> WARN EX2526 -> ROM not initialized on board (simulation fine)",
+      "tilt_wtab.hex 有 256 个词而数组声明 [0:15] -> iverilog 仅 WARNING -> 静默只装前 48 项、其余 X（亮度恒等点被夹到下限）",
+      "vel_shape 的旧 feat_on 门（tilt_gain!=0）在查表后成了死门 -> 写 0x6E 什么都不发生"
     ]
   }
 }

@@ -95,24 +95,65 @@ def sine_hex():
     return os.path.join(BUILD, "_hex", "sine256.hex")
 
 
+def patch_sine_path(d):
+    """02–07 这些套件不走 copy_data，而是**覆盖** 01_additive 产出的 sine256.hex。
+
+    2026-10-06：这里补 tilt_wtab.hex。
+      这些套件本身不实例化 note_map，用不到亮度表；但 note_map.v 一旦被加进
+      某个套件的源文件清单（本项目已发生过两次"某个套件漏登记源文件"），
+      缺表就会立刻变成"音频全 X"。补这一行等于把这个陷阱提前填掉，
+      代价是一次 1 KB 的文件拷贝。
+    """
+    if os.path.isfile(sine_hex()):
+        shutil.copy(sine_hex(), d)
+    wt = os.path.join(ROOT, "src", "gowin", "tdm_synth", "tilt_wtab.hex")
+    if os.path.isfile(wt):
+        shutil.copy(wt, d)
+    return [h for h in ("sine256.hex", "tilt_wtab.hex")
+            if not os.path.isfile(os.path.join(d, h))]
+
+
 DATA_FILES = ("sine256.hex", "note_inc.hex", "preset_part.hex",
-              "recip_inc.hex", "vel_wtab.hex")
+              "recip_inc.hex", "vel_wtab.hex", "tilt_wtab.hex")
 
 
-def copy_data(d, extra=()):
+def copy_data(d, extra=(), build_dir=None):
     """把仿真运行目录需要的所有数据文件一次拷齐。
 
     2026-10-06 第三次栽在同一类问题上（运行目录缺 hex ⇒ $readmemh 失败 ⇒
     音频全 X ⇒ 判据崩），根因是【同一件事在四处各写一遍】。这里收成唯一入口：
     新增数据文件只改 DATA_FILES，不再逐个套件补。
+
+    ★ 2026-10-06 二次加固：源文件缺失时**必须让闸口红**。
+      原来 `if os.path.isfile(p)` 静默跳过 —— 缺表不会报错，只会让下游
+      判据拿到 X，报出来的是一句莫名其妙的 ValueError（当天就这么白查了一轮）。
+      现在缺源文件直接列进 missing，由调用方标红并说明缺的是哪一张表。
+
+    build_dir：02–07 这类"先用 01 additive 产出 sine256.hex、再覆盖"的套件，
+      缓存就在 sim_build/ 下而不在 src/gowin/tdm_synth/。给了 build_dir 时
+      允许回退到 sim_build/_hex/ 找，找不到同样算 missing（不再静默通过）。
     """
     src_dir = os.path.join(ROOT, "src", "gowin", "tdm_synth")
+    cache = os.path.join(build_dir, "_hex") if build_dir else None
+    missing = []
     for h in DATA_FILES:
         p = os.path.join(src_dir, h)
+        if not os.path.isfile(p) and cache:
+            p = os.path.join(cache, h)
         if os.path.isfile(p):
             shutil.copy(p, d)
+        else:
+            missing.append(h)
     for h in extra:
-        shutil.copy(h, d)
+        if os.path.isfile(h):
+            shutil.copy(h, d)
+        else:
+            missing.append(os.path.basename(h))
+    # 拷贝后逐个复核：拷贝失败（锁/权限）同样不能静默通过
+    for h in DATA_FILES:
+        if h not in missing and not os.path.isfile(os.path.join(d, h)):
+            missing.append(h + "(拷贝失败)")
+    return missing
 
 
 def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_hex=()):
@@ -124,7 +165,11 @@ def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_
         rmtree_ok(d)
     os.makedirs(d, exist_ok=True)
     if need_hex:
-        copy_data(d, extra_hex)
+        miss = copy_data(d, extra_hex, build_dir=BUILD)
+        if miss:
+            return None, ("缺数据文件：%s —— 运行目录缺 hex 会让 $readmemh 失败、"
+                          "音频全 X、判据崩成 traceback。"
+                          "源目录 = src/gowin/tdm_synth/" % ", ".join(miss))
     # tb 文件归 sim，其余 rtl
     srcs = []
     for f in files:
@@ -236,7 +281,9 @@ def run_tdm_mask(mask, env_on):
     """--full 用：打补丁的 tb 副本跑指定掩码/包络配置"""
     d = os.path.join(BUILD, "11_tdm_%08X_e%d" % (mask, env_on))
     os.makedirs(d, exist_ok=True)
-    copy_data(d)
+    miss = copy_data(d, build_dir=BUILD)
+    if miss:
+        return False, "缺数据文件：%s" % ", ".join(miss)
     tb = open(sim("tb_tdm_equiv.v"), encoding="utf-8").read()
     tb = re.sub(r"localparam ENV_ON\s*=\s*1'b[01];", "localparam ENV_ON  = 1'b%d;" % env_on, tb)
     tb = re.sub(r"localparam \[NSLOT-1:0\] ACTIVE = 32'h[0-9A-Fa-f]+;",
@@ -297,6 +344,11 @@ def main():
     msg = "逐位一致 " + (line[-1].strip() if line else (log2.strip().splitlines()[-1] if log2.strip() else "无输出"))
     results.append(("01 additive", ok, msg))
     shutil.copy(os.path.join(d1, "sine256.hex"), os.path.join(hexdir, "sine256.hex"))
+    #   亮度轴表也进缓存：`patch_sine_path` 优先从综合目录取，取不到时回退这里。
+    #   这样"综合目录被清空"也不会让 02–07 组突然缺表。
+    _tw = os.path.join(ROOT, "src", "gowin", "tdm_synth", "tilt_wtab.hex")
+    if os.path.isfile(_tw):
+        shutil.copy(_tw, os.path.join(hexdir, "tilt_wtab.hex"))
 
     # 02–07：自判据套件
     suites = [
@@ -405,26 +457,30 @@ def main():
         if os.path.isdir(d):
             rmtree_ok(d)
         os.makedirs(d, exist_ok=True)
-        synth_hex = os.path.join(ROOT, "src", "gowin", "tdm_synth")
-        for h in ("sine256.hex", "note_inc.hex", "preset_part.hex", "recip_inc.hex"):
-            shutil.copy(os.path.join(synth_hex, h), d)
-        f1_files = ["audio_clk_en.v", "osc_env.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
-                    "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v",
-                    "fx_delay.v", "i2s_tx.v", "tdm_engine.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v",
-                    "tdm_top.v", "tb_tdm_f1.v"]
-        rc, log = run([os.path.join(IV, "iverilog.exe"), "-g2005", "-o", "f1.vvp",
-                       "-s", "tb_tdm_f1"] +
-                      [rtl(f) if not f.startswith("tb_") else sim(f) for f in f1_files], d,
-                      timeout=2400)
-        ok, msg = False, "compile fail"
-        if rc == 0:
-            run([os.path.join(IV, "vvp.exe"), "f1.vvp"], d, timeout=2400)
-            rc2, log2 = run([sys.executable, os.path.join(ROOT, "tools", "scripts", "f1_check_tdm.py"),
-                             "--simdir", d], BUILD)
-            ok = rc2 == 0 and "★★★" in log2
-            tail = [l for l in log2.splitlines() if "G" in l or "★" in l]
-            msg = " / ".join(tail[-3:]) if tail else log2[-120:]
-        results.append(("12 f1", ok, msg.replace("\n", " ")[:120]))
+        #   ★ 2026-10-06：这里原来是内联的 hex 清单，加 tilt_wtab.hex 时又漏了一次
+        #     （与 14 套件同款故障）。改为走唯一的 copy_data()。
+        miss = copy_data(d)
+        if miss:
+            #   缺表就直接标红，不再去编译/运行（跑了也是全 X，只会掩盖真因）
+            results.append(("12 f1", False, "缺数据文件：%s" % ", ".join(miss)))
+        else:
+            f1_files = ["audio_clk_en.v", "osc_env.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                        "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v",
+                        "fx_delay.v", "i2s_tx.v", "tdm_engine.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v",
+                        "tdm_top.v", "tb_tdm_f1.v"]
+            rc, log = run([os.path.join(IV, "iverilog.exe"), "-g2005", "-o", "f1.vvp",
+                           "-s", "tb_tdm_f1"] +
+                          [rtl(f) if not f.startswith("tb_") else sim(f) for f in f1_files], d,
+                          timeout=2400)
+            ok, msg = False, "compile fail"
+            if rc == 0:
+                run([os.path.join(IV, "vvp.exe"), "f1.vvp"], d, timeout=2400)
+                rc2, log2 = run([sys.executable, os.path.join(ROOT, "tools", "scripts", "f1_check_tdm.py"),
+                                 "--simdir", d], BUILD)
+                ok = rc2 == 0 and "★★★" in log2
+                tail = [l for l in log2.splitlines() if "G" in l or "★" in l]
+                msg = " / ".join(tail[-3:]) if tail else log2[-120:]
+            results.append(("12 f1", ok, msg.replace("\n", " ")[:120]))
 
         for env in (0, 1):
             for mask in (0x00000003, 0x0000000F, 0x000000FF, 0x0000FF00,
@@ -432,7 +488,8 @@ def main():
                 ok, msg = run_tdm_mask(mask, env)
                 results.append(("11 tdm %08X/e%d" % (mask, env), ok, msg))
 
-    # 13 vel_shape：力度->谱形 单元判据（V1-V8；表 = src/gowin/tdm_synth/vel_wtab.hex）
+    # 13 vel_shape：力度->谱形（含亮度灵敏度）单元判据 V1-V9
+    #   表 = src/gowin/tdm_synth/vel_wtab.hex（vel_shape.v 只读这一张）
     d = os.path.join(BUILD, "13_velshape")
     if os.path.isdir(d):
         rmtree_ok(d)
@@ -444,11 +501,14 @@ def main():
     if rc == 0:
         rc2, log2 = run([os.path.join(IV, "vvp.exe"), "vs.vvp"], d)
         ok = "ALL VEL_SHAPE CRITERIA PASS" in log2
+        #   缺表时输出全是 X，判据会以 FAIL 收场 —— 这时把日志尾给出来，
+        #   否则只能看到一句"compile fail"，无法区分是缺表还是逻辑错。
         tail = [l.strip() for l in log2.splitlines() if "  FAIL" in l]
-        msg = "V1-V8 全绿（基音/条数/单调/恒等）" if ok else (" / ".join(tail[:2]) or log2[-120:])
-    results.append(("13 vel shape", ok, msg.replace(chr(10), " ")[:120]))
+        msg = "V1-V9 全绿（基音/条数/单调/恒等/灵敏度）" if ok else (" / ".join(tail[:2]) or log2[-160:])
+    results.append(("13 vel shape", ok, msg.replace(chr(10), " ")[:160]))
 
-    # 14 vel_timbre：力度->音色 端到端（穿 tdm_top：端口 + 寄存器 0x6B-0x6D + 装载通路）
+    # 14 vel_timbre：力度->音色 + 独立亮度轴 端到端
+    #   （穿 tdm_top：端口 + 寄存器 0x5C/0x6D/0x6E + 装载与刷新通路）
     vt_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v", "i2s_tx.v",
                 "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v",
@@ -457,10 +517,10 @@ def main():
     if err:
         results.append(("14 vel timbre", False, err[:120]))
     else:
-        d = os.path.join(BUILD, "14_veltimbre")
-        run([os.path.join(IV, "vvp.exe"), "sim.vvp"], d)
+        #   compile_and_run 内部已经跑过 vvp，这里不再重复跑第二遍
+        #   （原来多跑一次，等于把同一份产物写两遍，只会让"哪一次的结果"变得含糊）
         ok, msg = judge_script("14_veltimbre", "vel_timbre_check.py")
-        results.append(("14 vel timbre", ok, msg.replace(chr(10), " ")[:120]))
+        results.append(("14 vel timbre", ok, msg.replace(chr(10), " ")[:160]))
 
     # ---------------------------------------------------------------- 汇总
     print()
