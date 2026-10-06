@@ -627,6 +627,25 @@ def main():
                else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("19 alloc", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 20 sat：24 位饱和/截断路径边界（阶段 3 遗留项）
+    #   为什么要有：12 f1 与 16 i2s top 都**到不了**饱和区（实测 sum_raw 峰值 383370，
+    #   阈值 524288 = 73%），clamp 分支从未被覆盖。
+    #   本机没有 Gowin 工具链、也没有增益寄存器可调，所以改为 force 引擎内部的
+    #   `acc_next`（饱和表达式的输入），逐点核对期望值 —— 覆盖正/负两侧的分界点。
+    sat_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v",
+                 "i2s_tx.v", "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v",
+                 "strip_ctrl.v", "led_ind.v", "event_hold.v", "tb_sat.v"]
+    log, err = compile_and_run("20_sat", sat_files, defines=("SIM_INIT",), need_hex=True)
+    if err:
+        results.append(("20 sat", False, err[:160]))
+    else:
+        ok = "RESULT sat=PASS" in (log or "")
+        tail = [l.strip() for l in (log or "").splitlines() if "FAIL" in l]
+        msg = ("±524288 分界点：正侧夹到 8388607、负侧正好 -8388608（10 点全对）" if ok
+               else (" / ".join(tail[:2]) or (log or "")[-160:]))
+        results.append(("20 sat", ok, msg.replace(chr(10), " ")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
