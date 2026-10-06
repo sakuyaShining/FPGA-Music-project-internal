@@ -101,9 +101,68 @@ def main():
         print("  FAIL  混合输入 期望 %s 实测 %s" % (exp, got))
         fails += 1
 
+    #   D 三份清单必须同步（本轮新增，防"改一处漏两处"）
+    #
+    #   make_public.py 把"内部材料"这份知识写成了**三个投影**：
+    #       EXCLUDE        要 git rm --cached 的路径
+    #       IGNORE_BLOCK   追加进公开版 .gitignore 的规则
+    #       LEAK_PATTERNS  提交前 find_leaks() 用来中止的判据
+    #   ⇒ 将来新增一条排除项时，只改其中一两处是很容易发生的，
+    #     而**只改 EXCLUDE/IGNORE 而不改 LEAK_PATTERNS** 会让新项*不被判据拦住*
+    #     ——"排除规则"与"泄漏判据"脱节，正是最该防的那种漏洞。
+    #   所以这里断言：**另外两份清单的每一条，都必须被 LEAK_PATTERNS 覆盖**。
+    print(" D 三份清单同步：EXCLUDE / IGNORE_BLOCK 的每一条都必须被 LEAK_PATTERNS 覆盖")
+
+    def representative(rule):
+        """为一条 ignore/排除规则构造一个真实的、应当被判为泄漏的路径
+
+        ★ 注意 EXCLUDE 里的**目录**是**不带尾斜杠**的（`notes`、`tools/pylib`），
+          而 IGNORE_BLOCK / LEAK_PATTERNS 用的是 `notes/` 这种带斜杠形式。
+          第一版直接把 `notes` 当代表路径，匹配 `^notes/` 自然失败 ⇒
+          报了 5 条"未覆盖"，其实全是**本测试的规范不一致**，不是真缺口。
+          （这已是本会话第三次"自己的检查器有 bug" —— 与前两次同类：
+            必须先把检查器本身验一遍，再相信它给出的缺口。）
+        """
+        r = rule.strip().rstrip("/")
+        #   在磁盘上确实是目录的 ⇒ 按目录语义构造路径
+        if os.path.isdir(os.path.join(ROOT, r)):
+            return r + "/example-file.md"
+        if "*" in r:
+            return r.replace("*", "diag_pitch")
+        return r
+
+    import re as _re
+    leak_re = [_re.compile(p) for p in mp.LEAK_PATTERNS]
+
+    def is_covered(path):
+        return any(rx.search(path) for rx in leak_re)
+
+    d_bad = []
+    for p in mp.EXCLUDE:
+        if not is_covered(representative(p)):
+            d_bad.append(("EXCLUDE", p))
+    for ln in mp.IGNORE_BLOCK.splitlines():
+        ln = ln.strip()
+        if not ln or ln.startswith("#"):
+            continue
+        if not is_covered(representative(ln)):
+            d_bad.append(("IGNORE_BLOCK", ln))
+
+    if d_bad:
+        print("  FAIL  %d 条排除规则未被 LEAK_PATTERNS 覆盖（新项不会被判据拦住）：" % len(d_bad))
+        for where, p in d_bad[:15]:
+            print("        [%s] %s" % (where, p))
+        fails += 1
+    else:
+        n_ex = len(mp.EXCLUDE)
+        n_ig = len([l for l in mp.IGNORE_BLOCK.splitlines()
+                    if l.strip() and not l.strip().startswith("#")])
+        print("  PASS  EXCLUDE %d 条 + IGNORE_BLOCK %d 条，全部被 LEAK_PATTERNS(%d 条) 覆盖"
+              % (n_ex, n_ig, len(mp.LEAK_PATTERNS)))
+
     print("=" * 70)
     if fails == 0:
-        print("RESULT leakcheck=PASS（A %d 例 + B %d 例 + C 1 例）"
+        print("RESULT leakcheck=PASS（A %d 例 + B %d 例 + C 1 例 + D 同步）"
               % (len(clean_cases), len(leak_cases)))
         return 0
     print("RESULT leakcheck=FAIL fails=%d" % fails)
