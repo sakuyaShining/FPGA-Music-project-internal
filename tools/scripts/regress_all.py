@@ -646,6 +646,25 @@ def main():
                else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("20 sat", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 21 voice：逐声部力度/音色是否需要独立存储？
+    #   阶段 3 计划里写着"保存每声部力度/音色/状态"。本套件把这条**假设变成事实**：
+    #   note_map 装载时就把力度算进每个泛音的幅度（vel_shape → amp_cal → load_amp），
+    #   引擎逐槽写进 pa_mem ⇒ 力度**烘进幅度**，装载后不再受全局变化影响。
+    #   于是"逐声部保存力度"不是缺口，而是需要被**判据固定住**的不变量。
+    voi_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v",
+                 "i2s_tx.v", "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v",
+                 "strip_ctrl.v", "led_ind.v", "event_hold.v", "tb_voice.v"]
+    log, err = compile_and_run("21_voice", voi_files, defines=("SIM_INIT",), need_hex=True)
+    if err:
+        results.append(("21 voice", False, err[:160]))
+    else:
+        ok = "RESULT voice=PASS" in (log or "")
+        tail = [l.strip() for l in (log or "").splitlines() if "FAIL" in l]
+        msg = ("力度在装载时烘进每泛音幅度；换声部/改全局都不影响已发声声部" if ok
+               else (" / ".join(tail[:2]) or (log or "")[-160:]))
+        results.append(("21 voice", ok, msg.replace(chr(10), " ")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
