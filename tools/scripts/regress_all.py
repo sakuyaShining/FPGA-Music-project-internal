@@ -665,6 +665,28 @@ def main():
                else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("21 voice", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 22 nyquist：完整位宽 Nyquist 与预生成表一致性（阶段 3 遗留项）
+    #   ├ N1 增量位宽：用 inc = round(f*2^24/fs) 独立算出 128 个音，与 note_inc.hex
+    #   │   逐项比对（判据以**公式**为准，不以表为准 ⇒ 不循环）。
+    #   │   实测：128/128 相等；最大增量 3990774 = 24 位的 23.8% ⇒ 位宽充足、未截断。
+    #   └ N2 第 k 泛音的 Nyquist 约束（加性合成固有）：量化"从哪个音开始越界"。
+    #      结果作为**设计约束**记录：要求全部 16 泛音不越界 ⇒ 音号 <= 92。
+    #   两个脚本都只读预生成表，属于静态数据判据，不需要仿真。
+    for nm, script, tag in (("22_nyquist", "nyquist_check.py", "22 nyquist"),
+                            ("23 preset_nyq", "preset_nyquist_check.py", "23 preset nyq")):
+        d = os.path.join(BUILD, nm)
+        os.makedirs(d, exist_ok=True)
+        ok, tail = judge_script(nm, script)
+        if tag == "22 nyquist":
+            msg = ("增量 128/128 与公式相符、位宽充足；量化单声部 Nyquist 约束" if ok
+                   else tail.replace(chr(10), " ")[:160])
+        else:
+            #   审计类：**有发现不等于失败**（加性合成对高音区本就该衰减高次泛音），
+            #   判据只要求脚本能跑完并给出明确结论（退出码 0）。
+            msg = ("预设表混叠审计完成（结果见 sim_build/23_preset_nyq_judge.log）" if ok
+                   else tail.replace(chr(10), " ")[:160])
+        results.append((tag, ok, msg))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
