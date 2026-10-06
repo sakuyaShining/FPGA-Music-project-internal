@@ -687,6 +687,19 @@ def main():
                    else tail.replace(chr(10), " ")[:160])
         results.append((tag, ok, msg))
 
+    # 24 leakcheck：公开版导出「泄漏判据」的自检（阶段 4）
+    #   为什么要有：make_public.py 原来在提交前只**打印**痕迹计数，
+    #   泄漏了也照常 commit 并返回 0 ⇒ 上游据此认为"这一步成功"，泄漏被静默放过。
+    #   现已加 find_leaks() 硬判据（提交前核对、泄漏即中止）。
+    #   本套件**自检该判据本身**：既要有"干净输入不误报"，更要有
+    #   "泄漏输入必须被抓到" —— 一个永远返回空的检测器会让导出永远绿灯。
+    d = os.path.join(BUILD, "24_leakcheck")
+    os.makedirs(d, exist_ok=True)
+    ok, tail = judge_script("24_leakcheck", "leakcheck_test.py")
+    msg = ("导出泄漏判据自检：干净 5 例不误报 / 泄漏 13 例必抓到 / 混合 1 例" if ok
+           else tail.replace(chr(10), " ")[:160])
+    results.append(("24 leakcheck", ok, msg))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)

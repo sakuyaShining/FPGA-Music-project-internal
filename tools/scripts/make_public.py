@@ -99,6 +99,60 @@ src/sim/mpr121_model.v
 src/sim/tb_i2c_master.v
 """
 
+#---------------------------------------------------------------------------
+# ★ 泄漏判据（2026-10-07）
+#
+#   为什么必须有：本脚本原来**没有**"排除是否真的生效"的硬判据 ——
+#   它只把三项痕迹计数**打印**出来，泄漏了也照样 commit 并返回 0。
+#   而本次审计发现排除本身依赖两个**偶然条件**：
+#     ① `git rm -r --cached .` 顺手把 make_public.py 自己清出索引；
+#     ② `tools/scripts/_*.py` 只写在 public 分支的 .gitignore 里，
+#        主线没有 ⇒ 那 28 个未跟踪的排查脚本**只是因为还没被 add 才没进**。
+#   在一个**干净克隆**里（`_*.py` 不存在）看似没事，
+#   但只要有人 `git add -A` 过、或在别的机器上重建，公开版就会带上它们。
+#
+#   ⇒ 判据：提交前**逐个核对**这些路径是否出现在索引里，**出现即中止（退出码 1）**。
+#      "先验证再提交"，而不是"提交完再看打印"。
+#---------------------------------------------------------------------------
+LEAK_PATTERNS = [
+    r"^refs/",
+    r"^PROJECT_MEMORY\.md$",
+    r"^\.zcodeignore$",
+    r"^notes/",
+    r"^backups/",
+    r"^tools/pylib/",
+    r"^src/rtl/archive/",
+    r"^src/gowin/bringup_9k/",
+    r"^tools/scripts/_",
+    r"^tools/scripts/(scan_traces|neutralize_comments|neutralize_docs|"
+    r"make_public|git_precheck|fix_gitignore|strip_refs|check_video_timing|"
+    r"make_image_rom)\.py$",
+    r"^tools/scripts/flash_sram\.cmd$",
+    r"^src/rtl/(bringup_top|image_rom|image_view|lcd_480x272|test_pattern|"
+    r"led_heartbeat|i2c_master)\.v$",
+    r"^src/rtl/README\.md$",
+    r"^src/sim/(mpr121_model|tb_i2c_master)\.v$",
+    r"^src/constr/bringup_top\.cst$",
+    r"^docs/01-竞赛情报/",
+    r"^docs/03-学习路线/",
+    r"^docs/02-技术方案/22-全面审计-2026-10-04\.md$",
+    r"^docs/02-技术方案/07-候选架构方案-v1\.md$",
+    r"^docs/02-技术方案/09-第一次烧录bring-up指南\.md$",
+    r"^sim_build/gui/selftest_report\.txt$",
+]
+
+
+def find_leaks(files):
+    """返回索引里**不该出现**的路径列表（空 = 干净）"""
+    pats = [re.compile(p) for p in LEAK_PATTERNS]
+    out = []
+    for f in files:
+        for p in pats:
+            if p.search(f):
+                out.append(f)
+                break
+    return out
+
 PAT_A = re.compile(r"ZCode|DeepSeek|GLM|双代理|交接|会话恢复", re.I)
 PAT_B = re.compile(r"任务板|挂账|销账|工单|认领|第\s*\d+\s*[轮次]")
 # 指向公开版中不存在路径的悬空引用（点进去 404，同时也是痕迹）
@@ -197,8 +251,24 @@ def main():
     for f in c_hits[:15]:
         print("       %s" % f)
 
+    # ---------------------------------------------------------------- 硬判据
+    #   ★ 提交**之前**核对索引，泄漏即中止。
+    #     原来这里只"打印计数"然后照常 commit —— 泄漏了也返回 0，
+    #     而"退出码 0"正是上游判断"这一步成功"的依据 ⇒ 泄漏会被静默放过。
+    leaks = find_leaks(files)
+    print("[7] 泄漏判据（不该出现在公开版索引里的路径）")
+    if leaks:
+        print("   ✗ 发现 %d 个泄漏路径 ⇒ **中止提交**：" % len(leaks))
+        for f in leaks[:25]:
+            print("       %s" % f)
+        if len(leaks) > 25:
+            print("       …（其余 %d 个省略）" % (len(leaks) - 25))
+        print("   处置：把规则补进 IGNORE_BLOCK / LEAK_PATTERNS，或从索引移除后重跑。")
+        return 1
+    print("   ✓ 无泄漏（%d 个跟踪文件全部通过）" % len(files))
+
     git("commit", "-q", "-m", "公开版快照：移出内部过程材料，只保留作品本体")
-    print("[7] 已提交：%s" % git("log", "--oneline", "-1").strip())
+    print("[8] 已提交：%s" % git("log", "--oneline", "-1").strip())
     print("    现在可：git push <公开仓库> %s:main" % a.branch)
     print("    已自动切回主线（避免后续提交误落在快照分支上）")
     git("checkout", "main")
@@ -222,8 +292,13 @@ if __name__ == "__main__":
     finally:
         # 兜底：main() 里会切到孤立分支 public，一旦中途崩溃，HEAD 会悬空。
         # 这里保证任何情况下都回到原分支，避免"分支被删、HEAD 无指向"。
-        # 兜底分支不能是孤立分支本身，否则会把 HEAD 留在即将被删除的分支上
-        _back = _orig if (_orig and _orig not in ("HEAD", "public")) else "main"
-        if _back:
-            _sp.run(["git", "checkout", _back], capture_output=True)
-            print("  [兜底] 已切回分支 %s" % _back)
+        # 兜底分支不能是孤立分支本身，否则会把 HEAD 留在即将被删除的分支上。
+        #
+        # ★ --dry 时**不要**执行：预演不该碰工作树。原来它在预演时也跑了一次
+        #   `git checkout main` 并打印"[兜底] 已切回分支 main"，属于无谓的副作用
+        #   （预演的唯一承诺是"不创建任何分支/提交"，那就连 checkout 也不该做）。
+        if "--dry" not in sys.argv:
+            _back = _orig if (_orig and _orig not in ("HEAD", "public")) else "main"
+            if _back:
+                _sp.run(["git", "checkout", _back], capture_output=True)
+                print("  [兜底] 已切回分支 %s" % _back)
