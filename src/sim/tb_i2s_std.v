@@ -42,7 +42,10 @@ module tb_i2s_std;
 
     wire bck_en, bck, lrck, sample_en;
 
-    audio_clk_en #(.DIV_BCK(18), .BCK_PER_LRCK(32)) u_clk (
+    //   ★ DIV_BCK 必须与【顶层出货配置】一致：tdm_top.v 用的是 16（27/16 = 1.6875 MHz），
+    //     不是 18。两者都是"每半帧 16 个采样沿"，但拍数不同；用错会让本判据与
+    //     真正上板的时序不是同一档（本项目已经因为"测试台与顶层配置不同档"吃过亏）。
+    audio_clk_en #(.DIV_BCK(16), .BCK_PER_LRCK(32)) u_clk (
         .clk(clk), .rst_n(rst_n),
         .bck_en(bck_en), .bck(bck), .lrck(lrck), .sample_en(sample_en));
 
