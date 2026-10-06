@@ -566,6 +566,25 @@ def main():
         ok, msg = judge_script("16_i2sttop", "i2s_top_check.py")
         results.append(("16 i2s top", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 17 evloss：8 键同时按/放 不丢事件、不挂音（pad_scan 待发位图 + note_map 忙模型）
+    #   为什么要有：tdm_top 自述"冲突时后到者被忽略"，pad_scan 则宣称有反压。
+    #   两条说法必须实测对齐；本会话已三次因"读代码下结论"而误判。
+    d = os.path.join(BUILD, "17_evloss")
+    if os.path.isdir(d):
+        rmtree_ok(d)
+    os.makedirs(d, exist_ok=True)
+    rc, log = run([os.path.join(IV, "iverilog.exe"), "-g2005", "-o", "ev.vvp",
+                   "-s", "tb_evloss", rtl("pad_scan.v"), sim("tb_evloss.v")], d)
+    if rc != 0:
+        results.append(("17 evloss", False, "COMPILE FAIL"))
+    else:
+        rc2, log2 = run([os.path.join(IV, "vvp.exe"), "ev.vvp"], d)
+        ok = "RESULT evloss=PASS" in log2
+        tail = [l.strip() for l in log2.splitlines() if "FAIL" in l]
+        msg = ("8 键同时按/放：16 条事件无丢失、不挂音" if ok
+               else (" / ".join(tail[:2]) or log2[-160:]))
+        results.append(("17 evloss", ok, msg.replace(chr(10), " ")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
