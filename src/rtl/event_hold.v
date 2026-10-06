@@ -105,10 +105,41 @@ module event_hold #(
         else if (out_valid && out_ready) rd_ptr <= rd_ptr + 1'b1;
     end
 
-    assign out_valid = ~empty;
-    assign out_on    = q_on  [rd_ptr[AW-1:0]];
-    assign out_note  = q_note[rd_ptr[AW-1:0]];
-    assign out_vel   = q_vel [rd_ptr[AW-1:0]];
+    //   输出**寄存一级**再给下游。
+    //   为什么：下游是 tdm_top 的"事件源优先级 mux + 寄存器"，
+    //   若本模块直接给出组合输出，等于把"寄存器堆读 + 队列读"串成一条长链；
+    //   本项目已经为同类问题栽过（加定序器后 SETUP slack 只剩 +0.105 ns）。
+    //
+    //   ★★ out_valid 必须与数据【一起】寄存，且判定用的是"读指针所指那一项
+    //      在上一拍是否有效"：
+    //          valid_r <= ~empty | (out_valid & out_ready)
+    //      踩过的坑：先写成 `out_valid = ~empty`（组合）而数据寄存 ——
+    //      当队列从【空】变为【有】的那一拍，~empty 立刻为 1，但寄存后的数据
+    //      还是上一拍的旧值（此时 rd_ptr 恰好指向刚写入的那一项，数据尚未被采到），
+    //      于是消费者会读到一个**错位的条目**。
+    //      实测症状非常有欺骗性：note 号完全正确、但 on/off 标志整体错开
+    //      （第 1 条本应 off 却报 on，序列整体位移）。定位方式就是看"号对、标志错"。
+    //      正确语义：数据可用的那一拍才宣告 valid。
+    reg              ov_r, oon_r;
+    reg [NB-1:0]     onote_r;
+    reg [VB-1:0]     ovel_r;
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            ov_r <= 1'b0; oon_r <= 1'b0; onote_r <= {NB{1'b0}}; ovel_r <= {VB{1'b0}};
+        end
+        else begin
+            ov_r    <= ~empty | (ov_r & out_ready);
+            oon_r   <= q_on  [rd_ptr[AW-1:0]];
+            onote_r <= q_note[rd_ptr[AW-1:0]];
+            ovel_r  <= q_vel [rd_ptr[AW-1:0]];
+        end
+    end
+
+    assign out_valid = ov_r;
+    assign out_on    = oon_r;
+    assign out_note  = onote_r;
+    assign out_vel   = ovel_r;
     assign level     = wr_ptr - rd_ptr;
 
 endmodule

@@ -398,7 +398,8 @@ def main():
     #     它们是预生成表，权威副本在 src/gowin/tdm_synth/（综合工程），此处从那里取。
     files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v", "song_seq.v",
              "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v", "i2s_tx.v",
-             "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v", "tb_reg_ctl.v"]
+             "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v",
+             "event_hold.v", "tb_reg_ctl.v"]
     synth_dir = os.path.join(ROOT, "src", "gowin", "tdm_synth")
     tables = [os.path.join(synth_dir, h) for h in
               ("note_inc.hex", "preset_part.hex", "recip_inc.hex")]
@@ -421,7 +422,7 @@ def main():
     # The stale 0xC0 expectation escaped prior regression after RTL moved to 0x80.
     vp7_files = ["audio_clk_en.v", "osc_env.v", "i2s_tx.v", "tdm_engine.v",
                  "pitch_mod.v", "note_map.v", "vel_shape.v", "reg_bank.v", "uart_rx.v", "uart_tx.v",
-                 "fx_delay.v", "song_seq.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v", "tdm_top.v", "tb_vp7.v"]
+                 "fx_delay.v", "song_seq.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v", "tdm_top.v", "event_hold.v", "tb_vp7.v"]
     vp7_log, vp7_err = compile_and_run(
         "09_vp7", vp7_files, defines=("SIM_INIT",), need_hex=True,
         extra_hex=tables if files else ())
@@ -471,7 +472,7 @@ def main():
             f1_files = ["audio_clk_en.v", "osc_env.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
                         "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v",
                         "fx_delay.v", "i2s_tx.v", "tdm_engine.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v",
-                        "tdm_top.v", "tb_tdm_f1.v"]
+                        "tdm_top.v", "event_hold.v", "tb_tdm_f1.v"]
             rc, log = run([os.path.join(IV, "iverilog.exe"), "-g2005", "-o", "f1.vvp",
                            "-s", "tb_tdm_f1"] +
                           [rtl(f) if not f.startswith("tb_") else sim(f) for f in f1_files], d,
@@ -516,7 +517,7 @@ def main():
     vt_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v", "i2s_tx.v",
                 "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v", "led_ind.v",
-                "tb_vel_timbre.v"]
+                "event_hold.v", "tb_vel_timbre.v"]
     log, err = compile_and_run("14_veltimbre", vt_files, defines=("SIM_INIT",), need_hex=True)
     if err:
         results.append(("14 vel timbre", False, err[:120]))
@@ -548,7 +549,7 @@ def main():
     top_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
                  "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v",
                  "i2s_tx.v", "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v",
-                 "strip_ctrl.v", "led_ind.v", "tb_i2s_top.v"]
+                 "strip_ctrl.v", "led_ind.v", "event_hold.v", "tb_i2s_top.v"]
     log, err = compile_and_run("16_i2sttop", top_files, defines=("SIM_INIT",), need_hex=True)
     if err:
         results.append(("16 i2s top", False, err[:160]))
