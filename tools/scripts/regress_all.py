@@ -95,6 +95,26 @@ def sine_hex():
     return os.path.join(BUILD, "_hex", "sine256.hex")
 
 
+DATA_FILES = ("sine256.hex", "note_inc.hex", "preset_part.hex",
+              "recip_inc.hex", "vel_wtab.hex")
+
+
+def copy_data(d, extra=()):
+    """把仿真运行目录需要的所有数据文件一次拷齐。
+
+    2026-10-06 第三次栽在同一类问题上（运行目录缺 hex ⇒ $readmemh 失败 ⇒
+    音频全 X ⇒ 判据崩），根因是【同一件事在四处各写一遍】。这里收成唯一入口：
+    新增数据文件只改 DATA_FILES，不再逐个套件补。
+    """
+    src_dir = os.path.join(ROOT, "src", "gowin", "tdm_synth")
+    for h in DATA_FILES:
+        p = os.path.join(src_dir, h)
+        if os.path.isfile(p):
+            shutil.copy(p, d)
+    for h in extra:
+        shutil.copy(h, d)
+
+
 def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_hex=()):
     """在 sim_build/regress/<name>/ 里编译并运行一个测试台，返回 stdout"""
     d = os.path.join(BUILD, name)
@@ -104,13 +124,7 @@ def compile_and_run(name, files, defines=(), plusargs=(), need_hex=False, extra_
         rmtree_ok(d)
     os.makedirs(d, exist_ok=True)
     if need_hex:
-        shutil.copy(sine_hex(), d)
-        # vel_shape 的权重表：与 sine256 同类的运行期依赖，一起拷
-        _wt = os.path.join(ROOT, "src", "gowin", "tdm_synth", "vel_wtab.hex")
-        if os.path.isfile(_wt):
-            shutil.copy(_wt, d)
-    for h in extra_hex:
-        shutil.copy(h, d)
+        copy_data(d, extra_hex)
     # tb 文件归 sim，其余 rtl
     srcs = []
     for f in files:
@@ -222,10 +236,7 @@ def run_tdm_mask(mask, env_on):
     """--full 用：打补丁的 tb 副本跑指定掩码/包络配置"""
     d = os.path.join(BUILD, "11_tdm_%08X_e%d" % (mask, env_on))
     os.makedirs(d, exist_ok=True)
-    shutil.copy(sine_hex(), d)
-    _wt = os.path.join(ROOT, "src", "gowin", "tdm_synth", "vel_wtab.hex")
-    if os.path.isfile(_wt):
-        shutil.copy(_wt, d)
+    copy_data(d)
     tb = open(sim("tb_tdm_equiv.v"), encoding="utf-8").read()
     tb = re.sub(r"localparam ENV_ON\s*=\s*1'b[01];", "localparam ENV_ON  = 1'b%d;" % env_on, tb)
     tb = re.sub(r"localparam \[NSLOT-1:0\] ACTIVE = 32'h[0-9A-Fa-f]+;",
