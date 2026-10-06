@@ -23,6 +23,10 @@ regress_all.py —— 全项目一键回归门
   10 fx         延迟+合唱冲激响应（fx_check.py，-DSIM_INIT）
   09b vp7       上电默认值/静音/音色通路（此前遗漏，2026-10-03 补入）
   11 tdm        TDM≡全并行黄金参考（默认全掩码；--full 时 8掩码×ENV 0/1）
+  13 vel shape  力度→谱形单元 V1-V9（含灵敏度只缩放偏差）
+  14 vel timbre 力度→音色 + 独立亮度轴 0x5C 端到端 J1-J4 / L1-L6
+  15 i2s std    I2S 标准接收器（与 04 的旧模型同线对照，两条口径都留）
+  16 i2s top    顶层音频通路端到端：tdm_top → fx → i2s_tx → 标准接收器
 """
 import argparse
 import os
@@ -521,6 +525,46 @@ def main():
         #   （原来多跑一次，等于把同一份产物写两遍，只会让"哪一次的结果"变得含糊）
         ok, msg = judge_script("14_veltimbre", "vel_timbre_check.py")
         results.append(("14 vel timbre", ok, msg.replace(chr(10), " ")[:160]))
+
+    # 15 i2s std：I2S 标准接收器（与 tb_i2s_tx 的旧模型同线对照）
+    #   为什么与 04 i2s 并存：04 的接收模型把"WS 翻转沿"当作新字 MSB，
+    #   而标准 I2S 要求 WS 比 MSB 提前一个 BCK。两者在**采样沿与字边界**上的
+    #   假设若都错，会一起错 —— 所以需要第二条独立口径，并把两条的结论都留下。
+    d = os.path.join(BUILD, "15_i2sstd")
+    if os.path.isdir(d):
+        rmtree_ok(d)
+    os.makedirs(d, exist_ok=True)
+    rc, log = run([os.path.join(IV, "iverilog.exe"), "-g2005", "-o", "i2s.vvp",
+                   "-s", "tb_i2s_std", rtl("audio_clk_en.v"), rtl("i2s_tx.v"),
+                   sim("tb_i2s_std.v")], d)
+    ok, msg = False, "compile fail"
+    if rc == 0:
+        rc2, log2 = run([os.path.join(IV, "vvp.exe"), "i2s.vvp"], d)
+        ok, msg = judge_script("15_i2sstd", "i2s_std_check.py")
+    results.append(("15 i2s std", ok, msg.replace(chr(10), " ")[:160]))
+
+    # 16 i2s top：顶层音频通路 端到端（tdm_top → fx → i2s_tx → 标准接收器）
+    #   验的是"单元绿但集成没跑到"这一类：24 位饱和输出 → 取高 16 位 → 解码。
+    top_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v",
+                 "i2s_tx.v", "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v",
+                 "strip_ctrl.v", "led_ind.v", "tb_i2s_top.v"]
+    log, err = compile_and_run("16_i2sttop", top_files, defines=("SIM_INIT",), need_hex=True)
+    if err:
+        results.append(("16 i2s top", False, err[:160]))
+    else:
+        #   判据需要测试台 stdout 里的 SUMRAW_MAX（饱和前那一级的实测峰值），
+        #   而 compile_and_run 已经把日志返回来了 —— 落盘成 run.txt 供判据读取。
+        #   ★ 必须显式写 UTF-8：PowerShell 的 `>` 重定向默认写 UTF-16，
+        #     Python 读不到会导致"饱和余量核算"被静默跳过（实测踩过）。
+        d = os.path.join(BUILD, "16_i2sttop")
+        try:
+            with open(os.path.join(d, "run.txt"), "w", encoding="utf-8") as fh:
+                fh.write(log or "")
+        except OSError:
+            pass
+        ok, msg = judge_script("16_i2sttop", "i2s_top_check.py")
+        results.append(("16 i2s top", ok, msg.replace(chr(10), " ")[:160]))
 
     # ---------------------------------------------------------------- 汇总
     print()
