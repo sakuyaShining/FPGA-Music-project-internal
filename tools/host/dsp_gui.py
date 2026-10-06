@@ -25,9 +25,10 @@ dsp_gui.py —— FPGA 加法合成器上位机 v2（PyQt5 + QSS）
   4. 每个动作都进"帧流水"，可一键导出成 `dsp_host.py --emit` 同格式 ⇒ 仿真里原样重放 ✓
   5. 字节率读数常显 —— 用来直观证明"电脑只发参数级数据（~几十 B/s），音频是 FPGA 算的" ✓
 
-  已知协议分歧（审计 2026-10-04）：RTL 用 SEQ_CTRL[2] 选下载曲谱（0x05），
-  冻结文档 A6 写的是"SCORE_LEN>0 自动启用"。GUI 跟随 RTL 实现（写 0x05），
-  与 dsp_host.cmd_demo_score 一致；文档一侧待修正案定稿后改表。
+  协议收敛（2026-10-06）：SEQ_CTRL 的"曲谱源"位已按修正案 A6/A7 删除，
+  **SCORE_LEN>0 即自动使用下载曲谱**。所以播放只写 SEQ_CTRL=0x01（bit0 使能），
+  bit2 是无关位。本文件曾留下三处不一致（头部注释写 0x05、实现写 0x01、
+  自检期望 0x05），自检因此长期 FAIL（帧一致性 ⑥）—— 现已统一为 0x01。
 """
 
 import os
@@ -1207,7 +1208,10 @@ def selftest():
     say("  [帧一致性 ⑤] 表情轴（颤音 400 @5.5Hz）：%s" % ("一致 ✓" if ok else "不一致 ✗"))
     fails += 0 if ok else 1
 
-    # ⑥ 定序器：BPM 120 + 欢乐颂 8 步 ⇒ TEMPO + 力度 + 曲谱 + SEQ_CTRL=0x05
+    # ⑥ 定序器：BPM 120 + 欢乐颂 8 步 ⇒ TEMPO + 力度 + 曲谱 + SEQ_CTRL=0x01
+    #   0x01 而不是 0x05：曲谱源由 SCORE_LEN>0 判定（修正案 A6/A7），bit2 是无关位。
+    #   本自检的期望值曾长期写着 0x05（与实现不符），导致 ⑥ 一直 FAIL、
+    #   进而把被跟踪的 selftest_report.txt 一直弄脏 —— 那是"陈旧期望值"而不是产品缺陷。
     w.spin_bpm.setValue(120)
     w.ed_score.setText(DEMO_SCORE_TEXT)
     w.journal = []
@@ -1217,9 +1221,9 @@ def selftest():
     exp.w24("TEMPO", dh.tempo_inc(120), "")
     exp.w("SEQ_VEL", 0xC0, "")
     exp.score([(64, 1), (64, 1), (65, 1), (67, 1), (67, 1), (65, 1), (64, 1), (62, 2)])
-    exp.w("SEQ_CTRL", 0x05, "")
+    exp.w("SEQ_CTRL", 0x01, "")
     ok = got == items(exp)
-    say("  [帧一致性 ⑥] 定序器下载并播放（含 SEQ_CTRL=0x05）：%s" % ("一致 ✓" if ok else "不一致 ✗"))
+    say("  [帧一致性 ⑥] 定序器下载并播放（含 SEQ_CTRL=0x01）：%s" % ("一致 ✓" if ok else "不一致 ✗"))
     fails += 0 if ok else 1
 
     # ⑥b 停止
