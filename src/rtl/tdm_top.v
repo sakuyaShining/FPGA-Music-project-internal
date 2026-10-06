@@ -37,7 +37,13 @@
 
 `timescale 1ns/1ps
 
-module tdm_top (
+module tdm_top #(
+    //   事件待处理队列深度（阶段 2）。note_map 一次装载约 20 拍，而
+    //   UART(0x61)/定序器/排针 ev_* 都是"单拍脉冲"，忙时会被静默丢掉
+    //   （丢音；丢 note-off 会挂音）。4 足够：最大突发（8 键同时按放）那一路上游
+    //   pad_scan 自带 8 位待发位图且受 note_busy 反压，不会同时压进本队列。
+    parameter integer EVQ_DEPTH = 4
+)(
     input  wire       clk,
     input  wire       rst_n,
 
@@ -442,6 +448,7 @@ module tdm_top (
     //   nm_busy 必须在【使用前】声明（本项目惯犯陷阱：先声明后使用）
     //-------------------------------------------------------------------------
     wire        nm_busy;                   // note_map 忙（在下面例化时接上）
+    wire        nm_ev_ack;                 // note_map 的事件接收确认（单拍，阶段 2）
     wire        pd_ev_valid, pd_ev_on;
     wire [6:0]  pd_ev_note;
     wire [15:0] pad_state;                 // 位图：bit0-7 左手音高，bit8-15 右手泛音
@@ -670,46 +677,115 @@ module tdm_top (
     // 原来用 seq_en（电平）选通 —— 定序器一使能就长期压住 pads 与排针事件，
     // 16 个触摸键会整体变哑，与本文件"三者互为兜底"的说明矛盾。
     wire        seq_ev_sel = seq_en & sq_ev_valid;
-    wire        ev_valid_i = u_ev_valid ? 1'b1       :
-                             seq_ev_sel  ? 1'b1       :
-                             pp_ev_valid ? 1'b1       : ev_valid;
-    wire        ev_on_i    = u_ev_valid ? u_ev_on    :
-                             seq_ev_sel  ? sq_ev_on   :
-                             pp_ev_valid ? pp_ev_on   : ev_on;
-    wire [6:0]  ev_note_i  = u_ev_valid ? u_ev_note  :
-                             seq_ev_sel  ? sq_ev_note :
-                             pp_ev_valid ? pp_ev_note : ev_note;
-    wire [3:0]  ev_vel_i   = u_ev_valid ? u_ev_vel   :
-                             seq_ev_sel  ? sq_ev_vel[7:4] :
-                             pp_ev_valid ? 4'd12      : ev_vel;   // pad 力度 v1 固定 12/15
 
     //-------------------------------------------------------------------------
-    // 事件打一拍再进 note_map（2026-10-02）
+    // 阶段 2：事件「待处理 + 接收确认」（2026-10-06）
     //
-    //   加定序器后 PnR 报 SETUP slack 只剩 +0.105 ns，关键路径是：
-    //       u_reg/mem[80]（SEQ_CTRL）→ 事件源 mux → u_nm 的时隙分配逻辑
-    //   也就是"一个寄存器直接串到 note_map 的组合分配网络里"。
-    //   在中间加一级寄存器就把这条路切断：寄存器→mux→寄存器 变成短路径，
-    //   而 寄存器→note_map 这条（加定序器之前就在的路径）本来就余量充足。
+    //   原来这里下面是一条 `ev_valid_i/ev_on_i/ev_note_i/ev_vel_i` 优先级 mux，
+    //   直接喂给"打一拍进 note_map"。那条 mux 有两个结构性缺陷：
+    //     ① 同一拍多源并起时只选出一个，其余源的事件**无声丢弃**；
+    //     ② note_map 一次装载占约 20 拍，期间到达的单拍脉冲同样被忽略。
+    //   两者都表现为丢音，**丢 note-off 时会挂音**。
     //
-    //   代价：音符事件晚 1 个时钟 = 37 ns，相对 5 ms 预算可忽略
-    //        （E5 延迟从 2807 变 2808 拍，已重测）。
+    //   修法（ready/valid）：每个"单拍脉冲"源各加挂起位 → 按原优先级选出 →
+    //   进 event_hold 队列 → 队列由 note_map 的【单拍 ev_ack】驱动出队。
+    //
+    //   ★ 三个必须同时满足的点（少一个就丢事件，本项目逐一踩过）：
+    //     (a) 每个源都要有挂起位（只挂最高优先级那个，同拍的低优先级源仍会丢）；
+    //     (b) out_ready 必须是【单拍确认】，不能用 `~nm_busy` 电平；
+    //     (c) 队列输出**直接**进 note_map，中间不要再插寄存器（会把 ev_valid
+    //         拉成连续两拍为高的电平，note_map 遂把同一事件消费两次）。
     //-------------------------------------------------------------------------
-    reg        ev_valid_r, ev_on_r;
-    reg [6:0]  ev_note_r;
-    reg [3:0]  ev_vel_r;
+    reg        uh_pend;                  // UART(0x61) 挂起
+    reg [3:0]  uh_vel;
+    reg [6:0]  uh_note;
+
+    reg        sh_pend;                  // 定序器挂起
+    reg        sh_on;   reg [6:0] sh_note;   reg [3:0] sh_vel;
+    reg        dh_pend;                  // 排针 ev_* 挂起
+    reg        dh_on;   reg [6:0] dh_note;   reg [3:0] dh_vel;
+
+    //   汇合后的有效事件（优先级 UART > 定序器 > pads > 排针，与原实现一致）
+    wire        mh_valid = uh_pend | (seq_en & sh_pend) | pp_ev_valid | dh_pend;
+    wire        mh_on    = uh_pend ? r_note_num[7]             :
+                           (seq_en & sh_pend) ? sh_on          :
+                           pp_ev_valid ? pp_ev_on              : dh_on;
+    wire [6:0]  mh_note  = uh_pend ? uh_note                   :
+                           (seq_en & sh_pend) ? sh_note        :
+                           pp_ev_valid ? pp_ev_note            : dh_note;
+    wire [3:0]  mh_vel   = uh_pend ? uh_vel                    :
+                           (seq_en & sh_pend) ? sh_vel         :
+                           pp_ev_valid ? 4'd12                 : dh_vel;
+
+    wire        ev_in_ready;
+    wire        ev_q_valid, ev_q_on;
+    wire [6:0]  ev_q_note;
+    wire [3:0]  ev_q_vel;
+    wire [2:0]  ev_q_level;
+    wire [15:0] ev_q_ovf;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            ev_valid_r <= 1'b0; ev_on_r <= 1'b0; ev_note_r <= 7'd0; ev_vel_r <= 4'd0;
+            uh_pend <= 1'b0; uh_vel <= 4'd0; uh_note <= 7'd0;
+            sh_pend <= 1'b0; sh_on  <= 1'b0; sh_note <= 7'd0; sh_vel <= 4'd0;
+            dh_pend <= 1'b0; dh_on  <= 1'b0; dh_note <= 7'd0; dh_vel <= 4'd0;
         end
         else begin
-            ev_valid_r <= ev_valid_i;
-            ev_on_r    <= ev_on_i;
-            ev_note_r  <= ev_note_i;
-            ev_vel_r   <= ev_vel_i;
+            //   收下就清挂起位（"接收确认"的另一半）
+            if (uh_pend && ev_in_ready) uh_pend <= 1'b0;
+            if (sh_pend && ev_in_ready && seq_en) sh_pend <= 1'b0;
+            if (dh_pend && ev_in_ready) dh_pend <= 1'b0;
+
+            //   到达即锁存。该源已有挂起项未被收走时【不覆盖】：
+            //   宁可让新事件在源端继续持有，也不要把旧的挤掉。
+            //   注：UART/定序器/排针都是单拍脉冲，"源端继续持有"实际做不到，
+            //   所以这里用【不覆盖 + 溢出计数】把这种极端情况**如实报出来**，
+            //   而不是静默丢掉（判据读 ev_q_ovf）。
+            if (u_ev_valid && !uh_pend) begin
+                uh_vel  <= u_ev_vel;
+                uh_note <= u_ev_note;
+                uh_pend <= 1'b1;
+            end
+            if (sq_ev_valid && seq_en && !sh_pend) begin
+                sh_on   <= sq_ev_on;
+                sh_note <= sq_ev_note;
+                sh_vel  <= sq_ev_vel[7:4];
+                sh_pend <= 1'b1;
+            end
+            if (ev_valid && !dh_pend) begin
+                dh_on   <= ev_on;
+                dh_note <= ev_note;
+                dh_vel  <= ev_vel;
+                dh_pend <= 1'b1;
+            end
         end
     end
+
+    event_hold #(.DEPTH(EVQ_DEPTH), .NB(7), .VB(4)) u_evhold (
+        .clk(clk), .rst_n(rst_n),
+        .in_valid(mh_valid), .in_on(mh_on), .in_note(mh_note), .in_vel(mh_vel),
+        .in_ready(ev_in_ready),
+        .out_valid(ev_q_valid), .out_on(ev_q_on), .out_note(ev_q_note), .out_vel(ev_q_vel),
+        .out_ready(nm_ev_ack),
+        .level(ev_q_level), .overflow(ev_q_ovf)
+    );
+
+    wire [15:0] ev_ovf_dbg = ev_q_ovf;
+    wire [2:0]  ev_lvl_dbg = ev_q_level;
+
+    //-------------------------------------------------------------------------
+    // 事件的最后一级：**队列输出直接进 note_map**
+    //
+    //   2026-10-02 这里曾有一级寄存器，为切断
+    //   `u_reg/mem → 事件源 mux → note_map 分配网络` 这条长链而加。
+    //   现在 mux 的每条都先落到挂起位或队列，而 **event_hold 的输出已经寄存过**
+    //   ⇒ 那条长链已经断了，这一级不再必要，而且**有害**：会把 ev_valid 拉成
+    //   "连续两拍为高"的电平，note_map 遂把同一事件消费两次。
+    //-------------------------------------------------------------------------
+    wire        ev_valid_r = ev_q_valid;
+    wire        ev_on_r    = ev_q_on;
+    wire [6:0]  ev_note_r  = ev_q_note;
+    wire [3:0]  ev_vel_r   = ev_q_vel;
 
     //-------------------------------------------------------------------------
     // 音频时钟链：27 MHz -> BCK -> LRCK，且【每样本拍数 = NSLOT】
@@ -789,7 +865,7 @@ module tdm_top (
         .load_inc(nm_load_inc), .load_amp(nm_load_amp),
         .load_gate(nm_load_gate), .load_epar(nm_load_epar),
         .load_gq(nm_load_gq),
-        .busy(nm_busy), .active(nm_active)
+        .busy(nm_busy), .ev_ack(nm_ev_ack), .active(nm_active)
     );
 
     //-------------------------------------------------------------------------
