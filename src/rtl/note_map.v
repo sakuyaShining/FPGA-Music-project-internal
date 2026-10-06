@@ -237,11 +237,13 @@ module note_map #(
     integer n;
     reg [NB-1:0] gsel_cur;
     reg          found_match, found_free;
+    reg          found_open;             // 找到了"可回收"的组（见下）
 
     always @(*) begin
         gsel_cur    = {NB{1'b0}};
         found_match = 1'b0;
         found_free  = 1'b0;
+        found_open  = 1'b0;
         // 先找"正在奏同一音符"的组
         for (n = 0; n < NG; n = n + 1) begin
             if (!found_match && (gtab[n] == n_hold)) begin
@@ -249,12 +251,29 @@ module note_map #(
                 found_match = 1'b1;
             end
         end
-        // 再找空闲组
+        // 再找【真正空闲】的组：以 gtab==FREE 为准 ——
+        //   它在 note-off 时会被写回 FREE（2026-10-06 修），所以是可靠的空闲标记。
         if (!found_match) begin
             for (n = 0; n < NG; n = n + 1) begin
                 if (!found_free && (gtab[n] == FREE)) begin
                     gsel_cur   = n[NB-1:0];
                     found_free = 1'b1;
+                end
+            end
+        end
+        // 第三档：【可回收】的组 —— 已收到 note-off、但释放尾音可能还在响。
+        //   为什么要有这一档（2026-10-06 修的真实缺陷）：
+        //     旧实现 note-off 只清 gact、**从不把 gtab 写回 FREE** ⇒ 32 组被用过之后
+        //     空闲搜索永远不再命中，之后每个 note-on 都走 round-robin **抢占**，
+        //     会把正在按住的音抢掉（实测：按住 40、按 32 个音，新音把 40 的组抢走）。
+        //   有了这一档，回收尾音与"按住不放"就被分开了：
+        //     真正在按住的组（gact=1）不会进这一档，**不会被抢**；
+        //     只有已经松手（gact=0）的组才会被回收。
+        if (!found_match && !found_free) begin
+            for (n = 0; n < NG; n = n + 1) begin
+                if (!found_open && !gact[n]) begin
+                    gsel_cur   = n[NB-1:0];
+                    found_open = 1'b1;
                 end
             end
         end
@@ -268,7 +287,7 @@ module note_map #(
             rr <= (rr == NG - 1) ? {NB{1'b0}} : (rr + 1'b1);
     end
 
-    wire [NB-1:0] gsel = (found_match || found_free) ? gsel_cur : rr;
+    wire [NB-1:0] gsel = (found_match || found_free || found_open) ? gsel_cur : rr;
 
     //-------------------------------------------------------------------------
     // 滑音初值（2026-10-01 新增）
@@ -507,6 +526,14 @@ module note_map #(
                     end
                     else if (match_r) begin
                         gact[gsel_r] <= 1'b0;
+                        //   ★ 关键修复（2026-10-06）：note-off 时把 gtab 写回 FREE。
+                        //   旧实现只清 gact —— 于是 32 组被用过之后，空闲搜索
+                        //   （条件是 gtab==FREE）**永远不再命中**，之后每个 note-on
+                        //   都走 round-robin 抢占，会把正在按住的音抢掉。
+                        //   释放尾音由包络自己的 release 段负责，不需要"占着组号"。
+                        //   实测缺陷（修前）：按住 40、依次按放 32 个音，新音把 40 的组抢走；
+                        //     修后：新音落在已松手的组上，按住的音安然无恙。
+                        gtab[gsel_r] <= FREE;
                         g_note_r     <= gtab[gsel_r];       // 释放正在响的那个音
                     end
                     // 滑音起点 = 该组【写入前】的内容（组合读到旧值）

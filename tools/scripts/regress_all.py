@@ -609,6 +609,24 @@ def main():
                if ok else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("18 evmerge", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 19 alloc：声部分配/回收（阶段 3）
+    #   为什么要有：note-off 曾经只清 gact、不把 gtab 写回 FREE ⇒ 32 组用过之后
+    #   空闲搜索永不命中，新音会**抢占正在按住的音**。
+    #   ★ 激励必须**填满全部 32 组**才能暴露它（只按 20 个音时判据假绿 —— 踩过）。
+    alc_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v",
+                 "i2s_tx.v", "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v",
+                 "strip_ctrl.v", "led_ind.v", "event_hold.v", "tb_alloc.v"]
+    log, err = compile_and_run("19_alloc", alc_files, defines=("SIM_INIT",), need_hex=True)
+    if err:
+        results.append(("19 alloc", False, err[:160]))
+    else:
+        ok = "RESULT alloc=PASS" in (log or "")
+        tail = [l.strip() for l in (log or "").splitlines() if "FAIL" in l]
+        msg = ("32 组填满后释放：gtab 回 FREE、新音不抢按住的音" if ok
+               else (" / ".join(tail[:2]) or (log or "")[-160:]))
+        results.append(("19 alloc", ok, msg.replace(chr(10), " ")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
