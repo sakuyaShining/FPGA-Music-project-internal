@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-leakcheck_test.py —— 公开版导出「泄漏判据」的自检（阶段 4）
+leakcheck_test.py —— 公开版「泄漏判据」的自检（阶段 4）
 
-【为什么要有这一条】
-  make_public.py 的职责是生成**只含作品本体**的公开快照，而它原来在提交前
-  只会**打印**三项痕迹计数，泄漏了也照常 commit 并返回 0 ——
-  而"退出码 0"正是上游判断"这一步成功"的依据 ⇒ 泄漏会被**静默放过**。
-  本次审计还发现排除依赖两个偶然条件：
-    ① `git rm -r --cached .` 顺手把 make_public.py 自己清出索引；
-    ② `tools/scripts/_*.py` 只写在 public 分支的 .gitignore 里，主线没有，
-       那 28 个未跟踪排查脚本"只是因为还没被 add 才没进"。
-  ⇒ 已给 make_public.py 加上 `find_leaks()` 硬判据：**提交前核对，泄漏即中止（退出码 1）**。
+【本判据守的是**产物**，所以它必须留在工作树里】
+  阶段 4 把"整理工具链"（make_public / scan_traces / neutralize_* …）搬到了
+  同级的 `../fpga-export-tooling/`。但"不许出现什么"是**产品侧知识**，
+  于是它单独成文件 `public_spec.py` 留在本仓，本判据直接 import 它。
+  （原来本文件用 importlib 加载 `tools/scripts/make_public.py` ——
+    搬走之后那条路径就不存在，门禁会红。这正是"搬动前必须先理依赖"的原因。）
 
 【本自检要防的是"判据本身失效"】
   一个永远返回空列表的 find_leaks() 会让导出流程**永远绿灯**，
@@ -23,14 +20,16 @@ leakcheck_test.py —— 公开版导出「泄漏判据」的自检（阶段 4�
 """
 import importlib.util
 import os
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-def load_make_public():
-    path = os.path.join(ROOT, "tools", "scripts", "make_public.py")
-    spec = importlib.util.spec_from_file_location("make_public", path)
+def load_spec():
+    """加载留在工作树里的权威规格 public_spec.py"""
+    path = os.path.join(ROOT, "tools", "scripts", "public_spec.py")
+    spec = importlib.util.spec_from_file_location("public_spec", path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
@@ -38,7 +37,7 @@ def load_make_public():
 
 def main():
     #   --simdir 是门禁 judge_script 的统一传参，本判据不需要，但必须接受
-    mp = load_make_public()
+    mp = load_spec()
 
     #   ---- 应当【干净】的输入（作品本体）----
     clean_cases = [
