@@ -23,9 +23,16 @@
       "id": "R02",
       "behavior": "保存并调用完整乐器配置",
       "decision_status": "user_confirmed_details_pending",
-      "implementation_status": "not_implemented",
-      "code_locations": ["tools/host/dsp_gui.py", "tools/scripts/dsp_host.py"],
-      "gap": "帧日志导出不是完整配置文件；schema、保存、导入与校验闭环未实现。",
+      "implementation_status": "file_layer_implemented_gui_device_pending",
+      "code_locations": ["tools/host/instrument_config.py", "tools/host/test_instrument_config.py", "tools/host/dsp_gui.py", "tools/scripts/dsp_host.py"],
+      "gap": "参数文件 schema、保存、读取与校验已实现；GUI 捕获/恢复和设备应用尚未接入，完整用户闭环未完成。",
+      "partial_implementation_commit": "caa0034531efb5336912dee840b771f396c1133b",
+      "partial_acceptance_evidence": {
+        "scope": "文件层，非 GUI/设备验收",
+        "command": "python -m unittest discover -s tools/host -p test_instrument_config.py -v",
+        "result": "7 tests passed, exit 0",
+        "date": "2026-10-07"
+      },
       "acceptance": ["文件往返恢复完整参数", "坏文件无副作用", "保存不自动改变在奏音"],
       "implementation_commit": null,
       "acceptance_evidence": null
