@@ -84,6 +84,18 @@ module tb_padseq;
         end
     endtask
 
+    //   ★ 组状态快照：打出"哪个组在响、其音符号是什么"。
+    //     本轮关键探针 —— 要回答"note 49 是否复用了 note 48 刚释放的那一组"。
+    task dump_active_groups;
+        begin
+            $write("     [组状态] t=%0d 在响组:", ns);
+            for (k = 0; k < 32; k = k + 1)
+                if (u_top.u_nm.gact[k])
+                    $write(" g%0d(note=%0d)", k, u_top.u_nm.gtab[k]);
+            $write("\n");
+        end
+    endtask
+
     always @(posedge clk) begin
         if (rst_n) begin
             if (u_top.pp_on_p) begin
@@ -91,12 +103,14 @@ module tb_padseq;
                 count_gact;
                 $display("   [t=%6d] note-ON  note=%0d  在响组数=%0d",
                          ns, u_top.pp_ev_note, gact_cnt);
+                dump_active_groups;
             end
             if (u_top.pp_off_p) begin
                 n_off = n_off + 1;
                 count_gact;
                 $display("   [t=%6d] note-OFF note=%0d  在响组数=%0d",
                          ns, u_top.pp_ev_note, gact_cnt);
+                dump_active_groups;
             end
         end
     end
@@ -134,12 +148,14 @@ module tb_padseq;
         rec(1000);
         count_gact;
         $display("     在响组数=%0d", gact_cnt);
+        dump_active_groups;
 
         $display(" [B] 按 pad0（期望 note=48）");
         disch_time[0] = 95;
         rec(hold_len);
         count_gact;
         $display("     在响组数=%0d", gact_cnt);
+        dump_active_groups;
 
         $display(" [C] 松开 pad0，同时按 pad1（期望 note-off 48 / note-on 49）");
         disch_time[0] = 30;
@@ -147,12 +163,14 @@ module tb_padseq;
         rec(hold_len);
         count_gact;
         $display("     在响组数=%0d", gact_cnt);
+        dump_active_groups;
 
         $display(" [D] 松开 pad1");
         disch_time[1] = 30;
         rec(4000);
         count_gact;
         $display("     在响组数=%0d", gact_cnt);
+        dump_active_groups;
 
         $fclose(fout);
         $display("--------------------------------------------------------------");
