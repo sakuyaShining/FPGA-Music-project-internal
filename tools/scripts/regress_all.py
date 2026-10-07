@@ -903,6 +903,41 @@ def main():
                if ok2 else tail.replace(chr(10), " ")[:160])
         results.append(("32 pitchmod", ok2, msg))
 
+    # 33 evhold：事件待处理队列的**单元**判据（此前**从未进过门禁**）
+    #   为什么补：`tb_evhold.v` 是我在阶段 2 写 `event_hold.v` 时配套的单元判据，
+    #   H1–H4（空队/深度/溢出/不丢且保序）当时手工跑过全绿，**却没登记进门禁**
+    #   ⇒ 与 `tb_pitch_mod` 同一类漏：文件在、判据在、就是没人跑。
+    #   本轮的"门禁覆盖审计"（工具 `gatecov_check.py`）把它机械地找了出来。
+    evh_files = ["event_hold.v", "tb_evhold.v"]
+    log, err = compile_and_run("33_evhold", evh_files, defines=(), need_hex=False)
+    if err:
+        results.append(("33 evhold", False, err[:160]))
+    else:
+        ok = "RESULT evhold=PASS" in (log or "")
+        tail = [l.strip() for l in (log or "").splitlines() if "FAIL" in l]
+        msg = ("H1–H4 全绿（空队不产 valid / 深度与溢出计数 / 合规源 20 条不丢且保序）" if ok
+               else (" / ".join(tail[:2]) or (log or "")[-160:]))
+        results.append(("33 evhold", ok, msg.replace(chr(10), " ")[:160]))
+
+    # 34 gatecov：门禁覆盖审计（哪些 tb/判据**存在但没挂上**）—— 信息项，不计入通过率
+    #   为什么要有：本轮靠它机械地找出了 `tb_evhold`、`tb_pitch_mod` 两个"写了没挂"的漏。
+    #   这类漏与"文档说做了但实际没有"同类：**看起来有覆盖**（文件在、脚本在），实际没跑。
+    #   只报不判、退出码恒 0 —— "没挂上"不等于"该挂"（一次性排查用的本就不该进闸口）。
+    d = os.path.join(BUILD, "34_gatecov")
+    os.makedirs(d, exist_ok=True)
+    rc, glog = run([sys.executable, os.path.join(ROOT, "tools", "scripts",
+                                                 "gatecov_check.py"),
+                    "--simdir", d], BUILD)
+    try:
+        with open(os.path.join(BUILD, "34_gatecov_judge.log"), "w",
+                  encoding="utf-8") as fh:
+            fh.write(glog)
+    except OSError:
+        pass
+    cov_line = [l.strip() for l in glog.splitlines() if "测试台：" in l]
+    results.append(("34 gatecov", None,
+                    (cov_line[0] if cov_line else "见 34_gatecov_judge.log")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
