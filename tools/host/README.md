@@ -1,5 +1,30 @@
 # 上位机（PyQt5 + QSS）使用说明
 
+## 新增：完整配置文件基础（2026-10-07）
+
+`instrument_config.py` 已提供独立的 JSON 配置草稿创建、校验、保存与读取 API，
+不依赖 Qt，不连接设备，不发送帧。当前 GUI 的文件按钮和硬件应用适配器尚未接入。
+
+配置包含名称、预设身份、16 分量谱/模式、持续/瞬间/混合方式与包络草稿、颤音和效果参数。
+时间为毫秒，颤音/合唱速率为毫赫兹，颤音深度为音分；反馈为 Q8。数据范围只是格式校验，
+不代表当前 RTL 能支持全部范围。混合分量分组为候选表达，模板的 8/8 分组与默认参数不是已批准的产品决定；
+后续试听若选择不同混合模型，应迁移 schema，不能静默丢弃旧参数。
+
+```powershell
+# 本地创建草稿，路径由用户选择；不写入 FPGA
+python tools/host/instrument_config.py new sim_build/my_config.json --name "我的音色" --mode hybrid
+python tools/host/instrument_config.py check sim_build/my_config.json
+
+# 文件往返、非法输入和写入失败验证
+python -m unittest discover -s tools/host -p test_instrument_config.py -v
+```
+
+读取先完整验证并返回独立对象；非法字段、重复字段、不支持版本和不合法数值报可读错误。
+保存先校验，再用同目录临时文件原子替换；失败不覆盖已有配置。
+CLI 失败退出码为 1。文件不包含 PCM、按住的音符、振荡器相位或效果器缓冲。
+
+目前完成的是 R02 的文件层。文件校验通过不能代替设备能力检查、GUI 导入/应用闭环或 RTL 验收。
+
 > 单文件 exe：`tools/host/dist/dsp_gui.exe`（约 37.7 MB，免装 Python）
 > 源码运行：`python tools/host/dsp_gui.py`
 
