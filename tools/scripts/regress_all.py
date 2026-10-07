@@ -878,6 +878,31 @@ def main():
     results.append(("31 spec sha", ok,
                     (sline[0] if sline else "见 31_spec_sha_judge.log")[:160]))
 
+    # 32 pitchmod：滑音**轨迹** + 颤音**逐样本**验收（此前**从未进过门禁**）
+    #   为什么补：本仓存在 tb_pitch_mod.v + pitch_mod_check.py + tb_pitch_mod512.v +
+    #   pitch_mod512_check.py，但门禁只登记了 `07 regpitch`（那验的是寄存器写入→音高，
+    #   不是滑音/颤音本身）⇒ 这两条**最有信息量的判据长期不在门禁里**：
+    #     G1 滑音轨迹 vs **Python 镜像**逐样本比对（不符 0/39598）
+    #     G2 滑音全程 第16泛音/第1泛音 频率比 = 16（谐波关系不变 ⇒ 是"音高在动"）
+    #     V1 颤音幅度/周期；V2 两泛音 cents 偏移一致；C1 相位增量连续（无咔哒）
+    #   ★ 它同时**独立佐证**了 `28 legato` 的 L4：该 tb 刻意装满 8 组再弹第 9 个音
+    #     ⇒ 走抢占 ⇒ 产生真实滑音（日志："应抢占组 0 并开始滑音"）。
+    pma_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v",
+                 "i2s_tx.v", "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v",
+                 "strip_ctrl.v", "led_ind.v", "event_hold.v", "tb_pitch_mod.v"]
+    log, err = compile_and_run("32_pitchmod", pma_files, defines=("SIM_INIT",), need_hex=True)
+    if err:
+        results.append(("32 pitchmod", False, err[:160]))
+    else:
+        #   判据脚本读 tb 写出的 pm_a_*.txt / pm_b_*.txt
+        ok2, jmsg = judge_script("32_pitchmod", "pitch_mod_check.py")
+        ok = ok2 and ("全部通过" in (jmsg or "") or "勿" in (jmsg or ""))
+        tail = (jmsg or "")[-160:]
+        msg = ("滑音轨迹 vs Python 镜像 0/39598；比例 16.0；颤音幅度/周期/一致性全对"
+               if ok2 else tail.replace(chr(10), " ")[:160])
+        results.append(("32 pitchmod", ok2, msg))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
