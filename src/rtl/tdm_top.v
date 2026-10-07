@@ -174,7 +174,21 @@ module tdm_top #(
             if (!b_done) begin
                 b_wr_en <= 1'b1;
                 case (b_idx)
-                    5'd0:  begin b_addr <= 8'h00; b_data <= 8'h02; end // CTRL（A4）：测试关 / VIB_EN=1（深度 0 ⇒ inert）/ GLIDE_EN=0 / preset_src=0
+                    //   ★ 2026-10-07 更正：本行注释原来写 "GLIDE_EN=0"，但 0x02 的
+                    //     **bit2 = 1** ⇒ 实际是 GLIDE_EN=**1**（滑音开）。逐位核对：
+                    //       0x02 = bit0 test_mode=0, bit1 vib_en=1, bit2 glide_en=1,
+                    //              bit3 preset_src=0
+                    //     两条都指向"默认不产生滑音"，只是**原因不同**：
+                    //       · glide_en = 1（开）
+                    //       · glide_step = 0x35/0x36 = 0（见下面 5'd6 / 5'd7）
+                    //     ⇒ 即使滑音开着，速率为 0 ⇒ gq 永不衰减 ⇒ **默认依旧无滑音**。
+                    //     这与 19 号规格 §3 的"默认 GLIDE_STEP=0"一致，**行为是对的**，
+                    //     但注释描述是错的 —— 这类"注释与数据不符"本会话已多次踩到
+                    //     （最典型是 tilt 表的"基音退"），凡涉及默认值都逐位核过再写。
+                    //   ★ 附带结论：**默认配置下滑音不可听** ⇒ 既有任何音频判据都不会
+                    //     因为滑音逻辑有 bug 而变红。所以滑音必须有**自己的判据**
+                    //     （见 src/sim/tb_glide.v），不能指望既有判据兜住。
+                    5'd0:  begin b_addr <= 8'h00; b_data <= 8'h02; end // CTRL（A4）：测试关 / VIB_EN=1（深度0⇒inert）/ GLIDE_EN=1（但 STEP=0 ⇒ 无滑音）/ preset_src=0
                     5'd1:  begin b_addr <= 8'h30; b_data <= 8'h00; end // VIB_INC   = 0（19 号 §3 默认 0）
                     5'd2:  begin b_addr <= 8'h31; b_data <= 8'h00; end
                     5'd3:  begin b_addr <= 8'h32; b_data <= 8'h00; end

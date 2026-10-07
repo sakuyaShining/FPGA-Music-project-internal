@@ -748,6 +748,26 @@ def main():
            else tail.replace(chr(10), " ")[:160])
     results.append(("24 leakcheck", ok, msg))
 
+    # 26 glide：滑音（portamento）不变量 —— 本仓此前**完全没有滑音判据**
+    #   为什么必须有：出货默认配置下滑音**不可听**
+    #     · CTRL(0x00) 自举 = 0x02 ⇒ bit2=1（GLIDE_EN 开）
+    #     · GLIDE_STEP(0x35/36) 自举 = 0 ⇒ 速率 0 ⇒ gq 永不衰减
+    #   ⇒ 默认无滑音 ⇒ **既有任何音频判据都不会因滑音逻辑有 bug 而变红**。
+    #   本套件直接驱动 pitch_mod，把滑音语义单独钉住（G1–G7）。
+    #   逐行核对 RTL 后确认两条"设计如此"的行为（第一版我按文档写错了、造成假失败）：
+    #     · 衰减**不受 glide_en 门控**（关滑音也照常衰减，避免残留偏移永久卡住）
+    #     · `GLIDE_CUT` 是**死参数**（衰减式本身就精确收敛到 0，从未读它）
+    gl_files = ["pitch_mod.v", "tb_glide.v"]
+    log, err = compile_and_run("26_glide", gl_files, defines=(), need_hex=False)
+    if err:
+        results.append(("26 glide", False, err[:160]))
+    else:
+        ok = "RESULT glide=PASS" in (log or "")
+        tail = [l.strip() for l in (log or "").splitlines() if "FAIL" in l]
+        msg = ("G1–G7 全绿（开关门控/零速率/正负收敛耗时/精确归零/无残余）" if ok
+               else (" / ".join(tail[:2]) or (log or "")[-160:]))
+        results.append(("26 glide", ok, msg.replace(chr(10), " ")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
