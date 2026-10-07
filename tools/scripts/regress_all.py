@@ -784,6 +784,30 @@ def main():
                else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("27 vib", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 28 legato：legato 复用 vs 非 legato 的行为区分（阶段 5 / 用户原则"滑音规则明确区分 legato 与滑动"）
+    #   ★ 本套件**纠正了文档的一处表述**：
+    #     34 号规格把 legato 记为「✅ 已实现且可运行时开关」，
+    #     实测发现**机制在、但正常演奏不会触发**：
+    #       glide_ok = GLIDE_EN(硬接1) && !match_r && !free_r，
+    #       而搜索顺序 同音 > FREE > 可回收 > 抢占 ⇒ 有空闲组时必选 FREE
+    #       ⇒ free_r=1 ⇒ glide_ok=0 ⇒ 无滑音。
+    #     只有 32 组全占满（走抢占）时 free_r 才可能为 0。
+    #     L4 用"占满 32 组再按第 33 个音"把这个前提**实测**出来，
+    #     避免只凭推理断言"它不触发"。
+    leg_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v",
+                 "i2s_tx.v", "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v",
+                 "strip_ctrl.v", "led_ind.v", "event_hold.v", "tb_legato.v"]
+    log, err = compile_and_run("28_legato", leg_files, defines=("SIM_INIT",), need_hex=True)
+    if err:
+        results.append(("28 legato", False, err[:160]))
+    else:
+        ok = "RESULT legato=PASS" in (log or "")
+        tail = [l.strip() for l in (log or "").splitlines() if "FAIL" in l]
+        msg = ("L1–L4：正常演奏**不触发** legato（机制在、条件苛刻）；松手即回收不留意外滑音" if ok
+               else (" / ".join(tail[:2]) or (log or "")[-160:]))
+        results.append(("28 legato", ok, msg.replace(chr(10), " ")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
