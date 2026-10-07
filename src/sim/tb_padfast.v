@@ -82,6 +82,25 @@ module tb_padfast;
     integer ev_log_cyc  [0:31];
     integer ev_log_n;
 
+    //   ★ 本轮新增：源侧探针 —— 证明"第二个事件被挂起位挡掉"
+    //     这是根因所在：`tdm_top.v:817`
+    //         if (pp_ev_valid && !pp_pend) begin ... pp_pend <= 1'b1; end
+    //     单槽挂起寄存器 ⇒ pp_pend=1 期间到来的事件被**直接忽略**。
+    integer pend_set_cnt;        // pp_pend 被置 1 的次数
+    integer pp_ev_cnt;           // pad_pitch 侧 valid 的拍数（新事件产生次数）
+    integer drop_cnt;            // **被挂起位挡掉的次数** = valid 且 pp_pend 已为 1
+    integer pend_prev;
+    always @(posedge clk) begin
+        if (rst_n) begin
+            if (u_top.pp_pend && !pend_prev) pend_set_cnt = pend_set_cnt + 1;
+            pend_prev = u_top.pp_pend;
+            if (u_top.pp_ev_valid) begin
+                pp_ev_cnt = pp_ev_cnt + 1;
+                if (u_top.pp_pend) drop_cnt = drop_cnt + 1;
+            end
+        end
+    end
+
     always @(posedge clk) begin
         cyc = cyc + 1;
         if (rst_n) begin
@@ -175,12 +194,15 @@ module tb_padfast;
         //-------------------------------------------------------------- B
         $display(" B 松开 pad0、**同一拍**按 pad1（期望 off48 + on49，且 49 被分配）");
         i1 = ev_log_n; before_ack = ack_cnt;
+        pend_set_cnt = 0; pp_ev_cnt = 0; drop_cnt = 0;
         disch_time[0] = 30;
         disch_time[1] = 95;
         adv(20000);
         scan;
         $display("      事件数=%0d  ack 增量=%0d  在响组数=%0d  note49 组=%0d",
                  ev_log_n - i1, ack_cnt - before_ack, gact_cnt, find_note(49));
+        $display("      [源侧] pad_ev_valid 拍数=%0d  挂起位置 1 次数=%0d  **被挂起位挡掉=%0d**",
+                 pp_ev_cnt, pend_set_cnt, drop_cnt);
         dump_groups;
         before_note49 = find_note(49);
 
@@ -195,6 +217,12 @@ module tb_padfast;
         check("B-two-events-produced", ev_log_n - i1, 2);
         check("B-both-events-acked",   ack_cnt - before_ack, 2);
         check("B-note49-allocated",    (before_note49 >= 0) ? 1 : 0, 1);
+        //   ★ 根因断言：源侧确实产生了 2 次 valid，但**恰有 1 次被挂起位挡掉**。
+        //     这证明丢失点在 `tdm_top.v:817` 的单槽挂起判断
+        //         if (pp_ev_valid && !pp_pend)
+        //     而不是队列或 note_map。
+        check("B-src-produced-2-valid", pp_ev_cnt, 2);
+        check("B-dropped-by-pending-slot", drop_cnt, 1);
 
         //-------------------------------------------------------------- C
         $display(" C 对照：先把 pad1 松开，静置后**单独**按 pad1");
