@@ -854,6 +854,30 @@ def main():
     results.append(("30 deadparam", None,
                     (dp_line[0] if dp_line else "见 30_deadparam_judge.log")[:160]))
 
+    # 31 spec_sha：规格文档里的「源码 blob 表」是否与工作树一致（阶段 1「SHA 绑定」）
+    #   为什么要有：项目纪律要求"每项结果绑定源码 SHA"，规格文档里列了每个 RTL 模块
+    #   与 6 张数据表的 blob 短哈希 —— 但**没有任何东西保证它们会被更新**。
+    #   改了 RTL 却忘改表 ⇒ 文档指向旧代码，而读者无从察觉
+    #   （这比"没有绑定"更危险：它**看起来**是绑定的）。
+    #   本判据把"绑定是否真的有效"变成可复跑的机械检查。
+    #   ★ 它自己也要防"空集假通过"：抽到 0 行 ⇒ 判 1（提取器失效），
+    #     否则会像第一版那样"零行 ⇒ 零不一致 ⇒ PASS"。
+    d = os.path.join(BUILD, "31_spec_sha")
+    os.makedirs(d, exist_ok=True)
+    rc, slog = run([sys.executable, os.path.join(ROOT, "tools", "scripts",
+                                                 "spec_sha_check.py"),
+                    "--simdir", d], BUILD)
+    try:
+        with open(os.path.join(BUILD, "31_spec_sha_judge.log"), "w",
+                  encoding="utf-8") as fh:
+            fh.write(slog)
+    except OSError:
+        pass
+    ok = (rc == 0 and "RESULT spec_sha=PASS" in slog)
+    sline = [l.strip() for l in slog.splitlines() if "全部" in l or "不一致" in l]
+    results.append(("31 spec sha", ok,
+                    (sline[0] if sline else "见 31_spec_sha_judge.log")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
