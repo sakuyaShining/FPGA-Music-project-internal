@@ -808,6 +808,28 @@ def main():
                else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("28 legato", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 29 inv：分配器不变量 —— 验证"可回收档(found_open)"是否可达
+    #   为什么要有：阶段 3 我加了 `found_open` 档（意图：松手但尾音在响的组
+    #   优先于抢占复用），**同一次修复**又加了 note-off 的 `gtab <= FREE`。
+    #   两者叠加推出不变量 `gact==0 ⇒ gtab==FREE`；而 FREE 档在前且遍历所有组
+    #   ⇒ 第三档永远选不到（死代码）。
+    #   ★ 这只是推理，本套件用仿真把它变成事实：遍历"逐个按放 + 占满再全放"，
+    #     全程 `gact==0 且 gtab!=FREE` 的组数恒为 0 ⇒ 死档被证实。
+    #   同时复现 `19 alloc` 的优先级场景，确认"不抢占正在按住的音"仍然成立。
+    inv_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v", "vel_shape.v",
+                 "song_seq.v", "reg_bank.v", "uart_rx.v", "uart_tx.v", "audio_clk_en.v",
+                 "i2s_tx.v", "fx_delay.v", "osc_env.v", "pad_scan.v", "pad_pitch.v",
+                 "strip_ctrl.v", "led_ind.v", "event_hold.v", "tb_inv.v"]
+    log, err = compile_and_run("29_inv", inv_files, defines=("SIM_INIT",), need_hex=True)
+    if err:
+        results.append(("29 inv", False, err[:160]))
+    else:
+        ok = "RESULT inv=PASS" in (log or "")
+        tail = [l.strip() for l in (log or "").splitlines() if "FAIL" in l]
+        msg = ("不变量 gact==0⇒gtab==FREE 恒成立；可回收档不可达（死档）；不抢占按住的音" if ok
+               else (" / ".join(tail[:2]) or (log or "")[-160:]))
+        results.append(("29 inv", ok, msg.replace(chr(10), " ")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
