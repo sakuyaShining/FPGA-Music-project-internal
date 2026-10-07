@@ -44,9 +44,10 @@
 
 module tb_glide;
 
-    localparam integer NG        = 32;
-    localparam integer QW        = 18;
-    localparam integer GLIDE_CUT = 24;
+    localparam integer NG = 32;
+    localparam integer QW = 18;
+    //   注：原来这里还有个 `localparam GLIDE_CUT = 24`，随 pitch_mod 的参数删除
+    //       一并向去掉（它只是用来打印，不参与任何判据）。
 
     reg clk = 1'b0;
     always #10 clk = ~clk;
@@ -65,7 +66,9 @@ module tb_glide;
     reg  [4:0]           rd_note;
     wire signed [QW-1:0] poff;
 
-    pitch_mod #(.NG(NG), .QW(QW), .GLIDE_CUT(GLIDE_CUT)) dut (
+    //   ★ 2026-10-07：`GLIDE_CUT` 已从 pitch_mod 删除（死参数，见该文件注释）。
+    //     本测试台原先 `.GLIDE_CUT(GLIDE_CUT)` 传参，现已一并去掉。
+    pitch_mod #(.NG(NG), .QW(QW)) dut (
         .clk(clk), .rst_n(rst_n), .sample_en(sample_en),
         .lfo_inc(lfo_inc), .vib_depth(vib_depth),
         .glide_step(glide_step), .vib_en(vib_en), .glide_en(glide_en),
@@ -116,7 +119,7 @@ module tb_glide;
 
     initial begin
         $display("==============================================================");
-        $display(" 滑音（portamento）不变量判据   GLIDE_CUT=%0d", GLIDE_CUT);
+        $display(" 滑音（portamento）不变量判据");
         $display("==============================================================");
 
         fails = 0; sample_en = 1'b0; glide_step = 16'd0;

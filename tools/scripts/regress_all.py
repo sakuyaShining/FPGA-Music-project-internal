@@ -830,6 +830,30 @@ def main():
                else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("29 inv", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 30 deadparam：RTL 死参数 / 未使用信号 审计（阶段 4 收敛维护）
+    #   为什么要有：本项目反复出现"文档与实现脱节"，已发现两例 ——
+    #     · pitch_mod 的 GLIDE_CUT（文档说"低于阈值归零"，实现从未读它）
+    #     · note_map 的 found_open 档（加了却不可达，29 inv 已证实）
+    #   这类残留会让人**写出错误判据**（我就在 GLIDE_CUT 上假失败过），
+    #   并掩盖真正未覆盖的路径。⇒ 用机械审计代替"靠人偶然发现"。
+    #   ★ 它**只报不判、退出码恒为 0**：启发式会误报（仅被层次引用的信号、
+    #     有意预留的参数），一个不精确的启发式不该让门禁变红（红灯疲劳）。
+    #     因此这里只把它作为**信息项**登记，不计入通过率（ok=None）。
+    d = os.path.join(BUILD, "30_deadparam")
+    os.makedirs(d, exist_ok=True)
+    rc, dlog = run([sys.executable, os.path.join(ROOT, "tools", "scripts",
+                                                 "deadparam_check.py"),
+                    "--simdir", d], BUILD)
+    try:
+        with open(os.path.join(BUILD, "30_deadparam_judge.log"), "w",
+                  encoding="utf-8") as fh:
+            fh.write(dlog)
+    except OSError:
+        pass
+    dp_line = [l.strip() for l in dlog.splitlines() if "合计" in l]
+    results.append(("30 deadparam", None,
+                    (dp_line[0] if dp_line else "见 30_deadparam_judge.log")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
