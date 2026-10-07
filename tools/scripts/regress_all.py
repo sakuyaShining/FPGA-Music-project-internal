@@ -981,6 +981,38 @@ def main():
             #   已知失败：ok=None（如实登记、不计入通过率）
             results.append(("35 t60(kf)", None, msg))
 
+    # 36 padfast(kf)：pad 通路"重叠切换丢事件" —— **已知失败**，先登记不拦门禁
+    #   ★ 这是本会话找到的**真产品缺陷**，直指目标阶段 2
+    #     「输入事件待处理与接收确认，绝不静默丢 note-off」：
+    #     实测丢的是 **note-ON**（比 note-off 更隐蔽：note-off 丢了会挂音，
+    #     note-on 丢了只是"不响"）。
+    #   复现（判据 `tb_padfast.v`，**11 秒**，不录音频）：
+    #     松开 pad0、同一拍按 pad1 ⇒ 事件日志出现
+    #         [拍=60697] OFF note=48
+    #         [拍=60698] ON  note=49      ← 两个事件都产生了
+    #     但 `nm_ev_ack` **只确认了 1 次**，且 note49 **从未被分配**（组=-1）。
+    #     对照：单独按 pad1（不重叠）⇒ 正常分配到组 0。
+    #   定位结论：
+    #     · `tb_evseq.v`（直接在外部事件口打 1 拍间隔的 off→on）**2 秒通过** ⇒
+    #       **事件队列与 note_map 本身没问题**；
+    #     ⇒ 丢失发生在 **pad 通路 → 队列之间**（`tdm_top` 的 per-source 挂起位/轮转仲裁）。
+    #   为何逃过已有判据：`17 evloss` 用的是"缓慢、不重叠"的激励，
+    #     恰好避开了"释放与按下紧邻"这个触发条件。
+    padf_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v",
+                  "vel_shape.v", "song_seq.v", "reg_bank.v", "uart_rx.v",
+                  "uart_tx.v", "audio_clk_en.v", "i2s_tx.v", "fx_delay.v",
+                  "osc_env.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v",
+                  "led_ind.v", "event_hold.v", "tb_padfast.v"]
+    log, err = compile_and_run("36_padfast", padf_files, defines=("SIM_INIT",),
+                               need_hex=True)
+    if err:
+        results.append(("36 padfast(kf)", None, "编译失败: " + err[:120]))
+    else:
+        tail = [l.strip() for l in (log or "").splitlines()
+                if "FAIL" in l or "RESULT" in l]
+        msg = " / ".join(tail[:3])[:160] if tail else (log or "")[-160:]
+        results.append(("36 padfast(kf)", None, msg))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
