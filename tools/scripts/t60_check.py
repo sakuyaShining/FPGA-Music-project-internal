@@ -110,7 +110,12 @@ def tops(h, n=25):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dir", default="sim_build/t60")
-    ap.add_argument("--tables", default="64,128,192,224",
+    #   ★ 2026-10-07 修正默认档：原来写 "64,128,192,224"（= 0x40,0x80,0xC0,0xE0），
+    #     但 `tb_t60.v` 的 `fb_tab` 实际是 {0x40, 0x60, 0x80, 0xC0}（= 64,96,128,192），
+    #     其中 0xC0 还被明确注释为"已知限制探针"。
+    #     ⇒ 默认值里的 **224(0xE0) 该 tb 根本不产出** ⇒ 判据永远报"缺 t60_fbe0.txt"。
+    #     这是**判据与测试台口径不一致**（不是 DUT 缺陷），已按 tb 的实际档位改正。
+    ap.add_argument("--tables", default="64,96,128,192",
                     help="RV_FB 档（十进制），与 tb_t60 的 fb_tab 对应")
     a = ap.parse_args()
     d = a.dir

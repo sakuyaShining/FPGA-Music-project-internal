@@ -938,6 +938,49 @@ def main():
     results.append(("34 gatecov", None,
                     (cov_line[0] if cov_line else "见 34_gatecov_judge.log")[:160]))
 
+    # 35 t60(kf)：混响 T60 取证 —— **已知失败**，先登记不拦门禁
+    #   为什么补：`tb_t60.v` + `t60_check.py` 都**已写好**，但从未进过门禁
+    #   （靠本轮的门禁覆盖审计 `34 gatecov` 找出）。它验的是 21 号 §6 配方的
+    #   V2（T60 随 fb 单调）/V3（回声密度）/V4（高频先死）/V5（饱和削顶）。
+    #   ★ 实测发现**真问题**：4 档 RV_FB 里有 **1 档饱和削顶**
+    #       fb=0xC0(0.750) 饱和样本 69039 / 70000 = **98.6%** ⇒ 该档不可用
+    #     其余三档饱和 0.0%。
+    #   ★ 且 V3 的失败是 **V5 的症状**不是独立问题：信号被削平后没有"峰"可数
+    #     （密度数组 [108,0,0,...]）。把它当独立问题会白查一遍。
+    #   ★ 另修一处判据口径：`t60_check.py` 的 `--tables` 默认原是
+    #     "64,128,192,224"，而 tb_t60 的 fb_tab 是 {0x40,0x60,0x80,0xC0}
+    #     ⇒ 默认值里的 224(0xE0) tb 根本不产出 ⇒ 判据永远报"缺 t60_fbe0.txt"。
+    #     已按 tb 实际档位改为 "64,96,128,192"。这是**判据与 tb 口径不一致**，
+    #     不是 DUT 缺陷。
+    #   注：`tb_t60` 是**长仿真**（4 档 × 70000 样本，实测**约 130 秒**），
+    #     故只在 `--full` 下跑，避免拖慢快速门。
+    if args.full:
+        t60_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v",
+                     "vel_shape.v", "song_seq.v", "reg_bank.v", "uart_rx.v",
+                     "uart_tx.v", "audio_clk_en.v", "i2s_tx.v", "fx_delay.v",
+                     "osc_env.v", "pad_scan.v", "pad_pitch.v", "strip_ctrl.v",
+                     "led_ind.v", "event_hold.v", "tb_t60.v"]
+        log, err = compile_and_run("35_t60", t60_files, defines=("SIM_INIT",),
+                                   need_hex=True)
+        if err:
+            results.append(("35 t60(kf)", None, "编译失败: " + err[:120]))
+        else:
+            rc, jlog = run([sys.executable, os.path.join(ROOT, "tools", "scripts",
+                                                         "t60_check.py"),
+                            "--dir", os.path.join(BUILD, "35_t60")], BUILD)
+            try:
+                with open(os.path.join(BUILD, "35_t60_judge.log"), "w",
+                          encoding="utf-8") as fh:
+                    fh.write(jlog)
+            except OSError:
+                pass
+            sat = [l.strip() for l in jlog.splitlines() if "饱和样本" in l]
+            msg = ("未通过（见 35_t60_judge.log）；" +
+                   (" / ".join(sat[-4:]) if sat else "无饱和数据"))[:160] if rc else \
+                  "T60 取证通过"
+            #   已知失败：ok=None（如实登记、不计入通过率）
+            results.append(("35 t60(kf)", None, msg))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
