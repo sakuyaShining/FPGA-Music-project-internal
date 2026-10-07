@@ -768,6 +768,22 @@ def main():
                else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("26 glide", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 27 vib：颤音不变量 —— 与滑音同一处境：本仓此前没有颤音判据，
+    #   而默认 vib_depth=0 ⇒ 即便 VIB_EN=1（CTRL 自举 0x02 的 bit1）也**听不出来**
+    #   ⇒ 既有音频判据不会因颤音逻辑有 bug 而变红。
+    #   本套件把三角波幅度/周期/跨零、开关门控、限幅，以及
+    #   **符号正确性**（本项目两次踩过的"有符号/无符号混用⇒负值被零扩展"坑）钉住。
+    vib_files = ["pitch_mod.v", "tb_vib.v"]
+    log, err = compile_and_run("27_vib", vib_files, defines=(), need_hex=False)
+    if err:
+        results.append(("27 vib", False, err[:160]))
+    else:
+        ok = "RESULT vib=PASS" in (log or "")
+        tail = [l.strip() for l in (log or "").splitlines() if "FAIL" in l]
+        msg = ("V1–V6 全绿（开关/零深度/三角幅度对称/周期/跨零/限幅/符号）" if ok
+               else (" / ".join(tail[:2]) or (log or "")[-160:]))
+        results.append(("27 vib", ok, msg.replace(chr(10), " ")[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
