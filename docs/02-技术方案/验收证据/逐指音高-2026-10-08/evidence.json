@@ -1,0 +1,28 @@
+{
+  "rtl_revision": "6b50ca9dc043e5ce2e36823f7c9ac69edd49469d",
+  "rtl_blobs": {
+    "src/rtl/finger_pitch.v": "de2f08ed00337c8fd3a90fcdd95527f6c6c8cde9",
+    "src/rtl/tdm_engine.v": "81581fdc696737c908a6096ce9093071af4f577f",
+    "src/rtl/tdm_top.v": "106eb79b13cb98df46db39d3929fa5d2a196cadf",
+    "src/rtl/note_map.v": "a1f8c837ebcd893deefa9dcdf45008715d5748d8",
+    "src/rtl/tdm_ship.v": "82a196f71f0c9de310afbe7c75c338947b707888",
+    "src/gowin/tdm_synth/finger_ratio.hex": "bffad7b7fd0fa9115e5d5dc2abae595cd74c847b"
+  },
+  "sha256": {
+    "full.log": "eec34c1890ef78ed46a0a76ad98f58ed069bbd1293cda7ddad9963e3451e638a",
+    "regress_result.txt": "4d3ba71379702c7fbef74115055ead36a8b9125d687a7cc1d115f1ac78bfb674",
+    "tb_finger_pitch.log": "f578c5c14252e229296ba9fb80cdee14f5cfe6e284f59897862fee677caa9c25",
+    "tb_finger_top.log": "37a8b57e396004c87d0be7748c528fc35f823fbfd8c80fee1b102055eb5ed05e",
+    "synth.log": "705788e393d282ea5b7ba700f16f4cbd69b735e1d79fb8a67654b742aff3bc67",
+    "lfo_audit.log": "06ce07bb43d9e59c2d5285cf42fdfa6578cddd6497be19076191e97ac4b53c90",
+    "tb_lfo_audit.v": "c5799caeb17b061c8f800d1553143b13b17106aa9f49f4ed04068207ec7c1085",
+    "probe_syn.rpt.html": "297ed8d12783a50a7afa13027fbb80019b7fe27cc9a225c33690d21923ea32e0",
+    "finger_synth_probe.v": "d889f7568a3d356644b7253a908bfb2f719b11f0205c6df938fe1e22da8dced2",
+    "probe.gprj": "3ecf9b4f23684e580bda2bc431c21521c25b5b1b1ab247039743b1ee797df58e",
+    "build.tcl": "bbf2e59f975a03680f75a8873d4913318806ec9854b5e637463786925289e5d1"
+  },
+  "synthesis_only": true,
+  "physical_touch_verified": false,
+  "additional_audit_failure": "Legacy LFO has half-period and wrap discontinuities; not fixed and not counted in existing regression known failures.",
+  "full_regression_summary": "  => 52/52 通过（另有 2 项已知失败，2 项信息审计，不计入）"
+}
