@@ -107,7 +107,12 @@ module note_map #(
     //     队列会在那几个连续空闲拍里连续出队，而本模块在忙期间只接收第一个
     //     ⇒ 其余静默消失（实测：发 28 条只到 4 条）。
     output wire                ev_ack,
-    output wire [NG-1:0]       active      // 哪些组在奏（调试/LED 用）
+    output wire [NG-1:0]       active,     // 哪些组在奏（调试/LED 用）
+    // Allocation notification for contact-to-voice binding. Refresh is excluded.
+    output wire               voice_valid,
+    output wire               voice_on,
+    output wire [$clog2(NG)-1:0] voice_group,
+    output wire [NB-1:0]       voice_note
 );
 
     localparam SW = $clog2(NG*P);
@@ -214,6 +219,10 @@ module note_map #(
     reg [PHASE_W-1:0] inc_old_r;        // 流水级2：旧音高（滑音起点）
     reg [PHASE_W-1:0] inc_new_r;        // 流水级2：新音高
     reg          on_cur;
+    assign voice_valid = (st == ST_GLIDE) && (on_cur || match_r);
+    assign voice_on = on_cur;
+    assign voice_group = gsel_r[$clog2(NG)-1:0];
+    assign voice_note = n_hold;
     reg [AMP_W-1:0] vel_cur;
     reg [$clog2(P)-1:0] k;
     // 步③ 刷新序列状态

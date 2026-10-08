@@ -118,7 +118,7 @@ def patch_sine_path(d):
 
 
 DATA_FILES = ("sine256.hex", "note_inc.hex", "preset_part.hex",
-              "recip_inc.hex", "vel_wtab.hex", "tilt_wtab.hex")
+              "recip_inc.hex", "vel_wtab.hex", "tilt_wtab.hex", "finger_ratio.hex")
 
 
 def copy_data(d, extra=(), build_dir=None):
@@ -1008,6 +1008,12 @@ def main():
         tail=[l.strip() for l in (log or "").splitlines() if "FAIL" in l or "RESULT" in l]
         results.append((label, not err and expected in (log or ""),
                         err[:160] if err else " / ".join(tail[:3])[:160]))
+
+    # Continuous contact position -> independently bound voice pitch.
+    rc, flog = run([sys.executable, os.path.join(ROOT, "tools", "scripts",
+                                                "finger_pitch_check.py")], ROOT)
+    results.append(("39 finger pitch", rc == 0 and "PASS continuous per-contact pitch integration" in flog,
+                    flog.strip().splitlines()[-1][:160] if flog.strip() else "no output"))
 
     # ---------------------------------------------------------------- 汇总
     print()

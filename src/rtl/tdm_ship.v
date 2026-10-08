@@ -61,7 +61,10 @@ module tdm_ship (
         .dac_ws(dac_ws),
         .dac_bck(dac_bck),
         .pa_en(pa_en),
-        .pad(pad)
+        .pad(pad),
+        .finger_valid(1'b0), .finger_cmd(2'd0),
+        .finger_id(5'd0), .finger_group(5'd0), .finger_position(12'sd0),
+        .voice_valid(), .voice_on(), .voice_group(), .voice_note()
     );
 
 endmodule

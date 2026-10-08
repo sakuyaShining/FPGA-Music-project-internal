@@ -42,7 +42,8 @@ module tdm_top #(
     //   UART(0x61)/定序器/排针 ev_* 都是"单拍脉冲"，忙时会被静默丢掉
     //   （丢音；丢 note-off 会挂音）。4 足够：最大突发（8 键同时按放）那一路上游
     //   pad_scan 自带 8 位待发位图且受 note_busy 反压，不会同时压进本队列。
-    parameter integer EVQ_DEPTH = 4
+    parameter integer EVQ_DEPTH = 4,
+    parameter integer FINGER_EXPR = 0
 )(
     input  wire       clk,
     input  wire       rst_n,
@@ -83,7 +84,15 @@ module tdm_top #(
     //     改为"只保留 PULL_MODE=DOWN、不指定引脚"（A6：ev_* 不上引脚；
     //     A2：test_mode 下拉）⇒ 悬空输入一律读 0，不会产生幽灵事件
     //-------------------------------------------------------------------------
-    inout  wire [15:0] pad
+    inout  wire [15:0] pad,
+    // Internal controller endpoint; no new physical pins in tdm_ship.
+    input wire finger_valid,
+    input wire [1:0] finger_cmd,
+    input wire [4:0] finger_id, finger_group,
+    input wire signed [11:0] finger_position,
+    output wire voice_valid, voice_on,
+    output wire [4:0] voice_group,
+    output wire [6:0] voice_note
 );
 
     localparam NSLOT   = 512;
@@ -892,8 +901,26 @@ module tdm_top #(
         .load_inc(nm_load_inc), .load_amp(nm_load_amp),
         .load_gate(nm_load_gate), .load_epar(nm_load_epar),
         .load_gq(nm_load_gq),
-        .busy(nm_busy), .ev_ack(nm_ev_ack), .active(nm_active)
+        .busy(nm_busy), .ev_ack(nm_ev_ack), .active(nm_active),
+        .voice_valid(voice_valid), .voice_on(voice_on),
+        .voice_group(voice_group), .voice_note(voice_note)
     );
+
+    wire [NG-1:0] finger_active;
+    wire [NG*18-1:0] finger_offsets;
+    generate if(FINGER_EXPR) begin: contact_expression
+        finger_pitch #(.NG(NG), .NF(32)) u_finger (
+            .clk(clk), .rst_n(rst_n),
+            .cmd_valid(finger_valid && !test_mode_eff), .cmd(finger_cmd),
+            .finger(finger_id), .group(finger_group), .position(finger_position),
+            .voice_valid(voice_valid), .voice_on(voice_on), .voice_group(voice_group),
+            .voice_active(nm_active),
+            .expr_active(finger_active), .expr_offsets(finger_offsets)
+        );
+    end else begin: no_contact_expression
+        assign finger_active=0;
+        assign finger_offsets=0;
+    end endgenerate
 
     //-------------------------------------------------------------------------
     // 测试模式：一次性把 512 个时隙装成等间隔频率栅格
@@ -950,7 +977,7 @@ module tdm_top #(
         //     默认值（开机自举写入）= 滑音开 + 颤音关：
         //     · 滑音开：组被复用时才真的滑，空闲组起音不滑
         //     · 颤音关：测试模式的 512 个谱峰若被颤音抹开就数不清（R3 现场自证）
-        .PART(P)
+        .PART(P), .FINGER_EXPR(FINGER_EXPR)
     ) u_tdm (
         .clk(clk), .rst_n(rst_n), .sample_en(sample_en),
         .clr(1'b0), .pclr(1'b0), .gate_in(1'b1),
@@ -959,6 +986,8 @@ module tdm_top #(
         .load_epar(load_epar),
         .load_gq(load_gq),
         .pmod_cfg(pmod_cfg),
+        .finger_active(test_mode_eff ? 32'd0 : finger_active),
+        .finger_offsets(finger_offsets),
         .env_en(1'b1),
         .a_inc(16'd117), .d_inc(16'd1), .d_m(2'd3), .d_k(5'd12),
         .s_lvl(16'd22938), .r_inc(16'd1), .r_m(2'd3), .r_k(5'd13),

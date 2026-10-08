@@ -73,7 +73,8 @@ module tdm_engine #(
     // ---- 表情调制（滑音/颤音）：见 pitch_mod.v 与文件内"表情调制"一段 ----
     //   开关与深度不在这里（编译期参数做不成"演奏时可调"），
     //     改由 pmod_cfg 端口在运行时给。
-    parameter PART      = 8      // 每组泛音数（组号 = slot / PART）。NSLOT=PART×组数
+    parameter PART      = 8,     // 每组泛音数（组号 = slot / PART）。NSLOT=PART×组数
+    parameter FINGER_EXPR = 0    // Opt-in; omitted ports preserve legacy bit accuracy.
 )(
     input  wire clk,
     input  wire rst_n,
@@ -123,6 +124,8 @@ module tdm_engine #(
     //   `58'd0` = 两个开关全关 = poff ≡ 0 = 与加调制之前【逐位相同】。
     //-------------------------------------------------------------------------
     input  wire [57:0]                 pmod_cfg,
+    input  wire [NSLOT/PART-1:0]       finger_active,
+    input  wire [(NSLOT/PART)*18-1:0]  finger_offsets,
 
     // ---- 输出 ----
     output reg  signed [OUT_W-1:0] sample_out,
@@ -574,7 +577,30 @@ module tdm_engine #(
         .poff       (poff)
     );
 
-    wire signed [42:0] pmod_mul = $signed({1'b0, eff_inc}) * poff;   // 25 位 × 18 位
+    // Freeze expression at the first partial of each group traversal. Updates
+    // mid-group cannot split harmonics between two expression generations.
+    reg signed [17:0] finger_held [0:PGRP-1];
+    reg [PGRP-1:0] finger_held_active;
+    integer fi;
+    wire [SW-PBS-1:0] finger_group = sl1[SW-1:PBS];
+    wire finger_first = sl1[PBS-1:0] == 0;
+    wire signed [17:0] finger_current = finger_offsets[finger_group*18 +: 18];
+    wire finger_use = FINGER_EXPR && (finger_first ? finger_active[finger_group] :
+                                                    finger_held_active[finger_group]);
+    wire signed [17:0] finger_q = finger_first ? finger_current : finger_held[finger_group];
+    always @(posedge clk or negedge rst_n) begin
+        if(!rst_n) begin
+            finger_held_active<=0;
+            for(fi=0;fi<PGRP;fi=fi+1) finger_held[fi]<=0;
+        end else if(FINGER_EXPR && finger_first) begin
+            finger_held[finger_group]<=finger_current;
+            finger_held_active[finger_group]<=finger_active[finger_group];
+        end
+    end
+    // Direct contact expression is authoritative for its group; legacy glide
+    // and global LFO remain available for groups without contact expression.
+    wire signed [17:0] effective_poff = finger_use ? finger_q : poff;
+    wire signed [42:0] pmod_mul = $signed({1'b0, eff_inc}) * effective_poff;
     wire signed [26:0] pmod     = pmod_mul >>> 16;                   // Q16 → inc 偏移（27 位，防 EX3791）
     wire [PHASE_W-1:0] ph_n     = ph1 + eff_inc + pmod[PHASE_W-1:0]; // 低 24 位 = 模 2^24
 
