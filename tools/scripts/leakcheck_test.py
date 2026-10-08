@@ -62,6 +62,8 @@ def main():
         (["src/gowin/bringup_9k/x.gprj"], "9K bringup 工程"),
         (["src/rtl/i2c_master.v"], "未启用的 I2C 主控"),
         (["docs/01-竞赛情报/x.md"], "准备阶段资料"),
+        (["backups/example-file.md"], "不依赖磁盘存在的备份目录"),
+        (["notes/example-file.md"], "不依赖磁盘存在的笔记目录"),
     ]
 
     fails = 0
@@ -112,19 +114,14 @@ def main():
     #   所以这里断言：**另外两份清单的每一条，都必须被 LEAK_PATTERNS 覆盖**。
     print(" D 三份清单同步：EXCLUDE / IGNORE_BLOCK 的每一条都必须被 LEAK_PATTERNS 覆盖")
 
-    def representative(rule):
-        """为一条 ignore/排除规则构造一个真实的、应当被判为泄漏的路径
+    # Directory semantics come from the explicit ignore rules, not from
+    # whether ignored directories happen to exist in this checkout/export.
+    directory_rules = {r.rstrip("/") for r in mp.ignore_rules() if r.endswith("/")}
 
-        ★ 注意 EXCLUDE 里的**目录**是**不带尾斜杠**的（`notes`、`tools/pylib`），
-          而 IGNORE_BLOCK / LEAK_PATTERNS 用的是 `notes/` 这种带斜杠形式。
-          第一版直接把 `notes` 当代表路径，匹配 `^notes/` 自然失败 ⇒
-          报了 5 条"未覆盖"，其实全是**本测试的规范不一致**，不是真缺口。
-          （这已是本会话第三次"自己的检查器有 bug" —— 与前两次同类：
-            必须先把检查器本身验一遍，再相信它给出的缺口。）
-        """
-        r = rule.strip().rstrip("/")
-        #   在磁盘上确实是目录的 ⇒ 按目录语义构造路径
-        if os.path.isdir(os.path.join(ROOT, r)):
+    def representative(rule):
+        raw = rule.strip()
+        r = raw.rstrip("/")
+        if raw.endswith("/") or r in directory_rules:
             return r + "/example-file.md"
         if "*" in r:
             return r.replace("*", "diag_pitch")
