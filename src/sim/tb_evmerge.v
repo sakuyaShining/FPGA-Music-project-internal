@@ -1,14 +1,8 @@
 //=============================================================================
 // tb_evmerge.v —— 事件「汇合点 + 待处理队列」端到端判据（穿 tdm_top）
 //
-// ⚠️ 状态：**当前不通过，且 event_hold 尚未接进 tdm_top**。
-//    本文件是"接线未完成"这一步的工作台，先留在库里，下一轮从这里继续。
-//    问题记录见 docs/02-技术方案/35-五阶段推进状态.md「接线未完成的真实原因」：
-//      out_ready 不能用 ~nm_busy 这种【电平】—— note_map 的 busy 是状态输出，
-//      事件被接收后要下一拍才拉高；那几个连续空闲拍会让队列连续出队，
-//      而 note_map 在忙期间只接收第一个 ⇒ 其余静默消失。
-//      实测：发 28 条只到 4 条、队列溢出飙升。改成单拍 ev_ack 后也只到 9/28，
-//      说明至少还有第二处未找到 ⇒ 先回退接线，保持门禁绿。
+// Current acceptance: real UART frames and pin events through tdm_top.
+// Source-stream stress lives in tb_event_sources; RC pad switching in tb_padfast.
 //
 // 【接线完成后它要验的是什么】
 //   阶段 2 的核心主张是"**不丢事件，尤其不丢 note-off**"。两个环节可能丢：
@@ -27,9 +21,7 @@
 //   M4 队列溢出计数 == 0（没有"悄悄丢"的情况）
 //
 // 【两个已踩过、已写进代码的口径坑】
-//   ① 抓事件必须按 ev_valid_r 的**上升沿**，不能按电平：
-//      busy 是电平，空闲期间 ev_valid_r 可能连续多拍为高（同一个事件）。
-//      按电平抓会把同一事件记很多遍（实测"发 28 收 64"，看着像重复投递）。
+//   ① Capture transfers with nm_ev_ack, not valid level or valid rising edge.
 //   ② 用 force 驱动 tdm_top 的 wr_en/wr_addr/wr_data 来产生 UART 事件：
 //      层次引用写 reg_bank.mem **不会产生 wr_en**，触发不了事件。
 //=============================================================================
@@ -86,9 +78,7 @@ module tb_evmerge;
     endtask
 
     //   排针事件：驱动一拍，并记一条期望。
-    //   带 gap 参数：间隔必须大于 note_map 的处理时间（约 20 拍），
-    //   否则队列被持续反压、挂起位一直占着，后续事件在源端就丢了 ——
-    //   那**不是** RTL 缺陷，而是人类按不出的速率。真实按键间隔是毫秒级。
+    // Existing human-rate pin traffic; faster pulse bursts have separate coverage.
     task pin_ev_gap;
         input [6:0]   n;
         input         on;
@@ -170,25 +160,15 @@ module tb_evmerge;
     integer  r_vel  [0:MAXEV-1];
     integer  nr;
 
-    //   ★ 按【上升沿】抓事件，不能在电平上连续抓。
-    //     为什么：`out_ready = ~nm_busy`，而"忙"是一个**电平**；
-    //     busy 为低的期间 ev_valid_r 可能连续多拍为高（同一个事件）。
-    //     第一版按电平抓，于是同一个事件被记了很多遍 ——
-    //     实测"发 28 收 64"，看着像严重重复投递，其实是**抓取口径**的问题。
-    //     事件接口的语义是"valid 起沿 = 一个新事件"，抓取必须遵守它。
-    reg ev_valid_r_q;
+    // Count only the actual note_map acceptance handshake. Valid may stay
+    // high across several distinct queued events and while the consumer stalls.
     always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            nr <= 0; ev_valid_r_q <= 1'b0;
-        end
-        else begin
-            ev_valid_r_q <= u_top.ev_valid_r;
-            if (u_top.ev_valid_r && !ev_valid_r_q && nr < MAXEV) begin
-                r_note[nr] <= u_top.ev_note_r;
-                r_on[nr]   <= u_top.ev_on_r;
-                r_vel[nr]  <= u_top.ev_vel_r;
-                nr         <= nr + 1;
-            end
+        if (!rst_n) nr <= 0;
+        else if (u_top.nm_ev_ack && nr < MAXEV) begin
+            r_note[nr] <= u_top.ev_note_r;
+            r_on[nr]   <= u_top.ev_on_r;
+            r_vel[nr]  <= u_top.ev_vel_r;
+            nr         <= nr + 1;
         end
     end
 

@@ -1,28 +1,7 @@
-//=============================================================================
-// tb_padfast.v —— 【快判据】pad 通路"切换丢事件"定位（不录音，秒级）
-//
-// 【背景（2026-10-07）】
-//   · `tb_padseq.v`（含录音）复现出：松开 pad0 的同时按 pad1 ⇒ **pad1 的 note-on 没落地**。
-//     但它要录 21000 个样本，**446 秒**才能跑完，不适合迭代。
-//   · `tb_evseq.v`（直接在外部事件口打脉冲）**2 秒通过** ⇒
-//     **事件队列与 note_map 本身没问题**，丢失是 **pad 通路特有**的。
-//
-//   本判据保留 pad 通路的完整逻辑（pad_scan 的 RC 模型 + pad_pitch 的扫查仲裁），
-//   但**完全不录音**（录音正是那 446 秒的来源 —— 每样本要等 sample_en，
-//   512 拍才一个样本）。改为按拍推进，并统计：
-//     · 每次 note-on / note-off（音符号、拍号）
-//     · note_map 的 ev_ack 次数
-//     · 每次事件后"在响组数"与各组的 gtab
-//
-// 【子测例】
-//   A 只按 pad0 → 应出现 note-on 48 并被分配
-//   B 松开 pad0、同时按 pad1 → 应出现 note-off 48 + note-on 49
-//     **并检查 note 49 是否真的被分配**（这是 `tb_padseq` 里失败的环节）
-//   C 对照：松开 pad0、等一段、再按 pad1（不重叠）⇒ 应正常分配 49
-//
-// 【判据】把 B 与 C 的"note49 是否分配"对比：
-//   B 失败 + C 通过 ⇒ 确证"重叠切换"导致丢失，且问题在 pad 通路的事件产生侧。
-//=============================================================================
+// RC pad end-to-end acceptance: A single on, B adjacent off/on,
+// C separated control, D three adjacent events. Check production, ordered
+// note_map acknowledgements, allocation and zero source overflow.
+// Original fe326ad fails B; do not infer FIFO correctness from that old probe.
 `timescale 1ns/1ps
 
 module tb_padfast;
@@ -76,35 +55,30 @@ module tb_padfast;
     // 探针
     //-------------------------------------------------------------------------
     integer n_on, n_off, ack_cnt;
+    integer ack_note[0:63], ack_on[0:63];
     integer cyc;                 // 全局拍计数（代替原本的"样本号"）
     integer ev_log_note [0:31];
     integer ev_log_on   [0:31];
     integer ev_log_cyc  [0:31];
     integer ev_log_n;
 
-    //   ★ 本轮新增：源侧探针 —— 证明"第二个事件被挂起位挡掉"
-    //     这是根因所在：`tdm_top.v:817`
-    //         if (pp_ev_valid && !pp_pend) begin ... pp_pend <= 1'b1; end
-    //     单槽挂起寄存器 ⇒ pp_pend=1 期间到来的事件被**直接忽略**。
-    integer pend_set_cnt;        // pp_pend 被置 1 的次数
-    integer pp_ev_cnt;           // pad_pitch 侧 valid 的拍数（新事件产生次数）
-    integer drop_cnt;            // **被挂起位挡掉的次数** = valid 且 pp_pend 已为 1
-    integer pend_prev;
-    always @(posedge clk) begin
-        if (rst_n) begin
-            if (u_top.pp_pend && !pend_prev) pend_set_cnt = pend_set_cnt + 1;
-            pend_prev = u_top.pp_pend;
-            if (u_top.pp_ev_valid) begin
-                pp_ev_cnt = pp_ev_cnt + 1;
-                if (u_top.pp_pend) drop_cnt = drop_cnt + 1;
-            end
-        end
+    // Observe actual rejected source pulses; no assertions tied to old pending registers.
+    integer pp_ev_cnt=0, drop_cnt=0;
+    always @(posedge clk) if (rst_n && u_top.pp_ev_valid) begin
+        pp_ev_cnt=pp_ev_cnt+1;
+        if (!u_top.padq_in_ready) drop_cnt=drop_cnt+1;
     end
 
     always @(posedge clk) begin
         cyc = cyc + 1;
         if (rst_n) begin
-            if (u_top.nm_ev_ack) ack_cnt = ack_cnt + 1;
+            if (u_top.nm_ev_ack) begin
+                if (ack_cnt < 64) begin
+                    ack_note[ack_cnt]=u_top.ev_note_r;
+                    ack_on[ack_cnt]=u_top.ev_on_r;
+                end
+                ack_cnt=ack_cnt+1;
+            end
             if (u_top.pp_on_p || u_top.pp_off_p) begin
                 if (ev_log_n < 32) begin
                     ev_log_note[ev_log_n] = u_top.pp_ev_note;
@@ -194,17 +168,20 @@ module tb_padfast;
         //-------------------------------------------------------------- B
         $display(" B 松开 pad0、**同一拍**按 pad1（期望 off48 + on49，且 49 被分配）");
         i1 = ev_log_n; before_ack = ack_cnt;
-        pend_set_cnt = 0; pp_ev_cnt = 0; drop_cnt = 0;
+        pp_ev_cnt = 0; drop_cnt = 0;
         disch_time[0] = 30;
         disch_time[1] = 95;
         adv(20000);
         scan;
         $display("      事件数=%0d  ack 增量=%0d  在响组数=%0d  note49 组=%0d",
                  ev_log_n - i1, ack_cnt - before_ack, gact_cnt, find_note(49));
-        $display("      [源侧] pad_ev_valid 拍数=%0d  挂起位置 1 次数=%0d  **被挂起位挡掉=%0d**",
-                 pp_ev_cnt, pend_set_cnt, drop_cnt);
+        $display("      [source] produced=%0d rejected=%0d", pp_ev_cnt, drop_cnt);
         dump_groups;
         before_note49 = find_note(49);
+        check("B-order-off48", ack_note[before_ack],48);
+        check("B-order-off", ack_on[before_ack],0);
+        check("B-order-on49", ack_note[before_ack+1],49);
+        check("B-order-on", ack_on[before_ack+1],1);
 
         //   打印 B 段事件明细
         for (k = i1; k < ev_log_n && k < i1 + 8; k = k + 1)
@@ -217,12 +194,8 @@ module tb_padfast;
         check("B-two-events-produced", ev_log_n - i1, 2);
         check("B-both-events-acked",   ack_cnt - before_ack, 2);
         check("B-note49-allocated",    (before_note49 >= 0) ? 1 : 0, 1);
-        //   ★ 根因断言：源侧确实产生了 2 次 valid，但**恰有 1 次被挂起位挡掉**。
-        //     这证明丢失点在 `tdm_top.v:817` 的单槽挂起判断
-        //         if (pp_ev_valid && !pp_pend)
-        //     而不是队列或 note_map。
         check("B-src-produced-2-valid", pp_ev_cnt, 2);
-        check("B-dropped-by-pending-slot", drop_cnt, 1);
+        check("B-source-queue-drops", drop_cnt, 0);
 
         //-------------------------------------------------------------- C
         $display(" C 对照：先把 pad1 松开，静置后**单独**按 pad1");
@@ -237,6 +210,23 @@ module tb_padfast;
         $display("      事件数=%0d  ack 增量=%0d  在响组数=%0d  note49 组=%0d",
                  ev_log_n - i0, ack_cnt - before_ack, gact_cnt, find_note(49));
         check("C-note49-alone-allocated", (find_note(49) >= 0) ? 1 : 0, 1);
+
+        // D: three real pad events in consecutive scan slots: off49/on50/on51.
+        $display(" D three adjacent events off49/on50/on51");
+        before_ack=ack_cnt; i0=ev_log_n;
+        disch_time[1]=30; disch_time[2]=95; disch_time[3]=95;
+        adv(20000);
+        check("D-three-produced",ev_log_n-i0,3);
+        check("D-three-acked",ack_cnt-before_ack,3);
+        check("D-off49-note",ack_note[before_ack],49);
+        check("D-off49-on",ack_on[before_ack],0);
+        check("D-on50-note",ack_note[before_ack+1],50);
+        check("D-on50-on",ack_on[before_ack+1],1);
+        check("D-on51-note",ack_note[before_ack+2],51);
+        check("D-on51-on",ack_on[before_ack+2],1);
+        check("D-note50-allocated",find_note(50)>=0,1);
+        check("D-note51-allocated",find_note(51)>=0,1);
+        check("D-no-pad-overflow",u_top.padq_ovf,0);
 
         $display("==============================================================");
         $display(" ★ 判读：");

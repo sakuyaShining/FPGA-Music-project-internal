@@ -981,23 +981,7 @@ def main():
             #   已知失败：ok=None（如实登记、不计入通过率）
             results.append(("35 t60(kf)", None, msg))
 
-    # 36 padfast(kf)：pad 通路"重叠切换丢事件" —— **已知失败**，先登记不拦门禁
-    #   ★ 这是本会话找到的**真产品缺陷**，直指目标阶段 2
-    #     「输入事件待处理与接收确认，绝不静默丢 note-off」：
-    #     实测丢的是 **note-ON**（比 note-off 更隐蔽：note-off 丢了会挂音，
-    #     note-on 丢了只是"不响"）。
-    #   复现（判据 `tb_padfast.v`，**11 秒**，不录音频）：
-    #     松开 pad0、同一拍按 pad1 ⇒ 事件日志出现
-    #         [拍=60697] OFF note=48
-    #         [拍=60698] ON  note=49      ← 两个事件都产生了
-    #     但 `nm_ev_ack` **只确认了 1 次**，且 note49 **从未被分配**（组=-1）。
-    #     对照：单独按 pad1（不重叠）⇒ 正常分配到组 0。
-    #   定位结论：
-    #     · `tb_evseq.v`（直接在外部事件口打 1 拍间隔的 off→on）**2 秒通过** ⇒
-    #       **事件队列与 note_map 本身没问题**；
-    #     ⇒ 丢失发生在 **pad 通路 → 队列之间**（`tdm_top` 的 per-source 挂起位/轮转仲裁）。
-    #   为何逃过已有判据：`17 evloss` 用的是"缓慢、不重叠"的激励，
-    #     恰好避开了"释放与按下紧邻"这个触发条件。
+    # 36 padfast: real RC pad adjacent off/on and three-event bursts.
     padf_files = ["tdm_top.v", "tdm_engine.v", "pitch_mod.v", "note_map.v",
                   "vel_shape.v", "song_seq.v", "reg_bank.v", "uart_rx.v",
                   "uart_tx.v", "audio_clk_en.v", "i2s_tx.v", "fx_delay.v",
@@ -1006,12 +990,24 @@ def main():
     log, err = compile_and_run("36_padfast", padf_files, defines=("SIM_INIT",),
                                need_hex=True)
     if err:
-        results.append(("36 padfast(kf)", None, "编译失败: " + err[:120]))
+        results.append(("36 padfast", False, "编译失败: " + err[:120]))
     else:
         tail = [l.strip() for l in (log or "").splitlines()
                 if "FAIL" in l or "RESULT" in l]
         msg = " / ".join(tail[:3])[:160] if tail else (log or "")[-160:]
-        results.append(("36 padfast(kf)", None, msg))
+        results.append(("36 padfast", "RESULT padfast=PASS" in (log or ""), msg))
+
+    # Registered-head FIFO throughput and four-source queues/readback.
+    for label, tb, files, hex_needed in [
+        ("37 evhold stream", "tb_evhold_stream", ["event_hold.v", "tb_evhold_stream.v"], False),
+        ("38 event sources", "tb_event_sources", padf_files[:-1]+["tb_event_sources.v"], True),
+    ]:
+        log, err=compile_and_run(label.replace(" ", "_"), files,
+                                 defines=("SIM_INIT",), need_hex=hex_needed)
+        expected="RESULT %s=PASS" % tb[3:]
+        tail=[l.strip() for l in (log or "").splitlines() if "FAIL" in l or "RESULT" in l]
+        results.append((label, not err and expected in (log or ""),
+                        err[:160] if err else " / ".join(tail[:3])[:160]))
 
     # ---------------------------------------------------------------- 汇总
     print()
@@ -1020,6 +1016,8 @@ def main():
     print("=" * 64)
     nfail = 0
     nskip = 0
+    ninfo = 0
+    info_names={"30 deadparam", "34 gatecov"}
     for name, ok, msg in results:
         #   ok is None ⇒ **已知失败/跳过**：如实显示、但不计入通过率
         #   （否则门禁会长期红 ⇒ 红灯疲劳，反而没人看）。
@@ -1027,13 +1025,14 @@ def main():
         mark = "✅" if ok else ("⚠️ " if ok is None else "❌")
         print("  %s  %-18s %s" % (mark, name, msg))
         if ok is None:
-            nskip += 1
+            if name in info_names: ninfo += 1
+            else: nskip += 1
         elif not ok:
             nfail += 1
-    ntotal = len(results) - nskip
+    ntotal = len(results) - nskip - ninfo
     print("=" * 64)
     print(" %d/%d 通过%s%s" % (ntotal - nfail, ntotal,
-                               ("（另有 %d 项已知失败已登记，不计入）" % nskip) if nskip else "",
+                               ("（另有 %d 项已知失败，%d 项信息审计，不计入）" % (nskip,ninfo)),
                                "" if nfail == 0 else "  —— 存在失败，不满足上板条件"))
     # 结果落盘（2026-10-04 审计 P1："全绿"声明必须可复核，不能只活在 git 提交一句话里）
     rpt = os.path.join(ROOT, "sim_build", "regress_result.txt")
@@ -1044,10 +1043,10 @@ def main():
                 time.strftime("%Y-%m-%d %H:%M:%S")))
             for name, ok, msg in results:
                 fh.write("  %s  %-18s %s\n"
-                         % ("PASS" if ok else ("KNOWN-FAIL" if ok is None else "FAIL"),
+                         % ("PASS" if ok else (("INFO" if name in info_names else "KNOWN-FAIL") if ok is None else "FAIL"),
                             name, msg))
-            fh.write("  => %d/%d 通过（另有 %d 项已知失败已登记，不计入）\n"
-                     % (ntotal - nfail, ntotal, nskip))
+            fh.write("  => %d/%d 通过（另有 %d 项已知失败，%d 项信息审计，不计入）\n"
+                     % (ntotal - nfail, ntotal, nskip, ninfo))
     except OSError:
         pass
     return 1 if nfail else 0

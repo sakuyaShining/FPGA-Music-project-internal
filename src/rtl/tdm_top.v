@@ -291,7 +291,7 @@ module tdm_top #(
 
     reg_bank #(.AW(8), .DW(8), .NW(128)) u_reg (
         .clk(clk), .rst_n(rst_n),
-        .wr_en(wr_en), .wr_addr(wr_addr), .wr_data(wr_data),
+        .wr_en(wr_en && !(wr_addr >= 8'h74 && wr_addr <= 8'h7C)), .wr_addr(wr_addr), .wr_data(wr_data),
         .rd_en(1'b0), .rd_addr(8'd0), .rd_data(),
         .regs_flat(R)
     );
@@ -372,6 +372,8 @@ module tdm_top #(
         else if (s_we_beats)                s_idx <= s_idx + 6'd1;   // 写完拍数自动 +1
     end
 
+    wire [15:0] uartq_ovf, seqq_ovf, padq_ovf, pinq_ovf;
+    wire [7:0] ev_drop_status;
     //---- 串口发送：回读两个字节 ----
     reg  [2:0]  rb_st;
     reg  [7:0]  rb_addr, tx_data;
@@ -398,7 +400,19 @@ module tdm_top #(
                 3'd1: begin tx_data <= rb_addr; tx_start <= 1'b1; rb_st <= 3'd2; end
                 3'd2: if (tx_done) rb_st <= 3'd3;
                 3'd3: begin
-                          tx_data  <= R[{rb_addr, 3'b000} +: 8];   // 组合读寄存器
+                          // Diagnostics use the existing two-byte readback frame.
+                          case(rb_addr)
+                              8'h74: tx_data<=uartq_ovf[7:0];
+                              8'h75: tx_data<=uartq_ovf[15:8];
+                              8'h76: tx_data<=seqq_ovf[7:0];
+                              8'h77: tx_data<=seqq_ovf[15:8];
+                              8'h78: tx_data<=padq_ovf[7:0];
+                              8'h79: tx_data<=padq_ovf[15:8];
+                              8'h7A: tx_data<=pinq_ovf[7:0];
+                              8'h7B: tx_data<=pinq_ovf[15:8];
+                              8'h7C: tx_data<=ev_drop_status;
+                              default: tx_data<=R[{rb_addr, 3'b000} +: 8];
+                          endcase
                           tx_start <= 1'b1;
                           rb_st    <= 3'd4;
                       end
@@ -687,200 +701,111 @@ module tdm_top #(
         end
     end
 
-    // 仲裁选通：定序器只在【正在发事件的这一拍】抢占总线。
-    // 原来用 seq_en（电平）选通 —— 定序器一使能就长期压住 pads 与排针事件，
-    // 16 个触摸键会整体变哑，与本文件"三者互为兜底"的说明矛盾。
-    wire        seq_ev_sel = seq_en & sq_ev_valid;
-
-    //-------------------------------------------------------------------------
-    // 阶段 2：事件「待处理 + 接收确认」（2026-10-06）
-    //
-    //   原来这里下面是一条 `ev_valid_i/ev_on_i/ev_note_i/ev_vel_i` 优先级 mux，
-    //   直接喂给"打一拍进 note_map"。那条 mux 有两个结构性缺陷：
-    //     ① 同一拍多源并起时只选出一个，其余源的事件**无声丢弃**；
-    //     ② note_map 一次装载占约 20 拍，期间到达的单拍脉冲同样被忽略。
-    //   两者都表现为丢音，**丢 note-off 时会挂音**。
-    //
-    //   修法（ready/valid）：每个"单拍脉冲"源各加挂起位 → 按原优先级选出 →
-    //   进 event_hold 队列 → 队列由 note_map 的【单拍 ev_ack】驱动出队。
-    //
-    //   ★ 三个必须同时满足的点（少一个就丢事件，本项目逐一踩过）：
-    //     (a) 每个源都要有挂起位（只挂最高优先级那个，同拍的低优先级源仍会丢）；
-    //     (b) out_ready 必须是【单拍确认】，不能用 `~nm_busy` 电平；
-    //     (c) 队列输出**直接**进 note_map，中间不要再插寄存器（会把 ev_valid
-    //         拉成连续两拍为高的电平，note_map 遂把同一事件消费两次）。
-    //-------------------------------------------------------------------------
-    reg        uh_pend;                  // UART(0x61) 挂起
-    reg [3:0]  uh_vel;
-    reg [6:0]  uh_note;
-    //   ★ UART 的"请求"要单独锁存：真实 UART 写是一拍脉冲（wr_en），
-    //     而队列/note_map 可能需要等很多拍才接收。若直接用 u_ev_valid 当请求，
-    //     它下一拍就没了 ⇒ 事件在"还没被接收"时就消失（实测 note 恒为 0）。
-    //     所以：wr 那一拍把请求置起来，被接收（ev_in_ready）才清。
-    reg        uh_req;
-    reg [7:0]  uh_req_note;              // 写入时刻的 0x60 整字节（含 on/off）
-                                                            
-    reg        sh_pend;                  // 定序器挂起
-    reg        sh_on;   reg [6:0] sh_note;   reg [3:0] sh_vel;
-    reg        dh_pend;                  // 排针 ev_* 挂起
-    reg        dh_on;   reg [6:0] dh_note;   reg [3:0] dh_vel;
-    //   ★ pads 也必须有挂起位（2026-10-06 实测发现，原因很关键）：
-    //     本优先级 mux **没有仲裁公平性** —— 只要高优先级源的 valid 一直举着，
-    //     低优先级源就**永久得不到服务**。原来所有源都是单拍脉冲，所以看不出来；
-    //     加了队列反压之后，pad_pitch 的 ev_valid 可能持续为高（它在等被接收），
-    //     于是排针事件被**活活饿死**：实测单源 3 条只收到 1 条，
-    //     且第 3 条之后 mh_note 一直停在 62（pads 把 mux 占住了）。
-    //     给 pads 也加挂起位之后，它同样"被接收就撤"，不会长期占线。
-    reg        pp_pend;                  // pads 挂起
-    reg        pp_on_r; reg [6:0] pp_note_r; reg [3:0] pp_vel_r;
-
-    //   汇合后的有效事件。**用轮转仲裁而不是固定优先级** ——
-    //   2026-10-06 实测教训：固定优先级 mux 只要高优先级源的 valid 一直举着，
-    //   低优先级源就**永久得不到服务**（无公平性）。原来所有源都是单拍脉冲，
-    //   所以这个缺陷看不出来；加了队列反压之后立刻显形：
-    //     pads 的 valid 可以持续为高（它在等被接收）⇒ 排针事件被活活饿死
-    //     （实测单源 3 条只收到 1 条，mh_note 一直停在 pads 的那一条上）。
-    //   轮转的规则：每次**成功接收**一个事件就转向下一个源；
-    //   当前指向的源若没有挂起事件，就按固定优先级兜底（保证不空转）。
-    //   代价：一个 2 位指针 + 每源的选中项多一次比较，很小。
-    //   收益：**任何一个源都不会被另一个源饿死** —— 这是"不丢事件"能成立的前提。
-    reg [1:0] arb_rr;                    // 0=UART 1=定序器 2=pads 3=排针
-
-    wire arb_u = uh_req;
-    wire arb_s = seq_en & sh_pend;
-    wire arb_p = pp_pend;
-    wire arb_d = dh_pend;
-
-    //   轮转优先：当前指针指向的源若有事，先服务它
-    wire sel_u = arb_u & (arb_rr == 2'd0) | (arb_u & ~(arb_s | arb_p | arb_d));
-    wire sel_s = ~sel_u & (arb_s & (arb_rr == 2'd1) | (arb_s & ~(arb_u | arb_p | arb_d)));
-    wire sel_p = ~sel_u & ~sel_s & (arb_p & (arb_rr == 2'd2) | (arb_p & ~(arb_u | arb_s | arb_d)));
-    wire sel_d = ~sel_u & ~sel_s & ~sel_p & arb_d;
-
-    wire        mh_valid = sel_u | sel_s | sel_p | sel_d;
-    wire        mh_on    = sel_u ? uh_req_note[7] :
-                           sel_s ? sh_on         :
-                           sel_p ? pp_on_r       : dh_on;
-    wire [6:0]  mh_note  = sel_u ? uh_req_note[6:0] :
-                           sel_s ? sh_note       :
-                           sel_p ? pp_note_r     : dh_note;
-    wire [3:0]  mh_vel   = sel_u ? uh_vel        :
-                           sel_s ? sh_vel        :
-                           sel_p ? pp_vel_r      : dh_vel;
-
-    wire        ev_in_ready;
-    wire        ev_q_valid, ev_q_on;
-    wire [6:0]  ev_q_note;
-    wire [3:0]  ev_q_vel;
-    wire [2:0]  ev_q_level;
+    // Each pulse source has four event slots. Only a selected, accepted head
+    // is popped; source overflow counters make unsupported bursts observable.
+    localparam integer SRCQ_DEPTH = 4;
+    wire uh_req, sh_pend, pp_pend, dh_pend;
+    wire uh_on, sh_on, pp_on_r, dh_on;
+    wire [6:0] uh_note, sh_note, pp_note_r, dh_note;
+    wire [3:0] uh_vel, sh_vel, pp_vel_r, dh_vel;
+    wire uartq_in_ready, seqq_in_ready, padq_in_ready, pinq_in_ready;
+    wire [2:0] uartq_level, seqq_level, padq_level, pinq_level;
+    wire ev_in_ready;
+    wire ev_q_valid, ev_q_on;
+    wire [6:0] ev_q_note;
+    wire [3:0] ev_q_vel;
+    wire [$clog2(EVQ_DEPTH+1)-1:0] ev_q_level;
     wire [15:0] ev_q_ovf;
+    reg [1:0] arb_rr;
+    reg [3:0] arb_sel;
+    wire arb_u=uh_req, arb_s=sh_pend, arb_p=pp_pend, arb_d=dh_pend;
 
+    // Scan all four sources from the round-robin cursor, skipping empty ones.
+    // Accepted sequencer events drain even after seq_en is switched off.
+    always @* begin
+        arb_sel=4'b0000;
+        case(arb_rr)
+            2'd0: if(arb_u) arb_sel=4'b0001;
+                  else if(arb_s) arb_sel=4'b0010;
+                  else if(arb_p) arb_sel=4'b0100;
+                  else if(arb_d) arb_sel=4'b1000;
+            2'd1: if(arb_s) arb_sel=4'b0010;
+                  else if(arb_p) arb_sel=4'b0100;
+                  else if(arb_d) arb_sel=4'b1000;
+                  else if(arb_u) arb_sel=4'b0001;
+            2'd2: if(arb_p) arb_sel=4'b0100;
+                  else if(arb_d) arb_sel=4'b1000;
+                  else if(arb_u) arb_sel=4'b0001;
+                  else if(arb_s) arb_sel=4'b0010;
+            2'd3: if(arb_d) arb_sel=4'b1000;
+                  else if(arb_u) arb_sel=4'b0001;
+                  else if(arb_s) arb_sel=4'b0010;
+                  else if(arb_p) arb_sel=4'b0100;
+        endcase
+    end
+    wire sel_u=arb_sel[0], sel_s=arb_sel[1], sel_p=arb_sel[2], sel_d=arb_sel[3];
+    wire mh_valid=|arb_sel;
+    wire mh_on=sel_u ? uh_on : sel_s ? sh_on : sel_p ? pp_on_r : dh_on;
+    wire [6:0] mh_note=sel_u ? uh_note : sel_s ? sh_note : sel_p ? pp_note_r : dh_note;
+    wire [3:0] mh_vel=sel_u ? uh_vel : sel_s ? sh_vel : sel_p ? pp_vel_r : dh_vel;
+
+    event_hold #(.DEPTH(SRCQ_DEPTH)) u_uartq (
+        .clk(clk), .rst_n(rst_n),
+        .in_valid(u_ev_valid), .in_on(u_ev_on), .in_note(u_ev_note), .in_vel(u_ev_vel),
+        .in_ready(uartq_in_ready),
+        .out_valid(uh_req), .out_on(uh_on), .out_note(uh_note), .out_vel(uh_vel),
+        .out_ready(sel_u && ev_in_ready), .level(uartq_level), .overflow(uartq_ovf)
+    );
+    event_hold #(.DEPTH(SRCQ_DEPTH)) u_seqq (
+        .clk(clk), .rst_n(rst_n),
+        .in_valid(sq_ev_valid && seq_en), .in_on(sq_ev_on), .in_note(sq_ev_note), .in_vel(sq_ev_vel[7:4]),
+        .in_ready(seqq_in_ready),
+        .out_valid(sh_pend), .out_on(sh_on), .out_note(sh_note), .out_vel(sh_vel),
+        .out_ready(sel_s && ev_in_ready), .level(seqq_level), .overflow(seqq_ovf)
+    );
+    event_hold #(.DEPTH(SRCQ_DEPTH)) u_padq (
+        .clk(clk), .rst_n(rst_n),
+        .in_valid(pp_ev_valid), .in_on(pp_ev_on), .in_note(pp_ev_note), .in_vel(pp_ev_vel),
+        .in_ready(padq_in_ready),
+        .out_valid(pp_pend), .out_on(pp_on_r), .out_note(pp_note_r), .out_vel(pp_vel_r),
+        .out_ready(sel_p && ev_in_ready), .level(padq_level), .overflow(padq_ovf)
+    );
+    event_hold #(.DEPTH(SRCQ_DEPTH)) u_pinq (
+        .clk(clk), .rst_n(rst_n),
+        .in_valid(ev_valid), .in_on(ev_on), .in_note(ev_note), .in_vel(ev_vel),
+        .in_ready(pinq_in_ready),
+        .out_valid(dh_pend), .out_on(dh_on), .out_note(dh_note), .out_vel(dh_vel),
+        .out_ready(sel_d && ev_in_ready), .level(pinq_level), .overflow(pinq_ovf)
+    );
     always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            uh_pend <= 1'b0; uh_vel <= 4'd0; uh_note <= 7'd0;
-            uh_req <= 1'b0; uh_req_note <= 8'd0;
-            sh_pend <= 1'b0; sh_on  <= 1'b0; sh_note <= 7'd0; sh_vel <= 4'd0;
-            dh_pend <= 1'b0; dh_on  <= 1'b0; dh_note <= 7'd0; dh_vel <= 4'd0;
-            pp_pend <= 1'b0; pp_on_r <= 1'b0; pp_note_r <= 7'd0; pp_vel_r <= 4'd0;
-        end
-        else begin
-            //   收下就清挂起位（"接收确认"的另一半）。
-            //   UART 用独立的 uh_req：真实 UART 写是一拍脉冲，而队列可能要等
-            //   很多拍才接收；若拿 u_ev_valid 当请求，事件还没被接收就没了
-            //   （实测 note 恒为 0）。所以 wr 那一拍置 uh_req，被接收才清。
-            if (uh_req && ev_in_ready)  uh_req  <= 1'b0;
-            if (sh_pend && ev_in_ready && seq_en) sh_pend <= 1'b0;
-            if (dh_pend && ev_in_ready) dh_pend <= 1'b0;
-            if (pp_pend && ev_in_ready) pp_pend <= 1'b0;
-
-            //   到达即锁存。**音符与力度都取写入时刻的值**（不能等到被接收时
-            //   再读：那时 wr_data 早没了，r_note_num 也可能已被下一次写覆盖）。
-            if (u_ev_valid) begin
-                uh_req      <= 1'b1;
-                uh_req_note <= r_note_num;
-                uh_vel      <= u_ev_vel;
-                uh_note     <= u_ev_note;
-            end
-            if (sq_ev_valid && seq_en && !sh_pend) begin
-                sh_on   <= sq_ev_on;
-                sh_note <= sq_ev_note;
-                sh_vel  <= sq_ev_vel[7:4];
-                sh_pend <= 1'b1;
-            end
-            if (ev_valid && !dh_pend) begin
-                dh_on   <= ev_on;
-                dh_note <= ev_note;
-                dh_vel  <= ev_vel;
-                dh_pend <= 1'b1;
-            end
-            //   pads：同样锁存（锁存后它就不再占着 mux，低优先级源才有机会）
-            //
-            //   ★★★ 2026-10-07 已证实的缺陷（判据 `tb_padfast.v`，门禁 `36 padfast(kf)`）：
-            //       上面这个 `&& !pp_pend` 是**单槽挂起**：当 `pp_pend=1`
-            //       （前一个事件还在等队列接收）时，**这一拍到来的事件被直接忽略**，
-            //       既不入队也不报错 —— 即**静默丢弃**。
-            //
-            //     实测（`tb_padfast` B 段：松开 pad0 的同一拍按 pad1）：
-            //         pad_ev_valid 拍数 = 2      ← 两个事件都产生了
-            //         挂起位置 1 次数    = 1
-            //         **被挂起位挡掉     = 1**   ← 第二个事件被丢
-            //         nm_ev_ack 增量     = 1     ← 只确认了一个
-            //         note49             = 未分配（组 = -1）
-            //       两个事件只隔 1 拍（拍 60697 OFF / 60698 ON）就复现。
-            //       对照：单独按 pad1（不重叠）⇒ 正常分配到组 0。
-            //
-            //     影响：**丢的是 note-ON**（比 note-off 更隐蔽 —— note-off 丢了会挂音、
-            //       听得出；note-on 丢了只是"不响"，会被当成演奏失误）。
-            //       这正是 `tb_show` 里"新音起音不足"的成因：新音根本没响，
-            //       听到的是前一个音的**释放尾音**。
-            //
-            //     为什么逃过 `17 evloss`：那条用"8 键同时按/放、缓慢不重叠"的激励，
-            //       **恰好避开"释放与按下紧邻"**这个条件 ⇒ 判据覆盖了"量"未覆盖"时序紧邻"。
-            //
-            //     同源问题：`sh_pend`（定序器）、`uh_req`（UART）、`dh_pend`（排针）
-            //       也是单槽挂起，**同样有这个风险**，只是尚未逐条构造判据验证。
-            //
-            //     修法方向（尚未实施，需与"绝不静默丢事件"这条要求一并设计）：
-            //       把单槽挂起换成**每源至少 1 深的小队列**（或给每个源一个
-            //       独立的 pending FIFO），使"同一拍/紧邻两拍"的事件不被吞；
-            //       并且——**任何被丢弃的事件都必须可观测**（计数器/状态位），
-            //       不允许静默丢弃。实施后必须复跑 `36 padfast`、`17 evloss`、
-            //       `18 evmerge`、`19 alloc`、`28 legato`、`32 pitchmod`。
-            if (pp_ev_valid && !pp_pend) begin
-                pp_on_r   <= pp_ev_on;
-                pp_note_r <= pp_ev_note;
-                pp_vel_r  <= pp_ev_vel;
-                pp_pend   <= 1'b1;
-            end
-
-            //   轮转指针：每**成功接收**一个事件就转向下一个源。
-            if (mh_valid && ev_in_ready) begin
-                if      (sel_u) arb_rr <= 2'd1;
-                else if (sel_s) arb_rr <= 2'd2;
-                else if (sel_p) arb_rr <= 2'd3;
-                else if (sel_d) arb_rr <= 2'd0;
-            end
+        if(!rst_n) arb_rr<=2'd0;
+        else if(mh_valid && ev_in_ready) begin
+            if(sel_u) arb_rr<=2'd1;
+            else if(sel_s) arb_rr<=2'd2;
+            else if(sel_p) arb_rr<=2'd3;
+            else arb_rr<=2'd0;
         end
     end
-
-    event_hold #(.DEPTH(EVQ_DEPTH), .NB(7), .VB(4)) u_evhold (
+    event_hold #(.DEPTH(EVQ_DEPTH)) u_evhold (
         .clk(clk), .rst_n(rst_n),
-        .in_valid(mh_valid), .in_on(mh_on), .in_note(mh_note), .in_vel(mh_vel),
+        // This producer holds its head under backpressure. A stalled head is
+        // not a rejected pulse: present it only on a successful transfer.
+        .in_valid(mh_valid && ev_in_ready), .in_on(mh_on), .in_note(mh_note), .in_vel(mh_vel),
         .in_ready(ev_in_ready),
         .out_valid(ev_q_valid), .out_on(ev_q_on), .out_note(ev_q_note), .out_vel(ev_q_vel),
-        .out_ready(nm_ev_ack),
-        .level(ev_q_level), .overflow(ev_q_ovf)
+        .out_ready(nm_ev_ack), .level(ev_q_level), .overflow(ev_q_ovf)
     );
-
-    wire [15:0] ev_ovf_dbg = ev_q_ovf;
-    wire [2:0]  ev_lvl_dbg = ev_q_level;
+    wire [15:0] ev_ovf_dbg=ev_q_ovf;
+    wire [$clog2(EVQ_DEPTH+1)-1:0] ev_lvl_dbg=ev_q_level;
+    assign ev_drop_status={3'b000, (ev_q_ovf!=0), (pinq_ovf!=0),
+                              (padq_ovf!=0), (seqq_ovf!=0), (uartq_ovf!=0)};
 
     //-------------------------------------------------------------------------
     // 事件的最后一级：**队列输出直接进 note_map**
     //
     //   2026-10-02 这里曾有一级寄存器，为切断
     //   `u_reg/mem → 事件源 mux → note_map 分配网络` 这条长链而加。
-    //   现在 mux 的每条都先落到挂起位或队列，而 **event_hold 的输出已经寄存过**
+    //   现在 mux 的每条都先落到独立源队列，而 **event_hold 的输出已经寄存过**
     //   ⇒ 那条长链已经断了，这一级不再必要，而且**有害**：会把 ev_valid 拉成
     //   "连续两拍为高"的电平，note_map 遂把同一事件消费两次。
     //-------------------------------------------------------------------------
