@@ -126,7 +126,15 @@ module tb_event_sources;
         expect_event(0,1,41,9); expect_event(1,1,59,10);
         @(negedge clk); we=0; sv=0;
         repeat(1000) @(negedge clk);
-        check("skip-empty-cursor",total,14);
+        check("two-source-pair",total,14);
+        // Previous UART/seq grants leave cursor=2 (empty pads/pins).
+        // With both UART and seq pending, the old fallback selected nothing.
+        write_reg(8'h60,8'hAA);
+        @(negedge clk); we=1; wa=8'h61; wd=11; sv=1; son=1; sn=60; svel=8'hC0;
+        expect_event(0,1,42,11); expect_event(1,1,60,12);
+        @(negedge clk); we=0; sv=0;
+        repeat(1000) @(negedge clk);
+        check("skip-empty-cursor",total,16);
         monitor=0;
         // Block downstream transfers; each source accepts four of ten pulses.
         force dut.ev_in_ready=0;
