@@ -4,7 +4,7 @@
 
 | 要确认的事实 | 唯一入口 |
 |---|---|
-| 最新设计、用户选择与未决项 | [design.md](design.md)，固定 N-01～N-11 |
+| 最新设计、全部已有能力、未实现项与待决参数 | [design.md](design.md)，2026-10-10总册，固定 N-01～N-11 |
 | 产品候选及模块落点 | [state.json](state.json) 与 [catalog.json](catalog.json) |
 | 来源工作树、保留方式、接合与风险 | [integration.md](integration.md) |
 | 当前源码身份 | [integration-20261009-06.json](versions/integration-20261009-06.json)，全源SHA256 |

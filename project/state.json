@@ -2,6 +2,13 @@
   "schema": 1,
   "product_branch": "codex/project-version-closure",
   "source_manifest": "project/versions/integration-20261009-06.json",
+  "design_register": {
+    "document": "project/design.md",
+    "reviewed_on": "2026-10-10",
+    "scope": "N-01 through N-11, integrated foundation, physical input boundaries, unimplemented behaviors and unresolved decisions",
+    "sources": "Archived design records plus current integrated code and version-bound validation",
+    "change": "Documentation consolidation only; no new musical semantics approved; implementation and hardware acceptance unchanged"
+  },
   "acceptance": {
     "targeted_digital": "passed",
     "full_regression": "complete: 55/55 required gates passed; 1 known failure (T60) and 2 informational audits (gatecov/deadparam)",
