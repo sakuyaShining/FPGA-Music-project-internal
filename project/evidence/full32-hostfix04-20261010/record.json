@@ -1,0 +1,17 @@
+{
+  "source_manifest": "project/versions/integration-20261010-04.json",
+  "source_manifest_sha256": "e93e7a6a8c9e5ac375d3f876e452182dd7f7311baeb00fc292170c69a01382d2",
+  "source_inputs": 226,
+  "configuration": "--full; complete full32 UART/MIDI127 plus host timeout ordering/raw failure/cleanup tests in required gate41",
+  "exit_code": 0,
+  "completed_local": "2026-10-10 05:57:41",
+  "required_pass": 56,
+  "required_total": 56,
+  "known_fail": ["T60"],
+  "info": ["deadparam","gatecov"],
+  "files": {
+    "regress_result.txt": "00da7f941881cfae682649401ee75fa72a93db8efc87f119ad717222bd43b3a2",
+    "regress.log": "f8da86c81bbed1df5f06d53eef9c0ddee8187e16cde27372f043641a92584779"
+  },
+  "hardware": "Board remains02; record covers04 digital regression only"
+}

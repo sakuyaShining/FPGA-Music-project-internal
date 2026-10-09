@@ -10,7 +10,7 @@
     "working_tree": "Host forward fix04: configure timeout before stream request, finally clear every case including MIDI127/all32 contacts; three host tests joined gate41. RTL identical02; board still02.",
     "hardware": "02 SRAM downloaded exit0; hardware-run02 failed exit1 12/15 passed3 failed; original run01/run02 preserved",
     "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "regression hostfix04",
+    "phase": "PnR",
     "targeted_exit_code": 0,
     "targeted_evidence": "project/evidence/full32-fix02-20261010/targeted.log",
     "targeted_pid": 9160,
@@ -31,14 +31,14 @@
     "hardware_report": "project/evidence/full32-fix02-20261010/hardware-run02/report.json",
     "download_exit_code": 0,
     "board_identity": "COM6: PROTO=0x11 TEST_ID=0xd3 REVISION=2 SCOPE=32",
-    "pnr_exit_code": 0,
+    "pnr_exit_code": null,
     "pnr_failed_attempt": "project/evidence/full32-fix02-20261010/pnr-attempt01/record.json",
     "download_log": "sim_build/sram-20261010-full32-fix02.log",
-    "pnr_session": 61900,
-    "pnr_pid": 1880,
-    "pnr_created_local": "2026-10-10 04:48:06",
-    "pnr_log": "sim_build/pnr-20261010-full32-fix02-attempt04.log",
-    "regression_exit_code": null,
+    "pnr_session": 74890,
+    "pnr_pid": 21076,
+    "pnr_created_local": "2026-10-10 06:02:40",
+    "pnr_log": "sim_build/pnr-20261010-full32-hostfix04.log",
+    "regression_exit_code": 0,
     "regression_evidence": "project/evidence/full32-hostfix04-20261010",
     "regression_pid": 16368,
     "regression_created_local": "2026-10-10 05:10:34",
@@ -55,8 +55,8 @@
   },
   "acceptance": {
     "targeted_digital": "04 three host transport tests passed (configuration order, raw failure evidence, complete cleanup); RTL unchanged02 whose complete stream/MIDI127 targeted passed",
-    "full_regression": "04 full regression running; source03 run deliberately aborted for undefined log directory variable, immutable03 retained; preserved02 passed56/56 T60 KNOWN-FAIL2INFO",
-    "pnr": "pending04 fresh build binding; preserved02 place0/route2 setup+11.111ns hold+0.214ns TNS0; earlier3 failures retained",
+    "full_regression": "04 full56/56 passed exit0 at2026-10-10 05:57:41; enhanced41 includes3 host tests PASS; T60 KNOWN-FAIL2INFO retained",
+    "pnr": "04 fresh place0/route2 full32 build running; preserved02 timing and earlier3 failures retained",
     "hardware": "02 run02 failed12/15. Randomized60-stream comparison: timeout configured before request30/30 exact vs after26/30; no delays/retries. Host reconfiguration order fixed04; isolated two-finger spectra match. Board remains02, no complete04 acceptance"
   },
   "versions": [
@@ -98,7 +98,7 @@
     },
     {
       "id": "integration-20261010-04",
-      "status": "current226-input host repair; unit3/3 passed; full56 required regression running; new PnR/binding/hardware pending"
+      "status": "current226-input host repair; unit3/3 and full56/56 passed exit0; new PnR running; binding/hardware pending"
     }
   ],
   "supporting_implementation": [
