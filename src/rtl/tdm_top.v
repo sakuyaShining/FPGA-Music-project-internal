@@ -43,7 +43,8 @@ module tdm_top #(
     //   （丢音；丢 note-off 会挂音）。4 足够：最大突发（8 键同时按放）那一路上游
     //   pad_scan 自带 8 位待发位图且受 note_busy 反压，不会同时压进本队列。
     parameter integer EVQ_DEPTH = 4,
-    parameter integer FINGER_EXPR = 0
+    parameter integer FINGER_EXPR = 0,
+    parameter integer BOARD_DIAG = 0
 )(
     input  wire       clk,
     input  wire       rst_n,
@@ -384,6 +385,13 @@ module tdm_top #(
     wire [15:0] uartq_ovf, seqq_ovf, padq_ovf, pinq_ovf;
     wire [7:0] ev_drop_status;
     //---- 串口发送：回读两个字节 ----
+    wire [7:0] diag_read;
+    wire diag_fvalid;
+    wire [1:0] diag_fcmd;
+    wire [4:0] diag_fid, diag_fgroup;
+    wire signed [11:0] diag_fpos;
+    reg [12:0] diag_stream_count;
+    reg [1:0] diag_stream_byte;
     reg  [2:0]  rb_st;
     reg  [7:0]  rb_addr, tx_data;
     reg         tx_start;
@@ -398,12 +406,14 @@ module tdm_top #(
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             rb_st <= 3'd0; tx_start <= 1'b0; rb_addr <= 8'd0; tx_data <= 8'd0;
+            diag_stream_count <= 0; diag_stream_byte <= 0;
         end
         else begin
             tx_start <= 1'b0;
             case (rb_st)
                 3'd0: if (wr_en && wr_addr == 8'h0F) begin
                           rb_addr <= wr_data;
+                          diag_stream_count <= 0; diag_stream_byte <= 0;
                           rb_st   <= 3'd1;
                       end
                 3'd1: begin tx_data <= rb_addr; tx_start <= 1'b1; rb_st <= 3'd2; end
@@ -420,12 +430,19 @@ module tdm_top #(
                               8'h7A: tx_data<=pinq_ovf[7:0];
                               8'h7B: tx_data<=pinq_ovf[15:8];
                               8'h7C: tx_data<=ev_drop_status;
-                              default: tx_data<=R[{rb_addr, 3'b000} +: 8];
+                              default: tx_data <= (BOARD_DIAG && rb_addr[7]) ? diag_read : R[{rb_addr, 3'b000} +: 8];
                           endcase
                           tx_start <= 1'b1;
                           rb_st    <= 3'd4;
                       end
-                3'd4: if (tx_done) rb_st <= 3'd0;
+                3'd4: if (tx_done) begin
+                    if (BOARD_DIAG && rb_addr==8'hA8 && diag_stream_count<13'd6143) begin
+                        diag_stream_count <= diag_stream_count+1'b1;
+                        diag_stream_byte <= diag_stream_byte==2 ? 0 : diag_stream_byte+1'b1;
+                        rb_st <= 3'd5;
+                    end else rb_st <= 3'd0;
+                end
+                3'd5: rb_st <= 3'd3;
                 default: rb_st <= 3'd0;
             endcase
         end
@@ -488,7 +505,9 @@ module tdm_top #(
     wire        nm_ev_ack;                 // note_map 的事件接收确认（单拍，阶段 2）
     wire        pd_ev_valid, pd_ev_on;
     wire [6:0]  pd_ev_note;
-    wire [15:0] pad_state;                 // 位图：bit0-7 左手音高，bit8-15 右手泛音
+    wire [15:0] pad_state_raw;
+    // Controlled UART input test: avoid floating electrodes injecting events.
+    wire [15:0] pad_state = BOARD_DIAG ? 16'd0 : pad_state_raw;
     wire [15:0] pad_harm_state = pad_state[15:8];
 
     pad_scan #(.NCH(16)) u_pad (
@@ -496,7 +515,7 @@ module tdm_top #(
         .pad(pad),
         .note_busy(nm_busy),
         .oct_up(1'b0),                     // v1 固定不升八度（S2 留 v2）
-        .state(pad_state),
+        .state(pad_state_raw),
         .ev_note(pd_ev_note), .ev_on(pd_ev_on), .ev_valid(pd_ev_valid),
         .dbg_raw0(), .dbg_base0(), .dbg_phase(),
         .dbg_sel(r_pad_sel),                   // (本次)遥测：主机选通道
@@ -930,8 +949,11 @@ module tdm_top #(
     generate if(FINGER_EXPR) begin: contact_expression
         finger_pitch #(.NG(NG), .NF(32)) u_finger (
             .clk(clk), .rst_n(rst_n),
-            .cmd_valid(finger_valid && !test_mode_eff), .cmd(finger_cmd),
-            .finger(finger_id), .group(finger_group), .position(finger_position),
+            .cmd_valid((BOARD_DIAG ? diag_fvalid : finger_valid) && !test_mode_eff),
+            .cmd(BOARD_DIAG ? diag_fcmd : finger_cmd),
+            .finger(BOARD_DIAG ? diag_fid : finger_id),
+            .group(BOARD_DIAG ? diag_fgroup : finger_group),
+            .position(BOARD_DIAG ? diag_fpos : finger_position),
             .voice_valid(voice_valid), .voice_on(voice_on), .voice_group(voice_group),
             .voice_active(nm_active),
             .expr_active(finger_active), .expr_offsets(finger_offsets)
@@ -1080,4 +1102,23 @@ module tdm_top #(
 
     assign led = test_mode_eff ? 6'b000000 : led_ind_o;   // 共阳极：低电平点亮
 
+    generate if (BOARD_DIAG) begin: board_observer
+        board_diag #(.FINGER_SCOPE(32)) u_diag (
+            .clk(clk), .rst_n(rst_n), .sample_en(sample_en),
+            .wr_en(wr_en), .wr_addr(wr_addr), .wr_data(wr_data),
+            .rd_addr(rb_addr==8'hA8 ? 8'hA0+{6'd0,diag_stream_byte} : rb_addr),
+            .stream_start(wr_en && wr_addr==8'h0F && wr_data==8'hA8),
+            .stream_next(rb_st==3'd4 && tx_done && rb_addr==8'hA8 && diag_stream_byte==2),
+            .ev_ack(nm_ev_ack), .ev_on(ev_on_r), .ev_note(ev_note_r),
+            .active(nm_active), .finger_active(finger_active),
+            .dry_sample(sample), .audio_sample(audio), .queue_level(ev_q_level), .note_busy(nm_busy),
+            .voice_valid(voice_valid), .voice_group(voice_group), .voice_note(voice_note),
+            .rd_data(diag_read), .finger_valid(diag_fvalid), .finger_cmd(diag_fcmd),
+            .finger_id(diag_fid), .finger_group(diag_fgroup), .finger_position(diag_fpos)
+        );
+    end else begin: no_board_observer
+        assign diag_read=0;
+        assign diag_fvalid=0; assign diag_fcmd=0; assign diag_fid=0;
+        assign diag_fgroup=0; assign diag_fpos=0;
+    end endgenerate
 endmodule

@@ -60,15 +60,26 @@ def peak(x):
     return float(k*FS/16384)
 
 def main():
+    global OUT
     parser=argparse.ArgumentParser();parser.add_argument('--ports',nargs='+',default=['COM6','COM5'])
+    parser.add_argument('--out',type=Path,default=OUT)
+    parser.add_argument('--identity',type=lambda value:int(value,0),default=0xd2)
+    parser.add_argument('--proto',type=lambda value:int(value,0),default=0x10)
+    parser.add_argument('--scope',type=int,default=2)
+    parser.add_argument('--revision',type=int,default=1)
     args=parser.parse_args();OUT.mkdir(parents=True,exist_ok=True)
+    OUT=args.out
+    if (OUT/'report.json').exists():raise SystemExit('Refusing to overwrite earlier hardware evidence')
+    OUT.mkdir(parents=True,exist_ok=True)
     board=None;probes=[]
     for port in args.ports:
         candidate=None
         try:
             candidate=Board(port)
             identity=candidate.read(0xa4)
-            if identity!=0xd2:raise RuntimeError('Not diagnostic device: %02x'%identity)
+            if identity!=args.identity:raise RuntimeError('Wrong test identity: %02x'%identity)
+            if candidate.read(0x7f)!=args.proto:raise RuntimeError('Wrong protocol version')
+            if candidate.read(0xa9)!=args.scope:raise RuntimeError('Wrong finger scope')
             board=candidate;probes.append(dict(port=port,identity=identity,connected=True));break
         except Exception as error:
             probes.append(dict(port=port,error=str(error)))
@@ -87,7 +98,7 @@ def main():
         print(name,row['status'],row.get('error',''),flush=True)
     def defaults():
         got={hex(a):board.read(a) for a in [0,0x37,0x40,0x5c,0x7f,0xa4,0xa5]}
-        assert list(got.values())==[2,0,1,0x70,0x10,0xd2,1],got
+        assert list(got.values())==[2,0,1,0x70,args.proto,args.identity,args.revision],got
         assert board.snapshot()['active']==0
         assert board.word(0x90)==512 and board.word(0x92)==512
         return got
@@ -229,6 +240,26 @@ def main():
         finally:
             board.note(60,False);board.note(67,False)
     case('two_fingers_independent_opposite_pitch',two_fingers)
+    if args.scope==32:
+        def full_scope():
+            try:
+                for n in range(40,72):board.note(n,True,15)
+                assert board.snapshot()['active']==0xffffffff
+                for fid in range(32):board.finger(fid,fid,0,0)
+                assert board.snapshot()['fingers']==0xffffffff
+                board.finger(31,31,16,1)
+                board.note(71,False);board.note(84,True,15)
+                assert not (board.snapshot()['fingers']&(1<<31))
+                baseline=board.capture('group31_reused_before_old_move',2048)
+                board.finger(31,31,-32,1)
+                unchanged=board.capture('group31_reused_after_old_move',2048)
+                assert not (board.snapshot()['fingers']&(1<<31))
+                return dict(groups=32,contacts=32,group31_reuse_clears_expression=True,
+                            stale_move_did_not_enable=True,
+                            note='samples archived; sample-by-sample equality not expected across different oscillator phases')
+            finally:
+                for n in list(range(40,72))+[84]:board.note(n,False)
+        case('full32_contacts_group31_reuse',full_scope)
     def sequence():
         board.write(0x50,1);time.sleep(.8);a=board.snapshot()
         time.sleep(.4);b=board.snapshot();assert b['ack']!=a['ack'],(a,b)

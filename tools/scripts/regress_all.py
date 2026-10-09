@@ -990,6 +990,13 @@ def main():
     results.append(('40 protocol join', not err and 'RESULT protocol_join=PASS' in (log or ''),
                     (err or 'Spectrum draft/commit, original velocity, sequence stop, active reset')[:160]))
 
+    board_sources = [os.path.join(RTL, name) for name in os.listdir(RTL) if name.endswith('.v')]
+    log, err = compile_and_run('41_board_test', board_sources + [sim('tb_board_test.v')],
+                               defines=('SIM_INIT',), need_hex=True)
+    results.append(('41 board test', not err and 'RESULT board_test=PASS' in (log or '')
+                    and 'FAIL' not in (log or ''),
+                    (err or 'UART endpoint, two independent contacts, full group31 and stale-owner isolation')[:160]))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)

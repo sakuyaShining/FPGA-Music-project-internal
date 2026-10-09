@@ -23,12 +23,14 @@ def files(root):
 
 
 def required(root):
-    project = root/'src/gowin/tdm_synth/tdm_synth.gprj'
-    dependencies = {project.relative_to(root).as_posix()}
-    for f in ET.parse(project).findall('.//File'):
-        if f.attrib.get('enable', '1') == '1':
-            dependencies.add((project.parent/f.attrib['path']).resolve().relative_to(root).as_posix())
-    dependencies.update(p.relative_to(root).as_posix() for p in project.parent.glob('*.hex'))
+    project_dir = root/'src/gowin/tdm_synth'
+    dependencies = set()
+    for project in project_dir.glob('*.gprj'):
+        dependencies.add(project.relative_to(root).as_posix())
+        for f in ET.parse(project).findall('.//File'):
+            if f.attrib.get('enable', '1') == '1':
+                dependencies.add((project.parent/f.attrib['path']).resolve().relative_to(root).as_posix())
+    dependencies.update(p.relative_to(root).as_posix() for p in project_dir.glob('*.hex'))
     return dependencies
 
 

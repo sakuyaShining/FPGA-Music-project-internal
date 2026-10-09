@@ -1,7 +1,20 @@
 {
   "schema": 1,
   "product_branch": "codex/project-version-closure",
-  "source_manifest": "project/versions/integration-20261009-06.json",
+  "source_manifest": "project/versions/integration-20261010-01.json",
+  "active_test_run": {
+    "id": "board-test-20261010",
+    "baseline": "integration-20261009-06",
+    "baseline_regression": "55/55 passed; exit 0 on 2026-10-10; T60 known failure and two INFO retained",
+    "baseline_evidence": "project/evidence/baseline-20261010",
+    "working_tree": "Changed intentionally: opt-in full32 UART observer and separate tdm_board_test wrapper; captured as integration-20261010-01",
+    "hardware": "Not yet programmed in this run",
+    "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance"
+    ,"regression_pid": 10656,
+    "regression_created_local": "2026-10-10 02:31:00",
+    "regression_log": "sim_build/regress-20261010-full32.log",
+    "regression_session": 79257
+  },
   "design_register": {
     "document": "project/design.md",
     "reviewed_on": "2026-10-10",
@@ -10,10 +23,10 @@
     "change": "Documentation consolidation only; no new musical semantics approved; implementation and hardware acceptance unchanged"
   },
   "acceptance": {
-    "targeted_digital": "passed",
-    "full_regression": "complete: 55/55 required gates passed; 1 known failure (T60) and 2 informational audits (gatecov/deadparam)",
-    "pnr": "complete: setup +12.037ns, hold +0.208ns, setup/hold TNS=0; PR1014 review remains open",
-    "hardware": "not tested for this product candidate"
+    "targeted_digital": "UART two-contact and full32 group31/reuse passed before identity marker revision; new full regression includes final marker",
+    "full_regression": "pending for integration-20261010-01; unchanged prior integration-20261009-06 rerun passed 55/55 with exit0",
+    "pnr": "pending for tdm_board_test full32; previous product timing only applies to integration-20261009-06",
+    "hardware": "not yet programmed in this run"
   },
   "versions": [
     {
@@ -38,7 +51,11 @@
     },
     {
       "id": "integration-20261009-06",
-      "status": "current product candidate"
+      "status": "verified baseline; preserved source and product build; superseded working source identity"
+    },
+    {
+      "id": "integration-20261010-01",
+      "status": "current working source; full32 board-test configuration under validation"
     }
   ],
   "supporting_implementation": [
@@ -225,6 +242,7 @@
   "board_observation": "project/board-observation.json",
   "authority_rule": "This state does not promote experiments or historical PASS counts into product acceptance. Each changed source requires a new identity and appropriate evidence.",
   "promotion": "Deferred by user: keep integration branch; do not interrupt or edit the active main board test.",
-  "build_record": "project/versions/product-build-20261009-06.json",
+  "build_record": null,
+  "previous_verified_build_record": "project/versions/product-build-20261009-06.json",
   "source_commit": "7eb8d17deac5a2208b138c6cf65a33348dbf2c57"
 }
