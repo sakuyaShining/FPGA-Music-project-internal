@@ -10,7 +10,9 @@
     "working_tree": "Forward fix after hardware run01: occupancy-based MIDI127 allocation, complete stream test, raw transport evidence and host RX buffer; integration-20261010-02",
     "hardware": "SRAM downloaded; COM6 D3/revision2/proto11/scope32 confirmed; run01 exposed failures",
     "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "targeted fixes",
+    "phase": "regression fix02",
+    "targeted_exit_code": 0,
+    "targeted_evidence": "project/evidence/full32-fix02-20261010/targeted.log",
     "targeted_pid": 9160,
     "targeted_created_local": "2026-10-10 03:19:24",
     "targeted_session": 20680,
@@ -28,12 +30,12 @@
     "pnr_pid": 22792,
     "pnr_created_local": "2026-10-10 03:08:40",
     "pnr_log": "sim_build/pnr-20261010-full32.log",
-    "regression_exit_code": 0,
-    "regression_evidence": "project/evidence/full32-20261010",
-    "regression_pid": 10656,
-    "regression_created_local": "2026-10-10 02:31:00",
-    "regression_log": "sim_build/regress-20261010-full32.log",
-    "regression_session": 79257
+    "regression_exit_code": null,
+    "regression_evidence": "project/evidence/full32-fix02-20261010",
+    "regression_pid": 30208,
+    "regression_created_local": "2026-10-10 03:37:38",
+    "regression_log": "sim_build/regress-20261010-full32-fix02.log",
+    "regression_session": 36197
   },
   "design_register": {
     "document": "project/design.md",
@@ -43,8 +45,8 @@
     "change": "Documentation consolidation only; no new musical semantics approved; implementation and hardware acceptance unchanged"
   },
   "acceptance": {
-    "targeted_digital": "running complete6144-byte UART stream and MIDI127 boundary tests for integration-20261010-02",
-    "full_regression": "pending for integration-20261010-02; previous01 passed56/56 with T60 KNOWN-FAIL and 2 INFO",
+    "targeted_digital": "passed exit0: complete6144-byte UART stream, MIDI127 independent on/off, full32 group31/reuse for02",
+    "full_regression": "running for integration-20261010-02; previous01 passed56/56 with T60 KNOWN-FAIL and 2 INFO",
     "pnr": "pending for02; preserved01 timing setup+10.527ns hold+0.211ns TNS0; PR1014 review open",
     "hardware": "run01 failed: sample stream short reads, MIDI127 ownership boundary, and sample/timbre/pitch assertions; preserve raw evidence and diagnose"
   },

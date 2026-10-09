@@ -23,7 +23,7 @@
 4. 01配置PnR完成退出0，setup+10.527ns、hold+0.211ns、TNS0、违例端点0；Logic87%、CLS95%、BSRAM34/46，PR1014保留。记录`versions/board-build-20261010-01.json`。
 5. 01已SRAM下载成功，COM6回读D3/revision2/proto11/scope32；run01退出1。15项中基本串口、32声部、5000事件、full32绑定等通过，但样本短读、MIDI127冲突、部分音色/频谱判据失败。完整报告在`evidence/full32-20261010/hardware-run01/`，不得改写为通过。
 6. 追加索引读与原始流诊断表明芯片能输出非零样本，三次同捕获流6145字节完整；不能据此抹掉run01的短读与频谱失败。
-7. 02向前修复：分配以活动位区分MIDI127与FREE；补完整6144数据字节串口测试；主机保存原始字节并扩大Windows RX缓冲，隔离释放尾音。当前专项验证中，全回归、新PnR和新板测尚未签收。
+7. 02向前修复：分配以活动位区分MIDI127与FREE；补完整6144数据字节串口测试；主机保存原始字节并扩大Windows RX缓冲，隔离释放尾音。专项退出0、RESULT board_test=PASS，证据`evidence/full32-fix02-20261010/targeted.log`；02全回归已启动，新PnR和新板测尚未签收。
 
 Gowin构建生成了`.gprj.user`状态文件（仅FlowState/ResultFileList/UI，无输入选项）。原文移入证据`generated-project-status.xml`，
 它不是源码修改；不覆盖源清单，归档后01身份检查通过，码流绑定后再下载。源码修复则必须生成02新清单。
