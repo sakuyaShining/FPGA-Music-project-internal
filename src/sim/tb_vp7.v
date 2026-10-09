@@ -156,8 +156,8 @@ module tb_vp7;
                               $display("       SPEC_MODE(0x5A) = 0x%02X  期望 0x02（叠加+自动刷新）", regval(8'h5A)); end
                     8:  begin if (regval(8'h5B) !== 8'h00) bad = bad + 1;
                               $display("       HARM_PADS(0x5B) = 0x%02X  期望 0x00（★ A1 的现行犯）", regval(8'h5B)); end
-                    9:  begin if (regval(8'h7F) !== 8'h10) bad = bad + 1;
-                              $display("       PROTO_VER(0x7F) = 0x%02X  期望 0x10（v1.0）", regval(8'h7F)); end
+                    9:  begin if (regval(8'h7F) !== 8'h11) bad = bad + 1;
+                              $display("       PROTO_VER(0x7F) = 0x%02X  期望 0x11（v1.1）", regval(8'h7F)); end
                     10: begin if (regval(8'h33) !== 8'h00 || regval(8'h34) !== 8'h00) bad = bad + 1;
                               $display("       VIB_DEPTH(0x33) = 0x%02X%02X 期望 0x0000（颤音关）",
                                        regval(8'h34), regval(8'h33)); end
