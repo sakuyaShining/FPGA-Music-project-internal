@@ -1,0 +1,10 @@
+{
+  "source_manifest": "project/versions/integration-20261010-02.json",
+  "source_manifest_sha256": "fbebb707e2f75bc2130f6ec3999436ee8dcde9183b42976d1925c3014896590c",
+  "configuration": "tdm_board_test GW2AR-LV18QN88C8/I7 BOARD_DIAG1 FINGER_EXPR1 full32 SSPI_GPIO place2 route1",
+  "exit_code": 1,
+  "completed_local": "2026-10-10 04:45:24",
+  "failure": "PR0004 189 unrouted nets; route1 worse than route2",
+  "bitstream": "No new fs or timing; stale01 artifacts excluded",
+  "next_attempt": "Same02 source; remaining placement0 with route2. If unsuccessful, inspect tool routing diagnostics and congestion before further configuration attempts."
+}
