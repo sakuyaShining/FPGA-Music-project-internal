@@ -31,6 +31,8 @@ Gowin构建生成了`.gprj.user`状态文件（仅FlowState/ResultFileList/UI，
 
 02 PnR第一轮place2/route2于04:31:04失败退出1，PR0004有1条未布通网络；报告未给网络名。Logic86%、CLS95%、BSRAM34/46，尚未获得02新码流或有效时序。旧.fs和时序文件仍为01，不能绑定给02。失败报告/日志/布局数据库及生成状态归档`evidence/full32-fix02-20261010/pnr-attempt01/`；下一轮保持完整32组和同一02源，换place1/route2，不修改源码或降低判据。
 
+02 PnR第二轮place1/route2于04:36:29同样失败退出1，配置由cmd.do核对确实生效；证据`pnr-attempt02/`保留。04:37:47启动第三轮place2/route1，源码与32组功能保持同一02指纹。
+
 ## 可见界面
 
 上位机“FPGA乐器工作台”已打开；本地草稿不代表板上参数，测试期间不同时连接串口。

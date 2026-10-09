@@ -1,0 +1,11 @@
+{
+  "source_manifest": "project/versions/integration-20261010-02.json",
+  "source_manifest_sha256": "fbebb707e2f75bc2130f6ec3999436ee8dcde9183b42976d1925c3014896590c",
+  "configuration": "tdm_board_test GW2AR-LV18QN88C8/I7 BOARD_DIAG1 FINGER_EXPR1 full32 SSPI_GPIO place1 route2",
+  "configuration_verified": "cmd.do contains -place_option1 -route_option2",
+  "exit_code": 1,
+  "completed_local": "2026-10-10 04:36:29",
+  "failure": "PR0004 one unrouted net; report does not identify network name",
+  "bitstream": "No new fs or timing; stale01 artifacts excluded",
+  "next_attempt": "Same02 source; place2 route1"
+}

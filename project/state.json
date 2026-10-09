@@ -27,10 +27,10 @@
     "pnr_exit_code": null,
     "pnr_failed_attempt": "project/evidence/full32-fix02-20261010/pnr-attempt01/record.json",
     "download_log": "sim_build/sram-20261010-full32.log",
-    "pnr_session": 95387,
-    "pnr_pid": 29004,
-    "pnr_created_local": "2026-10-10 04:33:10",
-    "pnr_log": "sim_build/pnr-20261010-full32-fix02-attempt02.log",
+    "pnr_session": 80556,
+    "pnr_pid": 27464,
+    "pnr_created_local": "2026-10-10 04:37:47",
+    "pnr_log": "sim_build/pnr-20261010-full32-fix02-attempt03.log",
     "regression_exit_code": 0,
     "regression_evidence": "project/evidence/full32-fix02-20261010",
     "regression_pid": 30208,
@@ -48,7 +48,7 @@
   "acceptance": {
     "targeted_digital": "passed exit0: complete6144-byte UART stream, MIDI127 independent on/off, full32 group31/reuse for02",
     "full_regression": "integration-20261010-02 passed56/56 exit0 at2026-10-10 04:24:37; T60 KNOWN-FAIL and2 INFO retained",
-    "pnr": "02 attempt01 place2/route2 failed exit1 PR0004 one unrouted net; preserved failure. Attempt02 place1/route2 running; no accepted02 bitstream.",
+    "pnr": "02 attempts01 place2/route2 and02 place1/route2 failed exit1 PR0004 one unrouted net; preserved both failures. Attempt03 place2/route1 running; no accepted02 bitstream.",
     "hardware": "run01 failed: sample stream short reads, MIDI127 ownership boundary, and sample/timbre/pitch assertions; preserve raw evidence and diagnose"
   },
   "versions": [
