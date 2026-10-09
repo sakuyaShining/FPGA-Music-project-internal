@@ -11,7 +11,7 @@
 | 逐指音高 | 单元与顶层通过 | 组0/31、绑定、位置连续、释放/重用、16泛音一致；真实多指输入未验 |
 | I²C | basic/contract通过 | 模型下读写、顺序、NACK、拉伸、超时、复位；产品顶层未接器件 |
 | 版本检查自身 | 7项通过 | 空清单、漏约束、数据/GUI漂移、新增源码、码流替换、旧输出绑定新快照被拒绝 |
-| 全量回归 | 正在运行，结果未签收 | 原始日志sim_build/closure-full.log；完成后写入本页及state，不复用历史52/52 |
+| 全量回归 | 55/55通过；1项已知失败、2项信息审计不计入通过数 | 原始结果已归档为[evidence/integration-06-regress_result.txt](evidence/integration-06-regress_result.txt)；KNOWN-FAIL为T60，INFO为gatecov/deadparam审计 |
 | 产品PnR | 已完成快照后的新构建，身份核对通过 | 最终本版报告setup +12.037ns、hold最差+0.208ns、setup/hold TNS=0、违例端点0；PR1014时钟布线告警保留 |
 | 产品板级 | 未执行 | 本聊天未下载候选，不把另一个聊天的diagnostic_v4结果套到产品 |
 

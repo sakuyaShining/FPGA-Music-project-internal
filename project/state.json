@@ -4,7 +4,7 @@
   "source_manifest": "project/versions/integration-20261009-06.json",
   "acceptance": {
     "targeted_digital": "passed",
-    "full_regression": "running",
+    "full_regression": "complete: 55/55 required gates passed; 1 known failure (T60) and 2 informational audits (gatecov/deadparam)",
     "pnr": "complete: setup +12.037ns, hold +0.208ns, setup/hold TNS=0; PR1014 review remains open",
     "hardware": "not tested for this product candidate"
   },

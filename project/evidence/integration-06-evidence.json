@@ -2,6 +2,7 @@
   "source_manifest": "project/versions/integration-20261009-06.json",
   "source_tree_sha256": "001c41cdf1de844a70f9a5220a4bedd82030ec2515b4858dded3c0c22b73e9e7",
   "files": {
+    "project/evidence/integration-06-regress_result.txt": "050db08455d507656a420baeafd79b0d079d1db07a8be8202b3cb707fc1986c2",
     "sim_build/closure/results.json": "6ab71aeb3dd1ddd884626a22211b4646698e00d49dc250b1afb8fea3a4cfe3b9",
     "sim_build/gui/selftest_report.txt": "aa198aa942e69ee522fe9ac58102a5de1bc390096d7e12489eed9eca42ae8d6c",
     "sim_build/closure-pnr-bound.log": "8f6242f38c2a7c9f3a75b40c44c12f6275264cfc5fbaff8f2ab0f317eb99badd",
@@ -21,5 +22,5 @@
     "sim_build/closure/padfast.txt": "c1c9cfdce13679dfcc24eeb6593d9669bb58bbea8b7f9496a2d5b53e27195ddc",
     "sim_build/closure/protocol_join.txt": "038ab93fd7c4f60e889899475b38ae2f13035407afd8e3841d210ad4c21a35a2"
   },
-  "scope": "Joined digital tests plus product default-configuration PnR; full regression recorded separately; no physical product board test"
+  "scope": "Joined digital tests, full regression (55/55 required gates; 1 known failure and 2 informational audits), plus product default-configuration PnR; no physical product board test"
 }
