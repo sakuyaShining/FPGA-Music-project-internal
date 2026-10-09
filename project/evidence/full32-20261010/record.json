@@ -1,0 +1,15 @@
+{
+  "source_manifest": "project/versions/integration-20261010-01.json",
+  "configuration": "default product regressions plus opt-in tdm_board_test full32 UART endpoint",
+  "exit_code": 0,
+  "completed_local": "2026-10-10 03:04:19",
+  "required_pass": 56,
+  "required_total": 56,
+  "known_fail": ["T60"],
+  "info": ["deadparam", "gatecov"],
+  "files": {
+    "regress_result.txt": "b627c5ff2df0602ad646effc463deba3b1e5cac0750ae4e05ab795972c5014e5",
+    "regress.log": "60e0b467def242f4cfed37ab9678b51db4f4426c66575835eaafc268db49c733"
+  },
+  "hardware": "not programmed yet; this record covers digital regression only"
+}

@@ -9,8 +9,15 @@
     "baseline_evidence": "project/evidence/baseline-20261010",
     "working_tree": "Changed intentionally: opt-in full32 UART observer and separate tdm_board_test wrapper; captured as integration-20261010-01",
     "hardware": "Not yet programmed in this run",
-    "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance"
-    ,"regression_pid": 10656,
+    "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
+    "phase": "PnR",
+    "pnr_session": 27516,
+    "pnr_pid": 22792,
+    "pnr_created_local": "2026-10-10 03:08:40",
+    "pnr_log": "sim_build/pnr-20261010-full32.log",
+    "regression_exit_code": 0,
+    "regression_evidence": "project/evidence/full32-20261010",
+    "regression_pid": 10656,
     "regression_created_local": "2026-10-10 02:31:00",
     "regression_log": "sim_build/regress-20261010-full32.log",
     "regression_session": 79257
@@ -23,9 +30,9 @@
     "change": "Documentation consolidation only; no new musical semantics approved; implementation and hardware acceptance unchanged"
   },
   "acceptance": {
-    "targeted_digital": "UART two-contact and full32 group31/reuse passed before identity marker revision; new full regression includes final marker",
-    "full_regression": "pending for integration-20261010-01; unchanged prior integration-20261009-06 rerun passed 55/55 with exit0",
-    "pnr": "pending for tdm_board_test full32; previous product timing only applies to integration-20261009-06",
+    "targeted_digital": "passed, including final D3/revision2/proto11/scope32 identity and UART group31/reuse",
+    "full_regression": "56/56 required gates passed, exit0 on 2026-10-10 03:04:19; T60 KNOWN-FAIL and 2 INFO retained",
+    "pnr": "running for tdm_board_test full32; previous product timing only applies to integration-20261009-06",
     "hardware": "not yet programmed in this run"
   },
   "versions": [
