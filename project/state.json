@@ -1,0 +1,223 @@
+{
+  "schema": 1,
+  "product_branch": "codex/project-version-closure",
+  "source_manifest": "project/versions/integration-20261009-06.json",
+  "acceptance": {
+    "targeted_digital": "passed",
+    "full_regression": "running",
+    "pnr": "complete: setup +12.037ns, hold +0.208ns, setup/hold TNS=0; PR1014 review remains open",
+    "hardware": "not tested for this product candidate"
+  },
+  "versions": [
+    {
+      "id": "integration-20261009-01",
+      "status": "superseded identity snapshot; do not select for download"
+    },
+    {
+      "id": "integration-20261009-02",
+      "status": "superseded identity snapshot; do not select for download"
+    },
+    {
+      "id": "integration-20261009-03",
+      "status": "superseded identity snapshot; do not select for download"
+    },
+    {
+      "id": "integration-20261009-04",
+      "status": "superseded identity snapshot; do not select for download"
+    },
+    {
+      "id": "integration-20261009-05",
+      "status": "superseded identity snapshot; do not select for download"
+    },
+    {
+      "id": "integration-20261009-06",
+      "status": "current product candidate"
+    }
+  ],
+  "supporting_implementation": [
+    {
+      "id": "B-01",
+      "behavior": "four 4-slot source queues, round robin, shared FIFO, observable rejected events",
+      "code": [
+        "src/rtl/event_hold.v",
+        "src/rtl/tdm_top.v"
+      ],
+      "origin": "a61b/7ca52c9",
+      "evidence": "project/evidence/integration-06-evidence.zip",
+      "status": "joined digital verified"
+    },
+    {
+      "id": "B-02",
+      "behavior": "contact binding and independently modulated group pitch",
+      "code": [
+        "src/rtl/finger_pitch.v",
+        "src/rtl/tdm_engine.v",
+        "src/gowin/tdm_synth/finger_ratio.hex"
+      ],
+      "origin": "a61b/6b50ca9",
+      "status": "joined digital verified; default FINGER_EXPR=0; physical input unverified",
+      "evidence": "project/evidence/integration-06-evidence.zip"
+    },
+    {
+      "id": "B-03",
+      "behavior": "configuration file and GUI draft save/load without device side effects",
+      "code": [
+        "tools/host/instrument_config.py",
+        "tools/host/config_editor.py",
+        "tools/host/dsp_gui.py"
+      ],
+      "origin": "6e70/6246926 plus captured working tree",
+      "status": "30 unit/UI tests passed; full configuration device application unavailable",
+      "evidence": "project/evidence/integration-06-evidence.zip",
+      "evidence_scope": "30 host/UI unit tests, GUI selftest; no full configuration device application"
+    },
+    {
+      "id": "B-04",
+      "behavior": "protocol v1.1 staged spectrum publish, refresh original velocity, redownload score and stop off",
+      "code": [
+        "src/rtl/note_map.v",
+        "src/rtl/tdm_top.v",
+        "src/rtl/song_seq.v",
+        "tools/scripts/dsp_host.py"
+      ],
+      "origin": "6e70 captured working tree, adapted to newest a61b event queues",
+      "status": "joined digital verified; not full right hand implementation",
+      "evidence": "project/evidence/integration-06-evidence.zip"
+    },
+    {
+      "id": "B-05",
+      "behavior": "I2C master latching, byte ordering, NACK, stretch/timeouts",
+      "code": [
+        "src/rtl/i2c_master.v"
+      ],
+      "origin": "6e70 captured working tree",
+      "status": "basic and contract simulations passed; no real controller wiring",
+      "evidence": "project/evidence/integration-06-evidence.zip"
+    },
+    {
+      "id": "B-06",
+      "behavior": "reset active voices and note identities",
+      "code": [
+        "src/rtl/note_map.v"
+      ],
+      "origin": "main diagnostic experiment plus joined test",
+      "status": "joined active-note reset passed; board reset synchronization still open",
+      "evidence": "project/evidence/integration-06-evidence.zip"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "N-01",
+      "status": "digital interface verified",
+      "code": [
+        "src/rtl/finger_pitch.v"
+      ],
+      "remaining": "real contacts/position input and board validation"
+    },
+    {
+      "id": "N-02",
+      "status": "partial",
+      "code": [
+        "src/rtl/finger_pitch.v",
+        "src/rtl/note_map.v"
+      ],
+      "remaining": "same-note multi-owner event identity"
+    },
+    {
+      "id": "N-03",
+      "status": "discussion",
+      "code": [],
+      "remaining": "automatic expression semantics; existing LFO discontinuity"
+    },
+    {
+      "id": "N-04",
+      "status": "pending",
+      "code": [
+        "src/rtl/note_map.v"
+      ],
+      "remaining": "right hand emphasis weights and combinations"
+    },
+    {
+      "id": "N-05",
+      "status": "partial",
+      "code": [
+        "src/rtl/note_map.v",
+        "src/rtl/tdm_top.v"
+      ],
+      "remaining": "gesture integration and envelope/release/commit consistency"
+    },
+    {
+      "id": "N-06",
+      "status": "pending",
+      "code": [],
+      "remaining": "smooth spectrum transition, latch, restore and new-note inheritance rules"
+    },
+    {
+      "id": "N-07",
+      "status": "draft/UI only",
+      "code": [
+        "tools/host/config_editor.py"
+      ],
+      "remaining": "device implementation and three articulation lifecycles"
+    },
+    {
+      "id": "N-08",
+      "status": "local workflow verified",
+      "code": [
+        "tools/host/instrument_config.py",
+        "tools/host/config_editor.py"
+      ],
+      "remaining": "complete device application"
+    },
+    {
+      "id": "N-09",
+      "status": "pending",
+      "code": [],
+      "remaining": "physical config slots, storage and selection rules"
+    },
+    {
+      "id": "N-10",
+      "status": "prototype pending",
+      "code": [
+        "src/rtl/i2c_master.v"
+      ],
+      "remaining": "real full-channel sensing and worst case touch-to-audio <=10ms"
+    },
+    {
+      "id": "N-11",
+      "status": "principle recorded",
+      "code": [],
+      "remaining": "freeze and audition unified action semantics"
+    }
+  ],
+  "known_open_issues": [
+    {
+      "id": "K-01",
+      "issue": "T60 acceptance remains known failure",
+      "gate": "35 t60(kf)"
+    },
+    {
+      "id": "K-02",
+      "issue": "legacy global LFO half-period/wrap discontinuity from additional a61b audit; not covered by existing passing waveform tests",
+      "evidence": "docs/02-技术方案/验收证据/逐指音高-2026-10-08/evidence.json"
+    },
+    {
+      "id": "K-03",
+      "issue": "asynchronous reset release synchronization and physical board reset behavior unverified"
+    },
+    {
+      "id": "K-04",
+      "issue": "PR1014 generic clock routing requires review; positive slack does not settle physical clock/I2S questions"
+    },
+    {
+      "id": "K-05",
+      "issue": "physical touch, DAC/audio, I2S electrical phase and end-to-end latency unverified"
+    }
+  ],
+  "external_sources": "notes/versioning/captures/2026-10-09",
+  "board_observation": "project/board-observation.json",
+  "authority_rule": "This state does not promote experiments or historical PASS counts into product acceptance. Each changed source requires a new identity and appropriate evidence.",
+  "promotion": "Deferred by user: keep integration branch; do not interrupt or edit the active main board test.",
+  "build_record": "project/versions/product-build-20261009-06.json",
+  "source_commit": "7eb8d17deac5a2208b138c6cf65a33348dbf2c57"
+}

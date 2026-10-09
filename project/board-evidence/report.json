@@ -1,0 +1,163 @@
+{
+  "port": "COM6",
+  "probes": [
+    {
+      "port": "COM6",
+      "identity": 210,
+      "connected": true
+    }
+  ],
+  "cases": [
+    {
+      "name": "power_on_defaults_and_frame_period",
+      "status": "PASS",
+      "detail": {
+        "0x0": 2,
+        "0x37": 0,
+        "0x40": 1,
+        "0x5c": 112,
+        "0x7f": 16,
+        "0xa4": 210,
+        "0xa5": 1
+      },
+      "seconds": 0.469
+    },
+    {
+      "name": "internal_power_on_silence",
+      "status": "PASS",
+      "detail": {
+        "samples": 512,
+        "all_zero": true
+      },
+      "seconds": 0.656
+    },
+    {
+      "name": "register_roundtrips_and_alias_protection",
+      "status": "PASS",
+      "detail": {
+        "patterns": 80,
+        "out_of_range_alias": false
+      },
+      "seconds": 1.672
+    },
+    {
+      "name": "notes_across_range_on_off",
+      "status": "PASS",
+      "detail": {
+        "notes": 7,
+        "on": 7,
+        "off": 7
+      },
+      "seconds": 4.344
+    },
+    {
+      "name": "32_voices_steal_and_recovery",
+      "status": "PASS",
+      "detail": {
+        "voices": 32,
+        "steal": true,
+        "recovered": true
+      },
+      "seconds": 0.813
+    },
+    {
+      "name": "midi127_free_sentinel_boundary",
+      "status": "FAIL",
+      "error": "{'ack': 81, 'on': 42, 'off': 39, 'active': 1, 'fingers': 0, 'last_group': 0, 'last_note': 60}",
+      "seconds": 0.266
+    },
+    {
+      "name": "deterministic_random_event_stress",
+      "status": "PASS",
+      "detail": {
+        "events": 306,
+        "random_seed": 2026
+      },
+      "seconds": 6.344
+    },
+    {
+      "name": "5000_event_real_uart_burst",
+      "status": "PASS",
+      "detail": {
+        "events": 5000,
+        "bytes": 20000,
+        "no_lost_ack": true,
+        "active_after": 0
+      },
+      "seconds": 2.375
+    },
+    {
+      "name": "hardware_samples_pitch_finger_release",
+      "status": "PASS",
+      "detail": {
+        "base_peak_hz": 440.95516204833984,
+        "moved_peak_hz": 460.2670669555664,
+        "base_rms": 343900.2200584495,
+        "tail_peak": 0,
+        "note": "internal digital samples, not DAC output"
+      },
+      "seconds": 3.563
+    },
+    {
+      "name": "hardware_velocity_amplitude",
+      "status": "PASS",
+      "detail": {
+        "low_rms": 83985.10563784509,
+        "high_rms": 334284.890699161,
+        "ratio": 3.980287792226419
+      },
+      "seconds": 1.312
+    },
+    {
+      "name": "presets_and_effects_digital_output",
+      "status": "FAIL",
+      "error": "('capture stream', 6144, 'a8f5ffe0ffff2004')",
+      "seconds": 5.11
+    },
+    {
+      "name": "two_fingers_independent_opposite_pitch",
+      "status": "PASS",
+      "detail": {
+        "expected_hz": [
+          273.20871865616647,
+          375.37611551499083
+        ],
+        "observed_hz": [
+          273.58531951904297,
+          376.58214569091797
+        ],
+        "movement_note_on": 0
+      },
+      "seconds": 1.718
+    },
+    {
+      "name": "sequencer_start_and_stop",
+      "status": "PASS",
+      "detail": {
+        "running_events": 2,
+        "stopped": true,
+        "remaining_active": 1,
+        "note": "disable is not an all-notes-off command"
+      },
+      "seconds": 2.469
+    },
+    {
+      "name": "event_drop_diagnostics",
+      "status": "PASS",
+      "detail": {
+        "0x74": 0,
+        "0x75": 0,
+        "0x76": 0,
+        "0x77": 0,
+        "0x78": 0,
+        "0x79": 0,
+        "0x7a": 0,
+        "0x7b": 0,
+        "0x7c": 0
+      },
+      "seconds": 0.156
+    }
+  ],
+  "reads": 1039,
+  "writes": 2055
+}

@@ -1,0 +1,17 @@
+== 工程 : C:\Users\Sakuya\FPGA-Music-project\sim_build\board_diag_20261009\diagnostic_v4\src\gowin\tdm_synth\tdm_synth.gprj
+== 选项 : -use_sspi_as_gpio 1
+== 开始编译 ...
+== 告警（不影响出码流，但值得看一眼）：
+   WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("C:\Users\Sakuya\FPGA-Music-project\sim_build\board_diag_20261009\diagnostic_v4\src\rtl\tdm_top.v":439)
+   WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\Sakuya\FPGA-Music-project\sim_build\board_diag_20261009\diagnostic_v4\src\rtl\pad_pitch.v":56)
+   WARN  (EX3670) : Actual bit length 5 differs from formal bit length 1 for port 'finger'("C:\Users\Sakuya\FPGA-Music-project\sim_build\board_diag_20261009\diagnostic_v4\src\rtl\tdm_top.v":931)
+   WARN  (EX3670) : Actual bit length 5 differs from formal bit length 1 for port 'group'("C:\Users\Sakuya\FPGA-Music-project\sim_build\board_diag_20261009\diagnostic_v4\src\rtl\tdm_top.v":931)
+   WARN  (EX3670) : Actual bit length 5 differs from formal bit length 1 for port 'voice_group'("C:\Users\Sakuya\FPGA-Music-project\sim_build\board_diag_20261009\diagnostic_v4\src\rtl\tdm_top.v":932)
+   WARN  (NL0002) : The module "pad_pitch" instantiated to "u_pitch" is swept in optimizing("C:\Users\Sakuya\FPGA-Music-project\sim_build\board_diag_20261009\diagnostic_v4\src\rtl\tdm_top.v":549)
+   WARN  (NL0002) : The module "strip_ctrl" instantiated to "u_strip" is swept in optimizing("C:\Users\Sakuya\FPGA-Music-project\sim_build\board_diag_20261009\diagnostic_v4\src\rtl\tdm_top.v":554)
+   WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew
+
+== 编译成功
+== 码流文件 : C:\Users\Sakuya\FPGA-Music-project\sim_build\board_diag_20261009\diagnostic_v4\src\gowin\tdm_synth\impl\pnr\tdm_synth.fs
+== 大小     : 7093.9 KB
+== 时间     : 10/09/2026 20:16:53

@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-10-07",
+  "checked_source_commit": "fcbe82e4d79a20094cde3fd7dc63f93b01e12dd8",
+  "rtl_baseline_commit": "5c67de24a87f05e26139219db932f7192869006f",
+  "external_dsh_checked_commit": "a280173",
+  "external_dsh_changes_merged": false,
+  "status_meaning": "状态由源码核对记录，不是自动检测结果。实现提交/验收证据为 null 的新行为不得声称完成。",
+  "decision_source": "docs/02-技术方案/37-首版交互需求分析-讨论稿.md",
+  "requirements": [
+    {
+      "id": "R01",
+      "behavior": "提供明确应用到在奏音操作，编辑不自动改变在奏音",
+      "decision_status": "user_confirmed_details_pending",
+      "implementation_status": "partial",
+      "code_locations": ["tools/host/dsp_gui.py", "tools/scripts/dsp_host.py", "src/rtl/note_map.v", "src/rtl/tdm_engine.v"],
+      "gap": "现有发送与刷新不等于受控整谱提交或刷新状态保持。",
+      "acceptance": ["编辑不发送", "新音不读中间谱", "应用不串用力度、不重起包络、不复活尾音"],
+      "implementation_commit": null,
+      "acceptance_evidence": null
+    },
+    {
+      "id": "R02",
+      "behavior": "保存并调用完整乐器配置",
+      "decision_status": "user_confirmed_details_pending",
+      "implementation_status": "file_and_gui_local_implemented_device_pending",
+      "code_locations": ["tools/host/instrument_config.py", "tools/host/test_instrument_config.py", "tools/host/dsp_gui.py", "tools/scripts/dsp_host.py", "tools/host/config_editor.py", "tools/host/test_config_editor.py"],
+      "gap": "文件与 GUI 本地编辑/保存/载入闭环已实现；设备能力检查、完整配置应用及实体槽仍未接入。",
+      "partial_implementation_commit": "caa0034531efb5336912dee840b771f396c1133b",
+      "partial_acceptance_evidence": {
+        "scope": "文件层，非 GUI/设备验收",
+        "command": "python -m unittest discover -s tools/host -p test_instrument_config.py -v",
+        "result": "7 tests passed, exit 0",
+        "date": "2026-10-07"
+      },
+      "acceptance": ["文件往返恢复完整参数", "坏文件无副作用", "保存不自动改变在奏音"],
+      "implementation_commit": null,
+      "acceptance_evidence": null,
+      "gui_partial_acceptance_evidence": {
+        "scope": "GUI 本地闭环，非设备/RTL 验收",
+        "command": "python -m unittest discover -s tools/host -p 'test_*.py' -v",
+        "result": "30 tests passed, exit 0",
+        "date": "2026-10-07",
+        "report": "sim_build/gui/config_editor_report.txt"
+      }
+    },
+    {
+      "id": "R03",
+      "behavior": "多个实体按钮选择完整配置槽",
+      "decision_status": "user_confirmed_details_pending",
+      "implementation_status": "not_implemented",
+      "code_locations": ["src/rtl/tdm_top.v", "src/rtl/reg_bank.v"],
+      "gap": "现有 PRESET 与预设表不是完整配置银行；按钮、槽数、持久性与切换规则待定。",
+      "acceptance": ["按钮选择完整配置", "生效对象与时刻明确", "断电行为符合说明"],
+      "implementation_commit": null,
+      "acceptance_evidence": null
+    },
+    {
+      "id": "R04",
+      "behavior": "持续、瞬间、混合三种发声方式",
+      "decision_status": "user_confirmed_details_pending",
+      "implementation_status": "primitive_only",
+      "code_locations": ["src/rtl/osc_env.v", "src/rtl/tdm_engine.v", "src/rtl/note_map.v", "tools/host/dsp_gui.py"],
+      "gap": "有逐槽包络能力，无对应三方式产品控制与已选定混合规则。",
+      "acceptance": ["各方式按下、长按、松手与重触发正确", "混合部分分别衰减/保持", "切换不意外重起音"],
+      "implementation_commit": null,
+      "acceptance_evidence": null
+    },
+    {
+      "id": "R05",
+      "behavior": "右手强调已有分量，不产生新音符",
+      "decision_status": "user_confirmed_details_pending",
+      "implementation_status": "legacy_behavior_differs",
+      "code_locations": ["src/rtl/note_map.v", "src/rtl/tdm_top.v"],
+      "gap": "现有掩码命中设 255，不是选定的分量强调；算法尚需试听选择。",
+      "acceptance": ["按定义修饰基础谱", "无新增 note-on", "不覆盖保存谱"],
+      "implementation_commit": null,
+      "acceptance_evidence": null
+    },
+    {
+      "id": "R06",
+      "behavior": "右手多触点组合强调多个分量",
+      "decision_status": "user_confirmed_details_pending",
+      "implementation_status": "legacy_behavior_differs",
+      "code_locations": ["src/rtl/pad_pitch.v", "src/rtl/tdm_top.v", "src/rtl/note_map.v"],
+      "gap": "现有按位或不能证明新的组合增益和逐指状态规则已实现。",
+      "acceptance": ["两点贡献组合正确", "部分松开状态确定", "组合峰值可控"],
+      "implementation_commit": null,
+      "acceptance_evidence": null
+    },
+    {
+      "id": "R07",
+      "behavior": "右手修饰整个在奏和弦",
+      "decision_status": "user_confirmed",
+      "implementation_status": "partial",
+      "code_locations": ["src/rtl/note_map.v", "src/rtl/tdm_engine.v", "src/rtl/tdm_top.v"],
+      "gap": "全刷入口已有，用户要求的状态保持与一致性未验。",
+      "acceptance": ["各在奏音按共同规则修饰", "各自音高、力度与包络保持", "不复活已释放声部"],
+      "implementation_commit": null,
+      "acceptance_evidence": null
+    },
+    {
+      "id": "R08",
+      "behavior": "右手跨位置时分量强调平滑变化，基准音符不变",
+      "decision_status": "user_confirmed_details_pending",
+      "implementation_status": "not_implemented",
+      "code_locations": ["src/rtl/note_map.v", "src/rtl/tdm_engine.v"],
+      "gap": "无谱形斜坡/插值和输入位置接合；不能把装载更新当成平滑已实现。",
+      "acceptance": ["从当前值继续平滑过渡", "不变基准音符、不重触发", "过程不产生失控峰值"],
+      "implementation_commit": null,
+      "acceptance_evidence": null
+    },
+    {
+      "id": "R09",
+      "behavior": "右手松手后保留最后强调结果",
+      "decision_status": "user_confirmed_details_pending",
+      "implementation_status": "not_implemented",
+      "code_locations": ["src/rtl/tdm_top.v", "src/rtl/pad_pitch.v"],
+      "gap": "当前物理掩码随触摸变化；无手势结果锁存和明确恢复操作。",
+      "acceptance": ["抬手后结果保持", "两指先后松手结果确定", "恢复基础谱的动作明确"],
+      "implementation_commit": null,
+      "acceptance_evidence": null
+    },
+    {
+      "id": "R10",
+      "behavior": "左手手势控制真正音高颤音，基准音符保持",
+      "decision_status": "user_confirmed_input_mapping_pending",
+      "implementation_status": "primitive_only_hardware_dependent",
+      "code_locations": ["src/rtl/pitch_mod.v", "src/rtl/pad_pitch.v", "src/rtl/tdm_top.v", "src/rtl/i2c_master.v"],
+      "gap": "有全局自动 LFO，无左手连续输入到声部的已验通路；逐指独立移动是候选而非已定方案。",
+      "acceptance": ["左手输入控制实际频率摆动", "基准音符保持且不重复起音", "若采用逐指方案，双指不串声部", "实测总延迟符合要求"],
+      "implementation_commit": null,
+      "acceptance_evidence": null
+    }
+  ]
+}

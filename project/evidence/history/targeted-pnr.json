@@ -1,0 +1,41 @@
+{
+  "source_tree_sha256": "b3a5e04516cfd891af0c9ecbb2cec797731819d48043d3632ee23b13a8790be1",
+  "files": {
+    "sim_build/closure/results.json": "6ab71aeb3dd1ddd884626a22211b4646698e00d49dc250b1afb8fea3a4cfe3b9",
+    "sim_build/gui/selftest_report.txt": "aa198aa942e69ee522fe9ac58102a5de1bc390096d7e12489eed9eca42ae8d6c",
+    "sim_build/protocol-join.log": "408648d12463fb941ec785a9bec65b31fdd8b4b65ab227e3f0f839f4c3f62601",
+    "sim_build/closure-pnr.log": "d00716f952ec1bc8ec78f822108731d796065f99fb41ff6b363d57ebfbf23d44",
+    "src/gowin/tdm_synth/impl/pnr/tdm_synth.rpt.txt": "08ba988b697b5362a196bc8cc56d377ce4f74b3737c1b26cf17c2de1f58ff661",
+    "src/gowin/tdm_synth/impl/pnr/tdm_synth_tr_content.html": "6af3c7fc78cc98687712d77af49b4580db9c98712dc00bf6e00382530aa9ae27",
+    "src/gowin/tdm_synth/impl/pnr/tdm_synth.pin.html": "90af3416f49276bbb77b9d8c2deb6f5feb3d0c7c1a1730961371b8d06cd2057d",
+    "src/gowin/tdm_synth/impl/pnr/tdm_synth.log": "dc2db770add1926054baf3456ed156ff43653b072fca44668e8bd49ec908b5c6",
+    "src/gowin/tdm_synth/impl/gwsynthesis/tdm_synth.log": "af67006982902592a2d8bc222799b1588428163b14db1963cc7ddddcded7ae33",
+    "sim_build/closure/event_sources.txt": "c61cd19471206f327b857862a18896d3f910cb11255de90dd4bfbc6e0d9dcbd0",
+    "sim_build/closure/evhold_stream.txt": "9c1303e8eae6d4c566e0e99113d150818d9858404d22cb8d314d787ca9a49eb7",
+    "sim_build/closure/finger.txt": "98f214e96e6aaa5172761666e409203610869ee812f64213983a6bf7a67697c4",
+    "sim_build/closure/gui.txt": "dffdcfe8b9941d96da876e3ecfb3d0dc5865f42eea26b6d1358f27726e8acde2",
+    "sim_build/closure/host.txt": "0d8c16c0ff8898d0d125dd6a538bec192eedb032c0c4c12d648eb538dde6eba4",
+    "sim_build/closure/i2c_contract.txt": "ffcf79174a075bc6d7ec2a43ef0e9e34203fa61f4858b3f34f26346f3603a7f2",
+    "sim_build/closure/i2c_master.txt": "42fa45070c6fc592ab4e0e4c656c9a05ece553909bf5d40c668a6020a7bb6d21",
+    "sim_build/closure/padfast.txt": "c1c9cfdce13679dfcc24eeb6593d9669bb58bbea8b7f9496a2d5b53e27195ddc",
+    "sim_build/closure/protocol_join.txt": "038ab93fd7c4f60e889899475b38ae2f13035407afd8e3841d210ad4c21a35a2"
+  },
+  "scope": "Joined digital tests and default FINGER_EXPR=0 product PnR; not physical touch or DAC acceptance",
+  "pnr": {
+    "device": "GW2AR-LV18QN88C8/I7",
+    "top": "tdm_ship",
+    "setup_slack_ns": 12.037,
+    "setup_tns": 0,
+    "hold_tns": 0,
+    "violating_endpoints": 0,
+    "logic": "15179/20736",
+    "cls": "8968/10368",
+    "bsram": "31/46",
+    "warnings": [
+      "PR1014 generic clock routing: pending board/clock route review",
+      "strip_ctrl optimized because physical input is constant",
+      "pad_pitch size truncation: existing bounded code warning"
+    ]
+  },
+  "acceptance": "digital targeted pass; PnR timing report passes; full regression pending; board unverified"
+}

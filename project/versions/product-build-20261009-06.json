@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "source_manifest": "project\\versions\\integration-20261009-06.json",
+  "source_tree_sha256": "001c41cdf1de844a70f9a5220a4bedd82030ec2515b4858dded3c0c22b73e9e7",
+  "configuration": "GW2AR-LV18QN88C8/I7; tdm_ship; 27MHz; 512 slots; fs=52734.375Hz; FINGER_EXPR=0; SSPI GPIO; place=2 route=2",
+  "command": "powershell -File tools/scripts/build_gowin.ps1 -Project src/gowin/tdm_synth/tdm_synth.gprj -TopModule tdm_ship -SspiAsGpio -PlaceOpt 2 -RouteOpt 2",
+  "bitstream": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\src\\gowin\\tdm_synth\\impl\\pnr\\tdm_synth.fs",
+  "bitstream_sha256": "84bd938c69ff278e4f2b74bc16a88d155d48a0986b37342bfc4f929893c0af59",
+  "log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\closure-pnr-bound.log",
+  "log_sha256": "8f6242f38c2a7c9f3a75b40c44c12f6275264cfc5fbaff8f2ab0f317eb99badd",
+  "bound_at": "2026-10-09T13:01:36.681517+00:00",
+  "source_captured_at": "2026-10-09T12:57:34.580224+00:00",
+  "acceptance": "identity-bound-only; review timing and hardware results separately"
+}

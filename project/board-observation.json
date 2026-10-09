@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "kind": "observed-diagnostic-experiment",
+  "base_commit": "7ca52c9dd57bfc04d97e7ed2261fd802cdff9d97",
+  "variant": "diagnostic_v4",
+  "finger_scope": 2,
+  "physical_pads": false,
+  "product_candidate": false,
+  "observed_files": {
+    "diagnostic_v4-source.json": {
+      "sha256": "66a7fb811ab385b4b456d8c8ad53fd0365cfc0bd0c25ca3906c651642b9d6031",
+      "archived": "project/board-evidence/diagnostic_v4-source.json"
+    },
+    "sram-program-retry.log": {
+      "sha256": "cb57fc117313883e3b33269e83e59988b4059ed72cee9c0510b205256526df09",
+      "archived": "project/board-evidence/sram-program-retry.log"
+    },
+    "hardware/report.json": {
+      "sha256": "81c0e40896fa0beaf62bde792b62c76f6b49d06c84dd408a59de151069a626b0",
+      "archived": "project/board-evidence/report.json"
+    },
+    "diagnostic-v4-sim-run.log": {
+      "sha256": "96ed4e1bd252a630635cff9b0adffa574b65e48bae0ca5cc26272e058f46fc6a",
+      "archived": "project/board-evidence/diagnostic-v4-sim-run.log"
+    },
+    "diagnostic-v4-two-finger-sim-run.log": {
+      "sha256": "4878b235b53850d8de784420d28ba82bd059b982811d168b7be062b682f91410",
+      "archived": "project/board-evidence/diagnostic-v4-two-finger-sim-run.log"
+    },
+    "diagnostic-v4-build.log": {
+      "sha256": "13c866dd769e99e090babd66a55635512fd1715e4c969ede40c370878eb56f83",
+      "archived": "project/board-evidence/diagnostic-v4-build.log"
+    }
+  },
+  "bitstream": {
+    "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\sim_build\\board_diag_20261009\\diagnostic_v4\\src\\gowin\\tdm_synth\\impl\\pnr\\tdm_synth.fs",
+    "sha256": "d2bb218dc32bfc88c47ad6bd27dce4dff14d36c2b4b4de4b2f3931a43e543571"
+  },
+  "boundary": "SRAM log reports successful download; captured hardware report NO_DEVICE/COM6 read failed. No DAC, physical touch or full product acceptance implied. Observation is immutable, not live state."
+}

@@ -1,3 +1,5 @@
+> **当前版本入口：[project/CURRENT.md](project/CURRENT.md)。** 本分支已接合最新事件/逐指代码与新版GUI/协议；下文旧状态、资源与验收数字仅供历史对照，不能作为本版交付结论。
+
 # FPGA 加法合成电子乐器
 
 基于高云 GW2AR-LV18QN88C8/I7（Sipeed Tang Nano 20K）的纯硬件实时加法合成乐器。
