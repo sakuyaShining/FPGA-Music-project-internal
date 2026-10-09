@@ -1,0 +1,58 @@
+{
+  "build_record": "project/versions/board-build-20261010-02.json",
+  "scope": "diagnostic followup; not replacement for failed run02",
+  "identity": {
+    "0xa4": 211,
+    "0xa5": 2,
+    "0xa9": 32,
+    "0x7f": 17
+  },
+  "clean_snapshot": {
+    "ack": 5734,
+    "on": 2740,
+    "off": 2994,
+    "active": 0,
+    "fingers": 2147483646,
+    "last_group": 0,
+    "last_note": 67
+  },
+  "streams": [
+    {
+      "length": 6145,
+      "equals_indexed": true
+    },
+    {
+      "length": 6145,
+      "equals_indexed": true
+    },
+    {
+      "length": 6145,
+      "equals_indexed": true
+    },
+    {
+      "length": 6145,
+      "equals_indexed": true
+    },
+    {
+      "length": 6144,
+      "equals_indexed": false
+    }
+  ],
+  "groups": [
+    0,
+    1
+  ],
+  "expected_peak_ratios": [
+    1.0,
+    0.998889654894584
+  ],
+  "two_finger_snapshot": {
+    "ack": 5865,
+    "on": 2743,
+    "off": 3122,
+    "active": 3,
+    "fingers": 2147483647,
+    "last_group": 1,
+    "last_note": 67
+  }
+}

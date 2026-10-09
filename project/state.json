@@ -10,17 +10,20 @@
     "working_tree": "Forward fix after hardware run01: occupancy-based MIDI127 allocation, complete stream test, raw transport evidence and host RX buffer; integration-20261010-02",
     "hardware": "02 SRAM downloaded exit0; hardware-run02 failed exit1 12/15 passed3 failed; original run01/run02 preserved",
     "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "hardware transport probe02",
+    "phase": "hardware read timing probe02",
     "targeted_exit_code": 0,
     "targeted_evidence": "project/evidence/full32-fix02-20261010/targeted.log",
     "targeted_pid": 9160,
     "targeted_created_local": "2026-10-10 03:19:24",
     "targeted_session": 20680,
     "targeted_log": "sim_build/board-test-stream-note127-20261010.log",
-    "hardware_pid": 28140,
-    "hardware_created_local": "2026-10-10 04:55:03",
-    "hardware_session": 69690,
-    "hardware_log": "sim_build/transport-probe02.log",
+    "hardware_pid": 24696,
+    "hardware_created_local": "2026-10-10 05:04:28",
+    "hardware_session": 19992,
+    "hardware_log": "sim_build/read-timing02.log",
+    "transport_probe_exit_code": 0,
+    "transport_probe_report": "project/evidence/full32-fix02-20261010/transport-probe02/report.json",
+    "serial_errors_probe_report": "project/evidence/full32-fix02-20261010/serial-errors02/report.json",
     "hardware_exit_code": 1,
     "hardware_run02_log": "sim_build/hardware-20261010-full32-fix02-run02.log",
     "hardware_report": "project/evidence/full32-fix02-20261010/hardware-run02/report.json",
@@ -51,7 +54,7 @@
     "targeted_digital": "passed exit0: complete6144-byte UART stream, MIDI127 independent on/off, full32 group31/reuse for02",
     "full_regression": "integration-20261010-02 passed56/56 exit0 at2026-10-10 04:24:37; T60 KNOWN-FAIL and2 INFO retained",
     "pnr": "02 attempt04 place0/route2 passed exit0; setup+11.111ns hold+0.214ns TNS0 endpoints0; Logic86% CLS95% BSRAM34/46; PR1014 retained; earlier3 failures preserved",
-    "hardware": "02 run02 failed exit1:12/15 pass,3 failures (sample short read, preset short read, two-finger group mismatch); diagnostic indexed/stream and isolated contacts probe running; no complete hardware acceptance"
+    "hardware": "02 run02 failed12/15; isolated two-finger indexed spectra both match expected (ratios1.0/.99889); stream corruption reproduced6/20 concentrated first13 bytes with Win32 error flags0. Controlled immediate/delayed read experiment running; transport unresolved"
   },
   "versions": [
     {
@@ -84,7 +87,7 @@
     },
     {
       "id": "integration-20261010-02",
-      "status": "current forward repair; targeted/full56/56/PnR passed; SRAM programmed; hardware-run02 failed12/15, diagnostic probe running"
+      "status": "targeted/full56/56/PnR passed; SRAM programmed; run02 failed12/15; isolated two-finger spectra verified; stream transport under diagnosis"
     }
   ],
   "supporting_implementation": [
