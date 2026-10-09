@@ -1,0 +1,152 @@
+{
+  "port": "COM6",
+  "probes": [
+    {
+      "port": "COM6",
+      "identity": 211,
+      "connected": true
+    }
+  ],
+  "cases": [
+    {
+      "name": "power_on_defaults_and_frame_period",
+      "status": "PASS",
+      "detail": {
+        "0x0": 2,
+        "0x37": 0,
+        "0x40": 1,
+        "0x5c": 112,
+        "0x7f": 17,
+        "0xa4": 211,
+        "0xa5": 2
+      },
+      "seconds": 0.469
+    },
+    {
+      "name": "internal_power_on_silence",
+      "status": "FAIL",
+      "error": "('capture stream', 6143, 'a800000000000000')",
+      "seconds": 5.109
+    },
+    {
+      "name": "register_roundtrips_and_alias_protection",
+      "status": "PASS",
+      "detail": {
+        "patterns": 80,
+        "out_of_range_alias": false
+      },
+      "seconds": 1.656
+    },
+    {
+      "name": "notes_across_range_on_off",
+      "status": "PASS",
+      "detail": {
+        "notes": 7,
+        "on": 7,
+        "off": 7
+      },
+      "seconds": 4.344
+    },
+    {
+      "name": "32_voices_steal_and_recovery",
+      "status": "PASS",
+      "detail": {
+        "voices": 32,
+        "steal": true,
+        "recovered": true
+      },
+      "seconds": 0.828
+    },
+    {
+      "name": "midi127_free_sentinel_boundary",
+      "status": "FAIL",
+      "error": "{'ack': 81, 'on': 42, 'off': 39, 'active': 1, 'fingers': 0, 'last_group': 0, 'last_note': 60}",
+      "seconds": 0.266
+    },
+    {
+      "name": "deterministic_random_event_stress",
+      "status": "PASS",
+      "detail": {
+        "events": 306,
+        "random_seed": 2026
+      },
+      "seconds": 5.984
+    },
+    {
+      "name": "5000_event_real_uart_burst",
+      "status": "PASS",
+      "detail": {
+        "events": 5000,
+        "bytes": 20000,
+        "no_lost_ack": true,
+        "active_after": 0
+      },
+      "seconds": 2.375
+    },
+    {
+      "name": "hardware_samples_pitch_finger_release",
+      "status": "FAIL",
+      "error": "('capture stream', 6144, 'a800000000000000')",
+      "seconds": 7.75
+    },
+    {
+      "name": "hardware_velocity_amplitude",
+      "status": "FAIL",
+      "error": "('capture stream', 6144, 'a810defd6dfde0e2')",
+      "seconds": 5.781
+    },
+    {
+      "name": "presets_and_effects_digital_output",
+      "status": "FAIL",
+      "error": "('silent preset', 0, 0.0)",
+      "seconds": 0.672
+    },
+    {
+      "name": "two_fingers_independent_opposite_pitch",
+      "status": "FAIL",
+      "error": "(273.20871865616647, 0.008314684106204926)",
+      "seconds": 1.5
+    },
+    {
+      "name": "full32_contacts_group31_reuse",
+      "status": "PASS",
+      "detail": {
+        "groups": 32,
+        "contacts": 32,
+        "group31_reuse_clears_expression": true,
+        "stale_move_did_not_enable": true,
+        "note": "samples archived; sample-by-sample equality not expected across different oscillator phases"
+      },
+      "seconds": 2.438
+    },
+    {
+      "name": "sequencer_start_and_stop",
+      "status": "PASS",
+      "detail": {
+        "running_events": 2,
+        "stopped": true,
+        "remaining_active": 0,
+        "note": "disable is not an all-notes-off command"
+      },
+      "seconds": 2.453
+    },
+    {
+      "name": "event_drop_diagnostics",
+      "status": "PASS",
+      "detail": {
+        "0x74": 0,
+        "0x75": 0,
+        "0x76": 0,
+        "0x77": 0,
+        "0x78": 0,
+        "0x79": 0,
+        "0x7a": 0,
+        "0x7b": 0,
+        "0x7c": 0
+      },
+      "seconds": 0.156
+    }
+  ],
+  "reads": 1079,
+  "writes": 2402
+}

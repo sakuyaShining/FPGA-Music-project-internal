@@ -10,7 +10,7 @@ module tb_board_test;
  task check;
  input [255:0] label;input integer got,want;
  begin if(got!==want) begin $display("FAIL %0s got=%0d expected=%0d",label,got,want);fails=fails+1;end
- else $display("PASS %0s",label);end endtask
+ else if(label!="stop") $display("PASS %0s",label);end endtask
  task send_byte;
  input[7:0] value;integer k;
  begin @(negedge clk);rx=0;repeat(234) @(negedge clk);
@@ -77,10 +77,19 @@ module tb_board_test;
  receive(stream_byte);check("stream sample1 low",stream_byte,stream_expected1[7:0]);
  receive(stream_byte);check("stream sample1 mid",stream_byte,stream_expected1[15:8]);
  receive(stream_byte);check("stream sample1 high",stream_byte,stream_expected1[23:16]);
+ for(k=6;k<6144;k=k+1) receive(stream_byte);
  end
  join
  rst_n=0;repeat(20) @(negedge clk);rst_n=1;repeat(600) @(negedge clk);
  write_reg(8'h83,1);read_check(8'h83,0);read_check(8'h89,0);read_check(8'h80,0);
+ write_reg(8'h00,8'h08);
+ write_reg(8'h60,8'hFF);write_reg(8'h61,15);
+ write_reg(8'h60,8'hBC);write_reg(8'h61,15);
+ check("MIDI127 and60 independent",dut.u_top.nm_active,3);
+ write_reg(8'h60,127);write_reg(8'h61,15);
+ check("MIDI127 off preserves60",dut.u_top.nm_active,2);
+ write_reg(8'h60,60);write_reg(8'h61,15);
+ check("MIDI127 corner cleanup",dut.u_top.nm_active,0);
  // The board-test endpoint must retain all 32 groups and IDs, not two only.
  write_reg(8'h00,8'h08);
  for(k=0;k<32;k=k+1) begin write_reg(8'h60,8'h80+40+k);write_reg(8'h61,15);end
@@ -100,5 +109,5 @@ module tb_board_test;
  if(fails==0) $display("RESULT board_test=PASS");else $display("RESULT board_test=FAIL fails=%0d",fails);
  $finish;
  end
- initial begin #150_000_000;$display("RESULT board_test=TIMEOUT");$finish;end
+ initial begin #1_000_000_000;$display("RESULT board_test=TIMEOUT");$finish;end
 endmodule

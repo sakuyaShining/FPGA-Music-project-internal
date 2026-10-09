@@ -14,6 +14,8 @@ FS=52734.375
 class Board:
     def __init__(self,port):
         self.port=serial.Serial(port,115200,timeout=1,write_timeout=1)
+        if hasattr(self.port,'set_buffer_size'):
+            self.port.set_buffer_size(rx_size=65536,tx_size=65536)
         self.reads=0;self.writes=0
         self.port.reset_input_buffer()
     def write(self,addr,data):
@@ -41,6 +43,7 @@ class Board:
         self.write(15,0xa8)
         previous_timeout=self.port.timeout;self.port.timeout=5
         stream=self.port.read(1+2048*3);self.port.timeout=previous_timeout
+        (OUT/(name+'.stream.bin')).write_bytes(stream)
         assert len(stream)==6145 and stream[0]==0xa8,('capture stream',len(stream),stream[:8].hex())
         values=[]
         for i in range(count):
@@ -171,6 +174,7 @@ def main():
         return dict(events=events,bytes=written,no_lost_ack=True,active_after=0)
     case('5000_event_real_uart_burst',uart_burst)
     def sound():
+        time.sleep(.7)  # Previous stress notes may still have release tails.
         board.note(69,True,15);time.sleep(.04)
         base=board.capture('a4_base',2048)
         assert np.max(np.abs(base))>50,'silent synthesis'
@@ -199,6 +203,7 @@ def main():
         levels={}
         try:
             for preset in range(4):
+                time.sleep(.7)
                 board.write(0x37,preset);board.note(60,True,15)
                 values=board.capture('preset%d_c4'%preset,512)
                 rms=float(np.sqrt(np.mean(values.astype(float)**2)))
@@ -216,6 +221,7 @@ def main():
             board.write(0x40,1);board.write(0x37,0);board.note(69,False)
     case('presets_and_effects_digital_output',presets_and_effects)
     def two_fingers():
+        time.sleep(.7)
         start=board.snapshot()
         try:
             board.note(60,True,15);g0=board.snapshot()['last_group']

@@ -1,0 +1,15 @@
+power_on_defaults_and_frame_period PASS 
+internal_power_on_silence FAIL ('capture stream', 6143, 'a800000000000000')
+register_roundtrips_and_alias_protection PASS 
+notes_across_range_on_off PASS 
+32_voices_steal_and_recovery PASS 
+midi127_free_sentinel_boundary FAIL {'ack': 81, 'on': 42, 'off': 39, 'active': 1, 'fingers': 0, 'last_group': 0, 'last_note': 60}
+deterministic_random_event_stress PASS 
+5000_event_real_uart_burst PASS 
+hardware_samples_pitch_finger_release FAIL ('capture stream', 6144, 'a800000000000000')
+hardware_velocity_amplitude FAIL ('capture stream', 6144, 'a810defd6dfde0e2')
+presets_and_effects_digital_output FAIL ('silent preset', 0, 0.0)
+two_fingers_independent_opposite_pitch FAIL (273.20871865616647, 0.008314684106204926)
+full32_contacts_group31_reuse PASS 
+sequencer_start_and_stop PASS 
+event_drop_diagnostics PASS 

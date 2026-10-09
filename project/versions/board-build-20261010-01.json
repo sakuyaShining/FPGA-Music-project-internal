@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "source_manifest": "project\\versions\\integration-20261010-01.json",
+  "source_tree_sha256": "290e2622f9574141fcdb458e51ef7d2a09ba7096625872c857a6e37d30b1de2e",
+  "configuration": "tdm_board_test; GW2AR-LV18QN88C8/I7; 27MHz; 512 slots; FINGER_EXPR=1; BOARD_DIAG=1; NG=32; NF=32; physical_pads=0; SSPI GPIO; place=2; route=2",
+  "command": "build_gowin.ps1 -Project tdm_board_test.gprj -TopModule tdm_board_test -SspiAsGpio -PlaceOpt 2 -RouteOpt 2",
+  "bitstream": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\src\\gowin\\tdm_synth\\impl\\pnr\\tdm_board_test.fs",
+  "bitstream_sha256": "f187b88de24a80cf078096f56f5bb5851e46265613670a0a87450a78adc1178e",
+  "log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\pnr-20261010-full32.log",
+  "log_sha256": "1b1e1ecba86d2dd54deb2da8101d684f0b7961f57e17be7051dafe3821c95360",
+  "bound_at": "2026-10-09T19:14:06.212498+00:00",
+  "source_captured_at": "2026-10-09T18:30:59.518638+00:00",
+  "acceptance": "identity-bound-only; review timing and hardware results separately"
+}

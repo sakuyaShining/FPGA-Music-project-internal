@@ -273,16 +273,15 @@ module note_map #(
         found_open  = 1'b0;
         // 先找"正在奏同一音符"的组
         for (n = 0; n < NG; n = n + 1) begin
-            if (!found_match && (gtab[n] == n_hold)) begin
+            if (!found_match && gact[n] && (gtab[n] == n_hold)) begin
                 gsel_cur    = n[NB-1:0];
                 found_match = 1'b1;
             end
         end
-        // 再找【真正空闲】的组：以 gtab==FREE 为准 ——
-        //   它在 note-off 时会被写回 FREE（2026-10-06 修），所以是可靠的空闲标记。
+        // Occupancy is authoritative: MIDI 127 has the same bits as FREE.
         if (!found_match) begin
             for (n = 0; n < NG; n = n + 1) begin
-                if (!found_free && (gtab[n] == FREE)) begin
+                if (!found_free && !gact[n]) begin
                     gsel_cur   = n[NB-1:0];
                     found_free = 1'b1;
                 end
@@ -558,7 +557,7 @@ module note_map #(
                     // 本拍完成搜索（组合），末尾寄存 ⇒ 长链在此切断
                     gsel_r  <= gsel;
                     match_r <= found_match;
-                    free_r  <= (gtab[gsel] == FREE);   // 写入【前】的空闲状态
+                    free_r  <= !gact[gsel];   // FREE bits alone cannot distinguish MIDI127.
                     st      <= ST_GLIDE;
                 end
 
