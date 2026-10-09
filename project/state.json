@@ -8,9 +8,13 @@
     "baseline_regression": "55/55 passed; exit 0 on 2026-10-10; T60 known failure and two INFO retained",
     "baseline_evidence": "project/evidence/baseline-20261010",
     "working_tree": "Host forward fix04: timeout before stream request, finally clear cases, host tests in gate41; full56/56 and fresh PnR passed, 04 SRAM programmed.",
-    "hardware": "04 hardware-run04 passed15/15 exit0; raw evidence preserved; indexedRAM vs100 exact-stream stability running",
+    "hardware": "04 hardware-run04 passed15/15 exit0; actual capture equals2048 indexedRAM samples;100/100 complete streams exact exit0; this digital board test delivery complete",
     "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "hardware transport stability04",
+    "phase": "hardware complete",
+    "completed_scope": "version-bound integrated full32 synthetic-input/internal-digital board test; physical DAC/touch/I2S electrical/10ms and unimplemented musical semantics remain open",
+    "stability_exit_code": 0,
+    "stability_report": "project/evidence/full32-hostfix04-20261010/transport-stability04/report.json",
+    "delivery_record": "project/evidence/full32-hostfix04-20261010/delivery.json",
     "targeted_exit_code": 0,
     "targeted_evidence": "project/evidence/full32-fix02-20261010/targeted.log",
     "targeted_pid": 9160,
@@ -58,7 +62,7 @@
     "targeted_digital": "04 three host transport tests passed (configuration order, raw failure evidence, complete cleanup); RTL unchanged02 whose complete stream/MIDI127 targeted passed",
     "full_regression": "04 full56/56 passed exit0 at2026-10-10 05:57:41; enhanced41 includes3 host tests PASS; T60 KNOWN-FAIL2INFO retained",
     "pnr": "04 fresh place0/route2 full32 passed exit0 at06:06:37; setup+11.111ns hold+.214ns TNS0 endpoints0; Logic86% CLS95% BSRAM34/46; all30 ports explicit33; PR1014 retained",
-    "hardware": "04 identified SRAM hardware-run04 passed15/15 exit0: notes/32voices/MIDI127/5000events/samples/timbres/two-finger/full32/sequence. Exact RAM-to-stream100 repetition stability running; physical DAC/touch/I2S electrical not accepted; old failures retained"
+    "hardware": "04 identified SRAM hardware-run04 passed15/15 exit0; actual capture equals2048 indexedRAM samples and100/100 full streams exact exit0 without retries/read delay. Internal digital scope accepted; physical DAC/touch/I2S electrical/10ms not accepted; all old failures retained"
   },
   "versions": [
     {
@@ -99,7 +103,7 @@
     },
     {
       "id": "integration-20261010-04",
-      "status": "current226-input repair; unit3/3 full56/56 PnR SRAM and15/15 hardware passed; exact-stream stability pending; physical acceptance separate"
+      "status": "current226-input verified integration; unit3/3 full56/56 PnR SRAM15/15 hardware and100/100 exact-stream passed; physical/unfinished design acceptance separate"
     }
   ],
   "supporting_implementation": [
@@ -123,8 +127,9 @@
         "src/gowin/tdm_synth/finger_ratio.hex"
       ],
       "origin": "a61b/6b50ca9",
-      "status": "joined digital verified; default FINGER_EXPR=0; physical input unverified",
-      "evidence": "project/evidence/integration-06-evidence.zip"
+      "status": "joined digital verified;04 full32 synthetic UART board two-finger pitch measured; default product FINGER_EXPR=0, physical input unverified",
+      "evidence": "project/evidence/full32-hostfix04-20261010/delivery.json",
+      "historical_evidence": "project/evidence/integration-06-evidence.zip"
     },
     {
       "id": "B-03",
@@ -176,11 +181,11 @@
   "requirements": [
     {
       "id": "N-01",
-      "status": "digital interface verified",
+      "status": "digital interface and04 synthetic UART two-finger board pitch verified",
       "code": [
         "src/rtl/finger_pitch.v"
       ],
-      "remaining": "real contacts/position input and board validation"
+      "remaining": "real contact/position sensor input and physical/audio board validation; default product finger inputs remain zero"
     },
     {
       "id": "N-02",
@@ -266,8 +271,9 @@
     },
     {
       "id": "K-07",
-      "issue": "hardware01 short capture streams and timbre/pitch failures; raw indexed followup confirms nonzero samples but does not resolve run01 failures",
-      "evidence": "project/evidence/full32-20261010/sample-probe01/report.json"
+      "issue": "Historical01/02 short streams traced to host timeout reconfiguration after request; residual notes contaminated two-finger test. Fixed04 ordering/finally cleanup,15/15 and100/100 exact-stream pass; original failures retained",
+      "status": "resolved within controlled internal-digital board test; physical audio separate",
+      "evidence": "project/evidence/full32-hostfix04-20261010/delivery.json"
     },
     {
       "id": "K-01",
@@ -299,5 +305,6 @@
   "build_record": "project/versions/board-build-20261010-04.json",
   "currently_programmed_record": "project/versions/board-build-20261010-04.json",
   "previous_verified_build_record": "project/versions/product-build-20261009-06.json",
-  "source_commit": "7eb8d17deac5a2208b138c6cf65a33348dbf2c57"
+  "source_commit": "9d827a1",
+  "followup": "This digital board test delivery complete; automation disabled after evidence handoff. Physical tests need equipment/wiring and remain separately open."
 }
