@@ -10,17 +10,19 @@
     "working_tree": "Forward fix after hardware run01: occupancy-based MIDI127 allocation, complete stream test, raw transport evidence and host RX buffer; integration-20261010-02",
     "hardware": "02 SRAM downloaded exit0; hardware-run02 failed exit1 12/15 passed3 failed; original run01/run02 preserved",
     "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "hardware read timing probe02",
+    "phase": "hardware timeout order probe02",
     "targeted_exit_code": 0,
     "targeted_evidence": "project/evidence/full32-fix02-20261010/targeted.log",
     "targeted_pid": 9160,
     "targeted_created_local": "2026-10-10 03:19:24",
     "targeted_session": 20680,
     "targeted_log": "sim_build/board-test-stream-note127-20261010.log",
-    "hardware_pid": 24696,
-    "hardware_created_local": "2026-10-10 05:04:28",
-    "hardware_session": 19992,
-    "hardware_log": "sim_build/read-timing02.log",
+    "hardware_pid": 27360,
+    "hardware_created_local": "2026-10-10 05:07:55",
+    "hardware_session": 76505,
+    "hardware_log": "sim_build/timeout-order02.log",
+    "read_timing_probe_exit_code": 0,
+    "read_timing_probe_report": "project/evidence/full32-fix02-20261010/read-timing02/report.json",
     "transport_probe_exit_code": 0,
     "transport_probe_report": "project/evidence/full32-fix02-20261010/transport-probe02/report.json",
     "serial_errors_probe_report": "project/evidence/full32-fix02-20261010/serial-errors02/report.json",
@@ -54,7 +56,7 @@
     "targeted_digital": "passed exit0: complete6144-byte UART stream, MIDI127 independent on/off, full32 group31/reuse for02",
     "full_regression": "integration-20261010-02 passed56/56 exit0 at2026-10-10 04:24:37; T60 KNOWN-FAIL and2 INFO retained",
     "pnr": "02 attempt04 place0/route2 passed exit0; setup+11.111ns hold+0.214ns TNS0 endpoints0; Logic86% CLS95% BSRAM34/46; PR1014 retained; earlier3 failures preserved",
-    "hardware": "02 run02 failed12/15; isolated two-finger indexed spectra both match expected (ratios1.0/.99889); stream corruption reproduced6/20 concentrated first13 bytes with Win32 error flags0. Controlled immediate/delayed read experiment running; transport unresolved"
+    "hardware": "02 run02 failed12/15; isolated two-finger indexed spectra match. Read timing immediate12/20 exact vs delayed20/20; timeout setter invokes Win32 reconfiguration after request. Randomized before/after timeout configuration60-stream causal comparison running, no read delay; no complete hardware acceptance"
   },
   "versions": [
     {
