@@ -8,25 +8,27 @@
     "baseline_regression": "55/55 passed; exit 0 on 2026-10-10; T60 known failure and two INFO retained",
     "baseline_evidence": "project/evidence/baseline-20261010",
     "working_tree": "Forward fix after hardware run01: occupancy-based MIDI127 allocation, complete stream test, raw transport evidence and host RX buffer; integration-20261010-02",
-    "hardware": "SRAM downloaded; COM6 D3/revision2/proto11/scope32 confirmed; run01 exposed failures",
+    "hardware": "02 SRAM downloaded exit0; hardware-run02 failed exit1 12/15 passed3 failed; original run01/run02 preserved",
     "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "PnR",
+    "phase": "hardware transport probe02",
     "targeted_exit_code": 0,
     "targeted_evidence": "project/evidence/full32-fix02-20261010/targeted.log",
     "targeted_pid": 9160,
     "targeted_created_local": "2026-10-10 03:19:24",
     "targeted_session": 20680,
     "targeted_log": "sim_build/board-test-stream-note127-20261010.log",
-    "hardware_pid": 16852,
-    "hardware_created_local": "2026-10-10 03:15:04",
-    "hardware_session": 42873,
-    "hardware_log": "sim_build/hardware-20261010-full32-run01.log",
-    "hardware_report": "project/evidence/full32-20261010/hardware-run01/report.json",
+    "hardware_pid": 28140,
+    "hardware_created_local": "2026-10-10 04:55:03",
+    "hardware_session": 69690,
+    "hardware_log": "sim_build/transport-probe02.log",
+    "hardware_exit_code": 1,
+    "hardware_run02_log": "sim_build/hardware-20261010-full32-fix02-run02.log",
+    "hardware_report": "project/evidence/full32-fix02-20261010/hardware-run02/report.json",
     "download_exit_code": 0,
     "board_identity": "COM6: PROTO=0x11 TEST_ID=0xd3 REVISION=2 SCOPE=32",
-    "pnr_exit_code": null,
+    "pnr_exit_code": 0,
     "pnr_failed_attempt": "project/evidence/full32-fix02-20261010/pnr-attempt01/record.json",
-    "download_log": "sim_build/sram-20261010-full32.log",
+    "download_log": "sim_build/sram-20261010-full32-fix02.log",
     "pnr_session": 61900,
     "pnr_pid": 1880,
     "pnr_created_local": "2026-10-10 04:48:06",
@@ -48,8 +50,8 @@
   "acceptance": {
     "targeted_digital": "passed exit0: complete6144-byte UART stream, MIDI127 independent on/off, full32 group31/reuse for02",
     "full_regression": "integration-20261010-02 passed56/56 exit0 at2026-10-10 04:24:37; T60 KNOWN-FAIL and2 INFO retained",
-    "pnr": "02 attempts01/02 route2 failed one unrouted net; attempt03 route1 failed189 unrouted nets; all preserved. Attempt04 place0/route2 running; no accepted02 bitstream.",
-    "hardware": "run01 failed: sample stream short reads, MIDI127 ownership boundary, and sample/timbre/pitch assertions; preserve raw evidence and diagnose"
+    "pnr": "02 attempt04 place0/route2 passed exit0; setup+11.111ns hold+0.214ns TNS0 endpoints0; Logic86% CLS95% BSRAM34/46; PR1014 retained; earlier3 failures preserved",
+    "hardware": "02 run02 failed exit1:12/15 pass,3 failures (sample short read, preset short read, two-finger group mismatch); diagnostic indexed/stream and isolated contacts probe running; no complete hardware acceptance"
   },
   "versions": [
     {
@@ -82,7 +84,7 @@
     },
     {
       "id": "integration-20261010-02",
-      "status": "current forward repair; targeted and full56/56 passed; PnR running; not programmed"
+      "status": "current forward repair; targeted/full56/56/PnR passed; SRAM programmed; hardware-run02 failed12/15, diagnostic probe running"
     }
   ],
   "supporting_implementation": [
@@ -244,8 +246,8 @@
   "known_open_issues": [
     {
       "id": "K-06",
-      "issue": "MIDI127 collides with FREE sentinel on hardware01; occupancy-based forward fix in02 awaiting tests",
-      "evidence": "project/evidence/full32-20261010/hardware-run01/report.json"
+      "issue": "MIDI127/FREE conflict in01 fixed forward in02; targeted/full56/56 and hardware-run02 boundary pass; original01 failure preserved",
+      "evidence": "project/evidence/full32-fix02-20261010/hardware-run02/report.json"
     },
     {
       "id": "K-07",
@@ -279,8 +281,8 @@
   "board_observation": "project/board-observation.json",
   "authority_rule": "This state does not promote experiments or historical PASS counts into product acceptance. Each changed source requires a new identity and appropriate evidence.",
   "promotion": "Deferred by user: keep integration branch; do not interrupt or edit the active main board test.",
-  "build_record": null,
-  "currently_programmed_record": "project/versions/board-build-20261010-01.json",
+  "build_record": "project/versions/board-build-20261010-02.json",
+  "currently_programmed_record": "project/versions/board-build-20261010-02.json",
   "previous_verified_build_record": "project/versions/product-build-20261009-06.json",
   "source_commit": "7eb8d17deac5a2208b138c6cf65a33348dbf2c57"
 }

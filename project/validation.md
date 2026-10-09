@@ -8,6 +8,8 @@
 02 PnR第一轮place2/route2失败退出1（PR0004，一条网络未布通）；失败证据保留`evidence/full32-fix02-20261010/pnr-attempt01/`。尚无02码流可下载，改用place1/route2继续验证同一完整32组源码。
 02第二轮place1/route2也因PR0004退出1，保留`pnr-attempt02/`；第三轮place2/route1正在运行。02没有被下载。
 第三轮place2/route1也失败，PR0004有189条未布通网络，证据`pnr-attempt03/`保留；第四轮place0/route2正在运行。02未下载，时序/板级尚未验。
+第四轮place0/route2成功退出0，setup+11.111ns、hold+0.214ns、TNS0、违例端点0，PR1014保留；30端口明确约束，完整32组。绑定`board-build-20261010-02.json`且下载前check-build通过，02已SRAM下载，hardware-run02运行中。
+02 hardware-run02退出1，12/15通过、3失败；MIDI127/静音/力度已板验，短流与两指组号失败保留。追加RAM索引读/流对比及独立两指诊断，不能套用诊断结果抹掉原失败。
 实时状态见[state.json](state.json)，配置见[board-test-20261010.md](board-test-20261010.md)。
 
 当前源码身份由state指向的不可变清单确定。Git提交可继续增加文档，但源码/表/GUI/约束/工具有任何变化都会导致身份检查失败。
