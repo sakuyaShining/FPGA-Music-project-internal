@@ -7,7 +7,7 @@
 | 最新设计、全部已有能力、未实现项与待决参数 | [design.md](design.md)，2026-10-10总册，固定 N-01～N-11 |
 | 产品候选及模块落点 | [state.json](state.json) 与 [catalog.json](catalog.json) |
 | 来源工作树、保留方式、接合与风险 | [integration.md](integration.md) |
-| 当前源码身份 | [integration-20261010-02.json](versions/integration-20261010-02.json)，板测失败后的向前修复，正在验证 |
+| 当前源码身份 | [integration-20261010-04.json](versions/integration-20261010-04.json)，主机串口配置顺序与失败清理修复，正在验证 |
 | 本版实测及证据边界 | [validation.md](validation.md) |
 | 开发板诊断身份与结果 | [board-observation.json](board-observation.json)，与产品候选分开 |
 
@@ -19,7 +19,7 @@
 版本归一不等于产品功能全部完成。
 
 ```powershell
-python tools/scripts/project_version.py check project/versions/integration-20261010-02.json
+python tools/scripts/project_version.py check project/versions/integration-20261010-04.json
 python tools/scripts/closure_check.py
 python tools/scripts/regress_all.py --full
 ```
@@ -30,5 +30,5 @@ python tools/scripts/regress_all.py --full
 旧34/35号规格、记忆和架构图用于追溯。发生冲突先看本入口和可追溯用户决定，再核对实际源码。
 
 主目录接合按用户选择暂缓。2026-10-10用户已授权本分支上板测试与模拟多指：先验证，不打断其他活跃板测。
-20261009-06是保留的已验底座；20261010-01数字56/56及PnR通过，但板测失败；20261010-02专项、56/56及PnR通过，已SRAM下载，板测12/15通过、3失败，继续定位。状态以state为准。
+20261009-06已验底座保留；01/02板测失败保留。板上仍02（专项、56/56、PnR通过，板测12/15）；隔离实验定位主机在流请求后重配置串口造成损坏，当前04向前修复只改主机/门禁，226输入全回归中。03因新增门禁日志目录变量错误而中止，快照保留、不签收。状态以state为准。
 本轮测试见[board-test-20261010.md](board-test-20261010.md)，旧55/55与产品PnR不直接签收新增配置。

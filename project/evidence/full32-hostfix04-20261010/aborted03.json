@@ -1,0 +1,9 @@
+{
+  "source_manifest": "project/versions/integration-20261010-03.json",
+  "status": "deliberately aborted; no regression acceptance",
+  "pid": 31884,
+  "created_local": "2026-10-10 05:09:53",
+  "session": 27980,
+  "reason": "New host gate log used undefined OUT instead of existing BUILD; detected before gate execution, stopped owned run and child; no受测source edited while run active",
+  "forward_fix": "integration-20261010-04.json uses BUILD; old03 manifest retained"
+}

@@ -993,9 +993,14 @@ def main():
     board_sources = [os.path.join(RTL, name) for name in os.listdir(RTL) if name.endswith('.v')]
     log, err = compile_and_run('41_board_test', board_sources + [sim('tb_board_test.v')],
                                defines=('SIM_INIT',), need_hex=True)
+    transport_rc, transport_log = run([sys.executable, os.path.join(ROOT, 'tools', 'scripts',
+                                      'test_board_transport.py')], cwd=ROOT, timeout=30)
+    with open(os.path.join(BUILD, '41_board_transport.log'), 'w', encoding='utf-8') as fh:
+        fh.write(transport_log or '')
     results.append(('41 board test', not err and 'RESULT board_test=PASS' in (log or '')
-                    and 'FAIL' not in (log or ''),
-                    (err or 'UART endpoint, two independent contacts, full group31 and stale-owner isolation')[:160]))
+                    and 'FAIL' not in (log or '') and transport_rc == 0,
+                    (err or (transport_log if transport_rc else
+                     'Full UART stream, full32 contacts, MIDI127, host timeout ordering and failure bytes'))[:160]))
 
     # ---------------------------------------------------------------- 汇总
     print()

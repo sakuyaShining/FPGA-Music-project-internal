@@ -40,9 +40,14 @@ class Board:
         time.sleep(.055)
         assert self.read(0x80)&3==2,'Capture did not finish'
         assert self.word(0x81)==2048,'Capture length mismatch'
-        self.write(15,0xa8)
+        # Windows timeout changes reconfigure the UART. Finish configuration
+        # before asking the FPGA to transmit; never reconfigure an active stream.
         previous_timeout=self.port.timeout;self.port.timeout=5
-        stream=self.port.read(1+2048*3);self.port.timeout=previous_timeout
+        try:
+            self.write(15,0xa8)
+            stream=self.port.read(1+2048*3)
+        finally:
+            self.port.timeout=previous_timeout
         (OUT/(name+'.stream.bin')).write_bytes(stream)
         assert len(stream)==6145 and stream[0]==0xa8,('capture stream',len(stream),stream[:8].hex())
         values=[]
@@ -55,6 +60,11 @@ class Board:
     def finger(self,fid,group,pos,cmd):
         self.write(0xb0,fid);self.write(0xb1,group)
         self.write(0xb2,pos&255);self.write(0xb3,(pos>>8)&15);self.write(0xb4,cmd)
+    def clear_events(self,scope=2):
+        self.write(0x50,0)
+        for n in range(128):self.note(n,False)
+        for fid in range(scope):self.finger(fid,fid,0,2)
+        time.sleep(.7)
 
 def peak(x):
     y=x.astype(float);y-=y.mean()
@@ -95,6 +105,10 @@ def main():
         started=time.monotonic()
         try: detail=function();row=dict(name=name,status='PASS',detail=detail)
         except Exception as error:row=dict(name=name,status='FAIL',error=str(error))
+        finally:
+            try:board.clear_events(args.scope)
+            except Exception as error:
+                row['status']='FAIL';row['cleanup_error']=str(error)
         row['seconds']=round(time.monotonic()-started,3);cases.append(row)
         (OUT/'report.json').write_text(json.dumps(dict(port=board.port.port,probes=probes,cases=cases,
             reads=board.reads,writes=board.writes),ensure_ascii=False,indent=2),encoding='utf-8')
@@ -281,7 +295,7 @@ def main():
     case('event_drop_diagnostics',overflow)
     board.write(0x50,0)
     # Explicit note-off cleanup; no sensor inputs enabled.
-    for n in range(0,127):board.note(n,False)
+    board.clear_events(args.scope)
     board.port.close()
     raise SystemExit(1 if any(x['status']!='PASS' for x in cases) else 0)
 

@@ -1,16 +1,16 @@
 {
   "schema": 1,
   "product_branch": "codex/project-version-closure",
-  "source_manifest": "project/versions/integration-20261010-02.json",
+  "source_manifest": "project/versions/integration-20261010-04.json",
   "active_test_run": {
     "id": "board-test-20261010",
     "baseline": "integration-20261009-06",
     "baseline_regression": "55/55 passed; exit 0 on 2026-10-10; T60 known failure and two INFO retained",
     "baseline_evidence": "project/evidence/baseline-20261010",
-    "working_tree": "Forward fix after hardware run01: occupancy-based MIDI127 allocation, complete stream test, raw transport evidence and host RX buffer; integration-20261010-02",
+    "working_tree": "Host forward fix04: configure timeout before stream request, finally clear every case including MIDI127/all32 contacts; three host tests joined gate41. RTL identical02; board still02.",
     "hardware": "02 SRAM downloaded exit0; hardware-run02 failed exit1 12/15 passed3 failed; original run01/run02 preserved",
     "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "hardware timeout order probe02",
+    "phase": "regression hostfix04",
     "targeted_exit_code": 0,
     "targeted_evidence": "project/evidence/full32-fix02-20261010/targeted.log",
     "targeted_pid": 9160,
@@ -38,12 +38,13 @@
     "pnr_pid": 1880,
     "pnr_created_local": "2026-10-10 04:48:06",
     "pnr_log": "sim_build/pnr-20261010-full32-fix02-attempt04.log",
-    "regression_exit_code": 0,
-    "regression_evidence": "project/evidence/full32-fix02-20261010",
-    "regression_pid": 30208,
-    "regression_created_local": "2026-10-10 03:37:38",
-    "regression_log": "sim_build/regress-20261010-full32-fix02.log",
-    "regression_session": 36197
+    "regression_exit_code": null,
+    "regression_evidence": "project/evidence/full32-hostfix04-20261010",
+    "regression_pid": 16368,
+    "regression_created_local": "2026-10-10 05:10:34",
+    "regression_log": "sim_build/regress-20261010-full32-hostfix04.log",
+    "regression_session": 37710,
+    "timeout_order_probe_report": "project/evidence/full32-fix02-20261010/timeout-order02/report.json"
   },
   "design_register": {
     "document": "project/design.md",
@@ -53,10 +54,10 @@
     "change": "Documentation consolidation only; no new musical semantics approved; implementation and hardware acceptance unchanged"
   },
   "acceptance": {
-    "targeted_digital": "passed exit0: complete6144-byte UART stream, MIDI127 independent on/off, full32 group31/reuse for02",
-    "full_regression": "integration-20261010-02 passed56/56 exit0 at2026-10-10 04:24:37; T60 KNOWN-FAIL and2 INFO retained",
-    "pnr": "02 attempt04 place0/route2 passed exit0; setup+11.111ns hold+0.214ns TNS0 endpoints0; Logic86% CLS95% BSRAM34/46; PR1014 retained; earlier3 failures preserved",
-    "hardware": "02 run02 failed12/15; isolated two-finger indexed spectra match. Read timing immediate12/20 exact vs delayed20/20; timeout setter invokes Win32 reconfiguration after request. Randomized before/after timeout configuration60-stream causal comparison running, no read delay; no complete hardware acceptance"
+    "targeted_digital": "04 three host transport tests passed (configuration order, raw failure evidence, complete cleanup); RTL unchanged02 whose complete stream/MIDI127 targeted passed",
+    "full_regression": "04 full regression running; source03 run deliberately aborted for undefined log directory variable, immutable03 retained; preserved02 passed56/56 T60 KNOWN-FAIL2INFO",
+    "pnr": "pending04 fresh build binding; preserved02 place0/route2 setup+11.111ns hold+0.214ns TNS0; earlier3 failures retained",
+    "hardware": "02 run02 failed12/15. Randomized60-stream comparison: timeout configured before request30/30 exact vs after26/30; no delays/retries. Host reconfiguration order fixed04; isolated two-finger spectra match. Board remains02, no complete04 acceptance"
   },
   "versions": [
     {
@@ -90,6 +91,14 @@
     {
       "id": "integration-20261010-02",
       "status": "targeted/full56/56/PnR passed; SRAM programmed; run02 failed12/15; isolated two-finger spectra verified; stream transport under diagnosis"
+    },
+    {
+      "id": "integration-20261010-03",
+      "status": "preserved host repair snapshot; regression deliberately aborted after detecting undefined gate log directory; superseded04, no acceptance"
+    },
+    {
+      "id": "integration-20261010-04",
+      "status": "current226-input host repair; unit3/3 passed; full56 required regression running; new PnR/binding/hardware pending"
     }
   ],
   "supporting_implementation": [
@@ -286,7 +295,7 @@
   "board_observation": "project/board-observation.json",
   "authority_rule": "This state does not promote experiments or historical PASS counts into product acceptance. Each changed source requires a new identity and appropriate evidence.",
   "promotion": "Deferred by user: keep integration branch; do not interrupt or edit the active main board test.",
-  "build_record": "project/versions/board-build-20261010-02.json",
+  "build_record": null,
   "currently_programmed_record": "project/versions/board-build-20261010-02.json",
   "previous_verified_build_record": "project/versions/product-build-20261009-06.json",
   "source_commit": "7eb8d17deac5a2208b138c6cf65a33348dbf2c57"
