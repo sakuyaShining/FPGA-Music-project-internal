@@ -133,7 +133,7 @@ class SerialLink(LinkBase):
                 "  然后重新打包：\n"
                 "      python tools/host/build_exe.py\n"
                 "· 现在可以先用「模拟设备」体验界面 ✓")
-        self.ser = serial.Serial(self.port, self.baud, timeout=0.5)
+        self.ser = serial.Serial(self.port, self.baud, timeout=0.5, write_timeout=0.5)
         self.kind = "真实串口"
         self.detail = "%s @ %d 8N1" % (self.port, self.baud)
         return True
@@ -147,31 +147,35 @@ class SerialLink(LinkBase):
 
     def send(self, frames):
         if self.ser is None:
-            return 0
+            raise RuntimeError("串口未打开")
         buf = bytearray()
         for a, d, _note in frames.items:
             buf.append(a & 0xFF)
             buf.append(d & 0xFF)
         n = self.ser.write(bytes(buf))
-        self.ser.flush()
         self._sent += n
+        if n != len(buf):
+            raise OSError("串口写入不完整：%d / %d 字节" % (n, len(buf)))
+        self.ser.flush()
         return n
 
     def read_reg(self, addr, timeout=0.5):
         if self.ser is None:
             return None
+        old = self.ser.timeout
         try:
             self.ser.reset_input_buffer()
-            self.ser.write(bytes([RD_REQ, addr & 0xFF]))
+            if self.ser.write(bytes([RD_REQ, addr & 0xFF])) != 2:
+                return None
             self.ser.flush()
-            old = self.ser.timeout
             self.ser.timeout = timeout
             r = self.ser.read(2)
-            self.ser.timeout = old
             self._sent += 2
         except Exception:
             return None
-        if len(r) < 2:
+        finally:
+            self.ser.timeout = old
+        if len(r) < 2 or r[0] != (addr & 0xFF):
             return None
         return r[1]                        # 第 1 字节是回显地址，第 2 字节才是值
 

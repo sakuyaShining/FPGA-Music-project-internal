@@ -47,7 +47,8 @@ module note_map #(
     parameter NPRE    = 4,              // 音色预设数
     // 滑音（portamento）：默认关。关时每次 note_on 都写 gq=0（清残余），
     //   与"没有这个功能"的旧行为等价。
-    parameter GLIDE_EN = 1'b0
+    parameter GLIDE_EN = 1'b0,
+    parameter SPEC_STAGED = 0
 )(
     input  wire                clk,
     input  wire                rst_n,
@@ -72,6 +73,7 @@ module note_map #(
 
     //---- 塑谱（步③，19 号 §3/§4 + 修正案 A1）----
     //   谱 RAM 16×8：上位机经 0x58/0x59 写入（地址由 tdm_top 侧的指针给出）
+    input  wire                spec_commit,
     input  wire                spec_we,      // 写使能（1 拍）
     input  wire [3:0]          spec_addr,    // 0..15
     input  wire [7:0]          spec_wdata,
@@ -169,18 +171,33 @@ module note_map #(
     initial for (si = 0; si < P; si = si + 1) spec_ram[si] = 8'd0;
 `endif
 
-    always @(posedge clk) begin
-        if (spec_we) spec_ram[spec_addr] <= spec_wdata;
-    end
+    generate if (SPEC_STAGED) begin : staged_spectrum
+        reg [7:0] pending [0:P-1];
+        integer sp;
+        always @(posedge clk or negedge rst_n) begin
+            if (!rst_n) begin
+                for (sp = 0; sp < P; sp = sp + 1) begin pending[sp] <= 0; spec_ram[sp] <= 0; end
+            end else begin
+                if (spec_we) pending[spec_addr] <= spec_wdata;
+                if (spec_commit)
+                    for (sp = 0; sp < P; sp = sp + 1)
+                        spec_ram[sp] <= (spec_we && spec_addr == sp) ? spec_wdata : pending[sp];
+            end
+        end
+    end else begin : legacy_spectrum
+        always @(posedge clk) if (spec_we) spec_ram[spec_addr] <= spec_wdata;
+    end endgenerate
 
     //-------------------------------------------------------------------------
     // 组表：每个组正在奏哪个音符号（FREE = 空闲）
     //-------------------------------------------------------------------------
     reg [NB-1:0]  gtab [0:NG-1];
+    reg [AMP_W-1:0] group_velocity [0:NG-1];
     reg [NG-1:0]  gact;                 // 该组是否正在发声（gate=1）
     reg [NG-1:0]  gact_q;               // 打一拍，供装载序列使用
 
     integer gi;
+    integer reset_group;
     initial begin
         $readmemh("note_inc.hex", note_rom);
         $readmemh("preset_part.hex", part_rom);
@@ -188,6 +205,7 @@ module note_map #(
         for (gi = 0; gi < NG; gi = gi + 1) begin
             gtab[gi] = FREE;
             gact[gi] = 1'b0;
+            group_velocity[gi] = 0;
         end
         gact_q = {NG{1'b0}};
     end
@@ -459,6 +477,11 @@ module note_map #(
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
+            gact <= {NG{1'b0}};
+            for (reset_group = 0; reset_group < NG; reset_group = reset_group + 1) begin
+                gtab[reset_group] <= FREE;
+                group_velocity[reset_group] <= 0;
+            end
             st        <= ST_IDLE;
             load_en   <= 1'b0;
             load_slot <= {SW{1'b0}};
@@ -520,6 +543,7 @@ module note_map #(
                         // 命中在响的组：按【当前】音高与【当前】谱形重装它的 16 个时隙
                         gsel_r   <= rf_grp[NB-1:0];
                         g_note_r <= gtab[rf_grp[NB-1:0]];
+                        vel_cur  <= group_velocity[rf_grp[NB-1:0]];
                         on_cur   <= 1'b1;          // load_gate = 1（它本来就在响 ✓）
                         free_r   <= 1'b0;
                         match_r  <= 1'b1;          // 不参与滑音判定（刷新不改音高）
@@ -542,6 +566,7 @@ module note_map #(
                     // 组表更新 + 旧/新音高读取（结果全部寄存）
                     if (on_cur) begin
                         gtab[gsel_r] <= n_hold;
+                        group_velocity[gsel_r] <= vel_cur;
                         gact[gsel_r] <= 1'b1;
                         g_note_r     <= n_hold;             // 装载新音
                     end

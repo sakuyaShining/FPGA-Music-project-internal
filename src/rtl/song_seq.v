@@ -139,7 +139,11 @@ module song_seq #(
             if (bp_cnt != 12'd0) bp_cnt <= bp_cnt - 12'd1;
             beat_pulse <= (bp_cnt != 12'd0);
 
-            if (hold) begin
+            if (!enable || hold) begin
+                if (started && cur_note != 0) begin
+                    ev_valid <= 1; ev_on <= 0; ev_note <= cur_note; ev_vel <= vel;
+                end
+                cur_note <= 0;
                 step <= 8'd0; beat_cnt <= 8'd0; acc <= 24'd0;
                 beat_pend <= 1'b0;
                 started <= 1'b0;

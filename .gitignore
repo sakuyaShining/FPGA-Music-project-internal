@@ -83,3 +83,6 @@ refs/vendor-examples/
 
 # Archify 生成中间件（成品已归档到 docs/04-架构图）
 .archify/
+
+# Immutable local recovery archives; manifests/patches remain versioned.
+notes/versioning/captures/**/*.zip

@@ -673,45 +673,15 @@ def main():
                else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("21 voice", ok, msg.replace(chr(10), " ")[:160]))
 
-    # 25 i2c（**已知失败，先登记不拦门禁**）—— 阶段 5 / v2 资产
-    #
-    #   为什么要有这一条：`src/rtl/i2c_master.v` + `src/sim/mpr121_model.v` +
-    #   `tb_i2c_master.v` 在本仓里**从未被任何判据跑过**。2026-10-07 首次运行，
-    #   **自检失败 3 项**（reg-readback / touch-status / 未应答未标记）。
-    #
-    #   为什么"登记"而不是"拦门禁"：
-    #     · 它**不参与出货设计** —— 全仓 grep 确认 `i2c_master` 只在
-    #       `tb_i2c_master.v` 里被例化，`tdm_top` 没有用它；
-    #       约束文件 `tdm_top.cst:166` 明写 "Reserve them for v2"。
-    #     · 但它也不是"死代码"：它是**为 v2 准备的资产**，带着一个失败的自检。
-    #     · 直接标红会让门禁长期红（红灯疲劳），直接删掉会丢掉真实失败信息。
-    #   ⇒ 折中：**跑它、把失败如实登记进汇总**，但不计入"通过/失败"判定。
-    #     等 v2 要用它时必须先修好，届时应把 known_fail 改成硬判据。
-    #
-    #   已查到的线索（**未证实，勿当结论**）：
-    #     主机接收侧 `rd_d <= {rdbuf[23:0], sh}`（i2c_master.v:213）出现在
-    #     "位周期结束"分支，而 `sh` 的**最后一次**移位在同一拍由 :164 发出
-    #     （非阻塞）⇒ 存在"少移一位"的时序嫌疑。
-    #     但用数值反推校验时：case1 符合（0x24 少一位 ⇒ 0x00），
-    #     case2 **不符合**（预测 0x0000_0000，实测 0x0000_FFFF）⇒
-    #     该嫌疑**不足以解释两个用例**，需继续定位（可能是采样相位或 ACK 计数）。
-    i2c_ok = None
-    #   ★ 路径必须显式给出：`mpr121_model.v` 虽然不带 tb_ 前缀，却住在 src/sim/；
-    #     compile_and_run 只把 `tb_*` 归到 sim，其余归 rtl ⇒ 默认路由会去找
-    #     src/rtl/mpr121_model.v 而报 "No such file or directory"。
-    #     （第一版就是这么错的：套件显示"编译失败"，掩盖了真正的 3 项自检失败。）
-    i2c_files = [rtl("i2c_master.v"), sim("mpr121_model.v"), sim("tb_i2c_master.v")]
-    log, err = compile_and_run("25_i2c", i2c_files, defines=(), need_hex=False)
-    if err:
-        i2c_ok = False
-        results.append(("25 i2c(kf)", None, "编译失败: " + err[:120]))
-    else:
-        passed = "全部通过" in (log or "")
-        i2c_ok = passed
-        fails_line = [l.strip() for l in (log or "").splitlines() if "失败" in l]
-        results.append(("25 i2c(kf)", None,
-                        ("自检全部通过" if passed else
-                         "已知失败：%s" % (" / ".join(fails_line[:1]) or "见 25_i2c 日志"))))
+    # I2C revision is a required digital contract; physical peripheral remains unconnected.
+    i2c_ok = True
+    for label, tb, marker in [('25 i2c', 'tb_i2c_master.v', 'RESULT i2c_basic=PASS'),
+                              ('25b i2c contract', 'tb_i2c_contract.v', 'RESULT i2c_contract=PASS')]:
+        log, err = compile_and_run(label.replace(' ', '_'),
+            [rtl('i2c_master.v'), sim('mpr121_model.v'), sim(tb)], need_hex=False)
+        ok = not err and marker in (log or '') and 'FAIL' not in (log or '')
+        i2c_ok = i2c_ok and ok
+        results.append((label, ok, (err or (log or '').strip().splitlines()[-1])[:160]))
 
     # 22 nyquist：完整位宽 Nyquist 与预生成表一致性（阶段 3 遗留项）
     #   ├ N1 增量位宽：用 inc = round(f*2^24/fs) 独立算出 128 个音，与 note_inc.hex
@@ -1014,6 +984,11 @@ def main():
                                                 "finger_pitch_check.py")], ROOT)
     results.append(("39 finger pitch", rc == 0 and "PASS continuous per-contact pitch integration" in flog,
                     flog.strip().splitlines()[-1][:160] if flog.strip() else "no output"))
+
+    log, err = compile_and_run('40_protocol_join', padf_files[:-1] + ['tb_protocol_join.v'],
+                               defines=('SIM_INIT',), need_hex=True)
+    results.append(('40 protocol join', not err and 'RESULT protocol_join=PASS' in (log or ''),
+                    (err or 'Spectrum draft/commit, original velocity, sequence stop, active reset')[:160]))
 
     # ---------------------------------------------------------------- 汇总
     print()

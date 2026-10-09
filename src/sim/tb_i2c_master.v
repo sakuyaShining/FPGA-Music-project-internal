@@ -53,7 +53,7 @@ module tb_i2c_master;
     // ---------------- 从机模型 ----------------
     reg [11:0] touch = 12'h000;
 
-    mpr121_model #(.ADDR(7'h5A)) u_s (
+    mpr121_model #(.ADDR(7'h5A), .PROBE(0)) u_s (
         .clk(clk), .rst_n(rst_n), .sda(sda), .scl(scl), .touch(touch)
     );
 
@@ -104,7 +104,7 @@ module tb_i2c_master;
     integer trace_n = 0;
     always @(posedge clk) begin
         scl_p <= scl; sda_p <= sda;
-        if ((scl !== scl_p || sda !== sda_p) && trace_n < 200) begin
+        if ($test$plusargs("trace") && (scl !== scl_p || sda !== sda_p) && trace_n < 200) begin
             trace_n = trace_n + 1;
             $display("   t=%0t scl=%b sda=%b | st=%0d seq=%0d bitc=%0d q=%0d busy=%b err=%b mst=%0d sbc=%0d sdr=%b",
                      $time, scl, sda, u_m.st, u_m.seq, u_m.bitc, u_m.q, busy, err, u_s.st, u_s.bitc, u_s.sda_drive_lo);
@@ -115,7 +115,7 @@ module tb_i2c_master;
     // ---------------- RX 采样跟踪（定位主机接收侧） ----------------
     integer rx_trace = 0;
     always @(posedge clk) begin
-        if (u_m.st == 3'd4 && u_m.q == 2'd2 && rx_trace < 30) begin   // S_RX 且处于采样相位
+        if ($test$plusargs("trace") && u_m.st == 3'd4 && u_m.q == 2'd2 && rx_trace < 30) begin   // S_RX 且处于采样相位
             rx_trace <= rx_trace + 1;
             $display("      [主机收] bitc=%0d sda=%b 移位=%b rxc=%0d",
                      u_m.bitc, sda, u_m.sh, u_m.rxc);
@@ -145,13 +145,13 @@ module tb_i2c_master;
         do_xfer(1'b0, 7'h5A, 8'h5E, 16'h0024, 2'd1, 3'd1);
         if (err) begin $display("  FAIL  写入时从机未应答"); errors = errors + 1; end
         do_xfer(1'b1, 7'h5A, 8'h5E, 16'h0000, 2'd0, 3'd1);
-        check("reg-readback", rd_d, 32'h2400_0000);
+        check("reg-readback", rd_d, 32'h0000_0024);
 
         $display(" 用例 2：读触摸状态 2 字节（touch = 0x0F0）");
         touch = 12'h0F0;
         repeat (10) @(posedge clk);
         do_xfer(1'b1, 7'h5A, 8'h00, 16'h0000, 2'd0, 3'd2);
-        check("touch-status", rd_d, 32'hF000_0000);
+        check("touch-status", rd_d, 32'h0000_00F0);
 
         $display(" 用例 3：访问不存在的从机地址 0x33，应报 err");
         do_xfer(1'b1, 7'h33, 8'h00, 16'h0000, 2'd0, 3'd1);
@@ -159,8 +159,8 @@ module tb_i2c_master;
         else begin $display("  FAIL  未应答未被标记"); errors = errors + 1; end
 
         $display("==============================================================");
-        if (errors == 0) $display(" 全部通过");
-        else             $display(" 失败 %0d 项", errors);
+        if (errors == 0) $display("RESULT i2c_basic=PASS");
+        else begin $display("RESULT i2c_basic=FAIL errors=%0d", errors); $finish(1); end
         $display("==============================================================");
         $finish;
     end

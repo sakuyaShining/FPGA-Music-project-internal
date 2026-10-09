@@ -96,6 +96,7 @@ def main():
             "--name", "dsp_gui",
             "--paths", A(os.path.join("tools", "scripts")),
             "--add-data", A(os.path.join("tools", "host", "theme.qss")) + os.pathsep + ".",
+            "--add-data", A(os.path.join("tools", "host", "fonts")) + os.pathsep + "fonts",
             "--add-data", A(os.path.join("tools", "scripts", "dsp_host.py")) + os.pathsep + ".",
             "--add-data", A(os.path.join("docs", "02-技术方案", "regmap_baseline.csv")) + os.pathsep + ".",
             "--distpath", DIST,
