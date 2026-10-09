@@ -240,6 +240,16 @@
   ],
   "known_open_issues": [
     {
+      "id": "K-06",
+      "issue": "MIDI127 collides with FREE sentinel on hardware01; occupancy-based forward fix in02 awaiting tests",
+      "evidence": "project/evidence/full32-20261010/hardware-run01/report.json"
+    },
+    {
+      "id": "K-07",
+      "issue": "hardware01 short capture streams and timbre/pitch failures; raw indexed followup confirms nonzero samples but does not resolve run01 failures",
+      "evidence": "project/evidence/full32-20261010/sample-probe01/report.json"
+    },
+    {
       "id": "K-01",
       "issue": "T60 acceptance remains known failure",
       "gate": "35 t60(kf)"
