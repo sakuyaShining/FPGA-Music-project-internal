@@ -1,0 +1,17 @@
+{
+  "source_manifest": "project/versions/integration-20261010-04.json",
+  "build_record": "project/versions/board-build-20261010-04.json",
+  "configuration": "tdm_board_test GW2AR-LV18QN88C8/I7 full32 BOARD_DIAG1 FINGER_EXPR1 SSPI_GPIO place0 route2",
+  "exit_code": 0,
+  "completed_local": "2026-10-10 06:06:37",
+  "bitstream_generated_local": "2026-10-10 06:06:36",
+  "bitstream_sha256": "4f62b2e89b826e3dedfdecf58b09cec080e89c0039b181323775b4d8c09c3fdf",
+  "setup_slack_ns": 11.111,
+  "hold_slack_ns": 0.214,
+  "setup_tns_ns": 0,
+  "hold_tns_ns": 0,
+  "violated_endpoints": 0,
+  "resources": "Logic17800/20736 CLS9798/10368 BSRAM34/46 DSP9.75/24",
+  "io": "All30 ports explicitly constrained LVCMOS33; clk4 reset87DOWN UART70/69 DAC54/55/56 PA51 pads27..42",
+  "warning": "PR1014 retained; not physical audio/clock acceptance"
+}
