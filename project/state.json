@@ -10,7 +10,7 @@
     "working_tree": "Forward fix after hardware run01: occupancy-based MIDI127 allocation, complete stream test, raw transport evidence and host RX buffer; integration-20261010-02",
     "hardware": "SRAM downloaded; COM6 D3/revision2/proto11/scope32 confirmed; run01 exposed failures",
     "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "regression fix02",
+    "phase": "PnR fix02",
     "targeted_exit_code": 0,
     "targeted_evidence": "project/evidence/full32-fix02-20261010/targeted.log",
     "targeted_pid": 9160,
@@ -24,13 +24,13 @@
     "hardware_report": "project/evidence/full32-20261010/hardware-run01/report.json",
     "download_exit_code": 0,
     "board_identity": "COM6: PROTO=0x11 TEST_ID=0xd3 REVISION=2 SCOPE=32",
-    "pnr_exit_code": 0,
+    "pnr_exit_code": null,
     "download_log": "sim_build/sram-20261010-full32.log",
-    "pnr_session": 27516,
-    "pnr_pid": 22792,
-    "pnr_created_local": "2026-10-10 03:08:40",
-    "pnr_log": "sim_build/pnr-20261010-full32.log",
-    "regression_exit_code": null,
+    "pnr_session": 10601,
+    "pnr_pid": 3964,
+    "pnr_created_local": "2026-10-10 04:27:46",
+    "pnr_log": "sim_build/pnr-20261010-full32-fix02.log",
+    "regression_exit_code": 0,
     "regression_evidence": "project/evidence/full32-fix02-20261010",
     "regression_pid": 30208,
     "regression_created_local": "2026-10-10 03:37:38",
@@ -46,8 +46,8 @@
   },
   "acceptance": {
     "targeted_digital": "passed exit0: complete6144-byte UART stream, MIDI127 independent on/off, full32 group31/reuse for02",
-    "full_regression": "running for integration-20261010-02; previous01 passed56/56 with T60 KNOWN-FAIL and 2 INFO",
-    "pnr": "pending for02; preserved01 timing setup+10.527ns hold+0.211ns TNS0; PR1014 review open",
+    "full_regression": "integration-20261010-02 passed56/56 exit0 at2026-10-10 04:24:37; T60 KNOWN-FAIL and2 INFO retained",
+    "pnr": "running for02; preserved01 timing setup+10.527ns hold+0.211ns TNS0; PR1014 review open",
     "hardware": "run01 failed: sample stream short reads, MIDI127 ownership boundary, and sample/timbre/pitch assertions; preserve raw evidence and diagnose"
   },
   "versions": [
@@ -81,7 +81,7 @@
     },
     {
       "id": "integration-20261010-02",
-      "status": "current forward repair; tests pending; not programmed"
+      "status": "current forward repair; targeted and full56/56 passed; PnR running; not programmed"
     }
   ],
   "supporting_implementation": [

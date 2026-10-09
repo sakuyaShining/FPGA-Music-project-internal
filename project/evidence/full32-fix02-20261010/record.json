@@ -1,0 +1,16 @@
+{
+  "source_manifest": "project/versions/integration-20261010-02.json",
+  "source_manifest_sha256": "fbebb707e2f75bc2130f6ec3999436ee8dcde9183b42976d1925c3014896590c",
+  "configuration": "--full default product regressions plus complete full32 board UART stream and MIDI127 gate41",
+  "exit_code": 0,
+  "completed_local": "2026-10-10 04:24:37",
+  "required_pass": 56,
+  "required_total": 56,
+  "known_fail": ["T60"],
+  "info": ["deadparam", "gatecov"],
+  "files": {
+    "regress_result.txt": "890bcd670106b20073d44785a75ecac1da01f0526af7a689b1a785b5413e1e40",
+    "regress.log": "60e0b467def242f4cfed37ab9678b51db4f4426c66575835eaafc268db49c733"
+  },
+  "hardware": "02 not programmed; board remains01; this record covers digital regression only"
+}
