@@ -9,7 +9,7 @@ def main():
     parser.add_argument('--doc',type=Path,help='Explicit JSON manifest; historical Markdown is rejected')
     args=parser.parse_args()
     try:
-        record,errors=check(ROOT,args.doc or ROOT/'project/versions/integration-20261009-02.json')
+        record,errors=check(ROOT,args.doc or ROOT/'project/versions/integration-20261009-03.json')
     except (OSError,ValueError,KeyError) as e:
         print('FAIL',e);return 1
     for e in errors:print('FAIL',e)
