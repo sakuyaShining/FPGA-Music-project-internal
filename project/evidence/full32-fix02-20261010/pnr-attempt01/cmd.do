@@ -1,0 +1,18 @@
+-d C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\gowin\tdm_synth\impl\gwsynthesis\tdm_board_test.vg
+-p GW2AR-18C-QFN88-8
+-pn GW2AR-LV18QN88C8/I7
+-cst C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\constr\tdm_board_test.cst
+-cfg C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\gowin\tdm_synth\impl\pnr\device.cfg
+-sdc C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\constr\tdm_top.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-place_option 2
+-route_option 2
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000

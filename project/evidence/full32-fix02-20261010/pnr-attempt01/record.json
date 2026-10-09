@@ -1,0 +1,13 @@
+{
+  "source_manifest": "project/versions/integration-20261010-02.json",
+  "source_manifest_sha256": "fbebb707e2f75bc2130f6ec3999436ee8dcde9183b42976d1925c3014896590c",
+  "top": "tdm_board_test",
+  "part": "GW2AR-LV18QN88C8/I7",
+  "configuration": "BOARD_DIAG1 FINGER_EXPR1 full32 SSPI_GPIO place2 route2",
+  "exit_code": 1,
+  "completed_local": "2026-10-10 04:31:04",
+  "failure": "PR0004: one unrouted net; report does not identify its name",
+  "resources": "Logic17800/20736 CLS9779/10368 BSRAM34/46 DSP9.75/24",
+  "bitstream": "No new bitstream generated. Existing fs/timing files are stale01 and excluded from this attempt evidence.",
+  "next_attempt": "Same verified02 source and full32 configuration; vary placement to1, keep route2. Preserve this failed attempt."
+}
