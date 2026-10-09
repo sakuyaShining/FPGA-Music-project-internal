@@ -102,11 +102,15 @@ def main():
     if args.action == 'bind-build':
         if not args.bitstream.is_file() or not args.log.is_file(): raise ValueError('Missing build output')
         if args.bitstream.stat().st_size==0 or args.log.stat().st_size==0: raise ValueError('Empty build output')
+        captured = datetime.fromisoformat(record['captured_at']).timestamp()
+        if min(args.bitstream.stat().st_mtime,args.log.stat().st_mtime) < captured:
+            raise ValueError('Build predates source capture; capture first, then build new outputs')
         exclusive(args.output, dict(schema=1, source_manifest=str(args.manifest),
             source_tree_sha256=record['tree_sha256'], configuration=args.configuration,
             command=args.command, bitstream=str(args.bitstream.resolve()),
             bitstream_sha256=sha(args.bitstream.read_bytes()), log=str(args.log.resolve()),
             log_sha256=sha(args.log.read_bytes()), bound_at=datetime.now(timezone.utc).isoformat(),
+            source_captured_at=record['captured_at'],
             acceptance='identity-bound-only; review timing and hardware results separately'))
     print('RESULT project_version=PASS files=%d' % len(record['files']))
     return 0

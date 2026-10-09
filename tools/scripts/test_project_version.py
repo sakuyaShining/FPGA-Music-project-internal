@@ -48,6 +48,17 @@ class VersionTests(unittest.TestCase):
         self.assertEqual(subprocess.run(cmd,capture_output=True).returncode,0)
         bit.write_bytes(b'replacement')
         self.assertEqual(subprocess.run(cmd,capture_output=True).returncode,1)
+    def test_old_build_cannot_be_bound_to_new_source_capture(self):
+        bit=self.root/'old.fs';bit.write_bytes(b'old output')
+        log=self.root/'old.txt';log.write_text('old log')
+        self.record['captured_at']='2099-01-01T00:00:00+00:00';self.save(self.record)
+        command=['python',str(Path(pv.__file__)),'--root',str(self.root),'bind-build',str(self.manifest),
+                 '--bitstream',str(bit),'--log',str(log),'--command','test','--configuration','test',
+                 '--output',str(self.root/'bound.json')]
+        self.assertEqual(subprocess.run(command,capture_output=True).returncode,1)
+        self.assertFalse((self.root/'bound.json').exists())
+        self.record['captured_at']='2000-01-01T00:00:00+00:00';self.save(self.record)
+        self.assertEqual(subprocess.run(command,capture_output=True).returncode,0)
 
 
 if __name__=='__main__':unittest.main()
