@@ -387,9 +387,16 @@
     "updated_on": "2026-10-10",
     "document": "project/board-requirements-20261010.md",
     "current": "Tang Nano20K GW2AR-LV18QN88C8/I7 verified04 retained",
-    "proposed_target": null,
-    "status": "Await exact board/chip/dock version and reason; no migration or purchase decision",
+    "proposed_target": "Tang Primer20K GW2A-LV18PG256C8/I7; Dock/Lite unspecified",
+    "status": "Compared official specs: sameLUT/FF/BSRAM/multipliers, morePLLs andexternalDDR; no migration authorized",
     "current_resource_evidence": "project/evidence/full32-hostfix04-20261010/pnr/record.json",
-    "preservation": "Keep20K source/build/evidence while any new target is independently validated"
+    "preservation": "Keep20K source/build/evidence while any new target is independently validated",
+    "pending": [
+      "Dock orLite exactversion",
+      "damagedbutton board andsilkscreen/failuremode",
+      "contestacceptance Primer20K not explicitlylisted unlikePrimer25K",
+      "reasonforreplacement"
+    ],
+    "external_memory": "1Gbit DDR3=128MiB, not1GB; controller andbuffering notimplemented"
   }
 }
