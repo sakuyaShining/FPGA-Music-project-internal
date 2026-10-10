@@ -382,5 +382,14 @@
     ],
     "bench_day1": "project/prototype/bench-day1.md",
     "bench_status": "NOT_RUN; wiring continuity, power, identified04 UART then conditional physicalI2S/reset; physical probe points require board revision schematic"
+  },
+  "board_selection_review": {
+    "updated_on": "2026-10-10",
+    "document": "project/board-requirements-20261010.md",
+    "current": "Tang Nano20K GW2AR-LV18QN88C8/I7 verified04 retained",
+    "proposed_target": null,
+    "status": "Await exact board/chip/dock version and reason; no migration or purchase decision",
+    "current_resource_evidence": "project/evidence/full32-hostfix04-20261010/pnr/record.json",
+    "preservation": "Keep20K source/build/evidence while any new target is independently validated"
   }
 }
