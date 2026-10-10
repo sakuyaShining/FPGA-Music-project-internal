@@ -453,14 +453,17 @@
     "id": "N-12",
     "date": "2026-10-10",
     "document": "project/audio-visualization-design-20261010.md",
-    "user_decision": "At least see played audio waveform in host app; visible performance feedback",
-    "status": "Requirement and reference design reviewed; archived FPGA plot generated; host app page/acquisition not implemented",
+    "user_decision": "Music visualization: trajectory+waveform+spectrum accepted; evaluate entity-side FPGA-only computation",
+    "status": "Design and hardware resource feasibility reviewed; no new RTL or host waveform page implemented",
     "available": "tdm_board_test actual2048x24 samples; current115200UART6145byte frame approximately0.533s wire time",
     "boundary": "Snapshots of internal FPGA samples; not continuous scope, not DAC/speaker or sensor latency acceptance",
     "next": "Waveform parsing/view, shared serial asynchronous capture and source-aware timestamps; new fullsource identity and targeted gates",
     "name": "Music visualization",
     "reference_review": "Bitwig scope/spectrum; Ableton noteeditor/MPE; SonicVisualiser wave/spectrogram; Synesthesia audio-reactive scenes; official sources reviewed2026-10-10",
     "archived_example": "project/evidence/music-visualization-20261010/actual-waveform-spectrum.png",
-    "example_provenance": "project/evidence/music-visualization-20261010/plot-record.json"
+    "example_provenance": "project/evidence/music-visualization-20261010/plot-record.json",
+    "entity_architecture": "Proposed sidecar eventhistory, samplebuffer, fixedpointFFT and lightweight renderer; no synthesis core rewrite assumed",
+    "entity_resource_status": "Not implemented or synthesized; currentfull32diagnosticCLS95%/BSRAM34of46; no fit guarantee",
+    "entity_scope_pending": "Clarification asked whether FPGA-only also forbids acquisitionMCU or permits dedicatedtouch frontend"
   }
 }
