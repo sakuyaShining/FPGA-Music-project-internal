@@ -12,10 +12,18 @@
     "document": "project/touch-decision-20261010.md",
     "authorization": "User requested component research and decisions; panel choice remains compare both",
     "panel": "independent sliding keys vs mutual-capacitance multitouch surface; not frozen",
-    "prototype_platform": "Infineon PSoC4100S Max CY8CKIT-041S-MAX / CY8C4149AZI-S598; sensor frontend only, synthesis remains FPGA",
+    "prototype_platform": "CY8CKIT-041S-MAX retained as conditional evaluation candidate; no purchase or final-product selection",
     "surface_backup": "Azoteq IQS9150; seven contacts per IC, consider split hands; speed not hardware accepted",
     "disposition": "FDC2114/2214 demoted to small sensing experiments; MPR121 discontinued excluded new formal main BOM; mXT640UD-HA cited typical90Hz/idle<25ms does not establish <=10ms",
-    "status": "official-source research and prototype decision complete; procurement/physical scans/full-load worst10ms/final BOM pending"
+    "status": "Conditional evaluation purchase; finalfrontend and panel undecided; no physical10ms acceptance",
+    "original_prototype_platform": "Infineon PSoC4100S Max CY8CKIT-041S-MAX / CY8C4149AZI-S598; sensor frontend only, synthesis remains FPGA",
+    "procurement_review": {
+      "date": "2026-10-10",
+      "official_limit": "AN234185 section5.2 standardCSX touchpad widget up to3 simultaneous fingers; not a universal silicon limit",
+      "correction": "Earlier proposed4/5finger surface tests need customalgorithm/partition/dedicatedfrontend; standard library not established",
+      "recommendation": "Hold unconditionalP-01 purchase until experimental scope firmware leadtime budget confirmed; keep multi-finger requirements",
+      "final_product": "kit can be modular contest prototype but customsensor geometry mounting firmware and latency must be validated; not frozenBOM"
+    }
   },
   "open_issue_explanation": "project/open-issues-explained-20261010.md",
   "procurement": {
@@ -31,12 +39,12 @@
       "soldering iron"
     ],
     "user_inventory_update": "User corrected: neither oscilloscope nor logic analyzer borrowed; resistors borrowed; multimeter present availability not confirmed",
-    "first_batch": "CY8CKIT-041S-MAX complete kit1; passive8ohm rated3W speaker1; only missing short wires/headers/hooks/consumables",
+    "first_batch": "Suitable passive speaker plus matchedconnector and missingconsumables; PSoC completekit conditional after capability/firmware/leadtime/budget review",
     "borrow_first": "logic analyzer; additional scope/differential probe if existing instrument insufficient",
-    "deferred": "FDC EVM, MPR121 modules, IQS9150 backup, RC/LC bulk parts, large38-point panel, extra control boards and LED drivers",
+    "deferred": "FDC EVM, MPR121 modules, IQS9150 backup, RC/LC bulk parts, large38-point panel, extra control boards and LED drivers; unconditionalCY8CKIT-041S-MAX order pending suitability review",
     "kit_contents_verified": "main+CAPSENSE boards, MicroB USB cable,6 jumper wires,40pin FFC, onboardKitProg3; avoid duplicate purchases",
     "electrical_condition": "Kit target voltage defaults5V; set J10/actual board revision to3.3V and verify pullups before FPGA connection",
-    "reference_quotes": "Retrieved2026-10-10 DigiKeyUSD105.36 listed40 stock; MouserUSD98.59 listed0; domestic tax/shipping and delivery unconfirmed",
+    "reference_quotes": "Rechecked2026-10-10 DigiKeyUSD105.36 listed38stock; domesticdelivery taxshipping unconfirmed",
     "status": "Lists synchronized and old versions preserved; no order/payment/vendor message performed",
     "latest_borrowed": [
       "LEDs quantity unspecified",
@@ -388,7 +396,8 @@
     "unconfirmed_dependencies": [
       "touch kit delivery",
       "PCB fabrication shipping and assembly lead time",
-      "physical input and DAC latency results"
+      "physical input and DAC latency results",
+      "CSX standardwidget3finger limit requires valid fulltouch firmware/front-end strategy before reliance on kit"
     ],
     "status": "Replanned from existing docs; dates are targets, no order or musical scope change authorized by this plan"
   },
@@ -406,7 +415,8 @@
       "user procurement",
       "actual kit/electrode capability",
       "instrument availability",
-      "measured full-load input to DAC latency"
+      "measured full-load input to DAC latency",
+      "PSoC standardCSX3touch limit: fullsurface4/5touch route not implemented"
     ],
     "bench_day1": "project/prototype/bench-day1.md",
     "bench_status": "COM6 powered-board internal digital check5/5 PASS exit0; wiring andphysical measurements NOT_RUN",

@@ -9,7 +9,7 @@
 | 来源工作树、保留方式、接合与风险 | [integration.md](integration.md) |
 | 当前源码身份 | [integration-20261010-04.json](versions/integration-20261010-04.json)，226输入，完整回归及受控数字板测已验 |
 | 本版实测及证据边界 | [validation.md](validation.md) |
-| 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，第一轮PSoC平台已选、正式BOM待实测 |
+| 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，PSoC套件改条件评估采购，标准CSX3指限制已复核，最终前端/BOM未冻结 |
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
 | 原型、PCB、组装与提交排期 | [delivery-plan-20261010.md](delivery-plan-20261010.md)，官方11月4日18:00；内部10月31日提交目标，交期未确认 |
 | 到货实验卡、接线检查和记录模板 | [prototype/README.md](prototype/README.md)，双形态实测准备完成，尚未执行 |
