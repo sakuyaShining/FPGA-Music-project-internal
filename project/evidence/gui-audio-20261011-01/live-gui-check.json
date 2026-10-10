@@ -1,0 +1,17 @@
+{
+  "port": "COM6",
+  "download_performed": false,
+  "musical_commands_sent": false,
+  "source_manifest": "project/versions/integration-20261011-01.json",
+  "bitstream_identity": "Configuration tags only; actual bitstream hash not independently read from board",
+  "status": "PASS",
+  "sample_count": 2048,
+  "identity": {
+    "0x7f": 17,
+    "0xa4": 211,
+    "0xa5": 2,
+    "0xa9": 32
+  },
+  "elapsed_s": 0.7190000000118744,
+  "boundary": "Actual GUI QThread-to-SerialLink capture passed; internal samples only, no DAC or FPGA FFT acceptance"
+}

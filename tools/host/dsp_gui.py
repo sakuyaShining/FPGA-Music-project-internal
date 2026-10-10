@@ -14,6 +14,8 @@ config_editor 独立管理完整本地草稿；保存、载入不发设备命令
 import os
 import sys
 import time
+import json
+from pathlib import Path
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, _HERE)
@@ -37,6 +39,7 @@ from config_editor import ConfigEditor
 from studio_theme import THEMES, color, stylesheet
 from ui_preferences import load_preferences, save_preferences
 from studio_fonts import font_choices
+from audio_observer import AudioPage, CaptureWorker
 
 if QApplication.instance() is None:
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
@@ -359,6 +362,8 @@ class MainWindow(QMainWindow):
         self.scan_i = -1
         self.held = {}
         self.octave = 0                      # 键盘八度移位（±2 上限）
+        self.audio_worker = None
+        self.audio_test_note = False
         self._build_ui()
         self._load_theme()
         self.theme_picker.currentIndexChanged.connect(self._save_display_preferences)
@@ -398,7 +403,7 @@ class MainWindow(QMainWindow):
         rail.addSpacing(20)
         self.nav_buttons = []
         self.nav_group = QButtonGroup(self)
-        for index, label in enumerate(("01   音色设计", "02   设备实验", "03   硬件诊断")):
+        for index, label in enumerate(("01   音色设计", "02   设备实验", "03   硬件诊断", "04   音乐可视化")):
             button = QPushButton(label)
             button.setObjectName("Nav")
             button.setCheckable(True)
@@ -528,6 +533,11 @@ class MainWindow(QMainWindow):
         explanation.setWordWrap(True)
         explanation.setObjectName("Hint")
         diag_layout.addWidget(explanation)
+        self.audio_page = AudioPage()
+        page(self.audio_page, "音乐可视化")
+        self.audio_page.capture.clicked.connect(self._capture_audio)
+        self.audio_page.export.clicked.connect(self._export_audio)
+        self.audio_page.test_note.clicked.connect(self._audio_test_toggle)
         outer.addWidget(self.pages, 1)
 
         # ===== 主体：三列（演奏 | 塑谱 | 遥测调试）=====
@@ -1207,9 +1217,17 @@ class MainWindow(QMainWindow):
             self.log("未发现串口（pyserial 未装或没有设备）⇒ 可用「模拟设备」自测 ✓")
 
     def _toggle_conn(self):
+        if self.audio_worker is not None and self.audio_worker.isRunning():
+            self.log("采样事务进行中，完成后再切换连接")
+            return
         if self.link is not None:
             self._stop_scan()
             self._release_keys()
+            if self.audio_test_note:
+                if not self.send_frames(dh.cmd_note('off:69'), '释放A4测试音'):
+                    return
+                self.audio_test_note = False
+                self.audio_page.test_note.setText('发送A4测试音')
             self.link.close()
             self.link = None
             self.badge.setText("未连接")
@@ -1261,6 +1279,9 @@ class MainWindow(QMainWindow):
 
     # ---------------- 定时 ----------------
     def _tick(self):
+        if self.audio_worker is not None and self.audio_worker.isRunning():
+            self._tick_rate()
+            return
         if self.pages.currentIndex() == 2 and self.link is not None and self.scan_i in (-1, None):
             self._refresh_bars()
         self._tick_rate()
@@ -1290,6 +1311,7 @@ class MainWindow(QMainWindow):
             ("音色设计", "绘制分量、编辑参数\n保存和载入完整配置"),
             ("设备实验", "测试音符、预设与效果\n下载和播放实验曲谱"),
             ("硬件诊断", "查看电极遥测\n回读设备寄存器"),
+            ("音乐可视化", "查看FPGA真实音频快照\n计算与电气输出分开验证"),
         )
         title, description = descriptions[index]
         self.page_heading.setText(title)
@@ -1339,14 +1361,88 @@ class MainWindow(QMainWindow):
             super().keyReleaseEvent(ev)
 
     def closeEvent(self, ev):
+        if self.audio_worker is not None and self.audio_worker.isRunning():
+            self.log("采样事务进行中，请完成后关闭工作台")
+            ev.ignore()
+            return
         if not self.editor.confirm_discard():
             ev.ignore()
             return
         self._stop_scan()
         self._release_keys()
+        if self.audio_test_note and self.link is not None:
+            self.send_frames(dh.cmd_note('off:69'), '关闭时释放A4测试音')
         if self.link is not None:
             self.link.close()
         ev.accept()
+
+    def _capture_audio(self):
+        if not isinstance(self.link, SerialLink) or self.link.ser is None:
+            self.audio_page.status.setText("需要连接真实full32诊断设备；模拟设备无音频数据。")
+            return
+        if self.audio_worker is not None and self.audio_worker.isRunning():
+            return
+        self._stop_scan()
+        self.audio_page.capture.setEnabled(False)
+        self.audio_page.fx.setEnabled(False)
+        self.audio_page.test_note.setEnabled(False)
+        self.audio_page.status.setText("正在采集FPGA快照…本次完成前串口由采样独占，历史曲线暂保留。")
+        self.audio_worker = CaptureWorker(self.link, self.audio_page.fx.isChecked(), self)
+        self.audio_worker.result.connect(self._audio_ready)
+        self.audio_worker.failure.connect(self._audio_failed)
+        self.audio_worker.finished.connect(self._audio_finished)
+        self.audio_worker.start()
+
+    def _archive_audio(self, data, raw, status):
+        folder = Path(out_dir()) / 'audio_observer' / ('%s-%d' % (time.strftime('%Y%m%d-%H%M%S'), time.time_ns()))
+        folder.mkdir(parents=True, exist_ok=False)
+        (folder/'stream.bin').write_bytes(raw)
+        record = {k: v for k, v in data.items() if k != 'raw'}
+        record['status'] = status
+        (folder/'capture.json').write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding='utf-8')
+        return str(folder)
+
+    def _audio_ready(self, data):
+        self.audio_page.show_snapshot(data)
+        try:
+            destination = self._archive_audio(data, data['raw'], 'CAPTURED_NOT_ELECTRICAL_ACCEPTANCE')
+            self.log('音频快照已归档：' + destination)
+        except OSError as exc:
+            self.audio_page.status.setText(self.audio_page.status.text() + ' · 自动归档失败：' + str(exc))
+
+    def _audio_failed(self, exc):
+        self.audio_page.status.setText('本次采集失败：%s；保留的曲线为历史快照。' % exc)
+        self.log('音频采集失败：' + str(exc))
+        try:
+            self._archive_audio(dict(error=str(exc)), getattr(exc, 'raw', b''), 'FAILED')
+        except OSError as archive_exc:
+            self.log('失败证据保存失败：' + str(archive_exc))
+
+    def _audio_finished(self):
+        self.audio_page.capture.setEnabled(True)
+        self.audio_page.fx.setEnabled(True)
+        self.audio_page.test_note.setEnabled(True)
+
+    def _audio_test_toggle(self):
+        if not isinstance(self.link, SerialLink):
+            self.audio_page.status.setText('测试音需要真实设备；模拟设备不会发声。')
+            return
+        command = 'off:69' if self.audio_test_note else 'on:69:12'
+        if self.send_frames(dh.cmd_note(command), 'A4测试音命令（执行需采样确认）'):
+            self.audio_test_note = not self.audio_test_note
+            self.audio_page.test_note.setText('释放A4测试音' if self.audio_test_note else '发送A4测试音')
+
+    def _export_audio(self):
+        data = self.audio_page.snapshot
+        if data is None:
+            return
+        filename, _ = QFileDialog.getSaveFileName(self, '导出FPGA快照', 'fpga-audio.json', 'JSON (*.json)')
+        if filename:
+            try:
+                Path(filename).write_text(json.dumps({k: v for k, v in data.items() if k != 'raw'},
+                                                    ensure_ascii=False, indent=2), encoding='utf-8')
+            except OSError as exc:
+                self.audio_page.status.setText('导出失败：' + str(exc))
 
 
 # =============================================================================
@@ -1368,6 +1464,8 @@ def selftest():
 
     app = QApplication(sys.argv)
     w = MainWindow()
+    if '--audio' in sys.argv:
+        w.pages.setCurrentIndex(3)
     w.show()
     app.processEvents()
 

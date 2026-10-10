@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-11",
+  "source_manifest": "project/versions/integration-20261011-01.json",
+  "source_tree_sha256": "0e47db55517c88e9e1efadd794c46214d2d455fd60deb85c64f78db75ef94f7d",
+  "modified_or_added_inputs": [
+    "tools/host/audio_observer.py",
+    "tools/host/dsp_gui.py",
+    "tools/host/serial_link.py",
+    "tools/host/test_audio_observer.py"
+  ],
+  "RTL_data_constraints_scripts_unchanged_vs04": true,
+  "host_tests": "37 passed",
+  "gui_selftest": "PASS",
+  "raw_fixture": "project/evidence/bench/20261010-session-check02/a4_base.stream.bin",
+  "raw_fixture_sha256": "affab18021a22eb069fa28fffc0b78d694aa4ddbf688edb5366aea08d377e690",
+  "screenshot_source": "Archived04 board samples, NOT live current acquisition",
+  "hardware_acceptance": "GUI QThread capture on COM6 PASS2048 points in0.719s, no download or musical commands; live-gui-check.json; physical audio and FFT not accepted",
+  "board_compatibility": "D3/revision2/proto11/scope32 existing04 diagnostic API; tags not unique bitstream identity",
+  "FFT_mode": "User asked what FFT means; dual-mode authorization unresolved. No host FFT added",
+  "pending": "FPGA FFT and accepted-event trajectory interface; real display hardware; new GUI live board validation"
+}

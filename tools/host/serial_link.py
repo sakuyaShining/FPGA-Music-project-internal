@@ -20,6 +20,22 @@ serial_link.py —— 上位机通信层（GUI 只认这一层，不直接碰 py
 import os
 import sys
 import time
+import threading
+from functools import wraps
+
+
+def serial_transaction(method):
+    @wraps(method)
+    def guarded(self, *args, **kwargs):
+        if not self._transaction.acquire(blocking=False):
+            if method.__name__ == 'read_reg':
+                return None
+            raise RuntimeError('音频采样占用串口，请等待本次事务完成')
+        try:
+            return method(self, *args, **kwargs)
+        finally:
+            self._transaction.release()
+    return guarded
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -119,6 +135,8 @@ class SerialLink(LinkBase):
         self.baud = baud
         self.ser = None
         self._sent = 0
+        self._transaction = threading.RLock()
+        self.capture_busy = False
 
     def open(self):
         try:
@@ -138,6 +156,7 @@ class SerialLink(LinkBase):
         self.detail = "%s @ %d 8N1" % (self.port, self.baud)
         return True
 
+    @serial_transaction
     def close(self):
         if self.ser is not None:
             try:
@@ -145,6 +164,7 @@ class SerialLink(LinkBase):
             finally:
                 self.ser = None
 
+    @serial_transaction
     def send(self, frames):
         if self.ser is None:
             raise RuntimeError("串口未打开")
@@ -159,16 +179,17 @@ class SerialLink(LinkBase):
         self.ser.flush()
         return n
 
+    @serial_transaction
     def read_reg(self, addr, timeout=0.5):
         if self.ser is None:
             return None
         old = self.ser.timeout
         try:
+            self.ser.timeout = timeout
             self.ser.reset_input_buffer()
             if self.ser.write(bytes([RD_REQ, addr & 0xFF])) != 2:
                 return None
             self.ser.flush()
-            self.ser.timeout = timeout
             r = self.ser.read(2)
             self._sent += 2
         except Exception:
@@ -178,6 +199,17 @@ class SerialLink(LinkBase):
         if len(r) < 2 or r[0] != (addr & 0xFF):
             return None
         return r[1]                        # 第 1 字节是回显地址，第 2 字节才是值
+
+    @serial_transaction
+    def capture_audio(self, fx=True):
+        from audio_observer import capture_serial
+        if self.ser is None:
+            raise RuntimeError('串口未打开')
+        self.capture_busy = True
+        try:
+            return capture_serial(self.ser, fx)
+        finally:
+            self.capture_busy = False
 
 
 # =============================================================================

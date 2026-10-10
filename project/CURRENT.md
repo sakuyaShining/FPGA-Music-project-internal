@@ -9,12 +9,12 @@
 | 最新设计、全部已有能力、未实现项与待决参数 | [design.md](design.md)，固定N-01～N-11，新增N-12音频可视化 |
 | 产品候选及模块落点 | [state.json](state.json) 与 [catalog.json](catalog.json) |
 | 来源工作树、保留方式、接合与风险 | [integration.md](integration.md) |
-| 当前源码身份 | [integration-20261010-04.json](versions/integration-20261010-04.json)，226输入，完整回归及受控数字板测已验 |
+| 当前源码身份 | [integration-20261011-01.json](versions/integration-20261011-01.json)，228输入，上位机波形页关联验证；04完整回归/板测按原身份保留 |
 | 本版实测及证据边界 | [validation.md](validation.md) |
 | 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，用户确定全FPGA扫描/坐标/追踪，不用采集MCU，PSoC退出采购，原始测量前端待评估 |
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
 | 外部音频输出方案 | [audio-output-plan-20261010.md](audio-output-plan-20261010.md)，推荐3.5mm LINE OUT＋I²S线路DAC，内置喇叭可选；新增硬件尚未验 |
-| 音乐可视化设计 | [audio-visualization-design-20261010.md](audio-visualization-design-20261010.md)，N-12首版波形已确认，GUI页尚未实现，板上已有数字采样接口 |
+| 音乐可视化设计 | [audio-visualization-design-20261010.md](audio-visualization-design-20261010.md)，[gui-audio-20261011.md](gui-audio-20261011.md)，GUI真实波形页已接入/验证；FPGA轨迹与频谱尚未实现 |
 | 三视图架构及性能指标 | [music-visualization-metrics-20261010.md](music-visualization-metrics-20261010.md)，21项指标、计算边界与候选比较；建议阈值未冻结，架构尚未证明最优 |
 | 整机IO与PCB/底板分工 | [io-architecture-20261010.md](io-architecture-20261010.md)，Nano＋载板＋电极板为推荐分工，新前端/显示/引脚尚未冻结 |
 | 原型、PCB、组装与提交排期 | [delivery-plan-20261010.md](delivery-plan-20261010.md)，官方11月4日18:00；内部10月31日提交目标，交期未确认 |
@@ -31,7 +31,7 @@
 版本归一不等于产品功能全部完成。
 
 ```powershell
-python tools/scripts/project_version.py check project/versions/integration-20261010-04.json
+python tools/scripts/project_version.py check project/versions/integration-20261011-01.json
 python tools/scripts/closure_check.py
 python tools/scripts/regress_all.py --full
 ```
@@ -44,3 +44,5 @@ python tools/scripts/regress_all.py --full
 主目录接合按用户选择暂缓。2026-10-10用户已授权本分支上板测试与模拟多指：先验证，不打断其他活跃板测。
 20261009-06已验底座保留；01/02板测失败和03中止快照保留。当前04完整源226输入，全回归56/56、新PnR、SRAM下载、内部数字板测15/15、100/100完整流逐字节一致均退出0；实际主机capture与2048样本RAM索引读一致，无重试。板上构建[board-build-20261010-04.json](versions/board-build-20261010-04.json)，最终交付记录[evidence/full32-hostfix04-20261010/delivery.json](evidence/full32-hostfix04-20261010/delivery.json)。实体触控/DAC/10ms与未实现音乐语义仍挂账。
 本轮测试见[board-test-20261010.md](board-test-20261010.md)，旧55/55与产品PnR不直接签收新增配置。
+
+2026-10-11上位机波形更新：本版228输入，37主机测试/GUI自测/真实COM6后台采样通过。RTL及构建脚本与04相同；未重新PnR/下载，旧04码流和全量证据不升级为新GUI版全量签收。电脑FFT调试模式尚未批准。

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "product_branch": "codex/project-version-closure",
-  "source_manifest": "project/versions/integration-20261010-04.json",
+  "source_manifest": "project/versions/integration-20261011-01.json",
   "touch_frontend_decision": {
     "date": "2026-10-10",
     "requirements": [
@@ -179,6 +179,10 @@
     {
       "id": "integration-20261010-04",
       "status": "current226-input verified integration; unit3/3 full56/56 PnR SRAM15/15 hardware and100/100 exact-stream passed; physical/unfinished design acceptance separate"
+    },
+    {
+      "id": "integration-20261011-01",
+      "status": "228inputs host-only update;37hosttests GUIselftest/live2048capture PASS; RTLsame04, no newPnR or fullreg claim"
     }
   ],
   "supporting_implementation": [
@@ -470,10 +474,10 @@
     "date": "2026-10-10",
     "document": "project/audio-visualization-design-20261010.md",
     "user_decision": "Trajectory+waveform+spectrum accepted; all application computation only Tang Nano20K FPGA",
-    "status": "Design and hardware resource feasibility reviewed; no new RTL or host waveform page implemented",
+    "status": "Desktop real FPGA waveform snapshot implemented; accepted-event trajectory andFPGA spectrum unimplemented",
     "available": "tdm_board_test actual2048x24 samples; current115200UART6145byte frame approximately0.533s wire time",
     "boundary": "Snapshots of internal FPGA samples; not continuous scope, not DAC/speaker or sensor latency acceptance",
-    "next": "Implement resource-budgeted FPGA event history, waveform processing, fixed-point spectrum and entity renderer; host may display FPGA results, cannot replace entity computation",
+    "next": "FPGA accepted-event timeline and spectrum result interfaces, budgets and jointly verifiedRTL; computerFFT optional mode not approved",
     "name": "Music visualization",
     "reference_review": "Bitwig scope/spectrum; Ableton noteeditor/MPE; SonicVisualiser wave/spectrogram; Synesthesia audio-reactive scenes; official sources reviewed2026-10-10",
     "archived_example": "project/evidence/music-visualization-20261010/actual-waveform-spectrum.png",
@@ -494,7 +498,8 @@
       "diagnostic_BSRAM": 3,
       "boundary": "UART core excludes parser and capture; 100/100 integrity pass is not timed throughput benchmark; no source change",
       "upgrade_review": "UART is one link, not FPGA total throughput cap; 460800/921600/1.5M candidates untested; integer divider and BL616 bridge constraints recorded; no source/download change"
-    }
+    },
+    "desktop_waveform_evidence": "project/evidence/gui-audio-20261011-01/record.json"
   },
   "compute_policy": {
     "date": "2026-10-10",
@@ -532,5 +537,16 @@
     "audio": "Existing boardinternalI2S/MAX; proposed independent reachablepin lineDAC output requires new IO and clock review",
     "pin_boundary": "CST numbers are FPGA package pins, not physical header positions",
     "next": "Select rawfrontend/screen/DAC clock; joint reachable-pin and power budget before carrier schematic freeze"
+  },
+  "gui_audio_update": {
+    "date": "2026-10-11",
+    "document": "project/gui-audio-20261011.md",
+    "source_manifest": "project/versions/integration-20261011-01.json",
+    "status": "Waveform page implemented; host37 and GUIselftest PASS; live GUI capture PASS; trajectory/FPGA FFT pending",
+    "evidence": "project/evidence/gui-audio-20261011-01/record.json",
+    "hardware_scope": "ActualGUI transport2048 samples; configuration tags only, no newPnR/download; old04 board evidence preserved",
+    "PC_FFT_authorization": "Pending explanation; not approved or implemented",
+    "screen_dependency": "None for desktop display; entity screen pending",
+    "version_boundary": "Current GUI source01 differs from04 fulltree only inhost inputs;04 regression/hardware is historical, not01 full acceptance"
   }
 }
