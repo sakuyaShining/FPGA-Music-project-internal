@@ -511,5 +511,17 @@
       "source_identity": "PASS 226 files unchanged",
       "closure_checks": "9/9 PASS; development RTL/host preservation checks only"
     }
+  },
+  "io_architecture": {
+    "date": "2026-10-10",
+    "document": "project/io-architecture-20261010.md",
+    "status": "Proposed partition and existing wiring review; no frozen new pinout or PCB design",
+    "compute": "Nano20K only; no additional MCU",
+    "board_partition": "Existing Nano core plus proposed electrical carrier and replaceable electrode PCB; mechanical insulating base is separate",
+    "touch_bus": "I2C retained candidate; rawfrontend unresolved, alternateSPI/scanlines need review; currentaudio top no i2c_master instance",
+    "display_bus": "SPI or parallel pending screen and budget",
+    "audio": "Existing boardinternalI2S/MAX; proposed independent reachablepin lineDAC output requires new IO and clock review",
+    "pin_boundary": "CST numbers are FPGA package pins, not physical header positions",
+    "next": "Select rawfrontend/screen/DAC clock; joint reachable-pin and power budget before carrier schematic freeze"
   }
 }
