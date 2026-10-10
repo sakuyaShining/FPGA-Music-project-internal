@@ -12,7 +12,7 @@
 | 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，PSoC套件改条件评估采购，标准CSX3指限制已复核，最终前端/BOM未冻结 |
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
 | 外部音频输出方案 | [audio-output-plan-20261010.md](audio-output-plan-20261010.md)，推荐3.5mm LINE OUT＋I²S线路DAC，内置喇叭可选；新增硬件尚未验 |
-| 演奏音频曲线设计 | [audio-visualization-design-20261010.md](audio-visualization-design-20261010.md)，N-12已确认，GUI波形页尚未实现，板上已有数字采样接口 |
+| 音乐可视化设计 | [audio-visualization-design-20261010.md](audio-visualization-design-20261010.md)，N-12首版波形已确认，GUI页尚未实现，板上已有数字采样接口 |
 | 原型、PCB、组装与提交排期 | [delivery-plan-20261010.md](delivery-plan-20261010.md)，官方11月4日18:00；内部10月31日提交目标，交期未确认 |
 | 到货实验卡、接线检查和记录模板 | [prototype/README.md](prototype/README.md)，双形态实测准备完成，尚未执行 |
 | 开发板/芯片要求与换板核对 | [board-requirements-20261010.md](board-requirements-20261010.md)，Primer20K资源同档，底板/坏按键/赛事认可待确认，迁移未决定 |

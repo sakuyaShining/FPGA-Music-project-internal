@@ -1,0 +1,22 @@
+{
+  "source": "project/evidence/bench/20261010-session-check02",
+  "report_finished_utc": "2026-10-10T09:36:47.861753+00:00",
+  "sample_rate_hz": 52734.375,
+  "window_ms": 38.83614814814815,
+  "input_files": {
+    "a4_base.npy": {
+      "sha256": "30e4c2093d1d675875b3793f6fc2feaa592972c1185c64572ae1780486d51fd7",
+      "samples": 2048,
+      "rms_fullscale": 0.033347190705986234,
+      "peak_fullscale": 0.06852340698242188
+    },
+    "a4_plus75cents.npy": {
+      "sha256": "7c7d2181a6097fb9ba101b3f242a67ac3bb7981d3978754ba80d87913e8db1b5",
+      "samples": 2048,
+      "rms_fullscale": 0.03270180014160236,
+      "peak_fullscale": 0.0638275146484375
+    }
+  },
+  "analysis": "24bit fullscale normalization; Hann window;16384-point zero-padded FFT; padding does not improve underlying resolution",
+  "scope": "Archived FPGA internal samples, no current capture, no DAC or speaker measurement"
+}
