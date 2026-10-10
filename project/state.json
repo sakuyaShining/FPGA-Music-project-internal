@@ -483,7 +483,8 @@
       "uart_core_LUT": 98,
       "uart_core_registers": 72,
       "diagnostic_BSRAM": 3,
-      "boundary": "UART core excludes parser and capture; 100/100 integrity pass is not timed throughput benchmark; no source change"
+      "boundary": "UART core excludes parser and capture; 100/100 integrity pass is not timed throughput benchmark; no source change",
+      "upgrade_review": "UART is one link, not FPGA total throughput cap; 460800/921600/1.5M candidates untested; integer divider and BL616 bridge constraints recorded; no source/download change"
     }
   },
   "compute_policy": {
