@@ -428,7 +428,15 @@
     ],
     "bench_day1": "project/prototype/bench-day1.md",
     "bench_status": "COM6 powered-board internal digital check5/5 PASS exit0; wiring andphysical measurements NOT_RUN",
-    "available_instruments": "No oscilloscope or logic analyzer currently borrowed; multimeter access unconfirmed"
+    "available_instruments": "No oscilloscope or logic analyzer currently borrowed; multimeter access unconfirmed",
+    "current_equipment_experiments": {
+      "document": "project/prototype/available-experiments-20261010.md",
+      "status": "Plan recorded, NOT_RUN this turn",
+      "available_now": "Paper mechanical mockup; archived-sample/reference and FPGA visualization synthesis experiments; controlled future UART throughput trial",
+      "conditional": "Multimeter and electrode materials pending user confirmation; small RC rawmeasurement is exploratory not final multitouch acceptance",
+      "blocked_physical": "No selected touch frontend/screen/lineDAC or scope/analyzer; full touch, physicalaudio and<=10ms not accepted",
+      "preserve": "Existing04 accepted digital results unchanged; any experiment source/bitstream separately identified"
+    }
   },
   "board_selection_review": {
     "updated_on": "2026-10-10",
