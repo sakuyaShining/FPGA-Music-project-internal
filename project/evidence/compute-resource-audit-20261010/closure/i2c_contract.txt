@@ -1,0 +1,49 @@
+PASS bounded completion
+PASS done single pulse
+PASS write two bytes
+PASS bounded completion
+PASS done single pulse
+PASS bounded completion
+PASS done single pulse
+PASS four byte little byte-order
+PASS three ACK then one NACK
+PASS two START one STOP
+PASS bounded completion
+PASS done single pulse
+PASS one byte zero fill
+PASS bounded completion
+PASS done single pulse
+PASS three bytes zero fill
+PASS bounded completion
+PASS done single pulse
+PASS touch two bytes
+PASS bounded completion
+PASS done single pulse
+PASS request snapshot
+PASS bounded completion
+PASS done single pulse
+PASS stretch preserves data
+PASS bounded completion
+PASS done single pulse
+PASS missing slave NACK
+PASS bounded completion
+PASS done single pulse
+PASS zero read rejected
+PASS bounded completion
+PASS done single pulse
+PASS oversized read rejected
+PASS bounded completion
+PASS done single pulse
+PASS oversized write rejected
+PASS bounded completion
+PASS done single pulse
+PASS stuck SCL times out
+PASS bounded completion
+PASS done single pulse
+PASS busy SDA times out
+PASS bounded completion
+PASS done single pulse
+PASS error cleared on next request
+PASS reset releases lines
+RESULT i2c_contract=PASS rate=100000
+C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\sim\tb_i2c_contract.v:93: $finish called at 4672420000 (1ps)

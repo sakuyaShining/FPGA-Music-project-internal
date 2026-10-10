@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-10",
+  "source_manifest": "project/versions/integration-20261010-04.json",
+  "manifest_sha256": "e93e7a6a8c9e5ac375d3f876e452182dd7f7311baeb00fc292170c69a01382d2",
+  "project": "src/gowin/tdm_synth/tdm_board_test.gprj",
+  "project_sha256": "1283f4a03a0a76e9a341565130ad936443c5099104117620334c2a49a166c23e",
+  "enabled_project_files": [
+    {
+      "path": "src/rtl/tdm_board_test.v",
+      "type": "file.verilog",
+      "sha256": "f24c8559010f15457cc68c1bf3c1c42f2b4d4eedab56310332addba3ad23c85d"
+    },
+    {
+      "path": "src/rtl/board_diag.v",
+      "type": "file.verilog",
+      "sha256": "b889e1a521c164a8b3ea7d7136d6a058c2f00dada5a684937362dfcc02a56e8c"
+    },
+    {
+      "path": "src/rtl/tdm_top.v",
+      "type": "file.verilog",
+      "sha256": "0489bb33293a1195328bf0256d12eca3fc28255fecc625bb25a3e736caba491c"
+    },
+    {
+      "path": "src/rtl/tdm_ship.v",
+      "type": "file.verilog",
+      "sha256": "bb4add15144d5a3509b51f23fcf3aeffa8025527c67387a0757991511461d72f"
+    },
+    {
+      "path": "src/rtl/tdm_engine.v",
+      "type": "file.verilog",
+      "sha256": "7db1497e466de5e0ddba22edc1656fb3e100a30522c51f4a117712dd90276f0e"
+    },
+    {
+      "path": "src/rtl/note_map.v",
+      "type": "file.verilog",
+      "sha256": "069b76c436e6424bbc831c23b7964144898e3eeab67208302d9e24167aadfee2"
+    },
+    {
+      "path": "src/rtl/vel_shape.v",
+      "type": "file.verilog",
+      "sha256": "ed66c9d539250c893e6086b65870b74a86aca1df55897f4c5c33d5e1fbb8ab8d"
+    },
+    {
+      "path": "src/rtl/event_hold.v",
+      "type": "file.verilog",
+      "sha256": "ec06d3697215394354da8b3ffcdca6208c7cd5b6d8a4b8055e1d8e1a813708e4"
+    },
+    {
+      "path": "src/rtl/osc_env.v",
+      "type": "file.verilog",
+      "sha256": "170c66076c1b4993d6ce5280eabfadf71d20261d32ea52165c15a9c6ca98d65c"
+    },
+    {
+      "path": "src/rtl/pitch_mod.v",
+      "type": "file.verilog",
+      "sha256": "1ef276560151929c68d934a43909e85884ee5c564b809412bdb5ab4d9e062b30"
+    },
+    {
+      "path": "src/rtl/finger_pitch.v",
+      "type": "file.verilog",
+      "sha256": "0a67f38698fd47908665523b9f347842a2fe931ba6cefc9eb1b47995b387d895"
+    },
+    {
+      "path": "src/rtl/reg_bank.v",
+      "type": "file.verilog",
+      "sha256": "ab40758c3cfc453328860448d921e9f17423ccc5b67fde9c6f067881c91c89c3"
+    },
+    {
+      "path": "src/rtl/uart_rx.v",
+      "type": "file.verilog",
+      "sha256": "2812e4eea205fc4de870ddf7aa0edc9265685bb2bb0461258846bf42dcfb0518"
+    },
+    {
+      "path": "src/rtl/uart_tx.v",
+      "type": "file.verilog",
+      "sha256": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f"
+    },
+    {
+      "path": "src/rtl/fx_delay.v",
+      "type": "file.verilog",
+      "sha256": "ca16072487785866667c6f26da528603de4a0c1d8cff1299625875e6cf6881ef"
+    },
+    {
+      "path": "src/rtl/song_seq.v",
+      "type": "file.verilog",
+      "sha256": "56339052cda65f54c91061240af3fe604ca8715f34c7f31f18864606daf0db5f"
+    },
+    {
+      "path": "src/rtl/pad_scan.v",
+      "type": "file.verilog",
+      "sha256": "e42adff0b0b18c5a9b1f2ce8c26b0089cd06413116f0958dc0bcdfc8b07992cb"
+    },
+    {
+      "path": "src/rtl/pad_pitch.v",
+      "type": "file.verilog",
+      "sha256": "c8a7fc95f6bd98d14963c3c3b7b36a244de48f585711f078b5f39fbeeb353508"
+    },
+    {
+      "path": "src/rtl/strip_ctrl.v",
+      "type": "file.verilog",
+      "sha256": "25fe3d5a6fe4bc3aaf5479a6906807e90af7e4b6ce5ecfeeb0d1c37b94903bcd"
+    },
+    {
+      "path": "src/rtl/led_ind.v",
+      "type": "file.verilog",
+      "sha256": "05ce8e6dced0d341c04f51edd7a9fdc136fa5a58205cf5cf79314abb8f9ce8b3"
+    },
+    {
+      "path": "src/rtl/i2s_tx.v",
+      "type": "file.verilog",
+      "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a"
+    },
+    {
+      "path": "src/rtl/audio_clk_en.v",
+      "type": "file.verilog",
+      "sha256": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c"
+    },
+    {
+      "path": "src/constr/tdm_board_test.cst",
+      "type": "file.cst",
+      "sha256": "a2e61c6dbd26e8c9668ece0ce12074a4efa78026ee0811c195a18a08d3e08d89"
+    },
+    {
+      "path": "src/constr/tdm_top.sdc",
+      "type": "file.sdc",
+      "sha256": "56658d04c741d9ad621a9b1af5f852ba669e6bfdf97d95f2dc9b9f180a773278"
+    }
+  ],
+  "constraint": {
+    "date": "2026-10-10",
+    "authority": "Explicit user decision: no other MCU; all application computation only Tang Nano20K FPGA",
+    "platform": "Tang Nano20K GW2AR-LV18QN88C8/I7",
+    "scope": [
+      "touch scan",
+      "coordinate extraction",
+      "contact tracking",
+      "music synthesis",
+      "trajectory",
+      "waveform analysis",
+      "spectrum",
+      "entity display computation"
+    ],
+    "prohibited": "No external MCU, external algorithm controller, host CPU/GPU or other FPGA as application coprocessor; no automatic board upgrade",
+    "development_boundary": "Host build, reference synthesis, FFT assertions and archived plotting remain development tools; not proof of FPGA implementation",
+    "board_mcu_fact": "Nano20K physically contains BL616 for download/UART bridge; no project application firmware found; vendor firmware internals not audited",
+    "audit": "project/compute-resource-audit-20261010.md",
+    "evidence": "project/evidence/compute-resource-audit-20261010/record.json",
+    "status": "Music RTL inspected; new full-channel touch and FPGA visualization unimplemented",
+    "verification": {
+      "source_identity": "PASS 226 files unchanged",
+      "closure_checks": "9/9 PASS; development RTL/host preservation checks only"
+    }
+  },
+  "findings": "See project/compute-resource-audit-20261010.md; host computations and board BL616 explicitly recorded",
+  "scope_limit": "No vendor BL616 firmware audit or exhaustive archive binary audit",
+  "product_source_changed": false,
+  "hardware_action": "None; no serial connection or download this audit",
+  "status": "Audit recorded, all-FPGA entity touch and visualization NOT_IMPLEMENTED",
+  "source_check_exit": 0,
+  "closure_checks": [
+    {
+      "name": "protocol_join",
+      "passed": true
+    },
+    {
+      "name": "padfast",
+      "passed": true
+    },
+    {
+      "name": "event_sources",
+      "passed": true
+    },
+    {
+      "name": "evhold_stream",
+      "passed": true
+    },
+    {
+      "name": "i2c_master",
+      "passed": true
+    },
+    {
+      "name": "i2c_contract",
+      "passed": true
+    },
+    {
+      "name": "host",
+      "passed": true
+    },
+    {
+      "name": "finger",
+      "passed": true
+    },
+    {
+      "name": "gui",
+      "passed": true
+    }
+  ]
+}

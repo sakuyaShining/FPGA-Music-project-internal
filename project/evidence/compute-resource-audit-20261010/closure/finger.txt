@@ -1,0 +1,7 @@
+PASS finger_pitch: independent groups 0/31, anchors, clamps, release, reuse, races, reset
+C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\sim\tb_finger_pitch.v:57: $finish called at 410000 (1ps)
+
+PASS finger_top: allocator binding, independent notes, group 31, 16 partials, continuous updates, no retrigger, release/reuse/steal (3584 checks)
+C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\sim\tb_finger_top.v:104: $finish called at 544710000 (1ps)
+
+PASS continuous per-contact pitch integration

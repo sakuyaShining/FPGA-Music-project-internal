@@ -1,5 +1,7 @@
 # 当前项目入口
 
+**用户硬约束：唯一应用计算平台是Tang Nano 20K FPGA，不使用其他MCU或计算平台承担触控、音乐与实体可视化。** 计算资源逐项审计见[compute-resource-audit-20261010.md](compute-resource-audit-20261010.md)，电脑参考/FFT绘图与板载BL616单独列明；全FPGA触控和实体三视图尚未实现。
+
 本次整理遵循：保留最新已验代码，向前接合；不通过回退旧版本制造“闭环”。
 
 | 要确认的事实 | 唯一入口 |
@@ -15,7 +17,7 @@
 | 音乐可视化设计 | [audio-visualization-design-20261010.md](audio-visualization-design-20261010.md)，N-12首版波形已确认，GUI页尚未实现，板上已有数字采样接口 |
 | 原型、PCB、组装与提交排期 | [delivery-plan-20261010.md](delivery-plan-20261010.md)，官方11月4日18:00；内部10月31日提交目标，交期未确认 |
 | 到货实验卡、接线检查和记录模板 | [prototype/README.md](prototype/README.md)，双形态实测准备完成，尚未执行 |
-| 开发板/芯片要求与换板核对 | [board-requirements-20261010.md](board-requirements-20261010.md)，Primer20K资源同档，底板/坏按键/赛事认可待确认，迁移未决定 |
+| 开发板/芯片要求与换板核对 | [board-requirements-20261010.md](board-requirements-20261010.md)，历史Primer20K比较保留；最新决定固定Nano20K，不以换板增加算力 |
 | T60、旧LFO、时钟告警的具体含义 | [open-issues-explained-20261010.md](open-issues-explained-20261010.md) |
 | 开发板诊断身份与结果 | [board-observation.json](board-observation.json)，与产品候选分开 |
 

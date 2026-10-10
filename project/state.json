@@ -13,7 +13,7 @@
     "authorization": "User requested component research and decisions; panel choice remains compare both",
     "panel": "independent sliding keys vs mutual-capacitance multitouch surface; not frozen",
     "prototype_platform": "PSoCkit removed fromprocurement byuserFPGA-only decision; rawmeasurement frontend/electrodes pending",
-    "surface_backup": "Azoteq IQS9150; seven contacts per IC, consider split hands; speed not hardware accepted",
+    "surface_backup": "Historical IQS9150 suggestion superseded: coordinate/ID computation off FPGA is prohibited; no active controller backup selected",
     "disposition": "FDC2114/2214 demoted to small sensing experiments; MPR121 discontinued excluded new formal main BOM; mXT640UD-HA cited typical90Hz/idle<25ms does not establish <=10ms",
     "status": "FPGA-only architecture decided; rawmeasurement andFPGAtracker unimplemented; originalPSoC/IQSresearch historical",
     "original_prototype_platform": "Infineon PSoC4100S Max CY8CKIT-041S-MAX / CY8C4149AZI-S598; sensor frontend only, synthesis remains FPGA",
@@ -21,10 +21,10 @@
       "date": "2026-10-10",
       "official_limit": "AN234185 section5.2 standardCSX touchpad widget up to3 simultaneous fingers; not a universal silicon limit",
       "correction": "Earlier proposed4/5finger surface tests need customalgorithm/partition/dedicatedfrontend; standard library not established",
-      "recommendation": "Hold unconditionalP-01 purchase until experimental scope firmware leadtime budget confirmed; keep multi-finger requirements",
-      "final_product": "kit can be modular contest prototype but customsensor geometry mounting firmware and latency must be validated; not frozenBOM"
+      "recommendation": "Superseded by explicit no-MCU decision: CY8CKIT quantity0; not conditionally purchasable",
+      "final_product": "Historical kit suitability research only; excluded current product architecture"
     },
-    "latest_user_constraint": "Touch scan,coordinate extraction,tracking,music and visualization all onFPGA; no acquisitionMCU"
+    "latest_user_constraint": "All touch, music and visualization application computation only Tang Nano20K FPGA; no other MCU or compute board"
   },
   "open_issue_explanation": "project/open-issues-explained-20261010.md",
   "procurement": {
@@ -34,17 +34,14 @@
     "prototype_entry": "docs/02-技术方案/39-原型硬件采购清单-2026-10-08.md",
     "preserved_old_lists": "docs/archive/procurement-before-20261010",
     "confirmed_owned": [
-      "Tang Nano20K",
-      "oscilloscope",
-      "multimeter",
-      "soldering iron"
+      "Tang Nano20K"
     ],
     "user_inventory_update": "User corrected: neither oscilloscope nor logic analyzer borrowed; resistors borrowed; multimeter present availability not confirmed",
     "first_batch": "Appropriate outputhardware afterclock/pin review andmissingconsumables; noPSoC/acquisitionMCU; rawtouch frontend pending",
-    "borrow_first": "logic analyzer; additional scope/differential probe if existing instrument insufficient",
-    "deferred": "FDC EVM, MPR121 modules, IQS9150 backup, RC/LC bulk parts, large38-point panel, extra control boards and LED drivers; unconditionalCY8CKIT-041S-MAX order pending suitability review",
+    "borrow_first": "logic analyzer and oscilloscope; confirm multimeter access",
+    "deferred": "Raw sensing/electrodes and visual display await FPGA-only feasibility; PSoC and other MCU excluded, coordinate-controller suggestions historical",
     "kit_contents_verified": "main+CAPSENSE boards, MicroB USB cable,6 jumper wires,40pin FFC, onboardKitProg3; avoid duplicate purchases",
-    "electrical_condition": "Kit target voltage defaults5V; set J10/actual board revision to3.3V and verify pullups before FPGA connection",
+    "electrical_condition": "Old PSoC voltage notes historical only; each newly selected electrical peripheral needs Nano3.3V compatibility review",
     "reference_quotes": "Rechecked2026-10-10 DigiKeyUSD105.36 listed38stock; domesticdelivery taxshipping unconfirmed",
     "status": "Lists synchronized and old versions preserved; no order/payment/vendor message performed",
     "latest_borrowed": [
@@ -67,7 +64,8 @@
     ],
     "speaker_status": "Research complete; no order; impedance power and connector pairing required",
     "audio_output_candidate": "I2S lineDAC module plus3.5mm output and cable, borrowed active speaker; exact module not frozen",
-    "psoc_quantity": 0
+    "psoc_quantity": 0,
+    "historically_reported_equipment": "Older list included oscilloscope, multimeter and soldering iron; latest user availability overrides; scope/analyzer not obtained and multimeter access unconfirmed"
   },
   "active_test_run": {
     "id": "board-test-20261010",
@@ -130,7 +128,7 @@
   "design_register": {
     "document": "project/design.md",
     "reviewed_on": "2026-10-10",
-    "scope": "N-01 through N-11, integrated foundation, physical input boundaries, unimplemented behaviors and unresolved decisions",
+    "scope": "N-01 through N-12; Nano20K-only application computation, integrated foundation, unimplemented behavior and physical acceptance boundaries",
     "sources": "Archived design records plus current integrated code and version-bound validation",
     "change": "Documentation consolidation only; no new musical semantics approved; implementation and hardware acceptance unchanged"
   },
@@ -326,17 +324,23 @@
     },
     {
       "id": "N-10",
-      "status": "prototype pending",
+      "status": "FPGA-only requirement decided; physical prototype pending",
       "code": [
         "src/rtl/i2c_master.v"
       ],
-      "remaining": "PSoC4100SMax selected prototype, both panel geometries compared; actual full-channel sensors, tracking and worst touch-to-DAC<=10ms pending"
+      "remaining": "Raw sensing frontend not selected; full-channel FPGA scanning, coordinates, tracking, both panel geometry experiments and worst touch-to-DAC<=10ms unimplemented/unverified"
     },
     {
       "id": "N-11",
       "status": "principle recorded",
       "code": [],
       "remaining": "freeze and audition unified action semantics"
+    },
+    {
+      "id": "N-12",
+      "status": "design recorded; FPGA implementation pending",
+      "code": [],
+      "remaining": "Trajectory, waveform analysis, spectrum and entity display all on Nano20K; historical host FFT plot is not implementation; combined resource/PnR unverified"
     }
   ],
   "known_open_issues": [
@@ -416,11 +420,11 @@
     "status": "PriorPSoC experiment plan historical; pureFPGAfrontend plan requires new rawmeasurement andalgorithm review",
     "implementation_review": "i2c_master supports1-4byte reads and8bit register pointer; finger_pitch is expression endpoint not physical tracker",
     "pending": [
-      "user procurement",
-      "actual kit/electrode capability",
+      "FPGA-only raw measurement frontend and electrode review",
+      "full-channel scanning and FPGA coordinate/contact tracking",
+      "both panel geometries measured comparison",
       "instrument availability",
-      "measured full-load input to DAC latency",
-      "PSoC standardCSX3touch limit: fullsurface4/5touch route not implemented"
+      "touch-to-DAC latency evidence"
     ],
     "bench_day1": "project/prototype/bench-day1.md",
     "bench_status": "COM6 powered-board internal digital check5/5 PASS exit0; wiring andphysical measurements NOT_RUN",
@@ -431,9 +435,9 @@
     "document": "project/board-requirements-20261010.md",
     "current": "Tang Nano20K GW2AR-LV18QN88C8/I7 verified04 retained",
     "proposed_target": "Tang Primer20K GW2A-LV18PG256C8/I7; Dock/Lite unspecified",
-    "status": "Compared official specs: sameLUT/FF/BSRAM/multipliers, morePLLs andexternalDDR; no migration authorized",
+    "status": "Historical comparison retained; latest user fixes Nano20K as sole application compute platform, replacement/upgrade not current plan",
     "current_resource_evidence": "project/evidence/full32-hostfix04-20261010/pnr/record.json",
-    "preservation": "Keep20K source/build/evidence while any new target is independently validated",
+    "preservation": "Retain Nano20K verified source/build/evidence; no other board used to add application compute",
     "pending": [
       "Dock orLite exactversion",
       "Primerdamagedbutton silkscreen/failuremode",
@@ -456,11 +460,11 @@
     "id": "N-12",
     "date": "2026-10-10",
     "document": "project/audio-visualization-design-20261010.md",
-    "user_decision": "Music visualization: trajectory+waveform+spectrum accepted; evaluate entity-side FPGA-only computation",
+    "user_decision": "Trajectory+waveform+spectrum accepted; all application computation only Tang Nano20K FPGA",
     "status": "Design and hardware resource feasibility reviewed; no new RTL or host waveform page implemented",
     "available": "tdm_board_test actual2048x24 samples; current115200UART6145byte frame approximately0.533s wire time",
     "boundary": "Snapshots of internal FPGA samples; not continuous scope, not DAC/speaker or sensor latency acceptance",
-    "next": "Waveform parsing/view, shared serial asynchronous capture and source-aware timestamps; new fullsource identity and targeted gates",
+    "next": "Implement resource-budgeted FPGA event history, waveform processing, fixed-point spectrum and entity renderer; host may display FPGA results, cannot replace entity computation",
     "name": "Music visualization",
     "reference_review": "Bitwig scope/spectrum; Ableton noteeditor/MPE; SonicVisualiser wave/spectrogram; Synesthesia audio-reactive scenes; official sources reviewed2026-10-10",
     "archived_example": "project/evidence/music-visualization-20261010/actual-waveform-spectrum.png",
@@ -468,5 +472,30 @@
     "entity_architecture": "Proposed sidecar eventhistory, samplebuffer, fixedpointFFT and lightweight renderer; no synthesis core rewrite assumed",
     "entity_resource_status": "Not implemented or synthesized; currentfull32diagnosticCLS95%/BSRAM34of46; no fit guarantee",
     "entity_scope_pending": "Resolved: user requires touch,music,andentityvisualization allcomputed onFPGA; no acquisitionMCU"
+  },
+  "compute_policy": {
+    "date": "2026-10-10",
+    "authority": "Explicit user decision: no other MCU; all application computation only Tang Nano20K FPGA",
+    "platform": "Tang Nano20K GW2AR-LV18QN88C8/I7",
+    "scope": [
+      "touch scan",
+      "coordinate extraction",
+      "contact tracking",
+      "music synthesis",
+      "trajectory",
+      "waveform analysis",
+      "spectrum",
+      "entity display computation"
+    ],
+    "prohibited": "No external MCU, external algorithm controller, host CPU/GPU or other FPGA as application coprocessor; no automatic board upgrade",
+    "development_boundary": "Host build, reference synthesis, FFT assertions and archived plotting remain development tools; not proof of FPGA implementation",
+    "board_mcu_fact": "Nano20K physically contains BL616 for download/UART bridge; no project application firmware found; vendor firmware internals not audited",
+    "audit": "project/compute-resource-audit-20261010.md",
+    "evidence": "project/evidence/compute-resource-audit-20261010/record.json",
+    "status": "Music RTL inspected; new full-channel touch and FPGA visualization unimplemented",
+    "verification": {
+      "source_identity": "PASS 226 files unchanged",
+      "closure_checks": "9/9 PASS; development RTL/host preservation checks only"
+    }
   }
 }

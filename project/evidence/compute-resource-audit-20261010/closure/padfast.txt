@@ -1,0 +1,48 @@
+==============================================================
+ pad 通路『切换丢事件』定位（不录音，秒级）
+==============================================================
+ A 只按 pad0（期望 note-on 48 且被分配）
+      事件数=1 在响组数=1 note48 组=0
+  PASS  A-note48-allocated (1)
+ B 松开 pad0、**同一拍**按 pad1（期望 off48 + on49，且 49 被分配）
+      事件数=2  ack 增量=2  在响组数=1  note49 组=0
+      [source] produced=2 rejected=0
+      [组状态] 拍=80200 在响组: g0(note=49)
+  PASS  B-order-off48 (48)
+  PASS  B-order-off (0)
+  PASS  B-order-on49 (49)
+  PASS  B-order-on (1)
+        [事件] 拍=60697 OFF note=48
+        [事件] 拍=60698 ON  note=49
+  PASS  B-two-events-produced (2)
+  PASS  B-both-events-acked (2)
+  PASS  B-note49-allocated (1)
+  PASS  B-src-produced-2-valid (2)
+  PASS  B-source-queue-drops (0)
+ C 对照：先把 pad1 松开，静置后**单独**按 pad1
+      静置后在响组数=0
+      事件数=1  ack 增量=1  在响组数=1  note49 组=0
+  PASS  C-note49-alone-allocated (1)
+ D three adjacent events off49/on50/on51
+  PASS  D-three-produced (3)
+  PASS  D-three-acked (3)
+  PASS  D-off49-note (49)
+  PASS  D-off49-on (0)
+  PASS  D-on50-note (50)
+  PASS  D-on50-on (1)
+  PASS  D-on51-note (51)
+  PASS  D-on51-on (1)
+  PASS  D-note50-allocated (1)
+  PASS  D-note51-allocated (1)
+  PASS  D-no-pad-overflow (0)
+==============================================================
+ ★ 判读：
+   B 段事件日志中若出现 OFF48 与 ON49 两条 ⇒ 事件**产生了**；
+   再看 note49 组是否为 -1：
+     · 事件产生但未分配 ⇒ 丢失在 pad 通路 → note_map 之间
+     · 事件压根没产生   ⇒ 丢失在 pad_scan/pad_pitch 的扫查仲裁里
+   C 段通过而 B 段失败 ⇒ 确证是『重叠切换』触发。
+   本判据**不录音频**，因此秒级可反复迭代（对比 tb_padseq 的 446 秒）。
+==============================================================
+RESULT padfast=PASS
+C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\sim\tb_padfast.v:242: $finish called at 5933469081 (1ps)
