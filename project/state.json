@@ -393,10 +393,11 @@
     "preservation": "Keep20K source/build/evidence while any new target is independently validated",
     "pending": [
       "Dock orLite exactversion",
-      "damagedbutton board andsilkscreen/failuremode",
+      "Primerdamagedbutton silkscreen/failuremode",
       "contestacceptance Primer20K not explicitlylisted unlikePrimer25K",
       "reasonforreplacement"
     ],
-    "external_memory": "1Gbit DDR3=128MiB, not1GB; controller andbuffering notimplemented"
+    "external_memory": "1Gbit DDR3=128MiB, not1GB; controller andbuffering notimplemented",
+    "damage_confirmation": "User confirmed damagedbutton on proposedPrimer20K, notcurrentNano; buttonidentity andDock/Lite unknown"
   }
 }
