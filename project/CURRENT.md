@@ -9,6 +9,8 @@
 | 来源工作树、保留方式、接合与风险 | [integration.md](integration.md) |
 | 当前源码身份 | [integration-20261010-04.json](versions/integration-20261010-04.json)，226输入，完整回归及受控数字板测已验 |
 | 本版实测及证据边界 | [validation.md](validation.md) |
+| 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，第一轮PSoC平台已选、正式BOM待实测 |
+| T60、旧LFO、时钟告警的具体含义 | [open-issues-explained-20261010.md](open-issues-explained-20261010.md) |
 | 开发板诊断身份与结果 | [board-observation.json](board-observation.json)，与产品候选分开 |
 
 整合开发分支为 **`codex/project-version-closure`**。底座为 `a61b/7ca52c9` 的四源队列与逐指接口，

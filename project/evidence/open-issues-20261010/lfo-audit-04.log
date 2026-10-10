@@ -1,0 +1,5 @@
+before half-period: lfo_t=-1, poff=-8
+after half-period: lfo_t=127, poff=992
+before wrap: lfo_t=0, poff=0
+after wrap: lfo_t=-128, poff=-1000
+project/evidence/open-issues-20261010/tb_lfo_audit.v:17: $finish called at 4000 (1ps)
