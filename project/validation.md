@@ -43,3 +43,11 @@ T60已知失败、旧LFO跳变、异步复位同步释放、真实触摸/音频/
 本次按用户选择只保留整合分支，未接入或打断主目录板测。原main仍是来源工作区，候选验证完成后再接收板测的新成果。
 
 最终码流记录：[product-build-20261009-06.json](versions/product-build-20261009-06.json)。原始源码对应证据与码流保存在[evidence/integration-06-evidence.zip](evidence/integration-06-evidence.zip)。
+
+## 2026-10-10用户现场接续检查
+
+用户确认连接Nano20K且持续未断电，COM5/COM6枚举。本轮核对04源/构建PASS，另一板测空闲，COM6独占读回D3/proto11/rev2/scope32；未下载、未复位、未写Flash。标签不能独立区分02/04，04归属结合原下载记录与用户连续供电陈述，不宣称从FPGA读出了完整码流SHA。
+
+证据[session-check02/report.json](evidence/bench/20261010-session-check02/report.json)：5/5通过、退出0。覆盖清理后的2048样本静音、五档音符开关/MIDI127独立、完整32组分配/抢占/释放、A4内部数字频谱与单指移动、两指反向变调且不新增note-on。所有capture保留6145字节原始流和样本，结束活动音符0、串口关闭、所改控制参数恢复。不是上电默认/实体触控/DAC/I²S电气/10ms验收。
+
+首轮[session-check01/report.json](evidence/bench/20261010-session-check01/report.json)退出1，4/5通过；生命周期项因探测脚本使用本机Python不支持的int.bit_count未执行完，不是已定位RTL故障。改用同义bin.count写法后以新目录完整复跑，原失败/脚本/流均保留，未降低判据。

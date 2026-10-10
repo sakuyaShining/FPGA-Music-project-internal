@@ -30,7 +30,7 @@
       "multimeter",
       "soldering iron"
     ],
-    "user_inventory_update": "2026-10-10 borrowed above; logic analyzer not obtained; FDC EVM not ordered",
+    "user_inventory_update": "User corrected: neither oscilloscope nor logic analyzer borrowed; resistors borrowed; multimeter present availability not confirmed",
     "first_batch": "CY8CKIT-041S-MAX complete kit1; passive8ohm rated3W speaker1; only missing short wires/headers/hooks/consumables",
     "borrow_first": "logic analyzer; additional scope/differential probe if existing instrument insufficient",
     "deferred": "FDC EVM, MPR121 modules, IQS9150 backup, RC/LC bulk parts, large38-point panel, extra control boards and LED drivers",
@@ -43,12 +43,12 @@
       "Dupont wires assorted connectors",
       "breadboard",
       "several audio speakers type unspecified",
-      "oscilloscope"
+      "assorted resistors"
     ],
     "pending_borrowed_details": [
-      "passive vs active speakers and impedance power",
-      "scope channels probes and model",
-      "LED current limiting resistors"
+      "speaker type impedance power",
+      "resistor values",
+      "multimeter access; scope andanalyzer not borrowed"
     ],
     "speaker_action": "Hold duplicate purchase until borrowed speaker suitability confirmed"
   },
@@ -60,7 +60,7 @@
     "working_tree": "Host forward fix04: timeout before stream request, finally clear cases, host tests in gate41; full56/56 and fresh PnR passed, 04 SRAM programmed.",
     "hardware": "04 hardware-run04 passed15/15 exit0; actual capture equals2048 indexedRAM samples;100/100 complete streams exact exit0; this digital board test delivery complete",
     "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "hardware complete",
+    "phase": "hardware session check complete",
     "completed_scope": "version-bound integrated full32 synthetic-input/internal-digital board test; physical DAC/touch/I2S electrical/10ms and unimplemented musical semantics remain open",
     "stability_exit_code": 0,
     "stability_report": "project/evidence/full32-hostfix04-20261010/transport-stability04/report.json",
@@ -71,10 +71,10 @@
     "targeted_created_local": "2026-10-10 03:19:24",
     "targeted_session": 20680,
     "targeted_log": "sim_build/board-test-stream-note127-20261010.log",
-    "hardware_pid": 16140,
+    "hardware_pid": 0,
     "hardware_created_local": "2026-10-10 06:09:55",
     "hardware_session": 93858,
-    "hardware_log": "sim_build/transport-stability04.log",
+    "hardware_log": "project/evidence/bench/20261010-session-check02/check.log",
     "hardware_run04_log": "sim_build/hardware-20261010-full32-hostfix04-run04.log",
     "read_timing_probe_exit_code": 0,
     "read_timing_probe_report": "project/evidence/full32-fix02-20261010/read-timing02/report.json",
@@ -83,7 +83,7 @@
     "serial_errors_probe_report": "project/evidence/full32-fix02-20261010/serial-errors02/report.json",
     "hardware_exit_code": 0,
     "hardware_run02_log": "sim_build/hardware-20261010-full32-fix02-run02.log",
-    "hardware_report": "project/evidence/full32-hostfix04-20261010/hardware-run04/report.json",
+    "hardware_report": "project/evidence/bench/20261010-session-check02/report.json",
     "download_exit_code": 0,
     "board_identity": "COM6: PROTO=0x11 TEST_ID=0xd3 REVISION=2 SCOPE=32",
     "pnr_exit_code": 0,
@@ -99,7 +99,16 @@
     "regression_created_local": "2026-10-10 05:10:34",
     "regression_log": "sim_build/regress-20261010-full32-hostfix04.log",
     "regression_session": 37710,
-    "timeout_order_probe_report": "project/evidence/full32-fix02-20261010/timeout-order02/report.json"
+    "timeout_order_probe_report": "project/evidence/full32-fix02-20261010/timeout-order02/report.json",
+    "session_check": {
+      "status": "PASS",
+      "passed": 5,
+      "exit_code": 0,
+      "record": "project/evidence/bench/20261010-session-check02/record.json",
+      "no_download": true,
+      "initial_failure": "test Python API compatibility; preserved session-check01",
+      "identity_boundary": "Readback is configuration tag, not a unique bitstream hash.04 attribution relies on verified stored build/download and user continuous-power statement."
+    }
   },
   "design_register": {
     "document": "project/design.md",
@@ -394,8 +403,8 @@
       "measured full-load input to DAC latency"
     ],
     "bench_day1": "project/prototype/bench-day1.md",
-    "bench_status": "NOT_RUN; wiring continuity, power, identified04 UART then conditional physicalI2S/reset; physical probe points require board revision schematic",
-    "available_instruments": "Oscilloscope borrowed; logic analyzer unavailable; physical experiments NOT_RUN"
+    "bench_status": "COM6 powered-board internal digital check5/5 PASS exit0; wiring andphysical measurements NOT_RUN",
+    "available_instruments": "No oscilloscope or logic analyzer currently borrowed; multimeter access unconfirmed"
   },
   "board_selection_review": {
     "updated_on": "2026-10-10",

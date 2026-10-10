@@ -1,0 +1,89 @@
+{
+  "started_at": "2026-10-10T09:35:42.391528+00:00",
+  "port": "COM6",
+  "status": "FAIL",
+  "cases": [
+    {
+      "name": "cleared_internal_silence",
+      "status": "PASS",
+      "detail": {
+        "samples": 2048,
+        "all_zero": true,
+        "condition": "after deliberate event clearing, not startup"
+      }
+    },
+    {
+      "name": "note_lifecycle_and127_boundary",
+      "status": "FAIL",
+      "error": "'int' object has no attribute 'bit_count'"
+    },
+    {
+      "name": "full32_allocation_and_release",
+      "status": "PASS",
+      "detail": {
+        "voices": 32,
+        "steal": true,
+        "released_all": true
+      }
+    },
+    {
+      "name": "real_fpga_internal_pitch_expression",
+      "status": "PASS",
+      "detail": {
+        "base_hz": 440.95516204833984,
+        "moved_hz": 460.2670669555664,
+        "move_note_on": 0,
+        "sample_stream_bytes": 6145
+      }
+    },
+    {
+      "name": "two_synthetic_contacts_independent_pitch",
+      "status": "PASS",
+      "detail": {
+        "groups": [
+          0,
+          1
+        ],
+        "expected_hz": [
+          273.20871865616647,
+          375.37611551499083
+        ],
+        "observed_hz": [
+          273.58531951904297,
+          376.58214569091797
+        ],
+        "move_note_on": 0
+      }
+    }
+  ],
+  "source_manifest": "project/versions/integration-20261010-04.json",
+  "build_record": "project/versions/board-build-20261010-04.json",
+  "identity_boundary": "Readback is configuration tag, not a unique bitstream hash.04 attribution relies on verified stored build/download and user continuous-power statement.",
+  "scope": "Powered-board synthetic UART inputs and internal digital samples; no reset, new download, startup-default claim, physical touch, DAC or latency acceptance.",
+  "identity": {
+    "0x7f": 17,
+    "0xa4": 211,
+    "0xa5": 2,
+    "0xa9": 32
+  },
+  "before": {
+    "ack": 7789,
+    "on": 2743,
+    "off": 5046,
+    "active": 0,
+    "fingers": 2147483646,
+    "last_group": 0,
+    "last_note": 69
+  },
+  "after": {
+    "ack": 8850,
+    "on": 2780,
+    "off": 6070,
+    "active": 0,
+    "fingers": 3,
+    "last_group": 1,
+    "last_note": 67
+  },
+  "passed": 4,
+  "finished_at": "2026-10-10T09:35:55.298473+00:00"
+}
