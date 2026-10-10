@@ -475,7 +475,16 @@
     "metrics_document": "project/music-visualization-metrics-20261010.md",
     "architecture_verdict": "Reasonable candidate, not proven optimal: display, spectrum resolution objective, fixed-point budget and joint PnR pending",
     "metrics_status": "21 metrics recorded; proposed latency/refresh/precision/stability targets not user-frozen or measured; no implementation this review",
-    "metrics_evidence": "project/evidence/music-visualization-metrics-20261010/calculations.json"
+    "metrics_evidence": "project/evidence/music-visualization-metrics-20261010/calculations.json",
+    "uart_assessment": {
+      "document": "project/uart-efficiency-20261010.md",
+      "evidence": "project/evidence/uart-efficiency-20261010/record.json",
+      "nominal_payload_bytes_per_second": 11520,
+      "uart_core_LUT": 98,
+      "uart_core_registers": 72,
+      "diagnostic_BSRAM": 3,
+      "boundary": "UART core excludes parser and capture; 100/100 integrity pass is not timed throughput benchmark; no source change"
+    }
   },
   "compute_policy": {
     "date": "2026-10-10",

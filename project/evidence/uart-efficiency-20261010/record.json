@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-10",
+  "source_manifest": "project/versions/integration-20261010-04.json",
+  "build_record": "project/versions/board-build-20261010-04.json",
+  "source_check": "PASS 226 files",
+  "build_check": "PASS",
+  "synthesis_report_identity": "tdm_board_test GW2AR-LV18QN88C8/I7 created2026-10-10 06:03:52, same04 flow; actualsource andbuildhash checks PASS",
+  "reports": [
+    {
+      "path": "src/gowin/tdm_synth/impl/gwsynthesis/tdm_board_test_syn_resource.html",
+      "sha256": "1eb576d6200d282c0604ade90898a58d251f60c3875efbf2378faaad32e2800c"
+    },
+    {
+      "path": "src/gowin/tdm_synth/impl/gwsynthesis/tdm_board_test_syn.rpt.html",
+      "sha256": "2f7403873c0e754c756e736f2d9150e83074abbffdb19b8802167302aae54964"
+    }
+  ],
+  "uart_tx": {
+    "registers": 32,
+    "LUT": 51,
+    "BSRAM": 0,
+    "DSP": 0
+  },
+  "uart_rx": {
+    "registers": 40,
+    "LUT": 47,
+    "BSRAM": 0,
+    "DSP": 0
+  },
+  "diagnostic_observer": {
+    "registers": 335,
+    "LUT": 214,
+    "ALU": 75,
+    "BSRAM": 3,
+    "DSP": 0
+  },
+  "nominal_payload_bytes_per_second": 11520,
+  "full_frame_wire_time_ms_nominal": 533.4201388888888,
+  "throughput_measurement": "Not measured; old100/100 report has no per-frame times",
+  "no_hardware_action": true
+}
