@@ -548,5 +548,24 @@
     "PC_FFT_authorization": "Pending explanation; not approved or implemented",
     "screen_dependency": "None for desktop display; entity screen pending",
     "version_boundary": "Current GUI source01 differs from04 fulltree only inhost inputs;04 regression/hardware is historical, not01 full acceptance"
+  },
+  "host_product_review": {
+    "date": "2026-10-11",
+    "document": "project/host-product-review-20261011.md",
+    "basis": "Current228-input GUI source checked PASS",
+    "role_proposal": "Instrument configuration and performance observation workstation",
+    "current_pages": [
+      "local configuration draft",
+      "legacy device experiments",
+      "hardware diagnostics",
+      "actual FPGA waveform snapshots"
+    ],
+    "key_boundary": "Draft schematics/parameter bars differ from real FPGA sampled wave; full config application, FPGA spectrum and accepted-event trajectory pending",
+    "priority_proposals": [
+      "explicit application with device confirmation",
+      "FPGA result-based trajectory/waveform/spectrum",
+      "separate connection, accepted state, internal audio and electrical verification"
+    ],
+    "status": "Review and recommendations recorded; no code or musical semantics changed"
   }
 }
