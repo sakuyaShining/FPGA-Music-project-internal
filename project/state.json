@@ -471,7 +471,11 @@
     "example_provenance": "project/evidence/music-visualization-20261010/plot-record.json",
     "entity_architecture": "Proposed sidecar eventhistory, samplebuffer, fixedpointFFT and lightweight renderer; no synthesis core rewrite assumed",
     "entity_resource_status": "Not implemented or synthesized; currentfull32diagnosticCLS95%/BSRAM34of46; no fit guarantee",
-    "entity_scope_pending": "Resolved: user requires touch,music,andentityvisualization allcomputed onFPGA; no acquisitionMCU"
+    "entity_scope_pending": "Resolved: user requires touch,music,andentityvisualization allcomputed onFPGA; no acquisitionMCU",
+    "metrics_document": "project/music-visualization-metrics-20261010.md",
+    "architecture_verdict": "Reasonable candidate, not proven optimal: display, spectrum resolution objective, fixed-point budget and joint PnR pending",
+    "metrics_status": "21 metrics recorded; proposed latency/refresh/precision/stability targets not user-frozen or measured; no implementation this review",
+    "metrics_evidence": "project/evidence/music-visualization-metrics-20261010/calculations.json"
   },
   "compute_policy": {
     "date": "2026-10-10",

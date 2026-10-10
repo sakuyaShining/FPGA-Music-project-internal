@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-10",
+  "kind": "Analytic resource/performance estimates, NOT implemented hardware measurements",
+  "source_manifest": "project/versions/integration-20261010-04.json",
+  "manifest_sha256": "e93e7a6a8c9e5ac375d3f876e452182dd7f7311baeb00fc292170c69a01382d2",
+  "sample_rate_hz": 52734.375,
+  "fft": [
+    {
+      "N": 512,
+      "window_ms": 9.709037037037037,
+      "grid_hz": 102.996826171875,
+      "radix2_complex_butterflies": 2304
+    },
+    {
+      "N": 1024,
+      "window_ms": 19.418074074074074,
+      "grid_hz": 51.4984130859375,
+      "radix2_complex_butterflies": 5120
+    },
+    {
+      "N": 2048,
+      "window_ms": 38.83614814814815,
+      "grid_hz": 25.74920654296875,
+      "radix2_complex_butterflies": 11264
+    },
+    {
+      "N": 4096,
+      "window_ms": 77.6722962962963,
+      "grid_hz": 12.874603271484375,
+      "radix2_complex_butterflies": 24576
+    }
+  ],
+  "uart_full_snapshot": {
+    "bytes": 6145,
+    "bps": 115200,
+    "framing_bits_per_byte": 10,
+    "wire_ms": 533.4201388888888,
+    "ideal_frames_per_second": 1.8746948738812041
+  },
+  "display_example": {
+    "width": 320,
+    "height": 240,
+    "bits_per_pixel": 16,
+    "fps": 20,
+    "payload_bps": 24576000
+  },
+  "targets_status": "Engineering proposals only; not user-approved or measured",
+  "product_source_changed": false,
+  "implementation_status": "NOT_IMPLEMENTED"
+}

@@ -15,6 +15,7 @@
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
 | 外部音频输出方案 | [audio-output-plan-20261010.md](audio-output-plan-20261010.md)，推荐3.5mm LINE OUT＋I²S线路DAC，内置喇叭可选；新增硬件尚未验 |
 | 音乐可视化设计 | [audio-visualization-design-20261010.md](audio-visualization-design-20261010.md)，N-12首版波形已确认，GUI页尚未实现，板上已有数字采样接口 |
+| 三视图架构及性能指标 | [music-visualization-metrics-20261010.md](music-visualization-metrics-20261010.md)，21项指标、计算边界与候选比较；建议阈值未冻结，架构尚未证明最优 |
 | 原型、PCB、组装与提交排期 | [delivery-plan-20261010.md](delivery-plan-20261010.md)，官方11月4日18:00；内部10月31日提交目标，交期未确认 |
 | 到货实验卡、接线检查和记录模板 | [prototype/README.md](prototype/README.md)，双形态实测准备完成，尚未执行 |
 | 开发板/芯片要求与换板核对 | [board-requirements-20261010.md](board-requirements-20261010.md)，历史Primer20K比较保留；最新决定固定Nano20K，不以换板增加算力 |
