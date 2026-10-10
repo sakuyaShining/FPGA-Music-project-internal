@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-11",
+  "cause": "Observed via actual Windows UI: selected dropdown COM6 while active link SimLink; no actual audio generated",
+  "immediate_resolution": "Disconnected simulated backend and connected actualCOM6 in user window; continuous2048 sample capture observed successful",
+  "code_fix": "Disable port selection/refresh while connected; stop continuous capture when backend not real",
+  "source_manifest": "project/versions/integration-20261011-03.json",
+  "tests": "40 host tests PASS including backend/selector consistency",
+  "runtime_boundary": "Existing02 user window corrected live and kept connected;03 protection applies on next GUI launch",
+  "no_download": true,
+  "evidence": "project/evidence/connection-fix-20261011-03/record.json"
+}

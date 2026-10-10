@@ -88,6 +88,17 @@ class ObserverTests(unittest.TestCase):
 
 
 class ObserverUiTests(unittest.TestCase):
+    def test_connected_port_cannot_look_like_another_backend(self):
+        from dsp_gui import MainWindow, SimLink
+        window = MainWindow()
+        window.cmb_port.setCurrentIndex(0); window._toggle_conn()
+        self.assertIsInstance(window.link, SimLink)
+        self.assertFalse(window.cmb_port.isEnabled())
+        self.assertFalse(window.btn_refresh.isEnabled())
+        window._toggle_conn()
+        self.assertTrue(window.cmb_port.isEnabled())
+        self.assertTrue(window.btn_refresh.isEnabled())
+        window.close()
     def test_keyboard_polyphony_octave_release_and_panic(self):
         from dsp_gui import MainWindow, SimLink
         from PyQt5.QtCore import Qt

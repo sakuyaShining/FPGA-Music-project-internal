@@ -1249,6 +1249,8 @@ class MainWindow(QMainWindow):
                 self.audio_page.test_note.setText('发送A4测试音')
             self.link.close()
             self.link = None
+            self.cmb_port.setEnabled(True)
+            self.btn_refresh.setEnabled(True)
             self.badge.setText("未连接")
             self.badge.setObjectName("BadgeOff")
             self.badge.setStyleSheet("")
@@ -1289,6 +1291,8 @@ class MainWindow(QMainWindow):
         self._restyle()
         # 连上先回读一轮：立刻能看到"板子活着吗 + 寄存器现在是什么状态"
         self.read_all()
+        self.cmb_port.setEnabled(False)
+        self.btn_refresh.setEnabled(False)
 
     def _restyle(self):
         self.badge.style().unpolish(self.badge)
@@ -1397,6 +1401,7 @@ class MainWindow(QMainWindow):
 
     def _capture_audio(self):
         if not isinstance(self.link, SerialLink) or self.link.ser is None:
+            self.audio_page.follow.setChecked(False)
             self.audio_page.status.setText("需要连接真实full32诊断设备；模拟设备无音频数据。")
             return
         if self.audio_worker is not None and self.audio_worker.isRunning():

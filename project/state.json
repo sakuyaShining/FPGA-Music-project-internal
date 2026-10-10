@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "product_branch": "codex/project-version-closure",
-  "source_manifest": "project/versions/integration-20261011-02.json",
+  "source_manifest": "project/versions/integration-20261011-03.json",
   "touch_frontend_decision": {
     "date": "2026-10-10",
     "requirements": [
@@ -187,6 +187,10 @@
     {
       "id": "integration-20261011-02",
       "status": "Host-only performance workspace;39tests/live A4+C5 accepted and released during sample stream PASS; RTL unchanged, no newPnR"
+    },
+    {
+      "id": "integration-20261011-03",
+      "status": "Host-only connection consistency repair;40tests PASS; existing02 livewindow switched fromSimLink toCOM6 andsampled"
     }
   ],
   "supporting_implementation": [
@@ -580,5 +584,16 @@
     "evidence": "project/evidence/performance-20261011-02/board-check.json",
     "scope": "Eight pentatonic keys, octave, velocity, polyphonic on/off, panic, actual FPGA waveform snapshots; no PCFFT",
     "pending": "FPGA accepted-event trajectory and spectrum; entity display; real touch and physicalDAC"
+  },
+  "connection_ui_fix": {
+    "date": "2026-10-11",
+    "cause": "Observed via actual Windows UI: selected dropdown COM6 while active link SimLink; no actual audio generated",
+    "immediate_resolution": "Disconnected simulated backend and connected actualCOM6 in user window; continuous2048 sample capture observed successful",
+    "code_fix": "Disable port selection/refresh while connected; stop continuous capture when backend not real",
+    "source_manifest": "project/versions/integration-20261011-03.json",
+    "tests": "40 host tests PASS including backend/selector consistency",
+    "runtime_boundary": "Existing02 user window corrected live and kept connected;03 protection applies on next GUI launch",
+    "no_download": true,
+    "evidence": "project/evidence/connection-fix-20261011-03/record.json"
   }
 }

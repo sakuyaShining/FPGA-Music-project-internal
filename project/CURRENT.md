@@ -9,7 +9,7 @@
 | 最新设计、全部已有能力、未实现项与待决参数 | [design.md](design.md)，固定N-01～N-11，新增N-12音频可视化 |
 | 产品候选及模块落点 | [state.json](state.json) 与 [catalog.json](catalog.json) |
 | 来源工作树、保留方式、接合与风险 | [integration.md](integration.md) |
-| 当前源码身份 | [integration-20261011-02.json](versions/integration-20261011-02.json)，228输入，键盘演奏/实际波形关联验证；04完整回归/板测按原身份保留 |
+| 当前源码身份 | [integration-20261011-03.json](versions/integration-20261011-03.json)，228输入，演奏/波形与连接状态保护关联验证；04完整回归/板测按原身份保留 |
 | 本版实测及证据边界 | [validation.md](validation.md) |
 | 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，用户确定全FPGA扫描/坐标/追踪，不用采集MCU，PSoC退出采购，原始测量前端待评估 |
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
@@ -31,7 +31,7 @@
 版本归一不等于产品功能全部完成。
 
 ```powershell
-python tools/scripts/project_version.py check project/versions/integration-20261011-02.json
+python tools/scripts/project_version.py check project/versions/integration-20261011-03.json
 python tools/scripts/closure_check.py
 python tools/scripts/regress_all.py --full
 ```
@@ -48,3 +48,5 @@ python tools/scripts/regress_all.py --full
 2026-10-11上位机波形更新：本版228输入，37主机测试/GUI自测/真实COM6后台采样通过。RTL及构建脚本与04相同；未重新PnR/下载，旧04码流和全量证据不升级为新GUI版全量签收。电脑FFT调试模式尚未批准。
 
 2026-10-11演奏工作区：见[performance-workspace-20261011.md](performance-workspace-20261011.md)。39主机测试和真实COM6双音演奏/采样期间释放通过；无新RTL/PnR/下载，FPGA轨迹/频谱仍未实现。
+
+2026-10-11连接问题：实窗原为模拟后端，虽端口下拉已改COM6；现已切换真实COM6并连续采集。03修复连接时锁定端口，40主机测试通过，保护在下次GUI启动生效；保留当前已连的02窗口供用户演奏。
