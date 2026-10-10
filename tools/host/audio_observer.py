@@ -76,7 +76,7 @@ def capture_serial(ser, fx=True):
 
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
 from PyQt5.QtGui import QColor, QPainter, QPen
-from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QCheckBox, QVBoxLayout, QHBoxLayout, QComboBox
+from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QCheckBox, QVBoxLayout, QHBoxLayout, QComboBox, QSlider
 
 
 class CaptureWorker(QThread):
@@ -131,7 +131,7 @@ class AudioPage(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         layout = QVBoxLayout(self)
-        heading = QLabel('音乐可视化 · FPGA真实音频快照')
+        heading = QLabel('演奏工作区 · 键盘演奏与FPGA波形')
         heading.setObjectName('PageTitle'); layout.addWidget(heading)
         hint = QLabel('电脑显示FPGA采样。此页观察内部数字音频，不证明DAC、喇叭或外部引脚电气输出。')
         hint.setWordWrap(True); layout.addWidget(hint)
@@ -144,6 +144,25 @@ class AudioPage(QWidget):
         for gain in (1, 4, 16): self.zoom.addItem('显示放大 ×%d' % gain, gain)
         controls.addWidget(self.zoom)
         controls.addStretch(); layout.addLayout(controls)
+        self.follow = QCheckBox('连续采集实际波形（约每秒1次）')
+        layout.addWidget(self.follow)
+        self.play_buttons = []
+        keyboard = QHBoxLayout()
+        for letter in 'ZXCVBNM,':
+            button = QPushButton(letter)
+            button.setFocusPolicy(Qt.NoFocus)
+            button.setMinimumHeight(65)
+            self.play_buttons.append(button); keyboard.addWidget(button)
+        layout.addLayout(keyboard)
+        settings = QHBoxLayout()
+        self.oct_down = QPushButton('低八度'); self.oct_up = QPushButton('高八度')
+        self.velocity = QSlider(Qt.Horizontal); self.velocity.setRange(1,15); self.velocity.setValue(12)
+        self.velocity_label = QLabel('力度12/15')
+        self.panic = QPushButton('释放全部音符')
+        for item in (self.oct_down,self.oct_up,self.velocity_label,self.velocity,self.panic): settings.addWidget(item)
+        layout.addLayout(settings)
+        self.play_state = QLabel('输入：电脑键盘/鼠标 · 按下发音，松开释放 · 五声音阶 · 此处标记命令状态，不是FPGA执行轨迹')
+        self.play_state.setWordWrap(True); layout.addWidget(self.play_state)
         self.status = QLabel('未采集 · 仅支持真实full32诊断设备，模拟设备不产生音频')
         self.status.setWordWrap(True); layout.addWidget(self.status)
         self.wave = Waveform(); layout.addWidget(self.wave)

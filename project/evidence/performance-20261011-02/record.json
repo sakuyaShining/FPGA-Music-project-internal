@@ -1,0 +1,15 @@
+{
+  "source_manifest": "project/versions/integration-20261011-02.json",
+  "source_tree_sha256": "bb9bd13865abca934da14b27e26f6b892cbeecf8b24db4746d3dc372369b1b38",
+  "host_changes": [
+    "tools/host/audio_observer.py",
+    "tools/host/dsp_gui.py",
+    "tools/host/serial_link.py",
+    "tools/host/test_audio_observer.py"
+  ],
+  "host_tests": 39,
+  "GUIselftest": "PASS",
+  "live": "board-check.json",
+  "hardware_source": "Existing compatible diagnostic configuration only; tags not bitstreamhash",
+  "no_new_download": true
+}

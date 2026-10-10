@@ -365,6 +365,9 @@ class MainWindow(QMainWindow):
         self.audio_worker = None
         self.audio_test_note = False
         self._build_ui()
+        self.audio_page.velocity.valueChanged.connect(self.sld_vel.setValue)
+        self.sld_vel.valueChanged.connect(self.audio_page.velocity.setValue)
+        self._shift_octave(0)
         self._load_theme()
         self.theme_picker.currentIndexChanged.connect(self._save_display_preferences)
         self.text_size_picker.currentIndexChanged.connect(self._save_display_preferences)
@@ -375,6 +378,10 @@ class MainWindow(QMainWindow):
         self.timer.start(200)
         self.scan_timer = QTimer(self)
         self.scan_timer.timeout.connect(self._scan_step)
+        self.audio_follow_timer = QTimer(self)
+        self.audio_follow_timer.setInterval(1000)
+        self.audio_follow_timer.timeout.connect(self._follow_audio)
+        self.audio_page.follow.toggled.connect(lambda enabled: self.audio_follow_timer.start() if enabled else self.audio_follow_timer.stop())
         self.log("就绪 ✓ 顶部可切「模拟设备」（无板自测）或选串口连接 ✓")
         self.log("配置页可离线编辑、保存和载入完整草稿；设备应用尚待接入。")
         self.log("设备实验页保留旧接口测试；模拟设备不出声。左手手势与右手保持功能尚待实现。")
@@ -403,7 +410,7 @@ class MainWindow(QMainWindow):
         rail.addSpacing(20)
         self.nav_buttons = []
         self.nav_group = QButtonGroup(self)
-        for index, label in enumerate(("01   音色设计", "02   设备实验", "03   硬件诊断", "04   音乐可视化")):
+        for index, label in enumerate(("01   音色设计", "02   设备实验", "03   硬件诊断", "04   演奏与观察")):
             button = QPushButton(label)
             button.setObjectName("Nav")
             button.setCheckable(True)
@@ -538,6 +545,13 @@ class MainWindow(QMainWindow):
         self.audio_page.capture.clicked.connect(self._capture_audio)
         self.audio_page.export.clicked.connect(self._export_audio)
         self.audio_page.test_note.clicked.connect(self._audio_test_toggle)
+        for i, button in enumerate(self.audio_page.play_buttons):
+            button.pressed.connect(lambda idx=i: self.note_on(idx))
+            button.released.connect(lambda idx=i: self.note_off(idx))
+        self.audio_page.oct_down.clicked.connect(lambda: self._shift_octave(-1))
+        self.audio_page.oct_up.clicked.connect(lambda: self._shift_octave(1))
+        self.audio_page.velocity.valueChanged.connect(lambda v: self.audio_page.velocity_label.setText('力度%d/15' % v))
+        self.audio_page.panic.clicked.connect(self._performance_panic)
         outer.addWidget(self.pages, 1)
 
         # ===== 主体：三列（演奏 | 塑谱 | 遥测调试）=====
@@ -918,14 +932,18 @@ class MainWindow(QMainWindow):
         if self.send_frames(dh.cmd_note("on:%d:%d" % (midi, vel)), "音符开 %s" % midi_name(midi)):
             self.held[idx] = midi
             self.key_btns[idx].setDown(True)
+            self.audio_page.play_buttons[idx].setDown(True)
+            self._performance_state()
 
     def note_off(self, idx):
         if idx not in self.held:
             return
-        midi = self.held.pop(idx)
-        self.key_btns[idx].setDown(False)
-        self.send_frames(dh.cmd_note("off:%d" % midi),
-                         "音符关 %s" % midi_name(midi))
+        midi = self.held[idx]
+        if self.send_frames(dh.cmd_note("off:%d" % midi), "音符关 %s" % midi_name(midi)):
+            self.held.pop(idx)
+            self.key_btns[idx].setDown(False)
+            self.audio_page.play_buttons[idx].setDown(False)
+            self._performance_state()
 
     def _shift_octave(self, d):
         self.octave = max(-2, min(2, self.octave + d))
@@ -933,6 +951,7 @@ class MainWindow(QMainWindow):
             m = PENTA[i] + 12 * self.octave
             b.setText("%s\n%d" % (midi_name(m), m))
             b.setToolTip("MIDI %d（电脑键 %s）" % (m, KEYMAP[i]))
+            self.audio_page.play_buttons[i].setText('%s\n%s' % (KEYMAP[i], midi_name(m)))
         self.lab_oct.setText("%s – %s%s" % (midi_name(PENTA[0] + 12 * self.octave),
                                             midi_name(PENTA[-1] + 12 * self.octave),
                                             {0: "", 1: "（+1oct）", -1: "（−1oct）",
@@ -1311,7 +1330,7 @@ class MainWindow(QMainWindow):
             ("音色设计", "绘制分量、编辑参数\n保存和载入完整配置"),
             ("设备实验", "测试音符、预设与效果\n下载和播放实验曲谱"),
             ("硬件诊断", "查看电极遥测\n回读设备寄存器"),
-            ("音乐可视化", "查看FPGA真实音频快照\n计算与电气输出分开验证"),
+            ("演奏与观察", "键盘演奏与多音释放\n查看FPGA实际波形"),
         )
         title, description = descriptions[index]
         self.page_heading.setText(title)
@@ -1323,7 +1342,7 @@ class MainWindow(QMainWindow):
 
     def _keyboard_active(self):
         focus = QApplication.focusWidget()
-        return (self.pages.currentWidget() is self.experiment_page and
+        return (self.pages.currentIndex() in (1, 3) and
                 not isinstance(focus, (QLineEdit, QPlainTextEdit, QAbstractSpinBox, QComboBox)))
 
     def _export(self):
@@ -1386,7 +1405,7 @@ class MainWindow(QMainWindow):
         self.audio_page.capture.setEnabled(False)
         self.audio_page.fx.setEnabled(False)
         self.audio_page.test_note.setEnabled(False)
-        self.audio_page.status.setText("正在采集FPGA快照…本次完成前串口由采样独占，历史曲线暂保留。")
+        self.audio_page.status.setText("正在采集FPGA实际波形…仍可按键演奏；读回事务由采样独占。")
         self.audio_worker = CaptureWorker(self.link, self.audio_page.fx.isChecked(), self)
         self.audio_worker.result.connect(self._audio_ready)
         self.audio_worker.failure.connect(self._audio_failed)
@@ -1411,6 +1430,7 @@ class MainWindow(QMainWindow):
             self.audio_page.status.setText(self.audio_page.status.text() + ' · 自动归档失败：' + str(exc))
 
     def _audio_failed(self, exc):
+        self.audio_page.follow.setChecked(False)
         self.audio_page.status.setText('本次采集失败：%s；保留的曲线为历史快照。' % exc)
         self.log('音频采集失败：' + str(exc))
         try:
@@ -1431,6 +1451,28 @@ class MainWindow(QMainWindow):
         if self.send_frames(dh.cmd_note(command), 'A4测试音命令（执行需采样确认）'):
             self.audio_test_note = not self.audio_test_note
             self.audio_page.test_note.setText('释放A4测试音' if self.audio_test_note else '发送A4测试音')
+
+    def _follow_audio(self):
+        if self.pages.currentIndex() == 3:
+            self._capture_audio()
+
+    def _performance_state(self):
+        notes = ', '.join(midi_name(n) for n in self.held.values()) or '无按住音符'
+        self.audio_page.play_state.setText('电脑演奏 · 已发送按键状态：%s（不是FPGA执行确认）' % notes)
+
+    def _performance_panic(self):
+        if self.link is None: return
+        if self.send_frames(dh.cmd_note(','.join('off:%d' % n for n in range(128))), '释放全部128音符'):
+            self.held.clear()
+            for button in self.key_btns + self.audio_page.play_buttons: button.setDown(False)
+            self.audio_test_note = False; self.audio_page.test_note.setText('发送A4测试音')
+            self._performance_state()
+
+    def changeEvent(self, event):
+        from PyQt5.QtCore import QEvent
+        super().changeEvent(event)
+        if event.type() == QEvent.ActivationChange and not self.isActiveWindow() and hasattr(self, 'held'):
+            self._release_keys()
 
     def _export_audio(self):
         data = self.audio_page.snapshot

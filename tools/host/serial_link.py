@@ -136,6 +136,7 @@ class SerialLink(LinkBase):
         self.ser = None
         self._sent = 0
         self._transaction = threading.RLock()
+        self._write_lock = threading.RLock()
         self.capture_busy = False
 
     def open(self):
@@ -164,7 +165,6 @@ class SerialLink(LinkBase):
             finally:
                 self.ser = None
 
-    @serial_transaction
     def send(self, frames):
         if self.ser is None:
             raise RuntimeError("串口未打开")
@@ -172,12 +172,24 @@ class SerialLink(LinkBase):
         for a, d, _note in frames.items:
             buf.append(a & 0xFF)
             buf.append(d & 0xFF)
-        n = self.ser.write(bytes(buf))
-        self._sent += n
-        if n != len(buf):
-            raise OSError("串口写入不完整：%d / %d 字节" % (n, len(buf)))
-        self.ser.flush()
-        return n
+        acquired = self._transaction.acquire(blocking=False)
+        # UART is full duplex: notes do not produce RX responses or touch the
+        # sample reader. Allow only these writes while a capture owns RX.
+        if not acquired and any(a not in (0x60, 0x61) for a, _, _ in frames.items):
+            raise RuntimeError('采样中仅允许演奏音符；其他事务请等待')
+        try:
+            with self._write_lock:
+                n = self.ser.write(bytes(buf))
+                if n != len(buf):
+                    self._sent += n
+                    raise OSError("串口写入不完整：%d / %d 字节" % (n, len(buf)))
+                self.ser.flush()
+            self._sent += n
+            if n != len(buf):
+                raise OSError("串口写入不完整：%d / %d 字节" % (n, len(buf)))
+            return n
+        finally:
+            if acquired: self._transaction.release()
 
     @serial_transaction
     def read_reg(self, addr, timeout=0.5):
@@ -207,7 +219,20 @@ class SerialLink(LinkBase):
             raise RuntimeError('串口未打开')
         self.capture_busy = True
         try:
-            return capture_serial(self.ser, fx)
+            link = self
+            class Port:
+                @property
+                def timeout(self): return link.ser.timeout
+                @timeout.setter
+                def timeout(self, value):
+                    with link._write_lock: link.ser.timeout = value
+                def write(self, data):
+                    with link._write_lock: return link.ser.write(data)
+                def flush(self):
+                    with link._write_lock: link.ser.flush()
+                def read(self, count): return link.ser.read(count)
+                def reset_input_buffer(self): link.ser.reset_input_buffer()
+            return capture_serial(Port(), fx)
         finally:
             self.capture_busy = False
 

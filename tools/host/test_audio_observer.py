@@ -34,6 +34,24 @@ class FakeSerial:
 
 
 class ObserverTests(unittest.TestCase):
+    def test_note_transmission_during_capture_does_not_request_readback(self):
+        import dsp_host as dh
+        from unittest.mock import Mock
+        link = SerialLink('TEST'); link.ser = Mock()
+        link.ser.write.side_effect = lambda data: len(data)
+        ready, done = threading.Event(), threading.Event()
+        def owner():
+            with link._transaction:
+                ready.set(); done.wait(2)
+        thread = threading.Thread(target=owner); thread.start(); ready.wait(2)
+        try:
+            self.assertEqual(link.send(dh.cmd_note('on:60:12')), 4)
+            self.assertEqual(link.send(dh.cmd_note('off:60')), 4)
+            control = dh.Frames(); control.w('CTRL', 8, 'control')
+            with self.assertRaises(RuntimeError): link.send(control)
+            link.ser.read.assert_not_called()
+        finally:
+            done.set(); thread.join()
     def test_signed_full_frame_and_configuration_before_request(self):
         port = FakeSerial()
         data = capture_serial(port)
@@ -70,6 +88,22 @@ class ObserverTests(unittest.TestCase):
 
 
 class ObserverUiTests(unittest.TestCase):
+    def test_keyboard_polyphony_octave_release_and_panic(self):
+        from dsp_gui import MainWindow, SimLink
+        from PyQt5.QtCore import Qt
+        from PyQt5.QtTest import QTest
+        window = MainWindow(); window.link = SimLink(); window.link.open()
+        window.pages.setCurrentIndex(3)
+        window.show(); window.setFocus(); self.app.processEvents()
+        QTest.keyPress(window, Qt.Key_Z); QTest.keyPress(window, Qt.Key_X)
+        self.assertEqual(set(window.held.values()), {60,62})
+        window._shift_octave(1)
+        QTest.keyRelease(window, Qt.Key_Z)
+        self.assertEqual(window.held, {1:62})
+        self.assertTrue(any(a==0x60 and d==60 for a,d,_ in window.journal))
+        window._performance_panic(); self.assertEqual(window.held,{})
+        self.assertFalse(any(b.isDown() for b in window.audio_page.play_buttons))
+        window.link=None; window.close()
     @classmethod
     def setUpClass(cls):
         from PyQt5.QtWidgets import QApplication

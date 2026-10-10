@@ -1,0 +1,21 @@
+{
+  "source_manifest": "project/versions/integration-20261011-02.json",
+  "port": "COM6",
+  "download": false,
+  "boundary": "Configuration tags only; internal digital samples and accepted-note counters, not DAC/sensor/FFT",
+  "before": {
+    "on": 2823,
+    "off": 7099,
+    "active": 0
+  },
+  "after": {
+    "on": 2825,
+    "off": 7101,
+    "active": 0
+  },
+  "status": "PASS",
+  "released_during_stream": true,
+  "samples": 2048,
+  "elapsed_s": 0.7029999999795109,
+  "nonzero_samples": 2048
+}

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "product_branch": "codex/project-version-closure",
-  "source_manifest": "project/versions/integration-20261011-01.json",
+  "source_manifest": "project/versions/integration-20261011-02.json",
   "touch_frontend_decision": {
     "date": "2026-10-10",
     "requirements": [
@@ -183,6 +183,10 @@
     {
       "id": "integration-20261011-01",
       "status": "228inputs host-only update;37hosttests GUIselftest/live2048capture PASS; RTLsame04, no newPnR or fullreg claim"
+    },
+    {
+      "id": "integration-20261011-02",
+      "status": "Host-only performance workspace;39tests/live A4+C5 accepted and released during sample stream PASS; RTL unchanged, no newPnR"
     }
   ],
   "supporting_implementation": [
@@ -567,5 +571,14 @@
       "separate connection, accepted state, internal audio and electrical verification"
     ],
     "status": "Review and recommendations recorded; no code or musical semantics changed"
+  },
+  "performance_workspace": {
+    "date": "2026-10-11",
+    "document": "project/performance-workspace-20261011.md",
+    "source_manifest": "project/versions/integration-20261011-02.json",
+    "status": "Implemented and tested;39hosttests GUIselftest and live dual-note/full-duplex release PASS",
+    "evidence": "project/evidence/performance-20261011-02/board-check.json",
+    "scope": "Eight pentatonic keys, octave, velocity, polyphonic on/off, panic, actual FPGA waveform snapshots; no PCFFT",
+    "pending": "FPGA accepted-event trajectory and spectrum; entity display; real touch and physicalDAC"
   }
 }
