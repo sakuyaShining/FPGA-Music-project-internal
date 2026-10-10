@@ -14,6 +14,22 @@
     "status": "official-source research and prototype decision complete; procurement/physical scans/full-load worst10ms/final BOM pending"
   },
   "open_issue_explanation": "project/open-issues-explained-20261010.md",
+  "procurement": {
+    "updated_on": "2026-10-10",
+    "master": "docs/02-技术方案/24-采购清单.md",
+    "forwardable": "docs/02-技术方案/24-采购清单-微信版.txt",
+    "prototype_entry": "docs/02-技术方案/39-原型硬件采购清单-2026-10-08.md",
+    "preserved_old_lists": "docs/archive/procurement-before-20261010",
+    "confirmed_owned": ["Tang Nano20K", "oscilloscope", "multimeter", "soldering iron"],
+    "user_inventory_update": "FDC2114EVM not ordered; logic analyzer will be sought from lab; no speaker",
+    "first_batch": "CY8CKIT-041S-MAX complete kit1; passive8ohm rated3W speaker1; only missing short wires/headers/hooks/consumables",
+    "borrow_first": "logic analyzer; additional scope/differential probe if existing instrument insufficient",
+    "deferred": "FDC EVM, MPR121 modules, IQS9150 backup, RC/LC bulk parts, large38-point panel, extra control boards and LED drivers",
+    "kit_contents_verified": "main+CAPSENSE boards, MicroB USB cable,6 jumper wires,40pin FFC, onboardKitProg3; avoid duplicate purchases",
+    "electrical_condition": "Kit target voltage defaults5V; set J10/actual board revision to3.3V and verify pullups before FPGA connection",
+    "reference_quotes": "Retrieved2026-10-10 DigiKeyUSD105.36 listed40 stock; MouserUSD98.59 listed0; domestic tax/shipping and delivery unconfirmed",
+    "status": "Lists synchronized and old versions preserved; no order/payment/vendor message performed"
+  },
   "active_test_run": {
     "id": "board-test-20261010",
     "baseline": "integration-20261009-06",
