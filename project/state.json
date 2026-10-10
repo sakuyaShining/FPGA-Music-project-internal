@@ -448,5 +448,15 @@
     "candidate": "PCM5102A-class module only after current52.734375kHz/32BCK clock and power/pin review",
     "status": "Concrete architecture recommendation recorded; hardware and firmware not implemented or ordered",
     "boundary": "MAX98357A bridge speaker output is not line out; no direct3.5mm connection; no published builtin speaker score requirement"
+  },
+  "audio_visualization": {
+    "id": "N-12",
+    "date": "2026-10-10",
+    "document": "project/audio-visualization-design-20261010.md",
+    "user_decision": "At least see played audio waveform in host app; visible performance feedback",
+    "status": "Requirement confirmed and interfaces reviewed; GUI waveform and acquisition not implemented",
+    "available": "tdm_board_test actual2048x24 samples; current115200UART6145byte frame approximately0.533s wire time",
+    "boundary": "Snapshots of internal FPGA samples; not continuous scope, not DAC/speaker or sensor latency acceptance",
+    "next": "Waveform parsing/view, shared serial asynchronous capture and source-aware timestamps; new fullsource identity and targeted gates"
   }
 }
