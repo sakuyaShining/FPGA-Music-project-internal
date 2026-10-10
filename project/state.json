@@ -12,10 +12,10 @@
     "document": "project/touch-decision-20261010.md",
     "authorization": "User requested component research and decisions; panel choice remains compare both",
     "panel": "independent sliding keys vs mutual-capacitance multitouch surface; not frozen",
-    "prototype_platform": "CY8CKIT-041S-MAX retained as conditional evaluation candidate; no purchase or final-product selection",
+    "prototype_platform": "PSoCkit removed fromprocurement byuserFPGA-only decision; rawmeasurement frontend/electrodes pending",
     "surface_backup": "Azoteq IQS9150; seven contacts per IC, consider split hands; speed not hardware accepted",
     "disposition": "FDC2114/2214 demoted to small sensing experiments; MPR121 discontinued excluded new formal main BOM; mXT640UD-HA cited typical90Hz/idle<25ms does not establish <=10ms",
-    "status": "Conditional evaluation purchase; finalfrontend and panel undecided; no physical10ms acceptance",
+    "status": "FPGA-only architecture decided; rawmeasurement andFPGAtracker unimplemented; originalPSoC/IQSresearch historical",
     "original_prototype_platform": "Infineon PSoC4100S Max CY8CKIT-041S-MAX / CY8C4149AZI-S598; sensor frontend only, synthesis remains FPGA",
     "procurement_review": {
       "date": "2026-10-10",
@@ -23,7 +23,8 @@
       "correction": "Earlier proposed4/5finger surface tests need customalgorithm/partition/dedicatedfrontend; standard library not established",
       "recommendation": "Hold unconditionalP-01 purchase until experimental scope firmware leadtime budget confirmed; keep multi-finger requirements",
       "final_product": "kit can be modular contest prototype but customsensor geometry mounting firmware and latency must be validated; not frozenBOM"
-    }
+    },
+    "latest_user_constraint": "Touch scan,coordinate extraction,tracking,music and visualization all onFPGA; no acquisitionMCU"
   },
   "open_issue_explanation": "project/open-issues-explained-20261010.md",
   "procurement": {
@@ -39,7 +40,7 @@
       "soldering iron"
     ],
     "user_inventory_update": "User corrected: neither oscilloscope nor logic analyzer borrowed; resistors borrowed; multimeter present availability not confirmed",
-    "first_batch": "Suitable passive speaker plus matchedconnector and missingconsumables; PSoC completekit conditional after capability/firmware/leadtime/budget review",
+    "first_batch": "Appropriate outputhardware afterclock/pin review andmissingconsumables; noPSoC/acquisitionMCU; rawtouch frontend pending",
     "borrow_first": "logic analyzer; additional scope/differential probe if existing instrument insufficient",
     "deferred": "FDC EVM, MPR121 modules, IQS9150 backup, RC/LC bulk parts, large38-point panel, extra control boards and LED drivers; unconditionalCY8CKIT-041S-MAX order pending suitability review",
     "kit_contents_verified": "main+CAPSENSE boards, MicroB USB cable,6 jumper wires,40pin FFC, onboardKitProg3; avoid duplicate purchases",
@@ -65,7 +66,8 @@
       "local labeled8ohm3W40-50mm fullrange plus actual matched plug; no verified quote"
     ],
     "speaker_status": "Research complete; no order; impedance power and connector pairing required",
-    "audio_output_candidate": "I2S lineDAC module plus3.5mm output and cable, borrowed active speaker; exact module not frozen"
+    "audio_output_candidate": "I2S lineDAC module plus3.5mm output and cable, borrowed active speaker; exact module not frozen",
+    "psoc_quantity": 0
   },
   "active_test_run": {
     "id": "board-test-20261010",
@@ -400,7 +402,8 @@
       "physical input and DAC latency results",
       "CSX standardwidget3finger limit requires valid fulltouch firmware/front-end strategy before reliance on kit"
     ],
-    "status": "Replanned from existing docs; dates are targets, no order or musical scope change authorized by this plan"
+    "status": "Replanned from existing docs; dates are targets, no order or musical scope change authorized by this plan",
+    "scope_change": "PureFPGA touch acquisition/tracking plus visualization; oldkitdelivery milestones not valid current criticalpath; schedule needs resource/frontend findings"
   },
   "prototype_preparation": {
     "updated_on": "2026-10-10",
@@ -410,7 +413,7 @@
       "project/prototype/contacts-template.csv",
       "project/prototype/latency-template.csv"
     ],
-    "status": "Prepared only; no physical run or sensor driver implemented",
+    "status": "PriorPSoC experiment plan historical; pureFPGAfrontend plan requires new rawmeasurement andalgorithm review",
     "implementation_review": "i2c_master supports1-4byte reads and8bit register pointer; finger_pitch is expression endpoint not physical tracker",
     "pending": [
       "user procurement",
@@ -464,6 +467,6 @@
     "example_provenance": "project/evidence/music-visualization-20261010/plot-record.json",
     "entity_architecture": "Proposed sidecar eventhistory, samplebuffer, fixedpointFFT and lightweight renderer; no synthesis core rewrite assumed",
     "entity_resource_status": "Not implemented or synthesized; currentfull32diagnosticCLS95%/BSRAM34of46; no fit guarantee",
-    "entity_scope_pending": "Clarification asked whether FPGA-only also forbids acquisitionMCU or permits dedicatedtouch frontend"
+    "entity_scope_pending": "Resolved: user requires touch,music,andentityvisualization allcomputed onFPGA; no acquisitionMCU"
   }
 }

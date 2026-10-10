@@ -9,7 +9,7 @@
 | 来源工作树、保留方式、接合与风险 | [integration.md](integration.md) |
 | 当前源码身份 | [integration-20261010-04.json](versions/integration-20261010-04.json)，226输入，完整回归及受控数字板测已验 |
 | 本版实测及证据边界 | [validation.md](validation.md) |
-| 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，PSoC套件改条件评估采购，标准CSX3指限制已复核，最终前端/BOM未冻结 |
+| 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，用户确定全FPGA扫描/坐标/追踪，不用采集MCU，PSoC退出采购，原始测量前端待评估 |
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
 | 外部音频输出方案 | [audio-output-plan-20261010.md](audio-output-plan-20261010.md)，推荐3.5mm LINE OUT＋I²S线路DAC，内置喇叭可选；新增硬件尚未验 |
 | 音乐可视化设计 | [audio-visualization-design-20261010.md](audio-visualization-design-20261010.md)，N-12首版波形已确认，GUI页尚未实现，板上已有数字采样接口 |
