@@ -12,6 +12,7 @@
 | 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，第一轮PSoC平台已选、正式BOM待实测 |
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
 | 原型、PCB、组装与提交排期 | [delivery-plan-20261010.md](delivery-plan-20261010.md)，官方11月4日18:00；内部10月31日提交目标，交期未确认 |
+| 到货实验卡、接线检查和记录模板 | [prototype/README.md](prototype/README.md)，双形态实测准备完成，尚未执行 |
 | T60、旧LFO、时钟告警的具体含义 | [open-issues-explained-20261010.md](open-issues-explained-20261010.md) |
 | 开发板诊断身份与结果 | [board-observation.json](board-observation.json)，与产品候选分开 |
 

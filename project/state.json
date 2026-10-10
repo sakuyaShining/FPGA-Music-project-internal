@@ -363,5 +363,22 @@
       "physical input and DAC latency results"
     ],
     "status": "Replanned from existing docs; dates are targets, no order or musical scope change authorized by this plan"
+  },
+  "prototype_preparation": {
+    "updated_on": "2026-10-10",
+    "document": "project/prototype/README.md",
+    "templates": [
+      "project/prototype/run-template.json",
+      "project/prototype/contacts-template.csv",
+      "project/prototype/latency-template.csv"
+    ],
+    "status": "Prepared only; no physical run or sensor driver implemented",
+    "implementation_review": "i2c_master supports1-4byte reads and8bit register pointer; finger_pitch is expression endpoint not physical tracker",
+    "pending": [
+      "user procurement",
+      "actual kit/electrode capability",
+      "instrument availability",
+      "measured full-load input to DAC latency"
+    ]
   }
 }
