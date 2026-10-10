@@ -58,13 +58,14 @@
       "resistor values",
       "multimeter access; scope andanalyzer not borrowed"
     ],
-    "speaker_action": "Unknown unmarked bare-wire borrowed speaker retained unused; user requested suitable replacement candidates",
+    "speaker_action": "Optional onboardmonitor/MAXexperiment; user prioritizes externaloutput; no mandatory speaker purchase",
     "speaker_candidates": [
       "Sipeed Nano20K matched speaker accessory; separate sale price stock unconfirmed",
       "DFRobotFIT0502 8ohm3W referenceCNY15 JSTPH2.0; Nano connector match not confirmed",
       "local labeled8ohm3W40-50mm fullrange plus actual matched plug; no verified quote"
     ],
-    "speaker_status": "Research complete; no order; impedance power and connector pairing required"
+    "speaker_status": "Research complete; no order; impedance power and connector pairing required",
+    "audio_output_candidate": "I2S lineDAC module plus3.5mm output and cable, borrowed active speaker; exact module not frozen"
   },
   "active_test_run": {
     "id": "board-test-20261010",
@@ -438,5 +439,14 @@
     ],
     "external_memory": "1Gbit DDR3=128MiB, not1GB; controller andbuffering notimplemented",
     "damage_confirmation": "User confirmed damagedbutton on proposedPrimer20K, notcurrentNano; buttonidentity andDock/Lite unknown"
+  },
+  "audio_output_plan": {
+    "date": "2026-10-10",
+    "document": "project/audio-output-plan-20261010.md",
+    "user_direction": "Finalize output with3.5mm orUSB; asks whether builtin speaker required",
+    "engineering_recommendation": "3.5mm TRS LINE OUT via I2S lineDAC; USB power/download/config retained; builtin speaker optional; USB Audio outside current critical path",
+    "candidate": "PCM5102A-class module only after current52.734375kHz/32BCK clock and power/pin review",
+    "status": "Concrete architecture recommendation recorded; hardware and firmware not implemented or ordered",
+    "boundary": "MAX98357A bridge speaker output is not line out; no direct3.5mm connection; no published builtin speaker score requirement"
   }
 }
