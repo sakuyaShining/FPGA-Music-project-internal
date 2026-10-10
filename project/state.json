@@ -30,14 +30,27 @@
       "multimeter",
       "soldering iron"
     ],
-    "user_inventory_update": "FDC2114EVM not ordered; logic analyzer will be sought from lab; no speaker",
+    "user_inventory_update": "2026-10-10 borrowed above; logic analyzer not obtained; FDC EVM not ordered",
     "first_batch": "CY8CKIT-041S-MAX complete kit1; passive8ohm rated3W speaker1; only missing short wires/headers/hooks/consumables",
     "borrow_first": "logic analyzer; additional scope/differential probe if existing instrument insufficient",
     "deferred": "FDC EVM, MPR121 modules, IQS9150 backup, RC/LC bulk parts, large38-point panel, extra control boards and LED drivers",
     "kit_contents_verified": "main+CAPSENSE boards, MicroB USB cable,6 jumper wires,40pin FFC, onboardKitProg3; avoid duplicate purchases",
     "electrical_condition": "Kit target voltage defaults5V; set J10/actual board revision to3.3V and verify pullups before FPGA connection",
     "reference_quotes": "Retrieved2026-10-10 DigiKeyUSD105.36 listed40 stock; MouserUSD98.59 listed0; domestic tax/shipping and delivery unconfirmed",
-    "status": "Lists synchronized and old versions preserved; no order/payment/vendor message performed"
+    "status": "Lists synchronized and old versions preserved; no order/payment/vendor message performed",
+    "latest_borrowed": [
+      "LEDs quantity unspecified",
+      "Dupont wires assorted connectors",
+      "breadboard",
+      "several audio speakers type unspecified",
+      "oscilloscope"
+    ],
+    "pending_borrowed_details": [
+      "passive vs active speakers and impedance power",
+      "scope channels probes and model",
+      "LED current limiting resistors"
+    ],
+    "speaker_action": "Hold duplicate purchase until borrowed speaker suitability confirmed"
   },
   "active_test_run": {
     "id": "board-test-20261010",
@@ -381,7 +394,8 @@
       "measured full-load input to DAC latency"
     ],
     "bench_day1": "project/prototype/bench-day1.md",
-    "bench_status": "NOT_RUN; wiring continuity, power, identified04 UART then conditional physicalI2S/reset; physical probe points require board revision schematic"
+    "bench_status": "NOT_RUN; wiring continuity, power, identified04 UART then conditional physicalI2S/reset; physical probe points require board revision schematic",
+    "available_instruments": "Oscilloscope borrowed; logic analyzer unavailable; physical experiments NOT_RUN"
   },
   "board_selection_review": {
     "updated_on": "2026-10-10",
