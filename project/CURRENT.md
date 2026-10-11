@@ -12,6 +12,7 @@
 | 当前源码身份 | [integration-20261011-07.json](versions/integration-20261011-07.json)，241输入，松键连续性修复；512槽专项、新PnR、SRAM、30秒实时与6种释放板测通过；全量原57/58加环境身份补验通过，原退出1保留 |
 | 本版实测及证据边界 | [validation.md](validation.md) |
 | 松键尖峰修复 | [release-spike-20261011.md](release-spike-20261011.md)：07已下载SRAM并通过6种真实PCM释放验证，可见GUI已恢复COM6实时观察 |
+| 全局演奏工作台方案 | [desktop-workbench-design-20261011.md](desktop-workbench-design-20261011.md)：常驻键盘/三视图、明确音色应用、参数与真实音频验证；方案已整理，尚未实施 |
 | 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，用户确定全FPGA扫描/坐标/追踪，不用采集MCU，PSoC退出采购，原始测量前端待评估 |
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
 | 外部音频输出方案 | [audio-output-plan-20261010.md](audio-output-plan-20261010.md)，推荐3.5mm LINE OUT＋I²S线路DAC，内置喇叭可选；新增硬件尚未验 |

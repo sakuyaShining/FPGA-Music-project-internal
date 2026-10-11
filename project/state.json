@@ -678,5 +678,20 @@
     ],
     "status": "UI path/which control not yet identified; no live serial touched or hardware failure inferred",
     "source_manifest": "project/versions/integration-20261011-07.json"
+  },
+  "global_performance_workbench_design": {
+    "date": "2026-10-11",
+    "requirements": [
+      "N-08",
+      "N-11",
+      "N-12"
+    ],
+    "document": "project/desktop-workbench-design-20261011.md",
+    "status": "Design proposal delivered; no product/UI implementation changes or serial interruption",
+    "user_requirement": "Global visualization, obvious playable workspace, timbre effectiveness tests",
+    "key_finding": "Current live transaction permits only note writes; preset commands rejected during continuous stream; editor preset remains local draft",
+    "proposal": "One global session/viewer and persistent keyboard; supported config adapter with explicit application, register/accepted-event/PCM evidence, deterministic A/B tests",
+    "source_baseline": "project/versions/integration-20261011-07.json",
+    "release_fix": "Preserved07 and user-confirmed release repair"
   }
 }
