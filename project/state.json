@@ -619,6 +619,23 @@
     "hardware_boundary": "Archived real06 stream analysed, current user serial untouched",
     "next": "Preserve already sounding per-slot amplitude/timbre on note-off; add release continuity criterion, new source/build/tests before changing board",
     "document": "project/release-spike-20261011.md",
-    "acceptance": "Open musical defect; existing live transport PASS and regression do not establish note-off amplitude continuity"
+    "acceptance": "Open musical defect; existing live transport PASS and regression do not establish note-off amplitude continuity",
+    "fix": {
+      "status": "Isolated07 code implemented;512slot targeted PASS, original06 fails same criterion; full58 and PnR running; board still06",
+      "candidate_root": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07",
+      "candidate_manifest": "project/evidence/release-fix07-20261011/candidate-source.json",
+      "change": "TDM consume falling gate preserves effective amplitude/increment/envelope parameters and does not reload glide; refresh/on/reuse unaffected",
+      "regression_pid": 27976,
+      "regression_created_local": "2026-10-11 20:17:20",
+      "regression_session": 49006,
+      "regression_log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07\\project\\evidence\\release-fix07-20261011\\regression.log",
+      "pnr_pid": 22848,
+      "pnr_created_local": "2026-10-11 20:17:31",
+      "pnr_session": 82459,
+      "pnr_log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07\\project\\evidence\\release-fix07-20261011\\pnr.log",
+      "tested_source_frozen": true,
+      "source_zip": "project/evidence/release-fix07-20261011/source07.zip",
+      "next": "Archive06 completion then copy exact07 source changes and identity into main integration worktree; require58/full,newPnR,bind/check and SRAM release audio test; keep user GUI/serial exclusive"
+    }
   }
 }
