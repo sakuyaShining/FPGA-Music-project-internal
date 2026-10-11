@@ -339,10 +339,12 @@ module tdm_engine #(
     //   满足时，本拍全部换成新值：门沿检测、相位推进、幅度乘法统一用新参数。
     //-------------------------------------------------------------------------
     wire consume = pv1 & (pp1 != ppr1);
-    wire [PHASE_W-1:0] eff_inc  = consume ? pi1  : inc1;
-    wire [AMP_W-1:0]   eff_amp  = consume ? pa1  : amp1;
+    wire release_only = consume & gc1 & ~pg1;
+    wire replace_params = consume & ~release_only;
+    wire [PHASE_W-1:0] eff_inc  = replace_params ? pi1 : inc1;
+    wire [AMP_W-1:0]   eff_amp  = replace_params ? pa1 : amp1;
     wire               eff_gate = consume ? pg1  : gc1;
-    wire [22:0]        eff_epar = consume ? pe1  : epar1;   // 与其他三个对称
+    wire [22:0]        eff_epar = replace_params ? pe1 : epar1;   // 与其他三个对称
 
     //-------------------------------------------------------------------------
     // 门沿检测：按时隙各判各的，但门值已经过【样本边界对齐】
@@ -553,7 +555,7 @@ module tdm_engine #(
     // 滑音初值的写入时机 = 【装载被消费的那一拍】
     //   这样 inc/amp/gate/epar/gq 五者同拍生效，不会出现
     //   "旧 inc × 新 gq"那种混代样本（见 pitch_mod.v 顶部注释）。
-    wire               gw_en   = consume;
+    wire               gw_en   = replace_params;
     // 组号位宽 = SW - PBS = $clog2(PGRP)（PBS 是"组内泛音索引"的位宽）
     wire [SW-PBS-1:0]  gw_note = sl1[SW-1:PBS];
     wire signed [17:0] gw_val  = pgq1;

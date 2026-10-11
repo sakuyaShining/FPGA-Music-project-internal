@@ -1,0 +1,20 @@
+{
+  "source_tree_sha256": "12f1802fbbaec61e716b81ee8cd55bc249348336e12abfa76006c923c73189ec",
+  "source_inputs": 241,
+  "original_full_exit": 1,
+  "original_full_pass": 57,
+  "original_full_required": 58,
+  "original_failed_gate": "31 spec sha: missing isolated project/state.json",
+  "environment_repair": "Added non-product project/state.json identifying exact07 manifest; no241source changes",
+  "supplemental_gate31_exit": 0,
+  "covered_required_pass": 58,
+  "required_total": 58,
+  "known_fail": 1,
+  "info": 2,
+  "acceptance": "All required criteria covered on identical241source; original full process exit1 retained, not rewritten as exit0",
+  "files": {
+    "regression.log": "40d09a7ee40e427c9ddd631f2cc7c1d9ef4a7c5f1a29ead3df344dd6f4b810a3",
+    "regress_result-original.txt": "4813cd3a12ba161d54491ba003f5fd83847f9b1fd6ddcb9880e677c1becce286",
+    "31-supplement.log": "805b2c309f9f001e2305a4671aa28b1ae6ece971535ccdc8542c2c90614861ea"
+  }
+}

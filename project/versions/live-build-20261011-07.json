@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "source_manifest": "project\\versions\\integration-20261011-07.json",
+  "source_tree_sha256": "12f1802fbbaec61e716b81ee8cd55bc249348336e12abfa76006c923c73189ec",
+  "configuration": "TangNano20K GW2AR-LV18QN88C8/I7 full32 tdm_live_test FINGER_EXPR1 BOARD_DIAG1 FIR63 decimate4 PCM16 UART460800 D4rev4 SSPI place0 route2 release preserve falling-gate",
+  "command": "build_gowin.ps1 tdm_live_test SSPI place0 route2",
+  "bitstream": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07\\src\\gowin\\tdm_synth\\impl\\pnr\\tdm_live_test.fs",
+  "bitstream_sha256": "9f3f4461bb79eb967970907a6f770808b90f0d6099ba493ce99d4ae2d4d454c6",
+  "log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07\\project\\evidence\\release-fix07-20261011\\pnr.log",
+  "log_sha256": "7843503623c002f112cf98fe44629f30ea9919d7980c657be52f16a45eca6ef0",
+  "bound_at": "2026-10-11T12:25:57.626996+00:00",
+  "source_captured_at": "2026-10-11T12:17:06.934041+00:00",
+  "acceptance": "identity-bound-only; review timing and hardware results separately"
+}

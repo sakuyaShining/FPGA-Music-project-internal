@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "product_branch": "codex/project-version-closure",
-  "source_manifest": "project/versions/integration-20261011-06.json",
+  "source_manifest": "project/versions/integration-20261011-07.json",
   "touch_frontend_decision": {
     "date": "2026-10-10",
     "requirements": [
@@ -70,8 +70,8 @@
   },
   "active_test_run": {
     "id": "desktop-live-filtered-20261011",
-    "phase": "06 regression complete;07 repair validation",
-    "source_manifest": "project/versions/integration-20261011-06.json",
+    "phase": "07 awaiting hardware test",
+    "source_manifest": "project/versions/integration-20261011-07.json",
     "regression_pid": 4876,
     "regression_created_local": "2026-10-11 19:27:30",
     "regression_session": 81255,
@@ -623,7 +623,7 @@
     "document": "project/release-spike-20261011.md",
     "acceptance": "Open musical defect; existing live transport PASS and regression do not establish note-off amplitude continuity",
     "fix": {
-      "status": "07 full58 attempt02 running on D exact241 source; original attempt01 infrastructure no-space archived; targeted and PnR PASS; board06",
+      "status": "07 integrated exact241source; all58 criteria covered full57PASS plus environment-only gate31supplementPASS; PnR PASS; boardstill06; awaiting GUI/serial coordination",
       "candidate_root": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07",
       "candidate_manifest": "project/evidence/release-fix07-20261011/candidate-source.json",
       "change": "TDM consume falling gate preserves effective amplitude/increment/envelope parameters and does not reload glide; refresh/on/reuse unaffected",
@@ -658,7 +658,11 @@
         "preserved_vcd": "D:/FPGA-Project/codex-evidence/release-fix07-20261011/attempt01-additive.vcd"
       },
       "regression_attempt02_root": "D:\\FPGA-Project\\codex-evidence\\release-candidate07",
-      "regression_exit_file": "D:/FPGA-Project/codex-evidence/release-candidate07/project/evidence/release-fix07-attempt02/regression-exit.txt"
+      "regression_exit_file": "D:/FPGA-Project/codex-evidence/release-candidate07/project/evidence/release-fix07-attempt02/regression-exit.txt",
+      "resolved_gates": "D:\\FPGA-Project\\codex-evidence\\release-candidate07\\project\\evidence\\release-fix07-attempt02\\resolved-gates.json",
+      "original_full_exit": 1,
+      "supplement_gate31_exit": 0,
+      "source_unchanged_after_full": true
     }
   }
 }

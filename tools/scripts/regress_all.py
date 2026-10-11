@@ -1008,6 +1008,10 @@ def main():
     results.append(('42 live monitor', live_rc==0 and 'RESULT live_monitor=PASS' in live_log,
                     'Continuous PCM16, CRC, accepted timestamps, visible overflow and desktop analysis'))
 
+    release_rc, release_log = run([sys.executable, os.path.join(ROOT, "tools", "scripts", "release_continuity_check.py")], cwd=ROOT, timeout=180)
+    with open(os.path.join(BUILD,"43_release_continuity.log"),"w",encoding="utf-8") as fh: fh.write(release_log or "")
+    results.append(("43 release continuity", release_rc==0 and "RESULT release_continuity=PASS" in release_log, "Release preserves sounding parameters across512slots; refresh and reuse"))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)
