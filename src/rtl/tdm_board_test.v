@@ -1,6 +1,6 @@
 // Integration-derived controlled UART board test, full 32-group expression.
 // Physical RC input ignored; internal samples are not external DAC measurements.
-module tdm_board_test (
+module tdm_board_test #(parameter LIVE_MONITOR=0, parameter UART_BAUD=115200, parameter LIVE_DECIMATE=1) (
     input wire clk, rst_n,
     input wire uart_rx_pin,
     output wire uart_tx_pin,
@@ -15,7 +15,7 @@ module tdm_board_test (
         if (rst_n) reset_release<=0;
         else reset_release<={reset_release[0],1'b1};
     end
-    tdm_top #(.BOARD_DIAG(1), .FINGER_EXPR(1)) u_top (
+    tdm_top #(.BOARD_DIAG(1), .FINGER_EXPR(1), .LIVE_MONITOR(LIVE_MONITOR), .LIVE_DECIMATE(LIVE_DECIMATE), .UART_BAUD(UART_BAUD)) u_top (
         .clk(clk), .rst_n(reset_release[1]),
         .ev_valid(1'b0), .ev_on(1'b0), .ev_note(7'd0), .ev_vel(4'd0),
         .preset(2'd0), .test_mode(1'b0),

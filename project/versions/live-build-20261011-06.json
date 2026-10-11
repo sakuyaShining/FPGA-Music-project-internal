@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "source_manifest": "project\\versions\\integration-20261011-06.json",
+  "source_tree_sha256": "c9ac45771458985a04c02b75ed7a78b49b285bb153168d98a54069b65c5bc66b",
+  "configuration": "TangNano20K GW2AR-LV18QN88C8/I7; tdm_live_test; NG32 NF32 FINGER_EXPR1 BOARD_DIAG1 LIVE_MONITOR1 LIVE_DECIMATE4 UART460800; music27MHz/512; observation PCM16 FIR63 /4 format2 D4rev4; SSPI GPIO place0 route2",
+  "command": "build_gowin.ps1 -Project tdm_live_test.gprj -TopModule tdm_live_test -SspiAsGpio -PlaceOpt 0 -RouteOpt 2",
+  "bitstream": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\src\\gowin\\tdm_synth\\impl\\pnr\\tdm_live_test.fs",
+  "bitstream_sha256": "1182209b54320f90b0ee1d53d76f94fde38f7f765eb187a89d3d6bd84276cd34",
+  "log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\pnr-20261011-live06.log",
+  "log_sha256": "27b0405a95ae579e9251aeb4927cf6cb2a03968b1a92a308980cb648a524d990",
+  "bound_at": "2026-10-11T11:34:00.274743+00:00",
+  "source_captured_at": "2026-10-11T11:27:28.948626+00:00",
+  "acceptance": "identity-bound-only; review timing and hardware results separately"
+}

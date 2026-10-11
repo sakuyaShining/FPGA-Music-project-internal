@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11T06:13:00.633385+00:00",
+  "source": "project/versions/integration-20261011-03.json",
+  "build": "project/versions/board-build-20261010-04.json",
+  "identity_check": "PASS against isolated exact226-input04 copy; current03 separately PASS228; no source rollback",
+  "download_exit": 0,
+  "operation": "SRAM Program",
+  "gui_port": "COM6 @115200",
+  "gui_observation": "Actual user window captured A4 waveform, displayed at gain4; test note subsequently released; frozen snapshot retained",
+  "gui_capture_origin": "sim_build\\gui\\audio_observer\\20261011-141150-1791699110861605400",
+  "files": {
+    "a4.capture.json": "64e648b7cf6ff5e420bf6522655cb3e488613b553deb88ab6be7916870b451ec",
+    "a4.stream.bin": "f1a1160e2b2b3082fc5899b78fc37f51deb15afcdfaf5e29d3c46a01e29d2896",
+    "board-check.json": "3225669b9d01599d54940da5e465cff5a98f8c6f8c35c7f11170924c3f7fd3aa",
+    "download-exit.txt": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "download.log": "638ceb9fc910f0e34770c1a06d93006a4a3cb010d7b9c99a6659acb98d7d98e9",
+    "gui-capture.json": "920082df13ad13d1e22fb9ef98128eda48c1dc261a66bfb117c27753115b2be4",
+    "gui-stream.bin": "33252d2f703e5f56c1d02fe4bbe8d7d56b031c774d5e86c9575281a945a1eb13",
+    "identity.log": "2b756a8adeabf9b2b8f1679a6a6c1047a5ebdfaaaafe6e097fdf0e6c3d5def29"
+  },
+  "boundary": "Does not fix missing short-note trigger capture or validate physical audio"
+}

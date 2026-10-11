@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "product_branch": "codex/project-version-closure",
-  "source_manifest": "project/versions/integration-20261011-03.json",
+  "source_manifest": "project/versions/integration-20261011-06.json",
   "touch_frontend_decision": {
     "date": "2026-10-10",
     "requirements": [
@@ -69,62 +69,40 @@
     "historically_reported_equipment": "Older list included oscilloscope, multimeter and soldering iron; latest user availability overrides; scope/analyzer not obtained and multimeter access unconfirmed"
   },
   "active_test_run": {
-    "id": "board-test-20261010",
-    "baseline": "integration-20261009-06",
-    "baseline_regression": "55/55 passed; exit 0 on 2026-10-10; T60 known failure and two INFO retained",
-    "baseline_evidence": "project/evidence/baseline-20261010",
-    "working_tree": "Host forward fix04: timeout before stream request, finally clear cases, host tests in gate41; full56/56 and fresh PnR passed, 04 SRAM programmed.",
-    "hardware": "04 hardware-run04 passed15/15 exit0; actual capture equals2048 indexedRAM samples;100/100 complete streams exact exit0; this digital board test delivery complete",
-    "scope": "controlled synthetic contacts and internal digital samples; no physical touch or DAC acceptance",
-    "phase": "hardware session check complete",
-    "completed_scope": "version-bound integrated full32 synthetic-input/internal-digital board test; physical DAC/touch/I2S electrical/10ms and unimplemented musical semantics remain open",
-    "stability_exit_code": 0,
-    "stability_report": "project/evidence/full32-hostfix04-20261010/transport-stability04/report.json",
-    "delivery_record": "project/evidence/full32-hostfix04-20261010/delivery.json",
-    "targeted_exit_code": 0,
-    "targeted_evidence": "project/evidence/full32-fix02-20261010/targeted.log",
-    "targeted_pid": 9160,
-    "targeted_created_local": "2026-10-10 03:19:24",
-    "targeted_session": 20680,
-    "targeted_log": "sim_build/board-test-stream-note127-20261010.log",
-    "hardware_pid": 0,
-    "hardware_created_local": "2026-10-10 06:09:55",
-    "hardware_session": 93858,
-    "hardware_log": "project/evidence/bench/20261010-session-check02/check.log",
-    "hardware_run04_log": "sim_build/hardware-20261010-full32-hostfix04-run04.log",
-    "read_timing_probe_exit_code": 0,
-    "read_timing_probe_report": "project/evidence/full32-fix02-20261010/read-timing02/report.json",
-    "transport_probe_exit_code": 0,
-    "transport_probe_report": "project/evidence/full32-fix02-20261010/transport-probe02/report.json",
-    "serial_errors_probe_report": "project/evidence/full32-fix02-20261010/serial-errors02/report.json",
-    "hardware_exit_code": 0,
-    "hardware_run02_log": "sim_build/hardware-20261010-full32-fix02-run02.log",
-    "hardware_report": "project/evidence/bench/20261010-session-check02/report.json",
-    "download_exit_code": 0,
-    "board_identity": "COM6: PROTO=0x11 TEST_ID=0xd3 REVISION=2 SCOPE=32",
+    "id": "desktop-live-filtered-20261011",
+    "phase": "regression; live hardware passed",
+    "source_manifest": "project/versions/integration-20261011-06.json",
+    "regression_pid": 4876,
+    "regression_created_local": "2026-10-11 19:27:30",
+    "regression_session": 81255,
+    "regression_log": "sim_build/regress-20261011-live06.log",
+    "pnr_pid": 25300,
+    "pnr_created_local": "2026-10-11 19:27:30",
+    "pnr_session": 60866,
+    "pnr_log": "sim_build/pnr-20261011-live06.log",
+    "evidence": "project/evidence/desktop-live-filtered-20261011",
+    "board_status": "06 D4rev4 460800 SRAM programmed;30s live hardware PASS",
+    "previous_failed_hardware": "project/evidence/desktop-live-20261011/hardware-run01/report.json",
+    "scope": "Connected desktop music visualization; observation filtered/4, musicFs unchanged; entity FPGA visualization pending",
+    "updated": "2026-10-11T11:29:35.269458+00:00",
+    "previous_download_failed_exit": 50,
+    "previous_download_success_log": "project/evidence/desktop-live-20261011/download-attempt02.log",
     "pnr_exit_code": 0,
-    "pnr_failed_attempt": "project/evidence/full32-fix02-20261010/pnr-attempt01/record.json",
-    "download_log": "sim_build/sram-20261010-full32-hostfix04.log",
-    "pnr_session": 74890,
-    "pnr_pid": 21076,
-    "pnr_created_local": "2026-10-10 06:02:40",
-    "pnr_log": "sim_build/pnr-20261010-full32-hostfix04.log",
-    "regression_exit_code": 0,
-    "regression_evidence": "project/evidence/full32-hostfix04-20261010",
-    "regression_pid": 16368,
-    "regression_created_local": "2026-10-10 05:10:34",
-    "regression_log": "sim_build/regress-20261010-full32-hostfix04.log",
-    "regression_session": 37710,
-    "timeout_order_probe_report": "project/evidence/full32-fix02-20261010/timeout-order02/report.json",
-    "session_check": {
-      "status": "PASS",
-      "passed": 5,
-      "exit_code": 0,
-      "record": "project/evidence/bench/20261010-session-check02/record.json",
-      "no_download": true,
-      "initial_failure": "test Python API compatibility; preserved session-check01",
-      "identity_boundary": "Readback is configuration tag, not a unique bitstream hash.04 attribution relies on verified stored build/download and user continuous-power statement."
-    }
+    "pnr_build_record": "project/versions/live-build-20261011-06.json",
+    "pnr_setup_ns": 12.644,
+    "pnr_hold_ns": 0.228,
+    "pnr_resources": "Logic18654/20736 CLS10055/10368 BSRAM38/46 DSP10.75/24",
+    "download_exit_code": 0,
+    "hardware_exit_code": 0,
+    "hardware_report": "project/evidence/desktop-live-filtered-20261011/hardware-run01/report.json",
+    "visible_gui": {
+      "pid": 3468,
+      "created_local": "2026-10-11 19:35:41",
+      "command": "pythonw tools/host/dsp_gui.py --live",
+      "connected": "COM6 @460800",
+      "observation": "Actual native B press produced accepted note trajectory, wave pulse and PCFFT; stream counters remained zero errors"
+    },
+    "followup": "Existing heartbeat automation reactivated for final full57 closure; do not disturb interactive GUI or duplicate tests"
   },
   "design_register": {
     "document": "project/design.md",
@@ -397,7 +375,7 @@
   "authority_rule": "This state does not promote experiments or historical PASS counts into product acceptance. Each changed source requires a new identity and appropriate evidence.",
   "promotion": "Deferred by user: keep integration branch; do not interrupt or edit the active main board test.",
   "build_record": "project/versions/board-build-20261010-04.json",
-  "currently_programmed_record": "project/versions/board-build-20261010-04.json",
+  "currently_programmed_record": "project/versions/live-build-20261011-06.json",
   "previous_verified_build_record": "project/versions/product-build-20261009-06.json",
   "source_commit": "9d827a1",
   "followup": "This digital board test delivery complete; automation disabled after evidence handoff. Physical tests need equipment/wiring and remain separately open.",
@@ -507,7 +485,26 @@
       "boundary": "UART core excludes parser and capture; 100/100 integrity pass is not timed throughput benchmark; no source change",
       "upgrade_review": "UART is one link, not FPGA total throughput cap; 460800/921600/1.5M candidates untested; integer divider and BL616 bridge constraints recorded; no source/download change"
     },
-    "desktop_waveform_evidence": "project/evidence/gui-audio-20261011-01/record.json"
+    "desktop_waveform_evidence": "project/evidence/gui-audio-20261011-01/record.json",
+    "implementation_audit": {
+      "date": "2026-10-11",
+      "document": "project/visualization-implementation-audit-20261011.md",
+      "status": "N-12 incomplete: 1Hz finite39ms snapshots only; accepted-event trajectory and FPGA spectrum absent",
+      "user_requirement": "See waveform changes during live performance; complete trajectory + waveform + spectrum; inspect current implementation first",
+      "scope": "Read-only implementation review; no RTL/GUI changes or serial operations",
+      "findings": [
+        "Sampling coverage3.884percent at ideal1Hz; gaps not recorded",
+        "Full-frame read before display; observed transaction0.734s not worst-case bound",
+        "No common FPGA timestamps or trigger alignment",
+        "Host held state is not executed-event trajectory; spectrum placeholder only"
+      ]
+    },
+    "desktop_live_mode": {
+      "date": "2026-10-11",
+      "document": "project/desktop-live-implementation-20261011.md",
+      "status": "06 implemented and30s real hardware PASS; native user window live confirmed; full57 regression still running",
+      "standalone": "FPGA trajectory/waveform/spectrum retained, still unimplemented"
+    }
   },
   "compute_policy": {
     "date": "2026-10-10",
@@ -532,6 +529,11 @@
     "verification": {
       "source_identity": "PASS 226 files unchanged",
       "closure_checks": "9/9 PASS; development RTL/host preservation checks only"
+    },
+    "desktop_visualization_exception": {
+      "date": "2026-10-11",
+      "authority": "Explicit user authorization: computer may compute music visualization while connected; FPGA standalone visualization retained",
+      "scope": "Host waveform, FFT and trajectory analysis from actual audio/events; does not authorize host instrument synthesis or external touchMCU"
     }
   },
   "io_architecture": {
@@ -553,7 +555,7 @@
     "status": "Waveform page implemented; host37 and GUIselftest PASS; live GUI capture PASS; trajectory/FPGA FFT pending",
     "evidence": "project/evidence/gui-audio-20261011-01/record.json",
     "hardware_scope": "ActualGUI transport2048 samples; configuration tags only, no newPnR/download; old04 board evidence preserved",
-    "PC_FFT_authorization": "Pending explanation; not approved or implemented",
+    "PC_FFT_authorization": "Explicitly authorized2026-10-11 for connected desktop visualization; not implemented",
     "screen_dependency": "None for desktop display; entity screen pending",
     "version_boundary": "Current GUI source01 differs from04 fulltree only inhost inputs;04 regression/hardware is historical, not01 full acceptance"
   },
@@ -595,5 +597,17 @@
     "runtime_boundary": "Existing02 user window corrected live and kept connected;03 protection applies on next GUI launch",
     "no_download": true,
     "evidence": "project/evidence/connection-fix-20261011-03/record.json"
+  },
+  "last_verified_programmed_record": "project/versions/board-build-20261010-04.json",
+  "power_cycle_followup": {
+    "date": "2026-10-11",
+    "status": "SRAM reloaded exit0; COM6 identity pass; A4 GUI transport2048 nonzero and release verified; actual user GUI waveform visually observed, gain4, snapshot retained",
+    "document": "project/reload-and-keyboard-plan-20261011.md",
+    "identity_review": "project/evidence/reload-plan-20261011/identity-review.json",
+    "download_performed": true,
+    "proposal_status": "Keyboard redesign proposed, not implemented or accepted",
+    "evidence": "project/evidence/reload-test-20261011",
+    "checked_at": "2026-10-11T06:13:00.630767+00:00",
+    "boundary": "Current session restored; periodic snapshots can miss short notes; physical DAC and new keyboard redesign not validated"
   }
 }

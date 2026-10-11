@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-11",
+  "purpose": "Read-only preparation for user-guided SRAM reload; no download performed",
+  "build_record": "project/versions/board-build-20261010-04.json",
+  "current_source": "project/versions/integration-20261011-03.json",
+  "changed_inputs_since_build": [
+    "tools/host/audio_observer.py",
+    "tools/host/dsp_gui.py",
+    "tools/host/serial_link.py",
+    "tools/host/test_audio_observer.py"
+  ],
+  "only_host_changes": true,
+  "artifacts": {
+    "bitstream": true,
+    "log": true
+  },
+  "board_after_user_power_cycle": "unknown; historical SRAM session no longer current",
+  "waveform_issue": "User reports unresolved; no current live test this turn"
+}

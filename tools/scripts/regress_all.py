@@ -1002,6 +1002,12 @@ def main():
                     (err or (transport_log if transport_rc else
                      'Full UART stream, full32 contacts, MIDI127, host timeout ordering and failure bytes'))[:160]))
 
+    live_rc, live_log = run([sys.executable, os.path.join(ROOT, 'tools', 'scripts',
+                                             'live_monitor_check.py')], cwd=ROOT, timeout=180)
+    with open(os.path.join(BUILD,'42_live_monitor.log'),'w',encoding='utf-8') as fh:fh.write(live_log or '')
+    results.append(('42 live monitor', live_rc==0 and 'RESULT live_monitor=PASS' in live_log,
+                    'Continuous PCM16, CRC, accepted timestamps, visible overflow and desktop analysis'))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "source_manifest": "project\\versions\\integration-20261011-05.json",
+  "source_tree_sha256": "64c52303fa74ea55fd7f153bf7b3ae9cdc290218f8d047af96df770fa6ef3f54",
+  "configuration": "TangNano20K GW2AR-LV18QN88C8/I7; tdm_live_test; NG32 NF32 FINGER_EXPR1 BOARD_DIAG1 LIVE_MONITOR1 UART1500000; 27MHz/512 PCM16 full-rate; SSPI GPIO place0 route2",
+  "command": "build_gowin.ps1 -Project tdm_live_test.gprj -TopModule tdm_live_test -SspiAsGpio -PlaceOpt 0 -RouteOpt 2",
+  "bitstream": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\src\\gowin\\tdm_synth\\impl\\pnr\\tdm_live_test.fs",
+  "bitstream_sha256": "720be457da2504da9b3e74312530e00b285bfd94d973de716387f2a046416b17",
+  "log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\pnr-20261011-live05.log",
+  "log_sha256": "f8aaf1ae6f49187d73bbf55f51b68a27c7266fb258481a5fde17d18d21a6c9a6",
+  "bound_at": "2026-10-11T06:43:08.202549+00:00",
+  "source_captured_at": "2026-10-11T06:35:07.129118+00:00",
+  "acceptance": "identity-bound-only; review timing and hardware results separately"
+}

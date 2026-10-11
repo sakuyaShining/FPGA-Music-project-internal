@@ -363,6 +363,7 @@ class MainWindow(QMainWindow):
         self.held = {}
         self.octave = 0                      # 键盘八度移位（±2 上限）
         self.audio_worker = None
+        self.live_worker = None
         self.audio_test_note = False
         self._build_ui()
         self.audio_page.velocity.valueChanged.connect(self.sld_vel.setValue)
@@ -541,7 +542,8 @@ class MainWindow(QMainWindow):
         explanation.setObjectName("Hint")
         diag_layout.addWidget(explanation)
         self.audio_page = AudioPage()
-        page(self.audio_page, "音乐可视化")
+        self.pages.addTab(self.audio_page, "音乐可视化")
+        self.audio_page.live_button.clicked.connect(self._toggle_live)
         self.audio_page.capture.clicked.connect(self._capture_audio)
         self.audio_page.export.clicked.connect(self._export_audio)
         self.audio_page.test_note.clicked.connect(self._audio_test_toggle)
@@ -1236,6 +1238,8 @@ class MainWindow(QMainWindow):
             self.log("未发现串口（pyserial 未装或没有设备）⇒ 可用「模拟设备」自测 ✓")
 
     def _toggle_conn(self):
+        if self.live_worker is not None and self.live_worker.isRunning():
+            self._stop_live(); self.log("实时流停止后可断开连接"); return
         if self.audio_worker is not None and self.audio_worker.isRunning():
             self.log("采样事务进行中，完成后再切换连接")
             return
@@ -1251,6 +1255,7 @@ class MainWindow(QMainWindow):
             self.link = None
             self.cmb_port.setEnabled(True)
             self.btn_refresh.setEnabled(True)
+            self.audio_page.mode.setEnabled(True)
             self.badge.setText("未连接")
             self.badge.setObjectName("BadgeOff")
             self.badge.setStyleSheet("")
@@ -1268,7 +1273,7 @@ class MainWindow(QMainWindow):
                 self.link = SimLink()
                 self.chk_touch.setEnabled(True)
             else:
-                self.link = SerialLink(sel)
+                self.link = SerialLink(sel, self.audio_page.mode.currentData())
                 self.chk_touch.setEnabled(False)
             self.link.open()
         except Exception as e:
@@ -1293,6 +1298,7 @@ class MainWindow(QMainWindow):
         self.read_all()
         self.cmb_port.setEnabled(False)
         self.btn_refresh.setEnabled(False)
+        self.audio_page.mode.setEnabled(False)
 
     def _restyle(self):
         self.badge.style().unpolish(self.badge)
@@ -1302,6 +1308,8 @@ class MainWindow(QMainWindow):
 
     # ---------------- 定时 ----------------
     def _tick(self):
+        if self.live_worker is not None and self.live_worker.isRunning():
+            self._tick_rate(); return
         if self.audio_worker is not None and self.audio_worker.isRunning():
             self._tick_rate()
             return
@@ -1384,6 +1392,8 @@ class MainWindow(QMainWindow):
             super().keyReleaseEvent(ev)
 
     def closeEvent(self, ev):
+        if self.live_worker is not None and self.live_worker.isRunning():
+            self._stop_live(); ev.ignore(); return
         if self.audio_worker is not None and self.audio_worker.isRunning():
             self.log("采样事务进行中，请完成后关闭工作台")
             ev.ignore()
@@ -1400,6 +1410,7 @@ class MainWindow(QMainWindow):
         ev.accept()
 
     def _capture_audio(self):
+        if self.live_worker is not None and self.live_worker.isRunning(): return
         if not isinstance(self.link, SerialLink) or self.link.ser is None:
             self.audio_page.follow.setChecked(False)
             self.audio_page.status.setText("需要连接真实full32诊断设备；模拟设备无音频数据。")
@@ -1460,6 +1471,47 @@ class MainWindow(QMainWindow):
     def _follow_audio(self):
         if self.pages.currentIndex() == 3:
             self._capture_audio()
+
+    def _toggle_live(self):
+        from live_visualizer import LiveWorker, LiveAnalysis
+        if self.live_worker is not None and self.live_worker.isRunning():
+            self._stop_live(); return
+        if not isinstance(self.link, SerialLink):
+            self.audio_page.live_status.setText('请连接真实D4实时观察设备'); return
+        if self.audio_worker is not None and self.audio_worker.isRunning(): return
+        self.audio_page.follow.setChecked(False); self._stop_scan()
+        self.audio_page.live_model = LiveAnalysis()
+        for plot in (self.audio_page.trajectory,self.audio_page.live_wave,self.audio_page.live_spectrum):
+            plot.model=self.audio_page.live_model
+        self.live_worker=LiveWorker(self.link,self)
+        self.live_worker.batch.connect(self.audio_page.live_model.ingest)
+        self.live_worker.failure.connect(self._live_failed)
+        self.live_worker.finished.connect(self._live_finished)
+        self.live_display_timer=QTimer(self)
+        self.live_display_timer.setInterval(33)
+        self.live_display_timer.timeout.connect(self.audio_page.refresh_live)
+        self.live_display_timer.start()
+        self.audio_page.live_button.setText('停止实时观察')
+        self.audio_page.live_status.setText('核对设备身份并开始音频流…')
+        self.live_worker.start()
+
+    def _stop_live(self):
+        self._release_keys()
+        if self.audio_test_note:
+            self.send_frames(dh.cmd_note('off:69'), '释放A4测试音');self.audio_test_note=False
+        self.live_worker.stop()
+        self.audio_page.live_status.setText('正在停止 · 保留最后画面')
+
+    def _live_failed(self, message):
+        self.audio_page.live_status.setText(message);self.log(message)
+        self.live_error=message
+
+    def _live_finished(self):
+        self.live_display_timer.stop()
+        self.audio_page.refresh_live()
+        self.audio_page.live_button.setText('开始实时观察')
+        self.audio_page.live_status.setText(getattr(self,'live_error','已停止 · 保留历史画面'))
+        if hasattr(self,'live_error'):del self.live_error
 
     def _performance_state(self):
         notes = ', '.join(midi_name(n) for n in self.held.values()) or '无按住音符'
@@ -1710,6 +1762,10 @@ def main():
         return selftest()
     app = QApplication(sys.argv)
     w = MainWindow()
+    if "--live" in sys.argv:
+        w.pages.setCurrentIndex(3);w.audio_page.mode.setCurrentIndex(0)
+    elif "--audio" in sys.argv:
+        w.pages.setCurrentIndex(3)
     screen = app.primaryScreen()
     if screen:
         available = screen.availableGeometry()

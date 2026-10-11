@@ -1,6 +1,6 @@
 # 当前项目入口
 
-**用户硬约束：唯一应用计算平台是Tang Nano 20K FPGA，不使用其他MCU或计算平台承担触控、音乐与实体可视化。** 计算资源逐项审计见[compute-resource-audit-20261010.md](compute-resource-audit-20261010.md)，电脑参考/FFT绘图与板载BL616单独列明；全FPGA触控和实体三视图尚未实现。
+**用户硬约束：触控、发声与独立实体可视化由Tang Nano20K FPGA承担，不使用其他MCU。2026-10-11用户明确允许连接电脑时由上位机计算音乐可视化，实体功能仍保留。** 计算资源逐项审计见[compute-resource-audit-20261010.md](compute-resource-audit-20261010.md)，电脑参考/FFT绘图与板载BL616单独列明；全FPGA触控和实体三视图尚未实现。
 
 本次整理遵循：保留最新已验代码，向前接合；不通过回退旧版本制造“闭环”。
 
@@ -9,7 +9,7 @@
 | 最新设计、全部已有能力、未实现项与待决参数 | [design.md](design.md)，固定N-01～N-11，新增N-12音频可视化 |
 | 产品候选及模块落点 | [state.json](state.json) 与 [catalog.json](catalog.json) |
 | 来源工作树、保留方式、接合与风险 | [integration.md](integration.md) |
-| 当前源码身份 | [integration-20261011-03.json](versions/integration-20261011-03.json)，228输入，演奏/波形与连接状态保护关联验证；04完整回归/板测按原身份保留 |
+| 当前源码身份 | [integration-20261011-06.json](versions/integration-20261011-06.json)，239输入，滤波观察流候选，45主机测试/专项通过，全量回归/PnR进行中；05实链失败保留 |
 | 本版实测及证据边界 | [validation.md](validation.md) |
 | 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，用户确定全FPGA扫描/坐标/追踪，不用采集MCU，PSoC退出采购，原始测量前端待评估 |
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
@@ -50,3 +50,13 @@ python tools/scripts/regress_all.py --full
 2026-10-11演奏工作区：见[performance-workspace-20261011.md](performance-workspace-20261011.md)。39主机测试和真实COM6双音演奏/采样期间释放通过；无新RTL/PnR/下载，FPGA轨迹/频谱仍未实现。
 
 2026-10-11连接问题：实窗原为模拟后端，虽端口下拉已改COM6；现已切换真实COM6并连续采集。03修复连接时锁定端口，40主机测试通过，保护在下次GUI启动生效；保留当前已连的02窗口供用户演奏。
+
+2026-10-11用户重新上电并报告波形仍不可见：当前板上配置未知，之前连接成功不视为本次问题闭环。原04码流/日志指纹复核一致；本轮未下载。见[重新下载流程与键盘演奏方案](reload-and-keyboard-plan-20261011.md)，键盘新增设计为建议，尚未实施。
+
+2026-10-11重新上电恢复实测：完整04源隔离副本check-build通过，当前GUI03源228检查通过；原04码流SRAM重载exit0，COM6身份D3/rev2/proto11/scope32。A4产生2048非零样本、释放后active0；用户实际GUI采样并显示波形成功，显示倍率4，测试音已释放，保留最近快照。证据[evidence/reload-test-20261011/record.json](evidence/reload-test-20261011/record.json)。本轮未改产品源码；短音漏过周期采样/实体DAC仍未闭环。
+
+2026-10-11 N-12实现审查：用户要求实时演奏中观察三视图。当前只有1Hz、约39ms的有限快照，轨迹与FPGA频谱未实现，不能按采样成功签收实时可视化。详见[代码与算法审查](visualization-implementation-audit-20261011.md)。本轮未改实现或占用串口。
+
+2026-10-11 N-12新决定：电脑连接模式可用PC对真实FPGA音频计算波形/频谱并处理轨迹；不取消实体FPGA实现。见[电脑实时可视化架构](desktop-live-visualization-20261011.md)。此前PC FFT未批准的条目为历史状态，现被本次明确授权覆盖。持续数据通路尚未实现，现有快照不签收新目标。
+
+2026-10-11实时三视图实现：连续原采样率PCM16、FPGA接受事件、PC FFT及固定演奏区已接入候选，详见[实现与验收](desktop-live-implementation-20261011.md)。尚未签收新码流与板级结果，不能将界面已写当完成。

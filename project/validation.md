@@ -51,3 +51,7 @@ T60已知失败、旧LFO跳变、异步复位同步释放、真实触摸/音频/
 证据[session-check02/report.json](evidence/bench/20261010-session-check02/report.json)：5/5通过、退出0。覆盖清理后的2048样本静音、五档音符开关/MIDI127独立、完整32组分配/抢占/释放、A4内部数字频谱与单指移动、两指反向变调且不新增note-on。所有capture保留6145字节原始流和样本，结束活动音符0、串口关闭、所改控制参数恢复。不是上电默认/实体触控/DAC/I²S电气/10ms验收。
 
 首轮[session-check01/report.json](evidence/bench/20261010-session-check01/report.json)退出1，4/5通过；生命周期项因探测脚本使用本机Python不支持的int.bit_count未执行完，不是已定位RTL故障。改用同义bin.count写法后以新目录完整复跑，原失败/脚本/流均保留，未降低判据。
+
+2026-10-11重新上电恢复实测：完整04源隔离副本check-build通过，当前GUI03源228检查通过；原04码流SRAM重载exit0，COM6身份D3/rev2/proto11/scope32。A4产生2048非零样本、释放后active0；用户实际GUI采样并显示波形成功，显示倍率4，测试音已释放，保留最近快照。证据[evidence/reload-test-20261011/record.json](evidence/reload-test-20261011/record.json)。本轮未改产品源码；短音漏过周期采样/实体DAC仍未闭环。
+
+2026-10-11 desktop live06: host45 PASS; FIR exact1024 output/alias rejection gate PASS; PnR setup12.644ns hold.228ns TNS0; identity-bound SRAM programmed. GUI/UART30s PASS768audioframes/10events/zero CRC,gaps,losses/active0. Evidence project/evidence/desktop-live-filtered-20261011. Full57 regression still running;05 full57 historical only. Standalone FPGA visualization and physical DAC not accepted.

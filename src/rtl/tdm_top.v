@@ -44,7 +44,10 @@ module tdm_top #(
     //   pad_scan 自带 8 位待发位图且受 note_busy 反压，不会同时压进本队列。
     parameter integer EVQ_DEPTH = 4,
     parameter integer FINGER_EXPR = 0,
-    parameter integer BOARD_DIAG = 0
+    parameter integer BOARD_DIAG = 0,
+    parameter integer LIVE_MONITOR = 0,
+    parameter integer LIVE_DECIMATE = 1,
+    parameter integer UART_BAUD = 115200
 )(
     input  wire       clk,
     input  wire       rst_n,
@@ -141,7 +144,7 @@ module tdm_top #(
     reg  [7:0]  u_addr;
     reg         u_have_addr;
 
-    uart_rx #(.CLK_HZ(27000000), .BAUD(115200)) u_uart (
+    uart_rx #(.CLK_HZ(27000000), .BAUD(UART_BAUD)) u_uart (
         .clk(clk), .rst_n(rst_n), .rx(uart_rx_pin),
         .data(u_rx_data), .valid(u_rx_valid)
     );
@@ -396,10 +399,14 @@ module tdm_top #(
     reg  [7:0]  rb_addr, tx_data;
     reg         tx_start;
     wire        tx_done;
+    wire live_enabled, live_owns, live_start;
+    wire [7:0] live_data;
+    wire uart_idle;
 
-    uart_tx #(.CLK_HZ(27000000), .BAUD(115200)) u_tx (
+
+    uart_tx #(.CLK_HZ(27000000), .BAUD(UART_BAUD)) u_tx (
         .clk(clk), .rst_n(rst_n),
-        .tx_data(tx_data), .tx_start(tx_start),
+        .tx_data(live_owns ? live_data : tx_data), .tx_start(live_owns ? live_start : tx_start),
         .tx(uart_tx_pin), .busy(), .done(tx_done)
     );
 
@@ -411,7 +418,7 @@ module tdm_top #(
         else begin
             tx_start <= 1'b0;
             case (rb_st)
-                3'd0: if (wr_en && wr_addr == 8'h0F) begin
+                3'd0: if (!live_enabled && !live_owns && wr_en && wr_addr == 8'h0F) begin
                           rb_addr <= wr_data;
                           diag_stream_count <= 0; diag_stream_byte <= 0;
                           rb_st   <= 3'd1;
@@ -421,6 +428,8 @@ module tdm_top #(
                 3'd3: begin
                           // Diagnostics use the existing two-byte readback frame.
                           case(rb_addr)
+                              8'hA4: tx_data<=LIVE_MONITOR ? 8'hD4 : diag_read;
+                              8'hA5: tx_data<=LIVE_MONITOR ? (LIVE_DECIMATE==4 ? 8'd4 : 8'd3) : diag_read;
                               8'h74: tx_data<=uartq_ovf[7:0];
                               8'h75: tx_data<=uartq_ovf[15:8];
                               8'h76: tx_data<=seqq_ovf[7:0];
@@ -1099,6 +1108,26 @@ module tdm_top #(
         .pos(oct_pos), .seq_run(seq_en), .test_mode(test_mode_eff),
         .led(led_ind_o)
     );
+
+    generate if (LIVE_MONITOR) begin: live_observer
+        wire observation_valid;
+        wire signed [23:0] observation_audio;
+        if(LIVE_DECIMATE==4) begin: filtered_observation
+            live_observation_filter u_filter(.clk(clk),.rst_n(rst_n),.sample_en(sample_en),
+                .sample(audio),.valid(observation_valid),.filtered(observation_audio));
+        end else begin
+            assign observation_valid=sample_en;assign observation_audio=audio;
+        end
+        live_audio_monitor #(.FORMAT(LIVE_DECIMATE==4 ? 2 : 1)) u_live (
+            .clk(clk), .rst_n(rst_n), .sample_en(sample_en), .sample_valid(observation_valid), .sample(observation_audio),
+            .wr_en(wr_en), .wr_addr(wr_addr), .wr_data(wr_data),
+            .event_valid(nm_ev_ack), .event_on(ev_on_r), .event_note(ev_note_r), .event_velocity(ev_vel_r),
+            .tx_available(rb_st==0), .tx_done(tx_done),
+            .enabled(live_enabled), .owns_tx(live_owns), .tx_start(live_start), .tx_data(live_data)
+        );
+    end else begin: no_live_observer
+        assign live_enabled=0; assign live_owns=0; assign live_start=0; assign live_data=0;
+    end endgenerate
 
     assign led = test_mode_eff ? 6'b000000 : led_ind_o;   // 共阳极：低电平点亮
 
