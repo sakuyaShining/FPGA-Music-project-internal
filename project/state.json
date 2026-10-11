@@ -617,6 +617,8 @@
     "evidence": "project/evidence/release-spike-20261011",
     "simulation": "SIM_INIT v4:50->200, v8:100->200, v12:150->200; first uninitialized probe retained and not accepted",
     "hardware_boundary": "Archived real06 stream analysed, current user serial untouched",
-    "next": "Preserve already sounding per-slot amplitude/timbre on note-off; add release continuity criterion, new source/build/tests before changing board"
+    "next": "Preserve already sounding per-slot amplitude/timbre on note-off; add release continuity criterion, new source/build/tests before changing board",
+    "document": "project/release-spike-20261011.md",
+    "acceptance": "Open musical defect; existing live transport PASS and regression do not establish note-off amplitude continuity"
   }
 }
