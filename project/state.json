@@ -665,6 +665,18 @@
       "supplement_gate31_exit": 0,
       "source_unchanged_after_full": true,
       "delivery": "project/evidence/release-fix07-20261011/delivery07.json"
-    }
+    },
+    "user_confirmation": "2026-10-11 user confirms previously reported release spike fixed in use"
+  },
+  "preset_visualization_review": {
+    "date": "2026-10-11",
+    "user_report": "Switching timbre presets shows no visualization difference",
+    "read_only_findings": [
+      "01 config_editor preset edits local draft only; disabled apply; waveform preview uses drawn spectrum and explicitly excludes preset/effects",
+      "02 device set_preset sends PRESET0x37 and CTRL register selection; no SPEC_REFRESH command; new note load uses preset table",
+      "Already sounding slot retains loaded spectrum until explicit refresh or next onset;07release fix preserves release parameters only"
+    ],
+    "status": "UI path/which control not yet identified; no live serial touched or hardware failure inferred",
+    "source_manifest": "project/versions/integration-20261011-07.json"
   }
 }
