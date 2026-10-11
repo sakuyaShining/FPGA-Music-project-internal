@@ -70,7 +70,7 @@
   },
   "active_test_run": {
     "id": "desktop-live-filtered-20261011",
-    "phase": "regression; live hardware passed",
+    "phase": "06 regression complete;07 repair validation",
     "source_manifest": "project/versions/integration-20261011-06.json",
     "regression_pid": 4876,
     "regression_created_local": "2026-10-11 19:27:30",
@@ -102,7 +102,9 @@
       "connected": "COM6 @460800",
       "observation": "Actual native B press produced accepted note trajectory, wave pulse and PCFFT; stream counters remained zero errors"
     },
-    "followup": "Existing heartbeat automation reactivated for final full57 closure; do not disturb interactive GUI or duplicate tests"
+    "followup": "Existing heartbeat automation reactivated for final full57 closure; do not disturb interactive GUI or duplicate tests",
+    "regression_exit_code": 0,
+    "regression_result": "57/57 required PASS;1T60 KNOWN-FAIL;2INFO; release amplitude discontinuity remains open"
   },
   "design_register": {
     "document": "project/design.md",
@@ -621,7 +623,7 @@
     "document": "project/release-spike-20261011.md",
     "acceptance": "Open musical defect; existing live transport PASS and regression do not establish note-off amplitude continuity",
     "fix": {
-      "status": "Isolated07 code implemented;512slot targeted PASS, original06 fails same criterion; full58 and PnR running; board still06",
+      "status": "Isolated07 targeted512 PASS and PnR PASS; full58 running;06 full57PASS archived; board still06",
       "candidate_root": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07",
       "candidate_manifest": "project/evidence/release-fix07-20261011/candidate-source.json",
       "change": "TDM consume falling gate preserves effective amplitude/increment/envelope parameters and does not reload glide; refresh/on/reuse unaffected",
@@ -635,7 +637,20 @@
       "pnr_log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07\\project\\evidence\\release-fix07-20261011\\pnr.log",
       "tested_source_frozen": true,
       "source_zip": "project/evidence/release-fix07-20261011/source07.zip",
-      "next": "Archive06 completion then copy exact07 source changes and identity into main integration worktree; require58/full,newPnR,bind/check and SRAM release audio test; keep user GUI/serial exclusive"
+      "next": "Archive06 completion then copy exact07 source changes and identity into main integration worktree; require58/full,newPnR,bind/check and SRAM release audio test; keep user GUI/serial exclusive",
+      "pnr_review": {
+        "exit_code": 0,
+        "exit_evidence": "exec session82459 completed exit0; wrapper exit file empty due script not exporting LASTEXITCODE",
+        "setup_ns": 7.378,
+        "hold_ns": 0.198,
+        "setup_violations": 0,
+        "hold_violations": 0,
+        "TNS": 0,
+        "resources": "Logic18751/20736 CLS10048/10368 BSRAM38/46 DSP10.75/24",
+        "warning": "PR1014 remains open",
+        "configuration": "full32 live FIR63 decimate4 UART460800 place0 route2",
+        "bitstream_sha256": "9f3f4461bb79eb967970907a6f770808b90f0d6099ba493ce99d4ae2d4d454c6"
+      }
     }
   }
 }

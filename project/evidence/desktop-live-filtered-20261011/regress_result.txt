@@ -1,0 +1,62 @@
+﻿回归门结果：全量 --full 配置  2026-10-11 20:20:34
+  PASS  01 additive        逐位一致 不一致样本数 = 0   最大差异 = 0
+  PASS  02 clock           tb 自检输出
+  PASS  03 envelope        tb 自检输出
+  PASS  04 i2s             tb:PASS dec:解码侧跳过1个同步字后不符 0/63
+  PASS  05 voices          谱峰=[232, 290, 348, 463]（期望≥4 个基频峰）
+  PASS  06 testmode        固定峰数=32(应32) 窗A格=32 窗B格=34 
+  PASS  07 regpitch        三段频率=[463, 695, 463] 段2/段1=1.500（期望≈1.5）
+  PASS  08 seq             nc=12720，事件 73 条，样本 60000      期望事件 73 条，实测 73 条（比对前 73 条）      对齐偏移 = 5 个样本（第一条事件）      拍点脉冲 45 个（推算拍点 45 个），宽度应≈210
+  PASS  09 regctl          4-bypass] FX 全关时：顶层音频 vs 引擎输出      比对 2000 个样本（其中非零 1998 个），不一致 0 个  [E7-集成] 定序器驱动引擎（12000 个样本）      引擎在奏：出现 9 次起音 /
+  PASS  09b vp7            RESULT vp7=PASS silent=1 regs=1 preset0=1
+  PASS  10 fx              0~8000 样本内的回声数 = 1086（单抽头延迟只会有 3~4 个）      分段能量（每 1000 样本）: [76800000000, 140536774656, 17906663424, 3483959296, 839778
+  PASS  11 tdm             ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  12 f1                [G3] 谱外能量占比：1.99%（< 5% 为过） /   [G4] 峰位偏差：max 1.61 Hz（< 半格 13.85 Hz） /   ★★★ 通过：512 个独立谱峰与栅格一一对应（G1-G4）
+  PASS  11 tdm 00000003/e0 mask=00000003 env=0 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 0000000F/e0 mask=0000000F env=0 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 000000FF/e0 mask=000000FF env=0 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 0000FF00/e0 mask=0000FF00 env=0 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 00000101/e0 mask=00000101 env=0 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 000001FF/e0 mask=000001FF env=0 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 0000FFFF/e0 mask=0000FFFF env=0 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm FFFFFFFF/e0 mask=FFFFFFFF env=0 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 00000003/e1 mask=00000003 env=1 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 0000000F/e1 mask=0000000F env=1 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 000000FF/e1 mask=000000FF env=1 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 0000FF00/e1 mask=0000FF00 env=1 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 00000101/e1 mask=00000101 env=1 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 000001FF/e1 mask=000001FF env=1 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm 0000FFFF/e1 mask=0000FFFF env=1 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  11 tdm FFFFFFFF/e1 mask=FFFFFFFF env=1 : ── 黄金参考 TDM vs 并行 (跳过前 0 个样本) : 延迟 5, 不符 0 / 2495  ★★★ 黄金参考通过：TDM 与全并行逐位一致
+  PASS  13 vel shape       V1-V9 全绿（基音/条数/单调/恒等/灵敏度）
+  PASS  14 vel timbre      = 1.15）   [J3] 低力度：出声 2 条，基音 25，总能量 40（要求 出声>=2 且 基音!=0 且 能量>0）   [J4] 条数：低 2 -> 高 5（要求 高 >= 低）    ── 独立亮度轴 0x5C ──     L1 亮度 0->FF 谱心序列  tilt0:2.12  tilt4
+  PASS  15 i2s std         字比对（自校准滞后）        滞后 0 字：不符 99 / 99        滞后 1 字：不符 99 / 99        滞后 2 字：不符 0 / 99        滞后 3 字：不符 99 / 99        滞后 4 字：不符 99 / 99        ✓ 存在滞后 2，全部 
+  PASS  16 i2s top          1 字，不符 0 / 5999        ✓ i2s_tx 的 24→16 取高位与顶层 sample_out 逐样本一致    [T3] 饱和路径覆盖        解码峰值 23311 / 32767   饱和样本数 0        sum_raw 峰值 372984 / 饱和阈值 524288（
+  PASS  17 evloss          8 键同时按/放：16 条事件无丢失、不挂音
+  PASS  18 evmerge         28 条（排针 12 + UART 8 + 并存 8）一条不丢、note-off 14/14、溢出 0
+  PASS  19 alloc           32 组填满后释放：gtab 回 FREE、新音不抢按住的音
+  PASS  20 sat             ±524288 分界点：正侧夹到 8388607、负侧正好 -8388608（10 点全对）
+  PASS  21 voice           力度在装载时烘进每泛音幅度；换声部/改全局都不影响已发声声部
+  PASS  25 i2c             C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\sim\tb_i2c_master.v:165: $finish called at 143470000 (1ps)
+  PASS  25b i2c contract   C:\Users\Sakuya\.codex\worktrees\66a4\FPGA-Music-project\src\sim\tb_i2c_contract.v:93: $finish called at 4672420000 (1ps)
+  PASS  22 nyquist         增量 128/128 与公式相符、位宽充足；量化单声部 Nyquist 约束
+  PASS  23 preset nyq      预设表混叠审计完成（结果见 sim_build/23_preset_nyq_judge.log）
+  PASS  24 leakcheck       导出泄漏判据自检：干净 5 例不误报 / 泄漏 13 例必抓到 / 混合 1 例
+  PASS  26 glide           G1–G7 全绿（开关门控/零速率/正负收敛耗时/精确归零/无残余）
+  PASS  27 vib             V1–V6 全绿（开关/零深度/三角幅度对称/周期/跨零/限幅/符号）
+  PASS  28 legato          L1–L4：正常演奏**不触发** legato（机制在、条件苛刻）；松手即回收不留意外滑音
+  PASS  29 inv             不变量 gact==0⇒gtab==FREE 恒成立；可回收档不可达（死档）；不抢占按住的音
+  INFO  30 deadparam       合计：死参数 0 个，未使用信号 1 个（跨 1 个文件）
+  PASS  31 spec sha        全部源码、数据表、约束、GUI与构建入口一致
+  PASS  32 pitchmod        滑音轨迹 vs Python 镜像 0/39598；比例 16.0；颤音幅度/周期/一致性全对
+  PASS  33 evhold          H1–H4 全绿（空队不产 valid / 深度与溢出计数 / 合规源 20 条不丢且保序）
+  INFO  34 gatecov         测试台：存在 68 个，门禁引用 37 个，**未引用 31 个**
+  KNOWN-FAIL  35 t60(kf)         未通过（见 35_t60_judge.log）；fb=0x40(0.250): T60 实测 0.0245 s | 单抽头式参考 0.1417 s | **饱和样本 17 (0.0%)** OK / fb=0x60(0.375): T60 实测 0.0300 s | 单抽头式参考 0.2003 s | **饱和样本 2
+  PASS  36 padfast         RESULT padfast=PASS
+  PASS  37 evhold stream   RESULT evhold_stream=PASS
+  PASS  38 event sources   RESULT event_sources=PASS
+  PASS  39 finger pitch    PASS continuous per-contact pitch integration
+  PASS  40 protocol join   Spectrum draft/commit, original velocity, sequence stop, active reset
+  PASS  41 board test      Full UART stream, full32 contacts, MIDI127, host timeout ordering and failure bytes
+  PASS  42 live monitor    Continuous PCM16, CRC, accepted timestamps, visible overflow and desktop analysis
+  => 57/57 通过（另有 1 项已知失败，2 项信息审计，不计入）
