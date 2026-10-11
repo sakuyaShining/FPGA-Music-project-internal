@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "tools/scripts/regress_all.py", line 1059, in <module>
+    sys.exit(main())
+  File "tools/scripts/regress_all.py", line 501, in main
+    ok, msg = run_tdm_mask(mask, env)
+  File "tools/scripts/regress_all.py", line 304, in run_tdm_mask
+    open(tb_path, "w", encoding="utf-8").write(tb)
+OSError: [Errno 28] No space left on device

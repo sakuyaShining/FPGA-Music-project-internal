@@ -623,14 +623,14 @@
     "document": "project/release-spike-20261011.md",
     "acceptance": "Open musical defect; existing live transport PASS and regression do not establish note-off amplitude continuity",
     "fix": {
-      "status": "Isolated07 targeted512 PASS and PnR PASS; full58 running;06 full57PASS archived; board still06",
+      "status": "07 full58 attempt02 running on D exact241 source; original attempt01 infrastructure no-space archived; targeted and PnR PASS; board06",
       "candidate_root": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07",
       "candidate_manifest": "project/evidence/release-fix07-20261011/candidate-source.json",
       "change": "TDM consume falling gate preserves effective amplitude/increment/envelope parameters and does not reload glide; refresh/on/reuse unaffected",
-      "regression_pid": 27976,
-      "regression_created_local": "2026-10-11 20:17:20",
-      "regression_session": 49006,
-      "regression_log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07\\project\\evidence\\release-fix07-20261011\\regression.log",
+      "regression_pid": 24924,
+      "regression_created_local": "2026-10-11 20:45:31",
+      "regression_session": 8225,
+      "regression_log": "D:/FPGA-Project/codex-evidence/release-candidate07/project/evidence/release-fix07-attempt02/regression.log",
       "pnr_pid": 22848,
       "pnr_created_local": "2026-10-11 20:17:31",
       "pnr_session": 82459,
@@ -650,7 +650,15 @@
         "warning": "PR1014 remains open",
         "configuration": "full32 live FIR63 decimate4 UART460800 place0 route2",
         "bitstream_sha256": "9f3f4461bb79eb967970907a6f770808b90f0d6099ba493ce99d4ae2d4d454c6"
-      }
+      },
+      "regression_attempt01": {
+        "exit": 1,
+        "cause": "C drive no space, OSError Errno28; incomplete not an RTL PASS/FAIL",
+        "log": "project/evidence/release-fix07-20261011/regression-attempt01-no-space.log",
+        "preserved_vcd": "D:/FPGA-Project/codex-evidence/release-fix07-20261011/attempt01-additive.vcd"
+      },
+      "regression_attempt02_root": "D:\\FPGA-Project\\codex-evidence\\release-candidate07",
+      "regression_exit_file": "D:/FPGA-Project/codex-evidence/release-candidate07/project/evidence/release-fix07-attempt02/regression-exit.txt"
     }
   }
 }
