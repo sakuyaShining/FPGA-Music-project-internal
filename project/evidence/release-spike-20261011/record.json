@@ -1,0 +1,11 @@
+{
+  "kind": "read-only causal probe of current06 RTL, no source or board changes",
+  "source_manifest": "project/versions/integration-20261011-06.json",
+  "files": {
+    "src/rtl/note_map.v": "069b76c436e6424bbc831c23b7964144898e3eeab67208302d9e24167aadfee2",
+    "src/rtl/tdm_engine.v": "7db1497e466de5e0ddba22edc1656fb3e100a30522c51f4a117712dd90276f0e",
+    "src/rtl/osc_env.v": "170c66076c1b4993d6ce5280eabfadf71d20261d32ea52165c15a9c6ca98d65c"
+  },
+  "result": "VELOCITY 4 ON x OFF x\nVELOCITY 8 ON x OFF x\nVELOCITY 12 ON x OFF x\nRESULT release_spike_probe=DONE\nproject\\evidence\\release-spike-20261011\\tb_release_spike.v:31: $finish called at 1270000 (1ps)\n",
+  "boundary": "Load amplitude jump reproduced; user current raw audio not captured because GUI owns serial"
+}

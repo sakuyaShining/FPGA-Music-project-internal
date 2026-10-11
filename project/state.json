@@ -609,5 +609,14 @@
     "evidence": "project/evidence/reload-test-20261011",
     "checked_at": "2026-10-11T06:13:00.630767+00:00",
     "boundary": "Current session restored; periodic snapshots can miss short notes; physical DAC and new keyboard redesign not validated"
+  },
+  "release_spike_investigation": {
+    "date": "2026-10-11",
+    "status": "Confirmed current RTL amplitude discontinuity on note-off; no fix this read-only turn",
+    "cause": "note_map amp_use on uses amp_cal withvelocity, off uses unscaled amp_src; release envelopes inherit a larger base amplitude",
+    "evidence": "project/evidence/release-spike-20261011",
+    "simulation": "SIM_INIT v4:50->200, v8:100->200, v12:150->200; first uninitialized probe retained and not accepted",
+    "hardware_boundary": "Archived real06 stream analysed, current user serial untouched",
+    "next": "Preserve already sounding per-slot amplitude/timbre on note-off; add release continuity criterion, new source/build/tests before changing board"
   }
 }
