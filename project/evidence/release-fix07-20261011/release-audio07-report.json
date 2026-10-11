@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "velocity": 1,
+      "refresh": false,
+      "poly": false,
+      "target_note": 69,
+      "pre_peak": 147.0,
+      "post_peak": 136.0,
+      "peak_ratio": 0.9251700680272109,
+      "pre_rms": 81.8231339690998,
+      "post_rms": 75.19576691107378,
+      "off_timestamp": 8403172,
+      "pass": true
+    },
+    {
+      "velocity": 4,
+      "refresh": false,
+      "poly": false,
+      "target_note": 69,
+      "pre_peak": 633.0,
+      "post_peak": 608.0,
+      "peak_ratio": 0.9605055292259084,
+      "pre_rms": 349.263101291921,
+      "post_rms": 320.9553753112362,
+      "off_timestamp": 8456949,
+      "pass": true
+    },
+    {
+      "velocity": 8,
+      "refresh": false,
+      "poly": false,
+      "target_note": 69,
+      "pre_peak": 1268.0,
+      "post_peak": 1240.0,
+      "peak_ratio": 0.9779179810725552,
+      "pre_rms": 701.4015010367212,
+      "post_rms": 644.3750930197424,
+      "off_timestamp": 8511244,
+      "pass": true
+    },
+    {
+      "velocity": 12,
+      "refresh": false,
+      "poly": false,
+      "target_note": 69,
+      "pre_peak": 1883.0,
+      "post_peak": 1853.0,
+      "peak_ratio": 0.9840679766330324,
+      "pre_rms": 1050.2644339941876,
+      "post_rms": 965.0793323074838,
+      "off_timestamp": 8565416,
+      "pass": true
+    },
+    {
+      "velocity": 4,
+      "refresh": true,
+      "poly": false,
+      "target_note": 69,
+      "pre_peak": 522.0,
+      "post_peak": 492.0,
+      "peak_ratio": 0.9425287356321839,
+      "pre_rms": 317.587747268672,
+      "post_rms": 292.1442892036155,
+      "off_timestamp": 8630873,
+      "pass": true
+    },
+    {
+      "velocity": 12,
+      "refresh": false,
+      "poly": true,
+      "target_note": 72,
+      "pre_peak": 1879.0,
+      "post_peak": 1824.0,
+      "peak_ratio": 0.9707291112293773,
+      "pre_rms": 1042.941855485746,
+      "post_rms": 967.002302883252,
+      "off_timestamp": 8710285,
+      "pass": true
+    }
+  ],
+  "identity": {
+    "127": 17,
+    "164": 212,
+    "165": 4,
+    "169": 32
+  },
+  "crc_errors": 0,
+  "gaps": 0,
+  "discontinuities": 0,
+  "losses": 0,
+  "audio_frames": 181,
+  "script_sha256": "9372741c595bd3805f59fb62408c111237de8d81478118fd9455d5c76e5ca6d6",
+  "criterion": "Post1..10ms peak/RMS <= pre40..10ms *1.08 +3 PCM16 quantization; original v12 spike~30%, v4~4x rejected; no retries",
+  "boundary": "Internal filtered PCM, not DAC or physical touch"
+}

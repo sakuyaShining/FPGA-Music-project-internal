@@ -55,3 +55,9 @@ T60已知失败、旧LFO跳变、异步复位同步释放、真实触摸/音频/
 2026-10-11重新上电恢复实测：完整04源隔离副本check-build通过，当前GUI03源228检查通过；原04码流SRAM重载exit0，COM6身份D3/rev2/proto11/scope32。A4产生2048非零样本、释放后active0；用户实际GUI采样并显示波形成功，显示倍率4，测试音已释放，保留最近快照。证据[evidence/reload-test-20261011/record.json](evidence/reload-test-20261011/record.json)。本轮未改产品源码；短音漏过周期采样/实体DAC仍未闭环。
 
 2026-10-11 desktop live06: host45 PASS; FIR exact1024 output/alias rejection gate PASS; PnR setup12.644ns hold.228ns TNS0; identity-bound SRAM programmed. GUI/UART30s PASS768audioframes/10events/zero CRC,gaps,losses/active0. Evidence project/evidence/desktop-live-filtered-20261011. Full57 regression still running;05 full57 historical only. Standalone FPGA visualization and physical DAC not accepted.
+# 2026-10-11松键幅度连续性修复07
+
+当前241输入07已向前接合，512槽专项与新PnR通过（setup7.378ns/hold.198ns/TNS0、完整32组）；SRAM下载exit0，UserCode3A93/Status6020。30秒真实GUI769音频帧/10事件通过，CRC/缺帧/断点/观察损失0、active0；力度1/4/8/12、刷新、复音释放六例真实PCM峰值/RMS均未升高。
+
+回归边界：attempt01磁盘不足中断保留；D盘同241输入attempt02原57/58、exit1，31身份检查因漏环境state.json失败。补齐非产品环境元数据后31补验exit0，原另57PASS，因此58项判据均覆盖；不覆盖原报告、不声称原完整进程exit0。T60 KNOWN-FAIL/2INFO单列。完整索引为project/evidence/release-fix07-20261011/delivery07.json，原始流及源/码流ZIP保存D盘。实体DAC、触控、独立FPGA三视图与视觉延迟仍未验。
+

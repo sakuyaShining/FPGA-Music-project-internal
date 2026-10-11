@@ -1,0 +1,25 @@
+{
+  "source_tree_sha256": "12f1802fbbaec61e716b81ee8cd55bc249348336e12abfa76006c923c73189ec",
+  "source_manifest": "project/versions/integration-20261011-07.json",
+  "build_record": "project/versions/live-build-20261011-07.json",
+  "SRAM_exit": 0,
+  "usercode": "3A93",
+  "status_code": "6020",
+  "live_hardware": "PASS30s769audioframes10eventsCRC0gaps0loss0active0",
+  "release_audio": "PASS6cases v1/4/8/12 refreshed timbre poly; all post peaks below pre",
+  "original_probe_not_run": "COM6 access denied before audio capture; original script/log retained separately, corrected refresh address0x63 in evidence-only probeB",
+  "full_regression": "Original57/58exit1 retained; missing isolated state environment corrected;31supplementexit0;58criteria covered same241inputs",
+  "archive": "D:\\FPGA-Project\\codex-evidence\\release-candidate07\\project\\evidence\\release-fix07-attempt02\\source07-and-bitstream.zip",
+  "archive_sha256": "4a640f1e700a655586830e773cc9dfd1e6c38f174df73b428e20e2ce2a61e6b3",
+  "evidence_root": "D:\\FPGA-Project\\codex-evidence\\release-candidate07\\project\\evidence\\release-fix07-attempt02",
+  "originals": {
+    "download07.log": "518472aa30eabdf26a8911f2763dee060e4966dd731161a0d999b5623d3ba701",
+    "hardware-live07\\stream.bin": "9085e5a2dfadd3bce847dffbb5fc03015f6ce6d6c8b4f9d00447a4395106b963",
+    "hardware-live07\\wire.bin": "a563dc0d08ecb7ede26a0c078cd689bbbb50b563aeb30da083506ec020a63067",
+    "release-audio07b\\stream.bin": "e9866b9238f3e7d24277d152ad8e92d9c690a196321343f6b4b40d7bd41145ed",
+    "release-audio07b\\wire.bin": "e9866b9238f3e7d24277d152ad8e92d9c690a196321343f6b4b40d7bd41145ed",
+    "release-audio07b\\inputs.json": "6c90af5f5800b31ee2499cd892726f3c35af71a9204e96999eb60bc2e1fba02d",
+    "probe_release07b.py": "9372741c595bd3805f59fb62408c111237de8d81478118fd9455d5c76e5ca6d6"
+  },
+  "boundary": "Internal PCM only; physical DAC/touch/entity FPGA visualization and visual latency unverified"
+}

@@ -9,9 +9,9 @@
 | 最新设计、全部已有能力、未实现项与待决参数 | [design.md](design.md)，固定N-01～N-11，新增N-12音频可视化 |
 | 产品候选及模块落点 | [state.json](state.json) 与 [catalog.json](catalog.json) |
 | 来源工作树、保留方式、接合与风险 | [integration.md](integration.md) |
-| 当前源码身份 | [integration-20261011-06.json](versions/integration-20261011-06.json)，239输入，滤波观察流候选，45主机测试/专项通过，全量回归/PnR进行中；05实链失败保留 |
+| 当前源码身份 | [integration-20261011-07.json](versions/integration-20261011-07.json)，241输入，松键连续性修复；512槽专项、新PnR、SRAM、30秒实时与6种释放板测通过；全量原57/58加环境身份补验通过，原退出1保留 |
 | 本版实测及证据边界 | [validation.md](validation.md) |
-| 松键尖峰修复 | [release-spike-20261011.md](release-spike-20261011.md)：已定位；隔离07的512槽专项与PnR通过，58项全回归进行中，板上仍06 |
+| 松键尖峰修复 | [release-spike-20261011.md](release-spike-20261011.md)：07已下载SRAM并通过6种真实PCM释放验证，可见GUI已恢复COM6实时观察 |
 | 触控前端决策与双形态比较 | [touch-decision-20261010.md](touch-decision-20261010.md)，用户确定全FPGA扫描/坐标/追踪，不用采集MCU，PSoC退出采购，原始测量前端待评估 |
 | 当前采购与已在手设备 | [24号采购主清单](../docs/02-技术方案/24-采购清单.md)，2026-10-10按最新决策与用户库存同步；微信版同步 |
 | 外部音频输出方案 | [audio-output-plan-20261010.md](audio-output-plan-20261010.md)，推荐3.5mm LINE OUT＋I²S线路DAC，内置喇叭可选；新增硬件尚未验 |

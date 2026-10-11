@@ -70,7 +70,7 @@
   },
   "active_test_run": {
     "id": "desktop-live-filtered-20261011",
-    "phase": "07 awaiting hardware test",
+    "phase": "complete07 release fix",
     "source_manifest": "project/versions/integration-20261011-07.json",
     "regression_pid": 4876,
     "regression_created_local": "2026-10-11 19:27:30",
@@ -80,8 +80,8 @@
     "pnr_created_local": "2026-10-11 19:27:30",
     "pnr_session": 60866,
     "pnr_log": "sim_build/pnr-20261011-live06.log",
-    "evidence": "project/evidence/desktop-live-filtered-20261011",
-    "board_status": "06 D4rev4 460800 SRAM programmed;30s live hardware PASS",
+    "evidence": "project/evidence/release-fix07-20261011/delivery07.json",
+    "board_status": "07 SRAM SHA9f3f4461... usercode3A93 status6020 D4rev4 full32; GUI COM6 restored",
     "previous_failed_hardware": "project/evidence/desktop-live-20261011/hardware-run01/report.json",
     "scope": "Connected desktop music visualization; observation filtered/4, musicFs unchanged; entity FPGA visualization pending",
     "updated": "2026-10-11T11:29:35.269458+00:00",
@@ -94,7 +94,7 @@
     "pnr_resources": "Logic18654/20736 CLS10055/10368 BSRAM38/46 DSP10.75/24",
     "download_exit_code": 0,
     "hardware_exit_code": 0,
-    "hardware_report": "project/evidence/desktop-live-filtered-20261011/hardware-run01/report.json",
+    "hardware_report": "D:\\FPGA-Project\\codex-evidence\\release-candidate07\\project\\evidence\\release-fix07-attempt02\\hardware-live07\\report.json",
     "visible_gui": {
       "pid": 3468,
       "created_local": "2026-10-11 19:35:41",
@@ -104,7 +104,8 @@
     },
     "followup": "Existing heartbeat automation reactivated for final full57 closure; do not disturb interactive GUI or duplicate tests",
     "regression_exit_code": 0,
-    "regression_result": "57/57 required PASS;1T60 KNOWN-FAIL;2INFO; release amplitude discontinuity remains open"
+    "regression_result": "57/57 required PASS;1T60 KNOWN-FAIL;2INFO; release amplitude discontinuity remains open",
+    "release_audio_report": "D:\\FPGA-Project\\codex-evidence\\release-candidate07\\project\\evidence\\release-fix07-attempt02\\release-audio07b\\report.json"
   },
   "design_register": {
     "document": "project/design.md",
@@ -600,7 +601,7 @@
     "no_download": true,
     "evidence": "project/evidence/connection-fix-20261011-03/record.json"
   },
-  "last_verified_programmed_record": "project/versions/board-build-20261010-04.json",
+  "last_verified_programmed_record": "project/versions/live-build-20261011-07.json",
   "power_cycle_followup": {
     "date": "2026-10-11",
     "status": "SRAM reloaded exit0; COM6 identity pass; A4 GUI transport2048 nonzero and release verified; actual user GUI waveform visually observed, gain4, snapshot retained",
@@ -614,16 +615,16 @@
   },
   "release_spike_investigation": {
     "date": "2026-10-11",
-    "status": "Confirmed current RTL amplitude discontinuity on note-off; no fix this read-only turn",
+    "status": "Fixed07: release amplitude discontinuity criterion passed simulation and real internal PCM",
     "cause": "note_map amp_use on uses amp_cal withvelocity, off uses unscaled amp_src; release envelopes inherit a larger base amplitude",
     "evidence": "project/evidence/release-spike-20261011",
     "simulation": "SIM_INIT v4:50->200, v8:100->200, v12:150->200; first uninitialized probe retained and not accepted",
     "hardware_boundary": "Archived real06 stream analysed, current user serial untouched",
     "next": "Preserve already sounding per-slot amplitude/timbre on note-off; add release continuity criterion, new source/build/tests before changing board",
     "document": "project/release-spike-20261011.md",
-    "acceptance": "Open musical defect; existing live transport PASS and regression do not establish note-off amplitude continuity",
+    "acceptance": "Closed for tested note-off amplitude spike; does not close physical DAC/touch or all musical semantics",
     "fix": {
-      "status": "07 integrated exact241source; all58 criteria covered full57PASS plus environment-only gate31supplementPASS; PnR PASS; boardstill06; awaiting GUI/serial coordination",
+      "status": "Delivered07 SRAM + live hardwarePASS +6release audioPASS; visible GUI restored",
       "candidate_root": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07",
       "candidate_manifest": "project/evidence/release-fix07-20261011/candidate-source.json",
       "change": "TDM consume falling gate preserves effective amplitude/increment/envelope parameters and does not reload glide; refresh/on/reuse unaffected",
@@ -637,7 +638,7 @@
       "pnr_log": "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\sim_build\\release-candidate07\\project\\evidence\\release-fix07-20261011\\pnr.log",
       "tested_source_frozen": true,
       "source_zip": "project/evidence/release-fix07-20261011/source07.zip",
-      "next": "Archive06 completion then copy exact07 source changes and identity into main integration worktree; require58/full,newPnR,bind/check and SRAM release audio test; keep user GUI/serial exclusive",
+      "next": "No further automated testing required for this repair; entity hardware boundaries remain open",
       "pnr_review": {
         "exit_code": 0,
         "exit_evidence": "exec session82459 completed exit0; wrapper exit file empty due script not exporting LASTEXITCODE",
@@ -662,7 +663,8 @@
       "resolved_gates": "D:\\FPGA-Project\\codex-evidence\\release-candidate07\\project\\evidence\\release-fix07-attempt02\\resolved-gates.json",
       "original_full_exit": 1,
       "supplement_gate31_exit": 0,
-      "source_unchanged_after_full": true
+      "source_unchanged_after_full": true,
+      "delivery": "project/evidence/release-fix07-20261011/delivery07.json"
     }
   }
 }
