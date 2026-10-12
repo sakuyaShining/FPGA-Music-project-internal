@@ -33,7 +33,7 @@
 版本归一不等于产品功能全部完成。
 
 ```powershell
-python tools/scripts/project_version.py check project/versions/integration-20261011-03.json
+python tools/scripts/project_version.py check project/versions/integration-20261011-07.json
 python tools/scripts/closure_check.py
 python tools/scripts/regress_all.py --full
 ```
