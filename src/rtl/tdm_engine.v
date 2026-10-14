@@ -74,7 +74,8 @@ module tdm_engine #(
     //   开关与深度不在这里（编译期参数做不成"演奏时可调"），
     //     改由 pmod_cfg 端口在运行时给。
     parameter PART      = 8,     // 每组泛音数（组号 = slot / PART）。NSLOT=PART×组数
-    parameter FINGER_EXPR = 0    // Opt-in; omitted ports preserve legacy bit accuracy.
+    parameter FINGER_EXPR = 0,   // Opt-in; omitted ports preserve legacy bit accuracy.
+    parameter EXPLICIT_START = 0 // Legacy direct clients may omit load_start.
 )(
     input  wire clk,
     input  wire rst_n,
@@ -94,6 +95,7 @@ module tdm_engine #(
     input  wire [PHASE_W-1:0]          load_inc,
     input  wire [AMP_W-1:0]            load_amp,
     input  wire                        load_gate,
+    input  wire [7:0]                  load_start_tag,
     // 每时隙的包络参数 = {s_lvl[15:0], d_m[1:0], d_k[4:0]}  （23 位）
     //   这是"构造泛音结构"的核心：让每个泛音有自己的【衰减速率】与【衰减终点】，
     //   频谱才能随时间演化（钟/马林巴/钢琴的音色本质）。
@@ -195,7 +197,7 @@ module tdm_engine #(
     reg               pg_mem [0:NSLOT-1];        // 待生效门
     reg [PHASE_W-1:0] pi_mem [0:NSLOT-1];        // 待生效 inc
     reg [AMP_W-1:0]   pa_mem [0:NSLOT-1];        // 待生效 amp
-    reg [22:0]        pe_mem [0:NSLOT-1];        // 待生效 epar（包络参数）
+    reg [30:0]        pe_mem [0:NSLOT-1];        // pending start + epar
 
     //-------------------------------------------------------------------------
     // 每时隙包络参数（构造泛音结构）
@@ -221,7 +223,7 @@ module tdm_engine #(
     //-------------------------------------------------------------------------
     localparam [22:0] EPAR_DEF = {16'd22938, 2'd3, 5'd12};
 
-    reg [22:0] epar_mem [0:NSLOT-1];
+    reg [30:0] epar_mem [0:NSLOT-1];
 
     // 待生效的【滑音初值】（每时隙一份，与 inc/amp/gate/epar 同一个消费拍生效）
     //   为什么不能从 note_map 直写 gq：见 pitch_mod.v 顶部注释 ——
@@ -314,7 +316,7 @@ module tdm_engine #(
     reg               gc1, gq1;
     reg [AMP_W-1:0]   amp1;
     reg [SW-1:0]      sl1;
-    reg [22:0]        epar1 = EPAR_DEF;   // 该时隙的包络参数（必须给初值，
+    reg [30:0]        epar1 = EPAR_DEF;   // 该时隙的包络参数（必须给初值，
                                           //   否则首拍为 X 会污染包络存储）
     // 待生效装载区读出（与状态同地址同拍）
     //   ppr1 = 【读取时刻】的周期奇偶。判定必须用它而不是当前 ppar：
@@ -323,7 +325,7 @@ module tdm_engine #(
     reg               pv1, pp1, pg1;
     reg [PHASE_W-1:0] pi1;
     reg [AMP_W-1:0]   pa1;
-    reg [22:0]        pe1;        // 待生效 epar
+    reg [30:0]        pe1;        // pending start + epar
     reg               ppr1;
     reg signed [17:0] pgq1;       // 待生效滑音初值（与状态同地址同拍读出）
 
@@ -344,7 +346,7 @@ module tdm_engine #(
     wire [PHASE_W-1:0] eff_inc  = replace_params ? pi1 : inc1;
     wire [AMP_W-1:0]   eff_amp  = replace_params ? pa1 : amp1;
     wire               eff_gate = consume ? pg1  : gc1;
-    wire [22:0]        eff_epar = replace_params ? pe1 : epar1;   // 与其他三个对称
+    wire [22:0]        eff_epar = replace_params ? pe1[22:0] : epar1[22:0];
 
     //-------------------------------------------------------------------------
     // 门沿检测：按时隙各判各的，但门值已经过【样本边界对齐】
@@ -360,7 +362,8 @@ module tdm_engine #(
     //     访问，脉冲无人消费——正确做法是让门值本身按周期边界切换，
     //     而不是发脉冲。
     //-------------------------------------------------------------------------
-    wire trig_on  = eff_gate & ~gq1;
+    wire trig_on  = (eff_gate & ~gq1) |
+                   (EXPLICIT_START && consume && pg1 && pe1[30:23] != epar1[30:23]);
     wire trig_rel = ~eff_gate & gq1;
 
     osc_env #(.ENV_W(ENV_W), .STG_W(STG_W)) u_env (
@@ -604,7 +607,12 @@ module tdm_engine #(
     wire signed [17:0] effective_poff = finger_use ? finger_q : poff;
     wire signed [42:0] pmod_mul = $signed({1'b0, eff_inc}) * effective_poff;
     wire signed [26:0] pmod     = pmod_mul >>> 16;                   // Q16 → inc 偏移（27 位，防 EX3791）
-    wire [PHASE_W-1:0] ph_n     = ph1 + eff_inc + pmod[PHASE_W-1:0]; // 低 24 位 = 模 2^24
+    // Check the FINAL signed increment before taking its phase-width bits.
+    // This also covers expression/LFO/glide crossing Nyquist or zero.
+    wire signed [27:0] final_inc = $signed({4'b0000, eff_inc}) +
+                                  $signed({pmod[26], pmod});
+    wire increment_invalid = final_inc <= 0 || final_inc >= (1 << (PHASE_W-1));
+    wire [PHASE_W-1:0] ph_n = ph1 + final_inc[PHASE_W-1:0];
 
 
     //-------------------------------------------------------------------------
@@ -762,7 +770,7 @@ module tdm_engine #(
             sl1  <= slot_addr;
 
             // 级 2：寄存给后续级用
-            amp2 <= amp_eff;
+            amp2 <= increment_invalid ? {CORE_AMP_W{1'b0}} : amp_eff;
             tad2 <= tab_addr;
             sl2  <= sl1;
 
@@ -804,7 +812,7 @@ module tdm_engine #(
             gcur_mem [sl1] <= eff_gate;
             inc_mem  [sl1] <= eff_inc;
             amp_mem  [sl1] <= eff_amp;
-            epar_mem [sl1] <= eff_epar;        // 与其他三个参数对称
+            epar_mem [sl1] <= {EXPLICIT_START && replace_params ? pe1[30:23] : epar1[30:23], eff_epar};        // 与其他三个参数对称
             if (consume)
                 pv_mem[sl1] <= 1'b0;           // 消费完清待生效标志
 
@@ -815,7 +823,10 @@ module tdm_engine #(
                 pi_mem [load_slot] <= load_inc;
                 pa_mem [load_slot] <= load_amp;
                 pg_mem [load_slot] <= load_gate;
-                pe_mem [load_slot] <= load_epar;   // epar 也走待生效（见上方说明）
+                // Tags survive coalesced ON/refresh/OFF writes without an async
+                // read of every pending slot. At 512 slots and >=20 cycles/ON,
+                // an 8-bit tag cannot wrap before that slot consumes the buffer.
+                pe_mem [load_slot] <= {EXPLICIT_START ? load_start_tag : 8'd0, load_epar};
                 pgq_mem[load_slot] <= load_gq;     // 滑音初值同走待生效
                 pv_mem [load_slot] <= 1'b1;
                 pp_mem [load_slot] <= ppar;    // 打上装载时刻的周期奇偶

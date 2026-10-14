@@ -901,6 +901,7 @@ module tdm_top #(
     wire [AMP_W-1:0]   nm_load_amp;
     wire               nm_load_gate;
     wire [22:0]        nm_load_epar;
+    wire [7:0]         nm_load_start_tag;
 
     wire               tm_load_en;
     wire [8:0]         tm_load_slot;
@@ -947,6 +948,7 @@ module tdm_top #(
         .load_en(nm_load_en), .load_slot(nm_load_slot),
         .load_inc(nm_load_inc), .load_amp(nm_load_amp),
         .load_gate(nm_load_gate), .load_epar(nm_load_epar),
+        .load_start_tag(nm_load_start_tag),
         .load_gq(nm_load_gq),
         .busy(nm_busy), .ev_ack(nm_ev_ack), .active(nm_active),
         .voice_valid(voice_valid), .voice_on(voice_on),
@@ -1027,13 +1029,14 @@ module tdm_top #(
         //     默认值（开机自举写入）= 滑音开 + 颤音关：
         //     · 滑音开：组被复用时才真的滑，空闲组起音不滑
         //     · 颤音关：测试模式的 512 个谱峰若被颤音抹开就数不清（R3 现场自证）
-        .PART(P), .FINGER_EXPR(FINGER_EXPR)
+        .PART(P), .FINGER_EXPR(FINGER_EXPR), .EXPLICIT_START(1)
     ) u_tdm (
         .clk(clk), .rst_n(rst_n), .sample_en(sample_en),
         .clr(1'b0), .pclr(1'b0), .gate_in(1'b1),
         .load_en(load_en), .load_slot(load_slot),
         .load_inc(load_inc), .load_amp(load_amp), .load_gate(load_gate),
         .load_epar(load_epar),
+        .load_start_tag(test_mode_eff ? 8'd0 : nm_load_start_tag),
         .load_gq(load_gq),
         .pmod_cfg(pmod_cfg),
         .finger_active(test_mode_eff ? 32'd0 : finger_active),

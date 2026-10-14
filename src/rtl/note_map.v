@@ -94,6 +94,7 @@ module note_map #(
     output reg  [PHASE_W-1:0]  load_inc,
     output reg  [AMP_W-1:0]    load_amp,
     output reg                 load_gate,
+    output reg  [7:0]          load_start_tag, // changes only on note-on
     output reg  [22:0]         load_epar,
 
     //---- 到 tdm_engine 的【滑音初值】----
@@ -193,6 +194,7 @@ module note_map #(
     //-------------------------------------------------------------------------
     reg [NB-1:0]  gtab [0:NG-1];
     reg [AMP_W-1:0] group_velocity [0:NG-1];
+    reg [7:0] group_start_tag [0:NG-1];
     reg [NG-1:0]  gact;                 // 该组是否正在发声（gate=1）
     reg [NG-1:0]  gact_q;               // 打一拍，供装载序列使用
 
@@ -206,6 +208,7 @@ module note_map #(
             gtab[gi] = FREE;
             gact[gi] = 1'b0;
             group_velocity[gi] = 0;
+            group_start_tag[gi] = 0;
         end
         gact_q = {NG{1'b0}};
     end
@@ -458,7 +461,8 @@ module note_map #(
     //   处理：把该泛音的幅度置 0，而不是让它折回来当噪声。
     //   注：不做"改频率"，因为折叠后的频率并不等于原频率的镜像不是音乐上要的东西。
     //-------------------------------------------------------------------------
-    wire nyq_kill = (inc_cal >= {1'b1, {(PHASE_W-1){1'b0}}});   // ≥ 2^23
+    // Test the full Q8 product BEFORE narrowing; no wrapped partials.
+    wire nyq_kill = |inc_mul[PHASE_W+15:PHASE_W+7];
 
     // 时隙号必须在【足够宽的上下文】里算。
     //   Verilog 的 * 是"上下文决定宽度"的：g(7 位) * P(16) 若在 7 位上下文里
@@ -480,6 +484,7 @@ module note_map #(
             for (reset_group = 0; reset_group < NG; reset_group = reset_group + 1) begin
                 gtab[reset_group] <= FREE;
                 group_velocity[reset_group] <= 0;
+                group_start_tag[reset_group] <= 0;
             end
             st        <= ST_IDLE;
             load_en   <= 1'b0;
@@ -487,6 +492,7 @@ module note_map #(
             load_inc  <= {PHASE_W{1'b0}};
             load_amp  <= {AMP_W{1'b0}};
             load_gate <= 1'b0;
+            load_start_tag <= 8'd0;
             load_epar <= 23'd0;
             k         <= K0;
             n_hold    <= {NB{1'b0}};
@@ -566,6 +572,7 @@ module note_map #(
                     if (on_cur) begin
                         gtab[gsel_r] <= n_hold;
                         group_velocity[gsel_r] <= vel_cur;
+                        group_start_tag[gsel_r] <= group_start_tag[gsel_r] + 1'b1;
                         gact[gsel_r] <= 1'b1;
                         g_note_r     <= n_hold;             // 装载新音
                     end
@@ -601,6 +608,7 @@ module note_map #(
                     load_inc  <= inc_cal;
                     load_amp  <= amp_use;
                     load_gate <= on_cur;
+                    load_start_tag <= group_start_tag[gsel_r];
                     load_epar <= p_epar;
                     if (rf_mode) load_gq <= 18'sd0;   // ★ 刷新时不把旧滑音初值灌回去 ✗
                     if (k == P - 1) begin

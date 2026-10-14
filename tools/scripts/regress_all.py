@@ -1012,6 +1012,13 @@ def main():
     with open(os.path.join(BUILD,"43_release_continuity.log"),"w",encoding="utf-8") as fh: fh.write(release_log or "")
     results.append(("43 release continuity", release_rc==0 and "RESULT release_continuity=PASS" in release_log, "Release preserves sounding parameters across512slots; refresh and reuse"))
 
+    safety_rc, safety_log = run([sys.executable, os.path.join(ROOT, "tools", "scripts",
+                                "engine_safety_check.py"), "--new-only"], cwd=ROOT, timeout=180)
+    with open(os.path.join(BUILD, "44_engine_safety.log"), "w", encoding="utf-8") as fh:
+        fh.write(safety_log or "")
+    results.append(("44 engine safety", safety_rc == 0 and "RESULT engine_safety_suite=PASS" in safety_log,
+                    "8192 full-product cases, final pitch bounds, pending ON, refresh, tail reattack and group31"))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)

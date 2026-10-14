@@ -111,7 +111,12 @@ module osc_env #(
         lvl_o = lvl_i;
         stg_o = stg_i;
 
-        case (stg_i)
+        // A new excitation can arrive during sustain or an old release tail.
+        // Restart attack from the current level, preserving phase/amplitude
+        // continuity. Gate-off and ordinary parameter refresh do not trigger it.
+        if (trig_on) begin
+            stg_o = ST_ATK;
+        end else case (stg_i)
             //------------------------------------------------- IDLE
             ST_IDLE: begin
                 lvl_o = {ENV_W{1'b0}};

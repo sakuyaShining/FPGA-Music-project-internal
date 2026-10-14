@@ -86,3 +86,6 @@ refs/vendor-examples/
 
 # Immutable local recovery archives; manifests/patches remain versioned.
 notes/versioning/captures/**/*.zip
+
+# Gowin live-project GUI flow state; build settings are explicit in the recipe.
+/src/gowin/tdm_synth/tdm_live_test.gprj.user

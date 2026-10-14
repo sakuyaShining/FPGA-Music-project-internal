@@ -113,6 +113,9 @@ module tb_pitch_mod512;
         .clk(clk), .rst_n(rst_n),
         .ev_valid(ev_valid), .ev_on(ev_on), .ev_note(ev_note),
         .ev_vel(ev_vel), .preset(preset),
+        // Explicit identity controls: floating new inputs make amplitudes X.
+        .tilt_vbias(10'sd0), .tilt_vgain(8'd0), .vel_vscale(9'd256), .tilt(8'h70),
+        .spec_commit(1'b0),
         // 步③ 新增端口的安全默认（悬空读 z ⇒ 幅度变 x）
         .spec_we(1'b0), .spec_addr(4'd0), .spec_wdata(8'd0), .spec_replace(1'b0),
         .pad_mask(16'd0), .refresh_valid(1'b0), .rf_lo(7'd0), .rf_hi(8'd0),
