@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "product_branch": "codex/project-version-closure",
-  "source_manifest": "project/versions/integration-20261011-07.json",
+  "source_manifest": "project/versions/engine-safety-20261014-01.json",
   "touch_frontend_decision": {
     "date": "2026-10-10",
     "requirements": [
@@ -725,5 +725,35 @@
     "context": "project/desktop-host-context-20261012.md",
     "entry": "C:\\Users\\Sakuya\\Desktop\\FPGA-Host-Design-20261012\\先读我.md",
     "status": "Exported design context, source documents, selected code, evidence reports and standalone layout; product source unchanged"
+  },
+  "development_branch": "codex/instrument-engine-safety",
+  "latest_board_verified_manifest": "project/versions/integration-20261011-07.json",
+  "engine_safety_stage1": {
+    "status": "已验证",
+    "source_commit": "a7427ed0698692d6b7e4ff481f3bdf57a991b252",
+    "source_manifest": "project/versions/engine-safety-20261014-01.json",
+    "document": "project/engine-safety-20261014.md",
+    "targeted": "8192 full-product cases; signed final-increment bounds/recovery; refresh; held/fast/release-tail re-excitation; original envelope/finger/release tests passed",
+    "integration": "Initial22/23exit1 from stale pitch512 fixture; fixture supplement passes; combined29 unique targeted criteria, not one full29/29 run",
+    "pnr_probe": "project/evidence/engine-safety-20261014/attempt02/result.json",
+    "final_build": "project/versions/engine-safety-build-20261014-01.json; check-build PASS",
+    "board": "not downloaded; original07 last board evidence retained",
+    "not_completed": [
+      "writable instrument definitions",
+      "per-instrument complete attack/release and excitation semantics",
+      "runtime right-hand hold/reset/tail participation",
+      "layer ownership and same-pitch independent fingers",
+      "physical touch/DAC/10ms",
+      "T60 and old LFO seam"
+    ],
+    "final_pnr": "project/evidence/engine-safety-20261014/final-pnr.json",
+    "verification": "project/evidence/engine-safety-20261014/validation/summary.json",
+    "validation_scope": "Targeted digital and final PnR only; hardware remains unverified"
+  },
+  "active_development_run": {
+    "id": "engine-safety-20261014-01",
+    "source_manifest": "project/versions/engine-safety-20261014-01.json",
+    "phase": "stage1 delivered with digital/PnR evidence; board not changed",
+    "next": "writable single-instrument definition and lifecycle closure"
   }
 }

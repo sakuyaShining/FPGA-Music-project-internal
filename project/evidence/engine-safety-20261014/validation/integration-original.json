@@ -1,0 +1,126 @@
+[
+  {
+    "test": "tb_alloc",
+    "passed": true
+  },
+  {
+    "test": "tb_legato",
+    "passed": true
+  },
+  {
+    "test": "tb_event_sources",
+    "passed": true
+  },
+  {
+    "test": "tb_finger_top",
+    "passed": true
+  },
+  {
+    "test": "tb_protocol_join",
+    "passed": true
+  },
+  {
+    "test": "tb_i2s_top",
+    "passed": true
+  },
+  {
+    "test": "tb_pitch_mod512",
+    "passed": false
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 1,
+    "envelope": 0,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 1,
+    "envelope": 1,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 3,
+    "envelope": 0,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 3,
+    "envelope": 1,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 15,
+    "envelope": 0,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 15,
+    "envelope": 1,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 65535,
+    "envelope": 0,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 65535,
+    "envelope": 1,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 4294967295,
+    "envelope": 0,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 4294967295,
+    "envelope": 1,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 1431655765,
+    "envelope": 0,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 1431655765,
+    "envelope": 1,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 2863311530,
+    "envelope": 0,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 2863311530,
+    "envelope": 1,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 2147483649,
+    "envelope": 0,
+    "passed": true
+  },
+  {
+    "test": "tdm_golden",
+    "mask": 2147483649,
+    "envelope": 1,
+    "passed": true
+  }
+]

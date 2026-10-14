@@ -1,0 +1,11 @@
+{
+  "compile_exit": 0,
+  "target_test_exit": 1,
+  "boundary_failure_reproduced": true,
+  "hashes": {
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\src\\rtl\\note_map.v": "069b76c436e6424bbc831c23b7964144898e3eeab67208302d9e24167aadfee2",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\src\\rtl\\vel_shape.v": "ed66c9d539250c893e6086b65870b74a86aca1df55897f4c5c33d5e1fbb8ab8d",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\engine-capability-audit-20261014\\tb_note_map_guard.v": "add10c1ebcb3756b1df8e0a5460e7a905dea4a588a9a8d4af833fdfc48274627"
+  },
+  "output": "OBSERVED note=108 preset=0 partial=16 full_increment=21308176 loaded_increment=4530960 loaded_amp=71\nFATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\engine-capability-audit-20261014\\tb_note_map_guard.v:35: TARGET FAIL: over-Nyquist partial remained audible after truncation\n       Time: 260000  Scope: tb_note_map_guard\n"
+}

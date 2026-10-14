@@ -1,0 +1,20 @@
+====================================================================
+ 512 档功能仿真判据（NG=32 / NSLOT=512 / fs=48828.125 Hz）
+====================================================================
+
+[E1a] 32 复音：基频时隙的相位增量 vs 表期望（100 行 × 32 列）
+     基频完全正确的声部数 = 32 / 32
+
+[E1b] FFT 旁证（高音区 16 个基频；仅旁证，硬判据是 E1a）
+   （p512_out.txt：跳过 4100 行非数值，多为上电 x）
+Traceback (most recent call last):
+  File "C:\Users\Sakuya\.codex\worktrees\instrument-engine-safety\FPGA-Music-project\tools\scripts\pitch_mod512_check.py", line 260, in <module>
+    sys.exit(main())
+  File "C:\Users\Sakuya\.codex\worktrees\instrument-engine-safety\FPGA-Music-project\tools\scripts\pitch_mod512_check.py", line 137, in main
+    S = np.abs(np.fft.rfft(seg * np.hanning(len(seg))))
+  File "<__array_function__ internals>", line 200, in rfft
+  File "C:\Users\Sakuya\AppData\Roaming\Python\Python38\site-packages\numpy\fft\_pocketfft.py", line 408, in rfft
+    inv_norm = _get_forward_norm(n, norm)
+  File "C:\Users\Sakuya\AppData\Roaming\Python\Python38\site-packages\numpy\fft\_pocketfft.py", line 80, in _get_forward_norm
+    raise ValueError(f"Invalid number of FFT data points ({n}) specified.")
+ValueError: Invalid number of FFT data points (0) specified.

@@ -1,0 +1,47 @@
+{
+  "product_rtl_sha256": {
+    "note_map.v": "6b801c2ea7f660d1a8d118653eb1262f60892e1032bdf9241ce246576c37d8be",
+    "tdm_engine.v": "ab9df08878226e0de0d3fa9ceed3ef04dc1437ea45cb7e638bc9b80546aa3aab",
+    "tdm_top.v": "f0682f79e7eb4b54ddb9e3c1b3f87c564e98258605b8959201b1a90d272adbec",
+    "osc_env.v": "eb0740df133dd2cece5debb1728e2f3e7458b73e9ee46e4eff12ba1a3a7d4c4b"
+  },
+  "source_manifest": "project/versions/engine-safety-20261014-01.json",
+  "new_targeted_criteria": 3,
+  "legacy_core_criteria": 3,
+  "initial_integration": {
+    "passed": 22,
+    "total": 23,
+    "exit": 1
+  },
+  "supplement": [
+    {
+      "test": "tb_pitch_mod512",
+      "passed": true
+    }
+  ],
+  "combined_unique_criteria": 29,
+  "combined_passed": 29,
+  "scope": "Combined targeted coverage only; not a single full29/29 regression or hardware acceptance",
+  "remaining": [
+    "T60 known failure",
+    "old LFO discontinuity",
+    "no new hardware/I2S electrical/DAC/touch10ms tests"
+  ],
+  "logs": {
+    "i2s-judge.txt": "8141fc0c021eaa20c79fcd5c0c819ad5aab2ef6babf94c169ae6f4418a865be6",
+    "pitch512-initial-failure.txt": "88219fc7e7a49685ac93faa53e56096bfaf6a5bf93d8ee5f85551be7b649604c",
+    "pitch512-supplement.txt": "74b6552a03688ebfd764c824aeb70f2c5a89587cdcc669b8f44a0a344f90596a",
+    "tb_alloc.txt": "a61605652a3e6b40e6f7c1960da34bab51ccc42b01d0b375331954228e91be6e",
+    "tb_engine_safety.txt": "1f92df17812a0168df23fec7ff13fb07fb388d2f251eeee81b678c2ddfe2098b",
+    "tb_event_sources.txt": "13f53e270f5cc07fdb41956a638c7f0e3e754960c9b660ad156b623849defb42",
+    "tb_finger_pitch.txt": "f3d28d995d17c5d53212a6143a4736dbfeba6f323ae6ae8943b6944bd3695063",
+    "tb_finger_top.txt": "ae991adad45db52b0fd428c63f35b754b089f831c7104419eca71d5be2a1863b",
+    "tb_i2s_top.txt": "ce7d21ddb644a4dc5a9aca120cae55df9c5921435755751191c16b5de159cce9",
+    "tb_legato.txt": "6dba33fd487ffabcfbc618ae89f44ab3c44eadd603193cbc3dd74468ce14546a",
+    "tb_note_frequency_guard.txt": "09c9951d8b4c25561c1428bf85007ce1b3641775e5a59073c4da9b77ed706b6a",
+    "tb_osc_env.txt": "a31a288910e1a79f1b73e77946fd34907a31d07f62f0f355ec3d4ffaf4ce93c9",
+    "tb_protocol_join.txt": "1f4d8f28ac8c63fa603366dab3661f8e2e172852a4048b338fc61d45c495ba97",
+    "tb_release_continuity.txt": "5b096e612d08757d9a1dfa220b854c35dbba3efd8d1b958df6ce38ff25f258d3",
+    "tb_retrigger_top.txt": "c65d42ab25c0e93bbacb7c712bfe6b7648a3a1b64d412c581d7a20095ce34fe2"
+  }
+}

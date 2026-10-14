@@ -1,0 +1,42 @@
+==============================================================
+ legato 复用 vs 非 legato 的行为区分
+==============================================================
+ L1 legato：按住 60 → 再按 64（60 仍在响）
+      note60 在组 0（gact=1，gtab=60）
+      note64 落在组 1
+      ⇒ 用了别的组 ⇒ 未复用（60 仍按住时按 64 却没复用）
+  PASS  L1-note60-still-active (1)
+ L2 松开后组的身份是否被回收（阶段 3 的 gtab<=FREE）
+      松开后：'gtab!=FREE 且 gact==0' 的组数 = 0
+  PASS  L2-released-groups-are-freed (0)
+ L3 已松手的组不应残留旧音身份 ⇒ 不可能产生（由复用引起的）意外滑音
+  PASS  L3-note60-group-no-longer-active (0)
+  PASS  L3-note60-group-identity-freed (127)
+      note64 落在组 0（note60 原组 0）
+      ⇒ 无论落在哪一组，该组在写入前都是 FREE ⇒ **无滑音**
+  PASS  L3-no-glide-because-free (64)
+ L4 占满 32 组后再按第 33 个音：应走抢占档并产生非零滑音初值
+  PASS  L4-start-clean (0)
+      占满后在响组数 = 32（应 32）
+  PASS  L4-all-32-groups-active (32)
+      第 33 个音之后：note100 在组 0
+      （此时全部 32 组都应有 gact=1：抢占是把某组改写成新音）
+      ⇒ 抢占档下 `free_r` 可为 0 ⇒ `glide_ok` 可为 1 ⇒ 机制**确实可达**，
+        只是需要先把 32 组用满。
+==============================================================
+ ★ 实测结论（纠正文档的一处表述）：
+   `34-当前版本规格-基线v1.md` 把 legato 记为「✅ 已实现且可运行时开关」。
+   实测：**机制在、但正常演奏不会触发** ——
+     glide_ok = GLIDE_EN(硬接1) && !match_r && !free_r
+     搜索顺序 同音 > FREE > 可回收 > 抢占 ⇒ 有空闲组时必选 FREE
+     ⇒ free_r=1 ⇒ glide_ok=0 ⇒ **无滑音**。
+   只有 32 组全被占用（走抢占）时 free_r 才可能为 0，那时才可能滑。
+   ⇒ 这不是 RTL 缺陷，而是**规格与实现的口径不一致**：
+     文档说的「旧音仍在响」在实现里等价于「选中了一个 gtab!=FREE 的组」，
+     而分配器在有空闲组时**不会**去选那种组。
+   需要一次**规格裁定**：legato 应当由「上一个音是否还在响」驱动
+     （需要输入层/声部管理给出『上一个音』的信息），
+     而不是由「分配器恰好选中非 FREE 组」这种副作用驱动。
+==============================================================
+RESULT legato=PASS
+C:\Users\Sakuya\.codex\worktrees\instrument-engine-safety\FPGA-Music-project\src\sim\tb_legato.v:254: $finish called at 451511739 (1ps)
