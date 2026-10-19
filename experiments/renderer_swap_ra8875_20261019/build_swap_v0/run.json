@@ -1,0 +1,67 @@
+{
+  "label": "build_swap_v0",
+  "status": "build completed; audit required; NEVER PROGRAM",
+  "returncode": 0,
+  "seconds": 403.4,
+  "top": "joint_timing_top",
+  "device": "GW2AR-LV18QN88C8/I7",
+  "bench_gate": false,
+  "hardware_programmed": false,
+  "pnr": {
+    "Logic": 19850,
+    "Register": 10713,
+    "CLS": 10320,
+    "BSRAM": 32,
+    "DSP": "22.75"
+  },
+  "baseline_pnr": {
+    "Logic": 20478,
+    "Register": 10760,
+    "CLS": 10357,
+    "BSRAM": 32,
+    "DSP": "22.75"
+  },
+  "delta": {
+    "Logic": -628,
+    "Register": -47,
+    "CLS": -37,
+    "BSRAM": 0,
+    "DSP": 0
+  },
+  "timing": {
+    "core_clk_setup_TNS": -250.223,
+    "failing_endpoints": 127,
+    "WNS": -5.608,
+    "worst_path": [
+      "u_tdm/sl1_4_s0/Q",
+      "u_tdm/amp2_4_s0/RESET"
+    ],
+    "data_delay_ns": 42.11,
+    "period_ns": 37.037,
+    "core_clk_hold_TNS": -0.002,
+    "paths_analyzed": 68913
+  },
+  "changed_versus_baseline": [
+    {
+      "file": "build.tcl",
+      "status": "modified",
+      "sha256": "0c7abc7961b84e050c8e04f5fcec1183b3711928cfc6dd566c14e77957d4dd84",
+      "baseline_sha256": "be68c4c251ff1d0517dcd3b4e3e72e7a591491b9a6dadf7d805898199b5aafd3"
+    },
+    {
+      "file": "mv_panel_ra8875.v",
+      "status": "added",
+      "sha256": "3d7fa71edf29e18f3c903b177cd894282f0a20272aa4da72058b41ea1c8f2ec8"
+    },
+    {
+      "file": "mv_renderer.v",
+      "status": "modified",
+      "sha256": "0d479452ffec2dc4b493d6cb728ecf6b8f049e2cd001ef9c3ec3894e0f50e55d",
+      "baseline_sha256": "bc7f447e2123ce820c95cd5f83b76c56ffed7cf0c0a48641165ca3bb03d9f578"
+    }
+  ],
+  "created": "2026-10-19T22:55:43+08:00",
+  "gowin_exe": "D:/FPGA-Project/Gowin/Gowin_V1.9.11.03_Education/Gowin_V1.9.11.03_Education_x64/IDE/bin/gw_sh.exe",
+  "tcl": "0c7abc7961b84e050c8e04f5fcec1183b3711928cfc6dd566c14e77957d4dd84",
+  "gprj": "77d05acbf747c86180bcbc04a3c894e8e1e0c507d5a1d70b96be8b0b6763d3b8"
+}

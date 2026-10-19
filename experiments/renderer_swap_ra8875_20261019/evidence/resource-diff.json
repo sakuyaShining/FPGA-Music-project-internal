@@ -1,0 +1,978 @@
+{
+  "baseline_pnr": {
+    "Logic": [
+      20478,
+      20736
+    ],
+    "Register": [
+      10760,
+      15915
+    ],
+    "CLS": [
+      10357,
+      10368
+    ],
+    "BSRAM": [
+      32,
+      46
+    ]
+  },
+  "swap_pnr": {
+    "Logic": [
+      19850,
+      20736
+    ],
+    "Register": [
+      10713,
+      15915
+    ],
+    "CLS": [
+      10320,
+      10368
+    ],
+    "BSRAM": [
+      32,
+      46
+    ]
+  },
+  "baseline_syn": {
+    "joint_timing_top": {
+      "path": "joint_timing_top",
+      "logic": 20164,
+      "lut": 17336,
+      "alu": 1964,
+      "ssram": 144,
+      "register": 10760,
+      "bsram": 32
+    },
+    "joint_timing_top/scan_storage": {
+      "path": "joint_timing_top/scan_storage",
+      "logic": 13,
+      "lut": 1,
+      "alu": 12,
+      "ssram": 0,
+      "register": 12,
+      "bsram": 1
+    },
+    "joint_timing_top/system": {
+      "path": "joint_timing_top/system",
+      "logic": 19796,
+      "lut": 16985,
+      "alu": 1947,
+      "ssram": 144,
+      "register": 10708,
+      "bsram": 31
+    },
+    "joint_timing_top/system/music": {
+      "path": "joint_timing_top/system/music",
+      "logic": 14710,
+      "lut": 12640,
+      "alu": 1338,
+      "ssram": 122,
+      "register": 7238,
+      "bsram": 20
+    },
+    "joint_timing_top/system/music/layers": {
+      "path": "joint_timing_top/system/music/layers",
+      "logic": 1119,
+      "lut": 1030,
+      "alu": 41,
+      "ssram": 8,
+      "register": 843,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/bridge": {
+      "path": "joint_timing_top/system/music/bridge",
+      "logic": 1065,
+      "lut": 955,
+      "alu": 26,
+      "ssram": 14,
+      "register": 744,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/control": {
+      "path": "joint_timing_top/system/music/control",
+      "logic": 1396,
+      "lut": 1318,
+      "alu": 78,
+      "ssram": 0,
+      "register": 1210,
+      "bsram": 1
+    },
+    "joint_timing_top/system/music/control/panel": {
+      "path": "joint_timing_top/system/music/control/panel",
+      "logic": 528,
+      "lut": 480,
+      "alu": 48,
+      "ssram": 0,
+      "register": 355,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/control/panel/bank": {
+      "path": "joint_timing_top/system/music/control/panel/bank",
+      "logic": 528,
+      "lut": 480,
+      "alu": 48,
+      "ssram": 0,
+      "register": 355,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/control/mapper": {
+      "path": "joint_timing_top/system/music/control/mapper",
+      "logic": 154,
+      "lut": 154,
+      "alu": 0,
+      "ssram": 0,
+      "register": 307,
+      "bsram": 1
+    },
+    "joint_timing_top/system/music/control/slew": {
+      "path": "joint_timing_top/system/music/control/slew",
+      "logic": 708,
+      "lut": 678,
+      "alu": 30,
+      "ssram": 0,
+      "register": 498,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core": {
+      "path": "joint_timing_top/system/music/core",
+      "logic": 11130,
+      "lut": 9337,
+      "alu": 1193,
+      "ssram": 100,
+      "register": 4441,
+      "bsram": 19
+    },
+    "joint_timing_top/system/music/core/serial_configuration.receiver": {
+      "path": "joint_timing_top/system/music/core/serial_configuration.receiver",
+      "logic": 316,
+      "lut": 286,
+      "alu": 30,
+      "ssram": 0,
+      "register": 207,
+      "bsram": 1
+    },
+    "joint_timing_top/system/music/core/u_uart": {
+      "path": "joint_timing_top/system/music/core/u_uart",
+      "logic": 47,
+      "lut": 47,
+      "alu": 0,
+      "ssram": 0,
+      "register": 40,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_reg": {
+      "path": "joint_timing_top/system/music/core/u_reg",
+      "logic": 53,
+      "lut": 53,
+      "alu": 0,
+      "ssram": 0,
+      "register": 195,
+      "bsram": 1
+    },
+    "joint_timing_top/system/music/core/u_tx": {
+      "path": "joint_timing_top/system/music/core/u_tx",
+      "logic": 51,
+      "lut": 51,
+      "alu": 0,
+      "ssram": 0,
+      "register": 32,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_seq": {
+      "path": "joint_timing_top/system/music/core/u_seq",
+      "logic": 308,
+      "lut": 188,
+      "alu": 24,
+      "ssram": 16,
+      "register": 75,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_uartq": {
+      "path": "joint_timing_top/system/music/core/u_uartq",
+      "logic": 60,
+      "lut": 21,
+      "alu": 21,
+      "ssram": 3,
+      "register": 35,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_seqq": {
+      "path": "joint_timing_top/system/music/core/u_seqq",
+      "logic": 63,
+      "lut": 24,
+      "alu": 21,
+      "ssram": 3,
+      "register": 35,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_padq": {
+      "path": "joint_timing_top/system/music/core/u_padq",
+      "logic": 11,
+      "lut": 8,
+      "alu": 3,
+      "ssram": 0,
+      "register": 4,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_pinq": {
+      "path": "joint_timing_top/system/music/core/u_pinq",
+      "logic": 59,
+      "lut": 20,
+      "alu": 21,
+      "ssram": 3,
+      "register": 35,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_evhold": {
+      "path": "joint_timing_top/system/music/core/u_evhold",
+      "logic": 35,
+      "lut": 11,
+      "alu": 6,
+      "ssram": 3,
+      "register": 19,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_clk": {
+      "path": "joint_timing_top/system/music/core/u_clk",
+      "logic": 22,
+      "lut": 22,
+      "alu": 0,
+      "ssram": 0,
+      "register": 16,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_nm": {
+      "path": "joint_timing_top/system/music/core/u_nm",
+      "logic": 2702,
+      "lut": 2379,
+      "alu": 275,
+      "ssram": 8,
+      "register": 1474,
+      "bsram": 5
+    },
+    "joint_timing_top/system/music/core/u_nm/table_store": {
+      "path": "joint_timing_top/system/music/core/u_nm/table_store",
+      "logic": 159,
+      "lut": 159,
+      "alu": 0,
+      "ssram": 0,
+      "register": 74,
+      "bsram": 3
+    },
+    "joint_timing_top/system/music/core/u_nm/u_vshape": {
+      "path": "joint_timing_top/system/music/core/u_nm/u_vshape",
+      "logic": 147,
+      "lut": 147,
+      "alu": 0,
+      "ssram": 0,
+      "register": 0,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/contact_expression.u_finger": {
+      "path": "joint_timing_top/system/music/core/contact_expression.u_finger",
+      "logic": 1942,
+      "lut": 1709,
+      "alu": 173,
+      "ssram": 10,
+      "register": 809,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_tdm": {
+      "path": "joint_timing_top/system/music/core/u_tdm",
+      "logic": 3999,
+      "lut": 3380,
+      "alu": 295,
+      "ssram": 54,
+      "register": 978,
+      "bsram": 10
+    },
+    "joint_timing_top/system/music/core/u_tdm/u_env": {
+      "path": "joint_timing_top/system/music/core/u_tdm/u_env",
+      "logic": 216,
+      "lut": 137,
+      "alu": 79,
+      "ssram": 0,
+      "register": 0,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_tdm/u_pmod": {
+      "path": "joint_timing_top/system/music/core/u_tdm/u_pmod",
+      "logic": 1066,
+      "lut": 711,
+      "alu": 115,
+      "ssram": 40,
+      "register": 142,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_tdm/u_pmod/command_store": {
+      "path": "joint_timing_top/system/music/core/u_tdm/u_pmod/command_store",
+      "logic": 127,
+      "lut": 7,
+      "alu": 0,
+      "ssram": 20,
+      "register": 0,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_tdm/u_pmod/physical_store": {
+      "path": "joint_timing_top/system/music/core/u_tdm/u_pmod/physical_store",
+      "logic": 128,
+      "lut": 8,
+      "alu": 0,
+      "ssram": 20,
+      "register": 0,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_fx": {
+      "path": "joint_timing_top/system/music/core/u_fx",
+      "logic": 712,
+      "lut": 408,
+      "alu": 304,
+      "ssram": 0,
+      "register": 240,
+      "bsram": 2
+    },
+    "joint_timing_top/system/music/core/u_i2s": {
+      "path": "joint_timing_top/system/music/core/u_i2s",
+      "logic": 33,
+      "lut": 33,
+      "alu": 0,
+      "ssram": 0,
+      "register": 32,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_led": {
+      "path": "joint_timing_top/system/music/core/u_led",
+      "logic": 112,
+      "lut": 112,
+      "alu": 0,
+      "ssram": 0,
+      "register": 57,
+      "bsram": 0
+    },
+    "joint_timing_top/system/visualizer": {
+      "path": "joint_timing_top/system/visualizer",
+      "logic": 2909,
+      "lut": 2390,
+      "alu": 387,
+      "ssram": 22,
+      "register": 1648,
+      "bsram": 7
+    },
+    "joint_timing_top/system/visualizer/u_fft": {
+      "path": "joint_timing_top/system/visualizer/u_fft",
+      "logic": 768,
+      "lut": 479,
+      "alu": 217,
+      "ssram": 12,
+      "register": 527,
+      "bsram": 5
+    },
+    "joint_timing_top/system/visualizer/u_wave": {
+      "path": "joint_timing_top/system/visualizer/u_wave",
+      "logic": 84,
+      "lut": 84,
+      "alu": 0,
+      "ssram": 0,
+      "register": 65,
+      "bsram": 0
+    },
+    "joint_timing_top/system/visualizer/u_renderer": {
+      "path": "joint_timing_top/system/visualizer/u_renderer",
+      "logic": 2057,
+      "lut": 1827,
+      "alu": 170,
+      "ssram": 10,
+      "register": 1056,
+      "bsram": 2
+    },
+    "joint_timing_top/system/visualizer/u_renderer/u_panel": {
+      "path": "joint_timing_top/system/visualizer/u_renderer/u_panel",
+      "logic": 328,
+      "lut": 293,
+      "alu": 35,
+      "ssram": 0,
+      "register": 147,
+      "bsram": 0
+    },
+    "joint_timing_top/system/visualizer/u_renderer/u_panel/u_spi": {
+      "path": "joint_timing_top/system/visualizer/u_renderer/u_panel/u_spi",
+      "logic": 113,
+      "lut": 113,
+      "alu": 0,
+      "ssram": 0,
+      "register": 33,
+      "bsram": 0
+    },
+    "joint_timing_top/system/sensor": {
+      "path": "joint_timing_top/system/sensor",
+      "logic": 1523,
+      "lut": 1337,
+      "alu": 186,
+      "ssram": 0,
+      "register": 1458,
+      "bsram": 2
+    },
+    "joint_timing_top/system/sensor/scanner": {
+      "path": "joint_timing_top/system/sensor/scanner",
+      "logic": 243,
+      "lut": 212,
+      "alu": 31,
+      "ssram": 0,
+      "register": 297,
+      "bsram": 0
+    },
+    "joint_timing_top/system/sensor/scanner/writer": {
+      "path": "joint_timing_top/system/sensor/scanner/writer",
+      "logic": 34,
+      "lut": 34,
+      "alu": 0,
+      "ssram": 0,
+      "register": 21,
+      "bsram": 0
+    },
+    "joint_timing_top/system/sensor/store": {
+      "path": "joint_timing_top/system/sensor/store",
+      "logic": 514,
+      "lut": 454,
+      "alu": 60,
+      "ssram": 0,
+      "register": 365,
+      "bsram": 2
+    },
+    "joint_timing_top/system/sensor/positions": {
+      "path": "joint_timing_top/system/sensor/positions",
+      "logic": 766,
+      "lut": 671,
+      "alu": 95,
+      "ssram": 0,
+      "register": 796,
+      "bsram": 0
+    },
+    "joint_timing_top/system/transport": {
+      "path": "joint_timing_top/system/transport",
+      "logic": 501,
+      "lut": 465,
+      "alu": 36,
+      "ssram": 0,
+      "register": 265,
+      "bsram": 2
+    },
+    "joint_timing_top/system/transport/buffers": {
+      "path": "joint_timing_top/system/transport/buffers",
+      "logic": 182,
+      "lut": 182,
+      "alu": 0,
+      "ssram": 0,
+      "register": 84,
+      "bsram": 2
+    },
+    "joint_timing_top/system/transport/buffers/recording": {
+      "path": "joint_timing_top/system/transport/buffers/recording",
+      "logic": 79,
+      "lut": 79,
+      "alu": 0,
+      "ssram": 0,
+      "register": 32,
+      "bsram": 1
+    },
+    "joint_timing_top/system/transport/buffers/playback": {
+      "path": "joint_timing_top/system/transport/buffers/playback",
+      "logic": 79,
+      "lut": 79,
+      "alu": 0,
+      "ssram": 0,
+      "register": 32,
+      "bsram": 1
+    },
+    "joint_timing_top/system/transport/arbiter": {
+      "path": "joint_timing_top/system/transport/arbiter",
+      "logic": 319,
+      "lut": 283,
+      "alu": 36,
+      "ssram": 0,
+      "register": 181,
+      "bsram": 0
+    },
+    "joint_timing_top/system/sdram": {
+      "path": "joint_timing_top/system/sdram",
+      "logic": 153,
+      "lut": 153,
+      "alu": 0,
+      "ssram": 0,
+      "register": 99,
+      "bsram": 0
+    }
+  },
+  "swap_syn": {
+    "joint_timing_top": {
+      "path": "joint_timing_top",
+      "logic": 19537,
+      "lut": 16719,
+      "alu": 1954,
+      "ssram": 144,
+      "register": 10713,
+      "bsram": 32
+    },
+    "joint_timing_top/scan_storage": {
+      "path": "joint_timing_top/scan_storage",
+      "logic": 13,
+      "lut": 1,
+      "alu": 12,
+      "ssram": 0,
+      "register": 12,
+      "bsram": 1
+    },
+    "joint_timing_top/system": {
+      "path": "joint_timing_top/system",
+      "logic": 19162,
+      "lut": 16361,
+      "alu": 1937,
+      "ssram": 144,
+      "register": 10661,
+      "bsram": 31
+    },
+    "joint_timing_top/system/music": {
+      "path": "joint_timing_top/system/music",
+      "logic": 14681,
+      "lut": 12611,
+      "alu": 1338,
+      "ssram": 122,
+      "register": 7238,
+      "bsram": 20
+    },
+    "joint_timing_top/system/music/layers": {
+      "path": "joint_timing_top/system/music/layers",
+      "logic": 1115,
+      "lut": 1026,
+      "alu": 41,
+      "ssram": 8,
+      "register": 843,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/bridge": {
+      "path": "joint_timing_top/system/music/bridge",
+      "logic": 1066,
+      "lut": 956,
+      "alu": 26,
+      "ssram": 14,
+      "register": 744,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/control": {
+      "path": "joint_timing_top/system/music/control",
+      "logic": 1381,
+      "lut": 1303,
+      "alu": 78,
+      "ssram": 0,
+      "register": 1210,
+      "bsram": 1
+    },
+    "joint_timing_top/system/music/control/panel": {
+      "path": "joint_timing_top/system/music/control/panel",
+      "logic": 507,
+      "lut": 459,
+      "alu": 48,
+      "ssram": 0,
+      "register": 355,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/control/panel/bank": {
+      "path": "joint_timing_top/system/music/control/panel/bank",
+      "logic": 507,
+      "lut": 459,
+      "alu": 48,
+      "ssram": 0,
+      "register": 355,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/control/mapper": {
+      "path": "joint_timing_top/system/music/control/mapper",
+      "logic": 152,
+      "lut": 152,
+      "alu": 0,
+      "ssram": 0,
+      "register": 307,
+      "bsram": 1
+    },
+    "joint_timing_top/system/music/control/slew": {
+      "path": "joint_timing_top/system/music/control/slew",
+      "logic": 716,
+      "lut": 686,
+      "alu": 30,
+      "ssram": 0,
+      "register": 498,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core": {
+      "path": "joint_timing_top/system/music/core",
+      "logic": 11119,
+      "lut": 9326,
+      "alu": 1193,
+      "ssram": 100,
+      "register": 4441,
+      "bsram": 19
+    },
+    "joint_timing_top/system/music/core/serial_configuration.receiver": {
+      "path": "joint_timing_top/system/music/core/serial_configuration.receiver",
+      "logic": 316,
+      "lut": 286,
+      "alu": 30,
+      "ssram": 0,
+      "register": 207,
+      "bsram": 1
+    },
+    "joint_timing_top/system/music/core/u_uart": {
+      "path": "joint_timing_top/system/music/core/u_uart",
+      "logic": 47,
+      "lut": 47,
+      "alu": 0,
+      "ssram": 0,
+      "register": 40,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_reg": {
+      "path": "joint_timing_top/system/music/core/u_reg",
+      "logic": 47,
+      "lut": 47,
+      "alu": 0,
+      "ssram": 0,
+      "register": 195,
+      "bsram": 1
+    },
+    "joint_timing_top/system/music/core/u_tx": {
+      "path": "joint_timing_top/system/music/core/u_tx",
+      "logic": 52,
+      "lut": 52,
+      "alu": 0,
+      "ssram": 0,
+      "register": 32,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_seq": {
+      "path": "joint_timing_top/system/music/core/u_seq",
+      "logic": 314,
+      "lut": 194,
+      "alu": 24,
+      "ssram": 16,
+      "register": 75,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_uartq": {
+      "path": "joint_timing_top/system/music/core/u_uartq",
+      "logic": 61,
+      "lut": 22,
+      "alu": 21,
+      "ssram": 3,
+      "register": 35,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_seqq": {
+      "path": "joint_timing_top/system/music/core/u_seqq",
+      "logic": 61,
+      "lut": 22,
+      "alu": 21,
+      "ssram": 3,
+      "register": 35,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_padq": {
+      "path": "joint_timing_top/system/music/core/u_padq",
+      "logic": 12,
+      "lut": 9,
+      "alu": 3,
+      "ssram": 0,
+      "register": 4,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_pinq": {
+      "path": "joint_timing_top/system/music/core/u_pinq",
+      "logic": 59,
+      "lut": 20,
+      "alu": 21,
+      "ssram": 3,
+      "register": 35,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_evhold": {
+      "path": "joint_timing_top/system/music/core/u_evhold",
+      "logic": 35,
+      "lut": 11,
+      "alu": 6,
+      "ssram": 3,
+      "register": 19,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_clk": {
+      "path": "joint_timing_top/system/music/core/u_clk",
+      "logic": 22,
+      "lut": 22,
+      "alu": 0,
+      "ssram": 0,
+      "register": 16,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_nm": {
+      "path": "joint_timing_top/system/music/core/u_nm",
+      "logic": 2686,
+      "lut": 2363,
+      "alu": 275,
+      "ssram": 8,
+      "register": 1474,
+      "bsram": 5
+    },
+    "joint_timing_top/system/music/core/u_nm/table_store": {
+      "path": "joint_timing_top/system/music/core/u_nm/table_store",
+      "logic": 156,
+      "lut": 156,
+      "alu": 0,
+      "ssram": 0,
+      "register": 74,
+      "bsram": 3
+    },
+    "joint_timing_top/system/music/core/u_nm/u_vshape": {
+      "path": "joint_timing_top/system/music/core/u_nm/u_vshape",
+      "logic": 147,
+      "lut": 147,
+      "alu": 0,
+      "ssram": 0,
+      "register": 0,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/contact_expression.u_finger": {
+      "path": "joint_timing_top/system/music/core/contact_expression.u_finger",
+      "logic": 1936,
+      "lut": 1703,
+      "alu": 173,
+      "ssram": 10,
+      "register": 809,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_tdm": {
+      "path": "joint_timing_top/system/music/core/u_tdm",
+      "logic": 4010,
+      "lut": 3392,
+      "alu": 294,
+      "ssram": 54,
+      "register": 978,
+      "bsram": 10
+    },
+    "joint_timing_top/system/music/core/u_tdm/u_env": {
+      "path": "joint_timing_top/system/music/core/u_tdm/u_env",
+      "logic": 219,
+      "lut": 140,
+      "alu": 79,
+      "ssram": 0,
+      "register": 0,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_tdm/u_pmod": {
+      "path": "joint_timing_top/system/music/core/u_tdm/u_pmod",
+      "logic": 1083,
+      "lut": 729,
+      "alu": 114,
+      "ssram": 40,
+      "register": 142,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_tdm/u_pmod/command_store": {
+      "path": "joint_timing_top/system/music/core/u_tdm/u_pmod/command_store",
+      "logic": 126,
+      "lut": 6,
+      "alu": 0,
+      "ssram": 20,
+      "register": 0,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_tdm/u_pmod/physical_store": {
+      "path": "joint_timing_top/system/music/core/u_tdm/u_pmod/physical_store",
+      "logic": 127,
+      "lut": 7,
+      "alu": 0,
+      "ssram": 20,
+      "register": 0,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_fx": {
+      "path": "joint_timing_top/system/music/core/u_fx",
+      "logic": 717,
+      "lut": 413,
+      "alu": 304,
+      "ssram": 0,
+      "register": 240,
+      "bsram": 2
+    },
+    "joint_timing_top/system/music/core/u_i2s": {
+      "path": "joint_timing_top/system/music/core/u_i2s",
+      "logic": 33,
+      "lut": 33,
+      "alu": 0,
+      "ssram": 0,
+      "register": 32,
+      "bsram": 0
+    },
+    "joint_timing_top/system/music/core/u_led": {
+      "path": "joint_timing_top/system/music/core/u_led",
+      "logic": 103,
+      "lut": 103,
+      "alu": 0,
+      "ssram": 0,
+      "register": 57,
+      "bsram": 0
+    },
+    "joint_timing_top/system/visualizer": {
+      "path": "joint_timing_top/system/visualizer",
+      "logic": 2294,
+      "lut": 1785,
+      "alu": 377,
+      "ssram": 22,
+      "register": 1601,
+      "bsram": 7
+    },
+    "joint_timing_top/system/visualizer/u_fft": {
+      "path": "joint_timing_top/system/visualizer/u_fft",
+      "logic": 763,
+      "lut": 474,
+      "alu": 217,
+      "ssram": 12,
+      "register": 527,
+      "bsram": 5
+    },
+    "joint_timing_top/system/visualizer/u_wave": {
+      "path": "joint_timing_top/system/visualizer/u_wave",
+      "logic": 83,
+      "lut": 83,
+      "alu": 0,
+      "ssram": 0,
+      "register": 65,
+      "bsram": 0
+    },
+    "joint_timing_top/system/visualizer/u_renderer": {
+      "path": "joint_timing_top/system/visualizer/u_renderer",
+      "logic": 1448,
+      "lut": 1228,
+      "alu": 160,
+      "ssram": 10,
+      "register": 1009,
+      "bsram": 2
+    },
+    "joint_timing_top/system/visualizer/u_renderer/u_panel": {
+      "path": "joint_timing_top/system/visualizer/u_renderer/u_panel",
+      "logic": 448,
+      "lut": 396,
+      "alu": 52,
+      "ssram": 0,
+      "register": 153,
+      "bsram": 0
+    },
+    "joint_timing_top/system/visualizer/u_renderer/u_panel/u_spi": {
+      "path": "joint_timing_top/system/visualizer/u_renderer/u_panel/u_spi",
+      "logic": 150,
+      "lut": 150,
+      "alu": 0,
+      "ssram": 0,
+      "register": 33,
+      "bsram": 0
+    },
+    "joint_timing_top/system/sensor": {
+      "path": "joint_timing_top/system/sensor",
+      "logic": 1535,
+      "lut": 1349,
+      "alu": 186,
+      "ssram": 0,
+      "register": 1458,
+      "bsram": 2
+    },
+    "joint_timing_top/system/sensor/scanner": {
+      "path": "joint_timing_top/system/sensor/scanner",
+      "logic": 239,
+      "lut": 208,
+      "alu": 31,
+      "ssram": 0,
+      "register": 297,
+      "bsram": 0
+    },
+    "joint_timing_top/system/sensor/scanner/writer": {
+      "path": "joint_timing_top/system/sensor/scanner/writer",
+      "logic": 33,
+      "lut": 33,
+      "alu": 0,
+      "ssram": 0,
+      "register": 21,
+      "bsram": 0
+    },
+    "joint_timing_top/system/sensor/store": {
+      "path": "joint_timing_top/system/sensor/store",
+      "logic": 524,
+      "lut": 464,
+      "alu": 60,
+      "ssram": 0,
+      "register": 365,
+      "bsram": 2
+    },
+    "joint_timing_top/system/sensor/positions": {
+      "path": "joint_timing_top/system/sensor/positions",
+      "logic": 772,
+      "lut": 677,
+      "alu": 95,
+      "ssram": 0,
+      "register": 796,
+      "bsram": 0
+    },
+    "joint_timing_top/system/transport": {
+      "path": "joint_timing_top/system/transport",
+      "logic": 503,
+      "lut": 467,
+      "alu": 36,
+      "ssram": 0,
+      "register": 265,
+      "bsram": 2
+    },
+    "joint_timing_top/system/transport/buffers": {
+      "path": "joint_timing_top/system/transport/buffers",
+      "logic": 187,
+      "lut": 187,
+      "alu": 0,
+      "ssram": 0,
+      "register": 84,
+      "bsram": 2
+    },
+    "joint_timing_top/system/transport/buffers/recording": {
+      "path": "joint_timing_top/system/transport/buffers/recording",
+      "logic": 86,
+      "lut": 86,
+      "alu": 0,
+      "ssram": 0,
+      "register": 32,
+      "bsram": 1
+    },
+    "joint_timing_top/system/transport/buffers/playback": {
+      "path": "joint_timing_top/system/transport/buffers/playback",
+      "logic": 77,
+      "lut": 77,
+      "alu": 0,
+      "ssram": 0,
+      "register": 32,
+      "bsram": 1
+    },
+    "joint_timing_top/system/transport/arbiter": {
+      "path": "joint_timing_top/system/transport/arbiter",
+      "logic": 316,
+      "lut": 280,
+      "alu": 36,
+      "ssram": 0,
+      "register": 181,
+      "bsram": 0
+    },
+    "joint_timing_top/system/sdram": {
+      "path": "joint_timing_top/system/sdram",
+      "logic": 149,
+      "lut": 149,
+      "alu": 0,
+      "ssram": 0,
+      "register": 99,
+      "bsram": 0
+    }
+  }
+}
