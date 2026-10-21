@@ -107,3 +107,58 @@ PCB 打样 + 贴片 + 物流是**日历时间**，加算力压不下来；FPGA �
 2. **新建工作树从 `main` 拉**，不要从 `2770e63` 拉。
 3. **一个 agent 一次只干一条轴**。想加第三条轴，先在本板 §1 登记。
 4. 遇到 §2 的七条红线，任何 agent 都不许自行放宽。
+
+---
+
+## 8. 远程与备份（2026-10-22 核实，两个坑）
+
+### 坑一：`origin` 与 `public` 指向同一个公开仓库
+
+```
+origin    https://github.com/sakuyaShining/FPGA-Music-project.git
+public    https://github.com/sakuyaShining/FPGA-Music-project.git   ← 同一个地址
+internal  https://github.com/sakuyaShining/FPGA-Music-project-internal.git
+```
+
+`public/main` 上有一条提交叫「公开版快照：移出内部过程材料，只保留作品本体」——**说明不带 `-internal` 后缀那个仓库是对外的**。
+
+而本地 `main` 里有 `docs/01-竞赛情报/02-什么才叫好作品-评审逻辑与高分画像.md` 这类评分策略分析。
+
+> **硬规则：只推 `internal`。任何 agent 都不得执行 `git push origin` 或 `git push public`。**
+> 这是一条现存的坑：Codex 若哪天顺手 `git push origin main`，内部材料就上公开仓库了。
+
+分叉状态（本地 main = `10073fa`）：
+
+| 远程 | 落后 | 领先 | 能否直接推 |
+|---|---:|---:|---|
+| `internal` | 61 | 0 | **可以，fast-forward** |
+| `origin` | 126 | 2 | 双向分叉，禁止推 |
+| `public` | 126 | 1 | 双向分叉，禁止推 |
+
+推之前需确认 `FPGA-Music-project-internal` 在 GitHub 上确实是 **private**。
+
+### 坑二：push 不等于备份
+
+已跟踪内容只有 **509 文件 / 28.3 MB**：
+
+| 目录 | 磁盘 | 已跟踪 | push 能否保护 |
+|---|---:|---:|---|
+| `docs/` | 8 MB | 123 文件 | 能 |
+| `src/` | 42 MB | 128 文件 | 能 |
+| `tools/` | 90 MB | 137 文件 | 能 |
+| **`experiments/`** | **2103 MB** | **0 文件** | **不能** |
+| **`notes/`** | **502 MB** | **2 文件** | **几乎不能** |
+| `hardware/`（06df） | 304 MB | 0 文件 | 不能 |
+
+**结论：推 main 只保护文档与源码，不保护引擎 RTL 实验、证据 JSON、构建输入。** 那些仍只有一份，要单独做物理副本（复制到 D: 盘）。
+
+### LCEDA 原生会话
+
+- 会话是 **headless** 的（`native-session.json` 与 `evidence/open.json` 均为 `"headless": true`），**不占屏幕、不需要可见窗口**。
+- 但需要 bridge server（Node，端口 49620–49629）+ `lceda-pro.exe` 进程在跑。
+- 会话归属 Windows 账户；当前是 `Sakuya`，与 Codex 同账户，可用。
+- **`705cd8f3-…` 已关闭，不可复用**。新会话 ID 必须回写 `regional-recovery-20261021-r21/native-session.json`，否则 Codex 的 `native_project.py` 会拿死会话报错。
+- 每次改完铜线，`PCB1.epcb2` 的 sha256 会变，**必须同步更新 `REGIONAL-WORK-IN-PROGRESS.json` 的 `pcb_sha256`**，否则 A 轴引脚核对会误判"源已漂移"。
+
+---
+
