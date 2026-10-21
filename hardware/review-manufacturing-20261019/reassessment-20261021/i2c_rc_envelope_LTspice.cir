@@ -1,0 +1,14 @@
+* First-order I2C segment sensitivity model. GENERATED, NOT RUN IN SPICE.
+* No TCA9517 active behavior, VOL offset, overshoot, leakage or module model.
+* Parallel pullups apply to ONE segment only, never across buffer A/B domains.
+Vcc vcc 0 3.3
+Vcontrol ctrl 0 PULSE(1 0 1u 10n 10n 10u 20u)
+Sdriver bus 0 ctrl 0 OD
+.model OD SW(Ron=2 Roff=1e12 Vt=.5 Vh=0)
+Rp vcc bus {RP}
+Cb bus 0 {CB}
+.step param RP list 4700 2350 1566.6667
+.step param CB list 50p 100p 200p 400p
+.tran 0 10u 0 2n
+.meas tran rise_30_70 TRIG V(bus) VAL=.99 RISE=1 TARG V(bus) VAL=2.31 RISE=1
+.end

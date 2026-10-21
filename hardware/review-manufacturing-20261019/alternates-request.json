@@ -1,0 +1,1 @@
+{"name":"stock-alternates","code":"const r={};for(const q of __CLI__.args.queries)r[q]=await eda.lib_Device.search(q,'0819f05c4eef4c71ace90d822a990e87',undefined,undefined,8,1);return r;","args":{"queries":["RC0603FR-071KL","0603WAF2200T5E","DC3-16P","2.54-1*20P母"]}}

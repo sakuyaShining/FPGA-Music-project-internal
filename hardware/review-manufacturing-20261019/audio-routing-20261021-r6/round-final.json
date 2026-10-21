@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-21T04:24:59.770455+00:00",
+  "active_candidate": "r5",
+  "native_sources": {
+    "r3": {
+      "files": 19,
+      "pcb_sha256": "0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a",
+      "archive_sha256": "4c45fb6ce1959f6dc2da2b431e35c09030eadd8cc760b9d7bad2e632d8d9f475",
+      "source_matches_archive": true
+    },
+    "r4": {
+      "files": 19,
+      "pcb_sha256": "97a837d8411cef56633792edbb716451a4f6806a66dba659a91058e0c69c2515",
+      "archive_sha256": "146bb3c14b1e12aaef0984c49805347b7c8bdce5d23f1f52bd18582bd1da6030",
+      "source_matches_archive": true
+    },
+    "r5": {
+      "files": 19,
+      "pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+      "archive_sha256": "e9659c25786d6b5133ffb7b84adbabdee87962e0112ca31d948b5f21556f835b",
+      "source_matches_archive": true
+    },
+    "r6-rejected": {
+      "files": 19,
+      "pcb_sha256": "81c7968dc28fe7bb12a5d667c897b5dfe9e96d9d339e7d5408b34b5332870c6b",
+      "archive_sha256": "156f4009f2ea7bc47151da7377a4aac3bbb12478bcef2685840687fc28521aea",
+      "source_matches_archive": true
+    }
+  },
+  "packages": {
+    "stackup-validation-20261021-r5": {
+      "copied": 26,
+      "indexed": 26
+    },
+    "audio-routing-20261021-r6": {
+      "copied": 106,
+      "indexed": 106
+    }
+  },
+  "root_file_sha256": {
+    "CURRENT-STATE.json": "807c3bd7636b6b6ca03639d5d28e8c3fa2fc8a3e769dc3109ab2de22a865b991",
+    "ACTIVE-ROUTING-CANDIDATE.json": "39cb848ae3f7e16f6e47d26ec2fe1c944bed3ecf7dea2b93fe33e742975b7407",
+    "LATEST.md": "4b00a45829d17a910f8b59bbc22cd5ea07c0cb11c7da3415f736631a3899bfce",
+    "AUTONOMOUS-CURRENT.md": "eb53fc2a4fb5fc40b71325fc5b7d18bcc1a4887945d5f1ec23c7aad81cf5df7b",
+    "release-open-items.csv": "066c20b6a3eb38711c54b434e6d2b1afd9343fdfefac8e1db9b2070173481449",
+    "README-v2.md": "91059f501d1c517fe5b048dab142bd6aeaba44426cb2f596b31044215a83e04b",
+    "执行计划-20261020.md": "eb0426b3acf65e4d3e88ccd7098d16bf85891505bc9f5cadc3f7fcc80306a8de",
+    "采购与制造询价稿.md": "f4d36e891b6ea1185ecad7eebc1de8a38ce7915bd263f11cf602ca24253bb412",
+    "four_layer_geometry.py": "fd6865942af2c787508dbd44ee1c4db1fedb4dd6386494dc551995c0a4f99299",
+    "native_plane_geometry.py": "6d6a87f0c2ffc26f5eeaee46106be517142e6de05a0e35832d8c6b58fb59aba4"
+  },
+  "python_compile_pass": true,
+  "workbook_unchanged": true,
+  "r6_rejected_for_reference_geometry": true,
+  "reference_plot_visually_checked": true,
+  "native_drc_not_repeated_without_source_change": true,
+  "goal_status": "active",
+  "automation_id": "automation-2",
+  "temporary_keep_awake_active": false,
+  "manufacturing_release": false
+}

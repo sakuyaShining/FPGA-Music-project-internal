@@ -1,0 +1,25 @@
+TPS2553 local application scenario, vendor model with audited syntax adapter
+.include "C:/Users/Sakuya/.codex/worktrees/06df/FPGA-Music-project/hardware/review-manufacturing-20261019/spice-validation-20261021/tps2553_ngspice41_compat.lib"
+Vadapter adapter 0 PWL(0 0 3m 0 3.01m 5.0 0.08 5.0)
+Rup adapter vin 0.35
+Cin vin 0 2.2u
+Vsense vin switch_in 0
+Ven en 0 PWL(0 0 1m 0 1.01m 3.3 0.08 3.3)
+Xswitch switch_in 0 en 0 fault ilim out TPS2553_TRANS
+Rilim ilim 0 23700
+* Idealized powered pullup only; not an AP2112 regulator model.
+Bpull pull 0 V={min(max(V(out),0),3.3)}
+Rfault pull fault 100k
+Rbleed out 0 10k
+Resr out cap .05
+Ctotal cap 0 0.0010044
+Bload out 0 I={0.8*tanh(V(out)/.05)}
+.save v(adapter) v(vin) v(en) v(out) v(fault) i(Vadapter) i(Vsense)
+.control
+set wr_singlescale
+set wr_vecnames
+tran 5e-06 0.08
+wrdata waveform.txt v(adapter) v(vin) v(en) v(out) v(fault) i(Vadapter) i(Vsense)
+quit
+.endc
+.end

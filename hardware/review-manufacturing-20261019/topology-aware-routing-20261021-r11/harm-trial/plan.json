@@ -1,0 +1,24 @@
+{
+  "source_pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\local-layout-20261021-r7\\native-verified-capture.json",
+  "source_capture_sha256": "491058163daa5808745267db5299795f6dcfae605ab47ff16f618881339c9dfd",
+  "routes": [],
+  "failed": [
+    {
+      "net": "HARM_CS_N",
+      "error": "RuntimeError(('No safe fanout', 'U15', '8', []))"
+    }
+  ],
+  "selected": [
+    "HARM_CS_N"
+  ],
+  "native_imported": false,
+  "manufacturing_release": false,
+  "requires_access_regression_and_native_drc": true,
+  "raster_polygon_holes_preserved": true,
+  "topology_aware_fanout": true,
+  "previous_script_sha256": "0a2594521e1bb9c8eb8185fc188d1e9787e98bb2778e8a84a3af8b865cc407ec",
+  "dynamic_quiet_compatible_via_regions": true,
+  "bottom_audio_projection_guard_mm": 0.6,
+  "bottom_sense_projection_guard_mm": 0.5
+}

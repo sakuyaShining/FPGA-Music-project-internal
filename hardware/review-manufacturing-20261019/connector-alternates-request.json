@@ -1,0 +1,1 @@
+{"name":"connector-alternates","code":"const r={};for(const q of __CLI__.args.queries)r[q]=await eda.lib_Device.search(q,'0819f05c4eef4c71ace90d822a990e87',undefined,undefined,6,1);return Object.fromEntries(Object.entries(r).map(([k,v])=>[k,v]));","args":{"queries":["PZ254V-11-16P","PM254V-11-16P","1X16P","DC3-16","PH1-16-UA"]}}

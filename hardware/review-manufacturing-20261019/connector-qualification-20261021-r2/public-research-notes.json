@@ -1,0 +1,53 @@
+{
+  "checked_utc": "2026-10-20T21:59:18.305870+00:00",
+  "retrieval": "Public web tool primary pages/search index; no raw response hash when unavailable",
+  "sources": [
+    {
+      "url": "https://tech.alpsalpine.com/e/products/detail/EC11E15244B2/",
+      "findings": [
+        "Actual status Standard; status legend contains discontinued but does not label this product discontinued",
+        "Flat shaft 20mm; 6mm flat type; 30 detents/15 pulses; push switch; no washing"
+      ],
+      "limit": "Exact mechanical fit still unqualified; separate direct PDF/HTML requests 403"
+    },
+    {
+      "url": "https://www.samsung.com.cn/memory-storage/memory-card/memory-cardpro-endurance-32gb-mb-mj32ka-cn/",
+      "findings": [
+        "Exact MB-MJ32KA/CN 32GB identity",
+        "Official page sold out"
+      ],
+      "limit": "Not selected as available purchase"
+    },
+    {
+      "url": "https://www.sandisk.com/en-in/products/memory-cards/microsd-cards/sandisk-ultra-uhs-i-microsd?sku=SDSQUA4-032G-GN6MN",
+      "findings": [
+        "Official exact 32GB regional SKU exists"
+      ],
+      "limit": "Not proof of China availability or delivered CNY price"
+    },
+    {
+      "url": "https://www.buydisplay.com/download/manual/ER-TFTM070-5V4_Datasheet.pdf",
+      "findings": [
+        "Indexed table includes serial pins5CS/6SDO/7SDI/8SCLK",
+        "Indexed reset11 is labeled RESET(NC)",
+        "Indexed CTP 33INT/34SDA/35SCL/36RESET"
+      ],
+      "limit": "Search index only, full PDF not visually reviewed, main connector labels inconsistent across docs; not a released harness"
+    },
+    {
+      "url": "https://www.buydisplay.com/download/interfacing/ER-TFTM070-5V4_Interfacing.pdf",
+      "findings": [
+        "Indexed reference schematic dated Jun11 2024 still says FT5206"
+      ],
+      "limit": "Cannot resolve FT5316 actual shipped configuration from generic example"
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lv595a.pdf",
+      "findings": [
+        "SRCLR clears shift register; storage register has separate RCLK",
+        "OE high tri-states outputs"
+      ],
+      "limit": "Board OE tied low and SRCLR high; cannot infer a power-on known output from RTL initialization"
+    }
+  ]
+}

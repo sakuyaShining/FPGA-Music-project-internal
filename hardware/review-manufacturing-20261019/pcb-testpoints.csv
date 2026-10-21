@@ -1,0 +1,22 @@
+﻿name,net,x_mm,y_mm,pad_diameter_mm,purpose
+TP1,GND,8,33,0.8128,power/bus bring-up
+TP2,5V_IN,12,33,0.8128,power/bus bring-up
+TP3,5V_FUSED,16,33,0.8128,power/bus bring-up
+TP4,5V_PROTECTED,20,33,0.8128,power/bus bring-up
+TP5,5V_PERIPH,24,33,0.8128,power/bus bring-up
+TP6,3V3_IO,28,33,0.8128,power/bus bring-up
+TP7,3V3_PERIPH,32,33,0.8128,power/bus bring-up
+TP8,PWR_FAULT_N,36,33,0.8128,power/bus bring-up
+TP9,DAC_3V3,117,67,0.8128,power/bus bring-up
+TP10,GND,121,67,0.8128,power/bus bring-up
+TP11,I2C_SDA,73,49,0.8128,power/bus bring-up
+TP12,I2C_SCL,73,52,0.8128,power/bus bring-up
+TP13,BUS_SCK,73,45,0.8128,power/bus bring-up
+TP14,BUS_MOSI,75.5,42,0.8128,power/bus bring-up
+TP15,BUS_RETURN,73,39,0.8128,power/bus bring-up
+TP16,RC0,20,29,0.8128,"RC timing node: pad/probe adds capacitance, compare unprobed readings"
+TP17,RC1,65,29,0.8128,"RC timing node: pad/probe adds capacitance, compare unprobed readings"
+TP18,RC2,116,29,0.8128,"RC timing node: pad/probe adds capacitance, compare unprobed readings"
+TP19,RC3,20,71,0.8128,"RC timing node: pad/probe adds capacitance, compare unprobed readings"
+TP20,RC4,65,71,0.8128,"RC timing node: pad/probe adds capacitance, compare unprobed readings"
+TP21,RC5,116,71,0.8128,"RC timing node: pad/probe adds capacitance, compare unprobed readings"

@@ -1,0 +1,22 @@
+{
+  "native_trial": "Request timeout; temporary router primitives did not survive a save/close/reopen. No routing success claimed.",
+  "source_matches_committed_batch1": {
+    "lines": false,
+    "vias": true,
+    "line_geometry_equivalent_with_native_junction_splits": true
+  },
+  "rules_equal_structurally_after_reopen": true,
+  "counts": {
+    "pads": 1079,
+    "lines": 2841,
+    "vias": 404
+  },
+  "connection_errors": 119,
+  "stale_pour_clearance_errors": 389,
+  "requires_ground_rebuild": true,
+  "manufacturing_release": false,
+  "native_junction_normalization": "I2C_MOD_SCL intersections split two planned lines into four native segments; compare physical geometry as well as segment counts.",
+  "line_geometry_differences": [],
+  "maximum_centerline_difference_mm": 1.6858232447996282e-06,
+  "native_coordinate_comparison_tolerance_mm": 5e-06
+}

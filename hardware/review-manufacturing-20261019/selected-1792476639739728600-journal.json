@@ -1,0 +1,50 @@
+{
+  "nets": [
+    "L0_M00"
+  ],
+  "before": {
+    "lines": [
+      {
+        "net": "L0_M00",
+        "layer": 1,
+        "x1": 243.2,
+        "y1": 537,
+        "x2": 234.2,
+        "y2": 528,
+        "width": 8
+      },
+      {
+        "net": "L0_M00",
+        "layer": 1,
+        "x1": 234.2,
+        "y1": 502.1,
+        "x2": 234.2,
+        "y2": 528,
+        "width": 8
+      }
+    ],
+    "vias": [
+      {
+        "net": "L0_M00",
+        "x": 243.2,
+        "y": 537,
+        "hole": 12,
+        "diameter": 24
+      }
+    ]
+  },
+  "state": "rolled_back_needs_reopen_check",
+  "requires_ground_rebuild": true,
+  "fabrication_release": false,
+  "removed": {
+    "lines": 2,
+    "vias": 1
+  },
+  "routing_directory": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\routing-work\\selected-1792476639739728600-1792476643483444900",
+  "error": "No selected-net paths in result",
+  "rollback": {
+    "created_lines": 2,
+    "created_vias": 1,
+    "device_identity_and_placement_unchanged": true
+  }
+}

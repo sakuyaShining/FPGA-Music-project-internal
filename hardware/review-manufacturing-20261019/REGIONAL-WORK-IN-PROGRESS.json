@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-10-22T04:22:16.680010+08:00",
+  "role": "Latest regional construction checkpoint; stable ACTIVE-ROUTING-CANDIDATE.json remains R15",
+  "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-U8BusWork-20261022",
+  "session": "776c52e1-e3ab-4a77-9c5c-ac6c71e1e5f5",
+  "session_owner_windows_profile": "Sakuya",
+  "session_warning": "A session belongs to its Windows account. From another account, open the saved descriptor through that account CLI; do not reuse this handle.",
+  "pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "native_wrapper": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\native_project.py",
+  "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\checkpoint-capture.json",
+  "drc": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\checkpoint-drc.json",
+  "review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\checkpoint-review.json",
+  "readme": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\README.md",
+  "native_drc": {
+    "clearance": 0,
+    "physical": 0,
+    "connection": 59
+  },
+  "status": "saved_reopened_verified_construction_checkpoint_not_promoted",
+  "router_status": "All owned routing/diagnostic jobs terminal. Existing native API timeout trial cancelled previously; latest mature global fanout aborted by scope guard after normalizing unselected 3V3_IO. No new copper imported this turn.",
+  "closed_nets_this_recovery": [
+    "VIS_CS_N",
+    "VIS_BL_EN",
+    "DISP_MOSI",
+    "TP_RESET_N",
+    "3V3_IO",
+    "3V3_PERIPH",
+    "BUS_RETURN",
+    "BUS_SCK"
+  ],
+  "manufacturing_release": false,
+  "next_action": "Use address-next-checkpoint.json.27/35 address/disable top fanouts now have independent four-layer copper,drill,pad,edge,mount and quiet-guard checks, but no complete net or actual ground review; do not import them yet.8 exits remain. ADDR0 needs only U2.10; full-net trial proves its source escape sealed. Source-bound obstacle screen identifies L1_M07 bottom2 line624062d3306e7719 plus L1_M06 as blockers beneath the otherwise clear inward exit. A two-sensor trace detour must retain8mil and recover both nets with actual layer16 reference/quiet clearance; first detour stopped at an existing tight M06 endpoint, no native change. Inspect the exact retained endpoints/adjacent analog bundle or jointly move affected layout; do not repeat fixed MOSI/R64-only searches or all-board fanout. R64 relocation alone did not solve U15/TP14 cages.",
+  "offline_review_updated_at": "2026-10-22T04:55:21.909658+08:00",
+  "latest_offline_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address-next-checkpoint.json",
+  "pending_trial": {
+    "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-U8BusWork-20261022",
+    "session": "776c52e1-e3ab-4a77-9c5c-ac6c71e1e5f5",
+    "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+    "source_archive": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\native-clock-corridor-WORK-IN-PROGRESS.zip",
+    "entry": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\inv2-coupled\\native-state.json",
+    "next_action": "Inspect transaction state; never repeat creation. After saved57, reopen and audit real copper/ground before promoting. On failure, preserve evidence and restore verified59 ZIP only with owned document closed."
+  }
+}

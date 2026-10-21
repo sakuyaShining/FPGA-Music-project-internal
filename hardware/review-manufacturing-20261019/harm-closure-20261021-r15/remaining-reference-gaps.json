@@ -1,0 +1,118 @@
+{
+  "pcb_sha256": "5029ca7091053a207a08908edfbe4b2716058640fa654b720c08c2bc0333cacb",
+  "method": "Actual rebuilt native GND polygons with holes; centerline projection excluding 1mm signal-via and 0.5mm HARM PTH-pad regions.",
+  "layers": [
+    {
+      "signal_layer": 1,
+      "reference_layer": 15,
+      "total_gap_mm": 0.4172840375157249,
+      "longest_gap_mm": 0.4172840375157249,
+      "gaps": [
+        {
+          "length_mm": 0.4172840375157249,
+          "bounds_mm": [
+            82.55254439602025,
+            42.043375399999995,
+            82.94429572800385,
+            42.10501680397974
+          ],
+          "xy_mm": [
+            [
+              82.55254439602025,
+              42.10501680397974
+            ],
+            [
+              82.6141858,
+              42.043375399999995
+            ],
+            [
+              82.94429572800385,
+              42.043375399999995
+            ]
+          ],
+          "alternate_ground15_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "total_gap_mm": 3.9027381472546043,
+      "longest_gap_mm": 1.487130413649055,
+      "gaps": [
+        {
+          "length_mm": 1.487130413649055,
+          "bounds_mm": [
+            74.91514099999999,
+            54.01723459317546,
+            74.91514099999999,
+            55.504365006824514
+          ],
+          "xy_mm": [
+            [
+              74.91514099999999,
+              55.504365006824514
+            ],
+            [
+              74.91514099999999,
+              54.01723459317546
+            ]
+          ],
+          "alternate_ground15_fraction": 1.0
+        },
+        {
+          "length_mm": 1.2454413620366729,
+          "bounds_mm": [
+            52.235435144583235,
+            66.05562594458323,
+            53.116095177249576,
+            66.93628597724957
+          ],
+          "xy_mm": [
+            [
+              52.235435144583235,
+              66.05562594458323
+            ],
+            [
+              53.116095177249576,
+              66.93628597724957
+            ]
+          ],
+          "alternate_ground15_fraction": 1.0
+        },
+        {
+          "length_mm": 1.1701663715688766,
+          "bounds_mm": [
+            74.81556091065944,
+            57.42589094131886,
+            74.91514099999999,
+            58.55480988934056
+          ],
+          "xy_mm": [
+            [
+              74.81556091065944,
+              58.55480988934056
+            ],
+            [
+              74.91514099999999,
+              58.455229800000005
+            ],
+            [
+              74.91514099999999,
+              57.42589094131886
+            ]
+          ],
+          "alternate_ground15_fraction": 1.0
+        }
+      ]
+    }
+  ],
+  "not_si_signoff": true,
+  "limitations": [
+    "Projection gaps are a screening result, not a modeled return-current path or predicted waveform.",
+    "Alternate inner-1 GND is separated by thick core; its projection cannot replace nearest-reference evaluation.",
+    "Actual GPIO edge rates, cable loading and qualified stackup remain unknown."
+  ],
+  "next_step": "Evaluate return detours and IO edge/cable timing against the final stackup, then bench-test; retain as a routing candidate only.",
+  "manufacturing_release": false
+}

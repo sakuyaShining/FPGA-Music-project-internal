@@ -1,0 +1,48 @@
+{
+  "snapshot": "D:\\FPGA-Project\\snapshots\\before-r7-courtyard-repair-20261021-132035\\native-before-decoupling.zip",
+  "snapshot_sha256": "3190910e604f5ce3f7f8d3241c29376aaceda69f3194a060c7b01a8bc2558dc6",
+  "source_pcb_sha256": "2a110b5b6e8e669f1c687e3517b73e858bb3b139fc00e13fc5a8b9619db814bd",
+  "plan_sha256": "9203e1fa140d1da22d975725995901a2554427baebf1d0fa22322cb00b161e8d",
+  "result": {
+    "priorC": {
+      "x": 3088.5993,
+      "y": 1807.0499999999997,
+      "rotation": 180
+    },
+    "priorL": [
+      {
+        "id": "5430892a1909c52e",
+        "net": "3V3_PERIPH",
+        "layer": 1,
+        "x1": 3116.1417,
+        "y1": 1807.0866,
+        "x2": 3152.5,
+        "y2": 1806,
+        "width": 13.2
+      },
+      {
+        "id": "305b3cc227593b9a",
+        "net": "GND",
+        "layer": 1,
+        "x1": 3061.0235999999995,
+        "y1": 1807.0866,
+        "x2": 3025.5906,
+        "y2": 1807.0866,
+        "width": 10
+      }
+    ],
+    "createdL": [
+      "7bb000a32c0382bf",
+      "3f628af5f135f537"
+    ],
+    "createdV": [],
+    "actual_component": {
+      "x": 3031.495362992126,
+      "y": 1842.5696850393697,
+      "rotation": 180
+    },
+    "calibrated_to_actual_pad_numbers": true
+  },
+  "other_229_components_pads_rules_copper_unchanged": true,
+  "manufacturing_release": false
+}

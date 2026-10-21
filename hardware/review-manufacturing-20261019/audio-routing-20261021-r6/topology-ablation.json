@@ -1,0 +1,447 @@
+{
+  "source_pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+  "grid_mm": 0.05,
+  "diagnostic_only": true,
+  "native_unchanged": true,
+  "not_proof_of_a_valid_continuous_route": true,
+  "cases": [
+    {
+      "case": "physical_only",
+      "removed_top_track_nets": [],
+      "future_pin_guards": false,
+      "results": [
+        {
+          "net": "I2S_LRCK",
+          "pads": [
+            {
+              "pin": "J5.11",
+              "x_mm": 39.2684,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.23",
+              "x_mm": 98.02367999999998,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_DIN",
+          "pads": [
+            {
+              "pin": "J5.8",
+              "x_mm": 31.6484,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.22",
+              "x_mm": 98.67392,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_BCK",
+          "pads": [
+            {
+              "pin": "J5.7",
+              "x_mm": 29.1084,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.21",
+              "x_mm": 99.32415999999999,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        }
+      ]
+    },
+    {
+      "case": "with_future_pin_guards",
+      "removed_top_track_nets": [],
+      "future_pin_guards": true,
+      "results": [
+        {
+          "net": "I2S_LRCK",
+          "pads": [
+            {
+              "pin": "J5.11",
+              "x_mm": 39.2684,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.23",
+              "x_mm": 98.02367999999998,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_DIN",
+          "pads": [
+            {
+              "pin": "J5.8",
+              "x_mm": 31.6484,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.22",
+              "x_mm": 98.67392,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_BCK",
+          "pads": [
+            {
+              "pin": "J5.7",
+              "x_mm": 29.1084,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.21",
+              "x_mm": 99.32415999999999,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        }
+      ]
+    },
+    {
+      "case": "remove_IO_top_tracks",
+      "removed_top_track_nets": [
+        "3V3_IO"
+      ],
+      "future_pin_guards": true,
+      "results": [
+        {
+          "net": "I2S_LRCK",
+          "pads": [
+            {
+              "pin": "J5.11",
+              "x_mm": 39.2684,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.23",
+              "x_mm": 98.02367999999998,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_DIN",
+          "pads": [
+            {
+              "pin": "J5.8",
+              "x_mm": 31.6484,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.22",
+              "x_mm": 98.67392,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_BCK",
+          "pads": [
+            {
+              "pin": "J5.7",
+              "x_mm": 29.1084,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.21",
+              "x_mm": 99.32415999999999,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        }
+      ]
+    },
+    {
+      "case": "remove_5V_top_tracks",
+      "removed_top_track_nets": [
+        "5V_PERIPH"
+      ],
+      "future_pin_guards": true,
+      "results": [
+        {
+          "net": "I2S_LRCK",
+          "pads": [
+            {
+              "pin": "J5.11",
+              "x_mm": 39.2684,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.23",
+              "x_mm": 98.02367999999998,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_DIN",
+          "pads": [
+            {
+              "pin": "J5.8",
+              "x_mm": 31.6484,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.22",
+              "x_mm": 98.67392,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_BCK",
+          "pads": [
+            {
+              "pin": "J5.7",
+              "x_mm": 29.1084,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.21",
+              "x_mm": 99.32415999999999,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        }
+      ]
+    },
+    {
+      "case": "remove_PERIPH_top_tracks",
+      "removed_top_track_nets": [
+        "3V3_PERIPH"
+      ],
+      "future_pin_guards": true,
+      "results": [
+        {
+          "net": "I2S_LRCK",
+          "pads": [
+            {
+              "pin": "J5.11",
+              "x_mm": 39.2684,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.23",
+              "x_mm": 98.02367999999998,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_DIN",
+          "pads": [
+            {
+              "pin": "J5.8",
+              "x_mm": 31.6484,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.22",
+              "x_mm": 98.67392,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_BCK",
+          "pads": [
+            {
+              "pin": "J5.7",
+              "x_mm": 29.1084,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.21",
+              "x_mm": 99.32415999999999,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        }
+      ]
+    },
+    {
+      "case": "remove_GND_top_tracks",
+      "removed_top_track_nets": [
+        "GND"
+      ],
+      "future_pin_guards": true,
+      "results": [
+        {
+          "net": "I2S_LRCK",
+          "pads": [
+            {
+              "pin": "J5.11",
+              "x_mm": 39.2684,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.23",
+              "x_mm": 98.02367999999998,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_DIN",
+          "pads": [
+            {
+              "pin": "J5.8",
+              "x_mm": 31.6484,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.22",
+              "x_mm": 98.67392,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_BCK",
+          "pads": [
+            {
+              "pin": "J5.7",
+              "x_mm": 29.1084,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.21",
+              "x_mm": 99.32415999999999,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        }
+      ]
+    },
+    {
+      "case": "remove_IO_and_GND_top_tracks",
+      "removed_top_track_nets": [
+        "3V3_IO",
+        "GND"
+      ],
+      "future_pin_guards": true,
+      "results": [
+        {
+          "net": "I2S_LRCK",
+          "pads": [
+            {
+              "pin": "J5.11",
+              "x_mm": 39.2684,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.23",
+              "x_mm": 98.02367999999998,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_DIN",
+          "pads": [
+            {
+              "pin": "J5.8",
+              "x_mm": 31.6484,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.22",
+              "x_mm": 98.67392,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        },
+        {
+          "net": "I2S_BCK",
+          "pads": [
+            {
+              "pin": "J5.7",
+              "x_mm": 29.1084,
+              "y_mm": 37.9984,
+              "component": 1
+            },
+            {
+              "pin": "U12.21",
+              "x_mm": 99.32415999999999,
+              "y_mm": 54.8005,
+              "component": 1
+            }
+          ],
+          "same_grid_component": true
+        }
+      ]
+    }
+  ]
+}

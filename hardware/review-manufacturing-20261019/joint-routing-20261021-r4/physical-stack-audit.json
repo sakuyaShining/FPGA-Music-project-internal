@@ -1,0 +1,95 @@
+{
+  "pcb_sha256": "97a837d8411cef56633792edbb716451a4f6806a66dba659a91058e0c69c2515",
+  "logical_copper_layer_ids": [
+    1,
+    15,
+    16,
+    2
+  ],
+  "physical_records": {
+    "[\"LAYER_PHYS\",3]": {
+      "material": null,
+      "thickness": 0,
+      "permittivity": null,
+      "lossTangent": null,
+      "isKeepIsland": true,
+      "zIndex": 1
+    },
+    "[\"LAYER_PHYS\",7]": {
+      "material": null,
+      "thickness": 0,
+      "permittivity": null,
+      "lossTangent": null,
+      "isKeepIsland": true,
+      "zIndex": 2
+    },
+    "[\"LAYER_PHYS\",5]": {
+      "material": "",
+      "thickness": 0.394,
+      "permittivity": 3.3,
+      "lossTangent": 0.02,
+      "isKeepIsland": true,
+      "zIndex": 3
+    },
+    "[\"LAYER_PHYS\",1]": {
+      "material": null,
+      "thickness": 1.379,
+      "permittivity": null,
+      "lossTangent": null,
+      "isKeepIsland": true,
+      "zIndex": 1000
+    },
+    "[\"LAYER_PHYS\",361]": {
+      "material": "FR4",
+      "thickness": 59.449,
+      "permittivity": 4.5,
+      "lossTangent": 0,
+      "isKeepIsland": true,
+      "zIndex": 1001
+    },
+    "[\"LAYER_PHYS\",2]": {
+      "material": null,
+      "thickness": 1.378,
+      "permittivity": null,
+      "lossTangent": null,
+      "isKeepIsland": true,
+      "zIndex": 9000
+    },
+    "[\"LAYER_PHYS\",6]": {
+      "material": "",
+      "thickness": 0.394,
+      "permittivity": 3.3,
+      "lossTangent": 0.02,
+      "isKeepIsland": true,
+      "zIndex": 10000
+    },
+    "[\"LAYER_PHYS\",8]": {
+      "material": null,
+      "thickness": 0,
+      "permittivity": null,
+      "lossTangent": null,
+      "isKeepIsland": true,
+      "zIndex": 10001
+    },
+    "[\"LAYER_PHYS\",4]": {
+      "material": null,
+      "thickness": 0,
+      "permittivity": null,
+      "lossTangent": null,
+      "isKeepIsland": true,
+      "zIndex": 10002
+    }
+  },
+  "physical_copper_layer_ids": [
+    1,
+    2
+  ],
+  "physical_stack_metadata_complete": false,
+  "api_current_named_configuration": null,
+  "api_saved_configurations": [],
+  "do_not_infer_thickness_from_raw_values": true,
+  "unit_issue": "CLI TLayerPhys format reference describes 0.1mm units, while inherited record values resemble old mil values; unit/schema must be verified with a known native stack before any write",
+  "primary_manufacturer_reference": "https://cart.jlcpcb.com/client/template/placeOrder/impedance.html",
+  "candidate_factory_stack_not_selected": true,
+  "manufacturing_release": false
+}

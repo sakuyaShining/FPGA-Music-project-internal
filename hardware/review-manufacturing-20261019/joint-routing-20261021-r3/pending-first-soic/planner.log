@@ -1,0 +1,56 @@
+SOURCE be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e native microtracks 24 JOINT NETS ['INV2', 'PRESET3', 'DISP_VIS_DC', 'DISP_RESET_N', 'DISP_VIS_CS_N', 'DISP_SCK', 'DISP_MOSI', 'HARM_CS_N', 'BUS_SCK', 'BUS_MOSI', 'I2C_SCL', 'ADDR0', 'ADDR1', 'ADDR2', 'ADDR3', 'MUX_DISABLE', 'I2S_LRCK', 'I2S_DIN', 'I2S_BCK', 'SCAN_LATCH', 'INPUT_LOAD_N', 'VIS_DC', 'VIS_CS_N']
+FANOUTS {'I2S_BCK': (1, 1), 'I2S_DIN': (1, 1), 'I2S_LRCK': (1, 1), 'SCAN_LATCH': (1, 1), 'INPUT_LOAD_N': (2, 2), 'VIS_DC': (1, 1), 'VIS_CS_N': (1, 1), 'INV2': (0, 0), 'PRESET3': (0, 0), 'DISP_VIS_DC': (1, 1), 'DISP_RESET_N': (0, 0), 'DISP_VIS_CS_N': (0, 0), 'DISP_SCK': (0, 0), 'DISP_MOSI': (0, 0), 'HARM_CS_N': (0, 0), 'BUS_SCK': (3, 3), 'BUS_MOSI': (2, 1), 'I2C_SCL': (2, 2), 'ADDR0': (7, 5), 'ADDR1': (4, 4), 'ADDR2': (6, 5), 'ADDR3': (6, 5), 'MUX_DISABLE': (7, 5)}
+START INV2
+REJECTED INV2 SealedEscape('Locally sealed start: INV2') 0.5 s
+START PRESET3
+REJECTED PRESET3 SealedEscape('Locally sealed start: PRESET3') 0.7 s
+START DISP_VIS_DC
+METRICS DISP_VIS_DC {'before_length_mm': 0, 'after_length_mm': 71.85484127423965, 'before_vias': 0, 'after_vias': 4, 'mst_lower_bound_mm': 50.32847201505325, 'min_foreign_gap_mm': 0.18060961002687825}
+ACCEPTED_OFFLINE DISP_VIS_DC 8.5 s
+START DISP_RESET_N
+REJECTED DISP_RESET_N SealedEscape('Locally sealed start: DISP_RESET_N') 0.6 s
+START DISP_VIS_CS_N
+REJECTED DISP_VIS_CS_N SealedEscape('Locally sealed start: DISP_VIS_CS_N') 0.7 s
+START DISP_SCK
+REJECTED DISP_SCK SealedEscape('Locally sealed start: DISP_SCK') 0.7 s
+START DISP_MOSI
+REJECTED DISP_MOSI SealedEscape('Locally sealed start: DISP_MOSI') 0.7 s
+START HARM_CS_N
+REJECTED HARM_CS_N SealedEscape('Locally sealed goal: HARM_CS_N') 3.7 s
+START BUS_SCK
+REJECTED BUS_SCK SealedEscape('Locally sealed start: BUS_SCK') 7.4 s
+START BUS_MOSI
+REJECTED BUS_MOSI SealedEscape('Locally sealed start: BUS_MOSI') 5.8 s
+START I2C_SCL
+REJECTED I2C_SCL RuntimeError('No safe path I2C_SCL (1, 2)') 32.9 s
+START ADDR0
+REJECTED ADDR0 SealedEscape('Locally sealed start: ADDR0') 0.6 s
+START ADDR1
+REJECTED ADDR1 SealedEscape('Locally sealed start: ADDR1') 12.0 s
+START ADDR2
+REJECTED ADDR2 SealedEscape('Locally sealed start: ADDR2') 0.6 s
+START ADDR3
+REJECTED ADDR3 RuntimeError('No safe path ADDR3 (2, 4)') 31.2 s
+START MUX_DISABLE
+REJECTED MUX_DISABLE SealedEscape('Locally sealed start: MUX_DISABLE') 0.6 s
+START I2S_LRCK
+METRICS I2S_LRCK {'before_length_mm': 106.57670227614915, 'after_length_mm': 96.26096217459839, 'before_vias': 10, 'after_vias': 5, 'mst_lower_bound_mm': 61.110502307609934, 'min_foreign_gap_mm': 0.1728450461538516}
+REJECTED I2S_LRCK AssertionError('Audio quality budget: <=3 vias, no length increase') 12.7 s
+START I2S_DIN
+METRICS I2S_DIN {'before_length_mm': 105.10389648379709, 'after_length_mm': 111.04648421893111, 'before_vias': 8, 'after_vias': 5, 'mst_lower_bound_mm': 69.09942760747299, 'min_foreign_gap_mm': 0.18107763482456662}
+REJECTED I2S_DIN AssertionError('Audio quality budget: <=3 vias, no length increase') 13.5 s
+START I2S_BCK
+METRICS I2S_BCK {'before_length_mm': 96.4344804803691, 'after_length_mm': 111.70983518122809, 'before_vias': 9, 'after_vias': 5, 'mst_lower_bound_mm': 72.19808527092391, 'min_foreign_gap_mm': 0.18107763482456662}
+REJECTED I2S_BCK AssertionError('Connected-net quality budget exceeded') 13.4 s
+START SCAN_LATCH
+METRICS SCAN_LATCH {'before_length_mm': 47.86858346746655, 'after_length_mm': 59.335439774427414, 'before_vias': 5, 'after_vias': 3, 'mst_lower_bound_mm': 38.2847062555376, 'min_foreign_gap_mm': 0.1780130654844388}
+REJECTED SCAN_LATCH AssertionError('Connected-net quality budget exceeded') 6.3 s
+START INPUT_LOAD_N
+METRICS INPUT_LOAD_N {'before_length_mm': 31.12931967968739, 'after_length_mm': 36.99636424304505, 'before_vias': 8, 'after_vias': 6, 'mst_lower_bound_mm': 26.21047435985968, 'min_foreign_gap_mm': 0.19850813976520687}
+REJECTED INPUT_LOAD_N AssertionError('Connected-net quality budget exceeded') 8.4 s
+START VIS_DC
+METRICS VIS_DC {'before_length_mm': 127.86994418825914, 'after_length_mm': 114.26567499935788, 'before_vias': 15, 'after_vias': 15, 'mst_lower_bound_mm': 64.67013148003888, 'min_foreign_gap_mm': 0.17262176395927759}
+ACCEPTED_OFFLINE VIS_DC 14.7 s
+START VIS_CS_N
+REJECTED VIS_CS_N SealedEscape('Locally sealed start: VIS_CS_N') 0.7 s
+COMPLETE 2 offline candidate nets 21 rejected; final geometry False NO NATIVE IMPORT

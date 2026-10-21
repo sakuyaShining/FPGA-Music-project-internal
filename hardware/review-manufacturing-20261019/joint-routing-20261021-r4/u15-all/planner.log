@@ -1,0 +1,46 @@
+SOURCE 0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a native microtracks 28 JOINT NETS ['BUS_SCK', 'BUS_MOSI', 'DISP_RESET_N', 'HARM_CS_N', 'DISP_VIS_DC', 'DISP_SCK', 'DISP_MOSI', 'DISP_VIS_CS_N', 'VIS_BL_EN', 'TP_RESET_MOD_N', 'VIS_CS_N', 'TP_RESET_N', 'LCD_RESET_N', 'DISP_HARM_CS_N', 'VIS_DC', 'SCAN_LATCH']
+FANOUTS {'VIS_BL_EN': (1, 1), 'TP_RESET_MOD_N': (1, 1), 'VIS_CS_N': (1, 1), 'TP_RESET_N': (4, 2), 'LCD_RESET_N': (2, 2), 'DISP_HARM_CS_N': (1, 1), 'VIS_DC': (1, 1), 'SCAN_LATCH': (1, 1), 'BUS_SCK': (2, 2), 'BUS_MOSI': (2, 1), 'DISP_RESET_N': (2, 1), 'HARM_CS_N': (1, 1), 'DISP_VIS_DC': (1, 1), 'DISP_SCK': (0, 0), 'DISP_MOSI': (0, 0), 'DISP_VIS_CS_N': (1, 1), 'I2C_SCL': (2, 2), 'ADDR1': (6, 6), 'ADDR2': (6, 5), 'ADDR3': (6, 5), 'MUX_DISABLE': (7, 5), 'ADDR0': (7, 5), 'PRESET3': (0, 0), 'INV2': (0, 0)}
+START BUS_SCK
+REJECTED BUS_SCK SealedEscape('Locally sealed start: BUS_SCK') 0.6 s
+START BUS_MOSI
+REJECTED BUS_MOSI SealedEscape('Locally sealed start: BUS_MOSI') 0.7 s
+START DISP_RESET_N
+METRICS DISP_RESET_N {'before_length_mm': 0, 'after_length_mm': 82.7340459261392, 'before_vias': 0, 'after_vias': 2, 'mst_lower_bound_mm': 76.11754028071593, 'min_foreign_gap_mm': 0.1946078721940772}
+ACCEPTED_OFFLINE DISP_RESET_N 9.8 s
+START HARM_CS_N
+REJECTED HARM_CS_N RuntimeError('No safe path HARM_CS_N (1, 2)') 25.1 s
+START DISP_VIS_DC
+METRICS DISP_VIS_DC {'before_length_mm': 0, 'after_length_mm': 60.85145855960325, 'before_vias': 0, 'after_vias': 3, 'mst_lower_bound_mm': 50.32847201505325, 'min_foreign_gap_mm': 0.19160461661059552}
+ACCEPTED_OFFLINE DISP_VIS_DC 8.2 s
+START DISP_SCK
+REJECTED DISP_SCK SealedEscape('Locally sealed start: DISP_SCK') 0.7 s
+START DISP_MOSI
+REJECTED DISP_MOSI SealedEscape('Locally sealed start: DISP_MOSI') 0.7 s
+START DISP_VIS_CS_N
+METRICS DISP_VIS_CS_N {'before_length_mm': 0, 'after_length_mm': 66.44785744896264, 'before_vias': 0, 'after_vias': 7, 'mst_lower_bound_mm': 47.68381785004216, 'min_foreign_gap_mm': 0.17827626466249996}
+REJECTED DISP_VIS_CS_N AssertionError('Pending-net quality budget exceeded') 7.7 s
+START VIS_BL_EN
+METRICS VIS_BL_EN {'before_length_mm': 108.10409040956908, 'after_length_mm': 87.30974142931576, 'before_vias': 8, 'after_vias': 7, 'mst_lower_bound_mm': 56.37027630961905, 'min_foreign_gap_mm': 0.1822346426906713}
+ACCEPTED_OFFLINE VIS_BL_EN 8.2 s
+START TP_RESET_MOD_N
+METRICS TP_RESET_MOD_N {'before_length_mm': 47.20406598179173, 'after_length_mm': 70.42487656248908, 'before_vias': 1, 'after_vias': 10, 'mst_lower_bound_mm': 45.910378866783475, 'min_foreign_gap_mm': 0.1730834065836172}
+REJECTED TP_RESET_MOD_N AssertionError('Connected-net quality budget exceeded') 8.0 s
+START VIS_CS_N
+METRICS VIS_CS_N {'before_length_mm': 48.7215431205312, 'after_length_mm': 117.41436781718303, 'before_vias': 6, 'after_vias': 17, 'mst_lower_bound_mm': 38.92797117596467, 'min_foreign_gap_mm': 0.17111032793272896}
+REJECTED VIS_CS_N AssertionError('Connected-net quality budget exceeded') 15.5 s
+START TP_RESET_N
+METRICS TP_RESET_N {'before_length_mm': 18.344873040368952, 'after_length_mm': 18.344873040368952, 'before_vias': 2, 'after_vias': 2, 'mst_lower_bound_mm': 16.547745214922788, 'min_foreign_gap_mm': 0.16109374057666642}
+ACCEPTED_OFFLINE TP_RESET_N 5.9 s
+START LCD_RESET_N
+METRICS LCD_RESET_N {'before_length_mm': 25.71085707791378, 'after_length_mm': 28.076015434509717, 'before_vias': 4, 'after_vias': 6, 'mst_lower_bound_mm': 19.06458096249692, 'min_foreign_gap_mm': 0.20176242753516904}
+REJECTED LCD_RESET_N AssertionError('Connected-net quality budget exceeded') 6.3 s
+START DISP_HARM_CS_N
+METRICS DISP_HARM_CS_N {'before_length_mm': 50.50567153344651, 'after_length_mm': 71.69088541242904, 'before_vias': 2, 'after_vias': 9, 'mst_lower_bound_mm': 44.154509185314225, 'min_foreign_gap_mm': 0.1730834065836172}
+REJECTED DISP_HARM_CS_N AssertionError('Connected-net quality budget exceeded') 9.6 s
+START VIS_DC
+METRICS VIS_DC {'before_length_mm': 127.86994418825914, 'after_length_mm': 106.18831145614571, 'before_vias': 15, 'after_vias': 14, 'mst_lower_bound_mm': 64.67013148003888, 'min_foreign_gap_mm': 0.17262176395927759}
+ACCEPTED_OFFLINE VIS_DC 12.8 s
+START SCAN_LATCH
+METRICS SCAN_LATCH {'before_length_mm': 47.86858346746655, 'after_length_mm': 64.03227232912938, 'before_vias': 5, 'after_vias': 5, 'mst_lower_bound_mm': 38.2847062555376, 'min_foreign_gap_mm': 0.1780130654844388}
+REJECTED SCAN_LATCH AssertionError('Connected-net quality budget exceeded') 7.1 s
+COMPLETE 5 offline candidate nets 11 rejected; final geometry False NO NATIVE IMPORT

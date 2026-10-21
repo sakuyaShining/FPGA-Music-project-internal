@@ -1,0 +1,61 @@
+{
+  "clock": {
+    "qualification": "arithmetic_and_register_fields_only_not_hardware",
+    "fs_hz": 52734.375,
+    "bck_hz": 1687500.0,
+    "pll_hz": 81000000.0,
+    "pll_p": 1,
+    "pll_j": 24,
+    "pll_d": 0,
+    "pll_r": 2,
+    "dsp_hz": 20250000.0,
+    "idac_cycles": 384,
+    "dac_hz": 3375000.0,
+    "cp_hz": 1687500.0,
+    "osr_hz": 843750.0,
+    "speed_mode": "double",
+    "interpolation_program": 2,
+    "clock_flex_required": true,
+    "warning": "Register fields are not a boot sequence; mute, power, PLL lock, error policy and readback still required.",
+    "exported_register_fields_decoded": 20
+  },
+  "gpio": {
+    "panel_gpio": 17,
+    "reused_audio_outputs": 3,
+    "external_return_selector": "74LVC1G157; S=RA_CS_N,I0=RA_MISO,I1=165_QH",
+    "qualification": "unique_candidate_assignments_and_truth_table_not_board_or_timing"
+  },
+  "screen": {
+    "spi_hz": 6750000.0,
+    "full_800x480_rgb565_ms": 910.2222222222222,
+    "full_320x240_rgb565_ms": 182.04444444444445,
+    "command_120_bytes_wire_us_only": 142.22222222222223,
+    "combined_fixed_split_example": {
+      "visual_pixels": [
+        800,
+        240
+      ],
+      "fader_pixels": [
+        800,
+        240
+      ],
+      "estimated_fader_height_mm": 42.96
+    },
+    "qualification": "payload_and_geometry_only_no_panel_fps_or_touch_latency_claim"
+  },
+  "bom": {
+    "original_workbuddy_model_cny": "648.74",
+    "tier_correction_cny": "4.02",
+    "corrected_same_scope_model_cny": "652.76",
+    "not_included": [
+      "CTP option increment",
+      "current domestic delivered prices",
+      "small screen if absent",
+      "return mux",
+      "regulator and exact power distribution",
+      "final connectors/FFC",
+      "actual SMT quote"
+    ],
+    "qualification": "historical_model_arithmetic_only_not_a_quote"
+  }
+}

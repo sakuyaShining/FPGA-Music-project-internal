@@ -1,0 +1,28 @@
+{
+  "selected": [
+    "5V_IN",
+    "5V_FUSED",
+    "5V_PROTECTED",
+    "5V_PERIPH"
+  ],
+  "before": {
+    "lines": 84,
+    "vias": 3
+  },
+  "result": {
+    "success": true,
+    "totalNetsCount": 4,
+    "successNetsCount": 3,
+    "failedNets": [
+      "5V_PROTECTED"
+    ],
+    "duration": 12107
+  },
+  "after": {
+    "lines": 127,
+    "vias": 5
+  },
+  "widths_mil": [
+    39.37989997485401
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "removed_restored_ground_objects": {
+    "lines": [
+      "1de3660ea6e1ad57"
+    ],
+    "vias": [
+      "7fab1fc9b6cd8f81",
+      "eb53c6edc104cc2d"
+    ]
+  },
+  "retained_restored_5V_lines": [
+    "523a77e9e4cf72d7",
+    "b0e6235958308ecc"
+  ],
+  "reason": "Only the 5V main required restoration; the old GND branch/vias occupy the new R63 site and are deliberately replaced by rebuilt plane connection.",
+  "saved": true,
+  "manufacturing_release": false
+}

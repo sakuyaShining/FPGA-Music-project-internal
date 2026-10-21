@@ -1,0 +1,30 @@
+{
+  "source_pcb_sha256": "5d0219227e63813379a43afaf5dda3190089ab564f8b7ce019ddd1064f10bfb0",
+  "pcb_sha256_after": "901439eff27117ca697d4eb785bf7b8f80a9e6033f7ddeb4d29fc50c0785ac1d",
+  "result": {
+    "changes": [
+      {
+        "ref": "R63",
+        "type": "component",
+        "id": "98a56651b3a992e2"
+      },
+      {
+        "ref": "R64",
+        "type": "component",
+        "id": "ee89b86f6f64c19b"
+      }
+    ],
+    "removed_lines": [
+      "0d6af244c1f730ff",
+      "333ae7d894b62d5c",
+      "043efbc81b654b9e"
+    ],
+    "removed_vias": [
+      "5a009b63c014caec",
+      "7a4eb4ca801b2fbe"
+    ],
+    "saved": true
+  },
+  "reason": "Native DRC found R63 overlapping fixed I2C_SDA TP11; include every free test pad in placement screening. Move R64 away from TP12 clearance edge as well.",
+  "manufacturing_release": false
+}

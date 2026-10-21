@@ -1,0 +1,146 @@
+{
+  "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "remove_lines": [
+    {
+      "id": "bb69c07a4390ff26",
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2561.7735,
+      "y1": 1768.2955,
+      "x2": 1596.9759,
+      "y2": 1768.2955,
+      "width": 15.74
+    }
+  ],
+  "remove_vias": [
+    {
+      "id": "2aa4d5db16f73b89",
+      "net": "GND",
+      "x": 2225.2095,
+      "y": 1721.7554,
+      "diameter": 24,
+      "hole": 12
+    }
+  ],
+  "lines": [
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2561.7735,
+      "y1": 1768.2955,
+      "x2": 2237.204724409449,
+      "y2": 1768.2955,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2237.204724409449,
+      "y1": 1768.2955,
+      "x2": 2237.204724409449,
+      "y2": 1704.724409448819,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2237.204724409449,
+      "y1": 1704.724409448819,
+      "x2": 2133.8582677165355,
+      "y2": 1704.724409448819,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2133.8582677165355,
+      "y1": 1704.724409448819,
+      "x2": 2133.8582677165355,
+      "y2": 1768.2955,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2133.8582677165355,
+      "y1": 1768.2955,
+      "x2": 1596.9759000000001,
+      "y2": 1768.2955,
+      "width": 15.74
+    },
+    {
+      "net": "INV2",
+      "layer": 1,
+      "x1": 2186.7,
+      "y1": 1826.0000000000002,
+      "x2": 2186.7,
+      "y2": 1767.716535433071,
+      "width": 8
+    }
+  ],
+  "vias": [
+    {
+      "net": "INV2",
+      "x": 2186.7,
+      "y": 1767.716535433071,
+      "diameter": 24,
+      "hole": 12,
+      "id": "new-inv2-u7"
+    },
+    {
+      "net": "GND",
+      "x": 2161.417322834646,
+      "y": 1738.1889763779527,
+      "diameter": 24,
+      "hole": 12,
+      "id": "replacement-reference-ground"
+    }
+  ],
+  "minimum_clearances_mm": {
+    "track_copper": -0.10062799999999582,
+    "track_mount": 43.57048968006589,
+    "track_edge": 40.36328986,
+    "via_copper": -0.1981809600000018,
+    "hole_pad": 0.3094600000000015,
+    "via_quiet": 0.40928757035846314,
+    "via_mount": 55.466003293479645,
+    "via_edge": 43.8452,
+    "drill_drill": 0.5158227399889781
+  },
+  "failures": [
+    {
+      "net": "INV2",
+      "kind": "via_copper",
+      "gap_mm": -0.1981809600000018,
+      "minimum_mm": 0.158
+    },
+    {
+      "net": "3V3_PERIPH",
+      "kind": "track_copper",
+      "gap_mm": -0.06105460000001525,
+      "minimum_mm": 0.158
+    },
+    {
+      "net": "3V3_PERIPH",
+      "kind": "track_copper",
+      "gap_mm": -0.10062799999999582,
+      "minimum_mm": 0.158
+    },
+    {
+      "net": "3V3_PERIPH",
+      "kind": "track_copper",
+      "gap_mm": -0.10062799999999582,
+      "minimum_mm": 0.158
+    }
+  ],
+  "geometric_pass": false,
+  "power_continuity": {
+    "complete": true,
+    "pad_islands": 1
+  },
+  "power_width_mil": 15.74,
+  "components_unchanged": true,
+  "analog_copper_unchanged": true,
+  "native_imported": false,
+  "manufacturing_release": false
+}

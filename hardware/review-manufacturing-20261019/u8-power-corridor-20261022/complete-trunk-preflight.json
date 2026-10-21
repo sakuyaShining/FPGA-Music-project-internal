@@ -1,0 +1,65 @@
+{
+  "source_pcb_sha256": "03384de17ddf4a6a1f5781b646e9c10eadf20ddc9af6ea74b891c1f3d6b8ad3e",
+  "minimum_clearances_mm": {
+    "track_copper": 0.16344773000000457,
+    "track_mount": 32.428189311599134,
+    "track_edge": 30.773799999999994,
+    "via_copper": 0.17246241534229106,
+    "hole_pad": 0.2554042875946153,
+    "via_quiet": 0.36701932731685655,
+    "via_edge": 30.545199999999994,
+    "via_mount": 57.63198667306292,
+    "drill_drill": 0.3556926055605333,
+    "track_quiet": 0.21010535937882213
+  },
+  "failures": [],
+  "nets": [
+    {
+      "net": "3V3_IO",
+      "continuity": {
+        "complete": true,
+        "pad_islands": 1
+      }
+    },
+    {
+      "net": "5V_PERIPH",
+      "continuity": {
+        "complete": true,
+        "pad_islands": 1
+      }
+    },
+    {
+      "net": "BUS_MOSI",
+      "continuity": {
+        "complete": false,
+        "pad_islands": 5
+      }
+    },
+    {
+      "net": "BUS_SCK",
+      "continuity": {
+        "complete": true,
+        "pad_islands": 1
+      }
+    },
+    {
+      "net": "INPUT_LOAD_N",
+      "continuity": {
+        "complete": true,
+        "pad_islands": 1
+      }
+    },
+    {
+      "net": "PRESET1",
+      "continuity": {
+        "complete": true,
+        "pad_islands": 1
+      }
+    }
+  ],
+  "geometric_pass": true,
+  "required_recovery_nets": [
+    "INPUT_LOAD_N"
+  ],
+  "manufacturing_release": false
+}

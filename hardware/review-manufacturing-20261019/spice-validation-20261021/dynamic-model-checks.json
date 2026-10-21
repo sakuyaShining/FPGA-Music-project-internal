@@ -1,0 +1,30 @@
+{
+  "datasheet_timing_sanity": {
+    "condition": "5 V / CL 1uF / RL 100 ohm / Rilim 23.7k / EN 0..3.3V",
+    "en50_to_vout90_s": 0.001999343933802824,
+    "en50_to_vout10_s": 0.0015995034213581241,
+    "datasheet_ton_toff_max_s": 0.003,
+    "not_full_timing_equivalence": true,
+    "basic_timing_within_3ms": true
+  },
+  "collapse_timestep_checks": [
+    {
+      "max_step_s": 1e-07,
+      "peak_reverse_adapter_a": 9.37367253,
+      "peak_reverse_switch_a": 9.07443377,
+      "out_at_window_start_v": 4.90995865,
+      "end_time_s": 0.0603
+    },
+    {
+      "max_step_s": 5e-08,
+      "peak_reverse_adapter_a": 9.37366716,
+      "peak_reverse_switch_a": 9.0737482,
+      "out_at_window_start_v": 4.90995865,
+      "end_time_s": 0.0603
+    }
+  ],
+  "refined_peak_agreement_within_2_percent": true,
+  "physical_peak_not_validated": true,
+  "reason": "Forced input clamp through lumped 0.35 ohm; no real cable inductance, PMOS gate dynamics or full supply behavior",
+  "manufacturing_release": false
+}

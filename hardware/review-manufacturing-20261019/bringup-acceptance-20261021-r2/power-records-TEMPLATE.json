@@ -1,0 +1,396 @@
+{
+  "identity": {
+    "hardware_revision": null,
+    "pcb_sha256": "0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a",
+    "actual_bom_sha256": null,
+    "bitstream_sha256": null,
+    "product_firmware_qualified": false,
+    "nano_revision": null,
+    "small_screen_revision": null,
+    "large_screen_configuration": null,
+    "harness_revision": null,
+    "instruments": null,
+    "date_utc": null,
+    "operator": null
+  },
+  "physical_tests_executed": false,
+  "note": "TP8 depends on peripheral pull-up rail: off-state low does not alone mean a fault. Supply current and reverse current must be measured separately; voltage is insufficient.",
+  "states": [
+    {
+      "state": "both_off",
+      "usb": false,
+      "external_5v": false,
+      "load_configuration": null,
+      "sequence": null,
+      "bench_voltage_setting_v": null,
+      "bench_current_limit_a": null,
+      "input_current_a": null,
+      "reverse_current_a": null,
+      "temperatures_c": {},
+      "measurements": [
+        {
+          "point": "TP2",
+          "net": "5V_IN",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP3",
+          "net": "5V_FUSED",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP4",
+          "net": "5V_PROTECTED",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP5",
+          "net": "5V_PERIPH",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP6",
+          "net": "3V3_IO",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP7",
+          "net": "3V3_PERIPH",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP8",
+          "net": "PWR_FAULT_N",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP9",
+          "net": "DAC_3V3",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        }
+      ]
+    },
+    {
+      "state": "usb_only",
+      "usb": true,
+      "external_5v": false,
+      "load_configuration": null,
+      "sequence": null,
+      "bench_voltage_setting_v": null,
+      "bench_current_limit_a": null,
+      "input_current_a": null,
+      "reverse_current_a": null,
+      "temperatures_c": {},
+      "measurements": [
+        {
+          "point": "TP2",
+          "net": "5V_IN",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP3",
+          "net": "5V_FUSED",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP4",
+          "net": "5V_PROTECTED",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP5",
+          "net": "5V_PERIPH",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP6",
+          "net": "3V3_IO",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP7",
+          "net": "3V3_PERIPH",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP8",
+          "net": "PWR_FAULT_N",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP9",
+          "net": "DAC_3V3",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        }
+      ]
+    },
+    {
+      "state": "external_only",
+      "usb": false,
+      "external_5v": true,
+      "load_configuration": null,
+      "sequence": null,
+      "bench_voltage_setting_v": null,
+      "bench_current_limit_a": null,
+      "input_current_a": null,
+      "reverse_current_a": null,
+      "temperatures_c": {},
+      "measurements": [
+        {
+          "point": "TP2",
+          "net": "5V_IN",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP3",
+          "net": "5V_FUSED",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP4",
+          "net": "5V_PROTECTED",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP5",
+          "net": "5V_PERIPH",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP6",
+          "net": "3V3_IO",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP7",
+          "net": "3V3_PERIPH",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP8",
+          "net": "PWR_FAULT_N",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP9",
+          "net": "DAC_3V3",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        }
+      ]
+    },
+    {
+      "state": "both_on",
+      "usb": true,
+      "external_5v": true,
+      "load_configuration": null,
+      "sequence": null,
+      "bench_voltage_setting_v": null,
+      "bench_current_limit_a": null,
+      "input_current_a": null,
+      "reverse_current_a": null,
+      "temperatures_c": {},
+      "measurements": [
+        {
+          "point": "TP2",
+          "net": "5V_IN",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP3",
+          "net": "5V_FUSED",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP4",
+          "net": "5V_PROTECTED",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP5",
+          "net": "5V_PERIPH",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP6",
+          "net": "3V3_IO",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP7",
+          "net": "3V3_PERIPH",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP8",
+          "net": "PWR_FAULT_N",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        },
+        {
+          "point": "TP9",
+          "net": "DAC_3V3",
+          "voltage_v": null,
+          "min_transient_v": null,
+          "max_transient_v": null,
+          "acceptance_limits": null,
+          "status": "pending",
+          "evidence_files": []
+        }
+      ]
+    }
+  ]
+}

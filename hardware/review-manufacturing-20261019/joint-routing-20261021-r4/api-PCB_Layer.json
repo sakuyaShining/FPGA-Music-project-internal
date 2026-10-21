@@ -1,0 +1,110 @@
+{
+  "title": "PCB & 封装 / 图层操作类",
+  "methods": [
+    {
+      "name": "getCurrentLayer",
+      "comment": "获取当前图层的详细属性"
+    },
+    {
+      "name": "selectLayer",
+      "comment": "选中图层"
+    },
+    {
+      "name": "setLayerVisible",
+      "comment": "将层设置为可见"
+    },
+    {
+      "name": "setLayerInvisible",
+      "comment": "将层设置为不可见"
+    },
+    {
+      "name": "lockLayer",
+      "comment": "锁定层"
+    },
+    {
+      "name": "unlockLayer",
+      "comment": "取消锁定层"
+    },
+    {
+      "name": "setTheNumberOfCopperLayers",
+      "comment": "设置铜箔层数"
+    },
+    {
+      "name": "getTheNumberOfCopperLayers",
+      "comment": "获取铜箔层数"
+    },
+    {
+      "name": "setLayerColorConfiguration",
+      "comment": "设置层颜色配置"
+    },
+    {
+      "name": "setInactiveLayerTransparency",
+      "comment": "设置非激活层透明度"
+    },
+    {
+      "name": "setPcbType",
+      "comment": "设置 PCB 类型"
+    },
+    {
+      "name": "addCustomLayer",
+      "comment": "新增自定义层"
+    },
+    {
+      "name": "removeLayer",
+      "comment": "移除层"
+    },
+    {
+      "name": "modifyLayer",
+      "comment": "修改图层属性"
+    },
+    {
+      "name": "getAllLayers",
+      "comment": "获取所有图层的详细属性"
+    },
+    {
+      "name": "setInactiveLayerDisplayMode",
+      "comment": "设置非激活层展示模式"
+    },
+    {
+      "name": "getCurrentPhysicalStackingConfigurationName",
+      "comment": "获取当前物理叠层配置名称"
+    },
+    {
+      "name": "getCurrentPhysicalStackingConfiguration",
+      "comment": "获取当前物理叠层配置"
+    },
+    {
+      "name": "getPhysicalStackingConfiguration",
+      "comment": "获取指定物理叠层配置"
+    },
+    {
+      "name": "getAllPhysicalStackingConfigurations",
+      "comment": "获取所有物理叠层配置"
+    },
+    {
+      "name": "savePhysicalStackingConfiguration",
+      "comment": "保存物理叠层配置"
+    },
+    {
+      "name": "renamePhysicalStackingConfiguration",
+      "comment": "重命名物理叠层配置"
+    },
+    {
+      "name": "deletePhysicalStackingConfiguration",
+      "comment": "删除物理叠层配置"
+    },
+    {
+      "name": "getDefaultPhysicalStackingConfigurationName",
+      "comment": "获取新建 PCB 默认物理叠层配置的名称"
+    },
+    {
+      "name": "setAsDefaultPhysicalStackingConfiguration",
+      "comment": "设置为新建 PCB 默认物理叠层配置"
+    },
+    {
+      "name": "overwriteCurrentPhysicalStackingConfiguration",
+      "comment": "覆写当前物理叠层配置"
+    }
+  ],
+  "callPath": "pcb_Layer"
+}

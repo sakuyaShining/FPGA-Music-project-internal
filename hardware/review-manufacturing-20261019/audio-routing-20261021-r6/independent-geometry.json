@@ -1,0 +1,46 @@
+{
+  "source_pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+  "plan_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\audio-routing-20261021-r6\\fixed-fanout-four-via-bundle-1\\plan.json",
+  "plan_sha256": "6aba53e95b1ab53b9794f22f7877ee7d1eb84f53fdf039aced22014257c8be32",
+  "combined_geometry_pass": true,
+  "layer_crossing_negative_control_pass": true,
+  "through_via_positive_control_pass": true,
+  "results": [
+    {
+      "net": "I2S_BCK",
+      "min_copper_gap_mm": 0.1709585137154154,
+      "min_new_copper_gap_mm": 0.1709585137154154,
+      "actual_four_layer_connected": true,
+      "before_length_mm": 96.4344804803691,
+      "after_length_mm": 98.88876380214667,
+      "before_vias": 9,
+      "after_vias": 3,
+      "min_foreign_gap_mm": 0.16922062087396558
+    },
+    {
+      "net": "I2S_DIN",
+      "min_copper_gap_mm": 0.18113119116023685,
+      "min_new_copper_gap_mm": 0.18505272266992118,
+      "actual_four_layer_connected": true,
+      "before_length_mm": 105.10389648379709,
+      "after_length_mm": 110.3126524866756,
+      "before_vias": 8,
+      "after_vias": 3,
+      "min_foreign_gap_mm": 0.18113119116023685
+    },
+    {
+      "net": "I2S_LRCK",
+      "min_copper_gap_mm": 0.1728450461538516,
+      "min_new_copper_gap_mm": 0.17883055657839525,
+      "actual_four_layer_connected": true,
+      "before_length_mm": 106.57670227614915,
+      "after_length_mm": 93.01245948710668,
+      "before_vias": 10,
+      "after_vias": 4,
+      "min_foreign_gap_mm": 0.1728450461538516
+    }
+  ],
+  "source_19_unchanged": true,
+  "manufacturing_release": false,
+  "native_reference_check_required": true
+}

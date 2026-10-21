@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-20T22:02:21.454438+00:00",
+  "phase": "connector-and-acceptance-r2",
+  "workbook": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\硬件采购准备-r1.xlsx",
+  "workbook_sha256": "f696d5a89f75023bc5c3717f595a3eb834a917ddfff2b0ed6224177e62c18a32",
+  "previous_workbook_archive": {
+    "path": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-revisions\\before-r2-f3fb524a6fbe\\硬件采购准备-r1.xlsx",
+    "sha256": "f3fb524a6fbeb970e07c8fbc4eeddc3b28f2636d3012de9b0a978f3d3d37a47a"
+  },
+  "assembly_counts": {
+    "per_board_total": 230,
+    "factory_smt": 217,
+    "through_hole": 13
+  },
+  "nominal_connector_geometries_verified": 7,
+  "static_testpoints_verified": 21,
+  "static_harness_pins_verified": 165,
+  "pending_bench_stages": 22,
+  "pending_power_voltage_slots": 32,
+  "copied_packages": {
+    "hardware-contract-20261021-r1": {
+      "source_files_copied_and_verified": 31,
+      "delivery_files_indexed": 31
+    },
+    "purchase-preparation-20261021-r1": {
+      "source_files_copied_and_verified": 67,
+      "delivery_files_indexed": 71
+    },
+    "connector-qualification-20261021-r2": {
+      "source_files_copied_and_verified": 15,
+      "delivery_files_indexed": 15
+    },
+    "bringup-acceptance-20261021-r2": {
+      "source_files_copied_and_verified": 8,
+      "delivery_files_indexed": 8
+    }
+  },
+  "goal_state_observed_at_turn_start": "blocked",
+  "goal_resume_not_changed_by_agent": true,
+  "physical_tests_executed": false,
+  "pcb_sha256": "be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e",
+  "last_native_drc_unconnected": 78,
+  "new_native_drc_executed": false,
+  "native_permission": "Previous external-interaction permission refusal; no new retry or recovery evidence this turn",
+  "automation_id": "automation-2",
+  "manufacturing_release": false,
+  "purchases_made": false,
+  "open_items_sha256": "ad62f46f30841659608c8561d80d1002884f0a5b592b833400695be696354250",
+  "guide_sha256": "52e561c52e4485fdbfade9bf2c613a8978794a89f6f22e508b843ecf22f3bcc3"
+}

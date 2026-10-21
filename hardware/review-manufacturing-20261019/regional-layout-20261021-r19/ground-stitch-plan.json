@@ -1,0 +1,80 @@
+{
+  "source_pcb_sha256": "b0fa6f5320fbd31ad82ab679c6e32e51463ea007e141569bc3c351b58159d82f",
+  "reference_layers": [
+    15,
+    2
+  ],
+  "signal_reference_connections_before": [
+    {
+      "signal_id": "2e35092d9196490e",
+      "xy_mm": [
+        85.31626320000001,
+        44.3714886
+      ],
+      "nearest_reference": {
+        "type": "via",
+        "id": "78fa58214c2b9bfd"
+      },
+      "distance_mm": 4.930255598932396
+    },
+    {
+      "signal_id": "e44e8df9631ae967",
+      "xy_mm": [
+        129.8984194,
+        59.2067904
+      ],
+      "nearest_reference": {
+        "type": "plated_ground_pad",
+        "id": "1f5f9d7335f592f3e115",
+        "ref": "J11",
+        "pin": "2"
+      },
+      "distance_mm": 3.250004878714586
+    }
+  ],
+  "engineering_distance_goal_mm": 1.5,
+  "distance_goal_is_not_a_standard_or_si_signoff": true,
+  "vias": [
+    {
+      "net": "GND",
+      "x": 3326.1721259842525,
+      "y": 1733.34937007874,
+      "diameter": 24,
+      "hole": 12,
+      "xy_mm": [
+        84.484772,
+        44.027074
+      ],
+      "covers": [
+        "2e35092d9196490e"
+      ],
+      "predicted_reference_contact_mm2": {
+        "15": 0.2041783608192902,
+        "2": 0.2041783608192902
+      }
+    },
+    {
+      "net": "GND",
+      "x": 5114.110984251968,
+      "y": 2366.4090551181102,
+      "diameter": 24,
+      "hole": 12,
+      "xy_mm": [
+        129.898419,
+        60.10679
+      ],
+      "covers": [
+        "e44e8df9631ae967"
+      ],
+      "predicted_reference_contact_mm2": {
+        "15": 0.204180986465462,
+        "2": 0.2041594247668262
+      }
+    }
+  ],
+  "uncovered_signal_ids": [],
+  "safe_candidates": 207,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "rationale": "Join the same GND net across actual top/inner-route reference planes; share a stitch when geometry permits. Avoid sensing/audio projection guards and preserve all source copper."
+}

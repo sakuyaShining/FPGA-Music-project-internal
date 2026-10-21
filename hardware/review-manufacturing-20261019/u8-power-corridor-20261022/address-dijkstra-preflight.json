@@ -1,0 +1,76 @@
+{
+  "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "fanouts": 24,
+  "missing": [
+    [
+      "ADDR2",
+      "U4",
+      "14"
+    ],
+    [
+      "MUX_DISABLE",
+      "U4",
+      "15"
+    ],
+    [
+      "MUX_DISABLE",
+      "U6",
+      "15"
+    ],
+    [
+      "ADDR1",
+      "U1",
+      "11"
+    ],
+    [
+      "ADDR3",
+      "U1",
+      "13"
+    ],
+    [
+      "ADDR1",
+      "U2",
+      "11"
+    ],
+    [
+      "ADDR0",
+      "U2",
+      "10"
+    ],
+    [
+      "ADDR0",
+      "U3",
+      "10"
+    ],
+    [
+      "ADDR3",
+      "U3",
+      "13"
+    ],
+    [
+      "ADDR2",
+      "U3",
+      "14"
+    ],
+    [
+      "MUX_DISABLE",
+      "U3",
+      "15"
+    ]
+  ],
+  "minimum_clearances_mm": {
+    "track_copper": 0.18072462715103188,
+    "track_mount": 16.662994275711117,
+    "track_edge": 15.723800000000002,
+    "via_copper": 0.1682174593052082,
+    "hole_pad": 0.25042331565730036,
+    "via_quiet": 0.18308763330367883,
+    "via_mount": 16.434394275711117,
+    "via_edge": 15.495200000000002,
+    "hole_hole": 0.4730174593052051
+  },
+  "failures": [],
+  "geometric_pass": true,
+  "native_imported": false,
+  "manufacturing_release": false
+}

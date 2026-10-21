@@ -1,0 +1,58 @@
+{
+  "pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "native_drc": {
+    "Connection Error": 62
+  },
+  "other_229_components_and_pads_unchanged": true,
+  "C35_only_position_rotation_and_attribute_transform_changed": true,
+  "all_net_memberships_footprints_values_rules_layer_stack_unchanged": true,
+  "unselected_copper_unchanged": true,
+  "original_r5_19_files_unchanged": true,
+  "other_17_support_files_unchanged": true,
+  "new_local_copper_matches_plan": true,
+  "ground_via_id": "dfae055e3f2f190b",
+  "ground_via_inner_contacts_mm2": {
+    "1": 0.1922844141078981,
+    "15": 0.21887565457087288,
+    "16": 0.17006151124797675,
+    "2": 0.21887565457087288
+  },
+  "audio_reference_coverage": [
+    {
+      "net": "I2S_BCK",
+      "before_fraction": 0.9763017288714929,
+      "after_fraction": 0.9763017288714927,
+      "not_si_signoff": true
+    },
+    {
+      "net": "I2S_DIN",
+      "before_fraction": 0.9281717212879125,
+      "after_fraction": 0.9281717212879125,
+      "not_si_signoff": true
+    },
+    {
+      "net": "I2S_LRCK",
+      "before_fraction": 0.9172080599927678,
+      "after_fraction": 0.9172080599927678,
+      "not_si_signoff": true
+    }
+  ],
+  "audio_copper_unchanged": true,
+  "api_lines": 3262,
+  "native_lines": 3290,
+  "native_microtracks": 28,
+  "vias": 520,
+  "components": 230,
+  "pads": 1079,
+  "C35_final_rotation": 270,
+  "C35_final_pad_midpoint_mm": [
+    77.7,
+    45.3
+  ],
+  "power_stub_before_mm": 10.109818772903154,
+  "power_stub_after_mm": 2.376927430528742,
+  "ground_stub_mm": 0.9,
+  "legacy_CPL_C35_position_is_stale": true,
+  "power_transient_measured": false,
+  "manufacturing_release": false
+}

@@ -1,0 +1,55 @@
+SOURCE be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e native microtracks 24 JOINT NETS ['INV2', 'PRESET3', 'I2S_LRCK', 'I2S_DIN', 'I2S_BCK', 'SCAN_LATCH', 'INPUT_LOAD_N', 'VIS_DC', 'VIS_CS_N', 'DISP_VIS_DC', 'DISP_RESET_N', 'DISP_VIS_CS_N', 'DISP_SCK', 'DISP_MOSI', 'HARM_CS_N', 'BUS_SCK', 'BUS_MOSI', 'I2C_SCL', 'ADDR0', 'ADDR1', 'ADDR2', 'ADDR3', 'MUX_DISABLE']
+FANOUTS {'I2S_BCK': (1, 1), 'I2S_DIN': (1, 1), 'I2S_LRCK': (1, 1), 'SCAN_LATCH': (1, 1), 'INPUT_LOAD_N': (2, 2), 'VIS_DC': (1, 1), 'VIS_CS_N': (1, 1), 'INV2': (0, 0), 'PRESET3': (0, 0), 'DISP_VIS_DC': (1, 1), 'DISP_RESET_N': (0, 0), 'DISP_VIS_CS_N': (0, 0), 'DISP_SCK': (0, 0), 'DISP_MOSI': (0, 0), 'HARM_CS_N': (0, 0), 'BUS_SCK': (1, 1), 'BUS_MOSI': (2, 1), 'I2C_SCL': (2, 2), 'ADDR0': (7, 5), 'ADDR1': (3, 3), 'ADDR2': (5, 4), 'ADDR3': (5, 4), 'MUX_DISABLE': (6, 4)}
+START INV2
+REJECTED INV2 SealedEscape('Locally sealed start: INV2') 0.5 s
+START PRESET3
+REJECTED PRESET3 SealedEscape('Locally sealed start: PRESET3') 0.8 s
+START I2S_LRCK
+METRICS I2S_LRCK {'before_length_mm': 106.57670227614915, 'after_length_mm': 96.17327895950332, 'before_vias': 10, 'after_vias': 5, 'mst_lower_bound_mm': 61.110502307609934, 'min_foreign_gap_mm': 0.1728450461538516}
+REJECTED I2S_LRCK AssertionError('Audio quality budget: <=3 vias, no length increase') 12.8 s
+START I2S_DIN
+METRICS I2S_DIN {'before_length_mm': 105.10389648379709, 'after_length_mm': 107.78537875529577, 'before_vias': 8, 'after_vias': 7, 'mst_lower_bound_mm': 69.09942760747299, 'min_foreign_gap_mm': 0.18107763482456662}
+REJECTED I2S_DIN AssertionError('Audio quality budget: <=3 vias, no length increase') 14.4 s
+START I2S_BCK
+METRICS I2S_BCK {'before_length_mm': 96.4344804803691, 'after_length_mm': 162.98726004164254, 'before_vias': 9, 'after_vias': 10, 'mst_lower_bound_mm': 72.19808527092391, 'min_foreign_gap_mm': 0.1701515267981642}
+REJECTED I2S_BCK AssertionError('Connected-net quality budget exceeded') 17.1 s
+START SCAN_LATCH
+METRICS SCAN_LATCH {'before_length_mm': 47.86858346746655, 'after_length_mm': 59.335439774427414, 'before_vias': 5, 'after_vias': 3, 'mst_lower_bound_mm': 38.2847062555376, 'min_foreign_gap_mm': 0.1780130654844388}
+REJECTED SCAN_LATCH AssertionError('Connected-net quality budget exceeded') 7.1 s
+START INPUT_LOAD_N
+METRICS INPUT_LOAD_N {'before_length_mm': 31.12931967968739, 'after_length_mm': 28.708611093779037, 'before_vias': 8, 'after_vias': 9, 'mst_lower_bound_mm': 26.21047435985968, 'min_foreign_gap_mm': 0.19850813976520687}
+REJECTED INPUT_LOAD_N AssertionError('Connected-net quality budget exceeded') 9.5 s
+START VIS_DC
+METRICS VIS_DC {'before_length_mm': 127.86994418825914, 'after_length_mm': 131.68611050311665, 'before_vias': 15, 'after_vias': 19, 'mst_lower_bound_mm': 64.67013148003888, 'min_foreign_gap_mm': 0.17262176395927759}
+REJECTED VIS_DC AssertionError('Connected-net quality budget exceeded') 18.4 s
+START VIS_CS_N
+REJECTED VIS_CS_N SealedEscape('Locally sealed start: VIS_CS_N') 0.7 s
+START DISP_VIS_DC
+REJECTED DISP_VIS_DC AssertionError(('track_gap', -0.0762)) 10.3 s
+START DISP_RESET_N
+REJECTED DISP_RESET_N SealedEscape('Locally sealed start: DISP_RESET_N') 0.6 s
+START DISP_VIS_CS_N
+REJECTED DISP_VIS_CS_N SealedEscape('Locally sealed start: DISP_VIS_CS_N') 0.7 s
+START DISP_SCK
+REJECTED DISP_SCK SealedEscape('Locally sealed start: DISP_SCK') 0.7 s
+START DISP_MOSI
+REJECTED DISP_MOSI SealedEscape('Locally sealed start: DISP_MOSI') 0.7 s
+START HARM_CS_N
+REJECTED HARM_CS_N SealedEscape('Locally sealed goal: HARM_CS_N') 4.1 s
+START BUS_SCK
+REJECTED BUS_SCK SealedEscape('Locally sealed start: BUS_SCK') 0.8 s
+START BUS_MOSI
+REJECTED BUS_MOSI SealedEscape('Locally sealed start: BUS_MOSI') 0.8 s
+START I2C_SCL
+REJECTED I2C_SCL SealedEscape('Locally sealed escape: I2C_SCL') 0.6 s
+START ADDR0
+REJECTED ADDR0 SealedEscape('Locally sealed start: ADDR0') 0.6 s
+START ADDR1
+REJECTED ADDR1 SealedEscape('Locally sealed start: ADDR1') 0.6 s
+START ADDR2
+REJECTED ADDR2 SealedEscape('Locally sealed escape: ADDR2') 5.5 s
+START ADDR3
+REJECTED ADDR3 SealedEscape('Locally sealed escape: ADDR3') 5.5 s
+START MUX_DISABLE
+REJECTED MUX_DISABLE SealedEscape('Locally sealed escape: MUX_DISABLE') 5.5 s
+COMPLETE 0 offline candidate nets 23 rejected; final geometry False NO NATIVE IMPORT

@@ -1,0 +1,43 @@
+{
+  "utc": "2026-10-21T20:46:25.785288+00:00",
+  "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "native_mutated": false,
+  "methods": [
+    {
+      "method": "Two legal R64 pulldown placement screens",
+      "result": "16 placements pass bounding-box/copper/hole screens; first two bounded connection trials still sealed at U8 exit; no layout applied"
+    },
+    {
+      "method": "U8 exit shifted across VIS_CS_N only",
+      "result": "U8-to-host still blocked by existing BUS_SCK trunk topology; no copper applied"
+    },
+    {
+      "method": "U8 exit extended past BUS_SCK with narrow top crossover",
+      "result": "Host-to-U8 grid path exists; old R64 region remains disconnected. Continuous clearance/reference audit not completed; not accepted"
+    },
+    {
+      "method": "Joint R64 relocation and U8 exit",
+      "result": "R64-to-U8 grid path exists; TP14 and old U15 inward via remain isolated. No native changes"
+    },
+    {
+      "method": "U15 local clock/backlight escape screening",
+      "result": "No candidate satisfied all pad/drill/four-layer copper constraints; no relaxed rules, no layout changes"
+    },
+    {
+      "method": "Neighbouring TP_RESET_N inner16 unlocked",
+      "result": "MOSI still incomplete; removing R64/TP14 from a diagnostic core-only trial still leaves U8-to-U15 blocked. Diagnostic is not a netlist-preserving candidate and must never be imported"
+    },
+    {
+      "method": "Neighbouring BUS_SCK copper unlocked",
+      "result": "MOSI still incomplete at R64; no native changes"
+    },
+    {
+      "method": "Mature negotiated routing with four selected signal nets unlocked",
+      "result": "Scope guard: global fanout processed unselected 3V3_IO despite autorouter ignore_net_classes, with trace-normalization oscillation warning and no useful completed output. Verified owned Java child14924 was stopped; launcher22472 and Python parent then exited. No SES and no native import."
+    }
+  ],
+  "unvalidated_candidate_files_must_not_be_replayed": true,
+  "next_entry": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address-next-checkpoint.json",
+  "next_action": "Use address-next-checkpoint.json.27/35 address/disable top fanouts now have independent four-layer copper,drill,pad,edge,mount and quiet-guard checks, but no complete net or actual ground review; do not import them yet.8 exits remain. ADDR0 needs only U2.10; full-net trial proves its source escape sealed. Source-bound obstacle screen identifies L1_M07 bottom2 line624062d3306e7719 plus L1_M06 as blockers beneath the otherwise clear inward exit. A two-sensor trace detour must retain8mil and recover both nets with actual layer16 reference/quiet clearance; first detour stopped at an existing tight M06 endpoint, no native change. Inspect the exact retained endpoints/adjacent analog bundle or jointly move affected layout; do not repeat fixed MOSI/R64-only searches or all-board fanout. R64 relocation alone did not solve U15/TP14 cages.",
+  "manufacturing_release": false
+}

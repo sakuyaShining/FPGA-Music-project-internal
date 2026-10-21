@@ -1,0 +1,93 @@
+{
+  "engine": "ngspice-41 conda-forge win-64",
+  "engine_sha256": "41a6bda700d9160089f2a39a14f94408172f7748215b68b81d39ea1bc26e300c",
+  "vendor_model_sha256": "7e40f58d8c69445d15f9f153c9624a945191cb83b113f7651a20a7b44df289d8",
+  "vendor_model_header": "TPS2553_TRANS Final 1.00, 2011-10-19, PSpice 16.2, SLVM425A package",
+  "adapter_sha256": "6c1f4d13f4fe9bdeca09d898cbaf465825dd42046decdf1951e8abe33fb2582c",
+  "adapter_change": "PSpice boolean XOR in XNOR2 rewritten as explicitly parenthesized inequality; no device parameters changed",
+  "original_vendor_logic": {
+    "expected": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    "actual": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    "passed": false
+  },
+  "adapter_logic": {
+    "expected": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    "actual": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    "passed": true
+  },
+  "disabled": {
+    "vout_tail_v": -4.381249969999999e-12,
+    "input_tail_a": 1.0005e-07,
+    "fault_tail_v": 3.2996700300000006
+  },
+  "enabled": {
+    "vout_tail_v": 4.921601160000001,
+    "input_tail_a": 0.787576191,
+    "fault_tail_v": 3.2996700300000006
+  },
+  "uvlo": {
+    "vout_tail_v": -4.381249969999999e-12,
+    "input_tail_a": 0.00012000002,
+    "fault_tail_v": 3.2996700300000006
+  },
+  "current_limit": {
+    "vout_tail_v": 1.0878069099999998,
+    "input_tail_a": 1.08792692,
+    "fault_tail_v": 0.00197881271
+  },
+  "basic_compatibility_calibration_passed": true,
+  "not_pspice_equivalence_or_physical_validation": true,
+  "manufacturing_release": false
+}

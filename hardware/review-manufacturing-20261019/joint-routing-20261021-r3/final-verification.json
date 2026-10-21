@@ -1,0 +1,58 @@
+{
+  "native_geometry_checks": [
+    {
+      "net": "5V_PERIPH",
+      "layer": 1,
+      "expected_and_native_copper_equivalent": true
+    },
+    {
+      "net": "5V_PERIPH",
+      "layer": 2,
+      "expected_and_native_copper_equivalent": true
+    },
+    {
+      "net": "BUS_RETURN",
+      "layer": 1,
+      "expected_and_native_copper_equivalent": true
+    },
+    {
+      "net": "BUS_RETURN",
+      "layer": 2,
+      "expected_and_native_copper_equivalent": true
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "expected_and_native_copper_equivalent": true
+    },
+    {
+      "net": "GND",
+      "layer": 2,
+      "expected_and_native_copper_equivalent": true
+    }
+  ],
+  "native_components_pads_attributes_nets_rules_pour_definitions_unchanged": true,
+  "other_17_project_files_unchanged": true,
+  "descriptor_changes_only_pcb_save_metadata": [
+    {
+      "path": "/profile/pcbs/c3fd8656cf425e9f/version",
+      "before": "1792513722541",
+      "after": "1792535815824"
+    },
+    {
+      "path": "/profile/pcbs/c3fd8656cf425e9f/updateTime",
+      "before": 1792513722541,
+      "after": 1792535815824
+    }
+  ],
+  "original_529_vias_preserved": true,
+  "new_vias": 4,
+  "both_power_and_bus_return_complete": true,
+  "full_native_drc": {
+    "Connection Error": 74
+  },
+  "native_drc_source_stable": true,
+  "archive_crc_and_19_hashes_verified": true,
+  "checkpoint_sha256": "24424b7fcbbc9d73c202c299ed5e6b153259daeadcf853d4419f56e6f19ca287",
+  "manufacturing_release": false
+}

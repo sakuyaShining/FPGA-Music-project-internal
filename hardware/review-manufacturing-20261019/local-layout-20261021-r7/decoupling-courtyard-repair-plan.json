@@ -1,0 +1,77 @@
+{
+  "source_pcb_sha256": "2a110b5b6e8e669f1c687e3517b73e858bb3b139fc00e13fc5a8b9619db814bd",
+  "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\local-layout-20261021-r7\\first-position-native-verified-capture.json",
+  "source_capture_sha256": "dffd561f091bcf0d2595a3dc3270717d1c5399b0ca3ca9eca836eac381f28797",
+  "component": "C35",
+  "component_x_mm": 77.0,
+  "component_y_mm": 46.8,
+  "component_rotation": 180,
+  "pads": [
+    {
+      "id": "9f1e9b877a49c6a1e14",
+      "ref": "C35",
+      "n": "2",
+      "net": "GND",
+      "layer": 1,
+      "x": 3003.9370078740158,
+      "y": 1842.51968503937,
+      "rotation": 0,
+      "shape": [
+        "RECT",
+        31.5,
+        35.4,
+        0
+      ]
+    },
+    {
+      "id": "9f1e9b877a49c6a1e15",
+      "ref": "C35",
+      "n": "1",
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x": 3059.0551181102364,
+      "y": 1842.51968503937,
+      "rotation": 0,
+      "shape": [
+        "RECT",
+        31.5,
+        35.4,
+        0
+      ]
+    }
+  ],
+  "remove_line_ids": [
+    "5430892a1909c52e",
+    "305b3cc227593b9a"
+  ],
+  "remove_via_ids": [],
+  "lines": [
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 3059.0551181102364,
+      "y1": 1842.51968503937,
+      "x2": 3152.5,
+      "y2": 1806,
+      "width": 13.200000000000001
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "x1": 3003.9370078740158,
+      "y1": 1842.51968503937,
+      "x2": 3025.5906,
+      "y2": 1807.0866,
+      "width": 10.0
+    }
+  ],
+  "vias": [],
+  "retained_ground_via_id": "dfae055e3f2f190b",
+  "min_gap_mm": 0.3009899999999903,
+  "vcc_centerline_mm": 2.5483218026771985,
+  "ground_stub_mm": 1.0547521092662755,
+  "device_x_bbox_gap_estimate_mm": 0.6225,
+  "requires_native_device_spacing_check": true,
+  "native_imported": false,
+  "manufacturing_release": false
+}

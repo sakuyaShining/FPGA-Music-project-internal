@@ -1,0 +1,29 @@
+{
+  "nets": [],
+  "routes": [],
+  "lines": [],
+  "vias": [],
+  "source_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\quality-r1-source-78.json",
+  "source_sha256": "a35fe1ff580a48707ffad1dda1e4f8213dfe941bf53a4e45c4bc8d5cbab8cfc2",
+  "native_pcb_sha256": "be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e",
+  "native_short_line_obstacles": 24,
+  "failed_planning": [
+    {
+      "net": "INV2",
+      "error": "Locally sealed start: INV2"
+    },
+    {
+      "net": "DISP_VIS_DC",
+      "error": "Locally sealed start: DISP_VIS_DC"
+    },
+    {
+      "net": "PRESET3",
+      "error": "Locally sealed start: PRESET3"
+    }
+  ],
+  "reserved_unapplied_fanouts_file": "quality-r1-pending-plan-fanouts.json",
+  "bare_testpoint_vias_permitted": false,
+  "native_imported": false,
+  "requires_ground_rebuild_and_native_drc": true,
+  "manufacturing_release": false
+}

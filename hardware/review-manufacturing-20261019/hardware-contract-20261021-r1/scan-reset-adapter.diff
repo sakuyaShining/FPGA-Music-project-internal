@@ -1,0 +1,25 @@
+--- frozen86/rc_mux_scan.v
++++ candidate/rc_mux_scan_hw.v
+@@ -1,11 +1,12 @@
+ // Inverting Schmitt inputs: discharged=1, charged=0. Counter starts AFTER the
+ // charge word has physically latched, including the known synchronizer delay.
+ // Abstract logical pins, not Nano20K pin assignments. RC constants are fixtures.
+-module rc_mux_scan #(
++module rc_mux_scan_hw #(
+     parameter integer LANES=6,CW=12,DISCHARGE_CYCLES=512,
+     parameter integer TIMEOUT_CYCLES=2047,SPI_HALF_PERIOD=8
+ )(
+     input wire clk,rst_n,
++    input wire [1:0] peripheral_reset_n, // Q7 touch reset, Q6 shared display reset; active low
+     input wire [LANES-1:0] sense_n,
+     output wire bus_request,
+     input wire bus_grant,
+@@ -33,7 +34,7 @@
+     wire word_valid=send_state&&!waiting;
+     wire word_ready,word_done,word_latched;
+     wire [3:0] word_address=(state==DISABLE)?previous_address:address;
+-    wire [7:0] word_data={2'b00,(state==CHARGE),(state==DISABLE||state==ADDRESS),word_address};
++    wire [7:0] word_data={peripheral_reset_n,(state==CHARGE),(state==DISABLE||state==ADDRESS),word_address};
+     scan_shift595 #(.HALF_PERIOD(SPI_HALF_PERIOD)) writer(
+         .clk(clk),.rst_n(rst_n),.word_valid(word_valid),.word_ready(word_ready),.word_data(word_data),
+         .bus_request(bus_request),.bus_grant(bus_grant),.sck(bus_sck),.mosi(bus_mosi),.latch(scan_latch),

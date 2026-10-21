@@ -1,0 +1,38 @@
+{
+  "source_pcb_sha256": "0e19011fd41e7f66fc4e04bd24c0c38f03111bc86f39e89c855d4cfee2040948",
+  "input_dsn_sha256": "827bd53b0e41a36474b4c5d5c061e1eaf00bf5baa73ab84c7a5059be0b3890f6",
+  "result_ses_sha256": "a19bab24951af1a8f4494226d1f8c7088ba59debf7d408222cec67c2ebb6634a",
+  "net": "DISP_SCK",
+  "lines": 13,
+  "new_vias": 2,
+  "summed_length_mm": 86.18480775957909,
+  "continuity": {
+    "complete": true,
+    "pad_islands": 1
+  },
+  "minimum_clearances_mm": {
+    "track-copper": 0.1682495999999994,
+    "track-mount": 11.371105504528137,
+    "track-quiet": 0.3673194385563643,
+    "via-copper": 0.19860609081319658,
+    "via-pad-hole": 0.5671367063273319,
+    "via-quiet": 5.342832715015109,
+    "via-mount": 27.262836829946604,
+    "drill-drill": 1.226990994739574
+  },
+  "geometric_failures": [],
+  "geometric_pass": true,
+  "quality": {
+    "maximum_new_via_goal": 2,
+    "maximum_summed_length_goal_mm": 100,
+    "within_goal": true,
+    "note": "Engineering screening goals, not manufacturer design rules or SI signoff."
+  },
+  "native_imported": false,
+  "manufacturing_release": false,
+  "limitations": [
+    "No actual ground-pour rebuild, current-edge SI model, manufacturing approval or physical measurement.",
+    "Only selected DISP_SCK copper would be eligible for import; ignore all placement/unselected output.",
+    "Router completion/logged violation counts do not establish actual native-board validity."
+  ]
+}

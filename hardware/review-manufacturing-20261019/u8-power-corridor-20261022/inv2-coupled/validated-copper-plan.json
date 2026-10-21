@@ -1,0 +1,262 @@
+{
+  "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "remove_lines": [
+    {
+      "id": "bb69c07a4390ff26",
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2561.7735,
+      "y1": 1768.2955,
+      "x2": 1596.9759,
+      "y2": 1768.2955,
+      "width": 15.74
+    },
+    {
+      "id": "55fd98b15117e42a",
+      "net": "VIS_DC",
+      "layer": 16,
+      "x1": 2193.8976,
+      "y1": 1479.3307,
+      "x2": 2193.8976,
+      "y2": 1736.2205,
+      "width": 6
+    }
+  ],
+  "remove_vias": [
+    {
+      "id": "2642d1dca78c5c70",
+      "net": "VIS_DC",
+      "x": 2193.8976,
+      "y": 1736.2205,
+      "diameter": 24,
+      "hole": 12
+    }
+  ],
+  "lines": [
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2561.7735,
+      "y1": 1768.2955,
+      "x2": 2181.1023622047246,
+      "y2": 1768.2955,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2181.1023622047246,
+      "y1": 1768.2955,
+      "x2": 2181.1023622047246,
+      "y2": 1744.8818897637796,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2181.1023622047246,
+      "y1": 1744.8818897637796,
+      "x2": 2118.1102362204724,
+      "y2": 1744.8818897637796,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2118.1102362204724,
+      "y1": 1744.8818897637796,
+      "x2": 2118.1102362204724,
+      "y2": 1768.2955,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 2118.1102362204724,
+      "y1": 1768.2955,
+      "x2": 1596.9759000000001,
+      "y2": 1768.2955,
+      "width": 15.74
+    },
+    {
+      "net": "VIS_DC",
+      "layer": 16,
+      "x1": 2193.8976,
+      "y1": 1479.3307,
+      "x2": 2193.8976,
+      "y2": 1704.724409448819,
+      "width": 6
+    },
+    {
+      "net": "VIS_DC",
+      "layer": 16,
+      "x1": 2193.8976,
+      "y1": 1704.724409448819,
+      "x2": 2192.913385826772,
+      "y2": 1710.6299212598426,
+      "width": 6
+    },
+    {
+      "net": "VIS_DC",
+      "layer": 2,
+      "x1": 2193.8976,
+      "y1": 1736.2205,
+      "x2": 2192.913385826772,
+      "y2": 1710.6299212598426,
+      "width": 6
+    },
+    {
+      "net": "INV2",
+      "layer": 1,
+      "x1": 2186.7,
+      "y1": 1826.0000000000002,
+      "x2": 2153.5433070866143,
+      "y2": 1771.2598425196852,
+      "width": 8
+    },
+    {
+      "net": "INV2",
+      "layer": 16,
+      "x1": 2153.5433070866143,
+      "y1": 1771.2598425196852,
+      "x2": 2011.8110236220473,
+      "y2": 1914.3700787401576,
+      "width": 8.0
+    },
+    {
+      "net": "INV2",
+      "layer": 16,
+      "x1": 2011.8110236220473,
+      "y1": 1914.3700787401576,
+      "x2": 2000.9842519685042,
+      "y2": 1920.2755905511815,
+      "width": 8.0
+    },
+    {
+      "net": "INV2",
+      "layer": 16,
+      "x1": 2000.9842519685042,
+      "y1": 1920.2755905511815,
+      "x2": 1848.4251968503938,
+      "y2": 1945.8661417322837,
+      "width": 8.0
+    },
+    {
+      "net": "INV2",
+      "layer": 1,
+      "x1": 1848.4251968503938,
+      "y1": 1945.8661417322837,
+      "x2": 1823.8188976377955,
+      "y2": 1961.6141732283465,
+      "width": 8.0
+    },
+    {
+      "net": "INV2",
+      "layer": 1,
+      "x1": 1823.8188976377955,
+      "y1": 1961.6141732283465,
+      "x2": 1742.1259842519685,
+      "y2": 1961.6141732283465,
+      "width": 8.0
+    },
+    {
+      "net": "INV2",
+      "layer": 1,
+      "x1": 1742.1259842519685,
+      "y1": 1961.6141732283465,
+      "x2": 1702.7,
+      "y2": 1929.2,
+      "width": 8.0
+    }
+  ],
+  "vias": [
+    {
+      "net": "INV2",
+      "x": 2153.5433070866143,
+      "y": 1771.2598425196852,
+      "diameter": 24,
+      "hole": 12,
+      "id": "new-inv2-u7"
+    },
+    {
+      "net": "VIS_DC",
+      "x": 2192.913385826772,
+      "y": 1710.6299212598426,
+      "diameter": 24,
+      "hole": 12,
+      "id": "moved-vis-dc"
+    },
+    {
+      "net": "INV2",
+      "x": 1848.4251968503938,
+      "y": 1945.8661417322837,
+      "diameter": 24.000000000000004,
+      "hole": 12.000000000000002
+    },
+    {
+      "net": "GND",
+      "x": 1841.09320603834,
+      "y": 2020.309093727448,
+      "diameter": 24,
+      "hole": 12,
+      "xy_mm": [
+        46.763767433373836,
+        51.315850980677176
+      ],
+      "predicted_contact_mm2": {
+        "15": 0.21887565457087374,
+        "2": 0.21887358248941277
+      },
+      "distance_to_signal_mm": 1.9
+    }
+  ],
+  "preserved_line": {
+    "net": "VIS_DC",
+    "layer": 16,
+    "x1": 2193.8976,
+    "y1": 1479.3307,
+    "x2": 2193.8976,
+    "y2": 1704.724409448819,
+    "width": 6
+  },
+  "minimum_clearances_mm": {
+    "track_copper": 0.16530200000000153,
+    "track_mount": 43.57048968006589,
+    "track_edge": 40.36328986,
+    "via_copper": 0.16530200000000428,
+    "hole_pad": 0.34620987232458345,
+    "via_quiet": -0.10380506264506051,
+    "via_mount": 55.025503631915846,
+    "via_edge": 43.145199999999996,
+    "drill_drill": 0.5628304156900803,
+    "track_quiet": 0.810100726776348
+  },
+  "failures": [],
+  "geometric_pass": true,
+  "power_continuity": {
+    "complete": true,
+    "pad_islands": 1
+  },
+  "vis_dc_continuity": {
+    "complete": false,
+    "pad_islands": 2
+  },
+  "power_width_mil": 15.74,
+  "power_extra_length_mm": 1.1894113999999973,
+  "components_unchanged": true,
+  "analog_copper_unchanged": true,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "ground_copper_unchanged": true,
+  "reference_ground_review": "Pending full route;1.5mm is a project preference, not a clearance or SI signoff. Unsafe extra stitch omitted; actual source GND retained.",
+  "inv2_continuity": {
+    "complete": true,
+    "pad_islands": 1
+  },
+  "trunk_summary": {
+    "segments": 6,
+    "vias": 1
+  },
+  "full_continuous_preflight": "pending",
+  "reference_projection_adjustment": "Lower the receiver-side top corridor by0.1mm to avoid the existing SENSE_2 via antipad in reference15, with no new vias or component moves."
+}

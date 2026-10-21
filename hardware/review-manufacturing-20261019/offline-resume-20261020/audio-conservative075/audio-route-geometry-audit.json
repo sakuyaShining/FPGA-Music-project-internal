@@ -1,0 +1,34 @@
+{
+  "proposal_sha256": "d22e7010f26e09ea0c4137f5bbe1f484dfe5a1f5f5ec981d30a0d360e9885666",
+  "source_sha256": "f1621909934b43bfb41d0e0ae82a8f2d979626250fe3cd72bec43ceec343abd6",
+  "continuity": {
+    "DAC_XSMT": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "I2S_BCK": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "I2S_DIN": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "I2S_LRCK": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    }
+  },
+  "minimum_copper_gaps_mm": {
+    "DAC_XSMT": 0.19841195861687272,
+    "I2S_BCK": 0.16549567406955545,
+    "I2S_DIN": 0.1654321918211758,
+    "I2S_LRCK": 0.17421999511172404
+  },
+  "violations": [],
+  "offline_geometry_pass": true,
+  "native_imported": false,
+  "native_drc_pass": false,
+  "requires_native_recapture_and_drc": true,
+  "manufacturing_release": false
+}

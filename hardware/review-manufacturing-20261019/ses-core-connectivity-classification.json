@@ -1,0 +1,271 @@
+{
+  "label": "core",
+  "complete_nets": [
+    "DAC_XSMT",
+    "DISP_HARM_CS_N",
+    "DISP_RESET_N",
+    "INV1",
+    "INV5",
+    "KEY_QH",
+    "PRESET0",
+    "PWR_FAULT_N",
+    "PWR_GATE",
+    "PWR_ILIM",
+    "RA_MISO",
+    "SENSE_0",
+    "SENSE_2",
+    "SENSE_3",
+    "SENSE_4",
+    "SENSE_5",
+    "TP_INT_MOD"
+  ],
+  "complete_currently_pending_nets": [
+    "DAC_XSMT",
+    "DISP_RESET_N",
+    "INV1",
+    "RA_MISO",
+    "SENSE_3",
+    "TP_INT_MOD"
+  ],
+  "classification": {
+    "ADDR0": {
+      "complete": false,
+      "pad_islands": 6
+    },
+    "ADDR1": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "ADDR2": {
+      "complete": false,
+      "pad_islands": 7
+    },
+    "ADDR3": {
+      "complete": false,
+      "pad_islands": 5
+    },
+    "BUS_MOSI": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "BUS_RETURN": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "BUS_SCK": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "DAC_XSMT": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "DISP_HARM_CS_N": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "DISP_MOSI": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "DISP_RESET_N": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "DISP_SCK": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "DISP_VIS_CS_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "DISP_VIS_DC": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "EDIT": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "ENC_A": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "ENC_B": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "ENC_PUSH": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "HARM_CS_N": {
+      "complete": false,
+      "pad_islands": 4
+    },
+    "I2C_MOD_SCL": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "I2C_MOD_SDA": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "I2C_SCL": {
+      "complete": false,
+      "pad_islands": 5
+    },
+    "I2C_SDA": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "I2S_BCK": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "I2S_DIN": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "I2S_LRCK": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INPUT_LOAD_N": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "INV0": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV1": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "INV2": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV3": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV4": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV5": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "KEY_QH": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "LCD_RESET_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "MUX_DISABLE": {
+      "complete": false,
+      "pad_islands": 7
+    },
+    "PRESET0": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "PRESET1": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "PRESET2": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "PRESET3": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "PWR_FAULT_N": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "PWR_GATE": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "PWR_ILIM": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "RA_MISO": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "RC_DRIVE": {
+      "complete": false,
+      "pad_islands": 4
+    },
+    "SCAN_LATCH": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "SENSE_0": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "SENSE_1": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "SENSE_2": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "SENSE_3": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "SENSE_4": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "SENSE_5": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "TP_INT": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "TP_INT_MOD": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "TP_RESET_MOD_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "TP_RESET_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "VIS_BL_EN": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "VIS_CS_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "VIS_DC": {
+      "complete": false,
+      "pad_islands": 2
+    }
+  },
+  "native_imported": false,
+  "topology_tolerance_mm": 0.003,
+  "native_drc_required": true
+}

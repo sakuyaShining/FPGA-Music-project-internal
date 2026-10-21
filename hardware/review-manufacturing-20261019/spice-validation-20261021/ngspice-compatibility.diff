@@ -1,0 +1,12 @@
+--- TI-original
++++ ngspice41-local-syntax-adapter
+@@ -358,8 +358,7 @@
+ .ENDS INV_DELAY_BASIC_GEN
+ *$
+ .SUBCKT XNOR2_BASIC_GEN A B Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5 
+-E_ABMGATE  YINT 0 VALUE {{IF(V(A) > {VTHRESH}  ^  
+-+ V(B) > {VTHRESH},{VSS},{VDD})}}
++E_ABMGATE  YINT 0 VALUE {{IF((V(A) > {VTHRESH}) != (V(B) > {VTHRESH}),{VSS},{VDD})}}
+ RINT YINT Y 1
+ CINT Y 0 1n
+ .ENDS XNOR2_BASIC_GEN

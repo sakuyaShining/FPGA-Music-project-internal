@@ -1,0 +1,1 @@
+{"name":"encoder-review","code":"const r={};for(const q of __CLI__.args.queries)r[q]=await eda.lib_Device.search(q,'0819f05c4eef4c71ace90d822a990e87',undefined,undefined,5,1);return r;","args":{"queries":["EC11E18244A5","C470754"]}}

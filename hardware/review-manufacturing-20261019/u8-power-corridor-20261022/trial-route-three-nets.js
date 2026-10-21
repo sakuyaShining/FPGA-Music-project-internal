@@ -1,0 +1,1 @@
+const result=await eda.pcb_Document.autoRouting({RoutingNets:['BUS_MOSI','BUS_SCK','INPUT_LOAD_N'],layers:[1,16],existingPrimitiveMode:'keep',optimization:1});await eda.pcb_Document.save();return result;

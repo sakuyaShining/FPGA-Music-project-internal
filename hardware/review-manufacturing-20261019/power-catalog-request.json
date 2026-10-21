@@ -1,0 +1,1 @@
+{"name":"v2-power-catalog","code":"const r={};for(const q of __CLI__.args.queries)r[q]=await eda.lib_Device.search(q,'0819f05c4eef4c71ace90d822a990e87',undefined,undefined,6,1);return r;","args":{"queries":["TPS22918DBVR","SN74LVC244APWR","TCA9517DGKR","SN74LVC1G17DBVR","AO3407A","MF-MSMF110/16","CL10B103KB8NNNC","CL10C102JB8NNNC"]}}

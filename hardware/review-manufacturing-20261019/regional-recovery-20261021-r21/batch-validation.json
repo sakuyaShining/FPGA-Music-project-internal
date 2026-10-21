@@ -1,0 +1,67 @@
+{
+  "source_pcb_sha256": "270f5e4ff3a4ae4f198743a30ecb4be347c8456f8115c1b9a3bac045a698e0a3",
+  "signals_complete": [
+    "VIS_BL_EN",
+    "VIS_CS_N"
+  ],
+  "partial_power_pad_repairs": [
+    "U15.17",
+    "R30.1"
+  ],
+  "nets": [
+    {
+      "net": "3V3_IO",
+      "before": {
+        "complete": false,
+        "pad_islands": 5
+      },
+      "after": {
+        "complete": false,
+        "pad_islands": 3
+      },
+      "new_lines": 2,
+      "new_vias": 0,
+      "length_mm": 3.8600719654840616
+    },
+    {
+      "net": "VIS_BL_EN",
+      "before": {
+        "complete": false,
+        "pad_islands": 2
+      },
+      "after": {
+        "complete": true,
+        "pad_islands": 1
+      },
+      "new_lines": 6,
+      "new_vias": 1,
+      "length_mm": 19.670170607746595
+    },
+    {
+      "net": "VIS_CS_N",
+      "before": {
+        "complete": false,
+        "pad_islands": 3
+      },
+      "after": {
+        "complete": true,
+        "pad_islands": 1
+      },
+      "new_lines": 6,
+      "new_vias": 1,
+      "length_mm": 18.945409670044487
+    }
+  ],
+  "minimum_clearances_mm": {
+    "track_copper": 0.2444015969655456,
+    "track_mount": 52.3040334043106,
+    "track_quiet": 0.202337911043036,
+    "via_copper": 0.28062914224279495,
+    "hole_pad": 0.3273551999999996,
+    "via_quiet": 2.132581946152176,
+    "drill_drill": 0.7113434862154697
+  },
+  "failures": [],
+  "geometric_pass": true,
+  "manufacturing_release": false
+}

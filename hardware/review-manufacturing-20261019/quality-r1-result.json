@@ -1,0 +1,79 @@
+{
+  "baseline_snapshot": "D:\\FPGA-Project\\snapshots\\before-routing-quality-refactor-78open-20261021-000126",
+  "baseline_archive_checksums_verified": 24,
+  "native_project_files_verified": 19,
+  "pcb_sha256": "be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e",
+  "native_zip": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\native-230-0clear-78open-quality-r1-20261021-CANDIDATE.zip",
+  "native_zip_sha256": "d8340128342d5dbdcdddbc90fd540cf6a643590ab982c3af55aeecf58f61f88e",
+  "nets_optimized": {
+    "RC_DRIVE": {
+      "before_length_mm": 426.5124786901986,
+      "after_length_mm": 346.70206998741503,
+      "before_vias": 20,
+      "after_vias": 14,
+      "before_segments": 61,
+      "after_segments": 47
+    },
+    "BUS_RETURN": {
+      "before_length_mm": 162.7628265830925,
+      "after_length_mm": 120.27089404785683,
+      "before_vias": 8,
+      "after_vias": 7,
+      "before_segments": 28,
+      "after_segments": 19
+    },
+    "EDIT": {
+      "before_length_mm": 106.7309079789805,
+      "after_length_mm": 106.24667674610023,
+      "before_vias": 8,
+      "after_vias": 7,
+      "before_segments": 19,
+      "after_segments": 18
+    },
+    "VIS_BL_EN": {
+      "before_length_mm": 110.30203644501458,
+      "after_length_mm": 108.10408945281335,
+      "before_vias": 8,
+      "after_vias": 8,
+      "before_segments": 19,
+      "after_segments": 16
+    },
+    "I2C_MOD_SCL": {
+      "before_length_mm": 61.130567383866236,
+      "after_length_mm": 59.374591504293555,
+      "before_vias": 4,
+      "after_vias": 3,
+      "before_segments": 22,
+      "after_segments": 19
+    },
+    "PRESET0": {
+      "before_length_mm": 47.928193899625434,
+      "after_length_mm": 46.29746944107909,
+      "before_vias": 3,
+      "after_vias": 3,
+      "before_segments": 17,
+      "after_segments": 9
+    },
+    "RC3": {
+      "before_length_mm": 63.702519535618386,
+      "after_length_mm": 62.86784799951483,
+      "before_vias": 5,
+      "after_vias": 4,
+      "before_segments": 21,
+      "after_segments": 10
+    }
+  },
+  "copper_reduction_mm": 129.2058913373233,
+  "via_reduction": 10,
+  "api_segment_reduction": 49,
+  "no_new_via_locations": true,
+  "components_and_pads_unchanged": true,
+  "rules_unchanged": true,
+  "ground_and_other_unselected_copper_unchanged": true,
+  "clearance_errors": 0,
+  "physical_errors": 0,
+  "connection_error_objects": 78,
+  "pending_networks": 17,
+  "i2s_layout_debt_resolved": false,
+  "manufacturing_release": false
+}

@@ -1,0 +1,97 @@
+{
+  "utc": "2026-10-21T07:20:59.083030+00:00",
+  "source_pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "source_unchanged": true,
+  "native_imported": false,
+  "results": {
+    "plan.json": {
+      "routes": [],
+      "failed": [
+        {
+          "net": "PRESET3",
+          "error": "ValueError('no minimum-cost path was found to the specified end point')"
+        },
+        {
+          "net": "HARM_CS_N",
+          "error": "AssertionError('Endpoint raster blocked')"
+        },
+        {
+          "net": "ADDR1",
+          "error": "RuntimeError(('No safe fanout', 'U2', '11', []))"
+        },
+        {
+          "net": "ADDR3",
+          "error": "RuntimeError(('No safe fanout', 'U3', '13', []))"
+        },
+        {
+          "net": "DISP_SCK",
+          "error": "RuntimeError(('No safe fanout', 'U15', '18', ['Endpoint raster blocked', 'Endpoint raster blocked', 'Endpoint raster blocked']))"
+        }
+      ]
+    },
+    "raster-hole-fix-v2/plan.json": {
+      "routes": [
+        "PRESET3"
+      ],
+      "failed": [
+        {
+          "net": "HARM_CS_N",
+          "error": "AssertionError('No inner16 route in checked windows')"
+        },
+        {
+          "net": "ADDR1",
+          "error": "RuntimeError(('No safe fanout', 'U3', '11', ['', '']))"
+        },
+        {
+          "net": "ADDR3",
+          "error": "AssertionError('No inner16 route in checked windows')"
+        },
+        {
+          "net": "DISP_SCK",
+          "error": "AssertionError('No inner16 route in checked windows')"
+        }
+      ]
+    },
+    "mixed-mesh-v3/plan.json": {
+      "routes": [],
+      "failed": [
+        {
+          "net": "PRESET3",
+          "error": "AssertionError('No mixed physical route in checked windows')"
+        },
+        {
+          "net": "HARM_CS_N",
+          "error": "AssertionError()"
+        },
+        {
+          "net": "ADDR1",
+          "error": "AssertionError()"
+        },
+        {
+          "net": "ADDR3",
+          "error": "AssertionError()"
+        },
+        {
+          "net": "DISP_SCK",
+          "error": "AssertionError('No mixed physical route in checked windows')"
+        }
+      ]
+    },
+    "diagnostic-harm-v4/plan.json": {
+      "routes": [],
+      "failed": [
+        {
+          "net": "HARM_CS_N",
+          "error": "AssertionError(('Via budget', 'HARM_CS_N', 13, 6))"
+        }
+      ]
+    }
+  },
+  "harm_diagnostic": {
+    "connected": true,
+    "vias": 13,
+    "length_mm": 150.5201893983212,
+    "not_accepted": "engineering quality budget: <=6 vias for this four-pad net; not a manufacturing rule"
+  },
+  "next": "Independent6-layer candidate comparison; preserve4-layerR7. Need native physical stack, ground-reference and sensor/cost review before any promotion."
+}

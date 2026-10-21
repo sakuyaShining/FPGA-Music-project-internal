@@ -1,0 +1,1 @@
+return {ready:1,timestamp:Date.now()};

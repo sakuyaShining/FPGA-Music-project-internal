@@ -1,0 +1,632 @@
+{
+  "pcb_sha256": "81c7968dc28fe7bb12a5d667c897b5dfe9e96d9d339e7d5408b34b5332870c6b",
+  "plane_areas_mm2": {
+    "1": 8485.894953034483,
+    "2": 10239.922667580937,
+    "15": 12352.13877931672,
+    "16": 11664.397368136484
+  },
+  "via_exclusion_radius_mm": 1,
+  "pth_outline_exclusion_mm": 0.5,
+  "closest_reference": [
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 1,
+      "closest_reference_layer": 15,
+      "nominal_dielectric_mm": 0.2104,
+      "length_mm": 9.850000619999996,
+      "away_length_mm": 6.850000619999996,
+      "raw_reference_coverage": 0.7983371433212213,
+      "away_reference_coverage": 1.0,
+      "farther_inner15_coverage": null
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "closest_reference_layer": 2,
+      "nominal_dielectric_mm": 0.2104,
+      "length_mm": 89.03876467598117,
+      "away_length_mm": 81.7697189073641,
+      "raw_reference_coverage": 0.5099804492756053,
+      "away_reference_coverage": 0.5321710777648712,
+      "farther_inner15_coverage": 0.9697335985263065
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 2,
+      "closest_reference_layer": 16,
+      "nominal_dielectric_mm": 0.2104,
+      "length_mm": 0,
+      "away_length_mm": 0,
+      "raw_reference_coverage": null,
+      "away_reference_coverage": null,
+      "farther_inner15_coverage": null
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 1,
+      "closest_reference_layer": 15,
+      "nominal_dielectric_mm": 0.2104,
+      "length_mm": 5.665897686418708,
+      "away_length_mm": 2.6659725982381373,
+      "raw_reference_coverage": 0.6489954465002663,
+      "away_reference_coverage": 1.0,
+      "farther_inner15_coverage": null
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "closest_reference_layer": 2,
+      "nominal_dielectric_mm": 0.2104,
+      "length_mm": 104.6467556990508,
+      "away_length_mm": 96.37864298444674,
+      "raw_reference_coverage": 0.7232425133691721,
+      "away_reference_coverage": 0.7534774992628683,
+      "farther_inner15_coverage": 0.9779334549740842
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 2,
+      "closest_reference_layer": 16,
+      "nominal_dielectric_mm": 0.2104,
+      "length_mm": 0,
+      "away_length_mm": 0,
+      "raw_reference_coverage": null,
+      "away_reference_coverage": null,
+      "farther_inner15_coverage": null
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 1,
+      "closest_reference_layer": 15,
+      "nominal_dielectric_mm": 0.2104,
+      "length_mm": 1.9084186357306359,
+      "away_length_mm": 0.37687609336327116,
+      "raw_reference_coverage": 0.44700327862660205,
+      "away_reference_coverage": 1.0,
+      "farther_inner15_coverage": null
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 16,
+      "closest_reference_layer": 2,
+      "nominal_dielectric_mm": 0.2104,
+      "length_mm": 33.71912460563465,
+      "away_length_mm": 29.714573376377494,
+      "raw_reference_coverage": 0.6708982820023096,
+      "away_reference_coverage": 0.7319501147370129,
+      "farther_inner15_coverage": 0.9181256169425088
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "closest_reference_layer": 16,
+      "nominal_dielectric_mm": 0.2104,
+      "length_mm": 57.38491632237554,
+      "away_length_mm": 52.7708072132978,
+      "raw_reference_coverage": 0.43295134159468984,
+      "away_reference_coverage": 0.45500521463372534,
+      "farther_inner15_coverage": null
+    }
+  ],
+  "reference_gaps": [
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "b2ee7bb61ec1e60a",
+      "gap_mm": 7.450586355667139,
+      "x_mm": 99.31207975999999,
+      "y_mm": 48.82525033
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "89d0ecaee515f9a4",
+      "gap_mm": 1.1110639144182175,
+      "x_mm": 95.59280191479945,
+      "y_mm": 32.648309190147394
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "236ad77bf579fbf3",
+      "gap_mm": 0.8688090783561393,
+      "x_mm": 77.11141985426647,
+      "y_mm": 29.533617529796906
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "236ad77bf579fbf3",
+      "gap_mm": 0.20085209309787103,
+      "x_mm": 73.27146960042877,
+      "y_mm": 29.542589358081372
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "236ad77bf579fbf3",
+      "gap_mm": 1.246866370698492,
+      "x_mm": 70.72343098370467,
+      "y_mm": 29.548542707322962
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "925a5790cfd8f7b5",
+      "gap_mm": 0.6489620065517401,
+      "x_mm": 69.84041522485656,
+      "y_mm": 29.744688625266544
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "c82da60414a48f09",
+      "gap_mm": 15.432497802231392,
+      "x_mm": 60.89161083848954,
+      "y_mm": 30.497835572174697
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "ae53da0eea339852",
+      "gap_mm": 1.0167704046323456,
+      "x_mm": 48.41421333991501,
+      "y_mm": 31.927537135043472
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "ae53da0eea339852",
+      "gap_mm": 2.1250691780587063,
+      "x_mm": 45.595264749146295,
+      "y_mm": 38.035262396585686
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "45e5222223d680bd",
+      "gap_mm": 2.850731136954161,
+      "x_mm": 44.36425750488523,
+      "y_mm": 40.18923324194259
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "b857c825d7d0e83c",
+      "gap_mm": 1.7461521614038404,
+      "x_mm": 42.26063583289377,
+      "y_mm": 41.71515436105983
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "b857c825d7d0e83c",
+      "gap_mm": 1.4206366364957812,
+      "x_mm": 40.28377859458149,
+      "y_mm": 41.55377859458149
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "ad8fe64d7dc06933",
+      "gap_mm": 1.170733066521253,
+      "x_mm": 36.92541002,
+      "y_mm": 40.93289502109076
+    },
+    {
+      "net": "I2S_BCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "ad8fe64d7dc06933",
+      "gap_mm": 0.9645092628145012,
+      "x_mm": 32.918400000000005,
+      "y_mm": 39.66359358476044
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "a07f16a49328211f",
+      "gap_mm": 0.9744573112431797,
+      "x_mm": 96.88624195733951,
+      "y_mm": 54.31330195733952
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "8cec35d25bdecc3e",
+      "gap_mm": 0.1126137601808886,
+      "x_mm": 85.63854249306311,
+      "y_mm": 58.30975041145449
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "8cec35d25bdecc3e",
+      "gap_mm": 1.0518551999798578,
+      "x_mm": 84.97472210000001,
+      "y_mm": 58.32548071843745
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "8cec35d25bdecc3e",
+      "gap_mm": 0.5871754676458005,
+      "x_mm": 77.3358856996725,
+      "y_mm": 58.50649540678606
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "8cec35d25bdecc3e",
+      "gap_mm": 1.3175909179052112,
+      "x_mm": 76.15860943000001,
+      "y_mm": 58.53439288827236
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "196c11e746878958",
+      "gap_mm": 0.6306671495416929,
+      "x_mm": 75.37327070561645,
+      "y_mm": 58.838747446942065
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "d7a7fd71dc26b54b",
+      "gap_mm": 8.824400196575434,
+      "x_mm": 44.30983563907199,
+      "y_mm": 66.05794929542967
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "d7a7fd71dc26b54b",
+      "gap_mm": 0.9280536994605737,
+      "x_mm": 28.891956872663627,
+      "y_mm": 63.14940190408525
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "36b08cb78226b960",
+      "gap_mm": 0.5001080542249545,
+      "x_mm": 27.801748210613546,
+      "y_mm": 62.00926014264635
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "36b08cb78226b960",
+      "gap_mm": 1.2925934986924905,
+      "x_mm": 27.849009182284572,
+      "y_mm": 54.148169182284576
+    },
+    {
+      "net": "I2S_DIN",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "36b08cb78226b960",
+      "gap_mm": 7.539988830726934,
+      "x_mm": 27.885942935722326,
+      "y_mm": 48.00484235221589
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "3aca09e5fab4f3c9",
+      "gap_mm": 2.610076830312355,
+      "x_mm": 95.87065358312526,
+      "y_mm": 51.71877678203641
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "b39459a7cdec73cb",
+      "gap_mm": 0.21036753407671488,
+      "x_mm": 94.76927930419109,
+      "y_mm": 50.94659750854966
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "b39459a7cdec73cb",
+      "gap_mm": 0.7072651762732225,
+      "x_mm": 94.87500327483914,
+      "y_mm": 50.37953159856673
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "b39459a7cdec73cb",
+      "gap_mm": 0.6054049234057846,
+      "x_mm": 95.24451995,
+      "y_mm": 48.39757510970671
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "7d121eb67e6056c2",
+      "gap_mm": 0.565684293578398,
+      "x_mm": 95.4999995,
+      "y_mm": 47.900000719999994
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "c421628184a87f85",
+      "gap_mm": 2.201623086343897,
+      "x_mm": 95.73438259416953,
+      "y_mm": 46.599726686547456
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "bbc605cb39e8a023",
+      "gap_mm": 0.670935255266457,
+      "x_mm": 77.14822176516498,
+      "y_mm": 28.343983511432192
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "source_line_id": "bbc605cb39e8a023",
+      "gap_mm": 0.39363088491977216,
+      "x_mm": 73.53015659486694,
+      "y_mm": 28.16844380248515
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "98f9ecbb5bc1cedf",
+      "gap_mm": 0.19790670861835347,
+      "x_mm": 95.78079048073377,
+      "y_mm": 43.401276171235295
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "98f9ecbb5bc1cedf",
+      "gap_mm": 0.8688127403297022,
+      "x_mm": 95.75760389612019,
+      "y_mm": 42.075000939999995
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "98f9ecbb5bc1cedf",
+      "gap_mm": 0.8880673243985296,
+      "x_mm": 95.70108505122056,
+      "y_mm": 38.842116695182
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "98f9ecbb5bc1cedf",
+      "gap_mm": 0.6623688320020424,
+      "x_mm": 95.62367258498435,
+      "y_mm": 34.41411497483571
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "98f9ecbb5bc1cedf",
+      "gap_mm": 1.111063844701681,
+      "x_mm": 95.5928019143579,
+      "y_mm": 32.648309164890705
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "04e932abb1c78b97",
+      "gap_mm": 1.7410436712248563,
+      "x_mm": 70.44872850759243,
+      "y_mm": 29.30643021943804
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "bf31f8923dcf7722",
+      "gap_mm": 0.18680089840470618,
+      "x_mm": 69.50720722142542,
+      "y_mm": 29.510631981430937
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "bf31f8923dcf7722",
+      "gap_mm": 15.43249723893237,
+      "x_mm": 60.8916287806979,
+      "y_mm": 30.497833516296993
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "bf31f8923dcf7722",
+      "gap_mm": 1.0167705323535141,
+      "x_mm": 48.414213646176464,
+      "y_mm": 31.927537099951017
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "a945f1cdb6178159",
+      "gap_mm": 1.9614684267705442,
+      "x_mm": 45.60000024,
+      "y_mm": 37.969266626614726
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "cadb72edfe183ab2",
+      "gap_mm": 3.183913636371237,
+      "x_mm": 44.42299918974693,
+      "y_mm": 40.02191270142838
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "cadb72edfe183ab2",
+      "gap_mm": 0.24070557359366548,
+      "x_mm": 42.8889826688323,
+      "y_mm": 41.418963710042135
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "ec8770a3b91bdeb4",
+      "gap_mm": 1.054751574542665,
+      "x_mm": 42.27500053999999,
+      "y_mm": 41.45000092
+    },
+    {
+      "net": "I2S_LRCK",
+      "signal_layer": 2,
+      "reference_layer": 16,
+      "source_line_id": "ba6519b0735a5ec4",
+      "gap_mm": 0.21364374857241814,
+      "x_mm": 41.68704287459889,
+      "y_mm": 41.313703436635315
+    }
+  ],
+  "audio_via_nearest_ground": [
+    {
+      "id": "5e17e075d672f950",
+      "net": "I2S_BCK",
+      "x_mm": 99.29999952,
+      "y_mm": 44.100000699999995,
+      "nearest_ground_via_id": "305c815a163c945c",
+      "distance_mm": 5.404638535264616,
+      "within_engineering_1p5mm_target": false
+    },
+    {
+      "id": "83d0679408cb935d",
+      "net": "I2S_BCK",
+      "x_mm": 99.29999952,
+      "y_mm": 35.500000119999996,
+      "nearest_ground_via_id": "be39ff500e8940ba",
+      "distance_mm": 8.36779470015856,
+      "within_engineering_1p5mm_target": false
+    },
+    {
+      "id": "b21ddd3a4b93b5a2",
+      "net": "I2S_BCK",
+      "x_mm": 99.32415999999999,
+      "y_mm": 53.55049996,
+      "nearest_ground_via_id": "3b08a35a9b25224b",
+      "distance_mm": 2.6815606364357163,
+      "within_engineering_1p5mm_target": false
+    },
+    {
+      "id": "a86a437583177b16",
+      "net": "I2S_DIN",
+      "x_mm": 93.99999996,
+      "y_mm": 55.70000036,
+      "nearest_ground_via_id": "b2c72ed133044faf",
+      "distance_mm": 4.615461916645165,
+      "within_engineering_1p5mm_target": false
+    },
+    {
+      "id": "67fbcdf42e1cdfcc",
+      "net": "I2S_DIN",
+      "x_mm": 89.60000113999999,
+      "y_mm": 55.70000036,
+      "nearest_ground_via_id": "2f1526b521f400b7",
+      "distance_mm": 3.7752482538241514,
+      "within_engineering_1p5mm_target": false
+    },
+    {
+      "id": "3ce306c49513b93c",
+      "net": "I2S_DIN",
+      "x_mm": 98.4739204,
+      "y_mm": 53.55049996,
+      "nearest_ground_via_id": "dfdda1761d8ffa3c",
+      "distance_mm": 3.13464490059321,
+      "within_engineering_1p5mm_target": false
+    },
+    {
+      "id": "7c93490da205b897",
+      "net": "I2S_LRCK",
+      "x_mm": 95.79999889999999,
+      "y_mm": 44.4999999,
+      "nearest_ground_via_id": "305c815a163c945c",
+      "distance_mm": 3.057328485727572,
+      "within_engineering_1p5mm_target": false
+    },
+    {
+      "id": "8e9e951aaff51f24",
+      "net": "I2S_LRCK",
+      "x_mm": 95.29999989999999,
+      "y_mm": 30.20000056,
+      "nearest_ground_via_id": "f0d13891f43158c3",
+      "distance_mm": 3.8921762207814066,
+      "within_engineering_1p5mm_target": false
+    },
+    {
+      "id": "26183a6b15ed084d",
+      "net": "I2S_LRCK",
+      "x_mm": 72.44999988,
+      "y_mm": 28.85000072,
+      "nearest_ground_via_id": "3d54fb770b69bfa2",
+      "distance_mm": 5.721348432984992,
+      "within_engineering_1p5mm_target": false
+    },
+    {
+      "id": "47e9725c188d0651",
+      "net": "I2S_LRCK",
+      "x_mm": 97.84999988,
+      "y_mm": 52.90000088,
+      "nearest_ground_via_id": "dfdda1761d8ffa3c",
+      "distance_mm": 2.2343913417311114,
+      "within_engineering_1p5mm_target": false
+    }
+  ],
+  "not_electromagnetic_simulation": true,
+  "si_release": false,
+  "manufacturing_release": false
+}

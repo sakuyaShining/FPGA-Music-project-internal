@@ -1,0 +1,22 @@
+(pcb "four-layer-calibration"
+ (parser (string_quote ") (space_in_quoted_tokens on))
+ (resolution mil 1000) (unit mil)
+ (structure
+  (layer TopLayer (type signal) (property (index 0)))
+  (layer Inner15 (type signal) (property (index 1)))
+  (layer Inner16 (type signal) (property (index 2)))
+  (layer BottomLayer (type signal) (property (index 3)))
+  (boundary (rect pcb 0 0 1000 1000))
+  (via V24)
+  (rule (width 6) (clearance 6.5))
+ )
+ (placement (component BOARD (place u1 0 0 front 0)))
+ (library
+  (image BOARD (pin PA A 200 300) (pin PB B 800 700))
+  (padstack PA (shape (polygon TopLayer 0 -10 -20 10 -15 8 20 -10 10)) (attach off))
+  (padstack PB (shape (rect Inner16 -30 -10 30 10)) (attach off))
+  (padstack V24 (shape (circle TopLayer 24)) (shape (circle Inner15 24)) (shape (circle Inner16 24)) (shape (circle BottomLayer 24)) (attach off))
+ )
+ (network (net CAL (pins u1-A u1-B)) (class CAL CAL (circuit (use_via V24)) (rule (width 6) (clearance 6.5))))
+ (wiring)
+)

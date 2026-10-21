@@ -1,0 +1,82 @@
+{
+  "source_pcb_sha256": "61c75fb7d596861796fbafd07cd2123ea20a82e9a6ac3a0db29b94ade197c217",
+  "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\local-layout-20261021-r7\\second-position-native-verified-capture.json",
+  "source_capture_sha256": "04713e34888933eae3d070af3fa4c1ab1f5673cc52f3fb6cf025d4481af6e545",
+  "component": "C35",
+  "component_x_mm": 77.7,
+  "component_y_mm": 45.3,
+  "component_rotation": 270,
+  "pads": [
+    {
+      "id": "9f1e9b877a49c6a1e14",
+      "ref": "C35",
+      "n": "2",
+      "net": "GND",
+      "layer": 1,
+      "x": 3059.0551181102364,
+      "y": 1755.9055118110234,
+      "rotation": 270,
+      "shape": [
+        "RECT",
+        31.5,
+        35.4,
+        0
+      ]
+    },
+    {
+      "id": "9f1e9b877a49c6a1e15",
+      "ref": "C35",
+      "n": "1",
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x": 3059.0551181102364,
+      "y": 1811.023622047244,
+      "rotation": 270,
+      "shape": [
+        "RECT",
+        31.5,
+        35.4,
+        0
+      ]
+    }
+  ],
+  "remove_line_ids": [
+    "7bb000a32c0382bf",
+    "3f628af5f135f537"
+  ],
+  "remove_via_ids": [],
+  "lines": [
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 3059.0551181102364,
+      "y1": 1811.023622047244,
+      "x2": 3152.5,
+      "y2": 1806,
+      "width": 13.200000000000001
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "x1": 3059.0551181102364,
+      "y1": 1755.9055118110234,
+      "x2": 3059.0551181102364,
+      "y2": 1720.4724409448818,
+      "width": 10.0
+    }
+  ],
+  "vias": [],
+  "retained_ground_via_id": "dfae055e3f2f190b",
+  "via_move": {
+    "id": "dfae055e3f2f190b",
+    "x": 3059.0551181102364,
+    "y": 1720.4724409448818
+  },
+  "vcc_centerline_mm": 2.376927430528742,
+  "ground_stub_mm": 0.9,
+  "device_bbox_gap_estimate_mm": 0.6026272389596129,
+  "accepted_candidates": 53,
+  "requires_native_device_spacing_check": true,
+  "native_imported": false,
+  "manufacturing_release": false
+}

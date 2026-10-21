@@ -1,0 +1,1 @@
+Reuses R14 synthetic exchange calibration because the pad/layer unit convention and SES parser are unchanged. The source DSN is regenerated from current R15 PCB; this reuse is not a new native board test. Source: ../freerouting-comparison-20261021-r14/calibration-result.json.

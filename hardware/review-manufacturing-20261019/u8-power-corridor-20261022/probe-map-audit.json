@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-21T20:43:21.215362+00:00",
+  "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "native_drc": {
+    "clearance": 0,
+    "physical": 0,
+    "connection": 59
+  },
+  "testpoints": 21,
+  "pin_net_mapping_matches_legacy": true,
+  "changed_locations": [
+    {
+      "name": "TP13",
+      "prior_mm": [
+        73.0,
+        45.0
+      ],
+      "current_mm": [
+        74.50074,
+        46.20006
+      ]
+    },
+    {
+      "name": "TP14",
+      "prior_mm": [
+        75.5,
+        42.0
+      ],
+      "current_mm": [
+        75.00112,
+        40.401239999999994
+      ]
+    }
+  ],
+  "physical_tests_executed": false,
+  "manufacturing_release": false,
+  "map_sha256": "608b56c4953ff801ef3041cb9010323fe1e63453a7678fa97ccb63c7fcbb0e71"
+}

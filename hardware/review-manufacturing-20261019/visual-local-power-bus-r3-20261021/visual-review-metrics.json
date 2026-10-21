@@ -1,0 +1,75 @@
+{
+  "source_pcb_sha256": "0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a",
+  "api_tracks": 3262,
+  "native_tracks_including_microsegments": 3290,
+  "vias": 533,
+  "ground_vias": 84,
+  "total_track_mm": 8123.378357044612,
+  "selected_nets": {
+    "I2S_BCK": {
+      "vias": 9,
+      "total_track_mm": 96.4344804803691,
+      "pad_euclidean_mst_lower_bound_mm": 72.19808527092391,
+      "length_divided_by_lower_bound": 1.3356930466853507
+    },
+    "I2S_DIN": {
+      "vias": 8,
+      "total_track_mm": 105.10389648379709,
+      "pad_euclidean_mst_lower_bound_mm": 69.09942760747299,
+      "length_divided_by_lower_bound": 1.521053069800397
+    },
+    "I2S_LRCK": {
+      "vias": 10,
+      "total_track_mm": 106.57670227614913,
+      "pad_euclidean_mst_lower_bound_mm": 61.110502307609934,
+      "length_divided_by_lower_bound": 1.7439997750252072
+    },
+    "VIS_DC": {
+      "vias": 15,
+      "total_track_mm": 127.86994418825914,
+      "pad_euclidean_mst_lower_bound_mm": 64.67013148003888,
+      "length_divided_by_lower_bound": 1.9772643299438406
+    },
+    "VIS_BL_EN": {
+      "vias": 8,
+      "total_track_mm": 108.1040904095691,
+      "pad_euclidean_mst_lower_bound_mm": 56.37027630961905,
+      "length_divided_by_lower_bound": 1.9177498761190597
+    },
+    "EDIT": {
+      "vias": 7,
+      "total_track_mm": 106.2466763063108,
+      "pad_euclidean_mst_lower_bound_mm": 68.4613278658406,
+      "length_divided_by_lower_bound": 1.551922517695184
+    },
+    "RA_MISO": {
+      "vias": 4,
+      "total_track_mm": 91.54906671563077,
+      "pad_euclidean_mst_lower_bound_mm": 64.36438715461834,
+      "length_divided_by_lower_bound": 1.4223559139265702
+    },
+    "BUS_RETURN": {
+      "vias": 8,
+      "total_track_mm": 120.33061606075293,
+      "pad_euclidean_mst_lower_bound_mm": 63.86274010259247,
+      "length_divided_by_lower_bound": 1.8842069079317219
+    },
+    "RC_DRIVE": {
+      "vias": 14,
+      "total_track_mm": 346.70206574773675,
+      "pad_euclidean_mst_lower_bound_mm": 226.6742184576199,
+      "length_divided_by_lower_bound": 1.5295169786261238
+    }
+  },
+  "ground_copper": {
+    "1": {
+      "area_mm2": 7920.745259930675,
+      "polygon_count": 47
+    },
+    "2": {
+      "area_mm2": 9493.868630526427,
+      "polygon_count": 14
+    }
+  },
+  "not_a_signal_integrity_or_power_integrity_signoff": true
+}

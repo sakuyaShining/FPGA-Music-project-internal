@@ -1,0 +1,61 @@
+(ExpressProject "TPS2553_TRANS"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\tps2553_trans.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "tps2553_trans.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\tps2553_trans-pspicefiles\ilim\trans.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tps2553_trans-pspicefiles\ilim\trans.sim"
+        (DisplayName "ILIM-trans")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\tps2553_trans.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\tps2553_trans.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (TPS2553_TRANS
+      (FullPartName "TPS2553_TRANS.Normal")
+      (LibraryName ".\TPS2553_TRANS.OLB")
+      (DeviceIndex "0"))
+    (TPS2557_TRANS
+      (FullPartName "TPS2557_TRANS.Normal")
+      (LibraryName ".\TPS2557_TRANS.OLB")
+      (DeviceIndex "0"))
+    (TPS2001C_TRANS
+      (FullPartName "TPS2001C_TRANS.Normal")
+      (LibraryName ".\TPS2001C_TRANS.OLB")
+      (DeviceIndex "0"))
+    (TPS2000C_TRANS
+      (FullPartName "TPS2000C_TRANS.Normal")
+      (LibraryName ".\TPS2000C_TRANS.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "x0146065")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Select "Design Resources"
+         "C:\ELABTRANS_WS\ELABTRANS_DS\Part_Numbers\TPS2553\Release_Sankalp\PSPICE\TPS2553_PSPICE_TRANS\tps2553_trans.dsn"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 -4 283 1 330"))
+      (Tab 0)))
+  (ISPCBBASICLICENSE "false"))

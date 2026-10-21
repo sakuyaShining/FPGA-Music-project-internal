@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-21T05:43:37.682618+00:00",
+  "current_candidate": "r7",
+  "native_sources": {
+    "r3": {
+      "files": 19,
+      "pcb_sha256": "0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a",
+      "archive_sha256": "4c45fb6ce1959f6dc2da2b431e35c09030eadd8cc760b9d7bad2e632d8d9f475",
+      "source_matches_archive": true
+    },
+    "r4": {
+      "files": 19,
+      "pcb_sha256": "97a837d8411cef56633792edbb716451a4f6806a66dba659a91058e0c69c2515",
+      "archive_sha256": "146bb3c14b1e12aaef0984c49805347b7c8bdce5d23f1f52bd18582bd1da6030",
+      "source_matches_archive": true
+    },
+    "r5": {
+      "files": 19,
+      "pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+      "archive_sha256": "e9659c25786d6b5133ffb7b84adbabdee87962e0112ca31d948b5f21556f835b",
+      "source_matches_archive": true
+    },
+    "r6-rejected": {
+      "files": 19,
+      "pcb_sha256": "81c7968dc28fe7bb12a5d667c897b5dfe9e96d9d339e7d5408b34b5332870c6b",
+      "archive_sha256": "156f4009f2ea7bc47151da7377a4aac3bbb12478bcef2685840687fc28521aea",
+      "source_matches_archive": true
+    },
+    "r7": {
+      "files": 19,
+      "pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+      "archive_sha256": "e505ca0fb0efdb6946e4b957fd6cfd02e2fd3251edd37da0fe2d3bb5a1628df0",
+      "source_matches_archive": true
+    }
+  },
+  "files_copied": 57,
+  "delivery_file_hashes_verified": true,
+  "python_sources_compile": true,
+  "layout_comparison_visually_reviewed": true,
+  "native_drc": [
+    0,
+    0,
+    62
+  ],
+  "legacy_CPL_C35_stale": true,
+  "workbook_unchanged": true,
+  "old_r4_r6_headless_cli_sessions_closed_normally": true,
+  "goal_status": "active",
+  "automation_id": "automation-2",
+  "manufacturing_release": false
+}

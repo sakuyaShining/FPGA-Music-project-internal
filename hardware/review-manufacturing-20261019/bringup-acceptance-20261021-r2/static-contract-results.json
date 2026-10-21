@@ -1,0 +1,95 @@
+{
+  "utc": "2026-10-20T22:48:15.836225+00:00",
+  "source_sha256": {
+    "design.json": "fcdd234bf32632f9fb646a164a5a713d04d6403743f8a16424eb9cea80cadc40",
+    "joint-routing-20261021-r3/verified-source-74.json": "24dbea1d865ddc2f4ce7431376ce177b99521221da3a02a33ba6371adbf6cfc6",
+    "route-checkpoint-0clear-74open-local-power-bus-r3-20261021.json": "24424b7fcbbc9d73c202c299ed5e6b153259daeadcf853d4419f56e6f19ca287",
+    "pcb-testpoints.csv": "7f0df4bf6ef8c2fe452b157130c256d1365a5427b6f2904e43d46d861c581814",
+    "harness-contract.csv": "9d4de91df6578e344839ae2c7919bac526c47f16514405ab6cef8ab5b0a376d5",
+    "装配与分阶段验收-r2.md": "9ac4ac85f516300eb625c99605d998b46eeeff61e2a88c76ee0f83b8b1f39d06",
+    "purchase-preparation-20261021-r1/purchase-master.json": "4a9a33fe3f9409ccb5ca73548de9d62cdd710319e912519e837921bb9797d7ff",
+    "hardware-contract-20261021-r1/contract-results.json": "5462134d04adf341df00788a3c3e6826770a053926a99f0259cc05194576f8b6"
+  },
+  "native_files_unchanged": {
+    "eprj3-intro.md": true,
+    "FPGA-Music-Dualscreen-Review-20261019.eprj3": true,
+    "panel/Panel1.epan2": true,
+    "pcb/PCB1.epcb2": true,
+    "sch/Schematic1/01_Nano_headers.esch2": true,
+    "sch/Schematic1/02_Shift_and_memory.esch2": true,
+    "sch/Schematic1/03_Display_harnesses.esch2": true,
+    "sch/Schematic1/04_PCM5122_AUX.esch2": true,
+    "sch/Schematic1/05_Power.esch2": true,
+    "sch/Schematic1/06_Controls.esch2": true,
+    "sch/Schematic1/07_Scan_lane_0.esch2": true,
+    "sch/Schematic1/08_Scan_lane_1.esch2": true,
+    "sch/Schematic1/09_Scan_lane_2.esch2": true,
+    "sch/Schematic1/10_Scan_lane_3.esch2": true,
+    "sch/Schematic1/11_Scan_lane_4.esch2": true,
+    "sch/Schematic1/12_Scan_lane_5.esch2": true,
+    "sch/Schematic1/13_Power_off_isolation.esch2": true,
+    "sch/Schematic1/14_Protected_power_entry.esch2": true,
+    "sch/Schematic1/Schematic1.ecfg": true
+  },
+  "critical_pin_contracts": {
+    "U17": {
+      "3": "3V3_IO",
+      "4": "PWR_FAULT_N",
+      "6": "5V_PERIPH"
+    },
+    "U8": {
+      "13": "GND",
+      "10": "3V3_IO",
+      "4": "MUX_DISABLE",
+      "5": "RC_DRIVE",
+      "6": "LCD_RESET_N",
+      "7": "TP_RESET_N"
+    },
+    "U15": {
+      "17": "3V3_IO",
+      "3": "VIS_BL_EN",
+      "20": "3V3_PERIPH"
+    },
+    "J5": {
+      "1": null
+    },
+    "J11": {
+      "8": "VIS_BL_EN"
+    },
+    "J13": {
+      "1": "5V_IN",
+      "2": "GND"
+    },
+    "J12": {
+      "1": "AUX_L",
+      "2": "AUX_R",
+      "3": "GND"
+    }
+  },
+  "fault_attachments": [
+    [
+      "U17",
+      "4"
+    ],
+    [
+      "R68",
+      "2"
+    ],
+    [
+      "TP8",
+      "TP8"
+    ]
+  ],
+  "native_testpoints_verified": 21,
+  "harness_carrier_pins_verified": 165,
+  "assembly_counts": {
+    "total": 230,
+    "smt": 217,
+    "through_hole": 13
+  },
+  "stage_records": 22,
+  "power_measurement_slots": 32,
+  "static_checks_passed": true,
+  "physical_tests_executed": false,
+  "manufacturing_release": false
+}

@@ -1,0 +1,23 @@
+{
+  "nets": [],
+  "routes": [],
+  "lines": [],
+  "vias": [],
+  "source_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\controls-final-source-78.json",
+  "source_sha256": "6f97b82efa81dd2c60d296f4cdcdab619bc1b3003f761ff2d10e1b5564a6ca75",
+  "native_pcb_sha256": "e33b701103900190db8edb5877ccf108d0502c14b754430ce449931ab4b4d038",
+  "failed_planning": [
+    {
+      "net": "VIS_DC",
+      "error": "AssertionError('Reject trade of added length for fewer vias')"
+    }
+  ],
+  "via_cost_mm": 30.0,
+  "batch_final_geometry_pass": true,
+  "ground_removals": {
+    "lines": [],
+    "vias": []
+  },
+  "requires_ground_rebuild_and_native_drc": true,
+  "manufacturing_release": false
+}

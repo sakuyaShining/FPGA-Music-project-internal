@@ -1,0 +1,1 @@
+const ps=(await eda.pcb_PrimitivePour.getAll()).filter(p=>p.getState_Layer()===1);if(ps.length!==1||!await ps[0].rebuildCopperRegion())throw new Error('rebuild');return await eda.pcb_Document.save();

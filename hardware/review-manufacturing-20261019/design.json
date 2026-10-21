@@ -1,0 +1,4624 @@
+{
+  "pages": [
+    "01_Nano_headers",
+    "02_Shift_and_memory",
+    "03_Display_harnesses",
+    "04_PCM5122_AUX",
+    "05_Power",
+    "06_Controls",
+    "07_Scan_lane_0",
+    "08_Scan_lane_1",
+    "09_Scan_lane_2",
+    "10_Scan_lane_3",
+    "11_Scan_lane_4",
+    "12_Scan_lane_5",
+    "13_Power_off_isolation",
+    "14_Protected_power_entry"
+  ],
+  "parts": [
+    {
+      "page": "01_Nano_headers",
+      "ref": "J5",
+      "code": "C50984",
+      "mpn": "2.54-1*20P母",
+      "uuid": "3815f4ba16304a7d8dcaf50a7993317d",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_20P-P2.54-V-F",
+      "x": 260,
+      "y": 700,
+      "nets": {
+        "1": null,
+        "2": "GND",
+        "3": null,
+        "4": null,
+        "5": "SENSE_4",
+        "6": "SENSE_3",
+        "7": "I2S_BCK",
+        "8": "I2S_DIN",
+        "9": null,
+        "10": "SENSE_5",
+        "11": "I2S_LRCK",
+        "12": null,
+        "13": null,
+        "14": null,
+        "15": "GND",
+        "16": "3V3_IO",
+        "17": null,
+        "18": null,
+        "19": null,
+        "20": null
+      },
+      "role": "Nano J5 short harness, NOT stacked; actual revision/pin-1 must be checked",
+      "dnp": false
+    },
+    {
+      "page": "01_Nano_headers",
+      "ref": "J6",
+      "code": "C50984",
+      "mpn": "2.54-1*20P母",
+      "uuid": "3815f4ba16304a7d8dcaf50a7993317d",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_20P-P2.54-V-F",
+      "x": 850,
+      "y": 700,
+      "nets": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": "TP_INT",
+        "6": "BUS_MOSI",
+        "7": "SCAN_LATCH",
+        "8": "BUS_SCK",
+        "9": "BUS_RETURN",
+        "10": "I2C_SDA",
+        "11": "I2C_SCL",
+        "12": "SENSE_0",
+        "13": "SENSE_1",
+        "14": "SENSE_2",
+        "15": "INPUT_LOAD_N",
+        "16": "VIS_DC",
+        "17": "HARM_CS_N",
+        "18": "VIS_CS_N",
+        "19": "3V3_IO",
+        "20": "GND"
+      },
+      "role": "Nano J6 short harness, NOT stacked; no assumed inter-row spacing",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "U7",
+      "code": "C133541",
+      "mpn": "SN74LVC14ADR",
+      "uuid": "0fb2f413df3541ac87e8f008d4a45fdd",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SOIC-14_L8.7-W3.9-P1.27-LS6.0-BL",
+      "x": 250,
+      "y": 730,
+      "nets": {
+        "14": "3V3_IO",
+        "7": "GND",
+        "1": "RC0",
+        "3": "RC1",
+        "5": "RC2",
+        "9": "RC3",
+        "11": "RC4",
+        "13": "RC5",
+        "2": "INV0",
+        "4": "INV1",
+        "6": "INV2",
+        "8": "INV3",
+        "10": "INV4",
+        "12": "INV5"
+      },
+      "role": "six inverting Schmitt gates",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "U8",
+      "code": "C205940",
+      "mpn": "SN74LV595ADR",
+      "uuid": "1d3ba592c2f04ffd8e1729f5a5e1e992",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SOIC-16_L9.9-W3.9-P1.27-LS6.0-BL",
+      "x": 750,
+      "y": 730,
+      "nets": {
+        "16": "3V3_IO",
+        "8": "GND",
+        "14": "BUS_MOSI",
+        "11": "BUS_SCK",
+        "12": "SCAN_LATCH",
+        "13": "GND",
+        "10": "3V3_IO",
+        "9": null,
+        "15": "ADDR0",
+        "1": "ADDR1",
+        "2": "ADDR2",
+        "3": "ADDR3",
+        "4": "MUX_DISABLE",
+        "5": "RC_DRIVE",
+        "6": "LCD_RESET_N",
+        "7": "TP_RESET_N"
+      },
+      "role": "shared shift register: latch only complete scan/reset word",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "U9",
+      "code": "C273656",
+      "mpn": "SN74LV165ADR",
+      "uuid": "7d8ae49ce9b3491191ca4113ebaa059a",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SOIC-16_L9.9-W3.9-P1.27-LS6.0-BL",
+      "x": 1250,
+      "y": 730,
+      "nets": {
+        "16": "3V3_IO",
+        "8": "GND",
+        "1": "INPUT_LOAD_N",
+        "2": "BUS_SCK",
+        "15": "GND",
+        "10": "GND",
+        "9": "KEY_QH",
+        "7": null,
+        "11": "ENC_A",
+        "12": "ENC_B",
+        "13": "ENC_PUSH",
+        "14": "PRESET0",
+        "3": "PRESET1",
+        "4": "PRESET2",
+        "5": "PRESET3",
+        "6": "EDIT"
+      },
+      "role": "parallel input; reload after unrelated SPI traffic",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "U10",
+      "code": "C411625",
+      "mpn": "24LC256-I/SN",
+      "uuid": "c1c1b65cd7054aa6944b04ebc8277402",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL",
+      "x": 250,
+      "y": 330,
+      "nets": {
+        "1": "GND",
+        "2": "GND",
+        "3": "GND",
+        "4": "GND",
+        "5": "I2C_SDA",
+        "6": "I2C_SCL",
+        "7": "GND",
+        "8": "3V3_IO"
+      },
+      "role": "7-bit address 0x50; WP LOW",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "U11",
+      "code": "C503437",
+      "mpn": "74LVC1G157GV,125",
+      "uuid": "f7912baddfe14304a313d9d412d67e75",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "TSOP-6_L3.0-W1.5-P0.95-LS2.8-BR",
+      "x": 750,
+      "y": 330,
+      "nets": {
+        "1": "KEY_QH",
+        "2": "GND",
+        "3": "RA_MISO",
+        "4": "BUS_RETURN",
+        "5": "3V3_IO",
+        "6": "HARM_CS_N"
+      },
+      "role": "S=0 RA return; S=1 keys; lifecycle substitution pending",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "R11",
+      "code": "C22962",
+      "mpn": "0603WAF2200T5E",
+      "uuid": "5838c5089bf2441c9c491337f593e7a2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1100,
+      "y": 360,
+      "nets": {
+        "1": "INV0",
+        "2": "SENSE_0"
+      },
+      "role": "220R output isolation; stocked replacement for C107696",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "R12",
+      "code": "C22962",
+      "mpn": "0603WAF2200T5E",
+      "uuid": "5838c5089bf2441c9c491337f593e7a2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1430,
+      "y": 360,
+      "nets": {
+        "1": "INV1",
+        "2": "SENSE_1"
+      },
+      "role": "220R output isolation; stocked replacement for C107696",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "R13",
+      "code": "C22962",
+      "mpn": "0603WAF2200T5E",
+      "uuid": "5838c5089bf2441c9c491337f593e7a2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1100,
+      "y": 270,
+      "nets": {
+        "1": "INV2",
+        "2": "SENSE_2"
+      },
+      "role": "220R output isolation; stocked replacement for C107696",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "R14",
+      "code": "C22962",
+      "mpn": "0603WAF2200T5E",
+      "uuid": "5838c5089bf2441c9c491337f593e7a2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1430,
+      "y": 270,
+      "nets": {
+        "1": "INV3",
+        "2": "SENSE_3"
+      },
+      "role": "220R output isolation; stocked replacement for C107696",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "R15",
+      "code": "C22962",
+      "mpn": "0603WAF2200T5E",
+      "uuid": "5838c5089bf2441c9c491337f593e7a2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1100,
+      "y": 180,
+      "nets": {
+        "1": "INV4",
+        "2": "SENSE_4"
+      },
+      "role": "220R output isolation; stocked replacement for C107696",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "R16",
+      "code": "C22962",
+      "mpn": "0603WAF2200T5E",
+      "uuid": "5838c5089bf2441c9c491337f593e7a2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1430,
+      "y": 180,
+      "nets": {
+        "1": "INV5",
+        "2": "SENSE_5"
+      },
+      "role": "220R output isolation; stocked replacement for C107696",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "C7",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 180,
+      "y": 40,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF adjacent to U7..U11",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "C8",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 480,
+      "y": 40,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF adjacent to U7..U11",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "C9",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 780,
+      "y": 40,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF adjacent to U7..U11",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "C10",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1080,
+      "y": 40,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF adjacent to U7..U11",
+      "dnp": false
+    },
+    {
+      "page": "02_Shift_and_memory",
+      "ref": "C11",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1380,
+      "y": 40,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF adjacent to U7..U11",
+      "dnp": false
+    },
+    {
+      "page": "03_Display_harnesses",
+      "ref": "J10",
+      "code": "C247920",
+      "mpn": "2.54-1*12P反弯针",
+      "uuid": "846d528d3be14cf38a9fc6e513741feb",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_12P-P2.54-H-M-W10.5",
+      "x": 270,
+      "y": 700,
+      "nets": {
+        "1": "5V_PERIPH",
+        "2": "GND",
+        "3": "DISP_SCK",
+        "4": "DISP_MOSI",
+        "5": "RA_MISO",
+        "6": "DISP_HARM_CS_N",
+        "7": "DISP_RESET_N",
+        "8": "I2C_MOD_SDA",
+        "9": "I2C_MOD_SCL",
+        "10": "TP_INT_MOD",
+        "11": "TP_RESET_MOD_N",
+        "12": "GND"
+      },
+      "role": "OUR 12-way RA8875/CTP harness; supplier pinout NOT implied",
+      "dnp": false
+    },
+    {
+      "page": "03_Display_harnesses",
+      "ref": "J11",
+      "code": "C247920",
+      "mpn": "2.54-1*12P反弯针",
+      "uuid": "846d528d3be14cf38a9fc6e513741feb",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_12P-P2.54-H-M-W10.5",
+      "x": 900,
+      "y": 700,
+      "nets": {
+        "1": "5V_PERIPH",
+        "2": "GND",
+        "3": "DISP_SCK",
+        "4": "DISP_MOSI",
+        "5": "DISP_VIS_CS_N",
+        "6": "DISP_VIS_DC",
+        "7": "DISP_RESET_N",
+        "8": "VIS_BL_EN",
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": "GND"
+      },
+      "role": "OUR 12-way ILI9341 harness for module with onboard regulator; verify MSP2401 revision",
+      "dnp": false
+    },
+    {
+      "page": "03_Display_harnesses",
+      "ref": "R30",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 250,
+      "y": 300,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "HARM_CS_N"
+      },
+      "role": "idle pull-up",
+      "dnp": false
+    },
+    {
+      "page": "03_Display_harnesses",
+      "ref": "R31",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 700,
+      "y": 300,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "VIS_CS_N"
+      },
+      "role": "idle pull-up",
+      "dnp": false
+    },
+    {
+      "page": "03_Display_harnesses",
+      "ref": "R32",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1150,
+      "y": 300,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "INPUT_LOAD_N"
+      },
+      "role": "idle pull-up",
+      "dnp": false
+    },
+    {
+      "page": "03_Display_harnesses",
+      "ref": "R33",
+      "code": "C23162",
+      "mpn": "0603WAF4701T5E",
+      "uuid": "0f0661658cdd4f45888ea39caf7e9650",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 250,
+      "y": 180,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "I2C_SDA"
+      },
+      "role": "4.7k initial; DNP if module parallel pull-ups too strong",
+      "dnp": false
+    },
+    {
+      "page": "03_Display_harnesses",
+      "ref": "R34",
+      "code": "C23162",
+      "mpn": "0603WAF4701T5E",
+      "uuid": "0f0661658cdd4f45888ea39caf7e9650",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 700,
+      "y": 180,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "I2C_SCL"
+      },
+      "role": "4.7k initial; DNP if module parallel pull-ups too strong",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "U12",
+      "code": "C962071",
+      "mpn": "PCM5122PWR",
+      "uuid": "a943c2f256334e63b94dfb79caad8810",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "TSSOP-28_L9.8-W6.6-P0.65-BL",
+      "x": 400,
+      "y": 750,
+      "nets": {
+        "1": "DAC_3V3",
+        "2": "DAC_CAPP",
+        "3": "GND",
+        "4": "DAC_CAPM",
+        "5": "DAC_VNEG",
+        "6": "DAC_L_RAW",
+        "7": "DAC_R_RAW",
+        "8": "DAC_3V3",
+        "9": "GND",
+        "10": "GND",
+        "11": "I2C_MOD_SDA",
+        "12": "I2C_MOD_SCL",
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": "GND",
+        "17": "GND",
+        "18": "DAC_3V3",
+        "19": null,
+        "20": "GND",
+        "21": "I2S_BCK",
+        "22": "I2S_DIN",
+        "23": "I2S_LRCK",
+        "24": "GND",
+        "25": "DAC_XSMT",
+        "26": "DAC_LDOO",
+        "27": "GND",
+        "28": "DAC_3V3"
+      },
+      "role": "I2C mode MODE1=0 MODE2=1 ADR1/2=0 => 0x4C; SCK grounded in 3-wire mode",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "C20",
+      "code": "C1607",
+      "mpn": "CL10A225KP8NNNC",
+      "uuid": "c65936edd6734de99a636a2af666aaf4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1050,
+      "y": 820,
+      "nets": {
+        "1": "DAC_CAPP",
+        "2": "DAC_CAPM"
+      },
+      "role": "2.2uF charge pump; effective capacitance/bias to confirm",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "C21",
+      "code": "C1607",
+      "mpn": "CL10A225KP8NNNC",
+      "uuid": "c65936edd6734de99a636a2af666aaf4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1050,
+      "y": 700,
+      "nets": {
+        "1": "DAC_VNEG",
+        "2": "GND"
+      },
+      "role": "2.2uF charge pump; effective capacitance/bias to confirm",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "C22",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1050,
+      "y": 580,
+      "nets": {
+        "1": "DAC_LDOO",
+        "2": "GND"
+      },
+      "role": "100nF LDOO decoupling; never attach this pin to 3.3V",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "C23",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 200,
+      "y": 240,
+      "nets": {
+        "1": "DAC_3V3",
+        "2": "GND"
+      },
+      "role": "100nF for CPVDD/AVDD/DVDD, place separately at pins",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "C24",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 620,
+      "y": 240,
+      "nets": {
+        "1": "DAC_3V3",
+        "2": "GND"
+      },
+      "role": "100nF for CPVDD/AVDD/DVDD, place separately at pins",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "C25",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1040,
+      "y": 240,
+      "nets": {
+        "1": "DAC_3V3",
+        "2": "GND"
+      },
+      "role": "100nF for CPVDD/AVDD/DVDD, place separately at pins",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "C26",
+      "code": "C1607",
+      "mpn": "CL10A225KP8NNNC",
+      "uuid": "c65936edd6734de99a636a2af666aaf4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1460,
+      "y": 240,
+      "nets": {
+        "1": "DAC_3V3",
+        "2": "GND"
+      },
+      "role": "2.2uF local bulk",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "R40",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1050,
+      "y": 450,
+      "nets": {
+        "1": "DAC_3V3",
+        "2": "DAC_XSMT"
+      },
+      "role": "10k unmute pull-up; software mute required before manual PLL setup",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "R41",
+      "code": "C22775",
+      "mpn": "0603WAF1000T5E",
+      "uuid": "5303080f43d74b41ae76fc5142aa97e5",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1050,
+      "y": 340,
+      "nets": {
+        "1": "DAC_L_RAW",
+        "2": "AUX_L"
+      },
+      "role": "100R series; validate line output load",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "C27",
+      "code": "C14858",
+      "mpn": "CL10C101JB8NNNC",
+      "uuid": "c52f6dce9a2242039357ababc1e5f2aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1050,
+      "y": 120,
+      "nets": {
+        "1": "AUX_L",
+        "2": "GND"
+      },
+      "role": "100pF RF shunt candidate; not audio low-pass qualification",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "R42",
+      "code": "C22775",
+      "mpn": "0603WAF1000T5E",
+      "uuid": "5303080f43d74b41ae76fc5142aa97e5",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1500,
+      "y": 340,
+      "nets": {
+        "1": "DAC_R_RAW",
+        "2": "AUX_R"
+      },
+      "role": "100R series; validate line output load",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "C28",
+      "code": "C14858",
+      "mpn": "CL10C101JB8NNNC",
+      "uuid": "c52f6dce9a2242039357ababc1e5f2aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1500,
+      "y": 120,
+      "nets": {
+        "1": "AUX_R",
+        "2": "GND"
+      },
+      "role": "100pF RF shunt candidate; not audio low-pass qualification",
+      "dnp": false
+    },
+    {
+      "page": "04_PCM5122_AUX",
+      "ref": "J12",
+      "code": "C49257",
+      "mpn": "2.54-1*3P针",
+      "uuid": "fcc8b7ab7d4046188f57c59f3b17b90d",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_3P-P2.54-V-M-1",
+      "x": 1650,
+      "y": 700,
+      "nets": {
+        "1": "AUX_L",
+        "2": "AUX_R",
+        "3": "GND"
+      },
+      "role": "external TRS jack: Tip=L Ring=R Sleeve=GND; NOT headphones/speaker",
+      "dnp": false
+    },
+    {
+      "page": "05_Power",
+      "ref": "U13",
+      "code": "C51118",
+      "mpn": "AP2112K-3.3TRG1",
+      "uuid": "96423716b14e4b449901f431653f1108",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SOT-25-5_L2.9-W1.6-P0.95-LS2.8-BL",
+      "x": 800,
+      "y": 700,
+      "nets": {
+        "1": "5V_PERIPH",
+        "2": "GND",
+        "3": "5V_PERIPH",
+        "4": null,
+        "5": "DAC_3V3"
+      },
+      "role": "separate AP2112K 3.3V DAC LDO; not a display regulator",
+      "dnp": false
+    },
+    {
+      "page": "05_Power",
+      "ref": "C30",
+      "code": "C1607",
+      "mpn": "CL10A225KP8NNNC",
+      "uuid": "c65936edd6734de99a636a2af666aaf4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 450,
+      "y": 390,
+      "nets": {
+        "1": "5V_PERIPH",
+        "2": "GND"
+      },
+      "role": "2.2uF ceramic input, effective >=1uF",
+      "dnp": false
+    },
+    {
+      "page": "05_Power",
+      "ref": "C31",
+      "code": "C1607",
+      "mpn": "CL10A225KP8NNNC",
+      "uuid": "c65936edd6734de99a636a2af666aaf4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1050,
+      "y": 390,
+      "nets": {
+        "1": "DAC_3V3",
+        "2": "GND"
+      },
+      "role": "2.2uF ceramic output, effective >=1uF",
+      "dnp": false
+    },
+    {
+      "page": "05_Power",
+      "ref": "C32",
+      "code": "C1592",
+      "mpn": "CL10A105KO8NNNC",
+      "uuid": "6e73d6a3c4084768b6e24485ee6a6cf7",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 250,
+      "y": 230,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "1uF front-end bulk; local IC 100nF on each scan/core page",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "SW1",
+      "code": "C470754",
+      "mpn": "EC11E15244B2",
+      "uuid": "1e798447471e4a4791de69aa71ef6edf",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SW-TH_EC11XXXXXXXX",
+      "x": 300,
+      "y": 700,
+      "nets": {
+        "A": "ENC_A",
+        "B": "ENC_B",
+        "C": "GND",
+        "D": "ENC_PUSH",
+        "E": "GND",
+        "6": null,
+        "7": null
+      },
+      "role": "EC11E15244B2: official ALPS confirms push, 30 detents/15 pulses, 1.5mm travel",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "SW2",
+      "code": "C318884",
+      "mpn": "TS-1187A-B-A-B",
+      "uuid": "9b1d934c3e3a4920af227bab22a915b2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "x": 750,
+      "y": 700,
+      "nets": {
+        "1": "PRESET0",
+        "2": "PRESET0",
+        "3": "GND",
+        "4": "GND"
+      },
+      "role": "preset/edit button",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "SW3",
+      "code": "C318884",
+      "mpn": "TS-1187A-B-A-B",
+      "uuid": "9b1d934c3e3a4920af227bab22a915b2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "x": 1100,
+      "y": 700,
+      "nets": {
+        "1": "PRESET1",
+        "2": "PRESET1",
+        "3": "GND",
+        "4": "GND"
+      },
+      "role": "preset/edit button",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "SW4",
+      "code": "C318884",
+      "mpn": "TS-1187A-B-A-B",
+      "uuid": "9b1d934c3e3a4920af227bab22a915b2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "x": 1450,
+      "y": 700,
+      "nets": {
+        "1": "PRESET2",
+        "2": "PRESET2",
+        "3": "GND",
+        "4": "GND"
+      },
+      "role": "preset/edit button",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "SW5",
+      "code": "C318884",
+      "mpn": "TS-1187A-B-A-B",
+      "uuid": "9b1d934c3e3a4920af227bab22a915b2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "x": 750,
+      "y": 440,
+      "nets": {
+        "1": "PRESET3",
+        "2": "PRESET3",
+        "3": "GND",
+        "4": "GND"
+      },
+      "role": "preset/edit button",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "SW6",
+      "code": "C318884",
+      "mpn": "TS-1187A-B-A-B",
+      "uuid": "9b1d934c3e3a4920af227bab22a915b2",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "x": 1100,
+      "y": 440,
+      "nets": {
+        "1": "EDIT",
+        "2": "EDIT",
+        "3": "GND",
+        "4": "GND"
+      },
+      "role": "preset/edit button",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "R50",
+      "code": "C4190",
+      "mpn": "0603WAF2201T5E",
+      "uuid": "98df714a70bd4b05a6b4009c95d1c8aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 230,
+      "y": 280,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "ENC_A"
+      },
+      "role": "input pull-up; digital debounce required",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "R51",
+      "code": "C4190",
+      "mpn": "0603WAF2201T5E",
+      "uuid": "98df714a70bd4b05a6b4009c95d1c8aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 630,
+      "y": 280,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "ENC_B"
+      },
+      "role": "input pull-up; digital debounce required",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "R52",
+      "code": "C23162",
+      "mpn": "0603WAF4701T5E",
+      "uuid": "0f0661658cdd4f45888ea39caf7e9650",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1030,
+      "y": 280,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "ENC_PUSH"
+      },
+      "role": "input pull-up; digital debounce required",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "R53",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1430,
+      "y": 280,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "PRESET0"
+      },
+      "role": "input pull-up; digital debounce required",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "R54",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 230,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "PRESET1"
+      },
+      "role": "input pull-up; digital debounce required",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "R55",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 630,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "PRESET2"
+      },
+      "role": "input pull-up; digital debounce required",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "R56",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1030,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "PRESET3"
+      },
+      "role": "input pull-up; digital debounce required",
+      "dnp": false
+    },
+    {
+      "page": "06_Controls",
+      "ref": "R57",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1430,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "EDIT"
+      },
+      "role": "input pull-up; digital debounce required",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "U1",
+      "code": "C179326",
+      "mpn": "74HC4067PW,118",
+      "uuid": "7453dfbbac98498b8c3c70b0e3fe8a5c",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "x": 260,
+      "y": 750,
+      "nets": {
+        "24": "3V3_IO",
+        "12": "GND",
+        "15": "MUX_DISABLE",
+        "10": "ADDR0",
+        "11": "ADDR1",
+        "14": "ADDR2",
+        "13": "ADDR3",
+        "1": "RC0",
+        "9": "L0_M00",
+        "8": "L0_M01",
+        "7": "L0_M02",
+        "6": "L0_M03",
+        "5": "L0_M04",
+        "4": "L0_M05",
+        "3": "L0_M06",
+        "2": "L0_M07",
+        "23": "L0_M08",
+        "22": "L0_M09",
+        "21": "L0_M10",
+        "20": "L0_M11",
+        "19": "L0_M12",
+        "18": "L0_M13",
+        "17": "L0_M14",
+        "16": "L0_M15"
+      },
+      "role": "six parallel 16:1 MUX; address14/15 reference loads",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R1",
+      "code": "C105579",
+      "mpn": "RC0603FR-0747KL",
+      "uuid": "6a676f819e3646c8b3b03380076e4c20",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 260,
+      "y": 300,
+      "nets": {
+        "1": "RC_DRIVE",
+        "2": "RC0"
+      },
+      "role": "47k initial value; no fixed 1nF timing shunt",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "C1",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 260,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF local MUX decoupling",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R100",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 950,
+      "nets": {
+        "1": "L0_E00",
+        "2": "L0_M00"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R101",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 845,
+      "nets": {
+        "1": "L0_E01",
+        "2": "L0_M01"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R102",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 740,
+      "nets": {
+        "1": "L0_E02",
+        "2": "L0_M02"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R103",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 635,
+      "nets": {
+        "1": "L0_E03",
+        "2": "L0_M03"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R104",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 530,
+      "nets": {
+        "1": "L0_E04",
+        "2": "L0_M04"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R105",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 425,
+      "nets": {
+        "1": "L0_E05",
+        "2": "L0_M05"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R106",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 320,
+      "nets": {
+        "1": "L0_E06",
+        "2": "L0_M06"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R107",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 950,
+      "nets": {
+        "1": "L0_E07",
+        "2": "L0_M07"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R108",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 845,
+      "nets": {
+        "1": "L0_E08",
+        "2": "L0_M08"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R109",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 740,
+      "nets": {
+        "1": "L0_E09",
+        "2": "L0_M09"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R110",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 635,
+      "nets": {
+        "1": "L0_E10",
+        "2": "L0_M10"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R111",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 530,
+      "nets": {
+        "1": "L0_E11",
+        "2": "L0_M11"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R112",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 425,
+      "nets": {
+        "1": "L0_E12",
+        "2": "L0_M12"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "R113",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 320,
+      "nets": {
+        "1": "L0_E13",
+        "2": "L0_M13"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "C100",
+      "code": "C1634",
+      "mpn": "CL10C100JB8NNNC",
+      "uuid": "cce6c24475c147de9dedbc04bb9e84e4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 700,
+      "y": 160,
+      "nets": {
+        "1": "L0_M14",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "C101",
+      "code": "C14858",
+      "mpn": "CL10C101JB8NNNC",
+      "uuid": "c52f6dce9a2242039357ababc1e5f2aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1130,
+      "y": 160,
+      "nets": {
+        "1": "L0_M15",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "J20",
+      "code": "C22465876",
+      "mpn": "PZ254V-11-16P",
+      "uuid": "ee2c8be521d544108ed8ad2c2261825d",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "x": 1510,
+      "y": 750,
+      "nets": {
+        "1": "L0_E00",
+        "2": "L0_E01",
+        "3": "L0_E02",
+        "4": "L0_E03",
+        "5": "L0_E04",
+        "6": "L0_E05",
+        "7": "L0_E06",
+        "8": "L0_E07",
+        "9": "L0_E08",
+        "10": "L0_E09",
+        "11": "L0_E10",
+        "12": "L0_E11",
+        "13": "L0_E12",
+        "14": "L0_E13",
+        "15": "GND",
+        "16": "GND"
+      },
+      "role": "1x16 MALE carrier header, female cable required; 14 electrode channels + 2 ground",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "D1",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L0_E00",
+        "2": "L0_E01",
+        "4": "L0_E02",
+        "5": "L0_E03"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "D2",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L0_E04",
+        "2": "L0_E05",
+        "4": "L0_E06",
+        "5": "L0_E07"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "D3",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L0_E08",
+        "2": "L0_E09",
+        "4": "L0_E10",
+        "5": "L0_E11"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "07_Scan_lane_0",
+      "ref": "D4",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L0_E12",
+        "2": "L0_E13",
+        "4": null,
+        "5": null
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "U2",
+      "code": "C179326",
+      "mpn": "74HC4067PW,118",
+      "uuid": "7453dfbbac98498b8c3c70b0e3fe8a5c",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "x": 260,
+      "y": 750,
+      "nets": {
+        "24": "3V3_IO",
+        "12": "GND",
+        "15": "MUX_DISABLE",
+        "10": "ADDR0",
+        "11": "ADDR1",
+        "14": "ADDR2",
+        "13": "ADDR3",
+        "1": "RC1",
+        "9": "L1_M00",
+        "8": "L1_M01",
+        "7": "L1_M02",
+        "6": "L1_M03",
+        "5": "L1_M04",
+        "4": "L1_M05",
+        "3": "L1_M06",
+        "2": "L1_M07",
+        "23": "L1_M08",
+        "22": "L1_M09",
+        "21": "L1_M10",
+        "20": "L1_M11",
+        "19": "L1_M12",
+        "18": "L1_M13",
+        "17": "L1_M14",
+        "16": "L1_M15"
+      },
+      "role": "six parallel 16:1 MUX; address14/15 reference loads",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R2",
+      "code": "C105579",
+      "mpn": "RC0603FR-0747KL",
+      "uuid": "6a676f819e3646c8b3b03380076e4c20",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 260,
+      "y": 300,
+      "nets": {
+        "1": "RC_DRIVE",
+        "2": "RC1"
+      },
+      "role": "47k initial value; no fixed 1nF timing shunt",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "C2",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 260,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF local MUX decoupling",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R120",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 950,
+      "nets": {
+        "1": "L1_E00",
+        "2": "L1_M00"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R121",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 845,
+      "nets": {
+        "1": "L1_E01",
+        "2": "L1_M01"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R122",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 740,
+      "nets": {
+        "1": "L1_E02",
+        "2": "L1_M02"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R123",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 635,
+      "nets": {
+        "1": "L1_E03",
+        "2": "L1_M03"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R124",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 530,
+      "nets": {
+        "1": "L1_E04",
+        "2": "L1_M04"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R125",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 425,
+      "nets": {
+        "1": "L1_E05",
+        "2": "L1_M05"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R126",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 320,
+      "nets": {
+        "1": "L1_E06",
+        "2": "L1_M06"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R127",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 950,
+      "nets": {
+        "1": "L1_E07",
+        "2": "L1_M07"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R128",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 845,
+      "nets": {
+        "1": "L1_E08",
+        "2": "L1_M08"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R129",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 740,
+      "nets": {
+        "1": "L1_E09",
+        "2": "L1_M09"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R130",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 635,
+      "nets": {
+        "1": "L1_E10",
+        "2": "L1_M10"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R131",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 530,
+      "nets": {
+        "1": "L1_E11",
+        "2": "L1_M11"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R132",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 425,
+      "nets": {
+        "1": "L1_E12",
+        "2": "L1_M12"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "R133",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 320,
+      "nets": {
+        "1": "L1_E13",
+        "2": "L1_M13"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "C102",
+      "code": "C1634",
+      "mpn": "CL10C100JB8NNNC",
+      "uuid": "cce6c24475c147de9dedbc04bb9e84e4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 700,
+      "y": 160,
+      "nets": {
+        "1": "L1_M14",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "C103",
+      "code": "C14858",
+      "mpn": "CL10C101JB8NNNC",
+      "uuid": "c52f6dce9a2242039357ababc1e5f2aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1130,
+      "y": 160,
+      "nets": {
+        "1": "L1_M15",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "J21",
+      "code": "C22465876",
+      "mpn": "PZ254V-11-16P",
+      "uuid": "ee2c8be521d544108ed8ad2c2261825d",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "x": 1510,
+      "y": 750,
+      "nets": {
+        "1": "L1_E00",
+        "2": "L1_E01",
+        "3": "L1_E02",
+        "4": "L1_E03",
+        "5": "L1_E04",
+        "6": "L1_E05",
+        "7": "L1_E06",
+        "8": "L1_E07",
+        "9": "L1_E08",
+        "10": "L1_E09",
+        "11": "L1_E10",
+        "12": "L1_E11",
+        "13": "L1_E12",
+        "14": "L1_E13",
+        "15": "GND",
+        "16": "GND"
+      },
+      "role": "1x16 MALE carrier header, female cable required; 14 electrode channels + 2 ground",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "D5",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L1_E00",
+        "2": "L1_E01",
+        "4": "L1_E02",
+        "5": "L1_E03"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "D6",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L1_E04",
+        "2": "L1_E05",
+        "4": "L1_E06",
+        "5": "L1_E07"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "D7",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L1_E08",
+        "2": "L1_E09",
+        "4": "L1_E10",
+        "5": "L1_E11"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "08_Scan_lane_1",
+      "ref": "D8",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L1_E12",
+        "2": "L1_E13",
+        "4": null,
+        "5": null
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "U3",
+      "code": "C179326",
+      "mpn": "74HC4067PW,118",
+      "uuid": "7453dfbbac98498b8c3c70b0e3fe8a5c",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "x": 260,
+      "y": 750,
+      "nets": {
+        "24": "3V3_IO",
+        "12": "GND",
+        "15": "MUX_DISABLE",
+        "10": "ADDR0",
+        "11": "ADDR1",
+        "14": "ADDR2",
+        "13": "ADDR3",
+        "1": "RC2",
+        "9": "L2_M00",
+        "8": "L2_M01",
+        "7": "L2_M02",
+        "6": "L2_M03",
+        "5": "L2_M04",
+        "4": "L2_M05",
+        "3": "L2_M06",
+        "2": "L2_M07",
+        "23": "L2_M08",
+        "22": "L2_M09",
+        "21": "L2_M10",
+        "20": "L2_M11",
+        "19": "L2_M12",
+        "18": "L2_M13",
+        "17": "L2_M14",
+        "16": "L2_M15"
+      },
+      "role": "six parallel 16:1 MUX; address14/15 reference loads",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R3",
+      "code": "C105579",
+      "mpn": "RC0603FR-0747KL",
+      "uuid": "6a676f819e3646c8b3b03380076e4c20",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 260,
+      "y": 300,
+      "nets": {
+        "1": "RC_DRIVE",
+        "2": "RC2"
+      },
+      "role": "47k initial value; no fixed 1nF timing shunt",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "C3",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 260,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF local MUX decoupling",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R140",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 950,
+      "nets": {
+        "1": "L2_E00",
+        "2": "L2_M00"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R141",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 845,
+      "nets": {
+        "1": "L2_E01",
+        "2": "L2_M01"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R142",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 740,
+      "nets": {
+        "1": "L2_E02",
+        "2": "L2_M02"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R143",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 635,
+      "nets": {
+        "1": "L2_E03",
+        "2": "L2_M03"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R144",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 530,
+      "nets": {
+        "1": "L2_E04",
+        "2": "L2_M04"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R145",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 425,
+      "nets": {
+        "1": "L2_E05",
+        "2": "L2_M05"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R146",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 320,
+      "nets": {
+        "1": "L2_E06",
+        "2": "L2_M06"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R147",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 950,
+      "nets": {
+        "1": "L2_E07",
+        "2": "L2_M07"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R148",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 845,
+      "nets": {
+        "1": "L2_E08",
+        "2": "L2_M08"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R149",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 740,
+      "nets": {
+        "1": "L2_E09",
+        "2": "L2_M09"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R150",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 635,
+      "nets": {
+        "1": "L2_E10",
+        "2": "L2_M10"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R151",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 530,
+      "nets": {
+        "1": "L2_E11",
+        "2": "L2_M11"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R152",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 425,
+      "nets": {
+        "1": "L2_E12",
+        "2": "L2_M12"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "R153",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 320,
+      "nets": {
+        "1": "L2_E13",
+        "2": "L2_M13"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "C104",
+      "code": "C1634",
+      "mpn": "CL10C100JB8NNNC",
+      "uuid": "cce6c24475c147de9dedbc04bb9e84e4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 700,
+      "y": 160,
+      "nets": {
+        "1": "L2_M14",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "C105",
+      "code": "C14858",
+      "mpn": "CL10C101JB8NNNC",
+      "uuid": "c52f6dce9a2242039357ababc1e5f2aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1130,
+      "y": 160,
+      "nets": {
+        "1": "L2_M15",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "J22",
+      "code": "C22465876",
+      "mpn": "PZ254V-11-16P",
+      "uuid": "ee2c8be521d544108ed8ad2c2261825d",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "x": 1510,
+      "y": 750,
+      "nets": {
+        "1": "L2_E00",
+        "2": "L2_E01",
+        "3": "L2_E02",
+        "4": "L2_E03",
+        "5": "L2_E04",
+        "6": "L2_E05",
+        "7": "L2_E06",
+        "8": "L2_E07",
+        "9": "L2_E08",
+        "10": "L2_E09",
+        "11": "L2_E10",
+        "12": "L2_E11",
+        "13": "L2_E12",
+        "14": "L2_E13",
+        "15": "GND",
+        "16": "GND"
+      },
+      "role": "1x16 MALE carrier header, female cable required; 14 electrode channels + 2 ground",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "D9",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L2_E00",
+        "2": "L2_E01",
+        "4": "L2_E02",
+        "5": "L2_E03"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "D10",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L2_E04",
+        "2": "L2_E05",
+        "4": "L2_E06",
+        "5": "L2_E07"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "D11",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L2_E08",
+        "2": "L2_E09",
+        "4": "L2_E10",
+        "5": "L2_E11"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "09_Scan_lane_2",
+      "ref": "D12",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L2_E12",
+        "2": "L2_E13",
+        "4": null,
+        "5": null
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "U4",
+      "code": "C179326",
+      "mpn": "74HC4067PW,118",
+      "uuid": "7453dfbbac98498b8c3c70b0e3fe8a5c",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "x": 260,
+      "y": 750,
+      "nets": {
+        "24": "3V3_IO",
+        "12": "GND",
+        "15": "MUX_DISABLE",
+        "10": "ADDR0",
+        "11": "ADDR1",
+        "14": "ADDR2",
+        "13": "ADDR3",
+        "1": "RC3",
+        "9": "L3_M00",
+        "8": "L3_M01",
+        "7": "L3_M02",
+        "6": "L3_M03",
+        "5": "L3_M04",
+        "4": "L3_M05",
+        "3": "L3_M06",
+        "2": "L3_M07",
+        "23": "L3_M08",
+        "22": "L3_M09",
+        "21": "L3_M10",
+        "20": "L3_M11",
+        "19": "L3_M12",
+        "18": "L3_M13",
+        "17": "L3_M14",
+        "16": "L3_M15"
+      },
+      "role": "six parallel 16:1 MUX; address14/15 reference loads",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R4",
+      "code": "C105579",
+      "mpn": "RC0603FR-0747KL",
+      "uuid": "6a676f819e3646c8b3b03380076e4c20",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 260,
+      "y": 300,
+      "nets": {
+        "1": "RC_DRIVE",
+        "2": "RC3"
+      },
+      "role": "47k initial value; no fixed 1nF timing shunt",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "C4",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 260,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF local MUX decoupling",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R160",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 950,
+      "nets": {
+        "1": "L3_E00",
+        "2": "L3_M00"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R161",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 845,
+      "nets": {
+        "1": "L3_E01",
+        "2": "L3_M01"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R162",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 740,
+      "nets": {
+        "1": "L3_E02",
+        "2": "L3_M02"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R163",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 635,
+      "nets": {
+        "1": "L3_E03",
+        "2": "L3_M03"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R164",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 530,
+      "nets": {
+        "1": "L3_E04",
+        "2": "L3_M04"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R165",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 425,
+      "nets": {
+        "1": "L3_E05",
+        "2": "L3_M05"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R166",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 320,
+      "nets": {
+        "1": "L3_E06",
+        "2": "L3_M06"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R167",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 950,
+      "nets": {
+        "1": "L3_E07",
+        "2": "L3_M07"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R168",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 845,
+      "nets": {
+        "1": "L3_E08",
+        "2": "L3_M08"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R169",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 740,
+      "nets": {
+        "1": "L3_E09",
+        "2": "L3_M09"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R170",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 635,
+      "nets": {
+        "1": "L3_E10",
+        "2": "L3_M10"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R171",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 530,
+      "nets": {
+        "1": "L3_E11",
+        "2": "L3_M11"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R172",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 425,
+      "nets": {
+        "1": "L3_E12",
+        "2": "L3_M12"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "R173",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 320,
+      "nets": {
+        "1": "L3_E13",
+        "2": "L3_M13"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "C106",
+      "code": "C1634",
+      "mpn": "CL10C100JB8NNNC",
+      "uuid": "cce6c24475c147de9dedbc04bb9e84e4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 700,
+      "y": 160,
+      "nets": {
+        "1": "L3_M14",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "C107",
+      "code": "C14858",
+      "mpn": "CL10C101JB8NNNC",
+      "uuid": "c52f6dce9a2242039357ababc1e5f2aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1130,
+      "y": 160,
+      "nets": {
+        "1": "L3_M15",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "J23",
+      "code": "C22465876",
+      "mpn": "PZ254V-11-16P",
+      "uuid": "ee2c8be521d544108ed8ad2c2261825d",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "x": 1510,
+      "y": 750,
+      "nets": {
+        "1": "L3_E00",
+        "2": "L3_E01",
+        "3": "L3_E02",
+        "4": "L3_E03",
+        "5": "L3_E04",
+        "6": "L3_E05",
+        "7": "L3_E06",
+        "8": "L3_E07",
+        "9": "L3_E08",
+        "10": "L3_E09",
+        "11": "L3_E10",
+        "12": "L3_E11",
+        "13": "L3_E12",
+        "14": "L3_E13",
+        "15": "GND",
+        "16": "GND"
+      },
+      "role": "1x16 MALE carrier header, female cable required; 14 electrode channels + 2 ground",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "D13",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L3_E00",
+        "2": "L3_E01",
+        "4": "L3_E02",
+        "5": "L3_E03"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "D14",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L3_E04",
+        "2": "L3_E05",
+        "4": "L3_E06",
+        "5": "L3_E07"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "D15",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L3_E08",
+        "2": "L3_E09",
+        "4": "L3_E10",
+        "5": "L3_E11"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "10_Scan_lane_3",
+      "ref": "D16",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L3_E12",
+        "2": "L3_E13",
+        "4": null,
+        "5": null
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "U5",
+      "code": "C179326",
+      "mpn": "74HC4067PW,118",
+      "uuid": "7453dfbbac98498b8c3c70b0e3fe8a5c",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "x": 260,
+      "y": 750,
+      "nets": {
+        "24": "3V3_IO",
+        "12": "GND",
+        "15": "MUX_DISABLE",
+        "10": "ADDR0",
+        "11": "ADDR1",
+        "14": "ADDR2",
+        "13": "ADDR3",
+        "1": "RC4",
+        "9": "L4_M00",
+        "8": "L4_M01",
+        "7": "L4_M02",
+        "6": "L4_M03",
+        "5": "L4_M04",
+        "4": "L4_M05",
+        "3": "L4_M06",
+        "2": "L4_M07",
+        "23": "L4_M08",
+        "22": "L4_M09",
+        "21": "L4_M10",
+        "20": "L4_M11",
+        "19": "L4_M12",
+        "18": "L4_M13",
+        "17": "L4_M14",
+        "16": "L4_M15"
+      },
+      "role": "six parallel 16:1 MUX; address14/15 reference loads",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R5",
+      "code": "C105579",
+      "mpn": "RC0603FR-0747KL",
+      "uuid": "6a676f819e3646c8b3b03380076e4c20",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 260,
+      "y": 300,
+      "nets": {
+        "1": "RC_DRIVE",
+        "2": "RC4"
+      },
+      "role": "47k initial value; no fixed 1nF timing shunt",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "C5",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 260,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF local MUX decoupling",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R180",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 950,
+      "nets": {
+        "1": "L4_E00",
+        "2": "L4_M00"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R181",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 845,
+      "nets": {
+        "1": "L4_E01",
+        "2": "L4_M01"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R182",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 740,
+      "nets": {
+        "1": "L4_E02",
+        "2": "L4_M02"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R183",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 635,
+      "nets": {
+        "1": "L4_E03",
+        "2": "L4_M03"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R184",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 530,
+      "nets": {
+        "1": "L4_E04",
+        "2": "L4_M04"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R185",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 425,
+      "nets": {
+        "1": "L4_E05",
+        "2": "L4_M05"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R186",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 320,
+      "nets": {
+        "1": "L4_E06",
+        "2": "L4_M06"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R187",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 950,
+      "nets": {
+        "1": "L4_E07",
+        "2": "L4_M07"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R188",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 845,
+      "nets": {
+        "1": "L4_E08",
+        "2": "L4_M08"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R189",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 740,
+      "nets": {
+        "1": "L4_E09",
+        "2": "L4_M09"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R190",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 635,
+      "nets": {
+        "1": "L4_E10",
+        "2": "L4_M10"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R191",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 530,
+      "nets": {
+        "1": "L4_E11",
+        "2": "L4_M11"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R192",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 425,
+      "nets": {
+        "1": "L4_E12",
+        "2": "L4_M12"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "R193",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 320,
+      "nets": {
+        "1": "L4_E13",
+        "2": "L4_M13"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "C108",
+      "code": "C1634",
+      "mpn": "CL10C100JB8NNNC",
+      "uuid": "cce6c24475c147de9dedbc04bb9e84e4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 700,
+      "y": 160,
+      "nets": {
+        "1": "L4_M14",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "C109",
+      "code": "C14858",
+      "mpn": "CL10C101JB8NNNC",
+      "uuid": "c52f6dce9a2242039357ababc1e5f2aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1130,
+      "y": 160,
+      "nets": {
+        "1": "L4_M15",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "J24",
+      "code": "C22465876",
+      "mpn": "PZ254V-11-16P",
+      "uuid": "ee2c8be521d544108ed8ad2c2261825d",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "x": 1510,
+      "y": 750,
+      "nets": {
+        "1": "L4_E00",
+        "2": "L4_E01",
+        "3": "L4_E02",
+        "4": "L4_E03",
+        "5": "L4_E04",
+        "6": "L4_E05",
+        "7": "L4_E06",
+        "8": "L4_E07",
+        "9": "L4_E08",
+        "10": "L4_E09",
+        "11": "L4_E10",
+        "12": "L4_E11",
+        "13": "L4_E12",
+        "14": "L4_E13",
+        "15": "GND",
+        "16": "GND"
+      },
+      "role": "1x16 MALE carrier header, female cable required; 14 electrode channels + 2 ground",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "D17",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L4_E00",
+        "2": "L4_E01",
+        "4": "L4_E02",
+        "5": "L4_E03"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "D18",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L4_E04",
+        "2": "L4_E05",
+        "4": "L4_E06",
+        "5": "L4_E07"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "D19",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L4_E08",
+        "2": "L4_E09",
+        "4": "L4_E10",
+        "5": "L4_E11"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "11_Scan_lane_4",
+      "ref": "D20",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L4_E12",
+        "2": "L4_E13",
+        "4": null,
+        "5": null
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "U6",
+      "code": "C179326",
+      "mpn": "74HC4067PW,118",
+      "uuid": "7453dfbbac98498b8c3c70b0e3fe8a5c",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "x": 260,
+      "y": 750,
+      "nets": {
+        "24": "3V3_IO",
+        "12": "GND",
+        "15": "MUX_DISABLE",
+        "10": "ADDR0",
+        "11": "ADDR1",
+        "14": "ADDR2",
+        "13": "ADDR3",
+        "1": "RC5",
+        "9": "L5_M00",
+        "8": "L5_M01",
+        "7": "L5_M02",
+        "6": "L5_M03",
+        "5": "L5_M04",
+        "4": "L5_M05",
+        "3": "L5_M06",
+        "2": "L5_M07",
+        "23": "L5_M08",
+        "22": "L5_M09",
+        "21": "L5_M10",
+        "20": "L5_M11",
+        "19": "L5_M12",
+        "18": "L5_M13",
+        "17": "L5_M14",
+        "16": "L5_M15"
+      },
+      "role": "six parallel 16:1 MUX; address14/15 reference loads",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R6",
+      "code": "C105579",
+      "mpn": "RC0603FR-0747KL",
+      "uuid": "6a676f819e3646c8b3b03380076e4c20",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 260,
+      "y": 300,
+      "nets": {
+        "1": "RC_DRIVE",
+        "2": "RC5"
+      },
+      "role": "47k initial value; no fixed 1nF timing shunt",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "C6",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 260,
+      "y": 160,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF local MUX decoupling",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R200",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 950,
+      "nets": {
+        "1": "L5_E00",
+        "2": "L5_M00"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R201",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 845,
+      "nets": {
+        "1": "L5_E01",
+        "2": "L5_M01"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R202",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 740,
+      "nets": {
+        "1": "L5_E02",
+        "2": "L5_M02"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R203",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 635,
+      "nets": {
+        "1": "L5_E03",
+        "2": "L5_M03"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R204",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 530,
+      "nets": {
+        "1": "L5_E04",
+        "2": "L5_M04"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R205",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 425,
+      "nets": {
+        "1": "L5_E05",
+        "2": "L5_M05"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R206",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": 320,
+      "nets": {
+        "1": "L5_E06",
+        "2": "L5_M06"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R207",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 950,
+      "nets": {
+        "1": "L5_E07",
+        "2": "L5_M07"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R208",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 845,
+      "nets": {
+        "1": "L5_E08",
+        "2": "L5_M08"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R209",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 740,
+      "nets": {
+        "1": "L5_E09",
+        "2": "L5_M09"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R210",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 635,
+      "nets": {
+        "1": "L5_E10",
+        "2": "L5_M10"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R211",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 530,
+      "nets": {
+        "1": "L5_E11",
+        "2": "L5_M11"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R212",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 425,
+      "nets": {
+        "1": "L5_E12",
+        "2": "L5_M12"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "R213",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1080,
+      "y": 320,
+      "nets": {
+        "1": "L5_E13",
+        "2": "L5_M13"
+      },
+      "role": "1k per electrode; stocked replacement for C21190",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "C110",
+      "code": "C1634",
+      "mpn": "CL10C100JB8NNNC",
+      "uuid": "cce6c24475c147de9dedbc04bb9e84e4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 700,
+      "y": 160,
+      "nets": {
+        "1": "L5_M14",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "C111",
+      "code": "C14858",
+      "mpn": "CL10C101JB8NNNC",
+      "uuid": "c52f6dce9a2242039357ababc1e5f2aa",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1130,
+      "y": 160,
+      "nets": {
+        "1": "L5_M15",
+        "2": "GND"
+      },
+      "role": "10/100pF C0G reference; selection subject to measured capacitance",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "J25",
+      "code": "C22465876",
+      "mpn": "PZ254V-11-16P",
+      "uuid": "ee2c8be521d544108ed8ad2c2261825d",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "x": 1510,
+      "y": 750,
+      "nets": {
+        "1": "L5_E00",
+        "2": "L5_E01",
+        "3": "L5_E02",
+        "4": "L5_E03",
+        "5": "L5_E04",
+        "6": "L5_E05",
+        "7": "L5_E06",
+        "8": "L5_E07",
+        "9": "L5_E08",
+        "10": "L5_E09",
+        "11": "L5_E10",
+        "12": "L5_E11",
+        "13": "L5_E12",
+        "14": "L5_E13",
+        "15": "GND",
+        "16": "GND"
+      },
+      "role": "1x16 MALE carrier header, female cable required; 14 electrode channels + 2 ground",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "D21",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L5_E00",
+        "2": "L5_E01",
+        "4": "L5_E02",
+        "5": "L5_E03"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "D22",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -30,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L5_E04",
+        "2": "L5_E05",
+        "4": "L5_E06",
+        "5": "L5_E07"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "D23",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 650,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L5_E08",
+        "2": "L5_E09",
+        "4": "L5_E10",
+        "5": "L5_E11"
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "12_Scan_lane_5",
+      "ref": "D24",
+      "code": "C106794",
+      "mpn": "TPD4E02B04DQAR",
+      "uuid": "fa97ee685b3a4204bc17756546406e53",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "x": 1080,
+      "y": -260,
+      "nets": {
+        "3": "GND",
+        "8": "GND",
+        "6": null,
+        "7": null,
+        "9": null,
+        "10": null,
+        "1": "L5_E12",
+        "2": "L5_E13",
+        "4": null,
+        "5": null
+      },
+      "role": "TI TPD4E02B04; NOT TECH PUBLIC -TP; physical ESD qualification pending",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "U14",
+      "code": "C544515",
+      "mpn": "TCA9517DGKR",
+      "uuid": "2e0f09439e5e433ebde7217a98d65b84",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "VSSOP-8_L3.0-W3.0-P0.65-LS5.0-BL",
+      "x": 270,
+      "y": 760,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "I2C_SCL",
+        "3": "I2C_SDA",
+        "4": "GND",
+        "5": "3V3_PERIPH",
+        "6": "I2C_MOD_SDA",
+        "7": "I2C_MOD_SCL",
+        "8": "3V3_PERIPH"
+      },
+      "role": "TCA9517: A=host, B=peripheral; EN=B rail, never host rail; verify B-side VOL at actual targets",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "U15",
+      "code": "C7668",
+      "mpn": "SN74LVC244APWR",
+      "uuid": "2814e0c8fc334b34bdf6ce8e81dab9ca",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "TSSOP-20_L6.5-W4.4-P0.65-LS6.4-BL",
+      "x": 900,
+      "y": 760,
+      "nets": {
+        "1": "GND",
+        "19": "GND",
+        "20": "3V3_PERIPH",
+        "10": "GND",
+        "2": "BUS_SCK",
+        "18": "DISP_SCK",
+        "4": "BUS_MOSI",
+        "16": "DISP_MOSI",
+        "6": "VIS_CS_N",
+        "14": "DISP_VIS_CS_N",
+        "8": "HARM_CS_N",
+        "12": "DISP_HARM_CS_N",
+        "11": "VIS_DC",
+        "9": "DISP_VIS_DC",
+        "13": "LCD_RESET_N",
+        "7": "DISP_RESET_N",
+        "15": "TP_RESET_N",
+        "5": "TP_RESET_MOD_N",
+        "17": "3V3_IO",
+        "3": "VIS_BL_EN"
+      },
+      "role": "SN74LVC244A: peripheral-powered, Ioff, both OEs low, eighth channel provides backlight enable",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "U16",
+      "code": "C7836",
+      "mpn": "SN74LVC1G17DBVR",
+      "uuid": "4f7a0ea24d734e93830e74ea7183d607",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR",
+      "x": 1450,
+      "y": 760,
+      "nets": {
+        "1": null,
+        "2": "TP_INT_MOD",
+        "3": "GND",
+        "4": "TP_INT",
+        "5": "3V3_IO"
+      },
+      "role": "SN74LVC1G17: host-powered Schmitt input, Ioff; ignore touch INT until module initialized",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "C33",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 250,
+      "y": 350,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF at U14 A/B, U15, U16 supply pin",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "C34",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 600,
+      "y": 350,
+      "nets": {
+        "1": "3V3_PERIPH",
+        "2": "GND"
+      },
+      "role": "100nF at U14 A/B, U15, U16 supply pin",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "C35",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 950,
+      "y": 350,
+      "nets": {
+        "1": "3V3_PERIPH",
+        "2": "GND"
+      },
+      "role": "100nF at U14 A/B, U15, U16 supply pin",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "C36",
+      "code": "C1591",
+      "mpn": "CL10B104KB8NNNC",
+      "uuid": "ac7072e4a0764739a31216c96ed3c9cc",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1300,
+      "y": 350,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "100nF at U14 A/B, U15, U16 supply pin",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "R60",
+      "code": "C23162",
+      "mpn": "0603WAF4701T5E",
+      "uuid": "0f0661658cdd4f45888ea39caf7e9650",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 250,
+      "y": 200,
+      "nets": {
+        "1": "3V3_PERIPH",
+        "2": "I2C_MOD_SDA"
+      },
+      "role": "B-side 4.7k; recalculate parallel module pull-ups and bus capacitance",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "R61",
+      "code": "C23162",
+      "mpn": "0603WAF4701T5E",
+      "uuid": "0f0661658cdd4f45888ea39caf7e9650",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 690,
+      "y": 200,
+      "nets": {
+        "1": "3V3_PERIPH",
+        "2": "I2C_MOD_SCL"
+      },
+      "role": "B-side 4.7k; recalculate parallel module pull-ups and bus capacitance",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "R62",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1150,
+      "y": 200,
+      "nets": {
+        "1": "3V3_PERIPH",
+        "2": "TP_INT_MOD"
+      },
+      "role": "module INT pull-up; verify module polarity and existing pull-up",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "R63",
+      "code": "C25803",
+      "mpn": "0603WAF1003T5E",
+      "uuid": "40ff282b3d594c33b798d1707d8406cb",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 250,
+      "y": 60,
+      "nets": {
+        "1": "BUS_SCK",
+        "2": "GND"
+      },
+      "role": "100k boot bias while FPGA pins Hi-Z",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "R64",
+      "code": "C25803",
+      "mpn": "0603WAF1003T5E",
+      "uuid": "40ff282b3d594c33b798d1707d8406cb",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 690,
+      "y": 60,
+      "nets": {
+        "1": "BUS_MOSI",
+        "2": "GND"
+      },
+      "role": "100k boot bias while FPGA pins Hi-Z",
+      "dnp": false
+    },
+    {
+      "page": "13_Power_off_isolation",
+      "ref": "R65",
+      "code": "C25803",
+      "mpn": "0603WAF1003T5E",
+      "uuid": "40ff282b3d594c33b798d1707d8406cb",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1130,
+      "y": 60,
+      "nets": {
+        "1": "VIS_DC",
+        "2": "GND"
+      },
+      "role": "100k boot bias while FPGA pins Hi-Z",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "J13",
+      "code": "C158012",
+      "mpn": "B2B-XH-A(LF)(SN)",
+      "uuid": "7dd131312eb9424b9b42e425df3ee577",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "CONN-TH_B2B-XH-A-LF-SN",
+      "x": 200,
+      "y": 820,
+      "nets": {
+        "1": "5V_IN",
+        "2": "GND"
+      },
+      "role": "JST XH 2.5mm keyed 2P; pin1 +5V, pin2 GND; mating housing/contacts required",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "F1",
+      "code": "C210834",
+      "mpn": "MF-MSMF110/16-2",
+      "uuid": "fa4d23e96f1c494990185ed667cf34e1",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "F1812",
+      "x": 650,
+      "y": 820,
+      "nets": {
+        "1": "5V_IN",
+        "2": "5V_FUSED"
+      },
+      "role": "Bourns PTC 1.1A hold at 23C; temperature derating applies",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "Q1",
+      "code": "C110499",
+      "mpn": "DMP2035U-7",
+      "uuid": "b81c0edac4b4417cb0d95f22d3ffae84",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+      "x": 1100,
+      "y": 820,
+      "nets": {
+        "1": "PWR_GATE",
+        "2": "5V_PROTECTED",
+        "3": "5V_FUSED"
+      },
+      "role": "DMP2035U P-channel reverse polarity: D=input S=output G=100k to GND; not reverse-current isolation",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "R66",
+      "code": "C25803",
+      "mpn": "0603WAF1003T5E",
+      "uuid": "40ff282b3d594c33b798d1707d8406cb",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1500,
+      "y": 820,
+      "nets": {
+        "1": "PWR_GATE",
+        "2": "GND"
+      },
+      "role": "100k PMOS gate pull-down",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "U17",
+      "code": "C55266",
+      "mpn": "TPS2553DBVR",
+      "uuid": "ab12a31e340e4b838f277925cbc6f7ce",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR",
+      "x": 650,
+      "y": 500,
+      "nets": {
+        "1": "5V_PROTECTED",
+        "2": "GND",
+        "3": "3V3_IO",
+        "4": "PWR_FAULT_N",
+        "5": "PWR_ILIM",
+        "6": "5V_PERIPH"
+      },
+      "role": "TPS2553 ACTIVE-HIGH constant-current version; enabled by Nano rail, auto-retry/thermal behavior must be tested",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "R67",
+      "code": "C22912",
+      "mpn": "0603WAF2372T5E",
+      "uuid": "6e1400edf1a14fe6b5afaf424a14b8b1",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1100,
+      "y": 500,
+      "nets": {
+        "1": "PWR_ILIM",
+        "2": "GND"
+      },
+      "role": "23.7k 1%; TI equations with resistor tolerance: about 1.002..1.184A; not system load budget",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "R68",
+      "code": "C25803",
+      "mpn": "0603WAF1003T5E",
+      "uuid": "40ff282b3d594c33b798d1707d8406cb",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1500,
+      "y": 500,
+      "nets": {
+        "1": "3V3_PERIPH",
+        "2": "PWR_FAULT_N"
+      },
+      "role": "100k fault pull-up, test pad only, consumes no FPGA input",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "R69",
+      "code": "C25803",
+      "mpn": "0603WAF1003T5E",
+      "uuid": "40ff282b3d594c33b798d1707d8406cb",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 200,
+      "y": 470,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "EN default low if Nano disconnected; 33uA when host on",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "R70",
+      "code": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "uuid": "9b698a84139c4c4b998625f003a0615f",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1500,
+      "y": 330,
+      "nets": {
+        "1": "5V_PERIPH",
+        "2": "GND"
+      },
+      "role": "10k output bleed; no claim of immediate discharge",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "C37",
+      "code": "C1607",
+      "mpn": "CL10A225KP8NNNC",
+      "uuid": "c65936edd6734de99a636a2af666aaf4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 200,
+      "y": 170,
+      "nets": {
+        "1": "5V_PROTECTED",
+        "2": "GND"
+      },
+      "role": "2.2uF ceramic; local input/output decoupling",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "C38",
+      "code": "C1607",
+      "mpn": "CL10A225KP8NNNC",
+      "uuid": "c65936edd6734de99a636a2af666aaf4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 650,
+      "y": 170,
+      "nets": {
+        "1": "5V_PERIPH",
+        "2": "GND"
+      },
+      "role": "2.2uF ceramic; local input/output decoupling",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "C39",
+      "code": "C1607",
+      "mpn": "CL10A225KP8NNNC",
+      "uuid": "c65936edd6734de99a636a2af666aaf4",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "C0603",
+      "x": 1100,
+      "y": 170,
+      "nets": {
+        "1": "3V3_PERIPH",
+        "2": "GND"
+      },
+      "role": "2.2uF ceramic; local input/output decoupling",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "U18",
+      "code": "C51118",
+      "mpn": "AP2112K-3.3TRG1",
+      "uuid": "96423716b14e4b449901f431653f1108",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "SOT-25-5_L2.9-W1.6-P0.95-LS2.8-BL",
+      "x": 1100,
+      "y": 330,
+      "nets": {
+        "1": "5V_PERIPH",
+        "2": "GND",
+        "3": "5V_PERIPH",
+        "4": null,
+        "5": "3V3_PERIPH"
+      },
+      "role": "AP2112 separate digital peripheral 3.3V regulator, output never join DAC or Nano rail",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "R71",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 650,
+      "y": -20,
+      "nets": {
+        "1": "3V3_PERIPH",
+        "2": "GND"
+      },
+      "role": "1k rail bleed, 3.3mA / 10.9mW; bounds residual voltage from Ioff, not a substitute for sequencing tests",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "R72",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1100,
+      "y": -20,
+      "nets": {
+        "1": "DAC_3V3",
+        "2": "GND"
+      },
+      "role": "1k rail bleed, 3.3mA / 10.9mW; bounds residual voltage from Ioff, not a substitute for sequencing tests",
+      "dnp": false
+    },
+    {
+      "page": "14_Protected_power_entry",
+      "ref": "R73",
+      "code": "C22548",
+      "mpn": "RC0603FR-071KL",
+      "uuid": "3a88329dfeba4ae2b7e97c1498192bee",
+      "libraryUuid": "0819f05c4eef4c71ace90d822a990e87",
+      "footprint": "R0603",
+      "x": 1500,
+      "y": -20,
+      "nets": {
+        "1": "3V3_IO",
+        "2": "GND"
+      },
+      "role": "1k rail bleed, 3.3mA / 10.9mW; bounds residual voltage from Ioff, not a substitute for sequencing tests",
+      "dnp": false
+    }
+  ],
+  "notes": {
+    "01_Nano_headers": [
+      "Nano J5.1 (+5V) deliberately NC: no USB/external 5V backfeed link.",
+      "3V3_IO comes from Nano J5.16 / J6.19. Do NOT join DAC_3V3 to this net.",
+      "Only 3921 rev1.30 numbering checked. Confirm actual board revision and pin-1 orientation.",
+      "I2S pins 56/54/55 fan out existing outputs; BCK and LRCK remain DAC inputs.",
+      "Onboard LED loads on GPIO15..20 remain; measure edge timing on assembled harness."
+    ],
+    "02_Shift_and_memory": [
+      "U8 output state is not guaranteed at power-up. Firmware must initialize/latch before use.",
+      "Q4 HIGH disables all MUXes; drive LOW/discharge, select, settle, then charge/time. Inverted SENSE.",
+      "RA8875 return and 165 output are selected by U11. Never wire their push-pull outputs together.",
+      "No simultaneous key capture or 595 latch during screen command. Arbitration/timing still to implement."
+    ],
+    "03_Display_harnesses": [
+      "Custom 12-way harnesses; MUST translate to supplier connector pin numbering.",
+      "MSP2401/2402 5V: regulator bypass J1 OPEN; J11.8 drives module BL pin8 via 3.3V buffer.",
+      "ER-TFTM070-5V4: order 4-wire SPI + CTP + 5V + internal backlight PWM. Default board is parallel.",
+      "J10.10 is MODULE INT, not host TP_INT. J10.8/9 use isolated peripheral I2C.",
+      "All signals are 3.3V. Never join module pull-ups to 5V. Verify exact delivered module revision."
+    ],
+    "04_PCM5122_AUX": [
+      "TI SLAS763C: VREF mode default => VCOM pin10 GND; unused GPIO internally pulled down, NC.",
+      "XSMT pull-up does not replace controlled startup. Keep incoming I2S silent while configuring.",
+      "52,734.375Hz / 32fs needs manual BCK PLL, clock-flex, double-speed and readback; NOT bench validated.",
+      "J12 feeds an external TRS jack; exact jack footprint and ESD protection not frozen.",
+      "MAX98357 onboard speaker is BTL. Neither speaker terminal may connect to AUX or GND."
+    ],
+    "05_Power": [
+      "Nano USB powers 3V3_IO. Separate regulated external 5V powers peripheral domain through page14.",
+      "DAC_3V3 and 3V3_PERIPH are separate LDO outputs; neither may join Nano 3V3_IO.",
+      "PCM5122 I2S inputs are fail-safe LVCMOS (TI SLAS763C); external I2C uses page13 isolator.",
+      "AP2112 thermal estimate at 50mA: 85mW. Measure actual supply current and temperature.",
+      "J5.1 remains NC. This is NOT a USB power combiner and NOT an overvoltage protector."
+    ],
+    "06_Controls": [
+      "Four presets + edit + encoder A/B/push consume all eight 165 inputs.",
+      "EC11E15244B2 HAS push (ALPS official page). Old no-push rejection was incorrect; check pad geometry.",
+      "Button pin1/2 common and 3/4 common from library; mechanical drawing still to cross-check."
+    ],
+    "07_Scan_lane_0": [
+      "Lane 0: addresses0..13 electrodes, 14=10pF reference, 15=100pF reference.",
+      "No 1nF common shunt: old BOM value was unqualified and can swamp the touch delta.",
+      "14*6=84 available channels: 80 or83 allocated after 25/26-note endpoint decision.",
+      "ESD devices sit connector-side of 1k. Short return to ground; do not claim IEC immunity from schematic.",
+      "Electrode shapes, cover film, row spacing and sensor cable capacitance remain to measure."
+    ],
+    "08_Scan_lane_1": [
+      "Lane 1: addresses0..13 electrodes, 14=10pF reference, 15=100pF reference.",
+      "No 1nF common shunt: old BOM value was unqualified and can swamp the touch delta.",
+      "14*6=84 available channels: 80 or83 allocated after 25/26-note endpoint decision.",
+      "ESD devices sit connector-side of 1k. Short return to ground; do not claim IEC immunity from schematic.",
+      "Electrode shapes, cover film, row spacing and sensor cable capacitance remain to measure."
+    ],
+    "09_Scan_lane_2": [
+      "Lane 2: addresses0..13 electrodes, 14=10pF reference, 15=100pF reference.",
+      "No 1nF common shunt: old BOM value was unqualified and can swamp the touch delta.",
+      "14*6=84 available channels: 80 or83 allocated after 25/26-note endpoint decision.",
+      "ESD devices sit connector-side of 1k. Short return to ground; do not claim IEC immunity from schematic.",
+      "Electrode shapes, cover film, row spacing and sensor cable capacitance remain to measure."
+    ],
+    "10_Scan_lane_3": [
+      "Lane 3: addresses0..13 electrodes, 14=10pF reference, 15=100pF reference.",
+      "No 1nF common shunt: old BOM value was unqualified and can swamp the touch delta.",
+      "14*6=84 available channels: 80 or83 allocated after 25/26-note endpoint decision.",
+      "ESD devices sit connector-side of 1k. Short return to ground; do not claim IEC immunity from schematic.",
+      "Electrode shapes, cover film, row spacing and sensor cable capacitance remain to measure."
+    ],
+    "11_Scan_lane_4": [
+      "Lane 4: addresses0..13 electrodes, 14=10pF reference, 15=100pF reference.",
+      "No 1nF common shunt: old BOM value was unqualified and can swamp the touch delta.",
+      "14*6=84 available channels: 80 or83 allocated after 25/26-note endpoint decision.",
+      "ESD devices sit connector-side of 1k. Short return to ground; do not claim IEC immunity from schematic.",
+      "Electrode shapes, cover film, row spacing and sensor cable capacitance remain to measure."
+    ],
+    "12_Scan_lane_5": [
+      "Lane 5: addresses0..13 electrodes, 14=10pF reference, 15=100pF reference.",
+      "No 1nF common shunt: old BOM value was unqualified and can swamp the touch delta.",
+      "14*6=84 available channels: 80 or83 allocated after 25/26-note endpoint decision.",
+      "ESD devices sit connector-side of 1k. Short return to ground; do not claim IEC immunity from schematic.",
+      "Electrode shapes, cover film, row spacing and sensor cable capacitance remain to measure."
+    ],
+    "13_Power_off_isolation": [
+      "No extra FPGA pins. Eight buffered outputs include constant backlight enable.",
+      "TCA9517 B-side VOL offset requires target VIL check; never cascade B sides.",
+      "U11 host-powered return mux already has Ioff; display MISO must tri-state when deselected.",
+      "Power-off leakage and hot-plug behavior are DOCUMENT-REVIEWED, not measured.",
+      "BUS_SCK/MOSI still clock scan registers: firmware arbitration and complete-word re-latch remain required."
+    ],
+    "14_Protected_power_entry": [
+      "External regulated 5V only. Actual existing PSU UNKNOWN: verify label, polarity, load voltage before hookup.",
+      "No OV clamp. Do not connect 9V/12V/PD rail. PTC + PMOS + switch voltage drops require full-load check.",
+      "Host absent: peripheral switch disabled; page13 buffers isolate I/O. Either power-on order must be bench tested.",
+      "TPS2553 limits inrush/current; display capacitance/current unknown. Confirm successful cold-start at lowest input.",
+      "R67=23.7k +/-1%: TI equations give approx 1.002..1.184A limit; not a continuous-load rating.",
+      "R71..R73=1k rail bleeds: 200uA assumed total injection gives <=0.202V at +1% R; verify actual leakage.",
+      "At 0.8A, PTC Rmax=0.21ohm gives 0.168V drop before MOSFET/switch/wires; adapter headroom still open.",
+      "PWR_FAULT_N and all supply rails need PCB test pads. This page is NOT a qualified power supply."
+    ]
+  }
+}

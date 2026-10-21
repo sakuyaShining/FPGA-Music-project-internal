@@ -1,0 +1,1 @@
+const ids=[];for(const p of __CLI__.args.vias){const v=await eda.pcb_PrimitiveVia.create(p.net,p.x,p.y,p.hole,p.diameter);if(!v)throw new Error('via');ids.push(v.getState_PrimitiveId());}if(!await eda.pcb_Document.save())throw new Error('save');return {createdV:ids};

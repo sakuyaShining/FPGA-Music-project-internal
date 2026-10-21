@@ -1,0 +1,94 @@
+{
+  "result": {
+    "restoredL": [
+      "1de3660ea6e1ad57",
+      "523a77e9e4cf72d7",
+      "b0e6235958308ecc"
+    ],
+    "restoredV": [
+      "7fab1fc9b6cd8f81",
+      "eb53c6edc104cc2d"
+    ]
+  },
+  "restored_lines": [
+    {
+      "partitionId": "",
+      "groupId": 0,
+      "netName": "GND",
+      "layerId": 1,
+      "startX": 2836.6142,
+      "startY": 1757.874,
+      "endX": 2988.189,
+      "endY": 1679.1339,
+      "width": 8,
+      "locked": false,
+      "zIndex": -1
+    },
+    {
+      "partitionId": "",
+      "groupId": 0,
+      "netName": "5V_PERIPH",
+      "layerId": 1,
+      "startX": 2740.603,
+      "startY": 1988.175,
+      "endX": 2981.4424,
+      "endY": 2229.0143,
+      "width": 39.3799,
+      "locked": false,
+      "zIndex": -1
+    },
+    {
+      "partitionId": "",
+      "groupId": 0,
+      "netName": "5V_PERIPH",
+      "layerId": 1,
+      "startX": 2370.604,
+      "startY": 1988.175,
+      "endX": 2740.603,
+      "endY": 1988.175,
+      "width": 39.3799,
+      "locked": false,
+      "zIndex": -1
+    }
+  ],
+  "restored_vias": [
+    {
+      "partitionId": "",
+      "groupId": 0,
+      "netName": "GND",
+      "ruleName": "",
+      "centerX": 2929.1339,
+      "centerY": 1763.7795,
+      "holeDiameter": 12,
+      "viaDiameter": 24,
+      "viaType": "NORMAL",
+      "topSolderExpansion": null,
+      "bottomSolderExpansion": null,
+      "locked": false,
+      "unusedInnerLayers": [],
+      "propagationDelay": 0
+    },
+    {
+      "partitionId": "",
+      "groupId": 0,
+      "netName": "GND",
+      "ruleName": "",
+      "centerX": 2836.6142,
+      "centerY": 1757.874,
+      "holeDiameter": 12,
+      "viaDiameter": 24,
+      "viaType": "NORMAL",
+      "topSolderExpansion": null,
+      "bottomSolderExpansion": null,
+      "locked": false,
+      "unusedInnerLayers": [],
+      "propagationDelay": 0
+    }
+  ],
+  "new_R64_midpoint_mm": [
+    70.5,
+    38
+  ],
+  "reason": "Choose a verified empty placement; preserve original 5V main geometry/width and original ground geometry.",
+  "manufacturing_release": false
+}

@@ -1,0 +1,58 @@
+(session calibration
+  (base_design calibration)
+  (placement
+    (resolution mil 1000)
+    (component BOARD
+      (place u1 0 0 front 0)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution mil 1000)
+    (parser
+    )
+    (library_out 
+      (padstack V24
+        (shape
+          (circle TopLayer 24000 0 0)
+        )
+        (shape
+          (circle Inner15 24000 0 0)
+        )
+        (shape
+          (circle Inner16 24000 0 0)
+        )
+        (shape
+          (circle BottomLayer 24000 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net CAL
+        (wire
+          (path Inner16 6000
+            800000 700000
+            760483 700000
+          )
+        )
+        (wire
+          (path TopLayer 6000
+            200000 260938
+            200000 300000
+          )
+        )
+        (wire
+          (path Inner16 6000
+            760483 700000
+            321421 260938
+            200000 260938
+          )
+        )
+        (via V24 200000 260938
+        )
+      )
+    )
+  )
+)

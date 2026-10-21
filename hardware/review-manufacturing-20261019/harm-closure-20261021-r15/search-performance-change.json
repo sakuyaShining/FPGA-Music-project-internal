@@ -1,0 +1,11 @@
+{
+  "original_process_id": 8464,
+  "original_tool_session": 45218,
+  "reason": "Repeated union of identical large foreign copper within target loop; algorithm performance correction, not observation-timeout restart.",
+  "changes": [
+    "Use independent distance to each union operand, mathematically equivalent to distance to their union.",
+    "Reject positions without VCC contact before expensive copper/drill checks."
+  ],
+  "native_mutated": false,
+  "constraints_relaxed": false
+}

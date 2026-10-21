@@ -1,0 +1,239 @@
+{
+  "identity": {
+    "hardware_revision": null,
+    "pcb_sha256": "0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a",
+    "actual_bom_sha256": null,
+    "bitstream_sha256": null,
+    "product_firmware_qualified": false,
+    "nano_revision": null,
+    "small_screen_revision": null,
+    "large_screen_configuration": null,
+    "harness_revision": null,
+    "instruments": null,
+    "date_utc": null,
+    "operator": null
+  },
+  "physical_tests_executed": false,
+  "stages": [
+    {
+      "id": "A01",
+      "stage": "同版制造资料与原生DRC",
+      "exit_evidence": "零未连通；Gerber/钻孔/BOM/CPL同版，回流与机械审查完成",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "A02",
+      "stage": "工厂供料及费用",
+      "exit_evidence": "217位号精确匹配与替料审批；含按钮、税运和上料费用",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "A03",
+      "stage": "PCBA到货外观",
+      "exit_evidence": "230最终实装位号；pin1/极性/焊桥及通孔方向核准",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "A04",
+      "stage": "断电阻抗",
+      "exit_evidence": "三路3.3V隔离；无电源误短；保存阻抗趋势",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "B01",
+      "stage": "线束断电导通",
+      "exit_evidence": "预期线路和未连接脚逐项核对；电源极性插合后测量",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "C01",
+      "stage": "仅外部5V空载",
+      "exit_evidence": "保护链电压、关断残压/电流和温升",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "C02",
+      "stage": "仅USB/Nano",
+      "exit_evidence": "主机轨、外设残压/反灌；实板与码流身份",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "C03",
+      "stage": "Nano初始化后外部5V",
+      "exit_evidence": "完整595安全字与实际复位延时；三路3.3V与5V",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "C04",
+      "stage": "电子负载阶跃",
+      "exit_evidence": "实际负载点压降、启动/限流/恢复与温升",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "C05",
+      "stage": "四状态及顺序空载",
+      "exit_evidence": "2种接通顺序、分别断开；测量而非仿真推定",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "D01",
+      "stage": "小屏单独",
+      "exit_evidence": "J1/5V/IO；彩条与观看方向；八线错位正确",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "D02",
+      "stage": "大屏单独",
+      "exit_evidence": "同一SKU图纸/引脚；SPI4读回、忙超时、满背光启动",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "D03",
+      "stage": "双屏/595/165仲裁",
+      "exit_evidence": "CS互斥、完整重装8位、重新LOAD、扫描保留复位位",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "D04",
+      "stage": "触摸/I2C",
+      "exit_evidence": "真实地址；两侧电平与上升时间；超时恢复",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "D05",
+      "stage": "编码器/按键",
+      "exit_evidence": "真实输入字、去抖方向/定位和显示并发",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "D06",
+      "stage": "音频静音/时钟",
+      "exit_evidence": "锁定回读、零PCM；AUX和BTL分别验证",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "E01",
+      "stage": "三电极/覆盖层小样",
+      "exit_evidence": "材料、线长、噪声/漂移/触摸分布；确定性能门槛",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "E02",
+      "stage": "单组14路",
+      "exit_evidence": "参考地址排除、不同节点位置与超时",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "E03",
+      "stage": "六组84路",
+      "exit_evidence": "25/26候选索引、八度选择5节点、备用节点和全帧统计",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "E04",
+      "stage": "最新完整固件实现",
+      "exit_evidence": "真实协议包装、共同PnR/STA及资源检查；候选测试不替代",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "E05",
+      "stage": "全负载供电顺序复验",
+      "exit_evidence": "两屏+传感+音频+TF；各顺序和重配置后恢复",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    },
+    {
+      "id": "E06",
+      "stage": "完整并发长测",
+      "exit_evidence": "记录持续时间、欠载、最大存储停顿、误触/恢复和温升",
+      "status": "pending",
+      "measured_result": null,
+      "acceptance_limits": null,
+      "evidence_files": [],
+      "failure_action": null
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "source_pcb_sha256": "5029ca7091053a207a08908edfbe4b2716058640fa654b720c08c2bc0333cacb",
+  "input_dsn_sha256": "4e651ad84790ba8c18db2b27abb42f437afffa252b60b38209b6f9c054b2882d",
+  "result_ses_sha256": "2a9b22274626f75dd64ad1883f13c842e611df8d708bb137b7067f7fdd909102",
+  "net": "INV2",
+  "lines": 0,
+  "new_vias": 0,
+  "summed_length_mm": 0,
+  "continuity": {
+    "complete": false,
+    "pad_islands": 2
+  },
+  "minimum_clearances_mm": {},
+  "geometric_failures": [],
+  "geometric_pass": false,
+  "quality": {
+    "maximum_new_via_goal": 2,
+    "maximum_summed_length_goal_mm": 30,
+    "within_goal": true,
+    "note": "Engineering screening goals, not manufacturer design rules or SI signoff."
+  },
+  "native_imported": false,
+  "manufacturing_release": false,
+  "limitations": [
+    "No actual ground-pour rebuild, current-edge SI model, manufacturing approval or physical measurement.",
+    "Only selected INV2 copper would be eligible for import; ignore all placement/unselected output.",
+    "Router completion/logged violation counts do not establish actual native-board validity."
+  ]
+}

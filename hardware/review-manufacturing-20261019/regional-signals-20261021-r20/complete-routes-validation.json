@@ -1,0 +1,53 @@
+{
+  "source_pcb_sha256": "3e7589e43be8237a2c93c4f228d43054bbb7e26eaa4373cdd05368d824f5ab87",
+  "selected": [
+    "DISP_HARM_CS_N",
+    "DISP_VIS_CS_N",
+    "LCD_RESET_N"
+  ],
+  "nets": [
+    {
+      "net": "DISP_HARM_CS_N",
+      "continuity": {
+        "complete": true,
+        "pad_islands": 1
+      },
+      "new_lines": 8,
+      "new_vias": 1,
+      "new_length_mm": 23.858819863843724
+    },
+    {
+      "net": "DISP_VIS_CS_N",
+      "continuity": {
+        "complete": true,
+        "pad_islands": 1
+      },
+      "new_lines": 6,
+      "new_vias": 1,
+      "new_length_mm": 15.861125851171753
+    },
+    {
+      "net": "LCD_RESET_N",
+      "continuity": {
+        "complete": true,
+        "pad_islands": 1
+      },
+      "new_lines": 5,
+      "new_vias": 1,
+      "new_length_mm": 22.64385823124644
+    }
+  ],
+  "minimum_clearances_mm": {
+    "track_copper": 0.1655318000000037,
+    "track_mount": 43.26092029727129,
+    "track_quiet": 0.4122971260755596,
+    "via_copper": 0.1705187505402716,
+    "hole_pad": 0.32291875054027164,
+    "via_quiet": 0.18369712607555955,
+    "drill_drill": 1.8481752486634042
+  },
+  "failures": [],
+  "geometric_pass": true,
+  "native_imported": false,
+  "manufacturing_release": false
+}

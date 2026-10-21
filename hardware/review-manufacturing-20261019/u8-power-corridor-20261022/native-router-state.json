@@ -1,0 +1,12 @@
+{
+  "state": "cancelled_owned_session_closed",
+  "error": "{\"ok\": false, \"error\": {\"code\": \"REQUEST_TIMEOUT\", \"message\": \"invoke timed out after 289750ms (budget 290000ms; gave up waiting; the code may still be running in the render, and its result will be discarded)\"}}",
+  "session": "403dbe0a-5ac0-438b-ab12-87f7c35fe502",
+  "cancellation_result": {
+    "sessionId": "403dbe0a-5ac0-438b-ab12-87f7c35fe502",
+    "status": "closed",
+    "headless": true
+  },
+  "session_verified_closed": true,
+  "rationale": "The native routing observation timed out after five minutes. Explicitly closed only its owned headless session, preserving the saved staged trial. Do not repeat this native-router job. Reuse existing local search with nine verified pin escapes and four-layer via masks."
+}

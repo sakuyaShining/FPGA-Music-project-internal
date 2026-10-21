@@ -1,0 +1,21 @@
+signal,package_pin,header,direction,category,notes
+BUS_SCK,27,J6-8,out,panel,Shared SPI clock; transaction arbitration required
+BUS_MOSI,15,J6-6,out,panel,LED0 load; 595 always shifts but latch only controlled
+SCAN_LATCH,16,J6-7,out,panel,LED1 load
+INPUT_LOAD_N,17,J6-15,out,panel,LED2 load
+BUS_RETURN,28,J6-9,in,panel,External mux RA_MISO or 165_QH; never directly join outputs
+SENSE_0,29,J6-12,in,panel,RC Schmitt output
+SENSE_1,30,J6-13,in,panel,RC Schmitt output
+SENSE_2,31,J6-14,in,panel,RC Schmitt output
+SENSE_3,41,J5-6,in,panel,RC Schmitt output
+SENSE_4,42,J5-5,in,panel,RC Schmitt output
+SENSE_5,48,J5-10,in,panel,RC Schmitt output
+STORE_SDA,25,J6-10,inout,panel,3.3V I2C; address and pullup review required
+STORE_SCL,26,J6-11,inout,panel,3.3V I2C
+LCD_VIS_CS_N,18,J6-18,out,panel,LED3 load; omit only if one-screen option approved
+LCD_HARM_CS_N,19,J6-17,out,panel,LED4 load; also selects external return mux
+LCD_VIS_DC,20,J6-16,out,panel,LED5 load; ILI9341 only; RA8875 uses SPI prefix not DC
+TP_INT,77,J6-5,inout,panel,Touch controller exact reset/interrupt behavior remains device-specific
+I2S_BCK,56,J5-7,out,audio,Existing MAX98357A clock also goes to DAC input
+I2S_DIN,54,J5-8,out,audio,Existing MAX98357A data also goes to DAC input
+I2S_LRCK,55,J5-11,out,audio,Existing MAX98357A word clock also goes to DAC input

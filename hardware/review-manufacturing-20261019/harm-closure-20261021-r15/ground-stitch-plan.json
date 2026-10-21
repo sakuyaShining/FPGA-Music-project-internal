@@ -1,0 +1,168 @@
+{
+  "source_pcb_sha256": "38dd8d14bdddc5c202b4463d92fa12620012ed462fb0b7f8e3a3b7082e554a4b",
+  "reference_layers": [
+    15,
+    2
+  ],
+  "signal_reference_connections_before": [
+    {
+      "signal_id": "27ae76a348de27b9",
+      "xy_mm": [
+        74.91514099999999,
+        52.580235200000004
+      ],
+      "nearest_reference": {
+        "type": "via",
+        "id": "bebb7f84fb43efca"
+      },
+      "distance_mm": 5.626522035215013
+    },
+    {
+      "signal_id": "dc75b8937fc29aa7",
+      "xy_mm": [
+        51.9568176,
+        64.3035036
+      ],
+      "nearest_reference": {
+        "type": "via",
+        "id": "03db415ea2a3b53a"
+      },
+      "distance_mm": 5.243388467809804
+    },
+    {
+      "signal_id": "f88af98e79859b8e",
+      "xy_mm": [
+        66.6980378,
+        67.63636460000001
+      ],
+      "nearest_reference": {
+        "type": "via",
+        "id": "900b92b1108eafd1"
+      },
+      "distance_mm": 7.009841833485957
+    },
+    {
+      "signal_id": "19fee1b7b37e92fb",
+      "xy_mm": [
+        68.3188118,
+        66.0155906
+      ],
+      "nearest_reference": {
+        "type": "via",
+        "id": "4eacc21f957796dd"
+      },
+      "distance_mm": 5.981934420149676
+    },
+    {
+      "signal_id": "61e8bae716a81e1e",
+      "xy_mm": [
+        69.8288672,
+        63.478283
+      ],
+      "nearest_reference": {
+        "type": "via",
+        "id": "4eacc21f957796dd"
+      },
+      "distance_mm": 4.525149562328821
+    }
+  ],
+  "engineering_distance_goal_mm": 1.5,
+  "distance_goal_is_not_a_standard_or_si_signoff": true,
+  "vias": [
+    {
+      "net": "GND",
+      "x": 2719.7064960629923,
+      "y": 2479.4594488188977,
+      "diameter": 24,
+      "hole": 12,
+      "xy_mm": [
+        69.080545,
+        62.97827
+      ],
+      "covers": [
+        "61e8bae716a81e1e"
+      ],
+      "predicted_reference_contact_mm2": {
+        "15": 0.20418031231740713,
+        "2": 0.20418031231740713
+      }
+    },
+    {
+      "net": "GND",
+      "x": 2010.1109448818897,
+      "y": 2531.6340157480317,
+      "diameter": 24,
+      "hole": 12,
+      "xy_mm": [
+        51.056818,
+        64.303504
+      ],
+      "covers": [
+        "dc75b8937fc29aa7"
+      ],
+      "predicted_reference_contact_mm2": {
+        "15": 0.204163907853472,
+        "2": 0.204163907853472
+      }
+    },
+    {
+      "net": "GND",
+      "x": 2632.8196456692917,
+      "y": 2697.601220472441,
+      "diameter": 24,
+      "hole": 12,
+      "xy_mm": [
+        66.873619,
+        68.519071
+      ],
+      "covers": [
+        "f88af98e79859b8e"
+      ],
+      "predicted_reference_contact_mm2": {
+        "15": 0.20417517832933585,
+        "2": 0.20417517832933585
+      }
+    },
+    {
+      "net": "GND",
+      "x": 2974.4699606299214,
+      "y": 2095.1429527559058,
+      "diameter": 24,
+      "hole": 12,
+      "xy_mm": [
+        75.551537,
+        53.216631
+      ],
+      "covers": [
+        "27ae76a348de27b9"
+      ],
+      "predicted_reference_contact_mm2": {
+        "15": 0.20418129092664178,
+        "2": 0.20418129092664178
+      }
+    },
+    {
+      "net": "GND",
+      "x": 2656.9811023622046,
+      "y": 2585.4793700787404,
+      "diameter": 24,
+      "hole": 12,
+      "xy_mm": [
+        67.48732,
+        65.671176
+      ],
+      "covers": [
+        "19fee1b7b37e92fb"
+      ],
+      "predicted_reference_contact_mm2": {
+        "15": 0.20417854103689276,
+        "2": 0.20415047194028446
+      }
+    }
+  ],
+  "uncovered_signal_ids": [],
+  "safe_candidates": 282,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "rationale": "Join the same GND net across actual top/inner-route reference planes; share a stitch when geometry permits. Avoid sensing/audio projection guards and preserve all source copper."
+}

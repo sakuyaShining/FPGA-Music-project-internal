@@ -1,0 +1,59 @@
+2026-10-21 23:11:33.420 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-21 23:11:33.798 INFO   Hardware: 8 CPU cores, 447 CPU score, 1024 MB RAM
+2026-10-21 23:11:33.804 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-21 23:11:35.530 INFO   [F3B3D0\EA5154] Loading board file 'input.dsn'...
+2026-10-21 23:11:36.794 INFO   [F3B3D0\EA5154] Job 'F3B3D0\EA5154' started at 2026-10-21T15:11:36.794306600Z.
+2026-10-21 23:11:38.424 WARN   Design Warning: Board has 908 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 908 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 908 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5284 [net I2C_SDA] <-> FixedTrace#4712 [net I2C_SCL]
+          - FixedVia#5276 [net RC3] <-> ObstacleArea#436
+          - FixedVia#5275 [net RC3] <-> ObstacleArea#438
+          - FixedVia#5274 [net RC3] <-> ObstacleArea#438
+          - FixedVia#5274 [net RC3] <-> ObstacleArea#437
+          ... and 903 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 908 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-21 23:11:38.522 INFO   [F3B3D0\EA5154] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-21 23:11:40.290 INFO   [F3B3D0\EA5154] Auto-routing stage started on board '8a6c11643a24e93daaf6e45a8a77b8e6' with baseline score 271.88 for 388 unrouted items.
+2026-10-21 23:11:42.490 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:11:42.490 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:11:47.090 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:11:47.090 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:11:51.416 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:11:51.416 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:11:55.853 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:11:55.854 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:11:59.734 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:11:59.735 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:01.423 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:01.424 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:04.993 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:04.993 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:08.112 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:08.112 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:09.502 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:09.502 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:10.422 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:10.422 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:11.596 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:11.596 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:14.904 INFO   [F3B3D0\EA5154] Auto-routing pass #1 on board '8a6c11643a24e93daaf6e45a8a77b8e6' was completed in 33.71 seconds with score 275.82 (384 unrouted and 908 violations), using 10.58 CPU seconds and the job allocated 22.25 GB of memory so far.
+2026-10-21 23:12:17.396 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:17.396 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:22.481 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:22.481 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:24.333 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:24.333 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:26.341 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:26.341 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:32.072 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:32.072 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:35.423 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:12:35.423 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:12:38.437 INFO   [F3B3D0\EA5154] Auto-routing pass #2 on board '0c321c4e7b162530e244b4406c4241e7' was completed in 22.58 seconds with score 272.87 (387 unrouted and 908 violations), using 18.77 CPU seconds and the job allocated 37.63 GB of memory so far.
+2026-10-21 23:12:42.847 INFO   [F3B3D0\EA5154] Auto-routing stage completed: started with 388 unrouted nets, completed in 63.55 seconds, final score: 275.82 (384 unrouted and 908 violations), using 19.92 total CPU seconds, 39.73 GB total allocated, and 329.5 MB peak heap usage.
+2026-10-21 23:12:43.212 INFO   [F3B3D0\EA5154] Job 'F3B3D0\EA5154' finished with state: COMPLETED (elapsed: 1 minute 6.42 seconds, finished at UTC: 2026-10-21T15:12:43.210596700Z).
+2026-10-21 23:12:43.253 INFO   Saving output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-net-rebuild-20261021-r23\result.ses' (SES)...
+2026-10-21 23:12:43.257 INFO   Successfully saved output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-net-rebuild-20261021-r23\result.ses' (523536 bytes).

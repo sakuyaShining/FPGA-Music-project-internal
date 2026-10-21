@@ -1,0 +1,16 @@
+I2C single-segment passive RC, no active buffer model
+Vcc vcc 0 3.3
+Vctrl ctrl 0 PWL(0 1 1u 1 1.001u 0 30u 0)
+Sdriver bus 0 ctrl 0 OD
+.model OD SW(Ron=2 Roff=1e12 Vt=.5 Vh=0)
+Rp vcc bus 4700
+Cb bus 0 1e-10
+.save v(bus) v(ctrl) i(Vcc)
+.control
+set wr_singlescale
+set wr_vecnames
+tran 5e-09 3e-05
+wrdata waveform.txt v(bus) v(ctrl) i(Vcc)
+quit
+.endc
+.end

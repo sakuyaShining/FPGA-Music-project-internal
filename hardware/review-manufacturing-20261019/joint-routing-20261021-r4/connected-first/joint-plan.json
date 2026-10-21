@@ -1,0 +1,312 @@
+{
+  "utc": "2026-10-20T23:08:48.128021+00:00",
+  "phase": "complete",
+  "source_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\joint-routing-20261021-r3\\verified-source-74.json",
+  "source_sha256": "24dbea1d865ddc2f4ce7431376ce177b99521221da3a02a33ba6371adbf6cfc6",
+  "native_pcb_sha256": "0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a",
+  "native_microtracks_included": 28,
+  "normalized_via_dimensions": [
+    {
+      "id": "16a13e102cb0509d",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "16a13e102cb0509d",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "01b21cb3572d97ac",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "01b21cb3572d97ac",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "e899e9b8d35774a0",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "e899e9b8d35774a0",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "d9615af0a7445a08",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "d9615af0a7445a08",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "e3e15b301ec05f8d",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "e3e15b301ec05f8d",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "f0bb45a9727ffb53",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "f0bb45a9727ffb53",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    }
+  ],
+  "pending_nets": [
+    "I2C_SCL",
+    "BUS_SCK",
+    "BUS_MOSI",
+    "HARM_CS_N",
+    "ADDR1",
+    "ADDR2",
+    "ADDR3",
+    "MUX_DISABLE",
+    "ADDR0",
+    "PRESET3",
+    "INV2",
+    "DISP_RESET_N",
+    "DISP_VIS_DC",
+    "DISP_SCK",
+    "DISP_MOSI",
+    "DISP_VIS_CS_N"
+  ],
+  "ripped_connected_nets": [
+    "TP_RESET_MOD_N",
+    "TP_RESET_N",
+    "DISP_HARM_CS_N",
+    "LCD_RESET_N",
+    "SCAN_LATCH",
+    "VIS_CS_N",
+    "VIS_BL_EN",
+    "VIS_DC"
+  ],
+  "proposed_nets": [
+    "TP_RESET_N"
+  ],
+  "routes": [
+    {
+      "net": "TP_RESET_N",
+      "pads": [
+        [
+          "FANOUT-U8",
+          "7"
+        ],
+        [
+          "FANOUT-U15",
+          "15"
+        ]
+      ],
+      "lines": [
+        {
+          "id": "0daea22bb93ad1ca",
+          "net": "TP_RESET_N",
+          "layer": 1,
+          "x1": 2652.5590999999995,
+          "y1": 1725.3937,
+          "x2": 2644.7,
+          "y2": 1663.9,
+          "width": 6
+        },
+        {
+          "id": "bb8ccf384bb8fa9e",
+          "net": "TP_RESET_N",
+          "layer": 1,
+          "x1": 3280.5,
+          "y1": 1806,
+          "x2": 3269.685,
+          "y2": 1767.7165,
+          "width": 6
+        },
+        {
+          "id": "f86d90c6e9fa3bc7",
+          "net": "TP_RESET_N",
+          "layer": 1,
+          "x1": 3269.685,
+          "y1": 1767.7165,
+          "x2": 3259.8425,
+          "y2": 1760.8268,
+          "width": 6
+        },
+        {
+          "id": "69f4606fff9ab81d",
+          "net": "TP_RESET_N",
+          "layer": 1,
+          "x1": 3259.8425,
+          "y1": 1760.8268,
+          "x2": 3215.5512,
+          "y2": 1754.9213,
+          "width": 6
+        },
+        {
+          "net": "TP_RESET_N",
+          "layer": 2,
+          "x1": 2652.5590999999995,
+          "y1": 1725.3937,
+          "x2": 3215.5512,
+          "y2": 1754.9213,
+          "width": 6.000000000000001
+        }
+      ],
+      "vias": [
+        {
+          "id": "8518e407f9001cbd",
+          "net": "TP_RESET_N",
+          "x": 2652.5590999999995,
+          "y": 1725.3937,
+          "diameter": 24,
+          "hole": 12,
+          "routing_retained": true
+        },
+        {
+          "id": "31a3d549aaf7c260",
+          "net": "TP_RESET_N",
+          "x": 3215.5512,
+          "y": 1754.9213,
+          "diameter": 24,
+          "hole": 12,
+          "routing_retained": true
+        }
+      ],
+      "edges": [
+        {
+          "min_foreign_copper_gap_mm": 0.19833045128972926,
+          "expanded_nodes": 6603,
+          "search_bounds_mm": [
+            59.35,
+            35.800000000000004,
+            89.7,
+            52.6
+          ]
+        }
+      ],
+      "quality": {
+        "before_length_mm": 18.344873040368952,
+        "after_length_mm": 18.344873040368952,
+        "before_vias": 2,
+        "after_vias": 2,
+        "mst_lower_bound_mm": 16.547745214922788,
+        "min_foreign_gap_mm": 0.16109374057666326
+      },
+      "real_pad_continuity_pass": true,
+      "independent_geometry_pass": true
+    }
+  ],
+  "failed_planning": [
+    {
+      "net": "TP_RESET_MOD_N",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 8.491736299998593
+    },
+    {
+      "net": "LCD_RESET_N",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 13.474413999996614
+    },
+    {
+      "net": "SCAN_LATCH",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 7.710023699997691
+    },
+    {
+      "net": "VIS_CS_N",
+      "error": "SealedEscape('Locally sealed start: VIS_CS_N')",
+      "elapsed_seconds": 0.7282441999996081
+    },
+    {
+      "net": "VIS_DC",
+      "error": "SealedEscape('Locally sealed escape: VIS_DC')",
+      "elapsed_seconds": 11.593296699997154
+    },
+    {
+      "net": "BUS_SCK",
+      "error": "SealedEscape('Locally sealed start: BUS_SCK')",
+      "elapsed_seconds": 0.6571449999973993
+    },
+    {
+      "net": "BUS_MOSI",
+      "error": "SealedEscape('Locally sealed start: BUS_MOSI')",
+      "elapsed_seconds": 0.6967202000014368
+    },
+    {
+      "net": "DISP_RESET_N",
+      "error": "AssertionError(('track_gap', -0.0762))",
+      "elapsed_seconds": 12.965569400003005
+    },
+    {
+      "net": "HARM_CS_N",
+      "error": "SealedEscape('Locally sealed goal: HARM_CS_N')",
+      "elapsed_seconds": 4.3751642999995966
+    },
+    {
+      "net": "DISP_VIS_DC",
+      "error": "AssertionError(('track_gap', -0.0762))",
+      "elapsed_seconds": 16.3252913000033
+    },
+    {
+      "net": "DISP_SCK",
+      "error": "SealedEscape('Locally sealed start: DISP_SCK')",
+      "elapsed_seconds": 0.7302366000003531
+    },
+    {
+      "net": "DISP_MOSI",
+      "error": "SealedEscape('Locally sealed start: DISP_MOSI')",
+      "elapsed_seconds": 0.7170055000024149
+    },
+    {
+      "net": "DISP_VIS_CS_N",
+      "error": "AssertionError(('track_gap', 0.0023980581980705823))",
+      "elapsed_seconds": 16.917874099999608
+    }
+  ],
+  "retained_route_collision_checks": [
+    {
+      "net": "TP_RESET_N",
+      "pass_geometry": true,
+      "min_gap_mm": 0.16109374057666326
+    }
+  ],
+  "batch_final_geometry_pass": true,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "options": {
+    "run_dir": "connected-first",
+    "fanout_max": 0.65,
+    "pending_first": false,
+    "defer_failed_restore": false
+  },
+  "executed_script_sha256": "d2e938924ba3e5bc2016342cbdd69476922c939c0fae49bfd9ebc99ae3b2a143",
+  "requires_native_drc_and_ground_return_review": true,
+  "elapsed_seconds": 136.33137700000225,
+  "planner_sha256": {
+    "grid_route.py": "3009457a1e753a7911600907571af5eb6f5e92051a144be1f87ad4f9b8411d8e",
+    "reserve_escape.py": "cc024e241716baa3ce802b9eb01a25d5d7849389c3ad42ec68276663f940c585",
+    "physical_geometry.py": "d17818744445eb4c1a46d53909e4dfb56429462b4535ac35e5bf93e7f0db8db1"
+  }
+}

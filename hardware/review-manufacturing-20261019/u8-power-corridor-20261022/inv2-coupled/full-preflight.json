@@ -1,0 +1,139 @@
+{
+  "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "geometric_pass": true,
+  "minimum_clearances_mm": {
+    "track_copper": 0.16530200000000153,
+    "track_edge": 40.36328986,
+    "track_mount": 43.57048968006589,
+    "track_quiet": 0.18001198693062195,
+    "via_copper": 0.16530200000000428,
+    "hole_pad": 0.34620987232458345,
+    "via_quiet": 0.6489336375710066,
+    "via_mount": 50.708351573079696,
+    "via_edge": 43.145199999999996,
+    "drill_drill": 0.4832512990916321
+  },
+  "failures": [],
+  "continuity": {
+    "INV2": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "3V3_PERIPH": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "VIS_DC": {
+      "complete": false,
+      "pad_islands": 2
+    }
+  },
+  "new_ground_stitches": [
+    {
+      "net": "GND",
+      "x": 1841.09320603834,
+      "y": 2020.309093727448,
+      "diameter": 24,
+      "hole": 12,
+      "xy_mm": [
+        46.763767433373836,
+        51.315850980677176
+      ],
+      "predicted_contact_mm2": {
+        "15": 0.21887565457087374,
+        "2": 0.21887358248941277
+      },
+      "distance_to_signal_mm": 1.9
+    }
+  ],
+  "predicted_reference_returns": [
+    {
+      "signal_net": "INV2",
+      "xy_mm": [
+        54.7,
+        44.99
+      ],
+      "qualified_reference_xy_mm": [
+        56.5203213,
+        43.73258716
+      ],
+      "distance_mm": 2.2123871011716165,
+      "within_project_1p5mm_goal": false
+    },
+    {
+      "signal_net": "VIS_DC",
+      "xy_mm": [
+        55.7,
+        43.45
+      ],
+      "qualified_reference_xy_mm": [
+        56.5203213,
+        43.73258716
+      ],
+      "distance_mm": 0.8676304156900803,
+      "within_project_1p5mm_goal": true
+    },
+    {
+      "signal_net": "INV2",
+      "xy_mm": [
+        46.95,
+        49.425000000000004
+      ],
+      "qualified_reference_xy_mm": [
+        46.763767433373836,
+        51.315850980677176
+      ],
+      "distance_mm": 1.9,
+      "within_project_1p5mm_goal": false
+    }
+  ],
+  "reference_distance_is_preference_not_si_signoff": true,
+  "predicted_inv2_reference_projection": [
+    {
+      "layer": 1,
+      "reference": 15,
+      "length_mm": 0.6267642185682886,
+      "covered_mm": 0.6267642185682886
+    },
+    {
+      "layer": 16,
+      "reference": 2,
+      "length_mm": 4.116203324741716,
+      "covered_mm": 4.116203324741716
+    },
+    {
+      "layer": 16,
+      "reference": 2,
+      "length_mm": 0.3132491021535432,
+      "covered_mm": 0.3132491021535432
+    },
+    {
+      "layer": 16,
+      "reference": 2,
+      "length_mm": 2.9301634584428977,
+      "covered_mm": 2.9301634584428977
+    },
+    {
+      "layer": 1,
+      "reference": 15,
+      "length_mm": 0.0,
+      "covered_mm": 0.0
+    },
+    {
+      "layer": 1,
+      "reference": 15,
+      "length_mm": 1.7843105940193666,
+      "covered_mm": 1.7843105940193666
+    },
+    {
+      "layer": 1,
+      "reference": 15,
+      "length_mm": 1.296417308894019,
+      "covered_mm": 1.296417308894019
+    }
+  ],
+  "components_unchanged": true,
+  "source_sensor_audio_copper_unchanged": true,
+  "native_imported": false,
+  "manufacturing_release": false
+}

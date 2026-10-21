@@ -1,0 +1,29 @@
+{
+  "pcb_sha256": "0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a",
+  "native_poured_scale_mm": 0.254,
+  "arc_sampling_error_mm": 0.001,
+  "via_contacts": [
+    {
+      "id": "e46cf0da13ce8453",
+      "net": "GND",
+      "layers": {
+        "1": {
+          "annulus_intersection_area_mm2": 0.12891963198450176,
+          "annulus_to_pour_distance_mm": 0.0,
+          "contact_polygon_areas_mm2": [
+            6644.027132159122
+          ]
+        },
+        "2": {
+          "annulus_intersection_area_mm2": 0.17507781585521842,
+          "annulus_to_pour_distance_mm": 0.0,
+          "contact_polygon_areas_mm2": [
+            373.2212704785995
+          ]
+        }
+      }
+    }
+  ],
+  "requires_native_drc": true,
+  "not_a_full_signal_return_path_signoff": true
+}

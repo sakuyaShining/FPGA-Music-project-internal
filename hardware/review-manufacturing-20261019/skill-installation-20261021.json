@@ -1,0 +1,52 @@
+{
+  "manifest": "C:\\Users\\Sakuya\\.codex\\skill-research-20261021\\installation-manifest.json",
+  "verification": {
+    "installed_payload_files_verified": 557,
+    "smoke_commands_passed": 2,
+    "new_skill_local_links_valid": true,
+    "active_native_19_files_unchanged": true,
+    "next_turn_available": true
+  },
+  "skills": [
+    {
+      "name": "review-schematic-and-layout",
+      "action": "new_instruction_skill",
+      "source": "https://github.com/mcorbett51090/RavenClaude/tree/main/plugins/hardware-electronics-engineering/skills/review-schematic-and-layout",
+      "installed_path": "C:\\Users\\huangyongtao\\.codex\\skills\\review-schematic-and-layout"
+    },
+    {
+      "name": "select-components-and-bom",
+      "action": "new_instruction_skill",
+      "source": "https://github.com/mcorbett51090/RavenClaude/tree/main/plugins/hardware-electronics-engineering/skills/select-components-and-bom",
+      "installed_path": "C:\\Users\\huangyongtao\\.codex\\skills\\select-components-and-bom"
+    },
+    {
+      "name": "easyeda-api",
+      "action": "register_existing_in_current_profile",
+      "source": "C:\\Users\\Sakuya\\.codex\\skills\\easyeda-api",
+      "excluded": "node_modules/.git/__pycache__; no dependencies installed or bridge started",
+      "installed_path": "C:\\Users\\huangyongtao\\.codex\\skills\\easyeda-api"
+    },
+    {
+      "name": "lcsc",
+      "action": "register_existing_in_current_profile",
+      "source": "C:\\Users\\Sakuya\\.codex\\skills\\lcsc",
+      "excluded": "node_modules/.git/__pycache__; no dependencies installed or bridge started",
+      "installed_path": "C:\\Users\\huangyongtao\\.codex\\skills\\lcsc"
+    },
+    {
+      "name": "pcb-routing-knowledge",
+      "action": "new_skill_via_official_installer",
+      "repo": "dh118713-oss/pcb-routing-knowledge",
+      "commit": "13a9cee427fd5f247e0ebfde1cbc3524ac9e634c",
+      "installed_path": "C:\\Users\\huangyongtao\\.codex\\skills\\pcb-routing-knowledge"
+    },
+    {
+      "name": "schematic-design",
+      "action": "new_skill_via_official_installer",
+      "repo": "dh118713-oss/schematic-design-skill",
+      "commit": "d8c41fc112146670f332f12d6340335bab800fa7",
+      "installed_path": "C:\\Users\\huangyongtao\\.codex\\skills\\schematic-design"
+    }
+  ]
+}
