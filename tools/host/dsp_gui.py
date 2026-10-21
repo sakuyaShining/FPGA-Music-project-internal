@@ -1,39 +1,22 @@
 # -*- coding: utf-8 -*-
 """
-dsp_gui.py —— FPGA 加法合成器上位机 v2（PyQt5 + QSS）
+FPGA 乐器工作台（PyQt5）。
 
-用法：
-    python tools/host/dsp_gui.py                # 正常启动（选串口或"模拟设备"）
-    python tools/host/dsp_gui.py --selftest     # 离线自测：建界面→截图→校验帧一致性
+python tools/host/dsp_gui.py             # 本地配置 / 设备实验 / 硬件诊断
+python tools/host/dsp_gui.py --selftest  # 离屏截图与旧接口帧一致性
 
-【v2 相对 v1 的变化（围绕 8 分钟演示叙事重排）】
-  1. 左列 = 演奏：五声音阶键盘（八度可移）+ 力度 + **表情轴卡**（颤音/滑音，
-     M1"两个表情维度同时独立调节互不干扰"的现场演示面板）
-  2. 中列 = 塑谱：**手绘画谱**（按住拖动直接"抹"出 16 泛音谱形）+
-     **逐声部塑形目标**（A1：谱可只刷给声部 0–31，对 Hammond"全局注册"的差异化卖点）
-  3. 右列 = 遥测与调试：电极遥测（新增**自动循环扫描**）+ 寄存器表（连接后自动回读）
-  4. 底部 = **定序器卡**（脱机演示线：BPM + 曲谱文本 + 下载/播放/停止）
-     —— v1 里定序器只能靠命令行 dsp_host demo-score，GUI 演示叙事第 1 幕没有面板
-  5. 判据统一：量程判定 verdict() 只有一份（在 dsp_host.py，GUI/CLI 共用）
-
-【架构纪律（项目要求，v1 已立、v2 沿用）】
-  1. 协议/帧层与界面分离：界面只调 `serial_link` 的 send()/read_reg() ✓
-  2. 地址表与帧构造**直接复用** `dsp_host.py`（REG / Frames / cmd_note / cmd_spectrum /
-     cmd_fx / cmd_refresh / tempo_inc）—— 不另抄一份 ✗，从根上防"上位机与 RTL 各改各的" ✓
-     （v2 新增的表情轴/定序器写入也只碰冻结表里的寄存器名，不发明新地址 ✓）
-  3. 顶部**明确显示**当前是「真实串口」还是「模拟设备」✗ 绝不让人误以为在跟板子说话
-  4. 每个动作都进"帧流水"，可一键导出成 `dsp_host.py --emit` 同格式 ⇒ 仿真里原样重放 ✓
-  5. 字节率读数常显 —— 用来直观证明"电脑只发参数级数据（~几十 B/s），音频是 FPGA 算的" ✓
-
-  协议收敛（2026-10-06）：SEQ_CTRL 的"曲谱源"位已按修正案 A6/A7 删除，
-  **SCORE_LEN>0 即自动使用下载曲谱**。所以播放只写 SEQ_CTRL=0x01（bit0 使能），
-  bit2 是无关位。本文件曾留下三处不一致（头部注释写 0x05、实现写 0x01、
-  自检期望 0x05），自检因此长期 FAIL（帧一致性 ⑥）—— 现已统一为 0x01。
+config_editor 独立管理完整本地草稿；保存、载入不发设备命令。
+主入口使用workbench.WorkbenchWindow提供常驻演奏/观察及显式部分配置应用。
+MainWindow保留旧实验界面供回归；完整配置物理单位适配尚未完成。
+设备实验复用 dsp_host 地址/帧定义，模拟设备不产生音频。
+真实串口行为、左手手势和右手修饰需分别完成硬件与 RTL 验收。
 """
 
 import os
 import sys
 import time
+import json
+from pathlib import Path
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, _HERE)
@@ -44,14 +27,24 @@ from serial_link import (SerialLink, SimLink, verdict, addr_name,   # noqa: E402
                          list_ports, TEL, find_file, frozen, exe_dir)
 
 from PyQt5.QtCore import Qt, QTimer, QRectF, pyqtSignal      # noqa: E402
-from PyQt5.QtGui import QPainter, QColor, QPen, QFont        # noqa: E402
+from PyQt5.QtGui import QPainter, QColor, QPen, QFont, QKeySequence        # noqa: E402
 from PyQt5.QtWidgets import (                                # noqa: E402
     QApplication, QMainWindow, QWidget, QFrame, QLabel, QPushButton,
     QVBoxLayout, QHBoxLayout, QGridLayout, QComboBox, QSlider,
     QCheckBox, QPlainTextEdit, QTableWidget, QTableWidgetItem,
     QHeaderView, QFileDialog, QMessageBox, QSizePolicy,
-    QSpinBox, QLineEdit, QButtonGroup
+    QSpinBox, QLineEdit, QButtonGroup, QTabWidget, QScrollArea, QAbstractSpinBox, QShortcut, QBoxLayout,
+    QDialog, QFormLayout
 )
+from config_editor import ConfigEditor
+from studio_theme import THEMES, color, stylesheet
+from ui_preferences import load_preferences, save_preferences
+from studio_fonts import font_choices
+from audio_observer import AudioPage, CaptureWorker
+
+if QApplication.instance() is None:
+    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
+    QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
 
 # ---- 与硬件布局一致：左手 8 个五声音阶音高键（MIDI 60 62 64 67 69 72 74 76）----
 PENTA = [60, 62, 64, 67, 69, 72, 74, 76]
@@ -75,6 +68,13 @@ SHOW_REGS = ["CTRL", "PRESET", "FX_CTRL", "DELAY_LEN", "RV_FB", "RV_DAMP",
 DEMO_SCORE_TEXT = "64:1,64:1,65:1,67:1,67:1,65:1,64:1,62:2"      # 欢乐颂开头
 
 _NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+
+
+def chart_font(widget, bold=False):
+    font = QFont(widget.font())
+    font.setPointSizeF(max(9.0, font.pointSizeF() * .9))
+    font.setBold(bold)
+    return font
 
 
 def midi_name(m):
@@ -133,12 +133,15 @@ class SpectrumBars(QWidget):
       · changed 信号：值变化时发（界面用它更新读数标签）
     """
     changed = pyqtSignal()
+    selected = pyqtSignal(int)
 
     def __init__(self, n=16):
         super().__init__()
         self.n = n
         self.vals = [0] * n
         self._drag = False
+        self.selected_index = 0
+        self.setFocusPolicy(Qt.StrongFocus)
         self.setMinimumHeight(170)
         self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         self.setMouseTracking(True)
@@ -156,7 +159,7 @@ class SpectrumBars(QWidget):
     # ---- 鼠标 ----
     def _geom(self):
         w, h = self.width(), self.height()
-        pad_l, pad_r, pad_t, pad_b = 30, 6, 8, 18
+        pad_l, pad_r, pad_t, pad_b = self.fontMetrics().horizontalAdvance("255") + 16, 6, 12, self.fontMetrics().height() + 12
         n = self.n
         step = (w - pad_l - pad_r) / float(n)
         bw = max(5.0, step - 6.0)
@@ -165,9 +168,12 @@ class SpectrumBars(QWidget):
     def _apply_at(self, pos):
         w, h, pad_l, pad_r, pad_t, pad_b, step, bw = self._geom()
         x, y = pos.x(), pos.y()
+        if x < pad_l or x >= w-pad_r:
+            return
         idx = int((x - pad_l) / step)
         if not (0 <= idx < self.n):
             return
+        self.select(idx)
         plot_h = h - pad_t - pad_b
         v = int(round((h - pad_b - y) * 255.0 / plot_h))
         v = max(0, min(255, v))
@@ -177,6 +183,9 @@ class SpectrumBars(QWidget):
             self.update()
 
     def mousePressEvent(self, ev):
+        if ev.button() != Qt.LeftButton:
+            return
+        self.setFocus()
         self._drag = True
         self._apply_at(ev.pos())
 
@@ -187,6 +196,24 @@ class SpectrumBars(QWidget):
     def mouseReleaseEvent(self, ev):
         self._drag = False
 
+    def select(self, index):
+        self.selected_index = max(0, min(self.n-1, index))
+        self.selected.emit(self.selected_index)
+        self.update()
+
+    def keyPressEvent(self, event):
+        key = event.key()
+        if key in (Qt.Key_Left, Qt.Key_Right):
+            self.select(self.selected_index + (1 if key == Qt.Key_Right else -1))
+        elif key in (Qt.Key_Up, Qt.Key_Down, Qt.Key_Home, Qt.Key_End):
+            values = self.values()
+            step = 10 if event.modifiers() & Qt.ShiftModifier else 1
+            values[self.selected_index] = (0 if key == Qt.Key_Home else 255 if key == Qt.Key_End else
+                max(0, min(255, values[self.selected_index] + (step if key == Qt.Key_Up else -step))))
+            self.set_values(values)
+        else:
+            super().keyPressEvent(event)
+
     # ---- 绘制 ----
     def paintEvent(self, ev):
         p = QPainter(self)
@@ -195,16 +222,16 @@ class SpectrumBars(QWidget):
         plot_h = h - pad_t - pad_b
 
         # 网格 + 刻度
-        p.setPen(QPen(QColor("#262b34"), 1))
+        p.setPen(QPen(color(self, "border"), 1))
         for i in range(1, 4):
             y = pad_t + plot_h * i / 4.0
             p.drawLine(pad_l - 4, int(y), w - pad_r, int(y))
-        p.setPen(QColor("#6b7381"))
-        p.setFont(QFont("Consolas", 8))
+        p.setPen(color(self, "muted"))
+        p.setFont(chart_font(self))
         for i in range(0, 4):
             v = 255 * (4 - i) / 4.0
             y = pad_t + plot_h * i / 4.0
-            p.drawText(QRectF(0, y - 7, pad_l - 6, 14),
+            p.drawText(QRectF(0, y - 7, pad_l - 6, 22),
                        Qt.AlignRight | Qt.AlignVCenter, "%.0f" % v)
 
         for ch in range(self.n):
@@ -213,24 +240,29 @@ class SpectrumBars(QWidget):
             hv = plot_h * v / 255.0
             p.setPen(Qt.NoPen)
             # 底槽
-            p.setBrush(QColor("#20242c"))
+            p.setBrush(color(self, "inset"))
             p.drawRoundedRect(QRectF(x, pad_t, bw, plot_h), 3, 3)
+            if ch == self.selected_index:
+                p.setPen(QPen(color(self, "accent"), 2))
+                p.setBrush(Qt.NoBrush)
+                p.drawRoundedRect(QRectF(x-2, pad_t-2, bw+4, plot_h+4), 3, 3)
+                p.setPen(Qt.NoPen)
             # 幅度条（奇次泛音略亮，帮助看出"方波=奇次"这类结构）
-            c = QColor("#35d0ba") if ch % 2 == 0 else QColor("#2a9c8b")
+            c = color(self, "accent") if ch % 2 == 0 else color(self, "secondary")
             p.setBrush(c)
             if hv >= 2.0:
                 p.drawRoundedRect(QRectF(x, pad_t + plot_h - hv, bw, hv), 3, 3)
             # 谐波序号
-            p.setPen(QColor("#8b98a8"))
-            p.setFont(QFont("Consolas", 7))
-            p.drawText(QRectF(x - 3, h - pad_b + 2, bw + 6, 14),
+            p.setPen(color(self, "muted"))
+            p.setFont(chart_font(self))
+            p.drawText(QRectF(x - 3, h - pad_b + 2, bw + 6, 22),
                        Qt.AlignHCenter, str(ch + 1))
             # 幅度值（非 0 才画，避免糊成一排数字；满幅时夹回绘图区内）
             if v > 0:
-                ty = max(pad_t + 1.0, pad_t + plot_h - hv - 14)
-                p.setPen(QColor("#f0c46a"))
-                p.setFont(QFont("Consolas", 7, QFont.Bold))
-                p.drawText(QRectF(x - 6, ty, bw + 12, 12),
+                ty = max(pad_t + 1.0, pad_t + plot_h - hv - 22)
+                p.setPen(color(self, "text"))
+                p.setFont(chart_font(self, True))
+                p.drawText(QRectF(x - 6, ty, bw + 12, 22),
                            Qt.AlignHCenter, str(v))
         p.end()
 
@@ -259,7 +291,7 @@ class ElectrodeBars(QWidget):
         p.setRenderHint(QPainter.Antialiasing, True)
         w, h = self.width(), self.height()
         n = 16
-        pad_l, pad_r, pad_t, pad_b = 34, 8, 6, 18
+        pad_l, pad_r, pad_t, pad_b = 44, 8, 12, 28
         bw = max(4.0, (w - pad_l - pad_r) / float(n) - 6.0)
         maxv = 1.0
         for b, r in self.data.values():
@@ -267,16 +299,16 @@ class ElectrodeBars(QWidget):
         maxv = max(maxv * 1.15, 60.0)
 
         # 网格 + 刻度
-        p.setPen(QPen(QColor("#262b34"), 1))
+        p.setPen(QPen(color(self, "border"), 1))
         for i in range(1, 4):
             y = pad_t + (h - pad_t - pad_b) * i / 4.0
             p.drawLine(pad_l - 4, int(y), w - pad_r, int(y))
-        p.setPen(QColor("#6b7381"))
-        p.setFont(QFont("Consolas", 8))
+        p.setPen(color(self, "muted"))
+        p.setFont(chart_font(self))
         for i in range(0, 4):
             v = maxv * (4 - i) / 4.0
             y = pad_t + (h - pad_t - pad_b) * i / 4.0
-            p.drawText(QRectF(0, y - 7, pad_l - 6, 14),
+            p.drawText(QRectF(0, y - 7, pad_l - 6, 22),
                        Qt.AlignRight | Qt.AlignVCenter, "%.0f" % v)
 
         for ch in range(n):
@@ -289,23 +321,23 @@ class ElectrodeBars(QWidget):
                       "dim": "#4a5b6b", "gray": "#333a45"}
             c = QColor(colmap.get(col, "#4a5b6b"))
             if ch == self.sel:
-                p.setPen(QPen(QColor("#f0c46a"), 2))
+                p.setPen(QPen(color(self, "text"), 2))
                 p.setBrush(Qt.NoBrush)
                 p.drawRoundedRect(QRectF(x - 3, pad_t - 3, bw + 6,
                                          h - pad_t - pad_b + 6), 5, 5)
             # base 暗条
             hb = (h - pad_t - pad_b) * (base / maxv)
             p.setPen(Qt.NoPen)
-            p.setBrush(QColor("#2b3140"))
+            p.setBrush(color(self, "inset"))
             p.drawRoundedRect(QRectF(x, h - pad_b - hb, bw, hb), 3, 3)
             # raw 亮条
             hr = (h - pad_t - pad_b) * ((raw or 0) / maxv)
             p.setBrush(c)
             p.drawRoundedRect(QRectF(x, h - pad_b - hr, bw, hr), 3, 3)
             # 通道号
-            p.setPen(QColor("#f0c46a") if ch == self.sel else QColor("#8b98a8"))
-            p.setFont(QFont("Consolas", 8, QFont.Bold if ch == self.sel else QFont.Normal))
-            p.drawText(QRectF(x - 3, h - pad_b + 2, bw + 6, 14),
+            p.setPen(color(self, "text") if ch == self.sel else color(self, "muted"))
+            p.setFont(chart_font(self, ch == self.sel))
+            p.drawText(QRectF(x - 3, h - pad_b + 2, bw + 6, 22),
                        Qt.AlignHCenter, str(ch))
         p.end()
 
@@ -314,47 +346,144 @@ class ElectrodeBars(QWidget):
 #  主窗口
 # =============================================================================
 class MainWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self, preferences_path=None):
         super().__init__()
-        self.setWindowTitle("FPGA 加法合成器 · 上位机 v2  (协议 v1.0 + A1 逐声部塑形)")
-        self.resize(1420, 920)
+        self.preferences_path = preferences_path or os.path.join(out_dir(), "display_preferences.json")
+        self.ui_preferences = load_preferences(self.preferences_path)
+        self.available_fonts = font_choices()
+        self.base_font_points = QApplication.font().pointSizeF()
+        self.setWindowTitle("FPGA 乐器工作台 · 配置与设备实验")
+        self.resize(1280, 900)
         self.link = None
         self.journal = []                    # [(addr, data, note)] —— 可导出重放
+        self.journal_kind = None
         self.sent_total = 0
         self._rate = []                      # [(t, total)]
         self.ele = {}
         self.scan_i = -1
         self.held = {}
         self.octave = 0                      # 键盘八度移位（±2 上限）
+        self.audio_worker = None
+        self.live_worker = None
+        self.audio_test_note = False
         self._build_ui()
+        self.audio_page.velocity.valueChanged.connect(self.sld_vel.setValue)
+        self.sld_vel.valueChanged.connect(self.audio_page.velocity.setValue)
+        self._shift_octave(0)
         self._load_theme()
+        self.theme_picker.currentIndexChanged.connect(self._save_display_preferences)
+        self.text_size_picker.currentIndexChanged.connect(self._save_display_preferences)
+        self.font_picker.currentIndexChanged.connect(self._save_display_preferences)
 
         self.timer = QTimer(self)
         self.timer.timeout.connect(self._tick)
         self.timer.start(200)
         self.scan_timer = QTimer(self)
         self.scan_timer.timeout.connect(self._scan_step)
+        self.audio_follow_timer = QTimer(self)
+        self.audio_follow_timer.setInterval(1000)
+        self.audio_follow_timer.timeout.connect(self._follow_audio)
+        self.audio_page.follow.toggled.connect(lambda enabled: self.audio_follow_timer.start() if enabled else self.audio_follow_timer.stop())
         self.log("就绪 ✓ 顶部可切「模拟设备」（无板自测）或选串口连接 ✓")
-        self.log("演奏线：键盘 Z X C V B N M , = 五声音阶 8 键（与板上电极布局一致，八度可移）✓")
-        self.log("塑谱线：按住鼠标在 16 根泛音条上拖动即可画谱；可指定只刷新某个声部（A1）✓")
-        self.log("脱机线：底部定序器面板下载曲谱并播放，不依赖电脑演奏 ✓")
+        self.log("配置页可离线编辑、保存和载入完整草稿；全局工作台提供预设/谱部分应用。")
+        self.log("设备实验页保留旧接口测试；模拟设备不出声。左手手势与右手保持功能尚待实现。")
 
     # ---------------- UI ----------------
     def _build_ui(self):
         root = QWidget()
         self.setCentralWidget(root)
-        outer = QVBoxLayout(root)
-        outer.setContentsMargins(10, 8, 10, 8)
-        outer.setSpacing(8)
+        shell = QHBoxLayout(root)
+        shell.setContentsMargins(0, 0, 0, 0)
+        shell.setSpacing(0)
+        sidebar = QFrame()
+        self.sidebar = sidebar
+        sidebar.setObjectName("Sidebar")
+        sidebar.setFixedWidth(228)
+        rail = QVBoxLayout(sidebar)
+        rail.setContentsMargins(16, 30, 16, 20)
+        rail.setSpacing(9)
+        self.page_heading = QLabel("音色设计")
+        self.page_heading.setObjectName("Brand")
+        rail.addWidget(self.page_heading)
+        self.page_description = QLabel("绘制分量、编辑参数\n保存和载入完整配置")
+        self.page_description.setObjectName("Hint")
+        self.page_description.setWordWrap(True)
+        rail.addWidget(self.page_description)
+        rail.addSpacing(20)
+        self.nav_buttons = []
+        self.nav_group = QButtonGroup(self)
+        for index, label in enumerate(("01   音色设计", "02   设备实验", "03   硬件诊断", "04   演奏与观察")):
+            button = QPushButton(label)
+            button.setObjectName("Nav")
+            button.setCheckable(True)
+            self.nav_group.addButton(button)
+            button.clicked.connect(lambda checked=False, i=index: self.pages.setCurrentIndex(i))
+            rail.addWidget(button)
+            self.nav_buttons.append(button)
+        self.nav_buttons[0].setChecked(True)
+        rail.addStretch()
+        description = QLabel("声音由 FPGA 生成\n此处编辑乐器参数")
+        description.setObjectName("Hint")
+        rail.addWidget(description)
+        rail.addSpacing(20)
+        self.settings_button = QPushButton("设置…")
+        self.settings_button.clicked.connect(self._open_settings)
+        rail.addWidget(self.settings_button)
+        self.settings_dialog = QDialog(self)
+        self.settings_dialog.setWindowTitle("显示设置")
+        settings_layout = QVBoxLayout(self.settings_dialog)
+        settings_layout.setContentsMargins(24, 20, 24, 20)
+        settings_layout.setSpacing(16)
+        settings_title = QLabel("显示设置")
+        settings_title.setObjectName("PageTitle")
+        settings_layout.addWidget(settings_title)
+        form = QFormLayout()
+        form.setSpacing(12)
+        settings_layout.addLayout(form)
+        self.theme_picker = QComboBox()
+        for key, theme in THEMES.items():
+            self.theme_picker.addItem(theme["name"], key)
+        self.theme_picker.setCurrentIndex(self.theme_picker.findData(self.ui_preferences["theme"]))
+        self.theme_picker.currentIndexChanged.connect(self._load_theme)
+        form.addRow("工作台配色", self.theme_picker)
+        self.text_size_picker = QComboBox()
+        self.text_size_picker.addItem("舒适", "comfortable")
+        self.text_size_picker.addItem("大字", "large")
+        self.text_size_picker.setCurrentIndex(self.text_size_picker.findData(self.ui_preferences["text_size"]))
+        self.text_size_picker.currentIndexChanged.connect(self._load_theme)
+        form.addRow("文字大小", self.text_size_picker)
+        self.font_picker = QComboBox()
+        for key, (title, family) in self.available_fonts.items():
+            self.font_picker.addItem(title, key)
+        selected_font = self.font_picker.findData(self.ui_preferences["font"])
+        self.font_picker.setCurrentIndex(max(0, selected_font))
+        self.font_picker.currentIndexChanged.connect(self._load_theme)
+        form.addRow("界面字体", self.font_picker)
+        settings_hint = QLabel("修改后立即生效，并自动保存。")
+        settings_hint.setObjectName("Hint")
+        settings_layout.addWidget(settings_hint)
+        done = QPushButton("完成")
+        done.setObjectName("Primary")
+        done.clicked.connect(self.settings_dialog.accept)
+        settings_layout.addWidget(done)
+        shell.addWidget(sidebar)
+        workspace = QWidget()
+        outer = QVBoxLayout(workspace)
+        outer.setContentsMargins(0, 0, 0, 0)
+        outer.setSpacing(0)
+        shell.addWidget(workspace, 1)
 
         # ===== 顶栏 =====
         top = QFrame()
         top.setObjectName("TopBar")
-        th = QHBoxLayout(top)
-        th.setContentsMargins(10, 8, 10, 8)
+        footer = QVBoxLayout(top)
+        footer.setContentsMargins(12, 8, 12, 8)
+        th = QHBoxLayout()
+        footer.addLayout(th)
         th.setSpacing(10)
         self.cmb_port = QComboBox()
-        self.cmb_port.setMinimumWidth(190)
+        self.cmb_port.setMinimumWidth(145)
+        self.cmb_port.setMaximumWidth(210)
         self.btn_refresh = QPushButton("刷新端口")
         self.btn_refresh.clicked.connect(self._fill_ports)
         self.btn_conn = QPushButton("连接")
@@ -363,7 +492,7 @@ class MainWindow(QMainWindow):
         self.badge = QLabel("未连接")
         self.badge.setObjectName("BadgeOff")
         self.lab_detail = QLabel("")
-        self.lab_detail.setStyleSheet("color:#8b98a8;")
+        self.lab_detail.setObjectName("Hint")
         self.lab_tick = QLabel("已发 0 B · 0.0 B/s")
         self.lab_tick.setObjectName("Ticker")
         self.btn_export = QPushButton("导出帧序列")
@@ -374,12 +503,63 @@ class MainWindow(QMainWindow):
         th.addWidget(self.btn_conn)
         th.addWidget(self.badge)
         th.addWidget(self.lab_detail, 1)
-        th.addWidget(self.lab_tick)
-        th.addWidget(self.btn_export)
-        outer.addWidget(top)
+        metrics = QHBoxLayout()
+        metrics.addWidget(self.lab_tick, 1)
+        metrics.addWidget(self.btn_export)
+        footer.addLayout(metrics)
+
+        self.pages = QTabWidget()
+        self.pages.tabBar().hide()
+        self.editor = ConfigEditor(SpectrumBars, SPECTRA, card)
+        outer.addWidget(self.editor.document_header)
+        self.file_shortcuts = []
+        for keys, action in (("Ctrl+S", self.editor.save_document), ("Ctrl+Shift+S", self.editor.save_as),
+                             ("Ctrl+O", self.editor.open_dialog), ("Ctrl+N", self.editor.new_document)):
+            shortcut = QShortcut(QKeySequence(keys), self)
+            shortcut.activated.connect(lambda fn=action: fn() if self.pages.currentIndex() == 0 else None)
+            self.file_shortcuts.append(shortcut)
+
+        def page(widget, title):
+            scroll = QScrollArea()
+            scroll.setWidgetResizable(True)
+            scroll.setFrameShape(QFrame.NoFrame)
+            scroll.setWidget(widget)
+            self.pages.addTab(scroll, title)
+            return scroll
+
+        page(self.editor, "音色配置")
+        experiment = QWidget()
+        experiment_layout = QVBoxLayout(experiment)
+        self.experiment_page = page(experiment, "设备实验 · 旧接口")
+        explanation = QLabel("旧接口实验：此页操作直接发送设备命令，与配置草稿独立。自动颤音 / 滑音不代表左手手势功能已实现。")
+        explanation.setWordWrap(True)
+        explanation.setObjectName("Hint")
+        experiment_layout.addWidget(explanation)
+        diagnostics = QWidget()
+        diag_layout = QVBoxLayout(diagnostics)
+        page(diagnostics, "硬件诊断")
+        explanation = QLabel("这里显示旧版 FPGA RC 电极遥测；PCB + I²C 控制器的驱动与测量面板尚未接入。")
+        explanation.setWordWrap(True)
+        explanation.setObjectName("Hint")
+        diag_layout.addWidget(explanation)
+        self.audio_page = AudioPage()
+        self.pages.addTab(self.audio_page, "音乐可视化")
+        self.audio_page.live_button.clicked.connect(self._toggle_live)
+        self.audio_page.capture.clicked.connect(self._capture_audio)
+        self.audio_page.export.clicked.connect(self._export_audio)
+        self.audio_page.test_note.clicked.connect(self._audio_test_toggle)
+        for i, button in enumerate(self.audio_page.play_buttons):
+            button.pressed.connect(lambda idx=i: self.note_on(idx))
+            button.released.connect(lambda idx=i: self.note_off(idx))
+        self.audio_page.oct_down.clicked.connect(lambda: self._shift_octave(-1))
+        self.audio_page.oct_up.clicked.connect(lambda: self._shift_octave(1))
+        self.audio_page.velocity.valueChanged.connect(lambda v: self.audio_page.velocity_label.setText('力度%d/15' % v))
+        self.audio_page.panic.clicked.connect(self._performance_panic)
+        outer.addWidget(self.pages, 1)
 
         # ===== 主体：三列（演奏 | 塑谱 | 遥测调试）=====
         body = QHBoxLayout()
+        self.experiment_body = body
         body.setSpacing(8)
 
         # ---------- 左列：演奏 ----------
@@ -387,7 +567,7 @@ class MainWindow(QMainWindow):
         colL.setSpacing(8)
 
         # --- 键盘卡 ---
-        c, v = card("键盘（左手 · 五声音阶 · 八度可移）")
+        c, v = card("音符测试 · 五声音阶")
         octrow = QHBoxLayout()
         octrow.addWidget(QLabel("八度"))
         b = QPushButton("−")
@@ -429,7 +609,7 @@ class MainWindow(QMainWindow):
         colL.addWidget(c)
 
         # --- 表情轴卡 ---
-        c1, v1 = card("表情轴（颤音 / 滑音 —— M1「独立可控」演示面板）")
+        c1, v1 = card("旧接口 · 自动颤音 / 滑音")
         grid = QGridLayout()
         grid.setHorizontalSpacing(8)
         grid.setVerticalSpacing(6)
@@ -473,14 +653,14 @@ class MainWindow(QMainWindow):
             lambda x: self.lab_glide.setText(str(x)))
         grid.addWidget(self.lab_glide, 2, 3)
         v1.addLayout(grid)
-        hint = QLabel("演示动作：颤音✓ + 滑音✓ 同时开，两个滑条反方向拖 → 示波器上各自独立变化")
+        hint = QLabel("开关与滑条松开时直接发送。深度与步长为旧寄存器量值；本面板不控制左手触点。")
         hint.setObjectName("Hint")
         hint.setWordWrap(True)
         v1.addWidget(hint)
         colL.addWidget(c1)
 
         # --- 音色与效果卡 ---
-        c2, v2 = card("音色与效果")
+        c2, v2 = card("设备预设与效果 · 点击即发送")
         row2 = QHBoxLayout()
         row2.addWidget(QLabel("音色"))
         for nm, v_ in PRESETS:
@@ -502,17 +682,18 @@ class MainWindow(QMainWindow):
         # ---------- 中列：塑谱 ----------
         colM = QVBoxLayout()
         colM.setSpacing(8)
-        c3, v3 = card("塑谱（右手 · 16 泛音幅度 → 0x58/0x59/0x5A + A1 逐声部刷新）")
+        c3, v3 = card("谱形命令实验 · 协议 v1.1")
         self.spec = SpectrumBars(16)
         self.spec.set_values(SPECTRA[0][1])
         self.spec.changed.connect(self._spec_changed)
         v3.addWidget(self.spec)
         row4 = QHBoxLayout()
-        self.chk_replace = QCheckBox("替换模式（只用谱；不勾=叠加预设底谱）")
+        self.chk_replace = QCheckBox("仅使用绘制谱")
+        self.chk_replace.setToolTip("勾选为替换谱；未勾选则叠加到预设底谱。旧接口仅用于模拟测试。")
         row4.addWidget(self.chk_replace)
         row4.addWidget(QLabel("刷新目标"))
         self.cmb_voice = QComboBox()
-        self.cmb_voice.addItem("全部声部（0xFF 全刷）")
+        self.cmb_voice.addItem("全部声部")
         for i in range(32):
             self.cmb_voice.addItem("声部 %d" % i)
         self.cmb_voice.setMinimumWidth(150)
@@ -520,7 +701,7 @@ class MainWindow(QMainWindow):
         row4.addStretch(1)
         v3.addLayout(row4)
         row5 = QHBoxLayout()
-        b = QPushButton("下发谱 + 刷新")
+        b = QPushButton("下发谱 + 显式刷新")
         b.setObjectName("Primary")
         b.clicked.connect(self.send_spectrum)
         row5.addWidget(b)
@@ -535,8 +716,7 @@ class MainWindow(QMainWindow):
         self.lab_spec.setWordWrap(True)
         self._spec_changed()
         v3.addWidget(self.lab_spec)
-        hint2 = QLabel("逐声部塑形（A1）：① 选「声部 0」→ 画谱 → 下发；② 改谱 → 选「声部 1」→ 下发；\n"
-                       "两个音同时响时各用各的谱 —— 这是与拉杆风琴「全局注册」的本质差异")
+        hint2 = QLabel("完整谱提交后显式刷新所选声部；真实设备须回读确认协议 v1.1。完整配置应用仍待接入。")
         hint2.setObjectName("Hint")
         hint2.setWordWrap(True)
         v3.addWidget(hint2)
@@ -549,7 +729,7 @@ class MainWindow(QMainWindow):
         colR.setSpacing(8)
 
         # --- 电极遥测卡 ---
-        c4, v4 = card("电极遥测（上板 bring-up 第 0 步：量 RC 量程）")
+        c4, v4 = card("旧 RC 电极遥测 · 非 I²C 触控")
         self.bars = ElectrodeBars()
         v4.addWidget(self.bars)
         row6 = QHBoxLayout()
@@ -603,56 +783,108 @@ class MainWindow(QMainWindow):
         v5.addLayout(row7)
         colR.addWidget(c5)
         colR.addStretch(1)
-        body.addLayout(colR, 10)
+        diag_layout.addLayout(colR)
 
-        outer.addLayout(body, 1)
+        experiment_layout.addLayout(body, 1)
 
         # ===== 定序器卡（脱机演示线）=====
-        c6, v6 = card("定序器（脱机演示线：下载曲谱 → 播放，不依赖电脑实时演奏）")
+        c6, v6 = card("定序器实验 · 真实设备须确认协议 v1.1")
         sq = QHBoxLayout()
         sq.setSpacing(8)
         sq.addWidget(QLabel("BPM"))
         self.spin_bpm = QSpinBox()
         self.spin_bpm.setRange(40, 240)
         self.spin_bpm.setValue(120)
+        self.spin_bpm.valueChanged.connect(lambda _v: self._seq_status())
         self.spin_bpm.setToolTip("每拍时钟数 = BPM/60 × 2^24 / fs（PC 算好除法，RTL 只做加法）")
         sq.addWidget(self.spin_bpm)
-        sq.addWidget(QLabel("曲谱（音高:拍数，逗号分隔）"))
+        sq.addWidget(QLabel("曲谱（音高:拍数）"))
         self.ed_score = QLineEdit(DEMO_SCORE_TEXT)
         sq.addWidget(self.ed_score, 1)
         self.lab_seq = QLabel("")
         self.lab_seq.setObjectName("Ticker")
         self._seq_status()
         self.ed_score.textChanged.connect(lambda _t: self._seq_status())
-        sq.addWidget(self.lab_seq)
+        actions = QHBoxLayout()
+        actions.addWidget(self.lab_seq, 1)
         b = QPushButton("下载曲谱")
         b.clicked.connect(self.seq_download)
-        sq.addWidget(b)
+        actions.addWidget(b)
         b = QPushButton("▶ 下载并播放")
         b.setObjectName("Primary")
         b.clicked.connect(self.seq_play)
-        sq.addWidget(b)
+        actions.addWidget(b)
         b = QPushButton("■ 停止")
         b.setObjectName("Danger")
         b.clicked.connect(self.seq_stop)
-        sq.addWidget(b)
+        actions.addWidget(b)
         v6.addLayout(sq)
-        outer.addWidget(c6)
+        v6.addLayout(actions)
+        experiment_layout.addWidget(c6)
 
         # --- 日志 ---
         self.logbox = QPlainTextEdit()
         self.logbox.setReadOnly(True)
+        self.logbox.setMaximumBlockCount(1000)
         self.logbox.setMaximumHeight(130)
+        self.log_toggle = QCheckBox("显示设备操作日志")
+        self.log_toggle.toggled.connect(self.logbox.setVisible)
+        outer.addWidget(self.log_toggle)
         outer.addWidget(self.logbox)
+        self.logbox.hide()
+        self.pages.currentChanged.connect(self._page_changed)
+        outer.addWidget(top)
 
         self._fill_ports()
 
-    def _load_theme(self):
+    def _load_theme(self, *args):
         # 打包后 theme.qss 在 _MEIPASS 里 ⇒ 用 find_file 找（源码/onefile 两用）
         p = find_file("theme.qss")
         if p:
             with open(p, encoding="utf-8") as fh:
-                self.setStyleSheet(fh.read())
+                key = self.theme_picker.currentData()
+                self.setProperty("studioTheme", key)
+                family = self.available_fonts[self.font_picker.currentData()][1]
+                mono_family = self.available_fonts.get("lolita_mono", (None, None))[1] if family else None
+                self.setStyleSheet(stylesheet(fh.read(), key, self.base_font_points, self.text_size_picker.currentData(), family, mono_family))
+                self._resize_sidebar()
+                self.editor.reflow()
+                self._reflow_experiment()
+                self.settings_dialog.adjustSize()
+                for widget in self.findChildren(QWidget):
+                    widget.update()
+
+    def _open_settings(self):
+        self.settings_dialog.open()
+        self.settings_dialog.adjustSize()
+
+    def _save_display_preferences(self, *args):
+        self.ui_preferences = {"theme": self.theme_picker.currentData(), "text_size": self.text_size_picker.currentData(), "font": self.font_picker.currentData()}
+        try:
+            save_preferences(self.preferences_path, self.ui_preferences)
+        except OSError as exc:
+            self.log("显示偏好未能保存：%s" % exc)
+
+    def _resize_sidebar(self):
+        # 使用各控件样式生效后的真实字体；不能用主窗口的旧默认字体估算。
+        required = 0
+        for widget in self.sidebar.findChildren(QWidget):
+            widget.ensurePolished()
+            if isinstance(widget, (QLabel, QPushButton)):
+                width = max((widget.fontMetrics().horizontalAdvance(line) for line in widget.text().splitlines()), default=0)
+                required = max(required, width + (30 if isinstance(widget, QPushButton) else 0))
+            elif isinstance(widget, QComboBox):
+                required = max(required, widget.minimumSizeHint().width())
+        self.sidebar.setFixedWidth(max(228, required + 32))
+
+    def _reflow_experiment(self):
+        if hasattr(self, "experiment_body"):
+            width = self.width() - self.sidebar.width()
+            self.experiment_body.setDirection(QBoxLayout.TopToBottom if width < self.fontMetrics().horizontalAdvance("宽")*58 else QBoxLayout.LeftToRight)
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self._reflow_experiment()
 
     # ---------------- 工具 ----------------
     def log(self, s):
@@ -665,13 +897,22 @@ class MainWindow(QMainWindow):
         if self.link is None:
             self.log("✗ 未连接：%s（可切「模拟设备」先试）" % what)
             return
-        n = self.link.send(frames)
+        try:
+            n = self.link.send(frames)
+            if n != 2*len(frames.items):
+                raise OSError("发送不完整：%s / %d 字节" % (n, 2*len(frames.items)))
+        except Exception as exc:
+            self.log("✗ %s：通信失败，设备生效状态未知：%s" % (what, exc))
+            self.log_toggle.setChecked(True)
+            return False
         self.sent_total += n
+        self.journal_kind = self.link.kind
         for a, d, note in frames.items:
             self.journal.append((a, d, note))
         self.log("→ %s：%d 帧 / %d 字节   %s" % (what, len(frames.items), n,
                  "  ".join("%s=0x%02X" % (addr_name(a), d) for a, d, _ in frames.items[:4])))
         self._tick_rate()
+        return True
 
     def _ctrl_val(self):
         """CTRL：bit3=preset_src(寄存器) 固定 1，bit1/2 跟随表情轴开关。"""
@@ -684,20 +925,28 @@ class MainWindow(QMainWindow):
 
     # ---------------- 演奏 ----------------
     def note_on(self, idx):
+        if self.link is None:
+            self.log("未连接设备；请连接模拟设备检查命令流程，或连接 FPGA 测试发声。")
+            return
         if idx in self.held:
             return
         midi = PENTA[idx] + 12 * self.octave
         vel = self.sld_vel.value()
-        self.held[idx] = midi
-        self.send_frames(dh.cmd_note("on:%d:%d" % (midi, vel)),
-                         "音符开 %s" % midi_name(midi))
+        if self.send_frames(dh.cmd_note("on:%d:%d" % (midi, vel)), "音符开 %s" % midi_name(midi)):
+            self.held[idx] = midi
+            self.key_btns[idx].setDown(True)
+            self.audio_page.play_buttons[idx].setDown(True)
+            self._performance_state()
 
     def note_off(self, idx):
         if idx not in self.held:
             return
-        midi = self.held.pop(idx)
-        self.send_frames(dh.cmd_note("off:%d" % midi),
-                         "音符关 %s" % midi_name(midi))
+        midi = self.held[idx]
+        if self.send_frames(dh.cmd_note("off:%d" % midi), "音符关 %s" % midi_name(midi)):
+            self.held.pop(idx)
+            self.key_btns[idx].setDown(False)
+            self.audio_page.play_buttons[idx].setDown(False)
+            self._performance_state()
 
     def _shift_octave(self, d):
         self.octave = max(-2, min(2, self.octave + d))
@@ -705,6 +954,7 @@ class MainWindow(QMainWindow):
             m = PENTA[i] + 12 * self.octave
             b.setText("%s\n%d" % (midi_name(m), m))
             b.setToolTip("MIDI %d（电脑键 %s）" % (m, KEYMAP[i]))
+            self.audio_page.play_buttons[i].setText('%s\n%s' % (KEYMAP[i], midi_name(m)))
         self.lab_oct.setText("%s – %s%s" % (midi_name(PENTA[0] + 12 * self.octave),
                                             midi_name(PENTA[-1] + 12 * self.octave),
                                             {0: "", 1: "（+1oct）", -1: "（−1oct）",
@@ -743,10 +993,13 @@ class MainWindow(QMainWindow):
         self.lab_spec.setText("当前谱：%s" % ",".join(str(x) for x in vals))
 
     def send_spectrum(self):
+        if not self._protocol_v11_supported():
+            return
         vals = self.spec.values()
         mode = "replace" if self.chk_replace.isChecked() else "add"
         vi = self.cmb_voice.currentIndex()
-        self.send_frames(dh.cmd_spectrum(mode, vals), "塑谱（%s）" % mode)
+        if not self.send_frames(dh.cmd_spectrum(mode, vals), "塑谱（%s）" % mode):
+            return
         # 显式刷新：全部（0xFF）或单个声部（A1: 0–31）。
         #   叠加模式写 0x5A 时 RTL 会自动刷在响声部；这里补显式刷新是
         #   「界面替用户兜底」，保证"改了必生效"，且逐声部目标只有这条路能到。
@@ -768,6 +1021,9 @@ class MainWindow(QMainWindow):
             if not tok:
                 continue
             p = tok.split(":")
+            if len(p) > 2:
+                QMessageBox.warning(self, "曲谱格式", "这一段有多余字段：%r；应为 音高:拍数" % tok)
+                return None
             try:
                 n = int(p[0])
                 b = int(p[1]) if len(p) > 1 else 1
@@ -780,6 +1036,9 @@ class MainWindow(QMainWindow):
                                     "这一段超出范围：%r（音高 0–127，拍数 1–255）" % tok)
                 return None
             notes.append((n, b))
+            if len(notes) > 63:
+                QMessageBox.warning(self, "曲谱过长", "当前 RTL 曲谱长度为 6 位，最多支持 63 步。")
+                return None
         if not notes:
             QMessageBox.warning(self, "曲谱为空", "请先填入至少一步「音高:拍数」")
             return None
@@ -794,12 +1053,25 @@ class MainWindow(QMainWindow):
         f.w("SEQ_VEL", 0xC0, "定序器力度 12/15")
         f.score(notes)
         if enable:
-            # SEQ_CTRL=0x05：bit0 使能 + bit2 使用下载曲谱（RTL 现行语义；
-            #   冻结文档 A6 与此有分歧，GUI 跟随 RTL/CLI 同款写法）
+            # 曲谱源由 SCORE_LEN>0 判定；使能为 bit0。
             f.w("SEQ_CTRL", 0x01, "使能定序器（A6：SCORE_LEN>0 即用下载曲谱）")
         return f
 
+    def _protocol_v11_supported(self):
+        if isinstance(self.link, SimLink):
+            return True
+        if self.link is None:
+            self.log("未连接；无法发送协议 v1.1 命令")
+            return False
+        if self.link.read_reg(dh.REG["PROTO_VER"]) != dh.PROTOCOL_REVISION:
+            self.log("设备未确认协议 v1.1；曲谱/完整谱真实下发已阻止")
+            self.log_toggle.setChecked(True)
+            return False
+        return True
+
     def seq_download(self):
+        if not self._protocol_v11_supported():
+            return
         notes = self._parse_score()
         if notes is None:
             return
@@ -807,6 +1079,8 @@ class MainWindow(QMainWindow):
                          "下载曲谱 %d 步 @%d BPM" % (len(notes), self.spin_bpm.value()))
 
     def seq_play(self):
+        if not self._protocol_v11_supported():
+            return
         notes = self._parse_score()
         if notes is None:
             return
@@ -822,7 +1096,7 @@ class MainWindow(QMainWindow):
     def _sel_ch(self, i):
         self.bars.sel = i
         self.bars.update()
-        if self.link is not None:
+        if self.link is not None and self.scan_i in (-1, None):
             f = dh.Frames()
             f.w("PAD_SEL", i & 0x0F, "遥测通道 %d" % i)
             self.send_frames(f, "选遥测通道 %d" % i)
@@ -839,14 +1113,16 @@ class MainWindow(QMainWindow):
             self.scan_timer.stop()
 
     def _read_pair(self, lo, hi):
+        if self.link is None:
+            return None
         a = self.link.read_reg(TEL[lo])
         b = self.link.read_reg(TEL[hi])
         if a is None or b is None:
             return None
         return ((b & 0x0F) << 8) | a
 
-    def _refresh_bars(self):
-        i = self.cmb_ch.currentIndex()
+    def _refresh_bars(self, channel=None):
+        i = self.cmb_ch.currentIndex() if channel is None else channel
         base = self._read_pair("PAD_BASE_LO", "PAD_BASE_HI")
         raw = self._read_pair("PAD_RAW_LO", "PAD_RAW_HI")
         if base is None or raw is None:
@@ -866,21 +1142,29 @@ class MainWindow(QMainWindow):
         self.bars.clear()
         self.scan_i = 0
         self.log("开始扫描 16 路电极（每路写 PAD_SEL 后等 80 ms 让遥测刷新）…")
-        self.scan_timer.start(80)
+        if self._select_scan_channel():
+            self.scan_timer.start(80)
+
+    def _select_scan_channel(self):
+        f = dh.Frames()
+        f.w("PAD_SEL", self.scan_i, "扫描通道 %d" % self.scan_i)
+        if not self.send_frames(f, "选择扫描通道 %d" % self.scan_i):
+            self._stop_scan()
+            return False
+        return True
+
+    def _stop_scan(self):
+        self.scan_timer.stop()
+        self.scan_i = -1
+        self.chk_autoscan.setChecked(False)
 
     def _scan_step(self):
-        if self.scan_i is None or self.scan_i > 15:
-            self.scan_timer.stop()
-            self._scan_report()
+        if self.link is None or self.scan_i is None or not 0 <= self.scan_i <= 15:
+            self._stop_scan()
             return
         i = self.scan_i
-        f = dh.Frames()
-        f.w("PAD_SEL", i & 0x0F, "扫描通道 %d" % i)
-        self.link.send(f)
-        self.sent_total += 2
-        for a, d, note in f.items:
-            self.journal.append((a, d, note))
-        self._refresh_bars()
+        # 上一轮已选通该通道并等待 80 ms，再读回对应数据。
+        self._refresh_bars(i)
         self.bars.sel = i
         self.bars.update()
         self.scan_i += 1
@@ -888,6 +1172,9 @@ class MainWindow(QMainWindow):
         if self.scan_i > 15:
             self.scan_timer.stop()
             self._scan_report()
+            self._sel_ch(self.cmb_ch.currentIndex())
+        else:
+            self._select_scan_channel()
 
     def _scan_report(self):
         bad = 0
@@ -923,10 +1210,7 @@ class MainWindow(QMainWindow):
 
     def _autoscan_restart(self):
         if self.chk_autoscan.isChecked() and self.link is not None:
-            self.scan_i = 0
-            self.ele = {}
-            self.bars.clear()
-            self.scan_timer.start(80)
+            self.scan_all()
 
     def read_all(self):
         if self.link is None:
@@ -955,9 +1239,24 @@ class MainWindow(QMainWindow):
             self.log("未发现串口（pyserial 未装或没有设备）⇒ 可用「模拟设备」自测 ✓")
 
     def _toggle_conn(self):
+        if self.live_worker is not None and self.live_worker.isRunning():
+            self._stop_live(); self.log("实时流停止后可断开连接"); return
+        if self.audio_worker is not None and self.audio_worker.isRunning():
+            self.log("采样事务进行中，完成后再切换连接")
+            return
         if self.link is not None:
+            self._stop_scan()
+            self._release_keys()
+            if self.audio_test_note:
+                if not self.send_frames(dh.cmd_note('off:69'), '释放A4测试音'):
+                    return
+                self.audio_test_note = False
+                self.audio_page.test_note.setText('发送A4测试音')
             self.link.close()
             self.link = None
+            self.cmb_port.setEnabled(True)
+            self.btn_refresh.setEnabled(True)
+            self.audio_page.mode.setEnabled(True)
             self.badge.setText("未连接")
             self.badge.setObjectName("BadgeOff")
             self.badge.setStyleSheet("")
@@ -965,6 +1264,7 @@ class MainWindow(QMainWindow):
             self.btn_conn.setObjectName("Primary")
             self.chk_touch.setEnabled(False)
             self.chk_autoscan.setChecked(False)
+            self.lab_detail.setText("")
             self.log("已断开")
             self._restyle()
             return
@@ -974,7 +1274,7 @@ class MainWindow(QMainWindow):
                 self.link = SimLink()
                 self.chk_touch.setEnabled(True)
             else:
-                self.link = SerialLink(sel)
+                self.link = SerialLink(sel, self.audio_page.mode.currentData())
                 self.chk_touch.setEnabled(False)
             self.link.open()
         except Exception as e:
@@ -989,6 +1289,7 @@ class MainWindow(QMainWindow):
         self.btn_conn.setText("断开")
         self.btn_conn.setObjectName("Danger")
         self.journal = []
+        self.journal_kind = self.link.kind
         self.sent_total = 0
         self._rate = []
         self.log("已连接：%s（%s）%s" % (self.link.kind, self.link.detail,
@@ -996,6 +1297,9 @@ class MainWindow(QMainWindow):
         self._restyle()
         # 连上先回读一轮：立刻能看到"板子活着吗 + 寄存器现在是什么状态"
         self.read_all()
+        self.cmb_port.setEnabled(False)
+        self.btn_refresh.setEnabled(False)
+        self.audio_page.mode.setEnabled(False)
 
     def _restyle(self):
         self.badge.style().unpolish(self.badge)
@@ -1005,7 +1309,12 @@ class MainWindow(QMainWindow):
 
     # ---------------- 定时 ----------------
     def _tick(self):
-        if self.link is not None and self.scan_i in (-1, None):
+        if self.live_worker is not None and self.live_worker.isRunning():
+            self._tick_rate(); return
+        if self.audio_worker is not None and self.audio_worker.isRunning():
+            self._tick_rate()
+            return
+        if self.pages.currentIndex() == 2 and self.link is not None and self.scan_i in (-1, None):
             self._refresh_bars()
         self._tick_rate()
 
@@ -1022,6 +1331,33 @@ class MainWindow(QMainWindow):
         self.lab_tick.setText("已发 %d B · %.1f B/s" % (self.sent_total, r))
 
     # ---------------- 导出 / 按键 ----------------
+    def _release_keys(self):
+        for idx in list(self.held):
+            self.note_off(idx)
+        for button in self.key_btns:
+            button.setDown(False)
+
+    def _page_changed(self, index):
+        self._release_keys()
+        descriptions = (
+            ("音色设计", "绘制分量、编辑参数\n保存和载入完整配置"),
+            ("设备实验", "测试音符、预设与效果\n下载和播放实验曲谱"),
+            ("硬件诊断", "查看电极遥测\n回读设备寄存器"),
+            ("演奏与观察", "键盘演奏与多音释放\n查看FPGA实际波形"),
+        )
+        title, description = descriptions[index]
+        self.page_heading.setText(title)
+        self.page_description.setText(description)
+        self._resize_sidebar()
+        self.editor.document_header.setVisible(index == 0)
+        for i, button in enumerate(self.nav_buttons):
+            button.setChecked(i == index)
+
+    def _keyboard_active(self):
+        focus = QApplication.focusWidget()
+        return (self.pages.currentIndex() in (1, 3) and
+                not isinstance(focus, (QLineEdit, QPlainTextEdit, QAbstractSpinBox, QComboBox)))
+
     def _export(self):
         if not self.journal:
             QMessageBox.information(self, "导出帧序列", "还没有发过任何帧 ✓")
@@ -1033,6 +1369,7 @@ class MainWindow(QMainWindow):
         with open(p, "w", encoding="utf-8") as fh:
             fh.write("# addr data  （dsp_gui.py 导出；与 dsp_host.py --emit 同格式，"
                      "可被仿真测试台原样重放）\n")
+            fh.write("# 设备类型：%s；这里只记录发送字节，不代表硬件已经生效\n" % (self.journal_kind or "未知"))
             for a, d, note in self.journal:
                 fh.write("%02X %02X   # %s\n" % (a, d, note))
         self.log("已导出 %d 帧 → %s ✓" % (len(self.journal), p))
@@ -1041,7 +1378,7 @@ class MainWindow(QMainWindow):
         if ev.isAutoRepeat():
             return
         t = ev.text().upper()
-        if t in KEYMAP:
+        if t in KEYMAP and self._keyboard_active():
             self.note_on(KEYMAP.index(t))
         else:
             super().keyPressEvent(ev)
@@ -1050,15 +1387,162 @@ class MainWindow(QMainWindow):
         if ev.isAutoRepeat():
             return
         t = ev.text().upper()
-        if t in KEYMAP:
+        if t in KEYMAP and KEYMAP.index(t) in self.held:
             self.note_off(KEYMAP.index(t))
         else:
             super().keyReleaseEvent(ev)
 
     def closeEvent(self, ev):
+        if self.live_worker is not None and self.live_worker.isRunning():
+            self._stop_live(); ev.ignore(); return
+        if self.audio_worker is not None and self.audio_worker.isRunning():
+            self.log("采样事务进行中，请完成后关闭工作台")
+            ev.ignore()
+            return
+        if not self.editor.confirm_discard():
+            ev.ignore()
+            return
+        self._stop_scan()
+        self._release_keys()
+        if self.audio_test_note and self.link is not None:
+            self.send_frames(dh.cmd_note('off:69'), '关闭时释放A4测试音')
         if self.link is not None:
             self.link.close()
         ev.accept()
+
+    def _capture_audio(self):
+        if self.live_worker is not None and self.live_worker.isRunning(): return
+        if not isinstance(self.link, SerialLink) or self.link.ser is None:
+            self.audio_page.follow.setChecked(False)
+            self.audio_page.status.setText("需要连接真实full32诊断设备；模拟设备无音频数据。")
+            return
+        if self.audio_worker is not None and self.audio_worker.isRunning():
+            return
+        self._stop_scan()
+        self.audio_page.capture.setEnabled(False)
+        self.audio_page.fx.setEnabled(False)
+        self.audio_page.test_note.setEnabled(False)
+        self.audio_page.status.setText("正在采集FPGA实际波形…仍可按键演奏；读回事务由采样独占。")
+        self.audio_worker = CaptureWorker(self.link, self.audio_page.fx.isChecked(), self)
+        self.audio_worker.result.connect(self._audio_ready)
+        self.audio_worker.failure.connect(self._audio_failed)
+        self.audio_worker.finished.connect(self._audio_finished)
+        self.audio_worker.start()
+
+    def _archive_audio(self, data, raw, status):
+        folder = Path(out_dir()) / 'audio_observer' / ('%s-%d' % (time.strftime('%Y%m%d-%H%M%S'), time.time_ns()))
+        folder.mkdir(parents=True, exist_ok=False)
+        (folder/'stream.bin').write_bytes(raw)
+        record = {k: v for k, v in data.items() if k != 'raw'}
+        record['status'] = status
+        (folder/'capture.json').write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding='utf-8')
+        return str(folder)
+
+    def _audio_ready(self, data):
+        self.audio_page.show_snapshot(data)
+        try:
+            destination = self._archive_audio(data, data['raw'], 'CAPTURED_NOT_ELECTRICAL_ACCEPTANCE')
+            self.log('音频快照已归档：' + destination)
+        except OSError as exc:
+            self.audio_page.status.setText(self.audio_page.status.text() + ' · 自动归档失败：' + str(exc))
+
+    def _audio_failed(self, exc):
+        self.audio_page.follow.setChecked(False)
+        self.audio_page.status.setText('本次采集失败：%s；保留的曲线为历史快照。' % exc)
+        self.log('音频采集失败：' + str(exc))
+        try:
+            self._archive_audio(dict(error=str(exc)), getattr(exc, 'raw', b''), 'FAILED')
+        except OSError as archive_exc:
+            self.log('失败证据保存失败：' + str(archive_exc))
+
+    def _audio_finished(self):
+        self.audio_page.capture.setEnabled(True)
+        self.audio_page.fx.setEnabled(True)
+        self.audio_page.test_note.setEnabled(True)
+
+    def _audio_test_toggle(self):
+        if not isinstance(self.link, SerialLink):
+            self.audio_page.status.setText('测试音需要真实设备；模拟设备不会发声。')
+            return
+        command = 'off:69' if self.audio_test_note else 'on:69:12'
+        if self.send_frames(dh.cmd_note(command), 'A4测试音命令（执行需采样确认）'):
+            self.audio_test_note = not self.audio_test_note
+            self.audio_page.test_note.setText('释放A4测试音' if self.audio_test_note else '发送A4测试音')
+
+    def _follow_audio(self):
+        if self.pages.currentIndex() == 3:
+            self._capture_audio()
+
+    def _toggle_live(self):
+        from live_visualizer import LiveWorker, LiveAnalysis
+        if self.live_worker is not None and self.live_worker.isRunning():
+            self._stop_live(); return
+        if not isinstance(self.link, SerialLink):
+            self.audio_page.live_status.setText('请连接真实D4实时观察设备'); return
+        if self.audio_worker is not None and self.audio_worker.isRunning(): return
+        self.audio_page.follow.setChecked(False); self._stop_scan()
+        self.audio_page.live_model = LiveAnalysis()
+        for plot in (self.audio_page.trajectory,self.audio_page.live_wave,self.audio_page.live_spectrum):
+            plot.model=self.audio_page.live_model
+        self.live_worker=LiveWorker(self.link,self)
+        self.live_worker.batch.connect(self.audio_page.live_model.ingest)
+        self.live_worker.failure.connect(self._live_failed)
+        self.live_worker.finished.connect(self._live_finished)
+        self.live_display_timer=QTimer(self)
+        self.live_display_timer.setInterval(33)
+        self.live_display_timer.timeout.connect(self.audio_page.refresh_live)
+        self.live_display_timer.start()
+        self.audio_page.live_button.setText('停止实时观察')
+        self.audio_page.live_status.setText('核对设备身份并开始音频流…')
+        self.live_worker.start()
+
+    def _stop_live(self):
+        self._release_keys()
+        if self.audio_test_note:
+            self.send_frames(dh.cmd_note('off:69'), '释放A4测试音');self.audio_test_note=False
+        self.live_worker.stop()
+        self.audio_page.live_status.setText('正在停止 · 保留最后画面')
+
+    def _live_failed(self, message):
+        self.audio_page.live_status.setText(message);self.log(message)
+        self.live_error=message
+
+    def _live_finished(self):
+        self.live_display_timer.stop()
+        self.audio_page.refresh_live()
+        self.audio_page.live_button.setText('开始实时观察')
+        self.audio_page.live_status.setText(getattr(self,'live_error','已停止 · 保留历史画面'))
+        if hasattr(self,'live_error'):del self.live_error
+
+    def _performance_state(self):
+        notes = ', '.join(midi_name(n) for n in self.held.values()) or '无按住音符'
+        self.audio_page.play_state.setText('电脑演奏 · 已发送按键状态：%s（不是FPGA执行确认）' % notes)
+
+    def _performance_panic(self):
+        if self.link is None: return
+        if self.send_frames(dh.cmd_note(','.join('off:%d' % n for n in range(128))), '释放全部128音符'):
+            self.held.clear()
+            for button in self.key_btns + self.audio_page.play_buttons: button.setDown(False)
+            self.audio_test_note = False; self.audio_page.test_note.setText('发送A4测试音')
+            self._performance_state()
+
+    def changeEvent(self, event):
+        from PyQt5.QtCore import QEvent
+        super().changeEvent(event)
+        if event.type() == QEvent.ActivationChange and not self.isActiveWindow() and hasattr(self, 'held'):
+            self._release_keys()
+
+    def _export_audio(self):
+        data = self.audio_page.snapshot
+        if data is None:
+            return
+        filename, _ = QFileDialog.getSaveFileName(self, '导出FPGA快照', 'fpga-audio.json', 'JSON (*.json)')
+        if filename:
+            try:
+                Path(filename).write_text(json.dumps({k: v for k, v in data.items() if k != 'raw'},
+                                                    ensure_ascii=False, indent=2), encoding='utf-8')
+            except OSError as exc:
+                self.audio_page.status.setText('导出失败：' + str(exc))
 
 
 # =============================================================================
@@ -1080,6 +1564,8 @@ def selftest():
 
     app = QApplication(sys.argv)
     w = MainWindow()
+    if '--audio' in sys.argv:
+        w.pages.setCurrentIndex(3)
     w.show()
     app.processEvents()
 
@@ -1273,11 +1759,40 @@ def _sel(ch):
 
 
 def main():
+    if '--workbench-live-check' in sys.argv:
+        from check_workbench_live import main as check_live
+        return check_live([arg for arg in sys.argv[1:] if arg!='--workbench-live-check'])
+    if '--workbench-selftest' in sys.argv:
+        from workbench import smoke_test
+        return smoke_test()
     if "--selftest" in sys.argv:
         return selftest()
     app = QApplication(sys.argv)
-    w = MainWindow()
+    from workbench import WorkbenchWindow
+    w = WorkbenchWindow()
+    if "--live" in sys.argv:
+        w.audio_page.mode.setCurrentIndex(0)
+    elif "--audio" in sys.argv:
+        w.audio_page.mode.setCurrentIndex(1)
+    screen = app.primaryScreen()
+    if screen:
+        available = screen.availableGeometry()
+        w.resize(min(1280, max(640,available.width()-24)),
+                 min(760, max(520,available.height()-48)))
     w.show()
+    if '--startup-check' in sys.argv:
+        # Exercise this exact normal startup path, not a separately constructed
+        # test window. This would catch the former MainWindow/Workbench mismatch.
+        def check_normal_startup():
+            ready = (isinstance(w,WorkbenchWindow) and w.audio_page.isVisible() and
+                     not w.pages.isVisible() and not w.audio_page.live_button.isVisible())
+            report = dict(status='PASS' if ready else 'FAIL',ui_class=type(w).__name__,
+                title=w.windowTitle(),entry='normal main()',size=[w.width(),w.height()])
+            folder=Path(out_dir())
+            w.grab().save(str(folder/'normal-startup.png'))
+            (folder/'normal-startup.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+            w.close();app.exit(0 if ready else 1)
+        QTimer.singleShot(100,check_normal_startup)
     return app.exec_()
 
 

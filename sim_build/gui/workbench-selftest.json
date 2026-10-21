@@ -1,0 +1,210 @@
+{
+  "status": "PASS",
+  "scope": "离线界面/模拟寄存器流程，非板测",
+  "size": [
+    1280,
+    720
+  ],
+  "application": {
+    "status": "PARTIAL_PARAMETER_CONFIRMED",
+    "source": "模拟设备",
+    "started": 1792073184.0784678,
+    "requested": {
+      "schema_version": 1,
+      "name": "新音色",
+      "preset": 0,
+      "spectrum_mode": "replace",
+      "spectrum": [
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "articulation": {
+        "mode": "sustain",
+        "attack_ms": 5,
+        "decay_ms": 300,
+        "sustain_level": 192,
+        "release_ms": 200,
+        "hybrid_parts": [
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike"
+        ]
+      },
+      "vibrato": {
+        "enabled": false,
+        "rate_millihz": 5500,
+        "depth_cents": 0
+      },
+      "effects": {
+        "dry_enabled": true,
+        "delay": {
+          "enabled": false,
+          "time_ms": 30,
+          "feedback_q8": 96
+        },
+        "chorus": {
+          "enabled": false,
+          "rate_millihz": 500,
+          "depth_ms": 1
+        },
+        "reverb": {
+          "enabled": false,
+          "feedback_q8": 128,
+          "damping": 3
+        }
+      }
+    },
+    "preset_only": true,
+    "writes": [
+      [
+        0,
+        10,
+        "保留控制位，选择寄存器预设"
+      ],
+      [
+        55,
+        0,
+        "下一次起音预设"
+      ],
+      [
+        90,
+        128,
+        "开始完整谱草稿；关闭自动刷新，保留当前已提交模式"
+      ],
+      [
+        88,
+        0,
+        "谱 RAM 写指针归零"
+      ],
+      [
+        89,
+        0,
+        "泛音 1 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 2 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 3 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 4 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 5 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 6 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 7 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 8 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 9 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 10 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 11 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 12 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 13 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 14 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 15 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        89,
+        0,
+        "泛音 16 幅度 0（写后指针自动 +1）"
+      ],
+      [
+        90,
+        0,
+        "提交完整谱：叠加；自动刷新关闭，在奏音须显式刷新"
+      ]
+    ],
+    "readback": {
+      "CTRL": 10,
+      "PRESET": 0,
+      "SPEC_MODE": 0
+    },
+    "unsupported": [
+      "articulation (模式/包络/混合分组)",
+      "vibrato (物理单位)",
+      "effects (物理单位)"
+    ],
+    "audio_verified": false,
+    "sent_complete": true,
+    "protocol_flag_observed": 17,
+    "spectrum_confirmation": "16项已发送，协议无整谱回读；待音频验证",
+    "finished": 1792073184.0784678,
+    "display_name": "管风琴"
+  },
+  "advanced_dialog": true
+}

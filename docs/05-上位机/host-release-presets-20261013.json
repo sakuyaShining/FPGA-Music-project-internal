@@ -1,0 +1,131 @@
+{
+  "version": "host-workbench-20261013-05",
+  "tests_passed": 70,
+  "normal_startup": {
+    "status": "PASS",
+    "ui_class": "WorkbenchWindow",
+    "title": "FPGA 乐器 · 全局演奏工作台 · host-workbench-20261013-05",
+    "entry": "normal main()",
+    "size": [
+      776,
+      558
+    ]
+  },
+  "exe": "D:\\FPGA-Project\\host-workbench-20261013-05\\dist\\fpga_workbench.exe",
+  "exe_sha256": "37b8975d5b1a5ada58cd99abab60cda11915cca739834bb1fe0619e95aa396a0",
+  "hardware_live": {
+    "status": "PASS",
+    "port": "COM6",
+    "scope": "实际FPGA内部PCM和接受事件；不验收DAC/触控",
+    "auto_ready_seconds": 0.23499999998603016,
+    "checks": {
+      "auto_stream": true,
+      "on_accepted": true,
+      "off_accepted": true,
+      "pcm_nonzero": true,
+      "transport_complete": true,
+      "one_click_disconnect": true
+    },
+    "events": [
+      {
+        "note": 60,
+        "on": true
+      },
+      {
+        "note": 60,
+        "on": false
+      }
+    ],
+    "frames": 36,
+    "readback": {
+      "PROTO_VER": 17,
+      "CTRL": 10,
+      "PRESET": 2,
+      "FX_CTRL": 1,
+      "SPEC_MODE": 0
+    },
+    "crc_errors": 0,
+    "gaps": 0,
+    "discontinuities": 0,
+    "losses": 0,
+    "peak": 0.113861083984375,
+    "errors": []
+  },
+  "preset_comparison": {
+    "status": "PASS",
+    "note": 69,
+    "velocity": 12,
+    "spectrum_metric": "relative L1 difference of peak-normalized FFT magnitude, 40-5000Hz",
+    "pair_threshold": 0.05,
+    "scope": "four distinct observed PCM spectra; not full timbre/analog acceptance",
+    "pairs": [
+      {
+        "a": "管风琴",
+        "b": "钢琴",
+        "difference": 0.6803663309482737,
+        "distinct": true
+      },
+      {
+        "a": "管风琴",
+        "b": "钟",
+        "difference": 1.111019140534903,
+        "distinct": true
+      },
+      {
+        "a": "管风琴",
+        "b": "马林巴",
+        "difference": 0.8399942058375871,
+        "distinct": true
+      },
+      {
+        "a": "钢琴",
+        "b": "钟",
+        "difference": 1.0741271675744235,
+        "distinct": true
+      },
+      {
+        "a": "钢琴",
+        "b": "马林巴",
+        "difference": 0.6497284401089091,
+        "distinct": true
+      },
+      {
+        "a": "钟",
+        "b": "马林巴",
+        "difference": 0.8174518821184525,
+        "distinct": true
+      }
+    ],
+    "errors": [],
+    "restoration": "original preset restored; added spectrum cleared, unknown spectrum not restorable"
+  },
+  "preset_evidence": "D:/FPGA-Project/host-workbench-20261012/evidence/preset-spectra-20261013-04",
+  "host_version": {
+    "version": "host-workbench-20261013-05",
+    "design_zip_sha256": "5829f77058782fed347af97d8fcedbe7b685f3563af03a19f97a8ad240b36734",
+    "host_baseline": "66a4/codex/project-version-closure, integration-20261011-07 host files",
+    "rtl_modified": false,
+    "device_firmware_binding": null,
+    "inputs": {
+      "tools/host/audio_observer.py": "54e22d5703401df5f8ac5fe90d586d7769c4af9cd8689f04991f9a1d55f6ac1d",
+      "tools/host/build_exe.py": "d87a95ac0375e9a9ba23c3713bfad9f38ae5f7dfac2ef20bce2e9ff1142a7d0c",
+      "tools/host/config_editor.py": "3ee159ba713ec7a34394530623b09d35c223bda4775673fe616f12b45678fad7",
+      "tools/host/device_config.py": "b01f83772785acffed2903e06c607b9c70e87ce69120c5a2f9ac78a1f672c916",
+      "tools/host/dsp_gui.py": "2370ffe1d6cd1d0fc51a825d40200d1d24ac945e3f8c1556072b84f0319f4971",
+      "tools/host/evidence_export.py": "0c0a00d508d777313e9f3910aa2718572f64a00f2b71a630706d65c7dc2e4406",
+      "tools/host/fonts/lolita.ttf": "d91f680b870855d50619f72a1e597d2af5f068535e610a4fc95e5e53bab93449",
+      "tools/host/fonts/LolitaMono.ttf": "c8363198ffa98440b863a0835f7e6c8864e5d079694ee542e70f6210f86b2492",
+      "tools/host/instrument_config.py": "f28d87fec7eaf42f3d6b5e6961a2975c73f02cd0e5812f7337c5b096a5906538",
+      "tools/host/live_visualizer.py": "63b040596c826ae5abc6168d6ac9d4ee353a9bb74ed5f738d8906c06224ea1d0",
+      "tools/host/serial_link.py": "3f06f76862f7e973f1051e7109a044345132dcf701f5d4abc5aba33a0a6a8888",
+      "tools/host/studio_fonts.py": "9b531eccd1f0d1b0936ef155ba5cd82056b1517ba93447c49449ebe28196c7b5",
+      "tools/host/studio_theme.py": "88fd168c5bdec4df53d4941f03d5333a4315bde13f61159245ca59961e1b2bab",
+      "tools/host/theme.qss": "992e61c8615b3dfaf1d25a4b28c0651b11dac3f00c80e15968b7bae1fac2bf7b",
+      "tools/host/ui_preferences.py": "8b226933fa181cd54d80ea4cf548a32553a9c529cf60fcc7c49cfdc3676f302a",
+      "tools/host/workbench.py": "499e5e9e089dbcc7923fc8315521d3130fcbfc7e2e835d01085631e274fdd6fa",
+      "tools/scripts/dsp_host.py": "92610415fb0e66a6889479a0d8ed12350453064ff3d86563c07cd9de96bceb20",
+      "tools/scripts/check_workbench_live.py": "10dd3a57e4164a097cbc57f5bda49c674a97b8297c1d4a08dc11d41c8f0f9afc",
+      "tools/scripts/check_workbench_presets.py": "6a1f2f29dc3bf2821009100e31660d323905d53a20d61150860509d0481d4b5e"
+    }
+  }
+}

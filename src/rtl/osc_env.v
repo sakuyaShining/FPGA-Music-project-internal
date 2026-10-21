@@ -111,12 +111,19 @@ module osc_env #(
         lvl_o = lvl_i;
         stg_o = stg_i;
 
+        // A fresh key press must be accepted before a previous release reaches
+        // IDLE. Keep the current level for continuity, then attack from there.
+        // Otherwise the rising gate is consumed while ST_REL keeps decaying;
+        // once it reaches IDLE there is no second gate edge and the note dies.
+        if (trig_on) begin
+            lvl_o = (stg_i == ST_IDLE) ? {ENV_W{1'b0}} : lvl_i;
+            stg_o = ST_ATK;
+        end
+        else begin
         case (stg_i)
             //------------------------------------------------- IDLE
             ST_IDLE: begin
                 lvl_o = {ENV_W{1'b0}};
-                if (trig_on)
-                    stg_o = ST_ATK;
             end
 
             //------------------------------------------------- ATTACK
@@ -188,6 +195,7 @@ module osc_env #(
             //------------------------------------------------- 兜底
             default: stg_o = ST_IDLE;
         endcase
+        end
     end
 
 endmodule
