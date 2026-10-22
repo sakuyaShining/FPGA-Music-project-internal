@@ -1,0 +1,30 @@
+IO_LOC "clk" 4;
+IO_PORT "clk" IO_TYPE=LVCMOS33;
+IO_LOC "reset_button" 87;
+IO_PORT "reset_button" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+IO_LOC "probe_out" 69;
+IO_PORT "probe_out" IO_TYPE=LVCMOS33;
+IO_LOC "led[0]" 15;
+IO_LOC "led[1]" 16;
+IO_LOC "led[2]" 17;
+IO_LOC "led[3]" 18;
+IO_LOC "led[4]" 19;
+IO_LOC "led[5]" 20;
+IO_PORT "led[0]" IO_TYPE=LVCMOS33;
+IO_PORT "led[1]" IO_TYPE=LVCMOS33;
+IO_PORT "led[2]" IO_TYPE=LVCMOS33;
+IO_PORT "led[3]" IO_TYPE=LVCMOS33;
+IO_PORT "led[4]" IO_TYPE=LVCMOS33;
+IO_PORT "led[5]" IO_TYPE=LVCMOS33;
+IO_LOC "pa_en" 51;
+IO_LOC "dac_din" 54;
+IO_LOC "dac_ws" 55;
+IO_LOC "dac_bck" 56;
+IO_PORT "pa_en" IO_TYPE=LVCMOS33;
+IO_PORT "dac_din" IO_TYPE=LVCMOS33;
+IO_PORT "dac_ws" IO_TYPE=LVCMOS33;
+IO_PORT "dac_bck" IO_TYPE=LVCMOS33;
+// SDRAM ports must be resolved to vendor SIP pads, never free external GPIO.
+
+IO_LOC "scan_in" 70;
+IO_PORT "scan_in" IO_TYPE=LVCMOS33 PULL_MODE=UP;

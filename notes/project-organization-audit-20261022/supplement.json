@@ -1,0 +1,87 @@
+{
+  "main_experiment_source_duplicates": {
+    "files": 1045,
+    "distinct_raw_content": 113,
+    "redundant_entries": 932,
+    "basename_variants": {
+      "tdm_engine_rh.v": {
+        "copies": 12,
+        "distinct_raw_content": 2
+      },
+      "pitch_mod.v": {
+        "copies": 12,
+        "distinct_raw_content": 3
+      },
+      "mv_renderer.v": {
+        "copies": 17,
+        "distinct_raw_content": 1
+      },
+      "osc_env.v": {
+        "copies": 12,
+        "distinct_raw_content": 2
+      },
+      "tdm_top.v": {
+        "copies": 12,
+        "distinct_raw_content": 1
+      }
+    }
+  },
+  "m1_rtl_delta_vs_4d37": [
+    {
+      "path": "rtl/sdram_stream_probe.v",
+      "baseline_sha256": "74b208655fa7e957ef1e188c49f3b59386b11be816e4a3d837e1b7bbb6ebd432",
+      "m1_sha256": "56889b7c7a894260af5081119bb9169b44928de9c5fe0f965801830bfe335ab4"
+    },
+    {
+      "path": "engine/src/pitch_mod.v",
+      "baseline_sha256": "c16d1ae9d37f1daa3891dad05e67374dac716fb2148b062849df51a430ca1792",
+      "m1_sha256": "6855fafe33b2942216f53738bf9d1c986c1d4151e5e4e6a5ef22ae8d79d85f02"
+    },
+    {
+      "path": "engine/src/tdm_engine_rh.v",
+      "baseline_sha256": "4be8119bc228405c8a340084688d8ccf1e34a572626dcf930ffa0fc4f312ff59",
+      "m1_sha256": "747bfaff6e7279bc5124a13556b6a0c3257ecf6ebbaa406d796da831b851020e"
+    }
+  ],
+  "main_left_other_right_commit_counts": {
+    "internal/main": [
+      "62",
+      "0"
+    ],
+    "origin/main": [
+      "127",
+      "2"
+    ],
+    "public/main": [
+      "127",
+      "1"
+    ],
+    "backup/hardware-20261022": [
+      "3",
+      "1"
+    ],
+    "backup/ca03-20261022": [
+      "3",
+      "1"
+    ],
+    "codex/project-version-closure": [
+      "3",
+      "79"
+    ],
+    "codex/instrument-engine-safety": [
+      "3",
+      "81"
+    ],
+    "codex/wb-20261019": [
+      "2",
+      "3"
+    ],
+    "codex/v1-behavior-freeze": [
+      "43",
+      "11"
+    ]
+  },
+  "dirty_worktrees": 13,
+  "worktrees_with_agents": 3,
+  "worktrees_with_board": 1
+}

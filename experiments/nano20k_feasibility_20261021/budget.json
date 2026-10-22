@@ -1,0 +1,418 @@
+{
+  "status": "Feasibility NOT CLOSED; no complete product top or product timing qualification",
+  "documents": {
+    "38": {
+      "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\docs\\02-技术方案\\38-代码盘点与实现基线-2026-10-09.md",
+      "bytes": 39394,
+      "lines": 216,
+      "local_identical": true
+    },
+    "39": {
+      "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\docs\\02-技术方案\\39-最新设计构想与落地差距-2026-10-09.md",
+      "bytes": 88166,
+      "lines": 292,
+      "local_identical": true
+    },
+    "49": {
+      "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\docs\\02-技术方案\\49-最终收敛设计总纲-2026-10-15.md",
+      "bytes": 52010,
+      "lines": 241,
+      "local_identical": true
+    },
+    "86": {
+      "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\docs\\02-技术方案\\86-联合探针资源调整与布线失败边界-2026-10-19.md",
+      "bytes": 8978,
+      "lines": 76,
+      "local_identical": true
+    }
+  },
+  "hardware_checkpoint": {
+    "updated_at": "2026-10-21T23:28:33+08:00",
+    "role": "Latest regional construction checkpoint; stable ACTIVE-ROUTING-CANDIDATE.json remains R15",
+    "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-RegionalRecovery-20261021-r21",
+    "session": "538f597c-0d03-44aa-addb-b1c793e7ad81",
+    "session_owner_windows_profile": "Sakuya",
+    "session_warning": "A session belongs to its Windows account. From another account, open the saved descriptor through that account CLI; do not reuse this handle.",
+    "pcb_sha256": "5cd300aa8ebe4402c98b4d9d6336ab4d0df981354eaa93534e1d34b08c6dbb79",
+    "native_wrapper": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-recovery-20261021-r21\\native_project.py",
+    "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-net-rebuild-20261021-r23\\checkpoint-capture.json",
+    "drc": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-net-rebuild-20261021-r23\\checkpoint-drc.json",
+    "review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-recovery-20261021-r21\\checkpoint-review.json",
+    "readme": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-recovery-20261021-r21\\README.md",
+    "native_drc": {
+      "clearance": 0,
+      "physical": 0,
+      "connection": 65
+    },
+    "status": "saved_reopened_verified_construction_checkpoint_not_promoted",
+    "router_status": "R21 R22 R23 attempts terminal; only verified complete selected results applied",
+    "closed_nets_this_recovery": [
+      "VIS_CS_N",
+      "VIS_BL_EN",
+      "DISP_MOSI",
+      "TP_RESET_N",
+      "3V3_IO",
+      "3V3_PERIPH"
+    ],
+    "manufacturing_release": false,
+    "next_action": "Fresh current geometry: arrange U8 address/disable and BUS_SCK/BUS_MOSI fanout together; restore TP_RESET_MOD_N, VIS_DC, DISP_RESET_N, DISP_VIS_DC, HARM_CS_N and BUS_RETURN without sealing adjacent pins. Keep failed attempts and never replay stale DSN/SES/plan files."
+  },
+  "hardware_interface_pad_audit": "PASS J5/J6/U8/U9 against current capture",
+  "upstream86_delivery_file_drift": [
+    "build_nominal_v4/impl/gwsynthesis/board.vg",
+    "build_nominal_v4/impl/gwsynthesis/board_syn.rpt.html",
+    "build_nominal_v4/impl/pnr/board.log",
+    "build_nominal_v4/impl/pnr/board.pin.html",
+    "build_nominal_v4/impl/pnr/board.rpt.html",
+    "build_nominal_v4/impl/pnr/board.rpt.txt"
+  ],
+  "measured_synthesis": [
+    {
+      "path": "joint_timing_top/system/music",
+      "logic": 14710,
+      "lut": 12640,
+      "alu": 1338,
+      "ssram": 122,
+      "register": 7238,
+      "bsram": 20
+    },
+    {
+      "path": "joint_timing_top/system/visualizer",
+      "logic": 2909,
+      "lut": 2390,
+      "alu": 387,
+      "ssram": 22,
+      "register": 1648,
+      "bsram": 7
+    },
+    {
+      "path": "joint_timing_top/system/sensor",
+      "logic": 1523,
+      "lut": 1337,
+      "alu": 186,
+      "ssram": 0,
+      "register": 1458,
+      "bsram": 2
+    },
+    {
+      "path": "joint_timing_top/system/transport",
+      "logic": 501,
+      "lut": 465,
+      "alu": 36,
+      "ssram": 0,
+      "register": 265,
+      "bsram": 2
+    },
+    {
+      "path": "joint_timing_top/system/sdram",
+      "logic": 153,
+      "lut": 153,
+      "alu": 0,
+      "ssram": 0,
+      "register": 99,
+      "bsram": 0
+    }
+  ],
+  "measured_system": {
+    "path": "joint_timing_top/system",
+    "logic": 19796,
+    "lut": 16985,
+    "alu": 1947,
+    "ssram": 144,
+    "register": 10708,
+    "bsram": 31
+  },
+  "capacity": {
+    "logic": 20736,
+    "register": 15552,
+    "cls": 10368,
+    "bsram": 46,
+    "bsram_bits": 847872,
+    "dsp": 24,
+    "pll": 2,
+    "sdram_bytes": 8388608
+  },
+  "incremental_design_allocations": [
+    {
+      "id": "four_layers",
+      "scope": "Four simultaneous slots, generation/ownership, independent configuration",
+      "logic": 600,
+      "register": 700,
+      "bsram": 2,
+      "dsp": 0,
+      "status": "UNMEASURED design allocation, not predicted cost"
+    },
+    {
+      "id": "i2c_services",
+      "scope": "Shared I2C, FT53xx report, EEPROM journal, PCM5122 startup/readback",
+      "logic": 700,
+      "register": 450,
+      "bsram": 2,
+      "dsp": 0,
+      "status": "UNMEASURED design allocation, not predicted cost"
+    },
+    {
+      "id": "physical_control",
+      "scope": "Bounded shared SPI arbiter, 595 reset state, 165/encoder/buttons, octave selection, physical map",
+      "logic": 600,
+      "register": 500,
+      "bsram": 1,
+      "dsp": 0,
+      "status": "UNMEASURED design allocation, not predicted cost"
+    },
+    {
+      "id": "entity_ui_score",
+      "scope": "RA8875 fader graphics, on-device edit/draft/save, score guide, fonts/commands",
+      "logic": 1100,
+      "register": 700,
+      "bsram": 2,
+      "dsp": 0,
+      "status": "UNMEASURED design allocation, not predicted cost"
+    },
+    {
+      "id": "files_events",
+      "scope": "SD SPI, FAT/file allocation, PCM/event pairing, sector CRC, recovery",
+      "logic": 1600,
+      "register": 850,
+      "bsram": 3,
+      "dsp": 0,
+      "status": "UNMEASURED design allocation, not predicted cost"
+    },
+    {
+      "id": "play_live_mix",
+      "scope": "Independent PCM playback + live sum, saturation/levels, sample alignment",
+      "logic": 150,
+      "register": 80,
+      "bsram": 0,
+      "dsp": 1,
+      "status": "UNMEASURED design allocation, not predicted cost"
+    },
+    {
+      "id": "management",
+      "scope": "Cold boot/reset fence, errors/flow control/telemetry, persistent restore",
+      "logic": 300,
+      "register": 200,
+      "bsram": 1,
+      "dsp": 0,
+      "status": "UNMEASURED design allocation, not predicted cost"
+    }
+  ],
+  "incremental_allocations_total": {
+    "logic": 5050,
+    "register": 3480,
+    "bsram": 11,
+    "dsp": 1
+  },
+  "additive_planning_total_before_optimization": {
+    "logic": 24846,
+    "register": 14188,
+    "bsram": 42,
+    "dsp": 14.75
+  },
+  "logic_optimization_needed_for_allocations": {
+    "no_route_margin": 4110,
+    "with_10percent_engineering_margin": 6184
+  },
+  "sensitivity": [
+    {
+      "unmeasured_added_logic": 2500,
+      "saving_needed_no_margin": 1560,
+      "saving_needed_with_10percent_margin": 3634
+    },
+    {
+      "unmeasured_added_logic": 5000,
+      "saving_needed_no_margin": 4060,
+      "saving_needed_with_10percent_margin": 6134
+    },
+    {
+      "unmeasured_added_logic": 8000,
+      "saving_needed_no_margin": 7060,
+      "saving_needed_with_10percent_margin": 9134
+    }
+  ],
+  "budget_caveat": "Design allocations are neither lower bounds nor promises. Actual joint mapping must replace every allocation. CLS/packing/routing and RAM modes may invalidate arithmetic.",
+  "timing": {
+    "clock_hz": 27000000,
+    "period_ns": 37.03703703703704,
+    "sample_hz": 52734.375,
+    "sample_us": 18.962962962962962,
+    "oscillator_slots_per_sample": 512,
+    "groups": 32,
+    "partials": 16,
+    "max_full_four_layer_combinations_no_tails": 8,
+    "bck_hz": 1687500.0,
+    "pcm16_mono_bytes_per_s": 105468.75,
+    "fifo1024_ms": 19.418074074074074,
+    "ring256KiB_ms": 2485.5134814814814,
+    "full_sdram_mono16_seconds": 79.5364314074074,
+    "duplex_pcm_bytes_per_s": 210937.5,
+    "sd_6_75MHz_raw_bytes_per_s": 843750,
+    "sd_6_75MHz_duplex_payload_fraction": 0.25,
+    "scan_historical_cycles_no_grant_wait": 50192,
+    "scan_historical_cycles_grant_wait64": 54288,
+    "scan_historical_ms_no_wait": 1.858962962962963,
+    "scan_historical_ms_grant_wait64": 2.010666666666667,
+    "positions_upper_planning_cycles": 936,
+    "left_worst_phase_two_confirm_frames_factor": 3,
+    "left_historical_digital_phase_envelope_ms": 6.032,
+    "left_deadline_alloc_ms": {
+      "scan_and_two_frame_confirmation": 6.2,
+      "event_allocation": 0.8,
+      "queues_slew_and_output": 0.2,
+      "analog_and_system_margin": 2.8
+    },
+    "touch_i2c_34bytes_400kHz_wire_ms": 0.8325,
+    "right_deadline_scenarios": [
+      {
+        "sensor_hz": 100,
+        "worst_ms": 11.1325
+      },
+      {
+        "sensor_hz": 125,
+        "worst_ms": 9.1325
+      },
+      {
+        "sensor_hz": 200,
+        "worst_ms": 6.132499999999999
+      }
+    ],
+    "right_sensor_rates_are_scenarios_not_chip_qualifications": true,
+    "spi_hz": 6750000,
+    "small_full_frame_ms": 182.04444444444445,
+    "large_full_frame_ms": 910.2222222222222,
+    "scan_bus_min_word_payload_us": 303.4074074074074,
+    "scan_bus_word_occupancy_planning_us": 360,
+    "shared_spi_planning_fraction": {
+      "scan": 0.2,
+      "small_display": 0.65,
+      "large_display": 0.1,
+      "keys": 0.01,
+      "margin": 0.04
+    },
+    "small_display_budget_ms_per_50ms": 32.5,
+    "historical_small_display_interface_stress_ms": 51.720555555555556,
+    "requirements": [
+      "All rates require measured worst-case arbitration, I2C stretch and device processing bounds.",
+      "No unbounded nonpreemptible panel transaction or EEPROM write may delay audio/control.",
+      "SD uses board TF pins, not the carrier shared display/scan bus.",
+      "512 oscillator slots already occupied: extra oscillators cannot be added for free."
+    ]
+  },
+  "panel_gpio": [
+    [
+      "J5",
+      "5",
+      "SENSE_4"
+    ],
+    [
+      "J5",
+      "6",
+      "SENSE_3"
+    ],
+    [
+      "J5",
+      "10",
+      "SENSE_5"
+    ],
+    [
+      "J6",
+      "5",
+      "TP_INT"
+    ],
+    [
+      "J6",
+      "6",
+      "BUS_MOSI"
+    ],
+    [
+      "J6",
+      "7",
+      "SCAN_LATCH"
+    ],
+    [
+      "J6",
+      "8",
+      "BUS_SCK"
+    ],
+    [
+      "J6",
+      "9",
+      "BUS_RETURN"
+    ],
+    [
+      "J6",
+      "10",
+      "I2C_SDA"
+    ],
+    [
+      "J6",
+      "11",
+      "I2C_SCL"
+    ],
+    [
+      "J6",
+      "12",
+      "SENSE_0"
+    ],
+    [
+      "J6",
+      "13",
+      "SENSE_1"
+    ],
+    [
+      "J6",
+      "14",
+      "SENSE_2"
+    ],
+    [
+      "J6",
+      "15",
+      "INPUT_LOAD_N"
+    ],
+    [
+      "J6",
+      "16",
+      "VIS_DC"
+    ],
+    [
+      "J6",
+      "17",
+      "HARM_CS_N"
+    ],
+    [
+      "J6",
+      "18",
+      "VIS_CS_N"
+    ]
+  ],
+  "storage": {
+    "one_four_slot_88bit_definition_bytes": 704,
+    "double_runtime_bytes": 1408,
+    "draft_bytes": 704,
+    "eeprom_bytes": 32768,
+    "pcm_bytes_for_5min": 31640625.0,
+    "note": "88-bit table is current prototype schema only. Future complete definition/version/journal size unmeasured; 5 min is example, not requirement."
+  },
+  "inputs": {
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\docs\\02-技术方案\\38-代码盘点与实现基线-2026-10-09.md": "ca95c816e1a4e70b3b82165763c425a0f356016a5da5bf197a845bf833329856",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\docs\\02-技术方案\\39-最新设计构想与落地差距-2026-10-09.md": "a01b19c308acf48af005a3cba14ff8ab1b90f8c6421a981c64cbebbd8470f921",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\docs\\02-技术方案\\49-最终收敛设计总纲-2026-10-15.md": "b060370d440e490a3ff0073980545586516c638e16e9ea36bb597cbdbbd4f475",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\docs\\02-技术方案\\86-联合探针资源调整与布线失败边界-2026-10-19.md": "e1f950190f91210cde5565b3924a2a40cbf445773c658350bbefda5f1a2acd3c",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\REGIONAL-WORK-IN-PROGRESS.json": "b3368a3a9f16aac6c7a763ffd01cd3df2c2472ea7a8466a5a11da0366feafed6",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-net-rebuild-20261021-r23\\checkpoint-capture.json": "2cbc1b8ea6fcfcbec25f095cf2cc585da649c4107a37c42ad6122afd3075d815",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-recovery-20261021-r21\\README.md": "1ccec9ef4e6d99e2f0744359679ebabe36e4f68c82ec0e416e3b8ebc73acb11b",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-recovery-20261021-r21\\checkpoint-review.json": "919ef03a8da72340f7d30a064ea7e3556380071b6b9f31a7ba69e8c37d8699c8",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-net-rebuild-20261021-r23\\checkpoint-drc.json": "9d7979fb239338a3079c7f695869f965d506e6dfa5da83c0c3d6bfad7568c5fe",
+    "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-RegionalRecovery-20261021-r21\\pcb\\PCB1.epcb2": "5cd300aa8ebe4402c98b4d9d6336ab4d0df981354eaa93534e1d34b08c6dbb79",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\expected-pin-nets.json": "e4ce13db7ff84eb25759c9c3df8209b115141d7df329fcf534f9470dcbdab7c4",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\harness-contract.csv": "9d4de91df6578e344839ae2c7919bac526c47f16514405ab6cef8ab5b0a376d5",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\README.md": "358221afc8aaca20a8f75c5a1867d63f3877edc37c982a03814888451087d0bd",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\contract-results.json": "5462134d04adf341df00788a3c3e6826770a053926a99f0259cc05194576f8b6",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\供电与模块接口-v2.md": "296aca480d8a662f3776265b254db1a4bc1839b6d4469f30b85bd36f535c2bb8",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\屏幕出货配置核对-20261020.md": "ba67a37024a9fc898c9bde33c081f72117e7668c51c9fa8c8b5287638738cc03",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\project\\CURRENT.md": "34b5ecbceecbb2aca0ac396c7a9b46a9a1b63d904ccabe0b376afae54a106c52",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\delivery.json": "a7d4a66f19188a3ffaa7ef13e84d113b1b7d20d92f7f7a1fe76d0b4abe888ea0",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\evidence\\resource-map.json": "e167efe58679eea81274d77dc84c0934d0445d32ba890a523c2a70fc45bc6d3f",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\build_nominal_v4\\impl\\gwsynthesis\\board_syn_rsc.xml": "503eeffeec81a394d321315f0ea37b5e38a5c6ba66d450e7abf9c381efb700b9"
+  }
+}
