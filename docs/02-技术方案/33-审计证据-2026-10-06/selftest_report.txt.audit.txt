@@ -1,0 +1,14 @@
+﻿  已保存界面截图：C:\Users\Sakuya\.codex\worktrees\4e09\FPGA-Music-project\sim_build\gui\gui_preview.png
+  [帧一致性 ①] 音符 on/off：一致 ✓
+  [帧一致性 ①b] 八度 +1 后同一键 = MIDI 72：一致 ✓
+  [帧一致性 ②] 塑谱（16 字节谱 + 全刷）：一致 ✓
+  [帧一致性 ②b] 逐声部塑形（A1，声部 5）：一致 ✓
+  [帧一致性 ③] 效果器 reverb = 0x41（bit6=混响，与 tdm_top 一致）：一致 ✓
+  [帧一致性 ④] 遥测通道选择：一致 ✓
+  [帧一致性 ⑤] 表情轴（颤音 400 @5.5Hz）：一致 ✓
+  [帧一致性 ⑥] 定序器下载并播放（含 SEQ_CTRL=0x05）：不一致 ✗
+  [帧一致性 ⑥b] 定序器停止 = SEQ_CTRL 0x00：一致 ✓
+  [帧一致性 ⑦] 预设保留表情轴开关（CTRL bit1）：一致 ✓
+
+打包内含 pyserial = 有（3.5）⇒ exe 可连真实串口 ✓
+RESULT gui_selftest=FAIL fails=1

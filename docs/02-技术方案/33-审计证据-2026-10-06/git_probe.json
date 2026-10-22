@@ -1,0 +1,27 @@
+{
+  "dry": {
+    "rc": 0,
+    "stdout": "[1] 当前主线状态\n  分支：feature-audit\n[2] 将从公开版移除的路径\n   refs/素材库                         已跟踪   0 个文件 (磁盘上不存在)\n   PROJECT_MEMORY.md                已跟踪   0 个文件 (磁盘上不存在)\n   .zcodeignore                     已跟踪   0 个文件 (磁盘上不存在)\n   notes                            已跟踪   0 个文件 (磁盘上不存在)\n   backups                          已跟踪   0 个文件 (磁盘上不存在)\n   refs/_site-archive               已跟踪   0 个文件 (磁盘上不存在)\n   refs/candidate-guides            已跟踪   0 个文件 (磁盘上不存在)\n   refs/past-years                  已跟踪   0 个文件 (磁盘上不存在)\n   refs/official-notices            已跟踪   0 个文件 (磁盘上不存在)\n   refs/report-template             已跟踪   0 个文件 (磁盘上不存在)\n   refs/vendor-examples             已跟踪   0 个文件 (磁盘上不存在)\n   tools/pylib                      已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/archive                  已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/bringup_top.v            已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/image_rom.v              已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/image_view.v             已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/lcd_480x272.v            已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/test_pattern.v           已跟踪   0 个文件 (磁盘上不存在)\n   src/constr/bringup_top.cst       已跟踪   0 个文件 (磁盘上不存在)\n   src/gowin/bringup_9k             已跟踪   0 个文件 (磁盘上不存在)\n\n （预演：未创建任何分支/提交 ✓ 加 --apply 执行）\n  [兜底] 已切回分支 feature-audit\n",
+    "stderr": ""
+  },
+  "head_after_dry": {
+    "rc": 0,
+    "stdout": "feature-audit\n",
+    "stderr": ""
+  },
+  "existing_public": {
+    "rc": 1,
+    "stdout": "[1] 当前主线状态\n  分支：feature-audit\n[2] 将从公开版移除的路径\n   refs/素材库                         已跟踪   0 个文件 (磁盘上不存在)\n   PROJECT_MEMORY.md                已跟踪   0 个文件 (磁盘上不存在)\n   .zcodeignore                     已跟踪   0 个文件 (磁盘上不存在)\n   notes                            已跟踪   0 个文件 (磁盘上不存在)\n   backups                          已跟踪   0 个文件 (磁盘上不存在)\n   refs/_site-archive               已跟踪   0 个文件 (磁盘上不存在)\n   refs/candidate-guides            已跟踪   0 个文件 (磁盘上不存在)\n   refs/past-years                  已跟踪   0 个文件 (磁盘上不存在)\n   refs/official-notices            已跟踪   0 个文件 (磁盘上不存在)\n   refs/report-template             已跟踪   0 个文件 (磁盘上不存在)\n   refs/vendor-examples             已跟踪   0 个文件 (磁盘上不存在)\n   tools/pylib                      已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/archive                  已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/bringup_top.v            已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/image_rom.v              已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/image_view.v             已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/lcd_480x272.v            已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/test_pattern.v           已跟踪   0 个文件 (磁盘上不存在)\n   src/constr/bringup_top.cst       已跟踪   0 个文件 (磁盘上不存在)\n   src/gowin/bringup_9k             已跟踪   0 个文件 (磁盘上不存在)\n[3] 创建 public 分支（orphan 单一提交：公开仓库历史干净，不会有整理/修补这类显眼的中间提交）\n  ✗ git checkout --orphan public 失败：fatal: a branch named 'public' already exists\n  [兜底] 已切回分支 feature-audit\n",
+    "stderr": ""
+  },
+  "unchecked_hits": {
+    "rc": 0,
+    "stdout": "[1] 当前主线状态\n  分支：feature-audit\n[2] 将从公开版移除的路径\n   refs/素材库                         已跟踪   0 个文件 (磁盘上不存在)\n   PROJECT_MEMORY.md                已跟踪   0 个文件 (磁盘上不存在)\n   .zcodeignore                     已跟踪   0 个文件 (磁盘上不存在)\n   notes                            已跟踪   0 个文件 (磁盘上不存在)\n   backups                          已跟踪   0 个文件 (磁盘上不存在)\n   refs/_site-archive               已跟踪   0 个文件 (磁盘上不存在)\n   refs/candidate-guides            已跟踪   0 个文件 (磁盘上不存在)\n   refs/past-years                  已跟踪   0 个文件 (磁盘上不存在)\n   refs/official-notices            已跟踪   0 个文件 (磁盘上不存在)\n   refs/report-template             已跟踪   0 个文件 (磁盘上不存在)\n   refs/vendor-examples             已跟踪   0 个文件 (磁盘上不存在)\n   tools/pylib                      已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/archive                  已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/bringup_top.v            已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/image_rom.v              已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/image_view.v             已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/lcd_480x272.v            已跟踪   0 个文件 (磁盘上不存在)\n   src/rtl/test_pattern.v           已跟踪   0 个文件 (磁盘上不存在)\n   src/constr/bringup_top.cst       已跟踪   0 个文件 (磁盘上不存在)\n   src/gowin/bringup_9k             已跟踪   0 个文件 (磁盘上不存在)\n[3] 创建 snapshot-test 分支（orphan 单一提交：公开仓库历史干净，不会有整理/修补这类显眼的中间提交）\n[4] 清空索引（**文件全部留在磁盘** ✓）\n[5] 写入公开版排除规则\n   公开版跟踪文件数 = 2\n[6] 痕迹复核（公开版）\n   身份痕迹(A，协作方与工具名) 剩余文件数 = 1\n       README.md\n   工作流术语(B) 剩余文件数 = 0\n   悬空引用(C，指向公开版不存在的路径) 剩余文件数 = 0\n[7] 已提交：36bf018 公开版快照：移出内部过程材料，只保留作品本体\n    现在可：git push <公开仓库> snapshot-test:main\n    已自动切回主线（避免后续提交误落在快照分支上）\n  [兜底] 已切回分支 feature-audit\n",
+    "stderr": ""
+  },
+  "snapshot_exists": {
+    "rc": 0,
+    "stdout": "DeepSeek\n",
+    "stderr": ""
+  }
+}
