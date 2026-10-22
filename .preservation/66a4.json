@@ -9862,6 +9862,22 @@
       "sha256": "862c1112790efd441242dea61a1381848f231fc630e015ba299721492e223d1a",
       "lf_sha256": "d9343e6c6e8711f7fc1fd1afd64b77ede89b0c48d9cf0a90cea61c53b935829c",
       "mtime_ns": 1791548276222728500
+    },
+    "project/evidence/reload-test-20261011/a4.stream.bin": {
+      "stored_path": "project/evidence/reload-test-20261011/a4.stream.bin",
+      "codec": "raw",
+      "bytes": 6145,
+      "sha256": "f1a1160e2b2b3082fc5899b78fc37f51deb15afcdfaf5e29d3c46a01e29d2896",
+      "lf_sha256": "f1a1160e2b2b3082fc5899b78fc37f51deb15afcdfaf5e29d3c46a01e29d2896",
+      "mtime_ns": 1791699046528954600
+    },
+    "project/evidence/reload-test-20261011/gui-stream.bin": {
+      "stored_path": "project/evidence/reload-test-20261011/gui-stream.bin",
+      "codec": "raw",
+      "bytes": 6145,
+      "sha256": "33252d2f703e5f56c1d02fe4bbe8d7d56b031c774d5e86c9575281a945a1eb13",
+      "lf_sha256": "33252d2f703e5f56c1d02fe4bbe8d7d56b031c774d5e86c9575281a945a1eb13",
+      "mtime_ns": 1791699110863103400
     }
   },
   "deleted_tracked_paths": [],
@@ -9891,5 +9907,10 @@
       "reason": "generated/vendor/out-of-scope directory"
     }
   ],
-  "scope": "Tracked files and selected source/evidence extensions; generated/vendor directories and reparse targets excluded"
+  "scope": "Tracked files and selected source/evidence extensions; generated/vendor directories and reparse targets excluded",
+  "asset_supplement_at": "2026-10-22T10:55:19.929117+00:00",
+  "asset_supplement_paths": [
+    "project/evidence/reload-test-20261011/a4.stream.bin",
+    "project/evidence/reload-test-20261011/gui-stream.bin"
+  ]
 }
