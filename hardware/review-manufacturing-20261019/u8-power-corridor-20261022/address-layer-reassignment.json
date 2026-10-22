@@ -1,0 +1,169 @@
+{
+  "source_pcb_sha256": "6509803e7afca781b7f71ad69183cc10d8f6413312701eb16a2cdc46dfe83afd",
+  "method": "Joint two-sensor trunk assignment to physical16/2 with existing vias only; preserve top stubs and 8mil; reserve all seven ADDR0 exits; active digital copper guard .5mm plus routing gap; no native mutation",
+  "remove_lines": [
+    {
+      "id": "1af8296b39b21055",
+      "net": "L1_M06",
+      "layer": 2,
+      "x1": 2684.9,
+      "y1": 1086.7,
+      "x2": 2635.9,
+      "y2": 1037.6,
+      "width": 8
+    },
+    {
+      "id": "d330558795823c78",
+      "net": "L1_M06",
+      "layer": 2,
+      "x1": 2635.9,
+      "y1": 1037.6,
+      "x2": 2635.9,
+      "y2": 931.7,
+      "width": 8
+    },
+    {
+      "id": "ee79fb260e33e9f7",
+      "net": "L1_M06",
+      "layer": 2,
+      "x1": 2635.9,
+      "y1": 931.7,
+      "x2": 2571.5,
+      "y2": 867.4,
+      "width": 8
+    },
+    {
+      "id": "c7cd254373035f12",
+      "net": "L1_M06",
+      "layer": 2,
+      "x1": 2571.5,
+      "y1": 867.4,
+      "x2": 2571.5,
+      "y2": 812.7,
+      "width": 8
+    },
+    {
+      "id": "484fa5c859c5cb6e",
+      "net": "L1_M06",
+      "layer": 2,
+      "x1": 2571.5,
+      "y1": 812.7,
+      "x2": 2614.5,
+      "y2": 769.7,
+      "width": 8
+    },
+    {
+      "id": "c9e580b2fb409775",
+      "net": "L1_M06",
+      "layer": 2,
+      "x1": 2614.5,
+      "y1": 769.7,
+      "x2": 2614.5,
+      "y2": 536.6,
+      "width": 8
+    },
+    {
+      "id": "a8c54af08fbbccae",
+      "net": "L1_M07",
+      "layer": 2,
+      "x1": 2706.8,
+      "y1": 1108.7,
+      "x2": 2707.5,
+      "y2": 1108.1,
+      "width": 8
+    },
+    {
+      "id": "99fb26e85e6547b8",
+      "net": "L1_M07",
+      "layer": 2,
+      "x1": 2707.5,
+      "y1": 1108.1,
+      "x2": 2707.5,
+      "y2": 945.4,
+      "width": 8
+    },
+    {
+      "id": "624062d3306e7719",
+      "net": "L1_M07",
+      "layer": 2,
+      "x1": 2707.5,
+      "y1": 945.4,
+      "x2": 2652.4,
+      "y2": 890.3,
+      "width": 8
+    },
+    {
+      "id": "62b1ab5370e698da",
+      "net": "L1_M07",
+      "layer": 2,
+      "x1": 2652.4,
+      "y1": 890.3,
+      "x2": 2614.4,
+      "y2": 890.3,
+      "width": 8
+    },
+    {
+      "id": "e404d752c276709f",
+      "net": "L1_M07",
+      "layer": 2,
+      "x1": 2614.4,
+      "y1": 890.3,
+      "x2": 2585.6,
+      "y2": 861.5,
+      "width": 8
+    },
+    {
+      "id": "8f562bbc4a7c070d",
+      "net": "L1_M07",
+      "layer": 2,
+      "x1": 2585.6,
+      "y1": 861.5,
+      "x2": 2585.6,
+      "y2": 818.5,
+      "width": 8
+    },
+    {
+      "id": "b08bfc9517d80d67",
+      "net": "L1_M07",
+      "layer": 2,
+      "x1": 2585.6,
+      "y1": 818.5,
+      "x2": 2714.5,
+      "y2": 689.7,
+      "width": 8
+    },
+    {
+      "id": "7ebe1a65c3833dc0",
+      "net": "L1_M07",
+      "layer": 2,
+      "x1": 2714.5,
+      "y1": 689.7,
+      "x2": 2714.5,
+      "y2": 536.6,
+      "width": 8
+    }
+  ],
+  "lines": [],
+  "address0_escape": {
+    "net": "ADDR0",
+    "layer": 1,
+    "x1": 2666.3,
+    "y1": 985.1,
+    "x2": 2666.3,
+    "y2": 930.9661417322835,
+    "width": 6
+  },
+  "address0_via": {
+    "net": "ADDR0",
+    "x": 2666.3,
+    "y": 930.9661417322835,
+    "diameter": 24,
+    "hole": 12
+  },
+  "results": [],
+  "failure": "RuntimeError('No path L1_M06')",
+  "complete_pair": false,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "next_action": "Only if pair recovered, validate final four-layer geometry plus new ADDR0 fanout, actual reference after native pours and complete address backbone before any adoption; otherwise change affected layout/whole bundle, never repeat same search."
+}

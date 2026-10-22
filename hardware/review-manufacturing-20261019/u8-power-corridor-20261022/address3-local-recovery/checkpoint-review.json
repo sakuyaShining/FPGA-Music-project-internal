@@ -1,0 +1,143 @@
+{
+  "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+  "pcb_sha256": "68081b43760c6bac3f8e7e517991fbb097f32fd9697c371ddd0bf064224da0e1",
+  "session": "96bfe134-3e90-4200-9a92-4dd80095edff",
+  "saved_reopened": true,
+  "native_drc": {
+    "Connection Error": 50
+  },
+  "archive": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\native-addr3-50-REFERENCE-REPAIR-PENDING.zip",
+  "archive_sha256": "482b4995c536b994d90a57b930887e77d4d2589da73e3d115c9644c14b8347d3",
+  "archive_crc_verified": true,
+  "copper_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\native-stage-review.json",
+  "reference_repair_pending": true,
+  "protected_reference_degradation": [
+    {
+      "net": "L0_E08",
+      "layer": 1,
+      "reference": 15,
+      "before_covered_mm": 7.647649118959318,
+      "after_covered_mm": 7.354087613573267,
+      "delta_mm": -0.29356150538605164
+    },
+    {
+      "net": "L0_M07",
+      "layer": 1,
+      "reference": 15,
+      "before_covered_mm": 15.425001042505444,
+      "after_covered_mm": 14.800639512070882,
+      "delta_mm": -0.6243615304345624
+    },
+    {
+      "net": "L2_E05",
+      "layer": 1,
+      "reference": 15,
+      "before_covered_mm": 12.44888242488948,
+      "after_covered_mm": 11.912447086503384,
+      "delta_mm": -0.5364353383860951
+    },
+    {
+      "net": "L2_M00",
+      "layer": 1,
+      "reference": 15,
+      "before_covered_mm": 6.123669997055747,
+      "after_covered_mm": 5.685646461373206,
+      "delta_mm": -0.43802353568254127
+    },
+    {
+      "net": "L2_M01",
+      "layer": 1,
+      "reference": 15,
+      "before_covered_mm": 5.231400117809138,
+      "after_covered_mm": 4.812607868923771,
+      "delta_mm": -0.41879224888536726
+    },
+    {
+      "net": "RC4",
+      "layer": 1,
+      "reference": 15,
+      "before_covered_mm": 20.19409668604311,
+      "after_covered_mm": 19.59371566372085,
+      "delta_mm": -0.6003810223222601
+    }
+  ],
+  "actual_reference_projection": [
+    {
+      "net": "ADDR3",
+      "layer": 1,
+      "reference": 15,
+      "length_mm": 132.0306199842998,
+      "covered_mm": 122.66451908615667,
+      "gap_mm": 9.366100898143117,
+      "gap_wkt": [
+        "LINESTRING (40.09276709646019 4.277660921990737, 40.01561271157102 3.5061366698542287)",
+        "LINESTRING (39.85091352110741 3.2506103533191446, 39.320147577953925 2.896764893274387)",
+        "MULTILINESTRING ((33.93146181967616 2.8431262119987117, 33.790308494853605 2.8456695099108384), (31.657595820368403 2.8840966861675983, 31.000174272505912 2.8959420950672294), (29.24493837770414 2.9275679019134424, 28.3331493970197 2.9439964983619493))",
+        "LINESTRING (27.910486971746984 3.2696876276410647, 27.662224780210856 4.156336896099815)",
+        "LINESTRING (60.80000032 38.33686102645214, 60.80000032 37.661259773547854)",
+        "LINESTRING (35.42376616978827 33.70000118, 34.761513830211726 33.70000118)",
+        "LINESTRING (24.992879598512665 38.80711980148733, 24.837119801487344 38.96287959851265)",
+        "LINESTRING (27.198818313805777 60.912935220878545, 27.732679467332918 61.52306308368972)",
+        "LINESTRING (27.80000028 61.745461882911755, 27.80000028 62.25681995708824)",
+        "LINESTRING (35.400000320000004 71.1837128158798, 35.400000320000004 71.80000118)",
+        "LINESTRING (35.400000320000004 71.80000118, 35.088733624021394 72.11126766229823)",
+        "LINESTRING (101.91598484513422 14.217999904895395, 102.60000054 14.19999954)",
+        "MULTILINESTRING ((102.60000054 14.19999954, 102.65512372624711 14.23246473745623), (109.3304537853348 18.1639484416499, 109.8789155062197 18.486968921378466))"
+      ]
+    },
+    {
+      "net": "ADDR3",
+      "layer": 16,
+      "reference": 2,
+      "length_mm": 213.43325795241967,
+      "covered_mm": 213.43325795241967,
+      "gap_mm": 0.0,
+      "gap_wkt": []
+    },
+    {
+      "net": "L2_M02",
+      "layer": 1,
+      "reference": 15,
+      "length_mm": 22.181336690428775,
+      "covered_mm": 21.559467342673766,
+      "gap_mm": 0.621869347755009,
+      "gap_wkt": [
+        "LINESTRING (113.45269467387749 22.99843, 112.83082532612248 22.99843)"
+      ]
+    },
+    {
+      "net": "L2_M02",
+      "layer": 2,
+      "reference": 16,
+      "length_mm": 8.833560111029833,
+      "covered_mm": 8.833560111029833,
+      "gap_mm": 0.0,
+      "gap_wkt": []
+    },
+    {
+      "net": "L2_M03",
+      "layer": 1,
+      "reference": 15,
+      "length_mm": 2.7032918932201344,
+      "covered_mm": 2.7032918932201344,
+      "gap_mm": 0.0,
+      "gap_wkt": []
+    },
+    {
+      "net": "L2_M03",
+      "layer": 2,
+      "reference": 16,
+      "length_mm": 42.12116222231337,
+      "covered_mm": 39.672305232995875,
+      "gap_mm": 2.4488569893174983,
+      "gap_wkt": [
+        "LINESTRING (128.277021925842 12.361150125842011, 128.6723106 12.7564388)",
+        "LINESTRING (128.6723106 12.7564388, 128.6723106 13.333735344798296)",
+        "LINESTRING (124.29241351230867 21.81217108769134, 123.82044608205909 22.28413851794092)",
+        "LINESTRING (119.66860956396631 23.887415236033675, 119.21247258665385 24.34355221334614)"
+      ]
+    }
+  ],
+  "manufacturing_release": false,
+  "physical_tests": "UNMEASURED"
+}

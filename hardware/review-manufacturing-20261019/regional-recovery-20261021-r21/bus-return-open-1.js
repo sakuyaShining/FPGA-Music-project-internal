@@ -1,0 +1,1 @@
+await new Promise(r=>setTimeout(r,2500));return await eda.dmt_EditorControl.openDocument('c3fd8656cf425e9f');

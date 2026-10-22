@@ -1,0 +1,29 @@
+2026-10-22 05:06:04.364 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-22 05:06:04.652 INFO   Hardware: 8 CPU cores, 499 CPU score, 1024 MB RAM
+2026-10-22 05:06:04.658 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-22 05:06:06.587 INFO   [8B2308\AF7B34] Loading board file 'input.dsn'...
+2026-10-22 05:06:09.030 INFO   [8B2308\AF7B34] Job '8B2308\AF7B34' started at 2026-10-21T21:06:09.029370300Z.
+2026-10-22 05:06:11.880 WARN   Design Warning: Board has 3440 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 3440 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 3440 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5993 [net ADDR0] <-> ObstacleArea#616
+          - FixedVia#5992 [net ADDR0] <-> ObstacleArea#615
+          - FixedVia#5991 [net ADDR0] <-> ObstacleArea#614
+          - FixedVia#5990 [net ADDR0] <-> ObstacleArea#613
+          - FixedVia#5989 [net ADDR0] <-> ObstacleArea#612
+          ... and 3435 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 3440 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-22 05:06:11.991 INFO   [8B2308\AF7B34] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-22 05:06:16.080 INFO   [8B2308\AF7B34] Auto-routing stage started on board '2e88b9a172f62d0cc0400a7c055f01d6' with baseline score 242.47 for 379 unrouted items.
+2026-10-22 05:06:26.458 INFO   [8B2308\AF7B34] Auto-routing pass #1 on board '2e88b9a172f62d0cc0400a7c055f01d6' was completed in 8.19 seconds with score 243.45 (378 unrouted and 3440 violations), using 9.80 CPU seconds and the job allocated 9.22 GB of memory so far.
+2026-10-22 05:06:34.960 INFO   [8B2308\AF7B34] Auto-routing pass #2 on board '42d5e293a46f83ccfc0322d3b2e65060' was completed in 6.36 seconds with score 243.45 (378 unrouted and 3440 violations), using 15.61 CPU seconds and the job allocated 14.49 GB of memory so far.
+2026-10-22 05:06:43.199 INFO   [8B2308\AF7B34] Auto-routing pass #3 on board 'cc23a6126df6e44e28098698ce342629' was completed in 5.87 seconds with score 242.47 (379 unrouted and 3440 violations), using 22.05 CPU seconds and the job allocated 20.03 GB of memory so far.
+2026-10-22 05:06:50.035 INFO   [8B2308\AF7B34] Auto-routing pass #4 on board '2e88b9a172f62d0cc0400a7c055f01d6' was completed in 6.64 seconds with score 242.47 (379 unrouted and 3440 violations), using 27.47 CPU seconds and the job allocated 25.00 GB of memory so far.
+2026-10-22 05:06:56.930 INFO   [8B2308\AF7B34] Auto-routing pass #5 on board '2e88b9a172f62d0cc0400a7c055f01d6' was completed in 6.72 seconds with score 242.47 (379 unrouted and 3440 violations), using 33.17 CPU seconds and the job allocated 30.02 GB of memory so far.
+2026-10-22 05:07:04.033 INFO   [8B2308\AF7B34] Auto-routing pass #6 on board '2e88b9a172f62d0cc0400a7c055f01d6' was completed in 6.94 seconds with score 243.45 (378 unrouted and 3440 violations), using 38.63 CPU seconds and the job allocated 35.01 GB of memory so far.
+2026-10-22 05:07:09.766 INFO   [8B2308\AF7B34] Auto-routing stage completed: started with 379 unrouted nets, completed in 55.91 seconds, final score: 243.45 (378 unrouted and 3440 violations), using 43.20 total CPU seconds, 39.26 GB total allocated, and 422.6 MB peak heap usage.
+2026-10-22 05:07:10.075 INFO   [8B2308\AF7B34] Job '8B2308\AF7B34' finished with state: COMPLETED (elapsed: 1 minute 1.05 seconds, finished at UTC: 2026-10-21T21:07:10.074612Z).
+2026-10-22 05:07:10.083 INFO   Saving output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\u8-power-corridor-20261022\sensor-bundle-router\unreserved-fields\result.ses' (SES)...
+2026-10-22 05:07:10.087 INFO   Successfully saved output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\u8-power-corridor-20261022\sensor-bundle-router\unreserved-fields\result.ses' (544356 bytes).

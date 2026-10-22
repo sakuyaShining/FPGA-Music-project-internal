@@ -1,0 +1,143 @@
+{
+  "updated_at": "2026-10-22T04:22:16.680010+08:00",
+  "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-U8BusWork-20261022",
+  "session": "776c52e1-e3ab-4a77-9c5c-ac6c71e1e5f5",
+  "pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "native_drc": {
+    "clearance": 0,
+    "physical": 0,
+    "connection": 59
+  },
+  "remaining_nets": 13,
+  "components": 230,
+  "pads": 1079,
+  "vias": 555,
+  "native_lines": 3394,
+  "source_checkpoint_and_stable_R15_unchanged": true,
+  "components_rules_stackup_outline_nets_unchanged": true,
+  "declared_actual_copper_max_deviation_mm": 4.3520227260381695e-06,
+  "continuity": {
+    "BUS_SCK": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "INPUT_LOAD_N": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "PRESET1": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "3V3_IO": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "5V_PERIPH": {
+      "complete": true,
+      "pad_islands": 1
+    }
+  },
+  "new_ground_stitches": 10,
+  "actual_ground_contacts": [
+    {
+      "id": "58201fc53f3f6e10",
+      "contact_mm2": {
+        "15": 0.1711908886179613,
+        "2": 0.1711891241824731
+      }
+    },
+    {
+      "id": "117f5fc6c2ba73e4",
+      "contact_mm2": {
+        "15": 0.21887565457087355,
+        "2": 0.21887565457087355
+      }
+    },
+    {
+      "id": "ffe3e80f6bea572c",
+      "contact_mm2": {
+        "15": 0.16306987724682603,
+        "2": 0.16307620601339085
+      }
+    },
+    {
+      "id": "cd594a630b932873",
+      "contact_mm2": {
+        "15": 0.2041813567104081,
+        "2": 0.2041813567104081
+      }
+    },
+    {
+      "id": "82165bea95b28f7b",
+      "contact_mm2": {
+        "15": 0.20417123797564557,
+        "2": 0.20417123797564557
+      }
+    },
+    {
+      "id": "e28b20b0397f7a67",
+      "contact_mm2": {
+        "15": 0.20416418038797263,
+        "2": 0.20416418038797263
+      }
+    },
+    {
+      "id": "9372edaf3515b8b5",
+      "contact_mm2": {
+        "15": 0.2041614991850403,
+        "2": 0.18536608897110088
+      }
+    },
+    {
+      "id": "fc1418f94cad2fbf",
+      "contact_mm2": {
+        "15": 0.20418050930710585,
+        "2": 0.20418050930710585
+      }
+    },
+    {
+      "id": "e101ae0ab671d271",
+      "contact_mm2": {
+        "15": 0.21887565457087288,
+        "2": 0.15454194834733576
+      }
+    },
+    {
+      "id": "35c6a395243e383e",
+      "contact_mm2": {
+        "15": 0.21887565457087288,
+        "2": 0.21887565457087288
+      }
+    }
+  ],
+  "audio_reference_projection": [
+    {
+      "net": "I2S_BCK",
+      "before_fraction": 0.9763017288714927,
+      "after_fraction": 0.9763017288714929,
+      "si_signoff": false
+    },
+    {
+      "net": "I2S_DIN",
+      "before_fraction": 0.9281717212879125,
+      "after_fraction": 0.9281717212879125,
+      "si_signoff": false
+    },
+    {
+      "net": "I2S_LRCK",
+      "before_fraction": 0.9172080599927678,
+      "after_fraction": 0.9172080599927678,
+      "si_signoff": false
+    }
+  ],
+  "reference_distance_goal_uncovered_ids": [
+    "1a1cee6c2ae8b608",
+    "1b9aa95dae3d27ef",
+    "c228fea9af588e59"
+  ],
+  "reference_distance_goal_not_si_signoff": true,
+  "archive": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\native-clock-corridor-WORK-IN-PROGRESS.zip",
+  "archive_sha256": "d052676bc2631e30b424284f298b67909fcb67a9256bdc62c5d77675cb0cb5df",
+  "manufacturing_release": false
+}

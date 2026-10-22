@@ -1,0 +1,3557 @@
+{
+  "source_pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "native_imported": false,
+  "net": "3V3_IO",
+  "pad_count": 48,
+  "copper_object_count": 222,
+  "graph_contacts": 351,
+  "tested_top_lines": 172,
+  "individually_redundant_top_lines": 50,
+  "individually_redundant_boundary_lines": [
+    {
+      "id": "20598a39601b2f61",
+      "length_mm": 0.16451829213798672,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "c1a81b84fde5e562",
+      "length_mm": 0.16451829213798672,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "492a23a4459ee06e",
+      "length_mm": 1.1829511783162014,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "7abc391565e8281c",
+      "length_mm": 0.024210770502398688,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    }
+  ],
+  "rows": [
+    {
+      "id": "4561ace87ba51f33",
+      "length_mm": 2.001006920000002,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R32",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "fd661ee91920dbd0",
+      "length_mm": 1.384043460000001,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U7",
+          "pin": "14"
+        }
+      ]
+    },
+    {
+      "id": "beba72ce5754a4b0",
+      "length_mm": 1.746835828567924,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U7",
+          "pin": "14"
+        }
+      ]
+    },
+    {
+      "id": "9ef85bff35bd1448",
+      "length_mm": 0.3223234599999927,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "6dba3bab4e3206e0",
+      "length_mm": 0.049930224033137356,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "651aeeeada3875df",
+      "length_mm": 0.00025400000000530554,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "acdc7cd2756d52a3",
+      "length_mm": 1.304541460000003,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U10",
+          "pin": "8"
+        }
+      ]
+    },
+    {
+      "id": "f03124c64b221787",
+      "length_mm": 2.9974463799999853,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "b7f3dd95f23d5787",
+      "length_mm": 0.00035921024483017214,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "d21cdeea60a784b4",
+      "length_mm": 3.0004943799999992,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R33",
+          "pin": "1"
+        },
+        {
+          "ref": "U4",
+          "pin": "24"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        },
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        },
+        {
+          "ref": "C10",
+          "pin": "1"
+        },
+        {
+          "ref": "C32",
+          "pin": "1"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "1b5c9d16e4c946d2",
+      "length_mm": 1.880102920000006,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U9",
+          "pin": "16"
+        }
+      ]
+    },
+    {
+      "id": "aa03cec0dee907f2",
+      "length_mm": 1.350515459999997,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U9",
+          "pin": "16"
+        }
+      ]
+    },
+    {
+      "id": "8dd015a3a7d3d09c",
+      "length_mm": 1.0533354599999996,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "6add4f290dfc44e2",
+      "length_mm": 0.16451829213798672,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "88995acfe1712ec8",
+      "length_mm": 0.31546800000000985,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "b07f78b55dbb8a5e",
+      "length_mm": 1.6304517092388509,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "b358f900dd471bfd",
+      "length_mm": 0.8394674599999945,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C3",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "bfc6fd81de90fbf4",
+      "length_mm": 1.0533354599999996,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U1",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "09ced477cfce6db6",
+      "length_mm": 0.16451829213798422,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "71e1184fe0ae69d5",
+      "length_mm": 0.31572200000000095,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "5c5d35755efe0512",
+      "length_mm": 1.630451709238866,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U1",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "3fa254f1e41b17cb",
+      "length_mm": 0.8394674600000016,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "069db7679f0dd952",
+      "length_mm": 1.0533354599999996,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U2",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "da61dfefebe84997",
+      "length_mm": 0.16451829213798672,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "83f2ebf335e5f8f7",
+      "length_mm": 0.31826199999999005,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "db80cf1cea4d9478",
+      "length_mm": 1.630451709238871,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U2",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "d91979dde9be6708",
+      "length_mm": 0.8394674599999945,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "c0ed99bab3e57e2d",
+      "length_mm": 0.8468334599999849,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C11",
+          "pin": "1"
+        },
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        },
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C36",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "20598a39601b2f61",
+      "length_mm": 0.16451829213798672,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "d0f075afb8cfcb3e",
+      "length_mm": 0.7485354599999994,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C11",
+          "pin": "1"
+        },
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        },
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C36",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "27193efe04a40656",
+      "length_mm": 1.1981154599999968,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R32",
+          "pin": "1"
+        },
+        {
+          "ref": "R33",
+          "pin": "1"
+        },
+        {
+          "ref": "R34",
+          "pin": "1"
+        },
+        {
+          "ref": "U4",
+          "pin": "24"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        },
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        },
+        {
+          "ref": "C10",
+          "pin": "1"
+        },
+        {
+          "ref": "C32",
+          "pin": "1"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "86c39d6dad90db80",
+      "length_mm": 4.706607300000002,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U11",
+          "pin": "5"
+        },
+        {
+          "ref": "C11",
+          "pin": "1"
+        },
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        },
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C36",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "734d0b8c4a208def",
+      "length_mm": 1.3448795645888683,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U11",
+          "pin": "5"
+        },
+        {
+          "ref": "C11",
+          "pin": "1"
+        },
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        },
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C36",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "f20e48338004d60c",
+      "length_mm": 4.142983839999999,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U11",
+          "pin": "5"
+        },
+        {
+          "ref": "C11",
+          "pin": "1"
+        },
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        },
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C36",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "de4596e62ec2c368",
+      "length_mm": 1.9946908975094297,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U11",
+          "pin": "5"
+        },
+        {
+          "ref": "C11",
+          "pin": "1"
+        },
+        {
+          "ref": "R32",
+          "pin": "1"
+        },
+        {
+          "ref": "R33",
+          "pin": "1"
+        },
+        {
+          "ref": "R34",
+          "pin": "1"
+        },
+        {
+          "ref": "U4",
+          "pin": "24"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        },
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        },
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C10",
+          "pin": "1"
+        },
+        {
+          "ref": "C32",
+          "pin": "1"
+        },
+        {
+          "ref": "C36",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "393fcc427eb2b3e6",
+      "length_mm": 0.6362674599999991,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U11",
+          "pin": "5"
+        },
+        {
+          "ref": "C11",
+          "pin": "1"
+        },
+        {
+          "ref": "R32",
+          "pin": "1"
+        },
+        {
+          "ref": "R33",
+          "pin": "1"
+        },
+        {
+          "ref": "R34",
+          "pin": "1"
+        },
+        {
+          "ref": "U4",
+          "pin": "24"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        },
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        },
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C10",
+          "pin": "1"
+        },
+        {
+          "ref": "C32",
+          "pin": "1"
+        },
+        {
+          "ref": "C36",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "7d51d3d96cde71d9",
+      "length_mm": 2.9484243799999987,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U17",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "id": "0a7c66fac79cea95",
+      "length_mm": 0.4457700000000031,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        }
+      ]
+    },
+    {
+      "id": "6ab651e5d51c04bc",
+      "length_mm": 4.08852023049302,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        }
+      ]
+    },
+    {
+      "id": "4e7b1169c77fcd9c",
+      "length_mm": 3.5686898400000047,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "ff692d88efe82b63",
+      "length_mm": 4.827773118328541,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "b6ab73438a2557ab",
+      "length_mm": 11.388824059999997,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "9e2bf8e4c5ab24b9",
+      "length_mm": 2.408856717710694,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R69",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "ec151c9bcda750c4",
+      "length_mm": 1.0474934599999983,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U14",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "bdc837d537b62d74",
+      "length_mm": 0.16451829213798672,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "31ed9a0566e83207",
+      "length_mm": 2.0855889200000064,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U14",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "7656c665e5cbd021",
+      "length_mm": 1.0955894507206858,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U14",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "f937313e39b64fd5",
+      "length_mm": 1.7089069199999898,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U14",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "6dfd19de9c63549d",
+      "length_mm": 0.21301167519176822,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "19df74a6bd526870",
+      "length_mm": 2.610606919999995,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U14",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "4fd0f4b6c360bde9",
+      "length_mm": 1.08737146,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U15",
+          "pin": "17"
+        }
+      ]
+    },
+    {
+      "id": "eb25d4fa91bd7653",
+      "length_mm": 0.1645182921379817,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "e0b3f1ccd5724d8c",
+      "length_mm": 5.07643130000001,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U15",
+          "pin": "17"
+        }
+      ]
+    },
+    {
+      "id": "49365ca0cfd9e629",
+      "length_mm": 0.91490546,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U16",
+          "pin": "5"
+        }
+      ]
+    },
+    {
+      "id": "df21120866960ea2",
+      "length_mm": 4.291065840000002,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        },
+        {
+          "ref": "U8",
+          "pin": "10"
+        },
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "C7",
+          "pin": "1"
+        },
+        {
+          "ref": "C8",
+          "pin": "1"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "93bff9957661683d",
+      "length_mm": 0.46768994273750497,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        },
+        {
+          "ref": "U8",
+          "pin": "10"
+        },
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "C7",
+          "pin": "1"
+        },
+        {
+          "ref": "C8",
+          "pin": "1"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "a1701a0acde39bec",
+      "length_mm": 0.8793454600000032,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C7",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "c24d45382d78a8f6",
+      "length_mm": 6.170658220000007,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C9",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "4c1e5be76c6b4448",
+      "length_mm": 0.23088600000000525,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "225b96a2c6c90c09",
+      "length_mm": 1.0680674600000017,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "53fef3115e43895b",
+      "length_mm": 0.7335037278664766,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "1ddfee6c1532bf5c",
+      "length_mm": 4.34643784,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        },
+        {
+          "ref": "C10",
+          "pin": "1"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "54405a9b2ab7ee26",
+      "length_mm": 1.9523040886179872,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        },
+        {
+          "ref": "C10",
+          "pin": "1"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "0627c567e9e38694",
+      "length_mm": 10.99944206,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U4",
+          "pin": "24"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        },
+        {
+          "ref": "U17",
+          "pin": "3"
+        },
+        {
+          "ref": "R69",
+          "pin": "1"
+        },
+        {
+          "ref": "U7",
+          "pin": "14"
+        },
+        {
+          "ref": "U10",
+          "pin": "8"
+        },
+        {
+          "ref": "C10",
+          "pin": "1"
+        },
+        {
+          "ref": "C32",
+          "pin": "1"
+        },
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "7ccd2cc51a964314",
+      "length_mm": 0.053848000000002116,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "0224331867e39282",
+      "length_mm": 4.693145300000001,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "e39b46654e22abf0",
+      "length_mm": 1.536338625090065,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "9e5db42572ef798b",
+      "length_mm": 0.9207474600000012,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R53",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "cfc4e68fda0d389d",
+      "length_mm": 5.868146759999998,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "0b32e6037ba765b2",
+      "length_mm": 0.7465034600000031,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R57",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "f59ce4dc00f8889a",
+      "length_mm": 0.12105385251202358,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "b4248e8524604953",
+      "length_mm": 0.7355814599999917,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "969a9fd08c432d8e",
+      "length_mm": 4.644936899754461,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "67397a11b11e19a2",
+      "length_mm": 1.8736370449974262,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "79fdaf157e7bf549",
+      "length_mm": 2.448044379999999,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "fd5b7e69eceec363",
+      "length_mm": 3.4333225399515066,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "e00c4c6d46ea3e61",
+      "length_mm": 0.46862999999999744,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "20e4adddfda2dc40",
+      "length_mm": 1.2471761740441503,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        }
+      ]
+    },
+    {
+      "id": "081a5ce595486d80",
+      "length_mm": 6.621762220000001,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        }
+      ]
+    },
+    {
+      "id": "c1a81b84fde5e562",
+      "length_mm": 0.16451829213798672,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "de88e61f37dcd55d",
+      "length_mm": 1.234183459999997,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        }
+      ]
+    },
+    {
+      "id": "dba044eb13318238",
+      "length_mm": 10.078694599999992,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "a293d08ae29e6105",
+      "length_mm": 2.200875781998679,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        }
+      ]
+    },
+    {
+      "id": "7881ab55cd79fb3a",
+      "length_mm": 6.898368220000002,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        }
+      ]
+    },
+    {
+      "id": "cd007f8673859f20",
+      "length_mm": 1.0927139727092448,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        }
+      ]
+    },
+    {
+      "id": "88abecb43fc995e6",
+      "length_mm": 1.1696674599999994,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U6",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "bca99f1673b3a3a7",
+      "length_mm": 3.608615343383068,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "fddc52afade98d6c",
+      "length_mm": 7.0223202199999974,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "8bfc86a449eee6ba",
+      "length_mm": 5.908994159253717,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "74a26c569d4411f9",
+      "length_mm": 5.674852760000007,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "ba91d0d2edbd4ef9",
+      "length_mm": 1.0533354599999996,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U4",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "41922d8179e4087a",
+      "length_mm": 0.16451649609656602,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "e103740a4262cebc",
+      "length_mm": 6.905990760000002,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U4",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "e688ab1b94b11921",
+      "length_mm": 3.6086153433830837,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U4",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "37ad86a57c919272",
+      "length_mm": 16.971204122611944,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U4",
+          "pin": "24"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "c9787b340b43fa5a",
+      "length_mm": 3.9997278399999985,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U4",
+          "pin": "24"
+        },
+        {
+          "ref": "C4",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "1fa01f93858fbba5",
+      "length_mm": 10.081742599999998,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "bc6b1a1ced8dfd0f",
+      "length_mm": 1.1767691700024567,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "a1279dbc6d87b9f5",
+      "length_mm": 9.46401714000001,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "a167639ccbc47c89",
+      "length_mm": 1.0858889780572352,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "580de271294bb97a",
+      "length_mm": 9.463763140000012,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "adaa90e5610bc8e9",
+      "length_mm": 1.0858889780572252,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "2616160a1548e5d8",
+      "length_mm": 9.540722599999999,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "15375c4b8502ab9a",
+      "length_mm": 5.485622760000005,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "24"
+        },
+        {
+          "ref": "TP6",
+          "pin": "TP6"
+        }
+      ]
+    },
+    {
+      "id": "c5e8b21c8df2934b",
+      "length_mm": 7.802387767717483,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "24"
+        },
+        {
+          "ref": "TP6",
+          "pin": "TP6"
+        }
+      ]
+    },
+    {
+      "id": "a032c5fa44f20d76",
+      "length_mm": 9.164805139999999,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "24"
+        },
+        {
+          "ref": "TP6",
+          "pin": "TP6"
+        }
+      ]
+    },
+    {
+      "id": "646070cc6a4e4fa1",
+      "length_mm": 2.321568628213898,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "U1",
+          "pin": "24"
+        },
+        {
+          "ref": "TP6",
+          "pin": "TP6"
+        }
+      ]
+    },
+    {
+      "id": "0f23e23495a994f8",
+      "length_mm": 3.0543575276931403,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "TP6",
+          "pin": "TP6"
+        }
+      ]
+    },
+    {
+      "id": "be7cbf73d511a6ec",
+      "length_mm": 2.098499066166533,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "5f59d4b03717a40f",
+      "length_mm": 0.11557000000000528,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "711f785e01922991",
+      "length_mm": 3.349236380000015,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "723148871d7c2e07",
+      "length_mm": 9.847300599999997,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "363532d01f230c2c",
+      "length_mm": 0.5653969253825218,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "53072cff71a770c0",
+      "length_mm": 9.8478086,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "f6f7bd10cd01f022",
+      "length_mm": 0.7533614599999936,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "8a113ca67b236222",
+      "length_mm": 0.5996914600000167,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C11",
+          "pin": "1"
+        },
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "7ed5704f87f4f823",
+      "length_mm": 0.5161833257909474,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "7936e371b2df0b46",
+      "length_mm": 7.598646220000006,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "U16",
+          "pin": "5"
+        },
+        {
+          "ref": "C9",
+          "pin": "1"
+        },
+        {
+          "ref": "C36",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        },
+        {
+          "ref": "C33",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "3785bf85034fb2e1",
+      "length_mm": 1.8880036587407627,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "C8",
+          "pin": "1"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "71567410d093c411",
+      "length_mm": 0.5996939999999853,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "C8",
+          "pin": "1"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "48eeb69cfaaa6014",
+      "length_mm": 2.3901777849788672,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "C8",
+          "pin": "1"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "6873aa8e0462204b",
+      "length_mm": 5.990320759999996,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        },
+        {
+          "ref": "U8",
+          "pin": "10"
+        },
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "C8",
+          "pin": "1"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "5ace46b533d824be",
+      "length_mm": 1.512271538685607,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        },
+        {
+          "ref": "U8",
+          "pin": "10"
+        },
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "C8",
+          "pin": "1"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "4fb529a9717cacbd",
+      "length_mm": 6.480030219999989,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        },
+        {
+          "ref": "U8",
+          "pin": "10"
+        },
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "C8",
+          "pin": "1"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "c066d3c10cb8accd",
+      "length_mm": 1.8880054547911305,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        },
+        {
+          "ref": "U8",
+          "pin": "10"
+        },
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        },
+        {
+          "ref": "U14",
+          "pin": "1"
+        },
+        {
+          "ref": "U15",
+          "pin": "17"
+        },
+        {
+          "ref": "C8",
+          "pin": "1"
+        },
+        {
+          "ref": "R30",
+          "pin": "1"
+        },
+        {
+          "ref": "R31",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "R54",
+          "pin": "1"
+        },
+        {
+          "ref": "R55",
+          "pin": "1"
+        },
+        {
+          "ref": "R56",
+          "pin": "1"
+        },
+        {
+          "ref": "R57",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        },
+        {
+          "ref": "U3",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "45b6a48b79e0973b",
+      "length_mm": 2.709156380000003,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U8",
+          "pin": "16"
+        },
+        {
+          "ref": "U8",
+          "pin": "10"
+        }
+      ]
+    },
+    {
+      "id": "2bef4674389c4877",
+      "length_mm": 0.9019769248001851,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U5",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "846995b967cb52ee",
+      "length_mm": 4.571225300000009,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U5",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "01d3d76991f64265",
+      "length_mm": 3.6086153433830783,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U5",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "4156953802109415",
+      "length_mm": 1.1696674599999994,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U5",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "390e8cfcbb4d7ed2",
+      "length_mm": 1.1765254599999935,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "96ff230ed2869cc2",
+      "length_mm": 0.9021547513939124,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "753907e16d658b86",
+      "length_mm": 4.775441299999997,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "18896418dd3430cf",
+      "length_mm": 4.081695235841015,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "d746d13db3683e9f",
+      "length_mm": 1.130071838172889,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "6a5b889477a44496",
+      "length_mm": 0.8013674599999945,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "6ace017d149e0ad2",
+      "length_mm": 0.0014368409793709316,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "77545902dc8a001b",
+      "length_mm": 0.5996914600000025,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "71378386ba5b86a7",
+      "length_mm": 1.1300736342255482,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R50",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "b9a57ef9ca48f1de",
+      "length_mm": 24.66283104,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "U6",
+          "pin": "24"
+        },
+        {
+          "ref": "C6",
+          "pin": "1"
+        },
+        {
+          "ref": "R50",
+          "pin": "1"
+        },
+        {
+          "ref": "R51",
+          "pin": "1"
+        },
+        {
+          "ref": "R52",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "c4d815a92091ae43",
+      "length_mm": 0.6578599999999994,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "f72949150d3710fd",
+      "length_mm": 1.0776307345282992,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "463030dfafc14475",
+      "length_mm": 3.7185600000000036,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "5a645164a46f9765",
+      "length_mm": 0.4597891133987458,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "3ee9c18a842081e6",
+      "length_mm": 0.37084000000000117,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "R73",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "3c044153d705dcd3",
+      "length_mm": 0.29773181814676253,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "b13200c717a0e4e1",
+      "length_mm": 0.7888806568414457,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "40e43f8bba645998",
+      "length_mm": 0.2972428855049386,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "4d0b400c0ac0606a",
+      "length_mm": 0.7886460925522865,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "dddfce98b511e120",
+      "length_mm": 0.7812743695165254,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "07e0c0907ea9051d",
+      "length_mm": 0.3053381054716829,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "b8327c909f2a61ea",
+      "length_mm": 0.7810272432591734,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "59cedf0bb839387c",
+      "length_mm": 0.30486173479804174,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "f2d31c05d9579f7d",
+      "length_mm": 0.4678497912930108,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "a3f709a9ab70da8b",
+      "length_mm": 0.8342837541595697,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        },
+        {
+          "ref": "R53",
+          "pin": "1"
+        },
+        {
+          "ref": "U2",
+          "pin": "24"
+        }
+      ]
+    },
+    {
+      "id": "86dedf9675e88b71",
+      "length_mm": 0.7079069439697495,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "523e6844fbd0b9b6",
+      "length_mm": 0.7486917061737945,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "42d0e0102059c593",
+      "length_mm": 0.7074933140374076,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "4060c4c85cff5201",
+      "length_mm": 0.7483822162078727,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "f9536fedfa5eb06f",
+      "length_mm": 0.7831157780583871,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "7e184d61415920ed",
+      "length_mm": 0.1270598478057999,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "7323ef4891e8c60a",
+      "length_mm": 0.7835345307681717,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "527c25a95124a299",
+      "length_mm": 1.1827042091816116,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "31392b3b86a7d226",
+      "length_mm": 1.4663034036530695,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": false,
+      "disconnected_power_pads": [
+        {
+          "ref": "C11",
+          "pin": "1"
+        },
+        {
+          "ref": "U5",
+          "pin": "24"
+        },
+        {
+          "ref": "C5",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "id": "9908f6ab2cf3f9a7",
+      "length_mm": 0.2837006592743759,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "492a23a4459ee06e",
+      "length_mm": 1.1829511783162014,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "7abc391565e8281c",
+      "length_mm": 0.024210770502398688,
+      "on_harm_terminal_boundary": true,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "3ddda199fc842f7e",
+      "length_mm": 0.024641822796218005,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "fbe5b1136b824c9e",
+      "length_mm": 0.27038110653014225,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "a2367133142a2486",
+      "length_mm": 0.07985348742082678,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "bf597f1c0532e644",
+      "length_mm": 0.27055356431312033,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    },
+    {
+      "id": "6cc88ece7239e735",
+      "length_mm": 0.07895800391889143,
+      "on_harm_terminal_boundary": false,
+      "removal_preserves_all_power_pad_connections": true,
+      "disconnected_power_pads": []
+    }
+  ],
+  "limitations": [
+    "Individual removals are not a jointly removable set.",
+    "Pad continuity alone does not establish voltage-drop/transient/thermal adequacy.",
+    "No removal is approved or applied."
+  ]
+}

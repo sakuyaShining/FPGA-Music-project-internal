@@ -1,0 +1,116 @@
+{
+  "utc": "2026-10-21T02:23:51.459526+00:00",
+  "pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+  "source_stable_during_drc": true,
+  "full_native_drc": {
+    "Connection Error": 62
+  },
+  "physical_order": [
+    1,
+    361,
+    15,
+    362,
+    16,
+    363,
+    2
+  ],
+  "physical_stack": [
+    {
+      "layer": 1,
+      "material": null,
+      "native_mil": 1.378,
+      "millimetres": 0.035001199999999996,
+      "zIndex": 1000,
+      "loss_tangent_value": null,
+      "loss_tangent_qualified": false
+    },
+    {
+      "layer": 361,
+      "material": "7628",
+      "native_mil": 8.283,
+      "millimetres": 0.21038819999999997,
+      "zIndex": 1001,
+      "loss_tangent_value": null,
+      "loss_tangent_qualified": false
+    },
+    {
+      "layer": 15,
+      "material": null,
+      "native_mil": 0.598,
+      "millimetres": 0.015189199999999998,
+      "zIndex": 1002,
+      "loss_tangent_value": null,
+      "loss_tangent_qualified": false
+    },
+    {
+      "layer": 362,
+      "material": "FR4",
+      "native_mil": 41.929,
+      "millimetres": 1.0649966,
+      "zIndex": 1003,
+      "loss_tangent_value": null,
+      "loss_tangent_qualified": false
+    },
+    {
+      "layer": 16,
+      "material": null,
+      "native_mil": 0.598,
+      "millimetres": 0.015189199999999998,
+      "zIndex": 1004,
+      "loss_tangent_value": null,
+      "loss_tangent_qualified": false
+    },
+    {
+      "layer": 363,
+      "material": "7628",
+      "native_mil": 8.283,
+      "millimetres": 0.21038819999999997,
+      "zIndex": 1005,
+      "loss_tangent_value": null,
+      "loss_tangent_qualified": false
+    },
+    {
+      "layer": 2,
+      "material": null,
+      "native_mil": 1.378,
+      "millimetres": 0.035001199999999996,
+      "zIndex": 9000,
+      "loss_tangent_value": null,
+      "loss_tangent_qualified": false
+    }
+  ],
+  "copper_and_dielectric_mm": 1.5861538,
+  "finished_with_preserved_mask_mm": 1.606169,
+  "all_other_native_record_groups_unchanged": {
+    "STRING": true,
+    "ACTIVE_LAYER": true,
+    "COMPONENT": true,
+    "RULE_TEMPLATE": true,
+    "D3_ATTRIBUTE": true,
+    "SILK_OPTS": true,
+    "PAD": true,
+    "POURED": true,
+    "PRIMITIVE": true,
+    "PAD_NET": true,
+    "PREFERENCE": true,
+    "REGION": true,
+    "META": true,
+    "POLY": true,
+    "RULE": true,
+    "VIA": true,
+    "LINE": true,
+    "NET": true,
+    "PANELIZE": true,
+    "ATTR": true,
+    "POUR": true,
+    "RULE_SELECTOR": true,
+    "CANVAS": true
+  },
+  "all_17_supporting_files_unchanged": true,
+  "physical_stack_structure_verified": true,
+  "dielectric_loss_properties_qualified": false,
+  "factory_process_approved": false,
+  "sensor_capacitance_qualified": false,
+  "i2s_signoff": false,
+  "manufacturing_release": false
+}

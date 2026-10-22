@@ -1,0 +1,1 @@
+const d=await eda.dmt_SelectControl.getCurrentDocumentInfo();if(d?.parentProjectUuid!==__CLI__.args.project)throw new Error('Wrong PCB');const p=(await eda.pcb_PrimitivePour.getAll()).filter(p=>p.getState_Layer()===__CLI__.args.layer);if(p.length!==1||!await p[0].rebuildCopperRegion())throw new Error('Rebuild');return await eda.pcb_Document.save();

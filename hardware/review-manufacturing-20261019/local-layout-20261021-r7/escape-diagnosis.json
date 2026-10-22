@@ -1,0 +1,270 @@
+{
+  "source_pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+  "local_margin_mm": 4,
+  "grid_mm": 0.025,
+  "not_a_global_impossibility_proof": true,
+  "rows": [
+    {
+      "net": "INV2",
+      "ref": "U7",
+      "pin": "6",
+      "x_mm": 55.542179999999995,
+      "y_mm": 46.3804,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": false,
+      "local_via_cells": 0,
+      "nearest_via_cells": []
+    },
+    {
+      "net": "PRESET3",
+      "ref": "U9",
+      "pin": "5",
+      "x_mm": 64.63538,
+      "y_mm": 53.263799999999996,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": false,
+      "local_via_cells": 2,
+      "nearest_via_cells": [
+        {
+          "x_mm": 65.21038,
+          "y_mm": 52.0888,
+          "distance_mm": 1.308147545195113
+        },
+        {
+          "x_mm": 65.18538,
+          "y_mm": 52.06379999999999,
+          "distance_mm": 1.3200378782444087
+        }
+      ]
+    },
+    {
+      "net": "DISP_SCK",
+      "ref": "U15",
+      "pin": "18",
+      "x_mm": 81.37397999999999,
+      "y_mm": 45.8724,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": false,
+      "local_via_cells": 0,
+      "nearest_via_cells": []
+    },
+    {
+      "net": "DISP_MOSI",
+      "ref": "U15",
+      "pin": "16",
+      "x_mm": 82.67446,
+      "y_mm": 45.8724,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": false,
+      "local_via_cells": 0,
+      "nearest_via_cells": []
+    },
+    {
+      "net": "BUS_SCK",
+      "ref": "U8",
+      "pin": "11",
+      "x_mm": 65.90538,
+      "y_mm": 47.73421999999999,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": true,
+      "local_via_cells": 399,
+      "nearest_via_cells": [
+        {
+          "x_mm": 65.30538,
+          "y_mm": 46.559219999999996,
+          "distance_mm": 1.3193274801958763
+        },
+        {
+          "x_mm": 65.33037999999999,
+          "y_mm": 46.53421999999999,
+          "distance_mm": 1.3306483382171264
+        },
+        {
+          "x_mm": 65.30538,
+          "y_mm": 46.53421999999999,
+          "distance_mm": 1.341640786499874
+        },
+        {
+          "x_mm": 65.35538,
+          "y_mm": 46.50921999999999,
+          "distance_mm": 1.3428049001995785
+        },
+        {
+          "x_mm": 65.28038,
+          "y_mm": 46.53421999999999,
+          "distance_mm": 1.353005912773481
+        }
+      ]
+    },
+    {
+      "net": "BUS_SCK",
+      "ref": "U9",
+      "pin": "2",
+      "x_mm": 60.825379999999996,
+      "y_mm": 53.263799999999996,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": false,
+      "local_via_cells": 0,
+      "nearest_via_cells": []
+    },
+    {
+      "net": "BUS_SCK",
+      "ref": "U15",
+      "pin": "2",
+      "x_mm": 80.72373999999999,
+      "y_mm": 40.12946,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": true,
+      "local_via_cells": 4714,
+      "nearest_via_cells": [
+        {
+          "x_mm": 80.49874,
+          "y_mm": 41.40446,
+          "distance_mm": 1.2947007376224053
+        },
+        {
+          "x_mm": 80.47373999999999,
+          "y_mm": 41.40446,
+          "distance_mm": 1.2992786460186283
+        },
+        {
+          "x_mm": 80.44873999999999,
+          "y_mm": 41.40446,
+          "distance_mm": 1.3043197460745581
+        },
+        {
+          "x_mm": 80.42374,
+          "y_mm": 41.40446,
+          "distance_mm": 1.3098186897429738
+        },
+        {
+          "x_mm": 80.49874,
+          "y_mm": 41.429460000000006,
+          "distance_mm": 1.3193274801958763
+        }
+      ]
+    },
+    {
+      "net": "BUS_MOSI",
+      "ref": "U8",
+      "pin": "14",
+      "x_mm": 62.09537999999999,
+      "y_mm": 47.73421999999999,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": false,
+      "local_via_cells": 0,
+      "nearest_via_cells": []
+    },
+    {
+      "net": "BUS_MOSI",
+      "ref": "U15",
+      "pin": "4",
+      "x_mm": 82.02422,
+      "y_mm": 40.12946,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": true,
+      "local_via_cells": 4327,
+      "nearest_via_cells": [
+        {
+          "x_mm": 80.49922,
+          "y_mm": 41.47946,
+          "distance_mm": 2.036694626103776
+        },
+        {
+          "x_mm": 80.49922,
+          "y_mm": 41.50446,
+          "distance_mm": 2.053350919838107
+        },
+        {
+          "x_mm": 80.47422,
+          "y_mm": 41.47946,
+          "distance_mm": 2.0554804791094465
+        },
+        {
+          "x_mm": 80.49922,
+          "y_mm": 41.52946,
+          "distance_mm": 2.070175113366017
+        },
+        {
+          "x_mm": 80.47422,
+          "y_mm": 41.50446,
+          "distance_mm": 2.071985762499347
+        }
+      ]
+    },
+    {
+      "net": "HARM_CS_N",
+      "ref": "U11",
+      "pin": "6",
+      "x_mm": 70.79996,
+      "y_mm": 64.04863999999999,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": true,
+      "local_via_cells": 22153,
+      "nearest_via_cells": [
+        {
+          "x_mm": 70.77496,
+          "y_mm": 63.22363999999999,
+          "distance_mm": 0.8253787009609589
+        },
+        {
+          "x_mm": 70.74996,
+          "y_mm": 63.22363999999999,
+          "distance_mm": 0.8265137627408271
+        },
+        {
+          "x_mm": 70.72496,
+          "y_mm": 63.22363999999999,
+          "distance_mm": 0.8284020762890446
+        },
+        {
+          "x_mm": 70.69996,
+          "y_mm": 63.22363999999999,
+          "distance_mm": 0.8310385069297331
+        },
+        {
+          "x_mm": 70.67496,
+          "y_mm": 63.22363999999999,
+          "distance_mm": 0.8344159634139319
+        }
+      ]
+    },
+    {
+      "net": "HARM_CS_N",
+      "ref": "U15",
+      "pin": "8",
+      "x_mm": 84.62517999999999,
+      "y_mm": 40.12946,
+      "start_blocked": false,
+      "top_component_touches_local_boundary": false,
+      "local_via_cells": 22,
+      "nearest_via_cells": [
+        {
+          "x_mm": 84.40017999999999,
+          "y_mm": 41.40446,
+          "distance_mm": 1.2947007376224053
+        },
+        {
+          "x_mm": 84.37517999999999,
+          "y_mm": 41.40446,
+          "distance_mm": 1.2992786460186283
+        },
+        {
+          "x_mm": 84.35017999999998,
+          "y_mm": 41.40446,
+          "distance_mm": 1.3043197460745581
+        },
+        {
+          "x_mm": 84.47517999999998,
+          "y_mm": 41.429460000000006,
+          "distance_mm": 1.3086252328302401
+        },
+        {
+          "x_mm": 84.45017999999999,
+          "y_mm": 41.429460000000006,
+          "distance_mm": 1.3117259622344906
+        }
+      ]
+    }
+  ]
+}

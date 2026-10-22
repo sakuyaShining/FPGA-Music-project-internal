@@ -1,0 +1,187 @@
+{
+  "pcb_sha256": "5029ca7091053a207a08908edfbe4b2716058640fa654b720c08c2bc0333cacb",
+  "native_drc": {
+    "Connection Error": 58
+  },
+  "all_changed_copper_matches_declared_plan": true,
+  "other229_components_pads_rules_stack_values_and_net_memberships_unchanged": true,
+  "source_r7_19_files_unchanged": true,
+  "other17_native_support_files_unchanged": true,
+  "components": 230,
+  "pads": 1079,
+  "api_lines": 3288,
+  "native_copper_lines": 3316,
+  "native_microtracks": 28,
+  "vias": 530,
+  "pours": 4,
+  "completed_net": "HARM_CS_N",
+  "harm_length_mm": 72.27236205188741,
+  "new_signal_vias": 5,
+  "new_ground_stitches": 5,
+  "actual_ground_stitch_contacts": [
+    {
+      "id": "e2537dea81be2533",
+      "xy_mm": [
+        69.0805451,
+        62.97826876
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.20416742698080242,
+        "2": 0.20416742698080242
+      }
+    },
+    {
+      "id": "35c4646b19e34787",
+      "xy_mm": [
+        51.05681686,
+        64.3035036
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.20415118923760178,
+        "2": 0.20415118923760178
+      }
+    },
+    {
+      "id": "a41fc0dae2621d0a",
+      "xy_mm": [
+        66.87361784,
+        68.51907048
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.20416186857886348,
+        "2": 0.20416186857886348
+      }
+    },
+    {
+      "id": "7321bc45828fa348",
+      "xy_mm": [
+        75.55153800000001,
+        53.2166322
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.20416871665676323,
+        "2": 0.20416871665676323
+      }
+    },
+    {
+      "id": "4ffb65278ff2e388",
+      "xy_mm": [
+        67.48731993999999,
+        65.67117676000001
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.2041653870796697,
+        "2": 0.20413730577576628
+      }
+    }
+  ],
+  "new_power_vias": 0,
+  "R30_actual_pad_midpoint_mm": [
+    87.69857999999999,
+    44.80052
+  ],
+  "R30_actual_rotation": 270,
+  "R30_old_power_junction_preserved": true,
+  "all_original_3V3_IO_copper_records_exactly_unchanged": true,
+  "planned_junction_coalesced_into_existing_diagonal": "363532d01f230c2c",
+  "native_harm_cleanup_deviation": [
+    {
+      "net": "HARM_CS_N",
+      "layer": 1,
+      "hausdorff_mm": 7.139905934207623e-07,
+      "tolerance_mm": 5e-05
+    },
+    {
+      "net": "HARM_CS_N",
+      "layer": 16,
+      "hausdorff_mm": 2.540000001260978e-05,
+      "tolerance_mm": 5e-05
+    }
+  ],
+  "legacy_CPL_stale_designators": [
+    "C35",
+    "R30"
+  ],
+  "i2s_audio_copper_unchanged": true,
+  "i2s_reference_projection": [
+    {
+      "net": "I2S_BCK",
+      "before_fraction": 0.9763017288714927,
+      "after_fraction": 0.9763017288714927,
+      "not_si_signoff": true
+    },
+    {
+      "net": "I2S_DIN",
+      "before_fraction": 0.9281717212879125,
+      "after_fraction": 0.9281717212879125,
+      "not_si_signoff": true
+    },
+    {
+      "net": "I2S_LRCK",
+      "before_fraction": 0.9172080599927679,
+      "after_fraction": 0.9172080599927679,
+      "not_si_signoff": true
+    }
+  ],
+  "harm_reference_projection": [
+    {
+      "signal_layer": 1,
+      "nearest_ground_layer": 15,
+      "evaluated_centerline_mm": 23.438094406943286,
+      "ground_projection_fraction": 0.9821963325912659,
+      "not_si_signoff": true
+    },
+    {
+      "signal_layer": 16,
+      "nearest_ground_layer": 2,
+      "evaluated_centerline_mm": 36.10773521268219,
+      "ground_projection_fraction": 0.8919140698172663,
+      "not_si_signoff": true
+    }
+  ],
+  "signal_reference_change_ground_vias": [
+    {
+      "signal_via": "27ae76a348de27b9",
+      "x_mm": 74.91514099999999,
+      "y_mm": 52.580235200000004,
+      "nearest_ground_via_connected_to_both_references": "7321bc45828fa348",
+      "distance_mm": 0.9000012684535528,
+      "not_si_signoff": true
+    },
+    {
+      "signal_via": "dc75b8937fc29aa7",
+      "x_mm": 51.9568176,
+      "y_mm": 64.3035036,
+      "nearest_ground_via_connected_to_both_references": "35c4646b19e34787",
+      "distance_mm": 0.900000740000005,
+      "not_si_signoff": true
+    },
+    {
+      "signal_via": "f88af98e79859b8e",
+      "x_mm": 66.6980378,
+      "y_mm": 67.63636460000001,
+      "nearest_ground_via_connected_to_both_references": "a41fc0dae2621d0a",
+      "distance_mm": 0.8999989005731999,
+      "not_si_signoff": true
+    },
+    {
+      "signal_via": "19fee1b7b37e92fb",
+      "x_mm": 68.3188118,
+      "y_mm": 66.0155906,
+      "nearest_ground_via_connected_to_both_references": "4ffb65278ff2e388",
+      "distance_mm": 0.8999997813498687,
+      "not_si_signoff": true
+    },
+    {
+      "signal_via": "61e8bae716a81e1e",
+      "x_mm": 69.8288672,
+      "y_mm": 63.478283,
+      "nearest_ground_via_connected_to_both_references": "e2537dea81be2533",
+      "distance_mm": 0.9000001141951013,
+      "not_si_signoff": true
+    }
+  ],
+  "edge_rates_and_si_unqualified": true,
+  "power_drop_transients_and_actual_measurements_unqualified": true,
+  "manufacturing_release": false
+}

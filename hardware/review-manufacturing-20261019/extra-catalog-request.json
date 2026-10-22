@@ -1,0 +1,5 @@
+{
+ "name":"extra-catalog",
+ "code":"const r={};for(const q of __CLI__.args.queries){r[q]=await eda.lib_Device.search(q,'0819f05c4eef4c71ace90d822a990e87',undefined,undefined,6,1);}return r;",
+ "args":{"queries":["2.54-1*20P母","2.54-1*12P","2.54-1*3P","0603WAF1000T5E","0603WAF0000T5E"]}
+}

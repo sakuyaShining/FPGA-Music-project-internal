@@ -1,0 +1,76 @@
+{
+  "updated_utc": "2026-10-20T22:50:15.545210+00:00",
+  "phase": "local-power-bus-r3",
+  "pcb_sha256": "0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a",
+  "current_checkpoint": "route-checkpoint-0clear-74open-local-power-bus-r3-20261021.json",
+  "current_checkpoint_sha256": "24424b7fcbbc9d73c202c299ed5e6b153259daeadcf853d4419f56e6f19ca287",
+  "native_zip": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\native-230-0clear-74open-local-power-bus-r3-20261021-CANDIDATE.zip",
+  "native_zip_sha256": "4c45fb6ce1959f6dc2da2b431e35c09030eadd8cc760b9d7bad2e632d8d9f475",
+  "workbook": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\硬件采购准备-r1.xlsx",
+  "workbook_sha256": "59938d7887492c61e1b0c32ae14069d3dd1bbcf2c4da1ded779b480d0a9aee5b",
+  "previous_workbook_archive": {
+    "path": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-revisions\\before-r3-f696d5a89f75\\硬件采购准备-r1.xlsx",
+    "sha256": "f696d5a89f75023bc5c3717f595a3eb834a917ddfff2b0ed6224177e62c18a32"
+  },
+  "counts": {
+    "board_part_types": 36,
+    "placed_per_board": 230,
+    "factory_smt_per_board": 217,
+    "manual_through_hole_per_board": 13,
+    "external_scope_rows": 32
+  },
+  "native_drc": {
+    "clearance": 0,
+    "physical": 0,
+    "connections": 74,
+    "pending_nets": 16
+  },
+  "current_api_lines": 3262,
+  "current_native_microtracks": 28,
+  "current_vias": 533,
+  "purchasing_and_acceptance_use_current_state_pointer": true,
+  "physical_tests_executed": false,
+  "goal_status_observed": "active",
+  "automation_id": "automation-2",
+  "manufacturing_release": false,
+  "purchases_made": false,
+  "delivered_packages": {
+    "hardware-contract-20261021-r1": {
+      "copied": 31,
+      "indexed": 31
+    },
+    "purchase-preparation-20261021-r1": {
+      "copied": 67,
+      "indexed": 71
+    },
+    "connector-qualification-20261021-r2": {
+      "copied": 15,
+      "indexed": 15
+    },
+    "bringup-acceptance-20261021-r2": {
+      "copied": 8,
+      "indexed": 8
+    },
+    "joint-routing-20261021-r3": {
+      "copied": 52,
+      "indexed": 52
+    },
+    "visual-local-power-bus-r3-20261021": {
+      "copied": 4,
+      "indexed": 4
+    }
+  },
+  "root_file_sha256": {
+    "CURRENT-STATE.json": "807c3bd7636b6b6ca03639d5d28e8c3fa2fc8a3e769dc3109ab2de22a865b991",
+    "LATEST.md": "633dba560f2af14b4dfcbe52172090158300b87c7bc25a60ff01f89a54482477",
+    "AUTONOMOUS-CURRENT.md": "d1590c5b760331d9649d4a47e4276fbcd7e756aa87fd77132023cf80c8ebcbed",
+    "release-open-items.csv": "de837c5cf9d7045aea8fd1aac17b9e0a09f638ad7e2aeb86d3082ac64b652192",
+    "harness-contract.csv": "9d4de91df6578e344839ae2c7919bac526c47f16514405ab6cef8ab5b0a376d5",
+    "remaining-networks-74open-r3.csv": "9cb85ceabcc668642ffda6d9fa57f01ae13ab2dea307e3df1d17b4b53ae98b78",
+    "装配与分阶段验收-r2.md": "9ac4ac85f516300eb625c99605d998b46eeeff61e2a88c76ee0f83b8b1f39d06",
+    "装配与首次上电-v2.md": "8cc3555a4cb9120b203370cbcb491a6833fe6e5cf29dabd50966c753d4dffaa0",
+    "route-checkpoint-0clear-74open-local-power-bus-r3-20261021.json": "24424b7fcbbc9d73c202c299ed5e6b153259daeadcf853d4419f56e6f19ca287",
+    "drc-stage-local-power-bus-r3.json": "834d12faa00236e6492ecf58c30e77b027c5204d7641fb75250b6d13e73e616e",
+    "drc-stage-local-power-bus-r3.meta.json": "053674c5cd88c6164dd7d23427c0f89a9a67b5ef4e035287c7644bbe73064cc5"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "component_id": "f6c39b913d95b9c1",
+  "source_component": {
+    "partitionId": "",
+    "groupId": 0,
+    "layerId": 1,
+    "x": 1732.3169,
+    "y": 1929.1677,
+    "angle": 0,
+    "attrs": {
+      "Reuse Block": "",
+      "Group ID": "",
+      "Channel ID": "$1I178",
+      "Unique ID": "gge10",
+      "DeviceName": "{\"name\":\"0603WAF2200T5E\",\"source\":\"\",\"uuid\":\"9d0740cfb6eed3f3\"}"
+    },
+    "locked": false,
+    "zIndex": -1,
+    "pinSwap": false,
+    "pinSwapInfo": {
+      "f6c39b913d95b9c1e7": {
+        "pinClass": "",
+        "differentialPairClass": ""
+      },
+      "f6c39b913d95b9c1e8": {
+        "pinClass": "",
+        "differentialPairClass": ""
+      }
+    },
+    "footprintPrimitives": true
+  },
+  "source_attrs": {
+    "Footprint": "8a0cc0100752b24f",
+    "Designator": "R13",
+    "Device": "9d0740cfb6eed3f3"
+  },
+  "remove_lines": [
+    {
+      "id": "ec33d46cd5b4be26",
+      "net": "SENSE_2",
+      "layer": 1,
+      "x1": 1815,
+      "y1": 1929.2,
+      "x2": 1819.8,
+      "y2": 1933.9,
+      "width": 8
+    },
+    {
+      "id": "fef53ad74a3878df",
+      "net": "SENSE_2",
+      "layer": 1,
+      "x1": 1815,
+      "y1": 1929.2,
+      "x2": 1762,
+      "y2": 1929.2,
+      "width": 8
+    }
+  ],
+  "options": [],
+  "manufacturing_release": false
+}

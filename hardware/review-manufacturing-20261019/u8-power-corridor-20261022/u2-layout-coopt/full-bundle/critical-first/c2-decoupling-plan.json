@@ -1,0 +1,210 @@
+{
+  "source_pcb_sha256": "6509803e7afca781b7f71ad69183cc10d8f6413312701eb16a2cdc46dfe83afd",
+  "component": "C2",
+  "delta_mm": [
+    0,
+    -2
+  ],
+  "reason": "Keep original U2-to-C2 decoupling geometry and14.14mil widths while moving U2; extend upstream feed2mm and retain original ground while adding dedicated actual-reference stitch",
+  "remove_source_lines": [
+    {
+      "id": "069db7679f0dd952",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2896.6026,
+      "y1": 747.1281,
+      "x2": 2896.6026,
+      "y2": 788.598,
+      "width": 14.14
+    },
+    {
+      "id": "da61dfefebe84997",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2896.6026,
+      "y1": 788.598,
+      "x2": 2901.1826,
+      "y2": 793.178,
+      "width": 14.14
+    },
+    {
+      "id": "83f2ebf335e5f8f7",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2901.1826,
+      "y1": 793.178,
+      "x2": 2913.7126,
+      "y2": 793.178,
+      "width": 14.14
+    },
+    {
+      "id": "db80cf1cea4d9478",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2913.7126,
+      "y1": 793.178,
+      "x2": 2959.1025,
+      "y2": 838.5679,
+      "width": 14.14
+    },
+    {
+      "id": "d91979dde9be6708",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2959.1025,
+      "y1": 838.5679,
+      "x2": 2992.1524,
+      "y2": 838.5679,
+      "width": 14.14
+    }
+  ],
+  "remove_trial_power_bridge": {
+    "net": "3V3_IO",
+    "layer": 1,
+    "x1": 2896.6,
+    "y1": 668.3598425196851,
+    "x2": 2896.6,
+    "y2": 747.1,
+    "width": 14.14
+  },
+  "lines": [
+    {
+      "id": "shifted-c2-power-069db7679f0dd952",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2896.6026,
+      "y1": 668.3879425196851,
+      "x2": 2896.6026,
+      "y2": 709.8578425196849,
+      "width": 14.14
+    },
+    {
+      "id": "shifted-c2-power-da61dfefebe84997",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2896.6026,
+      "y1": 709.8578425196849,
+      "x2": 2901.1826,
+      "y2": 714.4378425196851,
+      "width": 14.14
+    },
+    {
+      "id": "shifted-c2-power-83f2ebf335e5f8f7",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2901.1826,
+      "y1": 714.4378425196851,
+      "x2": 2913.7126,
+      "y2": 714.4378425196851,
+      "width": 14.14
+    },
+    {
+      "id": "shifted-c2-power-db80cf1cea4d9478",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2913.7126,
+      "y1": 714.4378425196851,
+      "x2": 2959.1025,
+      "y2": 759.827742519685,
+      "width": 14.14
+    },
+    {
+      "id": "shifted-c2-power-d91979dde9be6708",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2959.1025,
+      "y1": 759.827742519685,
+      "x2": 2992.1524,
+      "y2": 759.827742519685,
+      "width": 14.14
+    },
+    {
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2959.1025,
+      "y1": 838.5679,
+      "x2": 2959.1025,
+      "y2": 759.827742519685,
+      "width": 14.14
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "x1": 2992.2,
+      "y1": 814.959842519685,
+      "x2": 2992.2,
+      "y2": 893.7,
+      "width": 8
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "x1": 2992.2,
+      "y1": 814.959842519685,
+      "x2": 3027.6330708661417,
+      "y2": 814.959842519685,
+      "width": 8
+    }
+  ],
+  "vias": [
+    {
+      "net": "GND",
+      "x": 3027.6330708661417,
+      "y": 814.959842519685,
+      "diameter": 24,
+      "hole": 12,
+      "predicted_contact_mm2": {
+        "15": 0.21887565457087227,
+        "2": 0.21887565457087227
+      },
+      "distance_to_c2_ground_mm": 0.9
+    }
+  ],
+  "minimum_clearances_mm": {
+    "moved_pad_copper": 0.0,
+    "track_copper": -0.179578
+  },
+  "failures": [
+    {
+      "kind": "moved_pad_copper",
+      "net": "3V3_IO",
+      "gap_mm": 0.0,
+      "limit_mm": 0.1524
+    },
+    {
+      "kind": "track_copper",
+      "net": "3V3_IO",
+      "gap_mm": -0.010483660000002643,
+      "limit_mm": 0.158
+    },
+    {
+      "kind": "track_copper",
+      "net": "3V3_IO",
+      "gap_mm": -0.010483660000002643,
+      "limit_mm": 0.158
+    },
+    {
+      "kind": "track_copper",
+      "net": "3V3_IO",
+      "gap_mm": -0.179578,
+      "limit_mm": 0.158
+    }
+  ],
+  "geometric_pass": false,
+  "continuity": {
+    "3V3_IO": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "RC1": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "RC_DRIVE": {
+      "complete": true,
+      "pad_islands": 1
+    }
+  },
+  "native_imported": false,
+  "manufacturing_release": false
+}

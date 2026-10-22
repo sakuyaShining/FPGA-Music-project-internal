@@ -1,0 +1,28 @@
+{
+  "source_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\stackup-validation-20261021-r5\\native-verified-capture.json",
+  "source_sha256": "614d3529a0ea17afa96cf867e9bba1fa87308207af8ba923c7709fefffde63ea",
+  "native_pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+  "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-4L-Stackup-20261021-r5",
+  "routes": [],
+  "failed": [
+    {
+      "net": "I2S_LRCK",
+      "error": "RuntimeError('No safe path I2S_LRCK (0, 1)')"
+    },
+    {
+      "net": "I2S_DIN",
+      "error": "RuntimeError('No safe path I2S_DIN (0, 1)')"
+    },
+    {
+      "net": "I2S_BCK",
+      "error": "RuntimeError('No safe path I2S_BCK (0, 1)')"
+    }
+  ],
+  "protection": "Both 1.7mm fine-pitch escape axes reserved for every remaining pending pin",
+  "reserved_pin_corridors": 45,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "requires_actual_rebuilt_ground_reference_check": true,
+  "pruned": [],
+  "batch_final_geometry_pass": false
+}

@@ -1,0 +1,26 @@
+2026-10-22 17:42:19.787 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-22 17:42:20.111 INFO   Hardware: 8 CPU cores, 442 CPU score, 1024 MB RAM
+2026-10-22 17:42:20.117 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-22 17:42:21.884 INFO   [EA940B\15AF08] Loading board file 'input.dsn'...
+2026-10-22 17:42:23.379 INFO   [EA940B\15AF08] Job 'EA940B\15AF08' started at 2026-10-22T09:42:23.379453800Z.
+2026-10-22 17:42:25.155 WARN   Design Warning: Board has 1008 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 1008 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 1008 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5635 [net L2_M14] <-> ObstacleArea#490
+          - FixedVia#5635 [net L2_M14] <-> ObstacleArea#358
+          - FixedVia#5634 [net L2_M14] <-> ObstacleArea#486
+          - FixedVia#5634 [net L2_M14] <-> ObstacleArea#485
+          - FixedVia#5633 [net L2_M04] <-> ObstacleArea#484
+          ... and 1003 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 1008 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-22 17:42:25.285 INFO   [EA940B\15AF08] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-22 17:42:27.581 INFO   [EA940B\15AF08] Auto-routing stage started on board '5aaf4426cb63d665978d575ad2cfc1d4' with baseline score 286.36 for 372 unrouted items.
+2026-10-22 17:42:39.449 INFO   [EA940B\15AF08] Auto-routing pass #1 on board '5aaf4426cb63d665978d575ad2cfc1d4' was completed in 10.72 seconds with score 288.33 (370 unrouted and 1008 violations), using 3.27 CPU seconds and the job allocated 5.00 GB of memory so far.
+2026-10-22 17:42:42.989 INFO   [EA940B\15AF08] Auto-routing pass #2 on board 'eecc2b767477f4758d7e828530cc27f8' was completed in 1.80 seconds with score 288.33 (370 unrouted and 1008 violations), using 3.81 CPU seconds and the job allocated 5.98 GB of memory so far.
+2026-10-22 17:42:47.760 INFO   [EA940B\15AF08] Auto-routing stage completed: started with 372 unrouted nets, completed in 20.75 seconds, final score: 288.33 (370 unrouted and 1008 violations), using 4.38 total CPU seconds, 7.63 GB total allocated, and 316.2 MB peak heap usage.
+2026-10-22 17:42:49.089 INFO   [EA940B\15AF08] Skipping optimization stage: the board has 370 unrouted connection(s) (optimizer only runs on completely routed boards).
+2026-10-22 17:42:49.561 INFO   [EA940B\15AF08] Job 'EA940B\15AF08' finished with state: COMPLETED (elapsed: 26.18 seconds, finished at UTC: 2026-10-22T09:42:49.559670800Z).
+2026-10-22 17:42:49.602 INFO   Saving output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\u8-power-corridor-20261022\address3-local-recovery\reachable-exits\plane-aware-backbone\analog-critical-first\raw2-recovery\result.ses' (SES)...
+2026-10-22 17:42:49.607 INFO   Successfully saved output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\u8-power-corridor-20261022\address3-local-recovery\reachable-exits\plane-aware-backbone\analog-critical-first\raw2-recovery\result.ses' (558231 bytes).

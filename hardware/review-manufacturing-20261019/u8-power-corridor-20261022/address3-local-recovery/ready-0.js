@@ -1,0 +1,1 @@
+await new Promise(r=>setTimeout(r,2000));return await eda.dmt_Pcb.getAllPcbsInfo();

@@ -1,0 +1,132 @@
+{
+  "utc": "2026-10-21T12:19:50.836081+00:00",
+  "source_pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "active_candidate": "r7",
+  "native_source_files_verified_unchanged": 19,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "last_native_drc": {
+    "clearance": 0,
+    "physical": 0,
+    "unconnected": 62,
+    "vias": 520
+  },
+  "design_complexity": {
+    "level": "intermediate",
+    "triggers": [
+      "multiple power domains",
+      "high impedance84 electrode sensing",
+      "FPGA/display interface edge and return assessment"
+    ],
+    "lifecycle_state": "design_draft",
+    "scope": "Prototype hardware preparation; no new certification or volume-production requirement added."
+  },
+  "skills_used": [
+    "pcb-routing-knowledge",
+    "review-schematic-and-layout"
+  ],
+  "source_boundaries": [
+    "R7 all3290native line records and520vias included.",
+    "Bottom I2S0.6mm/sense0.5mm projection guards retained as existing engineering trial heuristics; not independently proven SI/sensor limits.",
+    "No new physical stack, manufacturing capability, current waveform or actual measurement assumed."
+  ],
+  "trials": [
+    {
+      "case": "whole-board",
+      "artifact": "topology-graph-20261021-r12\\candidate.json",
+      "artifact_sha256": "940620af95cbbe696a537d10e406a82cf3cab879e4ac9cc5039736c5c75a476d",
+      "harm_new_vias": 6,
+      "power_new_vias": 0,
+      "harm_summed_centerline_mm": 427.9895683122271,
+      "geometric_connectivity": {
+        "complete": true,
+        "pad_islands": 1
+      },
+      "quality_accepted": false,
+      "rejection": "Excessive detour; minimum-via region tree omitted geometric path length. Not for native import."
+    },
+    {
+      "case": "bounded-local",
+      "artifact": "topology-graph-20261021-r12\\bounded-local\\candidate.json",
+      "artifact_sha256": "1f78f9858b16793669e3a35a848c7efb0a5619398222acb3d14ab7b33511b49d",
+      "harm_new_vias": 8,
+      "power_new_vias": 0,
+      "harm_summed_centerline_mm": 203.9749562173076,
+      "geometric_connectivity": {
+        "complete": true,
+        "pad_islands": 1
+      },
+      "quality_accepted": false,
+      "rejection": "Excessive detour; minimum-via region tree omitted geometric path length. Not for native import."
+    },
+    {
+      "case": "power-rework",
+      "artifact": "topology-graph-20261021-r12\\power-rework\\candidate.json",
+      "artifact_sha256": "70b67990acaad6b78477e5e7b06312e98e1117d023202a3b756dcf37487901cd",
+      "harm_new_vias": 6,
+      "power_new_vias": 6,
+      "harm_summed_centerline_mm": 247.98316457429985,
+      "geometric_connectivity": {
+        "complete": true,
+        "pad_islands": 1
+      },
+      "quality_accepted": false,
+      "rejection": "Excessive detour; minimum-via region tree omitted geometric path length. Not for native import."
+    }
+  ],
+  "root_cause": "Existing top3V3_IO routing separates HARM terminals. Diagnostic removal of all172top3V3_IO lines merges four terminal regions into one. Removal is not authorized by this test and would break supply. Removing allGND lines alone leaves two terminal groups.",
+  "power_audit": {
+    "power_pads": 48,
+    "top_lines": 172,
+    "individually_redundant_lines": 50,
+    "redundant_boundary_lines": [
+      {
+        "id": "20598a39601b2f61",
+        "length_mm": 0.16451829213798672,
+        "on_harm_terminal_boundary": true,
+        "removal_preserves_all_power_pad_connections": true,
+        "disconnected_power_pads": []
+      },
+      {
+        "id": "c1a81b84fde5e562",
+        "length_mm": 0.16451829213798672,
+        "on_harm_terminal_boundary": true,
+        "removal_preserves_all_power_pad_connections": true,
+        "disconnected_power_pads": []
+      },
+      {
+        "id": "492a23a4459ee06e",
+        "length_mm": 1.1829511783162014,
+        "on_harm_terminal_boundary": true,
+        "removal_preserves_all_power_pad_connections": true,
+        "disconnected_power_pads": []
+      },
+      {
+        "id": "7abc391565e8281c",
+        "length_mm": 0.024210770502398688,
+        "on_harm_terminal_boundary": true,
+        "removal_preserves_all_power_pad_connections": true,
+        "disconnected_power_pads": []
+      }
+    ],
+    "limitation": "Only four individually redundant boundary records, mostly tiny overlap segments; these are not a jointly safe removable set or a solution."
+  },
+  "offset_power_bridges": {
+    "alternatives": 79,
+    "representatives": 4,
+    "all_checked_modified_nets_connected": true,
+    "joint_three_bridge_power_pads_connected": true,
+    "joint_attempt_harm_length_mm": 247.98316457429985,
+    "accepted": false,
+    "reason": "Supply continuity preserved but full HARM route remains overlong, with six extra power vias. No native changes."
+  },
+  "failure_boundary": "The region graph is useful for diagnosing layer changes; optimizing only via count and choosing Euclidean trees within regions is insufficient. Do not replay these minimum-via candidates or install bridges as solved PCB work.",
+  "next": [
+    "Use the already installed verified Freerouting2.5.0 backend for a bounded selected-net route/length comparison from currentR7 geometry, rather than another unweighted region-tree trial.",
+    "Need a fresh offlineDSN adapter with current pads, microtracks, four physical layers and quiet/via keepouts; validate asymmetric pad/axis/unit round trips before trusting a routed result. Existing native export permission gate must not be bypassed.",
+    "Alternatively form a joint power/control local layout plan with source/load return and route-length effects; preserve all48power pads, other nets, actual rule widths and protected sensing geometry.",
+    "Only import a clearly better independent candidate; rebuild real ground pours, save/reopen, full native DRC and source/plane reconciliation before any promotion.",
+    "Purchasing/physical data/firmware integration and final same-versionCPL remain open."
+  ],
+  "goal_state_note": "get_goal returned paused at start. User explicitly requested continue; ordinary authorized work proceeded. No tool changes goal toactive or modifies account limits."
+}

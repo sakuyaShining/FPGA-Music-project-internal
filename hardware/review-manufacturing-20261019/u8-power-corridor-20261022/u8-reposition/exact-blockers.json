@@ -1,0 +1,283 @@
+[
+  {
+    "failure": {
+      "kind": "new_track",
+      "net": "3V3_IO",
+      "gap_mm": -0.199898,
+      "line": {
+        "net": "3V3_IO",
+        "layer": 1,
+        "x1": 2462.8102362204722,
+        "y1": 1811.023622047244,
+        "x2": 2762.8102362204722,
+        "y2": 1811.023622047244,
+        "width": 15.74
+      }
+    },
+    "blockers": [
+      {
+        "kind": "line",
+        "net": "PRESET1",
+        "id": "7cf13f0cd62ab303",
+        "layer": 1,
+        "gap_mm": -0.27609799999999995
+      },
+      {
+        "kind": "line",
+        "net": "PRESET1",
+        "id": "dfee99b209594696",
+        "layer": 1,
+        "gap_mm": 0.04890318000000102
+      },
+      {
+        "kind": "line",
+        "net": "TP_RESET_N",
+        "id": "31e73d7bc30d099f",
+        "layer": 1,
+        "gap_mm": 0.05650539999999646
+      },
+      {
+        "kind": "line",
+        "net": "TP_RESET_N",
+        "id": "2e9c0ca1c785f123",
+        "layer": 1,
+        "gap_mm": -0.27609799999999995
+      },
+      {
+        "kind": "via",
+        "net": "TP_RESET_N",
+        "id": "93773c029fca5e79",
+        "gap_mm": -0.48378420000000466
+      }
+    ]
+  },
+  {
+    "failure": {
+      "kind": "new_track",
+      "net": "3V3_IO",
+      "gap_mm": 0.048903180000000934,
+      "line": {
+        "net": "3V3_IO",
+        "layer": 1,
+        "x1": 2762.8102362204722,
+        "y1": 1811.023622047244,
+        "x2": 2762.8102362204722,
+        "y2": 1869.4574803149605,
+        "width": 15.74
+      }
+    },
+    "blockers": [
+      {
+        "kind": "line",
+        "net": "PRESET1",
+        "id": "dfee99b209594696",
+        "layer": 1,
+        "gap_mm": 0.04890318000000107
+      }
+    ]
+  },
+  {
+    "failure": {
+      "kind": "moved_pad",
+      "ref": "U8",
+      "pin": "3",
+      "net": "ADDR3",
+      "gap_mm": 0.0
+    },
+    "blockers": [
+      {
+        "kind": "line",
+        "net": "RC_DRIVE",
+        "id": "7d6d9d35f5f8889f",
+        "layer": 1,
+        "gap_mm": -0.07619999999999999
+      }
+    ]
+  },
+  {
+    "failure": {
+      "kind": "new_via",
+      "net": "BUS_SCK",
+      "xy_mm": [
+        68.32500016,
+        48.59999882
+      ],
+      "copper_gap_mm": -0.1688508735603216,
+      "hole_pad_gap_mm": 0.26967058192097526
+    },
+    "blockers": [
+      {
+        "kind": "line",
+        "net": "3V3_PERIPH",
+        "id": "507dc5ab10d43016",
+        "layer": 2,
+        "gap_mm": -0.16885087356031983
+      },
+      {
+        "kind": "line",
+        "net": "PRESET1",
+        "id": "a9409888f9d4f90a",
+        "layer": 1,
+        "gap_mm": 0.08583189604708041
+      },
+      {
+        "kind": "via",
+        "net": "PRESET1",
+        "id": "b3f712fde0d83d98",
+        "gap_mm": -0.01957642758359085
+      }
+    ]
+  },
+  {
+    "failure": {
+      "kind": "new_via",
+      "net": "GND",
+      "xy_mm": [
+        71.44538,
+        43.55
+      ],
+      "copper_gap_mm": -0.03648775466032517,
+      "hole_pad_gap_mm": 0.39901999999999316
+    },
+    "blockers": [
+      {
+        "kind": "line",
+        "net": "BUS_RETURN",
+        "id": "cdcae299d1772c2d",
+        "layer": 2,
+        "gap_mm": -0.03648775466032356
+      }
+    ]
+  },
+  {
+    "failure": {
+      "kind": "new_via",
+      "net": "GND",
+      "xy_mm": [
+        69.35,
+        48.9
+      ],
+      "copper_gap_mm": -0.26337765760252285,
+      "hole_pad_gap_mm": 0.4024309374577665
+    },
+    "blockers": [
+      {
+        "kind": "line",
+        "net": "3V3_PERIPH",
+        "id": "507dc5ab10d43016",
+        "layer": 2,
+        "gap_mm": -0.26337765760252313
+      }
+    ]
+  },
+  {
+    "failure": {
+      "kind": "moved_pad",
+      "ref": "U8",
+      "pin": "12",
+      "net": "SCAN_LATCH",
+      "gap_mm": 0.0
+    },
+    "blockers": [
+      {
+        "kind": "line",
+        "net": "PRESET1",
+        "id": "a9409888f9d4f90a",
+        "layer": 1,
+        "gap_mm": -0.07619999999999999
+      },
+      {
+        "kind": "line",
+        "net": "PRESET1",
+        "id": "7cf13f0cd62ab303",
+        "layer": 1,
+        "gap_mm": -0.07619999999999999
+      }
+    ]
+  },
+  {
+    "failure": {
+      "kind": "new_track",
+      "net": "SCAN_LATCH",
+      "gap_mm": 0.022149463593150953,
+      "line": {
+        "net": "SCAN_LATCH",
+        "layer": 1,
+        "x1": 2662.8102362204727,
+        "y1": 1869.4574803149605,
+        "x2": 2655.511811023622,
+        "y2": 1925.1968503937007,
+        "width": 6
+      }
+    },
+    "blockers": [
+      {
+        "kind": "line",
+        "net": "PRESET1",
+        "id": "a9409888f9d4f90a",
+        "layer": 1,
+        "gap_mm": 0.09584935294957397
+      },
+      {
+        "kind": "via",
+        "net": "PRESET1",
+        "id": "b3f712fde0d83d98",
+        "gap_mm": 0.02210508655733112
+      }
+    ]
+  },
+  {
+    "failure": {
+      "kind": "new_via",
+      "net": "SCAN_LATCH",
+      "xy_mm": [
+        67.45,
+        48.9
+      ],
+      "copper_gap_mm": -0.2063967822206872,
+      "hole_pad_gap_mm": 0.30099409430616986
+    },
+    "blockers": [
+      {
+        "kind": "line",
+        "net": "PRESET1",
+        "id": "a9409888f9d4f90a",
+        "layer": 1,
+        "gap_mm": 0.020042413491383082
+      },
+      {
+        "kind": "line",
+        "net": "PRESET1",
+        "id": "aa74be11e326b585",
+        "layer": 2,
+        "gap_mm": -0.02819880541215014
+      },
+      {
+        "kind": "via",
+        "net": "PRESET1",
+        "id": "b3f712fde0d83d98",
+        "gap_mm": -0.20648804036285157
+      }
+    ]
+  },
+  {
+    "failure": {
+      "kind": "new_via",
+      "net": "ADDR0",
+      "xy_mm": [
+        64.4,
+        48.575
+      ],
+      "copper_gap_mm": 0.06387445798581748,
+      "hole_pad_gap_mm": 0.2504233156573028
+    },
+    "blockers": [
+      {
+        "kind": "via",
+        "net": "GND",
+        "id": "117f5fc6c2ba73e4",
+        "gap_mm": 0.06386775285979301
+      }
+    ]
+  }
+]

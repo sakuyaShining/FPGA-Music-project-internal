@@ -1,0 +1,9 @@
+VCD info: dumpfile audio_clk_en.vcd opened for output.
+==============================================
+ 音频时钟使能链自检  27MHz / 18 / 32
+ 观测: bck_en=651  sample_en=20  lrck翻转=40  lrck上升=20
+ 实测: BCK = 27MHz/18 = 1500000 Hz
+       LRCK周期 = 576 clk → LRCK = 46875 Hz
+ [PASS] S1~S6 全部通过：BCK=1.5MHz LRCK=46875Hz 无抖动，lrck 1→0 边沿/sample_en/第32个bck_en 三者同拍
+==============================================
+C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\src\sim\tb_audio_clk_en.v:192: $finish called at 434214993 (1ps)

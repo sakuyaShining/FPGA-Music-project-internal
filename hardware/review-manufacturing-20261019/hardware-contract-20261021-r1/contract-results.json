@@ -1,0 +1,157 @@
+{
+  "pcb_unchanged": true,
+  "frozen86_sources_unchanged": {
+    "rc_mux_scan.v": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+    "scan_shift595.v": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+    "rc_strip_positions.v": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+    "instrument_sensor_probe.v": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+    "rc_delta_store.v": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320"
+  },
+  "reset_bits_conflict_confirmed": true,
+  "legacy_map_matches_physical_26": 1,
+  "physical_nodes_26": 78,
+  "physical_nodes_25": 75,
+  "runs": [
+    {
+      "case": "scan_original_negative",
+      "command": [
+        "D:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_scan",
+        "-o",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\scan_original_negative\\sim.vvp",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\tb_scan.v",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_mux_scan.v",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\scan_shift595.v"
+      ],
+      "compile_rc": 0,
+      "simulation_rc": 1,
+      "expected_success": false,
+      "expectation_matched": true,
+      "sources": {
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\tb_scan.v": "9f73f6baa081a8bd04be20690cde4e1941e2ce69b65689c60b58b51618b8f94e",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_mux_scan.v": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\scan_shift595.v": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f"
+      }
+    },
+    {
+      "case": "scan_candidate",
+      "command": [
+        "D:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-DPATCHED",
+        "-s",
+        "tb_scan",
+        "-o",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\scan_candidate\\sim.vvp",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\tb_scan.v",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\rc_mux_scan_hw.v",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\scan_shift595.v"
+      ],
+      "compile_rc": 0,
+      "simulation_rc": 0,
+      "expected_success": true,
+      "expectation_matched": true,
+      "sources": {
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\tb_scan.v": "9f73f6baa081a8bd04be20690cde4e1941e2ce69b65689c60b58b51618b8f94e",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\rc_mux_scan_hw.v": "fd0f537429af945ef4c0ba45650f1b45bd64c78c13780cc0e217448f1657677c",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\scan_shift595.v": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f"
+      }
+    },
+    {
+      "case": "map_25_original_negative",
+      "command": [
+        "D:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_map",
+        "-o",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_25_original_negative\\sim.vvp",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_25_original_negative.v",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_strip_positions.v"
+      ],
+      "compile_rc": 0,
+      "simulation_rc": 1,
+      "expected_success": false,
+      "expectation_matched": true,
+      "sources": {
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_25_original_negative.v": "713181f2ad35f0eb3a7a76cd248a318ecb732ae3734c7ea7023b4c7bc41ddd72",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_strip_positions.v": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e"
+      }
+    },
+    {
+      "case": "map_25_candidate",
+      "command": [
+        "D:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_map",
+        "-o",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_25_candidate\\sim.vvp",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_25_candidate.v",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_strip_positions.v"
+      ],
+      "compile_rc": 0,
+      "simulation_rc": 0,
+      "expected_success": true,
+      "expectation_matched": true,
+      "sources": {
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_25_candidate.v": "c75b0276764bd282aaee60186598a396a1408e9223956244e265df848b11e323",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_strip_positions.v": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e"
+      }
+    },
+    {
+      "case": "map_26_original_negative",
+      "command": [
+        "D:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_map",
+        "-o",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_26_original_negative\\sim.vvp",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_26_original_negative.v",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_strip_positions.v"
+      ],
+      "compile_rc": 0,
+      "simulation_rc": 1,
+      "expected_success": false,
+      "expectation_matched": true,
+      "sources": {
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_26_original_negative.v": "2e4bfba345f81b0542b93bd996f17f72313470ae3ff89cebc07dccbeb8e462c7",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_strip_positions.v": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e"
+      }
+    },
+    {
+      "case": "map_26_candidate",
+      "command": [
+        "D:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_map",
+        "-o",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_26_candidate\\sim.vvp",
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_26_candidate.v",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_strip_positions.v"
+      ],
+      "compile_rc": 0,
+      "simulation_rc": 0,
+      "expected_success": true,
+      "expectation_matched": true,
+      "sources": {
+        "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\hardware-contract-20261021-r1\\map_26_candidate.v": "b718fe0d300129a11ba1a254060be6fc57413a409b0ffa82a6ad0eca63b617f3",
+        "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_strip_positions.v": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e"
+      }
+    }
+  ],
+  "candidate_has_runtime_reset_input": true,
+  "candidate_node_maps_derived_from_native_pads": true,
+  "limits": [
+    "digital isolated contract tests only",
+    "no analog RC validation",
+    "no final shared-bus/reset controller integration",
+    "no joint PnR/STA or bitstream",
+    "not deployed to frozen product"
+  ],
+  "manufacturing_release": false
+}

@@ -1,0 +1,81 @@
+{
+  "module_mpn": "MSP2401",
+  "connections": [
+    {
+      "carrier": "J11",
+      "carrier_pin": 1,
+      "net": "5V_PERIPH",
+      "module": "MSP2401",
+      "module_pin": 1,
+      "module_label": "VCC",
+      "status": "厂家通用资料已核；成品线需导通/极性检验"
+    },
+    {
+      "carrier": "J11",
+      "carrier_pin": 2,
+      "net": "GND",
+      "module": "MSP2401",
+      "module_pin": 2,
+      "module_label": "GND",
+      "status": "厂家通用资料已核；成品线需导通/极性检验"
+    },
+    {
+      "carrier": "J11",
+      "carrier_pin": 5,
+      "net": "DISP_VIS_CS_N",
+      "module": "MSP2401",
+      "module_pin": 3,
+      "module_label": "CS",
+      "status": "厂家通用资料已核；成品线需导通/极性检验"
+    },
+    {
+      "carrier": "J11",
+      "carrier_pin": 7,
+      "net": "DISP_RESET_N",
+      "module": "MSP2401",
+      "module_pin": 4,
+      "module_label": "RESET",
+      "status": "厂家通用资料已核；成品线需导通/极性检验"
+    },
+    {
+      "carrier": "J11",
+      "carrier_pin": 6,
+      "net": "DISP_VIS_DC",
+      "module": "MSP2401",
+      "module_pin": 5,
+      "module_label": "DC/RS",
+      "status": "厂家通用资料已核；成品线需导通/极性检验"
+    },
+    {
+      "carrier": "J11",
+      "carrier_pin": 4,
+      "net": "DISP_MOSI",
+      "module": "MSP2401",
+      "module_pin": 6,
+      "module_label": "SDI/MOSI",
+      "status": "厂家通用资料已核；成品线需导通/极性检验"
+    },
+    {
+      "carrier": "J11",
+      "carrier_pin": 3,
+      "net": "DISP_SCK",
+      "module": "MSP2401",
+      "module_pin": 7,
+      "module_label": "SCK",
+      "status": "厂家通用资料已核；成品线需导通/极性检验"
+    },
+    {
+      "carrier": "J11",
+      "carrier_pin": 8,
+      "net": "VIS_BL_EN",
+      "module": "MSP2401",
+      "module_pin": 8,
+      "module_label": "LED",
+      "status": "厂家通用资料已核；成品线需导通/极性检验"
+    }
+  ],
+  "not_connected": "模块9 SDO不接；10–14触摸端本方案不使用；载板9–11 NC，12为备用GND，不按相同针号直连",
+  "conditions": "模块J1断开用于5V供电；3.3V数字IO；按厂商pin1方向检验，非镜像图",
+  "source_url": "https://www.lcdwiki.com/2.4inch_SPI_Module_ILI9341_SKU:MSP2402",
+  "manufacturing_release": false
+}

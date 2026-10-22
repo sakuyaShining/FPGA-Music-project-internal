@@ -1,0 +1,1 @@
+{"name":"esd-catalog","code":"const r={};for(const q of __CLI__.args.queries)r[q]=await eda.lib_Device.search(q,'0819f05c4eef4c71ace90d822a990e87',undefined,undefined,12,1);return r;","args":{"queries":["TPD4E02B04DQAR","C548280","PJ-320A"]}}

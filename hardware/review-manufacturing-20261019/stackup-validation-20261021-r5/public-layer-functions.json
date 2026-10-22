@@ -1,0 +1,6 @@
+{
+  "current": "getCurrentPhysicalStackingConfiguration(){}",
+  "overwrite": "overwriteCurrentPhysicalStackingConfiguration(t){return!1}",
+  "save": "async savePhysicalStackingConfiguration(t,i,n=!1){return!1}",
+  "setCount": "async setTheNumberOfCopperLayers(t){return t<2||t>32||t%2!==0?!1:await T.extensionApiMessageBus2.rpcCall(\"extensionApi.PCB_Layer.setTheNumberOfCopperLayers\",{numberOfLayers:t})}"
+}

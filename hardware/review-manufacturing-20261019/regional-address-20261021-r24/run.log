@@ -1,0 +1,51 @@
+2026-10-22 00:00:06.171 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-22 00:00:06.492 INFO   Hardware: 8 CPU cores, 447 CPU score, 1024 MB RAM
+2026-10-22 00:00:06.499 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-22 00:00:08.432 INFO   [547CB6\90DE1D] Loading board file 'input.dsn'...
+2026-10-22 00:00:09.677 INFO   [547CB6\90DE1D] Job '547CB6\90DE1D' started at 2026-10-21T16:00:09.677958200Z.
+2026-10-22 00:00:11.271 WARN   Design Warning: Board has 950 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 950 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 950 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5480 [net MUX_DISABLE] <-> FixedTrace#4574 [net RC_DRIVE]
+          - FixedVia#5479 [net ADDR3] <-> ObstacleArea#459
+          - FixedVia#5477 [net ADDR1] <-> ObstacleArea#457
+          - FixedVia#5476 [net ADDR1] <-> ObstacleArea#475
+          - FixedVia#5475 [net ADDR0] <-> ObstacleArea#105
+          ... and 945 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 950 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-22 00:00:11.404 INFO   [547CB6\90DE1D] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-22 00:00:13.842 INFO   [547CB6\90DE1D] Auto-routing stage started on board '5d0676438fa57728889b4bf19865db01' with baseline score 275.49 for 384 unrouted items.
+2026-10-22 00:00:42.796 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:00:42.796 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:00:53.231 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:00:53.232 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:00:57.857 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:00:57.857 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:01:09.131 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:01:09.132 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:01:15.921 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:01:15.921 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:01:20.263 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:01:20.263 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:01:34.578 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:01:34.578 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:01:39.640 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:01:39.641 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:01:43.059 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:01:43.059 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:01:47.942 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:01:47.942 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:01:55.231 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:01:55.231 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:01:59.931 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:01:59.932 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:02:03.002 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 00:02:03.002 WARN   Simplex.cutout_from: division line is null
+2026-10-22 00:02:05.973 INFO   [547CB6\90DE1D] Auto-routing pass #1 on board '5d0676438fa57728889b4bf19865db01' was completed in 110.97 seconds with score 281.40 (378 unrouted and 950 violations), using 30.61 CPU seconds and the job allocated 58.67 GB of memory so far.
+2026-10-22 00:02:13.850 INFO   [547CB6\90DE1D] Auto-routing pass #2 on board '5f63abb981d9fd21a495f222c552e740' was completed in 6.73 seconds with score 281.40 (378 unrouted and 950 violations), using 31.88 CPU seconds and the job allocated 60.63 GB of memory so far.
+2026-10-22 00:02:16.772 INFO   [547CB6\90DE1D] Auto-routing stage completed with timeout: started with 384 unrouted nets, completed in 124.40 seconds, final score: 281.40 (378 unrouted and 950 violations), using 31.88 total CPU seconds, 60.63 GB total allocated, and 515.4 MB peak heap usage.
+2026-10-22 00:02:17.159 INFO   [547CB6\90DE1D] Job '547CB6\90DE1D' finished with state: TIMED_OUT (elapsed: 2 minutes 7.48 seconds, finished at UTC: 2026-10-21T16:02:17.158038200Z).
+2026-10-22 00:02:17.198 INFO   Saving output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-address-20261021-r24\result.ses' (SES)...
+2026-10-22 00:02:17.204 INFO   Successfully saved output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-address-20261021-r24\result.ses' (541348 bytes).

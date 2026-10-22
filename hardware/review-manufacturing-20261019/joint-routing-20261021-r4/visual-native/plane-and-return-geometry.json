@@ -1,0 +1,1152 @@
+{
+  "pcb_sha256": "97a837d8411cef56633792edbb716451a4f6806a66dba659a91058e0c69c2515",
+  "planes": {
+    "1": {
+      "area_mm2": 8402.47549566041,
+      "polygon_count": 40,
+      "largest_polygon_mm2": 7229.868967875563
+    },
+    "2": {
+      "area_mm2": 10083.503818394558,
+      "polygon_count": 13,
+      "largest_polygon_mm2": 8390.93079353244
+    },
+    "15": {
+      "area_mm2": 12329.681401070984,
+      "polygon_count": 1,
+      "largest_polygon_mm2": 12329.681401070984
+    },
+    "16": {
+      "area_mm2": 11859.705884577692,
+      "polygon_count": 7,
+      "largest_polygon_mm2": 11038.428011563694
+    }
+  },
+  "bottom_i2s_centerline_coverage": [
+    {
+      "net": "I2S_BCK",
+      "bottom_centerline_mm": 64.03613815063065,
+      "centerline_over_native_L3_GND_fraction": 0.863110350550834,
+      "via_exclusion_radius_mm": 1,
+      "pth_exclusion_pad_outline_buffer_mm": 0.5,
+      "away_centerline_over_native_L3_GND_fraction": 0.9763046560658388,
+      "not_si_signoff": true,
+      "away_from_signal_transitions_mm": 53.171295826304124
+    },
+    {
+      "net": "I2S_DIN",
+      "bottom_centerline_mm": 79.22802869217853,
+      "centerline_over_native_L3_GND_fraction": 0.8351083035100955,
+      "via_exclusion_radius_mm": 1,
+      "pth_exclusion_pad_outline_buffer_mm": 0.5,
+      "away_centerline_over_native_L3_GND_fraction": 0.9281727821322874,
+      "not_si_signoff": true,
+      "away_from_signal_transitions_mm": 62.64604754526618
+    },
+    {
+      "net": "I2S_LRCK",
+      "bottom_centerline_mm": 59.59708937280532,
+      "centerline_over_native_L3_GND_fraction": 0.8195459935371232,
+      "via_exclusion_radius_mm": 1,
+      "pth_exclusion_pad_outline_buffer_mm": 0.5,
+      "away_centerline_over_native_L3_GND_fraction": 0.9172222109704721,
+      "not_si_signoff": true,
+      "away_from_signal_transitions_mm": 47.614099042903845
+    }
+  ],
+  "ground_via_inner_contacts": [
+    {
+      "id": "fe6b723c8257afa7",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.17554034802984375,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "dca7c9dc37dba5fc",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087357,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087357,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "fc134cd7fe31cb21",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "14327842a8121175",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.1817157618522009,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "9328021883dc0174",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087363,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087363,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "4f5c7efcce6a61cd",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087357,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.14934663840786605,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "b0951b56a75b1c66",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087232,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087232,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "7fc9aa1332891283",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087266,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087266,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "29d3a442018afe9f",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "e4299e9d36334090",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087327,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087327,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "1bbc766ca092462a",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087266,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087266,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "74ed7406c4da4e05",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "df7157a1495b7818",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "bebb7f84fb43efca",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "4eacc21f957796dd",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "3d54fb770b69bfa2",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "900b92b1108eafd1",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "385facde3e4d11ae",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087266,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087266,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "fc275c3d7df952d5",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "85a7f596c945d820",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087363,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087363,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "af975b5c831ffe34",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "68e7d4c17930cd02",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "a26bfa5bd7f3a6cc",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "f0d13891f43158c3",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "305c815a163c945c",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.15587615088917867,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.15587440377150932,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "95e0f9769fdc9041",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087227,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087227,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "8dcdbc626349cf57",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "4e6fa764124b62ab",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708722,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708722,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "8b9b7a859baf19d5",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087357,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087357,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "4c5b5a96a2c1f00d",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "98e07353eafeea9d",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708732,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708732,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "398cf95d4fde06e0",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "a76bed63e9d79543",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "07f90ee651343596",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "efc97a5e380fc894",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.15691449478829195,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.15691449478829195,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "1524e1ba0e285423",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087182,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087182,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "450e786f0185f583",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708732,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708732,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "04064e9f6df585df",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087232,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087232,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "19b4a226d0ec6b89",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087182,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087182,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "456fddf08cd8c2d8",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708734,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708734,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "03578806addffd5c",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "e2d942524f629fc0",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "66d9405519585708",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087244,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087244,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "99f13eef8d23844d",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708723,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "bb0763353d0255d0",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "7b9ba8ed40bd686c",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087205,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087205,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "b51a19a5ca722a52",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087332,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087332,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "66f68d8902fd7736",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.218875654570872,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.218875654570872,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "53d33268989c3bb8",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "dde22d6ca7d3f1af",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21515729167452746,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21515729167452746,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "6b8f009a44538a64",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "045f6d5c3d54c46b",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.16871999339690738,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "be39ff500e8940ba",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "3b08a35a9b25224b",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "88745364ff3e0291",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.20900742511497183,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "488eb98d7366753f",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.17149519923947049,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.1714935176804374,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "2f707417a56dbd21",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "df7694b3f0abaf67",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "3c35cf2bc08ce0da",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.1746816721880469,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.17466755672104853,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "78fa58214c2b9bfd",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "5a009b63c014caec",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.17162643912512254,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "e8c9cf42890752f5",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "2f1526b521f400b7",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.16715537084157675,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "b2c72ed133044faf",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.1602888086886594,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.16027546133445061,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "c84bd1099399f722",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.19082153084324893,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "ca4fb39b43c32e2c",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.1855142196846335,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.18548834665115876,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "525814c0b8fd102d",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "f2f32b869fa7f2b3",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "24740d1fbf53feec",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "9f4a31ee0e596252",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087177,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "7a4eb4ca801b2fbe",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.15820767357939242,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "e7f1be327afea30f",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "dfdda1761d8ffa3c",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.16414919665142483,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.16414919665142483,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "96c8e2a18f050cbb",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087294,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087294,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "10b9c00bc434a3f8",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "caaa7bd345b88b64",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087294,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087294,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "78305434916ed805",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087363,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087363,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "e314777688e46b43",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087357,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087357,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "14d8e371d2bb235c",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087357,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087357,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "9416babe971e2e6b",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087363,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.21887565457087363,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "03db415ea2a3b53a",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708722,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.2188756545708722,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "7c11f760bc64a10f",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.2188756545708722,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.20802532444543842,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "0f65ae4659bea992",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.21887565457087288,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.19732179884725326,
+          "distance_mm": 0.0
+        }
+      }
+    },
+    {
+      "id": "e46cf0da13ce8453",
+      "layers": {
+        "15": {
+          "intersection_mm2": 0.20851352947125903,
+          "distance_mm": 0.0
+        },
+        "16": {
+          "intersection_mm2": 0.20851352947125903,
+          "distance_mm": 0.0
+        }
+      }
+    }
+  ],
+  "not_si_or_touch_capacitance_signoff": true
+}

@@ -1,0 +1,198 @@
+{
+  "source_pcb_sha256": "68081b43760c6bac3f8e7e517991fbb097f32fd9697c371ddd0bf064224da0e1",
+  "modify_vias": [
+    {
+      "before": {
+        "id": "41094fbb570f6d07",
+        "net": "L2_M03",
+        "x": 4127.771,
+        "y": 455.972,
+        "diameter": 24,
+        "hole": 12
+      },
+      "after": {
+        "id": "41094fbb570f6d07",
+        "net": "L2_M03",
+        "x": 4113.991472440945,
+        "y": 455.972,
+        "diameter": 24,
+        "hole": 12
+      },
+      "affected_nets": [
+        "L2_E05",
+        "L2_E05"
+      ]
+    },
+    {
+      "before": {
+        "id": "fd0a322309383db8",
+        "net": "ADDR3",
+        "x": 1074.8031,
+        "y": 214.5669,
+        "diameter": 24,
+        "hole": 12
+      },
+      "after": {
+        "id": "fd0a322309383db8",
+        "net": "ADDR3",
+        "x": 1081.2987243263426,
+        "y": 202.4144416329951,
+        "diameter": 24,
+        "hole": 12
+      },
+      "affected_nets": [
+        "L0_E08"
+      ]
+    }
+  ],
+  "modify_lines": [
+    {
+      "before": {
+        "id": "81aa31328c4fa7b5",
+        "net": "L2_M03",
+        "layer": 2,
+        "x1": 4127.771,
+        "y1": 455.972,
+        "x2": 5019.589,
+        "y2": 455.972,
+        "width": 8
+      },
+      "after": {
+        "id": "81aa31328c4fa7b5",
+        "net": "L2_M03",
+        "layer": 2,
+        "x1": 4113.991472440945,
+        "y1": 455.972,
+        "x2": 5019.589,
+        "y2": 455.972,
+        "width": 8
+      }
+    },
+    {
+      "before": {
+        "id": "430665cd6963a4fe",
+        "net": "L2_M03",
+        "layer": 1,
+        "x1": 4108.06,
+        "y1": 475.683,
+        "x2": 4127.771,
+        "y2": 455.972,
+        "width": 8
+      },
+      "after": {
+        "id": "430665cd6963a4fe",
+        "net": "L2_M03",
+        "layer": 1,
+        "x1": 4108.06,
+        "y1": 475.683,
+        "x2": 4113.991472440945,
+        "y2": 455.972,
+        "width": 8
+      }
+    },
+    {
+      "before": {
+        "id": "6160cf4cebab8518",
+        "net": "ADDR3",
+        "layer": 1,
+        "x1": 1102.3622,
+        "y1": 116.1417,
+        "x2": 1074.8031,
+        "y2": 214.5669,
+        "width": 6
+      },
+      "after": {
+        "id": "6160cf4cebab8518",
+        "net": "ADDR3",
+        "layer": 1,
+        "x1": 1102.3622,
+        "y1": 116.1417,
+        "x2": 1081.2987243263426,
+        "y2": 202.4144416329951,
+        "width": 6
+      }
+    },
+    {
+      "before": {
+        "id": "e75897d29be32b71",
+        "net": "ADDR3",
+        "layer": 16,
+        "x1": 1074.8031,
+        "y1": 214.5669,
+        "x2": 826.7717,
+        "y2": 403.5433,
+        "width": 6
+      },
+      "after": {
+        "id": "e75897d29be32b71",
+        "net": "ADDR3",
+        "layer": 16,
+        "x1": 1081.2987243263426,
+        "y1": 202.4144416329951,
+        "x2": 826.7717,
+        "y2": 403.5433,
+        "width": 6
+      }
+    }
+  ],
+  "unlocalized_losses": [],
+  "unresolved": [
+    {
+      "id": "51860091797eb941",
+      "net": "ADDR3",
+      "xy_mm": [
+        21.7750009,
+        17.65000026
+      ],
+      "affected_nets": [
+        "L0_M07"
+      ]
+    },
+    {
+      "id": "5006dd60207047c2",
+      "net": "ADDR3",
+      "xy_mm": [
+        100.69999925999998,
+        14.24999944
+      ],
+      "affected_nets": [
+        "L2_M01",
+        "L2_M00"
+      ]
+    },
+    {
+      "id": "0a34f3f40abfe2a0",
+      "net": "ADDR3",
+      "xy_mm": [
+        76.32500102,
+        79.9749988
+      ],
+      "affected_nets": [
+        "RC4"
+      ]
+    }
+  ],
+  "native_imported": false,
+  "continuity": {
+    "ADDR3": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "L2_M02": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "L2_M03": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "L2_M04": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "L2_M14": {
+      "complete": true,
+      "pad_islands": 1
+    }
+  }
+}

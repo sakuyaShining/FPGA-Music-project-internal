@@ -1,0 +1,9 @@
+{
+  "title": "获取当前物理叠层配置",
+  "params": [],
+  "returns": {
+    "type": "{ [key: string]: any } | undefined",
+    "description": "当前物理叠层配置，`undefined` 为获取失败"
+  },
+  "isAsync": false
+}

@@ -1,0 +1,42 @@
+{
+  "source_pcb_sha256": "5029ca7091053a207a08908edfbe4b2716058640fa654b720c08c2bc0333cacb",
+  "track_width_mm": 0.1524,
+  "clearance_screen_mm": 0.165,
+  "top_free_components": 362,
+  "pads": [
+    {
+      "ref": "R13",
+      "pin": "1",
+      "xy_mm": [
+        43.24858,
+        49.00168
+      ],
+      "center_free_regions": [
+        40
+      ],
+      "pad_reachable_regions": [
+        40
+      ],
+      "center_foreign_cu_gap_mm": 0.644521189999999
+    },
+    {
+      "ref": "U7",
+      "pin": "6",
+      "xy_mm": [
+        55.542179999999995,
+        46.3804
+      ],
+      "center_free_regions": [
+        116
+      ],
+      "pad_reachable_regions": [
+        116
+      ],
+      "center_foreign_cu_gap_mm": 0.9829799999999977
+    }
+  ],
+  "common_top_free_regions": [],
+  "native_imported": false,
+  "manufacturing_release": false,
+  "interpretation": "Continuous polygon model only; no successful route produced. Router failure is not physical impossibility. R13 is a 220ohm series element to SENSE_2, not a supply pullup; do not relocate it under the R30 pullup assumption."
+}

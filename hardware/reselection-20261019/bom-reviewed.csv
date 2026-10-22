@@ -1,0 +1,29 @@
+﻿code,mpn,purchase_quantity,historical_unit_cny,historical_line_cny,historical_source,current_stock_lcsc,current_usd_tiers,review_status,notes
+C179326,"74HC4067PW,118",6,2.89,17.34,WorkBuddy 1+ tier for six units; not fresh CNY quote,14713,"[{""minimum"":1,""usd"":0.4764},{""minimum"":10,""usd"":0.366},{""minimum"":30,""usd"":0.3132},{""minimum"":100,""usd"":0.2654},{""minimum"":500,""usd"":0.2489},{""minimum"":1000,""usd"":0.2407}]",engineering_review_pending,左手6路并行MUX；替代TI C496123可省¥7.20; exact supplier MPN checked; LCSC USD is not domestic CNY
+C133541,SN74LVC14ADR,5,1.4573,7.29,立创5+档,32575,"[{""minimum"":5,""usd"":0.2402},{""minimum"":50,""usd"":0.1847},{""minimum"":150,""usd"":0.161},{""minimum"":500,""usd"":0.1313},{""minimum"":2500,""usd"":0.1181},{""minimum"":5000,""usd"":0.1102}]",engineering_review_pending,MOQ 5；实际用1颗（6门刚好6路）; exact supplier MPN checked; LCSC USD is not domestic CNY
+C205940,SN74LV595ADR,1,3.16,3.16,立创1+档,,,engineering_review_pending,8路输出Q0-Q7全部占用
+C273656,SN74LV165ADR,5,2.1232,10.62,立创5+档,,,engineering_review_pending,MOQ 5；实际用1颗，8路输入刚好占满
+C411625,24LC256-I/SN,1,4.50,4.50,立创估算（批量¥2.64）,,,engineering_review_pending,32KiB I²C EEPROM 存乐器参数
+C2841426,TPD4E02B04DQAR-TP,25,0.7486,18.72,立创5+档,4680,"[{""minimum"":5,""usd"":0.123},{""minimum"":50,""usd"":0.0978},{""minimum"":150,""usd"":0.0852},{""minimum"":500,""usd"":0.0757},{""minimum"":3000,""usd"":0.0596},{""minimum"":6000,""usd"":0.0558}]",hold_actual_TECH_PUBLIC_datasheet_and_sensor_noise_test,4通道ESD×25=100路；覆盖83节点+余量; exact supplier MPN checked; LCSC USD is not domestic CNY
+—,1kΩ 1% 0402,90,0.01,0.90,市场估价,,,engineering_review_pending,每电极串联保护
+—,47kΩ 1% 0402,10,0.02,0.20,市场估价,,,engineering_review_pending,RC测量电阻×6+备
+—,220Ω 1% 0402,10,0.02,0.20,市场估价,,,engineering_review_pending,施密特后串阻
+—,1nF C0G 0402,10,0.10,1.00,市场估价,,,engineering_review_pending,RC计时电容×6+备
+—,100nF 0402,20,0.03,0.60,市场估价,,,engineering_review_pending,10颗IC去耦+余量
+—,ER-TFTM070-5V4,1,280.00,280.00,厂家US$40.18起,,,hold_exact_CTP_SPI_configuration_and_delivered_quote,7寸800x480 RA8875+FT5316电容触摸；CTP为加价选项; base display price excludes selectable CTP; require MISO
+C370986,EC11E183440C,1,15.56,15.56,立创1+档,1910,"[{""minimum"":1,""usd"":2.5584},{""minimum"":10,""usd"":2.1901},{""minimum"":30,""usd"":1.9583},{""minimum"":120,""usd"":1.5817},{""minimum"":480,""usd"":1.4749},{""minimum"":960,""usd"":1.4272},{""minimum"":2040,""usd"":1.4091},{""minimum"":4800,""usd"":1.3976}]",superseded_encoder_source_mismatch,Historical WorkBuddy line only. C370986 supplier PDF actually references EC11E15244G1. ALPS confirms EC11E15244B2/C470754 HAS a push switch; the old rejection was incorrect. Current native review uses C470754; see ../review-manufacturing-20261019/README.md.
+—,轻触按键 6×6,6,0.30,1.80,市场估价,,,engineering_review_pending,4预设+1编辑+备
+—,旋钮帽 6mm,1,3.00,3.00,市场估价,,,engineering_review_pending,配EC11轴
+C962071,PCM5122PWR,1,19.87,19.87,立创1+档,456,"[{""minimum"":1,""usd"":3.2564},{""minimum"":10,""usd"":2.7762},{""minimum"":30,""usd"":2.4746},{""minimum"":100,""usd"":2.1666},{""minimum"":500,""usd"":2.0273},{""minimum"":1000,""usd"":1.9683}]",engineering_review_pending,AUX线路DAC；PCM5102A在52.734kHz不可用; exact supplier MPN checked; LCSC USD is not domestic CNY
+—,3.5mm TRS 插座 PJ-320,1,2.00,2.00,市场估价,,,engineering_review_pending,只接有源音箱
+—,DAC外围 2.2µF×3 / 100nF×4 / 输出RC,1,6.00,6.00,市场估价,,,engineering_review_pending,电荷泵与输出滤波
+—,microSD 32GB C10,1,30.00,30.00,市场估价,,,engineering_review_pending,板载卡座复用
+—,左手电极载板+主载板 打样,2轮,50.00,100.00,估价,,,engineering_review_pending,嘉立创；含拼板与工程费
+—,SMT选择性装配,1,60.00,60.00,估价,,,engineering_review_pending,TSSOP/DFN/模块座交厂
+—,覆盖膜/底板/铜柱,1,40.00,40.00,估价,,,engineering_review_pending,简易平板结构
+—,运费,1,30.00,30.00,估价,,,engineering_review_pending,含多批次分运
+C503437,"74LVC1G157GV,125",5,,,not_quoted,3350,"[{""minimum"":5,""usd"":0.2194},{""minimum"":50,""usd"":0.1726},{""minimum"":150,""usd"":0.1525},{""minimum"":500,""usd"":0.1275},{""minimum"":3000,""usd"":0.1164},{""minimum"":6000,""usd"":0.1097}]",hold_candidate_or_quote_pending,"dual-screen optional return mux; one used, first USD tier minimum5; lifecycle/alternative review pending"
+TBD,LCDWIKI MSP2401 ILI9341 320x240 module,1,,,not_quoted,,,hold_candidate_or_quote_pending,"dual-screen preferred; October17 inventory says no screen on hand; exact price, view angle and module pinout pending"
+TBD,3.3V DAC supply/filter network,1 set,,,not_quoted,,,hold_candidate_or_quote_pending,existing PCM5122 perimeter estimate not a confirmed supply tree; avoid double-counting after schematic
+TBD,display FFC/header and audio interconnects,1 set,,,not_quoted,,,hold_candidate_or_quote_pending,exact module revision dictates connector and cable; verify what the module includes
+TBD,5V power entry and distribution,1 set if missing,,,not_quoted,,,hold_candidate_or_quote_pending,5V3A historic availability needs confirmation; screen supply not from FPGA GPIO

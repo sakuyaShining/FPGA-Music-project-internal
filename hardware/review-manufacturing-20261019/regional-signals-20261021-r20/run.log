@@ -1,0 +1,44 @@
+2026-10-21 22:00:06.191 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-21 22:00:06.510 INFO   Hardware: 8 CPU cores, 454 CPU score, 1024 MB RAM
+2026-10-21 22:00:06.515 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-21 22:00:07.701 WARN   Could not create HttpClient for VersionChecker: java.io.IOException: Unable to establish loopback connection
+2026-10-21 22:00:08.234 INFO   [AC6DEB\2FFD14] Loading board file 'input.dsn'...
+2026-10-21 22:00:09.532 INFO   [AC6DEB\2FFD14] Job 'AC6DEB\2FFD14' started at 2026-10-21T14:00:09.531715500Z.
+2026-10-21 22:00:10.969 WARN   Design Warning: Board has 925 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 925 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 925 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5325 [net VIS_DC] <-> ObstacleArea#431
+          - FixedVia#5324 [net BUS_RETURN] <-> ObstacleArea#321
+          - FixedVia#5324 [net BUS_RETURN] <-> FixedTrace#3901 [net RC2]
+          - FixedVia#5323 [net BUS_RETURN] <-> ObstacleArea#495
+          - FixedVia#5322 [net BUS_RETURN] <-> ObstacleArea#465
+          ... and 920 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 925 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-21 22:00:11.090 INFO   [AC6DEB\2FFD14] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-21 22:00:12.946 INFO   [AC6DEB\2FFD14] Auto-routing stage started on board '781162dfc268fd89774ca2f3e80af9f0' with baseline score 263.84 for 396 unrouted items.
+2026-10-21 22:00:24.412 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:00:24.412 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:00:59.488 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'DISP_VIS_DC' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-21 22:01:23.619 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'VIS_CS_N' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-21 22:01:26.750 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:01:26.750 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:01:31.888 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:01:31.889 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:01:35.282 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:01:35.282 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:01:38.394 INFO   [AC6DEB\2FFD14] Auto-routing pass #1 on board '781162dfc268fd89774ca2f3e80af9f0' was completed in 84.55 seconds with score 275.66 (384 unrouted and 925 violations), using 24.08 CPU seconds and the job allocated 67.44 GB of memory so far.
+2026-10-21 22:01:40.868 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:01:40.868 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:01:45.205 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:01:45.205 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:01:46.193 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:01:46.193 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:01:56.718 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:01:56.718 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:02:02.405 INFO   [AC6DEB\2FFD14] Auto-routing pass #2 on board 'b70af2f9ce8f9f3181ecc42aa30439e4' was completed in 23.09 seconds with score 271.72 (388 unrouted and 925 violations), using 31.25 CPU seconds and the job allocated 83.84 GB of memory so far.
+2026-10-21 22:02:06.683 INFO   [AC6DEB\2FFD14] Auto-routing stage completed: started with 396 unrouted nets, completed in 114.89 seconds, final score: 275.66 (384 unrouted and 925 violations), using 32.48 total CPU seconds, 86.08 GB total allocated, and 832.1 MB peak heap usage.
+2026-10-21 22:02:06.958 INFO   [AC6DEB\2FFD14] Job 'AC6DEB\2FFD14' finished with state: COMPLETED (elapsed: 1 minute 57.42 seconds, finished at UTC: 2026-10-21T14:02:06.956294500Z).
+2026-10-21 22:02:06.958 INFO   Saving output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-signals-20261021-r20\result.ses' (SES)...
+2026-10-21 22:02:06.962 INFO   Successfully saved output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-signals-20261021-r20\result.ses' (526886 bytes).

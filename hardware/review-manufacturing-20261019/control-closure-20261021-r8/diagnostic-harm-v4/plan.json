@@ -1,0 +1,28 @@
+{
+  "source_pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\local-layout-20261021-r7\\native-verified-capture.json",
+  "source_capture_sha256": "491058163daa5808745267db5299795f6dcfae605ab47ff16f618881339c9dfd",
+  "routes": [],
+  "failed": [
+    {
+      "net": "HARM_CS_N",
+      "error": "AssertionError(('Via budget', 'HARM_CS_N', 13, 6))"
+    }
+  ],
+  "selected": [
+    "HARM_CS_N"
+  ],
+  "native_imported": false,
+  "manufacturing_release": false,
+  "requires_access_regression_and_native_drc": true,
+  "raster_polygon_holes_preserved": true,
+  "dynamic_quiet_compatible_via_regions": true,
+  "exact_constrained_triangle_fanout_fallback": true,
+  "physical_routing_layers": [
+    1,
+    16
+  ],
+  "isolated_via_portals": true,
+  "bottom_audio_projection_guard_mm": 0.6,
+  "bottom_sense_projection_guard_mm": 0.5
+}

@@ -1,0 +1,23 @@
+{
+  "source": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\qa-0clear-149open\\native-default-8pages-RAW.pdf",
+  "source_sha256": "2e2739390e91c555cc0025ab15e79b8b2f404cec8bcd8d29bfbb822989e91393",
+  "review_pdf": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\pcb-reviewed-pages-0clear-149open-CANDIDATE.pdf",
+  "review_pdf_sha256": "d79bb02529722ba493270f2d6b3b35eb53c4b7933eba54c2907d799948ea829d",
+  "source_pages_1based": [
+    1,
+    6,
+    7,
+    8
+  ],
+  "drawing_content_streams_unchanged": true,
+  "omitted": "Blank bottom assembly and native flat BOM table with encoding/overflow defects; native BOM CSV is separate",
+  "visual_qa": "Drawing-only derivative: all four pages rendered at 1800 px and visually inspected; readable, no drawing clipping observed. Routing incomplete; this is not fabrication approval.",
+  "manufacturing_release": false,
+  "pad_review_pdf": {
+    "path": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\pcb-pad-placement-review.pdf",
+    "sha256": "54016aaa4ba9df49356a8b82e773b0cf83ae53746df572c4c5f1155470ea1a96",
+    "pages": 2,
+    "visual_qa": "Both pages rendered and visually inspected, including enlarged page-2 footer. Counts and disclaimer readable. Pad extent boxes are not component bodies; ground pours omitted in this supplementary view."
+  },
+  "raw_native_pdf_qa": "Rejected for direct handover: flat BOM pages contain text encoding and column overflow defects. Original retained; native BOM CSV delivered separately."
+}

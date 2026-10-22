@@ -1,0 +1,743 @@
+{
+  "label": "signals",
+  "complete_nets": [
+    "ADDR2",
+    "BUS_MOSI",
+    "I2S_BCK",
+    "KEY_QH",
+    "L0_M00",
+    "L0_M04",
+    "L0_M05",
+    "L0_M06",
+    "L0_M07",
+    "L0_M08",
+    "L0_M09",
+    "L0_M10",
+    "L0_M15",
+    "L1_M00",
+    "L1_M01",
+    "L1_M02",
+    "L1_M03",
+    "L1_M04",
+    "L1_M05",
+    "L1_M06",
+    "L1_M07",
+    "L1_M08",
+    "L1_M09",
+    "L1_M10",
+    "L1_M11",
+    "L1_M12",
+    "L1_M14",
+    "L2_M00",
+    "L2_M01",
+    "L2_M02",
+    "L2_M03",
+    "L2_M04",
+    "L2_M05",
+    "L2_M06",
+    "L2_M07",
+    "L2_M08",
+    "L2_M09",
+    "L2_M10",
+    "L2_M14",
+    "L2_M15",
+    "L3_M00",
+    "L3_M02",
+    "L3_M03",
+    "L3_M04",
+    "L3_M05",
+    "L3_M06",
+    "L3_M07",
+    "L3_M09",
+    "L3_M11",
+    "L3_M12",
+    "L3_M13",
+    "L3_M14",
+    "L4_M01",
+    "L4_M03",
+    "L4_M04",
+    "L4_M05",
+    "L4_M06",
+    "L4_M07",
+    "L4_M12",
+    "L4_M14",
+    "L4_M15",
+    "L5_M00",
+    "L5_M01",
+    "L5_M03",
+    "L5_M04",
+    "L5_M05",
+    "L5_M06",
+    "L5_M07",
+    "L5_M08",
+    "L5_M09",
+    "L5_M13",
+    "PWR_FAULT_N",
+    "PWR_GATE",
+    "PWR_ILIM",
+    "RC3",
+    "SENSE_0",
+    "SENSE_1",
+    "SENSE_2",
+    "SENSE_3",
+    "SENSE_4",
+    "TP_INT",
+    "VIS_DC"
+  ],
+  "complete_currently_pending_nets": [
+    "ADDR2",
+    "BUS_MOSI",
+    "I2S_BCK",
+    "SENSE_3",
+    "VIS_DC"
+  ],
+  "classification": {
+    "ADDR0": {
+      "complete": false,
+      "pad_islands": 6
+    },
+    "ADDR1": {
+      "complete": false,
+      "pad_islands": 7
+    },
+    "ADDR2": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "ADDR3": {
+      "complete": false,
+      "pad_islands": 6
+    },
+    "BUS_MOSI": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "BUS_RETURN": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "BUS_SCK": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "DAC_XSMT": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "DISP_HARM_CS_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "DISP_MOSI": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "DISP_RESET_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "DISP_SCK": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "DISP_VIS_CS_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "DISP_VIS_DC": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "EDIT": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "ENC_A": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "ENC_B": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "ENC_PUSH": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "HARM_CS_N": {
+      "complete": false,
+      "pad_islands": 4
+    },
+    "I2C_MOD_SCL": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "I2C_MOD_SDA": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "I2C_SCL": {
+      "complete": false,
+      "pad_islands": 5
+    },
+    "I2C_SDA": {
+      "complete": false,
+      "pad_islands": 4
+    },
+    "I2S_BCK": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "I2S_DIN": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "I2S_LRCK": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INPUT_LOAD_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV0": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV1": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV2": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV3": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV4": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "INV5": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "KEY_QH": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L0_M00": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L0_M01": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L0_M02": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L0_M03": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L0_M04": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L0_M05": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L0_M06": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L0_M07": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L0_M08": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L0_M09": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L0_M10": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L0_M11": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L0_M12": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L0_M13": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L0_M14": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L0_M15": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M00": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M01": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M02": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M03": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M04": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M05": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M06": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M07": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M08": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M09": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M10": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M11": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M12": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M13": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L1_M14": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L1_M15": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L2_M00": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M01": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M02": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M03": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M04": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M05": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M06": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M07": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M08": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M09": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M10": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M11": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L2_M12": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L2_M13": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L2_M14": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L2_M15": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M00": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M01": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L3_M02": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M03": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M04": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M05": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M06": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M07": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M08": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L3_M09": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M10": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L3_M11": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M12": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M13": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M14": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L3_M15": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L4_M00": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L4_M01": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L4_M02": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L4_M03": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L4_M04": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L4_M05": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L4_M06": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L4_M07": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L4_M08": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L4_M09": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L4_M10": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L4_M11": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L4_M12": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L4_M13": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L4_M14": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L4_M15": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M00": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M01": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M02": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L5_M03": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M04": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M05": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M06": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M07": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M08": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M09": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M10": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L5_M11": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L5_M12": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L5_M13": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "L5_M14": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "L5_M15": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "LCD_RESET_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "MUX_DISABLE": {
+      "complete": false,
+      "pad_islands": 6
+    },
+    "PRESET0": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "PRESET1": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "PRESET2": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "PRESET3": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "PWR_FAULT_N": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "PWR_GATE": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "PWR_ILIM": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "RA_MISO": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "RC0": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "RC1": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "RC2": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "RC3": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "RC4": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "RC5": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "RC_DRIVE": {
+      "complete": false,
+      "pad_islands": 6
+    },
+    "SCAN_LATCH": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "SENSE_0": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "SENSE_1": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "SENSE_2": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "SENSE_3": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "SENSE_4": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "SENSE_5": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "TP_INT": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    },
+    "TP_INT_MOD": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "TP_RESET_MOD_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "TP_RESET_N": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "VIS_BL_EN": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "VIS_CS_N": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "VIS_DC": {
+      "complete": true,
+      "orphan_objects_removed": 0
+    }
+  },
+  "native_imported": false,
+  "topology_tolerance_mm": 0.003,
+  "native_drc_required": true
+}

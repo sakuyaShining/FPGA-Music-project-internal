@@ -1,0 +1,36 @@
+{
+  "net": "5V_PERIPH",
+  "additive": true,
+  "source_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\joint-routing-20261021-r3\\power-bus-return\\staged-planning-source.json",
+  "source_sha256": "e6340956171578e299d317c61be67d99e11116e4b8dc5268b979c5646e2892ad",
+  "native_pcb_sha256": "be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e",
+  "routes": [],
+  "failed_planning": [
+    {
+      "group": 0,
+      "pad": [
+        "U17",
+        "6"
+      ],
+      "reason": "No checked short supply-pin escape"
+    },
+    {
+      "connected_groups": [
+        1
+      ],
+      "remaining_groups": [
+        0
+      ],
+      "reason": "No 1mm trunk with existing pad/track constraints"
+    }
+  ],
+  "all_pad_groups_connected": false,
+  "lines": [],
+  "vias": [],
+  "new_trunk_width_mm": 1.0,
+  "new_via_diameter_mm": 1.2,
+  "new_via_hole_mm": 0.6,
+  "requires_independent_geometry_audit": true,
+  "requires_native_drc": true,
+  "manufacturing_release": false
+}

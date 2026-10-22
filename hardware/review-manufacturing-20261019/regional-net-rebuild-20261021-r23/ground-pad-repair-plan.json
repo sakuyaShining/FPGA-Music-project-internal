@@ -1,0 +1,78 @@
+{
+  "source_pcb_sha256": "e1cab1934dda25f265f4843bc868b553cce0e60bd06dd42d3b98df80460da95b",
+  "lines": [
+    {
+      "net": "GND",
+      "layer": 1,
+      "x1": 3527.5,
+      "y1": 1846.5,
+      "x2": 3490.157480314961,
+      "y2": 1846.5,
+      "width": 8
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "x1": 3420.1000000000004,
+      "y1": 1782.5,
+      "x2": 3472.44094488189,
+      "y2": 1782.5,
+      "width": 8
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "x1": 3472.44094488189,
+      "y1": 1782.5,
+      "x2": 3500.0000000000005,
+      "y2": 1756.6929133858268,
+      "width": 8
+    }
+  ],
+  "vias": [
+    {
+      "net": "GND",
+      "x": 3490.157480314961,
+      "y": 1846.5,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "net": "GND",
+      "x": 3500.0000000000005,
+      "y": 1756.6929133858268,
+      "diameter": 24,
+      "hole": 12
+    }
+  ],
+  "facts": [
+    {
+      "xy_mm": [
+        88.65,
+        46.9011
+      ],
+      "copper_gap_mm": 0.7647472658883736,
+      "hole_pad_gap_mm": 0.34651999999999816,
+      "drill_gap_mm": 2.9967472738043854,
+      "predicted_reference_contact_mm2": {
+        "15": 0.21885856273114596,
+        "2": 0.21885856273114596
+      }
+    },
+    {
+      "xy_mm": [
+        88.9,
+        44.62
+      ],
+      "copper_gap_mm": 0.1725400000000052,
+      "hole_pad_gap_mm": 0.38964524396031675,
+      "drill_gap_mm": 2.3555306655076214,
+      "predicted_reference_contact_mm2": {
+        "15": 0.21885856273114596,
+        "2": 0.21885856273114596
+      }
+    }
+  ],
+  "manufacturing_release": false,
+  "reason": "Native DRC found U15.19 and C35.2 ground islands after the supply rearrangement; provide explicit short top GND leads and off-pad plated through connections to the actual reference planes."
+}

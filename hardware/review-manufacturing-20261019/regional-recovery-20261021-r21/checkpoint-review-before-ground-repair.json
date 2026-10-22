@@ -1,0 +1,210 @@
+{
+  "pcb_sha256": "e1cab1934dda25f265f4843bc868b553cce0e60bd06dd42d3b98df80460da95b",
+  "source_R19_files_unchanged": true,
+  "stable_R15_files_unchanged": true,
+  "components_pads_rules_stackup_outline_net_membership_unchanged": true,
+  "audio_and_sensor_copper_unchanged": true,
+  "copper_reconciliation": [
+    {
+      "stage": "initial_signal_and_power",
+      "actual_copper_matches_declared": true,
+      "max_hausdorff_mm": 7.105427357601002e-15,
+      "tolerance_mm": 6e-05
+    },
+    {
+      "stage": "r31_branch",
+      "actual_copper_matches_declared": true,
+      "max_hausdorff_mm": 3.2175363890356434e-06,
+      "tolerance_mm": 6e-05
+    },
+    {
+      "stage": "supply_corridor_and_display_mosi",
+      "actual_copper_matches_declared": true,
+      "max_hausdorff_mm": 1.2727918994564263e-06,
+      "tolerance_mm": 6e-05
+    },
+    {
+      "stage": "reset_and_complete_supplies",
+      "actual_copper_matches_declared": true,
+      "max_hausdorff_mm": 2.5399999998398926e-05,
+      "tolerance_mm": 6e-05
+    }
+  ],
+  "native_drc": {
+    "Connection Error": 67
+  },
+  "continuity": {
+    "3V3_IO": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "3V3_PERIPH": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "VIS_CS_N": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "VIS_BL_EN": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "DISP_MOSI": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "TP_RESET_N": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "DISP_SCK": {
+      "complete": true,
+      "pad_islands": 1
+    }
+  },
+  "new_ground_stitches": 6,
+  "actual_ground_contacts": [
+    {
+      "id": "bce99bcce8b44132",
+      "actual_contact_mm2": {
+        "15": 0.21885856273114607,
+        "2": 0.16288255953877517
+      }
+    },
+    {
+      "id": "48746d61e8bc0685",
+      "actual_contact_mm2": {
+        "15": 0.2041653870796637,
+        "2": 0.2041653870796637
+      }
+    },
+    {
+      "id": "8bf6d9a02a44327d",
+      "actual_contact_mm2": {
+        "15": 0.2041653870796622,
+        "2": 0.2041653870796622
+      }
+    },
+    {
+      "id": "d027cf470c5656bb",
+      "actual_contact_mm2": {
+        "15": 0.20415486948638956,
+        "2": 0.20415112585786643
+      }
+    },
+    {
+      "id": "2aa4d5db16f73b89",
+      "actual_contact_mm2": {
+        "15": 0.18110287044074155,
+        "2": 0.18054593924562393
+      }
+    },
+    {
+      "id": "5f10ea6187db5bf6",
+      "actual_contact_mm2": {
+        "15": 0.218858562731146,
+        "2": 0.15172845416205732
+      }
+    }
+  ],
+  "audio_reference_projection": [
+    {
+      "net": "I2S_BCK",
+      "before_fraction": 0.9763017288714929,
+      "after_fraction": 0.9763017288714927,
+      "si_signoff": false
+    },
+    {
+      "net": "I2S_DIN",
+      "before_fraction": 0.9281717212879125,
+      "after_fraction": 0.9281717212879125,
+      "si_signoff": false
+    },
+    {
+      "net": "I2S_LRCK",
+      "before_fraction": 0.9172080599927679,
+      "after_fraction": 0.9172080599927679,
+      "si_signoff": false
+    }
+  ],
+  "remaining_nets": [
+    {
+      "net": "GND",
+      "objects": 2
+    },
+    {
+      "net": "TP_RESET_MOD_N",
+      "objects": 2
+    },
+    {
+      "net": "BUS_RETURN",
+      "objects": 2
+    },
+    {
+      "net": "VIS_DC",
+      "objects": 2
+    },
+    {
+      "net": "DISP_RESET_N",
+      "objects": 2
+    },
+    {
+      "net": "DISP_VIS_DC",
+      "objects": 2
+    },
+    {
+      "net": "HARM_CS_N",
+      "objects": 3
+    },
+    {
+      "net": "BUS_SCK",
+      "objects": 6
+    },
+    {
+      "net": "BUS_MOSI",
+      "objects": 5
+    },
+    {
+      "net": "ADDR1",
+      "objects": 7
+    },
+    {
+      "net": "ADDR2",
+      "objects": 7
+    },
+    {
+      "net": "ADDR3",
+      "objects": 7
+    },
+    {
+      "net": "MUX_DISABLE",
+      "objects": 7
+    },
+    {
+      "net": "ADDR0",
+      "objects": 7
+    },
+    {
+      "net": "PRESET3",
+      "objects": 4
+    },
+    {
+      "net": "INV2",
+      "objects": 2
+    }
+  ],
+  "vias": 526,
+  "pads": 1079,
+  "native_lines": 3338,
+  "archive": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\regional-recovery-20261021-r21\\native-r21-after-r23-WORK-IN-PROGRESS.zip",
+  "archive_sha256": "30da7f836d1ded2eeb09cb14020b61e5c501fc1d42bba63ec8fcc8f32c324e5a",
+  "manufacturing_release": false,
+  "status": "regional_construction_checkpoint_not_promoted_over_R15",
+  "limitations": [
+    "Remaining nets are not routed; original R15 remains the stable routing checkpoint",
+    "Reference-plane projections and nearby stitches are geometric evidence, not signal/power integrity or sensor qualification",
+    "TP_RESET_N is a 66.87mm, four-via construction route; optimize before release",
+    "Factory stackup, mechanical fit, actual hardware tests, final CPL and final firmware remain open"
+  ]
+}

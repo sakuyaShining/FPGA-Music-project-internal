@@ -1,0 +1,47 @@
+2026-10-22 03:51:28.155 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-22 03:51:28.474 INFO   Hardware: 8 CPU cores, 494 CPU score, 1024 MB RAM
+2026-10-22 03:51:28.479 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-22 03:51:30.436 INFO   [DECA01\B80B4D] Loading board file 'input.dsn'...
+2026-10-22 03:51:31.531 INFO   [DECA01\B80B4D] Job 'DECA01\B80B4D' started at 2026-10-21T19:51:31.530695Z.
+2026-10-22 03:51:32.924 WARN   Design Warning: Board has 935 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 935 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 935 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5433 [net BUS_SCK] <-> ObstacleArea#465
+          - FixedVia#5431 [net BUS_SCK] <-> ObstacleArea#461
+          - FixedVia#5430 [net BUS_SCK] <-> ObstacleArea#459
+          - FixedVia#5429 [net BUS_MOSI] <-> ObstacleArea#468
+          - FixedVia#5428 [net BUS_MOSI] <-> ObstacleArea#466
+          ... and 930 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 935 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-22 03:51:33.031 INFO   [DECA01\B80B4D] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-22 03:51:34.766 INFO   [DECA01\B80B4D] Auto-routing stage started on board '1ec0804f4dd4a72966f04f4c68529883' with baseline score 276.55 for 383 unrouted items.
+2026-10-22 03:51:42.452 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:51:42.452 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:51:45.828 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:51:45.828 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:51:47.977 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:51:47.977 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:51:50.886 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:51:50.886 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:51:51.792 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:51:51.792 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:51:52.278 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:51:52.278 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:51:54.987 INFO   [DECA01\B80B4D] Auto-routing pass #1 on board '1ec0804f4dd4a72966f04f4c68529883' was completed in 19.34 seconds with score 279.51 (380 unrouted and 935 violations), using 13.09 CPU seconds and the job allocated 14.05 GB of memory so far.
+2026-10-22 03:51:59.043 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:51:59.043 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:52:00.569 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:52:00.571 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:52:04.023 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:52:04.023 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:52:06.452 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:52:06.452 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:52:07.661 WARN   Simplex.calc_division_lines: division not found
+2026-10-22 03:52:07.661 WARN   Simplex.cutout_from: division line is null
+2026-10-22 03:52:10.277 INFO   [DECA01\B80B4D] Auto-routing pass #2 on board 'ee35c64830042fd0300ce5c7ac6a47c9' was completed in 14.46 seconds with score 278.52 (381 unrouted and 935 violations), using 24.53 CPU seconds and the job allocated 25.63 GB of memory so far.
+2026-10-22 03:52:14.186 INFO   [DECA01\B80B4D] Auto-routing stage completed: started with 383 unrouted nets, completed in 40.50 seconds, final score: 279.51 (380 unrouted and 935 violations), using 27.39 total CPU seconds, 28.06 GB total allocated, and 628.1 MB peak heap usage.
+2026-10-22 03:52:14.449 INFO   [DECA01\B80B4D] Job 'DECA01\B80B4D' finished with state: COMPLETED (elapsed: 42.92 seconds, finished at UTC: 2026-10-21T19:52:14.447306300Z).
+2026-10-22 03:52:14.484 INFO   Saving output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\u8-power-corridor-20261022\result.ses' (SES)...
+2026-10-22 03:52:14.489 INFO   Successfully saved output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\u8-power-corridor-20261022\result.ses' (536959 bytes).

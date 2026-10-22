@@ -1,0 +1,113 @@
+{
+  "pcb_sha256": "5029ca7091053a207a08908edfbe4b2716058640fa654b720c08c2bc0333cacb",
+  "planned": 5,
+  "created": 5,
+  "native_clearance_errors": 0,
+  "native_physical_errors": 0,
+  "actual_reference_layers": [
+    15,
+    2
+  ],
+  "actual_annular_contacts": [
+    {
+      "id": "e2537dea81be2533",
+      "xy_mm": [
+        69.0805451,
+        62.97826876
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.20416742698080242,
+        "2": 0.20416742698080242
+      }
+    },
+    {
+      "id": "35c4646b19e34787",
+      "xy_mm": [
+        51.05681686,
+        64.3035036
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.20415118923760178,
+        "2": 0.20415118923760178
+      }
+    },
+    {
+      "id": "a41fc0dae2621d0a",
+      "xy_mm": [
+        66.87361784,
+        68.51907048
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.20416186857886348,
+        "2": 0.20416186857886348
+      }
+    },
+    {
+      "id": "7321bc45828fa348",
+      "xy_mm": [
+        75.55153800000001,
+        53.2166322
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.20416871665676323,
+        "2": 0.20416871665676323
+      }
+    },
+    {
+      "id": "4ffb65278ff2e388",
+      "xy_mm": [
+        67.48731993999999,
+        65.67117676000001
+      ],
+      "actual_reference_contact_mm2": {
+        "15": 0.2041653870796697,
+        "2": 0.20413730577576628
+      }
+    }
+  ],
+  "signal_to_ground_distances": [
+    {
+      "signal_via": "27ae76a348de27b9",
+      "x_mm": 74.91514099999999,
+      "y_mm": 52.580235200000004,
+      "nearest_ground_via_connected_to_both_references": "7321bc45828fa348",
+      "distance_mm": 0.9000012684535528,
+      "not_si_signoff": true
+    },
+    {
+      "signal_via": "dc75b8937fc29aa7",
+      "x_mm": 51.9568176,
+      "y_mm": 64.3035036,
+      "nearest_ground_via_connected_to_both_references": "35c4646b19e34787",
+      "distance_mm": 0.900000740000005,
+      "not_si_signoff": true
+    },
+    {
+      "signal_via": "f88af98e79859b8e",
+      "x_mm": 66.6980378,
+      "y_mm": 67.63636460000001,
+      "nearest_ground_via_connected_to_both_references": "a41fc0dae2621d0a",
+      "distance_mm": 0.8999989005731999,
+      "not_si_signoff": true
+    },
+    {
+      "signal_via": "19fee1b7b37e92fb",
+      "x_mm": 68.3188118,
+      "y_mm": 66.0155906,
+      "nearest_ground_via_connected_to_both_references": "4ffb65278ff2e388",
+      "distance_mm": 0.8999997813498687,
+      "not_si_signoff": true
+    },
+    {
+      "signal_via": "61e8bae716a81e1e",
+      "x_mm": 69.8288672,
+      "y_mm": 63.478283,
+      "nearest_ground_via_connected_to_both_references": "e2537dea81be2533",
+      "distance_mm": 0.9000001141951013,
+      "not_si_signoff": true
+    }
+  ],
+  "geometry_pass": true,
+  "si_signoff": false,
+  "manufacturing_release": false
+}

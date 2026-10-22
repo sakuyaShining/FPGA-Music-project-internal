@@ -1,0 +1,2759 @@
+{
+  "source_pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+  "gap_mm": 0.158,
+  "via_annulus_mm": 0.6096,
+  "drill_mm": 0.3048,
+  "local_margin_mm": 4,
+  "rows": [
+    {
+      "net": "BUS_SCK",
+      "ref": "U8",
+      "pin": "11",
+      "x_mm": 65.90538,
+      "y_mm": 47.73421999999999,
+      "component_area_mm2": 9.15897851908126,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 0.5766409462795256,
+      "candidates": [
+        {
+          "x_mm": 65.3054065750441,
+          "y_mm": 46.676960004766755,
+          "distance_mm": 1.2156343233776716,
+          "region_area_mm2": 0.3276021837908243
+        },
+        {
+          "x_mm": 66.50874982,
+          "y_mm": 45.458589181312874,
+          "distance_mm": 2.35426225443247,
+          "region_area_mm2": 0.12003923662010281
+        },
+        {
+          "x_mm": 63.843179370666164,
+          "y_mm": 45.654539247,
+          "distance_mm": 2.9287784945303486,
+          "region_area_mm2": 0.12899952586859842
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "bb69c07a4390ff26",
+          "net": "3V3_PERIPH",
+          "boundary_contact_mm": 5.163220774469774
+        },
+        {
+          "id": "4fb529a9717cacbd",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 3.756651294562372
+        },
+        {
+          "id": "081a5ce595486d80",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.5777799134850627
+        },
+        {
+          "id": "45b6a48b79e0973b",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.5362299388759404
+        },
+        {
+          "id": "c066d3c10cb8accd",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.5312153239172446
+        },
+        {
+          "id": "a29290d006da97c3",
+          "net": "GND",
+          "boundary_contact_mm": 1.278319856995526
+        }
+      ]
+    },
+    {
+      "net": "BUS_SCK",
+      "ref": "U9",
+      "pin": "2",
+      "x_mm": 60.825379999999996,
+      "y_mm": 53.263799999999996,
+      "component_area_mm2": 2.8533935096282304,
+      "touches_local_boundary": false,
+      "via_regions_area_mm2": 0.0,
+      "candidates": [],
+      "track_boundaries": [
+        {
+          "id": "fb90816933ddf643",
+          "net": "GND",
+          "boundary_contact_mm": 2.247875551067386
+        },
+        {
+          "id": "86d0419db8fc184f",
+          "net": "INPUT_LOAD_N",
+          "boundary_contact_mm": 0.9814081209754327
+        },
+        {
+          "id": "ad3ff9670edb5efe",
+          "net": "INPUT_LOAD_N",
+          "boundary_contact_mm": 0.2492264163482356
+        }
+      ]
+    },
+    {
+      "net": "BUS_SCK",
+      "ref": "U15",
+      "pin": "2",
+      "x_mm": 80.72373999999999,
+      "y_mm": 40.12946,
+      "component_area_mm2": 19.305080302580222,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 3.7756061034417954,
+      "candidates": [
+        {
+          "x_mm": 80.45585958942692,
+          "y_mm": 41.341350052449144,
+          "distance_mm": 1.2411435910457669,
+          "region_area_mm2": 2.858576885363449
+        },
+        {
+          "x_mm": 79.42609,
+          "y_mm": 39.62196522530539,
+          "distance_mm": 1.3933579830188332,
+          "region_area_mm2": 0.3192734314677652
+        },
+        {
+          "x_mm": 77.96571899811336,
+          "y_mm": 39.76644377380048,
+          "distance_mm": 2.781808876851874,
+          "region_area_mm2": 0.006463517622976633
+        },
+        {
+          "x_mm": 79.95507153744681,
+          "y_mm": 43.89073187631974,
+          "distance_mm": 3.839012546595502,
+          "region_area_mm2": 0.5912922689876043
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "723148871d7c2e07",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 6.740840279339284
+        },
+        {
+          "id": "8f73f9fcb655dfcd",
+          "net": "3V3_PERIPH",
+          "boundary_contact_mm": 3.227536071139105
+        },
+        {
+          "id": "8ab9d4124659f3b4",
+          "net": "GND",
+          "boundary_contact_mm": 2.1556995978681623
+        },
+        {
+          "id": "48266e09357fb600",
+          "net": "GND",
+          "boundary_contact_mm": 1.7538880639084604
+        },
+        {
+          "id": "4bb07e56fb43172b",
+          "net": "GND",
+          "boundary_contact_mm": 0.9866900856139256
+        },
+        {
+          "id": "883bf372042d6389",
+          "net": "GND",
+          "boundary_contact_mm": 0.5429814707064436
+        },
+        {
+          "id": "9f7b90653acf0ab8",
+          "net": "GND",
+          "boundary_contact_mm": 0.464874032048238
+        },
+        {
+          "id": "fd5b7e69eceec363",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.32823913946720307
+        }
+      ]
+    },
+    {
+      "net": "BUS_MOSI",
+      "ref": "U8",
+      "pin": "14",
+      "x_mm": 62.09537999999999,
+      "y_mm": 47.73421999999999,
+      "component_area_mm2": 2.8635218136045473,
+      "touches_local_boundary": false,
+      "via_regions_area_mm2": 0.0,
+      "candidates": [],
+      "track_boundaries": [
+        {
+          "id": "081a5ce595486d80",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.5777799134850485
+        },
+        {
+          "id": "e7723689d116ce9e",
+          "net": "GND",
+          "boundary_contact_mm": 1.4497090936439108
+        }
+      ]
+    },
+    {
+      "net": "BUS_MOSI",
+      "ref": "U15",
+      "pin": "4",
+      "x_mm": 82.02422,
+      "y_mm": 40.12946,
+      "component_area_mm2": 15.296459575617291,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 3.421610787124257,
+      "candidates": [
+        {
+          "x_mm": 80.579539247,
+          "y_mm": 41.45016500326639,
+          "distance_mm": 1.957387080712837,
+          "region_area_mm2": 2.847400550499086
+        },
+        {
+          "x_mm": 79.42609,
+          "y_mm": 39.62196522530539,
+          "distance_mm": 2.6472307121296255,
+          "region_area_mm2": 0.31927343146776527
+        },
+        {
+          "x_mm": 79.95507153744681,
+          "y_mm": 43.89073187631974,
+          "distance_mm": 4.292847713078118,
+          "region_area_mm2": 0.2549368051574061
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "723148871d7c2e07",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 6.382720279339284
+        },
+        {
+          "id": "8f73f9fcb655dfcd",
+          "net": "3V3_PERIPH",
+          "boundary_contact_mm": 3.227536071139105
+        },
+        {
+          "id": "48266e09357fb600",
+          "net": "GND",
+          "boundary_contact_mm": 1.385413249743138
+        },
+        {
+          "id": "883bf372042d6389",
+          "net": "GND",
+          "boundary_contact_mm": 0.5429814707064436
+        },
+        {
+          "id": "360090ebde71f414",
+          "net": "3V3_PERIPH",
+          "boundary_contact_mm": 0.26239782505821846
+        },
+        {
+          "id": "4ec465275ad1a262",
+          "net": "DISP_RESET_N",
+          "boundary_contact_mm": 0.22591947688652075
+        },
+        {
+          "id": "8ab9d4124659f3b4",
+          "net": "GND",
+          "boundary_contact_mm": 0.21920898199934277
+        },
+        {
+          "id": "38d2e429ac9850ee",
+          "net": "GND",
+          "boundary_contact_mm": 0.21772192187772244
+        }
+      ]
+    },
+    {
+      "net": "HARM_CS_N",
+      "ref": "U11",
+      "pin": "6",
+      "x_mm": 70.79996,
+      "y_mm": 64.04863999999999,
+      "component_area_mm2": 20.72426266739912,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 14.482372359759887,
+      "candidates": [
+        {
+          "x_mm": 70.79996,
+          "y_mm": 63.29271999999999,
+          "distance_mm": 0.7559200000000033,
+          "region_area_mm2": 14.475954032578077
+        },
+        {
+          "x_mm": 72.23903350141666,
+          "y_mm": 64.46680030253852,
+          "distance_mm": 1.4985962034846845,
+          "region_area_mm2": 0.006418327181811121
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "9e5fe2f36c3a8379",
+          "net": "KEY_QH",
+          "boundary_contact_mm": 4.106973592120225
+        },
+        {
+          "id": "86c39d6dad90db80",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 3.282854584626881
+        },
+        {
+          "id": "c0ed99bab3e57e2d",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.0371498459789263
+        },
+        {
+          "id": "20598a39601b2f61",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.9019411758135227
+        },
+        {
+          "id": "492a23a4459ee06e",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.5213935023888459
+        },
+        {
+          "id": "d0f075afb8cfcb3e",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.399175156041489
+        }
+      ]
+    },
+    {
+      "net": "HARM_CS_N",
+      "ref": "U15",
+      "pin": "8",
+      "x_mm": 84.62517999999999,
+      "y_mm": 40.12946,
+      "component_area_mm2": 2.257692262092338,
+      "touches_local_boundary": false,
+      "via_regions_area_mm2": 0.06561541789591463,
+      "candidates": [
+        {
+          "x_mm": 84.35729958942692,
+          "y_mm": 41.341350052449144,
+          "distance_mm": 1.2411435910457669,
+          "region_area_mm2": 0.06561541789591463
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "360090ebde71f414",
+          "net": "3V3_PERIPH",
+          "boundary_contact_mm": 2.345626685358728
+        },
+        {
+          "id": "f3c1bc7c8383272d",
+          "net": "DISP_RESET_N",
+          "boundary_contact_mm": 0.5978857175381466
+        }
+      ]
+    },
+    {
+      "net": "ADDR1",
+      "ref": "U8",
+      "pin": "1",
+      "x_mm": 59.55537999999999,
+      "y_mm": 42.26306,
+      "component_area_mm2": 20.664121260100835,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 11.822540221202932,
+      "candidates": [
+        {
+          "x_mm": 58.84898999999999,
+          "y_mm": 42.23832895941366,
+          "distance_mm": 0.7068227900036063,
+          "region_area_mm2": 11.822540221202932
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "502e98de20cb19f2",
+          "net": "RC1",
+          "boundary_contact_mm": 3.660979346432842
+        },
+        {
+          "id": "6873aa8e0462204b",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 3.1043901312145423
+        },
+        {
+          "id": "5ace46b533d824be",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.7025879150865213
+        },
+        {
+          "id": "4fb529a9717cacbd",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.6475676030431101
+        },
+        {
+          "id": "16e552d584a343d9",
+          "net": "RC1",
+          "boundary_contact_mm": 0.7596962847123276
+        },
+        {
+          "id": "f6a14047badf775e",
+          "net": "RC1",
+          "boundary_contact_mm": 0.44531538764529627
+        }
+      ]
+    },
+    {
+      "net": "ADDR1",
+      "ref": "U4",
+      "pin": "11",
+      "x_mm": 27.924760000000003,
+      "y_mm": 74.97572,
+      "component_area_mm2": 37.86444603247492,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 19.890516249214357,
+      "candidates": [
+        {
+          "x_mm": 27.924760000000003,
+          "y_mm": 76.20662,
+          "distance_mm": 1.2309000000000054,
+          "region_area_mm2": 3.329555061707937
+        },
+        {
+          "x_mm": 27.917081791791322,
+          "y_mm": 73.67297343252156,
+          "distance_mm": 1.3027691944309032,
+          "region_area_mm2": 3.291357934160394
+        },
+        {
+          "x_mm": 29.752,
+          "y_mm": 74.97572,
+          "distance_mm": 1.8272399999999962,
+          "region_area_mm2": 8.621837831813826
+        },
+        {
+          "x_mm": 26.3491324,
+          "y_mm": 77.05434478592935,
+          "distance_mm": 2.608310436769674,
+          "region_area_mm2": 3.6060706341165405
+        },
+        {
+          "x_mm": 25.49687667363504,
+          "y_mm": 72.8587422,
+          "distance_mm": 3.2212128852551554,
+          "region_area_mm2": 1.0416947874156584
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "2fffe51594d7f0e8",
+          "net": "RC3",
+          "boundary_contact_mm": 8.00664256684509
+        },
+        {
+          "id": "d2af56a50a073be7",
+          "net": "L3_M00",
+          "boundary_contact_mm": 2.472485377095319
+        },
+        {
+          "id": "00defd6e4711e3f2",
+          "net": "L3_M02",
+          "boundary_contact_mm": 2.4202255693609582
+        },
+        {
+          "id": "e688ab1b94b11921",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.2309682519731484
+        },
+        {
+          "id": "37ad86a57c919272",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.2413440274093537
+        },
+        {
+          "id": "b2dbbbde0ea7c2f2",
+          "net": "L3_M00",
+          "boundary_contact_mm": 1.236935577202891
+        },
+        {
+          "id": "374080ed1cc1f74c",
+          "net": "GND",
+          "boundary_contact_mm": 0.741035739775562
+        },
+        {
+          "id": "5cd3ad647a146a4b",
+          "net": "L3_M02",
+          "boundary_contact_mm": 0.7375072140006117
+        }
+      ]
+    },
+    {
+      "net": "ADDR1",
+      "ref": "U5",
+      "pin": "11",
+      "x_mm": 72.92594,
+      "y_mm": 74.97572,
+      "component_area_mm2": 12.50873127639969,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 4.018498744506302,
+      "candidates": [
+        {
+          "x_mm": 72.92594,
+          "y_mm": 73.74481999999999,
+          "distance_mm": 1.2309000000000054,
+          "region_area_mm2": 3.4874620398444716
+        },
+        {
+          "x_mm": 72.09588161652488,
+          "y_mm": 76.26702,
+          "distance_mm": 1.5350741382673823,
+          "region_area_mm2": 0.007042824690777543
+        },
+        {
+          "x_mm": 70.89346168281624,
+          "y_mm": 76.26702,
+          "distance_mm": 2.4079916527725223,
+          "region_area_mm2": 0.5239938799710531
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "846995b967cb52ee",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 4.453457374719093
+        },
+        {
+          "id": "753907e16d658b86",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.8598906345623858
+        },
+        {
+          "id": "18896418dd3430cf",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.534172219027187
+        },
+        {
+          "id": "a34b169d7530ca35",
+          "net": "L4_M14",
+          "boundary_contact_mm": 1.5337937368365246
+        },
+        {
+          "id": "8e9ad74445f73e53",
+          "net": "L4_M00",
+          "boundary_contact_mm": 0.9146364617240752
+        },
+        {
+          "id": "43c17612af7ca8ec",
+          "net": "L4_M00",
+          "boundary_contact_mm": 0.6915300223752605
+        },
+        {
+          "id": "9a9a618b06b538c8",
+          "net": "L4_M00",
+          "boundary_contact_mm": 0.572072551203063
+        },
+        {
+          "id": "513c3d7e9b089a4a",
+          "net": "L4_M04",
+          "boundary_contact_mm": 0.15901082772071634
+        }
+      ]
+    },
+    {
+      "net": "ADDR1",
+      "ref": "U6",
+      "pin": "11",
+      "x_mm": 117.92457999999999,
+      "y_mm": 74.97572,
+      "component_area_mm2": 28.32309552201542,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 15.456673449483395,
+      "candidates": [
+        {
+          "x_mm": 117.92457999999999,
+          "y_mm": 73.74481999999999,
+          "distance_mm": 1.2309000000000054,
+          "region_area_mm2": 9.9218806241402
+        },
+        {
+          "x_mm": 117.66752875689222,
+          "y_mm": 76.22467353257935,
+          "distance_mm": 1.2751314709180717,
+          "region_area_mm2": 4.294277424193182
+        },
+        {
+          "x_mm": 119.06094,
+          "y_mm": 76.62516,
+          "distance_mm": 2.00298935673658,
+          "region_area_mm2": 1.2405154011500117
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "0f33bfc31a662b1c",
+          "net": "RC5",
+          "boundary_contact_mm": 5.787920113807422
+        },
+        {
+          "id": "721d2e31ee1f3be1",
+          "net": "GND",
+          "boundary_contact_mm": 5.248420028574777
+        },
+        {
+          "id": "bca99f1673b3a3a7",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.4223121963135945
+        },
+        {
+          "id": "59f89930ea1dd61f",
+          "net": "RC5",
+          "boundary_contact_mm": 1.6449669234305546
+        },
+        {
+          "id": "c23ee017efc72e76",
+          "net": "GND",
+          "boundary_contact_mm": 0.6194749508601267
+        },
+        {
+          "id": "06beae4838f00268",
+          "net": "L5_M00",
+          "boundary_contact_mm": 0.41426735590359426
+        },
+        {
+          "id": "75d2ace94f361e76",
+          "net": "L5_M07",
+          "boundary_contact_mm": 0.3529310923829903
+        },
+        {
+          "id": "41ebe40053b4713d",
+          "net": "GND",
+          "boundary_contact_mm": 0.24228000000003647
+        }
+      ]
+    },
+    {
+      "net": "ADDR1",
+      "ref": "U1",
+      "pin": "11",
+      "x_mm": 22.07514,
+      "y_mm": 25.021539999999998,
+      "component_area_mm2": 5.684436411510412,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 0.1356562240772026,
+      "candidates": [
+        {
+          "x_mm": 22.07514,
+          "y_mm": 23.790639999999996,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 0.1047976165535078
+        },
+        {
+          "x_mm": 19.26610413078661,
+          "y_mm": 23.1099,
+          "distance_mm": 3.3978007599221343,
+          "region_area_mm2": 0.0308586075236948
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "9ce82258300279cb",
+          "net": "L0_M01",
+          "boundary_contact_mm": 4.284961299562365
+        },
+        {
+          "id": "053800892b63d800",
+          "net": "L0_M01",
+          "boundary_contact_mm": 1.8870882727318614
+        },
+        {
+          "id": "8fec01bbe9e5bbf6",
+          "net": "GND",
+          "boundary_contact_mm": 1.6831790265371813
+        },
+        {
+          "id": "8f36e8ff8262a3df",
+          "net": "GND",
+          "boundary_contact_mm": 1.0896147262888711
+        },
+        {
+          "id": "6da24840b6ea46d2",
+          "net": "GND",
+          "boundary_contact_mm": 0.6169349508599808
+        },
+        {
+          "id": "118aba1e781e81e2",
+          "net": "L0_M00",
+          "boundary_contact_mm": 0.4353000000000087
+        },
+        {
+          "id": "ba20c81a8745d099",
+          "net": "L0_M01",
+          "boundary_contact_mm": 0.06849820990324426
+        }
+      ]
+    },
+    {
+      "net": "ADDR1",
+      "ref": "U2",
+      "pin": "11",
+      "x_mm": 67.07378,
+      "y_mm": 25.021539999999998,
+      "component_area_mm2": 8.971913118476094,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 2.07557425956345,
+      "candidates": [
+        {
+          "x_mm": 67.51926,
+          "y_mm": 23.73037092230545,
+          "distance_mm": 1.3658587106998263,
+          "region_area_mm2": 0.015960207670964684
+        },
+        {
+          "x_mm": 65.5107,
+          "y_mm": 25.021539999999998,
+          "distance_mm": 1.5630799999999994,
+          "region_area_mm2": 2.0596140518924853
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "6ee1937f2664b386",
+          "net": "L1_M00",
+          "boundary_contact_mm": 4.766770776304889
+        },
+        {
+          "id": "c423b7b67f91665b",
+          "net": "GND",
+          "boundary_contact_mm": 3.6692685434251127
+        },
+        {
+          "id": "2a5b3a00f400274a",
+          "net": "L1_M01",
+          "boundary_contact_mm": 2.4145025991247504
+        },
+        {
+          "id": "c60b81d2d4bf53f2",
+          "net": "L1_M01",
+          "boundary_contact_mm": 1.6121380393317588
+        },
+        {
+          "id": "81454d356e5de295",
+          "net": "GND",
+          "boundary_contact_mm": 1.32364747227243
+        },
+        {
+          "id": "dcf27f6ddab0518c",
+          "net": "L1_M00",
+          "boundary_contact_mm": 0.7898582099032907
+        },
+        {
+          "id": "eadd1b82cf3b0b54",
+          "net": "GND",
+          "boundary_contact_mm": 0.6666924481980444
+        },
+        {
+          "id": "b31f40763ff48a5f",
+          "net": "L1_M01",
+          "boundary_contact_mm": 0.660697884050255
+        }
+      ]
+    },
+    {
+      "net": "ADDR1",
+      "ref": "U3",
+      "pin": "11",
+      "x_mm": 112.07495999999999,
+      "y_mm": 25.021539999999998,
+      "component_area_mm2": 21.265975592507047,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 8.943049832412251,
+      "candidates": [
+        {
+          "x_mm": 112.07495999999999,
+          "y_mm": 23.790639999999996,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 2.8757934415624438
+        },
+        {
+          "x_mm": 112.07495999999999,
+          "y_mm": 26.25244,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 0.05119727066598298
+        },
+        {
+          "x_mm": 110.75953,
+          "y_mm": 25.021539999999998,
+          "distance_mm": 1.315429999999992,
+          "region_area_mm2": 6.016059120183826
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "c81bbd44ccd45e34",
+          "net": "GND",
+          "boundary_contact_mm": 6.820181138736492
+        },
+        {
+          "id": "1fa01f93858fbba5",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 3.3857737771855967
+        },
+        {
+          "id": "54acc847334fada5",
+          "net": "L2_M02",
+          "boundary_contact_mm": 2.8827220693224054
+        },
+        {
+          "id": "bc6b1a1ced8dfd0f",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.0037210867846103
+        },
+        {
+          "id": "a1279dbc6d87b9f5",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.7564978401142755
+        },
+        {
+          "id": "59cedf0bb839387c",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.6841596915262005
+        },
+        {
+          "id": "9aacc84ff1f2dea0",
+          "net": "GND",
+          "boundary_contact_mm": 0.6193997592702785
+        },
+        {
+          "id": "b8327c909f2a61ea",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.2830304342008061
+        }
+      ]
+    },
+    {
+      "net": "ADDR2",
+      "ref": "U8",
+      "pin": "2",
+      "x_mm": 60.825379999999996,
+      "y_mm": 42.26306,
+      "component_area_mm2": 22.619011182731725,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 12.809936849515887,
+      "candidates": [
+        {
+          "x_mm": 61.42535342495588,
+          "y_mm": 41.205800004766765,
+          "distance_mm": 1.215634323377668,
+          "region_area_mm2": 11.513062431349276
+        },
+        {
+          "x_mm": 64.46543740072565,
+          "y_mm": 40.3510707393362,
+          "distance_mm": 4.1116566993696475,
+          "region_area_mm2": 1.296874418166611
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "4fb529a9717cacbd",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.0659830467840035
+        },
+        {
+          "id": "502e98de20cb19f2",
+          "net": "RC1",
+          "boundary_contact_mm": 1.9873602784918063
+        },
+        {
+          "id": "6873aa8e0462204b",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.8343901314145725
+        },
+        {
+          "id": "5ace46b533d824be",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.9685892721630693
+        },
+        {
+          "id": "16e552d584a343d9",
+          "net": "RC1",
+          "boundary_contact_mm": 0.7596962847123276
+        },
+        {
+          "id": "f6a14047badf775e",
+          "net": "RC1",
+          "boundary_contact_mm": 0.44531538764529627
+        }
+      ]
+    },
+    {
+      "net": "ADDR2",
+      "ref": "U4",
+      "pin": "14",
+      "x_mm": 27.924760000000003,
+      "y_mm": 81.02092,
+      "component_area_mm2": 0.6607240044999949,
+      "touches_local_boundary": false,
+      "via_regions_area_mm2": 0.0,
+      "candidates": [],
+      "track_boundaries": [
+        {
+          "id": "accb35e0239d13cc",
+          "net": "L3_M15",
+          "boundary_contact_mm": 0.4353000000000087
+        },
+        {
+          "id": "e103740a4262cebc",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.43529999999998026
+        }
+      ]
+    },
+    {
+      "net": "ADDR2",
+      "ref": "U5",
+      "pin": "14",
+      "x_mm": 72.92594,
+      "y_mm": 81.02092,
+      "component_area_mm2": 34.279097077029824,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 10.84264998353387,
+      "candidates": [
+        {
+          "x_mm": 72.92594,
+          "y_mm": 79.79002,
+          "distance_mm": 1.2309000000000054,
+          "region_area_mm2": 0.05676725126037084
+        },
+        {
+          "x_mm": 74.24137,
+          "y_mm": 81.02092,
+          "distance_mm": 1.3154300000000063,
+          "region_area_mm2": 7.378154995866929
+        },
+        {
+          "x_mm": 71.54555761233267,
+          "y_mm": 82.40130238799821,
+          "distance_mm": 1.9521554941340578,
+          "region_area_mm2": 0.4504446526831978
+        },
+        {
+          "x_mm": 75.55634492659411,
+          "y_mm": 79.96600015090783,
+          "distance_mm": 2.8340582149735773,
+          "region_area_mm2": 0.9651034030423812
+        },
+        {
+          "x_mm": 70.37008077491896,
+          "y_mm": 78.71038391661484,
+          "distance_mm": 3.445430796149687,
+          "region_area_mm2": 0.0019186115425309457
+        },
+        {
+          "x_mm": 70.18406084345993,
+          "y_mm": 83.76397140099546,
+          "distance_mm": 3.8784316801475294,
+          "region_area_mm2": 1.9900299868837978
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "8865b817369115b2",
+          "net": "L4_M13",
+          "boundary_contact_mm": 3.9260868939894484
+        },
+        {
+          "id": "cafbde7bab6c8b4f",
+          "net": "RC4",
+          "boundary_contact_mm": 2.089466554665296
+        },
+        {
+          "id": "5628ef438a31baf2",
+          "net": "L4_M08",
+          "boundary_contact_mm": 1.7433378218730424
+        },
+        {
+          "id": "11e8bbe6299587fa",
+          "net": "RC4",
+          "boundary_contact_mm": 1.584848602723843
+        },
+        {
+          "id": "d04508aa8df46bca",
+          "net": "RC4",
+          "boundary_contact_mm": 1.5840983988130048
+        },
+        {
+          "id": "bba494fd808c028c",
+          "net": "L4_M13",
+          "boundary_contact_mm": 0.9158426200511736
+        },
+        {
+          "id": "93040c30ae7759bb",
+          "net": "RC4",
+          "boundary_contact_mm": 0.40894355347693895
+        },
+        {
+          "id": "091e544bc613a593",
+          "net": "RC4",
+          "boundary_contact_mm": 0.3994640766553695
+        }
+      ]
+    },
+    {
+      "net": "ADDR2",
+      "ref": "U6",
+      "pin": "14",
+      "x_mm": 117.92457999999999,
+      "y_mm": 81.02092,
+      "component_area_mm2": 15.249407541540643,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 6.0220262100738555,
+      "candidates": [
+        {
+          "x_mm": 117.92457999999999,
+          "y_mm": 82.26700038,
+          "distance_mm": 1.246080379999995,
+          "region_area_mm2": 0.5360101699389881
+        },
+        {
+          "x_mm": 119.24001,
+          "y_mm": 81.02092,
+          "distance_mm": 1.3154300000000063,
+          "region_area_mm2": 3.3351177654390374
+        },
+        {
+          "x_mm": 119.8850834877799,
+          "y_mm": 82.98142242226614,
+          "distance_mm": 2.772569868066183,
+          "region_area_mm2": 2.1508982746958294
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "6afea6f9846fdc27",
+          "net": "L5_M12",
+          "boundary_contact_mm": 5.940396241826549
+        },
+        {
+          "id": "bca99f1673b3a3a7",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.017385603083613
+        },
+        {
+          "id": "fddc52afade98d6c",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.4352999999999696
+        },
+        {
+          "id": "41ebe40053b4713d",
+          "net": "GND",
+          "boundary_contact_mm": 0.24228000000000804
+        }
+      ]
+    },
+    {
+      "net": "ADDR2",
+      "ref": "U1",
+      "pin": "14",
+      "x_mm": 22.07514,
+      "y_mm": 18.97634,
+      "component_area_mm2": 14.9005470187175,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 4.6443402399680505,
+      "candidates": [
+        {
+          "x_mm": 22.07514,
+          "y_mm": 17.74544,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 4.2242249102303315
+        },
+        {
+          "x_mm": 22.21870477568712,
+          "y_mm": 20.207240000000002,
+          "distance_mm": 1.2392439851853618,
+          "region_area_mm2": 0.42011532973771937
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "63fef0d2f4949b1b",
+          "net": "L0_M07",
+          "boundary_contact_mm": 3.3360490720307823
+        },
+        {
+          "id": "02aa7f3a43752d21",
+          "net": "L0_M07",
+          "boundary_contact_mm": 3.3072641087667702
+        },
+        {
+          "id": "c1adf82efa8fc451",
+          "net": "L0_M14",
+          "boundary_contact_mm": 1.4942349023446422
+        },
+        {
+          "id": "6fe00a200f9b9675",
+          "net": "L0_M11",
+          "boundary_contact_mm": 1.2082275793527966
+        },
+        {
+          "id": "3567e196f9c2ace1",
+          "net": "L0_M15",
+          "boundary_contact_mm": 0.16002995271237633
+        },
+        {
+          "id": "aec3f780e0c19b75",
+          "net": "L0_M15",
+          "boundary_contact_mm": 0.1309299960075408
+        }
+      ]
+    },
+    {
+      "net": "ADDR2",
+      "ref": "U2",
+      "pin": "14",
+      "x_mm": 67.07378,
+      "y_mm": 18.97634,
+      "component_area_mm2": 34.30471438282542,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 8.346009197435594,
+      "candidates": [
+        {
+          "x_mm": 67.07378,
+          "y_mm": 17.74544,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 3.768405115135767
+        },
+        {
+          "x_mm": 67.07077315914755,
+          "y_mm": 20.207240000000002,
+          "distance_mm": 1.2309036725479037,
+          "region_area_mm2": 0.001291488756194758
+        },
+        {
+          "x_mm": 65.75835,
+          "y_mm": 18.97634,
+          "distance_mm": 1.3154300000000063,
+          "region_area_mm2": 0.7591038957913279
+        },
+        {
+          "x_mm": 69.5156272716524,
+          "y_mm": 17.52436050462633,
+          "distance_mm": 2.8409263547409815,
+          "region_area_mm2": 2.916614315214674
+        },
+        {
+          "x_mm": 63.94832476535601,
+          "y_mm": 18.976839556240375,
+          "distance_mm": 3.1254552745672006,
+          "region_area_mm2": 0.456257881777606
+        },
+        {
+          "x_mm": 69.96294541275473,
+          "y_mm": 20.93163297270695,
+          "distance_mm": 3.48861683069027,
+          "region_area_mm2": 0.44433650076002307
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "7baf3285a75396ec",
+          "net": "RC_DRIVE",
+          "boundary_contact_mm": 4.58804892114175
+        },
+        {
+          "id": "23242820c5b42d99",
+          "net": "RC_DRIVE",
+          "boundary_contact_mm": 3.8931356334876557
+        },
+        {
+          "id": "40a71d4f5bd13b65",
+          "net": "L1_M13",
+          "boundary_contact_mm": 1.961233147734257
+        },
+        {
+          "id": "a793413fc0e1304b",
+          "net": "L1_M14",
+          "boundary_contact_mm": 0.29021311126612026
+        },
+        {
+          "id": "32588fd6e6143f5e",
+          "net": "L1_M13",
+          "boundary_contact_mm": 0.2748481406780073
+        },
+        {
+          "id": "3ed65e7fc4ceb09e",
+          "net": "L1_M15",
+          "boundary_contact_mm": 0.1650619634656275
+        },
+        {
+          "id": "548b3758544c2bb8",
+          "net": "L1_M15",
+          "boundary_contact_mm": 0.1358719992980712
+        }
+      ]
+    },
+    {
+      "net": "ADDR2",
+      "ref": "U3",
+      "pin": "14",
+      "x_mm": 112.07495999999999,
+      "y_mm": 18.97634,
+      "component_area_mm2": 5.324186101469587,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 0.1297578985426059,
+      "candidates": [
+        {
+          "x_mm": 112.26950411138543,
+          "y_mm": 20.207240000000002,
+          "distance_mm": 1.2461790486421906,
+          "region_area_mm2": 0.1297578985426059
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "54acc847334fada5",
+          "net": "L2_M02",
+          "boundary_contact_mm": 4.0102478710850615
+        },
+        {
+          "id": "8203c79844c7ac47",
+          "net": "L2_M15",
+          "boundary_contact_mm": 2.708539444573741
+        },
+        {
+          "id": "e7c5ca68818509de",
+          "net": "L2_M15",
+          "boundary_contact_mm": 1.4828936252358624
+        },
+        {
+          "id": "6e8039f66932b1f9",
+          "net": "L2_M15",
+          "boundary_contact_mm": 0.7863088905606043
+        },
+        {
+          "id": "929200b8dd1c29c8",
+          "net": "L2_M14",
+          "boundary_contact_mm": 0.4343347199825475
+        },
+        {
+          "id": "38dadd081d787209",
+          "net": "RC2",
+          "boundary_contact_mm": 0.10952953578883244
+        }
+      ]
+    },
+    {
+      "net": "ADDR3",
+      "ref": "U8",
+      "pin": "3",
+      "x_mm": 62.09537999999999,
+      "y_mm": 42.26306,
+      "component_area_mm2": 22.156743623058997,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 12.352439511747136,
+      "candidates": [
+        {
+          "x_mm": 62.695353424955876,
+          "y_mm": 41.205800004766765,
+          "distance_mm": 1.215634323377668,
+          "region_area_mm2": 9.59306358246849
+        },
+        {
+          "x_mm": 64.46543740072565,
+          "y_mm": 40.3510707393362,
+          "distance_mm": 3.045139572438046,
+          "region_area_mm2": 2.7593759292786455
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "7d6d9d35f5f8889f",
+          "net": "RC_DRIVE",
+          "boundary_contact_mm": 2.7072280491748626
+        },
+        {
+          "id": "4fb529a9717cacbd",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.0659830467840035
+        },
+        {
+          "id": "5ace46b533d824be",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.9685892721630693
+        },
+        {
+          "id": "16e552d584a343d9",
+          "net": "RC1",
+          "boundary_contact_mm": 0.759696284712323
+        },
+        {
+          "id": "6873aa8e0462204b",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.5643901314145767
+        },
+        {
+          "id": "f6a14047badf775e",
+          "net": "RC1",
+          "boundary_contact_mm": 0.44531538764529627
+        },
+        {
+          "id": "502e98de20cb19f2",
+          "net": "RC1",
+          "boundary_contact_mm": 0.31374121055077614
+        }
+      ]
+    },
+    {
+      "net": "ADDR3",
+      "ref": "U4",
+      "pin": "13",
+      "x_mm": 28.575,
+      "y_mm": 81.02092,
+      "component_area_mm2": 10.140149462504366,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 4.560588596567263,
+      "candidates": [
+        {
+          "x_mm": 29.17979,
+          "y_mm": 81.02092,
+          "distance_mm": 0.6047900000000013,
+          "region_area_mm2": 3.386200919150932
+        },
+        {
+          "x_mm": 31.57036306800782,
+          "y_mm": 79.54863829232069,
+          "distance_mm": 3.337635890260101,
+          "region_area_mm2": 1.1743876774163315
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "accb35e0239d13cc",
+          "net": "L3_M15",
+          "boundary_contact_mm": 4.218650000000011
+        },
+        {
+          "id": "e688ab1b94b11921",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.5796444277120663
+        },
+        {
+          "id": "e25d895ffef4ce02",
+          "net": "GND",
+          "boundary_contact_mm": 0.8950600000000115
+        },
+        {
+          "id": "e103740a4262cebc",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.4424133902683738
+        },
+        {
+          "id": "76a826fe0b68af73",
+          "net": "GND",
+          "boundary_contact_mm": 0.1358950531247245
+        },
+        {
+          "id": "dd6fa89f94a3804d",
+          "net": "GND",
+          "boundary_contact_mm": 0.13496711700381916
+        }
+      ]
+    },
+    {
+      "net": "ADDR3",
+      "ref": "U5",
+      "pin": "13",
+      "x_mm": 73.57618,
+      "y_mm": 81.02092,
+      "component_area_mm2": 36.353828199097364,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 12.695106698756227,
+      "candidates": [
+        {
+          "x_mm": 74.18096999999999,
+          "y_mm": 81.02092,
+          "distance_mm": 0.6047899999999942,
+          "region_area_mm2": 8.674976095217684
+        },
+        {
+          "x_mm": 73.53941965821858,
+          "y_mm": 79.79002,
+          "distance_mm": 1.2314487941964538,
+          "region_area_mm2": 0.04542304606339983
+        },
+        {
+          "x_mm": 75.55634492659411,
+          "y_mm": 79.96600015090783,
+          "distance_mm": 2.2436374538953756,
+          "region_area_mm2": 2.092066701400467
+        },
+        {
+          "x_mm": 71.8706776124106,
+          "y_mm": 82.72642238799821,
+          "distance_mm": 2.4119446074776896,
+          "region_area_mm2": 0.4504446526831978
+        },
+        {
+          "x_mm": 70.37008077491896,
+          "y_mm": 78.71038391661484,
+          "distance_mm": 3.951917159264606,
+          "region_area_mm2": 0.0019186115425309457
+        },
+        {
+          "x_mm": 70.5093198133506,
+          "y_mm": 84.0890913712947,
+          "distance_mm": 4.338122516491151,
+          "region_area_mm2": 1.4300465095942854
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "8865b817369115b2",
+          "net": "L4_M13",
+          "boundary_contact_mm": 3.9260868939894484
+        },
+        {
+          "id": "11e8bbe6299587fa",
+          "net": "RC4",
+          "boundary_contact_mm": 2.2351987280037653
+        },
+        {
+          "id": "cafbde7bab6c8b4f",
+          "net": "RC4",
+          "boundary_contact_mm": 2.089466554665296
+        },
+        {
+          "id": "d04508aa8df46bca",
+          "net": "RC4",
+          "boundary_contact_mm": 1.5840983988130048
+        },
+        {
+          "id": "bba494fd808c028c",
+          "net": "L4_M13",
+          "boundary_contact_mm": 0.9158426200511736
+        },
+        {
+          "id": "5628ef438a31baf2",
+          "net": "L4_M08",
+          "boundary_contact_mm": 0.6751897652239938
+        },
+        {
+          "id": "93040c30ae7759bb",
+          "net": "RC4",
+          "boundary_contact_mm": 0.40894355347693895
+        },
+        {
+          "id": "091e544bc613a593",
+          "net": "RC4",
+          "boundary_contact_mm": 0.3994640766553695
+        }
+      ]
+    },
+    {
+      "net": "ADDR3",
+      "ref": "U6",
+      "pin": "13",
+      "x_mm": 118.57482,
+      "y_mm": 81.02092,
+      "component_area_mm2": 18.42270659869876,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 7.707757292418778,
+      "candidates": [
+        {
+          "x_mm": 119.17961,
+          "y_mm": 81.02092,
+          "distance_mm": 0.6047899999999942,
+          "region_area_mm2": 3.4768969083530616
+        },
+        {
+          "x_mm": 118.00470954829636,
+          "y_mm": 82.31222,
+          "distance_mm": 1.4115529097918047,
+          "region_area_mm2": 0.5199075908349216
+        },
+        {
+          "x_mm": 120.21020331108042,
+          "y_mm": 82.65630242226618,
+          "distance_mm": 2.3127806297220523,
+          "region_area_mm2": 3.710952793230795
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "6afea6f9846fdc27",
+          "net": "L5_M12",
+          "boundary_contact_mm": 6.59063624182656
+        },
+        {
+          "id": "bca99f1673b3a3a7",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.5828413988911527
+        },
+        {
+          "id": "41ebe40053b4713d",
+          "net": "GND",
+          "boundary_contact_mm": 0.8925200000000189
+        },
+        {
+          "id": "fddc52afade98d6c",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.4426927902681849
+        }
+      ]
+    },
+    {
+      "net": "ADDR3",
+      "ref": "U1",
+      "pin": "13",
+      "x_mm": 21.424899999999997,
+      "y_mm": 18.97634,
+      "component_area_mm2": 12.980964210310836,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 4.605261090630419,
+      "candidates": [
+        {
+          "x_mm": 21.72278713947041,
+          "y_mm": 17.71095947285578,
+          "distance_mm": 1.2999710098066222,
+          "region_area_mm2": 4.191543889352717
+        },
+        {
+          "x_mm": 22.278996044246746,
+          "y_mm": 20.26753126855963,
+          "distance_mm": 1.5481133501144444,
+          "region_area_mm2": 0.4137172012777026
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "02aa7f3a43752d21",
+          "net": "L0_M07",
+          "boundary_contact_mm": 3.650921562587582
+        },
+        {
+          "id": "63fef0d2f4949b1b",
+          "net": "L0_M07",
+          "boundary_contact_mm": 3.52690041688367
+        },
+        {
+          "id": "bb1a1ebdc1526e2d",
+          "net": "L0_M07",
+          "boundary_contact_mm": 1.7085859284793599
+        },
+        {
+          "id": "c1adf82efa8fc451",
+          "net": "L0_M14",
+          "boundary_contact_mm": 1.4942349023446422
+        },
+        {
+          "id": "3567e196f9c2ace1",
+          "net": "L0_M15",
+          "boundary_contact_mm": 0.16002995271237633
+        },
+        {
+          "id": "aec3f780e0c19b75",
+          "net": "L0_M15",
+          "boundary_contact_mm": 0.1309299960075408
+        }
+      ]
+    },
+    {
+      "net": "ADDR3",
+      "ref": "U2",
+      "pin": "13",
+      "x_mm": 66.42353999999999,
+      "y_mm": 18.97634,
+      "component_area_mm2": 36.06505219681212,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 8.532213830370956,
+      "candidates": [
+        {
+          "x_mm": 65.81875,
+          "y_mm": 18.97634,
+          "distance_mm": 0.6047899999999942,
+          "region_area_mm2": 0.84501106390619
+        },
+        {
+          "x_mm": 66.9757,
+          "y_mm": 17.68504,
+          "distance_mm": 1.4043989303613185,
+          "region_area_mm2": 3.745843817721751
+        },
+        {
+          "x_mm": 63.94832474874424,
+          "y_mm": 18.976735625319257,
+          "distance_mm": 2.4752152828730765,
+          "region_area_mm2": 0.456257881777606
+        },
+        {
+          "x_mm": 69.5156272716524,
+          "y_mm": 17.52436050462633,
+          "distance_mm": 3.416028124957473,
+          "region_area_mm2": 2.055309848285242
+        },
+        {
+          "x_mm": 62.749719999999996,
+          "y_mm": 18.97634,
+          "distance_mm": 3.673819999999992,
+          "region_area_mm2": 1.1466569776675242
+        },
+        {
+          "x_mm": 69.96294541275473,
+          "y_mm": 20.93163297270695,
+          "distance_mm": 4.043582728837729,
+          "region_area_mm2": 0.2830713523798304
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "23242820c5b42d99",
+          "net": "RC_DRIVE",
+          "boundary_contact_mm": 4.543375633487664
+        },
+        {
+          "id": "7baf3285a75396ec",
+          "net": "RC_DRIVE",
+          "boundary_contact_mm": 3.8888365910613496
+        },
+        {
+          "id": "40a71d4f5bd13b65",
+          "net": "L1_M13",
+          "boundary_contact_mm": 1.1849298124120569
+        },
+        {
+          "id": "a793413fc0e1304b",
+          "net": "L1_M14",
+          "boundary_contact_mm": 0.29021311126612026
+        },
+        {
+          "id": "32588fd6e6143f5e",
+          "net": "L1_M13",
+          "boundary_contact_mm": 0.2748481406780073
+        },
+        {
+          "id": "3ed65e7fc4ceb09e",
+          "net": "L1_M15",
+          "boundary_contact_mm": 0.1650619634656275
+        },
+        {
+          "id": "548b3758544c2bb8",
+          "net": "L1_M15",
+          "boundary_contact_mm": 0.1358719992980712
+        }
+      ]
+    },
+    {
+      "net": "ADDR3",
+      "ref": "U3",
+      "pin": "13",
+      "x_mm": 111.42472,
+      "y_mm": 18.97634,
+      "component_area_mm2": 26.26549020427169,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 5.6276560802754165,
+      "candidates": [
+        {
+          "x_mm": 110.81993,
+          "y_mm": 18.77830486983498,
+          "distance_mm": 0.636387348145349,
+          "region_area_mm2": 0.0793404356701008
+        },
+        {
+          "x_mm": 112.32755730928329,
+          "y_mm": 20.264466638450834,
+          "distance_mm": 1.5730179413218885,
+          "region_area_mm2": 0.12641695429913138
+        },
+        {
+          "x_mm": 112.47396458638855,
+          "y_mm": 17.257601179999998,
+          "distance_mm": 2.013697428473475,
+          "region_area_mm2": 1.2048033826301157
+        },
+        {
+          "x_mm": 114.05985527822055,
+          "y_mm": 17.444403758499217,
+          "distance_mm": 3.048075882019031,
+          "region_area_mm2": 4.080923515815913
+        },
+        {
+          "x_mm": 110.10588648321954,
+          "y_mm": 15.978461667532416,
+          "distance_mm": 3.275148293018521,
+          "region_area_mm2": 0.1361717918601552
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "54acc847334fada5",
+          "net": "L2_M02",
+          "boundary_contact_mm": 6.97380060513004
+        },
+        {
+          "id": "929200b8dd1c29c8",
+          "net": "L2_M14",
+          "boundary_contact_mm": 4.743435653574832
+        },
+        {
+          "id": "8203c79844c7ac47",
+          "net": "L2_M15",
+          "boundary_contact_mm": 2.708539444573741
+        },
+        {
+          "id": "5332709c3d784c37",
+          "net": "L2_M13",
+          "boundary_contact_mm": 1.2238928769984232
+        },
+        {
+          "id": "e7c5ca68818509de",
+          "net": "L2_M15",
+          "boundary_contact_mm": 0.8326536306079139
+        },
+        {
+          "id": "6e8039f66932b1f9",
+          "net": "L2_M15",
+          "boundary_contact_mm": 0.7863088905606043
+        },
+        {
+          "id": "f1e0973036c17ebc",
+          "net": "L2_M14",
+          "boundary_contact_mm": 0.7550068526270767
+        },
+        {
+          "id": "38dadd081d787209",
+          "net": "RC2",
+          "boundary_contact_mm": 0.7035263474200832
+        }
+      ]
+    },
+    {
+      "net": "MUX_DISABLE",
+      "ref": "U8",
+      "pin": "4",
+      "x_mm": 63.365379999999995,
+      "y_mm": 42.26306,
+      "component_area_mm2": 18.774944757190994,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 9.604966371191225,
+      "candidates": [
+        {
+          "x_mm": 62.76540657504412,
+          "y_mm": 41.20580000476675,
+          "distance_mm": 1.215634323377677,
+          "region_area_mm2": 6.845590441912578
+        },
+        {
+          "x_mm": 64.72147298304839,
+          "y_mm": 40.62209703108438,
+          "distance_mm": 2.1287901831851492,
+          "region_area_mm2": 2.7593759292786455
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "7d6d9d35f5f8889f",
+          "net": "RC_DRIVE",
+          "boundary_contact_mm": 3.181306912926766
+        },
+        {
+          "id": "4fb529a9717cacbd",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.463974570176007
+        },
+        {
+          "id": "8a6f76d27396eacf",
+          "net": "RC_DRIVE",
+          "boundary_contact_mm": 0.3521384664348097
+        }
+      ]
+    },
+    {
+      "net": "MUX_DISABLE",
+      "ref": "U4",
+      "pin": "15",
+      "x_mm": 27.27452,
+      "y_mm": 81.02092,
+      "component_area_mm2": 0.6607240044999949,
+      "touches_local_boundary": false,
+      "via_regions_area_mm2": 0.0,
+      "candidates": [],
+      "track_boundaries": [
+        {
+          "id": "accb35e0239d13cc",
+          "net": "L3_M15",
+          "boundary_contact_mm": 0.4353000000000087
+        },
+        {
+          "id": "e103740a4262cebc",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.43529999999998026
+        }
+      ]
+    },
+    {
+      "net": "MUX_DISABLE",
+      "ref": "U5",
+      "pin": "15",
+      "x_mm": 72.2757,
+      "y_mm": 81.02092,
+      "component_area_mm2": 32.00445124170622,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 8.948984634008172,
+      "candidates": [
+        {
+          "x_mm": 72.86360167496993,
+          "y_mm": 79.72962,
+          "distance_mm": 1.4188319384030175,
+          "region_area_mm2": 0.033659810228651464
+        },
+        {
+          "x_mm": 71.4564752243131,
+          "y_mm": 82.31222,
+          "distance_mm": 1.5292432517749557,
+          "region_area_mm2": 0.4504446526831978
+        },
+        {
+          "x_mm": 73.58335134932013,
+          "y_mm": 82.31222,
+          "distance_mm": 1.837772494455917,
+          "region_area_mm2": 5.811818527486066
+        },
+        {
+          "x_mm": 70.34959846339676,
+          "y_mm": 78.73098129719233,
+          "distance_mm": 2.9922711093618943,
+          "region_area_mm2": 0.0019186115425309457
+        },
+        {
+          "x_mm": 69.85880187356928,
+          "y_mm": 83.43885143069623,
+          "distance_mm": 3.4187408438039073,
+          "region_area_mm2": 2.3182535487592943
+        },
+        {
+          "x_mm": 75.55634492659411,
+          "y_mm": 79.96600015090783,
+          "distance_mm": 3.446082851934397,
+          "region_area_mm2": 0.2687340941640111
+        },
+        {
+          "x_mm": 68.7567935947375,
+          "y_mm": 78.56739894,
+          "distance_mm": 4.289809772106563,
+          "region_area_mm2": 0.06392430688975828
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "8865b817369115b2",
+          "net": "L4_M13",
+          "boundary_contact_mm": 3.9260868939894484
+        },
+        {
+          "id": "5628ef438a31baf2",
+          "net": "L4_M08",
+          "boundary_contact_mm": 2.8114858785220913
+        },
+        {
+          "id": "cafbde7bab6c8b4f",
+          "net": "RC4",
+          "boundary_contact_mm": 2.089466554665296
+        },
+        {
+          "id": "d04508aa8df46bca",
+          "net": "RC4",
+          "boundary_contact_mm": 1.5840983988130048
+        },
+        {
+          "id": "01d3d76991f64265",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.2371161228495184
+        },
+        {
+          "id": "11e8bbe6299587fa",
+          "net": "RC4",
+          "boundary_contact_mm": 0.9344984774439363
+        },
+        {
+          "id": "bba494fd808c028c",
+          "net": "L4_M13",
+          "boundary_contact_mm": 0.9158426200511736
+        },
+        {
+          "id": "93040c30ae7759bb",
+          "net": "RC4",
+          "boundary_contact_mm": 0.40894355347693895
+        }
+      ]
+    },
+    {
+      "net": "MUX_DISABLE",
+      "ref": "U6",
+      "pin": "15",
+      "x_mm": 117.27434000000001,
+      "y_mm": 81.02092,
+      "component_area_mm2": 12.61666151307277,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 4.712338093318857,
+      "candidates": [
+        {
+          "x_mm": 117.44950357897092,
+          "y_mm": 82.26700038,
+          "distance_mm": 1.2583316704346397,
+          "region_area_mm2": 0.5259236416427165
+        },
+        {
+          "x_mm": 119.24001,
+          "y_mm": 81.02092,
+          "distance_mm": 1.9656699999999887,
+          "region_area_mm2": 3.1727584081210165
+        },
+        {
+          "x_mm": 119.85774592490372,
+          "y_mm": 83.00876,
+          "distance_mm": 3.2596769837558424,
+          "region_area_mm2": 1.0136560435551236
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "6afea6f9846fdc27",
+          "net": "L5_M12",
+          "boundary_contact_mm": 5.290156241826566
+        },
+        {
+          "id": "bca99f1673b3a3a7",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.017385603083613
+        },
+        {
+          "id": "fddc52afade98d6c",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.4352999999999838
+        }
+      ]
+    },
+    {
+      "net": "MUX_DISABLE",
+      "ref": "U1",
+      "pin": "15",
+      "x_mm": 22.72538,
+      "y_mm": 18.97634,
+      "component_area_mm2": 15.268818003226917,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 4.659954935585669,
+      "candidates": [
+        {
+          "x_mm": 22.72538,
+          "y_mm": 17.74544,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 4.2242249102303315
+        },
+        {
+          "x_mm": 22.72538,
+          "y_mm": 20.207240000000002,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 0.4357300253553381
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "63fef0d2f4949b1b",
+          "net": "L0_M07",
+          "boundary_contact_mm": 3.3360490720307823
+        },
+        {
+          "id": "02aa7f3a43752d21",
+          "net": "L0_M07",
+          "boundary_contact_mm": 3.3072641087667702
+        },
+        {
+          "id": "6fe00a200f9b9675",
+          "net": "L0_M11",
+          "boundary_contact_mm": 3.022650677234236
+        },
+        {
+          "id": "c1adf82efa8fc451",
+          "net": "L0_M14",
+          "boundary_contact_mm": 1.4942349023446422
+        },
+        {
+          "id": "3567e196f9c2ace1",
+          "net": "L0_M15",
+          "boundary_contact_mm": 0.173719731046349
+        },
+        {
+          "id": "aec3f780e0c19b75",
+          "net": "L0_M15",
+          "boundary_contact_mm": 0.1309299960075408
+        }
+      ]
+    },
+    {
+      "net": "MUX_DISABLE",
+      "ref": "U2",
+      "pin": "15",
+      "x_mm": 67.72402,
+      "y_mm": 18.97634,
+      "component_area_mm2": 32.723944500153245,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 8.320786548180953,
+      "candidates": [
+        {
+          "x_mm": 67.72402,
+          "y_mm": 17.74544,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 3.775871641159806
+        },
+        {
+          "x_mm": 65.75835,
+          "y_mm": 18.97634,
+          "distance_mm": 1.965670000000003,
+          "region_area_mm2": 0.7591038957913279
+        },
+        {
+          "x_mm": 69.5156272716524,
+          "y_mm": 17.52436050462633,
+          "distance_mm": 2.3061008370891702,
+          "region_area_mm2": 2.916614315214674
+        },
+        {
+          "x_mm": 69.96294541275473,
+          "y_mm": 20.93163297270695,
+          "distance_mm": 2.9725338707903997,
+          "region_area_mm2": 0.44433650076002307
+        },
+        {
+          "x_mm": 63.948324781967784,
+          "y_mm": 18.97694348716149,
+          "distance_mm": 3.77569526626131,
+          "region_area_mm2": 0.42479730662230974
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "7baf3285a75396ec",
+          "net": "RC_DRIVE",
+          "boundary_contact_mm": 5.287261251222136
+        },
+        {
+          "id": "23242820c5b42d99",
+          "net": "RC_DRIVE",
+          "boundary_contact_mm": 3.242895633487659
+        },
+        {
+          "id": "40a71d4f5bd13b65",
+          "net": "L1_M13",
+          "boundary_contact_mm": 2.737536483056438
+        },
+        {
+          "id": "a793413fc0e1304b",
+          "net": "L1_M14",
+          "boundary_contact_mm": 0.29021311126612026
+        },
+        {
+          "id": "32588fd6e6143f5e",
+          "net": "L1_M13",
+          "boundary_contact_mm": 0.2748481406780073
+        },
+        {
+          "id": "3ed65e7fc4ceb09e",
+          "net": "L1_M15",
+          "boundary_contact_mm": 0.17875174179960215
+        },
+        {
+          "id": "548b3758544c2bb8",
+          "net": "L1_M15",
+          "boundary_contact_mm": 0.1358719992980712
+        }
+      ]
+    },
+    {
+      "net": "MUX_DISABLE",
+      "ref": "U3",
+      "pin": "15",
+      "x_mm": 112.7252,
+      "y_mm": 18.97634,
+      "component_area_mm2": 5.733139109629729,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 0.14409565308064023,
+      "candidates": [
+        {
+          "x_mm": 112.72345820414749,
+          "y_mm": 20.207240000000002,
+          "distance_mm": 1.2309012323711421,
+          "region_area_mm2": 0.14409565308064023
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "54acc847334fada5",
+          "net": "L2_M02",
+          "boundary_contact_mm": 4.0102478710850615
+        },
+        {
+          "id": "8203c79844c7ac47",
+          "net": "L2_M15",
+          "boundary_contact_mm": 2.708539444573741
+        },
+        {
+          "id": "e7c5ca68818509de",
+          "net": "L2_M15",
+          "boundary_contact_mm": 2.133133619863823
+        },
+        {
+          "id": "6e8039f66932b1f9",
+          "net": "L2_M15",
+          "boundary_contact_mm": 0.7999986688945769
+        },
+        {
+          "id": "929200b8dd1c29c8",
+          "net": "L2_M14",
+          "boundary_contact_mm": 0.4347489699825497
+        },
+        {
+          "id": "38dadd081d787209",
+          "net": "RC2",
+          "boundary_contact_mm": 0.10952953578883244
+        }
+      ]
+    },
+    {
+      "net": "ADDR0",
+      "ref": "U8",
+      "pin": "15",
+      "x_mm": 60.825379999999996,
+      "y_mm": 47.73421999999999,
+      "component_area_mm2": 2.9408095507802106,
+      "touches_local_boundary": false,
+      "via_regions_area_mm2": 0.0,
+      "candidates": [],
+      "track_boundaries": [
+        {
+          "id": "081a5ce595486d80",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.9995216593417688
+        },
+        {
+          "id": "3f0768af31b3ed22",
+          "net": "RC2",
+          "boundary_contact_mm": 0.9467530315533087
+        },
+        {
+          "id": "20e4adddfda2dc40",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.746127416527751
+        },
+        {
+          "id": "e7723689d116ce9e",
+          "net": "GND",
+          "boundary_contact_mm": 0.35580776310879203
+        }
+      ]
+    },
+    {
+      "net": "ADDR0",
+      "ref": "U4",
+      "pin": "10",
+      "x_mm": 27.27452,
+      "y_mm": 74.97572,
+      "component_area_mm2": 36.3779963642859,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 17.774471333138873,
+      "candidates": [
+        {
+          "x_mm": 27.4331324,
+          "y_mm": 76.20662,
+          "distance_mm": 1.2410772350799826,
+          "region_area_mm2": 3.3037000073339198
+        },
+        {
+          "x_mm": 27.917081791791322,
+          "y_mm": 73.67297343252156,
+          "distance_mm": 1.4525957026464467,
+          "region_area_mm2": 3.291357934160394
+        },
+        {
+          "x_mm": 26.3491324,
+          "y_mm": 77.05434478592935,
+          "distance_mm": 2.275307278350244,
+          "region_area_mm2": 3.6103560909132617
+        },
+        {
+          "x_mm": 29.752,
+          "y_mm": 74.97572,
+          "distance_mm": 2.47748,
+          "region_area_mm2": 6.11417605568913
+        },
+        {
+          "x_mm": 25.49687667363504,
+          "y_mm": 72.8587422,
+          "distance_mm": 2.7643463606181338,
+          "region_area_mm2": 1.4548812450421673
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "2fffe51594d7f0e8",
+          "net": "RC3",
+          "boundary_contact_mm": 8.006642566896732
+        },
+        {
+          "id": "d2af56a50a073be7",
+          "net": "L3_M00",
+          "boundary_contact_mm": 3.1227253770953225
+        },
+        {
+          "id": "00defd6e4711e3f2",
+          "net": "L3_M02",
+          "boundary_contact_mm": 3.0931185964033636
+        },
+        {
+          "id": "e688ab1b94b11921",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.2309682519731484
+        },
+        {
+          "id": "b2dbbbde0ea7c2f2",
+          "net": "L3_M00",
+          "boundary_contact_mm": 1.236935577202891
+        },
+        {
+          "id": "374080ed1cc1f74c",
+          "net": "GND",
+          "boundary_contact_mm": 0.741035739775562
+        },
+        {
+          "id": "5cd3ad647a146a4b",
+          "net": "L3_M02",
+          "boundary_contact_mm": 0.7375072140006117
+        },
+        {
+          "id": "6cef7ab6a1209bf7",
+          "net": "GND",
+          "boundary_contact_mm": 0.6021570312140674
+        }
+      ]
+    },
+    {
+      "net": "ADDR0",
+      "ref": "U5",
+      "pin": "10",
+      "x_mm": 72.2757,
+      "y_mm": 74.97572,
+      "component_area_mm2": 13.643270405272094,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 4.048978095436246,
+      "candidates": [
+        {
+          "x_mm": 72.10091520538836,
+          "y_mm": 76.20662,
+          "distance_mm": 1.243247575677285,
+          "region_area_mm2": 0.010782886187154839
+        },
+        {
+          "x_mm": 72.88100016812724,
+          "y_mm": 73.68442,
+          "distance_mm": 1.4261290206481496,
+          "region_area_mm2": 3.5142013292780385
+        },
+        {
+          "x_mm": 70.89346168281624,
+          "y_mm": 76.26702,
+          "distance_mm": 1.8915703675758453,
+          "region_area_mm2": 0.5239938799710531
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "846995b967cb52ee",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 4.753335564714009
+        },
+        {
+          "id": "a34b169d7530ca35",
+          "net": "L4_M14",
+          "boundary_contact_mm": 2.1862505622647634
+        },
+        {
+          "id": "753907e16d658b86",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.8598906345623858
+        },
+        {
+          "id": "18896418dd3430cf",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.534172219027187
+        },
+        {
+          "id": "8e9ad74445f73e53",
+          "net": "L4_M00",
+          "boundary_contact_mm": 0.9146364617240752
+        },
+        {
+          "id": "01d3d76991f64265",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.9000224566550853
+        },
+        {
+          "id": "43c17612af7ca8ec",
+          "net": "L4_M00",
+          "boundary_contact_mm": 0.8439320053216729
+        },
+        {
+          "id": "9a9a618b06b538c8",
+          "net": "L4_M00",
+          "boundary_contact_mm": 0.572072551203063
+        }
+      ]
+    },
+    {
+      "net": "ADDR0",
+      "ref": "U6",
+      "pin": "10",
+      "x_mm": 117.27434000000001,
+      "y_mm": 74.97572,
+      "component_area_mm2": 25.440679108044307,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 13.167581575309477,
+      "candidates": [
+        {
+          "x_mm": 117.27434000000001,
+          "y_mm": 76.20662,
+          "distance_mm": 1.2309000000000054,
+          "region_area_mm2": 4.320745990361374
+        },
+        {
+          "x_mm": 117.27434000000001,
+          "y_mm": 73.74481999999999,
+          "distance_mm": 1.2309000000000054,
+          "region_area_mm2": 7.606320183798092
+        },
+        {
+          "x_mm": 119.06094,
+          "y_mm": 76.62516,
+          "distance_mm": 2.4315821749634474,
+          "region_area_mm2": 1.2405154011500117
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "721d2e31ee1f3be1",
+          "net": "GND",
+          "boundary_contact_mm": 5.248420028574777
+        },
+        {
+          "id": "0f33bfc31a662b1c",
+          "net": "RC5",
+          "boundary_contact_mm": 5.1376801138074395
+        },
+        {
+          "id": "bca99f1673b3a3a7",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.2341652231522793
+        },
+        {
+          "id": "59f89930ea1dd61f",
+          "net": "RC5",
+          "boundary_contact_mm": 1.6449669234305546
+        },
+        {
+          "id": "75d2ace94f361e76",
+          "net": "L5_M07",
+          "boundary_contact_mm": 1.2078926765118358
+        },
+        {
+          "id": "c23ee017efc72e76",
+          "net": "GND",
+          "boundary_contact_mm": 0.6057851725261587
+        },
+        {
+          "id": "06beae4838f00268",
+          "net": "L5_M00",
+          "boundary_contact_mm": 0.41426735590359426
+        },
+        {
+          "id": "77a96f5a9f59465d",
+          "net": "L5_M00",
+          "boundary_contact_mm": 0.2295351077144624
+        }
+      ]
+    },
+    {
+      "net": "ADDR0",
+      "ref": "U1",
+      "pin": "10",
+      "x_mm": 22.72538,
+      "y_mm": 25.021539999999998,
+      "component_area_mm2": 5.17738597341328,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 0.1281548767413052,
+      "candidates": [
+        {
+          "x_mm": 22.72538,
+          "y_mm": 23.790639999999996,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 0.11429282961287524
+        },
+        {
+          "x_mm": 19.26610413078661,
+          "y_mm": 23.1099,
+          "distance_mm": 3.9523356422401763,
+          "region_area_mm2": 0.01386204712842998
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "9ce82258300279cb",
+          "net": "L0_M01",
+          "boundary_contact_mm": 3.6347212995623646
+        },
+        {
+          "id": "053800892b63d800",
+          "net": "L0_M01",
+          "boundary_contact_mm": 1.8870882727318614
+        },
+        {
+          "id": "8fec01bbe9e5bbf6",
+          "net": "GND",
+          "boundary_contact_mm": 1.6831790265371813
+        },
+        {
+          "id": "6da24840b6ea46d2",
+          "net": "GND",
+          "boundary_contact_mm": 0.6032451725260062
+        },
+        {
+          "id": "8f36e8ff8262a3df",
+          "net": "GND",
+          "boundary_contact_mm": 0.4391997289975145
+        },
+        {
+          "id": "118aba1e781e81e2",
+          "net": "L0_M00",
+          "boundary_contact_mm": 0.3795896985623833
+        },
+        {
+          "id": "56123e1fc6ce23a7",
+          "net": "L0_M00",
+          "boundary_contact_mm": 0.3018000753829641
+        },
+        {
+          "id": "ba20c81a8745d099",
+          "net": "L0_M01",
+          "boundary_contact_mm": 0.06849820990324426
+        }
+      ]
+    },
+    {
+      "net": "ADDR0",
+      "ref": "U2",
+      "pin": "10",
+      "x_mm": 67.72402,
+      "y_mm": 25.021539999999998,
+      "component_area_mm2": 3.3569161349847,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 0.02842301471682489,
+      "candidates": [
+        {
+          "x_mm": 67.72402,
+          "y_mm": 23.790639999999996,
+          "distance_mm": 1.2309000000000019,
+          "region_area_mm2": 0.02842301471682489
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "6ee1937f2664b386",
+          "net": "L1_M00",
+          "boundary_contact_mm": 4.116635629605775
+        },
+        {
+          "id": "c423b7b67f91665b",
+          "net": "GND",
+          "boundary_contact_mm": 1.3643450671755404
+        },
+        {
+          "id": "81454d356e5de295",
+          "net": "GND",
+          "boundary_contact_mm": 0.9962926557680034
+        },
+        {
+          "id": "dcf27f6ddab0518c",
+          "net": "L1_M00",
+          "boundary_contact_mm": 0.8035479882372654
+        },
+        {
+          "id": "eadd1b82cf3b0b54",
+          "net": "GND",
+          "boundary_contact_mm": 0.6666924481980444
+        },
+        {
+          "id": "c87edea44d558bd6",
+          "net": "L1_M01",
+          "boundary_contact_mm": 0.42466803933171793
+        },
+        {
+          "id": "7300f1177f64a2b8",
+          "net": "L1_M01",
+          "boundary_contact_mm": 0.41158768659963824
+        },
+        {
+          "id": "15060c6b87eaab74",
+          "net": "GND",
+          "boundary_contact_mm": 0.33348811607770884
+        }
+      ]
+    },
+    {
+      "net": "ADDR0",
+      "ref": "U3",
+      "pin": "10",
+      "x_mm": 112.7252,
+      "y_mm": 25.021539999999998,
+      "component_area_mm2": 17.876344751815786,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 6.796985832236885,
+      "candidates": [
+        {
+          "x_mm": 112.49105985671275,
+          "y_mm": 26.259282933912047,
+          "distance_mm": 1.259694080778258,
+          "region_area_mm2": 0.03164425905024353
+        },
+        {
+          "x_mm": 112.38812316890689,
+          "y_mm": 23.744362610313928,
+          "distance_mm": 1.3209098662607905,
+          "region_area_mm2": 2.84178698126709
+        },
+        {
+          "x_mm": 110.75953,
+          "y_mm": 25.021539999999998,
+          "distance_mm": 1.965670000000003,
+          "region_area_mm2": 3.9235545919195514
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "c81bbd44ccd45e34",
+          "net": "GND",
+          "boundary_contact_mm": 5.519848107665579
+        },
+        {
+          "id": "1fa01f93858fbba5",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 3.3857737771855967
+        },
+        {
+          "id": "54acc847334fada5",
+          "net": "L2_M02",
+          "boundary_contact_mm": 2.8827220693224054
+        },
+        {
+          "id": "bc6b1a1ced8dfd0f",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 1.0037210867846103
+        },
+        {
+          "id": "9aacc84ff1f2dea0",
+          "net": "GND",
+          "boundary_contact_mm": 0.605709980936304
+        },
+        {
+          "id": "59cedf0bb839387c",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.39375913299407417
+        },
+        {
+          "id": "b8327c909f2a61ea",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.2830304342008061
+        },
+        {
+          "id": "a1279dbc6d87b9f5",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.08889739717372995
+        }
+      ]
+    },
+    {
+      "net": "PRESET3",
+      "ref": "U9",
+      "pin": "5",
+      "x_mm": 64.63538,
+      "y_mm": 53.263799999999996,
+      "component_area_mm2": 4.651526897123264,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 0.023079299125039594,
+      "candidates": [
+        {
+          "x_mm": 65.23535342495587,
+          "y_mm": 52.20654000476675,
+          "distance_mm": 1.2156343233776707,
+          "region_area_mm2": 0.023079299125039594
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "043efbc81b654b9e",
+          "net": "5V_PERIPH",
+          "boundary_contact_mm": 2.38049559660137
+        },
+        {
+          "id": "fb90816933ddf643",
+          "net": "GND",
+          "boundary_contact_mm": 2.2478755510673936
+        },
+        {
+          "id": "e5793d56b69632d8",
+          "net": "EDIT",
+          "boundary_contact_mm": 2.2258159071133585
+        },
+        {
+          "id": "7a071374c6f96896",
+          "net": "PRESET1",
+          "boundary_contact_mm": 0.9901406083797287
+        },
+        {
+          "id": "30507517f87561e1",
+          "net": "EDIT",
+          "boundary_contact_mm": 0.829836233632358
+        },
+        {
+          "id": "2a4cf118f49d4e7c",
+          "net": "PRESET2",
+          "boundary_contact_mm": 0.2605312286939533
+        }
+      ]
+    },
+    {
+      "net": "INV2",
+      "ref": "U7",
+      "pin": "6",
+      "x_mm": 55.542179999999995,
+      "y_mm": 46.3804,
+      "component_area_mm2": 2.868135197471467,
+      "touches_local_boundary": false,
+      "via_regions_area_mm2": 0.0,
+      "candidates": [],
+      "track_boundaries": [
+        {
+          "id": "bb69c07a4390ff26",
+          "net": "3V3_PERIPH",
+          "boundary_contact_mm": 1.6903091593043458
+        },
+        {
+          "id": "815beba3629cfd37",
+          "net": "RC2",
+          "boundary_contact_mm": 1.0687135527628375
+        },
+        {
+          "id": "07696e0e23858a5f",
+          "net": "RC2",
+          "boundary_contact_mm": 0.8153450056849175
+        },
+        {
+          "id": "43b910453f9a47c5",
+          "net": "RC2",
+          "boundary_contact_mm": 0.11046008612391169
+        }
+      ]
+    },
+    {
+      "net": "DISP_SCK",
+      "ref": "U15",
+      "pin": "18",
+      "x_mm": 81.37397999999999,
+      "y_mm": 45.8724,
+      "component_area_mm2": 5.694714615825076,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 0.11145922054891735,
+      "candidates": [
+        {
+          "x_mm": 82.50703033361407,
+          "y_mm": 43.130413733696315,
+          "distance_mm": 2.966865642913577,
+          "region_area_mm2": 0.09867586976863817
+        },
+        {
+          "x_mm": 85.17005598888943,
+          "y_mm": 42.93246132,
+          "distance_mm": 4.801398999831515,
+          "region_area_mm2": 0.012783350780279193
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "8f73f9fcb655dfcd",
+          "net": "3V3_PERIPH",
+          "boundary_contact_mm": 3.0195598241636135
+        },
+        {
+          "id": "360090ebde71f414",
+          "net": "3V3_PERIPH",
+          "boundary_contact_mm": 2.767343042320795
+        },
+        {
+          "id": "dff7e3177f8cf73c",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.8679320454222544
+        },
+        {
+          "id": "59725948d6676b42",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.6391423388008135
+        },
+        {
+          "id": "3ec9afee3fe5310f",
+          "net": "GND",
+          "boundary_contact_mm": 0.629346494052014
+        },
+        {
+          "id": "05433333517002e8",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.1853834203420726
+        },
+        {
+          "id": "4fd0f4b6c360bde9",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.1721318914345527
+        }
+      ]
+    },
+    {
+      "net": "DISP_MOSI",
+      "ref": "U15",
+      "pin": "16",
+      "x_mm": 82.67446,
+      "y_mm": 45.8724,
+      "component_area_mm2": 0.7410968987491066,
+      "touches_local_boundary": false,
+      "via_regions_area_mm2": 0.0,
+      "candidates": [],
+      "track_boundaries": [
+        {
+          "id": "e0b3f1ccd5724d8c",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.5002554394317158
+        },
+        {
+          "id": "05433333517002e8",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.47434546579434633
+        },
+        {
+          "id": "dff7e3177f8cf73c",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.2990884385937211
+        },
+        {
+          "id": "59725948d6676b42",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.12228373293097268
+        }
+      ]
+    }
+  ]
+}

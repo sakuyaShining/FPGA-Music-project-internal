@@ -1,0 +1,99 @@
+{
+  "nets": [
+    "PRESET0"
+  ],
+  "before": {
+    "lines": [
+      {
+        "net": "PRESET0",
+        "layer": 2,
+        "x1": 3095.2,
+        "y1": 1102.4,
+        "x2": 3036.3999999999996,
+        "y2": 1161.1,
+        "width": 8
+      },
+      {
+        "net": "PRESET0",
+        "layer": 2,
+        "x1": 3036.3999999999996,
+        "y1": 1161.1,
+        "x2": 3036.3999999999996,
+        "y2": 1352.8,
+        "width": 8
+      },
+      {
+        "net": "PRESET0",
+        "layer": 2,
+        "x1": 3036.3999999999996,
+        "y1": 1352.8,
+        "x2": 3055.6,
+        "y2": 1372,
+        "width": 8
+      },
+      {
+        "net": "PRESET0",
+        "layer": 1,
+        "x1": 2444.7,
+        "y1": 2312.5,
+        "x2": 2444.7,
+        "y2": 2255.5,
+        "width": 8
+      },
+      {
+        "net": "PRESET0",
+        "layer": 1,
+        "x1": 3055.6,
+        "y1": 1372,
+        "x2": 3149.6,
+        "y2": 1372,
+        "width": 8
+      },
+      {
+        "net": "PRESET0",
+        "layer": 1,
+        "x1": 2913.4000000000005,
+        "y1": 1372,
+        "x2": 3055.6,
+        "y2": 1372,
+        "width": 8
+      },
+      {
+        "net": "PRESET0",
+        "layer": 1,
+        "x1": 3095.2,
+        "y1": 1102.4,
+        "x2": 3061.2,
+        "y2": 1102.4,
+        "width": 8
+      }
+    ],
+    "vias": [
+      {
+        "net": "PRESET0",
+        "x": 2444.7,
+        "y": 2255.5,
+        "hole": 12,
+        "diameter": 24
+      },
+      {
+        "net": "PRESET0",
+        "x": 3055.6,
+        "y": 1372,
+        "hole": 12,
+        "diameter": 24
+      },
+      {
+        "net": "PRESET0",
+        "x": 3095.2,
+        "y": 1102.4,
+        "hole": 12,
+        "diameter": 24
+      }
+    ]
+  },
+  "created_lines": 18,
+  "created_vias": 3,
+  "device_identity_and_placement_unchanged": true,
+  "requires_ground_rebuild_and_fresh_drc": true
+}

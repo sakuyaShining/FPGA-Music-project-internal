@@ -1,0 +1,21 @@
+page,register_hex,mask_hex,value_hex,meaning,status
+253,3F,FF,11,Clock Flex key 1,field_review_only_not_boot_sequence
+253,40,FF,FF,Clock Flex key 2,field_review_only_not_boot_sequence
+0,09,31,00,BCK normal polarity and BCK/LRCK inputs; actual BCK phase still needs board verification,field_review_only_not_boot_sequence
+0,0D,70,10,PLL reference BCK,field_review_only_not_boot_sequence
+0,0E,70,10,DAC source PLL using Clock Flex,field_review_only_not_boot_sequence
+0,14,0F,00,P=1 encoded P-1,field_review_only_not_boot_sequence
+0,15,3F,18,J=24,field_review_only_not_boot_sequence
+0,16,3F,00,D high=0,field_review_only_not_boot_sequence
+0,17,FF,00,D low=0,field_review_only_not_boot_sequence
+0,18,0F,01,R=2 encoded R-1,field_review_only_not_boot_sequence
+0,1B,7F,03,DSP divide4: 20.25MHz=384fs,field_review_only_not_boot_sequence
+0,1C,7F,17,DAC divide24: 3.375MHz=64fs,field_review_only_not_boot_sequence
+0,1D,7F,01,NCP divide2: 1.6875MHz,field_review_only_not_boot_sequence
+0,1E,7F,03,OSR divide4: 843750Hz=16fs,field_review_only_not_boot_sequence
+0,22,13,01,Double speed and no 16x interpolation,field_review_only_not_boot_sequence
+0,23,FF,01,IDAC high of 384=0x0180,field_review_only_not_boot_sequence
+0,24,FF,80,IDAC low,field_review_only_not_boot_sequence
+0,28,33,00,I2S 16-bit stereo; retain 32BCK per frame,field_review_only_not_boot_sequence
+0,2B,1F,02,Program2 interpolation only; musical processing stays FPGA,field_review_only_not_boot_sequence
+0,04,01,01,Enable PLL only after programming correct clock fields,field_review_only_not_boot_sequence

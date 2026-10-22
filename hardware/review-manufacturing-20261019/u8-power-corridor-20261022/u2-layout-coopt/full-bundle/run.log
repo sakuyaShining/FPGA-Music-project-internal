@@ -1,0 +1,49 @@
+2026-10-22 12:44:04.021 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-22 12:44:04.327 INFO   Hardware: 8 CPU cores, 462 CPU score, 1024 MB RAM
+2026-10-22 12:44:04.333 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-22 12:44:05.765 WARN   Shape.read_polygon_scope: layer name 'BottomLayer' not found in layer structure  at 'addr0-sensor-bottom-0'
+2026-10-22 12:44:05.767 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-bottom-0'
+2026-10-22 12:44:05.767 WARN   Shape.read_polygon_scope: layer name 'TopLayer' not found in layer structure  at 'addr0-sensor-hole-0'
+2026-10-22 12:44:05.767 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-hole-0'
+2026-10-22 12:44:05.768 WARN   Shape.read_polygon_scope: layer name 'BottomLayer' not found in layer structure  at 'addr0-sensor-bottom-1'
+2026-10-22 12:44:05.768 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-bottom-1'
+2026-10-22 12:44:05.769 WARN   Shape.read_polygon_scope: layer name 'TopLayer' not found in layer structure  at 'addr0-sensor-hole-1'
+2026-10-22 12:44:05.769 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-hole-1'
+2026-10-22 12:44:05.769 WARN   Shape.read_polygon_scope: layer name 'BottomLayer' not found in layer structure  at 'addr0-sensor-bottom-2'
+2026-10-22 12:44:05.769 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-bottom-2'
+2026-10-22 12:44:05.769 WARN   Shape.read_polygon_scope: layer name 'TopLayer' not found in layer structure  at 'addr0-sensor-hole-2'
+2026-10-22 12:44:05.770 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-hole-2'
+2026-10-22 12:44:05.770 WARN   Shape.read_polygon_scope: layer name 'BottomLayer' not found in layer structure  at 'addr0-sensor-bottom-3'
+2026-10-22 12:44:05.770 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-bottom-3'
+2026-10-22 12:44:05.770 WARN   Shape.read_polygon_scope: layer name 'TopLayer' not found in layer structure  at 'addr0-sensor-hole-3'
+2026-10-22 12:44:05.771 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-hole-3'
+2026-10-22 12:44:05.771 WARN   Shape.read_polygon_scope: layer name 'BottomLayer' not found in layer structure  at 'addr0-sensor-bottom-4'
+2026-10-22 12:44:05.771 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-bottom-4'
+2026-10-22 12:44:05.771 WARN   Shape.read_polygon_scope: layer name 'TopLayer' not found in layer structure  at 'addr0-sensor-hole-4'
+2026-10-22 12:44:05.771 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-hole-4'
+2026-10-22 12:44:05.771 WARN   Shape.read_polygon_scope: layer name 'BottomLayer' not found in layer structure  at 'addr0-sensor-bottom-5'
+2026-10-22 12:44:05.772 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-bottom-5'
+2026-10-22 12:44:05.772 WARN   Shape.read_polygon_scope: layer name 'TopLayer' not found in layer structure  at 'addr0-sensor-hole-5'
+2026-10-22 12:44:05.772 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-hole-5'
+2026-10-22 12:44:05.772 WARN   Shape.read_polygon_scope: layer name 'BottomLayer' not found in layer structure  at 'addr0-sensor-bottom-6'
+2026-10-22 12:44:05.773 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-bottom-6'
+2026-10-22 12:44:05.773 WARN   Shape.read_polygon_scope: layer name 'TopLayer' not found in layer structure  at 'addr0-sensor-hole-6'
+2026-10-22 12:44:05.773 WARN   Shape.read_area_scope: could not read shape at 'addr0-sensor-hole-6'
+2026-10-22 12:44:05.826 ERROR  Cannot read field "shapeList" because "area" is null
+java.lang.NullPointerException: Cannot read field "shapeList" because "area" is null
+	at app.freerouting.io.specctra.parser.Structure.insertKeepout(Structure.java:865)
+	at app.freerouting.io.specctra.parser.Structure.readScope(Structure.java:1050)
+	at app.freerouting.io.specctra.DsnReader.readMetadata(DsnReader.java:248)
+	at app.freerouting.settings.sources.DsnFileSettings.<init>(DsnFileSettings.java:30)
+	at app.freerouting.cli.CliRunner.initializeCli(CliRunner.java:73)
+	at app.freerouting.Freerouting.initializeCli(Freerouting.java:65)
+	at app.freerouting.Freerouting.main(Freerouting.java:705)
+2026-10-22 12:44:05.826 ERROR  Cannot read field "shapeList" because "area" is null
+java.lang.NullPointerException: Cannot read field "shapeList" because "area" is null
+	at app.freerouting.io.specctra.parser.Structure.insertKeepout(Structure.java:865)
+	at app.freerouting.io.specctra.parser.Structure.readScope(Structure.java:1050)
+	at app.freerouting.io.specctra.DsnReader.readMetadata(DsnReader.java:248)
+	at app.freerouting.settings.sources.DsnFileSettings.<init>(DsnFileSettings.java:30)
+	at app.freerouting.cli.CliRunner.initializeCli(CliRunner.java:73)
+	at app.freerouting.Freerouting.initializeCli(Freerouting.java:65)
+	at app.freerouting.Freerouting.main(Freerouting.java:705)

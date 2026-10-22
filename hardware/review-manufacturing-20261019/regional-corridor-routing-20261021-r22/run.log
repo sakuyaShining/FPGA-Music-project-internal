@@ -1,0 +1,32 @@
+2026-10-21 23:07:14.088 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-21 23:07:14.396 INFO   Hardware: 8 CPU cores, 428 CPU score, 1024 MB RAM
+2026-10-21 23:07:14.403 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-21 23:07:16.097 INFO   [A8C834\62C3F9] Loading board file 'input.dsn'...
+2026-10-21 23:07:17.633 INFO   [A8C834\62C3F9] Job 'A8C834\62C3F9' started at 2026-10-21T15:07:17.633973100Z.
+2026-10-21 23:07:19.777 WARN   Design Warning: Board has 921 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 921 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 921 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5340 [net VIS_DC] <-> ObstacleArea#431
+          - FixedVia#5339 [net BUS_RETURN] <-> ObstacleArea#321
+          - FixedVia#5339 [net BUS_RETURN] <-> FixedTrace#3874 [net RC2]
+          - FixedVia#5334 [net I2C_SDA] <-> FixedTrace#4738 [net I2C_SCL]
+          - FixedVia#5330 [net TP_RESET_N] <-> ObstacleArea#321
+          ... and 916 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 921 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-21 23:07:19.911 INFO   [A8C834\62C3F9] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-21 23:07:22.074 INFO   [A8C834\62C3F9] Auto-routing stage started on board '33dce28719cc57e93183a9cdc8923fab' with baseline score 272.74 for 387 unrouted items.
+2026-10-21 23:07:29.157 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:07:29.157 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:07:31.472 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:07:31.472 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:07:43.703 INFO   [A8C834\62C3F9] Auto-routing pass #1 on board '33dce28719cc57e93183a9cdc8923fab' was completed in 20.67 seconds with score 275.70 (384 unrouted and 921 violations), using 6.64 CPU seconds and the job allocated 12.55 GB of memory so far.
+2026-10-21 23:08:06.013 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'DISP_VIS_DC' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-21 23:08:07.190 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 23:08:07.190 WARN   Simplex.cutout_from: division line is null
+2026-10-21 23:08:18.201 INFO   [A8C834\62C3F9] Auto-routing pass #2 on board 'f95b1cfb92f0d7a12369cb576af61916' was completed in 33.57 seconds with score 274.71 (385 unrouted and 921 violations), using 17.80 CPU seconds and the job allocated 36.40 GB of memory so far.
+2026-10-21 23:08:22.570 INFO   [A8C834\62C3F9] Auto-routing stage completed: started with 387 unrouted nets, completed in 61.91 seconds, final score: 275.70 (384 unrouted and 921 violations), using 18.95 total CPU seconds, 38.41 GB total allocated, and 492.1 MB peak heap usage.
+2026-10-21 23:08:22.877 INFO   [A8C834\62C3F9] Job 'A8C834\62C3F9' finished with state: COMPLETED (elapsed: 1 minute 5.24 seconds, finished at UTC: 2026-10-21T15:08:22.877065500Z).
+2026-10-21 23:08:22.893 INFO   Saving output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-corridor-routing-20261021-r22\result.ses' (SES)...
+2026-10-21 23:08:22.898 INFO   Successfully saved output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-corridor-routing-20261021-r22\result.ses' (529158 bytes).

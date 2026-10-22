@@ -1,0 +1,129 @@
+{
+  "title": "覆铜边框图元",
+  "methods": [
+    {
+      "name": "create",
+      "comment": "在 PCB 画布中创建图元"
+    },
+    {
+      "name": "getState_PrimitiveType",
+      "comment": "获取属性状态：图元类型"
+    },
+    {
+      "name": "getState_PrimitiveId",
+      "comment": "获取属性状态：图元 ID"
+    },
+    {
+      "name": "getState_Net",
+      "comment": "获取属性状态：网络名称"
+    },
+    {
+      "name": "getState_Layer",
+      "comment": "获取属性状态：层"
+    },
+    {
+      "name": "getState_ComplexPolygon",
+      "comment": "获取属性状态：复杂多边形"
+    },
+    {
+      "name": "getState_PourFillMethod",
+      "comment": "获取属性状态：覆铜填充方法"
+    },
+    {
+      "name": "getState_PreserveSilos",
+      "comment": "获取属性状态：是否保留孤岛"
+    },
+    {
+      "name": "getState_PourName",
+      "comment": "获取属性状态：覆铜边框名称"
+    },
+    {
+      "name": "getState_PourPriority",
+      "comment": "获取属性状态：覆铜优先级"
+    },
+    {
+      "name": "getState_LineWidth",
+      "comment": "获取属性状态：线宽"
+    },
+    {
+      "name": "getState_PrimitiveLock",
+      "comment": "获取属性状态：是否锁定"
+    },
+    {
+      "name": "setState_Net",
+      "comment": "设置属性状态：网络名称"
+    },
+    {
+      "name": "setState_Layer",
+      "comment": "设置属性状态：层"
+    },
+    {
+      "name": "setState_ComplexPolygon",
+      "comment": "设置属性状态：复杂多边形"
+    },
+    {
+      "name": "setState_PourFillMethod",
+      "comment": "设置属性状态：覆铜填充方法"
+    },
+    {
+      "name": "setState_PreserveSilos",
+      "comment": "设置属性状态：是否保留孤岛"
+    },
+    {
+      "name": "setState_PourName",
+      "comment": "设置属性状态：覆铜边框名称"
+    },
+    {
+      "name": "setState_PourPriority",
+      "comment": "设置属性状态：覆铜优先级"
+    },
+    {
+      "name": "setState_LineWidth",
+      "comment": "设置属性状态：线宽"
+    },
+    {
+      "name": "setState_PrimitiveLock",
+      "comment": "设置属性状态：是否锁定"
+    },
+    {
+      "name": "toAsync",
+      "comment": "将图元转换为异步图元"
+    },
+    {
+      "name": "toSync",
+      "comment": "将图元转换为同步图元"
+    },
+    {
+      "name": "isAsync",
+      "comment": "查询图元是否为异步图元"
+    },
+    {
+      "name": "reset",
+      "comment": "将异步图元重置为当前画布状态"
+    },
+    {
+      "name": "done",
+      "comment": "将对图元的更改应用到画布"
+    },
+    {
+      "name": "getCopperRegion",
+      "comment": "获取铺铜区域覆铜填充图元"
+    },
+    {
+      "name": "rebuildCopperRegion",
+      "comment": "重建铺铜区域覆铜填充"
+    },
+    {
+      "name": "convertToFill",
+      "comment": "转换到：填充图元(默认是填充区域)"
+    },
+    {
+      "name": "convertToPolyline",
+      "comment": "转换到：折线图元(默认是线条)"
+    },
+    {
+      "name": "convertToRegion",
+      "comment": "转换到：区域图元(默认是禁止区域)"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+Gate compatibility truth table
+.include "C:/Users/Sakuya/.codex/worktrees/06df/FPGA-Music-project/hardware/review-manufacturing-20261019/spice-validation-20261021/vendor-TI-TPS2553/SLVM425A/TPS2553_PSPICE_TRANS/tps2553_trans.lib"
+Vzero n0 0 0
+Vone n1 0 1
+Xxnor2_00 n0 n0 xnor2_00 XNOR2_BASIC_GEN
+Xxnor2_01 n0 n1 xnor2_01 XNOR2_BASIC_GEN
+Xxnor2_10 n1 n0 xnor2_10 XNOR2_BASIC_GEN
+Xxnor2_11 n1 n1 xnor2_11 XNOR2_BASIC_GEN
+Xand2_00 n0 n0 and2_00 AND2_BASIC_GEN
+Xand2_01 n0 n1 and2_01 AND2_BASIC_GEN
+Xand2_10 n1 n0 and2_10 AND2_BASIC_GEN
+Xand2_11 n1 n1 and2_11 AND2_BASIC_GEN
+Xor2_00 n0 n0 or2_00 OR2_BASIC_GEN
+Xor2_01 n0 n1 or2_01 OR2_BASIC_GEN
+Xor2_10 n1 n0 or2_10 OR2_BASIC_GEN
+Xor2_11 n1 n1 or2_11 OR2_BASIC_GEN
+.control
+set wr_singlescale
+set wr_vecnames
+op
+wrdata logic.txt v(xnor2_00) v(xnor2_01) v(xnor2_10) v(xnor2_11) v(and2_00) v(and2_01) v(and2_10) v(and2_11) v(or2_00) v(or2_01) v(or2_10) v(or2_11)
+quit
+.endc
+.end

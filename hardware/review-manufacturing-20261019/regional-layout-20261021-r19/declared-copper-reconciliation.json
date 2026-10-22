@@ -1,0 +1,147 @@
+{
+  "pcb_sha256": "270f5e4ff3a4ae4f198743a30ecb4be347c8456f8115c1b9a3bac045a698e0a3",
+  "all_actual_copper_matches_declared_regional_edits": true,
+  "copper_comparison_tolerance_mm": 5e-05,
+  "small_native_cleanup_differences": [
+    {
+      "net": "DISP_VIS_CS_N",
+      "layer": 16,
+      "hausdorff_mm": 2.540000001260978e-05
+    }
+  ],
+  "all_retained_source_vias_exactly_preserved": true,
+  "native_copper_lines": 3285,
+  "api_lines": 3257,
+  "native_microtracks": 28,
+  "vias": 513,
+  "pads": 1079,
+  "new_signal_vias": 5,
+  "new_ground_stitches": 5,
+  "all_new_reference_distances": [
+    {
+      "signal_net": "DISP_SCK",
+      "signal_id": "2e35092d9196490e",
+      "nearest_new_reference_ground_mm": 0.8999997813498793
+    },
+    {
+      "signal_net": "DISP_SCK",
+      "signal_id": "e44e8df9631ae967",
+      "nearest_new_reference_ground_mm": 0.9000007399999934
+    },
+    {
+      "signal_net": "DISP_HARM_CS_N",
+      "signal_id": "f642376a5fbbc654",
+      "nearest_new_reference_ground_mm": 0.8999997813498687
+    },
+    {
+      "signal_net": "DISP_VIS_CS_N",
+      "signal_id": "c4ffdb090ec84950",
+      "nearest_new_reference_ground_mm": 0.9000007399999934
+    },
+    {
+      "signal_net": "LCD_RESET_N",
+      "signal_id": "06c89de80f61a9b5",
+      "nearest_new_reference_ground_mm": 0.9000012684535528
+    }
+  ],
+  "actual_reference_projection": [
+    {
+      "net": "DISP_SCK",
+      "signal_layer": 1,
+      "reference_layer": 15,
+      "evaluated_mm": 0.5870897850162322,
+      "reference_projection_fraction": 1.0,
+      "gap_bounds_mm": null,
+      "si_signoff": false
+    },
+    {
+      "net": "DISP_SCK",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "evaluated_mm": 79.1695917339136,
+      "reference_projection_fraction": 0.8601951988229581,
+      "gap_bounds_mm": [
+        99.38600556859016,
+        28.04658355479162,
+        130.4511234,
+        58.0420807814017
+      ],
+      "si_signoff": false
+    },
+    {
+      "net": "DISP_HARM_CS_N",
+      "signal_layer": 1,
+      "reference_layer": 15,
+      "evaluated_mm": 0.6359986121038474,
+      "reference_projection_fraction": 1.0,
+      "gap_bounds_mm": null,
+      "si_signoff": false
+    },
+    {
+      "net": "DISP_HARM_CS_N",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "evaluated_mm": 21.222224346254293,
+      "reference_projection_fraction": 0.7391839285616628,
+      "gap_bounds_mm": [
+        83.9261466,
+        41.34841271238768,
+        99.97500959999999,
+        45.179411800000004
+      ],
+      "si_signoff": false
+    },
+    {
+      "net": "DISP_VIS_CS_N",
+      "signal_layer": 1,
+      "reference_layer": 15,
+      "evaluated_mm": 5.002000170893237,
+      "reference_projection_fraction": 1.0,
+      "gap_bounds_mm": null,
+      "si_signoff": false
+    },
+    {
+      "net": "DISP_VIS_CS_N",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "evaluated_mm": 44.671369849369256,
+      "reference_projection_fraction": 0.7218531818109104,
+      "gap_bounds_mm": [
+        86.44523959495392,
+        49.095225394953914,
+        117.75000071999999,
+        68.62500118
+      ],
+      "si_signoff": false
+    },
+    {
+      "net": "LCD_RESET_N",
+      "signal_layer": 1,
+      "reference_layer": 15,
+      "evaluated_mm": 7.8651749013345675,
+      "reference_projection_fraction": 0.9158220419391848,
+      "gap_bounds_mm": [
+        66.06929996014952,
+        40.79999968,
+        66.19999967999999,
+        41.44904516789256
+      ],
+      "si_signoff": false
+    },
+    {
+      "net": "LCD_RESET_N",
+      "signal_layer": 16,
+      "reference_layer": 2,
+      "evaluated_mm": 17.358386364454685,
+      "reference_projection_fraction": 0.6283190490052373,
+      "gap_bounds_mm": [
+        66.1999946,
+        38.705028,
+        70.56247048511524,
+        41.24512927589735
+      ],
+      "si_signoff": false
+    }
+  ],
+  "manufacturing_release": false
+}

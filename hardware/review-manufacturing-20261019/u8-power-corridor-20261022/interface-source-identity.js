@@ -1,0 +1,1 @@
+return await eda.dmt_SelectControl.getCurrentDocumentInfo();

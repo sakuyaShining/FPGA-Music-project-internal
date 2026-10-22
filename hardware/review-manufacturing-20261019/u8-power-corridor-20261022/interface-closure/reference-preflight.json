@@ -1,0 +1,37 @@
+{
+  "predicted_returns": [
+    {
+      "net": "DISP_RESET_N",
+      "distance_mm": 1.805147877652086,
+      "ground": {
+        "id": "ffe3e80f6bea572c",
+        "net": "GND",
+        "x": 3253.8632,
+        "y": 1668.3819,
+        "diameter": 24,
+        "hole": 12,
+        "contact": {
+          "15": 0.16306987724682603,
+          "2": 0.16307620601339085
+        }
+      }
+    }
+  ],
+  "predicted_projection": [
+    {
+      "layer": 1,
+      "reference": 15,
+      "length_mm": 1.448125666046582,
+      "covered_mm": 1.448125666046582,
+      "gap_mm": 0.0
+    },
+    {
+      "layer": 16,
+      "reference": 2,
+      "length_mm": 17.22738266048108,
+      "covered_mm": 14.689826309728861,
+      "gap_mm": 2.5375563507522187
+    }
+  ],
+  "physical_reference_not_si_signoff": true
+}

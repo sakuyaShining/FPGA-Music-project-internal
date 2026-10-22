@@ -1,0 +1,1 @@
+{"name":"export-state","code":"return {doc:await eda.dmt_SelectControl.getCurrentDocumentInfo(),count:(await eda.sch_PrimitiveComponent.getAll()).length};"}

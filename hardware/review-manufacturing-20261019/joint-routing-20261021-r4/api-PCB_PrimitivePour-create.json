@@ -1,0 +1,65 @@
+{
+  "title": "创建覆铜边框",
+  "params": [
+    {
+      "name": "net",
+      "type": "string",
+      "description": "网络名称",
+      "required": true
+    },
+    {
+      "name": "layer",
+      "type": "TPCB_LayersOfCopper",
+      "description": "层",
+      "required": true
+    },
+    {
+      "name": "complexPolygon",
+      "type": "IPCB_Polygon",
+      "description": "复杂多边形对象",
+      "required": true
+    },
+    {
+      "name": "pourFillMethod",
+      "type": "EPCB_PrimitivePourFillMethod",
+      "description": "覆铜填充方法",
+      "required": false
+    },
+    {
+      "name": "preserveSilos",
+      "type": "boolean",
+      "description": "是否保留孤岛",
+      "required": false
+    },
+    {
+      "name": "pourName",
+      "type": "string",
+      "description": "覆铜名称",
+      "required": false
+    },
+    {
+      "name": "pourPriority",
+      "type": "number",
+      "description": "覆铜优先级",
+      "required": false
+    },
+    {
+      "name": "lineWidth",
+      "type": "number",
+      "description": "线宽",
+      "required": false
+    },
+    {
+      "name": "primitiveLock",
+      "type": "boolean",
+      "description": "是否锁定",
+      "required": false
+    }
+  ],
+  "returns": {
+    "type": "IPCB_PrimitivePour",
+    "description": "覆铜边框图元对象"
+  },
+  "example": "```javascript\n// 1. 生成随机起点坐标，避免与画布上已有的覆铜边框重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 用 pcb_MathPolygon.createPolygon 构造覆铜轮廓：500×300 的矩形区域\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\n\n// 3. 在顶层铜层创建覆铜边框：挂 GND 网络、实心填充、不保留孤岛、优先级 5、线宽 10mil、不锁定\n//    注意：net 不能传空字符串（会报参数不正确），需传已有网络名\nconst pour = await eda.pcb_PrimitivePour.create('GND', 1, polygon, 'solid', false, '嘉立创示例_覆铜', 5, 10, false);\n\n// 4. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', pour.getState_PrimitiveId());\nconsole.log('primitiveType:', pour.getState_PrimitiveType());\nconsole.log('pourName:', pour.getState_PourName());\nconsole.log('pourFillMethod:', pour.getState_PourFillMethod());\nconsole.log('pourPriority:', pour.getState_PourPriority());\nconsole.log('layer:', pour.getState_Layer());\n```",
+  "isAsync": true
+}

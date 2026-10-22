@@ -1,0 +1,77 @@
+[
+  {
+    "pattern": "layerPhys",
+    "offset": 9258941,
+    "snippet": "return 10001;case 4:return 10002;default:return 1e3+A-3}}applyLayerPhysConfig(e){let A=new se;if(e.layerPhysConfigArr.length){gA.delAllSubstrateLayers();let t=0,r=0;for(let i of e.layerPhysConfigArr)i.zIndex=this.getPhyZIndex(Number(i[\"Layer Id\"]),r++),i.Type===\"Substrate\"&&(i[\"Layer Id\"]=361+t,gA.modifyLayer(i[\"Layer Id\"],\"SUBSTRATE\",i.Layer,361+t,Y.build(0,0,0,0),Y.build(0,0,0,0),!1,0),t++),kc(i[\"Layer Id\"]),i.Thickness!=null&&(i.Thickness=A.mm2mil(i.Thickness)/10);gA.setLayerPhys(e.layerPhysConfigArr,!0)}}async updateCanvas(){AG(!0),await this.removeUsedLayerForMultiLayerPads(),G"
+  },
+  {
+    "pattern": "layerPhys",
+    "offset": 9259251,
+    "snippet": "(i[\"Layer Id\"],\"SUBSTRATE\",i.Layer,361+t,Y.build(0,0,0,0),Y.build(0,0,0,0),!1,0),t++),kc(i[\"Layer Id\"]),i.Thickness!=null&&(i.Thickness=A.mm2mil(i.Thickness)/10);gA.setLayerPhys(e.layerPhysConfigArr,!0)}}async updateCanvas(){AG(!0),await this.removeUsedLayerForMultiLayerPads(),G.publish(\"flushService\",\"\"),G.publish(\"setPcbTabUnSaved\",[C.getInstance().tabId,!0],Q()),G.publish(\"ui/toastMsg\",{type:\"info\",msg:\"Apply successfully!\"},Q())}async removeUsedLayerForMultiLayerPads(){if(!LA.ins.realTimeUpdateUnusedLayers)return;let e=[...dt.getAllItem().filter(r=>r.layerId==12),...er.getAllIte"
+  },
+  {
+    "pattern": "layerPhys",
+    "offset": 12165592,
+    "snippet": "etHandle(new Vf(r),!0),new Z2(t).parseFull(e);let o=i.getDeletedIds();return i.preAdjust(),s(r.getDecodeTool()),t.setHandle(n),{modelsMap:A,deleted:o};function s(l){a(l.layer),a(l.layerPhys),a(l.net),a(l.ruleTemplateName),a(l.rule),a(l.ruleSelect),a(l.group),a(l.font),a(l.via),a(l.pad),a(l.line),a(l.arc),a(l.poly),a(l.fill),a(l.fpcFill),a(l.region),a(l.partition),a(l.pour),a(l.copper),a(l.image),a(l.objs),a(l.tearDrop),a(l.str),a(l.attr),a(l.dimension),a(l.component),a(l.shells),a(l.shellCuts),a(l.shellEntity),a(l.creases),a(l.bosses),a(l.padsPairGroup),a(l.activeLayer)}function a(l"
+  },
+  {
+    "pattern": "layerPhys",
+    "offset": 12214802,
+    "snippet": "type,{plainObj:!0});G.publish(\"openMainDialog\",{cmd:9,data:{option:{...a,objTypeName:A,values:n,componentPropertyType:o}}})}var zTA=class{constructor(e,A,t){this.layer=new zv;this.layerPhys=new AO;this.activeLayer=new Xv;this.ruleTemplateName=new oO;this.rule=new cO;this.ruleSelect=new Zv;this.padsPairGroup=new iO;this.padsPairGroupDetail=new nO;this.source=!1;this.version=e,this.doctype=A,this.compiler=t,this.format=new xm().getConfig(e),this.compiler==null&&(this.encoder=new GV(C.getInstance().id))}get ignorePartitionId(){return this.doctype!=3}getCommonSource(){var e;return this."
+  },
+  {
+    "pattern": "layerPhys",
+    "offset": 12217305,
+    "snippet": "MITIVE\"&&ri(o)||(i[n]=o)}return this.uploadSource(e,i,A),i}getItemFormat(e){return this.format[e]}getEncode(e){switch(e){case\"LAYER\":return this.layer;case\"LAYER_PHYS\":return this.layerPhys;case\"ACTIVE_LAYER\":return this.activeLayer;case\"RULE_TEMPLATE\":return this.ruleTemplateName;case\"RULE\":return this.rule;case\"RULE_SELECTOR\":return this.ruleSelect;case\"EQLEN_GRP\":return this.padsPairGroup;case\"EQLEN\":return this.padsPairGroupDetail}}getData(e,A,t){return A.getData(e,t)}uploadSource(e,A,t){var r;if(this.encoder!=null)switch(e){case\"CANVAS\":return this.encoder.uploadCanvas(A);case\""
+  },
+  {
+    "pattern": "permittivity",
+    "offset": 7806383,
+    "snippet": "(n)for(let l in n)n[l].layerType==\"TOP_STIFFENER\"&&o.push(n[l]);if(this.physInfo){let l=this.physInfo;for(let c of l){let d=a(c.layerId);d&&(d.addLayerStackup(d.name,c.thickness,c.permittivity,c.loss),d.addAttr2Layer(\"DIELECTRIC_TYPE\",c.type),d.addAttr2Layer(\"DIELECTRIC_NAME\",c.material))}}else{a(3),a(7),a(5),a(1);for(let l=15;l<=46;l++)a(l);a(2),a(6),a(8),a(4)}if(n)for(let l in n)n[l].layerType==\"BOTTOM_STIFFENER\"&&o.push(n[l]);for(let l in t)o.push(t[l]);r&&o.push(r),i!=null&&i[\"comp_+_bot\"]&&o.push(i[\"comp_+_bot\"]),a(9),a(10),a(11),a(58),a(59),a(13),a(14);for(let l=71;l<=270;l++)a(l"
+  },
+  {
+    "pattern": "permittivity",
+    "offset": 7829156,
+    "snippet": "AL_DK_VALUE\",\"BOARD\",\"\\u4ECB\\u7535\\u503C\",!1),t.endParams();let r=[],i={};for(let[n,o]of A)r.push({name:n,category:\"BOARD\"}),i[n]={PCB_MATERIAL_TYPE:o.material,MATERIAL_DK_VALUE:o.permittivity};t.addKeyAndValue(r,i)}addExtendsSolderInfo(e,A){let t=this.documentMap.get(5),r=this.documentMap.get(6);if(t||r){let i=[];for(let c of A)(t&&c.layerId==5||r&&c.layerId==6)&&i.push(c);let n=[\"Only Top Solder Mask\",\"Only Bottom Solder Mask\",\"Top Solder Mask and Bottom Solder Mask\"];e.addBoolean(\"IS_SOLDER_MASK\",\"SOLDER_MASK\",!0,\"\\u662F\\u5426\\u6709\\u963B\\u710A\"),e.addOptions(\"SOLDER_MASK_SIDE\",\"SOL"
+  },
+  {
+    "pattern": "permittivity",
+    "offset": 9523713,
+    "snippet": "let A=new se,t=gA.getLayerPhys().map(i=>({Layer:i.layerName,Type:i.layerType,Material:r(i.material),Thickness:i.thickness!=null?IA(A.mil2mm(i.thickness*10),3):\"-\",Permittivity:r(i.permittivity),\"Loss Tangent\":r(i.lossTangent)}));function r(i){return ske(i)?\"-\":i}return t}};function ske(j){return j==null}var QyA=class extends g1{constructor(A,t){super();this.profile=null;this.type=A,this.confirmWindowCb=t}getResult(A){let t=new Array;A.shape.forEach(r=>{let i=this.getModel(r);t.push(i),r.remove()}),t.length>0&&(this.profile=pA.build2(t)),A.shape.length=0}getModel(A){if(A instanceof Ij||"
+  },
+  {
+    "pattern": "permittivity",
+    "offset": 11811252,
+    "snippet": "se,t=gA.getLayerPhys().map(r=>({\"Layer Id\":r.layerId,Layer:r.layerName,Type:null,Material:r.material,Thickness:r.thickness!=null?IA(A.mil2mm(r.thickness*10),3):null,Permittivity:r.permittivity,\"Loss Tangent\":r.lossTangent,\"Layer Type\":r.layerType,zIndex:r.zIndex}));j(t)}));G.subscribe(\"pcb/exportFile/cancel\",j=>{!C.getInstance().isactive||23==C.getInstance().doctype||qCe(j)});G.subscribe(\"pcb/exportFile\",j=>{!C.getInstance().isactive||23==C.getInstance().doctype||VCe(j)});G.messageBus.rpcService(\"pcb/getExportFileData\",async j=>!C.getInstance().isactive||23==C.getInstance().doctype?voi"
+  },
+  {
+    "pattern": "permittivity",
+    "offset": 12255014,
+    "snippet": "t s=i?gA.getLayerPhys().map(l=>{let c=l.thickness,d=c!=null?n.mil2mm(c*10):0;return{\"Layer Id\":l.layerId,Layer:l.layerName,Type:null,Material:l.material,Thickness:d,Permittivity:l.permittivity,\"Loss Tangent\":l.lossTangent,\"Layer Type\":l.layerType,zIndex:l.zIndex}}):[];s.sort((l,c)=>l.zIndex-c.zIndex);let a=[{layerList:t},{layerPhyList:s}];G.publish(\"openMainDialog\",{cmd:15,data:{option:{panels:a,activeTab:A==null?void 0:A.activeTab}}})}),G.subscribe(\"netLengthRuleChanged\",()=>{if(!C.getInstance().isactive||23==C.getInstance().doctype)return;let A=Wc.getTool();(A instanceof hL||A instan"
+  },
+  {
+    "pattern": "lossTangent",
+    "offset": 7594838,
+    "snippet": "ion He(ue){return ue===\"3D_SHELL_TOP\"?\"3D_TOP\":ue===\"3D_SHELL_BOTTOM\"?\"3D_BOTTOM\":ue}function Xt(ue){return nm([\"LAYER_PHYS\",ue.layerId,ue.material,ue.thickness,ue.permittivity,ue.lossTangent,ue.isKeepIsland])}function kr(ue,Xe){let{layerId:ht,strokeWidth:Jt}=ue;if(Jt){let bj=[];for(let Ti of ue.getBaseGraphics())ns(it(ht,ue.globalIndex,Ti,Jt,Xe),bj);return bj.join(`\n`)}}function or(ue,Xe){let ht=ue.box,Jt=[ht.leftLow.x+D.x,ht.leftLow.y+D.y,ht.leftUp.x+D.x,ht.leftUp.y+D.y,ht.rightUp.x+D.x,ht.rightUp.y+D.y,ht.rightLow.x+D.x,ht.rightLow.y+D.y];return nm([\"TEXTURE\",dA(ue.globalIndex),Xe,"
+  },
+  {
+    "pattern": "lossTangent",
+    "offset": 7799560,
+    "snippet": "upInfo(){let e=[],t=XA.getInstance().getLayerPhys(),r=QNA()==\"FPC Flexible\";for(let i of t)e.push({layerId:i.layerId,material:i.material,permittivity:r?0:i.permittivity,loss:r?0:i.lossTangent,type:i.layerType,thickness:i.thickness});return e}generateExtends(e){e.addOptions(\"PCB_TYPE\",\"BASIC\",[QNA()],\"PCB\\u7C7B\\u578B\",[\"Common Material\",\"FPC Flexible\"]);let t=XA.getInstance().getLayerPhys();e.addInt(\"PCB_LAYER_COUNT\",\"BASIC\",t.length,\"PCB\\u5C42\\u6570\");let r=0;for(let s of t)r+=s.thickness||0;e.addFloat(\"PCB_THICKNESS\",\"BASIC\",r,\"\\u677F\\u539A\",!0,e.phyUnitLen());let i=_Ge();e.addFloat("
+  },
+  {
+    "pattern": "lossTangent",
+    "offset": 9523746,
+    "snippet": "map(i=>({Layer:i.layerName,Type:i.layerType,Material:r(i.material),Thickness:i.thickness!=null?IA(A.mil2mm(i.thickness*10),3):\"-\",Permittivity:r(i.permittivity),\"Loss Tangent\":r(i.lossTangent)}));function r(i){return ske(i)?\"-\":i}return t}};function ske(j){return j==null}var QyA=class extends g1{constructor(A,t){super();this.profile=null;this.type=A,this.confirmWindowCb=t}getResult(A){let t=new Array;A.shape.forEach(r=>{let i=this.getModel(r);t.push(i),r.remove()}),t.length>0&&(this.profile=pA.build2(t)),A.shape.length=0}getModel(A){if(A instanceof Ij||A instanceof qn)return A.primiti"
+  },
+  {
+    "pattern": "lossTangent",
+    "offset": 11811282,
+    "snippet": "({\"Layer Id\":r.layerId,Layer:r.layerName,Type:null,Material:r.material,Thickness:r.thickness!=null?IA(A.mil2mm(r.thickness*10),3):null,Permittivity:r.permittivity,\"Loss Tangent\":r.lossTangent,\"Layer Type\":r.layerType,zIndex:r.zIndex}));j(t)}));G.subscribe(\"pcb/exportFile/cancel\",j=>{!C.getInstance().isactive||23==C.getInstance().doctype||qCe(j)});G.subscribe(\"pcb/exportFile\",j=>{!C.getInstance().isactive||23==C.getInstance().doctype||VCe(j)});G.messageBus.rpcService(\"pcb/getExportFileData\",async j=>!C.getInstance().isactive||23==C.getInstance().doctype?void 0:await UCe(j));G.subscribe"
+  },
+  {
+    "pattern": "lossTangent",
+    "offset": 12255044,
+    "snippet": ">{let c=l.thickness,d=c!=null?n.mil2mm(c*10):0;return{\"Layer Id\":l.layerId,Layer:l.layerName,Type:null,Material:l.material,Thickness:d,Permittivity:l.permittivity,\"Loss Tangent\":l.lossTangent,\"Layer Type\":l.layerType,zIndex:l.zIndex}}):[];s.sort((l,c)=>l.zIndex-c.zIndex);let a=[{layerList:t},{layerPhyList:s}];G.publish(\"openMainDialog\",{cmd:15,data:{option:{panels:a,activeTab:A==null?void 0:A.activeTab}}})}),G.subscribe(\"netLengthRuleChanged\",()=>{if(!C.getInstance().isactive||23==C.getInstance().doctype)return;let A=Wc.getTool();(A instanceof hL||A instanceof pL)&&A.updateNetLengthRu"
+  }
+]

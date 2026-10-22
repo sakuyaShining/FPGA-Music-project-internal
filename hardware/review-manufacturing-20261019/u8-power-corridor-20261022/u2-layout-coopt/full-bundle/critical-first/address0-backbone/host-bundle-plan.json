@@ -1,0 +1,296 @@
+{
+  "source_pcb_sha256": "6509803e7afca781b7f71ad69183cc10d8f6413312701eb16a2cdc46dfe83afd",
+  "method": "Joint host power/PRESET lane reallocation and local SCK detour opens a real all-four-layer switch-via slot; keep all original widths and recover all affected nets before adoption",
+  "base_host_plan": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\u2-layout-coopt\\full-bundle\\critical-first\\address0-backbone\\host-power-coopt-plan.json",
+  "remove_source_lines": [
+    {
+      "id": "c8bd925176b49ce0",
+      "net": "3V3_IO",
+      "layer": 2,
+      "x1": 2346.024,
+      "y1": 1796.0254,
+      "x2": 2346.024,
+      "y2": 2440.9938,
+      "width": 14.14
+    },
+    {
+      "id": "582597aa135751b4",
+      "net": "PRESET2",
+      "layer": 2,
+      "x1": 2375,
+      "y1": 2211.6142,
+      "x2": 2375.9843,
+      "y2": 1801.1811,
+      "width": 6
+    },
+    {
+      "id": "b57bf3940b20a879",
+      "net": "PRESET0",
+      "layer": 2,
+      "x1": 2389.1551,
+      "y1": 1808.365,
+      "x2": 2389.1551,
+      "y2": 2194.165,
+      "width": 6
+    },
+    {
+      "id": "3eafcc3907e6d93a",
+      "net": "BUS_SCK",
+      "layer": 16,
+      "x1": 2096.4567,
+      "y1": 2049.2126,
+      "x2": 2417.3228,
+      "y2": 2053.1496,
+      "width": 6
+    }
+  ],
+  "lines": [
+    {
+      "net": "PRESET2",
+      "layer": 2,
+      "x1": 2375.9843,
+      "y1": 1801.1810999999998,
+      "x2": 2375.790744612391,
+      "y2": 1881.8897637795276,
+      "width": 6
+    },
+    {
+      "net": "PRESET2",
+      "layer": 2,
+      "x1": 2375.790744612391,
+      "y1": 1881.8897637795276,
+      "x2": 2440.944881889764,
+      "y2": 1956.692913385827,
+      "width": 6
+    },
+    {
+      "net": "PRESET2",
+      "layer": 2,
+      "x1": 2440.944881889764,
+      "y1": 1956.692913385827,
+      "x2": 2440.944881889764,
+      "y2": 2086.6141732283463,
+      "width": 6
+    },
+    {
+      "net": "PRESET2",
+      "layer": 2,
+      "x1": 2440.944881889764,
+      "y1": 2086.6141732283463,
+      "x2": 2375.1298237959954,
+      "y2": 2157.48031496063,
+      "width": 6
+    },
+    {
+      "net": "PRESET2",
+      "layer": 2,
+      "x1": 2375.1298237959954,
+      "y1": 2157.48031496063,
+      "x2": 2375.0,
+      "y2": 2211.6142,
+      "width": 6
+    },
+    {
+      "net": "PRESET0",
+      "layer": 2,
+      "x1": 2389.1551,
+      "y1": 1808.365,
+      "x2": 2389.1551,
+      "y2": 1870.0787401574803,
+      "width": 6
+    },
+    {
+      "net": "PRESET0",
+      "layer": 2,
+      "x1": 2389.1551,
+      "y1": 1870.0787401574803,
+      "x2": 2460.629921259843,
+      "y2": 1948.8188976377953,
+      "width": 6
+    },
+    {
+      "net": "PRESET0",
+      "layer": 2,
+      "x1": 2460.629921259843,
+      "y1": 1948.8188976377953,
+      "x2": 2460.629921259843,
+      "y2": 2106.299212598425,
+      "width": 6
+    },
+    {
+      "net": "PRESET0",
+      "layer": 2,
+      "x1": 2460.629921259843,
+      "y1": 2106.299212598425,
+      "x2": 2389.1551,
+      "y2": 2175.196850393701,
+      "width": 6
+    },
+    {
+      "net": "PRESET0",
+      "layer": 2,
+      "x1": 2389.1551,
+      "y1": 2175.196850393701,
+      "x2": 2389.1551,
+      "y2": 2194.165,
+      "width": 6
+    },
+    {
+      "net": "3V3_IO",
+      "layer": 2,
+      "x1": 2346.024,
+      "y1": 1796.0254,
+      "x2": 2346.024,
+      "y2": 1846.456692913386,
+      "width": 14.14
+    },
+    {
+      "net": "3V3_IO",
+      "layer": 2,
+      "x1": 2346.024,
+      "y1": 1846.456692913386,
+      "x2": 2332.677165354331,
+      "y2": 1929.1338582677165,
+      "width": 14.14
+    },
+    {
+      "net": "3V3_IO",
+      "layer": 2,
+      "x1": 2332.677165354331,
+      "y1": 1929.1338582677165,
+      "x2": 2332.677165354331,
+      "y2": 2082.6771653543306,
+      "width": 14.14
+    },
+    {
+      "net": "3V3_IO",
+      "layer": 2,
+      "x1": 2332.677165354331,
+      "y1": 2082.6771653543306,
+      "x2": 2346.024,
+      "y2": 2106.299212598425,
+      "width": 14.14
+    },
+    {
+      "net": "3V3_IO",
+      "layer": 2,
+      "x1": 2346.024,
+      "y1": 2106.299212598425,
+      "x2": 2346.024,
+      "y2": 2440.9938,
+      "width": 14.14
+    }
+  ],
+  "new_switch_via": {
+    "net": "ADDR0",
+    "x": 2362.2047244094488,
+    "y": 2043.3070866141732,
+    "diameter": 24,
+    "hole": 12
+  },
+  "preflight_minima_mm": {
+    "3V3_IO": -0.179578,
+    "PRESET2": 0.18257517764952047,
+    "PRESET0": 0.16022390546897422
+  },
+  "preflight_failures": [],
+  "clock_route": {
+    "lines": [
+      {
+        "net": "BUS_SCK",
+        "layer": 16,
+        "x1": 2096.4567,
+        "y1": 2049.2126,
+        "x2": 2356.299212598425,
+        "y2": 2065.944881889764,
+        "width": 6.000000000000001
+      },
+      {
+        "net": "BUS_SCK",
+        "layer": 16,
+        "x1": 2356.299212598425,
+        "y1": 2065.944881889764,
+        "x2": 2396.6535433070867,
+        "y2": 2062.992125984252,
+        "width": 6.000000000000001
+      },
+      {
+        "net": "BUS_SCK",
+        "layer": 16,
+        "x1": 2396.6535433070867,
+        "y1": 2062.992125984252,
+        "x2": 2417.3228,
+        "y2": 2053.1496,
+        "width": 6.000000000000001
+      }
+    ],
+    "vias": [],
+    "min_foreign_copper_gap_mm": 0.18160798137480055,
+    "expanded_nodes": 11781,
+    "search_bounds_mm": [
+      48.25,
+      47.050000000000004,
+      66.4,
+      57.150000000000006
+    ]
+  },
+  "address_routes": [
+    {
+      "lines": [
+        {
+          "net": "ADDR0",
+          "layer": 16,
+          "x1": 2362.2047244094488,
+          "y1": 1935.0393700787401,
+          "x2": 2362.2047244094488,
+          "y2": 2043.3070866141732,
+          "width": 6.000000000000001
+        }
+      ],
+      "vias": [],
+      "min_foreign_copper_gap_mm": 0.34182199999998636,
+      "expanded_nodes": 110,
+      "search_bounds_mm": [
+        54.975,
+        44.125,
+        65.0,
+        56.900000000000006
+      ]
+    }
+  ],
+  "failure": "AssertionError()",
+  "continuity": {
+    "ADDR0": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "BUS_SCK": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "3V3_IO": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "PRESET0": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "PRESET2": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "RC1": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "RC_DRIVE": {
+      "complete": true,
+      "pad_islands": 1
+    }
+  },
+  "native_imported": false,
+  "manufacturing_release": false,
+  "previous_preflight_failure_evidence": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\u2-layout-coopt\\full-bundle\\critical-first\\address0-backbone\\host-bundle-first-failure.json",
+  "power_lane_repair": "Keep the bottom supply to the right of the original GND spine; shift only0.339mm, return before INPUT_LOAD_N via, original14.14mil width."
+}

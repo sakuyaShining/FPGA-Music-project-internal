@@ -1,0 +1,167 @@
+{
+  "native_pcb_sha256": "0e96a38677afbe5af945c3ea02ea6915b26064fdeab45619d10ad11285cedd3a",
+  "native_unchanged": true,
+  "plan_sha256": "d701f46101aa7ad0ba31729e25cc90687976f35a41286860d991dd8d3740d56f",
+  "checks": [
+    {
+      "net": "TP_RESET_MOD_N",
+      "geometry_pass": true,
+      "new_lines_checked": 7,
+      "new_vias_checked": 1,
+      "min_foreign_gap_mm": 0.24549503031347203
+    },
+    {
+      "net": "DISP_HARM_CS_N",
+      "geometry_pass": true,
+      "new_lines_checked": 6,
+      "new_vias_checked": 1,
+      "min_foreign_gap_mm": 0.1706479859686884
+    },
+    {
+      "net": "TP_RESET_N",
+      "geometry_pass": true,
+      "new_lines_checked": 1,
+      "new_vias_checked": 0,
+      "min_foreign_gap_mm": 0.19801284542514624
+    },
+    {
+      "net": "LCD_RESET_N",
+      "geometry_pass": true,
+      "new_lines_checked": 4,
+      "new_vias_checked": 2,
+      "min_foreign_gap_mm": 0.16812002876876075
+    },
+    {
+      "net": "I2C_SDA",
+      "geometry_pass": true,
+      "new_lines_checked": 14,
+      "new_vias_checked": 2,
+      "min_foreign_gap_mm": 0.16757388728362232
+    },
+    {
+      "net": "SCAN_LATCH",
+      "geometry_pass": true,
+      "new_lines_checked": 5,
+      "new_vias_checked": 0,
+      "min_foreign_gap_mm": 0.17695082557700653
+    },
+    {
+      "net": "VIS_CS_N",
+      "geometry_pass": true,
+      "new_lines_checked": 10,
+      "new_vias_checked": 1,
+      "min_foreign_gap_mm": 0.1681545022955231
+    },
+    {
+      "net": "VIS_BL_EN",
+      "geometry_pass": true,
+      "new_lines_checked": 13,
+      "new_vias_checked": 2,
+      "min_foreign_gap_mm": 0.1702763529411201
+    },
+    {
+      "net": "BUS_RETURN",
+      "geometry_pass": true,
+      "new_lines_checked": 14,
+      "new_vias_checked": 4,
+      "min_foreign_gap_mm": 0.17418795624761713
+    },
+    {
+      "net": "VIS_DC",
+      "geometry_pass": true,
+      "new_lines_checked": 12,
+      "new_vias_checked": 4,
+      "min_foreign_gap_mm": 0.18874990792341245
+    },
+    {
+      "net": "I2C_SCL",
+      "geometry_pass": true,
+      "new_lines_checked": 21,
+      "new_vias_checked": 5,
+      "min_foreign_gap_mm": 0.16526636122020866
+    },
+    {
+      "net": "DISP_RESET_N",
+      "geometry_pass": true,
+      "new_lines_checked": 12,
+      "new_vias_checked": 4,
+      "min_foreign_gap_mm": 0.17401256815878208
+    },
+    {
+      "net": "DISP_VIS_DC",
+      "geometry_pass": true,
+      "new_lines_checked": 20,
+      "new_vias_checked": 4,
+      "min_foreign_gap_mm": 0.17351500715324897
+    },
+    {
+      "net": "DISP_VIS_CS_N",
+      "geometry_pass": true,
+      "new_lines_checked": 10,
+      "new_vias_checked": 2,
+      "min_foreign_gap_mm": 0.18880747234096007
+    }
+  ],
+  "errors": [],
+  "combined_geometry_pass": true,
+  "inner_i2s_reference_corridor": [
+    {
+      "net": "TP_RESET_MOD_N",
+      "min_inner_to_bottom_i2s_gap_mm": 0.8976152912313111
+    },
+    {
+      "net": "DISP_HARM_CS_N",
+      "min_inner_to_bottom_i2s_gap_mm": 1.3249471681660545
+    },
+    {
+      "net": "TP_RESET_N",
+      "min_inner_to_bottom_i2s_gap_mm": 10.360745500441038
+    },
+    {
+      "net": "LCD_RESET_N",
+      "min_inner_to_bottom_i2s_gap_mm": 7.730810372150447
+    },
+    {
+      "net": "I2C_SDA",
+      "min_inner_to_bottom_i2s_gap_mm": 18.410016067167206
+    },
+    {
+      "net": "SCAN_LATCH",
+      "min_inner_to_bottom_i2s_gap_mm": 12.837812367270297
+    },
+    {
+      "net": "VIS_CS_N",
+      "min_inner_to_bottom_i2s_gap_mm": 5.4002113486397905
+    },
+    {
+      "net": "VIS_BL_EN",
+      "min_inner_to_bottom_i2s_gap_mm": 0.8289225576666637
+    },
+    {
+      "net": "BUS_RETURN",
+      "min_inner_to_bottom_i2s_gap_mm": 10.817585089424881
+    },
+    {
+      "net": "VIS_DC",
+      "min_inner_to_bottom_i2s_gap_mm": 0.782160839655881
+    },
+    {
+      "net": "I2C_SCL",
+      "min_inner_to_bottom_i2s_gap_mm": 9.191992903466424
+    },
+    {
+      "net": "DISP_RESET_N",
+      "min_inner_to_bottom_i2s_gap_mm": 1.5684938179423134
+    },
+    {
+      "net": "DISP_VIS_DC",
+      "min_inner_to_bottom_i2s_gap_mm": 0.7927607414949782
+    },
+    {
+      "net": "DISP_VIS_CS_N",
+      "min_inner_to_bottom_i2s_gap_mm": 2.718255234418672
+    }
+  ],
+  "requires_native_ground_pour_stackup_and_sensor_capacitance_review": true,
+  "manufacturing_release": false
+}

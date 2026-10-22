@@ -1,0 +1,57 @@
+{
+  "source_pcb_sha256": "5cd300aa8ebe4402c98b4d9d6336ab4d0df981354eaa93534e1d34b08c6dbb79",
+  "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-RegionalRecovery-20261021-r21",
+  "before": {
+    "complete": false,
+    "pad_islands": 2
+  },
+  "after": {
+    "complete": true,
+    "pad_islands": 1
+  },
+  "signal_checks_mm": {
+    "copper": 0.2180704567009633,
+    "hole_pad": 0.5162636171346908,
+    "drill_drill": 1.0352092137743545,
+    "quiet": 7.956996604620615,
+    "mount": 69.95539943751939,
+    "edge": 48.7702
+  },
+  "ground_checks_mm": {
+    "copper": 0.2904000000000055,
+    "hole_pad": 0.8752824090016532,
+    "drill_drill": 0.5952000000000033,
+    "quiet": 8.182607920527374,
+    "mount": 69.15990776588642,
+    "edge": 48.7702
+  },
+  "predicted_ground_reference_contact_mm2": {
+    "15": 0.21887565457087288,
+    "2": 0.21887565457087288
+  },
+  "reference_layers": [
+    15,
+    2
+  ],
+  "nearby_reference_distance_mm": 0.9,
+  "distance_is_project_preference_not_si_signoff": true,
+  "vias": [
+    {
+      "net": "BUS_RETURN",
+      "x": 2875.984251968504,
+      "y": 2004.9212598425197,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "net": "GND",
+      "x": 2911.417322834646,
+      "y": 2004.9212598425197,
+      "diameter": 24,
+      "hole": 12
+    }
+  ],
+  "lines": [],
+  "geometric_pass": true,
+  "manufacturing_release": false
+}

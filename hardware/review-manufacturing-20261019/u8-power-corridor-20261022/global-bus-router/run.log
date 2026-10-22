@@ -1,0 +1,22 @@
+2026-10-22 04:41:26.971 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-22 04:41:27.275 INFO   Hardware: 8 CPU cores, 487 CPU score, 1500 MB RAM
+2026-10-22 04:41:27.280 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-22 04:41:28.965 INFO   [66CF97\CEAD33] Loading board file 'input.dsn'...
+2026-10-22 04:41:30.066 INFO   [66CF97\CEAD33] Job '66CF97\CEAD33' started at 2026-10-21T20:41:30.065273Z.
+2026-10-22 04:41:31.327 WARN   Design Warning: Board has 915 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 915 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 915 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5385 [net INPUT_LOAD_N] <-> FixedVia#5195 [net INPUT_LOAD_N]
+          - FixedVia#5385 [net INPUT_LOAD_N] <-> FixedVia#5195 [net INPUT_LOAD_N]
+          - FixedVia#5385 [net INPUT_LOAD_N] <-> FixedVia#5195 [net INPUT_LOAD_N]
+          - FixedVia#5385 [net INPUT_LOAD_N] <-> FixedVia#5195 [net INPUT_LOAD_N]
+          - FixedVia#5340 [net VIS_DC] <-> ObstacleArea#431
+          ... and 910 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 915 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-22 04:41:31.452 INFO   [66CF97\CEAD33] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-22 04:41:32.650 INFO   [66CF97\CEAD33] Fanout stage started on board '0d8d1939896e1232d6833030b238c083' with 532 of 903 SMD pins needing fanout (254 already connected, 117 netless).
+2026-10-22 04:43:26.002 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net '3V3_IO' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-22 04:46:54.226 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net '3V3_PERIPH' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-22 04:47:03.619 INFO   [66CF97\CEAD33] Fanout pass #1 on board '917c62e75551ba2ba0466c2177071b01' completed in 330.35 seconds with 301 SMD pins fanouted, 65 not routed, 0 insert errors, +4 extra vias (0 SMD pins still to check in pass, ripup costs=100).

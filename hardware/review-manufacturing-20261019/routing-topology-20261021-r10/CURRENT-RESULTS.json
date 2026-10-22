@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-21T11:17:44.042579+00:00",
+  "source_pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "native_source_files_verified_unchanged": 19,
+  "active_candidate": "r7",
+  "native_imported": false,
+  "manufacturing_release": false,
+  "r10": "Continuous analysis: HARM four anchors belong to regions3,2,0,3 on proposed inner17 without quiet guards, both with and without unaccepted PRESET3; same classification at0.2342 and0.304910678mm clearance. Confirms component-separation, not just raster alias. Six-layer helper positive/negative layer-control passed, not native signoff.",
+  "r11": [
+    {
+      "net": "HARM_CS_N",
+      "error": "RuntimeError(('No safe fanout', 'U15', '8', []))"
+    }
+  ],
+  "r11_boundary": "Four-layer single common-inner-region filter selects26.213920mm2 J6 through-pad region under retained sensing/audio quiet guards; U15.8 has no safe fanout into it within checked4mm window. Does not prove no multi-layer or local rework solution.",
+  "next": "Build topology graph between top/inner16 continuous free components via full-clearance through-via eligible regions; find minimum via connection before generating geometric routes. Compare isolated local cleanup, preserve quiet guards and all existing nets. No reason yet to choose6-layer process.",
+  "skills": [
+    {
+      "name": "easyeda-api",
+      "path": "C:\\Users\\Sakuya\\.codex\\skills\\easyeda-api\\SKILL.md",
+      "sha256": "b526dbdce75415647de3f3c43e7db10756ec6b4ac2c485368830df428de785aa"
+    },
+    {
+      "name": "lcsc",
+      "path": "C:\\Users\\Sakuya\\.codex\\skills\\lcsc\\SKILL.md",
+      "sha256": "84b5af2fc0e94a6900cef023851f7a60d74b697ba0cd2d294d3ca46f549127d2"
+    }
+  ],
+  "skill_policy": "Use easyeda-api documentation with existing working native CLI; no new bridge required solely to read references. lcsc community search is lead only; primary product/manufacturer and live quote verification remains required. No install/config changes."
+}

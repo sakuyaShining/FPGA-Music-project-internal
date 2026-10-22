@@ -1,0 +1,403 @@
+{
+  "source_pcb_sha256": "6509803e7afca781b7f71ad69183cc10d8f6413312701eb16a2cdc46dfe83afd",
+  "parent_plan": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\u8-reposition\\layout-plan.json",
+  "released_nets": [
+    "LCD_RESET_N",
+    "PRESET1",
+    "RC_DRIVE",
+    "SCAN_LATCH",
+    "TP_RESET_N"
+  ],
+  "remove_source_lines": [
+    {
+      "id": "a9409888f9d4f90a",
+      "net": "PRESET1",
+      "layer": 1,
+      "x1": 2671.2598,
+      "y1": 1927.1654,
+      "x2": 2673.2283,
+      "y2": 1841.5354,
+      "width": 6
+    },
+    {
+      "id": "7cf13f0cd62ab303",
+      "net": "PRESET1",
+      "layer": 1,
+      "x1": 2673.2283,
+      "y1": 1841.5354,
+      "x2": 2714.5669,
+      "y2": 1798.2283,
+      "width": 6
+    },
+    {
+      "id": "dfee99b209594696",
+      "net": "PRESET1",
+      "layer": 1,
+      "x1": 2714.5669,
+      "y1": 1798.2283,
+      "x2": 2876.9685,
+      "y2": 1798.2283,
+      "width": 6
+    },
+    {
+      "id": "3e55d2a3ed32bb55",
+      "net": "PRESET1",
+      "layer": 1,
+      "x1": 2876.9685,
+      "y1": 1798.2283,
+      "x2": 2996.063,
+      "y2": 1777.5591,
+      "width": 6
+    },
+    {
+      "id": "47e7c3a8682ecc2b",
+      "net": "PRESET1",
+      "layer": 2,
+      "x1": 2996.063,
+      "y1": 1777.5591,
+      "x2": 3216.5354,
+      "y2": 1777.5591,
+      "width": 6
+    },
+    {
+      "id": "7d6d9d35f5f8889f",
+      "net": "RC_DRIVE",
+      "layer": 1,
+      "x1": 2544.7,
+      "y1": 1663.9,
+      "x2": 2663.3858,
+      "y2": 1429.1339,
+      "width": 6
+    },
+    {
+      "id": "3496db3d9148a6db",
+      "net": "RC_DRIVE",
+      "layer": 2,
+      "x1": 2521.6535,
+      "y1": 1614.1732,
+      "x2": 2489.1732,
+      "y2": 1467.5197,
+      "width": 6
+    },
+    {
+      "id": "446c99c2e5aa08f7",
+      "net": "LCD_RESET_N",
+      "layer": 16,
+      "x1": 2606.2992,
+      "y1": 1606.2992,
+      "x2": 2719.4882,
+      "y2": 1650.5906,
+      "width": 6
+    },
+    {
+      "id": "1708c5a303d8faf8",
+      "net": "SCAN_LATCH",
+      "layer": 16,
+      "x1": 2513.7795,
+      "y1": 1827.7559,
+      "x2": 2167.3228,
+      "y2": 2007.874,
+      "width": 6
+    },
+    {
+      "id": "91df74b19f8b324a",
+      "net": "LCD_RESET_N",
+      "layer": 16,
+      "x1": 2688.778,
+      "y1": 1523.82,
+      "x2": 2606.299,
+      "y2": 1606.299,
+      "width": 6
+    },
+    {
+      "id": "b4c710f99a4088d1",
+      "net": "TP_RESET_N",
+      "layer": 16,
+      "x1": 3114.611,
+      "y1": 1690.197,
+      "x2": 2992.961,
+      "y2": 1811.847,
+      "width": 6
+    },
+    {
+      "id": "7da6dd899534ed6a",
+      "net": "TP_RESET_N",
+      "layer": 16,
+      "x1": 2992.961,
+      "y1": 1811.847,
+      "x2": 2569.399,
+      "y2": 1811.847,
+      "width": 6
+    },
+    {
+      "id": "d510185daab1b6b4",
+      "net": "TP_RESET_N",
+      "layer": 1,
+      "x1": 2254.671,
+      "y1": 1741.441,
+      "x2": 2565.394,
+      "y2": 1741.441,
+      "width": 6
+    },
+    {
+      "id": "49852460bcfd11c8",
+      "net": "TP_RESET_N",
+      "layer": 1,
+      "x1": 2565.394,
+      "y1": 1741.441,
+      "x2": 2583.317,
+      "y2": 1759.364,
+      "width": 6
+    },
+    {
+      "id": "31e73d7bc30d099f",
+      "net": "TP_RESET_N",
+      "layer": 1,
+      "x1": 2583.317,
+      "y1": 1759.364,
+      "x2": 2583.317,
+      "y2": 1797.929,
+      "width": 6
+    },
+    {
+      "id": "2e9c0ca1c785f123",
+      "net": "TP_RESET_N",
+      "layer": 1,
+      "x1": 2583.317,
+      "y1": 1797.929,
+      "x2": 2569.399,
+      "y2": 1811.847,
+      "width": 6
+    },
+    {
+      "id": "02ec6e2c38ea133d",
+      "net": "TP_RESET_N",
+      "layer": 16,
+      "x1": 2537.247,
+      "y1": 1469.531,
+      "x2": 2265.338,
+      "y2": 1741.44,
+      "width": 6
+    },
+    {
+      "id": "aa74be11e326b585",
+      "net": "PRESET1",
+      "layer": 2,
+      "x1": 2589.5669,
+      "y1": 2039.3701,
+      "x2": 2671.2598,
+      "y2": 1927.1654,
+      "width": 6
+    }
+  ],
+  "remove_source_vias": [
+    {
+      "id": "b3f712fde0d83d98",
+      "net": "PRESET1",
+      "x": 2671.2598,
+      "y": 1927.1654,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "0b1c5be6ac56ed84",
+      "net": "PRESET1",
+      "x": 2996.063,
+      "y": 1777.5591,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "93773c029fca5e79",
+      "net": "TP_RESET_N",
+      "x": 2569.399,
+      "y": 1811.847,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "58201fc53f3f6e10",
+      "net": "GND",
+      "x": 2971.008,
+      "y": 1719.0395,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "117f5fc6c2ba73e4",
+      "net": "GND",
+      "x": 2520.5944,
+      "y": 1934.375,
+      "diameter": 24,
+      "hole": 12
+    }
+  ],
+  "removed_provisional_vias": [
+    {
+      "net": "GND",
+      "x": 2812.8102362204727,
+      "y": 1714.5669291338581,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "net": "GND",
+      "x": 2730.314960629921,
+      "y": 1925.1968503937007,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "net": "BUS_SCK",
+      "x": 2689.9606362204727,
+      "y": 1913.3857803149608,
+      "diameter": 24,
+      "hole": 12
+    }
+  ],
+  "removed_provisional_lines": [
+    {
+      "net": "GND",
+      "layer": 1,
+      "x1": 2812.810236220472,
+      "y1": 1654.057480314961,
+      "x2": 2812.8102362204727,
+      "y2": 1714.5669291338581,
+      "width": 8
+    },
+    {
+      "net": "BUS_SCK",
+      "layer": 1,
+      "x1": 2712.8102362204722,
+      "y1": 1869.4574803149605,
+      "x2": 2689.9606362204727,
+      "y2": 1913.3857803149608,
+      "width": 6
+    }
+  ],
+  "replaced_address_via": {
+    "net": "ADDR0",
+    "x": 2527.5590551181103,
+    "y": 1913.3858267716537,
+    "diameter": 24,
+    "hole": 12
+  },
+  "replaced_address_stub": {
+    "net": "ADDR0",
+    "layer": 1,
+    "x1": 2512.8102362204722,
+    "y1": 1869.4574803149605,
+    "x2": 2527.5590551181103,
+    "y2": 1913.3858267716537,
+    "width": 6
+  },
+  "new_clock_escapes": {
+    "net": null,
+    "pads": [],
+    "lines": [
+      {
+        "net": "BUS_SCK",
+        "layer": 1,
+        "x1": 2712.8102362204722,
+        "y1": 1869.4574803149605,
+        "x2": 2687.0078740157483,
+        "y2": 1930.1181102362207,
+        "width": 6.000000000000001
+      },
+      {
+        "net": "BUS_SCK",
+        "layer": 1,
+        "x1": 2883.670078740158,
+        "y1": 1740.2,
+        "x2": 2850.393700787402,
+        "y2": 1737.204724409449,
+        "width": 6.000000000000001
+      }
+    ],
+    "vias": [
+      {
+        "net": "BUS_SCK",
+        "x": 2687.0078740157483,
+        "y": 1930.1181102362207,
+        "diameter": 24.000000000000004,
+        "hole": 12.000000000000002,
+        "routing_retained": true
+      },
+      {
+        "net": "BUS_SCK",
+        "x": 2850.393700787402,
+        "y": 1737.204724409449,
+        "diameter": 24.000000000000004,
+        "hole": 12.000000000000002,
+        "routing_retained": true
+      }
+    ],
+    "edges": [
+      {
+        "min_foreign_copper_gap_mm": 0.1847034645560487
+      },
+      {
+        "min_foreign_copper_gap_mm": 0.19588890299506473
+      }
+    ],
+    "new_fanouts": [
+      [
+        "BUS_SCK",
+        "U8",
+        "11"
+      ],
+      [
+        "BUS_SCK",
+        "R63",
+        "1"
+      ]
+    ]
+  },
+  "new_power_ground_vias": [
+    {
+      "net": "GND",
+      "x": 2788.683631579771,
+      "y": 1608.9197778089426,
+      "diameter": 24,
+      "hole": 12,
+      "predicted_contact_mm2": {
+        "15": 0.21887565457087288,
+        "2": 0.21887565457087288
+      },
+      "pad_to_via_mm": 1.3
+    }
+  ],
+  "new_power_ground_line": {
+    "net": "GND",
+    "layer": 1,
+    "x1": 2812.8102362204722,
+    "y1": 1654.0574803149607,
+    "x2": 2788.683631579771,
+    "y2": 1608.9197778089426,
+    "width": 8
+  },
+  "preflight_failures": [],
+  "continuity": {
+    "3V3_IO": {
+      "complete": false,
+      "pad_islands": 3
+    },
+    "BUS_MOSI": {
+      "complete": false,
+      "pad_islands": 5
+    }
+  },
+  "selected_route_nets": [
+    "ADDR0",
+    "BUS_SCK",
+    "BUS_MOSI",
+    "RC_DRIVE",
+    "LCD_RESET_N",
+    "TP_RESET_N",
+    "SCAN_LATCH",
+    "PRESET1",
+    "3V3_IO"
+  ],
+  "native_imported": false,
+  "manufacturing_release": false
+}

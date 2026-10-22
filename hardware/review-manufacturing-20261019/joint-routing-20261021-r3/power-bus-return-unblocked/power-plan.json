@@ -1,0 +1,122 @@
+{
+  "net": "5V_PERIPH",
+  "additive": true,
+  "source_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\joint-routing-20261021-r3\\power-bus-return\\staged-planning-source.json",
+  "source_sha256": "e6340956171578e299d317c61be67d99e11116e4b8dc5268b979c5646e2892ad",
+  "excluded_native_nets_require_joint_replacement": [
+    "BUS_RETURN"
+  ],
+  "native_pcb_sha256": "be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e",
+  "routes": [
+    {
+      "kind": "ic_supply_escape",
+      "group": 0,
+      "pad": [
+        "U17",
+        "6"
+      ],
+      "neck_width_mm": 0.8,
+      "lines": [
+        {
+          "net": "5V_PERIPH",
+          "layer": 1,
+          "x1": 970.4,
+          "y1": 1931.1,
+          "x2": 919.2188976377952,
+          "y2": 1931.0999999999997,
+          "width": 31.49606299212599
+        }
+      ],
+      "vias": []
+    },
+    {
+      "lines": [
+        {
+          "net": "5V_PERIPH",
+          "layer": 1,
+          "x1": 925.8509666666667,
+          "y1": 1718.8356,
+          "x2": 799.2125984251969,
+          "y2": 1724.4094488188978,
+          "width": 39.37007874015748
+        },
+        {
+          "net": "5V_PERIPH",
+          "layer": 1,
+          "x1": 799.2125984251969,
+          "y1": 1724.4094488188978,
+          "x2": 783.464566929134,
+          "y2": 1783.4645669291342,
+          "width": 39.37007874015748
+        },
+        {
+          "net": "5V_PERIPH",
+          "layer": 1,
+          "x1": 783.464566929134,
+          "y1": 1783.4645669291342,
+          "x2": 919.2188976377952,
+          "y2": 1931.0999999999997,
+          "width": 39.37007874015748
+        }
+      ],
+      "vias": [],
+      "min_foreign_copper_gap_mm": 0.21498510701490992,
+      "expanded_nodes": 1765,
+      "search_bounds_mm": [
+        18.3,
+        38.6,
+        28.6,
+        54.1
+      ],
+      "from_group": 1,
+      "to_group": 0
+    }
+  ],
+  "failed_planning": [],
+  "all_pad_groups_connected": true,
+  "lines": [
+    {
+      "net": "5V_PERIPH",
+      "layer": 1,
+      "x1": 970.4,
+      "y1": 1931.1,
+      "x2": 919.2188976377952,
+      "y2": 1931.0999999999997,
+      "width": 31.49606299212599
+    },
+    {
+      "net": "5V_PERIPH",
+      "layer": 1,
+      "x1": 925.8509666666667,
+      "y1": 1718.8356,
+      "x2": 799.2125984251969,
+      "y2": 1724.4094488188978,
+      "width": 39.37007874015748
+    },
+    {
+      "net": "5V_PERIPH",
+      "layer": 1,
+      "x1": 799.2125984251969,
+      "y1": 1724.4094488188978,
+      "x2": 783.464566929134,
+      "y2": 1783.4645669291342,
+      "width": 39.37007874015748
+    },
+    {
+      "net": "5V_PERIPH",
+      "layer": 1,
+      "x1": 783.464566929134,
+      "y1": 1783.4645669291342,
+      "x2": 919.2188976377952,
+      "y2": 1931.0999999999997,
+      "width": 39.37007874015748
+    }
+  ],
+  "vias": [],
+  "new_trunk_width_mm": 1.0,
+  "new_via_diameter_mm": 1.2,
+  "new_via_hole_mm": 0.6,
+  "requires_independent_geometry_audit": true,
+  "requires_native_drc": true,
+  "manufacturing_release": false
+}

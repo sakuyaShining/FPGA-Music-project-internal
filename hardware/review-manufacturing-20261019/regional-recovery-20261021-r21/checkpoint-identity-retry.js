@@ -1,0 +1,1 @@
+const first=await eda.dmt_SelectControl.getCurrentDocumentInfo();if(first?.documentType===3)return first;const tab=await eda.dmt_EditorControl.openDocument('c3fd8656cf425e9f');await new Promise(r=>setTimeout(r,3500));return {tab,current:await eda.dmt_SelectControl.getCurrentDocumentInfo()};

@@ -1,0 +1,14 @@
+2026-10-21 20:22:16.458 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-21 20:22:16.779 INFO   Hardware: 8 CPU cores, 486 CPU score, 512 MB RAM
+2026-10-21 20:22:16.790 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-21 20:22:18.079 WARN   Could not create HttpClient for VersionChecker: java.io.IOException: Unable to establish loopback connection
+2026-10-21 20:22:18.354 INFO   [E9F0F3\20B1FE] Loading board file 'calibration.dsn'...
+2026-10-21 20:22:18.404 INFO   [E9F0F3\20B1FE] Job 'E9F0F3\20B1FE' started at 2026-10-21T12:22:18.404322300Z.
+2026-10-21 20:22:18.441 INFO   [E9F0F3\20B1FE] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-21 20:22:18.478 INFO   [E9F0F3\20B1FE] Auto-routing stage started on board '0a3edef024e5e6cc0edd3ade835f304b' with baseline score 0.00 for 1 unrouted item.
+2026-10-21 20:22:18.670 INFO   [E9F0F3\20B1FE] Auto-routing pass #1 on board '0a3edef024e5e6cc0edd3ade835f304b' was completed in 0.17 seconds with score 1000.00 (0 unrouted and 0 violations).
+2026-10-21 20:22:18.676 INFO   [E9F0F3\20B1FE] Auto-routing pass #2 on board '1cbac19a20966c3076b6d997bdde8afd' was completed in 0.00 seconds with score 1000.00 (0 unrouted and 0 violations).
+2026-10-21 20:22:18.692 INFO   [E9F0F3\20B1FE] Auto-routing stage completed: started with 1 unrouted nets, completed in 0.25 seconds, final score: 1000.00 (0 unrouted and 0 violations), using 0.00 total CPU seconds, 0.00 GB total allocated, and 0.0 MB peak heap usage.
+2026-10-21 20:22:18.697 INFO   [E9F0F3\20B1FE] Job 'E9F0F3\20B1FE' finished with state: COMPLETED (elapsed: 0.29 seconds, finished at UTC: 2026-10-21T12:22:18.695920800Z).
+2026-10-21 20:22:18.725 INFO   Saving output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\freerouting-comparison-20261021-r14\calibration.ses' (SES)...
+2026-10-21 20:22:18.729 INFO   Successfully saved output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\freerouting-comparison-20261021-r14\calibration.ses' (1014 bytes).

@@ -1,0 +1,16 @@
+{
+  "title": "覆写当前物理叠层配置",
+  "remarks": "将会覆写 PCB 当前的物理叠层配置，请注意数据丢失风险",
+  "params": [
+    {
+      "name": "physicalStackingConfiguration",
+      "type": "{ [key: string]: any }",
+      "required": true
+    }
+  ],
+  "returns": {
+    "type": "boolean",
+    "description": "覆写是否成功"
+  },
+  "isAsync": false
+}

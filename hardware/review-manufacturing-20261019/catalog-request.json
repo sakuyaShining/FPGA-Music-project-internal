@@ -1,0 +1,5 @@
+{
+ "name":"catalog-and-project",
+ "code":"const queries={};for(const q of __CLI__.args.queries){queries[q]=await eda.lib_Device.search(q,'0819f05c4eef4c71ace90d822a990e87',undefined,undefined,10,1);}return {project:await eda.dmt_Project.getCurrentProjectInfo(),pages:await eda.dmt_Schematic.getAllSchematicPagesInfo(),queries};",
+ "args":{"queries":["C179326","C503437","C370986","C962071","HDR-TH_20P-P2.54-V-M","2.54-1*16P","CL10A225KP8NNNC","AP2112K-3.3TRG1"]}
+}

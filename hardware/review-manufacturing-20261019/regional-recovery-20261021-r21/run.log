@@ -1,0 +1,46 @@
+2026-10-21 22:52:28.964 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-21 22:52:29.283 INFO   Hardware: 8 CPU cores, 360 CPU score, 1024 MB RAM
+2026-10-21 22:52:29.292 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-21 22:52:31.157 INFO   [5D12D2\CE6D3D] Loading board file 'input.dsn'...
+2026-10-21 22:52:32.391 INFO   [5D12D2\CE6D3D] Job '5D12D2\CE6D3D' started at 2026-10-21T14:52:32.391089100Z.
+2026-10-21 22:52:33.864 WARN   Design Warning: Board has 924 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 924 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 924 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#5340 [net VIS_DC] <-> ObstacleArea#431
+          - FixedVia#5339 [net BUS_RETURN] <-> ObstacleArea#321
+          - FixedVia#5339 [net BUS_RETURN] <-> FixedTrace#3898 [net RC2]
+          - FixedVia#5338 [net BUS_RETURN] <-> ObstacleArea#490
+          - FixedVia#5337 [net BUS_RETURN] <-> ObstacleArea#465
+          ... and 919 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 924 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-21 22:52:33.980 INFO   [5D12D2\CE6D3D] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-10-21 22:52:35.914 INFO   [5D12D2\CE6D3D] Auto-routing stage started on board '7a98716a92f1e015aa24c382cd8c9fe0' with baseline score 265.82 for 394 unrouted items.
+2026-10-21 22:52:42.355 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:52:42.356 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:52:45.712 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:52:45.712 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:52:48.149 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:52:48.149 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:52:49.963 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:52:49.963 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:53:00.797 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:53:00.798 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:53:06.514 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:53:06.514 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:53:11.032 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:53:11.033 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:53:15.393 INFO   [5D12D2\CE6D3D] Auto-routing pass #1 on board '7a98716a92f1e015aa24c382cd8c9fe0' was completed in 38.55 seconds with score 272.71 (387 unrouted and 924 violations), using 10.59 CPU seconds and the job allocated 23.06 GB of memory so far.
+2026-10-21 22:53:18.761 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:53:18.762 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:54:30.198 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net 'BUS_RETURN' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-21 22:54:30.784 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:54:30.785 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:54:32.008 WARN   Simplex.calc_division_lines: division not found
+2026-10-21 22:54:32.008 WARN   Simplex.cutout_from: division line is null
+2026-10-21 22:54:36.358 INFO   [5D12D2\CE6D3D] Auto-routing pass #2 on board '05f1e3f4bacf2449435483501bbf627e' was completed in 79.80 seconds with score 272.71 (387 unrouted and 924 violations), using 37.11 CPU seconds and the job allocated 81.41 GB of memory so far.
+2026-10-21 22:54:39.384 INFO   [5D12D2\CE6D3D] Auto-routing stage completed with timeout: started with 394 unrouted nets, completed in 124.27 seconds, final score: 272.71 (387 unrouted and 924 violations), using 37.11 total CPU seconds, 81.41 GB total allocated, and 669.7 MB peak heap usage.
+2026-10-21 22:54:39.674 INFO   [5D12D2\CE6D3D] Job '5D12D2\CE6D3D' finished with state: TIMED_OUT (elapsed: 2 minutes 7.28 seconds, finished at UTC: 2026-10-21T14:54:39.672730800Z).
+2026-10-21 22:54:39.680 INFO   Saving output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-recovery-20261021-r21\result.ses' (SES)...
+2026-10-21 22:54:39.685 INFO   Successfully saved output file 'C:\Users\Sakuya\.codex\worktrees\06df\FPGA-Music-project\hardware\review-manufacturing-20261019\regional-recovery-20261021-r21\result.ses' (527675 bytes).

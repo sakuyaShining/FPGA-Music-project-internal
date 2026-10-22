@@ -1,0 +1,363 @@
+{
+  "source_pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "gap_mm": 0.158,
+  "via_annulus_mm": 0.6096,
+  "drill_mm": 0.3048,
+  "local_margin_mm": 4,
+  "rows": [
+    {
+      "net": "BUS_SCK",
+      "ref": "U15",
+      "pin": "2",
+      "x_mm": 80.72373999999999,
+      "y_mm": 40.12946,
+      "component_area_mm2": 26.889258180118286,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 4.474979261390119,
+      "candidates": [
+        {
+          "x_mm": 80.45585958942692,
+          "y_mm": 41.341350052449144,
+          "distance_mm": 1.2411435910457669,
+          "region_area_mm2": 3.846354628238759
+        },
+        {
+          "x_mm": 79.42609,
+          "y_mm": 39.62196522530539,
+          "distance_mm": 1.3933579830188332,
+          "region_area_mm2": 0.3192734314677652
+        },
+        {
+          "x_mm": 77.96571899811336,
+          "y_mm": 39.76644377380048,
+          "distance_mm": 2.781808876851874,
+          "region_area_mm2": 0.006463517622976633
+        },
+        {
+          "x_mm": 84.303047459641,
+          "y_mm": 41.38059633068449,
+          "distance_mm": 3.7916729828138345,
+          "region_area_mm2": 0.039180577918078344
+        },
+        {
+          "x_mm": 80.22848770973339,
+          "y_mm": 43.92639484995624,
+          "distance_mm": 3.829097685594677,
+          "region_area_mm2": 0.19349335022456698
+        },
+        {
+          "x_mm": 84.59649123089045,
+          "y_mm": 42.61700094,
+          "distance_mm": 4.60283195701729,
+          "region_area_mm2": 0.005307801507735511
+        },
+        {
+          "x_mm": 76.95600339704623,
+          "y_mm": 43.49954914029538,
+          "distance_mm": 5.055031149535518,
+          "region_area_mm2": 0.06490595441023703
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "723148871d7c2e07",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 6.740840279339284
+        },
+        {
+          "id": "8ab9d4124659f3b4",
+          "net": "GND",
+          "boundary_contact_mm": 2.1556995978681623
+        },
+        {
+          "id": "48266e09357fb600",
+          "net": "GND",
+          "boundary_contact_mm": 1.7538880639084604
+        },
+        {
+          "id": "4bb07e56fb43172b",
+          "net": "GND",
+          "boundary_contact_mm": 0.9866900856139256
+        },
+        {
+          "id": "883bf372042d6389",
+          "net": "GND",
+          "boundary_contact_mm": 0.5429814707064436
+        },
+        {
+          "id": "9f7b90653acf0ab8",
+          "net": "GND",
+          "boundary_contact_mm": 0.464874032048238
+        },
+        {
+          "id": "fd5b7e69eceec363",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.32823913946720307
+        },
+        {
+          "id": "4ec465275ad1a262",
+          "net": "DISP_RESET_N",
+          "boundary_contact_mm": 0.22591947688652075
+        }
+      ]
+    },
+    {
+      "net": "BUS_MOSI",
+      "ref": "U15",
+      "pin": "4",
+      "x_mm": 82.02422,
+      "y_mm": 40.12946,
+      "component_area_mm2": 26.512891982120266,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 4.672505113555717,
+      "candidates": [
+        {
+          "x_mm": 80.579539247,
+          "y_mm": 41.45016500326639,
+          "distance_mm": 1.957387080712837,
+          "region_area_mm2": 3.835178293374157
+        },
+        {
+          "x_mm": 84.303047459641,
+          "y_mm": 41.38059633068449,
+          "distance_mm": 2.599691656480143,
+          "region_area_mm2": 0.04040299527255396
+        },
+        {
+          "x_mm": 79.42609,
+          "y_mm": 39.62196522530539,
+          "distance_mm": 2.6472307121296255,
+          "region_area_mm2": 0.31927343146776527
+        },
+        {
+          "x_mm": 84.59649123089046,
+          "y_mm": 42.61700094,
+          "distance_mm": 3.5783291091573464,
+          "region_area_mm2": 0.2841570432166741
+        },
+        {
+          "x_mm": 80.61310326518921,
+          "y_mm": 43.97656208806775,
+          "distance_mm": 4.097736560014359,
+          "region_area_mm2": 0.19349335022456698
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "723148871d7c2e07",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 6.382720279339284
+        },
+        {
+          "id": "48266e09357fb600",
+          "net": "GND",
+          "boundary_contact_mm": 1.385413249743138
+        },
+        {
+          "id": "883bf372042d6389",
+          "net": "GND",
+          "boundary_contact_mm": 0.5429814707064436
+        },
+        {
+          "id": "4ec465275ad1a262",
+          "net": "DISP_RESET_N",
+          "boundary_contact_mm": 0.22591947688652075
+        },
+        {
+          "id": "8ab9d4124659f3b4",
+          "net": "GND",
+          "boundary_contact_mm": 0.21920898199934277
+        },
+        {
+          "id": "38d2e429ac9850ee",
+          "net": "GND",
+          "boundary_contact_mm": 0.21772192187772244
+        },
+        {
+          "id": "f3c1bc7c8383272d",
+          "net": "DISP_RESET_N",
+          "boundary_contact_mm": 0.21756914121369195
+        }
+      ]
+    },
+    {
+      "net": "HARM_CS_N",
+      "ref": "U15",
+      "pin": "8",
+      "x_mm": 84.62517999999999,
+      "y_mm": 40.12946,
+      "component_area_mm2": 23.905000649038648,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 2.0692023433543487,
+      "candidates": [
+        {
+          "x_mm": 84.35729958942692,
+          "y_mm": 41.341350052449144,
+          "distance_mm": 1.2411435910457669,
+          "region_area_mm2": 0.06561541789591463
+        },
+        {
+          "x_mm": 84.62517999999999,
+          "y_mm": 42.61700094,
+          "distance_mm": 2.4875409399999953,
+          "region_area_mm2": 0.2841570432166741
+        },
+        {
+          "x_mm": 83.03308029079723,
+          "y_mm": 42.99426335637677,
+          "distance_mm": 3.27748070242238,
+          "region_area_mm2": 1.5490781623273304
+        },
+        {
+          "x_mm": 87.84833301945693,
+          "y_mm": 40.95538741781828,
+          "distance_mm": 3.327291914806753,
+          "region_area_mm2": 0.0424206205506464
+        },
+        {
+          "x_mm": 87.7373052647602,
+          "y_mm": 42.61700094,
+          "distance_mm": 3.9841164129245596,
+          "region_area_mm2": 0.1277651441162117
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "7881ab55cd79fb3a",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 3.541146464287172
+        },
+        {
+          "id": "723148871d7c2e07",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 2.279688707821274
+        },
+        {
+          "id": "f3c1bc7c8383272d",
+          "net": "DISP_RESET_N",
+          "boundary_contact_mm": 0.5978857175381466
+        },
+        {
+          "id": "cd007f8673859f20",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.3282389676348243
+        },
+        {
+          "id": "f6f7bd10cd01f022",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.11558794848198062
+        },
+        {
+          "id": "53072cff71a770c0",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.05349793696396432
+        }
+      ]
+    },
+    {
+      "net": "DISP_SCK",
+      "ref": "U15",
+      "pin": "18",
+      "x_mm": 81.37397999999999,
+      "y_mm": 45.8724,
+      "component_area_mm2": 20.303459526781566,
+      "touches_local_boundary": true,
+      "via_regions_area_mm2": 3.891785003697891,
+      "candidates": [
+        {
+          "x_mm": 80.61310326518921,
+          "y_mm": 43.97656208806775,
+          "distance_mm": 2.042825199055449,
+          "region_area_mm2": 0.19349335022456698
+        },
+        {
+          "x_mm": 81.74460169563473,
+          "y_mm": 43.03096653677488,
+          "distance_mm": 2.865502498203525,
+          "region_area_mm2": 3.5270254056063473
+        },
+        {
+          "x_mm": 84.59649123089046,
+          "y_mm": 42.61700094,
+          "distance_mm": 4.580633326633354,
+          "region_area_mm2": 0.17126624786697706
+        }
+      ],
+      "track_boundaries": [
+        {
+          "id": "4c09f45c5411c2bc",
+          "net": "3V3_PERIPH",
+          "boundary_contact_mm": 1.2798593107908358
+        },
+        {
+          "id": "dff7e3177f8cf73c",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.8679320454222544
+        },
+        {
+          "id": "48266e09357fb600",
+          "net": "GND",
+          "boundary_contact_mm": 0.847515495528164
+        },
+        {
+          "id": "4bb07e56fb43172b",
+          "net": "GND",
+          "boundary_contact_mm": 0.6443980391707449
+        },
+        {
+          "id": "59725948d6676b42",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.6391423388008135
+        },
+        {
+          "id": "3ec9afee3fe5310f",
+          "net": "GND",
+          "boundary_contact_mm": 0.629346494052014
+        },
+        {
+          "id": "05433333517002e8",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.1853834203420726
+        },
+        {
+          "id": "4fd0f4b6c360bde9",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.1721318914345527
+        }
+      ]
+    },
+    {
+      "net": "DISP_MOSI",
+      "ref": "U15",
+      "pin": "16",
+      "x_mm": 82.67446,
+      "y_mm": 45.8724,
+      "component_area_mm2": 0.7410968987491066,
+      "touches_local_boundary": false,
+      "via_regions_area_mm2": 0.0,
+      "candidates": [],
+      "track_boundaries": [
+        {
+          "id": "e0b3f1ccd5724d8c",
+          "net": "3V3_IO",
+          "boundary_contact_mm": 0.5002554394317158
+        },
+        {
+          "id": "05433333517002e8",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.47434546579434633
+        },
+        {
+          "id": "dff7e3177f8cf73c",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.2990884385937211
+        },
+        {
+          "id": "59725948d6676b42",
+          "net": "TP_RESET_N",
+          "boundary_contact_mm": 0.12228373293097268
+        }
+      ]
+    }
+  ]
+}

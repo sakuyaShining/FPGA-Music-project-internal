@@ -1,0 +1,825 @@
+{
+  "utc": "2026-10-20T22:16:54.677233+00:00",
+  "phase": "complete",
+  "source_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\quality-r1-source-78.json",
+  "source_sha256": "a35fe1ff580a48707ffad1dda1e4f8213dfe941bf53a4e45c4bc8d5cbab8cfc2",
+  "native_pcb_sha256": "be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e",
+  "native_microtracks_included": 24,
+  "normalized_via_dimensions": [
+    {
+      "id": "16a13e102cb0509d",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "16a13e102cb0509d",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "01b21cb3572d97ac",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "01b21cb3572d97ac",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "e899e9b8d35774a0",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "e899e9b8d35774a0",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "d9615af0a7445a08",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "d9615af0a7445a08",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    }
+  ],
+  "pending_nets": [
+    "I2C_SCL",
+    "BUS_SCK",
+    "BUS_MOSI",
+    "HARM_CS_N",
+    "ADDR1",
+    "ADDR2",
+    "ADDR3",
+    "MUX_DISABLE",
+    "ADDR0",
+    "PRESET3",
+    "INV2",
+    "DISP_RESET_N",
+    "DISP_VIS_DC",
+    "DISP_SCK",
+    "DISP_MOSI",
+    "DISP_VIS_CS_N"
+  ],
+  "ripped_connected_nets": [
+    "I2S_BCK",
+    "I2S_DIN",
+    "I2S_LRCK",
+    "SCAN_LATCH",
+    "INPUT_LOAD_N",
+    "VIS_DC",
+    "VIS_CS_N"
+  ],
+  "proposed_nets": [
+    "DISP_VIS_DC",
+    "VIS_DC"
+  ],
+  "routes": [
+    {
+      "net": "DISP_VIS_DC",
+      "pads": [
+        [
+          "J11",
+          "6"
+        ],
+        [
+          "FANOUT-U15",
+          "9"
+        ]
+      ],
+      "lines": [
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 1,
+          "x1": 3357.3,
+          "y1": 1579.9,
+          "x2": 3357.283464566929,
+          "y2": 1523.6220472440943,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 2,
+          "x1": 3357.283464566929,
+          "y1": 1523.6220472440943,
+          "x2": 3463.582677165354,
+          "y2": 1443.8976377952756,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 1,
+          "x1": 3463.582677165354,
+          "y1": 1443.8976377952756,
+          "x2": 4278.543307086614,
+          "y2": 1638.7795275590552,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 1,
+          "x1": 4278.543307086614,
+          "y1": 1638.7795275590552,
+          "x2": 4381.889763779528,
+          "y2": 1573.818897637795,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 1,
+          "x1": 4381.889763779528,
+          "y1": 1573.818897637795,
+          "x2": 4886.811023622047,
+          "y2": 1570.8661417322835,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 1,
+          "x1": 4886.811023622047,
+          "y1": 1570.8661417322835,
+          "x2": 4886.811023622047,
+          "y2": 1733.267716535433,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 1,
+          "x1": 4886.811023622047,
+          "y1": 1733.267716535433,
+          "x2": 4854.330708661418,
+          "y2": 1765.7480314960628,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 1,
+          "x1": 4854.330708661418,
+          "y1": 1765.7480314960628,
+          "x2": 4798.2283464566935,
+          "y2": 1777.5590551181103,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 2,
+          "x1": 4798.2283464566935,
+          "y1": 1777.5590551181103,
+          "x2": 4836.614173228347,
+          "y2": 2303.149606299213,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "layer": 1,
+          "x1": 4836.614173228347,
+          "y1": 2303.149606299213,
+          "x2": 5039.4,
+          "y2": 2627.0999999999995,
+          "width": 6.000000000000001
+        }
+      ],
+      "vias": [
+        {
+          "net": "DISP_VIS_DC",
+          "x": 3357.283464566929,
+          "y": 1523.6220472440943,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002,
+          "routing_retained": true
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "x": 3463.582677165354,
+          "y": 1443.8976377952756,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "x": 4798.2283464566935,
+          "y": 1777.5590551181103,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "x": 4836.614173228347,
+          "y": 2303.149606299213,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        }
+      ],
+      "edges": [
+        {
+          "min_foreign_copper_gap_mm": 0.18060961002687825,
+          "expanded_nodes": 278509,
+          "search_bounds_mm": [
+            77.25,
+            30.674999999999997,
+            136.04999999999998,
+            74.77499999999999
+          ]
+        }
+      ],
+      "quality": {
+        "before_length_mm": 0,
+        "after_length_mm": 71.85484127423965,
+        "before_vias": 0,
+        "after_vias": 4,
+        "mst_lower_bound_mm": 50.32847201505325,
+        "min_foreign_gap_mm": 0.18060961002687825
+      },
+      "real_pad_continuity_pass": true,
+      "independent_geometry_pass": true
+    },
+    {
+      "net": "VIS_DC",
+      "pads": [
+        [
+          "J6",
+          "16"
+        ],
+        [
+          "R65",
+          "1"
+        ],
+        [
+          "FANOUT-U15",
+          "11"
+        ]
+      ],
+      "lines": [
+        {
+          "id": "782fc2a675e2ad84",
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 3382.8,
+          "y1": 1806,
+          "x2": 3407.4803,
+          "y2": 1805.1181,
+          "width": 6
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 2135.7,
+          "y1": 1259.8,
+          "x2": 1996.0629921259842,
+          "y2": 1399.6062992125983,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 1996.0629921259842,
+          "y1": 1399.6062992125983,
+          "x2": 1919.2913385826773,
+          "y2": 1399.6062992125983,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 1919.2913385826773,
+          "y1": 1399.6062992125983,
+          "x2": 1798.2283464566929,
+          "y2": 1470.472440944882,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 1798.2283464566929,
+          "y1": 1470.472440944882,
+          "x2": 1795.275590551181,
+          "y2": 1523.6220472440943,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 1795.275590551181,
+          "y1": 1523.6220472440943,
+          "x2": 1644.6850393700788,
+          "y2": 1674.2125984251968,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 1644.6850393700788,
+          "y1": 1674.2125984251968,
+          "x2": 1588.5826771653542,
+          "y2": 1715.5511811023623,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 1588.5826771653542,
+          "y1": 1715.5511811023623,
+          "x2": 1588.5826771653542,
+          "y2": 1910.4330708661419,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 1588.5826771653542,
+          "y1": 1910.4330708661419,
+          "x2": 1638.7795275590552,
+          "y2": 1960.6299212598424,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 1638.7795275590552,
+          "y1": 1960.6299212598424,
+          "x2": 1842.51968503937,
+          "y2": 1960.6299212598424,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 1842.51968503937,
+          "y1": 1960.6299212598424,
+          "x2": 1866.1417322834643,
+          "y2": 1945.8661417322835,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 1866.1417322834643,
+          "y1": 1945.8661417322835,
+          "x2": 2087.5984251968503,
+          "y2": 1945.8661417322835,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 2087.5984251968503,
+          "y1": 1945.8661417322835,
+          "x2": 2179.1338582677163,
+          "y2": 1963.5826771653544,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 2179.1338582677163,
+          "y1": 1963.5826771653544,
+          "x2": 2185.0393700787404,
+          "y2": 1993.1102362204724,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 2185.0393700787404,
+          "y1": 1993.1102362204724,
+          "x2": 2081.692913385827,
+          "y2": 2078.740157480315,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 2081.692913385827,
+          "y1": 2078.740157480315,
+          "x2": 2043.307086614173,
+          "y2": 2125.984251968504,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 2043.307086614173,
+          "y1": 2125.984251968504,
+          "x2": 2046.0,
+          "y2": 2441.0,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 3407.4802999999997,
+          "y1": 1805.1181,
+          "x2": 3522.6377952755906,
+          "y2": 1745.0787401574805,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 3522.6377952755906,
+          "y1": 1745.0787401574805,
+          "x2": 3522.6377952755906,
+          "y2": 1497.0472440944882,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 3522.6377952755906,
+          "y1": 1497.0472440944882,
+          "x2": 3587.5984251968507,
+          "y2": 1420.2755905511813,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 3587.5984251968507,
+          "y1": 1420.2755905511813,
+          "x2": 3614.1732283464567,
+          "y2": 1337.5984251968505,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 3614.1732283464567,
+          "y1": 1337.5984251968505,
+          "x2": 3620.07874015748,
+          "y2": 1251.9685039370079,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 3620.07874015748,
+          "y1": 1251.9685039370079,
+          "x2": 3687.992125984252,
+          "y2": 1139.763779527559,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 3687.992125984252,
+          "y1": 1139.763779527559,
+          "x2": 3534.4488188976375,
+          "y2": 1139.763779527559,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 3534.4488188976375,
+          "y1": 1139.763779527559,
+          "x2": 3180.11811023622,
+          "y2": 1139.763779527559,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 3180.11811023622,
+          "y1": 1139.763779527559,
+          "x2": 3047.2440944881887,
+          "y2": 1163.3858267716537,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 3047.2440944881887,
+          "y1": 1163.3858267716537,
+          "x2": 2601.377952755905,
+          "y2": 1163.3858267716537,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 2,
+          "x1": 2601.377952755905,
+          "y1": 1163.3858267716537,
+          "x2": 2232.283464566929,
+          "y2": 1275.5905511811025,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 2232.283464566929,
+          "y1": 1275.5905511811025,
+          "x2": 2217.51968503937,
+          "y2": 1290.3543307086613,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 2217.51968503937,
+          "y1": 1290.3543307086613,
+          "x2": 2170.275590551181,
+          "y2": 1290.3543307086613,
+          "width": 6.000000000000001
+        },
+        {
+          "net": "VIS_DC",
+          "layer": 1,
+          "x1": 2170.275590551181,
+          "y1": 1290.3543307086613,
+          "x2": 2135.7,
+          "y2": 1259.8,
+          "width": 6.000000000000001
+        }
+      ],
+      "vias": [
+        {
+          "id": "ac0626c7b7648b1e",
+          "net": "VIS_DC",
+          "x": 3407.4803,
+          "y": 1805.1181,
+          "diameter": 24,
+          "hole": 12,
+          "routing_retained": true
+        },
+        {
+          "net": "VIS_DC",
+          "x": 1919.2913385826773,
+          "y": 1399.6062992125983,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 1644.6850393700788,
+          "y": 1674.2125984251968,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 1588.5826771653542,
+          "y": 1715.5511811023623,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 1588.5826771653542,
+          "y": 1910.4330708661419,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 1842.51968503937,
+          "y": 1960.6299212598424,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 3522.6377952755906,
+          "y": 1745.0787401574805,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 3522.6377952755906,
+          "y": 1497.0472440944882,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 3614.1732283464567,
+          "y": 1337.5984251968505,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 3620.07874015748,
+          "y": 1251.9685039370079,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 3687.992125984252,
+          "y": 1139.763779527559,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 3534.4488188976375,
+          "y": 1139.763779527559,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 3180.11811023622,
+          "y": 1139.763779527559,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 2601.377952755905,
+          "y": 1163.3858267716537,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        },
+        {
+          "net": "VIS_DC",
+          "x": 2232.283464566929,
+          "y": 1275.5905511811025,
+          "diameter": 24.000000000000004,
+          "hole": 12.000000000000002
+        }
+      ],
+      "edges": [
+        {
+          "min_foreign_copper_gap_mm": 0.17262176395927759,
+          "expanded_nodes": 363294,
+          "search_bounds_mm": [
+            29.924999999999997,
+            9.975,
+            76.27499999999999,
+            84.075
+          ]
+        },
+        {
+          "min_foreign_copper_gap_mm": 0.17834741729721348,
+          "expanded_nodes": 215549,
+          "search_bounds_mm": [
+            46.199999999999996,
+            23.925,
+            94.575,
+            53.85
+          ]
+        }
+      ],
+      "quality": {
+        "before_length_mm": 127.86994418825914,
+        "after_length_mm": 114.26567499935788,
+        "before_vias": 15,
+        "after_vias": 15,
+        "mst_lower_bound_mm": 64.67013148003888,
+        "min_foreign_gap_mm": 0.17262176395927759
+      },
+      "real_pad_continuity_pass": true,
+      "independent_geometry_pass": true
+    }
+  ],
+  "failed_planning": [
+    {
+      "net": "INV2",
+      "error": "SealedEscape('Locally sealed start: INV2')",
+      "elapsed_seconds": 0.5066831000003731
+    },
+    {
+      "net": "PRESET3",
+      "error": "SealedEscape('Locally sealed start: PRESET3')",
+      "elapsed_seconds": 0.741023700000369
+    },
+    {
+      "net": "DISP_RESET_N",
+      "error": "SealedEscape('Locally sealed start: DISP_RESET_N')",
+      "elapsed_seconds": 0.5657023000021582
+    },
+    {
+      "net": "DISP_VIS_CS_N",
+      "error": "SealedEscape('Locally sealed start: DISP_VIS_CS_N')",
+      "elapsed_seconds": 0.6970128000029945
+    },
+    {
+      "net": "DISP_SCK",
+      "error": "SealedEscape('Locally sealed start: DISP_SCK')",
+      "elapsed_seconds": 0.6838213999944855
+    },
+    {
+      "net": "DISP_MOSI",
+      "error": "SealedEscape('Locally sealed start: DISP_MOSI')",
+      "elapsed_seconds": 0.6753802000021096
+    },
+    {
+      "net": "HARM_CS_N",
+      "error": "SealedEscape('Locally sealed goal: HARM_CS_N')",
+      "elapsed_seconds": 3.650945599998522
+    },
+    {
+      "net": "BUS_SCK",
+      "error": "SealedEscape('Locally sealed start: BUS_SCK')",
+      "elapsed_seconds": 7.390745899996546
+    },
+    {
+      "net": "BUS_MOSI",
+      "error": "SealedEscape('Locally sealed start: BUS_MOSI')",
+      "elapsed_seconds": 5.779963799999678
+    },
+    {
+      "net": "I2C_SCL",
+      "error": "RuntimeError('No safe path I2C_SCL (1, 2)')",
+      "elapsed_seconds": 32.88347570000042
+    },
+    {
+      "net": "ADDR0",
+      "error": "SealedEscape('Locally sealed start: ADDR0')",
+      "elapsed_seconds": 0.56247180000355
+    },
+    {
+      "net": "ADDR1",
+      "error": "SealedEscape('Locally sealed start: ADDR1')",
+      "elapsed_seconds": 12.035857900002156
+    },
+    {
+      "net": "ADDR2",
+      "error": "SealedEscape('Locally sealed start: ADDR2')",
+      "elapsed_seconds": 0.5608068000001367
+    },
+    {
+      "net": "ADDR3",
+      "error": "RuntimeError('No safe path ADDR3 (2, 4)')",
+      "elapsed_seconds": 31.18298340000183
+    },
+    {
+      "net": "MUX_DISABLE",
+      "error": "SealedEscape('Locally sealed start: MUX_DISABLE')",
+      "elapsed_seconds": 0.5885985999993864
+    },
+    {
+      "net": "I2S_LRCK",
+      "error": "AssertionError('Audio quality budget: <=3 vias, no length increase')",
+      "elapsed_seconds": 12.71115870000358
+    },
+    {
+      "net": "I2S_DIN",
+      "error": "AssertionError('Audio quality budget: <=3 vias, no length increase')",
+      "elapsed_seconds": 13.454865300001984
+    },
+    {
+      "net": "I2S_BCK",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 13.445021900006395
+    },
+    {
+      "net": "SCAN_LATCH",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 6.3022494000033475
+    },
+    {
+      "net": "INPUT_LOAD_N",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 8.445707500002754
+    },
+    {
+      "net": "VIS_CS_N",
+      "error": "SealedEscape('Locally sealed start: VIS_CS_N')",
+      "elapsed_seconds": 0.7066699999995762
+    }
+  ],
+  "retained_route_collision_checks": [
+    {
+      "net": "DISP_VIS_DC",
+      "pass_geometry": false,
+      "error": "AssertionError(('track_gap', -0.0762))"
+    },
+    {
+      "net": "VIS_DC",
+      "pass_geometry": false,
+      "error": "AssertionError(('track_gap', -0.0762))"
+    }
+  ],
+  "batch_final_geometry_pass": false,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "options": {
+    "run_dir": "pending-first-soic",
+    "fanout_max": 0.65,
+    "pending_first": true,
+    "defer_failed_restore": true
+  },
+  "executed_script_sha256": "781ac25d0e5031c14575e5606cddc0cb079d31c24a5b20c1ab67a98439b055a1",
+  "requires_native_drc_and_ground_return_review": true,
+  "elapsed_seconds": 318.9903456000029,
+  "planner_sha256": {
+    "grid_route.py": "3009457a1e753a7911600907571af5eb6f5e92051a144be1f87ad4f9b8411d8e",
+    "reserve_escape.py": "cc024e241716baa3ce802b9eb01a25d5d7849389c3ad42ec68276663f940c585",
+    "physical_geometry.py": "d17818744445eb4c1a46d53909e4dfb56429462b4535ac35e5bf93e7f0db8db1"
+  }
+}

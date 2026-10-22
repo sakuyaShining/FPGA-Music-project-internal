@@ -1,0 +1,88 @@
+{
+  "source_project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-4L-Stackup-20261021-r5",
+  "source_pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+  "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\stackup-validation-20261021-r5\\native-verified-capture.json",
+  "source_capture_sha256": "614d3529a0ea17afa96cf867e9bba1fa87308207af8ba923c7709fefffde63ea",
+  "remove_line_ids": [
+    "360090ebde71f414",
+    "8f73f9fcb655dfcd",
+    "2e1ff785117d1989",
+    "ee3577f6924b1697"
+  ],
+  "remove_via_ids": [],
+  "before_power_stub_mm": 10.109818772903154,
+  "accepted_candidates": 1,
+  "selection_strategy": "first geometrically acceptable placement in proximity-ordered bounded list; not global optimum",
+  "component": "C35",
+  "component_x_mm": 78.45,
+  "component_y_mm": 45.9,
+  "component_rotation": 0,
+  "pads": [
+    {
+      "id": "9f1e9b877a49c6a1e14",
+      "ref": "C35",
+      "n": "2",
+      "net": "GND",
+      "layer": 1,
+      "x": 3061.0236220472443,
+      "y": 1807.0866141732283,
+      "rotation": 0,
+      "shape": [
+        "RECT",
+        31.5,
+        35.4,
+        0
+      ]
+    },
+    {
+      "id": "9f1e9b877a49c6a1e15",
+      "ref": "C35",
+      "n": "1",
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x": 3116.141732283465,
+      "y": 1807.0866141732283,
+      "rotation": 0,
+      "shape": [
+        "RECT",
+        31.5,
+        35.4,
+        0
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "net": "3V3_PERIPH",
+      "layer": 1,
+      "x1": 3116.141732283465,
+      "y1": 1807.0866141732283,
+      "x2": 3152.5,
+      "y2": 1806.0,
+      "width": 13.200000000000001
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "x1": 3061.0236220472443,
+      "y1": 1807.0866141732283,
+      "x2": 3025.5905511811025,
+      "y2": 1807.0866141732283,
+      "width": 10.0
+    }
+  ],
+  "vias": [
+    {
+      "net": "GND",
+      "x": 3025.5905511811025,
+      "y": 1807.0866141732283,
+      "diameter": 24,
+      "hole": 12
+    }
+  ],
+  "min_gap_mm": 0.3009899999999903,
+  "vcc_centerline_mm": 0.9239123389153223,
+  "ground_stub_mm": 0.9,
+  "native_imported": false,
+  "manufacturing_release": false
+}

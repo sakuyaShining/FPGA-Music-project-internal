@@ -1,0 +1,40 @@
+{
+  "source_pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\local-layout-20261021-r7\\native-verified-capture.json",
+  "source_capture_sha256": "491058163daa5808745267db5299795f6dcfae605ab47ff16f618881339c9dfd",
+  "routes": [],
+  "failed": [
+    {
+      "net": "PRESET3",
+      "error": "ValueError('no minimum-cost path was found to the specified end point')"
+    },
+    {
+      "net": "HARM_CS_N",
+      "error": "AssertionError('Endpoint raster blocked')"
+    },
+    {
+      "net": "ADDR1",
+      "error": "RuntimeError(('No safe fanout', 'U2', '11', []))"
+    },
+    {
+      "net": "ADDR3",
+      "error": "RuntimeError(('No safe fanout', 'U3', '13', []))"
+    },
+    {
+      "net": "DISP_SCK",
+      "error": "RuntimeError(('No safe fanout', 'U15', '18', ['Endpoint raster blocked', 'Endpoint raster blocked', 'Endpoint raster blocked']))"
+    }
+  ],
+  "selected": [
+    "PRESET3",
+    "HARM_CS_N",
+    "ADDR1",
+    "ADDR3",
+    "DISP_SCK"
+  ],
+  "native_imported": false,
+  "manufacturing_release": false,
+  "requires_access_regression_and_native_drc": true,
+  "bottom_audio_projection_guard_mm": 0.6,
+  "bottom_sense_projection_guard_mm": 0.5
+}

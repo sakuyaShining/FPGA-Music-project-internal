@@ -1,0 +1,946 @@
+{
+  "updated_at": "2026-10-22T12:25:15.665580+08:00",
+  "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-U8BusWork-20261022",
+  "session": "77b7e66e-482d-4d23-b5a2-98597e1ad04d",
+  "pcb_sha256": "6509803e7afca781b7f71ad69183cc10d8f6413312701eb16a2cdc46dfe83afd",
+  "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "native_drc": {
+    "clearance": 0,
+    "physical": 0,
+    "connection": 57
+  },
+  "remaining_nets": 12,
+  "components": 230,
+  "pads": 1079,
+  "vias": 558,
+  "native_lines": 3407,
+  "components_rules_stackup_outline_nets_unchanged": true,
+  "other_net_copper_unchanged": true,
+  "non_PCB_design_files_unchanged": true,
+  "descriptor_metadata_changes": [
+    {
+      "file": "FPGA-Music-Dualscreen-U8BusWork-20261022.eprj3",
+      "allowed_fields": [
+        "PCB document version",
+        "PCB document updateTime"
+      ]
+    }
+  ],
+  "source_checkpoint_and_stable_R15_unchanged": true,
+  "declared_actual_copper_max_deviation_mm": 1.0954493933900045e-06,
+  "continuity": {
+    "INV2": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "VIS_DC": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "3V3_PERIPH": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "BUS_SCK": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "INPUT_LOAD_N": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "PRESET1": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "3V3_IO": {
+      "complete": true,
+      "pad_islands": 1
+    },
+    "5V_PERIPH": {
+      "complete": true,
+      "pad_islands": 1
+    }
+  },
+  "new_ground_contact": {
+    "id": "1962656cb04da26a",
+    "net": "GND",
+    "x": 1841.0932,
+    "y": 2020.3091,
+    "diameter": 24,
+    "hole": 12,
+    "contact_mm2": {
+      "15": 0.21887565457087363,
+      "2": 0.218873579521606
+    }
+  },
+  "actual_reference_returns": [
+    {
+      "net": "INV2",
+      "xy_mm": [
+        54.7,
+        44.99
+      ],
+      "nearest_ground_xy_mm": [
+        56.5203213,
+        43.73258716
+      ],
+      "distance_mm": 2.2123871011716165,
+      "within_project_1p5mm_goal": false
+    },
+    {
+      "net": "VIS_DC",
+      "xy_mm": [
+        55.7,
+        43.45
+      ],
+      "nearest_ground_xy_mm": [
+        56.5203213,
+        43.73258716
+      ],
+      "distance_mm": 0.8676304156900803,
+      "within_project_1p5mm_goal": true
+    },
+    {
+      "net": "INV2",
+      "xy_mm": [
+        46.95,
+        49.425000000000004
+      ],
+      "nearest_ground_xy_mm": [
+        46.763767279999996,
+        51.31585114
+      ],
+      "distance_mm": 1.9000001735889047,
+      "within_project_1p5mm_goal": false
+    }
+  ],
+  "inv2_reference_projection": [
+    {
+      "layer": 1,
+      "reference": 15,
+      "length_mm": 3.7074943834407996,
+      "covered_mm": 3.7074943834407996,
+      "gap_mm": 0.0
+    },
+    {
+      "layer": 16,
+      "reference": 2,
+      "length_mm": 7.359616514093599,
+      "covered_mm": 7.359616514093599,
+      "gap_mm": 0.0
+    }
+  ],
+  "sensitive_bottom_reference_projection": [
+    {
+      "net": "I2S_BCK",
+      "length_mm": 53.63615958656704,
+      "before_covered_mm": 52.37624744453772,
+      "after_covered_mm": 52.37624744453772,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "I2S_DIN",
+      "length_mm": 71.17069585330937,
+      "before_covered_mm": 63.66555307489287,
+      "after_covered_mm": 63.66555307489287,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "I2S_LRCK",
+      "length_mm": 49.597424667866306,
+      "before_covered_mm": 45.53400764927698,
+      "after_covered_mm": 45.53400764927698,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_E02",
+      "length_mm": 4.229346650651897,
+      "before_covered_mm": 4.229346650651897,
+      "after_covered_mm": 4.229346650651897,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_E05",
+      "length_mm": 4.196837190651897,
+      "before_covered_mm": 4.196837190651897,
+      "after_covered_mm": 4.196837190651897,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_E09",
+      "length_mm": 4.226298650651898,
+      "before_covered_mm": 4.226298650651898,
+      "after_covered_mm": 4.226298650651898,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M02",
+      "length_mm": 11.309526633941605,
+      "before_covered_mm": 9.620926102921322,
+      "after_covered_mm": 9.620926102921322,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M03",
+      "length_mm": 8.855499147469015,
+      "before_covered_mm": 8.55293230235322,
+      "after_covered_mm": 8.55293230235322,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M04",
+      "length_mm": 5.676301109484358,
+      "before_covered_mm": 5.676301109484358,
+      "after_covered_mm": 5.676301109484358,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M05",
+      "length_mm": 9.782378357427207,
+      "before_covered_mm": 7.842713834113951,
+      "after_covered_mm": 7.842713834113951,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M06",
+      "length_mm": 21.067648731856735,
+      "before_covered_mm": 18.80927523565881,
+      "after_covered_mm": 18.80927523565881,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M08",
+      "length_mm": 10.571484934205635,
+      "before_covered_mm": 8.95771834279444,
+      "after_covered_mm": 8.95771834279444,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M09",
+      "length_mm": 8.344404273491648,
+      "before_covered_mm": 6.658571336987475,
+      "after_covered_mm": 6.658571336987475,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M10",
+      "length_mm": 11.324522479261091,
+      "before_covered_mm": 9.696793516601081,
+      "after_covered_mm": 9.696793516601081,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M11",
+      "length_mm": 3.5538653290488473,
+      "before_covered_mm": 3.5538653290488473,
+      "after_covered_mm": 3.5538653290488473,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M12",
+      "length_mm": 11.536721959848649,
+      "before_covered_mm": 11.289132392871092,
+      "after_covered_mm": 11.289132392871092,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M13",
+      "length_mm": 11.863576394042317,
+      "before_covered_mm": 10.580982326887398,
+      "after_covered_mm": 10.580982326887398,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M14",
+      "length_mm": 7.570312974859745,
+      "before_covered_mm": 7.570312974859745,
+      "after_covered_mm": 7.570312974859745,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L0_M15",
+      "length_mm": 7.76964001961823,
+      "before_covered_mm": 7.76964001961823,
+      "after_covered_mm": 7.76964001961823,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_E01",
+      "length_mm": 4.269453648005216,
+      "before_covered_mm": 4.269453648005216,
+      "after_covered_mm": 4.269453648005216,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_E02",
+      "length_mm": 4.231889767857344,
+      "before_covered_mm": 4.231889767857344,
+      "after_covered_mm": 4.231889767857344,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_E05",
+      "length_mm": 4.213855767857342,
+      "before_covered_mm": 4.213855767857342,
+      "after_covered_mm": 4.213855767857342,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_E10",
+      "length_mm": 4.205727767857343,
+      "before_covered_mm": 4.205727767857343,
+      "after_covered_mm": 4.205727767857343,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M00",
+      "length_mm": 11.431454358952452,
+      "before_covered_mm": 11.431454358952452,
+      "after_covered_mm": 11.431454358952452,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M02",
+      "length_mm": 16.09264848056879,
+      "before_covered_mm": 15.072030944891377,
+      "after_covered_mm": 15.072030944891377,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M03",
+      "length_mm": 24.81506500359968,
+      "before_covered_mm": 20.215496229290007,
+      "after_covered_mm": 20.215496229290007,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M04",
+      "length_mm": 12.067356217118864,
+      "before_covered_mm": 12.067356217118864,
+      "after_covered_mm": 12.067356217118864,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M05",
+      "length_mm": 19.39674528729194,
+      "before_covered_mm": 19.39674528729194,
+      "after_covered_mm": 19.39674528729194,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M06",
+      "length_mm": 13.6180418329756,
+      "before_covered_mm": 13.6180418329756,
+      "after_covered_mm": 13.6180418329756,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M07",
+      "length_mm": 15.736376511888096,
+      "before_covered_mm": 15.736376511888096,
+      "after_covered_mm": 15.736376511888096,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M08",
+      "length_mm": 5.0564236784315515,
+      "before_covered_mm": 5.0564236784315515,
+      "after_covered_mm": 5.0564236784315515,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M09",
+      "length_mm": 5.337332941500975,
+      "before_covered_mm": 4.848233170626601,
+      "after_covered_mm": 4.848233170626601,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M10",
+      "length_mm": 10.190752355657855,
+      "before_covered_mm": 8.729864218749029,
+      "after_covered_mm": 8.729864218749029,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M12",
+      "length_mm": 12.597957319096093,
+      "before_covered_mm": 11.018011352549186,
+      "after_covered_mm": 11.018011352549186,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M13",
+      "length_mm": 2.7507309770360475,
+      "before_covered_mm": 2.7507309770360475,
+      "after_covered_mm": 2.7507309770360475,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M14",
+      "length_mm": 2.12093565017711,
+      "before_covered_mm": 0.8903007651251746,
+      "after_covered_mm": 0.8903007651251746,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L1_M15",
+      "length_mm": 7.669105427649925,
+      "before_covered_mm": 7.428582415423224,
+      "after_covered_mm": 7.428582415423224,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_E01",
+      "length_mm": 4.699151022114366,
+      "before_covered_mm": 4.699151022114366,
+      "after_covered_mm": 4.699151022114366,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_E02",
+      "length_mm": 4.24441430721079,
+      "before_covered_mm": 4.24441430721079,
+      "after_covered_mm": 4.24441430721079,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_E04",
+      "length_mm": 2.7533420891061846,
+      "before_covered_mm": 2.7533420891061846,
+      "after_covered_mm": 2.7533420891061846,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_E06",
+      "length_mm": 4.196589425062785,
+      "before_covered_mm": 4.196589425062785,
+      "after_covered_mm": 4.196589425062785,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_E09",
+      "length_mm": 4.244257447721499,
+      "before_covered_mm": 4.244257447721499,
+      "after_covered_mm": 4.244257447721499,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_E10",
+      "length_mm": 4.203952885062788,
+      "before_covered_mm": 4.203952885062788,
+      "after_covered_mm": 4.203952885062788,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M00",
+      "length_mm": 13.364932195332269,
+      "before_covered_mm": 13.364932195332269,
+      "after_covered_mm": 13.364932195332269,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M01",
+      "length_mm": 12.219879816786907,
+      "before_covered_mm": 12.219879816786907,
+      "after_covered_mm": 12.219879816786907,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M03",
+      "length_mm": 14.696369075301483,
+      "before_covered_mm": 14.145129318328102,
+      "after_covered_mm": 14.145129318328102,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M04",
+      "length_mm": 11.716138461772486,
+      "before_covered_mm": 11.716138461772486,
+      "after_covered_mm": 11.716138461772486,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M05",
+      "length_mm": 10.685122934481424,
+      "before_covered_mm": 10.685122934481424,
+      "after_covered_mm": 10.685122934481424,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M06",
+      "length_mm": 9.809787002244411,
+      "before_covered_mm": 9.809787002244411,
+      "after_covered_mm": 9.809787002244411,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M07",
+      "length_mm": 10.608336001922996,
+      "before_covered_mm": 9.487605895217174,
+      "after_covered_mm": 9.487605895217174,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M08",
+      "length_mm": 5.155781277693707,
+      "before_covered_mm": 5.155781277693707,
+      "after_covered_mm": 5.155781277693707,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M09",
+      "length_mm": 6.232932425556784,
+      "before_covered_mm": 5.9012872969277925,
+      "after_covered_mm": 5.9012872969277925,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M10",
+      "length_mm": 9.279332047552971,
+      "before_covered_mm": 7.858629532640274,
+      "after_covered_mm": 7.858629532640274,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M11",
+      "length_mm": 7.89856233564462,
+      "before_covered_mm": 7.89856233564462,
+      "after_covered_mm": 7.89856233564462,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M13",
+      "length_mm": 3.399929857193066,
+      "before_covered_mm": 3.1632720236566305,
+      "after_covered_mm": 3.1632720236566305,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M14",
+      "length_mm": 10.232229874827489,
+      "before_covered_mm": 8.586532509316124,
+      "after_covered_mm": 8.586532509316124,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L2_M15",
+      "length_mm": 5.279566771002208,
+      "before_covered_mm": 4.25310170886653,
+      "after_covered_mm": 4.25310170886653,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_E02",
+      "length_mm": 3.289841167155643,
+      "before_covered_mm": 3.289841167155643,
+      "after_covered_mm": 3.289841167155643,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_E05",
+      "length_mm": 3.8641138367658954,
+      "before_covered_mm": 3.8641138367658954,
+      "after_covered_mm": 3.8641138367658954,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_E06",
+      "length_mm": 3.5161628126257796,
+      "before_covered_mm": 3.5161628126257796,
+      "after_covered_mm": 3.5161628126257796,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M00",
+      "length_mm": 16.461897901889834,
+      "before_covered_mm": 16.461897901889834,
+      "after_covered_mm": 16.461897901889834,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M01",
+      "length_mm": 19.836019351506316,
+      "before_covered_mm": 19.836019351506316,
+      "after_covered_mm": 19.836019351506316,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M02",
+      "length_mm": 4.500893736441933,
+      "before_covered_mm": 4.500893736441933,
+      "after_covered_mm": 4.500893736441933,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M03",
+      "length_mm": 13.671710911584613,
+      "before_covered_mm": 11.15593837252301,
+      "after_covered_mm": 11.15593837252301,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M04",
+      "length_mm": 7.35706429481785,
+      "before_covered_mm": 7.35706429481785,
+      "after_covered_mm": 7.35706429481785,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M05",
+      "length_mm": 7.651501697790476,
+      "before_covered_mm": 7.209910897976258,
+      "after_covered_mm": 7.209910897976258,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M06",
+      "length_mm": 6.787868003595875,
+      "before_covered_mm": 6.787868003595875,
+      "after_covered_mm": 6.787868003595875,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M07",
+      "length_mm": 8.87337332486384,
+      "before_covered_mm": 6.745773467280488,
+      "after_covered_mm": 6.745773467280488,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M08",
+      "length_mm": 2.3565273682896173,
+      "before_covered_mm": 2.3565273682896173,
+      "after_covered_mm": 2.3565273682896173,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M09",
+      "length_mm": 2.1942465818575756,
+      "before_covered_mm": 2.1942465818575756,
+      "after_covered_mm": 2.1942465818575756,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M14",
+      "length_mm": 13.804580232556324,
+      "before_covered_mm": 12.031019569693372,
+      "after_covered_mm": 12.031019569693372,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L3_M15",
+      "length_mm": 2.9844858776482397,
+      "before_covered_mm": 2.9844858776482397,
+      "after_covered_mm": 2.9844858776482397,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_E01",
+      "length_mm": 3.9596695839168605,
+      "before_covered_mm": 3.9596695839168605,
+      "after_covered_mm": 3.9596695839168605,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_E02",
+      "length_mm": 2.853264902585593,
+      "before_covered_mm": 2.853264902585593,
+      "after_covered_mm": 2.853264902585593,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_E05",
+      "length_mm": 3.315816219131201,
+      "before_covered_mm": 3.315816219131201,
+      "after_covered_mm": 3.315816219131201,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_E06",
+      "length_mm": 3.678597521909907,
+      "before_covered_mm": 3.678597521909907,
+      "after_covered_mm": 3.678597521909907,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_E09",
+      "length_mm": 2.9746209557068397,
+      "before_covered_mm": 2.9746209557068397,
+      "after_covered_mm": 2.9746209557068397,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_E10",
+      "length_mm": 3.038485514838522,
+      "before_covered_mm": 3.038485514838522,
+      "after_covered_mm": 3.038485514838522,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M01",
+      "length_mm": 21.912996739534496,
+      "before_covered_mm": 21.479511770327218,
+      "after_covered_mm": 21.479511770327218,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M02",
+      "length_mm": 19.17999962744773,
+      "before_covered_mm": 19.17999962744773,
+      "after_covered_mm": 19.17999962744773,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M03",
+      "length_mm": 16.662866367074106,
+      "before_covered_mm": 15.583610780725465,
+      "after_covered_mm": 15.583610780725465,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M04",
+      "length_mm": 15.450219753929838,
+      "before_covered_mm": 12.65735887797707,
+      "after_covered_mm": 12.65735887797707,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M05",
+      "length_mm": 12.572561845959093,
+      "before_covered_mm": 12.572561845959093,
+      "after_covered_mm": 12.572561845959093,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M06",
+      "length_mm": 7.885416481606857,
+      "before_covered_mm": 7.396458951903552,
+      "after_covered_mm": 7.396458951903552,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M07",
+      "length_mm": 10.110392452807353,
+      "before_covered_mm": 8.966769919199747,
+      "after_covered_mm": 8.966769919199747,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M09",
+      "length_mm": 7.04515790134938,
+      "before_covered_mm": 7.04515790134938,
+      "after_covered_mm": 7.04515790134938,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M10",
+      "length_mm": 8.27447187776134,
+      "before_covered_mm": 8.27447187776134,
+      "after_covered_mm": 8.27447187776134,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M11",
+      "length_mm": 9.800404935417337,
+      "before_covered_mm": 8.606095146227943,
+      "after_covered_mm": 8.606095146227943,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M12",
+      "length_mm": 10.483365152363275,
+      "before_covered_mm": 9.840388240411327,
+      "after_covered_mm": 9.840388240411327,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M13",
+      "length_mm": 9.070105724586496,
+      "before_covered_mm": 9.070105724586496,
+      "after_covered_mm": 9.070105724586496,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M14",
+      "length_mm": 5.724587046746503,
+      "before_covered_mm": 3.968203535852525,
+      "after_covered_mm": 3.968203535852525,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L4_M15",
+      "length_mm": 5.793643516695045,
+      "before_covered_mm": 5.188918631083271,
+      "after_covered_mm": 5.188918631083271,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_E02",
+      "length_mm": 3.1490976739717667,
+      "before_covered_mm": 3.1490976739717667,
+      "after_covered_mm": 3.1490976739717667,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_E05",
+      "length_mm": 3.7900418818247488,
+      "before_covered_mm": 3.7900418818247488,
+      "after_covered_mm": 3.7900418818247488,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_E06",
+      "length_mm": 3.694258005159128,
+      "before_covered_mm": 3.694258005159128,
+      "after_covered_mm": 3.694258005159128,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_E09",
+      "length_mm": 2.929370520538768,
+      "before_covered_mm": 2.929370520538768,
+      "after_covered_mm": 2.929370520538768,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M00",
+      "length_mm": 27.308602876397547,
+      "before_covered_mm": 26.68310643296381,
+      "after_covered_mm": 26.68310643296381,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M01",
+      "length_mm": 24.877033046107762,
+      "before_covered_mm": 23.85945471395317,
+      "after_covered_mm": 23.85945471395317,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M02",
+      "length_mm": 13.76164810921363,
+      "before_covered_mm": 12.005235614999807,
+      "after_covered_mm": 12.005235614999807,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M03",
+      "length_mm": 14.357349549621079,
+      "before_covered_mm": 14.357349549621079,
+      "after_covered_mm": 14.357349549621079,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M04",
+      "length_mm": 13.064289823349077,
+      "before_covered_mm": 13.064289823349077,
+      "after_covered_mm": 13.064289823349077,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M05",
+      "length_mm": 10.84898481275055,
+      "before_covered_mm": 9.760208905077048,
+      "after_covered_mm": 9.760208905077048,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M06",
+      "length_mm": 8.191574673172644,
+      "before_covered_mm": 8.191574673172644,
+      "after_covered_mm": 8.191574673172644,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M07",
+      "length_mm": 7.664521311160349,
+      "before_covered_mm": 6.138595104642407,
+      "after_covered_mm": 6.138595104642407,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M08",
+      "length_mm": 3.68270607341254,
+      "before_covered_mm": 3.68270607341254,
+      "after_covered_mm": 3.68270607341254,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M09",
+      "length_mm": 5.117716889989445,
+      "before_covered_mm": 5.117716889989445,
+      "after_covered_mm": 5.117716889989445,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M13",
+      "length_mm": 10.519001832513405,
+      "before_covered_mm": 10.519001832513405,
+      "after_covered_mm": 10.519001832513405,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M14",
+      "length_mm": 17.70868961399431,
+      "before_covered_mm": 17.70868961399431,
+      "after_covered_mm": 17.70868961399431,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "L5_M15",
+      "length_mm": 9.927156162613937,
+      "before_covered_mm": 9.927156162613937,
+      "after_covered_mm": 9.927156162613937,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "RC0",
+      "length_mm": 18.748805869149297,
+      "before_covered_mm": 17.8060551100664,
+      "after_covered_mm": 17.8060551100664,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "RC1",
+      "length_mm": 16.488965179369263,
+      "before_covered_mm": 16.488965179369263,
+      "after_covered_mm": 16.488965179369263,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "RC2",
+      "length_mm": 34.72364815821824,
+      "before_covered_mm": 29.68789447605027,
+      "after_covered_mm": 29.68789447605027,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "RC3",
+      "length_mm": 16.70099235517094,
+      "before_covered_mm": 11.956779350474477,
+      "after_covered_mm": 11.956779350474477,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "RC4",
+      "length_mm": 23.976265761469083,
+      "before_covered_mm": 18.281635717977696,
+      "after_covered_mm": 18.281635717977696,
+      "delta_mm": 0.0
+    },
+    {
+      "net": "RC5",
+      "length_mm": 0.1341194602713074,
+      "before_covered_mm": 0.1341194602713074,
+      "after_covered_mm": 0.1341194602713074,
+      "delta_mm": 0.0
+    }
+  ],
+  "reference_distance_goal_not_si_signoff": true,
+  "physically_tested": false,
+  "archive": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\inv2-coupled\\native-inv2-repair-WORK-IN-PROGRESS.zip",
+  "archive_sha256": "15830844a312ebca19babcc0750a4da8487a1c6a8c116588f85b0f04d11ecf46",
+  "manufacturing_release": false
+}

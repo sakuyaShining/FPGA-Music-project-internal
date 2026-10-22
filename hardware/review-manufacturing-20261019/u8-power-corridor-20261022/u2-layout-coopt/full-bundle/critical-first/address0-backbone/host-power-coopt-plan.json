@@ -1,0 +1,112 @@
+{
+  "source_pcb_sha256": "6509803e7afca781b7f71ad69183cc10d8f6413312701eb16a2cdc46dfe83afd",
+  "method": "Co-adjust only U8 IO left power leg with unchanged15.74mil width; put ADDR0 port outside the sealed existing fanout cell; one full1/16 search with no new trunk vias, raw/audio quiet and foreign-bottom-reference-void guards",
+  "remove_source_power": [
+    {
+      "id": "04a82ecc3e93a7f1",
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2344.7,
+      "y1": 1879.3,
+      "x2": 2344.7,
+      "y2": 1962.5984,
+      "width": 15.74
+    }
+  ],
+  "power_lines": [
+    {
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2344.7,
+      "y1": 1879.2999999999997,
+      "x2": 2322.8346456692916,
+      "y2": 1929.1338582677165,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2322.8346456692916,
+      "y1": 1929.1338582677165,
+      "x2": 2322.8346456692916,
+      "y2": 1962.5984,
+      "width": 15.74
+    },
+    {
+      "net": "3V3_IO",
+      "layer": 1,
+      "x1": 2322.8346456692916,
+      "y1": 1962.5984,
+      "x2": 2344.7,
+      "y2": 1962.5984,
+      "width": 15.74
+    }
+  ],
+  "removed_trial_via": {
+    "net": "ADDR0",
+    "x": 2417.3228346456694,
+    "y": 1922.2440944881891,
+    "diameter": 24.000000000000004,
+    "hole": 12.000000000000002,
+    "routing_retained": true,
+    "id": "fixed-coopt-via-527"
+  },
+  "removed_trial_lines": [
+    {
+      "net": "ADDR0",
+      "layer": 1,
+      "x1": 2394.7,
+      "y1": 1879.2999999999997,
+      "x2": 2417.3228346456694,
+      "y2": 1922.2440944881891,
+      "width": 6.000000000000001,
+      "id": "fixed-coopt-3229"
+    }
+  ],
+  "new_via": {
+    "net": "ADDR0",
+    "x": 2362.2047244094488,
+    "y": 1935.0393700787401,
+    "diameter": 24,
+    "hole": 12
+  },
+  "new_stub": {
+    "net": "ADDR0",
+    "layer": 1,
+    "x1": 2394.7,
+    "y1": 1879.2999999999997,
+    "x2": 2362.2047244094488,
+    "y2": 1935.0393700787401,
+    "width": 6
+  },
+  "clearances_mm": {
+    "3V3_IOtrack": 0.24997790999999578,
+    "ADDR0track": 0.3752356082906213,
+    "via_copper": -0.07338759999999647,
+    "hole_pad": 0.4024309374577739,
+    "via_quiet": 2.320539619068923,
+    "drill_drill": 2.361019994673711
+  },
+  "preflight_failures": [
+    {
+      "net": "ADDR0",
+      "kind": "via_copper",
+      "gap_mm": -0.07338759999999647,
+      "limit_mm": 0.165
+    }
+  ],
+  "route": null,
+  "failure": null,
+  "continuity": {
+    "ADDR0": {
+      "complete": false,
+      "pad_islands": 2
+    },
+    "3V3_IO": {
+      "complete": true,
+      "pad_islands": 1
+    }
+  },
+  "native_imported": false,
+  "manufacturing_release": false
+}

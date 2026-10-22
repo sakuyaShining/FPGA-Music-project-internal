@@ -1,0 +1,20 @@
+TPS2553 basic functional calibration
+.include "C:/Users/Sakuya/.codex/worktrees/06df/FPGA-Music-project/hardware/review-manufacturing-20261019/spice-validation-20261021/tps2553_ngspice41_compat.lib"
+Vsrc vin 0 PWL(0 0 1m 0 1.01m 5 20m 5)
+Ven en 0 PWL(0 0 3m 0 3.01m 3.3 20m 3.3)
+Vpull pull 0 3.3
+Xswitch vin 0 en 0 fault ilim out TPS2553_TRANS
+Rilim ilim 0 23700
+Rfault pull fault 100k
+Cin vin 0 2.2u
+Cout out 0 2.2u
+Rload out 0 1.0
+.save v(vin) v(en) v(out) v(fault) i(Vsrc)
+.control
+set wr_singlescale
+set wr_vecnames
+tran 2e-06 0.02
+wrdata waveform.txt v(vin) v(en) v(out) v(fault) i(Vsrc)
+quit
+.endc
+.end

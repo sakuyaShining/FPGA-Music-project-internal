@@ -1,0 +1,33 @@
+{
+  "source_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\stackup-validation-20261021-r5\\native-verified-capture.json",
+  "source_sha256": "614d3529a0ea17afa96cf867e9bba1fa87308207af8ba923c7709fefffde63ea",
+  "native_pcb_sha256": "d21fb5545e51bb27ff5a2e86405c7ea50c80e5664c186543843ede1704eb3fcb",
+  "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-4L-Stackup-20261021-r5",
+  "routes": [],
+  "failed": [
+    {
+      "net": "I2S_BCK",
+      "error": "AssertionError('Global physical graph disconnected')"
+    }
+  ],
+  "protection": "Both 1.7mm fine-pitch escape axes reserved for every remaining pending pin",
+  "reserved_pin_corridors": 45,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "requires_actual_rebuilt_ground_reference_check": true,
+  "actual_four_layer_continuity_checked": true,
+  "bottom_high_impedance_projection_guard_mm": 0.5,
+  "raster_extra_inflation": "GRID*sqrt(2)",
+  "reference_validation_pending": true,
+  "pruned": [
+    {
+      "net": "I2S_DIN",
+      "reason": "AssertionError(('I2S_DIN', 'line', 0.03611880382637361))"
+    },
+    {
+      "net": "I2S_LRCK",
+      "reason": "AssertionError(('I2S_LRCK', 'line', -0.07619999999999999))"
+    }
+  ],
+  "batch_final_geometry_pass": false
+}

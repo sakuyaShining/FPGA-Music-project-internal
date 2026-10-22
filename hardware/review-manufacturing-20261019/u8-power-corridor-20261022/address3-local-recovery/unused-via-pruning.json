@@ -1,0 +1,35 @@
+{
+  "removed": [
+    {
+      "net": "ADDR3",
+      "x": 2466.5354330708665,
+      "y": 1619.0944881889764,
+      "diameter": 24.000000000000004,
+      "hole": 12.000000000000002,
+      "routing_retained": true,
+      "id": "addr3-fanout-vias-554",
+      "touching_layers": [
+        1
+      ],
+      "reason": "No layer transition, redundant pre-router fanout via; actual pads stay connected without it"
+    },
+    {
+      "net": "ADDR3",
+      "x": 4361.220472440945,
+      "y": 747.0472440944883,
+      "diameter": 24.000000000000004,
+      "hole": 12.000000000000002,
+      "routing_retained": true,
+      "id": "addr3-fanout-vias-560",
+      "touching_layers": [
+        1
+      ],
+      "reason": "No layer transition, redundant pre-router fanout via; actual pads stay connected without it"
+    }
+  ],
+  "continuity": {
+    "complete": true,
+    "pad_islands": 1
+  },
+  "native_mutated": false
+}

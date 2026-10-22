@@ -1,0 +1,293 @@
+{
+  "pcb_sha256": "270f5e4ff3a4ae4f198743a30ecb4be347c8456f8115c1b9a3bac045a698e0a3",
+  "native_drc": {
+    "Connection Error": 84
+  },
+  "stage": "regional_layout_reconnections_work_in_progress_not_promoted",
+  "moved_components": [
+    "U15",
+    "C35",
+    "R30",
+    "R31",
+    "R63",
+    "R64"
+  ],
+  "moved_testpads": [
+    "TP13",
+    "TP14"
+  ],
+  "other224_components_and_other_pads_unchanged": true,
+  "MPNs_values_pin_net_membership_stackup_rules_outline_and_connectors_preserved": true,
+  "original_5V_copper_geometry_and_width_restored": true,
+  "audio_copper_unchanged": true,
+  "audio_reference_projection": [
+    {
+      "net": "I2S_BCK",
+      "before_fraction": 0.9763017288714927,
+      "after_fraction": 0.9763017288714929,
+      "si_signoff": false
+    },
+    {
+      "net": "I2S_DIN",
+      "before_fraction": 0.9281717212879125,
+      "after_fraction": 0.9281717212879125,
+      "si_signoff": false
+    },
+    {
+      "net": "I2S_LRCK",
+      "before_fraction": 0.9172080599927679,
+      "after_fraction": 0.9172080599927679,
+      "si_signoff": false
+    }
+  ],
+  "display_clock_complete": true,
+  "display_clock_length_mm": 86.18480775957909,
+  "display_clock_signal_vias": 2,
+  "display_clock_ground_stitches": 2,
+  "actual_ground_contacts": [
+    {
+      "id": "c3eb32605012ed01",
+      "reference_contacts_mm2": {
+        "15": 0.2041653870796673,
+        "2": 0.2041653870796673
+      }
+    },
+    {
+      "id": "693f1eaef86b9b68",
+      "reference_contacts_mm2": {
+        "15": 0.2041682728930421,
+        "2": 0.2041467064663632
+      }
+    },
+    {
+      "id": "2ca4d845544be489",
+      "reference_contacts_mm2": {
+        "15": 0.20415271122351725,
+        "2": 0.20415271122351725
+      }
+    },
+    {
+      "id": "af41bafe41eb9f20",
+      "reference_contacts_mm2": {
+        "15": 0.20415866041017716,
+        "2": 0.2041696236172349
+      }
+    },
+    {
+      "id": "c1a4787976239990",
+      "reference_contacts_mm2": {
+        "15": 0.20415118923759495,
+        "2": 0.20415118923759495
+      }
+    }
+  ],
+  "reference_change_distances": [
+    {
+      "signal_id": "2e35092d9196490e",
+      "distance_mm": 0.8999997813498793
+    },
+    {
+      "signal_id": "e44e8df9631ae967",
+      "distance_mm": 0.9000007399999934
+    }
+  ],
+  "display_clock_reference_projection": [
+    {
+      "signal_layer": 1,
+      "ground_layer": 15,
+      "evaluated_mm": 0.5870897850162322,
+      "projection_fraction": 1.0,
+      "si_signoff": false
+    },
+    {
+      "signal_layer": 16,
+      "ground_layer": 2,
+      "evaluated_mm": 79.1695917339136,
+      "projection_fraction": 0.8601951988229581,
+      "si_signoff": false
+    }
+  ],
+  "source_R15_19_files_unchanged": true,
+  "unqualified": [
+    "Other disturbed signal/power nets not restored yet",
+    "U8 address/disable fanout corridors not yet arranged",
+    "Final mechanical fit, actual edge rates and qualified factory stackup unknown"
+  ],
+  "manufacturing_release": false,
+  "restored_connected_signal_nets": [
+    "DISP_HARM_CS_N",
+    "DISP_VIS_CS_N",
+    "LCD_RESET_N"
+  ],
+  "all_five_new_signal_vias": [
+    "c4ffdb090ec84950",
+    "f642376a5fbbc654",
+    "06c89de80f61a9b5",
+    "e44e8df9631ae967",
+    "2e35092d9196490e"
+  ],
+  "new_ground_stitches_total": 5,
+  "placement_capture_deltas_mm": [
+    {
+      "ref": "U15",
+      "pin": "1",
+      "expected_to_capture_mm": 0.000933967879545878
+    },
+    {
+      "ref": "U15",
+      "pin": "2",
+      "expected_to_capture_mm": 0.000933967879545878
+    },
+    {
+      "ref": "U15",
+      "pin": "3",
+      "expected_to_capture_mm": 0.000933967879545878
+    },
+    {
+      "ref": "U15",
+      "pin": "4",
+      "expected_to_capture_mm": 0.0009339678795453462
+    },
+    {
+      "ref": "U15",
+      "pin": "5",
+      "expected_to_capture_mm": 0.0009339678795453462
+    },
+    {
+      "ref": "U15",
+      "pin": "6",
+      "expected_to_capture_mm": 0.0009339678795464099
+    },
+    {
+      "ref": "U15",
+      "pin": "7",
+      "expected_to_capture_mm": 0.0009339678795464099
+    },
+    {
+      "ref": "U15",
+      "pin": "8",
+      "expected_to_capture_mm": 0.0009339678795464099
+    },
+    {
+      "ref": "U15",
+      "pin": "9",
+      "expected_to_capture_mm": 0.002624312481397578
+    },
+    {
+      "ref": "U15",
+      "pin": "10",
+      "expected_to_capture_mm": 0.000933967879545878
+    },
+    {
+      "ref": "U15",
+      "pin": "20",
+      "expected_to_capture_mm": 0.000933967879545878
+    },
+    {
+      "ref": "U15",
+      "pin": "19",
+      "expected_to_capture_mm": 0.000933967879545878
+    },
+    {
+      "ref": "U15",
+      "pin": "18",
+      "expected_to_capture_mm": 0.000933967879545878
+    },
+    {
+      "ref": "U15",
+      "pin": "17",
+      "expected_to_capture_mm": 0.0009339678795453462
+    },
+    {
+      "ref": "U15",
+      "pin": "16",
+      "expected_to_capture_mm": 0.0009339678795453462
+    },
+    {
+      "ref": "U15",
+      "pin": "15",
+      "expected_to_capture_mm": 0.0009339678795464099
+    },
+    {
+      "ref": "U15",
+      "pin": "14",
+      "expected_to_capture_mm": 0.0009339678795464099
+    },
+    {
+      "ref": "U15",
+      "pin": "13",
+      "expected_to_capture_mm": 0.0009339678795464099
+    },
+    {
+      "ref": "U15",
+      "pin": "12",
+      "expected_to_capture_mm": 0.002624312481397578
+    },
+    {
+      "ref": "U15",
+      "pin": "11",
+      "expected_to_capture_mm": 0.000933967879545878
+    },
+    {
+      "ref": "C35",
+      "pin": "2",
+      "expected_to_capture_mm": 0.0020047194317394583
+    },
+    {
+      "ref": "C35",
+      "pin": "1",
+      "expected_to_capture_mm": 0.00200471943174329
+    },
+    {
+      "ref": "R30",
+      "pin": "2",
+      "expected_to_capture_mm": 0.00183575597506958
+    },
+    {
+      "ref": "R30",
+      "pin": "1",
+      "expected_to_capture_mm": 0.0011345483682814188
+    },
+    {
+      "ref": "R31",
+      "pin": "2",
+      "expected_to_capture_mm": 0.0023446321673132563
+    },
+    {
+      "ref": "R31",
+      "pin": "1",
+      "expected_to_capture_mm": 0.0010623088063252718
+    },
+    {
+      "ref": "TP13",
+      "pin": "TP13",
+      "expected_to_capture_mm": 0.0007424284477228445
+    },
+    {
+      "ref": "TP14",
+      "pin": "TP14",
+      "expected_to_capture_mm": 0.0016709278859310768
+    },
+    {
+      "ref": "R63",
+      "pin": "2",
+      "expected_to_capture_mm": 0.0031320919526696316
+    },
+    {
+      "ref": "R63",
+      "pin": "1",
+      "expected_to_capture_mm": 0.0011516944039075261
+    },
+    {
+      "ref": "R64",
+      "pin": "2",
+      "expected_to_capture_mm": 0.001778679285321291
+    },
+    {
+      "ref": "R64",
+      "pin": "1",
+      "expected_to_capture_mm": 0.0017786792853016794
+    }
+  ],
+  "placement_capture_comparison_tolerance_mm": 0.004
+}

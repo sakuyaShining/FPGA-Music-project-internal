@@ -1,0 +1,11 @@
+* Ideal 47k RC sensitivity model. GENERATED, NOT RUN IN SPICE.
+* Not the complete 84-channel analog frontend: no MUX/ESD/finger/leakage model.
+* R is based on native R1..R6 nominal 47k; total capacitances are scenarios.
+Vdrive drive 0 PULSE(3.3 0 1u 10n 10n 50u 100u)
+Rcharge drive electrode {RSENSE}
+Ce electrode 0 {CTOTAL}
+.step param RSENSE list 46530 47000 47470
+.step param CTOTAL list 10p 30p 50p 100p 200p
+.tran 0 30u 0 2n
+.meas tran delay_half TRIG V(drive) VAL=1.65 FALL=1 TARG V(electrode) VAL=1.65 FALL=1
+.end

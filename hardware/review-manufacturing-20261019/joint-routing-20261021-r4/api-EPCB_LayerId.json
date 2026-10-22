@@ -1,0 +1,446 @@
+{
+  "name": "EPCB_LayerId",
+  "comment": "图层 ID",
+  "values": [
+    {
+      "name": "TOP",
+      "value": 1,
+      "description": "顶层"
+    },
+    {
+      "name": "TOP_SILKSCREEN",
+      "value": 3,
+      "description": "顶层丝印层"
+    },
+    {
+      "name": "TOP_SOLDER_MASK",
+      "value": 5,
+      "description": "顶层阻焊层"
+    },
+    {
+      "name": "TOP_PASTE_MASK",
+      "value": 7,
+      "description": "顶层锡膏（助焊）层"
+    },
+    {
+      "name": "TOP_ASSEMBLY",
+      "value": 9,
+      "description": "顶层装配层"
+    },
+    {
+      "name": "TOP_STIFFENER",
+      "value": 58,
+      "description": "顶层 FPC 补强层"
+    },
+    {
+      "name": "BOTTOM",
+      "value": 2,
+      "description": "底层"
+    },
+    {
+      "name": "BOTTOM_SILKSCREEN",
+      "value": 4,
+      "description": "底层丝印层"
+    },
+    {
+      "name": "BOTTOM_SOLDER_MASK",
+      "value": 6,
+      "description": "底层阻焊层"
+    },
+    {
+      "name": "BOTTOM_PASTE_MASK",
+      "value": 8,
+      "description": "底层锡膏（助焊）层"
+    },
+    {
+      "name": "BOTTOM_ASSEMBLY",
+      "value": 10,
+      "description": "底层装配层"
+    },
+    {
+      "name": "BOTTOM_STIFFENER",
+      "value": 59,
+      "description": "底层 FPC 补强层"
+    },
+    {
+      "name": "BOARD_OUTLINE",
+      "value": 11,
+      "description": "板框层"
+    },
+    {
+      "name": "MULTI",
+      "value": 12,
+      "description": "多层"
+    },
+    {
+      "name": "DOCUMENT",
+      "value": 13,
+      "description": "文档层"
+    },
+    {
+      "name": "MECHANICAL",
+      "value": 14,
+      "description": "机械层"
+    },
+    {
+      "name": "RATLINE",
+      "value": 57,
+      "description": "飞线层"
+    },
+    {
+      "name": "INNER_1",
+      "value": 15,
+      "description": "内层 1"
+    },
+    {
+      "name": "INNER_2",
+      "value": 16,
+      "description": "内层 2"
+    },
+    {
+      "name": "INNER_3",
+      "value": 17,
+      "description": "内层 3"
+    },
+    {
+      "name": "INNER_4",
+      "value": 18,
+      "description": "内层 4"
+    },
+    {
+      "name": "INNER_5",
+      "value": 19,
+      "description": "内层 5"
+    },
+    {
+      "name": "INNER_6",
+      "value": 20,
+      "description": "内层 6"
+    },
+    {
+      "name": "INNER_7",
+      "value": 21,
+      "description": "内层 7"
+    },
+    {
+      "name": "INNER_8",
+      "value": 22,
+      "description": "内层 8"
+    },
+    {
+      "name": "INNER_9",
+      "value": 23,
+      "description": "内层 9"
+    },
+    {
+      "name": "INNER_10",
+      "value": 24,
+      "description": "内层 10"
+    },
+    {
+      "name": "INNER_11",
+      "value": 25,
+      "description": "内层 11"
+    },
+    {
+      "name": "INNER_12",
+      "value": 26,
+      "description": "内层 12"
+    },
+    {
+      "name": "INNER_13",
+      "value": 27,
+      "description": "内层 13"
+    },
+    {
+      "name": "INNER_14",
+      "value": 28,
+      "description": "内层 14"
+    },
+    {
+      "name": "INNER_15",
+      "value": 29,
+      "description": "内层 15"
+    },
+    {
+      "name": "INNER_16",
+      "value": 30,
+      "description": "内层 16"
+    },
+    {
+      "name": "INNER_17",
+      "value": 31,
+      "description": "内层 17"
+    },
+    {
+      "name": "INNER_18",
+      "value": 32,
+      "description": "内层 18"
+    },
+    {
+      "name": "INNER_19",
+      "value": 33,
+      "description": "内层 19"
+    },
+    {
+      "name": "INNER_20",
+      "value": 34,
+      "description": "内层 20"
+    },
+    {
+      "name": "INNER_21",
+      "value": 35,
+      "description": "内层 21"
+    },
+    {
+      "name": "INNER_22",
+      "value": 36,
+      "description": "内层 22"
+    },
+    {
+      "name": "INNER_23",
+      "value": 37,
+      "description": "内层 23"
+    },
+    {
+      "name": "INNER_24",
+      "value": 38,
+      "description": "内层 24"
+    },
+    {
+      "name": "INNER_25",
+      "value": 39,
+      "description": "内层 25"
+    },
+    {
+      "name": "INNER_26",
+      "value": 40,
+      "description": "内层 26"
+    },
+    {
+      "name": "INNER_27",
+      "value": 41,
+      "description": "内层 27"
+    },
+    {
+      "name": "INNER_28",
+      "value": 42,
+      "description": "内层 28"
+    },
+    {
+      "name": "INNER_29",
+      "value": 43,
+      "description": "内层 29"
+    },
+    {
+      "name": "INNER_30",
+      "value": 44,
+      "description": "内层 30"
+    },
+    {
+      "name": "CUSTOM_1",
+      "value": 71,
+      "description": "自定义层 1"
+    },
+    {
+      "name": "CUSTOM_2",
+      "value": 72,
+      "description": "自定义层 2"
+    },
+    {
+      "name": "CUSTOM_3",
+      "value": 73,
+      "description": "自定义层 3"
+    },
+    {
+      "name": "CUSTOM_4",
+      "value": 74,
+      "description": "自定义层 4"
+    },
+    {
+      "name": "CUSTOM_5",
+      "value": 75,
+      "description": "自定义层 5"
+    },
+    {
+      "name": "CUSTOM_6",
+      "value": 76,
+      "description": "自定义层 6"
+    },
+    {
+      "name": "CUSTOM_7",
+      "value": 77,
+      "description": "自定义层 7"
+    },
+    {
+      "name": "CUSTOM_8",
+      "value": 78,
+      "description": "自定义层 8"
+    },
+    {
+      "name": "CUSTOM_9",
+      "value": 79,
+      "description": "自定义层 9"
+    },
+    {
+      "name": "CUSTOM_10",
+      "value": 80,
+      "description": "自定义层 10"
+    },
+    {
+      "name": "CUSTOM_11",
+      "value": 81,
+      "description": "自定义层 11"
+    },
+    {
+      "name": "CUSTOM_12",
+      "value": 82,
+      "description": "自定义层 12"
+    },
+    {
+      "name": "CUSTOM_13",
+      "value": 83,
+      "description": "自定义层 13"
+    },
+    {
+      "name": "CUSTOM_14",
+      "value": 84,
+      "description": "自定义层 14"
+    },
+    {
+      "name": "CUSTOM_15",
+      "value": 85,
+      "description": "自定义层 15"
+    },
+    {
+      "name": "CUSTOM_16",
+      "value": 86,
+      "description": "自定义层 16"
+    },
+    {
+      "name": "CUSTOM_17",
+      "value": 87,
+      "description": "自定义层 17"
+    },
+    {
+      "name": "CUSTOM_18",
+      "value": 88,
+      "description": "自定义层 18"
+    },
+    {
+      "name": "CUSTOM_19",
+      "value": 89,
+      "description": "自定义层 19"
+    },
+    {
+      "name": "CUSTOM_20",
+      "value": 90,
+      "description": "自定义层 20"
+    },
+    {
+      "name": "CUSTOM_21",
+      "value": 91,
+      "description": "自定义层 21"
+    },
+    {
+      "name": "CUSTOM_22",
+      "value": 92,
+      "description": "自定义层 22"
+    },
+    {
+      "name": "CUSTOM_23",
+      "value": 93,
+      "description": "自定义层 23"
+    },
+    {
+      "name": "CUSTOM_24",
+      "value": 94,
+      "description": "自定义层 24"
+    },
+    {
+      "name": "CUSTOM_25",
+      "value": 95,
+      "description": "自定义层 25"
+    },
+    {
+      "name": "CUSTOM_26",
+      "value": 96,
+      "description": "自定义层 26"
+    },
+    {
+      "name": "CUSTOM_27",
+      "value": 97,
+      "description": "自定义层 27"
+    },
+    {
+      "name": "CUSTOM_28",
+      "value": 98,
+      "description": "自定义层 28"
+    },
+    {
+      "name": "CUSTOM_29",
+      "value": 99,
+      "description": "自定义层 29"
+    },
+    {
+      "name": "CUSTOM_30",
+      "value": 100,
+      "description": "自定义层 30"
+    },
+    {
+      "name": "SUBSTRATE_1",
+      "value": 101,
+      "description": "夹层（介电基板）1"
+    },
+    {
+      "name": "HOLE",
+      "value": 47,
+      "description": "孔层（焊盘、过孔的内孔）"
+    },
+    {
+      "name": "COMPONENT_SHAPE",
+      "value": 48,
+      "description": "元件外形层"
+    },
+    {
+      "name": "COMPONENT_MARKING",
+      "value": 49,
+      "description": "元件标识层"
+    },
+    {
+      "name": "PIN_SOLDERING",
+      "value": 50,
+      "description": "引脚焊接层"
+    },
+    {
+      "name": "PIN_FLOATING",
+      "value": 51,
+      "description": "引脚悬空层"
+    },
+    {
+      "name": "COMPONENT_MODEL",
+      "value": 52,
+      "description": "元件模型层"
+    },
+    {
+      "name": "SHELL_3D_OUTLINE",
+      "value": 53,
+      "description": "3D 外壳边框层"
+    },
+    {
+      "name": "SHELL_3D_TOP",
+      "value": 54,
+      "description": "3D 外壳顶层"
+    },
+    {
+      "name": "SHELL_3D_BOTTOM",
+      "value": 55,
+      "description": "3D 外壳底层"
+    },
+    {
+      "name": "DRILL_DRAWING",
+      "value": 56,
+      "description": "钻孔图层"
+    }
+  ]
+}

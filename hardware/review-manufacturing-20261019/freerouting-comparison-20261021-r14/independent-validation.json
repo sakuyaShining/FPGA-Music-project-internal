@@ -1,0 +1,38 @@
+{
+  "source_pcb_sha256": "2cec51920011e0e8512956064d1c3b396bc4b98b98a94989432e883b30029eae",
+  "input_dsn_sha256": "d37b9f2c11a02987734108418057285a79fa5bc93668388ef2358e8cc424c1dc",
+  "result_ses_sha256": "facaaee3e578853d064ed9113c4aaf7197591a3a14e197d8611fca5251c2f868",
+  "net": "HARM_CS_N",
+  "lines": 26,
+  "new_vias": 5,
+  "summed_length_mm": 67.50060702466844,
+  "continuity": {
+    "complete": false,
+    "pad_islands": 2
+  },
+  "minimum_clearances_mm": {
+    "track-copper": 0.16555519457168372,
+    "track-mount": 49.2994125407406,
+    "track-quiet": 0.16650775962906875,
+    "via-copper": 0.181620950873156,
+    "via-pad-hole": 0.3671178982988207,
+    "via-quiet": 0.44752159999999486,
+    "via-mount": 49.52264600473601,
+    "drill-drill": 0.908129876061063
+  },
+  "geometric_failures": [],
+  "geometric_pass": false,
+  "quality": {
+    "maximum_new_via_goal": 6,
+    "maximum_summed_length_goal_mm": 100,
+    "within_goal": true,
+    "note": "Engineering screening goals, not manufacturer design rules or SI signoff."
+  },
+  "native_imported": false,
+  "manufacturing_release": false,
+  "limitations": [
+    "No actual ground-pour rebuild, current-edge SI model, manufacturing approval or physical measurement.",
+    "Only selected HARM copper would be eligible for import; ignore all placement/unselected output.",
+    "Router completion/logged violation counts do not establish actual native-board validity."
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  "java",
+  "-Xmx512m",
+  "-jar",
+  "D:\\FPGA-Project\\codex-tools\\freerouting\\freerouting-2.5.0.jar",
+  "-de",
+  "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\freerouting-comparison-20261021-r14\\calibration.dsn",
+  "-do",
+  "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\freerouting-comparison-20261021-r14\\calibration.ses",
+  "--router.autorouter.max_passes=4",
+  "--router.optimizer.enabled=false",
+  "--router.fanout.enabled=false",
+  "--router.layers.routable=true,false,true,false",
+  "--router.job_timeout=00:00:30",
+  "--router.automatic_neckdown=false",
+  "--router.strict_drc=true",
+  "-da",
+  "--gui.enabled=false",
+  "--api_server.enabled=false",
+  "--logging.file.enabled=false",
+  "--user_data_path=C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\freerouting-comparison-20261021-r14\\runtime-calibration"
+]

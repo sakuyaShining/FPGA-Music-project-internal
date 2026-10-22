@@ -1,0 +1,19 @@
+TPS2553 datasheet timing condition sanity check
+.include "C:/Users/Sakuya/.codex/worktrees/06df/FPGA-Music-project/hardware/review-manufacturing-20261019/spice-validation-20261021/tps2553_ngspice41_compat.lib"
+Vsrc vin 0 5
+Ven en 0 PWL(0 0 3m 0 3.01m 3.3 20m 3.3 20.01m 0 30m 0)
+Vpull pull 0 3.3
+Xswitch vin 0 en 0 fault ilim out TPS2553_TRANS
+Rilim ilim 0 23700
+Rfault pull fault 100k
+Cout out 0 1u
+Rload out 0 100
+.save v(en) v(out) v(fault) i(Vsrc)
+.control
+set wr_singlescale
+set wr_vecnames
+tran 1e-06 0.03
+wrdata waveform.txt v(en) v(out) v(fault) i(Vsrc)
+quit
+.endc
+.end

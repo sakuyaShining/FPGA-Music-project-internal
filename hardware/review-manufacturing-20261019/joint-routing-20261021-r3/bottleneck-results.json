@@ -1,0 +1,623 @@
+{
+  "pcb_sha256": "be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e",
+  "source_sha256": "a35fe1ff580a48707ffad1dda1e4f8213dfe941bf53a4e45c4bc8d5cbab8cfc2",
+  "power_pad_islands": [
+    {
+      "group": 0,
+      "pads": [
+        [
+          "U17",
+          "6"
+        ]
+      ],
+      "lines": 0,
+      "vias": 0
+    },
+    {
+      "group": 1,
+      "pads": [
+        [
+          "R70",
+          "1"
+        ],
+        [
+          "C38",
+          "1"
+        ],
+        [
+          "U18",
+          "1"
+        ],
+        [
+          "U18",
+          "3"
+        ],
+        [
+          "C30",
+          "1"
+        ],
+        [
+          "J10",
+          "1"
+        ],
+        [
+          "J11",
+          "1"
+        ],
+        [
+          "TP5",
+          "TP5"
+        ]
+      ],
+      "lines": 63,
+      "vias": 4
+    },
+    {
+      "group": 2,
+      "pads": [
+        [
+          "U13",
+          "1"
+        ],
+        [
+          "U13",
+          "3"
+        ]
+      ],
+      "lines": 3,
+      "vias": 0
+    }
+  ],
+  "local_escapes": [
+    {
+      "ref": "U7",
+      "pin": "6",
+      "net": "INV2",
+      "scenario": "current",
+      "checked_straight_rays": 96,
+      "straight_escapes_with_via": [],
+      "frequent_blocking_nets": [
+        [
+          "RC2",
+          100
+        ],
+        [
+          "GND",
+          61
+        ],
+        [
+          "3V3_PERIPH",
+          34
+        ],
+        [
+          "INV1",
+          11
+        ],
+        [
+          "5V_PERIPH",
+          10
+        ],
+        [
+          "RC1",
+          4
+        ],
+        [
+          "VIS_DC",
+          3
+        ],
+        [
+          "3V3_IO",
+          3
+        ]
+      ],
+      "nearest_foreign_copper": [
+        {
+          "net": "GND",
+          "kind": "pad",
+          "id": "d64e70d910a90c4be18",
+          "center_gap_mm": 0.9829799999999977
+        },
+        {
+          "net": "RC2",
+          "kind": "pad",
+          "id": "d64e70d910a90c4be20",
+          "center_gap_mm": 0.9829800000000048
+        },
+        {
+          "net": "RC2",
+          "kind": "line",
+          "id": "07696e0e23858a5f",
+          "center_gap_mm": 0.9911637631115612
+        },
+        {
+          "net": "GND",
+          "kind": "line",
+          "id": "8d88b1096d42b0e2",
+          "center_gap_mm": 1.1683999999999983
+        },
+        {
+          "net": "RC2",
+          "kind": "line",
+          "id": "43b910453f9a47c5",
+          "center_gap_mm": 1.1871244421807547
+        },
+        {
+          "net": "RC2",
+          "kind": "line",
+          "id": "815beba3629cfd37",
+          "center_gap_mm": 1.2180011199999967
+        },
+        {
+          "net": "3V3_PERIPH",
+          "kind": "line",
+          "id": "bb69c07a4390ff26",
+          "center_gap_mm": 1.2657963000000125
+        },
+        {
+          "net": "INV1",
+          "kind": "pad",
+          "id": "d64e70d910a90c4be21",
+          "center_gap_mm": 2.252980000000001
+        }
+      ]
+    },
+    {
+      "ref": "U7",
+      "pin": "6",
+      "net": "INV2",
+      "scenario": "joint_trunks_removed",
+      "checked_straight_rays": 96,
+      "straight_escapes_with_via": [],
+      "frequent_blocking_nets": [
+        [
+          "RC2",
+          100
+        ],
+        [
+          "GND",
+          61
+        ],
+        [
+          "3V3_PERIPH",
+          34
+        ],
+        [
+          "INV1",
+          11
+        ],
+        [
+          "5V_PERIPH",
+          10
+        ],
+        [
+          "RC1",
+          4
+        ],
+        [
+          "3V3_IO",
+          3
+        ]
+      ],
+      "nearest_foreign_copper": [
+        {
+          "net": "GND",
+          "kind": "pad",
+          "id": "d64e70d910a90c4be18",
+          "center_gap_mm": 0.9829799999999977
+        },
+        {
+          "net": "RC2",
+          "kind": "pad",
+          "id": "d64e70d910a90c4be20",
+          "center_gap_mm": 0.9829800000000048
+        },
+        {
+          "net": "RC2",
+          "kind": "line",
+          "id": "07696e0e23858a5f",
+          "center_gap_mm": 0.9911637631115612
+        },
+        {
+          "net": "GND",
+          "kind": "line",
+          "id": "8d88b1096d42b0e2",
+          "center_gap_mm": 1.1683999999999983
+        },
+        {
+          "net": "RC2",
+          "kind": "line",
+          "id": "43b910453f9a47c5",
+          "center_gap_mm": 1.1871244421807547
+        },
+        {
+          "net": "RC2",
+          "kind": "line",
+          "id": "815beba3629cfd37",
+          "center_gap_mm": 1.2180011199999967
+        },
+        {
+          "net": "3V3_PERIPH",
+          "kind": "line",
+          "id": "bb69c07a4390ff26",
+          "center_gap_mm": 1.2657963000000125
+        },
+        {
+          "net": "INV1",
+          "kind": "pad",
+          "id": "d64e70d910a90c4be21",
+          "center_gap_mm": 2.252980000000001
+        }
+      ]
+    },
+    {
+      "ref": "U9",
+      "pin": "5",
+      "net": "PRESET3",
+      "scenario": "current",
+      "checked_straight_rays": 96,
+      "straight_escapes_with_via": [],
+      "frequent_blocking_nets": [
+        [
+          "PRESET2",
+          88
+        ],
+        [
+          "PRESET1",
+          57
+        ],
+        [
+          "EDIT",
+          45
+        ],
+        [
+          "I2C_SDA",
+          32
+        ],
+        [
+          "GND",
+          30
+        ],
+        [
+          "VIS_CS_N",
+          24
+        ],
+        [
+          "RC5",
+          21
+        ],
+        [
+          "5V_PERIPH",
+          12
+        ]
+      ],
+      "nearest_foreign_copper": [
+        {
+          "net": "I2C_SDA",
+          "kind": "line",
+          "id": "d3b4cec0b8dd2772",
+          "center_gap_mm": 0.4597399999999965
+        },
+        {
+          "net": "PRESET2",
+          "kind": "line",
+          "id": "1d36a971e72c667d",
+          "center_gap_mm": 0.8242590050412687
+        },
+        {
+          "net": "EDIT",
+          "kind": "pad",
+          "id": "e44fc6d6d4918699e41",
+          "center_gap_mm": 0.9690099999999973
+        },
+        {
+          "net": "PRESET2",
+          "kind": "pad",
+          "id": "e44fc6d6d4918699e39",
+          "center_gap_mm": 0.9690100000000043
+        },
+        {
+          "net": "PRESET2",
+          "kind": "via",
+          "id": "77265a4bee20f9d5",
+          "center_gap_mm": 1.0032616565622963
+        },
+        {
+          "net": "PRESET2",
+          "kind": "line",
+          "id": "2a4cf118f49d4e7c",
+          "center_gap_mm": 1.048307680994501
+        },
+        {
+          "net": "EDIT",
+          "kind": "line",
+          "id": "30507517f87561e1",
+          "center_gap_mm": 1.193848371916692
+        },
+        {
+          "net": "GND",
+          "kind": "line",
+          "id": "fb90816933ddf643",
+          "center_gap_mm": 1.4325600000000096
+        }
+      ]
+    },
+    {
+      "ref": "U9",
+      "pin": "5",
+      "net": "PRESET3",
+      "scenario": "joint_trunks_removed",
+      "checked_straight_rays": 96,
+      "straight_escapes_with_via": [],
+      "frequent_blocking_nets": [
+        [
+          "PRESET2",
+          88
+        ],
+        [
+          "PRESET1",
+          57
+        ],
+        [
+          "EDIT",
+          45
+        ],
+        [
+          "I2C_SDA",
+          32
+        ],
+        [
+          "GND",
+          30
+        ],
+        [
+          "RC5",
+          21
+        ],
+        [
+          "5V_PERIPH",
+          12
+        ],
+        [
+          "",
+          8
+        ]
+      ],
+      "nearest_foreign_copper": [
+        {
+          "net": "I2C_SDA",
+          "kind": "line",
+          "id": "d3b4cec0b8dd2772",
+          "center_gap_mm": 0.4597399999999965
+        },
+        {
+          "net": "PRESET2",
+          "kind": "line",
+          "id": "1d36a971e72c667d",
+          "center_gap_mm": 0.8242590050412687
+        },
+        {
+          "net": "EDIT",
+          "kind": "pad",
+          "id": "e44fc6d6d4918699e41",
+          "center_gap_mm": 0.9690099999999973
+        },
+        {
+          "net": "PRESET2",
+          "kind": "pad",
+          "id": "e44fc6d6d4918699e39",
+          "center_gap_mm": 0.9690100000000043
+        },
+        {
+          "net": "PRESET2",
+          "kind": "via",
+          "id": "77265a4bee20f9d5",
+          "center_gap_mm": 1.0032616565622963
+        },
+        {
+          "net": "PRESET2",
+          "kind": "line",
+          "id": "2a4cf118f49d4e7c",
+          "center_gap_mm": 1.048307680994501
+        },
+        {
+          "net": "EDIT",
+          "kind": "line",
+          "id": "30507517f87561e1",
+          "center_gap_mm": 1.193848371916692
+        },
+        {
+          "net": "GND",
+          "kind": "line",
+          "id": "fb90816933ddf643",
+          "center_gap_mm": 1.4325600000000096
+        }
+      ]
+    },
+    {
+      "ref": "U15",
+      "pin": "7",
+      "net": "DISP_RESET_N",
+      "scenario": "current",
+      "checked_straight_rays": 96,
+      "straight_escapes_with_via": [],
+      "frequent_blocking_nets": [
+        [
+          "VIS_CS_N",
+          170
+        ],
+        [
+          "TP_RESET_MOD_N",
+          89
+        ],
+        [
+          "GND",
+          48
+        ],
+        [
+          "LCD_RESET_N",
+          43
+        ],
+        [
+          "HARM_CS_N",
+          38
+        ],
+        [
+          "PRESET1",
+          27
+        ],
+        [
+          "DISP_VIS_DC",
+          24
+        ],
+        [
+          "DISP_HARM_CS_N",
+          22
+        ]
+      ],
+      "nearest_foreign_copper": [
+        {
+          "net": "PRESET1",
+          "kind": "line",
+          "id": "c21aac9ee7926474",
+          "center_gap_mm": 0.0015344385978029113
+        },
+        {
+          "net": "VIS_CS_N",
+          "kind": "pad",
+          "id": "bd743bdbf480b556e10",
+          "center_gap_mm": 0.46862999999999033
+        },
+        {
+          "net": "HARM_CS_N",
+          "kind": "pad",
+          "id": "bd743bdbf480b556e12",
+          "center_gap_mm": 0.46862999999999033
+        },
+        {
+          "net": "VIS_CS_N",
+          "kind": "line",
+          "id": "b1f4024d345d8654",
+          "center_gap_mm": 0.49758234416522046
+        },
+        {
+          "net": "VIS_CS_N",
+          "kind": "line",
+          "id": "76e88b1febfe6351",
+          "center_gap_mm": 0.5537944352637578
+        },
+        {
+          "net": "VIS_CS_N",
+          "kind": "line",
+          "id": "6318b70d902c8e05",
+          "center_gap_mm": 0.5695994272772873
+        },
+        {
+          "net": "VIS_CS_N",
+          "kind": "line",
+          "id": "cc1236d6aaade2f3",
+          "center_gap_mm": 0.9817790212831863
+        },
+        {
+          "net": "TP_RESET_MOD_N",
+          "kind": "line",
+          "id": "29d8821cf2b865c9",
+          "center_gap_mm": 1.0443387799999968
+        }
+      ]
+    },
+    {
+      "ref": "U15",
+      "pin": "7",
+      "net": "DISP_RESET_N",
+      "scenario": "joint_trunks_removed",
+      "checked_straight_rays": 96,
+      "straight_escapes_with_via": [],
+      "frequent_blocking_nets": [
+        [
+          "TP_RESET_MOD_N",
+          89
+        ],
+        [
+          "GND",
+          48
+        ],
+        [
+          "LCD_RESET_N",
+          43
+        ],
+        [
+          "HARM_CS_N",
+          38
+        ],
+        [
+          "VIS_CS_N",
+          38
+        ],
+        [
+          "PRESET1",
+          27
+        ],
+        [
+          "DISP_VIS_DC",
+          24
+        ],
+        [
+          "DISP_HARM_CS_N",
+          22
+        ]
+      ],
+      "nearest_foreign_copper": [
+        {
+          "net": "PRESET1",
+          "kind": "line",
+          "id": "c21aac9ee7926474",
+          "center_gap_mm": 0.0015344385978029113
+        },
+        {
+          "net": "VIS_CS_N",
+          "kind": "pad",
+          "id": "bd743bdbf480b556e10",
+          "center_gap_mm": 0.46862999999999033
+        },
+        {
+          "net": "HARM_CS_N",
+          "kind": "pad",
+          "id": "bd743bdbf480b556e12",
+          "center_gap_mm": 0.46862999999999033
+        },
+        {
+          "net": "TP_RESET_MOD_N",
+          "kind": "line",
+          "id": "29d8821cf2b865c9",
+          "center_gap_mm": 1.0443387799999968
+        },
+        {
+          "net": "TP_RESET_MOD_N",
+          "kind": "pad",
+          "id": "bd743bdbf480b556e9",
+          "center_gap_mm": 1.118869999999987
+        },
+        {
+          "net": "DISP_VIS_DC",
+          "kind": "pad",
+          "id": "bd743bdbf480b556e13",
+          "center_gap_mm": 1.1188700000000011
+        },
+        {
+          "net": "TP_RESET_MOD_N",
+          "kind": "line",
+          "id": "6604fae7a185321e",
+          "center_gap_mm": 1.1808984193808083
+        },
+        {
+          "net": "LCD_RESET_N",
+          "kind": "line",
+          "id": "97bfbc4903577b46",
+          "center_gap_mm": 1.2237389799999931
+        }
+      ]
+    }
+  ],
+  "scope": "Straight-ray diagnostic only; absence is not proof that no bent path or better layout exists. No native mutation or DRC.",
+  "manufacturing_release": false
+}

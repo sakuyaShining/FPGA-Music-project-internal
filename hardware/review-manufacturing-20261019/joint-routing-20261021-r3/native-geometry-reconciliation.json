@@ -1,0 +1,73 @@
+{
+  "source_pcb_sha256": "be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e",
+  "applied_pcb_sha256": "6562a03aac917a551453200cae8cc326c46948b517fe81f58e70bd5692ecd2bd",
+  "native_auto_split_old_tracks": [
+    {
+      "id": "f47491340a8120a9",
+      "net": "5V_PERIPH"
+    },
+    {
+      "id": "3842c0816a38c7eb",
+      "net": "5V_PERIPH"
+    },
+    {
+      "id": "f1a4d95c32299f68",
+      "net": "5V_PERIPH"
+    }
+  ],
+  "copper_shape_checks": [
+    {
+      "net": "5V_PERIPH",
+      "layer": 1,
+      "missing_copper_area_mm2": 0.0,
+      "unexpected_copper_area_mm2": 0.0,
+      "equivalent_within_rounding": true
+    },
+    {
+      "net": "5V_PERIPH",
+      "layer": 2,
+      "missing_copper_area_mm2": 0.0,
+      "unexpected_copper_area_mm2": 0.0,
+      "equivalent_within_rounding": true
+    },
+    {
+      "net": "BUS_RETURN",
+      "layer": 1,
+      "missing_copper_area_mm2": 0.0,
+      "unexpected_copper_area_mm2": 0.0,
+      "equivalent_within_rounding": true
+    },
+    {
+      "net": "BUS_RETURN",
+      "layer": 2,
+      "missing_copper_area_mm2": 0.0,
+      "unexpected_copper_area_mm2": 0.0,
+      "equivalent_within_rounding": true
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "missing_copper_area_mm2": 0.0,
+      "unexpected_copper_area_mm2": 0.0,
+      "equivalent_within_rounding": true
+    },
+    {
+      "net": "GND",
+      "layer": 2,
+      "missing_copper_area_mm2": 0.0,
+      "unexpected_copper_area_mm2": 0.0,
+      "equivalent_within_rounding": true
+    }
+  ],
+  "comparison_tolerance_mm": 5e-06,
+  "all_expected_copper_preserved": true,
+  "no_unplanned_copper": true,
+  "original_vias_preserved": true,
+  "source_sha256": {
+    "local-power-bus-with-return-plan.json": "99fcc734fa622b343454cb27c309184f9da359d5d2f346da82bb26dee7e714da",
+    "applied-source.json": "f9672f8a91b7817f7a5994735a13b0c093ac4fda5cc6527379a65bc533fd821f",
+    "apply-audit.json": "727b4d985e64d3fbc0674a4b3b24400a3342d27fe0b1a9ab4a2919152528471e"
+  },
+  "requires_full_native_drc": true,
+  "manufacturing_release": false
+}

@@ -1,0 +1,215 @@
+{
+  "utc": "2026-10-20T22:09:28.710946+00:00",
+  "phase": "complete",
+  "source_file": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\quality-r1-source-78.json",
+  "source_sha256": "a35fe1ff580a48707ffad1dda1e4f8213dfe941bf53a4e45c4bc8d5cbab8cfc2",
+  "native_pcb_sha256": "be576cabac058fc0754fbc87a07565e69531e59c7d249a6f6d267c5f93c5fc3e",
+  "native_microtracks_included": 24,
+  "normalized_via_dimensions": [
+    {
+      "id": "16a13e102cb0509d",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "16a13e102cb0509d",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "01b21cb3572d97ac",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "01b21cb3572d97ac",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "e899e9b8d35774a0",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "e899e9b8d35774a0",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    },
+    {
+      "id": "d9615af0a7445a08",
+      "field": "diameter",
+      "capture": 47.2,
+      "native": 47.2441
+    },
+    {
+      "id": "d9615af0a7445a08",
+      "field": "hole",
+      "capture": 23.6,
+      "native": 23.622
+    }
+  ],
+  "pending_nets": [
+    "I2C_SCL",
+    "BUS_SCK",
+    "BUS_MOSI",
+    "HARM_CS_N",
+    "ADDR1",
+    "ADDR2",
+    "ADDR3",
+    "MUX_DISABLE",
+    "ADDR0",
+    "PRESET3",
+    "INV2",
+    "DISP_RESET_N",
+    "DISP_VIS_DC",
+    "DISP_SCK",
+    "DISP_MOSI",
+    "DISP_VIS_CS_N"
+  ],
+  "ripped_connected_nets": [
+    "I2S_BCK",
+    "I2S_DIN",
+    "I2S_LRCK",
+    "SCAN_LATCH",
+    "INPUT_LOAD_N",
+    "VIS_DC",
+    "VIS_CS_N"
+  ],
+  "proposed_nets": [],
+  "routes": [],
+  "failed_planning": [
+    {
+      "net": "INV2",
+      "error": "SealedEscape('Locally sealed start: INV2')",
+      "elapsed_seconds": 0.5119725999975344
+    },
+    {
+      "net": "PRESET3",
+      "error": "SealedEscape('Locally sealed start: PRESET3')",
+      "elapsed_seconds": 0.7533221999983652
+    },
+    {
+      "net": "I2S_LRCK",
+      "error": "AssertionError('Audio quality budget: <=3 vias, no length increase')",
+      "elapsed_seconds": 12.782305599997926
+    },
+    {
+      "net": "I2S_DIN",
+      "error": "AssertionError('Audio quality budget: <=3 vias, no length increase')",
+      "elapsed_seconds": 14.392683500002022
+    },
+    {
+      "net": "I2S_BCK",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 17.069461999999476
+    },
+    {
+      "net": "SCAN_LATCH",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 7.102511199998844
+    },
+    {
+      "net": "INPUT_LOAD_N",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 9.490931200001796
+    },
+    {
+      "net": "VIS_DC",
+      "error": "AssertionError('Connected-net quality budget exceeded')",
+      "elapsed_seconds": 18.353331600003003
+    },
+    {
+      "net": "VIS_CS_N",
+      "error": "SealedEscape('Locally sealed start: VIS_CS_N')",
+      "elapsed_seconds": 0.7282744000040111
+    },
+    {
+      "net": "DISP_VIS_DC",
+      "error": "AssertionError(('track_gap', -0.0762))",
+      "elapsed_seconds": 10.261128400001326
+    },
+    {
+      "net": "DISP_RESET_N",
+      "error": "SealedEscape('Locally sealed start: DISP_RESET_N')",
+      "elapsed_seconds": 0.5667136999982176
+    },
+    {
+      "net": "DISP_VIS_CS_N",
+      "error": "SealedEscape('Locally sealed start: DISP_VIS_CS_N')",
+      "elapsed_seconds": 0.7087115999966045
+    },
+    {
+      "net": "DISP_SCK",
+      "error": "SealedEscape('Locally sealed start: DISP_SCK')",
+      "elapsed_seconds": 0.7249128000039491
+    },
+    {
+      "net": "DISP_MOSI",
+      "error": "SealedEscape('Locally sealed start: DISP_MOSI')",
+      "elapsed_seconds": 0.7092024000012316
+    },
+    {
+      "net": "HARM_CS_N",
+      "error": "SealedEscape('Locally sealed goal: HARM_CS_N')",
+      "elapsed_seconds": 4.127864699999918
+    },
+    {
+      "net": "BUS_SCK",
+      "error": "SealedEscape('Locally sealed start: BUS_SCK')",
+      "elapsed_seconds": 0.7903738000022713
+    },
+    {
+      "net": "BUS_MOSI",
+      "error": "SealedEscape('Locally sealed start: BUS_MOSI')",
+      "elapsed_seconds": 0.8347907999996096
+    },
+    {
+      "net": "I2C_SCL",
+      "error": "SealedEscape('Locally sealed escape: I2C_SCL')",
+      "elapsed_seconds": 0.6092667000048095
+    },
+    {
+      "net": "ADDR0",
+      "error": "SealedEscape('Locally sealed start: ADDR0')",
+      "elapsed_seconds": 0.5798269000006258
+    },
+    {
+      "net": "ADDR1",
+      "error": "SealedEscape('Locally sealed start: ADDR1')",
+      "elapsed_seconds": 0.5551536999992095
+    },
+    {
+      "net": "ADDR2",
+      "error": "SealedEscape('Locally sealed escape: ADDR2')",
+      "elapsed_seconds": 5.527834799999255
+    },
+    {
+      "net": "ADDR3",
+      "error": "SealedEscape('Locally sealed escape: ADDR3')",
+      "elapsed_seconds": 5.548321900001611
+    },
+    {
+      "net": "MUX_DISABLE",
+      "error": "SealedEscape('Locally sealed escape: MUX_DISABLE')",
+      "elapsed_seconds": 5.54858460000105
+    }
+  ],
+  "retained_route_collision_checks": [],
+  "batch_final_geometry_pass": false,
+  "native_imported": false,
+  "manufacturing_release": false,
+  "requires_native_drc_and_ground_return_review": true,
+  "elapsed_seconds": 230.5299062999984,
+  "planner_sha256": {
+    "grid_route.py": "3009457a1e753a7911600907571af5eb6f5e92051a144be1f87ad4f9b8411d8e",
+    "reserve_escape.py": "cc024e241716baa3ce802b9eb01a25d5d7849389c3ad42ec68276663f940c585",
+    "physical_geometry.py": "d17818744445eb4c1a46d53909e4dfb56429462b4535ac35e5bf93e7f0db8db1"
+  }
+}

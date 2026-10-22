@@ -1,0 +1,1 @@
+{"name":"v2-entry-catalog","code":"const r={};for(const q of __CLI__.args.queries)r[q]=await eda.lib_Device.search(q,'0819f05c4eef4c71ace90d822a990e87',undefined,undefined,5,1);return r;","args":{"queries":["DMP2035U-7","B2B-XH-A(LF)(SN)","0603WAF1003T5E"]}}

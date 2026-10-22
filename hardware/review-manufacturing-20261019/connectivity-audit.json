@@ -1,0 +1,22 @@
+{
+  "scope": "Native exported connectivity / BOM / critical source pin contracts only; NOT physical or production verification",
+  "components": 230,
+  "pins": 1054,
+  "connected_pins": 917,
+  "intentional_nc": 137,
+  "nets": 261,
+  "mismatches": 0,
+  "native_bom_refs": 230,
+  "original_project_unchanged": true,
+  "critical_pin_contracts": "PASS",
+  "native_drc": [],
+  "fabrication_release": false,
+  "pcb_evidence": "See separate pcb-pad-audit.json and pcb-drc.json; this audit checks the schematic",
+  "hashes": {
+    "design.json": "fcdd234bf32632f9fb646a164a5a713d04d6403743f8a16424eb9cea80cadc40",
+    "native-protel.net": "a50947a7849d0f2dc8c1c0396cc45dee3f74f48b25fb1dba2c2abcef5e193faf",
+    "expected-pin-nets.json": "e4ce13db7ff84eb25759c9c3df8209b115141d7df329fcf534f9470dcbdab7c4",
+    "native-bom.tsv": "007c277cb1c989a0ba5dcc056fa2b964e3f2480145b4b5f8cefca1e40066f286",
+    "pin-net-audit.csv": "c76499c38d3a9e22407d96d463396c290b08c49f1b7557c3ba960db1b83b5e17"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "stage": "before-native-open",
+  "failure": "New records concatenated to original EOF without newline; parser rejected before any editor open",
+  "failed_pcb_sha256": "59c76b2a3d28faec0580b0e6c8338c6520665e0ba7b9d11214a9909dab404a5f",
+  "original_r4_unmodified": true,
+  "corrective_action": "Preserve failed source, add record boundary newline, rebuild unopened scratch copy only"
+}

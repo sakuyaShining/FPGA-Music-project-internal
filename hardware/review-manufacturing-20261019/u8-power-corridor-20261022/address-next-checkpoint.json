@@ -1,0 +1,74 @@
+{
+  "updated_at": "2026-10-22T04:55:21.909658+08:00",
+  "source_project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-U8BusWork-20261022",
+  "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+  "native_drc": {
+    "clearance": 0,
+    "physical": 0,
+    "connection": 59
+  },
+  "native_mutated": false,
+  "live_route_jobs": [],
+  "candidate_address_fanouts": 27,
+  "remaining_pin_exits": [
+    [
+      "ADDR2",
+      "U4",
+      "14"
+    ],
+    [
+      "MUX_DISABLE",
+      "U4",
+      "15"
+    ],
+    [
+      "ADDR1",
+      "U1",
+      "11"
+    ],
+    [
+      "ADDR1",
+      "U2",
+      "11"
+    ],
+    [
+      "ADDR0",
+      "U2",
+      "10"
+    ],
+    [
+      "ADDR3",
+      "U3",
+      "13"
+    ],
+    [
+      "ADDR2",
+      "U3",
+      "14"
+    ],
+    [
+      "MUX_DISABLE",
+      "U3",
+      "15"
+    ]
+  ],
+  "candidate_geometry_pass": true,
+  "complete_address_nets_closed": 0,
+  "actual_candidate_ground_reference_review": "pending",
+  "next_action": "Use address-next-checkpoint.json.27/35 address/disable top fanouts now have independent four-layer copper,drill,pad,edge,mount and quiet-guard checks, but no complete net or actual ground review; do not import them yet.8 exits remain. ADDR0 needs only U2.10; full-net trial proves its source escape sealed. Source-bound obstacle screen identifies L1_M07 bottom2 line624062d3306e7719 plus L1_M06 as blockers beneath the otherwise clear inward exit. A two-sensor trace detour must retain8mil and recover both nets with actual layer16 reference/quiet clearance; first detour stopped at an existing tight M06 endpoint, no native change. Inspect the exact retained endpoints/adjacent analog bundle or jointly move affected layout; do not repeat fixed MOSI/R64-only searches or all-board fanout. R64 relocation alone did not solve U15/TP14 cages.",
+  "evidence_sha256": {
+    "address-extended-escapes.json": "d8ff3e22c3ffd3bff80ac82f88af05df9ed43ada49dc06578418dc077567c7c9",
+    "address-extended-capture.json": "8964e46f27f40187d02c411923e2776d5bc9de11be37961e71da05383b0832f5",
+    "address-dijkstra-preflight.json": "54b1578f45897b8359613214bcfc5ffcd42bf37917bd8bba43313fc2beed9b83",
+    "address-extended-preflight.json": "10b4822f65e606e486658f4999ca6cf2df6d037bc11d3e4d8e6feb46849e0836",
+    "address-missing-pin-obstacle-screen.json": "81aaa5ef272735bf20aedaf12570fad307fb22a943f06d639833dece066e0b10",
+    "address0-core-failure.json": "bca676a0a904ed820b32cc181a835ed56341311ce9ab9c012a87f016cec9344d",
+    "address0-sensor-coopt-plan.json": "273d5996a5baaf68987f101265ec008169e34938f33722984f14898356d6f21a",
+    "probe-map-current-UNMEASURED.csv": "608b56c4953ff801ef3041cb9010323fe1e63453a7678fa97ccb63c7fcbb0e71",
+    "probe-map-audit.json": "93cd46a3adbf7b8343f594834fd89302d155bdc3bca102b55e26bcb19218ba8e"
+  },
+  "mature_router_terminal_attempt": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\global-bus-router\\attempt.json",
+  "local_mosi_failures": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\mosi\\attempts-summary.json",
+  "manufacturing_release": false,
+  "physical_tests_executed": false
+}
