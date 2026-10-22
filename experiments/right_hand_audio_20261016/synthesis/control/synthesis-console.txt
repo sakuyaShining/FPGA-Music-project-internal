@@ -1,0 +1,36 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project C:/Users/Sakuya/FPGA-Music-project/experiments/right_hand_audio_20261016/synthesis/control/probe.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_fader_gain_map.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_music_probe.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_performance_control.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_timbre_slew.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_fader_bank.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_fader_panel.v'
+Compiling module 'rh_performance_control'("C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_performance_control.v":3)
+Compiling module 'rh_fader_panel'("C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_fader_panel.v":3)
+Compiling module 'rh_fader_bank(RESET_Y=420)'("C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_fader_bank.v":5)
+Compiling module 'rh_fader_gain_map'("C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_fader_gain_map.v":3)
+Extracting RAM for identifier 'rom'("C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_fader_gain_map.v":28)
+Compiling module 'rh_timbre_slew'("C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\rh_timbre_slew.v":2)
+NOTE  (EX0101) : Current top module is "rh_performance_control"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\impl\gwsynthesis\probe.vg" completed
+[100%] Generate report file "C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\synthesis\control\impl\gwsynthesis\probe_syn.rpt.html" completed
+GowinSynthesis finish

@@ -1,0 +1,9 @@
+{
+  "scope": "Diagnostic only; entire new physical left frontend excluded; no shipping approval",
+  "modified": "tdm_top_rh.v",
+  "before_sha256": "599061e842cbb3f6d3664d88c9ddd7951741f3717be0a9bbf0c1ec072e5a30e8",
+  "after_sha256": "2d2e7197186ebe503f5d829ce4f7245f603e6cd3a8fc795bb316df26413b6cef",
+  "removed": "    pad_scan #(.NCH(16)) u_pad (\n        .clk(clk), .rst_n(rst_n),\n        .pad(pad),\n        .note_busy(nm_busy),\n        .oct_up(1'b0),                     // v1 固定不升八度（S2 留 v2）\n        .state(pad_state_raw),\n        .ev_note(pd_ev_note), .ev_on(pd_ev_on), .ev_valid(pd_ev_valid),\n        .dbg_raw0(), .dbg_base0(), .dbg_phase(),\n        .dbg_sel(r_pad_sel),                   // (本次)遥测：主机选通道\n        .dbg_raw_sel(pad_raw_sel),\n        .dbg_base_sel(pad_base_sel)\n    );",
+  "inserted": "    // RESOURCE DIAGNOSTIC: new physical left frontend is NOT included here.\n    // Only the already-present digital note/finger interfaces remain enabled.\n    assign pad = 16'bz;\n    assign pad_state_raw = 16'd0;\n    assign pd_ev_note = 7'd0;\n    assign pd_ev_on = 1'b0;\n    assign pd_ev_valid = 1'b0;\n    assign pad_raw_sel = 12'd0;\n    assign pad_base_sel = 12'd0;",
+  "preserved_candidate_unchanged": true
+}

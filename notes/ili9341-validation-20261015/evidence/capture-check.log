@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "digital controller subset, not physical module or full visualization",
+  "reset_during_byte_recovered": true,
+  "invalid_window_rejected": true,
+  "decoded_bytes": 153922,
+  "pin_timing_minima": {
+    "sck_period_ns": 148.152,
+    "sck_high_ns": 74.076,
+    "sck_low_ns": 74.076,
+    "mosi_setup_ns": 74.076
+  },
+  "frames": [
+    {
+      "tag": 1,
+      "pixels_written": 76800,
+      "all_76800_pixels_match": true,
+      "transfer_ms": 219.04341720300008,
+      "rgb565_sha256": "e18339d566396ba07cad5e297dba1ce045800b5668b2dc1dd4fe6d65b2253d5c",
+      "image": "frame-1.png"
+    },
+    {
+      "tag": 2,
+      "pixels_written": 143,
+      "all_76800_pixels_match": true,
+      "transfer_ms": 0.4233258210000992,
+      "rgb565_sha256": "707c3d58eace728d2470247548dfb2470394e0a63c8016155072c6eea29b49b4",
+      "image": "frame-2.png"
+    }
+  ],
+  "capture_sha256": "16db76e2c8dc2513a95d313b255ab7ee8aa15438a0b4c57fe9adf52273cbe906"
+}

@@ -1,0 +1,100 @@
+{
+  "query": "TPD1E01B04DPYR",
+  "expected_mpn": "TPD1E01B04DPYR",
+  "retrieved_at_utc": "2026-10-15T10:13:03.403669+00:00",
+  "source": "https://jlcsearch.tscircuit.com",
+  "source_kind": "community_JLCPCB_assembly_catalog",
+  "currency": "USD",
+  "domestic_quote_verified": false,
+  "electrically_qualified": false,
+  "manufacturing_release": false,
+  "accepted": [],
+  "rejected": [
+    {
+      "reason": "identity_mismatch",
+      "item": {
+        "lcsc_code": "C1884574",
+        "lcsc_id": 1884574,
+        "mpn": "SS34",
+        "manufacturer": "",
+        "package": "SMB",
+        "description": "-55℃~+150℃ 3A 40V 500nA 550mV 80A Independent SMB Schottky Diodes ROHS",
+        "is_basic": false,
+        "stock": 5187,
+        "price_usd": 0.055,
+        "datasheet_url": "",
+        "attributes": {},
+        "prices": []
+      }
+    },
+    {
+      "reason": "identity_mismatch",
+      "item": {
+        "lcsc_code": "C5861021",
+        "lcsc_id": 5861021,
+        "mpn": "SMCJ20A",
+        "manufacturer": "",
+        "package": "SMC",
+        "description": "-55℃~+150℃ 1.5kW@10/1000us 1uA 20V 22.2V 32.4V 46.3A IEC 61000-4-2、IEC 61000-4-4 TVS Unidirectional SMC ESD and Surge Protection (TVS/ESD) ROHS",
+        "is_basic": false,
+        "stock": 1685,
+        "price_usd": 0.1193,
+        "datasheet_url": "",
+        "attributes": {},
+        "prices": []
+      }
+    },
+    {
+      "reason": "identity_mismatch",
+      "item": {
+        "lcsc_code": "C2829600",
+        "lcsc_id": 2829600,
+        "mpn": "HY-10A",
+        "manufacturer": "",
+        "package": "插件,P=2mm",
+        "description": "-25℃~+85℃ 1 10 10P 1x10P 250V 2mm 3A Brass HY Through Hole Tin 插件,P=2mm Wire To Board Connector ROHS",
+        "is_basic": false,
+        "stock": 1342,
+        "price_usd": 0.0645,
+        "datasheet_url": "",
+        "attributes": {},
+        "prices": []
+      }
+    },
+    {
+      "reason": "identity_mismatch",
+      "item": {
+        "lcsc_code": "C5161524",
+        "lcsc_id": 5161524,
+        "mpn": "SMCJ90CA",
+        "manufacturer": "",
+        "package": "DO-214AB(SMC)",
+        "description": "",
+        "is_basic": false,
+        "stock": 504,
+        "price_usd": 0.1579,
+        "datasheet_url": "",
+        "attributes": {},
+        "prices": []
+      }
+    },
+    {
+      "reason": "identity_mismatch",
+      "item": {
+        "lcsc_code": "C22399457",
+        "lcsc_id": 22399457,
+        "mpn": "HVLR5208J500MK9",
+        "manufacturer": "",
+        "package": "插件,D9.5xL52mm",
+        "description": "",
+        "is_basic": false,
+        "stock": 6,
+        "price_usd": 9.5404,
+        "datasheet_url": "",
+        "attributes": {},
+        "prices": []
+      }
+    }
+  ],
+  "status": "no_verified_identity_match"
+}

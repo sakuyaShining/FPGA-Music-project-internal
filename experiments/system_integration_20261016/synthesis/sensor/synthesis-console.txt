@@ -1,0 +1,50 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project C:/Users/Sakuya/FPGA-Music-project/experiments/system_integration_20261016/synthesis/sensor/probe.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\instrument_joint_probe.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\instrument_sensor_probe.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\music_visualizer.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\mv_fft1024.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\mv_panel_driver.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\mv_renderer.v'
+Analyzing included file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\mv_font.vh'("C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\mv_renderer.v":55)
+Back to file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\mv_renderer.v'("C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\mv_renderer.v":55)
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\mv_spi_byte.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\mv_wave_capture.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rc_delta_store.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rc_mux_scan.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rc_strip_positions.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rh_fader_bank.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rh_fader_gain_map.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rh_fader_panel.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rh_music_probe.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rh_performance_control.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rh_timbre_slew.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\scan_shift595.v'
+Compiling module 'instrument_sensor_probe'("C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\instrument_sensor_probe.v":3)
+Compiling module 'rc_mux_scan'("C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rc_mux_scan.v":4)
+Compiling module 'scan_shift595'("C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\scan_shift595.v":3)
+Compiling module 'rc_delta_store'("C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rc_delta_store.v":4)
+Extracting RAM for identifier 'memory'("C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rc_delta_store.v":30)
+Compiling module 'rc_strip_positions(NODE_MAP=546'b100110110011001001011100101010010011001000100011110001101000101100010010000111000010100000110000000111111011111001111010111100011101101110100111001011100001101110110110011010101101000110011011001001100010110000010111101011100101101010110001010110101010010100101010000100111010011001001010100100010001101000100100001010000000111110011110001110100111000011011001101000110010011000001011100101100010101001010000100110010010001000100100000001111000111000011010001100000101100010100001001000100000001110000110000010100001000000011000001000000010000000)'("C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\rc_strip_positions.v":5)
+NOTE  (EX0101) : Current top module is "instrument_sensor_probe"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\impl\gwsynthesis\probe.vg" completed
+[100%] Generate report file "C:\Users\Sakuya\FPGA-Music-project\experiments\system_integration_20261016\synthesis\sensor\impl\gwsynthesis\probe_syn.rpt.html" completed
+GowinSynthesis finish

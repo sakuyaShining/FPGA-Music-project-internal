@@ -1,0 +1,16 @@
+test_adjustable_range_and_inclusive_limit (test_reference.FaderRules) ... ok
+test_boundary_belongs_only_to_right_zone (test_reference.FaderRules) ... ok
+test_distance_tie_is_id_stable (test_reference.FaderRules) ... ok
+test_each_side_selects_nearest_then_midpoint (test_reference.FaderRules) ... ok
+test_half_pixel_rounds_to_smaller_pixel_y (test_reference.FaderRules) ... ok
+test_midpoint_is_wide_then_clamped_not_wrapped (test_reference.FaderRules) ... ok
+test_no_attraction_across_zone_even_with_huge_radius (test_reference.FaderRules) ... ok
+test_on_axis_overrides_both_side_candidates (test_reference.FaderRules) ... ok
+test_overlapping_regions_and_duplicate_ids_rejected (test_reference.FaderRules) ... ok
+test_same_side_nearest_wins_in_either_report_order (test_reference.FaderRules) ... ok
+test_touch_removal_holds_affected_fader (test_reference.FaderRules) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+OK

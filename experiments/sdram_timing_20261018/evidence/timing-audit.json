@@ -1,0 +1,431 @@
+{
+  "status": "PASS declared-envelope static audit and negative cases; experimental bench only",
+  "selected": {
+    "nominal": {
+      "slack_ns": {
+        "Setup": 5.704,
+        "Hold": 0.225,
+        "Recovery": 34.43,
+        "Removal": 1.19
+      },
+      "worst_paths": {
+        "Setup": [
+          "1",
+          "5.704",
+          "ram/write_data_0_s0/Q",
+          "IO_sdram_dq_0_iobuf/IO",
+          "core_clk:[R]",
+          "sdram_forward:[R]",
+          "18.518",
+          "2.271",
+          "7.043"
+        ],
+        "Hold": [
+          "1",
+          "0.225",
+          "serial/cnt_1_s1/Q",
+          "serial/cnt_1_s1/D",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "0.000",
+          "0.000",
+          "0.436"
+        ],
+        "Recovery": [
+          "1",
+          "34.430",
+          "reset_release_1_s0/Q",
+          "serial/st_0_s4/CLEAR",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "37.037",
+          "0.000",
+          "2.072"
+        ],
+        "Removal": [
+          "1",
+          "1.190",
+          "reset_release_1_s0/Q",
+          "serial/st_0_s4/CLEAR",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "0.000",
+          "0.000",
+          "1.401"
+        ]
+      },
+      "summary": [
+        [
+          "Numbers of Paths Analyzed",
+          "2224"
+        ],
+        [
+          "Numbers of Endpoints Analyzed",
+          "1068"
+        ],
+        [
+          "Numbers of Falling Endpoints",
+          "0"
+        ],
+        [
+          "Numbers of Setup Violated Endpoints",
+          "0"
+        ],
+        [
+          "Numbers of Hold Violated Endpoints",
+          "0"
+        ]
+      ],
+      "resource": {
+        "Logic": 498,
+        "Register": 358,
+        "I/O Port": 13
+      },
+      "bitstream_sha256": "86c9b213840ece24b97dd1ab0dfe4142c69b75fdc72a0a1dfaa3dd3c046fb885",
+      "sip_ports": {
+        "O_sdram_clk": "p73/2",
+        "O_sdram_cke": "p18/7",
+        "O_sdram_cs_n": "p22/7",
+        "O_sdram_ras_n": "p21/7",
+        "O_sdram_cas_n": "p20/7",
+        "O_sdram_wen_n": "p19/7",
+        "O_sdram_addr[0]": "p67/2",
+        "O_sdram_addr[1]": "p66/2",
+        "O_sdram_addr[2]": "p65/2",
+        "O_sdram_addr[3]": "p64/2",
+        "O_sdram_addr[4]": "p28/7",
+        "O_sdram_addr[5]": "p27/7",
+        "O_sdram_addr[6]": "p26/7",
+        "O_sdram_addr[7]": "p25/7",
+        "O_sdram_addr[8]": "p24/7",
+        "O_sdram_addr[9]": "p23/7",
+        "O_sdram_addr[10]": "p68/2",
+        "O_sdram_ba[0]": "p69/2",
+        "O_sdram_ba[1]": "p70/2",
+        "O_sdram_dqm[0]": "p14/7",
+        "O_sdram_dqm[1]": "p76/2",
+        "O_sdram_dqm[2]": "p29/7",
+        "O_sdram_dqm[3]": "p61/2",
+        "IO_sdram_dq[0]": "p1/7",
+        "IO_sdram_dq[1]": "p2/7",
+        "IO_sdram_dq[2]": "p5/7",
+        "IO_sdram_dq[3]": "p6/7",
+        "IO_sdram_dq[4]": "p7/7",
+        "IO_sdram_dq[5]": "p8/7",
+        "IO_sdram_dq[6]": "p11/7",
+        "IO_sdram_dq[7]": "p12/7",
+        "IO_sdram_dq[8]": "p78/2",
+        "IO_sdram_dq[9]": "p79/2",
+        "IO_sdram_dq[10]": "p82/2",
+        "IO_sdram_dq[11]": "p83/2",
+        "IO_sdram_dq[12]": "p84/2",
+        "IO_sdram_dq[13]": "p85/2",
+        "IO_sdram_dq[14]": "p88/2",
+        "IO_sdram_dq[15]": "p89/2",
+        "IO_sdram_dq[16]": "p42/6",
+        "IO_sdram_dq[17]": "p41/6",
+        "IO_sdram_dq[18]": "p38/6",
+        "IO_sdram_dq[19]": "p37/6",
+        "IO_sdram_dq[20]": "p36/6",
+        "IO_sdram_dq[21]": "p35/6",
+        "IO_sdram_dq[22]": "p32/7",
+        "IO_sdram_dq[23]": "p31/7",
+        "IO_sdram_dq[24]": "p59/2",
+        "IO_sdram_dq[25]": "p58/2",
+        "IO_sdram_dq[26]": "p55/2",
+        "IO_sdram_dq[27]": "p54/2",
+        "IO_sdram_dq[28]": "p53/2",
+        "IO_sdram_dq[29]": "p52/2",
+        "IO_sdram_dq[30]": "p49/3",
+        "IO_sdram_dq[31]": "p48/3"
+      },
+      "external_pins": {
+        "clk": 4,
+        "reset_button": 87,
+        "uart_tx_pin": 69,
+        "led[0]": 15,
+        "led[1]": 16,
+        "led[2]": 17,
+        "led[3]": 18,
+        "led[4]": 19,
+        "led[5]": 20,
+        "dac_din": 54,
+        "dac_ws": 55,
+        "dac_bck": 56,
+        "pa_en": 51
+      },
+      "warnings": [
+        "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+      ]
+    },
+    "stress": {
+      "slack_ns": {
+        "Setup": 4.204,
+        "Hold": 0.037,
+        "Recovery": 33.93,
+        "Removal": 0.89
+      },
+      "worst_paths": {
+        "Setup": [
+          "1",
+          "4.204",
+          "ram/write_data_0_s0/Q",
+          "IO_sdram_dq_0_iobuf/IO",
+          "core_clk:[R]",
+          "sdram_forward:[R]",
+          "18.518",
+          "2.271",
+          "7.043"
+        ],
+        "Hold": [
+          "1",
+          "0.037",
+          "serial/cnt_10_s1/Q",
+          "serial/cnt_10_s1/D",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "0.000",
+          "0.000",
+          "0.548"
+        ],
+        "Recovery": [
+          "1",
+          "33.930",
+          "reset_release_1_s0/Q",
+          "serial/st_0_s4/CLEAR",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "37.037",
+          "0.000",
+          "2.072"
+        ],
+        "Removal": [
+          "1",
+          "0.890",
+          "reset_release_1_s0/Q",
+          "serial/st_0_s4/CLEAR",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "0.000",
+          "0.000",
+          "1.401"
+        ]
+      },
+      "summary": [
+        [
+          "Numbers of Paths Analyzed",
+          "2224"
+        ],
+        [
+          "Numbers of Endpoints Analyzed",
+          "1068"
+        ],
+        [
+          "Numbers of Falling Endpoints",
+          "0"
+        ],
+        [
+          "Numbers of Setup Violated Endpoints",
+          "0"
+        ],
+        [
+          "Numbers of Hold Violated Endpoints",
+          "0"
+        ]
+      ],
+      "resource": {
+        "Logic": 498,
+        "Register": 358,
+        "I/O Port": 13
+      },
+      "bitstream_sha256": "7a1a4f571ae429395f79f6d58a6dd5a2064ea6541c5a120f8771e1094f97ee49",
+      "sip_ports": {
+        "O_sdram_clk": "p73/2",
+        "O_sdram_cke": "p18/7",
+        "O_sdram_cs_n": "p22/7",
+        "O_sdram_ras_n": "p21/7",
+        "O_sdram_cas_n": "p20/7",
+        "O_sdram_wen_n": "p19/7",
+        "O_sdram_addr[0]": "p67/2",
+        "O_sdram_addr[1]": "p66/2",
+        "O_sdram_addr[2]": "p65/2",
+        "O_sdram_addr[3]": "p64/2",
+        "O_sdram_addr[4]": "p28/7",
+        "O_sdram_addr[5]": "p27/7",
+        "O_sdram_addr[6]": "p26/7",
+        "O_sdram_addr[7]": "p25/7",
+        "O_sdram_addr[8]": "p24/7",
+        "O_sdram_addr[9]": "p23/7",
+        "O_sdram_addr[10]": "p68/2",
+        "O_sdram_ba[0]": "p69/2",
+        "O_sdram_ba[1]": "p70/2",
+        "O_sdram_dqm[0]": "p14/7",
+        "O_sdram_dqm[1]": "p76/2",
+        "O_sdram_dqm[2]": "p29/7",
+        "O_sdram_dqm[3]": "p61/2",
+        "IO_sdram_dq[0]": "p1/7",
+        "IO_sdram_dq[1]": "p2/7",
+        "IO_sdram_dq[2]": "p5/7",
+        "IO_sdram_dq[3]": "p6/7",
+        "IO_sdram_dq[4]": "p7/7",
+        "IO_sdram_dq[5]": "p8/7",
+        "IO_sdram_dq[6]": "p11/7",
+        "IO_sdram_dq[7]": "p12/7",
+        "IO_sdram_dq[8]": "p78/2",
+        "IO_sdram_dq[9]": "p79/2",
+        "IO_sdram_dq[10]": "p82/2",
+        "IO_sdram_dq[11]": "p83/2",
+        "IO_sdram_dq[12]": "p84/2",
+        "IO_sdram_dq[13]": "p85/2",
+        "IO_sdram_dq[14]": "p88/2",
+        "IO_sdram_dq[15]": "p89/2",
+        "IO_sdram_dq[16]": "p42/6",
+        "IO_sdram_dq[17]": "p41/6",
+        "IO_sdram_dq[18]": "p38/6",
+        "IO_sdram_dq[19]": "p37/6",
+        "IO_sdram_dq[20]": "p36/6",
+        "IO_sdram_dq[21]": "p35/6",
+        "IO_sdram_dq[22]": "p32/7",
+        "IO_sdram_dq[23]": "p31/7",
+        "IO_sdram_dq[24]": "p59/2",
+        "IO_sdram_dq[25]": "p58/2",
+        "IO_sdram_dq[26]": "p55/2",
+        "IO_sdram_dq[27]": "p54/2",
+        "IO_sdram_dq[28]": "p53/2",
+        "IO_sdram_dq[29]": "p52/2",
+        "IO_sdram_dq[30]": "p49/3",
+        "IO_sdram_dq[31]": "p48/3"
+      },
+      "external_pins": {
+        "clk": 4,
+        "reset_button": 87,
+        "uart_tx_pin": 69,
+        "led[0]": 15,
+        "led[1]": 16,
+        "led[2]": 17,
+        "led[3]": 18,
+        "led[4]": 19,
+        "led[5]": 20,
+        "dac_din": 54,
+        "dac_ws": 55,
+        "dac_bck": 56,
+        "pa_en": 51
+      },
+      "warnings": [
+        "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+      ]
+    }
+  },
+  "negative_cases": {
+    "unregistered_stress": {
+      "slack_ns": {
+        "Setup": -0.877,
+        "Hold": 0.039,
+        "Recovery": 33.412,
+        "Removal": 1.165
+      },
+      "worst_paths": {
+        "Setup": [
+          "1",
+          "-0.877",
+          "ram/state_1_s1/Q",
+          "O_sdram_dqm_3_obuf/O",
+          "sys_clk:[R]",
+          "sdram_forward:[R]",
+          "18.518",
+          "5.329",
+          "9.066"
+        ],
+        "Hold": [
+          "1",
+          "0.039",
+          "serial/cnt_12_s1/Q",
+          "serial/cnt_12_s1/D",
+          "sys_clk:[R]",
+          "sys_clk:[R]",
+          "0.000",
+          "0.000",
+          "0.550"
+        ],
+        "Recovery": [
+          "1",
+          "33.412",
+          "reset_release_1_s0/Q",
+          "serial/st_0_s4/CLEAR",
+          "sys_clk:[R]",
+          "sys_clk:[R]",
+          "37.037",
+          "0.000",
+          "2.590"
+        ],
+        "Removal": [
+          "1",
+          "1.165",
+          "reset_release_1_s0/Q",
+          "serial/st_0_s4/CLEAR",
+          "sys_clk:[R]",
+          "sys_clk:[R]",
+          "0.000",
+          "0.000",
+          "1.676"
+        ]
+      },
+      "summary": [
+        [
+          "Numbers of Paths Analyzed",
+          "1113"
+        ],
+        [
+          "Numbers of Endpoints Analyzed",
+          "1037"
+        ],
+        [
+          "Numbers of Falling Endpoints",
+          "0"
+        ],
+        [
+          "Numbers of Setup Violated Endpoints",
+          "10"
+        ],
+        [
+          "Numbers of Hold Violated Endpoints",
+          "0"
+        ]
+      ]
+    },
+    "missing_io_reason": "missing forwarded clock",
+    "missing_io_falsely_good_slack": {
+      "Setup": 30.341,
+      "Hold": 0.425,
+      "Recovery": 34.33,
+      "Removal": 1.74
+    }
+  },
+  "deployment_scope": "volatile RAM diagnostic bench; not production or exact embedded die qualification",
+  "limitations": [
+    "embedded die/bin and package delays unbound",
+    "remaining clk_d PR1014 warning is PLL input; logic_clk has primary route",
+    "default timing report shows worst25 paths; not an exhaustive per-bit path certificate",
+    "no analog waveform/jitter or temperature/voltage sweep"
+  ],
+  "input_constraints_bits": 32,
+  "output_constraints_bits": 52,
+  "sip_ports": 55,
+  "bench_gate": true,
+  "production_qualified": false,
+  "inputs": {
+    "audit_timing.py": "23ddc0e1df5d7c6b3f477b66f919d640fd7beba8b8658d6ec9eed1022b75bc8f",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79",
+    "rtl/sdram_board_top.v": "ad3ce1ca7a2383aec15c0e00abe558def75d499b8c5059583d2356e338aca56a",
+    "rtl/sdram_word_controller.v": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+    "rtl/uart_tx.v": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f",
+    "constraints/sdram_board.cst": "261854fa9806dad8a10aa11adf01b2fe57a91dc14efdb7a82f0a3e056597b32d",
+    "constraints/sdram_board.sdc": "7adc6725fb0d18ddfe3bb5e952df17d9735d2af9478747b2be744a2505b97325",
+    "reference/stress.sdc": "83f8fc91a87cc8a02331edbea0aef812341094c0edd91ccc8d882bbd4169fc46",
+    "build_pll32_nominal/run.json": "9de47447e11ab767145083ea90b97521bbb1e20873417d83e3e0ed87af309a43",
+    "build_pll32_stress/run.json": "4d9fe18714b1974fae02d46257da762bd2994f08ddbd8990dc154dab26db9686",
+    "evidence/sdram-reference.json": "eed26ff4d5feaccfbc11612e9e014d0507c6e7dae1af67700ea215a946517410",
+    "evidence/board-model.json": "f02f207bfb9758418e898d3fc9dbf6b091286801dcc335efa3d1754fed7e06e8",
+    "evidence/pin-equivalence.json": "f9d5ef12a575bf0e4f046c616b6cf92333d363723cadaf6eb588178abf7b6f1c"
+  }
+}

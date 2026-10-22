@@ -1,0 +1,14 @@
+﻿module_pin,module_signal,host_signal,electrical_note,status
+1,TP_RST,595_Q7,3.3V,conditional_on_actual_module_revision
+2,TP_INT,TP_INT,3.3V,conditional_on_actual_module_revision
+3,TP_SCL,STORE_SCL,3.3V,conditional_on_actual_module_revision
+4,TP_SDA,STORE_SDA,3.3V,conditional_on_actual_module_revision
+5,LCD_BL,candidate_fixed_3V3_through_10k,3.3V; check module current,conditional_on_actual_module_revision
+6,LCD_RST,595_Q6,3.3V; R21 fit check,conditional_on_actual_module_revision
+7,LCD_DC,LCD_SHARED_DC,3.3V,conditional_on_actual_module_revision
+8,LCD_CS,LCD_HARM_CS_N,3.3V,conditional_on_actual_module_revision
+9,SCLK,BUS_SCK,3.3V,conditional_on_actual_module_revision
+10,MOSI,BUS_MOSI,3.3V,conditional_on_actual_module_revision
+11,MISO,NC_write_only_LCD,module output; not tied to GND,conditional_on_actual_module_revision
+12,GND,GND,0V,conditional_on_actual_module_revision
+13,VCC,5V_SOURCE,5V power; not GPIO,conditional_on_actual_module_revision

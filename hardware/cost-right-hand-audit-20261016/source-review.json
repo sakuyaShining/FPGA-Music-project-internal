@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-16",
+  "review_status": "已验证 within source/identity/arithmetic only",
+  "cost_release_status": "讨论中",
+  "right_hand_product_status": "部分实现; physical path待实现/待验证",
+  "source_heads": {
+    "C:\\Users\\Sakuya\\FPGA-Music-project": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\instrument-engine-safety\\FPGA-Music-project": "683db4834a031baca217b9e3ae7a0369644b8935"
+  },
+  "source_is_uncommitted_on_host": true,
+  "sources": [
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\workbench.py",
+      "sha256": "f7691a88690d4d37ccfd63f0c58472a0e1e515068bdd1ec74eb0a55e0f5b724a",
+      "anchors": [
+        {
+          "line": 535,
+          "text": "def _apply_document(self, document, preset_only, sound_label=None):"
+        },
+        {
+          "line": 542,
+          "text": "self.device_status.setText('请先松开全部音符；本版本仅在空闲时应用'); return"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\config_editor.py",
+      "sha256": "0c6d5da5cba91f5f966ae82267609db9c9825dc7b3e25f0354751e2c6d79c7e2",
+      "anchors": []
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\advanced_tools.py",
+      "sha256": "68fc31c8f45fb305fa7d51536cd1c6073d11ce0b64723a7d696c01868c6b6b43",
+      "anchors": []
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\device_config.py",
+      "sha256": "b01f83772785acffed2903e06c607b9c70e87ce69120c5a2f9ac78a1f672c916",
+      "anchors": []
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\dsp_gui.py",
+      "sha256": "2370ffe1d6cd1d0fc51a825d40200d1d24ac945e3f8c1556072b84f0319f4971",
+      "anchors": [
+        {
+          "line": 995,
+          "text": "def send_spectrum(self):"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\scripts\\dsp_host.py",
+      "sha256": "06519fcca3373121f72c1137dcb2a9a69d667552da4804a912f9bb10876a36ee",
+      "anchors": [
+        {
+          "line": 231,
+          "text": "def cmd_spectrum(mode, vals):"
+        },
+        {
+          "line": 249,
+          "text": "def cmd_refresh(voice):"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\src\\rtl\\note_map.v",
+      "sha256": "569df524bda98d33f2e01685b58affdee5ee8ebf7c105d9ced59b587bedbfc98",
+      "anchors": [
+        {
+          "line": 376,
+          "text": "wire [7:0] spec_eff   = pad_mask[k] ? 8'd255 : spec_ram[k];"
+        },
+        {
+          "line": 510,
+          "text": "else if (gact[rf_grp[NB-1:0]]) begin"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\src\\rtl\\tdm_top.v",
+      "sha256": "7beaeec6947213a353930193cb9aa41d5861b7fe6fb63ab12b1d3fc5cc1c243f",
+      "anchors": [
+        {
+          "line": 579,
+          "text": "wire [15:0] pad_mask_eff = {8'd0, (r_harm_pads | pad_state[15:8])};"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\instrument-engine-safety\\FPGA-Music-project\\src\\rtl\\note_map.v",
+      "sha256": "6b801c2ea7f660d1a8d118653eb1262f60892e1032bdf9241ce246576c37d8be",
+      "anchors": [
+        {
+          "line": 405,
+          "text": "wire [7:0] spec_eff   = pad_mask[k] ? 8'd255 : spec_ram[k];"
+        },
+        {
+          "line": 547,
+          "text": "else if (gact[rf_grp[NB-1:0]]) begin"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\instrument-engine-safety\\FPGA-Music-project\\src\\rtl\\tdm_top.v",
+      "sha256": "f0682f79e7eb4b54ddb9e3c1b3f87c564e98258605b8959201b1a90d272adbec",
+      "anchors": [
+        {
+          "line": 647,
+          "text": "wire [15:0] pad_mask_eff = {8'd0, (r_harm_pads | pad_state[15:8])};"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\instrument-engine-safety\\FPGA-Music-project\\src\\rtl\\tdm_engine.v",
+      "sha256": "ab9df08878226e0de0d3fa9ceed3ef04dc1437ea45cb7e638bc9b80546aa3aab",
+      "anchors": [
+        {
+          "line": 829,
+          "text": "pe_mem [load_slot] <= {EXPLICIT_START ? load_start_tag : 8'd0, load_epar};"
+        }
+      ]
+    }
+  ],
+  "electrical_tests_run": false,
+  "rtl_simulation_run": false,
+  "pnr_run": false,
+  "hardware_touched": false,
+  "orders_placed": false
+}

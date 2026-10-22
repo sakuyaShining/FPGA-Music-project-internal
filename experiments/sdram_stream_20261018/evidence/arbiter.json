@@ -1,0 +1,170 @@
+{
+  "status": "PASS independent two-deque stream scoreboard, stalls, clear drain and three deliberate faults",
+  "results": [
+    {
+      "aw": 1,
+      "seed": 19,
+      "cycles": 170004,
+      "clears": [
+        368,
+        1196
+      ],
+      "events": {
+        "record_in": 3182,
+        "memory_responses": 12286,
+        "play_clear_issue": 179,
+        "clear_done": 1564,
+        "record_out": 2957,
+        "play_in": 3142,
+        "play_out": 2482,
+        "play_clear_wait": 1006,
+        "clear_with_pending_memory": 1231,
+        "rec_clear_issue": 129,
+        "rec_clear_wait": 225,
+        "rec_clear_idle": 14,
+        "play_clear_idle": 11
+      },
+      "memory_clients": {
+        "0": 3214,
+        "1": 3066,
+        "2": 3188,
+        "3": 2824
+      },
+      "max_other_grants_before_service": [
+        3,
+        2,
+        3,
+        2
+      ],
+      "max_clear_cycles": 109,
+      "log": "PASS arbiter AW=1 seed=19 cycles=170004 drained\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\tb_arbiter.v:35: $finish called at 1700040000 (1ps)\n"
+    },
+    {
+      "aw": 3,
+      "seed": 71,
+      "cycles": 170004,
+      "clears": [
+        371,
+        1234
+      ],
+      "events": {
+        "record_in": 3209,
+        "memory_responses": 12313,
+        "play_in": 3152,
+        "play_clear_wait": 1031,
+        "clear_with_pending_memory": 1233,
+        "clear_done": 1605,
+        "record_out": 2934,
+        "play_out": 2453,
+        "rec_clear_wait": 202,
+        "play_clear_issue": 194,
+        "rec_clear_issue": 147,
+        "play_clear_idle": 9,
+        "rec_clear_idle": 22
+      },
+      "memory_clients": {
+        "0": 3251,
+        "1": 3045,
+        "2": 3218,
+        "3": 2804
+      },
+      "max_other_grants_before_service": [
+        3,
+        2,
+        3,
+        2
+      ],
+      "max_clear_cycles": 101,
+      "log": "PASS arbiter AW=3 seed=71 cycles=170004 drained\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\tb_arbiter.v:35: $finish called at 1700040000 (1ps)\n"
+    },
+    {
+      "aw": 5,
+      "seed": 991,
+      "cycles": 170004,
+      "clears": [
+        353,
+        1211
+      ],
+      "events": {
+        "record_in": 3198,
+        "memory_responses": 12280,
+        "play_in": 3161,
+        "play_clear_wait": 1040,
+        "clear_with_pending_memory": 1253,
+        "clear_done": 1564,
+        "record_out": 2936,
+        "play_out": 2451,
+        "rec_clear_idle": 17,
+        "rec_clear_wait": 213,
+        "play_clear_issue": 162,
+        "rec_clear_issue": 123,
+        "play_clear_idle": 9
+      },
+      "memory_clients": {
+        "0": 3234,
+        "1": 3040,
+        "2": 3207,
+        "3": 2806
+      },
+      "max_other_grants_before_service": [
+        3,
+        2,
+        3,
+        2
+      ],
+      "max_clear_cycles": 98,
+      "log": "PASS arbiter AW=5 seed=991 cycles=170004 drained\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\tb_arbiter.v:35: $finish called at 1700040000 (1ps)\n"
+    },
+    {
+      "aw": 17,
+      "seed": 331,
+      "cycles": 170004,
+      "clears": [
+        380,
+        1228
+      ],
+      "events": {
+        "record_in": 3190,
+        "memory_responses": 12234,
+        "play_in": 3156,
+        "play_clear_wait": 1065,
+        "clear_with_pending_memory": 1281,
+        "clear_done": 1608,
+        "record_out": 2894,
+        "play_out": 2405,
+        "rec_clear_wait": 216,
+        "play_clear_idle": 17,
+        "rec_clear_issue": 149,
+        "rec_clear_idle": 15,
+        "play_clear_issue": 146
+      },
+      "memory_clients": {
+        "0": 3230,
+        "1": 3023,
+        "2": 3199,
+        "3": 2790
+      },
+      "max_other_grants_before_service": [
+        3,
+        2,
+        3,
+        2
+      ],
+      "max_clear_cycles": 88,
+      "log": "PASS arbiter AW=17 seed=331 cycles=170004 drained\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\tb_arbiter.v:35: $finish called at 1700040000 (1ps)\n"
+    }
+  ],
+  "detected_faults": {
+    "wrong-play-region": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\memory_backend_model.v:24: read before initialization\n       Time: 1285000  Scope: tb_arbiter.memory\n",
+    "early-clear": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\tb_arbiter.v:46: ring capacity\n       Time: 32935000  Scope: tb_arbiter\n",
+    "head-overwrite": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\tb_arbiter.v:48: record head unstable\n       Time: 40645000  Scope: tb_arbiter\n"
+  },
+  "inputs": {
+    "rtl/pcm_sdram_arbiter.v": "04b4eca1cbc600af5f643ef35b609ac58aecaba07977034d4d8d1b25410dbbbb",
+    "tb/memory_backend_model.v": "64d777f58b9ac3c974baa3602605e27ed1eb19f586bb2fdfdf452e4e51094e20",
+    "tb/tb_arbiter.v": "daf79c9e6cd697a27d9c8c9e53976959ccf155b5b74959c97019f692ca6491e5",
+    "check_arbiter.py": "3faf28d21993784d5cba4c0631311853f95131ac2d4c0917648f02c46321c601",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79"
+  },
+  "hardware_tested": false
+}

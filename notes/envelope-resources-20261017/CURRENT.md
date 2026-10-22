@@ -1,0 +1,1 @@
+最新入口为76号报告及experiments/envelope_resources_20261017/project/CURRENT.md。已完成172输入备份、共享包络回归、联合综合和配置诊断SRAM/PCM板验；当前新GUI入口在实验目录launch_gui.cmd。实际记录由latest-hardware.txt定位。

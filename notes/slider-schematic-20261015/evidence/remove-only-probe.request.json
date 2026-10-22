@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "12de57c5-7390-42b3-a59b-dd54f50eff50",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "await eda.dmt_EditorControl.openDocument('ba336973a1f81bda');const w=await eda.sch_PrimitiveWire.getAllPrimitiveId();if(w.length!==1||w[0]!=='a22c7a161a6bd702')throw new Error('Unexpected wire inventory');const a=await eda.sch_PrimitiveWire.delete(w);const b=await eda.sch_PrimitiveComponent.delete('54c9428684f7c357');return {a,b,saved:await eda.sch_Document.save()};",
+    "--args",
+    "{}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

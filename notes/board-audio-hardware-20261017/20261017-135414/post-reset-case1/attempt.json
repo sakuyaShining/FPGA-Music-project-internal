@@ -1,0 +1,20 @@
+{
+  "time": "2026-10-17T14:02:39.069482+08:00",
+  "command": [
+    "C:\\Program Files\\python\\python.exe",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\board_audio_20261017\\package\\board_check.py",
+    "--port",
+    "COM6",
+    "--case",
+    "1",
+    "--output",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\board-audio-hardware-20261017\\20261017-135414\\post-reset-case1"
+  ],
+  "port_hwid": "USB VID:PID=0403:6010 SER=2025030317B",
+  "script_sha256": "441f1af8274ab551871ab27048407eec6e3862d7e6ef43f98aae87fc6cf1bd60",
+  "checker_sha256": "9ee9ddf019c387899e1233bf44559f98566a4ae2f1ffdc00091ac61c16c0737e",
+  "bitstream_sha256": "7384acdf9fb51f887dc20d1d63ed01a8dc69cb36d78305fc77d9e6a8df8ca246",
+  "case": 1,
+  "status": "attempt recorded before opening UART",
+  "flash_read_or_written": false
+}

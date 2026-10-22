@@ -1,0 +1,64 @@
+{
+  "status": "discussion_not_quotation_or_release",
+  "budget_target_cny": 500,
+  "allocation_caps_cny": {
+    "right_touch_display": 170,
+    "sensing_controls_eeprom_components": 80,
+    "prototype_and_final_pcbs": 80,
+    "assembly": 35,
+    "connectors_protection_passives_wires": 35,
+    "cover_and_mounting": 20,
+    "TF_card": 30,
+    "shipping": 20,
+    "reserve": 30
+  },
+  "allocation_total_cny": 500,
+  "DFR0669_manufacturer_list_price_cny": 169.0,
+  "remaining_after_DFR0669_cny": 331.0,
+  "display_payloads": [
+    {
+      "scenario": "2.8_RGB565",
+      "pixels": 76800,
+      "wire_bytes_per_pixel": 2,
+      "full_payload_bytes": 153600,
+      "ideal_full_transfer_ms_at_6_75MHz": 182.04444444444445,
+      "ideal_full_transfer_ms_at_10MHz": 122.88000000000001,
+      "scope": "payload arithmetic only; clocks/overhead/module timing not qualified"
+    },
+    {
+      "scenario": "3.5_RGB565",
+      "pixels": 153600,
+      "wire_bytes_per_pixel": 2,
+      "full_payload_bytes": 307200,
+      "ideal_full_transfer_ms_at_6_75MHz": 364.0888888888889,
+      "ideal_full_transfer_ms_at_10MHz": 245.76000000000002,
+      "scope": "payload arithmetic only; clocks/overhead/module timing not qualified"
+    },
+    {
+      "scenario": "DFR0669_RGB666_3byte_planning",
+      "pixels": 153600,
+      "wire_bytes_per_pixel": 3,
+      "full_payload_bytes": 460800,
+      "ideal_full_transfer_ms_at_6_75MHz": 546.1333333333333,
+      "ideal_full_transfer_ms_at_10MHz": 368.64000000000004,
+      "scope": "payload arithmetic only; clocks/overhead/module timing not qualified"
+    }
+  ],
+  "GT911_read_model": {
+    "bus_Hz": 400000,
+    "status_read_bytes_with_addresses": 5,
+    "five_point_read_bytes_with_addresses": 44,
+    "clear_status_write_bytes": 4,
+    "clock_count": 477,
+    "ideal_bus_ms": 1.1925,
+    "exclusions": "START STOP bus free stretch arbitration sensor processing debounce audio output"
+  },
+  "GPIO_model": {
+    "six_RC_lanes_one_touch_LCD_example": 18,
+    "second_LCD_independent_CS_DC_RST_extra": 3,
+    "two_display_example_total": 21,
+    "scope": "logical budget only; not real Nano pin assignment"
+  },
+  "no_RTL_changes": true,
+  "no_order": true
+}

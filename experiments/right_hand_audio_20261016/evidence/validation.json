@@ -1,0 +1,22 @@
+{
+  "status": "PASS within control and engine simulations",
+  "audio_hardware_tested": false,
+  "product_engine_modified": false,
+  "inputs": {
+    "rtl\\rh_fader_gain_map.v": "4a15353dc921388d71dff712999b2149a7e0245ed2641462ede3e79b7a704414",
+    "rtl\\rh_music_probe.v": "d0f494e2c8bcf0925af85ed2ca446854dcf938e9ae452568958564fc5ac1e41e",
+    "rtl\\rh_performance_control.v": "52a139a2730b0824d90b1f19f40b4ab50b6a2f7b23cdc2fe05ccb31a07fd4e99",
+    "rtl\\rh_timbre_slew.v": "317febd64da227a12726689ddc482168abe9e534cf4ee0d55e6feec42274338c",
+    "engine\\tdm_engine_rh.v": "f24a278b501b8225219a6b89e93259c6484f2812eb9ebdf1d34113d09c575b59",
+    "engine\\tdm_top_rh.v": "599061e842cbb3f6d3664d88c9ddd7951741f3717be0a9bbf0c1ec072e5a30e8",
+    "tb_control.v": "9ab97987b901504610b7091b3fc0a8a83cd4e17dbfa70950b0fa72fda6afa23e",
+    "tb_engine.v": "edc9fc20738082aa1bfb199f5c40f8da9a34ba2445703618fe2a0df54a0a21ef",
+    "tb_music.v": "d498bbac7984d750aac0010ec4ace33607e7c0a299057e9ca792e94206cb6057",
+    "run_validation.py": "4bdff2528066bbd0d30bd2d8c6e127a36fa5a8fa07d5d9ec0ca966cc2224ce3c",
+    "generate_assets.py": "385fd6e46086ffa689824ce3bf5e544a196088f98262d63c70132f7361629476",
+    "audition-config.json": "ee362ed2c20f1afb518b108ff8b1cefcbebecd59142b435d21b1d995b97d3902",
+    "fader_gain_q8.hex": "38a644d29b92c5b3267bab5931966a033e35b75973ad84b7af362be74194f6a5"
+  },
+  "control_log": "evidence/run-control.log",
+  "engine_log": "evidence/run-engine.log"
+}

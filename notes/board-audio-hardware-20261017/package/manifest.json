@@ -1,0 +1,17 @@
+{
+  "version": "board-audio-hardware-20261017-v1",
+  "device": "GW2AR-LV18QN88C8/I7",
+  "profile": 114,
+  "abi": 1,
+  "reset_button": "S2 / FPGA pin87 / active high",
+  "mode": "SRAM only",
+  "audio_image_tested": true,
+  "mute_image_tested": false,
+  "flash_read_or_written": false,
+  "files": {
+    "board-audio-sram.fs": "7384acdf9fb51f887dc20d1d63ed01a8dc69cb36d78305fc77d9e6a8df8ca246",
+    "board_check.py": "9ee9ddf019c387899e1233bf44559f98566a4ae2f1ffdc00091ac61c16c0737e",
+    "mute-sram.fs": "69c13d53a7cc3af8aa0299a67ca7d2a79cc550e92fabe94c3b317a622c5483ad",
+    "README.md": "43d9c4a6e71aa9e62ddec4bb5a205de91fc7ae14ad9d68e438d2db4bd3e9bb7a"
+  }
+}

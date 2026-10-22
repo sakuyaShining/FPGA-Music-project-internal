@@ -1,0 +1,24 @@
+{
+  "version": "board-audio-20261017-v0",
+  "status": "已实现待验证",
+  "verified": "限定数字仿真、内部27MHz PnR、文件引脚身份",
+  "source_main": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+  "source_engine": "683db4834a031baca217b9e3ae7a0369644b8935",
+  "selected_build": "build_ready_default",
+  "resource": {
+    "Logic": 15258,
+    "Register": 7287,
+    "BSRAM": 36,
+    "CLS": 9340,
+    "I/O Port": 14
+  },
+  "slack_ns": {
+    "Setup": 3.523,
+    "Hold": 0.214
+  },
+  "hardware_tested": false,
+  "serial_opened": false,
+  "fpga_programmed": false,
+  "flash_read_or_written": false,
+  "next": "用户上电后核对器件/连接/串口，SRAM临时测试"
+}

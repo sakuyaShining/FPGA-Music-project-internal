@@ -1,0 +1,54 @@
+{
+  "status": "PASS restored stage76 SRAM; identity/sample period/zero PCM verified",
+  "port": "COM6",
+  "image": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\envelope_resources_20261017\\package\\config-sram.fs",
+  "image_sha256": "8c2d52e59b13b8d343b54a9d602d265154dc6cc9640320df10835f2e1b1c253c",
+  "script_sha256": "c023b7d42d0fa2f7793d877d9cb18e516dffd32e90efc811349237f370a7f62c",
+  "flash_read_or_written": false,
+  "tf_accessed": false,
+  "audio_test_started": false,
+  "program_command": [
+    "D:/FPGA-Project/Gowin/Gowin_V1.9.11.03_Education/Gowin_V1.9.11.03_Education_x64/Programmer/bin/programmer_cli.exe",
+    "--device",
+    "GW2AR-18C",
+    "--operation_index",
+    "2",
+    "--chain_size",
+    "1",
+    "--chain_index",
+    "0",
+    "--channel",
+    "0",
+    "--fsFile",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\envelope_resources_20261017\\package\\config-sram.fs"
+  ],
+  "identity": {
+    "C0": 114,
+    "C2": 118,
+    "C3": 1,
+    "D0": 117,
+    "D1": 1,
+    "A4": 211,
+    "A9": 32
+  },
+  "snapshot": {
+    "ack": 0,
+    "on": 0,
+    "off": 0,
+    "active": 0,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "board_status": {
+    "ready": true,
+    "armed": false,
+    "warm": true,
+    "initialized": true,
+    "running": false,
+    "bound": false,
+    "fault": false,
+    "case": 118
+  },
+  "zero_pcm_samples": 2048
+}

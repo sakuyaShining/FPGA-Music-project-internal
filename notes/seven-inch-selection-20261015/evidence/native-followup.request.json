@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "7050cfd7-edaf-486d-b00a-63c36da1de58",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "const library=await eda.lib_LibrariesList.getSystemLibraryUuid();const out={library,queries:{}};for(const q of __CLI__.args.queries)out.queries[q]=await eda.lib_Device.search(q,library,undefined,undefined,20,1);return out;",
+    "--args",
+    "{\"queries\": [\"LT7686\", \"LT7381\", \"SSP0700A\", \"MSP7001\"]}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

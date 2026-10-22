@@ -1,0 +1,1329 @@
+CD74HCx4067 High-Speed CMOS Logic 16-Channel Analog Multiplexer and 
+Demultiplexer
+1 Features
+• Wide analog input voltage range
+• Low ON resistance
+– VCC = 4.5V, 70Ω (typ)
+– VCC = 6V, 60Ω (typ)
+• Fast switching and propagation speeds
+• Break-before-make switching
+– 6ns (typ) at 4.5V
+• Available in both narrow- and wide-body plastic 
+packages
+• Fanout (over-temperature range)
+– Standard outputs: 10 LSTTL loads
+– Bus driver outputs: 15 LSTTL loads
+• Wide operating temperature range: –55°C to 
++125°C
+• Balanced propagation delay and transition times
+• Significant power reduction compared to LSTTL 
+logic ICs
+• HC types
+– 2V to 6V operation
+– High noise immunity: NIL = 30%, NIH = 30% of 
+VCC at VCC = 5V
+• HCT types
+– 4.5V to 5.5V operation
+– Direct LSTTL input logic compatibility, VIL= 0.8V 
+(max), VIH = 2V (min)
+– CMOS input compatibility, Il ≤ 1µA at VOL, VOH
+2 Applications
+• Energy infrastructure
+• Building automation
+• Wireless infrastructure
+• Appliances
+• Data center & enterprise computing
+• Retail automation & payment
+• Signal gating
+• Modulators
+• Squelch controls
+• demodulators
+• choppers
+• commutating switches
+• Analog-to-digital and digital-to-analog conversions
+• Digital control of frequency, impedance, phase, 
+and analog-signal gain
+3 Description
+The CD74HC4067 and CD74HCT4067 devices are 
+digitally controlled analog switches that use silicon-
+gate CMOS technology to achieve operating speeds 
+similar to LSTTL, with the low power consumption of 
+standard CMOS integrated circuits.
+These analog multiplexers and demultiplexers control 
+analog voltages that may vary across the voltage 
+supply range. They are bidirectional switches, thus 
+allowing any analog input to be used as an output and 
+vice-versa. The switches have low on resistance and 
+low off leakages. In addition, these devices have an 
+enable control that, when high, disables all switches 
+to their off state.
+Package Information 
+PART NUMBER PACKAGE (1) BODY SIZE (NOM)
+CD74HC4067M SOIC(24) 15.4mm × 10.3mm
+CD74HC4067M96 SOIC(24) 15.4mm × 10.3mm
+CD74HC4067SM96 SSOP(24) 8.20mm × 7.40mm
+CD74HCT4067M SOIC(24) 15.4mm × 10.3mm
+CD74HC4067PW TSSOP(24) 7.8mm × 6.4mm
+CD74HCT4067PW TSSOP(24) 7.8mm × 6.4mm
+(1) For all available packages, see the orderable addendum at 
+the end of the data sheet.
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+P N
+I0
+9
+P N
+I15
+16
+14 - OUTPUT CIRCUITS
+SAME AS ABOVE
+(WITH ANALOG INPUTS)
+I TO I1 14
+BINARY
+1 OF 16
+DECODER
+S = 5 STAGESN
+E = 4 STAGES
+10
+11
+14
+13S
+S
+S
+S
+3
+2
+1
+0E
+15
+1 COMMON
+INPUT/
+OUTPUT
+Functional Block Diagram
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+ www.ti.com
+2 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: CD74HC4067 CD74HCT4067
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Pin Configuration and Functions...................................4
+4.1 Device Functional Modes............................................5
+5 Absolute Maximum Ratings........................................... 5
+6 Thermal Information........................................................6
+7 Recommended Operating Conditions...........................6
+8 Electrical Characteristics: HC Devices..........................7
+9 Electrical Characteristics: HCT Devices....................... 8
+10 HTC Input Loading........................................................ 8
+11 Switching Characteristics HC.......................................9
+12 Switching Characteristics HCT.................................. 10
+13 Analog Channel Specifications.................................. 11
+14 Typical Characteristics............................................... 12
+15 Analog Test Circuits....................................................13
+16 Device and Documentation Support..........................14
+16.1 Related Documentation.......................................... 14
+16.2 Receiving Notification of Documentation Updates..14
+16.3 Support Resources................................................. 14
+16.4 Trademarks.............................................................14
+16.5 Electrostatic Discharge Caution..............................14
+16.6 Glossary..................................................................14
+17 Revision History.......................................................... 14
+18 Mechanical, Packaging, and Orderable 
+Information.................................................................... 14
+www.ti.com
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 3
+Product Folder Links: CD74HC4067 CD74HCT4067
+4 Pin Configuration and Functions
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+COMMON
+I
+I
+I
+I
+I
+I
+I
+I
+S
+S
+GND
+7
+6
+5
+4
+3
+2
+1
+0
+0
+1
+16
+17
+18
+19
+20
+21
+22
+23
+24
+15
+14
+13
+VCC
+I
+I
+9
+10
+I11
+I12
+I14
+E
+S
+S
+I
+I
+2
+3
+8
+13
+I15
+INPUT/OUTPUT
+Figure 4-1. N, DW, or DB Packages 24-Pin PDIP, SOIC, or SSOP (Top View) 
+PIN
+TYPE(1) DESCRIPTION
+NAME NO.
+COMMON 
+INPUT/
+OUTPUT
+1 IO Common input or output.
+I7 2 IO Switch input/output
+I6 3 IO Switch input/output
+I5 4 IO Switch input/output
+I4 5 IO Switch input/output
+I3 6 IO Switch input/output
+I2 7 IO Switch input/output
+I1 8 IO Switch input/output
+I0 9 IO Switch input/output
+S0 10 I Select/Address pin
+S1 11 I Select/Address pin
+GND 12 P Ground pin
+S3 13 I Select/Address pin
+S2 14 I Select/Address pin
+E 15 I Enable for all switches ON/OFF
+I15 16 IO Switch input/output
+I14 17 IO Switch input/output
+I13 18 IO Switch input/output
+I12 19 IO Switch input/output
+I11 20 IO Switch input/output
+I10 21 IO Switch input/output
+I9 22 IO Switch input/output
+I8 23 IO Switch input/output
+VCC 24 P Power pin
+(1) I = input, O = output, P = Power
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+ www.ti.com
+4 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: CD74HC4067 CD74HCT4067
+4.1 Device Functional Modes
+Table 4-1. Truth Table 
+S0 S1 S2 S3 E SELECTED
+CHANNEL
+X X X X 1 None
+0 0 0 0 0 0
+1 0 0 0 0 1
+0 1 0 0 0 2
+1 1 0 0 0 3
+0 0 1 0 0 4
+1 0 1 0 0 5
+0 1 1 0 0 6
+1 1 1 0 0 7
+0 0 0 1 0 8
+1 0 0 1 0 9
+0 1 0 1 0 10
+1 1 0 1 0 11
+0 0 1 1 0 12
+1 0 1 1 0 13
+0 1 1 1 0 14
+1 1 1 1 0 15
+5 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1) (2)
+MIN MAX UNIT
+VCC HC
+DC Supply voltage
+-0.5 7 V
+VCC HCT –0.5 7 V
+IIK DC input diode current For VI < -0.5V or VI > VCC + 0.5V –20 20 mA
+IOK DC output diode current For VO < -0.5V or VO > VCC + 
+-0.5V –20 20 mA
+ICC DC VCC or ground current –50 50 mA
+DC Output 
+Source or Sink 
+Current per 
+Output Pin, IO
+For VO > -0.5V or VO < VCC + -0.5V –25 25 mA
+TJMAX Maximum junction temperature (Plastic Package) 150 °C
+Tstg Storage temperature –65 150 °C
+(1) Stresses beyond those listed under Absolute Maximum Rating may cause permanent damage to the device. These are stress 
+ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated 
+under Recommended Operating Condition. Exposure to absolute-maximum-rated conditions for extended periods may affect device 
+reliability.
+(2) All voltages are with respect to ground, unless otherwise specified.
+www.ti.com
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 5
+Product Folder Links: CD74HC4067 CD74HCT4067
+6 Thermal Information
+THERMAL METRIC (1)
+CD74HCx4067
+UNITE (PDIP) M (SOIC) SM (SSOP) PW (TSSOP)
+24 PINS 24 PINS 24 PINS 24 PINS
+RθJA Junction-to-ambient thermal resistance 67 84.8 96.2 97.4 °C/W
+RθJC(top)
+Junction-to-case (top) thermal 
+resistance N/A 57.0 60.0 45.0 °C/W
+RθJB Junction-to-board thermal resistance N/A 59.5 65.1 62.7 °C/W
+ΨJT
+Junction-to-top characterization 
+parameter N/A 29.0 21.1 5.20 °C/W
+ΨJB
+Junction-to-board characterization 
+parameter N/A 59.0 64.4 62.1 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+report.
+7 Recommended Operating Conditions
+MIN NOM MAX UNIT
+VCC
+Supply voltage range (TA = full package temperature 
+range)(2)
+CD54 and 74HC 
+types 2 6 V
+CD54 and 74HCT 
+types 4.5 5.5
+VIS Analog switch I/O voltage 0 VCC V
+TA Ambient temperature –55 125 °C
+tr , tf Input rise and fall times
+2 V 0 1000
+ns4.5 V 0 500
+6 V 0 400
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+ www.ti.com
+6 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: CD74HC4067 CD74HCT4067
+8 Electrical Characteristics: HC Devices
+Over operating free-air temperature range (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+Analog Switch
+VIS (V) VI (V) VCC (V) TA 
+High Level Input Voltage VIH
+2
+25°C 1.5
+V
+–40°C to +85°C 1.5
+–55°C to +125°C 1.5
+4.5
+25°C 3.15
+–40°C to +85°C 3.15
+–55°C to +125°C 3.15
+6
+25°C 4.2
+–40°C to +85°C 4.2
+–55°C to +125°C 4.2
+Low Level Input Voltage VIL
+2
+25°C 0.5
+V
+–40°C to +85°C 0.5
+–55°C to +125°C 0.5
+4.5
+25°C 1.35
+–40°C to +85°C 1.35
+–55°C to +125°C 1.35
+6
+25°C 1.8
+–40°C to +85°C 1.8
+–55°C to +125°C 1.8
+"ON" Resistance IO = 1mA RON
+VCC or GND VCC or GND
+4.5
+25°C 70 160
+Ω
+–40°C to +85°C 200
+–55°C to +125°C 240
+6
+25°C 60 140
+–40°C to +85°C 175
+–55°C to +125°C 210
+VCC to GND VCC to GND
+4.5
+25°C 90 180
+Ω
+–40°C to +85°C 225
+–55°C to +125°C 270
+6
+25°C 80 160
+–40°C to +85°C 200
+–55°C to +125°C 240
+"ON" Resistance Between Any Two 
+Switches ΔRON
+4.5
+25°C
+10
+Ω
+6 8.5
+Off-Switch Leakage Current IZ E = VCC VCC or GND 6
+25°C ±0.8
+µA–55°C to 85°C ±8
+–55°C to 125°C ±8
+Input Leakage Current (Any Control) IIL
+VCC or 
+GND(1) 6
+25°C ±0.1
+µA–55°C to 85°C ±1
+–55°C to 125°C ±1
+www.ti.com
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 7
+Product Folder Links: CD74HC4067 CD74HCT4067
+Over operating free-air temperature range (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+Quiescent Device Current
+ ICC VCC or GND 6
+25°C 8
+µA–55°C to 85°C 80
+–55°C to 125°C 160
+(1) Any voltage between VCC and GND.
+9 Electrical Characteristics: HCT Devices
+Over operating free-air temperature range (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+Analog Switch
+VIS (V) VI (V) VCC (V) TA 
+High Level Input Voltage VIH
+4.5
+25°C 2
+V–40°C to +85°C 2
+–55°C to +125°C 2
+Low Level Input Voltage VIL
+25°C 0.8
+V–40°C to +85°C 0.8
+–55°C to +125°C 0.8
+"ON" Resistance IO = 1mA RON
+VCC or GND VCC or GND
+4.5
+25°C 70 160
+Ω–40°C to +85°C 200
+–55°C to +125°C 240
+VCC to GND VCC to GND
+25°C 90 180
+Ω–40°C to +85°C 225
+–55°C to +125°C 270
+"ON" Resistance Between Any Two 
+Switches ΔRON 4.5 25°C 10 Ω
+Off-Switch Leakage Current IZ E = VCC VCC or GND 5.5
+25°C ±0.8
+µA–55°C to 85°C ±8
+–55°C to 125°C ±8
+Input Leakage Current (Any Control) IIL VCC or GND 5.5
+25°C ±0.1
+µA–55°C to 85°C ±1
+–55°C to 125°C ±1
+Quiescent Device Current
+ ICC VCC or GND 5.5
+25°C 8
+µA
+–55°C to 85°C 80
+–55°C to 125°C 160
+Additional Quiescent Device Current 
+Per Input Pin: 1 Unit Load
+ 
+▲ICC 
+(1) VCC - 2.1 4.5 to 5.5
+25°C 100 360
+–55°C to 85°C 450
+–55°C to 125°C 490
+(1) For dual-supply systems theoretical worst case (VI = 2.4V, VCC = 5.5V) specification is 1.8mA
+10 HTC Input Loading
+over operating free-air temperature range (unless otherwise noted)
+INPUT UNIT LOAD(1)
+S0 – S3 0.5
+E 0.3
+(1) Unit Load is the ΔICC limit specified in Section 9 (for example, 360-µA max at 25°C.
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+ www.ti.com
+8 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: CD74HC4067 CD74HCT4067
+11 Switching Characteristics HC
+over operating free-air temperature range (unless otherwise noted)
+Parameter Test Conditions CL (pF) MIN NOM MAX UNIT
+VCC (V) TA
+Propagati
+on Delay 
+Time 
+Switch In 
+to Out
+tPHL, tPLH
+2
+ 
+25°C
+50
+75
+ns
+-40°C to 85°C 95
+-55°C to 125°C 110
+4.5
+25°C 15
+-40°C to 85°C 19
+-55°C to 125°C 22
+6
+25°C 13
+-40°C to 85°C 16
+-55°C to 125°C 19
+5 25°C 15 6
+Switch 
+Turn On E 
+to Out
+tPZH, tPZL
+2
+25°C
+50
+275
+ns
+-40°C to 85°C 345
+-55°C to 125°C 415
+4.5
+25°C 55
+-40°C to 85°C 69
+-55°C to 125°C 83
+6
+25°C 47
+-40°C to 85°C 59
+-55°C to 125°C 71
+5 25°C 15 23
+Switch 
+Turn On 
+Sn to Out
+tPZH, tPZL
+2
+25°C
+50
+300
+ns
+-40°C to 85°C 375
+-55°C to 125°C 450
+4.5
+25°C 60
+-40°C to 85°C 75
+-55°C to 125°C 90
+6
+25°C 51
+-40°C to 85°C 64
+-55°C to 125°C 76
+5 25°C 15 25
+Switch 
+Turn Off !
+E to Out
+tPHZ, tPLZ
+2
+25°C
+50
+275
+ns
+-40°C to 85°C 345
+-55°C to 125°C 415
+4.5
+25°C 55
+-40°C to 85°C 69
+-55°C to 125°C 83
+6
+25°C 47
+-40°C to 85°C 59
+-55°C to 125°C 71
+5 25°C 15 23
+www.ti.com
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 9
+Product Folder Links: CD74HC4067 CD74HCT4067
+over operating free-air temperature range (unless otherwise noted)
+Parameter Test Conditions CL (pF) MIN NOM MAX UNIT
+Switch 
+Turn Off 
+Sn to Out
+tPHZ, tPLZ
+2
+25°C
+50
+290
+ns
+-40°C to 85°C 365
+-55°C to 125°C 435
+4.5
+25°C 58
+-40°C to 85°C 73
+-55°C to 125°C 87
+6
+25°C 49
+-40°C to 85°C 62
+-55°C to 125°C 74
+5 25°C 15 21
+Input 
+(Control) 
+Capacitan
+ce
+CI
+25°C 10
+pF
+-40°C to 85°C 10
+-55°C to 125°C 10
+CPD 
+Power 
+dissipatio
+n 
+capacitan
+ce(1)
+CPD 5 25°C 93
+12 Switching Characteristics HCT
+over operating free-air temperature range (unless otherwise noted)
+Parameter Test Conditions CL (pF) MIN NOM MAX UNIT
+VCC (V) TA
+Propagati
+on Delay 
+Time 
+Switch In 
+to Out
+tPHL, tPLH
+4.5
+25°C
+50
+15
+ns
+-40°C to 85°C 19
+-55°C to 125°C 22
+5 25°C 15 6
+Switch 
+Turn On E 
+to Out
+tPZH, tPZL
+4.5
+25°C
+50
+60
+ns
+-40°C to 85°C 75
+-55°C to 125°C 90
+5 25°C 15 25
+Switch 
+Turn On 
+Sn to Out
+tPZH, tPZL
+4.5
+25°C
+50
+60
+ns
+-40°C to 85°C 75
+-55°C to 125°C 90
+5 25°C 15 25
+Switch 
+Turn Off !
+E to Out
+tPHZ, tPLZ
+4.5
+25°C
+50
+55
+ns
+-40°C to 85°C 69
+-55°C to 125°C 83
+5 25°C 15 23
+Switch 
+Turn Off 
+Sn to Out
+tPHZ, tPLZ
+4.5
+25°C
+50
+58
+ns
+-40°C to 85°C 73
+-55°C to 125°C 87
+5 25°C 15 21
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+ www.ti.com
+10 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: CD74HC4067 CD74HCT4067
+over operating free-air temperature range (unless otherwise noted)
+Parameter Test Conditions CL (pF) MIN NOM MAX UNIT
+Input 
+(Control) 
+Capacitan
+ce
+CI
+25°C 10
+pF
+-40°C to 85°C 10
+-55°C to 125°C 10
+CPD 
+Power 
+dissipatio
+n 
+capacitan
+ce(1)
+CPD 5 25°C 96
+13 Analog Channel Specifications
+over operating free-air temperature range (unless otherwise noted)
+Parameter Test Conditions VCC (V) HC HCT UNIT
+Switch Frequency Response Bandwidth at -3dB 4.5 89 89 MHz
+Total Harmonic Distortion 1kHz, VIS= 
+4VPP
+4.5 0.051 0.051 %
+Switch "OFF" signal feedthrough 4.5 -75 -75 dB
+CI
+Switch input capacitance 5 5 pF
+CCOM
+Common Capacitance 50 50 pF
+www.ti.com
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 11
+Product Folder Links: CD74HC4067 CD74HCT4067
+14 Typical Characteristics
+140
+120
+100
+80
+60
+40
+20
+0
+0 1 2 4 5 6 7 8 9 103
+INPUT SIGNAL VOLTAGE, V (V)IS
+“ON” RESISTANCE, R
+ON
+(Ω)
+VCC = 4.5V
+TA = 25°C GND = 0 V
+Figure 14-1. Typical ON Resistance vs Input Signal Voltage
+0
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+10 10 10 10 10
+FREQUENCY, f (Hz)
+4 6 7 8 5
+UNITS (dB)
+-8
+-9
+-10
+VCC = 4.5 V RL = 50 Ω TA = 25°C
+Figure 14-2. Typical Switch Frequency Response
+0
+-10
+-20
+-30
+-40
+-50
+-60
+-70
+10 10 10 10 10
+FREQUENCY, f (Hz)
+4 6 7 8 5
+SWITCH-OFF SIGNAL FEEDTHROUGH (dB)
+-80
+-90
+-100
+VCC = 4.5 V RL = 50 Ω TA = 25°C
+Figure 14-3. Typical Switch-Off Signal Feedthrough vs Frequency
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+ www.ti.com
+12 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: CD74HC4067 CD74HCT4067
+15 Analog Test Circuits
+Figure 15-1. Frequency Response Test Circuit
+ Figure 15-2. Sine Wave Distortion Test Circuit
+Figure 15-3. Control-to-Switch Feedthrough Noise 
+Test Circuit
+Figure 15-4. Switch Off Signal Feedthrough Test 
+Circuit
+tPHL tPLH
+tTHL tTLH
+90%
+50%
+10%
+50%
+10%INVERTING
+OUTPUT
+INPUT
+GND
+VCC
+t = 6nsr t = 6nsf
+90%
+Figure 15-5. HC Transition Times and Propagation 
+Delay Times, Combination Logic
+tPHL tPLH
+tTHL tTLH
+2.7V
+1.3V
+0.3V
+1.3V
+10%INVERTING
+OUTPUT
+INPUT
+GND
+3V
+t = 6nsr t = 6nsf
+90%
+Figure 15-6. HCT Transition Times and Propagation 
+Delay Times, Combination Logic
+www.ti.com
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+Copyright © 2024 Texas Instruments Incorporated Submit Document Feedback 13
+Product Folder Links: CD74HC4067 CD74HCT4067
+16 Device and Documentation Support
+16.1 Related Documentation
+• Texas Instruments, High-Speed CMOS Logic 16-Channel Analog Multiplexer/Demultiplexer
+16.2 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Notifications to register and receive a weekly digest of any product information that has changed. For change 
+details, review the revision history included in any revised document.
+16.3 Support Resources
+TI E2E ™ support forums  are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+16.4 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+16.5 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+16.6 Glossary
+TI Glossary This glossary lists and explains terms, acronyms, and definitions.
+17 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision C (November 2003) to Revision D (December 2024) Page
+• Updated Applications, Pin Configuration and Functions section, ESD Ratings table, Thermal Information 
+table, Detailed Description section, Application and Implementation section, Power Supply Recommendations 
+section, Layout section, Device and Documentation Support section, and Mechanical, Packaging, and 
+Orderable Information section............................................................................................................................ 1
+18 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+CD74HC4067, CD74HCT4067
+SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024
+ www.ti.com
+14 Submit Document Feedback Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: CD74HC4067 CD74HCT4067
+PACKAGE OPTION ADDENDUM
+www.ti.com 1-Apr-2026
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+CD74HC4067DGSR Active Production VSSOP (DGS) | 24 5000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HC4067
+CD74HC4067M96 Active Production SOIC (DW) | 24 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HC4067M
+CD74HC4067M96.A Active Production SOIC (DW) | 24 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HC4067M
+CD74HC4067PWR Active Production TSSOP (PW) | 24 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HC4067
+CD74HC4067PWR.A Active Production TSSOP (PW) | 24 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 HC4067
+CD74HC4067RGYR Active Production VQFN (RGY) | 24 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -55 to 125 HC4067
+CD74HC4067RGYR.A Active Production VQFN (RGY) | 24 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 HC4067
+CD74HC4067SM96 Active Production SSOP (DB) | 24 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HP4067
+CD74HC4067SM96.A Active Production SSOP (DB) | 24 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HP4067
+CD74HC4067SM96E4 Active Production SSOP (DB) | 24 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HP4067
+CD74HC4067SM96G4 Active Production SSOP (DB) | 24 2000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HP4067
+CD74HCT4067DGSR Active Production VSSOP (DGS) | 24 5000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HT4067
+CD74HCT4067M Active Production SOIC (DW) | 24 25 | TUBE Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HCT4067M
+CD74HCT4067M.A Active Production SOIC (DW) | 24 25 | TUBE Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HCT4067M
+CD74HCT4067ME4 Active Production SOIC (DW) | 24 25 | TUBE Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HCT4067M
+CD74HCT4067MG4 Active Production SOIC (DW) | 24 25 | TUBE Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HCT4067M
+CD74HCT4067PWR Active Production TSSOP (PW) | 24 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -55 to 125 HCT4067
+CD74HCT4067PWR.A Active Production TSSOP (PW) | 24 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 HCT4067
+CD74HCT4067RGYR Active Production VQFN (RGY) | 24 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -55 to 125 HCT4067
+CD74HCT4067RGYR.A Active Production VQFN (RGY) | 24 3000 | LARGE T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 HCT4067
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+Addendum-Page 1
+PACKAGE OPTION ADDENDUM
+www.ti.com 1-Apr-2026
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+ OTHER QUALIFIED VERSIONS OF CD74HC4067, CD74HCT4067 :
+• Automotive : CD74HC4067-Q1, CD74HCT4067-Q1
+ NOTE: Qualified Version Definitions:
+• Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+Addendum-Page 2
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 10-Aug-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+CD74HC4067DGSR VSSOP DGS 24 5000 330.0 16.4 5.44 6.4 1.45 8.0 16.0 Q1
+CD74HC4067M96 SOIC DW 24 2000 330.0 24.4 10.75 15.7 2.7 12.0 24.0 Q1
+CD74HC4067PWR TSSOP PW 24 2000 330.0 16.4 6.95 8.3 1.6 8.0 16.0 Q1
+CD74HC4067RGYR VQFN RGY 24 3000 330.0 12.4 3.8 5.8 1.2 8.0 12.0 Q1
+CD74HC4067SM96 SSOP DB 24 2000 330.0 16.4 8.2 8.8 2.5 12.0 16.0 Q1
+CD74HCT4067DGSR VSSOP DGS 24 5000 330.0 16.4 5.44 6.4 1.45 8.0 16.0 Q1
+CD74HCT4067PWR TSSOP PW 24 3000 330.0 16.4 6.95 8.3 1.6 8.0 16.0 Q1
+CD74HCT4067RGYR VQFN RGY 24 3000 330.0 12.4 3.8 5.8 1.2 8.0 12.0 Q1
+Pack Materials-Page 1
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 10-Aug-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+CD74HC4067DGSR VSSOP DGS 24 5000 353.0 353.0 32.0
+CD74HC4067M96 SOIC DW 24 2000 350.0 350.0 43.0
+CD74HC4067PWR TSSOP PW 24 2000 353.0 353.0 32.0
+CD74HC4067RGYR VQFN RGY 24 3000 367.0 367.0 35.0
+CD74HC4067SM96 SSOP DB 24 2000 353.0 353.0 32.0
+CD74HCT4067DGSR VSSOP DGS 24 5000 353.0 353.0 32.0
+CD74HCT4067PWR TSSOP PW 24 3000 353.0 353.0 32.0
+CD74HCT4067RGYR VQFN RGY 24 3000 367.0 367.0 35.0
+Pack Materials-Page 2
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 10-Aug-2026
+TUBE
+ 
+ 
+L - Tube length
+T - Tube  
+height
+W - Tube  
+width
+B - Alignment groove width
+ 
+ 
+*All dimensions are nominal
+Device Package Name Package Type Pins SPQ L (mm) W (mm) T (µm) B (mm)
+CD74HCT4067M DW SOIC 24 25 506.98 12.7 4826 6.6
+CD74HCT4067M.A DW SOIC 24 25 506.98 12.7 4826 6.6
+CD74HCT4067ME4 DW SOIC 24 25 506.98 12.7 4826 6.6
+CD74HCT4067MG4 DW SOIC 24 25 506.98 12.7 4826 6.6
+Pack Materials-Page 3
+www.ti.com
+PACKAGE OUTLINE
+C
+22X 0.65
+2X
+7.15
+24X 0.30
+0.19
+ TYP6.6
+6.2
+1.2 MAX
+0.15
+0.05
+0.25
+GAGE PLANE
+-80
+B
+NOTE 4
+4.5
+4.3
+A
+NOTE 3
+7.9
+7.7
+0.75
+0.50
+(0.15) TYP
+TSSOP - 1.2 mm max heightPW0024A
+SMALL OUTLINE PACKAGE
+4220208/A   02/2017
+1
+12
+13
+24
+0.1 C A B
+PIN 1 INDEX AREA
+SEE DETAIL  A
+0.1 C
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side. 
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm per side.
+5. Reference JEDEC registration MO-153.
+ 
+SEATING
+PLANE
+A  20
+DETAIL A
+TYPICAL
+SCALE  2.000
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.05 MAX
+ALL AROUND
+0.05 MIN
+ALL AROUND
+24X (1.5)
+24X (0.45)
+22X (0.65)
+(5.8)
+(R0.05) TYP
+TSSOP - 1.2 mm max heightPW0024A
+SMALL OUTLINE PACKAGE
+4220208/A   02/2017
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE: 10X
+SYMM
+SYMM
+1
+12 13
+24
+15.000
+METALSOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+OPENING
+EXPOSED METALEXPOSED METAL
+SOLDER MASK DETAILS
+NON-SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK
+DEFINED
+www.ti.com
+EXAMPLE STENCIL DESIGN
+24X (1.5)
+24X (0.45)
+22X (0.65)
+(5.8)
+(R0.05) TYP
+TSSOP - 1.2 mm max heightPW0024A
+SMALL OUTLINE PACKAGE
+4220208/A   02/2017
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE: 10X
+SYMM
+SYMM
+1
+12 13
+24
+www.ti.com
+PACKAGE OUTLINE
+C
+22X 0.5
+2X 5.5
+24X 0.275
+0.165
+5.1
+4.7 TYP
+0.15
+0.05
+0.25
+GAGE PLANE
+0 -8
+4X (0 -15 )
+4X (7 -15 )
+1.1 MAX
+B 3.1
+2.9
+A
+6.2
+6.0
+NOTE 3
+0.7
+0.4
+(0.15) TYP
+VSSOP - 1.1 mm max heightDGS0024A
+SMALL OUTLINE PACKAGE
+4226366/A   10/2020
+1
+12
+13
+24
+0.1 C A B
+PIN 1 INDEX
+AREA
+SEE DETAIL  A
+0.1 C
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side. 
+4. No JEDEC registration as of September 2020.
+5. Features may differ or may not be present.
+ 
+SEATING
+PLANE
+PowerPAD is a trademark of Texas Instruments.
+A  20
+DETAIL A
+TYPICAL
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.05 MAX
+ALL AROUND
+0.05 MIN
+ALL AROUND
+24X (1.45)
+24X (0.3)
+22X (0.5)
+(4.4)
+(R0.05) TYP
+VSSOP - 1.1 mm max heightDGS0024A
+SMALL OUTLINE PACKAGE
+4226366/A   10/2020
+NOTES: (continued)
+ 
+  6. Publication IPC-7351 may have alternate designs. 
+  7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+  8. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+      numbers SLMA002 (www.ti.com/lit/slma002) and SLMA004 (www.ti.com/lit/slma004).
+  9. Size of metal pad may vary due to creepage requirement.
+10. Vias are optional depending on application, refer to device data sheet. It is recommended that vias under paste be filled, plugged
+      or tented. 
+LAND PATTERN EXAMPLE
+SCALE: 15X
+SYMM
+SYMM
+1
+12 13
+24
+15.000
+METALSOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+OPENING
+EXPOSED METALEXPOSED METAL
+SOLDER MASK DETAILS
+NON-SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK
+DEFINED
+www.ti.com
+EXAMPLE STENCIL DESIGN
+24X (1.45)
+24X (0.3)
+22X (0.5)
+(4.4)
+(R0.05) TYP
+VSSOP - 1.1 mm max heightDGS0024A
+SMALL OUTLINE PACKAGE
+4226366/A   10/2020
+NOTES: (continued)
+ 
+11. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+      design recommendations.   
+12. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE: 15X
+SYMM
+SYMM
+1
+12 13
+24
+
+MECHANICAL DATA
+MSSO002E – JANUARY 1995 – REVISED DECEMBER 2001
+POST OFFICE BOX 655303 • DALLAS, TEXAS 75265
+DB (R-PDSO-G**)   PLASTIC SMALL-OUTLINE
+4040065 /E 12/01
+28 PINS SHOWN
+Gage Plane
+8,20
+7,40
+0,55
+0,95
+0,25
+38
+12,90
+12,30
+28
+10,50
+24
+8,50
+Seating Plane
+9,907,90
+30
+10,50
+9,90
+0,38
+5,60
+5,00
+15
+0,22
+14
+A
+28
+1
+2016
+6,506,50
+14
+0,05 MIN
+5,905,90
+DIM
+A  MAX
+A  MIN
+PINS **
+2,00 MAX
+6,90
+7,50
+0,65 M0,15
+0°–/C02578°
+0,10
+0,09
+0,25
+NOTES: A. All linear dimensions are in millimeters.
+B. This drawing is subject to change without notice.
+C. Body dimensions do not include mold flash or protrusion not to exceed 0,15.
+D. Falls within JEDEC MO-150
+GENERIC PACKAGE VIEW
+Images above are just a representation of the package family, actual package may vary.
+Refer to the product data sheet for package details.
+RGY 24
+5.5 x 3.5 mm, 0.5 mm pitch
+VQFN - 1 mm max height
+PLASTIC QUAD FLATPACK - NO LEAD
+4203539-5/J
+
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

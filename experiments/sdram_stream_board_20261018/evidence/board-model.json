@@ -1,0 +1,28 @@
+{
+  "status": "PASS stage83 synthetic board wrapper, UART frames, six cases and simulated S2 inflight restart; three faults detected",
+  "results": {
+    "3": "PASS stage83 wrapper cycles=85071 frames=11 reset_inflight=1 masks=3f rec=24 played=24 after_stop=10 prefix=13 miss=8 clears=6 held=32 inflight=1 SDRAM_ref=195 gap=396\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\tb\\tb_board.v:50: $finish called at 3150841179 (1ps)\n",
+    "10": "PASS stage83 wrapper cycles=85071 frames=11 reset_inflight=1 masks=3f rec=24 played=24 after_stop=10 prefix=13 miss=8 clears=6 held=32 inflight=1 SDRAM_ref=195 gap=396\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\tb\\tb_board.v:50: $finish called at 3150841179 (1ps)\n",
+    "16": "PASS stage83 wrapper cycles=85071 frames=11 reset_inflight=1 masks=3f rec=24 played=24 after_stop=10 prefix=13 miss=8 clears=6 held=32 inflight=1 SDRAM_ref=195 gap=396\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\tb\\tb_board.v:50: $finish called at 3150841179 (1ps)\n"
+  },
+  "detected_faults": {
+    "wrong-record-pattern": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\tb\\tb_board.v:22: bench failed code=1 index=0 got=1356 expected=1357 state=19 tests=00\n       Time: 210616587  Scope: tb_board\n",
+    "wrong-play-pattern": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\tb\\tb_board.v:22: bench failed code=2 index=0 got=9bde expected=9bdf state=19 tests=00\n       Time: 208912839  Scope: tb_board\n",
+    "wrong-frame-checksum": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\tb\\tb_board.v:43: frame identity/checksum\n       Time: 194468019  Scope: tb_board\n"
+  },
+  "inputs": {
+    "rtl/pcm_sdram_arbiter.v": "04b4eca1cbc600af5f643ef35b609ac58aecaba07977034d4d8d1b25410dbbbb",
+    "rtl/pcm_sdram_stream.v": "c347777b2e3eddd527a264f9717dc15f8a1883683287b18e0c29052df8e8df40",
+    "rtl/pcm_storage_buffers.v": "b19f0c94048e678a2073e69170f6301f2c83f92180325edb37654f23c3470e93",
+    "rtl/pcm_sync_fifo.v": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609",
+    "rtl/sdram_board_top.v": "2ad61b18787e80adf2470d3f77e412804dbe8e9304a596ac28c6dd7ff9bfd348",
+    "rtl/sdram_word_controller.v": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+    "rtl/uart_tx.v": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f",
+    "tb/sdram_timing_model.v": "9e87cacd52e1b674c3cf8b2d647c7c4bdbc0609c5087c84b05a572a965d766e3",
+    "tb/tb_board.v": "2bb29426d6ff3432e2efa9af39f2ec6f500c278e999d85617d2b581d02caeede",
+    "check_board.py": "468a3248f5bccd0e179064dfaedddfeba7ec07bc6bef3e775a623b146f8ac999",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79"
+  },
+  "physical_tested": false,
+  "pll_simulated": false
+}

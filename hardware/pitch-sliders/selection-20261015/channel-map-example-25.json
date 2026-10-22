@@ -1,0 +1,613 @@
+{
+  "summary": {
+    "pitch_positions": 25,
+    "raw_nodes": 104,
+    "reference_nodes": 16,
+    "occupied": 120,
+    "spare": 8,
+    "status": "ILLUSTRATIVE, NOT USER ENDPOINT/GEOMETRY FREEZE",
+    "note": "Triplets may cross lanes; lane normalization and frame timing require prototype validation."
+  },
+  "map": [
+    {
+      "node": "PITCH_1_E0",
+      "lane": 0,
+      "address": 0
+    },
+    {
+      "node": "PITCH_1_E1",
+      "lane": 1,
+      "address": 0
+    },
+    {
+      "node": "PITCH_1_E2",
+      "lane": 2,
+      "address": 0
+    },
+    {
+      "node": "PITCH_2_E0",
+      "lane": 3,
+      "address": 0
+    },
+    {
+      "node": "PITCH_2_E1",
+      "lane": 4,
+      "address": 0
+    },
+    {
+      "node": "PITCH_2_E2",
+      "lane": 5,
+      "address": 0
+    },
+    {
+      "node": "PITCH_3_E0",
+      "lane": 6,
+      "address": 0
+    },
+    {
+      "node": "PITCH_3_E1",
+      "lane": 7,
+      "address": 0
+    },
+    {
+      "node": "PITCH_3_E2",
+      "lane": 0,
+      "address": 1
+    },
+    {
+      "node": "PITCH_4_E0",
+      "lane": 1,
+      "address": 1
+    },
+    {
+      "node": "PITCH_4_E1",
+      "lane": 2,
+      "address": 1
+    },
+    {
+      "node": "PITCH_4_E2",
+      "lane": 3,
+      "address": 1
+    },
+    {
+      "node": "PITCH_5_E0",
+      "lane": 4,
+      "address": 1
+    },
+    {
+      "node": "PITCH_5_E1",
+      "lane": 5,
+      "address": 1
+    },
+    {
+      "node": "PITCH_5_E2",
+      "lane": 6,
+      "address": 1
+    },
+    {
+      "node": "PITCH_6_E0",
+      "lane": 7,
+      "address": 1
+    },
+    {
+      "node": "PITCH_6_E1",
+      "lane": 0,
+      "address": 2
+    },
+    {
+      "node": "PITCH_6_E2",
+      "lane": 1,
+      "address": 2
+    },
+    {
+      "node": "PITCH_7_E0",
+      "lane": 2,
+      "address": 2
+    },
+    {
+      "node": "PITCH_7_E1",
+      "lane": 3,
+      "address": 2
+    },
+    {
+      "node": "PITCH_7_E2",
+      "lane": 4,
+      "address": 2
+    },
+    {
+      "node": "PITCH_8_E0",
+      "lane": 5,
+      "address": 2
+    },
+    {
+      "node": "PITCH_8_E1",
+      "lane": 6,
+      "address": 2
+    },
+    {
+      "node": "PITCH_8_E2",
+      "lane": 7,
+      "address": 2
+    },
+    {
+      "node": "PITCH_9_E0",
+      "lane": 0,
+      "address": 3
+    },
+    {
+      "node": "PITCH_9_E1",
+      "lane": 1,
+      "address": 3
+    },
+    {
+      "node": "PITCH_9_E2",
+      "lane": 2,
+      "address": 3
+    },
+    {
+      "node": "PITCH_10_E0",
+      "lane": 3,
+      "address": 3
+    },
+    {
+      "node": "PITCH_10_E1",
+      "lane": 4,
+      "address": 3
+    },
+    {
+      "node": "PITCH_10_E2",
+      "lane": 5,
+      "address": 3
+    },
+    {
+      "node": "PITCH_11_E0",
+      "lane": 6,
+      "address": 3
+    },
+    {
+      "node": "PITCH_11_E1",
+      "lane": 7,
+      "address": 3
+    },
+    {
+      "node": "PITCH_11_E2",
+      "lane": 0,
+      "address": 4
+    },
+    {
+      "node": "PITCH_12_E0",
+      "lane": 1,
+      "address": 4
+    },
+    {
+      "node": "PITCH_12_E1",
+      "lane": 2,
+      "address": 4
+    },
+    {
+      "node": "PITCH_12_E2",
+      "lane": 3,
+      "address": 4
+    },
+    {
+      "node": "PITCH_13_E0",
+      "lane": 4,
+      "address": 4
+    },
+    {
+      "node": "PITCH_13_E1",
+      "lane": 5,
+      "address": 4
+    },
+    {
+      "node": "PITCH_13_E2",
+      "lane": 6,
+      "address": 4
+    },
+    {
+      "node": "PITCH_14_E0",
+      "lane": 7,
+      "address": 4
+    },
+    {
+      "node": "PITCH_14_E1",
+      "lane": 0,
+      "address": 5
+    },
+    {
+      "node": "PITCH_14_E2",
+      "lane": 1,
+      "address": 5
+    },
+    {
+      "node": "PITCH_15_E0",
+      "lane": 2,
+      "address": 5
+    },
+    {
+      "node": "PITCH_15_E1",
+      "lane": 3,
+      "address": 5
+    },
+    {
+      "node": "PITCH_15_E2",
+      "lane": 4,
+      "address": 5
+    },
+    {
+      "node": "PITCH_16_E0",
+      "lane": 5,
+      "address": 5
+    },
+    {
+      "node": "PITCH_16_E1",
+      "lane": 6,
+      "address": 5
+    },
+    {
+      "node": "PITCH_16_E2",
+      "lane": 7,
+      "address": 5
+    },
+    {
+      "node": "PITCH_17_E0",
+      "lane": 0,
+      "address": 6
+    },
+    {
+      "node": "PITCH_17_E1",
+      "lane": 1,
+      "address": 6
+    },
+    {
+      "node": "PITCH_17_E2",
+      "lane": 2,
+      "address": 6
+    },
+    {
+      "node": "PITCH_18_E0",
+      "lane": 3,
+      "address": 6
+    },
+    {
+      "node": "PITCH_18_E1",
+      "lane": 4,
+      "address": 6
+    },
+    {
+      "node": "PITCH_18_E2",
+      "lane": 5,
+      "address": 6
+    },
+    {
+      "node": "PITCH_19_E0",
+      "lane": 6,
+      "address": 6
+    },
+    {
+      "node": "PITCH_19_E1",
+      "lane": 7,
+      "address": 6
+    },
+    {
+      "node": "PITCH_19_E2",
+      "lane": 0,
+      "address": 7
+    },
+    {
+      "node": "PITCH_20_E0",
+      "lane": 1,
+      "address": 7
+    },
+    {
+      "node": "PITCH_20_E1",
+      "lane": 2,
+      "address": 7
+    },
+    {
+      "node": "PITCH_20_E2",
+      "lane": 3,
+      "address": 7
+    },
+    {
+      "node": "PITCH_21_E0",
+      "lane": 4,
+      "address": 7
+    },
+    {
+      "node": "PITCH_21_E1",
+      "lane": 5,
+      "address": 7
+    },
+    {
+      "node": "PITCH_21_E2",
+      "lane": 6,
+      "address": 7
+    },
+    {
+      "node": "PITCH_22_E0",
+      "lane": 7,
+      "address": 7
+    },
+    {
+      "node": "PITCH_22_E1",
+      "lane": 0,
+      "address": 8
+    },
+    {
+      "node": "PITCH_22_E2",
+      "lane": 1,
+      "address": 8
+    },
+    {
+      "node": "PITCH_23_E0",
+      "lane": 2,
+      "address": 8
+    },
+    {
+      "node": "PITCH_23_E1",
+      "lane": 3,
+      "address": 8
+    },
+    {
+      "node": "PITCH_23_E2",
+      "lane": 4,
+      "address": 8
+    },
+    {
+      "node": "PITCH_24_E0",
+      "lane": 5,
+      "address": 8
+    },
+    {
+      "node": "PITCH_24_E1",
+      "lane": 6,
+      "address": 8
+    },
+    {
+      "node": "PITCH_24_E2",
+      "lane": 7,
+      "address": 8
+    },
+    {
+      "node": "PITCH_25_E0",
+      "lane": 0,
+      "address": 9
+    },
+    {
+      "node": "PITCH_25_E1",
+      "lane": 1,
+      "address": 9
+    },
+    {
+      "node": "PITCH_25_E2",
+      "lane": 2,
+      "address": 9
+    },
+    {
+      "node": "OCTAVE_EXAMPLE_0",
+      "lane": 3,
+      "address": 9
+    },
+    {
+      "node": "OCTAVE_EXAMPLE_1",
+      "lane": 4,
+      "address": 9
+    },
+    {
+      "node": "OCTAVE_EXAMPLE_2",
+      "lane": 5,
+      "address": 9
+    },
+    {
+      "node": "OCTAVE_EXAMPLE_3",
+      "lane": 6,
+      "address": 9
+    },
+    {
+      "node": "OCTAVE_EXAMPLE_4",
+      "lane": 7,
+      "address": 9
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_1_E0",
+      "lane": 0,
+      "address": 10
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_1_E1",
+      "lane": 1,
+      "address": 10
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_1_E2",
+      "lane": 2,
+      "address": 10
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_2_E0",
+      "lane": 3,
+      "address": 10
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_2_E1",
+      "lane": 4,
+      "address": 10
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_2_E2",
+      "lane": 5,
+      "address": 10
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_3_E0",
+      "lane": 6,
+      "address": 10
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_3_E1",
+      "lane": 7,
+      "address": 10
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_3_E2",
+      "lane": 0,
+      "address": 11
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_4_E0",
+      "lane": 1,
+      "address": 11
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_4_E1",
+      "lane": 2,
+      "address": 11
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_4_E2",
+      "lane": 3,
+      "address": 11
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_5_E0",
+      "lane": 4,
+      "address": 11
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_5_E1",
+      "lane": 5,
+      "address": 11
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_5_E2",
+      "lane": 6,
+      "address": 11
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_6_E0",
+      "lane": 7,
+      "address": 11
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_6_E1",
+      "lane": 0,
+      "address": 12
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_6_E2",
+      "lane": 1,
+      "address": 12
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_7_E0",
+      "lane": 2,
+      "address": 12
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_7_E1",
+      "lane": 3,
+      "address": 12
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_7_E2",
+      "lane": 4,
+      "address": 12
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_8_E0",
+      "lane": 5,
+      "address": 12
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_8_E1",
+      "lane": 6,
+      "address": 12
+    },
+    {
+      "node": "HARMONIC_EXAMPLE_8_E2",
+      "lane": 7,
+      "address": 12
+    },
+    {
+      "node": "REFERENCE_0_10pF",
+      "lane": 0,
+      "address": 14
+    },
+    {
+      "node": "REFERENCE_0_100pF",
+      "lane": 0,
+      "address": 15
+    },
+    {
+      "node": "REFERENCE_1_10pF",
+      "lane": 1,
+      "address": 14
+    },
+    {
+      "node": "REFERENCE_1_100pF",
+      "lane": 1,
+      "address": 15
+    },
+    {
+      "node": "REFERENCE_2_10pF",
+      "lane": 2,
+      "address": 14
+    },
+    {
+      "node": "REFERENCE_2_100pF",
+      "lane": 2,
+      "address": 15
+    },
+    {
+      "node": "REFERENCE_3_10pF",
+      "lane": 3,
+      "address": 14
+    },
+    {
+      "node": "REFERENCE_3_100pF",
+      "lane": 3,
+      "address": 15
+    },
+    {
+      "node": "REFERENCE_4_10pF",
+      "lane": 4,
+      "address": 14
+    },
+    {
+      "node": "REFERENCE_4_100pF",
+      "lane": 4,
+      "address": 15
+    },
+    {
+      "node": "REFERENCE_5_10pF",
+      "lane": 5,
+      "address": 14
+    },
+    {
+      "node": "REFERENCE_5_100pF",
+      "lane": 5,
+      "address": 15
+    },
+    {
+      "node": "REFERENCE_6_10pF",
+      "lane": 6,
+      "address": 14
+    },
+    {
+      "node": "REFERENCE_6_100pF",
+      "lane": 6,
+      "address": 15
+    },
+    {
+      "node": "REFERENCE_7_10pF",
+      "lane": 7,
+      "address": 14
+    },
+    {
+      "node": "REFERENCE_7_100pF",
+      "lane": 7,
+      "address": 15
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>右手泛音推子 · 交互原型</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f1e9;color:#25302e;font:15px/1.6 "Microsoft YaHei",sans-serif}main{max-width:1040px;margin:auto;padding:24px}h1{font-size:25px;margin:0}p{margin:6px 0 16px;color:#5c6661}.badge{font-size:12px;color:#956740;background:#f5e5ca;padding:4px 9px;border-radius:8px;margin-left:12px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:14px 0}button{border:1px solid #c7cec6;border-radius:8px;padding:9px 13px;color:#263b32;background:#fff;cursor:pointer}button:hover{background:#e1ede5}button:focus-visible{outline:3px solid #52877a}button.primary{background:#296857;color:white;border-color:#296857}canvas{display:block;width:100%;height:auto;background:#fffdf8;border:1px solid #d7d9ce;border-radius:14px;touch-action:none;user-select:none}.range{margin-left:auto;display:flex;gap:6px;align-items:center;font-size:13px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.card{padding:13px;border:1px solid #dde1d7;border-radius:10px;background:#fafbf6}.card b{display:block;margin-bottom:3px}.muted{font-size:12px;color:#6d766f}#status{min-height:28px;margin-top:8px;font-size:13px}#legend{font-size:13px}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#db713b;margin-right:5px}@media(max-width:650px){main{padding:12px}.cards{grid-template-columns:1fr}.range{margin-left:0}h1{font-size:21px}}
+</style>
+<main>
+<h1>手指塑造，松手保持<span class="badge">交互原型 · 未接音频</span></h1>
+<p>每根推子有自己的分区。同侧取最近触点，两侧都有触点时跟随高度中点。</p>
+<div class="toolbar">
+<button id="near">演示：同侧取近</button><button id="middle" class="primary">演示：两侧取中</button><button id="zones">演示：跨区不抢</button>
+<label class="range">区内作用半径 <input id="radius" type="range" min="0" max="150" value="50"><output id="radiusText">50 px</output></label>
+</div>
+<div class="toolbar"><button id="release">松开全部触点 · 保持位置</button><button id="reset">恢复初始位置</button><button id="export">导出触点轨迹</button></div>
+<canvas id="surface" width="800" height="480" aria-label="八组泛音推子及多触点操作区域"></canvas>
+<div id="status" role="status"></div>
+<div id="legend"><span class="dot"></span>拖动触点；鼠标 Shift＋单击可固定触点，拖动固定点可继续调整，右键移除。最多5点。</div>
+<div class="cards"><div class="card"><b>区内判断</b>阴影表示有效范围；其他分区的手指不会抢走推子。</div><div class="card"><b>位置跟随</b>虚线显示有效触点；两边各有触点时，推子处于两者高度中间。</div><div class="card"><b>保持</b>松手保留最后位置。这里展示8组示例，未冻结16分量映射和声音增益。</div></div>
+<p class="muted">页面用于核对手势与FPGA行为，不代表实体屏幕刷新率或10ms响应已经验证。当前距离按横向计算，分区为硬边界。</p>
+</main>
+<script type="module" src="app.mjs"></script></html>

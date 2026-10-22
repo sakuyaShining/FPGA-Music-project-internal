@@ -1,0 +1,25 @@
+{
+  "status": "部分实现",
+  "scope": "整机接合开发候选；不是可下载产品或制造发布版",
+  "source_engine_head": "683db4834a031baca217b9e3ae7a0369644b8935",
+  "source_engine_manifest": "engine-safety-20261014-01.json",
+  "main_head": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+  "hardware_tested_this_stage": false,
+  "pnr_tested_this_stage": false,
+  "items": [
+    {"id":"SYS-01","name":"备份、来源与版本接合","status":"部分实现","evidence":"upstream.json、delivery.json；原产品不覆盖，开发候选单独绑定","next":"统一可复现门禁后再评估产品接合；不按HEAD猜未提交内容"},
+    {"id":"N-01/N-10-A","name":"RC原始扫描与26条滑条位置","status":"部分实现","evidence":"rtl/rc_mux_scan.v、rc_delta_store.v、rc_strip_positions.v；evidence/validation.json限定数字测试已验证","next":"实物量程、漂移、多指/邻近串扰与覆盖层资格；节点布线映射仍为试验设置"},
+    {"id":"N-02/N-11","name":"触点到音符实例、分配反馈和逐指绑定","status":"待实现","evidence":"原finger_pitch数字终点保留；当前sensor report与音乐输入并行","next":"建立含来源/实例身份及接收确认的事件；同MIDI多指、释放/抢占、事件拒绝不能仅靠音高猜组"},
+    {"id":"N-10-B","name":"独立八度选档条","status":"待实现","evidence":"只选档、无需测力为用户决定；96节点原始帧有空间容纳候选5节点","next":"选档数/阈值及在奏音切换规则讨论；不把5节点算例冻结为最终档数"},
+    {"id":"N-04/N-05/N-06","name":"右手分区推子、全和弦修饰、保持和恢复","status":"部分实现","evidence":"复用66/67号RTL；当前并发PCM/I2S对照；evidence/joint-validation.json","next":"实际触屏完整报告、7英寸界面、试听；跨区/最大强调/分组和层与PCM作用范围待讨论"},
+    {"id":"N-07/N-08","name":"完整自定义乐器设备应用","status":"待实现","evidence":"既有GUI11版仍只支持预设/谱部分应用；文件配置不是完整设备能力","next":"版本化设备格式与量化、持续/瞬间/混合包络规则、显式应用/失败回读/实体编辑"},
+    {"id":"N-09-A","name":"四预设同音分层","status":"待实现","evidence":"32组×16分量是总引擎预算；四槽不等于四层同时演奏已实现","next":"在实例身份基础上做逐层分配、包络、释放/抢占及混音余量"},
+    {"id":"N-09-B","name":"实体保存与断电保留","status":"待实现","evidence":"EEPROM双副本/校验/最后提交为候选；尚无设备存储驱动","next":"完整配置格式后接页写/读回/启动恢复，注入每页掉电/坏校验测试"},
+    {"id":"N-12","name":"波形、频谱、音高轨迹与独立小屏","status":"部分实现","evidence":"原可视化RTL保留，现有并发FFT节拍/PCM隔离验证；实屏与完整刷新仍未验","next":"接实体引脚、核模块电平/初始化、满载刷新/短音记录与PnR"},
+    {"id":"REC-01","name":"保存PCM伴奏、回放时现场独立演奏","status":"待实现","evidence":"用户已决定；SDHC/TF、SDRAM缓冲为候选；无存储闭环","next":"先计入SD/SDRAM/文件系统/混音资源，再做录放与现场并发；短写/卡延迟/欠载必须可观测"},
+    {"id":"SCORE-01","name":"实体演奏录入与曲谱指引","status":"待实现","evidence":"原定序器/主机曲谱基础保留；回放期间禁用手奏不符合新增需求","next":"确定最小时间戳事件记录与播放状态，接屏幕指引；循环/多轨细则待讨论"},
+    {"id":"HW-01","name":"7英寸触屏、AUX、GPIO、电源与制造","status":"讨论中","evidence":"已有小屏/板/喇叭复用；当前约558元仍是条件成本，屏接口/适配缺口未闭环","next":"屏完整版本/含运报价、DAC时序、真实Nano排针、选择性SMT与电极小样资格；约500元不自动增加"},
+    {"id":"OPT-01","name":"单板联合资源与时序","status":"部分实现","evidence":"synthesis/joint与joint_serial分别保存；可选共享滑音运算以保持原输出换取资源","next":"把全部待实现控制/录放/显示计入，做真实CST/SDC与PnR；未凭综合宣布全功能装得下"}
+  ],
+  "next_sequence": ["验证共享滑音资源优化与原行为一致性", "左手事件实例/确认/逐指绑定", "完整配置及双层原型", "SDRAM/TF录放与现场并发资源探针", "非易失保存/实体UI/双屏驱动接合", "真实引脚与PnR、实物延迟/听感、小样制造资格与总价"]
+}

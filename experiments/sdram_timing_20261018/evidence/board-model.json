@@ -1,0 +1,19 @@
+{
+  "status": "PASS wrapper and return-delay sweep; 20ns expected failure detected",
+  "results": {
+    "3.0": "PASS board wrapper ACCESS=3.000000 cycles=31568 frames=8 UART_snapshot S2_abort_reinit two_patterns 128_operations muted\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_timing_20261018\\tb\\tb_board.v:55: $finish called at 1169215584 (1ps)\n",
+    "10.0": "PASS board wrapper ACCESS=10.000000 cycles=31568 frames=8 UART_snapshot S2_abort_reinit two_patterns 128_operations muted\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_timing_20261018\\tb\\tb_board.v:55: $finish called at 1169215584 (1ps)\n",
+    "16.0": "PASS board wrapper ACCESS=16.000000 cycles=31568 frames=8 UART_snapshot S2_abort_reinit two_patterns 128_operations muted\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_timing_20261018\\tb\\tb_board.v:55: $finish called at 1169215584 (1ps)\n",
+    "20.0": "PASS late-return negative case ACCESS=20.000000 BIST rejected data cycles=5837\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_timing_20261018\\tb\\tb_board.v:43: $finish called at 216190806 (1ps)\n"
+  },
+  "inputs": {
+    "rtl/sdram_board_top.v": "ad3ce1ca7a2383aec15c0e00abe558def75d499b8c5059583d2356e338aca56a",
+    "rtl/sdram_word_controller.v": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+    "rtl/uart_tx.v": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f",
+    "tb/sdram_timing_model.v": "9e87cacd52e1b674c3cf8b2d647c7c4bdbc0609c5087c84b05a572a965d766e3",
+    "tb/tb_board.v": "63d813c0230fa666bebcd3eaee83fee0fb49e10e58bcc33caae27fedecdd8e45",
+    "check_board.py": "03dd34b59257349de4598540779cc77f39f3fca6182bfd41b3cf11f407c5d218",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79"
+  },
+  "physical_tested": false
+}

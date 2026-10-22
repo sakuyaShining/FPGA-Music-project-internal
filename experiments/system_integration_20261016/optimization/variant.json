@@ -1,0 +1,9 @@
+{
+  "status": "opt-in candidate, not product replacement",
+  "original_sha256": "1ef276560151929c68d934a43909e85884ee5c564b809412bdb5ab4d9e062b30",
+  "variant_sha256": "2059877d05fa1f1d15b195cc12c5b26d2522c7960cacc9e600e09a6f76c34ae2",
+  "minimum_sample_spacing_clocks": 33,
+  "actual_music_spacing_clocks": 512,
+  "unchanged_lfo_known_issue": true,
+  "removed_parallel_block": "    always @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            for (n = 0; n < NG; n = n + 1)\n                gq[n] <= {QW{1'b0}};\n        end\n        else begin\n            // 衰减【每样本一次】（sample_en 门控）：\n            //   第一版漏了 sample_en，于是每时钟衰减一次 = 快 512 倍\n            //   （实测滑音速率 14046/样本，而 step=10 应该是 28/样本）。\n            //   关滑音时也要照常走完，否则残留偏移会永久卡住。\n            if (sample_en) begin\n                for (n = 0; n < NG; n = n + 1) begin\n                    if (gq[n] > 0)\n                        gq[n] <= (gq[n] > stp)  ? (gq[n] - stp)  : {QW{1'b0}};\n                    else if (gq[n] < 0)\n                        gq[n] <= (gq[n] < nstp) ? (gq[n] - nstp) : {QW{1'b0}};\n                    else\n                        gq[n] <= {QW{1'b0}};\n                end\n            end\n\n            // 滑音初值装载（优先级最高：与 inc/amp/gate 同一个消费拍）\n            if (gw_en === 1'b1)\n                gq[gw_note] <= gw_val;\n        end\n    end\n"
+}

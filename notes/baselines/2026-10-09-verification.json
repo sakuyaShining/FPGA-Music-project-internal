@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-09",
+  "source_head": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+  "kind": "targeted checks, not full regression",
+  "product_rtl_changed": false,
+  "results": [
+    {
+      "name": "shipclock",
+      "expected": "PASS",
+      "actual": "PASS",
+      "markers": [
+        "RESULT shipclock=PASS"
+      ],
+      "log": "sim_build/baseline-20261009/shipclock.log"
+    },
+    {
+      "name": "clock",
+      "expected": "PASS",
+      "actual": "PASS",
+      "markers": [],
+      "log": "sim_build/baseline-20261009/clock.log"
+    },
+    {
+      "name": "alloc",
+      "expected": "PASS",
+      "actual": "PASS",
+      "markers": [
+        "RESULT alloc=PASS"
+      ],
+      "log": "sim_build/baseline-20261009/alloc.log"
+    },
+    {
+      "name": "inv",
+      "expected": "PASS",
+      "actual": "PASS",
+      "markers": [
+        "RESULT inv=PASS"
+      ],
+      "log": "sim_build/baseline-20261009/inv.log"
+    },
+    {
+      "name": "legato",
+      "expected": "PASS",
+      "actual": "PASS",
+      "markers": [
+        "RESULT legato=PASS"
+      ],
+      "log": "sim_build/baseline-20261009/legato.log"
+    },
+    {
+      "name": "padfast",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "markers": [
+        "  FAIL  B-both-events-acked got 1 exp 2",
+        "  FAIL  B-note49-allocated got 0 exp 1",
+        "RESULT padfast=FAIL fails=2"
+      ],
+      "log": "sim_build/baseline-20261009/padfast.log"
+    },
+    {
+      "name": "spec_sha",
+      "actual": "PASS",
+      "expected": "PASS",
+      "log": "sim_build/baseline-20261009/spec_sha.log"
+    },
+    {
+      "name": "nyquist",
+      "actual": "PASS",
+      "expected": "PASS",
+      "log": "sim_build/baseline-20261009/nyquist.log"
+    }
+  ],
+  "raw_logs_tracked": false,
+  "interpretation": {
+    "legato": "PASS describes absence of ordinary legato; target not implemented",
+    "padfast": "FAIL confirms two unresolved product assertions",
+    "clock": "default DIV_BCK=18",
+    "shipclock": "shipping instance DIV_BCK=16"
+  }
+}

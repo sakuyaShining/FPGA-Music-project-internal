@@ -1,0 +1,15 @@
+{
+  "status": "PASS functional and cycle equivalence",
+  "results": {
+    "tb_bridge": "PASS bridge_reference_equiv frames=541 ons=269 offs=268 binds=269 moves=2 backpressure bind_delay fault_watchdog gap calibration steal late_completion generation_wrap260\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\resource_safety_20261016\\tb_bridge_equiv.v:122: $finish called at 118230000 (1ps)\n",
+    "tb_bridge_random": "PASS bridge_random frames=600 clocks=159410 row_checks=4144660 events=5244 moves=1941 NF26 reset gaps calibration invalid backpressure late_reply steal forwarded_rows\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\resource_safety_20261016\\tb_bridge_random.v:73: $finish called at 1594100000 (1ps)\n"
+  },
+  "inputs": {
+    "selected/left_contact_bridge.v": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36",
+    "common.py": "c51ae628baf93a9159578515b50483d83d2319a42d1dd84703b69e444e6e5c2e",
+    "tb_bridge_equiv.v": "bfc6e7dc63fc5c8ca0602fa663811a780c2cfb75477743a1f74e970e4f1e7a33",
+    "reference/left_contact_bridge.v": "3cfeb623f98bfa8e6104963f854f8f69d859be680d8c46db1f87b82b4e2ad9e2",
+    "run_bridge_equiv.py": "4592621aea0c1bbeda0ab87eefbb50947e4097ae8beb3dd72dd2e2810b3c46f1",
+    "tb_bridge_random.v": "531fcc2d7f9f60a31b09060ccbc1724dd508f189443289b499eff44dc37555cd"
+  }
+}

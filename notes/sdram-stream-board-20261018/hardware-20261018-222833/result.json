@@ -1,0 +1,143 @@
+{
+  "status": "PASS two six-case SDRAM stream runs and restored stage76 identity/silence",
+  "time": "2026-10-18T22:28:33.549083+08:00",
+  "port": "COM6",
+  "script_sha256": "3e33a5d5000c86fe31d6be2de44be282dca43e3b6acf933b39034e1c44574153",
+  "audit_sha256": "b3555e00193e3a2f70b298ed6d207f4e0af912f40c689d8f453db5872f5ba21b",
+  "test_bitstream_sha256": "2d826fc5cc9343cd86f5bfa68b72232701143cb2cffc557f15fc3b8e2446d9a2",
+  "selected_build": "build_stress_v4",
+  "restore_bitstream_sha256": "8c2d52e59b13b8d343b54a9d602d265154dc6cc9640320df10835f2e1b1c253c",
+  "flash_read_or_written": false,
+  "tf_accessed": false,
+  "audio_played": false,
+  "runs": [
+    {
+      "status": "PASS default FIFO10/ring17 six-case synthetic stream bench",
+      "frames": 49,
+      "final": {
+        "elapsed_s": 4.578,
+        "state": 18,
+        "flags": 37,
+        "tests": 63,
+        "hex": "a5830112253f4990e30800100000001000000010000000100000012000000104020008000000060000002000000001000000000000000000000000048814008c",
+        "cycles": 149131337,
+        "rec_count": 4096,
+        "rec_read": 4096,
+        "feed_count": 4096,
+        "played": 4096,
+        "after_stop": 8193,
+        "prefix_count": 132097,
+        "misses": 8,
+        "clear_count": 6,
+        "held_cycles": 32,
+        "inflight_clears": 1,
+        "failure_index": 0,
+        "requests": 1345540,
+        "observed": 0,
+        "expected": 0,
+        "error_code": 0
+      },
+      "normal_samples_per_direction": 266240,
+      "recovery_samples_per_direction": 4096,
+      "ring_bytes_per_direction": 262144,
+      "raw_sha256": "255bd88e8ec8f3cb9be821ed762e0f1e270399df222400fc759efa7bf3a3fc26",
+      "frames_sha256": "82af52618854cdde09fdf91bcb061f88ebcf33665d4a50959fb0e60fc5338d33",
+      "bad_checksums": 0
+    },
+    {
+      "status": "PASS default FIFO10/ring17 six-case synthetic stream bench",
+      "frames": 50,
+      "final": {
+        "elapsed_s": 4.546,
+        "state": 18,
+        "flags": 37,
+        "tests": 63,
+        "hex": "a5830112253f4990e30800100000001000000010000000100000012000000104020008000000060000002000000001000000000000000000000000048814008c",
+        "cycles": 149131337,
+        "rec_count": 4096,
+        "rec_read": 4096,
+        "feed_count": 4096,
+        "played": 4096,
+        "after_stop": 8193,
+        "prefix_count": 132097,
+        "misses": 8,
+        "clear_count": 6,
+        "held_cycles": 32,
+        "inflight_clears": 1,
+        "failure_index": 0,
+        "requests": 1345540,
+        "observed": 0,
+        "expected": 0,
+        "error_code": 0
+      },
+      "normal_samples_per_direction": 266240,
+      "recovery_samples_per_direction": 4096,
+      "ring_bytes_per_direction": 262144,
+      "raw_sha256": "98b94f57b768d70cf914dbe13cb9353d8c254d3ac84ae9f88881f1e654221fd6",
+      "frames_sha256": "248d8a6e834bdb49f3814e38822a9b8fcf2d3c5b683c82967e5d09e47c434200",
+      "bad_checksums": 0
+    }
+  ],
+  "before": {
+    "identity": {
+      "C0": 114,
+      "C2": 118,
+      "C3": 1,
+      "D0": 117,
+      "D1": 1,
+      "A4": 211,
+      "A9": 32
+    },
+    "status": {
+      "ready": true,
+      "armed": false,
+      "warm": true,
+      "initialized": true,
+      "running": false,
+      "bound": false,
+      "fault": false,
+      "case": 118
+    },
+    "snapshot": {
+      "ack": 0,
+      "on": 0,
+      "off": 0,
+      "active": 0,
+      "fingers": 0,
+      "period_min": 512,
+      "period_max": 512
+    }
+  },
+  "restored": {
+    "identity": {
+      "C0": 114,
+      "C2": 118,
+      "C3": 1,
+      "D0": 117,
+      "D1": 1,
+      "A4": 211,
+      "A9": 32
+    },
+    "status": {
+      "ready": true,
+      "armed": false,
+      "warm": true,
+      "initialized": true,
+      "running": false,
+      "bound": false,
+      "fault": false,
+      "case": 118
+    },
+    "snapshot": {
+      "ack": 0,
+      "on": 0,
+      "off": 0,
+      "active": 0,
+      "fingers": 0,
+      "period_min": 512,
+      "period_max": 512
+    },
+    "zero_pcm_samples": 2048
+  },
+  "finished": "2026-10-18T22:29:05.176927+08:00"
+}

@@ -1,0 +1,8 @@
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module rh_fader_bank declared here: C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_faders_20261016\rtl\rh_fader_bank.v:5
+       :   -- module rh_fader_gain_map declared here: C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\rtl\rh_fader_gain_map.v:3
+       :   -- module rh_fader_panel declared here: C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_faders_20261016\rtl\rh_fader_panel.v:3
+       :   -- module rh_performance_control declared here: C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\rtl\rh_performance_control.v:3
+       :   -- module rh_timbre_slew declared here: C:\Users\Sakuya\FPGA-Music-project\experiments\right_hand_audio_20261016\rtl\rh_timbre_slew.v:2

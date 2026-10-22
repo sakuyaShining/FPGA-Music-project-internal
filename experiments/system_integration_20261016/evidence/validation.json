@@ -1,0 +1,41 @@
+{
+  "scope": "digital tests only",
+  "hardware_tested": false,
+  "results": {
+    "scanner": "PASS scanner rows=32 words=128 ordered timeout stuck_input backpressure grant_delays physical_latch_timing\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\system_integration_20261016\\tb_scanner.v:54: $finish called at 65905000 (1ps)\n",
+    "positions": "PASS positions frames=160 independent_reference calibration invalid_nodes endpoints wide_centroid debounce hysteresis coherent_backpressure protocol_resync\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\system_integration_20261016\\tb_positions.v:55: $finish called at 317240000 (1ps)\n",
+    "sensor": "PASS sensor lanes=6 nodes=96 strips=26 frames=5 cycles=17325 words=324 physical_words_to_calibrated_positions backpressure\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\system_integration_20261016\\tb_sensor.v:47: $finish called at 173250000 (1ps)\n",
+    "scan_budget": "PASS scan_budget default6x16 frame_cycles_grant0=50192 frame_cycles_grant64=54288 clock_hz=27000000 all26positions debounce2 latency_scope_scan_only\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\system_integration_20261016\\tb_scan_budget.v:42: $finish called at 1326745000 (1ps)\n"
+  },
+  "inputs": {
+    "rtl/instrument_joint_probe.v": "5dd58082611a345fdfcfd0fa9a27d2a6d28911e9fbb4307d46fc9fcd00cdab4a",
+    "rtl/instrument_sensor_probe.v": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+    "rtl/music_visualizer.v": "d35912021fee2cfbf75cbfde1cda3aae1e35355d7962b092333fd4f35086cfb7",
+    "rtl/mv_fft1024.v": "c55f4090d89f020b84f4bf03508cb89e5eab0328e9e371d3325603029c107329",
+    "rtl/mv_panel_driver.v": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+    "rtl/mv_renderer.v": "bc7f447e2123ce820c95cd5f83b76c56ffed7cf0c0a48641165ca3bb03d9f578",
+    "rtl/mv_spi_byte.v": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+    "rtl/mv_wave_capture.v": "368495a1805024999a7fdd9104183baa1461b72841d6d7fe63d8b23c362583ee",
+    "rtl/rc_delta_store.v": "ad0c0f8bf7214fb466bdc24341fc806321e87eeb1cc351588fa04ac0e3e257f9",
+    "rtl/rc_mux_scan.v": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+    "rtl/rc_strip_positions.v": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+    "rtl/rh_fader_bank.v": "bd5af0b47a36749da5fb5fbc29e546f19e7bc00e1929873593b31f680358c2da",
+    "rtl/rh_fader_gain_map.v": "4a15353dc921388d71dff712999b2149a7e0245ed2641462ede3e79b7a704414",
+    "rtl/rh_fader_panel.v": "740cd8367f6e4e59431e8223b9d1d187309d78036c1b2b04bd6d4c7e692cc49a",
+    "rtl/rh_music_probe.v": "50399fe808325f853bf3af0d31ab341d9327d1c6835606039ccf29570f19676c",
+    "rtl/rh_performance_control.v": "52a139a2730b0824d90b1f19f40b4ab50b6a2f7b23cdc2fe05ccb31a07fd4e99",
+    "rtl/rh_timbre_slew.v": "317febd64da227a12726689ddc482168abe9e534cf4ee0d55e6feec42274338c",
+    "rtl/scan_shift595.v": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+    "tb_compat_music.v": "d7cb1da3a5f4673b732a62a60e53edd8686b2f12ae1c7e2b212e5b1cccb4d730",
+    "tb_joint.v": "bd6290b5dce40028c1b2b3931886a50607c9a31e886b9dba8aa393b46992e033",
+    "tb_positions.v": "d8e0865f6b2f1fa14693a3bbabbec91c5a4972edaf915c11b46088b542bb5e8c",
+    "tb_scanner.v": "904e5f5849baec39df32d30ece1361e0aa0fb04cd1ea6c01b45fc6e33b0331d8",
+    "tb_scan_budget.v": "4f2a48ea74d28213de01f32b14316c9caa889d4f9d4cfc130a970ecc742ba520",
+    "tb_sensor.v": "5aefa27133781785b1c3fa0ac81f68fa75ecf7c52b671459d06c5fee94663bee",
+    "tb_serial_glide.v": "5239094c4168d2b3352038029af320198d39a755d6534a2fe3c74fa1ad5dead5",
+    "run_validation.py": "8efc7387137959ed3319d175a1f57adfb09e5c796489a98234a8e6848c6106aa",
+    "expected_vectors.hex": "2abc25d6b2104c79ca38a1eddefb8561d65dbf0d7a1ea2096bb9428d61416d59",
+    "meta_vectors.hex": "e418abc36cf6741c42f7743cd1748341a163e8ad3b462504c7e82c080d0715c3",
+    "row_vectors.hex": "18cef1507800b016c97c339cbf87db9659892c585ee13f465cdd9f81cc70a743"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "digital allocator/bridge only",
+  "results": {
+    "allocator": "PASS allocator events=117 legacy100_load_exact same_pitch_instances source_isolation stale_off refresh steal midi127 completion_identity\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\left_hand_events_20261016\\tb_allocator.v:71: $finish called at 30660000 (1ps)\n",
+    "bridge": "PASS bridge frames=541 ons=269 offs=268 binds=269 moves=2 backpressure bind_delay fault_watchdog gap calibration steal late_completion generation_wrap260\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\left_hand_events_20261016\\tb_bridge.v:91: $finish called at 118230000 (1ps)\n"
+  },
+  "inputs": {
+    "candidate/compat_music_probe.v": "14c1dcc2387f39298646b77e5c64e367c2edc02540b18266cc5fa8392a69af1c",
+    "candidate/note_map_owned.v": "25fa2e19cca1d6ce951e0a552bf6e01a34631eaba5b78b61ab7b7d64332e6725",
+    "candidate/tdm_top_owned.v": "453ed64075b45af0ce4f1aa097c0e0453dc0662bbec25df101e8f3ea49eb60fc",
+    "rtl/left_contact_bridge.v": "2b1b76907ebd578733521e61c392345843664f970545ef1cc7481699dcfc5ffc",
+    "tb_allocator.v": "3a7fdce6909dfba962be51d3e4729db61ec649f85bf560fd1e50aefcc2f00dda",
+    "tb_bridge.v": "fe95576669e9e773d5b4135a278b3ccd5c79c843c22e6968e8ccb2841c60db0e",
+    "run_validation.py": "98b7540e2c123a98edfeef6b43e5fea83e79f0aa7a1087ce4f0565fbf1282fd4",
+    "prepare_owned.py": "4b4aa39bc3947e22282e565f258cc9b09b0323bd503ff78662e9c94760b50bb1"
+  }
+}

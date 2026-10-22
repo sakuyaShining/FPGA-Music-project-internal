@@ -1,0 +1,19 @@
+{
+  "status": "PASS within disposable browser prototype",
+  "checks": [
+    "two sides target midpoint",
+    "release retains position",
+    "same side nearest controls",
+    "oversized radius cannot cross zone",
+    "multi-touch pointer input reaches model",
+    "moving one finger updates midpoint",
+    "touch end releases ownership",
+    "simultaneous release does not publish a one-finger intermediate target",
+    "touch end holds last reported result",
+    "mobile viewport has no horizontal overflow",
+    "no browser runtime errors"
+  ],
+  "errors": [],
+  "hardware_verified": false,
+  "audio_connected": false
+}

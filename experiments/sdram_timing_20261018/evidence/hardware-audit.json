@@ -1,0 +1,40 @@
+{
+  "status": "PASS offline audit of two physical SDRAM sweeps and restored stage76",
+  "hardware_directory": "notes/sdram-timing-20261018/hardware-20261018-212812",
+  "hardware_tested": true,
+  "production_qualified": false,
+  "runs": 2,
+  "total_halfword_operations": 33554432,
+  "bytes_transferred": 67108864,
+  "zero_pcm_samples": 2048,
+  "input_root": "C:\\Users\\Sakuya\\FPGA-Music-project",
+  "inputs": {
+    "notes/sdram-timing-20261018/hardware-20261018-212812/bench_hardware_attempt.py": "49bc72f5a322280db2d94c5dc247c760f02d9e8890daa24dd46600719c0ffb92",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/cables.log": "8655fbd934397b5f9b9cc9e4ffe21a5f4213b793848c182cff0d45990b9efe6a",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/jtag-scan.log": "3174bd37d6b8689f1c46846153dd39391958f40d4afcc172ff42da1a26a005cf",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/programmer-help.log": "e1ad78c517ba244c57e539660a6c9e8f8f98c0bbe24ac5e603e3f530c2d7bd60",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/restore-stage76-attempt.json": "0e57a6206b19d492f1f3c9126b6f4042c0b3c82b2b0f1da82a631a89f104b282",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/restore-stage76.log": "ffaf5022d3d97e8a76ff7b13d6898f20ff4caf378f4d6b8d3a0133b71c7ab538",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/restored-silence-s24le.bin": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/result.json": "c468de9fda11fb8a56e4a20bf626547dda89d63767b75a0f76702cfe71cd5ed4",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/sweep1-sram-attempt.json": "13ad834d451330c78d17eb858693df756e4463ef3c61fd81d9966fae71887cc6",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/sweep1-sram.log": "ca764036c53571f7c46b5d2329b42d8fad9bf3b023f2ae7168a2e1dca00bec9d",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/sweep1.bin": "a3936ccc0e14143d52e570a6f9847c481246ebe9cf6358346f24001c1748acf8",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/sweep1.json": "6ebd2dee2148f2b5e7d15fe58f79066ea7e9c766bade37dc28cbc476c5ba3bcb",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/sweep2-sram-attempt.json": "13ad834d451330c78d17eb858693df756e4463ef3c61fd81d9966fae71887cc6",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/sweep2-sram.log": "ca764036c53571f7c46b5d2329b42d8fad9bf3b023f2ae7168a2e1dca00bec9d",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/sweep2.bin": "a3936ccc0e14143d52e570a6f9847c481246ebe9cf6358346f24001c1748acf8",
+    "notes/sdram-timing-20261018/hardware-20261018-212812/sweep2.json": "1960a06bb47cb4681d87f61e40f9fb033452014ef19e38f3c07793bb2981155f",
+    "experiments/sdram_timing_20261018/check_hardware_evidence.py": "b69ac1a494d93f0fdc0a9edc68fa62e778257ddd78d701dc842c5dca7edfb37d",
+    "experiments/sdram_timing_20261018/common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79",
+    "experiments/sdram_timing_20261018/evidence/timing-audit.json": "89d9d70b2df79d3ec46e4b8692c92783db46b754f7fba43af3de5c9ee0cd4c76",
+    "notes/sdram-timing-20261018/bench_hardware.py": "49bc72f5a322280db2d94c5dc247c760f02d9e8890daa24dd46600719c0ffb92"
+  },
+  "limitations": [
+    "one board and current ambient/supply only",
+    "two complementary XOR-address patterns, not exhaustive alias/March/retention tests",
+    "no analog edge/timing measurements",
+    "readback receives 1Hz snapshots, not each transaction",
+    "no physical S2 test or power-cycle test in this stage"
+  ]
+}

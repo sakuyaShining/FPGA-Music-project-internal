@@ -1,0 +1,35 @@
+{
+  "scope": "synthesis only; logical interfaces exposed as ports, not physical pinout",
+  "profiles": {
+    "driver": {
+      "logic": 336,
+      "registers": 150,
+      "bsram": 0,
+      "io_ports_probe_only": 66,
+      "report_sha256": "53f4a4ae1bbacff0d286ba61c5575ebd7c71d947254a19d1502ebe315a63326a",
+      "hierarchy_sha256": "c08ea1cdff4a398755827fc30eab6cb0624c25afd54d1cbae912884fe5e29ce6"
+    },
+    "core_driver": {
+      "logic": 17373,
+      "registers": 6059,
+      "bsram": 31,
+      "io_ports_probe_only": 133,
+      "report_sha256": "9a34646ee9e9399a79aeaba2bd0540a1c7bf4a7df1e08c42f2999a473181c513",
+      "hierarchy_sha256": "d3bff16a00bdfe0eb530fb26b93618fe70416591b93035fbd7656d150ed7e4d6"
+    }
+  },
+  "core_baseline": {
+    "logic": 17087,
+    "T_Register": 5909,
+    "T_Bsram": 31
+  },
+  "combined_logic_delta_not_standalone_cost": 286,
+  "copied_core_inputs_match_previous_probe": true,
+  "limitations": [
+    "no physical IO allocation or PnR",
+    "pixel producer/FFT/trajectory renderer absent",
+    "new custom-instrument/layering/touch/encoder/storage logic absent",
+    "no physical display or audio test",
+    "core profile excludes diagnostic/PC live observation"
+  ]
+}

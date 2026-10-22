@@ -1,0 +1,40 @@
+{
+  "status": "PASS joint synthesis only; no pin/timing/board qualification",
+  "before": {
+    "Logic": 20082,
+    "BSRAM": 31,
+    "Register": 10928
+  },
+  "after": {
+    "Logic": 20114,
+    "BSRAM": 31,
+    "Register": 11015
+  },
+  "delta": {
+    "Logic": 32,
+    "BSRAM": 0,
+    "Register": 87
+  },
+  "logic_spare": 622,
+  "bsram_spare": 15,
+  "controller": {
+    "name": "sdram",
+    "Register": "87",
+    "Lut": "163",
+    "T_Register": "87(87)",
+    "T_Lut": "163(163)"
+  },
+  "changed": [
+    "sdram_storage_probe.v"
+  ],
+  "full_pnr": false,
+  "hardware_tested": false,
+  "inputs": {
+    "audit_resources.py": "3eddd1b3cfd7aa44a7f8af8a8696d4a3c3b5bbc3d6fd2acc7bb321bc976659d7",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79",
+    "synthesize.py": "54ea3556f8a0ffcd9e5fdbbb7a271b662f3f964671b91fca1f4f5909983466b7",
+    "synthesis_reference/run.json": "40b5af125f7c8964671169fd733751ab59dfa60b0ae76b1b8fc0c43731363c14",
+    "synthesis_buffered/run.json": "cdf63c0c66cccf32071551e03efcea2acc778203f099285793f3c2911e09bac3",
+    "synthesis_buffered/impl/gwsynthesis/probe_syn_rsc.xml": "0f74a6aa3d8169d687980e41296032d63abdf29ecba6b99e42b95d5b4c6feb94"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "status": "discussion_not_implementation_or_manufacturing_release",
+  "reference_board": "3921 rev1.30",
+  "profile": "17_GPIO_shared_DC_and_LCD_reset_via_595",
+  "gpio_count": 17,
+  "unique_pin_count": 17,
+  "all_pins_on_actual_headers": true,
+  "all_pins_in_reviewed_3V3_groups": true,
+  "reserved_pin_overlap": [],
+  "LED_pins_repurposed": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "fast_signal_on_LED_pin": "BUS_MOSI pin15; waveform/loading unverified",
+  "capacity_examples": [
+    {
+      "slots": 25,
+      "pitch_nodes": 75,
+      "octave_nodes_example": 5,
+      "active_nodes": 80,
+      "lanes": 6,
+      "available_sensing_addresses": 84,
+      "spare_sensing_addresses": 4,
+      "all_addresses_unique": true,
+      "active_addresses_below_reserved": true
+    },
+    {
+      "slots": 26,
+      "pitch_nodes": 78,
+      "octave_nodes_example": 5,
+      "active_nodes": 83,
+      "lanes": 6,
+      "available_sensing_addresses": 84,
+      "spare_sensing_addresses": 1,
+      "all_addresses_unique": true,
+      "active_addresses_below_reserved": true
+    }
+  ],
+  "system_bom_rows": 28,
+  "quote_closed": false,
+  "touch_latency_verified": false,
+  "board_revision_matched_to_user": false,
+  "physical_display_pinout_known": false,
+  "prototype_speaker_user_report": {
+    "ohms": 4,
+    "rated_watts": 3
+  },
+  "engine_RTL_changed": false,
+  "native_schematic_changed": false,
+  "purchased": false,
+  "native_project_changed_files": []
+}

@@ -1,0 +1,34 @@
+{
+  "status": "Arithmetic only; not measured performance",
+  "screen_frame_bytes": 768000,
+  "ideal_fullframe_ms_at_6_75MHz": 910.2222222222223,
+  "ideal_fullframe_fps_at_6_75MHz": 1.0986328125,
+  "raw_payload_limit_bytes_per_50ms": 42187.5,
+  "gt911_100Hz_period_ms": 10,
+  "previous_five_point_I2C_ideal_ms": 1.1925,
+  "nominal_100Hz_phase_plus_I2C_ms": 11.192499999999999,
+  "uart_spectrum_and_refresh_writes": 20,
+  "uart_bytes": 40,
+  "uart_8n1_ideal_ms_at_115200": 3.472222222222222,
+  "original_Logic_remaining": 959,
+  "original_BSRAM_remaining": 8,
+  "cost_sensitivity": [
+    {
+      "case": "Both cost alternatives qualify",
+      "reference_total_cny": "557.9049"
+    },
+    {
+      "case": "ESD alternative fails; revert original TI reference",
+      "reference_total_cny": "599.2417"
+    },
+    {
+      "case": "MUX alternative fails; revert original TI reference",
+      "reference_total_cny": "577.6281"
+    },
+    {
+      "case": "Both alternatives fail",
+      "reference_total_cny": "618.9649"
+    }
+  ],
+  "budget_equation": "power_reuse_saving + manufacturing_saving + other_confirmed_saving >= 57.9049 + extra_interface_cost + other_uncovered_cost"
+}

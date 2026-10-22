@@ -1,0 +1,49 @@
+{
+  "status": "PASS board diagnostic pin/internal timing and wrapper simulation audit only",
+  "resource": {
+    "Logic": 10495,
+    "Register": 4699,
+    "BSRAM": 39,
+    "I/O Port": 14
+  },
+  "slack_ns": {
+    "Setup": 8.486,
+    "Hold": 0.074
+  },
+  "tns": 0,
+  "pins": {
+    "uart_rx_pin": 70,
+    "uart_tx_pin": 69,
+    "clk": 4,
+    "led[0]": 15,
+    "led[1]": 16,
+    "led[2]": 17,
+    "led[3]": 18,
+    "led[4]": 19,
+    "led[5]": 20,
+    "reset_button": 87,
+    "dac_bck": 56,
+    "dac_ws": 55,
+    "dac_din": 54,
+    "pa_en": 51
+  },
+  "bitstream_sha256": "8c2d52e59b13b8d343b54a9d602d265154dc6cc9640320df10835f2e1b1c253c",
+  "warnings": [
+    "WARN  (EX3073) : Port 'board_wr_en' remains unconnected for this instance(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\envelope_resources_20261017\\build_board\\board_config_top.v\":38)",
+    "WARN  (EX3791) : Expression size 32 truncated to fit in target size 11(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\envelope_resources_20261017\\build_board\\pad_pitch.v\":56)",
+    "WARN  (EX3073) : Port 'update_overrun' remains unconnected for this instance(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\envelope_resources_20261017\\build_board\\tdm_engine_rh.v\":657)",
+    "WARN  (NL0002) : The module \"pad_pitch\" instantiated to \"u_pitch\" is swept in optimizing(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\envelope_resources_20261017\\build_board\\tdm_top_owned.v\":627)",
+    "WARN  (NL0002) : The module \"strip_ctrl\" instantiated to \"u_strip\" is swept in optimizing(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\envelope_resources_20261017\\build_board\\tdm_top_owned.v\":632)",
+    "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+  ],
+  "external_i2s_timing_verified": false,
+  "full_system_pnr": false,
+  "hardware_tested": false,
+  "build_record_sha256": "68dbf73036249f041b025e04952c2b1e1a88a2d4f26bf63ec45013161431ff95",
+  "inputs": {
+    "audit_board.py": "966b5d8c5860de59ae96f8abead2670eb9e60c587de94548ff5e4a76b998ab53",
+    "common.py": "8368a74675466ca951b7547bde1c89aadc23b1086b001b04cc5ae6f73c62c1ea",
+    "constraints/board_audio.cst": "275e1fd51e4a8d806dc65ad3c001aa44354201f6ea5fbb77696dd51158781b2f",
+    "constraints/board_audio.sdc": "9c6bf1e3e62b58b886616f133fe6a963272b7528b8e95d8810adbe89986cf39e"
+  }
+}

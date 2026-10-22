@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "notes/sdram-timing-20261018/bench_hardware.py", line 116, in main
+    attempted=True;program('sweep%d-sram'%number,fs)
+  File "notes/sdram-timing-20261018/bench_hardware.py", line 63, in program
+    assert 'success' in log.lower(),('no success marker',label)
+AssertionError: ('no success marker', 'sweep1-sram')

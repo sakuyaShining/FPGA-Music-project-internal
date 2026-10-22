@@ -1,0 +1,29 @@
+{
+  "status": "部分实现",
+  "source_main_head": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+  "source_engine_head": "683db4834a031baca217b9e3ae7a0369644b8935",
+  "upstream": "experiments/left_hand_events_20261016",
+  "version": "instrument-layers-20261016-v0",
+  "features": {
+    "four_volatile_spectral_envelope_slots": "已验证",
+    "complete_staging_and_atomic_publish": "已验证",
+    "dual_layer_identity_slide_release": "已验证",
+    "ideal_rc_to_dual_layer_pcm": "已验证",
+    "legacy_pcm_i2s": "已验证",
+    "full_instrument_configuration": "部分实现",
+    "independent_attack_release_effects": "待实现",
+    "four_simultaneous_layers": "待实现",
+    "gui_wire_protocol_and_physical_editor": "待实现",
+    "nonvolatile_save": "待实现",
+    "pcm_accompaniment_record_play_live": "待实现",
+    "event_tracks_and_score_guide": "待实现",
+    "seven_inch_touch_ui": "待实现",
+    "hardware_timing_and_audio_qualification": "待实现",
+    "final_music_switch_and_steal_semantics": "讨论中",
+    "final_500_yuan_manufacturing": "讨论中"
+  },
+  "resource": {"logic": 20668, "logic_limit": 20736, "register": 12604, "bsram": 43, "bsram_limit": 46, "full_product_capacity_verified": false, "pnr_tested": false},
+  "hardware_tested": false,
+  "startup_unknown_boundary": {"pcm_samples": 1, "i2s_clocks": 512, "known_after_warmup_clocks": 4096},
+  "next": "先优化元数据/分配资源，建立完整配置与TF/SDRAM录放所需余量，再接逐层包络及非易失保存；不擅改音乐规则"
+}

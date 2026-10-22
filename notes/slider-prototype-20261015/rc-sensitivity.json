@@ -1,0 +1,219 @@
+{
+  "kind": "illustrative lumped-RC arithmetic, not hardware acceptance",
+  "assumptions": {
+    "vcc_v": 3.3,
+    "vt_high_v": 2.0,
+    "vt_low_v": 0.6,
+    "baseline_cap_pf": 100,
+    "touch_delta_pf": 5,
+    "clock_hz": 27000000
+  },
+  "stress_sources": {
+    "LVC14A_input": "datasheet II at 3.6V: 1uA/5uA/20uA for listed temperature columns",
+    "4067_off": "datasheet at 6V: 0.8uA at 25C and 8uA over listed ranges",
+    "caution": "sums 1.8/13/28uA are illustrative; not guaranteed combined 3.3V bounds"
+  },
+  "rows": [
+    {
+      "resistor_ohms": 10000,
+      "leakage_stress_ua": 0,
+      "charge_asymptote_v": 3.3,
+      "discharge_asymptote_v": 0.0,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 0.9315582040049434,
+      "delta_5pf_ticks_27mhz": 1.2576035754066712
+    },
+    {
+      "resistor_ohms": 10000,
+      "leakage_stress_ua": 1.8,
+      "charge_asymptote_v": 3.282,
+      "discharge_asymptote_v": 0.018,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 0.9400316341694207,
+      "delta_5pf_ticks_27mhz": 1.2690427061287173
+    },
+    {
+      "resistor_ohms": 10000,
+      "leakage_stress_ua": 13,
+      "charge_asymptote_v": 3.17,
+      "discharge_asymptote_v": 0.13,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 0.9967278390795243,
+      "delta_5pf_ticks_27mhz": 1.3455825827573593
+    },
+    {
+      "resistor_ohms": 10000,
+      "leakage_stress_ua": 28,
+      "charge_asymptote_v": 3.02,
+      "discharge_asymptote_v": 0.27999999999999997,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 1.0854542040905988,
+      "delta_5pf_ticks_27mhz": 1.465363175522305
+    },
+    {
+      "resistor_ohms": 22000,
+      "leakage_stress_ua": 0,
+      "charge_asymptote_v": 3.3,
+      "discharge_asymptote_v": 0.0,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 2.049428048810876,
+      "delta_5pf_ticks_27mhz": 2.7667278658946666
+    },
+    {
+      "resistor_ohms": 22000,
+      "leakage_stress_ua": 1.8,
+      "charge_asymptote_v": 3.2603999999999997,
+      "discharge_asymptote_v": 0.039599999999999996,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 2.0909256639418023,
+      "delta_5pf_ticks_27mhz": 2.822749646321431
+    },
+    {
+      "resistor_ohms": 22000,
+      "leakage_stress_ua": 13,
+      "charge_asymptote_v": 3.014,
+      "discharge_asymptote_v": 0.286,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 2.3966034290776874,
+      "delta_5pf_ticks_27mhz": 3.2354146292548753
+    },
+    {
+      "resistor_ohms": 22000,
+      "leakage_stress_ua": 28,
+      "charge_asymptote_v": 2.6839999999999997,
+      "discharge_asymptote_v": 0.616,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": false,
+      "charge_100pf_us": 3.0076322770318495,
+      "delta_5pf_ticks_27mhz": 4.060303573992986
+    },
+    {
+      "resistor_ohms": 47000,
+      "leakage_stress_ua": 0,
+      "charge_asymptote_v": 3.3,
+      "discharge_asymptote_v": 0.0,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 4.378323558823234,
+      "delta_5pf_ticks_27mhz": 5.910736804411382
+    },
+    {
+      "resistor_ohms": 47000,
+      "leakage_stress_ua": 1.8,
+      "charge_asymptote_v": 3.2154,
+      "discharge_asymptote_v": 0.0846,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 4.5725290723297425,
+      "delta_5pf_ticks_27mhz": 6.172914247645162
+    },
+    {
+      "resistor_ohms": 47000,
+      "leakage_stress_ua": 13,
+      "charge_asymptote_v": 2.689,
+      "discharge_asymptote_v": 0.611,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": false,
+      "charge_100pf_us": 6.399911910699468,
+      "delta_5pf_ticks_27mhz": 8.639881079444294
+    },
+    {
+      "resistor_ohms": 47000,
+      "leakage_stress_ua": 28,
+      "charge_asymptote_v": 1.9839999999999998,
+      "discharge_asymptote_v": 1.316,
+      "crosses_assumed_high": false,
+      "crosses_assumed_low": false,
+      "charge_100pf_us": null,
+      "delta_5pf_ticks_27mhz": null
+    },
+    {
+      "resistor_ohms": 100000,
+      "leakage_stress_ua": 0,
+      "charge_asymptote_v": 3.3,
+      "discharge_asymptote_v": 0.0,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 9.315582040049433,
+      "delta_5pf_ticks_27mhz": 12.57603575406677
+    },
+    {
+      "resistor_ohms": 100000,
+      "leakage_stress_ua": 1.8,
+      "charge_asymptote_v": 3.1199999999999997,
+      "discharge_asymptote_v": 0.18,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 10.245043165143878,
+      "delta_5pf_ticks_27mhz": 13.830808272944271
+    },
+    {
+      "resistor_ohms": 100000,
+      "leakage_stress_ua": 13,
+      "charge_asymptote_v": 2.0,
+      "discharge_asymptote_v": 1.2999999999999998,
+      "crosses_assumed_high": false,
+      "crosses_assumed_low": false,
+      "charge_100pf_us": null,
+      "delta_5pf_ticks_27mhz": null
+    },
+    {
+      "resistor_ohms": 100000,
+      "leakage_stress_ua": 28,
+      "charge_asymptote_v": 0.5,
+      "discharge_asymptote_v": 2.8,
+      "crosses_assumed_high": false,
+      "crosses_assumed_low": false,
+      "charge_100pf_us": null,
+      "delta_5pf_ticks_27mhz": null
+    },
+    {
+      "resistor_ohms": 220000,
+      "leakage_stress_ua": 0,
+      "charge_asymptote_v": 3.3,
+      "discharge_asymptote_v": 0.0,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 20.494280488108757,
+      "delta_5pf_ticks_27mhz": 27.667278658946802
+    },
+    {
+      "resistor_ohms": 220000,
+      "leakage_stress_ua": 1.8,
+      "charge_asymptote_v": 2.904,
+      "discharge_asymptote_v": 0.39599999999999996,
+      "crosses_assumed_high": true,
+      "crosses_assumed_low": true,
+      "charge_100pf_us": 25.67433034215523,
+      "delta_5pf_ticks_27mhz": 34.66034596190959
+    },
+    {
+      "resistor_ohms": 220000,
+      "leakage_stress_ua": 13,
+      "charge_asymptote_v": 0.43999999999999995,
+      "discharge_asymptote_v": 2.86,
+      "crosses_assumed_high": false,
+      "crosses_assumed_low": false,
+      "charge_100pf_us": null,
+      "delta_5pf_ticks_27mhz": null
+    },
+    {
+      "resistor_ohms": 220000,
+      "leakage_stress_ua": 28,
+      "charge_asymptote_v": -2.8600000000000003,
+      "discharge_asymptote_v": 6.16,
+      "crosses_assumed_high": false,
+      "crosses_assumed_low": false,
+      "charge_100pf_us": null,
+      "delta_5pf_ticks_27mhz": null
+    }
+  ],
+  "manufacturing_release": false
+}

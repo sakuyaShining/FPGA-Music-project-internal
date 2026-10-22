@@ -1,0 +1,199 @@
+usage: programmer_cli.exe [-h] [--device <GWxx-x>] [--operation_index <int>]
+                          [--chain_index <int>] [--chain_size <int>]
+                          [--chain_ir <string>] [--frequency <string>]
+                          [--fsFile bitstream.fs] [--acFile ac.bin]
+                          [--csrFile csr.bin] [--mcuFile mcu.bin]
+                          [--fiFile userflash.fi] [--spiaddr 0x000000]
+                          [--output output.txt]
+                          [--key 00000000-00000000-00000000-00000000]
+                          [--keyread] [--keywrite] [--keylock]
+                          [--keywritefile] [--keyFile byteskey.ekey]
+                          [--mfgiref data[9:0]] [--svfcreate]
+                          [--svf_frequency <float>] [--channel <int>]
+                          [--location <int>] [--uid UID] [--lpt_address <int>]
+                          [--cable "Gowin USB CableFT2CH"]
+                          [--cable-index <int>] [--scan-cables [{F,L}]]
+                          [--scan] [--filestransform <int>] [--files <string>]
+                          [--read-otp-addr] [--save-otp-addr]
+                          [--i2c-addr 1010000] [--read-golden-addr]
+                          [--save-golden-addr] [--golden-addr 0x800000]
+                          [--debug [C:\]] [--gvc GVC]
+
+Gowin FPGA Programmer command-line interface. Version V1.9.11.03 Education (64-bit) build(2536);
+Copyright (C) 2014-2025 Gowin Semiconductor Corporation
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --device <GWxx-x>, -d <GWxx-x>
+                        Define a GOWIN FPGA device from:
+                        GW1N-1P5C GW1N-9C GW1NR-9C GW1NSR-4C 
+                        GW1NZ-1 GW2A-18C GW2AR-18C GW5A-25A 
+                        GW5A-25B GW5ART-15A GW5AS-25B GW5AST-138B 
+                        GW5AST-138C GW5AT-60B 
+  --operation_index <int>, --run <int>, -r <int>
+                        0: Read Device Codes;
+                        1: Reprogram;
+                        2: SRAM Program;
+                        3: SRAM Read;
+                        4: SRAM Program and Verify;
+                        5: embFlash Erase,Program;
+                        6: embFlash Erase,Program,Verify;
+                        7: embFlash Erase Only;
+                        8: exFlash Erase,Program;
+                        9: exFlash Erase,Program,Verify;
+                        10: exFlash Bulk Erase;
+                        11: exFlash Verify;
+                        12: exFlash Erase,Program in bscan;
+                        13: exFlash Erase,Program,Verify in bscan;
+                        14: exFlash Bulk Erase in bscan;
+                        15: exFlash Verify in bscan;
+                        16: SRAM Program JTAG 1149;
+                        17: SRAM Program,Verify JTAG 1149;
+                        18: bsdl read;
+                        19: embFlash 2nd Erase,Program;
+                        20: embFlash 2nd Erase,Program,Verify;
+                        21: embFlash 2nd Erase Only;
+                        22: -R-;
+                        23: Connect to JTAG of MCU;
+                        24: SRAM Erase;
+                        25: Authentication Code Erase,Program,Verify;
+                        26: Authentication Code Read;
+                        27: Firmware Erase,Program Securely;
+                        28: Firmware Erase Only;
+                        29: Firmware Erase,Program;
+                        30: Firmware Erase,Program,Verify;
+                        31: exFlash C Bin Erase,Program;
+                        32: exFlash C Bin Erase,Program,Verify;
+                        33: -R-;
+                        34: MFG Write iRef;
+                        35: CSR File Erase,Program,Verify;
+                        36: exFlash Erase,Program thru GAO-Bridge;
+                        37: exFlash Erase,Program,Verify thru GAO-Bridge;
+                        38: exFlash C Bin Erase,Program thru GAO-Bridge;
+                        39: exFlash C Bin Erase,Program,Verify thru GAO-Bridge;
+                        40: DK-GoAI-GW1NSR4C_QN48 v1.1;
+                        41: DK-GoAI-GW1NSR4C_QN48 v2.2;
+                        42: DK-GoAI-GW2AR18_QN88P v1.1;
+                        43: -R-;
+                        44: sFlash Erase,Program;
+                        45: sFlash Erase,Program,Verify;
+                        46: sFlash Verify Only;
+                        47: sFlash Bulk Erase;
+                        48: sFlash Background Erase,Program;
+                        49: sFlash Background Erase,Program,Verify;
+                        50: sFlash Erase,Program,Verify thru GAO-Bridge;
+                        51: exFlash Detect ID;
+                        52: exFlash Bulk Erase 5A;
+                        53: exFlash Erase,Program 5A;
+                        54: exFlash Erase,Program,Verify 5A;
+                        55: exFlash C Bin Erase,Program 5A;
+                        56: exFlash C Bin Erase,Program,Verify 5A;
+                        57: I2C Program SRAM;
+                        58: I2C Program Flash;
+                        59: I2C Erase Flash Only;
+                        60: I2C Erase Flash Only thru I2C-SPI;
+                        61: I2C Erase,Program Flash thru I2C-SPI;
+                        62: EBR Read;
+                        63: sFlash Background Erase,Program,Verify thru GAO-Bridge;
+                        64: sFlash Bulk Erase in bscan;
+                        65: sFlash Erase,Program in bscan;
+                        66: exFlash Verify 5A;
+                        67: exFlash Verify thru GAO-Bridge 5A;
+                        68: exFlash Erase,Program thru GAO-Bridge 5A;
+                        69: exFlash Erase,Program,Verify thru GAO-Bridge 5A;
+                        70: embFlash Background Erase,Program;
+                        71: embFlash Background Erase,Program,Verify;
+                        72: embFlash Background Erase Only ;
+                        73: Read User Code;
+                        74: Read Status Register;
+                        75: Set Flash QE For 9x/18x;
+                        76: Set ExFlash QE For GW5A(T);
+                        77: exFlash Erase,Program,Verify thru UART-IP-SPI;
+                        78: SRAM Reprogram thru UART-IP-SPI;
+                        79: -R-;
+                        80: -R-;
+  --chain_index <int>, -i <int>
+                        Define the device index on the chain. The default is 0.
+                        It must be used in combination with option: "--chain_size".
+  --chain_size <int>, -l <int>
+                        Define the device index on the chain. The minimum  length is 1.
+                        It must be used in combination with option: "--chain_index".
+  --chain_ir <string>   Define the IR_LENGTH of every device. example: 8,8,8,8 
+  --frequency <string>, --freq <string>
+                        default is 2.5MHz. More options:
+                        2.5MHz; 2MHz; 15MHz; 10MHz; 1.5MHz; 1.1MHz; 0.9MHz; 0.75MHz; 0.5MHz; 0.3MHz; 0.4MHz; 0.1MHz; 0.02MHz; 
+  --fsFile bitstream.fs, --fs bitstream.fs, -f bitstream.fs
+                        Define the .fs file path.
+  --acFile ac.bin, --ac ac.bin, -a ac.bin
+                        Define the Authentication-Code file path.
+  --csrFile csr.bin     Define the CSR file path.
+  --mcuFile mcu.bin, --fw mcu.bin, --mcu mcu.bin, -m mcu.bin
+                        Define firmware file path of MCU.
+  --fiFile userflash.fi
+                        Define Userflash initialization file path.
+  --spiaddr 0x000000    Define starts address of spi-flash.
+  --output output.txt, -o output.txt
+                        Define output file path. Default is output.txt
+  --key 00000000-00000000-00000000-00000000
+                        16 byte key string in HEX format.
+  --keyread             Read key from FPGA
+  --keywrite            Write key to FPGA
+  --keylock             Lock key setting
+  --keywritefile        Write key to FPGA through ekey file
+  --keyFile byteskey.ekey
+                        Define the byteskey(.ekey) file path.
+  --mfgiref data[9:0]   Write data[9:5] to tune iref;data[9:0]=itrim[9:5]+freq[4:0]
+  --svfcreate           Create SVF file only.
+  --svf_frequency <float>
+                        Define a frequency for SVF, default is 2.5 (MHz).
+  --channel <int>       Define download cable channel. Default is 0. Only works for Gowin USB Cable(FT2CH)
+  --location <int>      Define location number of USB Cable.
+                                when use location option, programmer will open the corresponding cable.
+                                Default works for Gowin USB Cable(FT2CH) .
+                                Will ignore --channel option
+  --uid UID, --unique-id UID
+                        Define Unique-ID of USB Cable.
+                                when use this option, programmer will open the corresponding cable.
+                                Default works for Gowin USB Cable(FT2CH) .
+                                Will ignore --location and --channel option
+  --lpt_address <int>   Define GOWIN LPT cable address. Default is 0x0378.
+  --cable "Gowin USB Cable(FT2CH)"
+                        Select a type of USB cable(including quotation marks):
+                        "Gowin USB Cable(GWU2X)"
+                        "Gowin USB Cable(FT2CH)"
+                        "Parallel Port(LPT)"
+                        "Digilent USB Device"
+                        "USB Debugger A"
+                        "Gowin USB Cable(WINUSB)"
+                        Default cable is "Gowin USB Cable(FT2CH)" 
+  --cable-index <int>   Select a number for USB cable:
+                        0: Gowin USB Cable(GWU2X);
+                        1: Gowin USB Cable(FT2CH);
+                        2: Parallel Port(LPT);
+                        3: Digilent USB Device;
+                        4: USB Debugger A;
+                        5: Gowin USB Cable(WINUSB);
+                        Higher priority than --cable, default cable-index is 0
+  --scan-cables [{F,L}], --show-channel [{F,L}]
+                        List GOWIN USB download cables, F means using ft2xx driver, L means using libusb driver 
+  --scan                Scan and list GOWIN FPGA devices
+  --filestransform <int>
+                        1: Convert/Merge .fs to .bin;
+                        2: Convert/Merge .bin(binary) to .hex(HEX);
+                        3: Convert/Merge .bin(binary) to .h(hpp);
+                        4: Convert .bin(binary) to .intelhex(Intel HEX);
+                        5: Merge multiple ".fs" files to one ".fs"  ;
+                        6: Append User Flash Init File(.fi) to a BitStreamFile(.bin);
+                        7: Append a MCU FW File(.bin) to a BitStreamFile(.bin);
+                        8: Append GW1NS4C M3 Core File(.bin) to a BitStreamFile(.fs);
+  --files <string>      Used with the parameter --filestransform together, multiple files are separated by ",",
+                        such as: file1.fs,file2.fs 
+  --read-otp-addr       Read OTP I2C Address
+  --save-otp-addr       Save as OTP I2C Address
+  --i2c-addr 1010000    Set the USB Cable address of I2C interface
+  --read-golden-addr    Read golden image Address
+  --save-golden-addr    Save as golden image Address
+  --golden-addr 0x800000
+                        Set the address of the golden image , the range is 0x000000-0xF00000, the default is 0x800000
+  --debug [C:\]         Output address of the file during debugging
+  --gvc GVC             Set the IP address and port number of gvc in the format xxx.xxx.xxx.xxx: xxxx

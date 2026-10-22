@@ -1,0 +1,35 @@
+{
+  "status": "PASS offline raw-frame/log audit of two physical six-case stream runs and stage76 restore",
+  "hardware_directory": "notes/sdram-stream-board-20261018/hardware-20261018-222833",
+  "hardware_tested": true,
+  "runs": 2,
+  "input_root": "C:\\Users\\Sakuya\\FPGA-Music-project",
+  "inputs": {
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/bench_hardware_attempt.py": "3e33a5d5000c86fe31d6be2de44be282dca43e3b6acf933b39034e1c44574153",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/cables.log": "8655fbd934397b5f9b9cc9e4ffe21a5f4213b793848c182cff0d45990b9efe6a",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/jtag-scan.log": "ded7677c36a7905cb95d1a9fd82e7403c0a31cc45c7e22a38ad0d5b352b29232",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/programmer-help.log": "e1ad78c517ba244c57e539660a6c9e8f8f98c0bbe24ac5e603e3f530c2d7bd60",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/restore-stage76-attempt.json": "0e57a6206b19d492f1f3c9126b6f4042c0b3c82b2b0f1da82a631a89f104b282",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/restore-stage76.log": "ca6ec564ffc027d1683544734c66bc9f4ad14d844073ccb4f5f56e6d2d9b26bb",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/restored-silence-s24le.bin": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/result.json": "3e6d99c6e3219135bfcd4110d8817e06e360507cbaf03328faced0a1ce8823ab",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/stream1.bin": "255bd88e8ec8f3cb9be821ed762e0f1e270399df222400fc759efa7bf3a3fc26",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/stream1.json": "82af52618854cdde09fdf91bcb061f88ebcf33665d4a50959fb0e60fc5338d33",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/stream2.bin": "98b94f57b768d70cf914dbe13cb9353d8c254d3ac84ae9f88881f1e654221fd6",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/stream2.json": "248d8a6e834bdb49f3814e38822a9b8fcf2d3c5b683c82967e5d09e47c434200",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/sweep1-sram-attempt.json": "ced75f168e96c9cca90c4fc388c22f15c7692c58908157d94fab7bad9961ab08",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/sweep1-sram.log": "63b6763ad5c9c76d6e8190e457f54919962421b243e030e3946d08b768b7bb38",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/sweep2-sram-attempt.json": "ced75f168e96c9cca90c4fc388c22f15c7692c58908157d94fab7bad9961ab08",
+    "notes/sdram-stream-board-20261018/hardware-20261018-222833/sweep2-sram.log": "e903a5f4a80379137a58ba87dc09a679fdf6d732acf0ad2348c99fb3b1fdb9d7",
+    "experiments/sdram_stream_board_20261018/check_hardware_evidence.py": "f4305e4925a54edc45c2ae94362bdd2e22b2d2993309b1c47ad01b545f816da1",
+    "experiments/sdram_stream_board_20261018/common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79",
+    "experiments/sdram_stream_board_20261018/evidence/timing-audit.json": "b3555e00193e3a2f70b298ed6d207f4e0af912f40c689d8f453db5872f5ba21b",
+    "notes/sdram-stream-board-20261018/bench_hardware.py": "3e33a5d5000c86fe31d6be2de44be282dca43e3b6acf933b39034e1c44574153"
+  },
+  "limits": [
+    "synthetic patterns and current single board/supply/ambient only",
+    "not real musical recording or final mixer",
+    "no physical S2, power-cycle or analog edge measurements",
+    "earlier final-prefix-check failures retained separately"
+  ]
+}

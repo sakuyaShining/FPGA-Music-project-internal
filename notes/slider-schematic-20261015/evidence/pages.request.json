@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "f2b882e0-36c9-40cb-b4c9-fc708f16a915",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "const pages=await eda.dmt_Schematic.getAllSchematicPagesInfo();const result={};\nawait eda.dmt_Schematic.modifySchematicPageName(__CLI__.args.p1,'01_Core_and_controls');result.core=__CLI__.args.p1;\nfor(const [key,name] of [['rc','02_Electrodes_and_RC'],['support','03_Power_and_interface']]){let p=pages.find(p=>p.name===name);let id=p?.uuid;if(!id){id=await eda.dmt_Schematic.createSchematicPage(__CLI__.args.sch);if(!id)throw new Error('Create page failed');await eda.dmt_Schematic.modifySchematicPageName(id,name);}result[key]=id;}return result;",
+    "--args",
+    "{\"p1\": \"ba336973a1f81bda\", \"sch\": \"7a8553eae6bc33bb\"}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

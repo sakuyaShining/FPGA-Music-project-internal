@@ -1,0 +1,81 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project C:/Users/Sakuya/FPGA-Music-project/experiments/music_visualizer_20261015/synthesis/visualizer.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\music_visualizer.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_panel_driver.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v'
+Analyzing included file 'C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_font.vh'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":55)
+Back to file 'C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":55)
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_spi_byte.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_wave_capture.v'
+Compiling module 'music_visualizer'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\music_visualizer.v":3)
+Compiling module 'mv_fft1024'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":4)
+Extracting RAM for identifier 'real_mem'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":22)
+Extracting RAM for identifier 'imag_mem'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":22)
+Extracting RAM for identifier 'window_rom'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":23)
+Extracting RAM for identifier 'cos_rom'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":23)
+Extracting RAM for identifier 'sin_rom'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":23)
+Extracting RAM for identifier 'band_rom'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":24)
+Extracting RAM for identifier 'peak'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":24)
+WARN  (EX2526) : Entry size 8 at bands1024.hex:0 does not match memory width 6("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":74)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":83)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":106)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":123)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":125)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":130)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 6("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":67)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":140)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_fft1024.v":145)
+Compiling module 'mv_wave_capture'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_wave_capture.v":2)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_wave_capture.v":25)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_wave_capture.v":26)
+Compiling module 'mv_renderer'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":4)
+Extracting RAM for identifier 'wave_mem'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":35)
+Extracting RAM for identifier 'previous_wave'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":35)
+Extracting RAM for identifier 'previous_bar'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":37)
+Extracting RAM for identifier 'pitches'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":42)
+WARN  (EX3791) : Expression size 24 truncated to fit in target size 17("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":47)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":79)
+Compiling module 'mv_panel_driver'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_panel_driver.v":4)
+Compiling module 'mv_spi_byte'("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_spi_byte.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_spi_byte.v":28)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 3("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_spi_byte.v":36)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_spi_byte.v":41)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_spi_byte.v":45)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_panel_driver.v":97)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_panel_driver.v":101)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_panel_driver.v":113)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_panel_driver.v":122)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_panel_driver.v":123)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":149)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":149)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":155)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":89)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":94)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":170)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 6("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":175)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":183)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":189)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\mv_renderer.v":202)
+NOTE  (EX0101) : Current top module is "music_visualizer"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\impl\gwsynthesis\visualizer.vg" completed
+[100%] Generate report file "C:\Users\Sakuya\FPGA-Music-project\experiments\music_visualizer_20261015\synthesis\impl\gwsynthesis\visualizer_syn.rpt.html" completed
+GowinSynthesis finish

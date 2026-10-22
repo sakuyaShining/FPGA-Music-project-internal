@@ -1,0 +1,25 @@
+{
+  "status": "PASS deterministic derivations",
+  "files": {
+    "engine/finger_pitch.v": "9adf7a2f109646d9c9e7b61f77a5081f8fabdf973dd0b067b21a140ed5fd6bfe",
+    "optimization/note_map_owned.v": "5e9dec7f488ccaa5d46f1cc3b56f3c1f25fe0e255f7f6e12cb896ecf501939f5",
+    "candidate/tdm_top_owned.v": "dbfdd0fa93d1dbddd0e5e50cc7014f9931f8a5e2a2e9e9c8ec14f7f0a2c94929",
+    "candidate/compat_music_probe.v": "db29224b40cefcbaeec304f234eb3ffce6de4bbc24de75c2d3acf469f3e26d28",
+    "rtl/left_layer_music_probe.v": "05f926e956344b9d07272b47a55c89c033b29e6c54202ba1f12f5612c70cd111",
+    "rtl/instrument_layer_probe.v": "edf4675a5f9b9f17153e9f73a62fc33407ec52e5d7747a808cefe0a6eba48dbb",
+    "rtl/layer_dispatch.v": "cf1f0739a324c1bea4d28734bf60b8a34366395ae199da3515ac81d5e29d7f0f",
+    "tb_sensor_layers.v": "940e69af658cdc424bf58348dea6754395b171e2976d67ab034ed4d384f4a58a",
+    "upstream.json": "baf3792380378a23182d73c0614d3065761fd7f7463fee2afac591b865bc06fd",
+    "sustain.json": "7b1081642f4e050f6e45d9ae4dbd42e0b33ddfabae629bc5cb59e4c77ee87eb9",
+    "strike.json": "2b1def97b5015a27f70ea1f52c96ee365d20bd119448c788e0cc42ae24d70090",
+    "sustain.hex": "461d639260397c0385e1fe0e32e3b9c0b156e4d421df159eaea0369dd7a1abff",
+    "strike.hex": "71c0be07225d6a8a33bf5ec4c969b8e4fe30cfc4285ab9cbb4c8c0f54e042a66"
+  },
+  "generators": {
+    "notes/instrument-layers-20261016/prepare.py": "6b718c98d2338e81fd032dcbdd13a01f9ba0b1d287316f0c971a51f72b623554",
+    "experiments/instrument_layers_20261016/prepare_wrappers.py": "11fa93947758d8db3df6bfeaf3f15ac561b4f813f75004632709b335d757525f",
+    "experiments/instrument_layers_20261016/prepare_sensor_test.py": "77f351bc3beb99409e3775ae67ccd2d8a84755365c03fbd7264232b9f3de5d1d",
+    "experiments/instrument_layers_20261016/prepare_memory_opt.py": "611d446c0e1657933c941d30ba933350c86949cbbf3e279c9be6b8930dcfb8bc",
+    "experiments/instrument_layers_20261016/check_slot_format.py": "e7be7a5763287023099e6545777524dafa8b1b12f52ed5d3c7e2ff64a413107c"
+  }
+}

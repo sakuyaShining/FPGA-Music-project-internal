@@ -1,0 +1,106 @@
+# -*- coding: utf-8 -*-
+from pathlib import Path
+import json
+P=Path(__file__).resolve().parents[2];N=Path(__file__).resolve().parent;R=P/'experiments/fx_memory_20261017';D=P/'docs/02-技术方案'
+read=lambda p:json.loads(p.read_text(encoding='utf-8'))
+syn=read(R/'synthesis_single_read/run.json');audit=read(R/'evidence/board-memory-audit.json');inv=read(R/'evidence/memory-inventory.json')
+assert syn['metrics']==dict(Logic=20635,BSRAM=28,Register=11592) and inv['freed_blocks']==18
+report='''# 效果器单读口与存储资源账 · 2026-10-17
+
+## 0. 结论、版本与状态
+
+版本`fx-memory-20261017-v0`，入口`experiments/fx_memory_20261017/project/CURRENT.md`。效果器单读口在限定逐拍对照、音乐/配置回归及综合范围**已验证**：联合BSRAM从46降至28，释放18；Logic从20537增加至20635，余101。因此内存瓶颈已缓解，逻辑容量仍紧，不能宣布已容纳SDRAM/TF/持久化/录放或全部产品。
+
+新诊断包装内部PnR通过，实体新RAM路径**已实现待验证**，本轮未下载、未开实际串口或访问任何存储介质。当前板上仍为76号已实测的配置诊断，原GUI及76号入口继续可用。整机**部分实现**；用户的非易失、伴奏录放、实体显示/触控等目标保持，不通过削减音乐功能或加板达成资源数字。
+
+开始核对38/39、main192与38号工作树分布后，验证76号源/证据/板验身份；先ZIP备份189项输入，再在新目录修改。main HEAD仍`fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12`；原76号及更早快照不覆盖，新delivery.json绑定源码、数据表、接口、构建/约束、验证及资源报告。讨论收尾仅更新38/39/49入口和本报告。
+
+## 1. 实测占用账和问题来源
+
+76号的Gowin层次资源报告列出：效果器20BSRAM、TDM状态/音源10、音符映射与运行时表5、FFT5、渲染2、扫描差值2、右手映射1、配置接收1，总和46。
+
+效果器的逻辑线缓冲为2048×16位，数据本体32768bit，但原源有十个分别捕获RAM输出的同步读表达式。虽然由状态机依次读取，综合仍复制出十份存储，各2BSRAM，共20。不能依据注释中的“分时”“一条线”就认定只有一个物理RAM读口或一块BSRAM。
+
+优化后只有效果器变为2，其余BSRAM归属不变，总28/46。释放18块，每块18432原始物理bit，合计331776bit≈40.5KiB；16位模式下可用载荷容量还受18位字宽/深度配置限制，不能把原始bit直接当任意字节FIFO容量。完整机器可读账在`evidence/memory-inventory.json`及`memory-owners.csv`。
+
+## 2. 单读口实现与时序规则
+
+现先选择本次抽头的偏移，再只做一次`wptr-offset`和一次同步RAM读。读地址在与旧模块完全相同的边沿取值，不能提前一拍取参数，否则运行中更改dly_len/cho_depth会改变含义。
+
+同步输出配套保存读标签；当前标签对应的抽头直接使用新读数据，在下一边沿存入该抽头的保持寄存器。因此每个抽头对外更新的拍次仍与旧模块一致，下一次RAM读不会冲掉之前抽头。st11计算反馈、写回和混音时，最后一个混响抽头已通过转发可见；sample_en打断、reset及不完整读序列也保留原行为。
+
+这是为避免历史“统一读地址后抽头错位”的重新实现；本轮没有缩小延迟线、减抽头、降低精度或删除延迟/合唱/混响，也没有插入新的音频样本延迟。
+
+## 3. 验证与实际构建
+
+| 检查 | 实际结果与范围 |
+|---|---|
+| 直接旧模块参考 | 两轮各600000拍，每轮同时AW11/2048项和AW4/16项；逐拍比较十抽头、dout、状态、指针、LFO、冲刷、阻尼状态及每次RAM写入；每轮每种深度46848次写回，覆盖多次回绕 |
+| 已知初始RAM | 600001次观察输出全已知，全部匹配；运行中逐拍变更长度、反馈、湿声/效果开关、LFO、阻尼，含脉冲、随机24位值、连续sample_en、打断读序列与中途复位 |
+| 未初始化RAM | 同样匹配，593857次已知、6144次未知输出；未知行为是旧路径现状，未声称修复 |
+| 故障反例 | 故意把读标签延后一位，cycle100046的AW4对照检出；当时dout尚相同，抽头/内部比较仍能检出，避免只看最终声音漏错 |
+| 原音乐与包络 | 71号三轨506645拍/985PCM逐字节一致，另两组启用独立包络的旧数据一致；5万拍独立参考、最大分频回绕、4123PCM配置链与3个既有故意错误反例通过 |
+| 配置链 | 串口独占、双入口与115200模型、CRC/截断/超时隔离及11主机故障检查通过；不把这些仿真称新板验 |
+| 相同工程综合 | reference20537Logic/11428寄存器/46BSRAM；single_read20635/11592/28，两工程只替换fx_delay.v，工程选项相同；Logic增加98、寄存器增加164、BSRAM减少18 |
+| 新诊断包装 | 加速1510PCM及115200标称4653PCM，配置/演奏/S2逻辑复位/关门清幅度清待写/重新上传通过；沿用76号复位静音边界，不声称缩短窗口env全清 |
+| 诊断PnR | 10369Logic/4864寄存器/21BSRAM/14IO；27MHz内部setup+7.694ns、hold+0.083ns，TNS0、违例0；14脚和LVCMOS33逐项核对 |
+
+完整逻辑接口探针无最终GPIO或联合PnR；诊断包装省略实体前端/显示/双层桥，不能拿其10369Logic余量签收整机。外部I²S接收时序、模拟音质和新BRAM路径实体表现仍未验；clk_d通用布线警告保留。教育版综合网表受保护，未做Icarus门级等价；RTL参考、资源报告和内部PnR各自限定范围。
+
+GUI和已有包络共享源码与76号一致，本轮无GUI修改，未为该改动重复跑104项GUI测试；使用上游已绑定的验证，不能列为本轮重跑结果。core/serial最终组绑定本轮实际输入。
+
+## 4. 必须单列的既有行为问题
+
+原fx_delay末尾对st有无条件递增覆盖，实际在sample_en间隙持续0～11循环，并非注释描述的“每个音频样本只运行一次”。因此FLUSH_LEN和dly_len的“样本”说明不能直接当真实声音时间规格。本轮逐拍保留这项行为，等价PASS只证明保持现状；没有替用户把原生52.734375kHz、效果时间或音乐响应改成另一套规则。
+
+后续应独立明确效果器推进节奏与参数时间映射，再做脉冲间隔、频谱/尾音和实体听感验收；状态为**待实现/讨论中**。原启动未知问题同样保留，不把资源优化当功能质量签收。schema1独立效果器仍拒绝应用，此处不把全局旧效果器等同逐层效果已完成。
+
+## 5. 断电保存与录放的实际接入边界
+
+| 后端 | 当前事实 | 后续所需 |
+|---|---|---|
+| 自定义乐器非易失 | 24LC256/32KiB是已有系统候选，当前未确认有此实物；电脑JSON保存及当前易失槽表不是断电保存 | 配置完整序列化/版本/CRC、写入和回读确认、断电中断恢复、I²C控制及设备加载接合 |
+| PCM文件 | 板载TF卡座可规划复用，未确认有卡；源码尚无TF写入/文件系统 | 卡资格、块读写/CRC/busy/超时、文件提交/恢复、原声与事件轨配对 |
+| 大缓冲 | 板内8MiB SDRAM为候选易失缓冲；可见Gowin安装目录的控制器模板，不是本项目已配置/接合IP | 实例、约束、初始化/刷新/仲裁、模型、资源/PnR及实体读写/吞吐/最长服务停顿验证 |
+
+本轮未触及板载配置Flash，不把它当用户数据后端；不把SDRAM当非易失介质，也未假定TF座内已有合格卡。录放仍**待实现**，不将主机诊断PCM捕获称录音功能。
+
+预算例可暂留播放FIFO1块、录制FIFO1块、事件暂存2块、卡块/元数据暂存1块，共5块；16位配置下单块约2048byte，单向FIFO仅约19.4ms PCM16，不能抵御任意卡停顿。它们只是预算候选，尚未分配、编写控制器或验证。大环形缓冲仍按61号SDRAM路线评估，不能把释放18块全部重复分配给多个用途。
+
+更紧的瓶颈现在是剩余101Logic：优先评估利用已释放RAM承接参数读回/状态保存等适合同步访问的数据，换回逻辑余量，再接SDRAM/TF/参数存储。该路线不自动冻结新器件、双板或500元制造方案，也不取消原两八度滑条、右手分区/松手保持/全和弦、自定义和分层/伴奏目标。
+
+## 6. 当前运行版本与交付入口
+
+本轮没有开COM、下载、访问SDRAM/TF/EEPROM/Flash或采购。当前板上保留76号实测镜像，继续使用`experiments/envelope_resources_20261017/launch_gui.cmd`；当前听感仍以用户实际反馈为准，本轮未发起新的试听。
+
+`build_board_memory/impl/pnr/board_config.fs`是本轮新候选，尚未部署。新实验下复制的`package/`仅是继承76号的旧镜像/manifest，用于追溯与回退，不能当77号新码流；见其中`INHERITED_76_ONLY.md`。保留源、旧包及旧快照，避免新旧源码/码流混用。
+
+回归命令：`check_fx.py`、`check_stage.py core/serial`、`check_board.py`及`nominal`；资源命令`run_synthesis.py 新目录 reference`与不带reference的候选。身份检查为`verify_stage77.py`，只核对交付哈希，不替代功能测试。下一步继续逻辑容量优化，再做存储控制与持久化/录放链。
+'''
+(D/'77-效果器单读口与存储资源账-2026-10-17.md').write_text(report,encoding='utf-8')
+entry='''**2026-10-17效果器存储优化**：[77号](77-效果器单读口与存储资源账-2026-10-17.md)及`experiments/fx_memory_20261017/project/CURRENT.md`为最新源码入口。先备份189项，仅隔离改fx_delay为单同步读＋标签/转发，保留原抽头更新边沿及现有调度。两轮各60万拍、两种深度逐拍输出/十抽头/写回对照、错位标签反例和原音乐/包络/配置回归通过；同工程20537/46BSRAM→20635/28，释放18块但Logic增98仅余101。数字优化/综合**已验证**；14脚新诊断PnR10369Logic/21BSRAM，setup+7.694/hold+0.083ns，未下载/新板验，实体路径**已实现待验证**。板上和GUI仍用76号已实测版本；原源/包/旧快照保持，本轮无COM/Flash/介质访问/采购。原效果器实际free-running调度与注释不符及启动未知另列，等价不当作时间规格达标；断电保存/TF/SDRAM/录放仍**待实现**。下一步用释放RAM换逻辑余量，再接存储控制，整机仍**部分实现**。'''
+for prefix in ('38-','39-','49-'):
+ p=next(D.glob(prefix+'*.md'));text=p.read_text(encoding='utf-8')
+ if '**2026-10-17效果器存储优化**' not in text:
+    if prefix=='38-':text=text.replace('## 0. 最重要的发现：最新成果并不都在 main\n','## 0. 最重要的发现：最新成果并不都在 main\n\n'+entry+'\n',1)
+    else:
+        idx=text.index('\n')+1;text=text[:idx]+'\n> '+entry+'\n'+text[idx:]
+    p.write_text(text,encoding='utf-8')
+current='''# 当前源码入口 · 效果器单读口77
+
+版本fx-memory-20261017-v0，整体部分实现。数字优化/回归/综合已验证，新RAM实体路径已实现待验证。
+
+- 报告：../../../docs/02-技术方案/77-效果器单读口与存储资源账-2026-10-17.md
+- 联合综合：20635Logic/11592寄存器/28BSRAM，剩101Logic/18BSRAM；只换fx_delay，原功能/调度逐拍保留。
+- 已验：两轮60万拍FX旧参考、错位反例、core/serial回归；新板级包装仿真及内部PnR通过，尚未下载。
+- 板上和GUI继续使用76号；此目录package/仅继承76号旧包，不能当77号新码流。
+- 新候选码流在build_board_memory/impl/pnr/board_config.fs；无新串口/Flash/介质访问或采购。
+- 资源账：evidence/memory-inventory.json与memory-owners.csv；预算方案不等于已实现存储。
+- 原效果器调度与时间注释不符/启动未知另列，保持现状的PASS不表示音乐时间目标完成。
+- 验证命令见check_fx.py、check_stage.py core/serial、check_board.py及nominal；交付身份用verify_stage77.py。
+- 下一步：RAM换逻辑余量，再推进非易失与TF/SDRAM伴奏录放。存储/四层/独立效果/实体显示触控等缺口保持。
+'''
+(R/'project/CURRENT.md').write_text(current,encoding='utf-8');(R/'README.md').write_text(current.replace('../../../docs/','../../docs/'),encoding='utf-8')
+(R/'package/INHERITED_76_ONLY.md').write_text('此目录三个fs及manifest原样继承76号已实测交付，不是77号候选。当前板上仍运行76号。77号新构建仅位于build_board_memory/impl/pnr/board_config.fs，未部署；请勿混用源码与镜像身份。\n',encoding='utf-8')
+(N/'CURRENT.md').write_text('最新源码入口为77号报告及experiments/fx_memory_20261017/project/CURRENT.md。先备份189项，释放18BSRAM但Logic余101；本轮未下载/开COM/访问介质，运行板和GUI仍为76号。\n',encoding='utf-8')
+print('PASS report/current entries; current hardware explicitly remains76')

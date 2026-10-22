@@ -1,0 +1,90 @@
+{
+  "scope": "离线Qt布局、模拟协议与主机回归；非板测",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "host-tests",
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/host",
+        "-p",
+        "test_*.py"
+      ],
+      "extra_env": {},
+      "exit_code": 0,
+      "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\host-tests.log"
+    },
+    {
+      "name": "dpi-125",
+      "command": [
+        "-m",
+        "unittest",
+        "test_advanced_tools.AdvancedToolsTests.test_small_screens_and_large_text_keep_close_and_apply_visible"
+      ],
+      "extra_env": {
+        "QT_SCALE_FACTOR": "1.25"
+      },
+      "exit_code": 0,
+      "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\dpi-125.log"
+    },
+    {
+      "name": "dpi-150",
+      "command": [
+        "-m",
+        "unittest",
+        "test_advanced_tools.AdvancedToolsTests.test_small_screens_and_large_text_keep_close_and_apply_visible"
+      ],
+      "extra_env": {
+        "QT_SCALE_FACTOR": "1.5"
+      },
+      "exit_code": 0,
+      "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\dpi-150.log"
+    },
+    {
+      "name": "dpi-200",
+      "command": [
+        "-m",
+        "unittest",
+        "test_advanced_tools.AdvancedToolsTests.test_small_screens_and_large_text_keep_close_and_apply_visible"
+      ],
+      "extra_env": {
+        "QT_SCALE_FACTOR": "2"
+      },
+      "exit_code": 0,
+      "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\dpi-200.log"
+    },
+    {
+      "name": "gui-selftest",
+      "command": [
+        "tools/host/dsp_gui.py",
+        "--selftest"
+      ],
+      "extra_env": {},
+      "exit_code": 0,
+      "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\gui-selftest.log"
+    },
+    {
+      "name": "workbench-selftest",
+      "command": [
+        "tools/host/dsp_gui.py",
+        "--workbench-selftest"
+      ],
+      "extra_env": {},
+      "exit_code": 0,
+      "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\workbench-selftest.log"
+    },
+    {
+      "name": "normal-startup",
+      "command": [
+        "tools/host/dsp_gui.py",
+        "--startup-check"
+      ],
+      "extra_env": {},
+      "exit_code": 0,
+      "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\normal-startup.log"
+    }
+  ]
+}

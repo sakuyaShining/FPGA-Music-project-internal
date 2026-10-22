@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "f2b882e0-36c9-40cb-b4c9-fc708f16a915",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "const p=await eda.dmt_Project.getCurrentProjectInfo();if(p?.friendlyName!=='FPGA-Music-Slider-Prototype-20261015')throw new Error('Wrong project');\nawait eda.dmt_EditorControl.openDocument(__CLI__.args.page);\nreturn {doc:await eda.dmt_SelectControl.getCurrentDocumentInfo(),parts:(await eda.sch_PrimitiveComponent.getAll()).filter(c=>c.getState_SupplierId()).map(c=>({ref:c.getState_Designator(),id:c.getState_PrimitiveId(),pins:[]}))};",
+    "--args",
+    "{\"page\": \"ba336973a1f81bda\"}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS deterministic source and test derivations",
+  "files": {
+    "selected/finger_pitch.v": "1702ccc636619f85f65ef18f810efd5e652ab206ffcdc1d2e07fbce12d093d5a",
+    "selected/note_map_owned.v": "5771c6de57aedef0872489530a017f84b66bfbf9141b96ab6f7d8cbd7c2918d1",
+    "selected/left_contact_bridge.v": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36",
+    "reference/finger_pitch.v": "ce665a7b84d5c92b8a7982277350daf831347020ab06b94eeb64aa8de7873e00",
+    "reference/note_map_owned.v": "7f3a2fb900461a75d2bf4bc4204299974f3337c3e45e0626a6a13ace7445c085",
+    "reference/left_contact_bridge.v": "3cfeb623f98bfa8e6104963f854f8f69d859be680d8c46db1f87b82b4e2ad9e2",
+    "tb_compat_music.v": "3b5fac0d8123b419289aec2a08f6b1549758db02ea97293300260e084293f528",
+    "tb_layers.v": "efdc2248e8c0e1d4abf0550f423cf0cf95db53436604e19618a42988f5a94e3c",
+    "tb_sensor_layers.v": "87535fb487ed6043716fad316be7d1ffa1abf6f282d528eb7457309253b81f95",
+    "tb_bridge_equiv.v": "bfc6e7dc63fc5c8ca0602fa663811a780c2cfb75477743a1f74e970e4f1e7a33",
+    "upstream.json": "42830c5af28e1c1944ef82196db809a0db99a4d2f6b6c91a2e765e33dfb07c26"
+  },
+  "generators": {
+    "notes/resource-safety-20261016/prepare.py": "f093ced0764cfb1bf6b6b66cc42117aac7d46260f1e34c2b6b4b1e7a40427ba7",
+    "notes/resource-safety-20261016/prepare_candidates.py": "0cd6ecd68f43845ae4171769c85ba14135a02de9c8b5ea000895af7b17b08aa8",
+    "notes/resource-safety-20261016/prepare_bridge.py": "196d54bbe2f7fc1aee0a8ed44b246afd86fe3f8cc3b880551c5bbf80f195c0de",
+    "notes/resource-safety-20261016/prepare_music_tests.py": "a8910dae2248744fc037e28cceaed06eaaf612ced3227b9deeb655e407e9a1a8",
+    "notes/resource-safety-20261016/prepare_bridge_test.py": "2520dfe50f030cae4fff4bd46814ace54bf72c34b6b30a17385e1be6c76b7d8e"
+  },
+  "inputs": {
+    "check_derivations.py": "635eaf01d19bc35e142e34e5fab6a5702a5d0934c3ea62bfbfd4e4e04140993a",
+    "common.py": "c51ae628baf93a9159578515b50483d83d2319a42d1dd84703b69e444e6e5c2e"
+  }
+}

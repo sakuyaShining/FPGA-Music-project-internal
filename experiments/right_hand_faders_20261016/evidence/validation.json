@@ -1,0 +1,48 @@
+{
+  "status": "PASS within isolated digital behavior",
+  "profiles": {
+    "1": {
+      "frames": 620,
+      "log": "PASS faders=1 touches=5 vectors=620 control_checks=4 latency_cycles=7\ntb_faders.v:110: $finish called at 61170000 (1ps)",
+      "cycles": 7,
+      "inferred_processing_us_at_27MHz": 0.25925925925925924
+    },
+    "8": {
+      "frames": 620,
+      "log": "PASS faders=8 touches=5 vectors=620 control_checks=5 latency_cycles=49\ntb_faders.v:110: $finish called at 315290000 (1ps)",
+      "cycles": 49,
+      "inferred_processing_us_at_27MHz": 1.8148148148148149
+    },
+    "16": {
+      "frames": 620,
+      "log": "PASS faders=16 touches=5 vectors=620 control_checks=5 latency_cycles=97\ntb_faders.v:110: $finish called at 605690000 (1ps)",
+      "cycles": 97,
+      "inferred_processing_us_at_27MHz": 3.5925925925925926
+    },
+    "panel": {
+      "frames": 620,
+      "cycles": 49,
+      "log": "PASS panel wrapper vectors=620 latency_cycles=49\ntb_panel.v:43: $finish called at 314100000 (1ps)"
+    }
+  },
+  "input_sha256": {
+    "rtl/rh_fader_bank.v": "bd5af0b47a36749da5fb5fbc29e546f19e7bc00e1929873593b31f680358c2da",
+    "rtl/rh_fader_panel.v": "740cd8367f6e4e59431e8223b9d1d187309d78036c1b2b04bd6d4c7e692cc49a",
+    "reference.py": "293cba19e2d53ef872c13a0882300acc8c315829c11315026e4f1516fbd00a48",
+    "test_reference.py": "51c635144019ece933de85d803244ccf125f1a888634d69eaa664c1e781ffb57",
+    "tb_faders.v": "254f4c96661b54076c2e08dd07d87299e8ff9ba18ce8077b46a76127835315c2",
+    "tb_panel.v": "995549ddc6ccd770fdc5d415aaf5f800bd0e9bdd96a69860663b99e3f99f1458",
+    "run_validation.py": "785c00e9595931a69443e9afe2ec5a4f92f9f6e9eb432a3bc960f37a86eb2666",
+    "prepare_synthesis.py": "e978e163d57e0bf1e4582d114eed643b49de185898c5dd65444abdfef5da38cb",
+    "serve_preview.py": "037391ed27c37a01bfef0746d26de4e94e513aee18e09d47dd0e3f42b36a402f",
+    "test_ui.mjs": "86d9128e73f0ed29684270270d2b3abf14ddc9cd6a3b110488e193ff4877a19b",
+    "preview/app.mjs": "e4b1d04384437e63721be15f8ee1c93abe2d395075503b32447a8b57f83a0a7d",
+    "preview/index.html": "e7532f1fa99deb3a757b09fe7f087528b471a80d7b8feaa32673adf66ad8480e",
+    "preview/model.mjs": "d0568ba4b1ca10563de6610725fe182e73f4fdd28ba2456080d4717e77d3e8d0",
+    "preview/test_model.mjs": "19002c45d36a952a34c9ac6f2eb8d70789ed3d5e10ce268a098662c11c49e1c9"
+  },
+  "product_engine_changed": false,
+  "audio_applied": false,
+  "touch_screen_driver_implemented": false,
+  "hardware_verified": false
+}

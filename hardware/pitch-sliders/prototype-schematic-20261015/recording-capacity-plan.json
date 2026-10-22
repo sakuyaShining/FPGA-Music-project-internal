@@ -1,0 +1,25 @@
+{
+  "source": "Native engine 27MHz/512, mono signed PCM16; capacity arithmetic only",
+  "sample_rate_numerator": 27000000,
+  "sample_rate_denominator": 512,
+  "bytes_per_second": 105468.75,
+  "five_minutes_ideal_bytes": 31640625.0,
+  "five_minutes_MiB": 30.174851417541504,
+  "eeprom_32KiB_ideal_seconds": 0.3106891851851852,
+  "sdram_8MiB_ideal_seconds": 79.5364314074074,
+  "record_ring_256KiB_ideal_seconds": 2.4855134814814814,
+  "onboard_tf_reserved_package_pins": {
+    "DAT2": 80,
+    "DAT3_CS": 81,
+    "CMD_MOSI": 82,
+    "CLK": 83,
+    "DAT0_MISO": 84,
+    "DAT1": 85
+  },
+  "duration_requirement": "pending_user_answer; five minutes is proposal, not freeze",
+  "additional_card_budget_cny": 30,
+  "existing_reserve_after_card_cny": 30,
+  "total_budget_goal_cny": 500,
+  "actual_quote_complete": false,
+  "resource_fit_verified": false
+}

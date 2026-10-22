@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "3896c71e-d7f4-4d62-9958-a81065e5032a",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "await eda.dmt_EditorControl.openDocument('ba336973a1f81bda');const changed=[];for(const p of __CLI__.args.made){for(const a of await eda.sch_PrimitiveAttribute.getAll(p.id)){if(a.getState_Value()!==p.net)continue;const e=a.toAsync();e.setState_ValueVisible(false);await e.done();changed.push({key:a.getState_Key(),value:p.net});}}return {changed,saved:await eda.sch_Document.save()};",
+    "--args",
+    "{\"made\": [{\"ref\": \"SW2\", \"n\": \"2\", \"net\": \"PRESET_0\", \"id\": \"0f83fc7d4a5a852c\", \"x\": 420, \"y\": 250}, {\"ref\": \"SW2\", \"n\": \"1\", \"net\": \"PRESET_0\", \"id\": \"0e96f7b3ad9d1682\", \"x\": 380, \"y\": 250}, {\"ref\": \"SW2\", \"n\": \"4\", \"net\": \"GND\", \"id\": \"2bbf9ea3aa540cf8\", \"x\": 420, \"y\": 220}, {\"ref\": \"SW2\", \"n\": \"3\", \"net\": \"GND\", \"id\": \"493d80e6bc5dd868\", \"x\": 380, \"y\": 220}, {\"ref\": \"SW3\", \"n\": \"2\", \"net\": \"PRESET_1\", \"id\": \"190f9c0a37d04cfc\", \"x\": 580, \"y\": 250}, {\"ref\": \"SW3\", \"n\": \"1\", \"net\": \"PRESET_1\", \"id\": \"e4d2990c7dc00cfc\", \"x\": 540, \"y\": 250}, {\"ref\": \"SW3\", \"n\": \"4\", \"net\": \"GND\", \"id\": \"e35394aa97f80e02\", \"x\": 580, \"y\": 220}, {\"ref\": \"SW3\", \"n\": \"3\", \"net\": \"GND\", \"id\": \"751de5a0dcf44c69\", \"x\": 540, \"y\": 220}, {\"ref\": \"SW4\", \"n\": \"2\", \"net\": \"PRESET_2\", \"id\": \"b5d3f747bd930156\", \"x\": 740, \"y\": 250}, {\"ref\": \"SW4\", \"n\": \"1\", \"net\": \"PRESET_2\", \"id\": \"f0702c592b191d46\", \"x\": 700, \"y\": 250}, {\"ref\": \"SW4\", \"n\": \"4\", \"net\": \"GND\", \"id\": \"c00162e9cac2798a\", \"x\": 740, \"y\": 220}, {\"ref\": \"SW4\", \"n\": \"3\", \"net\": \"GND\", \"id\": \"1c0d1dcfc8c04f28\", \"x\": 700, \"y\": 220}, {\"ref\": \"SW5\", \"n\": \"2\", \"net\": \"PRESET_3\", \"id\": \"80adf864654860ae\", \"x\": 900, \"y\": 250}, {\"ref\": \"SW5\", \"n\": \"1\", \"net\": \"PRESET_3\", \"id\": \"22b2ab1acb0ad4f8\", \"x\": 860, \"y\": 250}, {\"ref\": \"SW5\", \"n\": \"4\", \"net\": \"GND\", \"id\": \"67e76933d1ceb24a\", \"x\": 900, \"y\": 220}, {\"ref\": \"SW5\", \"n\": \"3\", \"net\": \"GND\", \"id\": \"4a23737d9ceaf7f4\", \"x\": 860, \"y\": 220}, {\"ref\": \"SW6\", \"n\": \"2\", \"net\": \"EDIT\", \"id\": \"faaae1334de3e2fa\", \"x\": 1060, \"y\": 250}, {\"ref\": \"SW6\", \"n\": \"1\", \"net\": \"EDIT\", \"id\": \"114ba2539787a586\", \"x\": 1020, \"y\": 250}, {\"ref\": \"SW6\", \"n\": \"4\", \"net\": \"GND\", \"id\": \"81db6e70b11e582b\", \"x\": 1060, \"y\": 220}, {\"ref\": \"SW6\", \"n\": \"3\", \"net\": \"GND\", \"id\": \"cd5f1547338ac931\", \"x\": 1020, \"y\": 220}]}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

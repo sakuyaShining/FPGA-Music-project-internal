@@ -1,0 +1,11 @@
+{
+  "status": "PASS logical state and pitch output equivalence within cadence contract",
+  "inputs": {
+    "optimization/pitch_mod.v": "2059877d05fa1f1d15b195cc12c5b26d2522c7960cacc9e600e09a6f76c34ae2",
+    "optimization/pitch_mod_reference.v": "668213b4c9c2a8a487b9848ac2a761dbccbffc8c8ae4dc52e76e063b0aa3941e",
+    "tb_serial_glide.v": "5239094c4168d2b3352038029af320198d39a755d6534a2fe3c74fa1ad5dead5",
+    "prepare_serial_glide.py": "8545ff0fd4b68dbd8d816ee6e83f924ba96b064e6ff159e667943cd3e7cb21bc",
+    "run_serial_validation.py": "60d2da949dd37d7b5a492e53578110245ec057c7a9c4a5e9e16c10b03cf7b445"
+  },
+  "log": "PASS serial_glide cycles=40000 checks=80000 group_state_checks=2560000 loads=4900 epochs=625 step_changes write_races bypass_lfo_exact overrun_detected\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\system_integration_20261016\\tb_serial_glide.v:42: $finish called at 400076000 (1ps)\n"
+}

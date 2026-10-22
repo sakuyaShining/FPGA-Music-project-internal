@@ -1,0 +1,889 @@
+{
+  "status": "PASS compiler checks only; no UART application",
+  "tests": 11,
+  "fixtures": [
+    {
+      "name": "fast",
+      "report": {
+        "status": "compiled only; not sent or persisted",
+        "format": "slot-v1/88-bit",
+        "sample_rate_nominal": 52734.375,
+        "attack": {
+          "inc": 619,
+          "shift": 0,
+          "nominal_ms": 1.005037037037037,
+          "phase_jitter_bound_ms": 0.0,
+          "requested_ms": 1
+        },
+        "release_from_full_to_cutoff100": {
+          "m": 3,
+          "k": 3,
+          "shift": 3,
+          "nominal_ms": 1.9721481481481482,
+          "phase_jitter_bound_ms": 0.13274074074074074,
+          "requested_ms": 2
+        },
+        "partials": [
+          {
+            "part": 0,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 1,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 2,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 3,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 4,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 5,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 6,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 7,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 8,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 9,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 10,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 11,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 12,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 13,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 14,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 15,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          }
+        ],
+        "unsupported_enabled_fields": [],
+        "remaining": "UART/GUI application, independent vibrato/effects and persistence not implemented"
+      }
+    },
+    {
+      "name": "slow",
+      "report": {
+        "status": "compiled only; not sent or persisted",
+        "format": "slot-v1/88-bit",
+        "sample_rate_nominal": 52734.375,
+        "attack": {
+          "inc": 104,
+          "shift": 1,
+          "nominal_ms": 11.984592592592593,
+          "phase_jitter_bound_ms": 0.018962962962962963,
+          "requested_ms": 12
+        },
+        "release_from_full_to_cutoff100": {
+          "m": 3,
+          "k": 9,
+          "shift": 1,
+          "nominal_ms": 40.31525925925926,
+          "phase_jitter_bound_ms": 0.018962962962962963,
+          "requested_ms": 40
+        },
+        "partials": [
+          {
+            "part": 0,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 1,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 2,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 3,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 4,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 5,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 6,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 7,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 8,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 9,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 10,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 11,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 12,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 13,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 14,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 15,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          }
+        ],
+        "unsupported_enabled_fields": [],
+        "remaining": "UART/GUI application, independent vibrato/effects and persistence not implemented"
+      }
+    },
+    {
+      "name": "hybrid",
+      "report": {
+        "status": "compiled only; not sent or persisted",
+        "format": "slot-v1/88-bit",
+        "sample_rate_nominal": 52734.375,
+        "attack": {
+          "inc": 619,
+          "shift": 0,
+          "nominal_ms": 1.005037037037037,
+          "phase_jitter_bound_ms": 0.0,
+          "requested_ms": 1
+        },
+        "release_from_full_to_cutoff100": {
+          "m": 3,
+          "k": 8,
+          "shift": 0,
+          "nominal_ms": 10.221037037037037,
+          "phase_jitter_bound_ms": 0.0,
+          "requested_ms": 10
+        },
+        "partials": [
+          {
+            "part": 0,
+            "mode": "sustain",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 4,
+              "nominal_ms": 0.9102222222222223,
+              "phase_jitter_bound_ms": 0.28444444444444444,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 1,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 2,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 3,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 4,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 5,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 6,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 7,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 8,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 9,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 10,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 11,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 12,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 13,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 14,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          },
+          {
+            "part": 15,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 0,
+              "nominal_ms": 0.9481481481481482,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 1
+            }
+          }
+        ],
+        "unsupported_enabled_fields": [],
+        "remaining": "UART/GUI application, independent vibrato/effects and persistence not implemented"
+      }
+    },
+    {
+      "name": "strike",
+      "report": {
+        "status": "compiled only; not sent or persisted",
+        "format": "slot-v1/88-bit",
+        "sample_rate_nominal": 52734.375,
+        "attack": {
+          "inc": 32768,
+          "shift": 0,
+          "nominal_ms": 0.018962962962962963,
+          "phase_jitter_bound_ms": 0.0,
+          "requested_ms": 0
+        },
+        "release_from_full_to_cutoff100": {
+          "m": 1,
+          "k": 0,
+          "shift": 8,
+          "nominal_ms": 4.8545185185185185,
+          "phase_jitter_bound_ms": 4.835555555555556,
+          "requested_ms": 5
+        },
+        "partials": [
+          {
+            "part": 0,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 1,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 2,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 3,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 4,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 5,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 6,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 7,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 8,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 9,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 10,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 11,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 12,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 13,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 14,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          },
+          {
+            "part": 15,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 4,
+              "shift": 1,
+              "nominal_ms": 1.8962962962962964,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 2
+            }
+          }
+        ],
+        "unsupported_enabled_fields": [],
+        "remaining": "UART/GUI application, independent vibrato/effects and persistence not implemented"
+      }
+    }
+  ],
+  "inputs": {
+    "check_host.py": "803a48844284075cb585fc500cdf087aac58013936cb88342e83ea85e4cea4a8",
+    "common.py": "4be1fb7ae1d36e22dbce850bc502edbdf11e5eab1a857a415dd9ff3815986db0",
+    "host/config_adapter.py": "0116c8cf5caf73ed1a5a61ee7125ff761da66b0e43ab1ba17c747022be42c03d",
+    "host/instrument_config.py": "f28d87fec7eaf42f3d6b5e6961a2975c73f02cd0e5812f7337c5b096a5906538",
+    "src/preset_part.hex": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850"
+  }
+}

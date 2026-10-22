@@ -1,0 +1,68 @@
+{
+  "hardware_tested": true,
+  "bitstream_programmed_by_this_script": false,
+  "case": 1,
+  "identity": {
+    "profile": 114,
+    "abi": 1,
+    "diagnostic": 211,
+    "scope": 32
+  },
+  "before": {
+    "ready": true,
+    "armed": false,
+    "warm": true,
+    "initialized": true,
+    "running": false,
+    "bound": false,
+    "fault": false,
+    "case": 0
+  },
+  "baseline": {
+    "ack": 0,
+    "on": 0,
+    "off": 0,
+    "active": 0,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "during": {
+    "ack": 1,
+    "on": 1,
+    "off": 0,
+    "active": 1,
+    "fingers": 1,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "audio": {
+    "samples": 2048,
+    "sample_rate": 52734.375,
+    "rms": 56076.159576731,
+    "peak": 126688,
+    "nonzero": 2045,
+    "saturated": 0,
+    "peak_hz": 439.3458366394043
+  },
+  "after": {
+    "ack": 2,
+    "on": 1,
+    "off": 1,
+    "active": 0,
+    "fingers": 1,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "status_after": {
+    "ready": true,
+    "armed": false,
+    "warm": true,
+    "initialized": true,
+    "running": false,
+    "bound": false,
+    "fault": false,
+    "case": 1
+  },
+  "status": "PASS limited digital board checks; listening/analog not verified"
+}

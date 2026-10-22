@@ -1,0 +1,1 @@
+此目录三个fs及manifest原样继承76号已实测交付，不是77号候选。当前板上仍运行76号。77号新构建仅位于build_board_memory/impl/pnr/board_config.fs，未部署；请勿混用源码与镜像身份。

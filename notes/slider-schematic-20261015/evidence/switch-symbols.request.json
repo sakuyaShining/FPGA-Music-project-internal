@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "f2b882e0-36c9-40cb-b4c9-fc708f16a915",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "return {tact:await eda.lib_Symbol.getDocumentSource(__CLI__.args.tact,__CLI__.args.lib),encoder:await eda.lib_Symbol.getDocumentSource(__CLI__.args.enc,__CLI__.args.lib)};",
+    "--args",
+    "{\"tact\": \"491952e4d57b4ee4a524a485d9ced403\", \"enc\": \"c277f108d55a44f6b2c76acc4d75abfc\", \"lib\": \"0819f05c4eef4c71ace90d822a990e87\"}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

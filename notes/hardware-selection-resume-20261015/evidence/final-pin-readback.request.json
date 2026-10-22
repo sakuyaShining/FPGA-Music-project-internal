@@ -1,0 +1,12 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "0cc0a7b5-57c5-4bb5-83d1-22a1dcd4b03f",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "const result=[];for(const c of (await eda.sch_PrimitiveComponent.getAll()).filter(c=>c.getState_SupplierId())){const pins=await eda.sch_PrimitiveComponent.getAllPinsByPrimitiveId(c.getState_PrimitiveId());result.push({id:c.getState_PrimitiveId(),ref:c.getState_Designator(),mpn:c.getState_ManufacturerId(),lcsc:c.getState_SupplierId(),addBom:c.getState_AddIntoBom(),addPcb:c.getState_AddIntoPcb(),pins:(pins||[]).map(p=>({number:p.getState_PinNumber(),name:p.getState_PinName(),x:p.getState_X(),y:p.getState_Y()}))});}const test=await eda.sch_ManufactureData.getBomFile('keyparts-bool-filter','csv',undefined,[{property:'Add into BOM',includeValue:true}]);return {parts:result,booleanFilteredBytes:test?.size};"
+  ],
+  "timeout": 75
+}

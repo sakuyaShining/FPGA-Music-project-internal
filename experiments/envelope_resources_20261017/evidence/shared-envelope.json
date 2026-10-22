@@ -1,0 +1,19 @@
+{
+  "status": "PASS reference equivalence and deliberate fault rejection",
+  "log": "PASS shared_envelope_reference cases=680560 widths=8,16,24 random full_level_range boundaries all_states coefficients shifts triggers linear_exp unknown_mode\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\envelope_resources_20261017\\tb_env_shared.v:54: $finish called at 1361120000 (1ps)\n",
+  "product_width": 16,
+  "extra_widths": [
+    8,
+    24
+  ],
+  "hardware_tested": false,
+  "inputs": {
+    "src/osc_env.v": "71b4ebd4c1fb58ff4bf58d8f6f0681f915d5910605a6071eedcdcf2c5cbda00b",
+    "reference/osc_env_reference.v": "e6f394db76186079c5a82c8b5c562a3a76914c53146f73f2eaab9fb509b23fbd",
+    "tb_env_shared.v": "29cc7d11486143a78b835ee511d9128f31f610765dd1ec83cc147c78e58a2515",
+    "reference/osc_env_original.v": "eb0740df133dd2cece5debb1728e2f3e7458b73e9ee46e4eff12ba1a3a7d4c4b",
+    "faults/osc_env_shared_bad.v": "09f5c5fed536c89d6863ae25bd888738194aa91ae24d772a5c99d43fa7e5f1b6",
+    "check_shared.py": "03eba20cedfe7f0788c42ce71effdc0a5c4c28e5f6eea8875a2cff1882756b46",
+    "common.py": "8368a74675466ca951b7547bde1c89aadc23b1086b001b04cc5ae6f73c62c1ea"
+  }
+}

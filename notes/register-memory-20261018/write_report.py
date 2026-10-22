@@ -1,0 +1,88 @@
+# -*- coding: utf-8 -*-
+from pathlib import Path
+import json
+P=Path(__file__).resolve().parents[2];R=P/'experiments/register_memory_20261018';E=R/'evidence'
+audit=json.loads((E/'board-register-audit.json').read_text(encoding='utf-8'))
+resource=json.loads((E/'register-resources.json').read_text(encoding='utf-8'))
+for group in ('core','serial'):assert json.loads((E/('matrix-'+group+'.json')).read_text())['status'].startswith('PASS')
+slack=audit['slack_ns'];b=audit['resource']
+title='78-参数回读RAM与逻辑余量恢复-2026-10-18.md'
+entry=f'''**2026-10-18参数回读RAM优化**：[{title[:2]}号]({title})及`experiments/register_memory_20261018/project/CURRENT.md`为最新源码入口。先备份195项，保留原reg_bank/旧顶层和77号；仅在实际tdm_top_owned接入128字节同步RAM与35字节实时镜像/前拍写转发。15万拍全地址存储/复位、5万拍9993次回读对照及漏转发反例，原音乐/包络/配置回归和115200板级包装仿真通过。同工程20635→19765Logic，减少870；11592→10844寄存器，BSRAM28→29，余971Logic/17BSRAM。限定数字与综合**已验证**；诊断PnR{b['Logic']}Logic/{b['BSRAM']}BSRAM，setup+{slack['Setup']:.3f}/hold+{slack['Hold']:.3f}ns，无新下载/串口/介质或Flash访问，实体新RAM路径**已实现待验证**。当前板上仍为76号；GUI/原源/旧包/快照保持。非易失、SDRAM/TF与录放仍**待实现**，整机**部分实现**；下一步以恢复的资源做存储控制器和缓冲的隔离验证/联合预算，不据诊断余量承诺全功能。'''
+report=f'''# 参数回读RAM与逻辑余量恢复 · 2026-10-18
+
+## 0. 结论、版本与验证范围
+
+版本`register-memory-20261018-v0`，入口`experiments/register_memory_20261018/project/CURRENT.md`。本轮使用1块BSRAM承接完整参数回读副本，在完整联合综合中减少870Logic、748寄存器，剩971Logic/17BSRAM。限定RTL参考、音乐/配置回归、综合及诊断内部PnR**已验证**；新RAM实体路径**已实现待验证**，整机仍**部分实现**。释放容量不是SDRAM、TF、非易失保存或伴奏录放已完成的证据。
+
+开始读取38/39与工作树分布，main192输入基线PASS；先核验77号源/证据/继承包，再ZIP备份195项且逐项校验。main HEAD仍`fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12`。原产品源、77号及更早成果/旧快照和GUI不覆盖；本轮无COM、下载、Flash、介质访问或采购。当前板上继续76号已实测配置诊断。
+
+## 1. 实际改动与保持的规则
+
+77号完整工程中u_reg为952寄存器/129LUT：128字节参数全部拉平，再由串口动态选择一个字节；许多字节只服务回读。新增`src/reg_bank_compact.v`，完整128字节以一个同步RAM保存，上电初值与旧模块一致；35个被静态切片引用的地址额外保留镜像，发声链同拍写入、下一拍使用的关系不变。综合实际只保留被使用的镜像位，u_reg为195寄存器/49LUT/1BSRAM。
+
+只在实际`src/tdm_top_owned.v`接入新模块；旧`src/reg_bank.v`和`src/tdm_top.v`不改，其他引用旧模块的路径保持。新模块为当前128×8用途专用，不声称替代旧模块全部可参数化场景；未镜像的flat字节输出0，只允许无实时消费者的地址如此处理，`check_register_memory.py`核查当前静态消费者与掩码。全部低128字节仍可完整写入/回读，最高位为1的写入仍忽略，高位非诊断读仍保留原RTL未知语义，不定义新的硬件值。
+
+参数RAM和镜像都不随演奏复位清空。同步读数据的异步清零在RAM外由有效标志实现，保留旧rd_en控制的读保持和同边沿读旧值。顶层持续预取rb_addr；UART回读state3以前一边沿RAM读结果为基础，转发前一边沿同址写入，得到旧动态flat取值。state3本边沿写入仍在取值之后生效，不误变成写优先；回读状态、发送字节和边沿时序不加拍。rb_addr在states1..3稳定，现有诊断/配置回读优先分支保持。
+
+初次探针误选了未使用的旧tdm_top，完整资源不变；该试验目录`synthesis_compact`保留，不列为有效优化。已恢复旧顶层字节，最终选定`synthesis_compact_v1`，与新参考同工程只有tdm_top_owned.v输入不同，新增compact模块两边均存在，参考侧不使用。早期夹具失败和修正过程不作为最终PASS，最终测试输入另绑定。没有减复音、泛音、精度、刷新率或更改音乐交互规则。
+
+## 2. 实际验证
+
+| 检查 | 本轮结果与边界 |
+|---|---|
+| 参数堆旧模块参考 | 150000拍，所有256地址写/读覆盖；14239次同址读写、67435次读保持、40871次高位写、41136次高位读、76次异步复位。同步回读及35镜像逐拍比较，含复位期间写入、复位不清参数；未知值用case比较保留 |
+| 顶层回读旧源参考 | 50000拍/9993次回复、所有256地址；9993次前拍同址写、9993次本拍同址写，回读状态/地址/tx_start/tx_data及UART输出逐拍一致。内部写口/tx_done受控注入，独立于真实波特率测试，不当作实体串口证据 |
+| 反例 | 故意去掉前拍写转发，cycle3即检出旧0x3a与错误0x02；反例只在验证副本，未进入选定源 |
+| 原音乐回归 | 71号三场景506645拍/985PCM轨迹逐字节一致，另两场景启用独立包络的旧数据一致 |
+| 包络与配置 | 独立包络5万拍、最大分频两次回绕、4123PCM完整配置链及3个既有故意错误反例通过 |
+| 主机/串口 | 编译/传输/11主机故障检查，独占/双入口、115200标准串口模型、CRC/忙/截断隔离/超时/重同步/释放通过 |
+| 板级包装仿真 | 加速1510PCM及标准115200的4653PCM，启动静音、配置/播放/S2逻辑复位/清音/重新上传演奏通过；env短窗口残留0x7f9c的既有边界保留，不声称瞬间包络全清 |
+
+GUI文件与77/76号相同，本轮未重跑104项GUI测试；FX模块与77号相同，未重跑其两轮60万拍专门对照，只继承绑定旧验证，不能算本轮新测试。未做受保护综合网表的门级等价；上述为记录范围内的RTL测试与工具资源/时序证据，非形式化全输入证明。
+
+## 3. 公平综合与诊断PnR
+
+| 完整联合逻辑接口工程 | Logic | 寄存器 | BSRAM |
+|---|---:|---:|---:|
+| 本轮重建77号参考 | 20635 | 11592 | 28 |
+| 参数回读RAM候选 | 19765 | 10844 | 29 |
+| 差值 | −870 | −748 | +1 |
+
+两侧Gowin 1.9.11.03、同一器件/顶层/工程文件和选项，输入集合相同，仅tdm_top_owned.v字节不同；`evidence/register-resources.json`逐文件绑定。u_reg952→195寄存器，顶层新增转发等9寄存器，因此整机减少748。完整工程包含此前左右手/分层/配置/音乐/可视化逻辑接口，无最终IO、无完整联合PnR，余971Logic不等于所有未来控制器可装入。
+
+14IO配置诊断新构建`build_board_register/impl/pnr/board_config.fs`：{b['Logic']}Logic/{b['Register']}寄存器/{b['BSRAM']}BSRAM，setup+{slack['Setup']:.3f}ns、hold+{slack['Hold']:.3f}ns、TNS0、违例0。引脚4/87(S2高有效)/70RX/69TX/51PA/54DIN/55WS/56BCK/15～20LED与LVCMOS33核对通过。诊断省略实体前端/显示/双层桥，不用其余量签整机；外部I²S时序、模拟声音及实际RAM路径仍未验，clk_d通用布线警告保留。
+
+资源收益不能跨顶层外推：与77号诊断PnR比较，本候选Logic10369→10629，增加260；寄存器4864→4116、BSRAM21→22。其综合LUT8948→9197也增加，虽然u_reg本身减少了寄存器/LUT；全局映射变化的详细来源尚未归因，不能把联合逻辑工程减少870的数字套到诊断包装。两种工程分别记录实际结果，完整整机仍需真实IO/PnR确认容量。
+
+诊断包装和C2=0x76身份字节未改，以保留本轮最小接合范围；不能仅靠C2区分本候选与当前板上76号，候选必须按文件哈希识别，后续部署前应补版本区分/验收。它尚未下载。`package/`三个fs与manifest均为继承76号，不能当78号候选；当前设备GUI继续用`experiments/envelope_resources_20261017/launch_gui.cmd`。
+
+## 4. 后续功能与边界
+
+存储预算从17块可用BSRAM和971Logic重新开始，不能重复分配77号的18块；参数回读已占用其中1块。后续先独立实现/验证SDRAM初始化、刷新、读写及缓冲仲裁，测资源与最坏服务间隔，再联合估算TF块接口、文件提交、事件轨与PCM录放。板内SDRAM是易失缓冲；板载TF座不表示已有存储卡；24LC256候选不表示已到手，自定义乐器断电保留仍**待实现**。本轮未把配置Flash作为用户数据空间。
+
+四层同时、独立效果、录伴奏再演奏另一旋律、曲谱指引、实体7英寸触屏与左手滑条等原目标保持原状态，不因资源优化删减或冻结未决音乐行为。77号已列的FX自由运行调度/真实时间映射与启动未知、模拟/实体触控延迟缺口保持。恢复971Logic只是下一阶段的可测起点，尚不据此要求双板或签制造预算。
+
+运行入口：`check_register_memory.py`，`check_stage.py core/serial`，`check_board.py`及`nominal`，`audit_resources.py`，`audit_stage78.py`。新交付身份检查`verify_stage78.py`仅核验文件身份，不替代功能/板级测试。源码、数据表、约束、构建、主机协议与验证脚本一并列入delivery.json；本轮评估/验证后才记录新快照，旧快照不更新。
+'''
+(P/'docs/02-技术方案'/title).write_text(report,encoding='utf-8')
+for prefix in ('38-','39-','49-'):
+ path=next((P/'docs/02-技术方案').glob(prefix+'*.md'));text=path.read_text(encoding='utf-8')
+ # Rerunning this writer is for report wording only; do not duplicate entries.
+ if '**2026-10-18参数回读RAM优化**' in text:continue
+ if prefix=='38-':anchor='## 0. 最重要的发现：最新成果并不都在 main\n';assert anchor in text;text=text.replace(anchor,anchor+'\n'+entry+'\n',1)
+ else:first,rest=text.split('\n',1);text=first+'\n\n> '+entry+'\n'+rest
+ path.write_text(text,encoding='utf-8')
+(R/'project/CURRENT.md').write_text(f'''# 当前源码入口 · 参数回读RAM78
+
+版本register-memory-20261018-v0，整机部分实现。报告：../../../docs/02-技术方案/{title}
+
+- 完整联合综合19765Logic/10844寄存器/29BSRAM，余971Logic/17BSRAM；比77减少870Logic，新增1BSRAM。
+- 15万拍参数旧参考、5万拍回读时序/反例，core/serial、板级包装两模式及诊断内部PnR通过；新RAM实体路径已实现待验证。
+- 当前板上仍76号，未开COM/下载/访问存储介质或Flash；设备GUI使用../envelope_resources_20261017/launch_gui.cmd。
+- 新候选build_board_register/impl/pnr/board_config.fs未部署；包装C2仍76，必须按哈希区分。package/仅继承76旧包。
+- 新身份入口verify_stage78.py。旧verifier/报告只用于历史，不以当前更新文档重写旧快照。
+- 下一步存储控制与缓冲的模型/资源验证，然后非易失、TF与伴奏录放；这些功能仍待实现，音乐规则不变。
+''',encoding='utf-8')
+(R/'README.md').write_text('当前版本register-memory-20261018-v0，见project/CURRENT.md与78号报告。完整机器仍部分实现；本轮仅参数存储/回读资源优化。未下载，新RAM实体路径待验证；当前板上为76号。交付身份用verify_stage78.py。\n',encoding='utf-8')
+(R/'package/INHERITED_76_ONLY.md').write_text('本目录三个fs及manifest原样继承76号已实测交付，均不是78号。当前板上仍76号；新候选仅位于build_board_register/impl/pnr/board_config.fs，未部署，包装C2仍76，必须按哈希区分。\n',encoding='utf-8')
+print('Wrote report, current entry and 38/39/49 dated status updates')

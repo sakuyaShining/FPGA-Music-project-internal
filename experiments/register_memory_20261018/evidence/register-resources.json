@@ -1,0 +1,43 @@
+{
+  "status": "PASS same full joint project synthesis; not full-system PnR",
+  "before": {
+    "Logic": 20635,
+    "BSRAM": 28,
+    "Register": 11592
+  },
+  "after": {
+    "Logic": 19765,
+    "BSRAM": 29,
+    "Register": 10844
+  },
+  "logic_saved": 870,
+  "registers_saved": 748,
+  "extra_bsram": 1,
+  "logic_spare": 971,
+  "bsram_spare": 17,
+  "register_bank_owners": {
+    "before": {
+      "T_Register": 952,
+      "T_Lut": 129,
+      "T_Bsram": 0
+    },
+    "after": {
+      "T_Register": 195,
+      "T_Lut": 49,
+      "T_Bsram": 1
+    }
+  },
+  "differing_inputs": [
+    "tdm_top_owned.v"
+  ],
+  "hardware_tested": false,
+  "inputs": {
+    "audit_resources.py": "428732a8da682ef4edb50c24022487871b06218b29dead3c736ba637ed26ffb4",
+    "common.py": "8368a74675466ca951b7547bde1c89aadc23b1086b001b04cc5ae6f73c62c1ea",
+    "run_synthesis.py": "8fbd6157aa2310df4d60f4986722f207d7718c3544e59514946b3faac3aa4b94",
+    "synthesis_reference/run.json": "907b116e92063e92c7504a1881c31241a8a6c497f6f12356d2554f3d352aa690",
+    "synthesis_compact_v1/run.json": "af152fb30ecf088fc4d279b68d5d99c8c5cd52ae659f4b3ff5b8a67863f08891",
+    "synthesis_reference/impl/gwsynthesis/probe_syn_rsc.xml": "01617ae8e3845f647c20c8a8e42066e2f4eaadc92d18befb1814e2a34345f5bd",
+    "synthesis_compact_v1/impl/gwsynthesis/probe_syn_rsc.xml": "54010365c67c70a9adc77adec4fe91043dbb04f384dbb585d427ffe0555854b7"
+  }
+}

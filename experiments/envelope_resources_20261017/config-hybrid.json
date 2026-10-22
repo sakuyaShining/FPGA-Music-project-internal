@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "name": "hybrid",
+  "preset": 0,
+  "spectrum_mode": "replace",
+  "spectrum": [
+    100,
+    40,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "articulation": {
+    "mode": "hybrid",
+    "attack_ms": 1,
+    "decay_ms": 1,
+    "sustain_level": 160,
+    "release_ms": 10,
+    "hybrid_parts": [
+      "sustain",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike"
+    ]
+  },
+  "vibrato": {
+    "enabled": false,
+    "rate_millihz": 5500,
+    "depth_cents": 0
+  },
+  "effects": {
+    "dry_enabled": true,
+    "delay": {
+      "enabled": false,
+      "time_ms": 30,
+      "feedback_q8": 96
+    },
+    "chorus": {
+      "enabled": false,
+      "rate_millihz": 500,
+      "depth_ms": 1
+    },
+    "reverb": {
+      "enabled": false,
+      "feedback_q8": 128,
+      "damping": 3
+    }
+  }
+}

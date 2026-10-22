@@ -1,0 +1,32 @@
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_engine_compat.py']
+PASS music cycles=193471 samples=374 events=8 changed_pcm=180 released_tail_pcm=40 fader_to_sound restore_exact state_preserved
+C:\Users\Sakuya\FPGA-Music-project\experiments\envelope_resources_20261017\tb_compat_music.v:86: $finish called at 1934750000 (1ps)
+PASS layers cycles=180467 samples=352 nonzero=340 child_on=9 child_off=9 commits=6 rejected_cfg=2 pcm_hash=29b53767 i2s_hash=5ef7bdeb startup_unknown_pcm=1 startup_unknown_i2s_clocks=512 independent_timbre sustain_strike slide snapshot release steal invalid_mask four_slots
+C:\Users\Sakuya\FPGA-Music-project\experiments\envelope_resources_20261017\tb_layers.v:125: $finish called at 1804710000 (1ps)
+PASS sensor_layers cycles=132707 samples=259 nonzero_pcm=145 reports=7 ons=6 offs=6 moves=1 pcm_hash=99cd9943 startup_unknown_pcm=1 physical_words_to_real_pcm same_midi_endpoints independent_pitch continuous512
+C:\Users\Sakuya\FPGA-Music-project\experiments\envelope_resources_20261017\tb_sensor_layers.v:80: $finish called at 1327070000 (1ps)
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_enabled_compat.py']
+PASS music cycles=193471 samples=374 events=8 changed_pcm=180 released_tail_pcm=40 fader_to_sound restore_exact state_preserved
+C:\Users\Sakuya\FPGA-Music-project\experiments\envelope_resources_20261017\tb_enabled_compat.v:87: $finish called at 1934750000 (1ps)
+PASS layers cycles=180467 samples=352 nonzero=340 child_on=9 child_off=9 commits=6 rejected_cfg=2 pcm_hash=29b53767 i2s_hash=5ef7bdeb startup_unknown_pcm=1 startup_unknown_i2s_clocks=512 independent_timbre sustain_strike slide snapshot release steal invalid_mask four_slots
+C:\Users\Sakuya\FPGA-Music-project\experiments\envelope_resources_20261017\tb_enabled_layers.v:125: $finish called at 1804710000 (1ps)
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_envelope.py']
+PASS trace generated cycles=50000
+C:\Users\Sakuya\FPGA-Music-project\experiments\envelope_resources_20261017\tb_envelope.v:40: $finish called at 500040000 (1ps)
+PASS independent envelope reference 50000 {0: 4380, 1: 14769, 2: 4437, 3: 6086, 4: 20327} 4149 1016
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_phase_wrap.py']
+PASS phase_wrap max_divider15 attack release gate_event two_rollovers
+C:\Users\Sakuya\FPGA-Music-project\experiments\envelope_resources_20261017\tb_phase_wrap.v:25: $finish called at 5281260000 (1ps)
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_music.py']
+PASS config_music cycles=2111127 samples=4123 nonzero=1763 child_on=5 child_off=5 commits=5 rejects=2 independent_ADSR edit_snapshot hybrid strike final_silence
+C:\Users\Sakuya\FPGA-Music-project\experiments\envelope_resources_20261017\tb_config_music.v:65: $finish called at 21111310000 (1ps)
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_faults.py']
+PASS regression caught: global-envelope
+PASS regression caught: replace-release
+PASS regression caught: partial-commit
+

@@ -1,0 +1,4 @@
+preupload active=00000000 busy=0 queue=0 own=0 idle=1
+reset scrub slot0 env=7f9c gate=0 amp=00 pending=0
+PASS board_config S2_scrub_reupload warm_gate DIV=16 cycles=773632 samples=1510 nonzero=508 UART_upload_PCM CRC busy truncated_sandbox resync timeout release
+C:\Users\Sakuya\FPGA-Music-project\experiments\envelope_resources_20261017\tb_board_config.v:81: $finish called at 7736460000 (1ps)

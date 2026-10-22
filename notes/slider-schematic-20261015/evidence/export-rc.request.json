@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "12de57c5-7390-42b3-a59b-dd54f50eff50",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "await eda.dmt_EditorControl.openDocument(__CLI__.args.page);const image=await eda.sch_ManufactureData.getPngFile(__CLI__.args.key,{width:3000});if(!image)throw new Error('No PNG');const imageSaved=await eda.sys_FileSystem.saveFileToFileSystem(__CLI__.args.dir,image,__CLI__.args.key+'.png');return {imageSaved};",
+    "--args",
+    "{\"page\": \"13ba83f761ae36dd\", \"key\": \"rc\", \"dir\": \"C:/Users/Sakuya/Documents/LCEDA-Pro/projects/FPGA-Music-Slider-Prototype-20261015/schematic-draft-exports/\"}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

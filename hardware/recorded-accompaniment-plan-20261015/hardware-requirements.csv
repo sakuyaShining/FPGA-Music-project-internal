@@ -1,0 +1,12 @@
+﻿category,item,new_quantity,existing,required_specification,candidate,status,budget_allocation_cny_not_quote
+FPGA,Tang Nano20K,0,yes,Existing GW2AR-18C; full integration synthesis/PnR required,existing,unverified_full_product,
+card socket,Nano onboard TF slot,0,yes,Reserve package pins80-85; SPI candidate uses81-84,existing,board_revision_check_pending,
+buffer RAM,64Mbit / 8MiB SDR SDRAM,0,yes,Propose1MiB reservation incl256KiB playback and256KiB recording,existing,controller_and_arbiter_pending,
+recording media,microSDHC 16/32GB; prefer32GB,1,no,FAT32; C10/U1 or better; measure actual SPI busy/read stalls,KIOXIA EXCERIA32GB LMEX1L032GG4 reference candidate,not_order_qualified,30
+speaker path,onboard MAX98357A + existing4ohm3W speaker,0,yes,Use mixed digital output; qualify electrical format and volume,existing,analog_output_verification_pending,
+AUX DAC,stereo line-output DAC or documented module,1,no,3.3V logic;16bit PCM;52734.375Hz and1.6875MHz32fs compatibility; ground-referenced line output,MPN not frozen; PCM5102A not assumed compatible,clock_and_supply_qualification_pending,
+audio connector,3.5mm TRS jack,1,no,TipL RingR SleeveGND; same mono program to both; no direct headphone requirement,exact manufacturer pinout pending,not_order_qualified,
+analog support,DAC regulator/decoupling/output/protection,1,no,Plan low-noise3.3V150mA rail; actual current/PSRR/filter/protection per DAC,exact regulator and passives pending,not_order_qualified,
+controls,existing press encoder and display menus,0,no_new_extra,Physical record/stop/select/play operation; dedicated keys optional,reuse accepted controls,interaction_pending,
+nonvolatile settings,24LC256 32KiB candidate,0,already_in_system_BOM,Instrument settings only; do not store PCM here,existing system candidate,persistence_pending,
+power,stable5V >=2A system planning capacity,conditional,conditional,Measure board+twoLCD+TFwrite+speaker peaks; avoid USB backfeed,exact adapter pending,not_final_power_budget,

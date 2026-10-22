@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "2c3e24cf-bf52-4cd1-ba65-8ce4fa0ffb87",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "return await eda.sch_Drc.check(true,false,true);",
+    "--args",
+    "{}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

@@ -1,0 +1,11 @@
+COMMAND ['C:\\Program Files\\python\\python.exe', '-m', 'unittest', 'discover', '-s', 'gui', '-p', 'test_*.py']
+........................................................................................................
+----------------------------------------------------------------------
+Ran 104 tests in 13.672s
+
+OK
+已保存本地配置草稿：C:\Users\Sakuya\AppData\Local\Temp\tmpbva_5038\config.json（尚未应用到设备）
+配置有效：新音色 / hybrid（文件校验不代表硬件支持）
+配置失败：配置 缺少字段：articulation, effects, name, preset, schema_version, spectrum, spectrum_mode, vibrato
+配置失败：[Errno 2] No such file or directory: 'C:\\Users\\Sakuya\\AppData\\Local\\Temp\\tmpbva_5038\\config.json.missing'
+

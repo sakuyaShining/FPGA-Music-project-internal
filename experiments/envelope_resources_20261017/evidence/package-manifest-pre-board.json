@@ -1,0 +1,26 @@
+{
+  "device": "GW2AR-LV18QN88C8/I7",
+  "operation": "SRAM Program 2 only",
+  "configuration_capability": [
+    117,
+    1,
+    4,
+    16,
+    11,
+    7
+  ],
+  "diagnostic_identity": {
+    "C0": 114,
+    "C2": 118,
+    "C3": 1,
+    "A4": 211,
+    "A9": 32
+  },
+  "default_sound": "silent until host sends notes; one-second warm gate",
+  "hardware_tested": false,
+  "files": {
+    "config-sram.fs": "8c2d52e59b13b8d343b54a9d602d265154dc6cc9640320df10835f2e1b1c253c",
+    "rollback-board-audio-sram.fs": "7384acdf9fb51f887dc20d1d63ed01a8dc69cb36d78305fc77d9e6a8df8ca246",
+    "rollback-mute-sram.fs": "69c13d53a7cc3af8aa0299a67ca7d2a79cc550e92fabe94c3b317a622c5483ad"
+  }
+}

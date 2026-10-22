@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "12de57c5-7390-42b3-a59b-dd54f50eff50",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "await eda.dmt_EditorControl.openDocument('ba336973a1f81bda');return (await eda.sch_PrimitiveAttribute.getAll(__CLI__.args.id)).map(a=>({id:a.getState_PrimitiveId(),key:a.getState_Key(),value:a.getState_Value(),x:a.getState_X(),y:a.getState_Y(),r:a.getState_Rotation(),visible:a.getState_ValueVisible()}));",
+    "--args",
+    "{\"id\": \"fe711f2a2bafc433\"}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASS joint synthesis resource audit only",
+  "before": {
+    "Logic": 19765,
+    "BSRAM": 29,
+    "Register": 10844
+  },
+  "after": {
+    "Logic": 20082,
+    "BSRAM": 31,
+    "Register": 10928
+  },
+  "stage78": {
+    "Logic": 19765,
+    "BSRAM": 29,
+    "Register": 10844
+  },
+  "delta": {
+    "Logic": 317,
+    "BSRAM": 2,
+    "Register": 84
+  },
+  "logic_spare": 654,
+  "bsram_spare": 15,
+  "owners": {
+    "buffers": {
+      "T_Register": "84(20)",
+      "T_Lut": "191(23)",
+      "T_Bsram": "2(0)"
+    },
+    "recording": {
+      "T_Register": "32(32)",
+      "T_Lut": "88(88)",
+      "T_Bsram": "1(1)"
+    },
+    "playback": {
+      "T_Register": "32(32)",
+      "T_Lut": "80(80)",
+      "T_Bsram": "1(1)"
+    }
+  },
+  "changed": [
+    "storage_probe.v"
+  ],
+  "full_pnr": false,
+  "media_backend": false,
+  "hardware_tested": false,
+  "inputs": {
+    "audit_resources.py": "633cc5ada344086ba26d42ad0db0c1b11f616f490a3201573f7e94dd76fe06ac",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79",
+    "synthesize.py": "3fab7ae4e3a8b4657b806314349536608076bf532995a253e882b980b47bd929",
+    "synthesis_reference_retry/run.json": "9520264324a8334c7d0fef0b0943db2e760033a5e2a9326d89207a20ea5f5eef",
+    "synthesis_buffered/run.json": "7162df3357f537d8a099bb959daa2e4cb4fc72ae46c999e859df4cdab630bfb5",
+    "synthesis_buffered/impl/gwsynthesis/probe_syn_rsc.xml": "f2e369bae968da9123cf96bbcbb070db5b139f90a50f5c7c84b24535a5ee845e"
+  }
+}

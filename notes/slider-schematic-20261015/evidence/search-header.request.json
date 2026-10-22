@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "f2b882e0-36c9-40cb-b4c9-fc708f16a915",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "return await eda.lib_Device.search(__CLI__.args.q,undefined,undefined,undefined,8,1);",
+    "--args",
+    "{\"q\": \"2.54-1*12P\"}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

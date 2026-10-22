@@ -1,0 +1,2294 @@
+{
+  "status": "PASS physical reset recovery and silent PCM; sampled overlap only",
+  "time": "2026-10-17T14:01:37.501209+08:00",
+  "script_sha256": "80a0810755889b574ae27210eee03281084e905e7e42a346f805a84b275b03c3",
+  "checker_sha256": "9ee9ddf019c387899e1233bf44559f98566a4ae2f1ffdc00091ac61c16c0737e",
+  "hardware_tested": true,
+  "flash_read_or_written": false,
+  "observations": [
+    {
+      "seconds": 0.3440000000409782,
+      "status": {
+        "ready": true,
+        "armed": false,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 192,
+        "on": 96,
+        "off": 96,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 0.765999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 194,
+        "on": 98,
+        "off": 96,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 1.140999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 194,
+        "on": 98,
+        "off": 96,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 1.515999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 194,
+        "on": 98,
+        "off": 96,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 1.890999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 196,
+        "on": 98,
+        "off": 98,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 2.265999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 196,
+        "on": 98,
+        "off": 98,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 2.625,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 196,
+        "on": 98,
+        "off": 98,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 2.98499999998603,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 196,
+        "on": 98,
+        "off": 98,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 3.35999999998603,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 196,
+        "on": 98,
+        "off": 98,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 3.765999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 198,
+        "on": 100,
+        "off": 98,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 4.140999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 198,
+        "on": 100,
+        "off": 98,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 4.515999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 198,
+        "on": 100,
+        "off": 98,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 4.890999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 200,
+        "on": 100,
+        "off": 100,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 5.265999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 200,
+        "on": 100,
+        "off": 100,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 5.640999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 200,
+        "on": 100,
+        "off": 100,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 6.015999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 200,
+        "on": 100,
+        "off": 100,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 6.375,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 200,
+        "on": 100,
+        "off": 100,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 6.780999999959022,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 202,
+        "on": 102,
+        "off": 100,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 7.187999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 202,
+        "on": 102,
+        "off": 100,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 7.547000000020489,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 202,
+        "on": 102,
+        "off": 100,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 7.922000000020489,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 204,
+        "on": 102,
+        "off": 102,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 8.280999999959022,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 204,
+        "on": 102,
+        "off": 102,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 8.640999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 204,
+        "on": 102,
+        "off": 102,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 9.015999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 204,
+        "on": 102,
+        "off": 102,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 9.390999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 204,
+        "on": 102,
+        "off": 102,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 9.812999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 206,
+        "on": 104,
+        "off": 102,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 10.187999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 206,
+        "on": 104,
+        "off": 102,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 10.562999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 206,
+        "on": 104,
+        "off": 102,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 10.937999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 208,
+        "on": 104,
+        "off": 104,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 11.297000000020489,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 208,
+        "on": 104,
+        "off": 104,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 11.672000000020489,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 208,
+        "on": 104,
+        "off": 104,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 12.047000000020489,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 208,
+        "on": 104,
+        "off": 104,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 12.422000000020489,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 208,
+        "on": 104,
+        "off": 104,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 12.827999999979511,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 210,
+        "on": 106,
+        "off": 104,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 13.202999999979511,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 210,
+        "on": 106,
+        "off": 104,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 13.577999999979511,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 210,
+        "on": 106,
+        "off": 104,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 13.937999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 212,
+        "on": 106,
+        "off": 106,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 14.312999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 212,
+        "on": 106,
+        "off": 106,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 14.687999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 212,
+        "on": 106,
+        "off": 106,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 15.062999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 212,
+        "on": 106,
+        "off": 106,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 15.437999999965541,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 212,
+        "on": 106,
+        "off": 106,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 15.85999999998603,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 214,
+        "on": 108,
+        "off": 106,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 16.23499999998603,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 214,
+        "on": 108,
+        "off": 106,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 16.60999999998603,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 214,
+        "on": 108,
+        "off": 106,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 16.98499999998603,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 216,
+        "on": 108,
+        "off": 108,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 17.35999999998603,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 216,
+        "on": 108,
+        "off": 108,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 17.719000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 216,
+        "on": 108,
+        "off": 108,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 18.07799999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 216,
+        "on": 108,
+        "off": 108,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 18.45299999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 216,
+        "on": 108,
+        "off": 108,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 18.875,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 218,
+        "on": 110,
+        "off": 108,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 19.219000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 218,
+        "on": 110,
+        "off": 108,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 19.594000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 218,
+        "on": 110,
+        "off": 108,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 19.969000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 220,
+        "on": 110,
+        "off": 110,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 20.32799999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 220,
+        "on": 110,
+        "off": 110,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 20.68799999996554,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 220,
+        "on": 110,
+        "off": 110,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 21.06299999996554,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 220,
+        "on": 110,
+        "off": 110,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 21.42200000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 220,
+        "on": 110,
+        "off": 110,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 21.82799999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 222,
+        "on": 112,
+        "off": 110,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 22.20299999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 222,
+        "on": 112,
+        "off": 110,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 22.57799999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 222,
+        "on": 112,
+        "off": 110,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 22.95299999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 224,
+        "on": 112,
+        "off": 112,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 23.32799999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 224,
+        "on": 112,
+        "off": 112,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 23.68799999996554,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 224,
+        "on": 112,
+        "off": 112,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 24.04700000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 224,
+        "on": 112,
+        "off": 112,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 24.42200000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 224,
+        "on": 112,
+        "off": 112,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 24.82799999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 226,
+        "on": 114,
+        "off": 112,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 25.219000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 226,
+        "on": 114,
+        "off": 112,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 25.57799999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 226,
+        "on": 114,
+        "off": 112,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 25.969000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 228,
+        "on": 114,
+        "off": 114,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 26.344000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 228,
+        "on": 114,
+        "off": 114,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 26.719000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 228,
+        "on": 114,
+        "off": 114,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 27.094000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 228,
+        "on": 114,
+        "off": 114,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 27.469000000040978,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 228,
+        "on": 114,
+        "off": 114,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 27.890999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 230,
+        "on": 116,
+        "off": 114,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 28.265999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 230,
+        "on": 116,
+        "off": 114,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 28.640999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 230,
+        "on": 116,
+        "off": 114,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 29.015999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 232,
+        "on": 116,
+        "off": 116,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 29.390999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 232,
+        "on": 116,
+        "off": 116,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 29.765999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 232,
+        "on": 116,
+        "off": 116,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 30.140999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 232,
+        "on": 116,
+        "off": 116,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 30.515999999945052,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 232,
+        "on": 116,
+        "off": 116,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 30.92200000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 234,
+        "on": 118,
+        "off": 116,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 31.29700000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 234,
+        "on": 118,
+        "off": 116,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 31.67200000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 234,
+        "on": 118,
+        "off": 116,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 32.04700000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 236,
+        "on": 118,
+        "off": 118,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 32.42200000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 236,
+        "on": 118,
+        "off": 118,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 32.79700000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 236,
+        "on": 118,
+        "off": 118,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 33.15599999995902,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 236,
+        "on": 118,
+        "off": 118,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 33.53099999995902,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 236,
+        "on": 118,
+        "off": 118,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 33.95299999997951,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 238,
+        "on": 120,
+        "off": 118,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 34.31299999996554,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 238,
+        "on": 120,
+        "off": 118,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 34.68799999996554,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 238,
+        "on": 120,
+        "off": 118,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 35.06299999996554,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 240,
+        "on": 120,
+        "off": 120,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 35.43799999996554,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 240,
+        "on": 120,
+        "off": 120,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 35.81299999996554,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 240,
+        "on": 120,
+        "off": 120,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 36.17200000002049,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 240,
+        "on": 120,
+        "off": 120,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 36.53099999995902,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 240,
+        "on": 120,
+        "off": 120,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 36.93799999996554,
+      "status": {
+        "ready": true,
+        "armed": true,
+        "warm": true,
+        "initialized": true,
+        "running": true,
+        "bound": true,
+        "fault": false,
+        "case": 3
+      },
+      "snapshot": {
+        "ack": 242,
+        "on": 122,
+        "off": 120,
+        "active": 3,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      }
+    },
+    {
+      "seconds": 40.81299999996554,
+      "status": {
+        "ready": true,
+        "armed": false,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 0
+      },
+      "snapshot": {
+        "ack": 0,
+        "on": 0,
+        "off": 0,
+        "active": 0,
+        "fingers": 0,
+        "period_min": 512,
+        "period_max": 512
+      }
+    }
+  ],
+  "uart_errors": [
+    {
+      "seconds": 40.60999999998603,
+      "error": "short UART response: 0/2"
+    }
+  ],
+  "identity": {
+    "profile": 114,
+    "abi": 1,
+    "diagnostic": 211,
+    "scope": 32
+  },
+  "reset_observed": {
+    "seconds": 40.81299999996554,
+    "status": {
+      "ready": true,
+      "armed": false,
+      "warm": true,
+      "initialized": true,
+      "running": false,
+      "bound": false,
+      "fault": false,
+      "case": 0
+    },
+    "snapshot": {
+      "ack": 0,
+      "on": 0,
+      "off": 0,
+      "active": 0,
+      "fingers": 0,
+      "period_min": 512,
+      "period_max": 512
+    }
+  },
+  "last_held_before_reset": {
+    "seconds": 36.93799999996554,
+    "status": {
+      "ready": true,
+      "armed": true,
+      "warm": true,
+      "initialized": true,
+      "running": true,
+      "bound": true,
+      "fault": false,
+      "case": 3
+    },
+    "snapshot": {
+      "ack": 242,
+      "on": 122,
+      "off": 120,
+      "active": 3,
+      "fingers": 4294967295,
+      "period_min": 512,
+      "period_max": 512
+    }
+  },
+  "post_reset_audio": {
+    "samples": 2048,
+    "sample_rate": 52734.375,
+    "rms": 0.0,
+    "peak": 0,
+    "nonzero": 0,
+    "saturated": 0,
+    "peak_hz": null
+  },
+  "raw_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0",
+  "post_reset_snapshot": {
+    "ack": 0,
+    "on": 0,
+    "off": 0,
+    "active": 0,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "post_reset_status": {
+    "ready": true,
+    "armed": false,
+    "warm": true,
+    "initialized": true,
+    "running": false,
+    "bound": false,
+    "fault": false,
+    "case": 0
+  },
+  "held_sample_age_seconds": 3.875,
+  "held_immediately_before_reset_observed": true,
+  "final_status": {
+    "ready": true,
+    "armed": false,
+    "warm": true,
+    "initialized": true,
+    "running": false,
+    "bound": false,
+    "fault": false,
+    "case": 0
+  },
+  "final_snapshot": {
+    "ack": 0,
+    "on": 0,
+    "off": 0,
+    "active": 0,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  }
+}

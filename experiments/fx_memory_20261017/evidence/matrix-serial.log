@@ -1,0 +1,40 @@
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_host.py']
+PASS compiler checks 11
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_transport.py']
+PASS transport valid CRC length semantic_error staging_clear poll_timeout busy recovery backpressure endian revisions=2
+C:\Users\Sakuya\FPGA-Music-project\experiments\fx_memory_20261017\tb_transport.v:38: $finish called at 121680000 (1ps)
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_transport_host.py']
+test_all_confirmation_fields_required (__main__.Tests) ... ok
+test_ambiguous_ack_no_retry (__main__.Tests) ... ok
+test_busy_no_writes (__main__.Tests) ... ok
+test_cleanup_and_selection_failure_remain_visible (__main__.Tests) ... ok
+test_crc_known_vector (__main__.Tests) ... ok
+test_device_reject (__main__.Tests) ... ok
+test_explicit_preset_restores_rom (__main__.Tests) ... ok
+test_old_device_never_written (__main__.Tests) ... ok
+test_partial_send_no_selection (__main__.Tests) ... ok
+test_success_and_revision_wrap (__main__.Tests) ... ok
+test_unsupported_before_any_io (__main__.Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.534s
+
+OK
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_serial_config.py']
+preupload active=00000000 busy=0 queue=0 own=0 idle=1
+PASS serial_config DIV=16 cycles=506875 samples=989 nonzero=287 UART_upload_PCM CRC busy truncated_sandbox resync timeout release
+C:\Users\Sakuya\FPGA-Music-project\experiments\fx_memory_20261017\tb_serial_config.v:67: $finish called at 5068800000 (1ps)
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_serial_config.py', 'nominal']
+preupload active=00000000 busy=0 queue=0 own=0 idle=1
+PASS nominal_serial_config DIV=234 samples=2354 PCM_and_upload_and_release
+C:\Users\Sakuya\FPGA-Music-project\experiments\fx_memory_20261017\tb_serial_config.v:55: $finish called at 12056220000 (1ps)
+
+COMMAND ['C:\\Program Files\\python\\python.exe', 'check_serial_config.py', 'dual']
+preupload active=00000000 busy=0 queue=0 own=0 idle=1
+PASS serial_config DIV=16 cycles=506875 samples=989 nonzero=287 UART_upload_PCM CRC busy truncated_sandbox resync timeout release
+C:\Users\Sakuya\FPGA-Music-project\experiments\fx_memory_20261017\tb_serial_config.v:67: $finish called at 5068800000 (1ps)
+

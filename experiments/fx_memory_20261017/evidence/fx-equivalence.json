@@ -1,0 +1,22 @@
+{
+  "status": "PASS every-clock reference and tag-misalignment fault rejection",
+  "logs": {
+    "initialized": "PASS fx_memory cycles=600000 AW11_writes=46848 AW4_writes=46848 known=600001 unknown=0 all_taps_dout_state_write_exact live_parameters reset interrupted_reads\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\tb_fx_memory.v:62: $finish called at 6000010000 (1ps)\n",
+    "unknown_start": "PASS fx_memory cycles=600000 AW11_writes=46848 AW4_writes=46848 known=593857 unknown=6144 all_taps_dout_state_write_exact live_parameters reset interrupted_reads\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\tb_fx_memory.v:62: $finish called at 6000010000 (1ps)\n"
+  },
+  "cycles_per_mode": 600000,
+  "aw": [
+    11,
+    4
+  ],
+  "hardware_tested": false,
+  "inputs": {
+    "src/fx_delay.v": "67ce4e845fbd4fa5f96efbce46d435b629425afeabdc20b3b3758f268dbce15e",
+    "reference/fx_delay_reference.v": "e23cc447ffb29121007ba3f3895be001f138282a5a37cea15d7bec1dfdf5ee0c",
+    "tb_fx_memory.v": "9a6c1bc6a2ce71979997e421baa082d9ee0a5e2391ad188410c4f8b3cc138014",
+    "reference/fx_delay_original.v": "ca16072487785866667c6f26da528603de4a0c1d8cff1299625875e6cf6881ef",
+    "faults/fx_tag_bad.v": "4d12fe6fe14f4ca716014263a1881833a70411b5507650b3364e55949973ddce",
+    "check_fx.py": "2f81779f68bab805a6eda941f6e8436095b5fb7cfd42b10e5916d86f971d86b1",
+    "common.py": "8368a74675466ca951b7547bde1c89aadc23b1086b001b04cc5ae6f73c62c1ea"
+  }
+}

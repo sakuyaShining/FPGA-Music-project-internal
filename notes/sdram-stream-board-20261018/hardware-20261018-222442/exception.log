@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "notes/sdram-stream-board-20261018/bench_hardware.py", line 123, in main
+    record['runs'].append(sweep(number));save(S/'result.json',record)
+  File "notes/sdram-stream-board-20261018/bench_hardware.py", line 99, in sweep
+    assert not d['flags']&2 and d['error_code']==0,('board self-test failed',d)
+AssertionError: ('board self-test failed', {'elapsed_s': 4.578, 'state': 19, 'flags': 38, 'tests': 31, 'hex': 'a5830113261f4890e3080010000000100000001000000010000001200000010402000800000006000000200000000100000001040200010401040c04881400a4', 'cycles': 149131336, 'rec_count': 4096, 'rec_read': 4096, 'feed_count': 4096, 'played': 4096, 'after_stop': 8193, 'prefix_count': 132097, 'misses': 8, 'clear_count': 6, 'held_cycles': 32, 'inflight_clears': 1, 'failure_index': 132097, 'requests': 1345540, 'observed': 1025, 'expected': 1025, 'error_code': 12})

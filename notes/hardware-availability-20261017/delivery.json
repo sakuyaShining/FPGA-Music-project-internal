@@ -1,0 +1,30 @@
+{
+  "status": "在手清单已记录；后续实现顺序为建议",
+  "time": "2026-10-17T14:07:41.210047+08:00",
+  "user_statement": "暂无屏幕和实体触控 目前仅有硬件是tangnano20k和喇叭",
+  "source_main": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+  "before": {
+    "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "a92a2ca5218417b778184bd158f780adb8ad83be4cc2e3daecce0b849831d824",
+    "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "a0bd07a35c03e8dc1f751c38dc8c95c905b3543557134282be2278925df741c2",
+    "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "8c88c60122ecfe7ef9935f84be2446832eceb01da395a3f29a46f565df0f7ad6"
+  },
+  "after": {
+    "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "e83cc618d0ff0538eb81415e0f3e546a52d084d771227ae0c97207721080186d",
+    "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "ddbd0b18af38b3fdf7c06c1e4a87baa5a34cb7070f360939733015f7f9f2d4cb",
+    "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "79d2145c0d50c1ca1d4ba98f64e3f1ee05aabf6f4a75e1ee1f97983b24aefc8b"
+  },
+  "backup": {
+    "path": "notes/hardware-availability-20261017/before-20261017-140741",
+    "zip_sha256": "5969fe4d163a6d201210767f63c51f19dbc2f84ef37d2b110971336132246a4d"
+  },
+  "files": {
+    "notes/hardware-availability-20261017/update.py": "f14fb8b2d94f690e1b0f6823a224bc4b980a7556d91eb8880e762caeb6a112e9",
+    "notes/hardware-availability-20261017/CURRENT.md": "bf249084e767caae011c96559307c3092ff7391fc0dee1eb0e603f997c6a7c90"
+  },
+  "previous_hardware_delivery_sha256": "7becfc035aeac38aabba3e34d65659c1b060f6f5532a407fb813644266d9d0c1",
+  "rtl_changed": false,
+  "serial_opened": false,
+  "fpga_programmed": false,
+  "flash_read_or_written": false,
+  "tests": "文档核对；main192身份PASS；修改前73号679项交付检查PASS。未重复运行无关仿真/硬件测试。"
+}

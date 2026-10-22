@@ -1,0 +1,103 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.szlcsc.com/#website",
+      "name": "立创商城",
+      "url": "https://www.szlcsc.com/",
+      "inLanguage": "zh-CN",
+      "publisher": {
+        "@id": "https://www.szlcsc.com/#organization"
+      }
+    },
+    {
+      "@type": [
+        "Organization",
+        "OnlineStore"
+      ],
+      "@id": "https://www.szlcsc.com/#organization",
+      "name": "立创商城",
+      "alternateName": [
+        "LCSC",
+        "立创"
+      ],
+      "url": "https://www.szlcsc.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://static.szlcsc.com/ecp/assets/newWeb/common/images/lcsc-logo.png"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://item.szlcsc.com/334768.html#product",
+      "name": "Waveshare(微雪电子) 7inch HDMI LCD (C)",
+      "url": "https://item.szlcsc.com/334768.html",
+      "image": [
+        "https://alimg.szlcsc.com/upload/public/product/source/20230109/19BBFFC1E8BB8B1DBFBE27C983837550.jpg",
+        "https://alimg.szlcsc.com/upload/public/product/source/20230109/816A6785BE5A7159EB1A8DFED00BA442.jpg",
+        "https://alimg.szlcsc.com/upload/public/brand/product/certificate/20251103/3A7AB15B8165315B73DE3AA2027B546B.png"
+      ],
+      "description": "7inch HDMI LCD (C)LCD显示屏，Waveshare(微雪电子)原厂出品，价格￥239.4元。提供高清引脚图、PCB焊盘图、3D模型及Datasheet数据手册，支持选型与设计参考，正品现货，一站式元器件采购尽在立创商城。",
+      "sku": "C359951",
+      "mpn": "7inch HDMI LCD (C)",
+      "brand": {
+        "@type": "Brand",
+        "name": "Waveshare(微雪电子)"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Waveshare(微雪电子)"
+      },
+      "category": "LCD显示屏",
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "name": "7inch HDMI LCD (C) Datasheet",
+        "url": "https://atta.szlcsc.com/upload/public/pdf/source/20190107/C359951_EBBB1478984ED94DB51BDDCE9E03A13A.pdf"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "CNY",
+        "price": 239.4,
+        "availability": "https://schema.org/InStock",
+        "inventoryLevel": {
+          "@type": "QuantitativeValue",
+          "value": 1
+        },
+        "seller": {
+          "@id": "https://www.szlcsc.com/#organization"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://item.szlcsc.com/334768.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.szlcsc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "电子元器件",
+          "item": "https://www.szlcsc.com/catalog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "LCD显示屏",
+          "item": "https://list.szlcsc.com/catalog/11142.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "7inch HDMI LCD (C)",
+          "item": "https://item.szlcsc.com/334768.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+﻿signal,fpga_package_pin,board_header,board_header_pin,logic_voltage,direction,existing_load,status
+BUS_SCK,27,J6,8,3.3V,out,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+BUS_MOSI,15,J6,6,3.3V,out,onboard_LED_510ohm,candidate_not_for_connection_until_board_and_wrapper_check
+SCAN_LATCH,16,J6,7,3.3V,out,onboard_LED_510ohm,candidate_not_for_connection_until_board_and_wrapper_check
+INPUT_LOAD_N,17,J6,15,3.3V,out,onboard_LED_510ohm,candidate_not_for_connection_until_board_and_wrapper_check
+INPUT_DATA,28,J6,9,3.3V,in,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+SENSE_0,29,J6,12,3.3V,in,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+SENSE_1,30,J6,13,3.3V,in,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+SENSE_2,31,J6,14,3.3V,in,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+SENSE_3,41,J5,6,3.3V,in,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+SENSE_4,42,J5,5,3.3V,in,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+SENSE_5,48,J5,10,3.3V,in,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+STORE_SDA,25,J6,10,3.3V,open_drain,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+STORE_SCL,26,J6,11,3.3V,open_drain,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check
+LCD_VIS_CS_N,18,J6,18,3.3V,out,onboard_LED_510ohm,candidate_not_for_connection_until_board_and_wrapper_check
+LCD_HARM_CS_N,19,J6,17,3.3V,out,onboard_LED_510ohm,candidate_not_for_connection_until_board_and_wrapper_check
+LCD_SHARED_DC,20,J6,16,3.3V,out,onboard_LED_510ohm,candidate_not_for_connection_until_board_and_wrapper_check
+TP_INT,77,J6,5,3.3V,bidir_at_reset_then_in,LCD_FPC_net; RGB_LCD_unplugged,candidate_not_for_connection_until_board_and_wrapper_check

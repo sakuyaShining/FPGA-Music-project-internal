@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "2c3e24cf-bf52-4cd1-ba65-8ce4fa0ffb87",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "const f=await eda.sch_ManufactureData.getPngFile('prototype-schematic',{width:3000});if(!f)throw new Error('No image');const saved=await eda.sys_FileSystem.saveFileToFileSystem(__CLI__.args.image,f,undefined,true);const b=await eda.sch_ManufactureData.getBomFile('prototype-bom','csv');if(!b)throw new Error('No BOM');const bomSaved=await eda.sys_FileSystem.saveFileToFileSystem(__CLI__.args.bom,b,undefined,true);return {image:{name:f.name,size:f.size,saved},bom:{name:b.name,size:b.size,saved:bomSaved},pages:await eda.dmt_Schematic.getAllSchematicPagesInfo()};",
+    "--args",
+    "{\"image\": \"C:/Users/Sakuya/Documents/LCEDA-Pro/projects/FPGA-Music-Slider-Prototype-20261015/schematic-draft-exports/prototype-schematic.zip\", \"bom\": \"C:/Users/Sakuya/Documents/LCEDA-Pro/projects/FPGA-Music-Slider-Prototype-20261015/schematic-draft-exports/prototype-bom.tsv\"}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

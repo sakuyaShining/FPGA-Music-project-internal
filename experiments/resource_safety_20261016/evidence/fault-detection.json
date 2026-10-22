@@ -1,0 +1,53 @@
+{
+  "status": "PASS all 3 deliberate regressions detected",
+  "results": {
+    "anchor_overwrite": {
+      "status": "PASS deliberate regression rejected",
+      "failure": "anchor mismatch",
+      "returncode": 1,
+      "log": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\resource_safety_20261016\\tb_anchor_equiv.v:20: anchor mismatch MB=1 NF=32 step=1\n       Time: 56000  Scope: tb_anchor_equiv.a1.check\nFATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\resource_safety_20261016\\tb_anchor_equiv.v:20: anchor mismatch MB=1 NF=5 step=1\n       Time: 56000  Scope: tb_anchor_equiv.a2.check\n"
+    },
+    "identity_wrong_row": {
+      "status": "PASS deliberate regression rejected",
+      "failure": "prefetch missed row",
+      "returncode": 1,
+      "log": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\resource_safety_20261016\\tb_identity_equiv.v:35: prefetch missed row\n       Time: 970000  Scope: tb_identity_equiv\n"
+    },
+    "bridge_no_forward": {
+      "status": "PASS deliberate regression rejected",
+      "failure": "cached row not coherent",
+      "returncode": 1,
+      "log": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\resource_safety_20261016\\tb_bridge_random.v:55: cached row not coherent at 13 state=8\n       Time: 127000  Scope: tb_bridge_random\n"
+    }
+  },
+  "inputs": {
+    "tb_identity_equiv.v": "dfc90d7bc5de7b862b545255bd91a43505d032168deb1cd928b1e58f8651d85c",
+    "fault_injection/bridge_no_forward.v": "dc6f5e920c424129c3b3fc7ada058ff57bbc18e9e8caeb7378ce68a018a9bf25",
+    "selected/finger_pitch.v": "1702ccc636619f85f65ef18f810efd5e652ab206ffcdc1d2e07fbce12d093d5a",
+    "engine/recip_inc.hex": "a9ea597f8b2ae211baa82c264796c4d118393863435c33aac9edb5ee71802002",
+    "common.py": "c51ae628baf93a9159578515b50483d83d2319a42d1dd84703b69e444e6e5c2e",
+    "engine/sin1024.hex": "b2d2b0328b8aee38c3fb7cdcd03064a6e34f1bab170bc99950ebaaf039618647",
+    "reference/left_contact_bridge.v": "3cfeb623f98bfa8e6104963f854f8f69d859be680d8c46db1f87b82b4e2ad9e2",
+    "engine/hann1024.hex": "a65ee44f5eaacc8237a2dc9f1b2d58998f197efa0377e2a7d76cdc9268591abc",
+    "reference/note_map_owned.v": "7f3a2fb900461a75d2bf4bc4204299974f3337c3e45e0626a6a13ace7445c085",
+    "rtl/instrument_table.v": "5116958977a70a2f33e1ce40e9cc6d6a4130d490b5a14f6a107ec7f436aa5543",
+    "engine/bands1024.hex": "01cdaaa2843dab6417522a5bb913e60b17e4daac675fe1c4ff99250a6e64123f",
+    "engine/fader_gain_q8.hex": "38a644d29b92c5b3267bab5931966a033e35b75973ad84b7af362be74194f6a5",
+    "engine/preset_part.hex": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+    "engine/tilt_wtab.hex": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8",
+    "engine/sine256.hex": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+    "selected/left_contact_bridge.v": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36",
+    "selected/note_map_owned.v": "5771c6de57aedef0872489530a017f84b66bfbf9141b96ab6f7d8cbd7c2918d1",
+    "reference/finger_pitch.v": "ce665a7b84d5c92b8a7982277350daf831347020ab06b94eeb64aa8de7873e00",
+    "engine/vel_shape.v": "ed66c9d539250c893e6086b65870b74a86aca1df55897f4c5c33d5e1fbb8ab8d",
+    "fault_injection/anchor_overwrite.v": "a71dd18e8f8e60152af1679e1a419a08c62d558d3f4a0584115e777c5016f09a",
+    "engine/note_inc.hex": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+    "engine/vel_wtab.hex": "c394b9c488197c4c74f45e85e055af45fbf61e6dfda380f412a39d7ab4d0a1d1",
+    "check_fault_detection.py": "f39f8ed98a47d085024b6c84cbaa2940f5d85aa3026b2602b1266c0464f75edb",
+    "fault_injection/identity_wrong_row.v": "fba4a24b29d88abf0103580db5e8b983beb980b1dbba40ef8e479ed90b73f40e",
+    "engine/finger_ratio.hex": "fbb875cffffd1f044971de6ceb47a5b90898a154229f1e29937b3a742f757ca3",
+    "engine/cos1024.hex": "706d4136e1d62d92d5a1052b077e8cf338f30590f728501853dde8f7bb9adf90",
+    "tb_bridge_random.v": "531fcc2d7f9f60a31b09060ccbc1724dd508f189443289b499eff44dc37555cd",
+    "tb_anchor_equiv.v": "1a31d16fc00d70c58da68692753bfb37ce0b591e554175c8f4efea3c47d27309"
+  }
+}

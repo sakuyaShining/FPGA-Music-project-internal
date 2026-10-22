@@ -1,0 +1,124 @@
+{
+  "version": "host-workbench-20261015-11",
+  "source_head": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+  "source_worktree": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project",
+  "source_is_uncommitted": true,
+  "exe": "D:\\FPGA-Project\\host-workbench-20261015-11\\dist\\fpga_workbench.exe",
+  "exe_sha256": "334985e770a36b8a7a3e4e2a46be7432c3a6a21dfc02ea37549763bc589003ec",
+  "source_zip": "D:\\FPGA-Project\\host-workbench-20261015-11\\host-source-11.zip",
+  "source_zip_sha256": "4c552b1505257704424cd6f66bb57ba447f00f5250b06e95081b0325cb4b9287",
+  "source_inputs_verified": true,
+  "protected_files": 186,
+  "protected_unchanged": true,
+  "main_baseline": "192 inputs PASS, no changes",
+  "backup": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\backup-20261015-191315",
+  "checks": {
+    "scope": "离线Qt布局、模拟协议与主机回归；非板测",
+    "status": "PASS",
+    "checks": [
+      {
+        "name": "host-tests",
+        "command": [
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tools/host",
+          "-p",
+          "test_*.py"
+        ],
+        "extra_env": {},
+        "exit_code": 0,
+        "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\host-tests.log"
+      },
+      {
+        "name": "dpi-125",
+        "command": [
+          "-m",
+          "unittest",
+          "test_advanced_tools.AdvancedToolsTests.test_small_screens_and_large_text_keep_close_and_apply_visible"
+        ],
+        "extra_env": {
+          "QT_SCALE_FACTOR": "1.25"
+        },
+        "exit_code": 0,
+        "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\dpi-125.log"
+      },
+      {
+        "name": "dpi-150",
+        "command": [
+          "-m",
+          "unittest",
+          "test_advanced_tools.AdvancedToolsTests.test_small_screens_and_large_text_keep_close_and_apply_visible"
+        ],
+        "extra_env": {
+          "QT_SCALE_FACTOR": "1.5"
+        },
+        "exit_code": 0,
+        "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\dpi-150.log"
+      },
+      {
+        "name": "dpi-200",
+        "command": [
+          "-m",
+          "unittest",
+          "test_advanced_tools.AdvancedToolsTests.test_small_screens_and_large_text_keep_close_and_apply_visible"
+        ],
+        "extra_env": {
+          "QT_SCALE_FACTOR": "2"
+        },
+        "exit_code": 0,
+        "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\dpi-200.log"
+      },
+      {
+        "name": "gui-selftest",
+        "command": [
+          "tools/host/dsp_gui.py",
+          "--selftest"
+        ],
+        "extra_env": {},
+        "exit_code": 0,
+        "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\gui-selftest.log"
+      },
+      {
+        "name": "workbench-selftest",
+        "command": [
+          "tools/host/dsp_gui.py",
+          "--workbench-selftest"
+        ],
+        "extra_env": {},
+        "exit_code": 0,
+        "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\workbench-selftest.log"
+      },
+      {
+        "name": "normal-startup",
+        "command": [
+          "tools/host/dsp_gui.py",
+          "--startup-check"
+        ],
+        "extra_env": {},
+        "exit_code": 0,
+        "log": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\advanced-tools-redesign-20261015\\normal-startup.log"
+      }
+    ]
+  },
+  "frozen_selftest": "PASS",
+  "frozen_workbench_selftest": "PASS including advanced dialog",
+  "frozen_normal_startup": "PASS",
+  "copied_saved_files": [
+    "instrument.json"
+  ],
+  "interactive_session_replaced": false,
+  "hardware_or_audio_tested_this_release": false,
+  "limitations": [
+    "完整激励/包络/物理单位效果配置仍未接入",
+    "设备非易失保存未实现",
+    "未执行新板测或模拟输出试听"
+  ],
+  "desktop_shortcut": {
+    "path": "C:/Users/Sakuya/Desktop/FPGA乐器上位机.lnk",
+    "updated": true,
+    "target_verified": "D:\\FPGA-Project\\host-workbench-20261015-11\\dist\\fpga_workbench.exe",
+    "backup": "D:\\FPGA-Project\\host-workbench-20261015-11\\evidence\\FPGA乐器上位机-原10版.lnk"
+  }
+}

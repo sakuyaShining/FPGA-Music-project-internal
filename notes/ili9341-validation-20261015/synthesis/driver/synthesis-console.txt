@@ -1,0 +1,37 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project C:/Users/Sakuya/FPGA-Music-project/notes/ili9341-validation-20261015/synthesis/driver/probe.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_spi_byte.v'
+Analyzing Verilog file 'C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_window.v'
+Compiling module 'ili9341_window'("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_window.v":4)
+Compiling module 'ili9341_spi_byte'("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_spi_byte.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_spi_byte.v":28)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 3("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_spi_byte.v":36)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_spi_byte.v":41)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_spi_byte.v":45)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_window.v":95)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_window.v":99)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_window.v":111)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_window.v":120)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\ili9341_window.v":121)
+NOTE  (EX0101) : Current top module is "ili9341_window"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\impl\gwsynthesis\probe.vg" completed
+[100%] Generate report file "C:\Users\Sakuya\FPGA-Music-project\notes\ili9341-validation-20261015\synthesis\driver\impl\gwsynthesis\probe_syn.rpt.html" completed
+GowinSynthesis finish

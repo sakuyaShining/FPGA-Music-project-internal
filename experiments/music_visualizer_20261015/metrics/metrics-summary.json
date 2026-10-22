@@ -1,0 +1,189 @@
+{
+  "scope": "Cycle-level digital measurements at nominal 27MHz; no physical panel/PnR claim",
+  "production_rtl_changed": false,
+  "normal_workload_prior_evidence": {
+    "gui_boundary_intervals_ms": [
+      50.00137407600005,
+      50.00137407600005,
+      50.001374075999934,
+      50.001374075999934,
+      50.00137407600005,
+      50.00137407600005,
+      50.001374075999934
+    ],
+    "draw_work_ms": [
+      6.388166088000048,
+      11.083732613999928,
+      6.410981495999863,
+      6.4165001579999625,
+      6.359646828000109,
+      6.361202423999998,
+      6.398092271999985
+    ],
+    "first_transfer_done_ms": 620.361073413,
+    "first_boundary_ms": 658.785590943
+  },
+  "stress": {
+    "transfers": [
+      {
+        "cycle": 1913182,
+        "number": 1,
+        "work_cycles": 563175,
+        "bytes": 14628,
+        "pixels": 5895,
+        "windows": 258,
+        "late": 0,
+        "work_ms_at_27MHz": 20.858333333333334
+      },
+      {
+        "cycle": 4096464,
+        "number": 2,
+        "work_cycles": 1396455,
+        "bytes": 36276,
+        "pixels": 16455,
+        "windows": 306,
+        "late": 1,
+        "work_ms_at_27MHz": 51.720555555555556
+      },
+      {
+        "cycle": 5005049,
+        "number": 3,
+        "work_cycles": 908583,
+        "bytes": 23604,
+        "pixels": 10119,
+        "windows": 306,
+        "late": 1,
+        "work_ms_at_27MHz": 33.65122222222222
+      },
+      {
+        "cycle": 6355051,
+        "number": 4,
+        "work_cycles": 908583,
+        "bytes": 23604,
+        "pixels": 10119,
+        "windows": 306,
+        "late": 1,
+        "work_ms_at_27MHz": 33.65122222222222
+      }
+    ],
+    "nominal_20hz_deadline_met_for_all_tested_transitions": false,
+    "largest_work_ms": 51.720555555555556,
+    "frame_boundary_intervals_ms": [
+      51.72062962962963,
+      50.00007407407407,
+      50.00007407407407
+    ],
+    "transfer_completion_intervals_ms": [
+      80.8622962962963,
+      33.651296296296294,
+      50.00007407407407
+    ],
+    "late_frames_final": 1,
+    "note": "Conservative legal interface stress, not proof all bands can reach this height simultaneously from bounded PCM."
+  },
+  "short_note_trace": {
+    "duration_ms": 5.000037037037037,
+    "trace_samples": [
+      262144,
+      262144,
+      262144,
+      262144
+    ],
+    "midi67_expected_bit": 28,
+    "ever_visible": false,
+    "meaning": "Display trace can miss an accepted short note; this does not demonstrate audio note loss."
+  },
+  "analysis": {
+    "sample_rate_hz": 52734.375,
+    "fft_size": 1024,
+    "bin_spacing_hz": 51.4984130859375,
+    "nominal_window_duration_ms": 19.418074074074074,
+    "windows": {
+      "1": {
+        "first": 517,
+        "last": 524293,
+        "ready": 566887,
+        "gap_samples": 83,
+        "capture_first_to_last_ms": 19.39911111111111,
+        "last_sample_to_ready_ms": 1.5775555555555556,
+        "first_sample_to_ready_ms": 20.976666666666667
+      },
+      "2": {
+        "first": 567301,
+        "last": 1091077,
+        "ready": 1133671,
+        "gap_samples": 166,
+        "capture_first_to_last_ms": 19.39911111111111,
+        "last_sample_to_ready_ms": 1.5775555555555556,
+        "first_sample_to_ready_ms": 20.976666666666667
+      },
+      "3": {
+        "first": 1134085,
+        "last": 1657861,
+        "ready": 1700455,
+        "gap_samples": 249,
+        "capture_first_to_last_ms": 19.39911111111111,
+        "last_sample_to_ready_ms": 1.5775555555555556,
+        "first_sample_to_ready_ms": 20.976666666666667
+      },
+      "4": {
+        "first": 1700869,
+        "last": 2224645,
+        "ready": 2267239,
+        "gap_samples": 332,
+        "capture_first_to_last_ms": 19.39911111111111,
+        "last_sample_to_ready_ms": 1.5775555555555556,
+        "first_sample_to_ready_ms": 20.976666666666667
+      }
+    },
+    "fft_period_ms": 20.992,
+    "fft_update_hz": 47.63719512195122,
+    "wave_request_to_ready_ms": [
+      9.691148148148148,
+      9.69648148148148
+    ],
+    "nominal_wave_snapshot_ms": 9.709037037037037,
+    "nominal_wave_snapshot_coverage_per_50ms_percent": 19.418074074074074
+  },
+  "derived_from_rtl": {
+    "bar_max_height_px": 35,
+    "bar_release_px_per_update": 2,
+    "bar_max_release_updates": 18,
+    "bar_release_ms_at_20hz": 900,
+    "trace_pixels_per_semitone": 1.5,
+    "trace_cents_per_pixel": 66.66666666666667,
+    "trace_sweep_seconds": 14.4,
+    "wave_continuous_step_visibility_estimate": "Roughly 50-100ms plus column drawing; schedule inference, not measured photon latency."
+  },
+  "still_unverified": [
+    "worst-case analog panel latency",
+    "tearing/TE wiring",
+    "brightness and RGB direction",
+    "full-product place-and-route",
+    "universal bound for real PCM workloads"
+  ],
+  "source_sha256": {
+    "rtl\\music_visualizer.v": "d35912021fee2cfbf75cbfde1cda3aae1e35355d7962b092333fd4f35086cfb7",
+    "rtl\\mv_fft1024.v": "c55f4090d89f020b84f4bf03508cb89e5eab0328e9e371d3325603029c107329",
+    "rtl\\mv_font.vh": "7dcd884f14a74eeef9e666e5e0d3772d64301026a72dd056a54770f4da038754",
+    "rtl\\mv_panel_driver.v": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+    "rtl\\mv_renderer.v": "bc7f447e2123ce820c95cd5f83b76c56ffed7cf0c0a48641165ca3bb03d9f578",
+    "rtl\\mv_spi_byte.v": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+    "rtl\\mv_wave_capture.v": "368495a1805024999a7fdd9104183baa1461b72841d6d7fe63d8b23c362583ee",
+    "bands1024.hex": "01cdaaa2843dab6417522a5bb913e60b17e4daac675fe1c4ff99250a6e64123f",
+    "cos1024.hex": "706d4136e1d62d92d5a1052b077e8cf338f30590f728501853dde8f7bb9adf90",
+    "hann1024.hex": "a65ee44f5eaacc8237a2dc9f1b2d58998f197efa0377e2a7d76cdc9268591abc",
+    "sin1024.hex": "b2d2b0328b8aee38c3fb7cdcd03064a6e34f1bab170bc99950ebaaf039618647",
+    "metrics\\tb_analysis_timing.v": "758c44033f747369841726413da113e25a5739f4c9f59d28769c30da3a82a056",
+    "metrics\\tb_render_budget.v": "b70705f42b1a6ada995617b33862194ac916181b79a230effa18ac1636b743fc",
+    "metrics\\measure.py": "7b661deebb4950a8d1c987bd7685956925bcd932c693d81f8ba74220537682e5"
+  },
+  "evidence_sha256": {
+    "metrics\\render-budget.log": "f02813a4859900b4e7493fef533edd5d1866bf15e762f4acd77952a5305aac0a",
+    "metrics\\render-simulation.log": "7e4d202fbefcf949f5735fae7304e5ef65607c74f627b772a473c20c2e572468",
+    "metrics\\analysis-timing.log": "2aaae82e9a3fbbff5cca9c90a0928dd3cc36c5803eb79ad01808ec6a69890f6d",
+    "metrics\\analysis-simulation.log": "3f3687096ba4a2c58997aa9c6a3c2f4d60bb746ce14ec0a6159f5cbc0088b413",
+    "verification.json": "146856c02b0333d5ce0806ba0b7995732b5920899ed995027265954f9cc3c438",
+    "delivery-audit.json": "311f00a5257e31e48d4a630d8add7cda5cb318086ec1db9d06f1fa9f2d6ea560"
+  }
+}

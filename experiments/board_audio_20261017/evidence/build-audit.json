@@ -1,0 +1,92 @@
+{
+  "status": "PASS pin/PnR package audit only",
+  "profiles": {
+    "build_ready_default": {
+      "status": "PASS internal constrained PnR and pin audit only",
+      "resource": {
+        "Logic": 15258,
+        "Register": 7287,
+        "BSRAM": 36,
+        "CLS": 9340,
+        "I/O Port": 14
+      },
+      "slack_ns": {
+        "Setup": 3.523,
+        "Hold": 0.214
+      },
+      "tns": 0,
+      "pins": {
+        "uart_rx_pin": 70,
+        "uart_tx_pin": 69,
+        "clk": 4,
+        "led[0]": 15,
+        "led[1]": 16,
+        "led[2]": 17,
+        "led[3]": 18,
+        "led[4]": 19,
+        "led[5]": 20,
+        "reset_button": 87,
+        "dac_bck": 56,
+        "dac_ws": 55,
+        "dac_din": 54,
+        "pa_en": 51
+      },
+      "bitstream_sha256": "7384acdf9fb51f887dc20d1d63ed01a8dc69cb36d78305fc77d9e6a8df8ca246",
+      "warnings": [
+        "WARN  (EX3073) : Port 'finger_valid' remains unconnected for this instance(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\board_audio_20261017\\build_ready_default\\board_audio_top.v\":53)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 11(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\board_audio_20261017\\build_ready_default\\pad_pitch.v\":56)",
+        "WARN  (EX3073) : Port 'update_overrun' remains unconnected for this instance(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\board_audio_20261017\\build_ready_default\\tdm_engine_rh.v\":619)",
+        "WARN  (NL0002) : The module \"led_ind\" instantiated to \"u_led\" is swept in optimizing(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\board_audio_20261017\\build_ready_default\\tdm_top_owned.v\":1171)",
+        "WARN  (NL0002) : The module \"pad_pitch\" instantiated to \"u_pitch\" is swept in optimizing(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\board_audio_20261017\\build_ready_default\\tdm_top_owned.v\":597)",
+        "WARN  (NL0002) : The module \"strip_ctrl\" instantiated to \"u_strip\" is swept in optimizing(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\board_audio_20261017\\build_ready_default\\tdm_top_owned.v\":602)",
+        "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+      ],
+      "external_i2s_timing_verified": false,
+      "hardware_tested": false
+    },
+    "build_mute": {
+      "status": "PASS internal constrained PnR and pin audit only",
+      "resource": {
+        "Logic": 29,
+        "Register": 25,
+        "BSRAM": 0,
+        "CLS": 17,
+        "I/O Port": 14
+      },
+      "slack_ns": {
+        "Setup": 34.497,
+        "Hold": 0.424
+      },
+      "tns": 0,
+      "pins": {
+        "uart_rx_pin": 70,
+        "uart_tx_pin": 69,
+        "clk": 4,
+        "led[0]": 15,
+        "led[1]": 16,
+        "led[2]": 17,
+        "led[3]": 18,
+        "led[4]": 19,
+        "led[5]": 20,
+        "reset_button": 87,
+        "dac_bck": 56,
+        "dac_ws": 55,
+        "dac_din": 54,
+        "pa_en": 51
+      },
+      "bitstream_sha256": "69c13d53a7cc3af8aa0299a67ca7d2a79cc550e92fabe94c3b317a622c5483ad",
+      "warnings": [
+        "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+      ],
+      "external_i2s_timing_verified": false,
+      "hardware_tested": false
+    }
+  },
+  "inputs": {
+    "audit_build.py": "95912203d20882f346225988271e8c3d05ce4ff53fecfda114a359df36f2ef46",
+    "common.py": "40ff9bd20e5a923d78803577ef3c73603d628c080717fa0167f59c3c0d4d6dad",
+    "constraints/board_audio.cst": "275e1fd51e4a8d806dc65ad3c001aa44354201f6ea5fbb77696dd51158781b2f",
+    "constraints/board_audio.sdc": "9c6bf1e3e62b58b886616f133fe6a963272b7528b8e95d8810adbe89986cf39e",
+    "board_check.py": "9ee9ddf019c387899e1233bf44559f98566a4ae2f1ffdc00091ac61c16c0737e"
+  }
+}

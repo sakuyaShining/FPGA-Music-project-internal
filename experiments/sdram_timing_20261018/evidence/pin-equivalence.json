@@ -1,0 +1,12 @@
+{
+  "status": "PASS sampled old-source command/data/handshake equivalence",
+  "log": "PASS registered_pin_equivalence cycles=180000 accepted=9593 writes=4801 reads=4792 responses=9588 async_resets=6\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_timing_20261018\\tb\\tb_pin_equivalence.v:33: $finish called at 6666900557 (1ps)\n",
+  "inputs": {
+    "evidence/sdram_original.v": "1a3d254b74cc30c489dae4831157799b76ebf89331ab44147ca4f0b51388ac91",
+    "rtl/sdram_word_controller.v": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+    "tb/tb_pin_equivalence.v": "8deada051afc1a63fc12b0ccc26f9723a0c201c032d9674f6822118a2c9e95f3",
+    "reference/sdram_word_controller_unregistered.v": "29be66f34213f1ffbfbf060a888885a3034d84fefd7bd9ccae4571f649094143",
+    "check_pin_equivalence.py": "a83deb9d719be00bcc9cacedfb3d6dc77023947e9a2febea2f9c5c2edd08afc8",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79"
+  }
+}

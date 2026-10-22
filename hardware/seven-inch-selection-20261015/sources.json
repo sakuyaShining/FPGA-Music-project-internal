@@ -1,0 +1,67 @@
+[
+  {
+    "id": "mrb",
+    "url": "https://www.lcdwiki.com/zh/7.0inch_16BIT_Module_SSD1963",
+    "scope": "MRB7966, SSD1963, GT911, 16-bit 8080, 800x480, AA/PCB dimensions, 5V/3.3V, 2.03W"
+  },
+  {
+    "id": "mrb-schematic",
+    "url": "https://www.lcdwiki.com/res/MRB7963/7inch_SSD1963_display_Schematic.pdf",
+    "scope": "Vendor schematic, 16-bit bus and separate touch I2C; actual supplied board revision still unknown"
+  },
+  {
+    "id": "er",
+    "url": "https://www.buydisplay.com/chinese/7-inch-lcd-module-capacitive-touch-screen-panel-i2c-spi-serial",
+    "scope": "Indexed manufacturer base price CNY273.22; configurable interface/touch; NOT capacitive configuration quote; direct fetch 403"
+  },
+  {
+    "id": "er-drawing",
+    "url": "https://www.buydisplay.com/download/manual/ER-TFTM070-5V4_Datasheet.pdf",
+    "scope": "Manufacturer mechanical/interface datasheet; direct web fetch error, indexed drawing used only as reference"
+  },
+  {
+    "id": "surenoo",
+    "url": "https://www.surenoo.com/products/23163813",
+    "scope": "SSP0700A-800480: LT7686, FT5426 in detailed table, 185x105x7.98mm, 5V, SPI and I2C; header typo GT5426; availability/price not qualified"
+  },
+  {
+    "id": "ronbo",
+    "url": "https://www.ronboe.com/shop/msp7001/",
+    "scope": "MSP7001: 7inch 800x480, 185x105mm, 5V/3.3V, SPI, USD30 public price; controller and touch part absent; 3/4-wire descriptions conflict"
+  },
+  {
+    "id": "maclight",
+    "url": "https://www.szmaclight.com/product/7-inch-spi-tft-lcd-800480-i2c-ctp.html",
+    "scope": "7inch LT7680 SPI+I2C five-point module architecture, lacks exact MPN/dimensions/price"
+  },
+  {
+    "id": "hdmi-domestic",
+    "url": "https://item.szlcsc.com/334768.html",
+    "scope": "Exact C359951 identity; public payload valid stock1; single-unit package reference CNY239.40, not checkout quote"
+  },
+  {
+    "id": "hdmi-vendor",
+    "url": "https://www.waveshare.com/product/raspberry-pi/7inch-hdmi-lcd-c.htm",
+    "scope": "1024x600, HDMI display, five-point USB capacitive touch"
+  },
+  {
+    "id": "lt-domestic",
+    "url": "https://item.szlcsc.com/5791065.html",
+    "scope": "LT7680A-R/C5156687 identity; discontinued at this distributor, stock0; do not freeze for purchase"
+  },
+  {
+    "id": "lt-manual",
+    "url": "https://www.levetop.cn/uploadfiles/2023/05/LT7680x-R_DS_V30_CH.pdf",
+    "scope": "LT7680x-R family; A supports 1280x1024 while B only480x320; not interchangeable for800x480"
+  },
+  {
+    "id": "pcm5122",
+    "url": "https://item.szlcsc.com/1043162.html",
+    "scope": "PCM5122PWR/C962071 exact identity stock456; small-quantity price/PLL qualification pending"
+  },
+  {
+    "id": "pt8211",
+    "url": "https://item.szlcsc.com/93193.html",
+    "scope": "PT8211-S/C92004 exact identity stock1; price/justified format and analog circuit qualification pending"
+  }
+]

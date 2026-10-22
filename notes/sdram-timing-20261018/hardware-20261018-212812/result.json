@@ -1,0 +1,120 @@
+{
+  "status": "PASS two bounded SDRAM sweeps and restored stage76 identity/silence",
+  "time": "2026-10-18T21:28:12.675667+08:00",
+  "port": "COM6",
+  "script_sha256": "49bc72f5a322280db2d94c5dc247c760f02d9e8890daa24dd46600719c0ffb92",
+  "audit_sha256": "89d9d70b2df79d3ec46e4b8692c92783db46b754f7fba43af3de5c9ee0cd4c76",
+  "test_bitstream_sha256": "86c9b213840ece24b97dd1ab0dfe4142c69b75fdc72a0a1dfaa3dd3c046fb885",
+  "restore_bitstream_sha256": "8c2d52e59b13b8d343b54a9d602d265154dc6cc9640320df10835f2e1b1c253c",
+  "flash_read_or_written": false,
+  "tf_accessed": false,
+  "audio_played": false,
+  "runs": [
+    {
+      "status": "PASS bounded 8MiB two-pattern write/read sweep",
+      "frames": 7,
+      "final": {
+        "elapsed_s": 6.938,
+        "state": 5,
+        "initialized": true,
+        "fail": false,
+        "passed": true,
+        "phase": 1,
+        "index": 4194303,
+        "observed": 42341,
+        "expected": 42341,
+        "completed": 16777216,
+        "hex": "a581012d03ffff3f65a565a500000034"
+      },
+      "address_halfwords": 4194304,
+      "write_halfwords": 8388608,
+      "read_halfwords": 8388608,
+      "raw_sha256": "a3936ccc0e14143d52e570a6f9847c481246ebe9cf6358346f24001c1748acf8",
+      "frames_sha256": "6ebd2dee2148f2b5e7d15fe58f79066ea7e9c766bade37dc28cbc476c5ba3bcb"
+    },
+    {
+      "status": "PASS bounded 8MiB two-pattern write/read sweep",
+      "frames": 7,
+      "final": {
+        "elapsed_s": 6.938,
+        "state": 5,
+        "initialized": true,
+        "fail": false,
+        "passed": true,
+        "phase": 1,
+        "index": 4194303,
+        "observed": 42341,
+        "expected": 42341,
+        "completed": 16777216,
+        "hex": "a581012d03ffff3f65a565a500000034"
+      },
+      "address_halfwords": 4194304,
+      "write_halfwords": 8388608,
+      "read_halfwords": 8388608,
+      "raw_sha256": "a3936ccc0e14143d52e570a6f9847c481246ebe9cf6358346f24001c1748acf8",
+      "frames_sha256": "1960a06bb47cb4681d87f61e40f9fb033452014ef19e38f3c07793bb2981155f"
+    }
+  ],
+  "before": {
+    "identity": {
+      "C0": 114,
+      "C2": 118,
+      "C3": 1,
+      "D0": 117,
+      "D1": 1,
+      "A4": 211,
+      "A9": 32
+    },
+    "status": {
+      "ready": true,
+      "armed": false,
+      "warm": true,
+      "initialized": true,
+      "running": false,
+      "bound": false,
+      "fault": false,
+      "case": 118
+    },
+    "snapshot": {
+      "ack": 0,
+      "on": 0,
+      "off": 0,
+      "active": 0,
+      "fingers": 0,
+      "period_min": 512,
+      "period_max": 512
+    }
+  },
+  "restored": {
+    "identity": {
+      "C0": 114,
+      "C2": 118,
+      "C3": 1,
+      "D0": 117,
+      "D1": 1,
+      "A4": 211,
+      "A9": 32
+    },
+    "status": {
+      "ready": true,
+      "armed": false,
+      "warm": true,
+      "initialized": true,
+      "running": false,
+      "bound": false,
+      "fault": false,
+      "case": 118
+    },
+    "snapshot": {
+      "ack": 0,
+      "on": 0,
+      "off": 0,
+      "active": 0,
+      "fingers": 0,
+      "period_min": 512,
+      "period_max": 512
+    },
+    "zero_pcm_samples": 2048
+  },
+  "finished": "2026-10-18T21:28:45.635427+08:00"
+}

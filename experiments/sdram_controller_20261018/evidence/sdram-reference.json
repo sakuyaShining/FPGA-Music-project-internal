@@ -1,0 +1,18 @@
+{
+  "status": "PASS subset command/timing model and data scoreboard; four deliberate faults detected",
+  "log": "PASS SDRAM completed=2147 reads=1090 writes=1057 refreshes=95 max_refresh_gap=397 max_response_cycles=11 CAS3 masks boundaries response_hold reset_reinit\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_controller_20261018\\tb\\tb_sdram.v:49: $finish called at 1730859816 (1ps)\n",
+  "faults": {
+    "early-column": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_controller_20261018\\tb\\sdram_timing_model.v:56: column/tRCD\n       Time: 201190416  Scope: tb_sdram.memory\n",
+    "late-refresh": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_controller_20261018\\tb\\sdram_timing_model.v:28: refresh deadline cycle=5850 gap=422\n       Time: 216672300  Scope: tb_sdram.memory\n",
+    "half-mask": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_controller_20261018\\tb\\tb_sdram.v:17: data address=3ffdff got=xxxx expected=acff\n       Time: 706203546  Scope: tb_sdram.transaction\n",
+    "blocked-refresh": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_controller_20261018\\tb\\sdram_timing_model.v:28: refresh deadline cycle=38367 gap=422\n       Time: 1421036946  Scope: tb_sdram.memory\n"
+  },
+  "inputs": {
+    "rtl/sdram_word_controller.v": "29be66f34213f1ffbfbf060a888885a3034d84fefd7bd9ccae4571f649094143",
+    "tb/sdram_timing_model.v": "427f02aa940cf7f94f6784956e6bbb53825e7fbd5938bbd74ae88cd3e4c1278b",
+    "tb/tb_sdram.v": "fac55888a5bc4f25e91b5a4d93ebd80d2bf43b9dea49517acf3bc35e2be110f2",
+    "check_sdram.py": "67410bc64b60e3ccdba5d2d1b33cb180d942675e53a31a9ce238f4ace70913e2",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79"
+  },
+  "hardware_tested": false
+}

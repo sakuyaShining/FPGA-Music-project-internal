@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "12de57c5-7390-42b3-a59b-dd54f50eff50",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "await eda.dmt_EditorControl.openDocument('ba336973a1f81bda');const all=await eda.sch_PrimitiveComponent.getAll();const r=[];for(const p of __CLI__.args.pins){const c=all.find(c=>c.getState_Designator()===p.ref);const pp=(await eda.sch_PrimitiveComponent.getAllPinsByPrimitiveId(c.getState_PrimitiveId())).find(q=>q.getState_PinNumber()===p.pin);const w=await eda.sch_PrimitiveWire.get(p.wire);const port=await eda.sch_PrimitiveComponent.get(p.label);r.push({ref:p.ref,n:p.pin,x:pp.getState_X(),y:pp.getState_Y(),wire:p.wire,line:w?.getState_Line(),net:w?.getState_Net(),port:{x:port.getState_X(),y:port.getState_Y(),r:port.getState_Rotation()}});}return r;",
+    "--args",
+    "{\"pins\": [{\"ref\": \"SW2\", \"pin\": \"2\", \"net\": \"PRESET_0\", \"x\": 460, \"y\": 250, \"r\": 0, \"wire\": \"378b52942204326b\", \"label\": \"fb91de09ca8c99f4\"}, {\"ref\": \"SW2\", \"pin\": \"1\", \"net\": \"PRESET_0\", \"x\": 420, \"y\": 250, \"r\": 180, \"wire\": \"bdabbf7c7255f41b\", \"label\": \"b675cfcf001a33b5\"}, {\"ref\": \"SW2\", \"pin\": \"4\", \"net\": \"GND\", \"x\": 460, \"y\": 220, \"r\": 0, \"wire\": \"54d894cb344f75b6\", \"label\": \"f3faeffc630e51fd\"}, {\"ref\": \"SW2\", \"pin\": \"3\", \"net\": \"GND\", \"x\": 420, \"y\": 220, \"r\": 180, \"wire\": \"86dac607b76c01f6\", \"label\": \"23c77b833a909ac4\"}, {\"ref\": \"SW5\", \"pin\": \"2\", \"net\": \"PRESET_3\", \"x\": 820, \"y\": 250, \"r\": 0, \"wire\": \"19ae99c34754b812\", \"label\": \"f62169fce120ac6c\"}, {\"ref\": \"SW5\", \"pin\": \"1\", \"net\": \"PRESET_3\", \"x\": 780, \"y\": 250, \"r\": 180, \"wire\": \"9c3380316a9faba3\", \"label\": \"7b746975e325071e\"}, {\"ref\": \"SW5\", \"pin\": \"4\", \"net\": \"GND\", \"x\": 820, \"y\": 220, \"r\": 0, \"wire\": \"4b37e3031f43a565\", \"label\": \"22c9358600ec3594\"}, {\"ref\": \"SW5\", \"pin\": \"3\", \"net\": \"GND\", \"x\": 780, \"y\": 220, \"r\": 180, \"wire\": \"1ae8d748f4e89455\", \"label\": \"97c4c6ed5ca0679b\"}, {\"ref\": \"SW6\", \"pin\": \"2\", \"net\": \"EDIT\", \"x\": 940, \"y\": 250, \"r\": 0, \"wire\": \"55558f64f0b634d3\", \"label\": \"5624d5dffe597504\"}, {\"ref\": \"SW6\", \"pin\": \"1\", \"net\": \"EDIT\", \"x\": 900, \"y\": 250, \"r\": 180, \"wire\": \"8a9b0dda1ed7bab9\", \"label\": \"037705113086dfcf\"}, {\"ref\": \"SW6\", \"pin\": \"4\", \"net\": \"GND\", \"x\": 940, \"y\": 220, \"r\": 0, \"wire\": \"2e1d90678bd7ca41\", \"label\": \"3093b68f3077f715\"}, {\"ref\": \"SW6\", \"pin\": \"3\", \"net\": \"GND\", \"x\": 900, \"y\": 220, \"r\": 180, \"wire\": \"5d942d89a08dc838\", \"label\": \"1a2a910e65590d57\"}]}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

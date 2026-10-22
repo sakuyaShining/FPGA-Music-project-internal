@@ -1,0 +1,51 @@
+{
+  "status": "PASS independent deque reference and deliberate pointer fault",
+  "results": {
+    "1": {
+      "cycles": 50032,
+      "coverage": {
+        "push": 18869,
+        "pop": 18818,
+        "full": 24792,
+        "empty": 6334,
+        "simultaneous": 9452,
+        "reset_clear": 40
+      },
+      "stimulus_sha256": "051acc3e3a6f3f6fe17ba9a114a42e0f98a7ca7e8585f489a4db2004792287b3",
+      "trace_sha256": "2a1d6e6236aef464d012e7096c3ede1136379a00d2e3f6f664e97f61908f1b45"
+    },
+    "3": {
+      "cycles": 50050,
+      "coverage": {
+        "push": 23530,
+        "pop": 23345,
+        "full": 5864,
+        "empty": 1680,
+        "simultaneous": 11631,
+        "reset_clear": 40
+      },
+      "stimulus_sha256": "b7fe3a0279a8178f8efb079dd7a31cde0cec82ebaa6262d6fa81b3cdf3c357b3",
+      "trace_sha256": "cc0f70b30138a23819e9c2cc6b63add804d41c6653c7ef21a5bde34635d07e2c"
+    },
+    "10": {
+      "cycles": 53098,
+      "coverage": {
+        "push": 27170,
+        "pop": 26477,
+        "full": 1041,
+        "empty": 767,
+        "simultaneous": 13383,
+        "reset_clear": 40
+      },
+      "stimulus_sha256": "496acdd0e70072475aace89a37fe4908060cfd5db00421072b14cf1c5a21cfd1",
+      "trace_sha256": "8beb7e0eb39b0515a7ddbdb9c7e7b51064d4716ace4d15445dc231548298cb8b"
+    }
+  },
+  "fault_detected": "(19, 'ordering', '0002', [1, 2, 3, 4])",
+  "inputs": {
+    "rtl/pcm_sync_fifo.v": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609",
+    "tb_fifo.v": "833425bce9aaa8239168009def2beef9b875ca39ee48a5ec2d24d1ae04b120d2",
+    "check_fifo.py": "c2f9f5875c72ffb4f9ccd9df6049fb1cdd382a515b9b47fb038250c060c7d377",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79"
+  }
+}

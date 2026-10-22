@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "name": "strike",
+  "preset": 0,
+  "spectrum_mode": "replace",
+  "spectrum": [
+    90,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "articulation": {
+    "mode": "strike",
+    "attack_ms": 0,
+    "decay_ms": 2,
+    "sustain_level": 0,
+    "release_ms": 5,
+    "hybrid_parts": [
+      "sustain",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike",
+      "strike"
+    ]
+  },
+  "vibrato": {
+    "enabled": false,
+    "rate_millihz": 5500,
+    "depth_cents": 0
+  },
+  "effects": {
+    "dry_enabled": true,
+    "delay": {
+      "enabled": false,
+      "time_ms": 30,
+      "feedback_q8": 96
+    },
+    "chorus": {
+      "enabled": false,
+      "rate_millihz": 500,
+      "depth_ms": 1
+    },
+    "reverb": {
+      "enabled": false,
+      "feedback_q8": 128,
+      "damping": 3
+    }
+  }
+}

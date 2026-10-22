@@ -1,0 +1,43 @@
+{
+  "command": [
+    "D:/iverilog/bin/iverilog.exe",
+    "-g2012",
+    "-DSIM_INIT",
+    "-s",
+    "tb_fx_memory",
+    "-o",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\evidence\\fx-initialized.vvp",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\fx_delay.v",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\reference\\fx_delay_reference.v",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\tb_fx_memory.v"
+  ],
+  "cwd": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017",
+  "inputs": {
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\fx_delay.v": "67ce4e845fbd4fa5f96efbce46d435b629425afeabdc20b3b3758f268dbce15e",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\reference\\fx_delay_reference.v": "e23cc447ffb29121007ba3f3895be001f138282a5a37cea15d7bec1dfdf5ee0c",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\tb_fx_memory.v": "9a6c1bc6a2ce71979997e421baa082d9ee0a5e2391ad188410c4f8b3cc138014",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\bands1024.hex": "01cdaaa2843dab6417522a5bb913e60b17e4daac675fe1c4ff99250a6e64123f",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\board_slots.hex": "db61040e0c62fb2a1342c9c59787a1522dd98d07e8776c98e0a51bf943e1ac53",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\cos1024.hex": "706d4136e1d62d92d5a1052b077e8cf338f30590f728501853dde8f7bb9adf90",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\fader_gain_q8.hex": "38a644d29b92c5b3267bab5931966a033e35b75973ad84b7af362be74194f6a5",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\finger_ratio.hex": "fbb875cffffd1f044971de6ceb47a5b90898a154229f1e29937b3a742f757ca3",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\hann1024.hex": "a65ee44f5eaacc8237a2dc9f1b2d58998f197efa0377e2a7d76cdc9268591abc",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\note_inc.hex": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\preset_part.hex": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\recip_inc.hex": "a9ea597f8b2ae211baa82c264796c4d118393863435c33aac9edb5ee71802002",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\sin1024.hex": "b2d2b0328b8aee38c3fb7cdcd03064a6e34f1bab170bc99950ebaaf039618647",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\sine256.hex": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\tilt_wtab.hex": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\vel_wtab.hex": "c394b9c488197c4c74f45e85e055af45fbf61e6dfda380f412a39d7ab4d0a1d1",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\src\\mv_font.vh": "7dcd884f14a74eeef9e666e5e0d3772d64301026a72dd056a54770f4da038754",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\config-fast.hex": "5546db48147ca116f64429a17a08dd57b14a55e36f9e30cf7b38be14aeed34af",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\config-hybrid.hex": "c409ba57a5307429094e2fd4c7e6780db9fb296421d0acd00bd8df291c501d9a",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\config-slow.hex": "abfdf70d7f0a33853d0c248b689f45be00e5365d34ac697f0f629c8180663ec9",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\config-strike.hex": "9042ad0f86915c9c4747a486a33a14014e18bfdd4cd509ac337f308add6e09b9",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\strike.hex": "71c0be07225d6a8a33bf5ec4c969b8e4fe30cfc4285ab9cbb4c8c0f54e042a66",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\sustain.hex": "461d639260397c0385e1fe0e32e3b9c0b156e4d421df159eaea0369dd7a1abff",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\transport-payload.hex": "3b39666a5f36c84c10cf0b9a0a0042f225ce49ebaffa55ca96d9ca4115b99fda",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\fx_memory_20261017\\transport_fixture.vh": "1195ae2cc7d6c7512082f6919a47e9287aaae80a5229f4175830028a7559a411"
+  },
+  "returncode": 0
+}

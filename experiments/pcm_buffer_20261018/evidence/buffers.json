@@ -1,0 +1,11 @@
+{
+  "status": "PASS bounded storage stream simulation; no physical backend",
+  "log": "PASS buffers native512 rec=2344/2344 play=2304 misses=0 no_stall_errors cycles=1727373\nPASS bounded overflow after1024 explicit underflow clear separate lanes; final cycles=2290578\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\pcm_buffer_20261018\\tb_buffers.v:72: $finish called at 22905780000 (1ps)\n",
+  "inputs": {
+    "rtl/pcm_sync_fifo.v": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609",
+    "rtl/pcm_storage_buffers.v": "b19f0c94048e678a2073e69170f6301f2c83f92180325edb37654f23c3470e93",
+    "tb_buffers.v": "4ea1b2f0c6c5c2ee5bde1b67950ad259d6e86968a19049d144d3a3f918595e18",
+    "check_buffers.py": "a47e75ea7033b90791593b3b69190e7db8a95be4e605e26b0be486d7341d1c09",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79"
+  }
+}

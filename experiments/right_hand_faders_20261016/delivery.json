@@ -1,0 +1,152 @@
+{
+  "version": "right-hand-faders-20261016-01",
+  "status": "Isolated digital and browser prototype verified; product integration partial",
+  "backup": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\right-hand-faders-20261016\\backup-20261016-030858",
+  "protected": {
+    "main": {
+      "root": "C:\\Users\\Sakuya\\FPGA-Music-project",
+      "head": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+      "files": 194,
+      "original_files_unchanged": true
+    },
+    "engine": {
+      "root": "C:\\Users\\Sakuya\\.codex\\worktrees\\instrument-engine-safety\\FPGA-Music-project",
+      "head": "683db4834a031baca217b9e3ae7a0369644b8935",
+      "files": 930,
+      "original_files_unchanged": true
+    },
+    "host": {
+      "root": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project",
+      "head": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+      "files": 219,
+      "original_files_unchanged": true
+    }
+  },
+  "inputs": {
+    "prepare_synthesis.py": "e978e163d57e0bf1e4582d114eed643b49de185898c5dd65444abdfef5da38cb",
+    "README.md": "ffe2cd5617f7ee19fa021f470292e5e912d5306e25608a8e2b9293b6b20ac58c",
+    "reference.py": "293cba19e2d53ef872c13a0882300acc8c315829c11315026e4f1516fbd00a48",
+    "run_validation.py": "785c00e9595931a69443e9afe2ec5a4f92f9f6e9eb432a3bc960f37a86eb2666",
+    "serve_preview.py": "037391ed27c37a01bfef0746d26de4e94e513aee18e09d47dd0e3f42b36a402f",
+    "tb_faders.v": "254f4c96661b54076c2e08dd07d87299e8ff9ba18ce8077b46a76127835315c2",
+    "tb_panel.v": "995549ddc6ccd770fdc5d415aaf5f800bd0e9bdd96a69860663b99e3f99f1458",
+    "test_reference.py": "51c635144019ece933de85d803244ccf125f1a888634d69eaa664c1e781ffb57",
+    "test_ui.mjs": "86d9128e73f0ed29684270270d2b3abf14ddc9cd6a3b110488e193ff4877a19b",
+    "preview/app.mjs": "e4b1d04384437e63721be15f8ee1c93abe2d395075503b32447a8b57f83a0a7d",
+    "preview/index.html": "e7532f1fa99deb3a757b09fe7f087528b471a80d7b8feaa32673adf66ad8480e",
+    "preview/model.mjs": "d0568ba4b1ca10563de6610725fe182e73f4fdd28ba2456080d4717e77d3e8d0",
+    "preview/test_model.mjs": "19002c45d36a952a34c9ac6f2eb8d70789ed3d5e10ce268a098662c11c49e1c9",
+    "rtl/rh_fader_bank.v": "bd5af0b47a36749da5fb5fbc29e546f19e7bc00e1929873593b31f680358c2da",
+    "rtl/rh_fader_panel.v": "740cd8367f6e4e59431e8223b9d1d187309d78036c1b2b04bd6d4c7e692cc49a"
+  },
+  "captures": {
+    "evidence/browser-model.log": "9682fe8b5cce4633ae9e7ab798e7cc02c2c79c9594f6f6d2aa47c2bfae629d36",
+    "evidence/cases-1.json": "333322c5a1c383a6d195a2e7c8c3087f99097c0ddc32bc5577728214b8dcb91b",
+    "evidence/cases-16.json": "3fe02e21c6ad9d88961fee1fc7e2ee32e21dcdd0b1ffc899ed513ec1cc18f31e",
+    "evidence/cases-8.json": "86485313778ed0fef4ae7d9050cbd382f8b98ea3e521754bccb7b41b2077e237",
+    "evidence/cases-panel.json": "fe64d5ff06449c2bfbcc0bab760255cc8ccccff00170a025b662f30a21ac4caf",
+    "evidence/compile-1.log": "8c70d8ec1081f20ebe7f4fa4cb14c7ec44b8afabcab2eeb21ea49a082a679f2f",
+    "evidence/compile-16.log": "8c70d8ec1081f20ebe7f4fa4cb14c7ec44b8afabcab2eeb21ea49a082a679f2f",
+    "evidence/compile-8.log": "8c70d8ec1081f20ebe7f4fa4cb14c7ec44b8afabcab2eeb21ea49a082a679f2f",
+    "evidence/compile-panel.log": "f73de601e8977486924ec76aa77e9ca26e75fa85a0d083d6c69c3d0df9a75e35",
+    "evidence/faders-1.vvp": "f8e5947c74b05d26b58eba268a92f93aa44d33b3c460c7b24ec09598c344ad71",
+    "evidence/faders-16.vvp": "ce7f00ebd016ed2c2105c0d0d6c01b8e6feb2b845e134bda04171efd2f9a2657",
+    "evidence/faders-8.vvp": "55409c3ac902ab6d99456d6db9e30f2fc3cb14a75e2f676be404f629ac6581e1",
+    "evidence/panel.vvp": "42cd51b73a891e12625ad9d44d16748de5b97549353a772ee86a7f42a13d5b24",
+    "evidence/preview-midpoint.png": "fe86cdf88396d5d162cd296fa397027890c3e8d43456a9a868d4b652191cfb74",
+    "evidence/preview-mobile.png": "10b3e389f62d2652ab4e67a4fc6c5ead46c81c2dde9adb9b9c8f073b80fdd6f1",
+    "evidence/preview-zones.png": "df635fcfae0613181d5f7eac89e368e4453ebf2d006fa71c96b670b17c299a9c",
+    "evidence/python-tests.log": "796855514ca62f3ed559db48fc712fae30950fe0525a88d0a749971c1826e1be",
+    "evidence/rtl-1.log": "b42ed7b0f73d99d313ad4e944c8939093404f49895a41c599c4d457f270c7f9a",
+    "evidence/rtl-16.log": "edfdf55372271f817c786321ff431a356f9a199c1a46ff3b8d68fc2cc3b02ed7",
+    "evidence/rtl-8.log": "b0b5942a1df81f4f87c04fe98d9461de51978040d5663866c30b1abe23139ccd",
+    "evidence/rtl-panel.log": "28f41d2c3579aa104f6cc8d41ff43ce1a38a3b43b4034c98d5381101d194ef8f",
+    "evidence/ui-validation.json": "a404b0f52b30815fb9db2982a98a8a910ce240baa395a34078027153e5038d51",
+    "evidence/validation.json": "e3e215a788b59fe224e8bfe170d9aae8868bf729de81d699ce1f1b7aea3115e1",
+    "evidence/vectors-1.txt": "0e1be1fddef261346b0c6e85899795b84f9ba05d9f4e61736c558cc312d562db",
+    "evidence/vectors-16.txt": "757d95a9e77a73f1eceec3334fcc3aac37a7b3d705b15b11336d9259fc516b0b",
+    "evidence/vectors-8.txt": "5a1120a3ea94cbcade1588a6de1dd3cd80966530fb1f19e6a4d00af21ed8f395",
+    "evidence/vectors-panel.txt": "7b24644bfd7c09768d978c0a1eee804c1482bb28c0735e1f934fd63e75a34912",
+    "synthesis/generic/faders.gprj": "3068dd63d946023de66d45aa6d554df659e698e9d6868b9ed0bbfe5fa1918678",
+    "synthesis/generic/synth.tcl": "db227276564019ff3a3402b00b38a37d762bb2b73a9ebd7b114dd897c2dd3241",
+    "synthesis/generic/synthesis-console.txt": "d23cde5cdea160ff583471eacb1db70347f53995c582aea71e02e69eb4f25d2b",
+    "synthesis/panel/faders.gprj": "3068dd63d946023de66d45aa6d554df659e698e9d6868b9ed0bbfe5fa1918678",
+    "synthesis/panel/synth.tcl": "eeed2281cbea3c791b1ae19dcdd4cb70e34911008b8df724801d6467e2610025",
+    "synthesis/panel/synthesis-console.txt": "316724154f647f1a3f2f2b4bc2dc00799e72eebdb053bde3d6294c3970c0a6de"
+  },
+  "notes_inputs": {
+    "backup.py": "99e8d81c04c7853e00d34b1212da9c4d896813a7d1b6c128436f8a8cb6de0df1",
+    "finalize.py": "8e11d58e7c5e19b3edc68eaab793b63875b5b48038a0c672a6ae3bb907792456"
+  },
+  "documentation": {
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\docs\\02-技术方案\\66-右手分区推子控制器与交互原型实现-2026-10-16.md": "db795e21f84ce5f51775dc367559be335a3755159f070e64b5659501e673cc0b"
+  },
+  "actual_validation": {
+    "rule_unit_tests": 11,
+    "rtl_reference_frames": 2480,
+    "browser_model_same_input_cases": 2480,
+    "browser_ui_checks": 11,
+    "profiles": {
+      "1": {
+        "frames": 620,
+        "log": "PASS faders=1 touches=5 vectors=620 control_checks=4 latency_cycles=7\ntb_faders.v:110: $finish called at 61170000 (1ps)",
+        "cycles": 7,
+        "inferred_processing_us_at_27MHz": 0.25925925925925924
+      },
+      "8": {
+        "frames": 620,
+        "log": "PASS faders=8 touches=5 vectors=620 control_checks=5 latency_cycles=49\ntb_faders.v:110: $finish called at 315290000 (1ps)",
+        "cycles": 49,
+        "inferred_processing_us_at_27MHz": 1.8148148148148149
+      },
+      "16": {
+        "frames": 620,
+        "log": "PASS faders=16 touches=5 vectors=620 control_checks=5 latency_cycles=97\ntb_faders.v:110: $finish called at 605690000 (1ps)",
+        "cycles": 97,
+        "inferred_processing_us_at_27MHz": 3.5925925925925926
+      },
+      "panel": {
+        "frames": 620,
+        "cycles": 49,
+        "log": "PASS panel wrapper vectors=620 latency_cycles=49\ntb_panel.v:43: $finish called at 314100000 (1ps)"
+      }
+    }
+  },
+  "standalone_synthesis": {
+    "generic": {
+      "logic": 1317,
+      "registers": 784,
+      "bsram": 0,
+      "report_sha256": "f37558c76caec1a0f1cbffa8a61ce76dc6907246fdc52daf8085b051a750c216",
+      "hierarchy_sha256": "0fa4ae9daaef7e6d54be677e8d458ebb45220e4362d5d0615768822e1c2382aa",
+      "physical_pins_or_pnr_verified": false
+    },
+    "panel": {
+      "logic": 564,
+      "registers": 380,
+      "bsram": 0,
+      "report_sha256": "362871c89508c056456b9d2ff44d71f0a824096f79c6d90c50a81ca5ca856496",
+      "hierarchy_sha256": "eac31454ca24ffcdb8beaad7fa38bcc6f3f41e5f16990b8ce2baa7e61315f533",
+      "physical_pins_or_pnr_verified": false
+    }
+  },
+  "prototype_semantics": {
+    "sides_and_midpoint": "user confirmed",
+    "per_fader_partition": "user required",
+    "horizontal_distance": "explicit prototype interpretation",
+    "range": "adjustable and clipped to disjoint zone in prototype",
+    "cross_zone_range_policy": "follow-up clarification pending"
+  },
+  "not_verified": [
+    "real touch module/driver",
+    "audio mapping and smoothing",
+    "live layers/backing and tail scope",
+    "joint synthesis and PnR",
+    "physical pinout/power/noise",
+    "physical touch-to-sound latency"
+  ],
+  "board_downloaded": false,
+  "old_engine_modified": false,
+  "existing_gui_replaced": false,
+  "preview": "http://127.0.0.1:8766/"
+}

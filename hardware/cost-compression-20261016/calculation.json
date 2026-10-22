@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-16",
+  "status": "讨论中",
+  "product_code_changed": false,
+  "old_bom_changed": false,
+  "qualification_passed": false,
+  "order_placed": false,
+  "source_head": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+  "public_prices_are_quantity_confirmed": false,
+  "assumed_fx_cny_per_usd": "7.2",
+  "fx_is_live": false,
+  "examples": [
+    {
+      "variant": "25-slot-example",
+      "old_partial_purchase_cny": "121.0345",
+      "new_conditional_partial_purchase_cny": "62.9049",
+      "potential_reference_reduction_cny": "58.1296",
+      "esd_fitted_arrays": 21,
+      "esd_purchase_arrays": 25
+    },
+    {
+      "variant": "26-slot-example",
+      "old_partial_purchase_cny": "123.9649",
+      "new_conditional_partial_purchase_cny": "62.9049",
+      "potential_reference_reduction_cny": "61.0600",
+      "esd_fitted_arrays": 22,
+      "esd_purchase_arrays": 25
+    }
+  ],
+  "unchanged_unquoted_reserves_cny": "315",
+  "scenarios": [
+    {
+      "screen_reference_cny": "180",
+      "additional_interface_allowance_cny": "0",
+      "conditional_total_cny": "557.9049",
+      "remaining_reduction_to_500_cny": "57.9049",
+      "basis": "Not a landed quote; unchanged315 unquoted reserves; screen USD conversions use assumed7.2; interface20 is sensitivity only"
+    },
+    {
+      "screen_reference_cny": "180",
+      "additional_interface_allowance_cny": "20",
+      "conditional_total_cny": "577.9049",
+      "remaining_reduction_to_500_cny": "77.9049",
+      "basis": "Not a landed quote; unchanged315 unquoted reserves; screen USD conversions use assumed7.2; interface20 is sensitivity only"
+    },
+    {
+      "screen_reference_cny": "216",
+      "additional_interface_allowance_cny": "0",
+      "conditional_total_cny": "593.9049",
+      "remaining_reduction_to_500_cny": "93.9049",
+      "basis": "Not a landed quote; unchanged315 unquoted reserves; screen USD conversions use assumed7.2; interface20 is sensitivity only"
+    },
+    {
+      "screen_reference_cny": "216",
+      "additional_interface_allowance_cny": "20",
+      "conditional_total_cny": "613.9049",
+      "remaining_reduction_to_500_cny": "113.9049",
+      "basis": "Not a landed quote; unchanged315 unquoted reserves; screen USD conversions use assumed7.2; interface20 is sensitivity only"
+    },
+    {
+      "screen_reference_cny": "273.22",
+      "additional_interface_allowance_cny": "0",
+      "conditional_total_cny": "651.1249",
+      "remaining_reduction_to_500_cny": "151.1249",
+      "basis": "Not a landed quote; unchanged315 unquoted reserves; screen USD conversions use assumed7.2; interface20 is sensitivity only"
+    },
+    {
+      "screen_reference_cny": "273.22",
+      "additional_interface_allowance_cny": "20",
+      "conditional_total_cny": "671.1249",
+      "remaining_reduction_to_500_cny": "171.1249",
+      "basis": "Not a landed quote; unchanged315 unquoted reserves; screen USD conversions use assumed7.2; interface20 is sensitivity only"
+    }
+  ],
+  "assembly_user_decision": "User can solder headers/buttons/ordinary SMD; small packages factory assembled",
+  "power_user_reports_available": true,
+  "power_reuse_confirmed": false,
+  "power_qualification": "User reports available5V3A source; model/nameplate pending; do not deduct entire45 power/cable/path allowance"
+}

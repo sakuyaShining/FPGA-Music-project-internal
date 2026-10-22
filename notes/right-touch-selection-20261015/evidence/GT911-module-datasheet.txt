@@ -1,0 +1,898 @@
+小尺寸 MID 5点电容触控芯片 
+ 
+1 
+汇顶科技 机密信息  
+未经许可 不得转载 
+GT911 
+小尺寸 MID 5点电容触控芯片 
+Rev.021——2013年 1月 7日 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+====== 免责声明====== 
+本出版物中所述的器件应用信息及其他类似内容仅为您提供，它们可能由更新之信息所替代。确保
+应用符合技术规范，是您自身应负的责任。GOODIX对这些信息不作任何明示或暗示、书面或口头、
+法定或其他形式的声明或担保，包括但不限于针对其使用情况、质量、性能、适销性或特定用途的
+适用性的声明或担保。GOODIX 对因这些信息及使用这些信息而引起的后果不承担任何责任。未
+经GOODIX书面批准，不得将GOODIX 的产品用作生命维持系统中的关键组件。在GOODIX 知识
+产权保护下，不得暗中或以其他方式转让任何许可证。 
+ 
+小尺寸 MID 5点电容触控芯片 
+ 
+2 
+汇顶科技 机密信息  
+未经许可 不得转载 
+目录 
+1. 概述 ...................................................................................................................... 3 
+2. 产品特点 ............................................................................................................... 3 
+3. 芯片原理图 ......................................................................................................... 45 
+4. 管脚定义 ............................................................................................................. 56 
+5. 传感器设计 ......................................................................................................... 68 
+5.1. 感应通道排布 ............................................................................................ 68 
+5.2. 驱动通道排布 ............................................................................................ 68 
+5.3. 传感器设计参数要求 ................................................................................. 79 
+6. I2C通讯 ............................................................................................................ 810 
+6.1. I2C通讯................................................................................................... 810 
+a) 数据传输 ........................................................................................... 911 
+b) 对 GT911写操作 ............................................................................ 1012 
+c) 对 GT911读操作 ................................................................................ 1012 
+6.2. GT911的寄存器信息 ............................................................................ 1113 
+a) 实时命令 ......................................................................................... 1113 
+b) 配置信息 ............................................................................................ 1113 
+c) 坐标信息 ............................................................................................ 1618 
+7. 功能描述 ......................................................................................................... 1820 
+7.1. 工作模式 ............................................................................................... 1820 
+a) Normal mode .................................................................................. 1820 
+b) Green mode ................................................................................... 1820 
+c) Sleep mode ....................................................................................... 1820 
+7.2. 中断触发方式 ........................................................................................ 1921 
+7.3. 睡眠模式 ............................................................................................... 1921 
+7.4. 固化配置功能 ........................................................................................ 1921 
+7.5. 跳频功能 ............................................................................................... 1921 
+7.6. 自动校准 ............................................................................................... 1921 
+a) 初始化校准 ..................................................................................... 1921 
+b) 自动温漂补偿 .................................................................................. 1921 
+8. 参考电路图 ..................................................................................................... 2022 
+9. 电气特性 ......................................................................................................... 2123 
+9.1. 极限电气参数 ........................................................................................ 2123 
+9.2. 推荐工作条件 ........................................................................................ 2123 
+9.3. AC特性 ................................................................................................ 2123 
+9.4. DC 特性 ............................................................................................... 2123 
+10. 产品封装 ......................................................................................................... 2224 
+11. 版本记录 ......................................................................................................... 2325 
+12. 联系方式 ......................................................................................................... 2426 
+小尺寸 MID 5点电容触控芯片 
+ 
+3 
+汇顶科技 机密信息  
+未经许可 不得转载 
+1. 概述 
+GT911是专为 7”~8”设计的新一代 5 点电容触控方案，拥有 26 个驱动通道和 14 个感
+应通道，以满足更高的 touch精度要求。 
+GT911可同时识别 5 个触摸点位的实时准确位置，移动轨迹及触摸面积。并可根据主
+控需要，读取相应点数的触摸信息。 
+2. 产品特点 
+ 内置电容检测电路及高性能 MPU 
+ 触摸扫描频率：100Hz 
+ 触摸点坐标实时输出 
+ 统一软件版本适用于多种尺寸的电容屏 
+ 单电源供电，内置 1.8V LDO 
+ Flash 工艺制程，支持在线烧录 
+ 电容屏传感器 
+ 检测通道：26(驱动通道)*14(感应通道) 
+ 电容屏尺寸范围：7”~8" 
+ 支持 ITO玻璃 
+ Cover Lens 厚度支持：0.7mm≦玻璃≦2mm,0.5mm≦亚克力≦1.2mm 
+ 内置跳频功能 
+ 环境适应性能 
+ 初始化自动校准 
+ 自动温漂补偿 
+ 工作温度：-40℃~+85℃，湿度：≦95%RH 
+ 储存温度：-60℃~+125℃，湿度：≦95%RH 
+ 通讯接口 
+ 标准 I2C通讯接口 
+ 从设备工作模式 
+ 支持 1.8V~3.3V接口电平 
+小尺寸 MID 5点电容触控芯片 
+ 
+4 
+汇顶科技 机密信息  
+未经许可 不得转载 
+ 响应时间 
+ Green mode: <48ms 
+ Sleep mode: <200ms 
+ Initialization: <200ms 
+ 电源电压： 
+ 单电源供电：2.8V~3.3V 
+ 电源纹波： 
+ Vpp ≦50mV 
+ 封装：52 pins，6mm*6mm QFN_0.4P 
+ 应用开发支持工具 
+ 触摸屏模组参数侦测及配置参数自动生成 
+ 触摸屏模组性能综合测试工具 
+ 模组量产测试工具 
+ 主控软件开发参考驱动代码及文档指导 
+3. 芯片原理图 
+Driver
+AFE ADC
+Digital 
+State 
+Machine
+Turbo 51(M)
+Power 
+Managment
+OSC(60MHz)
+I2C
+……
+/RSTB
+INT
+VDDIO
+GND
+AVDD
+Turbo 
+51(S)
+DSP
+AHB
+Memory
+AVDD18
+DVDD12
+Driving
+channels
+Sensing
+channels
+ 
+小尺寸 MID 5点电容触控芯片 
+ 
+5 
+汇顶科技 机密信息  
+未经许可 不得转载 
+4. 管脚定义 
+ 
+管脚号. 名称 功能描述 备注 
+1~11 SEN3~SEN13 触摸模拟信号输入  
+12 AVDD28 模拟电源正 接 2.2uF滤波电容 
+13 AVDD18  接 2.2uF滤波电容 
+14 DVDD12  接 2.2uF滤波电容 
+15 DGND 数字信号地  
+16 INT 中断信号  
+17 Sensor_OPT1 模组识别口  
+18 Sensor_OPT2 模组识别口（备选） 需外部下拉 
+19 I2C_SDA I 2C 数据信号  
+20 I2C_SCL I 2C 时钟信号  
+21 VDDIO GPIO 电平控制 
+接 2.2uF滤波电容 
+悬空：1.8V 
+接 AVDD：AVDD 
+22 /RSTB 系统复位脚 需外部 10K上拉，拉低复
+位 
+23~48 DRV25~DRV0 驱动信号输出  
+49 AGND 模拟电源地  
+50~52 SEN0~SEN2 触摸模拟信号输入  
+小尺寸 MID 5点电容触控芯片 
+ 
+6 
+汇顶科技 机密信息  
+未经许可 不得转载 
+5. 传感器设计 
+5.1. 感应通道排布 
+SENS0~SENS13 是 14 个电容检测输入通道，直接与触摸屏模组的 14 个感应 ITO 通
+道相连。模组上感应 ITO通道按照顺序或逆序依次连接至芯片的 SENS0至 SENS13。
+若 ITO通道少于芯片检测通道，请按照《通道选择器》来选择通道。 
+ 排布方式示例（双面条形设计）：感应 ITO通道按照顺序接入芯片的SENS0至
+SENS13。 
+ 
+5.2. 驱动通道排布 
+DRV0~DRV25是 26个电容检测驱动信号输出通道，直接与触摸屏模组的 26个 ITO 驱
+动通道相连。 驱动线请按照 《通道选择器》 来选择通道和排布通道， 在确定排布方式后，
+需配置 GT911芯片的相关寄存器来保证各驱动通道的逻辑位置关系与物理位置关系一
+致，以使输出坐标与物理坐标匹配。 
+Sensor设计的更细规则，请参考具体 layout 指南。 
+ 
+ 
+小尺寸 MID 5点电容触控芯片 
+ 
+7 
+汇顶科技 机密信息  
+未经许可 不得转载 
+5.3. 传感器设计参数要求 
+DITO 
+参 数 范 围 
+驱动通道走线阻抗 ≦3KΩ 
+驱动通道阻抗 ≦10KΩ 
+感应通道走线阻抗 ≦10KΩ 
+感应通道阻抗 ≦40KΩ 
+节点电容 ≦4pF 
+感应通道 RC常数 ≦6us. Typ.=3.6us
+通道走线采用金属走线时，由于工艺控制等原因会导致部分走线被氧化，阻抗变大，导
+致各通道走线存在差异；当采用 ITO 材料走线时，虽然设计时会尽力通过长度、宽度
+匹配使得各通道走线一致， 但还是会存在不同程度的差异。 为保证整屏数据一致性和均
+匀性，需要控制走线阻抗符合上表要求。 
+另外，驱动走线与感应走线相邻且平行时，需在两者间插入地线，且地线宽度至少为通
+道走线宽度的两倍，最小不得小于 0.2mm。 
+小尺寸 MID 5点电容触控芯片 
+ 
+8 
+汇顶科技 机密信息  
+未经许可 不得转载 
+6. I2C 通讯 
+6.1. I2C 通讯 
+GT911 提供标准的 I2C 通讯接口，由 SCL 和 SDA 与主 CPU 进行通讯。 在系统中
+GT911 始终作为从设备，所有通讯都是由主 CPU发起，建议通讯速度为 400Kbps或
+以下。其支持的 I2C硬件电路支持时序如下： 
+ 
+测试条件 1：1.8V通讯接口，400Kbps通讯速度，上拉电阻 2K 
+Parameter Symbol Min. Max. Unit 
+SCL low period t lo 0.9 - us 
+SCL high period t hi 0.8 - us 
+SCL setup time for START condition t st1 0.4 - us 
+SCL setup time for STOP condition t st3 0.4 - us 
+SCL hold time for START condition t hd1 0.3 - us 
+SDA setup time t st2 0.4 - us 
+SDA hold time t hd2 0.4 - us 
+测试条件 2：3.3V通讯接口，400Kbps通讯速度，上拉电阻 2K 
+Parameter Symbol Min. Max. Unit 
+SCL low period t lo 0.9 - us 
+SCL high period t hi 0.8 - us 
+SCL setup time for START condition t st1 0.4 - us 
+SCL setup time for STOP condition t st3 0.4 - us 
+SCL hold time for START condition t hd1 0.3 - us 
+SDA setup time t st2 0.4 - us 
+SDA hold time t hd2 0.4 - us 
+GT911的 I2C从设备地址有两组，分别为 0xBA/0xBB和 0x28/0x29。主控在上电初始
+化时控制 Reset和 INT口状态进行设定，设定方法及时序图如下： 
+上电时序图： 
+小尺寸 MID 5点电容触控芯片 
+ 
+9 
+汇顶科技 机密信息  
+未经许可 不得转载 
+AVDD
+VDDIO
+INT
+Reset
+T1<100ms
+T1
+T2
+T2>10ms
+T3T3>100us
+主控控制为
+高或低
+主控INT转为悬浮输入态，
+触控IC控制电平
+T4>5ms主控控制低
+主控控制低
+ 
+设定地址为 0x28/0x29的时序： 
+ 
+设定地址为 0xBA/0xBB的时序： 
+ 
+a) 数据传输 
+(以设备地址为 0xBA/0xBB为例) 
+小尺寸 MID 5点电容触控芯片 
+ 
+10
+汇顶科技 机密信息  
+未经许可 不得转载 
+通讯总是由主 CPU发起，有效的起始信号为：在SCL保持为“1”时，SDA上发生由“1”
+到“0”的跳变。地址信息或数据流均在起始信号之后传输。 
+所有连接在 I2C总线上的从设备，都要检测总线上起始信号之后所发送的 8位地址信息，
+并做出正确反应。在收到与自己相匹配的地址信息时，GT911在第 9 个时钟周期，将
+SDA改为输出口，并置“0”，作为应答信号。若收到不与自己匹配的地址信息，即非 0XBA
+或 0XBB，GT911将保持闲置状态。 
+SDA口上的数据按 9个时钟周期串行发送 9位数据：8 位有效数据+1 位接收方发送的
+应答信号 ACK或非应答信号 NACK。数据传输在 SCL为“1”时有效。 
+当通讯完成时，由主 CPU发送停止信号。停止信号是当 SCL为“1”时，SDA状态由“0”
+到“1”的跳变。 
+b) 对 GT911写操作 
+(以设备地址为 0xBA/0xBB为例) 
+ 
+写操作时序图 
+上图为主 CPU对 GT911进行的写操作流程图。首先主 CPU产生一个起始信号，然后
+发送地址信息及读写位信息“0”表示写操作:0XBA。 
+在收到应答后，主 CPU 发送寄存器的 16 位地址，随后是 8 位要写入到寄存器的数据
+内容。 
+GT911 寄存器的地址指针会在写操作后自动加 1，所以当主 CPU需要对连续地址的寄
+存器进行写操作时，可以在一次写操作中连续写入。写操作完成，主 CPU发送停止信
+号结束当前写操作。 
+c) 对 GT911读操作 
+(以设备地址为 0xBA/0xBB为例) 
+ 
+读操作时序图 
+上图为主 CPU对 GT911进行的读操作流程图。首先主 CPU产生一个起始信号，然后
+发送设备地址信息及读写位信息“0”表示写操作：0XBA。 
+在收到应答后，主 CPU 发送首寄存器的 16 位地址信息，设置要读取的寄存器地址。
+在收到应答后，主 CPU 重新发送一次起始信号，发送读操作：0XBB。收到应答后，
+主 CPU开始读取数据。 
+小尺寸 MID 5点电容触控芯片 
+ 
+11
+汇顶科技 机密信息  
+未经许可 不得转载 
+GT911同样支持连续的读操作，默认为连续读取数据。主 CPU 在每收到一个 Byte 数
+据后需发送一个应答信号表示成功接收。在接收到所需的最后一个Byte数据后，主CPU
+发送“非应答信号 NACK”，然后再发送停止信号结束通讯。 
+6.2. GT911的寄存器信息 
+a) 实时命令 
+（Write Only） 
+Addr Name bit7 bit6 bit5 bit4 bit3 bit2 bit1 bit0 
+0x8040 Command 
+0：读坐标状态           1 ：差值原始值           2 ：软件复位 
+     3 ：基准更新（内部测试） 4：基准校准（内部测试）  5 :关屏 
+     其余值无效 
+b) 配置信息 
+（R/W） 
+寄存器 Config Data bit7 bit6 bit5 bit4 bit3 bit2 bit1 bit0 
+0x8047 
+Config_ 
+Version 
+配置文件的版本号(新下发的配置版本号大于原版本，或等于原版本号但配置内容有变
+化时保存，版本号版本正常范围：'A'~'Z',发送 0x00则将版本号初始化为'A') 
+0x8048 
+X Output Max 
+(Low Byte) 
+X坐标输出最大值 
+0x8049 
+X Output Max 
+(High Byte) 
+0x804A 
+Y Output Max 
+(Low Byte) 
+Y坐标输出最大值 
+0x804B 
+Y Output Max 
+(High Byte) 
+0x804C Touch Number Reserved 输出触点个数上限：1~5 
+0x804D 
+Module_ 
+Switch1 Reserved Stretch_rank 
+X2Y 
+（X,Y坐
+标交换） 
+Reserve
+d 
+INT 触发方式 
+00：上升沿触发
+01：下降沿触发
+02：低电平查询
+03：高电平查询
+0x804E 
+Module_ 
+switch2 Reserved 
+0x804F Shake_Count Reserved 手指按下/松开去抖次数 
+0x8050 Filter First_Filter Normal_Filter(原始坐标窗口滤波值,系数为 1） 
+0x8051 Large_Touch 大面积触摸点个数 
+0x8052 
+Noise_ 
+Reduction Reserved 噪声消除值（系数为 1,0-15有效） 
+小尺寸 MID 5点电容触控芯片 
+ 
+12
+汇顶科技 机密信息  
+未经许可 不得转载 
+0x8053 
+Screen_ 
+Touch_Level 屏上触摸点从无到有的阈值 
+0x8054 
+Screen_ 
+Leave_Level 屏上触摸点从有到无的阈值 
+0x8055 
+Low_Power_ 
+Control Reserved 进低功耗时间(0~15s) 
+0x8056 Refresh_Rate Reserved 坐标上报率(周期为 5+N ms) 
+0x8057 x_threshold 
+Reserved 
+0x8058 y_threshold 
+0x8059 X_Speed_Limit 
+Reserved 
+0x805A Y_Speed_Limit 
+0x805B Space 
+上边框的空白区（以 32为系数） 下边框的空白区（以 32为系数） 
+0x805C 左边框的空白区（以 32为系数） 右边框的空白区（以 32为系数） 
+0x805D Stretch_Rate Reserved 弱拉伸的拉伸程度（拉伸 x/16 Pitch）
+（beta版占用，发布版无效） 
+0x805E Stretch_R0 拉伸区间 1系数 
+0x805F Stretch_R1 拉伸区间 2系数 
+0x8060 Stretch_R2 拉伸区间 3系数 
+0x8061 Stretch_RM 各拉伸区间基数 
+0x8062 
+Drv_GroupA_ 
+Num 
+All_Drivi
+ng Reserved Driver_Group_A_number 
+0x8063 
+Drv_GroupB_ 
+Num Reserved Driver_Group_B_number 
+0x8064 Sensor_Num Sensor_Group_B_Number Sensor_Group_A_Number 
+0x8065 FreqA_factor 驱动组 A的驱动频率倍频系数  GroupA_Frequence = 倍频系数 * 基频 
+0x8066 FreqB_factor 驱动组 B的驱动频率倍频系数  GroupB_Frequence = 倍频系数 * 基频 
+0x8067 
+Pannel_ 
+BitFreqL 
+驱动组 A、B的基频(1526HZ<基频<14600Hz) 
+0x8068 
+Pannel_ 
+BitFreqH 
+0x8069 
+Pannel_Sensor_T
+imeL 相邻两次驱动信号输出时间间隔（以 us为单位）,Reserved（beta版占用，发布版无
+效） 
+0x806A 
+Pannel_Sensor_T
+imeH 
+0x806B 
+Pannel_Tx_ 
+Gain Reserved 
+Pannel_Drv_output_
+R 
+4 档可调 
+Pannel_DAC_Gain 
+0:Gain最大 
+7：Gain最小 
+0x806C 
+Pannel_Rx_ 
+Gain 
+Pannel_
+PGA_C Pannel_PGA_R Pannel_Rx_Vcmi(4
+档可调） 
+Pannel_PGA_Gain 
+(8 档可调） 
+小尺寸 MID 5点电容触控芯片 
+ 
+13
+汇顶科技 机密信息  
+未经许可 不得转载 
+0x806D 
+Pannel_Dump_ 
+Shift Reserved 屏原始值放大系数（2 的 N次方） 
+0x806E 
+Drv_Frame_ 
+Control 
+Reserve
+d SubFrame_DrvNum  Repeat_Num 
+(采样累加次数） 
+0x806F NC Reserved 
+0x8070 NC Reserved 
+0x8071 NC Reserved 
+0x8072 
+Stylus_Tx_ 
+Gain 暂未定义（当 stylus_priority=0时无效） 
+0x8073 
+Stylus_Rx_ 
+Gain 暂未定义（当 stylus_priority=0时无效） 
+0x8074 
+Stylus_Dump_ 
+Shift 笔原始值放大系数（2 的 N次方），Reserved 
+0x8075 
+Stylus_Driver_To
+uch_Level 笔触摸有效阈值（驱动方向），Reserved 
+0x8076 
+Stylus_Sensor_T
+ouch_Level 笔触摸有效阈值（感应方向），Reserved 
+0x8077 
+Stylus_ 
+Control 触摸笔超时退出时间（以秒为单位），Reserved 
+0x8078 Base_reduce S型改善量（通常为 2-4），Reserved 削底系数 N，削底量=Base+Base/2的 N
+次方（通常 2-4），Reserved 
+0x8079 NC Reserved 
+0x807A 
+Freq_Hopping_St
+art 跳频范围的起点频率( 以 2KHz为单位，例如 50表示 100KHz ) 
+0x807B 
+Freq_Hopping_E
+nd 跳频范围的终点频率( 以 2KHz为单位，例如 150表示 300KHz ) 
+0x807C 
+Noise_Detect_Ti
+mes 
+Detect_Stay_Times 
+(一次噪声检测中每个
+频率点上检测次数,建
+议 2） 
+Detect_Confirm_Times 
+(多次噪声检测后确定噪声量,1-63有效，建议 20） 
+0x807D Hopping_Flag 
+ 
+Hopping
+_En 
+Reserved Detect_Time_Out 
+(噪声检测超时时间，以秒为单位） 
+0x807E 
+Hoppging_ 
+Threshold 
+Large_Noise_Threshold 
+(beta版占用，发布版无效，
+Reserved) 
+Hopping_Hit_Threshold 
+（最优频率选定条件，当前工作频率干扰量－最小
+干扰量>设定值 x4，则选定最优频率和跳频） 
+0x807F 
+Noise_ 
+Threshold 判别有干扰的门限（所有频率点上干扰量小于此值认为无干扰） 
+0x8080 NC Reserved 
+0x8081 NC Reserved 
+小尺寸 MID 5点电容触控芯片 
+ 
+14
+汇顶科技 机密信息  
+未经许可 不得转载 
+0x8082 
+Hopping_seg1_Bi
+tFreqL 
+跳频检测区间频段 1 中心点基频（适用于驱动 A、B） 
+0x8083 
+Hopping_seg1_Bi
+tFreqH 
+0x8084 
+Hopping_seg1_F
+actor 跳频检测区间频段 1 中心点倍频系数（适用于驱动 A，驱动 B在此基础上换算出来）
+0x8085 
+Hopping_seg2_Bi
+tFreqL 
+跳频检测区间频段 2 中心点基频（适用于驱动 A、B） 
+0x8086 
+Hopping_seg2_Bi
+tFreqH 
+0x8087 
+Hopping_seg2_F
+actor 跳频检测区间频段 2 中心点倍频系数（适用于驱动 A，驱动 B在此基础上换算出来）
+0x8088 
+Hopping_seg3_Bi
+tFreqL 
+跳频检测区间频段 3 中心点基频（适用于驱动 A、B） 
+0x8089 
+Hopping_seg3_Bi
+tFreqH 
+0x808A 
+Hopping_seg3_F
+actor 跳频检测区间频段 3 中心点倍频系数（适用于驱动 A，驱动 B在此基础上换算出来）
+0x808B 
+Hopping_seg4_Bi
+tFreqL 
+跳频检测区间频段 4 中心点基频（适用于驱动 A、B） 
+0x808C 
+Hopping_seg4_Bi
+tFreqH 
+0x808D 
+Hopping_seg4_F
+actor 跳频检测区间频段 4 中心点倍频系数（适用于驱动 A，驱动 B在此基础上换算出来）
+0x808E 
+Hopping_seg5_Bi
+tFreqL 
+跳频检测区间频段 5 中心点基频（适用于驱动 A、B） 
+0x808F 
+Hopping_seg5_Bi
+tFreqH 
+0x8090 
+Hopping_seg5_F
+actor 跳频检测区间频段 5 中心点倍频系数（适用于驱动 A，驱动 B在此基础上换算出来）
+0x8091 NC Reserved 
+0x8092 NC Reserved 
+0x8093 Key 1 Key 1 位置：0-255 有效 
+(其中 0表示无按键，4 个键位置均为 8的倍数时表示为独立按键) 
+0x8094 Key 2 Key 2 位置：0-255 有效 
+(其中 0表示无按键，4 个键位置均为 8的倍数时表示为独立按键) 
+0x8095 Key 3 Key 3 位置：0-255 有效 
+(其中 0表示无按键，4 个键位置均为 8的倍数时表示为独立按键) 
+0x8096 Key 4 Key 4 位置：0-255 有效 
+(其中 0表示无按键，4 个键位置均为 8的倍数时表示为独立按键) 
+0x8097 Key_Area 长按更新时间(1~16s) 按键有效区间设置(单侧):0-15有效 
+小尺寸 MID 5点电容触控芯片 
+ 
+15
+汇顶科技 机密信息  
+未经许可 不得转载 
+0x8098 
+Key_Touch_ 
+Level 触摸按键按键阈值 
+0x8099 
+Key_Leave_ 
+Level 触摸按键松键阈值 
+0x809A Key_Sens KeySens_1(按键 1 灵敏度系数） KeySens_2（按键 2 灵敏度系数） 
+0x809B Key_Sens KeySens_3(按键 3 灵敏度系数） KeySens_4（按键 4 灵敏度系数） 
+0x809C Key_Restrain 手指从屏上离开后抑制按键的时间（以
+100ms 为单位），0 表示 600ms 抑制 
+独立按键邻键抑制参数(当次大值超过最
+大值的 Key_Restrain/16时则不输出按
+键),推荐设置 7±2 
+0x809D NC Reserved 
+0x809E NC Reserved 
+0x809F NC Reserved 
+0x80A0 NC Reserved 
+0x80A1 NC Reserved 
+0x80A2 
+Proximity_Drv_Se
+lect Drv_Start_Ch(驱动方向起始通道） Drv_End_Ch（结束通道， 
+为起始通道加此值） 
+0x80A3 
+Proximity_ 
+Sens_Select Sens_Start_Ch(感应方向起始通道） Sens_End_Ch（结束通道，
+为起始通道加此值） 
+0x80A4 
+Proximity_ 
+Touch_Level 设定值×10=接近感应生效阈值 
+0x80A5 
+Proximity_ 
+Leave_Level 设定值×10=接近感应无效阈值 
+0x80A6 
+Proximity_Sample_
+Add_Times 
+采样值累加次数 
+0x80A7 
+Proximity_Sample_
+Dec_ValL 
+采样值减此值（16位）后再累加，低字节 
+0x80A8 
+Proximity_Sample_
+Dec_ValH 
+采样值减此值（16位）后再累加，高字节 
+0x80A9 
+Proximity_Leave_S
+hake_Count 
+退出接近感应去抖次数 
+0x80AA 
+Self_Cap_Tx_ 
+gain 自电容发送增益 
+0x80AB 
+Self_Cap_Rx_ 
+gain 自电容接收增益 
+0x80AC 
+Self_Cap_Dump_
+Shift 自电容原始值放大系数（2的 N 次方） 
+0x80AD 
+SCap_Diff_Up_Le
+vel_Drv 自电容抑制悬浮上升阈值(驱动方向) 
+0x80AE 
+Scap_Merge_Tou
+ch_Level_Drv 自电容 Touch Level(驱动方向) 
+0x80AF SCap_Pulse_ 自电容采样时间（低字节） 
+小尺寸 MID 5点电容触控芯片 
+ 
+16
+汇顶科技 机密信息  
+未经许可 不得转载 
+TimeL 
+0x80B0 
+SCap_Pulse_ 
+TimeH 自电容采样时间（高字节） 
+0x80B1 
+SCap_Diff_Up_Le
+vel_Sen 自电容抑制悬浮上升阈值(感应方向) 
+0x80B2 
+Scap_Merge_Tou
+ch_Level_Sen 自电容 Touch Level(感应方向) 
+0x80B3 NC Reserved 
+0x80B4 NC Reserved 
+0x80B5 NC Reserved 
+0x80B6 NC Reserved 
+0x80B7 
+~ 
+0x80C4 
+Sensor_CH0~ 
+Sensor_CH13 ITO Sensor 对应的芯片通道号 
+0x80C5~ 
+0x80D4 
+NC Reserved  
+0x80D5~ 
+0x80EE 
+Driver_CH0~ 
+Driver_CH25 ITO Driver对应的芯片通道号 
+0x80EF~ 
+0x80FE 
+NC Reserved   
+0x80FF Config_Chksum 配置信息校验(0x8047到 0x80FE之字节和的补码) 
+0x8100 Config_Fresh 配置已更新标记(由主控写入标记) 
+c) 坐标信息 
+Addr Access bit7 bit6 bit5 bit4 bit3 bit2 bit1 bit0 
+0x8140 R Product ID ( first Byte，ASCII码 ) 
+0x8141 R Product ID ( second Byte，ASCII码 ) 
+0x8142 R Product ID ( third Byte，ASCII码 ) 
+0x8143 R Product ID ( forth Byte，ASCII码 ) 
+0x8144 R Firmware version ( HEX.low byte ) 
+0x8145 R Firmware version ( HEX.high byte )  
+0x8146 R x coordinate resolution ( low byte )  
+0x8147 R x coordinate resolution ( high byte ) 
+0x8148 R y coordinate resolution ( low byte ) 
+0x8149 R y coordinate resolution ( high byte ) 
+0x814A R Vendor_id ( 当前模组选项信息 ) 
+0x814B R Reserved 
+0x814C R Reserved 
+0x814D R Reserved 
+0x814E R/W buffer status large detect Reserved number of touch points 
+0x814F R track id 
+小尺寸 MID 5点电容触控芯片 
+ 
+17
+汇顶科技 机密信息  
+未经许可 不得转载 
+0x8150 R point 1 x coordinate (low byte) 
+0x8151 R point 1 x coordinate (high byte) 
+0x8152 R point 1 y coordinate (low byte) 
+0x8153 R point 1 y coordinate (high byte) 
+0x8154 R Point 1 size (low byte) 
+0x8155 R point 1 size (high byte) 
+0x8156 R Reserved 
+0x8157 R track id 
+0x8158 R point 2 x coordinate (low byte) 
+0x8159 R point 2 x coordinate (high byte) 
+0x815A R point 2 y coordinate (low byte) 
+0x815B R point 2 y coordinate (high byte) 
+0x815C R point 2 size (low byte) 
+0x815D R point 2 size (high byte) 
+0x815E R Reserved 
+0x815F R track id 
+0x8160 R point 3 x coordinate (low byte) 
+0x8161 R point 3 x coordinate (high byte) 
+0x8162 R point 3 y coordinate (low byte) 
+0x8163 R point 3 y coordinate (high byte) 
+0x8164 R point 3 size (low byte) 
+0x8165 R point 3 size (high byte) 
+0x8166 R Reserved 
+0x8167 R track id 
+0x8168 R point 4 x coordinate (low byte) 
+0x8169 R point 4 x coordinate (high byte) 
+0x816A R point 4 y coordinate (low byte) 
+0x816B R point 4 y coordinate (high byte) 
+0x816C R point 4 size (low byte) 
+0x816D R point 4 size (high byte) 
+0x816E R Reserved 
+0x816F R track id 
+0x8170 R point 5 x coordinate (low byte) 
+0x8171 R point 5 x coordinate (high byte) 
+0x8172 R point 5 y coordinate (low byte) 
+0x8173 R point 5 y coordinate (high byte) 
+0x8174 R point 5 size (low byte) 
+0x8175 R point 5 size (high byte) 
+0x8176 R Reserved 
+0x8177 R Reserved 
+小尺寸 MID 5点电容触控芯片 
+ 
+18
+汇顶科技 机密信息  
+未经许可 不得转载 
+7. 功能描述 
+7.1. 工作模式 
+ 
+a) Normal Mode 
+GT911在 Normal mode时，最快的坐标刷新周期为7ms-10ms间（依赖于配置信息的
+设定，配置信息可控周期步进长度为 1ms）。 
+Normal mode 状态下，一段时间无触摸事件发生，GT911将自动转入 Green mode，
+以降低功耗。GT911无触摸自动进入 Green mode 的时间可通过配置信息设置，范围
+为 0~15s，步进为 1s。 
+b) Green Mode 
+在 Green mode下，GT911扫描周期约为 40ms，若检测到有触摸动作发生，自动进入
+Normal mode。 
+c) Sleep Mode 
+主 CPU 通过 I2C 命令，使 GT911进入 Sleep mode（需要先将 INT 脚输出低电平）。
+当需要 GT911退出 Sleep mode时，主机输出一个高电平到 INT脚（主机打高 INT脚
+2~5ms），唤醒后 GT911将进入 Normal mode。 
+ 
+小尺寸 MID 5点电容触控芯片 
+ 
+19
+汇顶科技 机密信息  
+未经许可 不得转载 
+7.2. 中断触发方式 
+当有触摸时，GT911每个扫描周期均会通过 INT脚发出脉冲信号，通知主CPU读取坐
+标信息。主 CPU 可以通过相关的寄存器位“INT”来设置触发方式。设为“0”表示上升沿
+触发，即在有用户操作时，GT911 会在 INT 口输出上升沿跳变，通知 CPU；设为“1”
+表示下降沿触发，即在有用户操作时，GT911会在 INT口输出下降沿跳变。 
+7.3. 睡眠模式 
+当显示屏熄灭时或在其他不需要操作触摸屏的状态下，可以通过 I2C 命令使 GT911进
+入 Sleep mode 以降低功耗。当需要 GT911正常工作时，主控将 INT口输出一段时间
+的高电平将其唤醒。主控控制 GT911进入睡眠状态和退出睡眠状态时序，具体时序请
+参考第 7.1 节。 
+7.4. 固化配置功能 
+GT911支持固化配置功能，当获取项目的配置参数后，GT911会自动将版本较高的配
+置参数固化，固化了配置参数后的 GT911只会与主控进行 I2C通讯，不会接收主控下
+发的低版本配置。 
+7.5. 跳频功能 
+GT911拥有很好的硬件抗干扰基础，当GT911的驱动频谱与干扰信号的峰值频谱叠加
+时，可通过自适应跳频机制来切换到另一个频率，从而避开干扰。 
+7.6. 自动校准 
+a) 初始化校准 
+不同的温度、湿度及物理空间结构均会影响到电容传感器在闲置状态的基准值。GT911
+会在初始化的 200ms 内根据环境情况自动获得新的检测基准。完成触摸屏检测的初始
+化。 
+b) 自动温漂补偿 
+温度、湿度或灰尘等环境因素的缓慢变化，也会影响到电容传感器在闲置状态的基准值。
+GT911 实时检测各点数据的变化，对历史数据进行统计分析，由此来修正检测基准。
+从而降低环境变化对触摸屏检测的影响。 
+小尺寸 MID 5点电容触控芯片 
+ 
+20
+汇顶科技 机密信息  
+未经许可 不得转载 
+8. 参考电路图 
+ 
+GT911参考应用电路图 
+注： 
+1、 本电路仅表示基本应用方式，实际或根据应用环境需要对部分电路进行调整。 
+2、 电容建议采用 X7R材质 
+小尺寸 MID 5点电容触控芯片 
+ 
+21
+汇顶科技 机密信息  
+未经许可 不得转载 
+9. 电气特性 
+9.1. 极限电气参数 
+（环境温度为 25℃） 
+参数 最小值 最大值 单位 
+模拟电源 AVDD28（参考 AGND） 2.66 3.47 V 
+VDDIO（参考 DGND） 1.7 3.47 V 
+数字 I/O 可承受电压 0 3.47 V 
+模拟 I/O 可承受电压 0 3.47 V 
+工作温度范围 -40 85 ℃ 
+存储温度范围 -60 125 ℃ 
+焊接温度（10 秒钟）   300 ℃ 
+ESD保护电压（HB Model）  － ±2 KV 
+9.2. 推荐工作条件 
+参数 最小值 典型值 最大值 单位 
+AVDD28 2.8 - 3.3 V 
+VDDIO 1.8 - 3.3 V 
+工作温度 -20 25 85 ℃ 
+9.3. AC特性 
+（环境温度为 25℃，AVDD=2.8V，VDDIO=1.8V） 
+参数 最小值 典型值 最大值 单位 
+OSC 振荡频率 59 60 61 MHz 
+I/O 输出由低到高转换时间 - - 0.5 ns 
+I/O 输出由高到低转换时间 - - 0.5 ns 
+9.4. DC 特性 
+（环境温度为 25℃，AVDD=2.8V，VDDIO=1.8V） 
+参数 最小值 典型值 最大值 单位 
+Normal mode 工作电流 - 6.2 - mA 
+Green mode 工作电流 - 3.3 - mA 
+Sleep mode 工作电流 70 - 120 uA 
+数字输入为低电平电压值 -0.3 0 0.45 V 
+数字输入为高电平电压值 1.35 1.8 2.1 V 
+小尺寸 MID 5点电容触控芯片 
+ 
+22
+汇顶科技 机密信息  
+未经许可 不得转载 
+10. 产品封装 
+         
+          
+                                                   
+* Controlling Dimension：MM  
+
+小尺寸 MID 5点电容触控芯片 
+ 
+23
+汇顶科技 机密信息  
+未经许可 不得转载 
+11. 版本记录 
+ 
+文件版本 发布时间 修订 
+Rev.00 2012-11-02 预发布 
+Rev.01 2012-11-22 修改配置信息、更新参考电路图 
+Rev.02 2012-12-26 修改存储温度、各模式电流及部分表述 
+Rev.021 2013-1-7 在配置信息列表中增加 filter 功能描述 
+ 
+小尺寸 MID 5点电容触控芯片 
+ 
+24
+汇顶科技 机密信息  
+未经许可 不得转载 
+12. 联系方式 
+ 
+ 
+ 
+深圳市汇顶科技股份有限公司 
+深圳市福田保税区腾飞工业大厦 B座 13 层    518000 
+Floor 13, Phase B, TengFei Industrial Building, FuTian Free Trade Zone 
+ShenZhen  518000 
+电话/TEL：+86-755-33338828   传真/FAX：+86-755-33338828 

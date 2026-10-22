@@ -1,0 +1,567 @@
+                         1                                                   2                                                   3                                                   4                                                    5                                                   6
+              Tang Nano 20K
+
+             Revision History
+A                                                                                                                                                                                                                                                                                             A
+                Version            Date                                 Change Note
+
+
+                  3850         2022/12/24                              Original edition
+
+
+                  3920         2023/02/22                   Shorten PCB width to 888mil
+                                                            Changed pin assignment of BL616.
+
+
+                  3921         2023/03/27                   Fix some Silkscreen issuses
+                                                            First public release version.
+
+
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                             B
+
+
+
+                GW2AR-18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                             C
+
+
+
+
+
+
+
+
+
+
+
+                File: MAIN.kicad_sch
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                              Sheet: /
+D                                                                                                                                                                             File: Tang_Nano_20K_3921.kicad_sch                                                                              D
+                                                                                                                                                                              Title: Tang_Nano_20K_3921_Schematics
+                                                                                                                                                                              Size: A4               Date: 2023-07-11                                                  Rev: 1.30
+                                                                                                                                                                              KiCad E.D.A.  kicad (6.0.8)                                                              Id: 1/7
+                         1                                                   2                                                   3                                                   4                                                    5                                                   6
+                             1                                                          2                                                           3                                                          4                                                          5                                                           6
+                                                                                                                                                                                                                                           DISPLAY                                               PERIPHERALS
+                                                                                                +3V3                                                                                                                 PIN27_LCD_B7           LCD_B7                       PIN88_MODE0_KEY1          KEY_S1
+                                                                                                                                                                                                                     PIN28_LCD_B6           LCD_B6                       PIN87_MODE1_KEY2          KEY_S2
+        MSPI_CLK                    R4R4     1K1K     GNDGND                                                                                                                                                         PIN29_LCD_B5           LCD_B5                       PIN79_WS2812              WS2812
+        PIN06_SYS_TCK               R5R5     4.7K4.7K GNDGND                                                                                                                                                         PIN30_LCD_B4           LCD_B4                       PIN80_SDIO_D2             SDIO_D2
+        PIN88_MODE0_KEY1            R6R6     1K1K     GNDGND                                                                   GND                                                                                   PIN31_LCD_B3           LCD_B3                       PIN81_SDIO_D3             SDIO_D3
+        PIN87_MODE1_KEY2            R7R7     1K1K     GNDGND                                                                                                                                                         PIN32_LCD_G7           LCD_G7                       PIN82_SDIO_CMD            SDIO_CMD
+                                                                                                                                  +3V3+3V3                                                                           DVI_TX2_P              DVI_TX2_P                    PIN84_SDIO_D0             SDIO_D0
+A                                                                                                                                                                                                                    DVI_TX2_N              DVI_TX2_N                    PIN85_SDIO_D1             SDIO_D1                            A
+                                    IC1IC1                                                                                                                                                                           DVI_TXC_P              DVI_TXC_P                    PIN83_SDIO_CLK            SDIO_CLK
+                                 GW2AR-LV18-QN88C8/I7GW2AR-LV18-QN88C8/I7                                                                                                                                            DVI_TXC_N              DVI_TXC_N                    PIN15_SYS_LED0            LED0
+                                                                                                                                                                                                                     DVI_TX0_P              DVI_TX0_P                    PIN16_SYS_LED1            LED1
+                                                                                                                                                                                                                     DVI_TX0_N              DVI_TX0_N                    PIN17_SYS_LED2            LED2
+                                                                                                                                                                                                                     DVI_TX1_P              DVI_TX1_P                    PIN18_SYS_LED3            LED3
+                                                                                                                                                                                                                     DVI_TX1_N              DVI_TX1_N                    PIN19_SYS_LED4            LED4
+                                                                                                                                                                                                                     PIN42_LCD_R3           LCD_R3                       PIN20_SYS_LED5            LED5
+                                                                                                                                                                                                                     PIN41_LCD_R4           LCD_R4
+                                                                                                                                                                                                                     PIN25_LCD_HS           LCD_HS                                                File: PERIPHERALS.kicad_sch
+                                                                                                                                                                                                                     PIN77_LCD_CK           LCD_CK
+                                                                                                                                                                                                                     PIN48_LCD_DE           LCD_DE                                               POWER
+                    +1V0+1V0    11  VCOREVCORE                                                                                                               VCOREVCORE6666     +1V0+1V0                             PIN26_LCD_VS           LCD_VS
+   +3V3           GNDGND        22  VSSVSS                                                                                                                      VSSVSS 6565       GNDGND                             PIN18_SYS_LED3         LCD_INIT0
+                                33  VCCX/VCCO_2/6/7VCCX/VCCO_2/6/7                                                                                VCCX/VCCO_2/6/7VCCX/VCCO_2/6/76464        +3V3                     PIN19_SYS_LED4         LCD_INIT1
+              PIN04_SYS_CLK     44  IOL7A/LPLL1_T_inIOL7A/LPLL1_T_inBANK7                                                                          IOR29A/GCLKT_3IOR29A/GCLKT_36363 MSPI_HOLD                        PIN20_SYS_LED5         LCD_INIT2                                             File: POWER.kicad_sch
+              PIN05_SYS_TMS     55  IOR25B/TMSIOR25B/TMS                                                                                               IOR33A/MI/D7IOR33A/MI/D76262 MSPI_DO                          PIN17_SYS_LED2         LCD_INIT3
+        R1    PIN06_SYS_TCK     66  IOR26A/TCKIOR26A/TCK                                                                                             IOR33B/MO/D6IOR33B/MO/D66161   MSPI_DI                          PIN49_LCD_BL           DSI_LCD_BL                                           USB_JTAG
+       4.7K   PIN07_SYS_TDI     77  IOR26B/TDIIOR26B/TDIJTAG     BANK2                                                                            IOR34A/MCS_N/D5IOR34A/MCS_N/D56060MSPI_CS                          PIN53_EDID_CLK         DDC_CLK                      PIN86_HSPI_CSN            SPI_~{CS}
+              PIN08_SYS_TDO     88  IOR25A/TDOIOR25A/TDO                                                                                           IOR34B/MCLK/D4IOR34B/MCLK/D45959 MSPI_CLK                         PIN52_EDID_DAT         DCD_DAT                      PIN76_HSPI_DAT            SPI_DAT
+B    PIN09_SYS_~{RECFG}         99  IOR31B/RECONFIG_NIOR31B/RECONFIG_NBANK3                                                                                 VCCO_3VCCO_35858                                                                                             PIN75_HSPI_DIR            SPI_DIR                            B
+     PIN10_5351CKP             1010                                                                                                                                    5757         MSPI_WP    +3V3                                         File: DISPLAY.kicad_sch      PIN13_HSPI_SCLK
+     PIN11_5351CKN             1111 IOL29A/GCLKT_6IOL29A/GCLKT_6                                                               BANK3          IOR35A/FASTRD_N/D3IOR35A/FASTRD_N/D35656PIN56_I2S_BCLK                                                                     PIN05_SYS_TMS             SPI_SCLK
+                               1212 IOL29B/GCLKC_6IOL29B/GCLKC_6                                                                                      IOR36A/SO/D1IOR36A/SO/D15555  PIN55_I2S_LRCK                                         AUDIO                         PIN06_SYS_TCK             JTAG_TMS
+     PIN13_HSPI_SCLK+3V3+3V3   1313 VCCX/VCCO_2/6/7VCCX/VCCO_2/6/7                                                                           IOR36B/SSPI_CS_N/D0IOR36B/SSPI_CS_N/D05454PIN54_I2S_DIN                 PIN56_I2S_BCLK                                      PIN07_SYS_TDI             JTAG_TCK
+                               1414 IOL45A/LPLL2_T_inIOL45A/LPLL2_T_in                                                                     IOR38A/DIN/CLKHOLD_NIOR38A/DIN/CLKHOLD_N5353PIN53_EDID_CLK                PIN55_I2S_LRCK         I2S_BCLK                     PIN08_SYS_TDO             JTAG_TDI
+     PIN15_SYS_LED0VCCPLLLVCCPLLL1515VCCPLLL_1VCCPLLL_1          BANK6                                                                          IOR38B/DOUT/WE_NIOR38B/DOUT/WE_N5252PIN52_EDID_DAT                   PIN54_I2S_DIN          I2S_LRCK                     PIN69_SYS_TX              JTAG_TDO
+     PIN16_SYS_LED1            1616 IOL47A/LPLL2_T_fbIOL47A/LPLL2_T_fb                                                                                IOR39A/SCLKIOR39A/SCLK5151    PIN51_PA_~{SD}/EN                PIN51_PA_~{SD}/EN      I2S_DIN                      PIN70_SYS_RX              BL616_UART_RX
+     PIN17_SYS_LED2            1717 IOL47B/LPLL2_C_fbIOL47B/LPLL2_C_fb                                                                          IOR45A/RPLL2_T_inIOR45A/RPLL2_T_in5050                                                      PA_~{SD}/EN                                            BL616_UART_TX
+     PIN18_SYS_LED3            1818 IOL49AIOL49A                                                                                                        VCCPLLR_1VCCPLLR_14949 VCCPLLRVCCPLLRPIN49_LCD_BL                                   File: AUDIO.kicad_sch                                 File: USB_JTAG.kicad_sch
+     PIN19_SYS_LED4            1919 IOL49BIOL49B                                                                                                             IOR49AIOR49A4848       PIN48_LCD_DE
+     PIN20_SYS_LED5            2020 IOL51AIOL51A                                                                                                             IOR49BIOR49B4747R11R11 10K10K                           PIN73_HSPI_DIN2              1                                              11
+                               2121 IOL51BIOL51B                                                                                                               EXTREXTR4646                      GND                 PIN74_HSPI_DIN3              2                                              22                       +5V+5V
+                  GND          2222 VSSVSS                                                                                                                      VSSVSS 4545       GND                                PIN75_HSPI_DIR               3                                              33 PIN76_HSPI_DAT           GNDGND
+                    +1V0+1V0        VCOREVCORE                                                                                                               VCOREVCORE         +1V0+1V0                             PIN85_SDIO_D1                4                                              44 PIN80_SDIO_D2
+
+                                                                                                                                                                                                                     PIN77_LCD_CK                 5                                              55 PIN42_LCD_R3
+                                                                                                                                                                                                                     PIN15_SYS_LED0               6                                              66 PIN41_LCD_R4
+                                                                                                                                                                                                                     PIN16_SYS_LED1               7                                              77 PIN56_I2S_BCLK
+                                                                                                                                                                                                                     PIN27_LCD_B7                 8                                              88 PIN54_I2S_DIN
+C                                                                                                                                                                             PIN09_SYS_~{RECFG}     TP1             PIN28_LCD_B6                 9                                              99 PIN51_PA_~{SD}/EN                 C
+                                                                                                                                                                               GND                   TP2             PIN25_LCD_HS                 10     J6                              J5J5    1010PIN48_LCD_DE
+                                                                                                                                                                                                                     PIN26_LCD_VS                 11      Conn_01x20           Conn_01x20Conn_01x201111PIN55_I2S_LRCK
+                                                                                                                                                                                                                     PIN29_LCD_B5                 12                                             1212PIN49_LCD_BL
+                                                                                                                                                                              PIN06_SYS_TCK          TP3             PIN30_LCD_B4                 13                                             1313PIN86_HSPI_CSN
+                                                                                                                                                                              PIN08_SYS_TDO          TP4             PIN31_LCD_B3                 14                                             1414PIN79_WS2812
+                                                                                                                                        VCCO_4VCCO_4                          PIN07_SYS_TDI          TP5             PIN17_SYS_LED2               15     Joystick_MCLK                 GND       1515   GNDGND
+                                               VCCO_5                                                                                                                         PIN05_SYS_TMS          TP6             PIN20_SYS_LED5               16     Joystick_MOSI                  3V3      1616                     +3V3
+                                                                                                                                       C5C5                                                                          PIN19_SYS_LED4               17     Joystick_MISO         Joystick_CS       1717PIN72_HSPI_DIN1
+                                                  C3C3                                                                                  100nF100nF                                                                   PIN18_SYS_LED3               18     Joystick_CS         Joystick_MISO       1818PIN71_HSPI_DIN0
+                                                  100nF100nF                                                                                                                                                         +3V3+3V3                     19     3V3                 Joystick_MOSI       1919PIN53_EDID_CLK
+                                                                                                                                  GNDGND                                                                              GNDGND                      20     GND                Joystick_MCLK        2020PIN52_EDID_DAT
+                                                         GNDGND                                                             GND
+
+   +3V3        +3V3                                               GND
+                           GNDGND   C2C2    100nF100nF+3V3
+
+
+       R2          R3R3       U2U2
+        4.7K        4.7K4.7K64Mbit Flash64Mbit Flash       R9
+        MSPI_CS   11                      88               4.7K                                                                                                                                        Sheet: /GW2AR-18/
+D                    ~{CS}~{CS}     VCCVCC                                                U3U3  OSC_27MHzOSC_27MHz   +3V3+3V3                                                                          File: MAIN.kicad_sch                                                                                                           D
+        MSPI_DO   22 IO1/DOIO1/DOIO3/~{HOLD}IO3/~{HOLD}77MSPI_HOLD                       11   ENEN         VCCVCC   44        C4      100nF         GND  PIN10_5351CKP             SYS_GCLK6_P
+        MSPI_WP   33                      66       0R0RMSPI_CLK                                                                                          PIN11_5351CKN             SYS_GCLK6_N         Title: Tang_Nano_20K_3921_Schematics
+                     IO2/~{WP}IO2/~{WP}CLKCLK      R8R8                                  22                         33  R10R10   22R22RPIN04_SYS_CLK     PIN13_HSPI_SCLK           SYS_LPLL2_in
+                  44                      55             MSPI_DI              GNDGND          GNDGND       OUTOUT                                                                                      Size: A4                  Date: 2023-07-11                                                           Rev: 1.30
+      GND            GNDGND        IO0/DIIO0/DI                                                                                                                                                        KiCad E.D.A.  kicad (6.0.8)                                                                          Id: 2/7
+                             1                                                          2                                                           3                                                          4                                                          5                                                           6
+                            1                                                        2                                                         3                                                        4                                                         5                                                         6
+
+
+                 RGB LCD                                                                                                                                                                                                                                                                DVI TX
+
+
+                                                                                                                                                                                                                                                                                                   +5VD+5VD
+AJ2J2                                                                                                                                                                                                                         U7U7                                                                                          A
+                         LEDKLEDK11   VLED-VLED-                                                                                                                                                                        RCLAMP0524PRCLAMP0524P
+                         LEDALEDA22   VLED+VLED+                                                                                                           DVI_TX2_P       C55C55   100nF100nF  DVI_D2_P               11 IN1IN1OUT1OUT11010                       DVI_D2_P           11D2+D2+
+                          GNDGND33                         GNDGND                                                                                          DVI_TX2_N       C56C56   100nF100nF  DVI_D2_N               22 IN2IN2OUT2OUT299                         DVI_D2_N           33D2-D2-
+                          VCCVCC44                      +3V3+3V3                                                                                                                                              GNDGND   33 GNDGND GNDGND88    GNDGND                DVI_D1_P           44D1+D1+
+                            R0R055                   GND                                                                                                   DVI_TX1_P       C57C57   100nF100nF  DVI_D1_P               44 IN3IN3OUT3OUT377                         DVI_D1_N           66D1-D1-
+                            R1R166                                                                                                                         DVI_TX1_N       C58C58   100nF100nF  DVI_D1_N               55 IN4IN4OUT4OUT466                         DVI_D0_P           77D0+D0+
+                            R2R277                                                                                                                                                                                            U8U8                                 DVI_D0_N           99D0-D0-
+                            R3R388                     PIN42_LCD_R3    LCD_R3                                                                                                                                           RCLAMP0524PRCLAMP0524P                     DVI_CK_P          1010CK+CK+
+                            R4R499                     PIN41_LCD_R4    LCD_R4                                                                              DVI_TX0_P       C59C59   100nF100nF  DVI_D0_P               11 IN1IN1OUT1OUT11010                       DVI_CK_N          1212CK-CK-
+                            R5R51010                   PIN40_LCD_R5    DVI_TX2_N                                                                           DVI_TX0_N       C60C60   100nF100nF  DVI_D0_N               22 IN2IN2OUT2OUT299                                                                   J3J3
+                            R6R61111                   PIN39_LCD_R6    DVI_TX2_P                                                                                                                              GNDGND   33 GNDGND GNDGND88    GNDGND                DVI_CEC           1313CECCEC              DVI_TX_ADVI_TX_A
+                            R7R71212                   PIN38_LCD_R7    DVI_TX1_N                                                                           DVI_TXC_P       C61C61   100nF100nF  DVI_CK_P               44 IN3IN3OUT3OUT377
+                            G0G01313                 GND                                                                                                  DVI_TXC_N        C62C62   100nF100nF  DVI_CK_N               55 IN4IN4OUT4OUT466                         DVI_EDID_CLK      1515SCLSCL
+                            G1G11414                                                                                                                                                                                                                               DVI_EDID_DAT      1616SDASDA
+                            G2G21515                   PIN37_LCD_G2    DVI_TX1_P                                                                                                                                                                            R47
+                            G3G31616                   PIN36_LCD_G3    DVI_TX0_N                                                                                                                                                                           2.2K                      1414UTILITYUTILITY
+                            G4G41717                   PIN35_LCD_G4    DVI_TX0_P                                                                                                D4                                                    PIN26_LCD_VS                 HPD               1919HPDHPD
+                            G5G51818                   PIN34_LCD_G5    DVI_TXC_N                                                                              +5VD                             GND
+                            G6G61919                   PIN33_LCD_G6    DVI_TXC_P                                                                                                                                                                          R46                        D8D8
+B                           G7G72020                   PIN32_LCD_G7    LCD_G7                                                                                                                                                                             5.1K                                                              B
+                            B0B02121                                                                                                                                         C63      100nF
+                                2222                 GND
+                            B1B12323
+                            B2B2                                                                                                                                       R40                                                                                                               GNDGND
+                            B3B32424                   PIN31_LCD_B3    LCD_B3                                                                                                      27K    DVI_CEC
+                            B4B42525                   PIN30_LCD_B4    LCD_B4
+                            B5B52626                   PIN29_LCD_B5    LCD_B5                                                                                          R32R32     49.9R49.9RDVI_D2_P
+                                2727                   PIN28_LCD_B6                                                                                         +3.3V      R33R33     49.9R49.9RDVI_D2_N                                                             +3.3V
+                            B6B62828                   PIN27_LCD_B7    LCD_B6
+                            B7B72929                                   LCD_B7                                                                                          R34R34     49.9R49.9RDVI_D1_P
+                          GNDGND3030  GNDGND          PIN77_LCD_CK                                                                                                     R35R35     49.9R49.9RDVI_D1_N                                                                 R48
+                          CLKCLK3131                                   LCD_CK                                                                                                                                                                                         2.2K
+                          DISPDISP     +3V3+3V3                                                                                                                        R36R36     49.9R49.9R
+                       HSYNCHSYNC3232                 PIN25_LCD_HS     LCD_HS                                                                                                            DVI_D0_P                          DDC_CLK    DDC_CLK                                              DVI_EDID_CLK
+                       VSYNCVSYNC3333                  PIN26_LCD_VS    LCD_VS                                                                                          R37R37     49.9R49.9RDVI_D0_N                                                                            11       66
+                          DENDEN3434                  PIN48_LCD_DE     LCD_DE                                                                                                                                                                                   R50                Q1AQ1A
+                           NCNC 3535                                                                                                                                   R38R38     49.9R49.9RDVI_CK_P                                                            2.2K            2N7002KD2N7002KD
+                          GNDGND3636  GNDGND                                                                                                                           R39R39     49.9R49.9RDVI_CK_N                       DDC_DAT    DDC_DAT                                              DVI_EDID_DAT
+                           XRXR 3737             PIN76_SYS_LED0        LCD_INIT0                                                                                                                                                                                       44       33
+                           YDYD 3838             PIN75_SYS_LED1        LCD_INIT1                                                                                       D3D3       RB161QS-40T18RRB161QS-40T18R+3V3+3V3                                                    Q1BQ1B
+C                           XLXL3939             PIN74_SYS_LED2        LCD_INIT2                                                                                                                                                                                       2N7002KD2N7002KD                                     C
+                           YUYU 4040             PIN73_SYS_LED3        LCD_INIT3
+                          pad1pad1MPMP
+                          pad2pad2MPMP                                                                                                                                                                                                PIN25_LCD_HS          R51         100R                     DVI_CEC
+                                            GND
+                    FPC-40-0.5mmFPC-40-0.5mm                                                                                                                           R41R41      2.2K2.2KDVI_EDID_CLK
+                                                                                                                                                             +5VD      R42R42      2.2K2.2KDVI_EDID_DAT
+
+
+                                                                                                                                                                          D5D5       RB161QS-40T18RRB161QS-40T18R+5V+5V
+                    LCD BACKLIGHT
+
+
+                                            +5V               L4             D1
+                                                           2.2uH 0806    1N5819WS
+                                                                                                 VLED+
+                                       C53              6  IN    SW   1              C54C54
+                                      22uF                                        2.2uF/50V2.2uF/50V
+                                      GND               2  GND   OV   5
+                                      R29R29      27K27K4             3                      GNDGND
+                            +3V3      R30R30     100R100R  EN     FB                                                                                                                            Sheet: /GW2AR-18/DISPLAY/
+D             DSI_LCD_BL                                                   VLED-     R31                                                                                                        File: DISPLAY.kicad_sch                                                                                                     D
+                                                              U6                   5.6R/1%
+                                                            LP3320                                                                                                                              Title: Tang_Nano_20K_3921_Schematics
+                                                                                                                                                                                                Size: A4                  Date: 2023-07-11                                                        Rev: 1.30
+                                                                                                                                                                                                KiCad E.D.A.  kicad (6.0.8)                                                                       Id: #/7
+                            1                                                        2                                                         3                                                        4                                                         5                                                         6
+                           1                                                      2                                                      3                                                       4                                                      5                                                      6
+
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                               A
+
+
+
+                                                                                                                       DAC + Audio PA
+
+
+
+
+                                                                                    GND         C14        NC      PIN51_PA_~{SD}/EN       PA_~{SD}/EN     AUDIO_OUTP    1    J4
+                                                                                                                                                           AUDIO_OUTN    2     Conn_01x02_Male
+                                                                                                R45         0R
+
+                                                                                                                                  IC3
+                                                                                                                          MAX98357AEWL+T
+                                                                                            AUDIO_~{SD_MODE}     A1   ~{SD_MODE}           OUTN    B3     AUDIO_OUTN             AUDIO_OUTN
+                                                                                  +5V                            A2   VDD                  BCLK    C1     PIN56_I2S_BCLK         I2S_BCLK
+                                                                          AUDIO_OUTP        AUDIO_OUTP           A3   OUTP                  GND    C2                              GND
+B                                                                              I2S_DIN      PIN54_I2S_DIN        B1   DIN                 LRCLK    C3     PIN55_I2S_LRCK         I2S_LRCK                                                                                                                       B
+                                                                                  +5V                            B2   GAIN_SLOT
+
+
+
+                                                                                                                      +5V
+
+
+
+
+                                                                                                                           C67C67        C68C68
+                                                                                                                           10uF10uF    100nF100nF
+
+                                                                                                                      GNDGND        GNDGND
+
+
+
+
+
+
+
+
+
+
+
+
+C                                                                                                                                                                                                                                                                                                               C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                         Sheet: /GW2AR-18/AUDIO/
+D                                                                                                                                                                                        File: AUDIO.kicad_sch                                                                                                  D
+                                                                                                                                                                                         Title: Tang_Nano_20K_3921_Schematics
+                                                                                                                                                                                         Size: A4                Date: 2023-07-11                                                      Rev: 1.30
+                                                                                                                                                                                         KiCad E.D.A.  kicad (6.0.8)                                                                   Id: #/7
+                           1                                                      2                                                      3                                                       4                                                      5                                                      6
+                           1                                                       2                                                       3                                                       4                                                       5                                                       6
+
+                                       Button x 2                                                                                                                                                                                                            MICRO SD CARD
+
+
+
+                                   S1                                                                                                                                                                                                                      J7           Micro_SD_Card_Det
+                       R43      Key_3x4                                                                                                                                                                         +3V3
+A                      330R                                                                                                                                                                                                                                                                                         A
+          +3V3                                            KEY_S1                                                                                                                       PIN80_SDIO_D2                               PIN80_SDIO_D2        1
+                                                                                                                                                  SDIO_D2                                                           R53      10K                            DAT2
+                                                        C15C15                                                                                    SDIO_D3                              PIN81_SDIO_D3                 R54     10K   PIN81_SDIO_D3        2   DAT3/CD
+                                                        100nF100nF                                                                              SDIO_CMD                             PIN82_SDIO_CMD                  R55     10K   PIN82_SDIO_CMD       3   CMD
+                                                                                                                                                                                                                                                        4   VDD
+                                                   GNDGND                                                                                       SDIO_CLK      R49      22R            PIN83_SDIO_CLK                               PIN83_SDIO_CLK       5   CLK
+                                                                                                                                                                                                                           GNDGND                       6   VSS
+                                   S2                                                                                                             SDIO_D0                              PIN84_SDIO_D0                 R56R56  10K10KPIN84_SDIO_D0        7   DAT0
+                       R44      Key_3x4                                                                                                                                                PIN85_SDIO_D1                 R57     10K   PIN85_SDIO_D1        8
+                       330R                                                                                                                       SDIO_D1                                                                                               10  DAT1
+          +3V3                                            KEY_S2                                                                                                                                                     C26                                9   DET_A                                   11
+                                                        C25C25                                                                                                                                                       4.7uF                                  DET_B                          SHIELD
+
+                                                        100nF100nF
+
+                                                   GNDGND                                                                                                                                                       GND                                                                                     GND
+
+
+
+
+
+
+
+B                                                                                                                                                                                                                                                                                                                   B
+                                                                                                                                                                                                                                                                      LED
+
+
+
+                                                                                                                                                                                                                                                                            R12     LED0
+                                                                                                                                                                                                                                                       PIN15_SYS_LED0      510R    Orange
+                                                                                                                                                                                                                                                LED0                                            +3V3
+                                                                                                                                                                                     WS2812                                                                                 R13     LED1
+                          AUX_PLL                                                                                                                                                                                                                      PIN16_SYS_LED1      510R    Orange
+                                                                                                                                                                                                                                                LED1                                            +3V3
+
+                                          +3V3+3V3          U12U12           +3V3+3V3                                                                                                          +5V+5V                                                                               LED2
+                                                         MS5351MMS5351M                                                                                                                     U1U1                                                                            R14
+                         C64C64  100nF100nF      11                       77                                                                                                   WS2812B-2020WS2812B-2020                                                PIN17_SYS_LED2      510R    Orange
+                 GNDGND          EX_PLL_XI       22VDDVDD          VDDOVDDO1010PIN10_5351CKP                                                                                                                 R60                                LED2                                            +3V3
+                                 EX_PLL_XO       33XAXA             CLK0CLK099PIN11_5351CKN         SYS_GCLK6_P                                                        WS2812_DOUT       11            33    100R
+                                                 44XBXB             CLK1CLK166PIN13_5351clk2        SYS_GCLK6_N                                                                            DOUTDOUTDINDIN                  WS2812                                           R15     LED3
+          5351_IIC_SCL                             SCLSCL           CLK2CLK2                        SYS_LPLL2_in                                                                                                                                                           510R    Orange
+C         5351_IIC_SDA                           55SDASDA           GNDGND88                  GND                                                                                            RGB                       R52R52                   LED3   PIN18_SYS_LED3                           +3V3                C
+                                                                                                                                                                                                                       5.1K5.1K
+
+                                                            GNDGND                                                                                                                             GNDGND             GNDGND                                                    R16     LED4
+                                                       Y1Y1                                                                                                                                                                                            PIN19_SYS_LED4      510R    Orange
+                                                EX_PLL_XI25MHz25MHzEX_PLL_XO                                                                                                                                                                    LED4                                            +3V3
+                                                           11   33
+
+                                                     C65C65              C66                                                                                                                                                                                                R28     LED5
+                                                     10pF10pF            10pF                                                                                                                                                                          PIN20_SYS_LED5      510R    Orange
+                                                                                                                                                                                                                                                LED5                                            +3V3
+
+
+                                                            GND
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                           Sheet: /GW2AR-18/PERIPHERALS/
+D                                                                                                                                                                                          File: PERIPHERALS.kicad_sch                                                                                              D
+                                                                                                                                                                                           Title: Tang_Nano_20K_3921_Schematics
+                                                                                                                                                                                           Size: A4                 Date: 2023-07-11                                                       Rev: 1.30
+                                                                                                                                                                                           KiCad E.D.A.  kicad (6.0.8)                                                                     Id: #/7
+                           1                                                       2                                                       3                                                       4                                                       5                                                       6
+                            1                                                        2                                                         3                                                        4                                                         5                                                        6
+
+
+
+
+
+
+
+
+
+
+
+
+A                                                                                                                                                                                                                                                                                                                           A
+
+
+                                                                                                                                          U9U9                                                   FB2FB2
+                                                                                                          +5V+5V                       MT3520BMT3520B    L1L1                            MPZ1608S101ATAH0MPZ1608S101ATAH0
+                                                                                                                                 44                  33   2.2uH 08062.2uH 0806                           +3.3V+3.3V
+                                                                                                                                    VINVIN      SWSW                              C23C23
+                                                                                                               C11C11                                             R17             22uF22uF
+                                                                                                               10uF10uF          11                  55           68K
+                                                                                                         GNDGND                     ENEN        FBFB                        GNDGND
+
+                                                                                                                                                                  R18R18
+                                                                                                                                                                  15K15K
+                                                                                                                                         GNDGND
+                                                                                                                                                              GNDGND
+
+
+                                                                                                                                          U10U10                                                 FB3FB3
+                                                                                                          +5V+5V                       MT3520BMT3520B    L2L2                            MPZ1608S101ATAH0MPZ1608S101ATAH0
+                                                                                                                                 44                  33   2.2uH 08062.2uH 0806
+                                                                                                                                    VINVIN      SWSW                              C24C24                   +1V0+1V0
+                                                                                                               C12C12                                             R19             22uF22uF
+B                                                                                                              10uF10uF          11                  55           10K                                                                                                                                                       B
+                                                                                                         GNDGND                     ENEN        FBFB                        GNDGND
+
+                                                                                                                                                                  R20R20
+                                                                                                                                                                  15K15K
+                                                                                                                                         GNDGND
+                                                                                                                                                              GNDGND
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    +1V0                                                                     +3V3                                                                  +1V0+1V0VCCPLLLVCCPLLL+1V0+1V0VCCPLLR
+
+
+                                                                                                                                                                                                         FB4FB4     FB5FB5
+C                            C1C1    C7C7     C8C8     C9C9     C10C10   C13C13              C16C16   C17C17   C18C18  C19C19   C20C20   C21C21   C22C22  C27C27   C28                                                                                                                                                      C
+
+                             100nF100nF100nF100nF100nF100nF100nF100nF100nF100nF4.7uF4.7uF    100nF100nF100nF100nF100nF100nF100nF100nF100nF100nF100nF100nF100nF100nF4.7uF4.7uF4.7uF                    C29      C30         C31     C32
+
+                                                                                                                                                                                                      4.7uF    100nF       4.7uF    100nF
+
+                                                     GND                                                                      GND
+                                                                                                                                                                                                    GND     GND         GND      GND
+
+
+
+
+
+                                                    U4U4                                                                    U11U11
+                                                ME6211C33ME6211C33VCCO_4VCCO_4                                           ME6211C33ME6211C33VCCO_5VCCO_5
+
+               +5V+5V                       11 VINVIN VOUTVOUT55                        +5V+5V                       11 VINVIN VOUTVOUT55
+                          C6C6     GNDGND   22 VSSVSS                    C41C41                    C50C50   GNDGND   22 VSSVSS                    C52C52
+                        100nF100nF          33 CECE      NCNC 44       100nF100nF                100nF100nF          33 CECE      NCNC 44       100nF100nF
+
+                    GNDGND                                         GNDGND                    GNDGND                                         GNDGND
+                                                                                                                                                                                                Sheet: /GW2AR-18/POWER/
+D                                                                                                                                                                                               File: POWER.kicad_sch                                                                                                       D
+                                                                                                                                                                                                Title: Tang_Nano_20K_3921_Schematics
+                                                                                                                                                                                                Size: A4                  Date: 2023-07-11                                                        Rev: 1.30
+                                                                                                                                                                                                KiCad E.D.A.  kicad (6.0.8)                                                                       Id: #/7
+                            1                                                        2                                                         3                                                        4                                                         5                                                        6
+                            1                                                        2                                                        3                                                        4                                                        5                                                        6
+
+
+           +3V3
+
+
+                  AVDD33_RF1      +3V3     BL616_VDDIO1
+
+                       C33C33     C34C34                    C43C43                                                                USB-JTAG
+                       10pF10pF   10uF10uF                  100nF100nF
+
+A                GNDGND      GNDGND                    GNDGND                                                                                                                                                                                                                                                            A
+
+                  AVDD33_RF2               VDD18_FLASH
+
+                                  C35C35                    C44C44
+                                  100nF100nF                4.7uF4.7uF
+
+                             GNDGND                    GNDGND                                                                   GNDGND
+
+                  AVDD33_AON               DVDD11
+                                                                                                                                                                                                                                                                                             J1J1
+                                  C36C36                    C45C45                                                                                                                                                                                                               USB_C_Receptacle_USB2.0USB_C_Receptacle_USB2.0
+                                  100nF100nF                2.2uF2.2uF                                                                                                                                                                    +5V+5V FU1FU16V 2A Fuse6V 2A FuseVBUSA4A4 VBUSVBUS
+                                                                                                                                                                                          U5U5
+                             GNDGND                    GNDGND                                                                                                                    BL616C-50-Q2I-QFN40BL616C-50-Q2I-QFN40                            GNDGND     R24R24    5.1K5.1KA5A5CC1CC1
+                                                                                            BL616_ANT        11  ANTANT                                              VDDIO2VDDIO23030BL616_VDDIO2                                                  GNDGND     R25R25    5.1K5.1KB5B5CC2CC2
+                PVDD33_DCDC       +3V3     BL616_VDDIO2                                     AVDD33_RF1       22  AVDD33_RF1AVDD33_RF1                               GPIO_22GPIO_222929BL616_IO22   5351_IIC_SCL
+                                                                                            AVDD33_RF2       33  AVDD33_RF2AVDD33_RF2                               GPIO_21GPIO_212828BL616_IO21   5351_IIC_SDA                                                                A7A7 D-D-
+                                  C37C37                    C46C46                SPI_~{CS} BL616_IO0        44  GPIO_0GPIO_0                                       GPIO_20GPIO_202727BL616_IO20                         BL616_USBN      R26R26   0R0R BL616_USB#_N            B7B7 D-D-
+                                  4.7uF4.7uF                100nF100nF           SPI_SCLK   BL616_IO1        55  GPIO_1GPIO_1                                       USB_DMUSB_DM2626 BL616_USBN                          BL616_USBP      R27R27   0R0R BL616_USB#_P            A6A6 D+D+
+B                                                                                  SPI_DIR  BL616_BOOT       66  GPIO_2GPIO_2                                        USB_DPUSB_DP2525BL616_USBP                                                                                B6B6 D+D+                                 B
+               Via to GND    GNDGND                    GNDGND                     SPI_DAT   BL616_IO3        77  GPIO_3GPIO_3                                    VDDIO_USBVDDIO_USB2424VDDIO_USB
+                                                                                            BL616_VDDIO1     88  VDDIO1VDDIO1                                        DVDD11DVDD112323     DVDD11
+                   VDDIO_USB                               AVDD18_RF            JTAG_TCK    BL616_IO10       99  GPIO_10GPIO_10                                  DCDC_OUTDCDC_OUT2222 DCDC_OUT                                                                                 A8A8 SBU1SBU1
+                                                                          BL616_UART_TX     BL616_IO11      1010 GPIO_11GPIO_11                                   SW_DCDCSW_DCDC2121   SW_DCDC                                                                                 B8B8 SBU2SBU2
+                                  C38C38                    C47C47
+                                  100nF100nF                100nF100nF
+
+                             GNDGND                    GNDGNDL3L3
+                                                       2.2uH 08062.2uH 0806                                                                                                                                                                                                                 GNDGND   GNDGND
+                  AVDD33_RF3                  DCDC_OUT          SW_DCDC
+
+                                  C39C39                    C48C48
+                                  100nF100nF                4.7uF4.7uF                                                                                                                                                                                BL616_USB#_N        D2D2           GNDGND
+                                                                                                                                                                                                                                                      BL616_USB#_P        D6D6           GNDGND
+                             GNDGND                    GNDGND                                                                                                                                                                                         VBUS                D7D7           GNDGND
+
+
+            AVDD15_RF1                                          AVDD15_RF2
+
+C                                 C40C40                    C49C49                                                                                                                                                                                                                                                       C
+                                  2.2uF2.2uF                10pF10pF
+
+                             GNDGND                    GNDGND
+
+                                            GNDGNDY2Y2
+                                                40MHz40MHz
+                            BL616_XOUT     33   11   BL616_XIN
+
+                                              XGND
+
+
+
+
+                                           GND
+                                        Via to GND
+                             +3V3+3V3                  GNDGND                 SW4SW4
+
+                                 R21R21             R22R22                  SW_PushSW_PushR23R23
+              BL616_EN           27K27K             10K10K    BL616_BOOT               10K10K
+                                  C42C42           C51C51                                       +3V3+3V3                                                                                       Sheet: /GW2AR-18/USB_JTAG/
+D                                                                                                                                                                                              File: USB_JTAG.kicad_sch                                                                                                  D
+                                  100nF100nF        NCNC
+                                                                                                                                                                                               Title: Tang_Nano_20K_3921_Schematics
+                             GNDGND                    GNDGND                                                                                                                                  Size: A4                 Date: 2023-07-11                                                        Rev: 1.30
+                                                                                                                                                                                               KiCad E.D.A.  kicad (6.0.8)                                                                      Id: #/7
+                            1                                                        2                                                        3                                                        4                                                        5                                                        6

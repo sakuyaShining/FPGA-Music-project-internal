@@ -1,0 +1,61 @@
+{
+  "status": "read-only preflight recorded; inspect device results before hardware actions",
+  "time": "2026-10-17T13:41:02.289604+08:00",
+  "source_delivery_sha256": "bf7731a9af6e28f2908365f14f9dbe9d7aa852fb0916dd53881cfa33f6017526",
+  "verified_files": 583,
+  "package": {
+    "profile": 114,
+    "abi": 1,
+    "device": "GW2AR-LV18QN88C8/I7",
+    "download_mode": "SRAM only; no download performed",
+    "hardware_tested": false,
+    "files": {
+      "board-audio-sram.fs": "7384acdf9fb51f887dc20d1d63ed01a8dc69cb36d78305fc77d9e6a8df8ca246",
+      "board_check.py": "9ee9ddf019c387899e1233bf44559f98566a4ae2f1ffdc00091ac61c16c0737e",
+      "mute-sram.fs": "69c13d53a7cc3af8aa0299a67ca7d2a79cc550e92fabe94c3b317a622c5483ad",
+      "README.md": "fe43f7204568760b04ebe044aca01a121d0e72308b82bd0972afd7175848b44d"
+    }
+  },
+  "backup_zip_sha256": "b8c0a94245c4c9be5498fe9f837e10a9b9afdd6188b0af2781be75d87e997a9b",
+  "commands": {
+    "usb-ports": {
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "Get-PnpDevice -PresentOnly | Where-Object { $_.InstanceId -like 'USB*' -or $_.Class -eq 'Ports' } | Select-Object Status,Class,FriendlyName,InstanceId | ConvertTo-Json -Depth 3"
+      ],
+      "returncode": 0,
+      "log_sha256": "00ad182ec0352a353e213681365ebf5d9b5c99d8963153590d94132794003dfb"
+    },
+    "serial-ports": {
+      "command": [
+        "C:/Program Files/python/python.exe",
+        "-m",
+        "serial.tools.list_ports",
+        "-v"
+      ],
+      "returncode": 0,
+      "log_sha256": "9a1120a07c05d7fd3f1aaf7765333cee4033ff5c4814247ecf0cf8b84c460a51"
+    },
+    "programmer-help": {
+      "command": [
+        "D:/FPGA-Project/Gowin/Gowin_V1.9.11.03_Education/Gowin_V1.9.11.03_Education_x64/Programmer/bin/programmer_cli.exe",
+        "--help"
+      ],
+      "returncode": 0,
+      "log_sha256": "e1ad78c517ba244c57e539660a6c9e8f8f98c0bbe24ac5e603e3f530c2d7bd60"
+    },
+    "cables": {
+      "command": [
+        "D:/FPGA-Project/Gowin/Gowin_V1.9.11.03_Education/Gowin_V1.9.11.03_Education_x64/Programmer/bin/programmer_cli.exe",
+        "--scan-cables"
+      ],
+      "returncode": 48,
+      "log_sha256": "db586e109c3d243d2809c0a2a6ce14c7635e7bca3110403039cbfeeb30182664"
+    }
+  },
+  "serial_opened": false,
+  "fpga_programmed": false,
+  "flash_read_or_written": false
+}

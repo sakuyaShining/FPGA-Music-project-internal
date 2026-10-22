@@ -1,0 +1,350 @@
+{
+  "status": "PASS declared-envelope stage83 static audit and bound functional bench; experimental use only",
+  "selected": {
+    "nominal": {
+      "slack_ns": {
+        "Setup": 6.105,
+        "Hold": 0.002,
+        "Recovery": 31.718,
+        "Removal": 2.68
+      },
+      "worst_paths": {
+        "Setup": [
+          "1",
+          "6.105",
+          "ram/write_data_14_s0/Q",
+          "IO_sdram_dq_30_iobuf/IO",
+          "core_clk:[R]",
+          "sdram_forward:[R]",
+          "18.518",
+          "2.271",
+          "6.642"
+        ],
+        "Hold": [
+          "1",
+          "0.002",
+          "stream/arbiter/play_out_data_2_s0/Q",
+          "stream/buffers/playback/mem_mem_0_0_s/DI[2]",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "0.000",
+          "0.000",
+          "0.451"
+        ],
+        "Recovery": [
+          "1",
+          "31.718",
+          "reset_release_1_s0/Q",
+          "serial/biti_0_s3/CLEAR",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "37.037",
+          "0.000",
+          "4.784"
+        ],
+        "Removal": [
+          "1",
+          "2.680",
+          "reset_release_1_s0/Q",
+          "serial/biti_0_s3/CLEAR",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "0.000",
+          "0.000",
+          "2.891"
+        ]
+      },
+      "summary": [
+        [
+          "Numbers of Paths Analyzed",
+          "8374"
+        ],
+        [
+          "Numbers of Endpoints Analyzed",
+          "4181"
+        ],
+        [
+          "Numbers of Falling Endpoints",
+          "0"
+        ],
+        [
+          "Numbers of Setup Violated Endpoints",
+          "0"
+        ],
+        [
+          "Numbers of Hold Violated Endpoints",
+          "0"
+        ]
+      ],
+      "resource": {
+        "Logic": 2493,
+        "Register": 1394,
+        "I/O Port": 13
+      },
+      "bitstream_sha256": "72796796c61e2ccfd503b39ad2dc5922d0d883281851d53593c2387279cf21cf",
+      "sip_ports": {
+        "O_sdram_clk": "p73/2",
+        "O_sdram_cke": "p18/7",
+        "O_sdram_cs_n": "p22/7",
+        "O_sdram_ras_n": "p21/7",
+        "O_sdram_cas_n": "p20/7",
+        "O_sdram_wen_n": "p19/7",
+        "O_sdram_addr[0]": "p67/2",
+        "O_sdram_addr[1]": "p66/2",
+        "O_sdram_addr[2]": "p65/2",
+        "O_sdram_addr[3]": "p64/2",
+        "O_sdram_addr[4]": "p28/7",
+        "O_sdram_addr[5]": "p27/7",
+        "O_sdram_addr[6]": "p26/7",
+        "O_sdram_addr[7]": "p25/7",
+        "O_sdram_addr[8]": "p24/7",
+        "O_sdram_addr[9]": "p23/7",
+        "O_sdram_addr[10]": "p68/2",
+        "O_sdram_ba[0]": "p69/2",
+        "O_sdram_ba[1]": "p70/2",
+        "O_sdram_dqm[0]": "p14/7",
+        "O_sdram_dqm[1]": "p76/2",
+        "O_sdram_dqm[2]": "p29/7",
+        "O_sdram_dqm[3]": "p61/2",
+        "IO_sdram_dq[0]": "p1/7",
+        "IO_sdram_dq[1]": "p2/7",
+        "IO_sdram_dq[2]": "p5/7",
+        "IO_sdram_dq[3]": "p6/7",
+        "IO_sdram_dq[4]": "p7/7",
+        "IO_sdram_dq[5]": "p8/7",
+        "IO_sdram_dq[6]": "p11/7",
+        "IO_sdram_dq[7]": "p12/7",
+        "IO_sdram_dq[8]": "p78/2",
+        "IO_sdram_dq[9]": "p79/2",
+        "IO_sdram_dq[10]": "p82/2",
+        "IO_sdram_dq[11]": "p83/2",
+        "IO_sdram_dq[12]": "p84/2",
+        "IO_sdram_dq[13]": "p85/2",
+        "IO_sdram_dq[14]": "p88/2",
+        "IO_sdram_dq[15]": "p89/2",
+        "IO_sdram_dq[16]": "p42/6",
+        "IO_sdram_dq[17]": "p41/6",
+        "IO_sdram_dq[18]": "p38/6",
+        "IO_sdram_dq[19]": "p37/6",
+        "IO_sdram_dq[20]": "p36/6",
+        "IO_sdram_dq[21]": "p35/6",
+        "IO_sdram_dq[22]": "p32/7",
+        "IO_sdram_dq[23]": "p31/7",
+        "IO_sdram_dq[24]": "p59/2",
+        "IO_sdram_dq[25]": "p58/2",
+        "IO_sdram_dq[26]": "p55/2",
+        "IO_sdram_dq[27]": "p54/2",
+        "IO_sdram_dq[28]": "p53/2",
+        "IO_sdram_dq[29]": "p52/2",
+        "IO_sdram_dq[30]": "p49/3",
+        "IO_sdram_dq[31]": "p48/3"
+      },
+      "external_pins": {
+        "clk": 4,
+        "reset_button": 87,
+        "uart_tx_pin": 69,
+        "led[0]": 15,
+        "led[1]": 16,
+        "led[2]": 17,
+        "led[3]": 18,
+        "led[4]": 19,
+        "led[5]": 20,
+        "dac_din": 54,
+        "dac_ws": 55,
+        "dac_bck": 56,
+        "pa_en": 51
+      },
+      "warnings": [
+        "WARN  (EX3791) : Expression size 3 truncated to fit in target size 2(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\build_nominal\\pcm_sdram_arbiter.v\":53)",
+        "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+      ]
+    },
+    "stress": {
+      "slack_ns": {
+        "Setup": 4.563,
+        "Hold": 0.037,
+        "Recovery": 31.218,
+        "Removal": 2.38
+      },
+      "worst_paths": {
+        "Setup": [
+          "1",
+          "4.563",
+          "IO_sdram_dq_31_iobuf/IO",
+          "ram/rsp_data_15_s0/D",
+          "sdram_forward:[R]",
+          "core_clk:[R]",
+          "18.518",
+          "-2.271",
+          "15.192"
+        ],
+        "Hold": [
+          "1",
+          "0.037",
+          "serial/cnt_1_s1/Q",
+          "serial/cnt_1_s1/D",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "0.000",
+          "0.000",
+          "0.548"
+        ],
+        "Recovery": [
+          "1",
+          "31.218",
+          "reset_release_1_s0/Q",
+          "serial/biti_0_s3/CLEAR",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "37.037",
+          "0.000",
+          "4.784"
+        ],
+        "Removal": [
+          "1",
+          "2.380",
+          "reset_release_1_s0/Q",
+          "serial/biti_0_s3/CLEAR",
+          "core_clk:[R]",
+          "core_clk:[R]",
+          "0.000",
+          "0.000",
+          "2.891"
+        ]
+      },
+      "summary": [
+        [
+          "Numbers of Paths Analyzed",
+          "8374"
+        ],
+        [
+          "Numbers of Endpoints Analyzed",
+          "4181"
+        ],
+        [
+          "Numbers of Falling Endpoints",
+          "0"
+        ],
+        [
+          "Numbers of Setup Violated Endpoints",
+          "0"
+        ],
+        [
+          "Numbers of Hold Violated Endpoints",
+          "0"
+        ]
+      ],
+      "resource": {
+        "Logic": 2493,
+        "Register": 1394,
+        "I/O Port": 13
+      },
+      "bitstream_sha256": "f319bad2d4b2e9248b38c7cf8d03207647d3f10fb437c34e57001188028d743d",
+      "sip_ports": {
+        "O_sdram_clk": "p73/2",
+        "O_sdram_cke": "p18/7",
+        "O_sdram_cs_n": "p22/7",
+        "O_sdram_ras_n": "p21/7",
+        "O_sdram_cas_n": "p20/7",
+        "O_sdram_wen_n": "p19/7",
+        "O_sdram_addr[0]": "p67/2",
+        "O_sdram_addr[1]": "p66/2",
+        "O_sdram_addr[2]": "p65/2",
+        "O_sdram_addr[3]": "p64/2",
+        "O_sdram_addr[4]": "p28/7",
+        "O_sdram_addr[5]": "p27/7",
+        "O_sdram_addr[6]": "p26/7",
+        "O_sdram_addr[7]": "p25/7",
+        "O_sdram_addr[8]": "p24/7",
+        "O_sdram_addr[9]": "p23/7",
+        "O_sdram_addr[10]": "p68/2",
+        "O_sdram_ba[0]": "p69/2",
+        "O_sdram_ba[1]": "p70/2",
+        "O_sdram_dqm[0]": "p14/7",
+        "O_sdram_dqm[1]": "p76/2",
+        "O_sdram_dqm[2]": "p29/7",
+        "O_sdram_dqm[3]": "p61/2",
+        "IO_sdram_dq[0]": "p1/7",
+        "IO_sdram_dq[1]": "p2/7",
+        "IO_sdram_dq[2]": "p5/7",
+        "IO_sdram_dq[3]": "p6/7",
+        "IO_sdram_dq[4]": "p7/7",
+        "IO_sdram_dq[5]": "p8/7",
+        "IO_sdram_dq[6]": "p11/7",
+        "IO_sdram_dq[7]": "p12/7",
+        "IO_sdram_dq[8]": "p78/2",
+        "IO_sdram_dq[9]": "p79/2",
+        "IO_sdram_dq[10]": "p82/2",
+        "IO_sdram_dq[11]": "p83/2",
+        "IO_sdram_dq[12]": "p84/2",
+        "IO_sdram_dq[13]": "p85/2",
+        "IO_sdram_dq[14]": "p88/2",
+        "IO_sdram_dq[15]": "p89/2",
+        "IO_sdram_dq[16]": "p42/6",
+        "IO_sdram_dq[17]": "p41/6",
+        "IO_sdram_dq[18]": "p38/6",
+        "IO_sdram_dq[19]": "p37/6",
+        "IO_sdram_dq[20]": "p36/6",
+        "IO_sdram_dq[21]": "p35/6",
+        "IO_sdram_dq[22]": "p32/7",
+        "IO_sdram_dq[23]": "p31/7",
+        "IO_sdram_dq[24]": "p59/2",
+        "IO_sdram_dq[25]": "p58/2",
+        "IO_sdram_dq[26]": "p55/2",
+        "IO_sdram_dq[27]": "p54/2",
+        "IO_sdram_dq[28]": "p53/2",
+        "IO_sdram_dq[29]": "p52/2",
+        "IO_sdram_dq[30]": "p49/3",
+        "IO_sdram_dq[31]": "p48/3"
+      },
+      "external_pins": {
+        "clk": 4,
+        "reset_button": 87,
+        "uart_tx_pin": 69,
+        "led[0]": 15,
+        "led[1]": 16,
+        "led[2]": 17,
+        "led[3]": 18,
+        "led[4]": 19,
+        "led[5]": 20,
+        "dac_din": 54,
+        "dac_ws": 55,
+        "dac_bck": 56,
+        "pa_en": 51
+      },
+      "warnings": [
+        "WARN  (EX3791) : Expression size 3 truncated to fit in target size 2(\"C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\build_stress\\pcm_sdram_arbiter.v\":53)",
+        "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+      ]
+    }
+  },
+  "bench_gate": true,
+  "production_qualified": false,
+  "bench_image": "build_stress/impl/pnr/board.fs",
+  "selection_reason": "nominal hold margin only0.002ns; use independently routed stricter I/O and uncertainty envelope",
+  "limitations": [
+    "exact embedded die and package delays unbound",
+    "remaining raw PLL input PR1014 warning",
+    "worst25 paths per class, not exhaustive per-bit certificate",
+    "isolated synthetic source, not full audio/music PnR",
+    "no analog edge or temperature/voltage qualification"
+  ],
+  "inputs": {
+    "audit_timing.py": "e6b9e96558675366925f4ca9e45a0b4419f6e6d0c836e62fe5546ceaadf68c05",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79",
+    "upstream.json": "abca1a9a740e25d641ded48243c873fd64b9a001c18d7ed175d4c264417a1d10",
+    "rtl/pcm_sdram_arbiter.v": "04b4eca1cbc600af5f643ef35b609ac58aecaba07977034d4d8d1b25410dbbbb",
+    "rtl/pcm_sdram_stream.v": "c347777b2e3eddd527a264f9717dc15f8a1883683287b18e0c29052df8e8df40",
+    "rtl/pcm_storage_buffers.v": "b19f0c94048e678a2073e69170f6301f2c83f92180325edb37654f23c3470e93",
+    "rtl/pcm_sync_fifo.v": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609",
+    "rtl/sdram_board_top.v": "ec9962e123db3fd70fd86450dd902b7e71c901da8240d717a7af849f427fb280",
+    "rtl/sdram_word_controller.v": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+    "rtl/uart_tx.v": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f",
+    "constraints/sdram_board.cst": "261854fa9806dad8a10aa11adf01b2fe57a91dc14efdb7a82f0a3e056597b32d",
+    "constraints/sdram_board.sdc": "7adc6725fb0d18ddfe3bb5e952df17d9735d2af9478747b2be744a2505b97325",
+    "reference/stress.sdc": "83f8fc91a87cc8a02331edbea0aef812341094c0edd91ccc8d882bbd4169fc46",
+    "evidence/board-model.json": "e1c65bfcdd52f710c1847e40bf287af3ecfae5b8986f22aed6d34817f4063443",
+    "build_nominal/run.json": "dae7d27b4785ca6b0a17ca31b6344dd01486dcf2f2b510e9479559ae5d5672d0",
+    "build_stress/run.json": "760fd54aac51b72e60f5eb0a35f09f9b3dfbc6d6a0fd3ba9524fef8d432c07ed"
+  }
+}

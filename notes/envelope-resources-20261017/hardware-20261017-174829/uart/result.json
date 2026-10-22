@@ -1,0 +1,6977 @@
+{
+  "status": "PASS bounded device configuration/PCM checks; no analog listening verdict",
+  "hardware_tested": true,
+  "flash_read_or_written": false,
+  "bitstream_sha256": "8c2d52e59b13b8d343b54a9d602d265154dc6cc9640320df10835f2e1b1c253c",
+  "port": "COM6",
+  "port_hwid": "USB VID:PID=0403:6010 SER=2025030317B",
+  "script_sha256": "64940fc4c1f04fc40d9c913be68ec930e3a4ec52610bc6851e550884e65efe1f",
+  "captures": {
+    "initial-silence": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 0.0,
+      "peak": 0,
+      "nonzero": 0,
+      "saturated": 0,
+      "peak_hz": 3.2186508178710938,
+      "pcm_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0"
+    },
+    "fast-onset": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 46296.60159774149,
+      "peak": 65536,
+      "nonzero": 2029,
+      "saturated": 0,
+      "peak_hz": 439.3458366394043,
+      "pcm_sha256": "56a2861cd26875da2e346c6699d361936f80233e46bb8225eb4f6861a7272918"
+    },
+    "fast-released": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 0.0,
+      "peak": 0,
+      "nonzero": 0,
+      "saturated": 0,
+      "peak_hz": 3.2186508178710938,
+      "pcm_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0"
+    },
+    "slow-onset": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 5195.984326862428,
+      "peak": 12320,
+      "nonzero": 2005,
+      "saturated": 0,
+      "peak_hz": 439.3458366394043,
+      "pcm_sha256": "35850efefd4436eac23fb9b220a6343503dad0cd6a4678014fce25ab05e58ee9"
+    },
+    "slow-released": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 0.0,
+      "peak": 0,
+      "nonzero": 0,
+      "saturated": 0,
+      "peak_hz": 3.2186508178710938,
+      "pcm_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0"
+    },
+    "strike-onset": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 19870.59523517099,
+      "peak": 63648,
+      "nonzero": 2033,
+      "saturated": 0,
+      "peak_hz": 439.3458366394043,
+      "pcm_sha256": "0dbfaf9a966e121502e839faada7ede800d97cc7fa8094a07e9594a44917c899"
+    },
+    "strike-held-silence": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 0.0,
+      "peak": 0,
+      "nonzero": 0,
+      "saturated": 0,
+      "peak_hz": 3.2186508178710938,
+      "pcm_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0"
+    },
+    "two-voices": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 63775.07729317151,
+      "peak": 131008,
+      "nonzero": 2047,
+      "saturated": 0,
+      "peak_hz": 439.3458366394043,
+      "pcm_sha256": "c5dbb38e75ee2922456868b8d6b587b7458927d7aa905caf6591f32e88dd7d1b"
+    },
+    "final-silence": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 0.0,
+      "peak": 0,
+      "nonzero": 0,
+      "saturated": 0,
+      "peak_hz": 3.2186508178710938,
+      "pcm_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0"
+    },
+    "cleanup-silence": {
+      "samples": 2048,
+      "sample_rate": 52734.375,
+      "rms": 0.0,
+      "peak": 0,
+      "nonzero": 0,
+      "saturated": 0,
+      "peak_hz": 3.2186508178710938,
+      "pcm_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0"
+    }
+  },
+  "applications": {
+    "fast": {
+      "status": "VOLATILE_CONFIG_CONFIRMED",
+      "source": "真实串口",
+      "requested": {
+        "schema_version": 1,
+        "name": "fast",
+        "preset": 0,
+        "spectrum_mode": "replace",
+        "spectrum": [
+          128,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "articulation": {
+          "mode": "sustain",
+          "attack_ms": 0,
+          "decay_ms": 0,
+          "sustain_level": 255,
+          "release_ms": 80,
+          "hybrid_parts": [
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike"
+          ]
+        },
+        "vibrato": {
+          "enabled": false,
+          "rate_millihz": 5500,
+          "depth_cents": 0
+        },
+        "effects": {
+          "dry_enabled": true,
+          "delay": {
+            "enabled": false,
+            "time_ms": 30,
+            "feedback_q8": 96
+          },
+          "chorus": {
+            "enabled": false,
+            "rate_millihz": 500,
+            "depth_ms": 1
+          },
+          "reverb": {
+            "enabled": false,
+            "feedback_q8": 128,
+            "damping": 3
+          }
+        }
+      },
+      "preset_only": false,
+      "writes": [
+        [
+          224,
+          165,
+          "volatile instrument upload"
+        ],
+        [
+          225,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          226,
+          177,
+          "volatile instrument upload"
+        ],
+        [
+          227,
+          36,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          128,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          2,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          3,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          4,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          5,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          6,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          7,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          9,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          10,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          12,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          13,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          14,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          15,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          16,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          229,
+          175,
+          "volatile instrument upload"
+        ],
+        [
+          230,
+          19,
+          "volatile instrument upload"
+        ],
+        [
+          231,
+          90,
+          "volatile instrument upload"
+        ],
+        [
+          224,
+          195,
+          "volatile instrument upload"
+        ],
+        [
+          55,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          64,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          0,
+          8,
+          "volatile instrument upload"
+        ]
+      ],
+      "readback": {
+        "d0": 117,
+        "d1": 1,
+        "d2": 4,
+        "d3": 16,
+        "d4": 11,
+        "d5": 7,
+        "d6": 0,
+        "e9": 1,
+        "de": 1,
+        "df": 0,
+        "d8": 177,
+        "d9": 36,
+        "da": 0,
+        "db": 176,
+        "d7": 1,
+        "dc": 175,
+        "dd": 19,
+        "00": 8,
+        "37": 0,
+        "40": 1,
+        "CTRL": 8,
+        "PRESET": 0,
+        "FX_CTRL": 1
+      },
+      "sent_complete": true,
+      "audio_verified": false,
+      "persisted": false,
+      "scope": "spectrum and articulation only",
+      "commit_state": "confirmed",
+      "quantization": {
+        "status": "compiled only; not sent or persisted",
+        "format": "slot-v1/88-bit",
+        "sample_rate_nominal": 52734.375,
+        "attack": {
+          "inc": 32768,
+          "shift": 0,
+          "nominal_ms": 0.018962962962962963,
+          "phase_jitter_bound_ms": 0.0,
+          "requested_ms": 0
+        },
+        "release_from_full_to_cutoff100": {
+          "m": 3,
+          "k": 9,
+          "shift": 2,
+          "nominal_ms": 80.63051851851851,
+          "phase_jitter_bound_ms": 0.05688888888888889,
+          "requested_ms": 80
+        },
+        "partials": [
+          {
+            "part": 0,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 1,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 2,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 3,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 4,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 5,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 6,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 7,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 8,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 9,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 10,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 11,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 12,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 13,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 14,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 15,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          }
+        ],
+        "unsupported_enabled_fields": [],
+        "remaining": "compiler only; transport is separate; independent vibrato/effects and persistence not implemented"
+      },
+      "slot": 0,
+      "sequence": 9393,
+      "crc16": 5039,
+      "payload_bytes": 176,
+      "revision_before": 0,
+      "ack": {
+        "state": 3,
+        "result": 1,
+        "sequence": 9393,
+        "slot": 0,
+        "count": 176,
+        "crc16": 5039,
+        "revision": 1
+      },
+      "selection_confirmed": true
+    },
+    "slow": {
+      "status": "VOLATILE_CONFIG_CONFIRMED",
+      "source": "真实串口",
+      "requested": {
+        "schema_version": 1,
+        "name": "slow",
+        "preset": 0,
+        "spectrum_mode": "replace",
+        "spectrum": [
+          128,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "articulation": {
+          "mode": "sustain",
+          "attack_ms": 200,
+          "decay_ms": 0,
+          "sustain_level": 255,
+          "release_ms": 200,
+          "hybrid_parts": [
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike"
+          ]
+        },
+        "vibrato": {
+          "enabled": false,
+          "rate_millihz": 5500,
+          "depth_cents": 0
+        },
+        "effects": {
+          "dry_enabled": true,
+          "delay": {
+            "enabled": false,
+            "time_ms": 30,
+            "feedback_q8": 96
+          },
+          "chorus": {
+            "enabled": false,
+            "rate_millihz": 500,
+            "depth_ms": 1
+          },
+          "reverb": {
+            "enabled": false,
+            "feedback_q8": 128,
+            "damping": 3
+          }
+        }
+      },
+      "preset_only": false,
+      "writes": [
+        [
+          224,
+          165,
+          "volatile instrument upload"
+        ],
+        [
+          225,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          226,
+          49,
+          "volatile instrument upload"
+        ],
+        [
+          227,
+          7,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          128,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          2,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          3,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          4,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          5,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          6,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          7,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          9,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          10,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          12,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          13,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          14,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          15,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          16,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          229,
+          12,
+          "volatile instrument upload"
+        ],
+        [
+          230,
+          88,
+          "volatile instrument upload"
+        ],
+        [
+          231,
+          90,
+          "volatile instrument upload"
+        ],
+        [
+          224,
+          195,
+          "volatile instrument upload"
+        ],
+        [
+          55,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          64,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          0,
+          8,
+          "volatile instrument upload"
+        ]
+      ],
+      "readback": {
+        "d0": 117,
+        "d1": 1,
+        "d2": 4,
+        "d3": 16,
+        "d4": 11,
+        "d5": 7,
+        "d6": 0,
+        "e9": 1,
+        "de": 2,
+        "df": 0,
+        "d8": 49,
+        "d9": 7,
+        "da": 0,
+        "db": 176,
+        "d7": 1,
+        "dc": 12,
+        "dd": 88,
+        "00": 8,
+        "37": 0,
+        "40": 1,
+        "CTRL": 8,
+        "PRESET": 0,
+        "FX_CTRL": 1
+      },
+      "sent_complete": true,
+      "audio_verified": false,
+      "persisted": false,
+      "scope": "spectrum and articulation only",
+      "commit_state": "confirmed",
+      "quantization": {
+        "status": "compiled only; not sent or persisted",
+        "format": "slot-v1/88-bit",
+        "sample_rate_nominal": 52734.375,
+        "attack": {
+          "inc": 199,
+          "shift": 6,
+          "nominal_ms": 200.2488888888889,
+          "phase_jitter_bound_ms": 1.1946666666666668,
+          "requested_ms": 200
+        },
+        "release_from_full_to_cutoff100": {
+          "m": 1,
+          "k": 2,
+          "shift": 9,
+          "nominal_ms": 203.88977777777777,
+          "phase_jitter_bound_ms": 9.690074074074074,
+          "requested_ms": 200
+        },
+        "partials": [
+          {
+            "part": 0,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 1,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 2,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 3,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 4,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 5,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 6,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 7,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 8,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 9,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 10,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 11,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 12,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 13,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 14,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 15,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          }
+        ],
+        "unsupported_enabled_fields": [],
+        "remaining": "compiler only; transport is separate; independent vibrato/effects and persistence not implemented"
+      },
+      "slot": 0,
+      "sequence": 1841,
+      "crc16": 22540,
+      "payload_bytes": 176,
+      "revision_before": 1,
+      "ack": {
+        "state": 3,
+        "result": 1,
+        "sequence": 1841,
+        "slot": 0,
+        "count": 176,
+        "crc16": 22540,
+        "revision": 2
+      },
+      "selection_confirmed": true
+    },
+    "strike": {
+      "status": "VOLATILE_CONFIG_CONFIRMED",
+      "source": "真实串口",
+      "requested": {
+        "schema_version": 1,
+        "name": "strike",
+        "preset": 0,
+        "spectrum_mode": "replace",
+        "spectrum": [
+          128,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "articulation": {
+          "mode": "strike",
+          "attack_ms": 2,
+          "decay_ms": 80,
+          "sustain_level": 0,
+          "release_ms": 50,
+          "hybrid_parts": [
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike"
+          ]
+        },
+        "vibrato": {
+          "enabled": false,
+          "rate_millihz": 5500,
+          "depth_cents": 0
+        },
+        "effects": {
+          "dry_enabled": true,
+          "delay": {
+            "enabled": false,
+            "time_ms": 30,
+            "feedback_q8": 96
+          },
+          "chorus": {
+            "enabled": false,
+            "rate_millihz": 500,
+            "depth_ms": 1
+          },
+          "reverb": {
+            "enabled": false,
+            "feedback_q8": 128,
+            "damping": 3
+          }
+        }
+      },
+      "preset_only": false,
+      "writes": [
+        [
+          224,
+          165,
+          "volatile instrument upload"
+        ],
+        [
+          225,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          226,
+          16,
+          "volatile instrument upload"
+        ],
+        [
+          227,
+          214,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          128,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          2,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          3,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          4,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          5,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          6,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          7,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          9,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          10,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          12,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          13,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          14,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          15,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          106,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          16,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          139,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          156,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          229,
+          215,
+          "volatile instrument upload"
+        ],
+        [
+          230,
+          171,
+          "volatile instrument upload"
+        ],
+        [
+          231,
+          90,
+          "volatile instrument upload"
+        ],
+        [
+          224,
+          195,
+          "volatile instrument upload"
+        ],
+        [
+          55,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          64,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          0,
+          8,
+          "volatile instrument upload"
+        ]
+      ],
+      "readback": {
+        "d0": 117,
+        "d1": 1,
+        "d2": 4,
+        "d3": 16,
+        "d4": 11,
+        "d5": 7,
+        "d6": 0,
+        "e9": 1,
+        "de": 3,
+        "df": 0,
+        "d8": 16,
+        "d9": 214,
+        "da": 0,
+        "db": 176,
+        "d7": 1,
+        "dc": 215,
+        "dd": 171,
+        "00": 8,
+        "37": 0,
+        "40": 1,
+        "CTRL": 8,
+        "PRESET": 0,
+        "FX_CTRL": 1
+      },
+      "sent_complete": true,
+      "audio_verified": false,
+      "persisted": false,
+      "scope": "spectrum and articulation only",
+      "commit_state": "confirmed",
+      "quantization": {
+        "status": "compiled only; not sent or persisted",
+        "format": "slot-v1/88-bit",
+        "sample_rate_nominal": 52734.375,
+        "attack": {
+          "inc": 313,
+          "shift": 0,
+          "nominal_ms": 1.991111111111111,
+          "phase_jitter_bound_ms": 0.0,
+          "requested_ms": 2
+        },
+        "release_from_full_to_cutoff100": {
+          "m": 1,
+          "k": 2,
+          "shift": 7,
+          "nominal_ms": 50.97244444444444,
+          "phase_jitter_bound_ms": 2.4082962962962964,
+          "requested_ms": 50
+        },
+        "partials": [
+          {
+            "part": 0,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 1,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 2,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 3,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 4,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 5,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 6,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 7,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 8,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 9,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 10,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 11,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 12,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 13,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 14,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          },
+          {
+            "part": 15,
+            "mode": "strike",
+            "decay": {
+              "m": 3,
+              "k": 10,
+              "shift": 1,
+              "nominal_ms": 79.34103703703704,
+              "phase_jitter_bound_ms": 0.018962962962962963,
+              "requested_ms": 80
+            }
+          }
+        ],
+        "unsupported_enabled_fields": [],
+        "remaining": "compiler only; transport is separate; independent vibrato/effects and persistence not implemented"
+      },
+      "slot": 0,
+      "sequence": 54800,
+      "crc16": 43991,
+      "payload_bytes": 176,
+      "revision_before": 2,
+      "ack": {
+        "state": 3,
+        "result": 1,
+        "sequence": 54800,
+        "slot": 0,
+        "count": 176,
+        "crc16": 43991,
+        "revision": 3
+      },
+      "selection_confirmed": true
+    },
+    "duet-fast": {
+      "status": "VOLATILE_CONFIG_CONFIRMED",
+      "source": "真实串口",
+      "requested": {
+        "schema_version": 1,
+        "name": "duet-fast",
+        "preset": 0,
+        "spectrum_mode": "replace",
+        "spectrum": [
+          128,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "articulation": {
+          "mode": "sustain",
+          "attack_ms": 0,
+          "decay_ms": 0,
+          "sustain_level": 255,
+          "release_ms": 80,
+          "hybrid_parts": [
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike"
+          ]
+        },
+        "vibrato": {
+          "enabled": false,
+          "rate_millihz": 5500,
+          "depth_cents": 0
+        },
+        "effects": {
+          "dry_enabled": true,
+          "delay": {
+            "enabled": false,
+            "time_ms": 30,
+            "feedback_q8": 96
+          },
+          "chorus": {
+            "enabled": false,
+            "rate_millihz": 500,
+            "depth_ms": 1
+          },
+          "reverb": {
+            "enabled": false,
+            "feedback_q8": 128,
+            "damping": 3
+          }
+        }
+      },
+      "preset_only": false,
+      "writes": [
+        [
+          224,
+          165,
+          "volatile instrument upload"
+        ],
+        [
+          225,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          226,
+          172,
+          "volatile instrument upload"
+        ],
+        [
+          227,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          128,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          2,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          3,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          4,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          5,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          6,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          7,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          9,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          10,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          12,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          13,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          14,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          15,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          16,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          105,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          229,
+          171,
+          "volatile instrument upload"
+        ],
+        [
+          230,
+          47,
+          "volatile instrument upload"
+        ],
+        [
+          231,
+          90,
+          "volatile instrument upload"
+        ],
+        [
+          224,
+          195,
+          "volatile instrument upload"
+        ],
+        [
+          55,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          64,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          0,
+          8,
+          "volatile instrument upload"
+        ]
+      ],
+      "readback": {
+        "d0": 117,
+        "d1": 1,
+        "d2": 4,
+        "d3": 16,
+        "d4": 11,
+        "d5": 7,
+        "d6": 0,
+        "e9": 1,
+        "de": 4,
+        "df": 0,
+        "d8": 172,
+        "d9": 1,
+        "da": 0,
+        "db": 176,
+        "d7": 1,
+        "dc": 171,
+        "dd": 47,
+        "00": 8,
+        "37": 0,
+        "40": 1,
+        "CTRL": 8,
+        "PRESET": 0,
+        "FX_CTRL": 1
+      },
+      "sent_complete": true,
+      "audio_verified": false,
+      "persisted": false,
+      "scope": "spectrum and articulation only",
+      "commit_state": "confirmed",
+      "quantization": {
+        "status": "compiled only; not sent or persisted",
+        "format": "slot-v1/88-bit",
+        "sample_rate_nominal": 52734.375,
+        "attack": {
+          "inc": 32768,
+          "shift": 0,
+          "nominal_ms": 0.018962962962962963,
+          "phase_jitter_bound_ms": 0.0,
+          "requested_ms": 0
+        },
+        "release_from_full_to_cutoff100": {
+          "m": 3,
+          "k": 9,
+          "shift": 2,
+          "nominal_ms": 80.63051851851851,
+          "phase_jitter_bound_ms": 0.05688888888888889,
+          "requested_ms": 80
+        },
+        "partials": [
+          {
+            "part": 0,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 1,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 2,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 3,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 4,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 5,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 6,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 7,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 8,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 9,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 10,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 11,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 12,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 13,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 14,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 15,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          }
+        ],
+        "unsupported_enabled_fields": [],
+        "remaining": "compiler only; transport is separate; independent vibrato/effects and persistence not implemented"
+      },
+      "slot": 0,
+      "sequence": 428,
+      "crc16": 12203,
+      "payload_bytes": 176,
+      "revision_before": 3,
+      "ack": {
+        "state": 3,
+        "result": 1,
+        "sequence": 428,
+        "slot": 0,
+        "count": 176,
+        "crc16": 12203,
+        "revision": 4
+      },
+      "selection_confirmed": true
+    },
+    "duet-slow": {
+      "status": "VOLATILE_CONFIG_CONFIRMED",
+      "source": "真实串口",
+      "requested": {
+        "schema_version": 1,
+        "name": "duet-slow",
+        "preset": 1,
+        "spectrum_mode": "replace",
+        "spectrum": [
+          128,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "articulation": {
+          "mode": "sustain",
+          "attack_ms": 200,
+          "decay_ms": 0,
+          "sustain_level": 255,
+          "release_ms": 200,
+          "hybrid_parts": [
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "sustain",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike",
+            "strike"
+          ]
+        },
+        "vibrato": {
+          "enabled": false,
+          "rate_millihz": 5500,
+          "depth_cents": 0
+        },
+        "effects": {
+          "dry_enabled": true,
+          "delay": {
+            "enabled": false,
+            "time_ms": 30,
+            "feedback_q8": 96
+          },
+          "chorus": {
+            "enabled": false,
+            "rate_millihz": 500,
+            "depth_ms": 1
+          },
+          "reverb": {
+            "enabled": false,
+            "feedback_q8": 128,
+            "damping": 3
+          }
+        }
+      },
+      "preset_only": false,
+      "writes": [
+        [
+          224,
+          165,
+          "volatile instrument upload"
+        ],
+        [
+          225,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          226,
+          80,
+          "volatile instrument upload"
+        ],
+        [
+          227,
+          95,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          128,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          2,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          3,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          4,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          5,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          6,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          7,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          8,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          9,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          10,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          12,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          13,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          14,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          15,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          32,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          64,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          16,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          162,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          132,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          99,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          0,
+          "volatile instrument upload"
+        ],
+        [
+          228,
+          11,
+          "volatile instrument upload"
+        ],
+        [
+          229,
+          84,
+          "volatile instrument upload"
+        ],
+        [
+          230,
+          146,
+          "volatile instrument upload"
+        ],
+        [
+          231,
+          90,
+          "volatile instrument upload"
+        ],
+        [
+          224,
+          195,
+          "volatile instrument upload"
+        ],
+        [
+          55,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          64,
+          1,
+          "volatile instrument upload"
+        ],
+        [
+          0,
+          8,
+          "volatile instrument upload"
+        ]
+      ],
+      "readback": {
+        "d0": 117,
+        "d1": 1,
+        "d2": 4,
+        "d3": 16,
+        "d4": 11,
+        "d5": 7,
+        "d6": 0,
+        "e9": 1,
+        "de": 5,
+        "df": 0,
+        "d8": 80,
+        "d9": 95,
+        "da": 1,
+        "db": 176,
+        "d7": 1,
+        "dc": 84,
+        "dd": 146,
+        "00": 8,
+        "37": 1,
+        "40": 1,
+        "CTRL": 8,
+        "PRESET": 1,
+        "FX_CTRL": 1
+      },
+      "sent_complete": true,
+      "audio_verified": false,
+      "persisted": false,
+      "scope": "spectrum and articulation only",
+      "commit_state": "confirmed",
+      "quantization": {
+        "status": "compiled only; not sent or persisted",
+        "format": "slot-v1/88-bit",
+        "sample_rate_nominal": 52734.375,
+        "attack": {
+          "inc": 199,
+          "shift": 6,
+          "nominal_ms": 200.2488888888889,
+          "phase_jitter_bound_ms": 1.1946666666666668,
+          "requested_ms": 200
+        },
+        "release_from_full_to_cutoff100": {
+          "m": 1,
+          "k": 2,
+          "shift": 9,
+          "nominal_ms": 203.88977777777777,
+          "phase_jitter_bound_ms": 9.690074074074074,
+          "requested_ms": 200
+        },
+        "partials": [
+          {
+            "part": 0,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 1,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 2,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 3,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 4,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 5,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 6,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 7,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 8,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 9,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 10,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 11,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 12,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 13,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 14,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          },
+          {
+            "part": 15,
+            "mode": "sustain",
+            "decay": {
+              "m": 1,
+              "k": 0,
+              "shift": 0,
+              "nominal_ms": 0.018962962962962963,
+              "phase_jitter_bound_ms": 0.0,
+              "requested_ms": 0
+            }
+          }
+        ],
+        "unsupported_enabled_fields": [],
+        "remaining": "compiler only; transport is separate; independent vibrato/effects and persistence not implemented"
+      },
+      "slot": 1,
+      "sequence": 24400,
+      "crc16": 37460,
+      "payload_bytes": 176,
+      "revision_before": 4,
+      "ack": {
+        "state": 3,
+        "result": 1,
+        "sequence": 24400,
+        "slot": 1,
+        "count": 176,
+        "crc16": 37460,
+        "revision": 5
+      },
+      "selection_confirmed": true
+    }
+  },
+  "identity": {
+    "registers": {
+      "192": 114,
+      "193": 25,
+      "194": 118,
+      "195": 1,
+      "164": 211,
+      "167": 8,
+      "169": 32
+    },
+    "configuration_capability": [
+      117,
+      1,
+      4,
+      16,
+      11,
+      7
+    ]
+  },
+  "before": {
+    "ack": 0,
+    "on": 0,
+    "off": 0,
+    "active": 0,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "fast_snapshot": {
+    "ack": 1,
+    "on": 1,
+    "off": 0,
+    "active": 1,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "slow_snapshot": {
+    "ack": 3,
+    "on": 2,
+    "off": 1,
+    "active": 1,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "attack_rms_ratio": 8.910073373084535,
+  "crc_rejection": {
+    "result": 2,
+    "revision": 2,
+    "sandbox": 3
+  },
+  "unsupported_rejection": {
+    "status": "FAILED",
+    "source": "真实串口",
+    "requested": {
+      "schema_version": 1,
+      "name": "unsupported",
+      "preset": 0,
+      "spectrum_mode": "replace",
+      "spectrum": [
+        128,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "articulation": {
+        "mode": "sustain",
+        "attack_ms": 0,
+        "decay_ms": 0,
+        "sustain_level": 255,
+        "release_ms": 80,
+        "hybrid_parts": [
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike"
+        ]
+      },
+      "vibrato": {
+        "enabled": true,
+        "rate_millihz": 5500,
+        "depth_cents": 0
+      },
+      "effects": {
+        "dry_enabled": true,
+        "delay": {
+          "enabled": false,
+          "time_ms": 30,
+          "feedback_q8": 96
+        },
+        "chorus": {
+          "enabled": false,
+          "rate_millihz": 500,
+          "depth_ms": 1
+        },
+        "reverb": {
+          "enabled": false,
+          "feedback_q8": 128,
+          "damping": 3
+        }
+      }
+    },
+    "preset_only": false,
+    "writes": [],
+    "readback": {},
+    "sent_complete": false,
+    "audio_verified": false,
+    "persisted": false,
+    "scope": "spectrum and articulation only",
+    "commit_state": "not_started",
+    "error": "not applied: unsupported independent vibrato"
+  },
+  "duet_snapshot": {
+    "ack": 8,
+    "on": 5,
+    "off": 3,
+    "active": 3,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "busy_rejection": {
+    "status": "FAILED",
+    "source": "真实串口",
+    "requested": {
+      "schema_version": 1,
+      "name": "busy",
+      "preset": 0,
+      "spectrum_mode": "replace",
+      "spectrum": [
+        128,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "articulation": {
+        "mode": "sustain",
+        "attack_ms": 0,
+        "decay_ms": 0,
+        "sustain_level": 255,
+        "release_ms": 80,
+        "hybrid_parts": [
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "sustain",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike",
+          "strike"
+        ]
+      },
+      "vibrato": {
+        "enabled": false,
+        "rate_millihz": 5500,
+        "depth_cents": 0
+      },
+      "effects": {
+        "dry_enabled": true,
+        "delay": {
+          "enabled": false,
+          "time_ms": 30,
+          "feedback_q8": 96
+        },
+        "chorus": {
+          "enabled": false,
+          "rate_millihz": 500,
+          "depth_ms": 1
+        },
+        "reverb": {
+          "enabled": false,
+          "feedback_q8": 128,
+          "damping": 3
+        }
+      }
+    },
+    "preset_only": false,
+    "writes": [],
+    "readback": {
+      "d0": 117,
+      "d1": 1,
+      "d2": 4,
+      "d3": 16,
+      "d4": 11,
+      "d5": 7,
+      "d6": 0,
+      "e9": 0
+    },
+    "sent_complete": false,
+    "audio_verified": false,
+    "persisted": false,
+    "scope": "spectrum and articulation only",
+    "commit_state": "not_started",
+    "quantization": {
+      "status": "compiled only; not sent or persisted",
+      "format": "slot-v1/88-bit",
+      "sample_rate_nominal": 52734.375,
+      "attack": {
+        "inc": 32768,
+        "shift": 0,
+        "nominal_ms": 0.018962962962962963,
+        "phase_jitter_bound_ms": 0.0,
+        "requested_ms": 0
+      },
+      "release_from_full_to_cutoff100": {
+        "m": 3,
+        "k": 9,
+        "shift": 2,
+        "nominal_ms": 80.63051851851851,
+        "phase_jitter_bound_ms": 0.05688888888888889,
+        "requested_ms": 80
+      },
+      "partials": [
+        {
+          "part": 0,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 1,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 2,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 3,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 4,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 5,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 6,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 7,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 8,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 9,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 10,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 11,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 12,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 13,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 14,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        },
+        {
+          "part": 15,
+          "mode": "sustain",
+          "decay": {
+            "m": 1,
+            "k": 0,
+            "shift": 0,
+            "nominal_ms": 0.018962962962962963,
+            "phase_jitter_bound_ms": 0.0,
+            "requested_ms": 0
+          }
+        }
+      ],
+      "unsupported_enabled_fields": [],
+      "remaining": "compiler only; transport is separate; independent vibrato/effects and persistence not implemented"
+    },
+    "slot": 0,
+    "sequence": 40803,
+    "crc16": 34131,
+    "payload_bytes": 176,
+    "error": "device not idle or previous upload still locked"
+  },
+  "after": {
+    "ack": 10,
+    "on": 5,
+    "off": 5,
+    "active": 0,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "cleanup_snapshot": {
+    "ack": 12,
+    "on": 5,
+    "off": 7,
+    "active": 0,
+    "fingers": 0,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "cleanup_pcm": {
+    "samples": 2048,
+    "sample_rate": 52734.375,
+    "rms": 0.0,
+    "peak": 0,
+    "nonzero": 0,
+    "saturated": 0,
+    "peak_hz": 3.2186508178710938,
+    "pcm_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0"
+  },
+  "completed_time": "2026-10-17T17:50:50.568663+08:00"
+}

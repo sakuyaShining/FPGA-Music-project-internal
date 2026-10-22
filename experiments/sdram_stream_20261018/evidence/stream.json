@@ -1,0 +1,66 @@
+{
+  "status": "PASS independent PCM queues through both FIFOs/rings and real SDRAM command model; stop, clear and bounded host/bus pauses",
+  "results": [
+    {
+      "real_sdram_model": false,
+      "events": {
+        "host_feed": 539,
+        "memory_write": 831,
+        "memory_read": 620,
+        "captured": 293,
+        "played": 320,
+        "host_record": 272,
+        "record_clear": 2,
+        "record_clear_done": 2,
+        "play_clear": 3,
+        "play_clear_done": 3,
+        "record_after_stop": 20
+      },
+      "max_fifo_rec_play_ring_rec_play": [
+        4,
+        8,
+        19,
+        64
+      ],
+      "log": "PASS stream REAL_MEMORY=0 cycles=210003 stopped_record_drained play_cleared\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\tb_stream.v:56: $finish called at 7778091114 (1ps)\n"
+    },
+    {
+      "real_sdram_model": true,
+      "events": {
+        "host_feed": 539,
+        "memory_write": 831,
+        "memory_read": 620,
+        "captured": 293,
+        "played": 320,
+        "host_record": 272,
+        "record_clear": 2,
+        "record_clear_done": 2,
+        "play_clear": 3,
+        "play_clear_done": 3,
+        "record_after_stop": 20
+      },
+      "max_fifo_rec_play_ring_rec_play": [
+        4,
+        8,
+        19,
+        64
+      ],
+      "log": "SDRAM refs=531 reads=620 writes=831 max_gap=395\nPASS stream REAL_MEMORY=1 cycles=210003 stopped_record_drained play_cleared\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\tb_stream.v:56: $finish called at 7778091114 (1ps)\n"
+    }
+  ],
+  "detected_fault": "FATAL: C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_20261018\\tb\\tb_stream.v:69: stream output during clear\n       Time: 2977318149  Scope: tb_stream\n",
+  "inputs": {
+    "rtl/pcm_sdram_stream.v": "c347777b2e3eddd527a264f9717dc15f8a1883683287b18e0c29052df8e8df40",
+    "rtl/pcm_sdram_arbiter.v": "04b4eca1cbc600af5f643ef35b609ac58aecaba07977034d4d8d1b25410dbbbb",
+    "rtl/pcm_storage_buffers.v": "b19f0c94048e678a2073e69170f6301f2c83f92180325edb37654f23c3470e93",
+    "rtl/pcm_sync_fifo.v": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609",
+    "rtl/sdram_word_controller.v": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+    "tb/tb_stream.v": "7a81628fe271f2823a5b658d7386d9adac8e1d7715951eb8e47f134db133a048",
+    "tb/memory_backend_model.v": "64d777f58b9ac3c974baa3602605e27ed1eb19f586bb2fdfdf452e4e51094e20",
+    "tb/sdram_timing_model.v": "9e87cacd52e1b674c3cf8b2d647c7c4bdbc0609c5087c84b05a572a965d766e3",
+    "check_stream.py": "d68c8d8a31311e91e5e37bb32880bcfc610185872ad3c7870a63a277df0fb27b",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79"
+  },
+  "hardware_tested": false,
+  "final_mixer_connected": false
+}

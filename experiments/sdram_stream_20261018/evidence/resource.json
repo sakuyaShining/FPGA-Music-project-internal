@@ -1,0 +1,73 @@
+{
+  "status": "PASS joint synthesis only; no joint pin/timing/board qualification",
+  "before": {
+    "Logic": 20124,
+    "BSRAM": 31,
+    "Register": 11034
+  },
+  "after": {
+    "Logic": 20422,
+    "BSRAM": 31,
+    "Register": 11208
+  },
+  "delta": {
+    "Logic": 298,
+    "BSRAM": 0,
+    "Register": 174
+  },
+  "logic_spare": 314,
+  "bsram_spare": 15,
+  "hierarchy": {
+    "transport": {
+      "name": "transport",
+      "Lut": "2",
+      "T_Register": "265(0)",
+      "T_Alu": "36(0)",
+      "T_Lut": "475(2)",
+      "T_Bsram": "2(0)"
+    },
+    "buffers": {
+      "name": "buffers",
+      "Register": "20",
+      "Lut": "23",
+      "T_Register": "84(20)",
+      "T_Lut": "193(23)",
+      "T_Bsram": "2(0)"
+    },
+    "arbiter": {
+      "name": "arbiter",
+      "Register": "181",
+      "Alu": "36",
+      "Lut": "280",
+      "T_Register": "181(181)",
+      "T_Alu": "36(36)",
+      "T_Lut": "280(280)"
+    },
+    "sdram": {
+      "name": "sdram",
+      "Register": "99",
+      "Lut": "155",
+      "T_Register": "99(99)",
+      "T_Lut": "155(155)"
+    }
+  },
+  "changed": [
+    "sdram_stream_probe.v"
+  ],
+  "selected_builds": [
+    "synthesis_reference_final",
+    "synthesis_buffered_retry"
+  ],
+  "rejected_build": "synthesis_buffered_final: manually terminated after reports; apparent return0 not accepted",
+  "full_pnr": false,
+  "hardware_tested": false,
+  "inputs": {
+    "audit_resources.py": "0f472f90969f448c2085760711e10ff6aa939ce0bce0b0f477bcc9c7b8950bf2",
+    "common.py": "7065215e405ef8c4b1698208339b1293157b3102f49f8c625e2ecd60ce00df79",
+    "synthesize.py": "8ecee6f846df995e7aae51ca9a2e34294856120712c821b179d0a5e3d8fe9459",
+    "synthesis_reference_final/run.json": "1997072d0eaead776f82467c04dbf0b7c3e04c6092eff119bacecc66c943f9f8",
+    "synthesis_buffered_retry/run.json": "40332a1dd0d88c0bcfd7f6263cb8d8d3b29da947211a0feade348acdfc1af93f",
+    "synthesis_buffered_retry/impl/gwsynthesis/probe_syn_rsc.xml": "bbfdfcbc67b79411455b64e85e98ec3d7e79716be8501801fa744f34cbb8acc3",
+    "synthesis_buffered_final/interruption.json": "149dae049f9a413ca899b45eea6b80063b1747aad75d13a828862ad59e8313af"
+  }
+}

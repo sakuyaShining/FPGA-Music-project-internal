@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project><Template>FPGA</Template><Version>5</Version>
+<Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>
+<FileList>
+<File path="live_observation_filter.v" type="file.verilog" enable="1"/>
+<File path="tdm_live_test.v" type="file.verilog" enable="1"/>
+<File path="live_audio_monitor.v" type="file.verilog" enable="1"/>
+<File path="tdm_board_test.v" type="file.verilog" enable="1"/>
+<File path="board_diag.v" type="file.verilog" enable="1"/>
+<File path="tdm_top.v" type="file.verilog" enable="1"/>
+<File path="tdm_ship.v" type="file.verilog" enable="1"/>
+<File path="tdm_engine.v" type="file.verilog" enable="1"/>
+<File path="note_map.v" type="file.verilog" enable="1"/>
+<File path="vel_shape.v" type="file.verilog" enable="1"/>
+<File path="event_hold.v" type="file.verilog" enable="1"/>
+<File path="osc_env.v" type="file.verilog" enable="1"/>
+<File path="pitch_mod.v" type="file.verilog" enable="1"/>
+<File path="finger_pitch.v" type="file.verilog" enable="1"/>
+<File path="reg_bank.v" type="file.verilog" enable="1"/>
+<File path="uart_rx.v" type="file.verilog" enable="1"/>
+<File path="uart_tx.v" type="file.verilog" enable="1"/>
+<File path="fx_delay.v" type="file.verilog" enable="1"/>
+<File path="song_seq.v" type="file.verilog" enable="1"/>
+<File path="pad_scan.v" type="file.verilog" enable="1"/>
+<File path="pad_pitch.v" type="file.verilog" enable="1"/>
+<File path="strip_ctrl.v" type="file.verilog" enable="1"/>
+<File path="led_ind.v" type="file.verilog" enable="1"/>
+<File path="i2s_tx.v" type="file.verilog" enable="1"/>
+<File path="audio_clk_en.v" type="file.verilog" enable="1"/>
+<File path="resource_core_probe.v" type="file.verilog" enable="1"/>
+</FileList></Project>

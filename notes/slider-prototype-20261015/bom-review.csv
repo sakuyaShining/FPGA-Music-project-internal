@@ -1,0 +1,46 @@
+﻿Reference,Quantity,MPN_or_value,LCSC,Package,Purpose,Source,Status
+U1,1,CD74HC4067M96,C496123,SOIC-24-300mil,16:1 raw electrode selection,https://www.ti.com/lit/ds/symlink/cd74hc4067.pdf,REVIEW_ONLY
+R21,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R22,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R23,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R24,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R25,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R26,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+C16,1,10pF C0G 0603,,0603,"reference load, not a touch stimulus",,REVIEW_ONLY
+C17,1,47pF C0G 0603,,0603,"reference load, not a touch stimulus",,REVIEW_ONLY
+C18,1,100pF C0G 0603,,0603,"reference load, not a touch stimulus",,REVIEW_ONLY
+R1,1,47k 1% 0603,,0603,initial RC resistor; evaluate 100k/220k replacements,,REVIEW_ONLY
+U2,1,CD74HC4067M96,C496123,SOIC-24-300mil,16:1 raw electrode selection,https://www.ti.com/lit/ds/symlink/cd74hc4067.pdf,REVIEW_ONLY
+R27,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R28,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R29,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R30,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R31,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+R32,1,1k 1% 0603,,0603,electrode series resistor candidate,,REVIEW_ONLY
+C19,1,10pF C0G 0603,,0603,"reference load, not a touch stimulus",,REVIEW_ONLY
+C20,1,47pF C0G 0603,,0603,"reference load, not a touch stimulus",,REVIEW_ONLY
+C21,1,100pF C0G 0603,,0603,"reference load, not a touch stimulus",,REVIEW_ONLY
+R2,1,47k 1% 0603,,0603,initial RC resistor; evaluate 100k/220k replacements,,REVIEW_ONLY
+U3,1,SN74LVC14ADR,C133541,SOIC-14,Schmitt input edge conversion,https://www.ti.com/lit/ds/symlink/sn74lvc14a.pdf,REVIEW_ONLY
+R3,1,220R 0603,,0603,digital output series termination candidate,,REVIEW_ONLY
+R4,1,220R 0603,,0603,digital output series termination candidate,,REVIEW_ONLY
+U4,1,SN74LV595ADR,C205940,SOIC-16,latched scan-address and RC drive outputs,https://www.ti.com/lit/ds/symlink/sn74lv595a.pdf,REVIEW_ONLY
+U5,1,SN74LV165ADR,C273656,SOIC-16,read 4 presets + edit + encoder A/B/push,https://www.ti.com/lit/ds/symlink/sn74lv165a.pdf,REVIEW_ONLY
+R41,1,10k 0603,,0603,input pull-up; switches/encoder close to GND,,REVIEW_ONLY
+R42,1,10k 0603,,0603,input pull-up; switches/encoder close to GND,,REVIEW_ONLY
+R43,1,10k 0603,,0603,input pull-up; switches/encoder close to GND,,REVIEW_ONLY
+R44,1,10k 0603,,0603,input pull-up; switches/encoder close to GND,,REVIEW_ONLY
+R45,1,10k 0603,,0603,input pull-up; switches/encoder close to GND,,REVIEW_ONLY
+R46,1,10k 0603,,0603,input pull-up; switches/encoder close to GND,,REVIEW_ONLY
+R47,1,10k 0603,,0603,input pull-up; switches/encoder close to GND,,REVIEW_ONLY
+R48,1,10k 0603,,0603,input pull-up; switches/encoder close to GND,,REVIEW_ONLY
+U6,1,24LC256-I/SN,C411625,SOIC-8,candidate 32KiB nonvolatile instrument storage,https://www.microchip.com/content/dam/mchp/documents/MPD/ProductDocuments/DataSheets/24AA256-24LC256-24FC256-Data-Sheet-20001203W.pdf,REVIEW_ONLY
+R51,1,4.7k 0603,,0603,I2C initial pull-up; verify bus capacitance,,REVIEW_ONLY
+R52,1,4.7k 0603,,0603,I2C initial pull-up; verify bus capacitance,,REVIEW_ONLY
+C1,1,100nF X7R 0603,,0603,local bypass for U1,,REVIEW_ONLY
+C2,1,100nF X7R 0603,,0603,local bypass for U2,,REVIEW_ONLY
+C3,1,100nF X7R 0603,,0603,local bypass for U3,,REVIEW_ONLY
+C4,1,100nF X7R 0603,,0603,local bypass for U4,,REVIEW_ONLY
+C5,1,100nF X7R 0603,,0603,local bypass for U5,,REVIEW_ONLY
+C6,1,100nF X7R 0603,,0603,local bypass for U6,,REVIEW_ONLY
+C7,1,4.7uF X7R 0805,,0805,local bulk candidate,,REVIEW_ONLY

@@ -1,0 +1,103 @@
+{
+  "scope": "isolated synthesis only; no new PnR, functional or board acceptance",
+  "source_inputs_unchanged": true,
+  "profiles": {
+    "live_reference": {
+      "synthesis_completed": true,
+      "logic": 18190,
+      "T_Register": 6455,
+      "T_Lut": 13535,
+      "T_Alu": 4421,
+      "T_Bsram": 38,
+      "T_Ssram": 39,
+      "report_sha256": "82842183aeb290f9907107ac1af56adc1a3c51fd5774aec1d5af2f3f10bfa227",
+      "hierarchy_sha256": "7b6112b9345f2bb68090025d98dcd88009437eb3637b0948b1ac323b201aab1d",
+      "no_pin_constraints": true,
+      "no_timing_acceptance": true
+    },
+    "core_expression": {
+      "synthesis_completed": true,
+      "logic": 17087,
+      "T_Register": 5909,
+      "T_Lut": 12538,
+      "T_Alu": 4297,
+      "T_Bsram": 31,
+      "T_Ssram": 42,
+      "report_sha256": "11274c15f71e6567451c8a18e9c348ed1f0f10cf68bf4f9251218a6be744dfd4",
+      "hierarchy_sha256": "6c4df7b793cd91de0c5bcc15e3e232f06068e357654ec51567fbcd73edae5018",
+      "no_pin_constraints": true,
+      "no_timing_acceptance": true
+    }
+  },
+  "reference_minus_core": {
+    "logic": 1103,
+    "T_Register": 546,
+    "T_Lut": 997,
+    "T_Alu": 124,
+    "T_Bsram": 7
+  },
+  "core_nominal_headroom_not_final_product": {
+    "logic": 3649,
+    "bsram_blocks": 15,
+    "bsram_bytes_upper_bound": 34560,
+    "excludes": [
+      "new touch frontend",
+      "writable instrument lifecycle",
+      "layer allocator",
+      "FFT and waveform/trajectory analysis",
+      "screen renderer",
+      "encoder and EEPROM controllers"
+    ]
+  },
+  "display_assumptions": [
+    {
+      "width": 240,
+      "height": 240,
+      "rgb565_frame_bytes": 115200,
+      "pixel_mbps_at_20_fps": 18.432,
+      "spi_full_frame_fps_ideal": {
+        "13.5": 14.6484375,
+        "20": 21.70138888888889,
+        "40": 43.40277777777778
+      },
+      "not_included": "commands, idle, bus sharing, blanking and panel limits; not actual screen identity"
+    },
+    {
+      "width": 320,
+      "height": 240,
+      "rgb565_frame_bytes": 153600,
+      "pixel_mbps_at_20_fps": 24.576,
+      "spi_full_frame_fps_ideal": {
+        "13.5": 10.986328125,
+        "20": 16.276041666666668,
+        "40": 32.552083333333336
+      },
+      "not_included": "commands, idle, bus sharing, blanking and panel limits; not actual screen identity"
+    },
+    {
+      "width": 480,
+      "height": 320,
+      "rgb565_frame_bytes": 307200,
+      "pixel_mbps_at_20_fps": 49.152,
+      "spi_full_frame_fps_ideal": {
+        "13.5": 5.4931640625,
+        "20": 8.138020833333334,
+        "40": 16.276041666666668
+      },
+      "not_included": "commands, idle, bus sharing, blanking and panel limits; not actual screen identity"
+    },
+    {
+      "width": 800,
+      "height": 480,
+      "rgb565_frame_bytes": 768000,
+      "pixel_mbps_at_20_fps": 122.88,
+      "spi_full_frame_fps_ideal": {
+        "13.5": 2.197265625,
+        "20": 3.2552083333333335,
+        "40": 6.510416666666667
+      },
+      "not_included": "commands, idle, bus sharing, blanking and panel limits; not actual screen identity"
+    }
+  ],
+  "checks_passed": true
+}

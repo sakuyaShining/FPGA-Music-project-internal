@@ -1,0 +1,153 @@
+{
+  "status": "measured memory inventory; future backend proposals not implemented",
+  "before": {
+    "total": 46,
+    "free": 0,
+    "owners": [
+      {
+        "path": "/instrument_layer_probe/music/control/mapper",
+        "blocks": 1,
+        "physical_bits": 18432
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/serial_configuration.receiver",
+        "blocks": 1,
+        "physical_bits": 18432
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/u_nm",
+        "blocks": 2,
+        "physical_bits": 36864
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/u_nm/table_store",
+        "blocks": 3,
+        "physical_bits": 55296
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/u_tdm",
+        "blocks": 10,
+        "physical_bits": 184320
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/u_fx",
+        "blocks": 20,
+        "physical_bits": 368640
+      },
+      {
+        "path": "/instrument_layer_probe/visualizer/u_fft",
+        "blocks": 5,
+        "physical_bits": 92160
+      },
+      {
+        "path": "/instrument_layer_probe/visualizer/u_renderer",
+        "blocks": 2,
+        "physical_bits": 36864
+      },
+      {
+        "path": "/instrument_layer_probe/sensor/store",
+        "blocks": 2,
+        "physical_bits": 36864
+      }
+    ]
+  },
+  "after": {
+    "total": 28,
+    "free": 18,
+    "owners": [
+      {
+        "path": "/instrument_layer_probe/music/control/mapper",
+        "blocks": 1,
+        "physical_bits": 18432
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/serial_configuration.receiver",
+        "blocks": 1,
+        "physical_bits": 18432
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/u_nm",
+        "blocks": 2,
+        "physical_bits": 36864
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/u_nm/table_store",
+        "blocks": 3,
+        "physical_bits": 55296
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/u_tdm",
+        "blocks": 10,
+        "physical_bits": 184320
+      },
+      {
+        "path": "/instrument_layer_probe/music/core/u_fx",
+        "blocks": 2,
+        "physical_bits": 36864
+      },
+      {
+        "path": "/instrument_layer_probe/visualizer/u_fft",
+        "blocks": 5,
+        "physical_bits": 92160
+      },
+      {
+        "path": "/instrument_layer_probe/visualizer/u_renderer",
+        "blocks": 2,
+        "physical_bits": 36864
+      },
+      {
+        "path": "/instrument_layer_probe/sensor/store",
+        "blocks": 2,
+        "physical_bits": 36864
+      }
+    ]
+  },
+  "fx_before": 20,
+  "fx_after": 2,
+  "freed_blocks": 18,
+  "physical_bits_per_block": 18432,
+  "source_xml": {
+    "reference/before-resources.xml": "77b3dffb05d6a6a4d284fb2ce8b7145aa750f59920fc3c584420c6a35fc6ff0f",
+    "synthesis_single_read/impl/gwsynthesis/probe_syn_rsc.xml": "01617ae8e3845f647c20c8a8e42066e2f4eaadc92d18befb1814e2a34345f5bd"
+  },
+  "backends": {
+    "configuration": {
+      "candidate": "external 24LC256, previously planned; not confirmed present",
+      "persistent": true,
+      "implemented": false
+    },
+    "audio_files": {
+      "candidate": "board TF socket + qualified card",
+      "card_present_confirmed": false,
+      "filesystem_implemented": false
+    },
+    "large_buffers": {
+      "candidate": "in-package 8MiB SDRAM",
+      "persistent": false,
+      "controller_integrated": false
+    }
+  },
+  "proposed_budget_only": [
+    {
+      "use": "playback FIFO",
+      "blocks": 1,
+      "capacity_bytes_at_16bit": 2048
+    },
+    {
+      "use": "record FIFO",
+      "blocks": 1,
+      "capacity_bytes_at_16bit": 2048
+    },
+    {
+      "use": "event/score staging",
+      "blocks": 2,
+      "capacity_bytes_at_16bit": 4096
+    },
+    {
+      "use": "SD block/metadata staging",
+      "blocks": 1,
+      "capacity_bytes_at_16bit": 2048
+    }
+  ],
+  "caveat": "FIFO reservation is only an example, not verified real-time/storage capacity; large rings still require SDRAM; card worst busy not measured"
+}

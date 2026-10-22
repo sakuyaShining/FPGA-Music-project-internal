@@ -1,0 +1,41 @@
+{
+  "status": "部分实现",
+  "native_component_count": 53,
+  "native_bom_skus": 19,
+  "pin_contract_count": 231,
+  "connected_pins": 207,
+  "intentional_nc": 24,
+  "nets": 59,
+  "native_drc_violations": 0,
+  "musical_engine_modified": false,
+  "main_head": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+  "main_baseline": "PASS 192 inputs",
+  "newest_engine_baseline": "PASS 246 inputs",
+  "pre_edit_backup": "C:\\Users\\Sakuya\\FPGA-Music-project\\notes\\slider-schematic-20261015\\evidence\\before-schematic.zip",
+  "pre_edit_backup_sha256": "fb86fb22495bb5c1fb7068edff8bf23fecb67c38dc1d5fafd49e6f4199986e2f",
+  "manufacturing_release": false,
+  "unverified": [
+    "ESD/protection qualification",
+    "electrode coupon footprints and geometry",
+    "physical Nano header and board revision",
+    "encoder and switch mechanical/electrical drawing qualification",
+    "resource fit of SD/SDRAM/filesystem/score UI",
+    "record/play functionality",
+    "physical RC noise/position/latency",
+    "PCB/DRC/quotation"
+  ],
+  "files": {
+    "01-core.png": "c513d3e9a8bc2a25aabe2c06d3c2f3c36e110df66e0532a87ca0bf8827b7a5bd",
+    "02-electrodes.png": "dbae5af812fdc410e343ee8b409f4ee88b75bff64df7c25a0347be4709cbb8b1",
+    "03-interface.png": "2b9ed210cdaeb5581bbc3481332546561945b536f41c82379f8c70f9a4161a9c",
+    "connectivity-audit.json": "70932a6571a36d21a77dcb88c240b52395d9297d2217c060237b16c2098aeae2",
+    "EasyEDA-prototype-project.zip": "7087efe46b9ce13a91be9c6666d5b7a9144092f91eb78e7963b824eebea3295f",
+    "expected-pin-nets.json": "809804399aabbfa2690266b72906f261010ec1c27b2a5b94937376be4f06b765",
+    "pin-net-audit.csv": "d85d10ed8f64e8bc63f19c49c867f42cb53e61c4d1f27fde83f757e5c7eb8f2b",
+    "prototype-bom-native-utf16.tsv": "8938fdaf9775f0972ec5ca6cc6ec5436ea00c153eee822aa439dcc45c02b0018",
+    "prototype-bom.csv": "5ba6f854ec0aed9c69e0825bdd0619a24679fee7f62583d5c9deae10783240f4",
+    "prototype-native.net": "e468551d0c54e6dbcd1c75f661ab164e7d6c3ef3e47835f00077b8350f41b5ed",
+    "README.md": "8da757d1de4478f5eef7fac3d265877630f4c1923c61ca06bae04b11b0e5e872",
+    "recording-capacity-plan.json": "803dd78a4fe39dd7c125b0c94a66ed0f03b48d30cadc93ec7dfdddf2e0e29421"
+  }
+}

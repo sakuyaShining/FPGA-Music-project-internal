@@ -1,0 +1,77 @@
+{
+  "hardware_tested": true,
+  "bitstream_programmed_by_this_script": false,
+  "case": 6,
+  "identity": {
+    "profile": 114,
+    "abi": 1,
+    "diagnostic": 211,
+    "scope": 32
+  },
+  "before": {
+    "ready": true,
+    "armed": false,
+    "warm": true,
+    "initialized": true,
+    "running": false,
+    "bound": false,
+    "fault": false,
+    "case": 5
+  },
+  "baseline": {
+    "ack": 18,
+    "on": 9,
+    "off": 9,
+    "active": 0,
+    "fingers": 7,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "during": {
+    "ack": 50,
+    "on": 41,
+    "off": 9,
+    "active": 4294967295,
+    "fingers": 4294967295,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "audio": {
+    "samples": 2048,
+    "sample_rate": 52734.375,
+    "rms": 233065.18159009723,
+    "peak": 736976,
+    "nonzero": 2048,
+    "saturated": 0,
+    "peak_hz": 159.32321548461914
+  },
+  "stress_after_capture": {
+    "ack": 86,
+    "on": 43,
+    "off": 43,
+    "active": 0,
+    "fingers": 4294967295,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "after": {
+    "ack": 86,
+    "on": 43,
+    "off": 43,
+    "active": 0,
+    "fingers": 4294967295,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "status_after": {
+    "ready": true,
+    "armed": false,
+    "warm": true,
+    "initialized": true,
+    "running": false,
+    "bound": false,
+    "fault": false,
+    "case": 6
+  },
+  "status": "PASS limited digital board checks; listening/analog not verified"
+}

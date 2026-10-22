@@ -1,0 +1,21 @@
+{
+  "operation": 2,
+  "mode": "SRAM only",
+  "image": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\build_stress_v1\\impl\\pnr\\board.fs",
+  "sha256": "140a2c6a0906e6356c1e17287f28b5114327a416a6aa5d3ae715048ef7f60b12",
+  "command": [
+    "D:/FPGA-Project/Gowin/Gowin_V1.9.11.03_Education/Gowin_V1.9.11.03_Education_x64/Programmer/bin/programmer_cli.exe",
+    "--device",
+    "GW2AR-18C",
+    "--operation_index",
+    "2",
+    "--chain_size",
+    "1",
+    "--chain_index",
+    "0",
+    "--channel",
+    "0",
+    "--fsFile",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\sdram_stream_board_20261018\\build_stress_v1\\impl\\pnr\\board.fs"
+  ]
+}

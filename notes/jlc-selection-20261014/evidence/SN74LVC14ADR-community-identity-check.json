@@ -1,0 +1,32 @@
+{
+  "query": "SN74LVC14ADR",
+  "expected_mpn": "SN74LVC14ADR",
+  "retrieved_at_utc": "2026-10-14T17:40:26.612464+00:00",
+  "source": "https://jlcsearch.tscircuit.com",
+  "source_kind": "community_JLCPCB_assembly_catalog",
+  "currency": "USD",
+  "domestic_quote_verified": false,
+  "electrically_qualified": false,
+  "manufacturing_release": false,
+  "accepted": [],
+  "rejected": [
+    {
+      "reason": "identity_mismatch",
+      "item": {
+        "lcsc_code": "C17694755",
+        "lcsc_id": 17694755,
+        "mpn": "2450BM14G0011001T",
+        "manufacturer": "",
+        "package": "SMD-6P,1.6x0.8mm",
+        "description": "-40℃~+105℃ 0.6mm 0.8mm 1.5dB 1.6mm 180°@±10° 2.4GHz~2.5GHz 2dB 9.5dB SMD-6P,1.6x0.8mm Balun ROHS",
+        "is_basic": false,
+        "stock": 60,
+        "price_usd": 1.0015,
+        "datasheet_url": "",
+        "attributes": {},
+        "prices": []
+      }
+    }
+  ],
+  "status": "no_verified_identity_match"
+}

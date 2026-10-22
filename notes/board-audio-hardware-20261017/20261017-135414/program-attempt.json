@@ -1,0 +1,25 @@
+{
+  "time": "2026-10-17T13:55:04.293057+08:00",
+  "command": [
+    "D:/FPGA-Project/Gowin/Gowin_V1.9.11.03_Education/Gowin_V1.9.11.03_Education_x64/Programmer/bin/programmer_cli.exe",
+    "--device",
+    "GW2AR-18C",
+    "--operation_index",
+    "2",
+    "--chain_size",
+    "1",
+    "--chain_index",
+    "0",
+    "--channel",
+    "0",
+    "--fsFile",
+    "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\board_audio_20261017\\package\\board-audio-sram.fs"
+  ],
+  "operation": 2,
+  "mode": "SRAM only",
+  "bitstream_sha256": "7384acdf9fb51f887dc20d1d63ed01a8dc69cb36d78305fc77d9e6a8df8ca246",
+  "preflight_sha256": "178b28d10370ae710b3974fc8c4146b498edea1f00089c5dbaf3f901d1f52957",
+  "script_sha256": "76a34cb472b3d76535eb1edb1dd9f253a7548515f10543ae06585dc4238c7018",
+  "flash_read_or_written": false,
+  "status": "attempt recorded before invoking programmer"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "PASS cycle equivalence in tested scope",
+  "results": {
+    "anchor": "PASS anchor_equiv MB=0 NF=32 clocks=50040 groups_checked=1601280 binds=9269 moves=9340 releases=9385 concurrent_voice=19760\nPASS anchor_equiv MB=1 NF=32 clocks=50040 groups_checked=1601280 binds=9380 moves=9490 releases=9371 concurrent_voice=19995\nPASS anchor_equiv MB=1 NF=5 clocks=50040 groups_checked=1601280 binds=9304 moves=9277 releases=9470 concurrent_voice=19941\nPASS anchor all modes and padded contact addresses\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\resource_safety_20261016\\tb_anchor_equiv.v:48: $finish called at 500436000 (1ps)\n",
+    "identity": "PASS identity_equiv events=5000 clocks=176543 group_checks=5649376 loads=80269 results=4999 cycle_exact prefetch full32 MIDI127 stale_keys refresh cfg reset\nC:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\resource_safety_20261016\\tb_identity_equiv.v:53: $finish called at 1765517000 (1ps)\n"
+  },
+  "inputs": {
+    "engine/sin1024.hex": "b2d2b0328b8aee38c3fb7cdcd03064a6e34f1bab170bc99950ebaaf039618647",
+    "engine/fader_gain_q8.hex": "38a644d29b92c5b3267bab5931966a033e35b75973ad84b7af362be74194f6a5",
+    "tb_anchor_equiv.v": "1a31d16fc00d70c58da68692753bfb37ce0b591e554175c8f4efea3c47d27309",
+    "engine/vel_wtab.hex": "c394b9c488197c4c74f45e85e055af45fbf61e6dfda380f412a39d7ab4d0a1d1",
+    "selected/finger_pitch.v": "1702ccc636619f85f65ef18f810efd5e652ab206ffcdc1d2e07fbce12d093d5a",
+    "common.py": "c51ae628baf93a9159578515b50483d83d2319a42d1dd84703b69e444e6e5c2e",
+    "engine/sine256.hex": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+    "engine/preset_part.hex": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+    "engine/bands1024.hex": "01cdaaa2843dab6417522a5bb913e60b17e4daac675fe1c4ff99250a6e64123f",
+    "engine/hann1024.hex": "a65ee44f5eaacc8237a2dc9f1b2d58998f197efa0377e2a7d76cdc9268591abc",
+    "engine/note_inc.hex": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+    "engine/finger_ratio.hex": "fbb875cffffd1f044971de6ceb47a5b90898a154229f1e29937b3a742f757ca3",
+    "engine/vel_shape.v": "ed66c9d539250c893e6086b65870b74a86aca1df55897f4c5c33d5e1fbb8ab8d",
+    "rtl/instrument_table.v": "5116958977a70a2f33e1ce40e9cc6d6a4130d490b5a14f6a107ec7f436aa5543",
+    "reference/finger_pitch.v": "ce665a7b84d5c92b8a7982277350daf831347020ab06b94eeb64aa8de7873e00",
+    "selected/note_map_owned.v": "5771c6de57aedef0872489530a017f84b66bfbf9141b96ab6f7d8cbd7c2918d1",
+    "engine/tilt_wtab.hex": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8",
+    "engine/cos1024.hex": "706d4136e1d62d92d5a1052b077e8cf338f30590f728501853dde8f7bb9adf90",
+    "engine/recip_inc.hex": "a9ea597f8b2ae211baa82c264796c4d118393863435c33aac9edb5ee71802002",
+    "tb_identity_equiv.v": "dfc90d7bc5de7b862b545255bd91a43505d032168deb1cd928b1e58f8651d85c",
+    "run_units.py": "212cf03a67b7ae424b63925dea085b0827c13cf91d5b558710e17f26403f701d",
+    "reference/note_map_owned.v": "7f3a2fb900461a75d2bf4bc4204299974f3337c3e45e0626a6a13ace7445c085"
+  }
+}

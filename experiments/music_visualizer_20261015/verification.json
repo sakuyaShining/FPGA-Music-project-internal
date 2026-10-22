@@ -1,0 +1,162 @@
+{
+  "fft": [
+    {
+      "case": "silence",
+      "max_complex_error_lsb": 0.0,
+      "peak_bin": 0
+    },
+    {
+      "case": "dc",
+      "max_complex_error_lsb": 9.234375,
+      "peak_bin": 0
+    },
+    {
+      "case": "single",
+      "max_complex_error_lsb": 6.320231799349999,
+      "peak_bin": 16
+    },
+    {
+      "case": "dual",
+      "max_complex_error_lsb": 7.2679718439650145,
+      "peak_bin": 8
+    },
+    {
+      "case": "negative_full",
+      "max_complex_error_lsb": 7.628921598623989,
+      "peak_bin": 0
+    }
+  ],
+  "panel": {
+    "bytes": 196394,
+    "windows": 2071,
+    "frames": [
+      {
+        "number": 1,
+        "boundary_ms": 658.785590943,
+        "transfer_done_ms": 620.361073413,
+        "late": 0,
+        "analysis_gap_samples": 2573,
+        "spectrum_sequence": 31,
+        "input_layer_mask_at_boundary": 1
+      },
+      {
+        "number": 2,
+        "boundary_ms": 708.786965019,
+        "transfer_done_ms": 665.173757031,
+        "late": 0,
+        "analysis_gap_samples": 2739,
+        "spectrum_sequence": 33,
+        "input_layer_mask_at_boundary": 3
+      },
+      {
+        "number": 3,
+        "boundary_ms": 758.7883390950001,
+        "transfer_done_ms": 719.870697633,
+        "late": 0,
+        "analysis_gap_samples": 2988,
+        "spectrum_sequence": 36,
+        "input_layer_mask_at_boundary": 3
+      },
+      {
+        "number": 4,
+        "boundary_ms": 808.789713171,
+        "transfer_done_ms": 765.199320591,
+        "late": 0,
+        "analysis_gap_samples": 3154,
+        "spectrum_sequence": 38,
+        "input_layer_mask_at_boundary": 3
+      },
+      {
+        "number": 5,
+        "boundary_ms": 858.791087247,
+        "transfer_done_ms": 815.206213329,
+        "late": 0,
+        "analysis_gap_samples": 3320,
+        "spectrum_sequence": 40,
+        "input_layer_mask_at_boundary": 3
+      },
+      {
+        "number": 6,
+        "boundary_ms": 908.792461323,
+        "transfer_done_ms": 865.1507340750001,
+        "late": 0,
+        "analysis_gap_samples": 3569,
+        "spectrum_sequence": 43,
+        "input_layer_mask_at_boundary": 3
+      },
+      {
+        "number": 7,
+        "boundary_ms": 958.793835399,
+        "transfer_done_ms": 915.153663747,
+        "late": 0,
+        "analysis_gap_samples": 3735,
+        "spectrum_sequence": 45,
+        "input_layer_mask_at_boundary": 3
+      },
+      {
+        "number": 8,
+        "boundary_ms": 1008.795209475,
+        "transfer_done_ms": 965.191927671,
+        "late": 0,
+        "analysis_gap_samples": 3984,
+        "spectrum_sequence": 48,
+        "input_layer_mask_at_boundary": 3
+      }
+    ],
+    "boundary_intervals_ms": [
+      50.00137407600005,
+      50.00137407600005,
+      50.001374075999934,
+      50.001374075999934,
+      50.00137407600005,
+      50.00137407600005,
+      50.001374075999934
+    ],
+    "post_startup_transfer_work_ms": [
+      6.388166088000048,
+      11.083732613999928,
+      6.410981495999863,
+      6.4165001579999625,
+      6.359646828000109,
+      6.361202423999998,
+      6.398092271999985
+    ],
+    "static_area_unchanged": true,
+    "accepted_note_pitch_trace_checked": true,
+    "caution": "Digital SPI receiver only. Frame boundary is telemetry; LCD writes are progressive, not atomic."
+  },
+  "negative_checks": [
+    {
+      "case": "missing_pixel_byte",
+      "rejected": true
+    },
+    {
+      "case": "window_x511",
+      "rejected": true
+    }
+  ],
+  "inputs_sha256": {
+    "rtl\\music_visualizer.v": "d35912021fee2cfbf75cbfde1cda3aae1e35355d7962b092333fd4f35086cfb7",
+    "rtl\\mv_fft1024.v": "c55f4090d89f020b84f4bf03508cb89e5eab0328e9e371d3325603029c107329",
+    "rtl\\mv_font.vh": "7dcd884f14a74eeef9e666e5e0d3772d64301026a72dd056a54770f4da038754",
+    "rtl\\mv_panel_driver.v": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+    "rtl\\mv_renderer.v": "bc7f447e2123ce820c95cd5f83b76c56ffed7cf0c0a48641165ca3bb03d9f578",
+    "rtl\\mv_spi_byte.v": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+    "rtl\\mv_wave_capture.v": "368495a1805024999a7fdd9104183baa1461b72841d6d7fe63d8b23c362583ee",
+    "bands1024.hex": "01cdaaa2843dab6417522a5bb913e60b17e4daac675fe1c4ff99250a6e64123f",
+    "cos1024.hex": "706d4136e1d62d92d5a1052b077e8cf338f30590f728501853dde8f7bb9adf90",
+    "hann1024.hex": "a65ee44f5eaacc8237a2dc9f1b2d58998f197efa0377e2a7d76cdc9268591abc",
+    "sin1024.hex": "b2d2b0328b8aee38c3fb7cdcd03064a6e34f1bab170bc99950ebaaf039618647",
+    "tb_fft.v": "68372ef82eb0eeb3cd2deebf08ef20ff7c9c6d3466b0bae6fde12719991ee82b",
+    "tb_wave.v": "e9c41307e139235d320c7d0eb2619fb259ed84400df76ece3033f87620f3e901",
+    "tb_visualizer.v": "5832c67ce0a53a612a80879074a0f8a773c997eb8b182fe8740c24f66007d87f",
+    "verify.py": "564e78818c918ea09494df0c72c977401ce92c2f0c006208b08663a8907685f8"
+  },
+  "captures_sha256": {
+    "visualizer-spi.log": "e3190abaad7f6bded798c9e04ba9e35973dff2cff5cf04c45ac06388df128a62",
+    "visualizer-simulation.log": "5330a05fbf1bba56c144f614e5796921ca277859559936a589b46f4d6c0e21e0",
+    "fft-bins.txt": "5f67467e5dda1c0581ce3482599d7937306c5b6577cf6bff6f9dda022f99d498",
+    "fft-simulation.log": "c41519db8e1ea55f93274a1cb12ae8f5c3caf180bf0799374a1d175db573f5b6",
+    "wave-simulation.log": "a3d17098106a76e5f106ae3c9f507a761fc8db4629e5ad67807dd3289cd25167"
+  }
+}

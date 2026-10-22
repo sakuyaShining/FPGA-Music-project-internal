@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "f2b882e0-36c9-40cb-b4c9-fc708f16a915",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "return {project:await eda.dmt_Project.getCurrentProjectInfo(),pages:await eda.dmt_Schematic.getAllSchematicPagesInfo()};",
+    "--args",
+    "{}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

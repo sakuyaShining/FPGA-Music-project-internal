@@ -1,0 +1,44 @@
+{
+  "status": "讨论中; arithmetic only",
+  "screen": {
+    "width": 800,
+    "height": 480,
+    "bpp": 16,
+    "aa_mm": [
+      154.08,
+      85.92
+    ],
+    "frame_bytes": 768000,
+    "ideal_full_frame_s_at_6_75MHz": 0.9102222222222223,
+    "ideal_raw_bit_s_20fps": 122880000,
+    "eight_groups_example_pitch_mm": 19.26,
+    "eight_groups_example_width_with_2mm_gaps": 17.51
+  },
+  "layout": {
+    "panel_mm": [
+      470,
+      220
+    ],
+    "left_example_slots_per_row": 13,
+    "left_example_pitch_mm": 18,
+    "left_example_strip_mm": [
+      12,
+      48
+    ],
+    "left_active_width_mm": 228,
+    "left_two_row_active_height_mm": 108,
+    "right_module_envelope_mm": [
+      185,
+      108
+    ],
+    "status": "proposal, not endpoint count decision or drilling drawing"
+  },
+  "budget": {
+    "total_target_cny": 500,
+    "display_target_cny": 200,
+    "other_allocations_cny": 300,
+    "hdmi_reference_plus_other_allocations_cny": 539.4,
+    "er_BASE_reference_plus_other_allocations_cny": 573.22,
+    "note": "These sums use allocations, not complete quotations; ER excludes unconfirmed capacitive add-on."
+  }
+}

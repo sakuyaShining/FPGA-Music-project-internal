@@ -1,0 +1,32 @@
+{
+  "query": "AD7147",
+  "expected_mpn": "AD7147",
+  "retrieved_at_utc": "2026-10-14T17:37:31.114388+00:00",
+  "source": "https://jlcsearch.tscircuit.com",
+  "source_kind": "community_JLCPCB_assembly_catalog",
+  "currency": "USD",
+  "domestic_quote_verified": false,
+  "electrically_qualified": false,
+  "manufacturing_release": false,
+  "accepted": [],
+  "rejected": [
+    {
+      "reason": "identity_mismatch",
+      "item": {
+        "lcsc_code": "C305374",
+        "lcsc_id": 305374,
+        "mpn": "VT1E331M-CRF10",
+        "manufacturer": "",
+        "package": "SMD,D8xL10.5mm",
+        "description": "-40℃~+105℃ 10.5mm 2000hrs@105℃ 25V 330uF 8mm ±20% SMD,D8xL10.5mm Aluminum Electrolytic Capacitors - SMD ROHS",
+        "is_basic": false,
+        "stock": 25,
+        "price_usd": 0.0768,
+        "datasheet_url": "",
+        "attributes": {},
+        "prices": []
+      }
+    }
+  ],
+  "status": "no_verified_identity_match"
+}

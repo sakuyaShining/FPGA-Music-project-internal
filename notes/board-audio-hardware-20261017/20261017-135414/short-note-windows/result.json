@@ -1,0 +1,203 @@
+{
+  "status": "PASS observed onset and post-release silence; transition timing is host approximate",
+  "time": "2026-10-17T13:58:23.253790+08:00",
+  "script_sha256": "e6521ad6898b45e8b68b965bfa88691c0948f2c8a2580afe1b88b2081b6e0ff7",
+  "checker_sha256": "9ee9ddf019c387899e1233bf44559f98566a4ae2f1ffdc00091ac61c16c0737e",
+  "hardware_tested": true,
+  "flash_read_or_written": false,
+  "windows": [
+    {
+      "label": "onset",
+      "host_delay_after_confirmation": 0.0,
+      "confirmation_seconds": 0.046999999904073775,
+      "request_seconds_after_confirmation": 0.0,
+      "receive_seconds_after_confirmation": 0.609000000054948,
+      "audio": {
+        "samples": 2048,
+        "sample_rate": 52734.375,
+        "rms": 55385.06894348873,
+        "peak": 128416,
+        "nonzero": 2048,
+        "saturated": 0,
+        "peak_hz": 439.3458366394043
+      },
+      "chunk_rms": [
+        54883.32598339864,
+        54693.31867787874,
+        56512.47231364064,
+        56138.751357685185,
+        57357.32601856541,
+        55361.52185408201,
+        56336.66472200853,
+        51601.44031904536
+      ],
+      "raw_file": "onset.s24le",
+      "raw_sha256": "aa8a6e2546c83311a86ac8c96a175b5b99ecb0004c90700dd276406b336bd88f",
+      "snapshot": {
+        "ack": 88,
+        "on": 44,
+        "off": 44,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      },
+      "after": {
+        "ack": 88,
+        "on": 44,
+        "off": 44,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      },
+      "status_after": {
+        "ready": true,
+        "armed": false,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 5
+      }
+    },
+    {
+      "label": "transition",
+      "host_delay_after_confirmation": 0.065,
+      "confirmation_seconds": 0.030999999959021807,
+      "request_seconds_after_confirmation": 0.0779999999795109,
+      "receive_seconds_after_confirmation": 0.7029999999795109,
+      "audio": {
+        "samples": 2048,
+        "sample_rate": 52734.375,
+        "rms": 29820.434340398195,
+        "peak": 88640,
+        "nonzero": 2047,
+        "saturated": 0,
+        "peak_hz": 439.3458366394043
+      },
+      "chunk_rms": [
+        39214.29439630401,
+        35191.51080871635,
+        32822.65894165188,
+        29252.53086486706,
+        26836.84485926019,
+        25472.26134445075,
+        23456.007141028927,
+        22036.08411220106
+      ],
+      "raw_file": "transition.s24le",
+      "raw_sha256": "aa6659f4b94ac56945d89c7a31d441442dbb327d4e4eab85a1fb57d07b129fca",
+      "snapshot": {
+        "ack": 90,
+        "on": 45,
+        "off": 45,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      },
+      "after": {
+        "ack": 90,
+        "on": 45,
+        "off": 45,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      },
+      "status_after": {
+        "ready": true,
+        "armed": false,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 5
+      }
+    },
+    {
+      "label": "quiet",
+      "host_delay_after_confirmation": 0.25,
+      "confirmation_seconds": 0.0470000000204891,
+      "request_seconds_after_confirmation": 0.26599999994505197,
+      "receive_seconds_after_confirmation": 0.9059999999590218,
+      "audio": {
+        "samples": 2048,
+        "sample_rate": 52734.375,
+        "rms": 0.0,
+        "peak": 0,
+        "nonzero": 0,
+        "saturated": 0,
+        "peak_hz": null
+      },
+      "chunk_rms": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_file": "quiet.s24le",
+      "raw_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0",
+      "snapshot": {
+        "ack": 92,
+        "on": 46,
+        "off": 46,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      },
+      "after": {
+        "ack": 92,
+        "on": 46,
+        "off": 46,
+        "active": 0,
+        "fingers": 4294967295,
+        "period_min": 512,
+        "period_max": 512
+      },
+      "status_after": {
+        "ready": true,
+        "armed": false,
+        "warm": true,
+        "initialized": true,
+        "running": false,
+        "bound": false,
+        "fault": false,
+        "case": 5
+      }
+    }
+  ],
+  "identity": {
+    "profile": 114,
+    "abi": 1,
+    "diagnostic": 211,
+    "scope": 32
+  },
+  "final_status": {
+    "ready": true,
+    "armed": false,
+    "warm": true,
+    "initialized": true,
+    "running": false,
+    "bound": false,
+    "fault": false,
+    "case": 5
+  },
+  "final_snapshot": {
+    "ack": 92,
+    "on": 46,
+    "off": 46,
+    "active": 0,
+    "fingers": 4294967295,
+    "period_min": 512,
+    "period_max": 512
+  }
+}

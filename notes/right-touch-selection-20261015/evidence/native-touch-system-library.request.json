@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "de0d8a53-3a87-41b0-876b-1de9e858c4c7",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "const result={project:await eda.dmt_Project.getCurrentProjectInfo(),library:await eda.lib_LibrariesList.getSystemLibraryUuid(),queries:{}};\nfor (const query of __CLI__.args.queries) {\n result.queries[query]=await eda.lib_Device.search(query,result.library,undefined,undefined,20,1);\n}\nreturn result;",
+    "--args",
+    "{\"queries\": [\"SN74LVC14ADR\", \"DFR0669\", \"HS28B03A\", \"CTPH043\", \"2.8inch Capacitive Touch LCD\", \"LCKFB-st7789-2.0inch-screen\", \"DFR1092\"]}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

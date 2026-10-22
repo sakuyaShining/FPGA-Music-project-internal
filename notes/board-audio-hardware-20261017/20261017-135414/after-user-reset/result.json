@@ -1,0 +1,46 @@
+{
+  "time": "2026-10-17T14:01:00.637623+08:00",
+  "script_sha256": "547b921f7607169a47683dabab8f9df9999de4ab3800d6502425b2eb8c5d60b8",
+  "checker_sha256": "9ee9ddf019c387899e1233bf44559f98566a4ae2f1ffdc00091ac61c16c0737e",
+  "hardware_tested": true,
+  "user_report": "\u5df2\u6309\u4e0b",
+  "audio_armed_by_this_script": false,
+  "flash_read_or_written": false,
+  "identity": {
+    "profile": 114,
+    "abi": 1,
+    "diagnostic": 211,
+    "scope": 32
+  },
+  "state": {
+    "ready": true,
+    "armed": false,
+    "warm": true,
+    "initialized": true,
+    "running": false,
+    "bound": false,
+    "fault": false,
+    "case": 3
+  },
+  "snapshot": {
+    "ack": 192,
+    "on": 96,
+    "off": 96,
+    "active": 0,
+    "fingers": 4294967295,
+    "period_min": 512,
+    "period_max": 512
+  },
+  "raw_sha256": "fd9243e1ba57263ed469c3bdbd7ade6ec5254e7ed924a9f5737fa44749933cc0",
+  "audio": {
+    "samples": 2048,
+    "sample_rate": 52734.375,
+    "rms": 0.0,
+    "peak": 0,
+    "nonzero": 0,
+    "saturated": 0,
+    "peak_hz": null
+  },
+  "status": "FAIL",
+  "error": "reset state was not observed"
+}

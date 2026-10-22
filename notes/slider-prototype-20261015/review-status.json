@@ -1,0 +1,25 @@
+{
+  "status": "logical list consistency only, not ERC or electrical qualification",
+  "no_duplicate_component_pins": true,
+  "fpga_signal_count_candidate": 18,
+  "prototype_lanes": 2,
+  "future_full_lanes": 8,
+  "physical_sliders_on_coupon": 4,
+  "electrodes_per_slider_candidate": 3,
+  "physical_electrode_nodes": 12,
+  "scan_addresses_per_frame": 16,
+  "board_dimensions_candidate_mm": [
+    90,
+    100
+  ],
+  "release_for_manufacture": false,
+  "missing": [
+    "connected EDA project and ERC/DRC",
+    "exact display model",
+    "exact encoder footprint",
+    "ESD selection and validation",
+    "physical pin assignment",
+    "measured sensing data",
+    "domestic CNY quote"
+  ]
+}

@@ -1,0 +1,1 @@
+见project/CURRENT.md。SDRAM逻辑控制与子集模型实验，尚未接合录放队列或完成实体RAM资格验证。

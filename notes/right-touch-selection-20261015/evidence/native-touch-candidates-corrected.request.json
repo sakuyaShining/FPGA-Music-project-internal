@@ -1,0 +1,16 @@
+{
+  "args": [
+    "invoke",
+    "--session",
+    "de0d8a53-3a87-41b0-876b-1de9e858c4c7",
+    "--ext-uuid",
+    "eda",
+    "--code",
+    "const result={};\nfor (const query of __CLI__.args.queries) {\n result[query]=await eda.lib_Device.search(query);\n}\nreturn result;",
+    "--args",
+    "{\"queries\": [\"DFR0669\", \"HS28B03A\", \"CTPH043\", \"2.8inch Capacitive Touch LCD\", \"LCKFB-st7789-2.0inch-screen\"]}",
+    "--timeout",
+    "60000"
+  ],
+  "timeout": 75
+}

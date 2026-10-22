@@ -1,0 +1,5 @@
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module rh_fader_bank declared here: rtl/rh_fader_bank.v:5
+       :   -- module rh_fader_panel declared here: rtl/rh_fader_panel.v:3

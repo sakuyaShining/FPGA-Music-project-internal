@@ -1,0 +1,29 @@
+{
+  "version": "resource-safety-20261016-v0",
+  "status": "部分实现",
+  "source_main_head": "fe326ad9505c94f46f9236bf7f9bfc3b5f1b9a12",
+  "source_engine_head": "683db4834a031baca217b9e3ae7a0369644b8935",
+  "upstream": "experiments/instrument_layers_20261016",
+  "selected_variant": "all",
+  "features": {
+    "contact_anchor_sharing": "已验证",
+    "identity_prefetch": "已验证",
+    "contact_metadata_cache_and_forwarding": "已验证",
+    "cycle_equivalence_in_recorded_scope": "已验证",
+    "deliberate_regression_detection": "已验证",
+    "full_instrument_configuration": "部分实现",
+    "independent_attack_release_effects": "待实现",
+    "four_simultaneous_layers": "待实现",
+    "gui_protocol_and_physical_editor": "待实现",
+    "nonvolatile_save": "待实现",
+    "pcm_record_play_live_and_event_score": "待实现",
+    "seven_inch_touch_ui": "待实现",
+    "final_music_switch_and_steal_semantics": "讨论中",
+    "final_500_yuan_manufacturing": "讨论中"
+  },
+  "resource": {"logic": 19892, "logic_limit": 20736, "register": 11120, "bsram": 43, "bsram_limit": 46, "logic_remaining": 844, "bsram_remaining": 3, "full_product_capacity_verified": false},
+  "hardware_tested": false,
+  "pnr_tested": false,
+  "startup_unknown_boundary_preserved": true,
+  "next": "在已验证资源底座上接逐层完整包络/配置能力，随后非易失和TF/SDRAM录放资源探针"
+}
