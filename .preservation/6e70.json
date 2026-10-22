@@ -3990,6 +3990,22 @@
       "sha256": "862c1112790efd441242dea61a1381848f231fc630e015ba299721492e223d1a",
       "lf_sha256": "d9343e6c6e8711f7fc1fd1afd64b77ede89b0c48d9cf0a90cea61c53b935829c",
       "mtime_ns": 1791309987728217900
+    },
+    "tools/host/fonts/LolitaMono.ttf": {
+      "stored_path": "tools/host/fonts/LolitaMono.ttf",
+      "codec": "raw",
+      "bytes": 12082220,
+      "sha256": "c8363198ffa98440b863a0835f7e6c8864e5d079694ee542e70f6210f86b2492",
+      "lf_sha256": "3983e3893b380450e062cf6819257e8913b05fe640df7fbe34ae9bab4180b417",
+      "mtime_ns": 1786661512759523100
+    },
+    "tools/host/fonts/lolita.ttf": {
+      "stored_path": "tools/host/fonts/lolita.ttf",
+      "codec": "raw",
+      "bytes": 11949844,
+      "sha256": "d91f680b870855d50619f72a1e597d2af5f068535e610a4fc95e5e53bab93449",
+      "lf_sha256": "84f67177019cace1459492e9494d97aea817d722236532e7ab61e883711605d5",
+      "mtime_ns": 1425208826000000000
     }
   },
   "deleted_tracked_paths": [],
@@ -4011,5 +4027,10 @@
       "reason": "generated/vendor/out-of-scope directory"
     }
   ],
-  "scope": "Tracked files and selected source/evidence extensions; generated/vendor directories and reparse targets excluded"
+  "scope": "Tracked files and selected source/evidence extensions; generated/vendor directories and reparse targets excluded",
+  "asset_supplement_at": "2026-10-22T10:55:21.639501+00:00",
+  "asset_supplement_paths": [
+    "tools/host/fonts/LolitaMono.ttf",
+    "tools/host/fonts/lolita.ttf"
+  ]
 }
