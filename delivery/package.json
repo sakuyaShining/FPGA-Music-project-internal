@@ -1,0 +1,34 @@
+{
+  "project": "src/gowin/tdm_synth/tdm_synth.gprj",
+  "top_module": "tdm_ship",
+  "device": "GW2AR-LV18QN88C8/I7",
+  "code_patterns": [
+    "src/rtl/*.v", "src/sim/*.v", "src/constr/tdm_top.cst", "src/constr/tdm_top.sdc",
+    "src/gowin/tdm_synth/tdm_synth.gprj", "src/gowin/tdm_synth/*.hex",
+    "tools/scripts/*.py", "tools/scripts/build_gowin.ps1", "tools/scripts/build_project.ps1",
+    "tools/scripts/program_project.ps1", "tools/scripts/build_sims.ps1",
+    "tools/scripts/flash.cmd", "tools/scripts/flash_sram.cmd",
+    "tools/host/*.py", "tools/host/*.qss", "tools/host/README.md", "tools/requirements-*.txt"
+  ],
+  "exclude": ["tools/scripts/extract.py", "tools/scripts/docx_text.py"],
+  "required_hex": ["note_inc.hex", "preset_part.hex", "recip_inc.hex", "sine256.hex", "tilt_wtab.hex", "vel_wtab.hex"],
+  "documents": {
+    "HANDOFF.md": "HANDOFF.md",
+    "delivery/QUICKSTART.md": "QUICKSTART.md",
+    "delivery/status.json": "status.json",
+    "delivery/package.json": "code/delivery/package.json",
+    "handoff/任务领取与交回模板.md": "collaboration/task_template.md",
+    "docs/02-技术方案/19-UART协议v1.0草案.md": "code/docs/02-技术方案/19-UART协议v1.0草案.md",
+    "docs/02-技术方案/regmap_baseline.csv": "code/docs/02-技术方案/regmap_baseline.csv",
+    "delivery/hardware/README.md": "hardware/README.md"
+  },
+  "evidence": {
+    "delivery/validation.md": "evidence/validation.md",
+    "sim_build/right_fader/result.txt": "evidence/right_fader_rtl.txt",
+    "sim_build/hardware_audit/dsi_20261014/protocol_compile_probe/README.txt": "evidence/dsi_protocol_compile/README.txt",
+    "sim_build/hardware_audit/dsi_20261014/protocol_compile_probe/impl/gwsynthesis/probe.log": "evidence/dsi_protocol_compile/synthesis.log",
+    "sim_build/hardware_audit/dsi_20261013/baseline/impl/pnr/baseline.rpt.txt": "evidence/audio_baseline/pnr_resources.txt",
+    "sim_build/hardware_audit/dsi_20261013/baseline/impl/pnr/baseline_tr_content.html": "evidence/audio_baseline/timing.html",
+    "sim_build/hardware_audit/dsi_20261013/bank_probe/impl/pnr/bank_probe.log": "evidence/bank_voltage_probe.log"
+  }
+}

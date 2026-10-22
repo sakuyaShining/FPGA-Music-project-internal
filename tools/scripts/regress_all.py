@@ -40,7 +40,8 @@ ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
 RTL = os.path.join(ROOT, "src", "rtl")
 SIM = os.path.join(ROOT, "src", "sim")
 BUILD = os.path.join(ROOT, "sim_build", "regress")
-IV = r"D:\iverilog\bin"
+IV = os.environ.get("FPGA_MUSIC_IVERILOG_BIN") or os.path.dirname(
+    shutil.which("iverilog") or r"D:\iverilog\bin\iverilog.exe")
 
 FULL_BASE = ["osc_core.v", "osc_env.v", "osc_additive.v", "mixer.v", "synth_top.v"]
 

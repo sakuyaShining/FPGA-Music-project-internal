@@ -120,7 +120,7 @@ Remove-Item -LiteralPath $outFile, $errFile, $tclPath -ErrorAction SilentlyConti
 $errs = $output -split "`r?`n" | Where-Object { $_ -match '\bERROR\b' }
 $warns = $output -split "`r?`n" | Where-Object { $_ -match '\bWARN\b' }
 
-if ($errs.Count -gt 0) {
+if ($gwExit -ne 0 -or $errs.Count -gt 0) {
     Write-Host "== 编译失败，错误如下：" -ForegroundColor Red
     $errs | ForEach-Object { Write-Host "   $_" -ForegroundColor Red }
     Write-Host ""

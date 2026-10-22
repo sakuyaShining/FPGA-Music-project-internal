@@ -83,3 +83,9 @@ refs/vendor-examples/
 
 # Archify 生成中间件（成品已归档到 docs/04-架构图）
 .archify/
+
+# Generated delivery snapshots; source manifests live in delivery/.
+release/
+# Machine-local IDE state; existing tracked copies are historical until untracked.
+*.gprj.user
+.codex-remote-attachments/

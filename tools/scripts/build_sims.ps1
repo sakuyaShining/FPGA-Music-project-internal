@@ -17,14 +17,21 @@
 # NOTE: iverilog writes warnings to stderr; with ErrorActionPreference=Stop
 #       PowerShell turns that into a terminating NativeCommandError. Keep
 #       'Continue' and filter for real errors instead.
+param([string]$Iverilog = $env:FPGA_MUSIC_IVERILOG)
 $ErrorActionPreference = 'Continue'
-$iverilog = 'D:\iverilog\bin\iverilog.exe'
-if (-not (Test-Path $iverilog)) { Write-Error "iverilog not found: $iverilog" }
+Set-Location (Split-Path -Parent (Split-Path -Parent $PSScriptRoot))
+if (-not $Iverilog) {
+    $taskIvCommand = Get-Command iverilog.exe -ErrorAction SilentlyContinue
+    if ($taskIvCommand) { $Iverilog = $taskIvCommand.Source }
+}
+if (-not $Iverilog) { $Iverilog = 'D:\iverilog\bin\iverilog.exe' }
+if (-not (Test-Path -LiteralPath $Iverilog)) { Write-Error "iverilog not found; pass -Iverilog or set FPGA_MUSIC_IVERILOG: $Iverilog"; exit 1 }
 
 $RTL = 'src\rtl'
 
 $S_COMMON = @("$RTL\osc_env.v", "$RTL\tdm_engine.v", "$RTL\pitch_mod.v")
 $S_TOP = @(
+    "$RTL\event_hold.v"
     "$RTL\audio_clk_en.v", "$RTL\osc_env.v", "$RTL\i2s_tx.v"
     "$RTL\tdm_engine.v", "$RTL\pitch_mod.v", "$RTL\note_map.v"
     "$RTL\vel_shape.v", "$RTL\reg_bank.v", "$RTL\uart_rx.v"
@@ -62,10 +69,13 @@ $targets = @(
 )
 $fail = 0
 foreach ($tg in $targets) {
+    $taskOutputDir = Split-Path -Parent $tg.o
+    if ($taskOutputDir) { New-Item -ItemType Directory -Force -Path $taskOutputDir | Out-Null }
     $a = @('-g2005', '-DSIM_INIT', '-o', $tg.o, '-s', $tg.t) + $tg.s
     $out = & $iverilog @a 2>&1
+    $taskCompileExit = $LASTEXITCODE
     $err = $out | Select-String -Pattern '\berror\b'
-    if ($err) {
+    if ($taskCompileExit -ne 0 -or $err) {
         Write-Output ("FAIL {0}" -f $tg.n)
         $err | Select-Object -First 4 | ForEach-Object { Write-Output ("     " + $_) }
         $fail = $fail + 1
