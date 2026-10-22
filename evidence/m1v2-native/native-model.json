@@ -1,0 +1,17 @@
+{
+  "status": "PASS replicated native store versus independent word array; complete asynchronous address sweeps",
+  "results": {
+    "native-2-8": "PASS native NG=2 QW=8 cycles=20000 writes=10000 read_write=8663 full_address_sweeps=78 async_reads\nD:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_native.v:29: $finish called at 200786000 (1ps)\n",
+    "native-32-18": "PASS native NG=32 QW=18 cycles=20000 writes=10000 read_write=5009 full_address_sweeps=78 async_reads\nD:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_native.v:29: $finish called at 203126000 (1ps)\n",
+    "native-32-20": "PASS native NG=32 QW=20 cycles=20000 writes=10000 read_write=5009 full_address_sweeps=78 async_reads\nD:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_native.v:29: $finish called at 203126000 (1ps)\n",
+    "native-128-20": "PASS native NG=128 QW=20 cycles=20000 writes=10000 read_write=4745 full_address_sweeps=78 async_reads\nD:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_native.v:29: $finish called at 210146000 (1ps)\n"
+  },
+  "inputs": {
+    "engine/src/pitch_native_store.v": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+    "tb/vendor_ram16sdp4.v": "8ca2165b7d833f4db03edbe1291b8faafb50096c9622f4397dc7cca3d1244670",
+    "tb/tb_native.v": "875b066112900601bbcd8412abf43a935efaced9f08638fe357ce2f8e8f83cab",
+    "check_native.py": "9bf64262e861ccd1bfe285b654595388dab48c51388e64896f806bc023053253",
+    "common.py": "edc883dfaabf9eb122aeaf205482e48a5684e244956b0c1d8c29a9c6101a4312"
+  },
+  "hardware_tested": false
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS sampled pitch output/epoch equivalence to84, with debug shadow state; swapped native read ports detected",
+  "results": {
+    "pitch-2-18": "PASS pitch_memory NG=2 QW=18 cycles=240000 writes=120000 epochs=489 same_write=127 dual_address_write=121 sample_write=479 resets=12\nD:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_pitch_memory.v:49: $finish called at 2400038000 (1ps)\n",
+    "pitch-8-18": "PASS pitch_memory NG=8 QW=18 cycles=240000 writes=121876 epochs=558 same_write=315 dual_address_write=2074 sample_write=516 resets=12\nD:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_pitch_memory.v:49: $finish called at 2400038000 (1ps)\n",
+    "pitch-32-18": "PASS pitch_memory NG=32 QW=18 cycles=240000 writes=127504 epochs=833 same_write=336 dual_address_write=10260 sample_write=667 resets=12\nD:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_pitch_memory.v:49: $finish called at 2400038000 (1ps)\n",
+    "pitch-32-20": "PASS pitch_memory NG=32 QW=20 cycles=240000 writes=127503 epochs=833 same_write=355 dual_address_write=10105 sample_write=664 resets=12\nD:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_pitch_memory.v:49: $finish called at 2400038000 (1ps)\n"
+  },
+  "detected_fault": "FATAL: D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_pitch_memory.v:18: logical storage mismatch cycle=16 group=1\n       Time: 196000  Scope: tb_pitch_memory.check\n",
+  "inputs": {
+    "engine/src/pitch_mod.v": "c16d1ae9d37f1daa3891dad05e67374dac716fb2148b062849df51a430ca1792",
+    "engine/src/pitch_native_store.v": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+    "tb/vendor_ram16sdp4.v": "8ca2165b7d833f4db03edbe1291b8faafb50096c9622f4397dc7cca3d1244670",
+    "evidence/baseline01-pitch/pitch_mod_reference.v": "56ed2b47517657379fbe778a34a6fc92c2b03f7cff2c5a5e4e4b50c0928a036f",
+    "tb/tb_pitch_memory.v": "01e02010264296cb6f07b2b15a3458991cc2f2b7cc31dee2287ac45e70f730e9",
+    "reference/pitch_mod.v": "f90a31f486c021ab0a7d0232b43ca5eb1d22a3890e835feac2fbe9f4b8b5106a",
+    "check_pitch.py": "0b6bc92dff00604df80deed5570340155083d2a7ea06c95a5d763029b47330d5",
+    "common.py": "edc883dfaabf9eb122aeaf205482e48a5684e244956b0c1d8c29a9c6101a4312"
+  },
+  "hardware_tested": false
+}

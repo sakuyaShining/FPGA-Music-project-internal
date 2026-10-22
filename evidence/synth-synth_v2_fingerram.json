@@ -1,0 +1,892 @@
+{
+  "status": "synthesis measured; NOT placed or routed; NEVER PROGRAM",
+  "label": "synth_v2_fingerram",
+  "returncode": 0,
+  "seconds": 101.63,
+  "totals": {
+    "reg": 10880.0,
+    "alu": 1966.0,
+    "lut": 17305.0,
+    "dsp": 28.0,
+    "bsram": 33.0,
+    "ssram": 140.0,
+    "rom16": 0.0,
+    "logic_equiv": 20111.0
+  },
+  "modules": {
+    "joint_timing_top": {
+      "reg": 40.0,
+      "alu": 5.0,
+      "lut": 347.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--scan_storage": {
+      "reg": 12.0,
+      "alu": 12.0,
+      "lut": 1.0,
+      "dsp": 9.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--system": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--music": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--layers": {
+      "reg": 843.0,
+      "alu": 41.0,
+      "lut": 1029.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 8.0,
+      "rom16": 0.0
+    },
+    "|--bridge": {
+      "reg": 744.0,
+      "alu": 27.0,
+      "lut": 963.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 14.0,
+      "rom16": 0.0
+    },
+    "|--control": {
+      "reg": 50.0,
+      "alu": 0.0,
+      "lut": 7.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--panel": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--bank": {
+      "reg": 355.0,
+      "alu": 48.0,
+      "lut": 472.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--mapper": {
+      "reg": 307.0,
+      "alu": 0.0,
+      "lut": 152.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--slew": {
+      "reg": 498.0,
+      "alu": 30.0,
+      "lut": 689.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--core": {
+      "reg": 158.0,
+      "alu": 21.0,
+      "lut": 579.0,
+      "dsp": 1.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--serial_configuration.receiver": {
+      "reg": 207.0,
+      "alu": 30.0,
+      "lut": 285.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_uart": {
+      "reg": 40.0,
+      "alu": 0.0,
+      "lut": 47.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_reg": {
+      "reg": 195.0,
+      "alu": 0.0,
+      "lut": 50.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_tx": {
+      "reg": 32.0,
+      "alu": 0.0,
+      "lut": 53.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_seq": {
+      "reg": 75.0,
+      "alu": 24.0,
+      "lut": 187.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 16.0,
+      "rom16": 0.0
+    },
+    "|--u_uartq": {
+      "reg": 35.0,
+      "alu": 21.0,
+      "lut": 21.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 3.0,
+      "rom16": 0.0
+    },
+    "|--u_seqq": {
+      "reg": 35.0,
+      "alu": 21.0,
+      "lut": 22.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 3.0,
+      "rom16": 0.0
+    },
+    "|--u_padq": {
+      "reg": 4.0,
+      "alu": 3.0,
+      "lut": 9.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_pinq": {
+      "reg": 35.0,
+      "alu": 21.0,
+      "lut": 20.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 3.0,
+      "rom16": 0.0
+    },
+    "|--u_evhold": {
+      "reg": 19.0,
+      "alu": 6.0,
+      "lut": 11.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 3.0,
+      "rom16": 0.0
+    },
+    "|--u_clk": {
+      "reg": 16.0,
+      "alu": 0.0,
+      "lut": 22.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_nm": {
+      "reg": 1400.0,
+      "alu": 275.0,
+      "lut": 2077.0,
+      "dsp": 4.0,
+      "bsram": 2.0,
+      "ssram": 8.0,
+      "rom16": 0.0
+    },
+    "|--table_store": {
+      "reg": 74.0,
+      "alu": 0.0,
+      "lut": 159.0,
+      "dsp": 0.0,
+      "bsram": 3.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_vshape": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 147.0,
+      "dsp": 2.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--contact_expression.u_finger": {
+      "reg": 809.0,
+      "alu": 173.0,
+      "lut": 1733.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 10.0,
+      "rom16": 0.0
+    },
+    "|--u_tdm": {
+      "reg": 956.0,
+      "alu": 102.0,
+      "lut": 2498.0,
+      "dsp": 4.0,
+      "bsram": 11.0,
+      "ssram": 10.0,
+      "rom16": 0.0
+    },
+    "|--u_env": {
+      "reg": 0.0,
+      "alu": 79.0,
+      "lut": 143.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_pmod": {
+      "reg": 142.0,
+      "alu": 114.0,
+      "lut": 650.0,
+      "dsp": 1.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--command_store": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 11.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 20.0,
+      "rom16": 0.0
+    },
+    "|--physical_store": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 12.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 20.0,
+      "rom16": 0.0
+    },
+    "|--u_fx": {
+      "reg": 240.0,
+      "alu": 304.0,
+      "lut": 411.0,
+      "dsp": 3.0,
+      "bsram": 2.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_i2s": {
+      "reg": 32.0,
+      "alu": 0.0,
+      "lut": 33.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_led": {
+      "reg": 57.0,
+      "alu": 0.0,
+      "lut": 101.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--visualizer": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_fft": {
+      "reg": 527.0,
+      "alu": 217.0,
+      "lut": 478.0,
+      "dsp": 3.0,
+      "bsram": 5.0,
+      "ssram": 12.0,
+      "rom16": 0.0
+    },
+    "|--u_wave": {
+      "reg": 65.0,
+      "alu": 0.0,
+      "lut": 82.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_renderer": {
+      "reg": 909.0,
+      "alu": 135.0,
+      "lut": 1484.0,
+      "dsp": 1.0,
+      "bsram": 2.0,
+      "ssram": 10.0,
+      "rom16": 0.0
+    },
+    "|--u_panel": {
+      "reg": 114.0,
+      "alu": 35.0,
+      "lut": 178.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_spi": {
+      "reg": 33.0,
+      "alu": 0.0,
+      "lut": 115.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--sensor": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--scanner": {
+      "reg": 276.0,
+      "alu": 31.0,
+      "lut": 175.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--writer": {
+      "reg": 21.0,
+      "alu": 0.0,
+      "lut": 34.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--store": {
+      "reg": 365.0,
+      "alu": 60.0,
+      "lut": 455.0,
+      "dsp": 0.0,
+      "bsram": 2.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--positions": {
+      "reg": 796.0,
+      "alu": 95.0,
+      "lut": 752.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--transport": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--buffers": {
+      "reg": 20.0,
+      "alu": 0.0,
+      "lut": 25.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--recording": {
+      "reg": 32.0,
+      "alu": 0.0,
+      "lut": 84.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--playback": {
+      "reg": 32.0,
+      "alu": 0.0,
+      "lut": 71.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--arbiter": {
+      "reg": 181.0,
+      "alu": 36.0,
+      "lut": 277.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--sdram": {
+      "reg": 99.0,
+      "alu": 0.0,
+      "lut": 154.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    }
+  },
+  "ram_extractions": 50,
+  "inputs": {
+    "audio_clk_en.v": {
+      "source": "engine/src/audio_clk_en.v",
+      "sha256": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c"
+    },
+    "board_diag.v": {
+      "source": "engine/src/board_diag.v",
+      "sha256": "a92a314729ec29a461c2fc7aa6c022f8f8408352ef73d988d566c993061f1e7d"
+    },
+    "bringup_top.v": {
+      "source": "engine/src/bringup_top.v",
+      "sha256": "c1658662f3c9d35b9a4af1d5fb0f20ba0a9077d34ec9474832534230509a610d"
+    },
+    "compat_music_probe.v": {
+      "source": "engine/src/compat_music_probe.v",
+      "sha256": "af0a54d4788109f45140d41193f0650b77208e5c03b9f6eb4fed4a444bdbc4f3"
+    },
+    "event_hold.v": {
+      "source": "engine/src/event_hold.v",
+      "sha256": "ec06d3697215394354da8b3ffcdca6208c7cd5b6d8a4b8055e1d8e1a813708e4"
+    },
+    "finger_pitch.v": {
+      "source": "engine/src/finger_pitch.v",
+      "sha256": "1702ccc636619f85f65ef18f810efd5e652ab206ffcdc1d2e07fbce12d093d5a"
+    },
+    "fx_delay.v": {
+      "source": "engine/src/fx_delay.v",
+      "sha256": "67ce4e845fbd4fa5f96efbce46d435b629425afeabdc20b3b3758f268dbce15e"
+    },
+    "i2c_master.v": {
+      "source": "engine/src/i2c_master.v",
+      "sha256": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999"
+    },
+    "i2s_tx.v": {
+      "source": "engine/src/i2s_tx.v",
+      "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a"
+    },
+    "image_rom.v": {
+      "source": "engine/src/image_rom.v",
+      "sha256": "7083c1fe352f63c950dbf5bd1de6545a6fcb28f983d8c08a0683b6f75041e198"
+    },
+    "image_view.v": {
+      "source": "engine/src/image_view.v",
+      "sha256": "e45fd3de51a6a8260301d285bbbfc5384887675b2e7a8e95be6a50a0cd1f97fe"
+    },
+    "instrument_joint_probe.v": {
+      "source": "engine/src/instrument_joint_probe.v",
+      "sha256": "5dd58082611a345fdfcfd0fa9a27d2a6d28911e9fbb4307d46fc9fcd00cdab4a"
+    },
+    "instrument_layer_probe.v": {
+      "source": "engine/src/instrument_layer_probe.v",
+      "sha256": "85afde696d25b07973116a2a83735f6c628e32d4bbb1becd6a01ac3e87b9fbe3"
+    },
+    "instrument_owned_probe.v": {
+      "source": "engine/src/instrument_owned_probe.v",
+      "sha256": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e"
+    },
+    "instrument_sensor_probe.v": {
+      "source": "engine/src/instrument_sensor_probe.v",
+      "sha256": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5"
+    },
+    "instrument_table.v": {
+      "source": "engine/src/instrument_table.v",
+      "sha256": "2343da52dd99d883403a889caf5b5b8fd0c61c06a2f94db42e9ba319e1bd377f"
+    },
+    "layer_dispatch.v": {
+      "source": "engine/src/layer_dispatch.v",
+      "sha256": "cf1f0739a324c1bea4d28734bf60b8a34366395ae199da3515ac81d5e29d7f0f"
+    },
+    "lcd_480x272.v": {
+      "source": "engine/src/lcd_480x272.v",
+      "sha256": "7a4176f739123438be35837be943fb93eb355f5c8a2f36e322ef97a1546f8409"
+    },
+    "led_blink.v": {
+      "source": "engine/src/led_blink.v",
+      "sha256": "323ed6035f1d4f2d198eb97009c3576a53a81f3a050071f1bf976a73b3a69f6c"
+    },
+    "led_heartbeat.v": {
+      "source": "engine/src/led_heartbeat.v",
+      "sha256": "ceac0e82fbaec093bcdc5d7765a6f8943c421728015d4690d2c907ec7e2de277"
+    },
+    "led_ind.v": {
+      "source": "engine/src/led_ind.v",
+      "sha256": "05ce8e6dced0d341c04f51edd7a9fdc136fa5a58205cf5cf79314abb8f9ce8b3"
+    },
+    "left_contact_bridge.v": {
+      "source": "engine/src/left_contact_bridge.v",
+      "sha256": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36"
+    },
+    "left_layer_music_probe.v": {
+      "source": "engine/src/left_layer_music_probe.v",
+      "sha256": "5451b95b8043945a2e5815bafc97065ac606e7483a3eab69f9819baaa48f3424"
+    },
+    "left_music_probe.v": {
+      "source": "engine/src/left_music_probe.v",
+      "sha256": "ae154867537d216d177165a7d393715d9751a25214e5bc5ebc7c12e58ad0249b"
+    },
+    "live_audio_monitor.v": {
+      "source": "engine/src/live_audio_monitor.v",
+      "sha256": "f42a6c98c84e2ecf5fabad5b99d025932bf94feaee6b6fd022be7d935b85cd8d"
+    },
+    "live_observation_filter.v": {
+      "source": "engine/src/live_observation_filter.v",
+      "sha256": "ffd3170e422cd760fb822964e7943aa46b66ff8ac43132b443ae59954f958e3f"
+    },
+    "mixer.v": {
+      "source": "engine/src/mixer.v",
+      "sha256": "317ab1090976a369bcf5e60748e2f9cd861dc6ffdfad259bf93b9cd7151e8149"
+    },
+    "music_visualizer.v": {
+      "source": "engine/src/music_visualizer.v",
+      "sha256": "d35912021fee2cfbf75cbfde1cda3aae1e35355d7962b092333fd4f35086cfb7"
+    },
+    "mv_fft1024.v": {
+      "source": "engine/src/mv_fft1024.v",
+      "sha256": "c55f4090d89f020b84f4bf03508cb89e5eab0328e9e371d3325603029c107329"
+    },
+    "mv_panel_driver.v": {
+      "source": "engine/src/mv_panel_driver.v",
+      "sha256": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1"
+    },
+    "mv_renderer.v": {
+      "source": "engine/src/mv_renderer.v",
+      "sha256": "e45ae5bb2bafe8275f995d48a15842c8647ce6fec3e2233b993e972610db67d8"
+    },
+    "mv_spi_byte.v": {
+      "source": "engine/src/mv_spi_byte.v",
+      "sha256": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597"
+    },
+    "mv_wave_capture.v": {
+      "source": "engine/src/mv_wave_capture.v",
+      "sha256": "368495a1805024999a7fdd9104183baa1461b72841d6d7fe63d8b23c362583ee"
+    },
+    "note_map.v": {
+      "source": "engine/src/note_map.v",
+      "sha256": "6b801c2ea7f660d1a8d118653eb1262f60892e1032bdf9241ce246576c37d8be"
+    },
+    "note_map_owned.v": {
+      "source": "engine/src/note_map_owned.v",
+      "sha256": "005684fd952f51677e78855b871235e82931129becc9639bd1fb84f51063a1f3"
+    },
+    "osc_additive.v": {
+      "source": "engine/src/osc_additive.v",
+      "sha256": "84a1a531553e68716a6711e0566655cf43acf638fcba2151338862f0a077f6c5"
+    },
+    "osc_additive_top.v": {
+      "source": "engine/src/osc_additive_top.v",
+      "sha256": "3447962873a9bf9305bb02807713c349fb12a997da366563880c36cd300c475b"
+    },
+    "osc_core.v": {
+      "source": "engine/src/osc_core.v",
+      "sha256": "1197146dbb96d5f067e1a61852d8210ec866428609dec7a0fd5027c45facb274"
+    },
+    "osc_env.v": {
+      "source": "engine/src/osc_env.v",
+      "sha256": "71b4ebd4c1fb58ff4bf58d8f6f0681f915d5910605a6071eedcdcf2c5cbda00b"
+    },
+    "pad_pitch.v": {
+      "source": "engine/src/pad_pitch.v",
+      "sha256": "c8a7fc95f6bd98d14963c3c3b7b36a244de48f585711f078b5f39fbeeb353508"
+    },
+    "pad_scan.v": {
+      "source": "engine/src/pad_scan.v",
+      "sha256": "e42adff0b0b18c5a9b1f2ce8c26b0089cd06413116f0958dc0bcdfc8b07992cb"
+    },
+    "perf_ctrl.v": {
+      "source": "engine/src/perf_ctrl.v",
+      "sha256": "e20f1c96bca276042a1550e7f923590640a4965c7f158333d50b93e6a626707e"
+    },
+    "pitch_mod.v": {
+      "source": "engine/src/pitch_mod.v",
+      "sha256": "6855fafe33b2942216f53738bf9d1c986c1d4151e5e4e6a5ef22ae8d79d85f02"
+    },
+    "pitch_native_store.v": {
+      "source": "engine/src/pitch_native_store.v",
+      "sha256": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c"
+    },
+    "rc_delta_store.v": {
+      "source": "engine/src/rc_delta_store.v",
+      "sha256": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320"
+    },
+    "rc_mux_scan.v": {
+      "source": "engine/src/rc_mux_scan.v",
+      "sha256": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b"
+    },
+    "rc_strip_positions.v": {
+      "source": "engine/src/rc_strip_positions.v",
+      "sha256": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e"
+    },
+    "reg_bank.v": {
+      "source": "engine/src/reg_bank.v",
+      "sha256": "ab40758c3cfc453328860448d921e9f17423ccc5b67fde9c6f067881c91c89c3"
+    },
+    "reg_bank_compact.v": {
+      "source": "engine/src/reg_bank_compact.v",
+      "sha256": "48b96835537a241bf047d1bea01850150c372e0086b243c00aff4f744f805520"
+    },
+    "rh_fader_bank.v": {
+      "source": "engine/src/rh_fader_bank.v",
+      "sha256": "bd5af0b47a36749da5fb5fbc29e546f19e7bc00e1929873593b31f680358c2da"
+    },
+    "rh_fader_gain_map.v": {
+      "source": "engine/src/rh_fader_gain_map.v",
+      "sha256": "4a15353dc921388d71dff712999b2149a7e0245ed2641462ede3e79b7a704414"
+    },
+    "rh_fader_panel.v": {
+      "source": "engine/src/rh_fader_panel.v",
+      "sha256": "740cd8367f6e4e59431e8223b9d1d187309d78036c1b2b04bd6d4c7e692cc49a"
+    },
+    "rh_music_probe.v": {
+      "source": "engine/src/rh_music_probe.v",
+      "sha256": "50399fe808325f853bf3af0d31ab341d9327d1c6835606039ccf29570f19676c"
+    },
+    "rh_performance_control.v": {
+      "source": "engine/src/rh_performance_control.v",
+      "sha256": "52a139a2730b0824d90b1f19f40b4ab50b6a2f7b23cdc2fe05ccb31a07fd4e99"
+    },
+    "rh_timbre_slew.v": {
+      "source": "engine/src/rh_timbre_slew.v",
+      "sha256": "317febd64da227a12726689ddc482168abe9e534cf4ee0d55e6feec42274338c"
+    },
+    "scan_shift595.v": {
+      "source": "engine/src/scan_shift595.v",
+      "sha256": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f"
+    },
+    "song_seq.v": {
+      "source": "engine/src/song_seq.v",
+      "sha256": "56339052cda65f54c91061240af3fe604ca8715f34c7f31f18864606daf0db5f"
+    },
+    "strip_ctrl.v": {
+      "source": "engine/src/strip_ctrl.v",
+      "sha256": "25fe3d5a6fe4bc3aaf5479a6906807e90af7e4b6ce5ecfeeb0d1c37b94903bcd"
+    },
+    "synth_top.v": {
+      "source": "engine/src/synth_top.v",
+      "sha256": "c782c68cc93c1c0d8cdac18a3612d28bc9859b096a8def9637b5e5c0b184e5d5"
+    },
+    "tdm_board_test.v": {
+      "source": "engine/src/tdm_board_test.v",
+      "sha256": "4d0cf24ab912a41334ef6fcee35c71079eab66196805c74bec2eddc349f7af3e"
+    },
+    "tdm_engine.v": {
+      "source": "engine/src/tdm_engine.v",
+      "sha256": "ab9df08878226e0de0d3fa9ceed3ef04dc1437ea45cb7e638bc9b80546aa3aab"
+    },
+    "tdm_engine_rh.v": {
+      "source": "engine/src/tdm_engine_rh.v",
+      "sha256": "35223ec3626cb19bf6d93dd089280543f618e6faf16cd0b7b7e44a0afcf0690e"
+    },
+    "tdm_live_test.v": {
+      "source": "engine/src/tdm_live_test.v",
+      "sha256": "755c158d90269157c5e1b0ddb5f86e704089201eb256e5e5206391c1e167126c"
+    },
+    "tdm_ship.v": {
+      "source": "engine/src/tdm_ship.v",
+      "sha256": "bb4add15144d5a3509b51f23fcf3aeffa8025527c67387a0757991511461d72f"
+    },
+    "tdm_top.v": {
+      "source": "engine/src/tdm_top.v",
+      "sha256": "f0682f79e7eb4b54ddb9e3c1b3f87c564e98258605b8959201b1a90d272adbec"
+    },
+    "tdm_top_owned.v": {
+      "source": "engine/src/tdm_top_owned.v",
+      "sha256": "b962db70a7c5c25a90e2f65f87e9a62012da30d5f5104ab90f4835e85e296780"
+    },
+    "tdm_top_rh.v": {
+      "source": "engine/src/tdm_top_rh.v",
+      "sha256": "bdf3b214fc3e27fe9dfa00e20bb7277665a0e69e36c12831702f999b68f95eb2"
+    },
+    "test_mode.v": {
+      "source": "engine/src/test_mode.v",
+      "sha256": "92e0ffa2348974c5f4b98418a93c6b6ae4434a3d95b59b1a0f2a6c3a417f1d8a"
+    },
+    "test_pattern.v": {
+      "source": "engine/src/test_pattern.v",
+      "sha256": "b5eea2e1d2b16015b5af8381ccf59770fcdba5e560379416f70dbfd6bf64ecf1"
+    },
+    "uart_rx.v": {
+      "source": "engine/src/uart_rx.v",
+      "sha256": "2812e4eea205fc4de870ddf7aa0edc9265685bb2bb0461258846bf42dcfb0518"
+    },
+    "uart_tx.v": {
+      "source": "engine/src/uart_tx.v",
+      "sha256": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f"
+    },
+    "vel_shape.v": {
+      "source": "engine/src/vel_shape.v",
+      "sha256": "ed66c9d539250c893e6086b65870b74a86aca1df55897f4c5c33d5e1fbb8ab8d"
+    },
+    "video_timing.v": {
+      "source": "engine/src/video_timing.v",
+      "sha256": "04f3863aff241183776b10ea49a2dd4c4aaf0e194bd33b5521bf148fa8052281"
+    },
+    "uart_cfg_transport.v": {
+      "source": "engine/rtl/uart_cfg_transport.v",
+      "sha256": "462b3571bf976dc52a15363668d0b784722eb1a34dcbec20cbd6037f0f7fccdf"
+    },
+    "joint_timing_top.v": {
+      "source": "rtl/joint_timing_top.v",
+      "sha256": "66d967c99b554c3f9e4f1e7242ba32ea824883bad6b84c7c2bd94e5e1e27fd51"
+    },
+    "pcm_sdram_arbiter.v": {
+      "source": "rtl/pcm_sdram_arbiter.v",
+      "sha256": "04b4eca1cbc600af5f643ef35b609ac58aecaba07977034d4d8d1b25410dbbbb"
+    },
+    "pcm_sdram_stream.v": {
+      "source": "rtl/pcm_sdram_stream.v",
+      "sha256": "c347777b2e3eddd527a264f9717dc15f8a1883683287b18e0c29052df8e8df40"
+    },
+    "pcm_storage_buffers.v": {
+      "source": "rtl/pcm_storage_buffers.v",
+      "sha256": "b19f0c94048e678a2073e69170f6301f2c83f92180325edb37654f23c3470e93"
+    },
+    "pcm_sync_fifo.v": {
+      "source": "rtl/pcm_sync_fifo.v",
+      "sha256": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609"
+    },
+    "probe_scan_store.v": {
+      "source": "rtl/probe_scan_store.v",
+      "sha256": "d8dbbb6f74583162dfa46a6e9542b9603076c29123621c08cec62f93f9d96168"
+    },
+    "sdram_storage_probe.v": {
+      "source": "rtl/sdram_storage_probe.v",
+      "sha256": "a6cdc5db7ea9bb99237b38559cafeebb95d25a95223f14807f8ecb9d03085ea8"
+    },
+    "sdram_stream_probe.v": {
+      "source": "rtl/sdram_stream_probe.v",
+      "sha256": "74b208655fa7e957ef1e188c49f3b59386b11be816e4a3d837e1b7bbb6ebd432"
+    },
+    "sdram_word_controller.v": {
+      "source": "rtl/sdram_word_controller.v",
+      "sha256": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e"
+    },
+    "storage_probe.v": {
+      "source": "rtl/storage_probe.v",
+      "sha256": "26efd8c2f0c8b9e25c138349b253404e9fbcd6ad5381fd6def6e4c0503059265"
+    },
+    "bands1024.hex": {
+      "source": "engine/src/bands1024.hex",
+      "sha256": "01cdaaa2843dab6417522a5bb913e60b17e4daac675fe1c4ff99250a6e64123f"
+    },
+    "board_slots.hex": {
+      "source": "engine/src/board_slots.hex",
+      "sha256": "db61040e0c62fb2a1342c9c59787a1522dd98d07e8776c98e0a51bf943e1ac53"
+    },
+    "cos1024.hex": {
+      "source": "engine/src/cos1024.hex",
+      "sha256": "706d4136e1d62d92d5a1052b077e8cf338f30590f728501853dde8f7bb9adf90"
+    },
+    "fader_gain_q8.hex": {
+      "source": "engine/src/fader_gain_q8.hex",
+      "sha256": "38a644d29b92c5b3267bab5931966a033e35b75973ad84b7af362be74194f6a5"
+    },
+    "finger_ratio.hex": {
+      "source": "engine/src/finger_ratio.hex",
+      "sha256": "fbb875cffffd1f044971de6ceb47a5b90898a154229f1e29937b3a742f757ca3"
+    },
+    "hann1024.hex": {
+      "source": "engine/src/hann1024.hex",
+      "sha256": "a65ee44f5eaacc8237a2dc9f1b2d58998f197efa0377e2a7d76cdc9268591abc"
+    },
+    "note_inc.hex": {
+      "source": "engine/src/note_inc.hex",
+      "sha256": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac"
+    },
+    "preset_part.hex": {
+      "source": "engine/src/preset_part.hex",
+      "sha256": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850"
+    },
+    "recip_inc.hex": {
+      "source": "engine/src/recip_inc.hex",
+      "sha256": "a9ea597f8b2ae211baa82c264796c4d118393863435c33aac9edb5ee71802002"
+    },
+    "sin1024.hex": {
+      "source": "engine/src/sin1024.hex",
+      "sha256": "b2d2b0328b8aee38c3fb7cdcd03064a6e34f1bab170bc99950ebaaf039618647"
+    },
+    "sine256.hex": {
+      "source": "engine/src/sine256.hex",
+      "sha256": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8"
+    },
+    "tilt_wtab.hex": {
+      "source": "engine/src/tilt_wtab.hex",
+      "sha256": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8"
+    },
+    "vel_wtab.hex": {
+      "source": "engine/src/vel_wtab.hex",
+      "sha256": "c394b9c488197c4c74f45e85e055af45fbf61e6dfda380f412a39d7ab4d0a1d1"
+    },
+    "mv_font.vh": {
+      "source": "engine/src/mv_font.vh",
+      "sha256": "7dcd884f14a74eeef9e666e5e0d3772d64301026a72dd056a54770f4da038754"
+    },
+    "sdram_board.cst": {
+      "source": "constraints/sdram_board.cst",
+      "sha256": "859bb22c9668f9a415e9b04050ce137071d474b4e10f1eaee8db9839174540ef"
+    },
+    "sdram_board.sdc": {
+      "source": "constraints/sdram_board.sdc",
+      "sha256": "ee00607bd29835653d8e68e6416edc5da9538a93a8502215e0b0df111f3a7dec"
+    }
+  },
+  "console_sha256": "42a8ba5ceb3b66e11d953293ff1e246ed0b526606e007c1859f300cfe38ddf5f",
+  "bench_gate": false,
+  "hardware_programmed": false
+}

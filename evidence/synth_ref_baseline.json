@@ -1,0 +1,484 @@
+{
+  "status": "derived from existing PnR build synthesis report (not a new run)",
+  "label": "synth_ref_baseline",
+  "totals": {
+    "reg": 10760.0,
+    "alu": 1965.0,
+    "lut": 17194.0,
+    "dsp": 28.0,
+    "bsram": 32.0,
+    "ssram": 144.0,
+    "rom16": 0.0,
+    "logic_equiv": 20023.0
+  },
+  "modules": {
+    "joint_timing_top": {
+      "reg": 40.0,
+      "alu": 5.0,
+      "lut": 343.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--scan_storage": {
+      "reg": 12.0,
+      "alu": 12.0,
+      "lut": 1.0,
+      "dsp": 9.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--system": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--music": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--layers": {
+      "reg": 843.0,
+      "alu": 41.0,
+      "lut": 1017.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 8.0,
+      "rom16": 0.0
+    },
+    "|--bridge": {
+      "reg": 744.0,
+      "alu": 27.0,
+      "lut": 987.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 14.0,
+      "rom16": 0.0
+    },
+    "|--control": {
+      "reg": 50.0,
+      "alu": 0.0,
+      "lut": 7.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--panel": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--bank": {
+      "reg": 355.0,
+      "alu": 48.0,
+      "lut": 465.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--mapper": {
+      "reg": 307.0,
+      "alu": 0.0,
+      "lut": 149.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--slew": {
+      "reg": 498.0,
+      "alu": 30.0,
+      "lut": 718.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--core": {
+      "reg": 158.0,
+      "alu": 20.0,
+      "lut": 586.0,
+      "dsp": 1.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--serial_configuration.receiver": {
+      "reg": 207.0,
+      "alu": 30.0,
+      "lut": 281.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_uart": {
+      "reg": 40.0,
+      "alu": 0.0,
+      "lut": 46.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_reg": {
+      "reg": 195.0,
+      "alu": 0.0,
+      "lut": 48.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_tx": {
+      "reg": 32.0,
+      "alu": 0.0,
+      "lut": 53.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_seq": {
+      "reg": 75.0,
+      "alu": 24.0,
+      "lut": 193.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 16.0,
+      "rom16": 0.0
+    },
+    "|--u_uartq": {
+      "reg": 35.0,
+      "alu": 21.0,
+      "lut": 24.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 3.0,
+      "rom16": 0.0
+    },
+    "|--u_seqq": {
+      "reg": 35.0,
+      "alu": 21.0,
+      "lut": 22.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 3.0,
+      "rom16": 0.0
+    },
+    "|--u_padq": {
+      "reg": 4.0,
+      "alu": 3.0,
+      "lut": 7.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_pinq": {
+      "reg": 35.0,
+      "alu": 21.0,
+      "lut": 19.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 3.0,
+      "rom16": 0.0
+    },
+    "|--u_evhold": {
+      "reg": 19.0,
+      "alu": 6.0,
+      "lut": 11.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 3.0,
+      "rom16": 0.0
+    },
+    "|--u_clk": {
+      "reg": 16.0,
+      "alu": 0.0,
+      "lut": 22.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_nm": {
+      "reg": 1400.0,
+      "alu": 275.0,
+      "lut": 2086.0,
+      "dsp": 4.0,
+      "bsram": 2.0,
+      "ssram": 8.0,
+      "rom16": 0.0
+    },
+    "|--table_store": {
+      "reg": 74.0,
+      "alu": 0.0,
+      "lut": 159.0,
+      "dsp": 0.0,
+      "bsram": 3.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_vshape": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 147.0,
+      "dsp": 2.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--contact_expression.u_finger": {
+      "reg": 809.0,
+      "alu": 173.0,
+      "lut": 1708.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 10.0,
+      "rom16": 0.0
+    },
+    "|--u_tdm": {
+      "reg": 836.0,
+      "alu": 101.0,
+      "lut": 2495.0,
+      "dsp": 4.0,
+      "bsram": 10.0,
+      "ssram": 14.0,
+      "rom16": 0.0
+    },
+    "|--u_env": {
+      "reg": 0.0,
+      "alu": 79.0,
+      "lut": 139.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_pmod": {
+      "reg": 142.0,
+      "alu": 115.0,
+      "lut": 638.0,
+      "dsp": 1.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--command_store": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 5.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 20.0,
+      "rom16": 0.0
+    },
+    "|--physical_store": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 6.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 20.0,
+      "rom16": 0.0
+    },
+    "|--u_fx": {
+      "reg": 240.0,
+      "alu": 304.0,
+      "lut": 412.0,
+      "dsp": 3.0,
+      "bsram": 2.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_i2s": {
+      "reg": 32.0,
+      "alu": 0.0,
+      "lut": 33.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_led": {
+      "reg": 57.0,
+      "alu": 0.0,
+      "lut": 99.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--visualizer": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_fft": {
+      "reg": 527.0,
+      "alu": 217.0,
+      "lut": 478.0,
+      "dsp": 3.0,
+      "bsram": 5.0,
+      "ssram": 12.0,
+      "rom16": 0.0
+    },
+    "|--u_wave": {
+      "reg": 65.0,
+      "alu": 0.0,
+      "lut": 82.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_renderer": {
+      "reg": 909.0,
+      "alu": 135.0,
+      "lut": 1462.0,
+      "dsp": 1.0,
+      "bsram": 2.0,
+      "ssram": 10.0,
+      "rom16": 0.0
+    },
+    "|--u_panel": {
+      "reg": 114.0,
+      "alu": 35.0,
+      "lut": 175.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--u_spi": {
+      "reg": 33.0,
+      "alu": 0.0,
+      "lut": 111.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--sensor": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--scanner": {
+      "reg": 276.0,
+      "alu": 31.0,
+      "lut": 173.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--writer": {
+      "reg": 21.0,
+      "alu": 0.0,
+      "lut": 37.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--store": {
+      "reg": 365.0,
+      "alu": 60.0,
+      "lut": 463.0,
+      "dsp": 0.0,
+      "bsram": 2.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--positions": {
+      "reg": 796.0,
+      "alu": 95.0,
+      "lut": 680.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--transport": {
+      "reg": 0.0,
+      "alu": 0.0,
+      "lut": 0.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--buffers": {
+      "reg": 20.0,
+      "alu": 0.0,
+      "lut": 25.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--recording": {
+      "reg": 32.0,
+      "alu": 0.0,
+      "lut": 78.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--playback": {
+      "reg": 32.0,
+      "alu": 0.0,
+      "lut": 77.0,
+      "dsp": 0.0,
+      "bsram": 1.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--arbiter": {
+      "reg": 181.0,
+      "alu": 36.0,
+      "lut": 282.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    },
+    "|--sdram": {
+      "reg": 99.0,
+      "alu": 0.0,
+      "lut": 145.0,
+      "dsp": 0.0,
+      "bsram": 0.0,
+      "ssram": 0.0,
+      "rom16": 0.0
+    }
+  }
+}

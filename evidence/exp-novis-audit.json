@@ -1,0 +1,95 @@
+{
+  "status": "FAIL or incomplete scoped structural STA",
+  "route_completed": true,
+  "scoped_static_pass": false,
+  "source_identity_pass": true,
+  "pins_pass": true,
+  "timing": {
+    "slack_ns": {
+      "Setup": 1.367,
+      "Hold": -0.05,
+      "Recovery": 32.659,
+      "Removal": 1.952
+    },
+    "worst_paths": {
+      "Setup": [
+        "1",
+        "1.367",
+        "system/music/layers/state_2_s1/Q",
+        "system/music/core/contact_expression.u_finger/offset[6]_3_s1/D",
+        "core_clk:[R]",
+        "core_clk:[R]",
+        "37.037",
+        "0.000",
+        "35.135"
+      ],
+      "Hold": [
+        "1",
+        "-0.050",
+        "scan_storage/hard_register[7].cell_register/DOUT[2]",
+        "system/music/control/panel/bank/id_q_10_s0/D",
+        "core_clk:[R]",
+        "core_clk:[R]",
+        "0.000",
+        "0.000",
+        "0.161"
+      ],
+      "Recovery": [
+        "1",
+        "32.659",
+        "reset_release_1_s0/Q",
+        "system/music/core/u_tdm/sine_tab_sine_tab_0_0_s/RESET",
+        "core_clk:[R]",
+        "core_clk:[R]",
+        "37.037",
+        "0.000",
+        "3.440"
+      ],
+      "Removal": [
+        "1",
+        "1.952",
+        "reset_release_1_s0/Q",
+        "system/sdram/sd_we_n_s0/PRESET",
+        "core_clk:[R]",
+        "core_clk:[R]",
+        "0.000",
+        "0.000",
+        "2.163"
+      ]
+    }
+  },
+  "resource": {
+    "Logic": {
+      "used": 17545.0,
+      "capacity": 20736.0
+    },
+    "Register": {
+      "used": 9232.0,
+      "capacity": 15915.0
+    },
+    "CLS": {
+      "used": 10061.0,
+      "capacity": 10368.0
+    },
+    "BSRAM": {
+      "used": 26.0,
+      "capacity": 46.0
+    },
+    "DSP": {
+      "used": 19.25,
+      "capacity": 24.0
+    }
+  },
+  "errors": [],
+  "returncode": 0,
+  "product_qualified": false,
+  "bench_gate": false,
+  "hardware_programmed": false,
+  "report_inputs": {
+    "build_m1_exp_novis\\run.json": "58bb8a3780e99f7b7676caca018304fecb75cfc5c2892b1f189db0a7222b9afd",
+    "build_m1_exp_novis\\sdram_board.sdc": "ee00607bd29835653d8e68e6416edc5da9538a93a8502215e0b0df111f3a7dec",
+    "build_m1_exp_novis\\impl\\pnr\\board.rpt.txt": "8c8ca3bfa73c183fc8cb6265849cfb46a1e5e225397e01afa08b0997e2348084",
+    "build_m1_exp_novis\\console.log": "efeb1b30a8cdc3d89106763bd651a93d0888c2eb29220a08a61f8ac04cb7f8b6",
+    "build_m1_exp_novis\\impl\\pnr\\board_tr_content.html": "d93bd460cfe12a72c992f0d9a72b25ce7a6bd9064629939d36b4de8e86366348"
+  }
+}
