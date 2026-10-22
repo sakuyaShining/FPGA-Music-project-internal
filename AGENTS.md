@@ -1,5 +1,9 @@
 # 项目工作入口
 
+先读 `project/CURRENT.md` 和 `project/state.json`，再读协作板。入口身份检查：`python tools/scripts/project_control.py check`；完整保全内容核验加 `--full`。源码捕获不等于产品验收。
+
+命名分支与远程提交是交接必填项。共享开发只推已核实为private的internal；origin/public用于独立对外发布。
+
 **本项目由多个 agent 并行推进。开工前必须先读 `docs/00-协作/AGENT-BOARD.md`**，确认：
 你被分配到哪条轴、哪些路径只有你能写、哪些决定不可回退、上一个 agent 在飞什么。
 一个 agent 同一时间只认领一条轴。`notes/agent-collaboration-log.md` 是给评委看的人机协作
@@ -10,7 +14,7 @@
 - `docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md`：当前源码事实与验证边界。
 - `docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md`：目标、状态与未决项。
 
-运行 `git status --short` 和基线入口指定的 `project_baseline.py --check`，先识别版本漂移。
+运行 `git status --short` 和上面的project_control检查，先识别版本归属与恢复输入。旧版本的project_baseline.py仅按对应冻结入口使用，不用旧范围签收新实验。
 同时查看38号 §0 的工作树分布：main不是项目所有最新成果；a61b有事件修复/逐指接口，6e70有未接合GUI/协议及未提交成果。
 39号 §0 为较新设计，后面旧方案用于历史对照。不得把右手回中、只修饰单音等旧提案覆盖后续松手保持、全和弦修饰选择。
 旧的 PROJECT_MEMORY、34/35 号文档和架构图保留历史；有冲突时核对实际源码及相应版本证据。

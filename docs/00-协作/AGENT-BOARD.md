@@ -162,3 +162,17 @@ internal  https://github.com/sakuyaShining/FPGA-Music-project-internal.git
 
 ---
 
+
+
+---
+
+## 9. 2026-10-22 管理收口检查点
+
+用户已授权执行保全版本、同步GitHub、统一入口三步。本轮管理分支为`codex/project-management-20261022`（4d37）；没有移动其他活跃工程、没有改写其他工作树索引或分支。
+
+- 共享入口：根README → `project/CURRENT.md` → `project/state.json`。旧正文中的工作区、会话和硬件计数是历史信息，当前取所选源码快照中的入口核对。
+- GitHub：已核实internal为private；main及既有有效分支已同步。各工作区保全分支与精确提交见`project/versions/workspace-preservation-20261022.json`。保全不是产品验收。
+- A轴：4d37候选已冻结；D盘M1有独立活跃工作区，owner身份尚待登记，临时关闭可视化的面积实验不得作为产品裁剪决定。
+- B轴：保持06df及其硬件入口所有权；原生来源、pending试作、R15候选分别保全，不改板、不重放会话、不制造放行。
+- 管理owner：本会话4d37，仅修改入口、登记、恢复工具和管理文档；未认领其他会话功能实现。main接合仍由用户完成。
+- 下一步：合并本管理PR后，各owner从登记的来源继续提交并同步新检查点；目录迁移及功能接合另行审查。

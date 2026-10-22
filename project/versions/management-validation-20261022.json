@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "scope": "Management/source preservation only; not FPGA product acceptance",
+  "private_repository_verified": true,
+  "repository": "sakuyaShining/FPGA-Music-project-internal",
+  "initial_failure": {
+    "status": "FAIL",
+    "reason": "Capture draft applied Git autocrlf normalization; raw source hashes differed",
+    "correction": "Append exact-byte blobs with --no-filters; retain draft history; seal snapshot EOL attributes"
+  },
+  "local_content_verification": {
+    "status": "PASS",
+    "scope": "Full captured content hashes",
+    "snapshots": 22,
+    "inputs": 18277,
+    "unique_verified_blobs": 5845,
+    "remote_checked_now": false,
+    "errors": [],
+    "product_acceptance": false
+  },
+  "fpga_staged_input_verification": {
+    "status": "PASS",
+    "scope": "Frozen FPGA inputs retain exact source bytes in staged Git blobs",
+    "inputs": 100,
+    "errors": []
+  },
+  "recovery_checks": [
+    {
+      "snapshot": "4d37",
+      "files": 702,
+      "raw_sha256_verified": true
+    },
+    {
+      "snapshot": "native-source57",
+      "files": 17,
+      "raw_sha256_verified": true
+    }
+  ],
+  "original_workspaces_rewritten": false,
+  "hardware_programmed": false,
+  "manufacturing_released": false,
+  "pending": [
+    "Verify all final remote snapshot refs",
+    "Clone management branch from GitHub and validate recovery",
+    "Create reviewable entry PR; main merge remains user-owned"
+  ]
+}

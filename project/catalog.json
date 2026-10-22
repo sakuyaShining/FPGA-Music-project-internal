@@ -1,0 +1,59 @@
+{
+  "schema": 2,
+  "classification": "Navigation and source roles; file existence does not prove wiring",
+  "predecessor_catalog": "codex/project-version-closure:project/catalog.json",
+  "input_manifests": "project/versions/workspace-preservation-20261022.json",
+  "areas": [
+    {
+      "id": "music",
+      "sources": [
+        "66a4",
+        "instrument-engine-safety"
+      ],
+      "role": "music baseline and forward fixes"
+    },
+    {
+      "id": "structural-integration",
+      "sources": [
+        "main",
+        "4d37",
+        "m1-work"
+      ],
+      "role": "experiments/probes; not complete product top"
+    },
+    {
+      "id": "host",
+      "sources": [
+        "6e70",
+        "ca03"
+      ],
+      "role": "GUI/protocol sources needing explicit integration review"
+    },
+    {
+      "id": "hardware",
+      "sources": [
+        "06df",
+        "native-source57",
+        "native-trial50",
+        "native-r15"
+      ],
+      "role": "construction source, reference and pending native projects"
+    },
+    {
+      "id": "historical-sources",
+      "sources": [
+        "4a4b",
+        "4c43",
+        "4e09",
+        "8c56",
+        "a61b",
+        "b5b8",
+        "b6d6",
+        "cec2",
+        "eb59",
+        "workbuddy"
+      ],
+      "role": "Preserved history, not redundant/deletable by inference"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Frozen feasibility inputs retain their sealed bytes across clones.
+# -text disables EOL conversion while preserving ordinary text diffs.
+experiments/nano20k_feasibility_20261021/** -text
+project/archives/*.zip -text

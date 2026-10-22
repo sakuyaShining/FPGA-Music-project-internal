@@ -1,3 +1,20 @@
+# FPGA Music 项目总入口
+
+**从 [project/CURRENT.md](project/CURRENT.md) 开始。** 该页统一导航音乐基线、开发候选、临时探针、GUI与硬件版本。
+
+- 机器版本与验证边界：[project/state.json](project/state.json)
+- 已保全源码及恢复身份：[版本清单](project/versions/workspace-preservation-20261022.json)
+- 开工规则：[AGENTS.md](AGENTS.md) · [协作板](docs/00-协作/AGENT-BOARD.md)
+- 核对命令：`python tools/scripts/project_control.py check --full`
+
+当前完整功能产品顶层尚未实现并验收。GitHub保存的WIP不代表功能完成；路由完成也不代表STA通过。
+
+---
+
+## 历史主目录说明
+
+以下保留原README的阶段基线。最新版本分工与有效证据以以上总入口为准。
+
 # FPGA 加法合成电子乐器
 
 基于高云 GW2AR-LV18QN88C8/I7（Sipeed Tang Nano 20K）的纯硬件实时加法合成乐器。
