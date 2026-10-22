@@ -1,0 +1,241 @@
+//=============================================================================
+// pitch_mod.v —— 表情调制层：滑音（portamento）+ 颤音（vibrato）
+//
+// 【它是什么】
+//   为每个音符组维护一个【音高比偏移】poff（有符号 Q2.16）：
+//       实际频率 = 基准频率 × (1 + poff/65536)
+//   poff = +65536 → 高一个八度；-32768 → 低一个八度（约）。
+//
+// 【为什么必须是"比例"而不是"加一个 Hz"】
+//   引擎里每个时隙的 inc 已经含了泛音比（inc_k = ratio_k × inc_note）。
+//   在相位累加前做 (inc × poff) >> 16（见 tdm_engine.v "表情调制"一段），
+//   所有泛音就【同比】移动 —— 滑音与颤音过程中谐波关系保持不变，
+//   这在音乐上是"音高在动"，而不是"音色在扭"。
+//   若改成加一个固定 inc 偏移，第 16 泛音只会动 1/16 的音分偏移，
+// 听感立刻不对（判据见 的 G2/V2）。
+//
+// 【两个来源，一个乘法】
+//   poff = gq[note] + vib_q
+//     · gq[note]：滑音偏移。音符开时由 note_map 写入初值
+//       （= 旧音 inc / 新音 inc - 1），之后【指数衰减到 0】→ 音高滑到目标。
+//       衰减用 lvl -= (lvl*m)>>k，与 osc_env 同一套手法：【零 DSP】。
+//     · vib_q：全局 LFO（三角波）× 深度（Q16），控制速率，每样本一个值。
+//   两者相加后只做【一次】乘法，这是把它们放在同一层的原因。
+//
+// 【为什么放在引擎里，而不是等交互层】
+//   它不改装载语义、不改包络语义，只在 ph_n 上多一项；
+//   而且参数默认【全关】时 poff 恒为 0 → 相位逐位等于原实现，
+//   已通过的 8 掩码 0/2495 回归因此不受影响（这是本设计的保护门）。
+//
+// 【状态与运算分离（纪律 3）】
+//   本模块只持有"每音符状态 + LFO 相位"；比例乘法和相位加法在引擎里。
+//   gq 表按组存（NG 项），组内 16 个泛音共用同一个 poff
+//   —— 滑音是"音在滑"，不是"每个泛音各自滑"。
+//
+// 【参数化】
+//   现在全部是编译期参数（与现有包络参数的处理一致：32 份实例共享，
+//   做成寄存器会撑爆器件）。交互层接入 reg_bank 时再统一改成端口。
+//=============================================================================
+
+`timescale 1ns/1ps
+
+module pitch_mod #(
+    parameter NG        = 32,            // 音符组数（= 最大复音数）
+    parameter QW        = 18,            // poff 位宽：Q2.16 有符号（±2.0 ≈ ±2 个八度）
+    //   ★ 2026-10-07 删除 `GLIDE_CUT = 17'd24`（原"|gq| 低于它直接归零"参数）。
+    //     删除理由：它是**死参数** —— 全文件从未读过它。
+    //     原注释声称它保证"精确收敛（无残余抖动）"，但真正的保证来自衰减式本身：
+    //         gq > 0 : gq <= (gq >  step) ? gq - step : 0
+    //         gq < 0 : gq <= (gq < -step) ? gq + step : 0
+    //     这个三元式在最后一步直接落到**精确 0**（不是靠阈值截断）⇒ 不需要 CUT。
+    //     工具 `tools/scripts/deadparam_check.py`（本仓新增）机械扫出它是唯一死参数；
+    //     判据 `26 glide` 的 G5 已验证"小初值/带余数也精确收敛到 0"。
+    //     保留死参数的实际危害：会让读者以为存在"阈值归零"行为，
+    //     从而**写出错误的判据**（我第一版 tb_glide 就是这么假失败的）。
+    parameter CLAMP_LO  = -18'sd114688,  // -1.75：音高下限（≈ 目标下方 2 个八度）
+    parameter CLAMP_HI  =  18'sd131071   // +1.9999：音高上限（≈ 目标上方 2 个八度）
+)(
+    input  wire                        clk,
+    input  wire                        rst_n,
+    input  wire                        sample_en,     // 周期起始（每样本一拍）
+
+    //-------------------------------------------------------------------------
+    // 运行时调制参数（2026-10-02 由编译期参数改成端口 —— 拓展 E2 要求
+    //   "演奏时可控"：颤音深度/速率、滑音时间必须能在演奏中改）
+    //   这些值由 tdm_top 从 reg_bank 取（UART 可写）。
+    //-------------------------------------------------------------------------
+    input  wire [23:0]                 lfo_inc,       // LFO 频率字 = f × 2^24 / fs
+    input  wire [15:0]                 vib_depth,     // 颤音深度（Q16 比例）
+    // 滑音速率：每样本音高比变化量（Q16）。滑音时长 = |gq0| / glide_step 个样本。
+    //   原来是 (m,k) 指数衰减，但那让每音符回路里出现【变量移位】——
+    //   32 份 19 位桶形移位器实测 +5270 LUT（Logic 46% → 72%）。
+    //   线性速率下每份只需要"比较 + 加减 + 选择"（≈35 LUT），
+    //   而且不再需要"样本末尾空闲窗口"（周期 = 时隙数 时本来也没有空闲）。
+    input  wire [15:0]                 glide_step,
+    input  wire                        vib_en,        // 颤音开关
+    input  wire                        glide_en,      // 滑音开关
+
+    // ---- 滑音初值装载（由 tdm_engine 在装载消费那一拍给）----
+    input  wire                        gw_en,
+    input  wire [$clog2(NG)-1:0]       gw_note,       // 音符组号
+    input  wire signed [QW-1:0]        gw_val,
+
+    // ---- 引擎读口（组合读，按当前时隙所属组）----
+    input  wire [$clog2(NG)-1:0]       rd_note,
+    output reg update_overrun,
+    output wire signed [QW-1:0]        poff
+);
+
+    //-------------------------------------------------------------------------
+    // 每音符的滑音偏移表
+    //-------------------------------------------------------------------------
+    // Separate single-write banks permit asynchronous distributed RAM inference.
+    // Metadata, not data RAM, resets. A command wins if both write one group.
+    reg [$clog2(NG)-1:0] sweep;
+    reg signed [QW-1:0] command_mem [0:NG-1];
+    reg signed [QW-1:0] materialized_mem [0:NG-1];
+    reg [NG-1:0] initialized,from_command;
+    wire signed [QW-1:0] materialized_sweep,materialized_read,command_sweep,command_read;
+    // materialized_mem remains a simulation-only logical view: it feeds gq
+    // comparisons, not the datapath, and is removed as unused during synthesis.
+    wire signed [QW-1:0] sweep_gq=initialized[sweep]?
+        (from_command[sweep]?command_sweep:materialized_sweep):{QW{1'b0}};
+    wire signed [QW-1:0] read_gq=initialized[rd_note]?
+        (from_command[rd_note]?command_read:materialized_read):{QW{1'b0}};
+    // Debug view retained for sampled old-source comparisons, unused in datapath.
+    wire signed [QW-1:0] gq [0:NG-1];
+    genvar gi;
+    generate for(gi=0;gi<NG;gi=gi+1)begin: logical_store
+        assign gq[gi]=initialized[gi]?(from_command[gi]?command_mem[gi]:materialized_mem[gi]):{QW{1'b0}};
+    end endgenerate
+
+    integer n;
+
+    //-------------------------------------------------------------------------
+    // 滑音衰减 —— 线性速率（2026-10-02 第二版）
+    //
+    //   gq 每样本朝 0 走 glide_step（Q16），到 0 就停：
+    //       gq > 0 : gq <= (gq >  step) ? gq - step : 0
+    //       gq < 0 : gq <= (gq < -step) ? gq + step : 0
+    //   滑音时长 = |gq0| / step 个样本 —— 是【可算的确定值】，比指数 τ 更好讲。
+    //
+    //   为什么不做指数：glide_k 运行时可变会让每份衰减都要一个
+    //     19 位变量移位器（32 份 ≈ +5270 LUT）。线性速率不需要移位器。
+    //   为什么不做"分时复用"：那需要样本末尾的空闲窗口，而
+    //     出货配置下周期 = 时隙数（512），根本没有空闲窗口。
+    //-------------------------------------------------------------------------
+    wire signed [QW-1:0] stp  = $signed({2'b00, glide_step});   // 正步长
+    wire signed [QW-1:0] nstp = -stp;
+
+    // Opt-in epoch implementation: logical reads observe the sample update
+    // immediately, even before the background sweep materializes each group.
+    reg [NG-1:0] pending;
+    
+    reg busy;
+    reg [15:0] step_held;
+    function signed [QW-1:0] advance;
+        input signed [QW-1:0] value;
+        input [15:0] step;
+        reg signed [QW-1:0] positive,negative;
+        begin
+            positive=$signed({2'b00,step});negative=-positive;
+            if(value>0)advance=(value>positive)?value-positive:{QW{1'b0}};
+            else if(value<0)advance=(value<negative)?value-negative:{QW{1'b0}};
+            else advance=0;
+        end
+    endfunction
+    pitch_native_store #(.NG(NG),.QW(QW)) command_store(.clk(clk),
+        .we(rst_n && gw_en===1'b1),.wa(gw_note),.ra(sweep),.rb(rd_note),
+        .data(gw_val),.qa(command_sweep),.qb(command_read));
+    pitch_native_store #(.NG(NG),.QW(QW)) physical_store(.clk(clk),
+        .we(rst_n && !sample_en && busy && pending[sweep]),.wa(sweep),.ra(sweep),.rb(rd_note),
+        .data(advance(sweep_gq,step_held)),.qa(materialized_sweep),.qb(materialized_read));
+
+    always @(posedge clk or negedge rst_n)begin
+        if(!rst_n)begin
+            pending<=0;sweep<=0;busy<=0;step_held<=0;update_overrun<=0;
+            initialized<=0;from_command<=0;
+        end else begin
+            if(sample_en)begin
+                if(|pending)update_overrun<=1;
+                pending<={NG{1'b1}};step_held<=glide_step;sweep<=0;busy<=1;
+            end else if(busy)begin
+                if(pending[sweep])begin
+                    pending[sweep]<=0;initialized[sweep]<=1;from_command[sweep]<=0;
+                end
+                if(sweep==NG-1)busy<=0;else sweep<=sweep+1'b1;
+            end
+            // Writes have exactly the original highest priority, including a
+            // write coincident with sample_en or a sweep of that same group.
+            if(gw_en===1'b1)begin initialized[gw_note]<=1;from_command[gw_note]<=1;pending[gw_note]<=0;end
+        end
+    end
+    always @(posedge clk)begin
+        if(rst_n)begin
+            if(!sample_en && busy && pending[sweep])materialized_mem[sweep]<=advance(sweep_gq,step_held);
+            if(gw_en===1'b1)command_mem[gw_note]<=gw_val;
+        end
+    end
+    wire signed [QW-1:0] logical_gq=pending[rd_note]?advance(read_gq,step_held):read_gq;
+
+    //-------------------------------------------------------------------------
+    // 颤音 LFO：三角波
+    //   24 位相位累加器；取高 8 位定"落在哪一段"，段内用低 7 位定位置。
+    //
+    //   第一版在这里错了两次，都记下来
+    //     错法一：写成 lfo_t = ph[23] ? (127-u) : (u-128)，其中 u = ph[23:16]。
+    //             ph[23]=1 时 u 已经是 128..255，再算 127-u 得到的是
+    //             【负半周】，于是两半全负 —— 三角波根本没越过零点。
+    //     错法二：三元表达式的两个分支一个有符号一个无符号，整体被判为
+    //             无符号 → 负半周被当成大正数。
+    //   正确写法：两半都用段内 7 位 u7 = ph[22:16]，
+    //             ph[23]=0 → u7-128 ∈ [-128,-1]；ph[23]=1 → 127-u7 ∈ [0,127]。
+    //             并且乘法的两个操作数都显式 $signed。
+    //   实测判据见验收证据 V1/V2（幅度=设定深度、均值≈0、两泛音一致）。
+    //-------------------------------------------------------------------------
+    reg [23:0] lfo_ph;
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)             lfo_ph <= 24'd0;
+        else if (sample_en)     lfo_ph <= lfo_ph + lfo_inc;
+    end
+
+    wire [6:0]        lfo_u7 = lfo_ph[22:16];
+    wire signed [8:0] lfo_t  = lfo_ph[23] ? (9'sd127 - $signed({2'b00, lfo_u7}))
+                                          : ($signed({2'b00, lfo_u7}) - 9'sd128);
+
+    // vib_q = 三角(-128..127) / 128 × 深度  →  (tri × depth) >> 7
+    wire signed [24:0]   vib_mul = $signed(lfo_t) * $signed({1'b0, vib_depth});
+    wire signed [QW-1:0] vib_raw = vib_mul[24:7];
+
+    //-------------------------------------------------------------------------
+    // 合成 + 限幅
+    //   poff 太大会让频率跑到 0 或负值（相位倒转）→ 限在 ±2 个八度内
+    //
+    //   关键：正在【消费装载】的那个时隙必须用【待生效值】，
+    //      不能等寄存器写进去再用 —— 否则那一拍就是"新 inc × 旧 gq"，
+    //      与 inc/amp/gate/epar 的语义不一致（它们在引擎里都是
+    //      `eff_x = consume ? px1 : x1`）。实测症状：滑音起点出现 1 个样本
+    //      相位增量 = 纯新 inc（无调制），比值判据也在那一拍越界。
+    //      所以这里做与引擎完全对称的一次选择：
+    //          gq_eff = gw_en ? gw_val : gq[rd_note]
+    //      （gw_en 就是引擎的 consume，gw_note 就是本时隙所属组）
+    //-------------------------------------------------------------------------
+    wire signed [QW-1:0] gq_eff = (gw_en === 1'b1) ? gw_val : logical_gq;
+
+    // 开关在【应用】处门控（衰减与装载照常进行，这样关掉再打开不会残留旧偏移）
+    //    必须先把选择结果落到【signed wire】再做加法：
+    //      写成 `(glide_en ? $signed(gq_eff) : {QW{1'b0}}) + (...)` 时，
+    //      三元表达式里"一条分支有符号、一条无符号"会让整个表达式判为
+    //      无符号 —— 负的 gq 会被零扩展成大正数。
+    //      实测症状：gq=-36343 时 poff_sum=225801（= 2^18-36343），
+    //      于是被上游限幅夹成 +131071（音高高了两个八度）。
+    //      **这是本项目第二次栽在同一件事上**（第一次在 LFO 三角波那里）。
+    wire signed [QW-1:0] gq_sel  = glide_en ? gq_eff  : 18'sd0;
+    wire signed [QW-1:0] vib_sel = vib_en   ? vib_raw : 18'sd0;
+    wire signed [QW:0]   poff_sum = gq_sel + vib_sel;
+
+    assign poff = (poff_sum > CLAMP_HI) ? CLAMP_HI :
+                  (poff_sum < CLAMP_LO) ? CLAMP_LO : poff_sum[QW-1:0];
+
+endmodule
