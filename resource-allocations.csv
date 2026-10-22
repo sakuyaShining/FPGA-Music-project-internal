@@ -1,0 +1,8 @@
+﻿id,scope,logic,register,bsram,dsp,status
+four_layers,"Four simultaneous slots, generation/ownership, independent configuration",600,700,2,0,"UNMEASURED design allocation, not predicted cost"
+i2c_services,"Shared I2C, FT53xx report, EEPROM journal, PCM5122 startup/readback",700,450,2,0,"UNMEASURED design allocation, not predicted cost"
+physical_control,"Bounded shared SPI arbiter, 595 reset state, 165/encoder/buttons, octave selection, physical map",600,500,1,0,"UNMEASURED design allocation, not predicted cost"
+entity_ui_score,"RA8875 fader graphics, on-device edit/draft/save, score guide, fonts/commands",1100,700,2,0,"UNMEASURED design allocation, not predicted cost"
+files_events,"SD SPI, FAT/file allocation, PCM/event pairing, sector CRC, recovery",1600,850,3,0,"UNMEASURED design allocation, not predicted cost"
+play_live_mix,"Independent PCM playback + live sum, saturation/levels, sample alignment",150,80,0,1,"UNMEASURED design allocation, not predicted cost"
+management,"Cold boot/reset fence, errors/flow control/telemetry, persistent restore",300,200,1,0,"UNMEASURED design allocation, not predicted cost"

@@ -1,0 +1,95 @@
+{
+  "status": "FAIL or incomplete scoped structural STA",
+  "route_completed": true,
+  "scoped_static_pass": false,
+  "source_identity_pass": true,
+  "pins_pass": true,
+  "timing": {
+    "slack_ns": {
+      "Setup": -6.397,
+      "Hold": -0.048,
+      "Recovery": 33.016,
+      "Removal": 1.876
+    },
+    "worst_paths": {
+      "Setup": [
+        "1",
+        "-6.397",
+        "system/music/core/u_tdm/sl1_5_s0/Q",
+        "system/music/core/u_tdm/phase_mem_phase_mem_0_0_s/DI[23]",
+        "core_clk:[R]",
+        "core_clk:[R]",
+        "37.037",
+        "0.000",
+        "42.899"
+      ],
+      "Hold": [
+        "1",
+        "-0.048",
+        "scan_storage/hard_register[5].cell_register/DOUT[10]",
+        "system/music/control/panel/bank/tx_q_10_s0/D",
+        "core_clk:[R]",
+        "core_clk:[R]",
+        "0.000",
+        "0.000",
+        "0.163"
+      ],
+      "Recovery": [
+        "1",
+        "33.016",
+        "reset_release_1_s0/Q",
+        "system/visualizer/u_fft/band_rom_band_rom_0_0_s/RESET",
+        "core_clk:[R]",
+        "core_clk:[R]",
+        "37.037",
+        "0.000",
+        "3.083"
+      ],
+      "Removal": [
+        "1",
+        "1.876",
+        "reset_release_1_s0/Q",
+        "system/sdram/sd_we_n_s0/PRESET",
+        "core_clk:[R]",
+        "core_clk:[R]",
+        "0.000",
+        "0.000",
+        "2.087"
+      ]
+    }
+  },
+  "resource": {
+    "Logic": {
+      "used": 20338.0,
+      "capacity": 20736.0
+    },
+    "Register": {
+      "used": 10760.0,
+      "capacity": 15915.0
+    },
+    "CLS": {
+      "used": 10346.0,
+      "capacity": 10368.0
+    },
+    "BSRAM": {
+      "used": 32.0,
+      "capacity": 46.0
+    },
+    "DSP": {
+      "used": 22.75,
+      "capacity": 24.0
+    }
+  },
+  "errors": [],
+  "returncode": 0,
+  "product_qualified": false,
+  "bench_gate": false,
+  "hardware_programmed": false,
+  "report_inputs": {
+    "build_ref_v0\\run.json": "158484a6115ee2961584ee96da3c9aeaad922d1498e3fdefe0d006d42980ad89",
+    "build_ref_v0\\sdram_board.sdc": "ee00607bd29835653d8e68e6416edc5da9538a93a8502215e0b0df111f3a7dec",
+    "build_ref_v0\\impl\\pnr\\board.rpt.txt": "27c00f0cbc071f35bb0c96e84553ae5c3d3a93a25eb628bbf9e0e989b6201612",
+    "build_ref_v0\\console.log": "4a2c5264beb6a0f93e1f4ca61a16d44dd02747796b2d6dd21b90af4973b5928b",
+    "build_ref_v0\\impl\\pnr\\board_tr_content.html": "a0fd62495e7011a09d7ae80de7d21e84cd1da0db05eace0e147a23eca136e96f"
+  }
+}
