@@ -1,0 +1,213 @@
+{
+  "name": "FPGA-Music-Dualscreen-Addr3Work-20261022",
+  "owner_uuid": "6d17183304ab4ae0a0c8ff5e860a2d3f",
+  "creator_uuid": "6d17183304ab4ae0a0c8ff5e860a2d3f",
+  "created_at": "2026-10-15 08:43:25",
+  "updated_at": "2026-10-15 08:43:25",
+  "modifier_uuid": "6d17183304ab4ae0a0c8ff5e860a2d3f",
+  "content": "ADDR3 seven-node closure with two sensing nets recovered; independent construction checkpoint, NOT FOR FABRICATION.",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "0f0d09b76213ff57",
+  "branch_uuid": "",
+  "pcb_count": 0,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "ed5d93eb9ffe7f83": {
+        "uuid": "ed5d93eb9ffe7f83",
+        "title": "Board1",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "7a8553eae6bc33bb": {
+        "uuid": "7a8553eae6bc33bb",
+        "name": "Schematic1",
+        "board": "ed5d93eb9ffe7f83",
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      }
+    },
+    "sheets": {
+      "ba336973a1f81bda": {
+        "uuid": "ba336973a1f81bda",
+        "title": "01_Nano_headers",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 1,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "13ba83f761ae36dd": {
+        "uuid": "13ba83f761ae36dd",
+        "title": "02_Shift_and_memory",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 2,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "45fc8fbb0eb41237": {
+        "uuid": "45fc8fbb0eb41237",
+        "title": "03_Display_harnesses",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 3,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "a0323553eb2aa616": {
+        "uuid": "a0323553eb2aa616",
+        "title": "04_PCM5122_AUX",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 4,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "8e52de1e6354c999": {
+        "uuid": "8e52de1e6354c999",
+        "title": "05_Power",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 5,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "c9aa31a1154f18d6": {
+        "uuid": "c9aa31a1154f18d6",
+        "title": "06_Controls",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 6,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "8b7bbaac691b2fa4": {
+        "uuid": "8b7bbaac691b2fa4",
+        "title": "07_Scan_lane_0",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 7,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "615628b0fd5e7265": {
+        "uuid": "615628b0fd5e7265",
+        "title": "08_Scan_lane_1",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 8,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "c98c8c1f43810c86": {
+        "uuid": "c98c8c1f43810c86",
+        "title": "09_Scan_lane_2",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 9,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "c52ccd40dd236bed": {
+        "uuid": "c52ccd40dd236bed",
+        "title": "10_Scan_lane_3",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 10,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "9e06be0539357952": {
+        "uuid": "9e06be0539357952",
+        "title": "11_Scan_lane_4",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 11,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "60214d5ec8b15945": {
+        "uuid": "60214d5ec8b15945",
+        "title": "12_Scan_lane_5",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 12,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "f1cacf4ea5c99437": {
+        "uuid": "f1cacf4ea5c99437",
+        "title": "13_Power_off_isolation",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 13,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      },
+      "3a214fc8a6c758ac": {
+        "uuid": "3a214fc8a6c758ac",
+        "title": "14_Protected_power_entry",
+        "schematic_uuid": "7a8553eae6bc33bb",
+        "zIndex": 14,
+        "source": "",
+        "version": "1792459170685",
+        "updateTime": 1792459170685
+      }
+    },
+    "pcbs": {
+      "c3fd8656cf425e9f": {
+        "uuid": "c3fd8656cf425e9f",
+        "title": "PCB1",
+        "board": "ed5d93eb9ffe7f83",
+        "parent_uuid": "",
+        "source": "",
+        "version": "1792666069358",
+        "updateTime": 1792666069358
+      }
+    },
+    "panels": {
+      "eb5d0e6dd1d4163c": {
+        "uuid": "eb5d0e6dd1d4163c",
+        "title": "Panel1",
+        "zIndex": null
+      }
+    },
+    "blockSymbols": {},
+    "owner": {
+      "uuid": "6d17183304ab4ae0a0c8ff5e860a2d3f"
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "0f0d09b76213ff57",
+    "settings": {
+      "UNIVERSAL": {
+        "dataType": "UNIVERSAL",
+        "data": {
+          "allowLibRename": true,
+          "defaultNetName": true,
+          "wireMultipleNet": true,
+          "netFlagCrossLayerConnection": true,
+          "netLabelCrossPageConnection": true,
+          "busGenerateNetClass": true,
+          "relevanceDisplayRow": "SINGLE",
+          "relevanceBelongSchPage": "NAME",
+          "relevanceLocation": "ZONE",
+          "multipartCrossLayer": true,
+          "nonElectronicAddIntoBom": false,
+          "nonElectronicUpdatePcb": false
+        }
+      }
+    }
+  }
+}
