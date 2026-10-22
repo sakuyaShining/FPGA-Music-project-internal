@@ -54,6 +54,10 @@ def check(full=False,remote=False,fresh=False):
             latest=lines[0].split()[0]
             p=subprocess.run(['git','-C',str(ROOT),'merge-base','--is-ancestor',latest,'HEAD'],capture_output=True)
             if p.returncode:errors.append('STALE ENTRY: fetch and read the current management branch before implementation')
+            else:
+                entry_files=['README.md','AGENTS.md','project/CURRENT.md','project/AGENT-START.md','project/handoff.json','project/state.json','tools/scripts/project_control.py']
+                if git('ls-tree','-r','HEAD','--',*entry_files)!=git('ls-tree','-r',latest,'--',*entry_files):
+                    errors.append('UNPUBLISHED ENTRY: local handoff content differs from the published entry; synchronize before another agent uses it')
     dep=json.loads((ROOT/'project/dependencies.json').read_text(encoding='utf-8'))
     for archive in [dep['archive']]+dep.get('additional_archives',[]):
         ap=ROOT/archive['path']
