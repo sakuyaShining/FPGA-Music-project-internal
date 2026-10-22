@@ -125,6 +125,17 @@
       "inputs": 100,
       "all_matched": true,
       "scope": "Complete current source/table/constraint set in the four registered directories; not future edits"
+    },
+    "scoped_validation": {
+      "status": "PASS",
+      "suites": [
+        "engine golden traces",
+        "pitch"
+      ],
+      "source_identity": "fpga_handoff.effective_build_inputs",
+      "record": "project/versions/management-validation-20261022.json",
+      "full_pnr_sta": "not rerun for this handoff",
+      "hardware_programmed": false
     }
   },
   "other_sources": {
@@ -148,5 +159,8 @@
     "manufacturing_release": false,
     "old_reports_are_not_current_acceptance": true
   },
-  "main_status": "Entry integration PR must be merged by the user under existing collaboration rule; use the explicit entry branch until then"
+  "main_status": "Entry integration PR must be merged by the user under existing collaboration rule; use the explicit entry branch until then",
+  "validated_handoff_implementation_commit": "a151d1059febabb8ab3fa165fa654aff40494782",
+  "validation_record": "project/versions/management-validation-20261022.json",
+  "recording_rule": "The frozen handoff tag may additionally include verification receipts; implementation source is identified separately above"
 }
