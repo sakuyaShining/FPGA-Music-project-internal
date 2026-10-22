@@ -49,7 +49,8 @@
       "validation": "Mutable area experiments; no acceptance inferred; inspect captured RTL including disabled visualizer",
       "owner": "unconfirmed independent M1 session",
       "product_accepted": false,
-      "programming_allowed": false
+      "programming_allowed": false,
+      "status": "Historical checkpoint; latest registered source is m1_current_registered"
     },
     "m1_reference": {
       "role": "reference",
@@ -85,6 +86,18 @@
       "status": "not_implemented_and_validated",
       "product_accepted": false,
       "programming_allowed": false
+    },
+    "m1_current_registered": {
+      "role": "development-candidate",
+      "snapshot": "m1-work",
+      "source_delta_archive": "project/archives/post-capture-wip-20261022.zip",
+      "source_delta_sha256": "073e727258cebe87b42d25f8314a1f37776a5d7043c20d269dced08d36036309",
+      "effective_source_identity": "project/handoff.json:fpga_handoff.effective_build_inputs",
+      "entry": "project/AGENT-START.md",
+      "validation": "Scoped handoff regression records only; no new route/STA/board qualification",
+      "product_accepted": false,
+      "programming_allowed": false
     }
-  }
+  },
+  "active_fpga_profile": "m1_current_registered"
 }

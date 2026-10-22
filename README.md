@@ -2,10 +2,12 @@
 
 **从 [project/CURRENT.md](project/CURRENT.md) 开始。** 该页统一导航音乐基线、开发候选、临时探针、GUI与硬件版本。
 
+**新Agent直接读[启动入口](project/AGENT-START.md)和[交接身份](project/handoff.json)**；可转交的完整指令见[NEXT-AGENT-PROMPT](project/NEXT-AGENT-PROMPT.md)。
+
 - 机器版本与验证边界：[project/state.json](project/state.json)
 - 已保全源码及恢复身份：[版本清单](project/versions/workspace-preservation-20261022.json)
 - 开工规则：[AGENTS.md](AGENTS.md) · [协作板](docs/00-协作/AGENT-BOARD.md)
-- 核对命令：`python tools/scripts/project_control.py check --full`
+- 核对命令：`python tools/scripts/project_control.py check --full --remote --fresh-entry`
 
 当前完整功能产品顶层尚未实现并验收。GitHub保存的WIP不代表功能完成；路由完成也不代表STA通过。
 

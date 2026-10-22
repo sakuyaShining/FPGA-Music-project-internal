@@ -1,5 +1,7 @@
 # 项目工作入口
 
+新Agent先读`project/AGENT-START.md`与`project/handoff.json`，执行`python tools/scripts/project_control.py check --remote --fresh-entry`。main在本管理PR合并前可能仍是旧入口；本批交接以`codex/project-management-20261022`及`handoff/20261022-management-v1`为准。不能只看旧README、目录时间戳或继承的source-identity就开始实施。
+
 先读 `project/CURRENT.md` 和 `project/state.json`，再读协作板。入口身份检查：`python tools/scripts/project_control.py check`；完整保全内容核验加 `--full`。源码捕获不等于产品验收。
 
 命名分支与远程提交是交接必填项。共享开发只推已核实为private的internal；origin/public用于独立对外发布。

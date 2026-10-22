@@ -40,8 +40,54 @@
   "hardware_programmed": false,
   "manufacturing_released": false,
   "pending": [
-    "Verify all final remote snapshot refs",
-    "Clone management branch from GitHub and validate recovery",
+    "Verify latest handoff freshness gate and M1 source-delta restore",
     "Create reviewable entry PR; main merge remains user-owned"
-  ]
+  ],
+  "github_clone_content_verification": {
+    "status": "PASS",
+    "scope": "Full captured content hashes",
+    "snapshots": 22,
+    "inputs": 18277,
+    "unique_verified_blobs": 5845,
+    "remote_checked_now": true,
+    "errors": [],
+    "product_acceptance": false
+  },
+  "github_tested_entry_commit": "bae91fc",
+  "github_restore_checks": [
+    {
+      "status": "RESTORED",
+      "id": "4d37",
+      "files": 702,
+      "output": "D:\\FPGA-Project\\codex-builds\\project-management-20261022\\github-restored-4d37",
+      "product_acceptance": false
+    },
+    {
+      "status": "RESTORED",
+      "id": "native-source57",
+      "files": 17,
+      "output": "D:\\FPGA-Project\\codex-builds\\project-management-20261022\\github-restored-native-source57",
+      "product_acceptance": false
+    },
+    {
+      "status": "PASS",
+      "check": "Existing destination refused without changing origin marker"
+    }
+  ],
+  "github_portable_regressions": {
+    "status": "PASS",
+    "source": "Archive from actual GitHub clone",
+    "suites": [
+      {
+        "suite": "native",
+        "returncode": 0,
+        "receipt": "D:\\FPGA-Project\\codex-builds\\project-management-20261022\\github-fpga-work\\evidence\\github-recovery-native\\suite-run.json"
+      },
+      {
+        "suite": "engine",
+        "returncode": 0,
+        "receipt": "D:\\FPGA-Project\\codex-builds\\project-management-20261022\\github-fpga-work\\evidence\\github-recovery-engine\\suite-run.json"
+      }
+    ]
+  }
 }

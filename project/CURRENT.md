@@ -2,6 +2,8 @@
 
 本入口管理全项目的版本和工作起点。**当前没有已经实现并通过验收的完整功能产品顶层。** 保存了源码、通过音乐回归、完成结构探针路由、通过STA、完成板验，是不同层级的事实。
 
+新Agent先读`project/AGENT-START.md`和`project/handoff.json`。可直接转交的启动指令在`project/NEXT-AGENT-PROMPT.md`。本批交接分支为`codex/project-management-20261022`，标签为`handoff/20261022-management-v1`；入口检查加`--fresh-entry`会拒绝未包含当前已发布管理入口的旧工作区。
+
 ## 从哪里开始
 
 1. 阅读本页和根目录AGENTS.md，再读协作板，确认负责人及路径边界。
@@ -22,7 +24,8 @@
 | 已接合音乐/主机基线 | `codex/project-version-closure`，66a4快照 | 原有project/CURRENT.md及07源清单记录了回归、PnR和板验；实体全功能仍有缺口 |
 | 频率/重奏修复候选 | `codex/instrument-engine-safety`及其快照 | 既有记录：专项覆盖与新PnR通过，未下载；不继承07板验为本版板验 |
 | Nano20K结构探针 | 4d37快照，`experiments/nano20k_feasibility_20261021/project/CURRENT.md` | 原音乐逐拍等价、renderer穷举、完整路由/码流完成；setup−6.397ns、hold−0.048ns，STA失败；不是可下载产品 |
-| M1开发与面积实验 | m1-work、m1-reference快照 | 工作目录在D盘；可能含关闭视觉化等临时配置。按捕获源码身份分析，不按旧README签收；负责人身份仍需登记 |
+| M1历史检查点与面积实验 | m1-work、m1-reference快照 | 当时可能含关闭视觉化等临时配置，只是固定检查点；不作为本次最新源码入口 |
+| 本次最新登记M1候选 | handoff.json的fpga_handoff：m1-work + 登记增量 | 按100个有效构建输入哈希确定身份；专项结果单独记录，新完整路由/STA未签收。负责人身份仍需登记 |
 | GUI/协议来源 | 6e70、ca03快照及backup/ca03分支 | 存在多个来源，不视为已经与最新FPGA探针接合 |
 | 硬件推进 | 06df快照中的`hardware/review-manufacturing-20261019/REGIONAL-WORK-IN-PROGRESS.json` | verified来源、pending_trial、ACTIVE-ROUTING候选分别保留；快照不是制造放行 |
 | CAD原生输入 | native-source57、native-trial50、native-r15快照 | 分别保存当前来源、待验试作和旧稳定候选。ID中的数字是历史标签，真实状态由原始哈希/记录解释 |
@@ -42,6 +45,8 @@ python tools/scripts/project_control.py restore --snapshot 4d37 --output D:/FPGA
 便携FPGA交接包保存在`project/archives/`，含冻结输入、黄金数据、适配入口和校验清单。具体流程读包内START-HERE.md与WORKFLOW.md；不执行下载/Flash/制造。
 
 原快照可能保留指向旧工作区的绝对路径。不要直接运行其中的prepare/build脚本；先使用便携包入口，或审查并适配到新的独立输出目录，避免覆盖历史构建。
+
+检查点之后观察到的硬件/M1源变化另存于`project/archives/post-capture-wip-20261022.zip`，来源和哈希见`project/versions/post-capture-source-drift-20261022.json`。这是未验证增量，不是一份完整产品或原生事务快照；不继承旧测试、DRC或路由结论。未来变化仍由原owner继续提交。
 
 ## GitHub与协作
 

@@ -19,5 +19,12 @@
     "path": "project/archives/fpga-agent-handoff-20261022-v1.zip",
     "sha256": "115f7d8f3789af99fed182ad331352e861c2795bba371567d9008df9d5458a78"
   },
-  "publication": "Independent reviewed export; never push internal source to origin/public"
+  "publication": "Independent reviewed export; never push internal source to origin/public",
+  "additional_archives": [
+    {
+      "path": "project/archives/post-capture-wip-20261022.zip",
+      "sha256": "073e727258cebe87b42d25f8314a1f37776a5d7043c20d269dced08d36036309",
+      "role": "Unvalidated source deltas after checkpoint capture"
+    }
+  ]
 }
