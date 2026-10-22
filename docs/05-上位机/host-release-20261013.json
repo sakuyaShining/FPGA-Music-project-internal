@@ -1,0 +1,38 @@
+{
+  "version": "host-workbench-20261013-02",
+  "fix": "bootloader runtime temporary directory pinned to writable D drive, not just build-time TEMP",
+  "runtime_temp": "D:/FPGA-Project/host-workbench-20261012/temp",
+  "verified_archive_option": true,
+  "unavailable_system_TEMP": "Z:/fpga-unavailable-temp-test",
+  "legacy_exe_selftest_exit": 0,
+  "workbench_exe_selftest_exit": 0,
+  "hardware_test": "NOT_RUN",
+  "exe": "D:\\FPGA-Project\\host-workbench-20261012\\dist\\dsp_gui.exe",
+  "exe_sha256": "124b6b83062ee767de46a2447b01e11cb7bb0d2a7228041fb99b56180e5142b4",
+  "host_version": {
+    "version": "host-workbench-20261013-02",
+    "design_zip_sha256": "5829f77058782fed347af97d8fcedbe7b685f3563af03a19f97a8ad240b36734",
+    "host_baseline": "66a4/codex/project-version-closure, integration-20261011-07 host files",
+    "rtl_modified": false,
+    "device_firmware_binding": null,
+    "inputs": {
+      "tools/host/audio_observer.py": "fc3e483d3d38a23929e32e6ff65d373d08f3f306d3d5a3ec498609252e740f1b",
+      "tools/host/build_exe.py": "2e448b72b76378270759f3c3a1fb8f35ff78640d0fc878b7449ad2fc77aa7189",
+      "tools/host/config_editor.py": "0bbfd9bed8d20e3dc816a9412464b99dd9c2e5168a66d3fa10fdd3af2c160a55",
+      "tools/host/device_config.py": "30f33bdc82fc541e0e9bdffafd88e7c86b4b089c25a71ce60e3cd6e69c979b28",
+      "tools/host/dsp_gui.py": "64e8c495b1f5afcae20bc1b03e423471070288661f66395ec946d11b8a24ab4d",
+      "tools/host/evidence_export.py": "0c0a00d508d777313e9f3910aa2718572f64a00f2b71a630706d65c7dc2e4406",
+      "tools/host/fonts/lolita.ttf": "d91f680b870855d50619f72a1e597d2af5f068535e610a4fc95e5e53bab93449",
+      "tools/host/fonts/LolitaMono.ttf": "c8363198ffa98440b863a0835f7e6c8864e5d079694ee542e70f6210f86b2492",
+      "tools/host/instrument_config.py": "f28d87fec7eaf42f3d6b5e6961a2975c73f02cd0e5812f7337c5b096a5906538",
+      "tools/host/live_visualizer.py": "8cef908b766938b1cd0a25e966356f377be2aa20c9b8755f1f9735d6b7a92806",
+      "tools/host/serial_link.py": "3f06f76862f7e973f1051e7109a044345132dcf701f5d4abc5aba33a0a6a8888",
+      "tools/host/studio_fonts.py": "9b531eccd1f0d1b0936ef155ba5cd82056b1517ba93447c49449ebe28196c7b5",
+      "tools/host/studio_theme.py": "88fd168c5bdec4df53d4941f03d5333a4315bde13f61159245ca59961e1b2bab",
+      "tools/host/theme.qss": "992e61c8615b3dfaf1d25a4b28c0651b11dac3f00c80e15968b7bae1fac2bf7b",
+      "tools/host/ui_preferences.py": "8b226933fa181cd54d80ea4cf548a32553a9c529cf60fcc7c49cfdc3676f302a",
+      "tools/host/workbench.py": "d95e1818c0643b01a701c938cf5e60dcc6329d91eee9b3de290dd94fdfa6bac7",
+      "tools/scripts/dsp_host.py": "92610415fb0e66a6889479a0d8ed12350453064ff3d86563c07cd9de96bceb20"
+    }
+  }
+}

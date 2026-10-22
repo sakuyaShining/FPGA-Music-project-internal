@@ -26,9 +26,10 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, "..", ".."))
-DIST = os.path.join(HERE, "dist")
-BUILD = os.path.join(HERE, "build")
-EXE = os.path.join(DIST, "dsp_gui.exe")
+OUTPUT_ROOT = os.path.abspath(os.environ.get('FPGA_HOST_BUILD_ROOT', HERE))
+DIST = os.path.join(OUTPUT_ROOT, "dist")
+BUILD = os.path.join(OUTPUT_ROOT, "build")
+EXE = os.path.join(DIST, "fpga_workbench.exe")
 OUTDIR = os.path.join(ROOT, "sim_build", "gui")
 
 
@@ -72,16 +73,20 @@ def main():
         return 1
     # pyserial 必须**打包时**已安装，否则 exe 里没有串口能力 （冻结后不能再用系统的）
     if not need("serial", "pyserial"):
-        print("  ⚠ 继续打包：exe 将只有「模拟设备」可用，真串口不可用 ✗")
+        return 1
+    if not need('PyQt5') or not need('numpy'):
+        return 1
 
     # ---- 2. 清理 ----
-    print("[2/4] 清理旧产物")
-    for d in (DIST, BUILD):
+    print("[2/4] 清理构建缓存（保留已交付的程序）")
+    for d in (BUILD,):
+        if os.path.commonpath((os.path.realpath(d), os.path.realpath(OUTPUT_ROOT))) != os.path.realpath(OUTPUT_ROOT):
+            raise RuntimeError('构建目录不在指定输出根目录内')
         if os.path.isdir(d):
             try:
                 import shutil
                 shutil.rmtree(d)
-                print("  已删 %s" % os.path.relpath(d, ROOT))
+                print("  已删 %s" % d)
             except OSError as e:
                 print("  ⚠ 删不掉 %s：%s（继续）" % (d, e))
 
@@ -91,16 +96,24 @@ def main():
     def A(p):
         return os.path.join(ROOT, p)
 
+    # onefile启动时先解压DLL，此时Python代码尚未运行。必须把运行时
+    # 临时目录写入bootloader，不能仅设置构建进程的TEMP/TMP。
+    runtime_temp = os.path.join(OUTPUT_ROOT, 'temp')
+    os.makedirs(runtime_temp, exist_ok=True)
     print("[3/4] PyInstaller 打包（onefile + windowed）")
     args = [sys.executable, "-m", "PyInstaller", "--noconfirm", "--onefile", "--windowed",
-            "--name", "dsp_gui",
+            "--name", "fpga_workbench",
+            "--hidden-import", "pkg_resources.py2_warn",
+            "--runtime-tmpdir", runtime_temp,
             "--paths", A(os.path.join("tools", "scripts")),
             "--add-data", A(os.path.join("tools", "host", "theme.qss")) + os.pathsep + ".",
+            "--add-data", A(os.path.join("tools", "host", "host_version.json")) + os.pathsep + ".",
+            "--add-data", A(os.path.join("tools", "host", "fonts")) + os.pathsep + "fonts",
             "--add-data", A(os.path.join("tools", "scripts", "dsp_host.py")) + os.pathsep + ".",
             "--add-data", A(os.path.join("docs", "02-技术方案", "regmap_baseline.csv")) + os.pathsep + ".",
             "--distpath", DIST,
             "--workpath", BUILD,
-            "--specpath", HERE,
+            "--specpath", OUTPUT_ROOT,
             A(os.path.join("tools", "host", "dsp_gui.py"))]
     if run(args) != 0:
         print("  ✗ 打包失败")
@@ -118,6 +131,8 @@ def main():
     rc = subprocess.call([EXE, "--selftest"], cwd=ROOT)
     print("  exe 退出码 = %d" % rc)
     ok = (rc == 0)
+    ok = subprocess.call([EXE, '--workbench-selftest'],cwd=ROOT)==0 and ok
+    ok = subprocess.call([EXE, '--startup-check'],cwd=ROOT)==0 and ok
     for p in (png, rpt):
         if os.path.isfile(p) and os.path.getmtime(p) >= t0 - 2:
             print("  ✓ 已刷新：%s" % os.path.relpath(p, ROOT))

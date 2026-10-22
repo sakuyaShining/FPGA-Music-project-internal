@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-13",
+  "action": "user-requested SRAM redownload",
+  "download": {
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-File",
+      "C:\\Users\\Sakuya\\.codex\\worktrees\\66a4\\FPGA-Music-project\\tools\\scripts\\flash_20k_verified.ps1",
+      "-BuildRecord",
+      "project/versions/live-build-20261011-07.json"
+    ],
+    "exit_code": 0,
+    "mode": "SRAM",
+    "bitstream_sha256": "9f3f4461bb79eb967970907a6f770808b90f0d6099ba493ce99d4ae2d4d454c6"
+  },
+  "source_build_identity": "PASS",
+  "bitstream_version": "integration-20261011-07",
+  "device": "GW2AR-18C (0x0000081B)",
+  "usercode": "0x00003A93",
+  "status_code": "0x00006020",
+  "serial_check": {
+    "status": "FAILED",
+    "port": "COM6",
+    "scope": "实际FPGA内部PCM和接受事件；不验收DAC/触控",
+    "errors": [
+      "could not open port 'COM6': PermissionError(13, '拒绝访问。', None, 5)",
+      "无法连接：could not open port 'COM6': PermissionError(13, '拒绝访问。', None, 5)"
+    ]
+  },
+  "evidence_root": "D:\\FPGA-Project\\host-workbench-20261012\\evidence\\sram-redownload-20261013-01",
+  "current_status": "SRAM_DOWNLOADED_UART_AUDIO_CHECK_PASS",
+  "serial_check_after_user_released_port": {
+    "status": "PASS",
+    "port": "COM6",
+    "scope": "实际FPGA内部PCM和接受事件；不验收DAC/触控",
+    "auto_ready_seconds": 0.25,
+    "checks": {
+      "auto_stream": true,
+      "on_accepted": true,
+      "off_accepted": true,
+      "pcm_nonzero": true,
+      "transport_complete": true,
+      "one_click_disconnect": true
+    },
+    "events": [
+      {
+        "note": 60,
+        "on": true
+      },
+      {
+        "note": 60,
+        "on": false
+      }
+    ],
+    "frames": 36,
+    "readback": {
+      "PROTO_VER": 17,
+      "CTRL": 10,
+      "PRESET": 0,
+      "FX_CTRL": 1,
+      "SPEC_MODE": 2
+    },
+    "crc_errors": 0,
+    "gaps": 0,
+    "discontinuities": 0,
+    "losses": 0,
+    "peak": 0.062530517578125,
+    "errors": []
+  }
+}

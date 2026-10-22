@@ -78,7 +78,7 @@ REG = {
     "SCORE_NOTE":   0x70,
     "SCORE_BEATS":  0x71,
     "SCORE_LEN":    0x73,
-    "PROTO_VER":    0x7F,     # 只读语义，= 0x10（v1.0）默认值在 reg_bank 初值块
+    "PROTO_VER":    0x7F,     # 只读语义，= 0x11（v1.1）默认值在 reg_bank 初值块
 }
 
 # v2 规划中、**当前 RTL 未实现**的地址：放在这里，避免 --check-map 误报
@@ -88,6 +88,7 @@ REG_V2 = {
     "SPREAD":       0x5D,     # 谱形展开（v2）
     "ANHARM":       0x5E,     # 非谐度 0=纯谐波 ↔ 255=钟列插值（v2）
 }
+PROTOCOL_REVISION = 0x11
 FS = 52734.375
 
 # 欢乐颂开头 8 步（与 tb_audio.v test=0 完全一致）
@@ -133,16 +134,22 @@ class Frames(object):
         self.items.append((a, data & 0xFF, note or name))
 
     def w16(self, name, value, note=""):
+        base = REG[name] if isinstance(name,str) else name
         for i, b in enumerate(le_bytes(value, 2)):
-            self.w(name, b, "%s[%d]" % (note or name, i))
+            self.w(base+i, b, "%s[%d]" % (note or name, i))
 
     def w24(self, name, value, note=""):
+        base = REG[name] if isinstance(name,str) else name
         for i, b in enumerate(le_bytes(value, 3)):
-            self.w(name, b, "%s[%d]" % (note or name, i))
+            self.w(base+i, b, "%s[%d]" % (note or name, i))
 
     def score(self, notes):
         # 冻结表里 0x72 是"保留"，索引由硬件自动管理：
         #   先写 SCORE_LEN=0 让索引归零，再逐对写 音高/拍数，最后写长度。
+        notes = list(notes)
+        if not 1 <= len(notes) <= 63 or any(type(n) is not int or type(b) is not int or not 0 <= n <= 127 or not 1 <= b <= 255 for n, b in notes):
+            raise ValueError("曲谱需有 1–63 步，音高 0–127，拍数 1–255")
+        self.w("SEQ_CTRL", 0, "下载前停止并释放旧曲谱音符")
         self.w("SCORE_LEN", 0, "长度写 0 → 索引归零（0x72 已冻结为保留，不能再用）")
         for n, b in notes:
             self.w("SCORE_NOTE", n, "音高 MIDI %d" % n)
@@ -228,11 +235,14 @@ def cmd_spectrum(mode, vals):
     f = Frames()
     if not vals:
         vals = [255, 0, 160, 0, 120, 0, 90, 0, 70, 0, 55, 0, 40, 0, 30, 0]
+    if mode not in ("replace", "add") or len(vals) != 16 or any(type(v) is not int or not 0 <= v <= 255 for v in vals):
+        raise ValueError("谱模式应为 replace/add，幅度需有 16 个 0–255 整数")
+    f.w("SPEC_MODE", 0x80, "开始完整谱草稿；关闭自动刷新，保留当前已提交模式")
     f.w("SPEC_IDX", 0, "谱 RAM 写指针归零")
     for i, v in enumerate(vals[:16]):
         f.w("SPEC_VAL", v, "泛音 %d 幅度 %d（写后指针自动 +1）" % (i + 1, v))
-    f.w("SPEC_MODE", 0x00 if mode == "replace" else 0x02,
-        "谱模式 = %s + 自动刷新在响声部" % ("替换" if mode == "replace" else "叠加"))
+    f.w("SPEC_MODE", 0x01 if mode == "replace" else 0x00,
+        "提交完整谱：%s；自动刷新关闭，在奏音须显式刷新" % ("替换" if mode == "replace" else "叠加"))
     return f
 
 
@@ -348,6 +358,13 @@ def send_serial(frames, port, baud=115200):
     except ImportError:
         print("需要 pyserial：pip install pyserial"); return 1
     ser = serial.Serial(port, baud, timeout=1)
+    if any(a == REG["SCORE_LEN"] or (a == REG["SPEC_MODE"] and d == 0x80) for a, d, _ in frames.items):
+        ser.write(bytes([REG["RD_REQ"], REG["PROTO_VER"]]))
+        response = ser.read(2)
+        if response != bytes([REG["PROTO_VER"], PROTOCOL_REVISION]):
+            ser.close()
+            print("设备未确认协议 v1.1；曲谱/完整谱下发已阻止")
+            return 2
     for a, d, _ in frames.items:
         ser.write(bytes([a, d]))
     ser.close()
