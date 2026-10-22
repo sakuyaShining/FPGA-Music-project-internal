@@ -627,6 +627,23 @@ def main():
                else (" / ".join(tail[:2]) or (log or "")[-160:]))
         results.append(("19 alloc", ok, msg.replace(chr(10), " ")[:160]))
 
+    # 20 i2c：主机与 MPR121 模型的基本读回 + 边界契约。
+    #   这是协议层闸门；板级实例化、引脚约束和真实外设读回留给 DSH 合入后的验收。
+    for name, tb, marker in (("20 i2c basic", "tb_i2c_master.v", "RESULT i2c_basic=PASS"),
+                             ("20b i2c contract", "tb_i2c_contract.v", "RESULT i2c_contract=PASS")):
+        d = os.path.join(BUILD, name.replace(" ", "_"))
+        if os.path.isdir(d):
+            rmtree_ok(d)
+        os.makedirs(d, exist_ok=True)
+        rc, log = run([os.path.join(IV, "iverilog.exe"), "-g2005", "-o", "i2c.vvp", "-s",
+                       tb[:-2], rtl("i2c_master.v"), sim("mpr121_model.v"), sim(tb)], d)
+        if rc != 0:
+            results.append((name, False, "COMPILE FAIL: " + (log or "")[-140:].replace(chr(10), " ")))
+        else:
+            rc2, log2 = run([os.path.join(IV, "vvp.exe"), "i2c.vvp"], d, timeout=120)
+            ok = marker in (log2 or "")
+            results.append((name, ok, "主机/模型契约通过" if ok else (log2 or "")[-140:].replace(chr(10), " ")))
+
     # ---------------------------------------------------------------- 汇总
     print()
     print("=" * 64)

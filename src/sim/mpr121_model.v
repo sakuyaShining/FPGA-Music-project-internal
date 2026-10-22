@@ -59,7 +59,7 @@ module mpr121_model #(
     end
 
     // ---------------- 状态 ----------------
-    localparam [1:0] S_ADDR = 2'd0, S_RX = 2'd1, S_TX = 2'd2;
+    localparam [1:0] S_ADDR = 2'd0, S_RX = 2'd1, S_TX = 2'd2, S_IGNORE = 2'd3;
 
     reg [1:0] st;
     reg [3:0] bitc;
@@ -71,6 +71,8 @@ module mpr121_model #(
     reg       mack;          // 发送：主机在应答位上给出的电平（0 = 应答）
 
     wire [7:0] cur = regs[ptr];
+    wire [6:0] ptr_next = ptr + 7'd1;
+    wire [7:0] next_byte = regs[ptr_next];
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -84,7 +86,7 @@ module mpr121_model #(
                 st <= S_ADDR; bitc <= 4'd0; sh <= 8'h00;
                 sda_drive_lo <= 1'b0; ack_clked <= 1'b0;
             end else if (cond_stop) begin
-                sda_drive_lo <= 1'b0; bitc <= 4'd0; ack_clked <= 1'b0;
+                sda_drive_lo <= 1'b0; bitc <= 4'd0; ack_clked <= 1'b0; st <= S_IGNORE;
             end else begin
                 case (st)
                     // ================= 收地址 =================
@@ -115,7 +117,7 @@ module mpr121_model #(
                                         st <= S_RX;
                                         first_wr <= 1'b1;
                                     end
-                                end
+                                end else st <= S_IGNORE;
                             end
                         end
                     end
@@ -161,9 +163,9 @@ module mpr121_model #(
                                 bitc <= 4'd0;
                                 if (!mack) begin                     // 主机应答 -> 继续下一字节
                                     ptr  <= ptr + 7'd1;
-                                    txsh <= cur;
-                                    sda_drive_lo <= ~cur[7];
-                                end
+                                    txsh <= next_byte;
+                                    sda_drive_lo <= ~next_byte[7];
+                                end else st <= S_IGNORE;
                             end
                         end
                     end

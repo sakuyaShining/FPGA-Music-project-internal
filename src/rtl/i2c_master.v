@@ -10,6 +10,9 @@
 //   写：START, dev|W, reg, [data0], [data1], STOP
 //   读：START, dev|W, reg, RSTART, dev|R, 读 rd_n 字节（末字节回 NACK）, STOP
 //
+// req 是空闲时的一拍请求，参数在接受时锁存。读 1–4 字节，写 0–2 字节。
+// rd_d[8*i +: 8] 保存第 i 个收到的字节；未使用的高字节为零。
+// 拉伸/总线忙超时由 STRETCH_TIMEOUT 限制，失败释放输出并给 done/err。
 // 位周期 4 相位：q=0 SCL 低、建立数据；q=1 释放 SCL（从机拉伸则等待）；
 //                q=2 SCL 高、采样；q=3 SCL 拉低收尾。
 // 引脚开漏：scl_lo / sda_lo 为 1 表示拉低，必须外接上拉。二者皆为寄存器输出
@@ -17,7 +20,8 @@
 //=============================================================================
 module i2c_master #(
     parameter integer CLK_HZ = 27000000,
-    parameter integer SCL_HZ = 100000
+    parameter integer SCL_HZ = 100000,
+    parameter integer STRETCH_TIMEOUT = CLK_HZ / 100
 )(
     input  wire        clk,
     input  wire        rst_n,
@@ -61,6 +65,20 @@ module i2c_master #(
                      Q_WD1    = 4'd7,
                      Q_STOP   = 4'd9;
 
+    reg [6:0] dev_q;
+    reg rd_q;
+    reg [7:0] reg_a_q;
+    reg [15:0] wr_d_q;
+    reg [1:0] wr_n_q;
+    reg [2:0] rd_n_q;
+    reg sda_meta, sda_sync, scl_meta, scl_sync;
+    localparam integer TW = (STRETCH_TIMEOUT > 1) ? $clog2(STRETCH_TIMEOUT+1) : 1;
+    reg [TW-1:0] stretch_count;
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin sda_meta <= 1; sda_sync <= 1; scl_meta <= 1; scl_sync <= 1; end
+        else begin sda_meta <= sda_in; sda_sync <= sda_meta; scl_meta <= scl_in; scl_sync <= scl_meta; end
+    end
+
     reg [2:0]    st;
     reg [3:0]    seq;
     reg [3:0]    bitc;
@@ -72,33 +90,45 @@ module i2c_master #(
     reg          ack_nack;   // q=2 采到的应答位（1 = 从机未应答）
 
     wire ph_last = (ph == DIV[PW-1:0] - 16'd1);
-    wire stretch = (~scl_lo) & (~scl_in);
-    wire is_last = (rxc + 3'd1 >= rd_n);
+    wire stretch = (~scl_lo) & (~scl_sync);
+    wire is_last = (rxc + 3'd1 >= rd_n_q);
+
+    wire start_wait = st == S_START && bitc == 0 && q == 0 && (!sda_sync || !scl_sync);
+    wire stalled = start_wait || (q == 1 && stretch);
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
+            stretch_count <= 0;
+            dev_q <= 0; rd_q <= 0; reg_a_q <= 0; wr_d_q <= 0; wr_n_q <= 0; rd_n_q <= 0;
             st <= S_IDLE; seq <= Q_START; bitc <= 4'd0; q <= 2'd0; ph <= 16'd0;
             sh <= 8'h00; rxc <= 3'd0; rdbuf <= 32'h0; rd_d <= 32'h0;
             scl_lo <= 1'b0; sda_lo <= 1'b0;
             busy <= 1'b0; done <= 1'b0; err <= 1'b0; ack_nack <= 1'b0;
         end else begin
             done <= 1'b0;
+            if (st == S_IDLE || !stalled) stretch_count <= 0;
+            else stretch_count <= stretch_count + 1'b1;
 
             if (st == S_IDLE) begin
                 scl_lo <= 1'b0; sda_lo <= 1'b0;
                 ph <= 16'd0; q <= 2'd0; bitc <= 4'd0; rxc <= 3'd0; rdbuf <= 32'h0;
                 if (req) begin
+                    dev_q <= dev; rd_q <= rd; reg_a_q <= reg_a;
+                    wr_d_q <= wr_d; wr_n_q <= wr_n; rd_n_q <= rd_n;
                     busy <= 1'b1;
                     st   <= S_START;
                     seq  <= Q_START;
                     bitc <= 4'd0; q <= 2'd0; ph <= 16'd0;
                     err  <= 1'b0;              // 只在新请求时清零
+                    if ((rd && (rd_n == 0 || rd_n > 4)) || (!rd && wr_n > 2)) begin
+                        st <= S_IDLE; busy <= 0; done <= 1; err <= 1;
+                    end
                     rd_d <= 32'h0;             // 否则结果会在回到 IDLE 的瞬间被抹掉
                 end
             end else begin
                 // ---------------- 相位推进 ----------------
                 if (ph_last) begin
-                    if (q == 2'd1 && stretch) ph <= ph;
+                    if (stalled) ph <= ph;
                     else begin ph <= 16'd0; q <= q + 2'd1; end
                 end else begin
                     ph <= ph + 16'd1;
@@ -109,8 +139,8 @@ module i2c_master #(
                     // ================= 起始 / 重复起始 =================
                     S_START, S_RSTART: begin
                         if (bitc == 4'd0) begin
-                            if (q == 2'd0)      begin scl_lo <= 1'b0; sda_lo <= 1'b0; end
-                            else if (q == 2'd1) begin scl_lo <= 1'b0; sda_lo <= 1'b1; end
+                            if (q == 2'd0)      begin scl_lo <= (st == S_RSTART); sda_lo <= 1'b0; end
+                            else if (q == 2'd1) begin scl_lo <= 1'b0; sda_lo <= 1'b0; end
                             else if (q == 2'd2) begin scl_lo <= 1'b0; sda_lo <= 1'b1; end
                             else                begin scl_lo <= 1'b1; sda_lo <= 1'b1; end
                         end else begin
@@ -126,7 +156,7 @@ module i2c_master #(
                         end else if (q == 2'd1) begin
                             scl_lo <= 1'b0;
                         end else if (q == 2'd2) begin
-                            if (bitc == 4'd8) ack_nack <= sda_in;   // 先锁存，下一步再判
+                            if (bitc == 4'd8 && ph_last) ack_nack <= sda_sync;   // 先锁存，下一步再判
                         end else begin
                             scl_lo <= 1'b1;
                         end
@@ -136,7 +166,7 @@ module i2c_master #(
                     S_RX: begin
                         if (q == 2'd0) begin
                             scl_lo <= 1'b1;
-                            if (bitc == 4'd8) sda_lo <= is_last ? 1'b1 : 1'b0;
+                            if (bitc == 4'd8) sda_lo <= is_last ? 1'b0 : 1'b1;
                             else              sda_lo <= 1'b0;
                         end else if (q == 2'd1) begin
                             scl_lo <= 1'b0;
@@ -150,8 +180,8 @@ module i2c_master #(
                         if (bitc == 4'd0) begin
                             scl_lo <= 1'b1; sda_lo <= 1'b1;
                         end else begin
-                            if (q == 2'd0)      begin scl_lo <= 1'b0; sda_lo <= 1'b1; end
-                            else if (q == 2'd1) begin scl_lo <= 1'b0; sda_lo <= 1'b0; end
+                            if (q == 2'd0)      begin scl_lo <= 1'b1; sda_lo <= 1'b1; end
+                            else if (q == 2'd1) begin scl_lo <= 1'b0; sda_lo <= 1'b1; end
                             else                begin scl_lo <= 1'b0; sda_lo <= 1'b0; end
                         end
                     end
@@ -160,8 +190,8 @@ module i2c_master #(
                 endcase
 
                 // ---------------- 采样 ----------------
-                if (q == 2'd2) begin
-                    if (st == S_RX && bitc < 4'd8) sh <= {sh[6:0], sda_in};
+                if (ph_last && q == 2'd2) begin
+                    if (st == S_RX && bitc < 4'd8) sh <= {sh[6:0], sda_sync};
                 end
 
                 // ---------------- 位周期结束 ----------------
@@ -171,23 +201,23 @@ module i2c_master #(
                             bitc <= 4'd0;
                             if (st == S_TX && ack_nack) err <= 1'b1;   // 用锁存值判，避免晚一拍
                             if (st == S_RX) begin
-                                rdbuf <= {rdbuf[23:0], sh};
+                                rdbuf[rxc*8 +: 8] <= sh;
                                 rxc   <= rxc + 3'd1;
                             end
 
                             if (st == S_TX) begin
-                                if (err) begin
+                                if (err || ack_nack) begin
                                     st <= S_STOP; seq <= Q_STOP; bitc <= 4'd0;
                                 end else begin
                                     case (seq)
                                         Q_START: begin
-                                            seq <= Q_ADDR; sh <= reg_a; st <= S_TX;
+                                            seq <= Q_ADDR; sh <= reg_a_q; st <= S_TX;
                                         end
                                         Q_ADDR: begin
-                                            if (rd) begin
+                                            if (rd_q) begin
                                                 st <= S_RSTART; seq <= Q_RSTART; bitc <= 4'd0;
-                                            end else if (wr_n >= 2'd1) begin
-                                                sh <= wr_d[7:0]; seq <= Q_WD0;
+                                            end else if (wr_n_q >= 2'd1) begin
+                                                sh <= wr_d_q[7:0]; seq <= Q_WD0;
                                             end else begin
                                                 st <= S_STOP; seq <= Q_STOP; bitc <= 4'd0;
                                             end
@@ -196,7 +226,7 @@ module i2c_master #(
                                             st <= S_RX; seq <= Q_RDATA; bitc <= 4'd0; rxc <= 3'd0;
                                         end
                                         Q_WD0: begin
-                                            if (wr_n == 2'd2) begin sh <= wr_d[15:8]; seq <= Q_WD1; end
+                                            if (wr_n_q == 2'd2) begin sh <= wr_d_q[15:8]; seq <= Q_WD1; end
                                             else begin st <= S_STOP; seq <= Q_STOP; bitc <= 4'd0; end
                                         end
                                         Q_WD1: begin
@@ -210,7 +240,8 @@ module i2c_master #(
                             end else begin
                                 if (is_last) begin
                                     st <= S_STOP; seq <= Q_STOP; bitc <= 4'd0;
-                                    rd_d <= {rdbuf[23:0], sh};
+                                    rd_d <= rdbuf;
+                                    rd_d[rxc*8 +: 8] <= sh;
                                 end
                             end
                         end else begin
@@ -221,9 +252,9 @@ module i2c_master #(
                         if (bitc == 4'd1) begin
                             bitc <= 4'd0;
                             if (st == S_START) begin
-                                st <= S_TX; seq <= Q_START; sh <= {dev, 1'b0};
+                                st <= S_TX; seq <= Q_START; sh <= {dev_q, 1'b0};
                             end else if (st == S_RSTART) begin
-                                st <= S_TX; seq <= Q_ADDRR; sh <= {dev, 1'b1};
+                                st <= S_TX; seq <= Q_ADDRR; sh <= {dev_q, 1'b1};
                             end else if (st == S_STOP) begin
                                 st <= S_END;
                             end
@@ -231,6 +262,11 @@ module i2c_master #(
                             bitc <= bitc + 4'd1;
                         end
                     end
+                end
+
+                // 时钟拉伸或启动总线忙超过限额：释放开漏输出，报告失败。
+                if (stalled && stretch_count >= STRETCH_TIMEOUT-1) begin
+                    err <= 1; st <= S_END; scl_lo <= 0; sda_lo <= 0;
                 end
 
                 // ---------------- 结束 ----------------

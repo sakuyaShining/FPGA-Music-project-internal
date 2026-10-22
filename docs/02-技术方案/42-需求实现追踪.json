@@ -3,7 +3,7 @@
   "checked_date": "2026-10-07",
   "checked_source_commit": "fcbe82e4d79a20094cde3fd7dc63f93b01e12dd8",
   "rtl_baseline_commit": "5c67de24a87f05e26139219db932f7192869006f",
-  "external_dsh_checked_commit": "d5c8139",
+  "external_dsh_checked_commit": "a280173",
   "external_dsh_changes_merged": false,
   "status_meaning": "状态由源码核对记录，不是自动检测结果。实现提交/验收证据为 null 的新行为不得声称完成。",
   "decision_source": "docs/02-技术方案/37-首版交互需求分析-讨论稿.md",
@@ -23,9 +23,9 @@
       "id": "R02",
       "behavior": "保存并调用完整乐器配置",
       "decision_status": "user_confirmed_details_pending",
-      "implementation_status": "file_layer_implemented_gui_device_pending",
-      "code_locations": ["tools/host/instrument_config.py", "tools/host/test_instrument_config.py", "tools/host/dsp_gui.py", "tools/scripts/dsp_host.py"],
-      "gap": "参数文件 schema、保存、读取与校验已实现；GUI 捕获/恢复和设备应用尚未接入，完整用户闭环未完成。",
+      "implementation_status": "file_and_gui_local_implemented_device_pending",
+      "code_locations": ["tools/host/instrument_config.py", "tools/host/test_instrument_config.py", "tools/host/dsp_gui.py", "tools/scripts/dsp_host.py", "tools/host/config_editor.py", "tools/host/test_config_editor.py"],
+      "gap": "文件与 GUI 本地编辑/保存/载入闭环已实现；设备能力检查、完整配置应用及实体槽仍未接入。",
       "partial_implementation_commit": "caa0034531efb5336912dee840b771f396c1133b",
       "partial_acceptance_evidence": {
         "scope": "文件层，非 GUI/设备验收",
@@ -35,7 +35,14 @@
       },
       "acceptance": ["文件往返恢复完整参数", "坏文件无副作用", "保存不自动改变在奏音"],
       "implementation_commit": null,
-      "acceptance_evidence": null
+      "acceptance_evidence": null,
+      "gui_partial_acceptance_evidence": {
+        "scope": "GUI 本地闭环，非设备/RTL 验收",
+        "command": "python -m unittest discover -s tools/host -p 'test_*.py' -v",
+        "result": "30 tests passed, exit 0",
+        "date": "2026-10-07",
+        "report": "sim_build/gui/config_editor_report.txt"
+      }
     },
     {
       "id": "R03",

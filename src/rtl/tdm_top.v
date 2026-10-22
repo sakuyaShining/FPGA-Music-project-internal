@@ -342,7 +342,7 @@ module tdm_top #(
 //       现在让出 0x60，触发器按修正案 A3 落到 0x0F（保留区）。
     //             两个字节（与写入的"地址+数据"两字节帧完全对称，上位机好写）。
     //   曲谱下载：往 0x70 写音高、往 0x71 写拍数（写完拍数索引自动 +1），
-    //             往 0x72 写起始索引，往 0x73 写步数；再把 SEQ_CTRL[2] 置 1。
+    //             先停止，再写 0x73=0 重置索引，写完整曲谱后提交长度，0x50=1 播放；0x72 保留。
     //-------------------------------------------------------------------------
     wire [7:0]  r_snote  = R[8'h70*8 +: 8];
     wire [7:0]  r_sbeat  = R[8'h71*8 +: 8];
@@ -354,7 +354,7 @@ module tdm_top #(
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n)                        s_idx <= 6'd0;
-        else if (wr_en && wr_addr == 8'h72) s_idx <= wr_data[5:0];   // 设索引
+        else if (wr_en && wr_addr == 8'h73 && wr_data[5:0] == 0) s_idx <= 6'd0; // 长度清零重置写指针，0x72保留
         else if (s_we_beats)                s_idx <= s_idx + 6'd1;   // 写完拍数自动 +1
     end
 
@@ -537,13 +537,30 @@ module tdm_top #(
                               (r_vel_sens <  8'h40) ? 9'd128 :   // 低半区 → 半灵敏
                               (r_vel_sens <  8'hC0) ? 9'd256 :   // 中区   → 一等一
                                                       9'd511;   // 高半区 → 最灵敏
-    wire        spec_replace = r_spec_mode[0];      // 1=替换 / 0=叠加
-    wire        spec_autorf  = r_spec_mode[1];
-
-    reg  [3:0]  spec_idx;
+    reg spec_mode_active, spec_transaction, spec_commit_pending, spec_next_mode;
     reg         spec_we;
     reg  [3:0]  spec_addr;
     reg  [7:0]  spec_wdata;
+    wire        spec_replace = spec_mode_active;      // 1=替换 / 0=叠加
+    wire        spec_autorf  = r_spec_mode[1] && !r_spec_mode[7];
+    wire spec_commit_fire = spec_commit_pending && !nm_busy;
+    wire spec_publish = spec_commit_fire || (spec_we && !spec_transaction);
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            spec_mode_active <= 0; spec_transaction <= 0; spec_commit_pending <= 0; spec_next_mode <= 0;
+        end else begin
+            if (wr_en && wr_addr == 8'h5A) begin
+                if (wr_data[7]) spec_transaction <= 1;
+                else if (spec_transaction) begin spec_commit_pending <= 1; spec_next_mode <= wr_data[0]; end
+                else spec_mode_active <= wr_data[0];
+            end
+            if (spec_commit_fire) begin
+                spec_mode_active <= spec_next_mode; spec_commit_pending <= 0; spec_transaction <= 0;
+            end
+        end
+    end
+
+    reg  [3:0]  spec_idx;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -650,13 +667,15 @@ module tdm_top #(
 
             // 节流：每 4096 拍最多刷一次（≈6.6 kHz ≫ 手势带宽）
             if (rf_thr != 13'd4095) rf_thr <= rf_thr + 13'd1;
-            else if (spec_dirty) begin
+            else if (spec_dirty && spec_autorf && !spec_transaction) begin
                 rf_thr     <= 13'd0;
                 spec_dirty <= 1'b0;
                 rf_pulse   <= 1'b1;
                 rf_lo_q    <= 7'd0;
                 rf_hi_q    <= 8'd32;               // 全刷（note_map 只刷在响的组 ✓）
             end
+
+            if (wr_en && wr_addr == 8'h5A && wr_data[7]) spec_dirty <= 0;
 
             // 0x63 显式刷新：立即生效，不节流
             if (wr_en && wr_addr == 8'h63) begin
@@ -733,7 +752,7 @@ module tdm_top #(
     reg [1:0] arb_rr;                    // 0=UART 1=定序器 2=pads 3=排针
 
     wire arb_u = uh_req;
-    wire arb_s = seq_en & sh_pend;
+    wire arb_s = sh_pend && (seq_en || !sh_on);
     wire arb_p = pp_pend;
     wire arb_d = dh_pend;
 
@@ -775,7 +794,7 @@ module tdm_top #(
             //   很多拍才接收；若拿 u_ev_valid 当请求，事件还没被接收就没了
             //   （实测 note 恒为 0）。所以 wr 那一拍置 uh_req，被接收才清。
             if (uh_req && ev_in_ready)  uh_req  <= 1'b0;
-            if (sh_pend && ev_in_ready && seq_en) sh_pend <= 1'b0;
+            if (sh_pend && ev_in_ready && arb_s) sh_pend <= 1'b0;
             if (dh_pend && ev_in_ready) dh_pend <= 1'b0;
             if (pp_pend && ev_in_ready) pp_pend <= 1'b0;
 
@@ -787,7 +806,7 @@ module tdm_top #(
                 uh_vel      <= u_ev_vel;
                 uh_note     <= u_ev_note;
             end
-            if (sq_ev_valid && seq_en && !sh_pend) begin
+            if (sq_ev_valid && (seq_en || !sq_ev_on) && (!sh_pend || (!seq_en && sh_on))) begin
                 sh_on   <= sq_ev_on;
                 sh_note <= sq_ev_note;
                 sh_vel  <= sq_ev_vel[7:4];
@@ -838,7 +857,7 @@ module tdm_top #(
     //   ⇒ 那条长链已经断了，这一级不再必要，而且**有害**：会把 ev_valid 拉成
     //   "连续两拍为高"的电平，note_map 遂把同一事件消费两次。
     //-------------------------------------------------------------------------
-    wire        ev_valid_r = ev_q_valid;
+    wire        ev_valid_r = ev_q_valid && !spec_commit_pending;
     wire        ev_on_r    = ev_q_on;
     wire [6:0]  ev_note_r  = ev_q_note;
     wire [3:0]  ev_vel_r   = ev_q_vel;
@@ -904,14 +923,14 @@ module tdm_top #(
         .NG(NG), .P(P), .PHASE_W(PHASE_W), .AMP_W(AMP_W), .NB(7), .NPRE(4),
         // 滑音初值照常算（真正"开不开"由 pitch_mod 的 glide_en 在应用处门控），
         //   这样 note_map 不必再吃一个运行时开关。
-        .GLIDE_EN(1'b1)
+        .GLIDE_EN(1'b1), .SPEC_STAGED(1)
     ) u_nm (
         .clk(clk), .rst_n(rst_n),
         .ev_valid(ev_valid_r), .ev_on(ev_on_r), .ev_note(ev_note_r),
         .ev_vel({ev_vel_r, 4'b0000}),      // 4 位 -> 8 位（16 级力度）
         .preset(preset_eff),               // 引脚或寄存器（CTRL[3] 选择）
         // 步③ 塑谱接口
-        .spec_we(spec_we), .spec_addr(spec_addr), .spec_wdata(spec_wdata),
+        .spec_we(spec_we), .spec_addr(spec_addr), .spec_wdata(spec_wdata), .spec_commit(spec_publish),
         .spec_replace(spec_replace),
         .tilt_vbias(tilt_vbias), .tilt_vgain(r_tilt_vgain), .vel_vscale(vel_vscale),
         .tilt(r_tilt),                     // 0x5C 独立亮度轴（0x70 = 恒等）
