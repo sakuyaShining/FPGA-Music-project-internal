@@ -1,0 +1,2853 @@
+{
+  "date": "2026-10-22",
+  "method": "Physical source lines, and nonblank physical lines after lexical // and /* */ removal; source copies counted only in their own profile. No generated netlists/hex/vendor models in RTL headline.",
+  "script_sha256": "79001ff7a06edafacd68373ea2842afb4278240ebace1815512f7842b07fbc1f",
+  "warning": "The enabled project source set also contains unused historical modules. This is source volume, not the number of elaborated modules or a resource estimate. Profiles overlap and must not be summed.",
+  "groups": {
+    "main_rtl_directory": {
+      "file_count": 35,
+      "unique_contents": 35,
+      "physical_lines": 7569,
+      "nonblank_lines": 6917,
+      "code_lines": 3839,
+      "bytes": 393866,
+      "module_definitions": 35,
+      "files": [
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\audio_clk_en.v",
+          "sha256": "7128527f46d18086a4f921dbe7eee005a56e3ac7157b8a71a5e15f85c0135269",
+          "bytes": 6849,
+          "physical_lines": 129,
+          "nonblank_lines": 118,
+          "code_lines": 46,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\bringup_top.v",
+          "sha256": "c1658662f3c9d35b9a4af1d5fb0f20ba0a9077d34ec9474832534230509a610d",
+          "bytes": 8791,
+          "physical_lines": 195,
+          "nonblank_lines": 174,
+          "code_lines": 104,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\event_hold.v",
+          "sha256": "fa9d8f0d757df57b07c2e99d62f3ecda562f05a8151efd7854932f8f4b173d75",
+          "bytes": 6745,
+          "physical_lines": 145,
+          "nonblank_lines": 130,
+          "code_lines": 69,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\fx_delay.v",
+          "sha256": "e5ae7798edc93df90bcae0498fba414d5f69153a098c24dc39ce69d058181bd2",
+          "bytes": 16599,
+          "physical_lines": 297,
+          "nonblank_lines": 271,
+          "code_lines": 154,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\i2c_master.v",
+          "sha256": "40140d3e7d180c5cdf04f29b4ec1267e582c8916556667a4d93fa1e4fdd62c90",
+          "bytes": 12589,
+          "physical_lines": 264,
+          "nonblank_lines": 244,
+          "code_lines": 200,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\i2s_tx.v",
+          "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+          "bytes": 5172,
+          "physical_lines": 95,
+          "nonblank_lines": 87,
+          "code_lines": 27,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\image_rom.v",
+          "sha256": "7083c1fe352f63c950dbf5bd1de6545a6fcb28f983d8c08a0683b6f75041e198",
+          "bytes": 2413,
+          "physical_lines": 45,
+          "nonblank_lines": 40,
+          "code_lines": 11,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\image_view.v",
+          "sha256": "e45fd3de51a6a8260301d285bbbfc5384887675b2e7a8e95be6a50a0cd1f97fe",
+          "bytes": 4060,
+          "physical_lines": 86,
+          "nonblank_lines": 77,
+          "code_lines": 42,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\lcd_480x272.v",
+          "sha256": "7a4176f739123438be35837be943fb93eb355f5c8a2f36e322ef97a1546f8409",
+          "bytes": 7905,
+          "physical_lines": 157,
+          "nonblank_lines": 143,
+          "code_lines": 76,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\led_blink.v",
+          "sha256": "3ca020001bc2c3447a3d3cee6df43a0017806047b7f87df39038d45b03961adf",
+          "bytes": 2885,
+          "physical_lines": 64,
+          "nonblank_lines": 56,
+          "code_lines": 21,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\led_heartbeat.v",
+          "sha256": "ceac0e82fbaec093bcdc5d7765a6f8943c421728015d4690d2c907ec7e2de277",
+          "bytes": 2898,
+          "physical_lines": 57,
+          "nonblank_lines": 51,
+          "code_lines": 28,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\led_ind.v",
+          "sha256": "608da423d0526cc0ac0d070de3611aeebf87c581f4361f106e942ef4ae79cb2a",
+          "bytes": 4858,
+          "physical_lines": 117,
+          "nonblank_lines": 109,
+          "code_lines": 77,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\mixer.v",
+          "sha256": "ab09200f0469082a91b3025ec2b06d74151ca978f282bdf3329560694959ed2b",
+          "bytes": 3343,
+          "physical_lines": 75,
+          "nonblank_lines": 66,
+          "code_lines": 31,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\note_map.v",
+          "sha256": "569df524bda98d33f2e01685b58affdee5ee8ebf7c105d9ced59b587bedbfc98",
+          "bytes": 34276,
+          "physical_lines": 584,
+          "nonblank_lines": 539,
+          "code_lines": 283,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\osc_additive.v",
+          "sha256": "cf3df7ee37843d89452d49c57427e233a66f6c9fabd346164c046b1d4965863f",
+          "bytes": 11771,
+          "physical_lines": 242,
+          "nonblank_lines": 222,
+          "code_lines": 143,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\osc_additive_top.v",
+          "sha256": "3da83033b20485965b2ca9ff93e377f329c19a5571d3e9a08a26fee3c135e3f7",
+          "bytes": 16095,
+          "physical_lines": 371,
+          "nonblank_lines": 332,
+          "code_lines": 230,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\osc_core.v",
+          "sha256": "bbaf2350de1b525d6110b6659499efc84da82239555eee4830ffd0a18b209529",
+          "bytes": 9497,
+          "physical_lines": 199,
+          "nonblank_lines": 180,
+          "code_lines": 108,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\osc_env.v",
+          "sha256": "219589ef878ecb445b9c7292854d36f45be383963751cd89b7e1ecebc4ea5850",
+          "bytes": 9054,
+          "physical_lines": 193,
+          "nonblank_lines": 176,
+          "code_lines": 113,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\pad_pitch.v",
+          "sha256": "3c9fbac593a96594782c8ebe8b34c87b19eab26ac37f6af0d081434213e9adfd",
+          "bytes": 5035,
+          "physical_lines": 110,
+          "nonblank_lines": 99,
+          "code_lines": 64,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\pad_scan.v",
+          "sha256": "32be1f99adf367e13278adc35b1e8c97e00e8c441bdce0ab074fbcf28742a8f9",
+          "bytes": 15516,
+          "physical_lines": 311,
+          "nonblank_lines": 287,
+          "code_lines": 217,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\perf_ctrl.v",
+          "sha256": "1f8e81091b9fdb3798919378d888e7054deeb4d404026d56414cc16b13e8a786",
+          "bytes": 9729,
+          "physical_lines": 194,
+          "nonblank_lines": 179,
+          "code_lines": 121,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\pitch_mod.v",
+          "sha256": "f66d4e7dede888f4a909087dbe0ad1883b263c0e25f82f7fd228d48803ee3bf6",
+          "bytes": 11717,
+          "physical_lines": 198,
+          "nonblank_lines": 180,
+          "code_lines": 62,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\reg_bank.v",
+          "sha256": "c8b7f6631f4d24d12171e6a1f10c7832f9d48ac3eb099cf02c9fcdc4e14e29a1",
+          "bytes": 9603,
+          "physical_lines": 183,
+          "nonblank_lines": 161,
+          "code_lines": 58,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\song_seq.v",
+          "sha256": "92976695dc40fb64a2463d7f9e6c3f1cb4d2f689c681e29c5e8f9f75fafbf16b",
+          "bytes": 10026,
+          "physical_lines": 203,
+          "nonblank_lines": 183,
+          "code_lines": 126,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\strip_ctrl.v",
+          "sha256": "a950f101f7cea42aef1ad404b090fecb44ef38dd904d176228d906be4c3fa6bc",
+          "bytes": 2514,
+          "physical_lines": 64,
+          "nonblank_lines": 59,
+          "code_lines": 43,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\synth_top.v",
+          "sha256": "c782c68cc93c1c0d8cdac18a3612d28bc9859b096a8def9637b5e5c0b184e5d5",
+          "bytes": 5158,
+          "physical_lines": 124,
+          "nonblank_lines": 113,
+          "code_lines": 74,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\tdm_engine.v",
+          "sha256": "b2c08ae25e973fef61098ad289ab5cfc6518786f556907f12e7ca0624f5fd803",
+          "bytes": 53792,
+          "physical_lines": 899,
+          "nonblank_lines": 843,
+          "code_lines": 273,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\tdm_ship.v",
+          "sha256": "cf831978c4318f53e1f131748e1dc45b9c0bfdd88d304d6fb7b41ba4995fd5e6",
+          "bytes": 2723,
+          "physical_lines": 67,
+          "nonblank_lines": 60,
+          "code_lines": 31,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\tdm_top.v",
+          "sha256": "7beaeec6947213a353930193cb9aa41d5861b7fe6fb63ab12b1d3fc5cc1c243f",
+          "bytes": 63254,
+          "physical_lines": 1110,
+          "nonblank_lines": 1018,
+          "code_lines": 588,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\test_mode.v",
+          "sha256": "d71a51e6620831b5f0b518fa3f7822d4ed7cefcf11e54c8f37921200a130b906",
+          "bytes": 4945,
+          "physical_lines": 105,
+          "nonblank_lines": 95,
+          "code_lines": 52,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\test_pattern.v",
+          "sha256": "b5eea2e1d2b16015b5af8381ccf59770fcdba5e560379416f70dbfd6bf64ecf1",
+          "bytes": 10542,
+          "physical_lines": 195,
+          "nonblank_lines": 178,
+          "code_lines": 106,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\uart_rx.v",
+          "sha256": "73e4ddd24eaba571e30e34fc7860e03ec03a725681328c869c7296c764cc8f36",
+          "bytes": 5057,
+          "physical_lines": 129,
+          "nonblank_lines": 116,
+          "code_lines": 81,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\uart_tx.v",
+          "sha256": "95827cb66750de05a812e77d517fc7bd6262dda9ebddfd301381d0caba950ce9",
+          "bytes": 3803,
+          "physical_lines": 110,
+          "nonblank_lines": 99,
+          "code_lines": 86,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\vel_shape.v",
+          "sha256": "71ff6e0d7e4bd50658bb3c897781fe6360c03efcbf6e2493d6bc68cddecccfd2",
+          "bytes": 6687,
+          "physical_lines": 105,
+          "nonblank_lines": 99,
+          "code_lines": 30,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\rtl\\video_timing.v",
+          "sha256": "b41e7f6c04cc41f2f00d2a0121c6c9376618c4fe218e3a4ee24d5c3fe9d82a3b",
+          "bytes": 7965,
+          "physical_lines": 147,
+          "nonblank_lines": 133,
+          "code_lines": 64,
+          "module_definitions": 1
+        }
+      ]
+    },
+    "main_legacy_shipping_project": {
+      "file_count": 19,
+      "unique_contents": 19,
+      "physical_lines": 5049,
+      "nonblank_lines": 4634,
+      "code_lines": 2428,
+      "bytes": 273280,
+      "module_definitions": 19,
+      "files": [
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\audio_clk_en.v",
+          "sha256": "7128527f46d18086a4f921dbe7eee005a56e3ac7157b8a71a5e15f85c0135269",
+          "bytes": 6849,
+          "physical_lines": 129,
+          "nonblank_lines": 118,
+          "code_lines": 46,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\event_hold.v",
+          "sha256": "fa9d8f0d757df57b07c2e99d62f3ecda562f05a8151efd7854932f8f4b173d75",
+          "bytes": 6745,
+          "physical_lines": 145,
+          "nonblank_lines": 130,
+          "code_lines": 69,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\fx_delay.v",
+          "sha256": "e5ae7798edc93df90bcae0498fba414d5f69153a098c24dc39ce69d058181bd2",
+          "bytes": 16599,
+          "physical_lines": 297,
+          "nonblank_lines": 271,
+          "code_lines": 154,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\i2s_tx.v",
+          "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+          "bytes": 5172,
+          "physical_lines": 95,
+          "nonblank_lines": 87,
+          "code_lines": 27,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\led_ind.v",
+          "sha256": "608da423d0526cc0ac0d070de3611aeebf87c581f4361f106e942ef4ae79cb2a",
+          "bytes": 4858,
+          "physical_lines": 117,
+          "nonblank_lines": 109,
+          "code_lines": 77,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\note_map.v",
+          "sha256": "569df524bda98d33f2e01685b58affdee5ee8ebf7c105d9ced59b587bedbfc98",
+          "bytes": 34276,
+          "physical_lines": 584,
+          "nonblank_lines": 539,
+          "code_lines": 283,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\osc_env.v",
+          "sha256": "219589ef878ecb445b9c7292854d36f45be383963751cd89b7e1ecebc4ea5850",
+          "bytes": 9054,
+          "physical_lines": 193,
+          "nonblank_lines": 176,
+          "code_lines": 113,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\pad_pitch.v",
+          "sha256": "3c9fbac593a96594782c8ebe8b34c87b19eab26ac37f6af0d081434213e9adfd",
+          "bytes": 5035,
+          "physical_lines": 110,
+          "nonblank_lines": 99,
+          "code_lines": 64,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\pad_scan.v",
+          "sha256": "32be1f99adf367e13278adc35b1e8c97e00e8c441bdce0ab074fbcf28742a8f9",
+          "bytes": 15516,
+          "physical_lines": 311,
+          "nonblank_lines": 287,
+          "code_lines": 217,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\pitch_mod.v",
+          "sha256": "f66d4e7dede888f4a909087dbe0ad1883b263c0e25f82f7fd228d48803ee3bf6",
+          "bytes": 11717,
+          "physical_lines": 198,
+          "nonblank_lines": 180,
+          "code_lines": 62,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\reg_bank.v",
+          "sha256": "c8b7f6631f4d24d12171e6a1f10c7832f9d48ac3eb099cf02c9fcdc4e14e29a1",
+          "bytes": 9603,
+          "physical_lines": 183,
+          "nonblank_lines": 161,
+          "code_lines": 58,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\song_seq.v",
+          "sha256": "92976695dc40fb64a2463d7f9e6c3f1cb4d2f689c681e29c5e8f9f75fafbf16b",
+          "bytes": 10026,
+          "physical_lines": 203,
+          "nonblank_lines": 183,
+          "code_lines": 126,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\strip_ctrl.v",
+          "sha256": "a950f101f7cea42aef1ad404b090fecb44ef38dd904d176228d906be4c3fa6bc",
+          "bytes": 2514,
+          "physical_lines": 64,
+          "nonblank_lines": 59,
+          "code_lines": 43,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\tdm_engine.v",
+          "sha256": "b2c08ae25e973fef61098ad289ab5cfc6518786f556907f12e7ca0624f5fd803",
+          "bytes": 53792,
+          "physical_lines": 899,
+          "nonblank_lines": 843,
+          "code_lines": 273,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\tdm_ship.v",
+          "sha256": "cf831978c4318f53e1f131748e1dc45b9c0bfdd88d304d6fb7b41ba4995fd5e6",
+          "bytes": 2723,
+          "physical_lines": 67,
+          "nonblank_lines": 60,
+          "code_lines": 31,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\tdm_top.v",
+          "sha256": "7beaeec6947213a353930193cb9aa41d5861b7fe6fb63ab12b1d3fc5cc1c243f",
+          "bytes": 63254,
+          "physical_lines": 1110,
+          "nonblank_lines": 1018,
+          "code_lines": 588,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\uart_rx.v",
+          "sha256": "73e4ddd24eaba571e30e34fc7860e03ec03a725681328c869c7296c764cc8f36",
+          "bytes": 5057,
+          "physical_lines": 129,
+          "nonblank_lines": 116,
+          "code_lines": 81,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\uart_tx.v",
+          "sha256": "95827cb66750de05a812e77d517fc7bd6262dda9ebddfd301381d0caba950ce9",
+          "bytes": 3803,
+          "physical_lines": 110,
+          "nonblank_lines": 99,
+          "code_lines": 86,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\gowin\\tdm_synth\\..\\..\\rtl\\vel_shape.v",
+          "sha256": "71ff6e0d7e4bd50658bb3c897781fe6360c03efcbf6e2493d6bc68cddecccfd2",
+          "bytes": 6687,
+          "physical_lines": 105,
+          "nonblank_lines": 99,
+          "code_lines": 30,
+          "module_definitions": 1
+        }
+      ]
+    },
+    "main_simulation_sources": {
+      "file_count": 62,
+      "unique_contents": 62,
+      "physical_lines": 12880,
+      "nonblank_lines": 11513,
+      "code_lines": 8790,
+      "bytes": 549656,
+      "module_definitions": 62,
+      "files": [
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\hello_tick.v",
+          "sha256": "702daac9922f94bc0a57989cb6dc611195572c53578e7b6ff65f974622868239",
+          "bytes": 2539,
+          "physical_lines": 55,
+          "nonblank_lines": 50,
+          "code_lines": 24,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\mpr121_model.v",
+          "sha256": "804f5ec796de19b0de7d820f5c48ffd73346bce7f045efa64a8697e80b272dee",
+          "bytes": 7817,
+          "physical_lines": 175,
+          "nonblank_lines": 162,
+          "code_lines": 139,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\sensor_sim.v",
+          "sha256": "a447a6e6d3eda6c74f4e09a85dfe735cd4bf952bb0ce44b2487d43076820fffc",
+          "bytes": 5282,
+          "physical_lines": 134,
+          "nonblank_lines": 124,
+          "code_lines": 99,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_alloc.v",
+          "sha256": "ebecad4d855c5a8cec9eefa03d21b2d06193cb2c4b4cf8d21c249fd9a8e6e0a7",
+          "bytes": 7470,
+          "physical_lines": 187,
+          "nonblank_lines": 165,
+          "code_lines": 128,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_audio.v",
+          "sha256": "4f44bb1d0c832ab1dd8da7fc93eac1cd82b808031cb5c99da5c888484e31ae92",
+          "bytes": 11727,
+          "physical_lines": 254,
+          "nonblank_lines": 228,
+          "code_lines": 174,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_audio_clk_en.v",
+          "sha256": "1bc0e2a2b626b741cbaf1b3833225c2bbfba26fd03b129e4f1b6d1a5bf84d0b3",
+          "bytes": 8333,
+          "physical_lines": 195,
+          "nonblank_lines": 173,
+          "code_lines": 137,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_e8.v",
+          "sha256": "199c5ccbda4e0f7a725909002539cdb6dad9ecbd76e4592c7fc30c682b51250e",
+          "bytes": 7060,
+          "physical_lines": 166,
+          "nonblank_lines": 152,
+          "code_lines": 117,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_ev.v",
+          "sha256": "59911de4f55f8c88b9b8fec86dec9a6246a94218d89a09bfec790d9fe8c522dd",
+          "bytes": 6463,
+          "physical_lines": 158,
+          "nonblank_lines": 137,
+          "code_lines": 117,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_evhold.v",
+          "sha256": "cb2d75fc514c086f827b84379a5076ecbf734c7cdd90b9a5f29e964eff8bcc87",
+          "bytes": 9572,
+          "physical_lines": 224,
+          "nonblank_lines": 202,
+          "code_lines": 156,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_evloss.v",
+          "sha256": "7c96d02e57f3634f4eae2cb323493aa2f6c2b982525b59db8feac52b1574bab4",
+          "bytes": 9327,
+          "physical_lines": 223,
+          "nonblank_lines": 199,
+          "code_lines": 148,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_evmerge.v",
+          "sha256": "ef488141ce5305a31725fa697149bda6c4a85c760690719872c41b6acc6f2908",
+          "bytes": 13764,
+          "physical_lines": 299,
+          "nonblank_lines": 268,
+          "code_lines": 178,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_evmin.v",
+          "sha256": "7a1f6aaff45f6c313290961366d2633e6253f4cd11713f3e5ed9668139122dc0",
+          "bytes": 6590,
+          "physical_lines": 170,
+          "nonblank_lines": 153,
+          "code_lines": 122,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_evseq.v",
+          "sha256": "c80008a1fe893fd61a4ebc7140387f0bfe86f378bfa692a29483b80dc740e7d1",
+          "bytes": 7145,
+          "physical_lines": 189,
+          "nonblank_lines": 167,
+          "code_lines": 137,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_fx.v",
+          "sha256": "06d91c02ef716831384ddfa2567fb8fef0e887c2decae6d3d684704ee9284a2a",
+          "bytes": 6761,
+          "physical_lines": 159,
+          "nonblank_lines": 140,
+          "code_lines": 103,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_fxinit.v",
+          "sha256": "fba5bfbf771bd1da4c7788fb7f2f91b555ce6076bf18c419cb2a1d5d9f303099",
+          "bytes": 3320,
+          "physical_lines": 75,
+          "nonblank_lines": 67,
+          "code_lines": 53,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_glide.v",
+          "sha256": "fe0532f8897096f535873553f4b9acf79a468c0fc94180ee6d625c04771089a9",
+          "bytes": 9781,
+          "physical_lines": 218,
+          "nonblank_lines": 196,
+          "code_lines": 137,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_hello_tick.v",
+          "sha256": "268b882104efc2009bdabfadf4af41050ddaacf4dba3b7303429b3ca5a13dfc1",
+          "bytes": 5513,
+          "physical_lines": 134,
+          "nonblank_lines": 116,
+          "code_lines": 60,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_i2c_master.v",
+          "sha256": "24ec8ec24293a6e30cd6644cf8541832904ce814b2b9745f5ce3f9d90ca1539d",
+          "bytes": 5931,
+          "physical_lines": 168,
+          "nonblank_lines": 144,
+          "code_lines": 126,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_i2s_std.v",
+          "sha256": "7aeec7e8ceff3cde6b766bc27aeaa22ec0b78b183074b42738929d634ca63304",
+          "bytes": 11366,
+          "physical_lines": 237,
+          "nonblank_lines": 215,
+          "code_lines": 139,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_i2s_top.v",
+          "sha256": "8197aaabc81b27329c7a407ec7aa8c8d87f73ed6f4a8dd26c7bcc8ceb670b1f7",
+          "bytes": 8228,
+          "physical_lines": 195,
+          "nonblank_lines": 174,
+          "code_lines": 129,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_i2s_tx.v",
+          "sha256": "36f57594e40cfccfee7d4c89f2511f25a30adf040d8eba7b37099cd9b1e87d0e",
+          "bytes": 7830,
+          "physical_lines": 201,
+          "nonblank_lines": 178,
+          "code_lines": 123,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_inv.v",
+          "sha256": "40e759a7378d0d5fe1f4ff5e0b5fb17f8a32f3fb74364ca90907766797b58604",
+          "bytes": 9028,
+          "physical_lines": 215,
+          "nonblank_lines": 194,
+          "code_lines": 157,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_latency.v",
+          "sha256": "4746eec042cb832af4d9417fc36f2094b2f788cde8302abaf2c92e5c85d62b6f",
+          "bytes": 8238,
+          "physical_lines": 203,
+          "nonblank_lines": 179,
+          "code_lines": 133,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_led_ind.v",
+          "sha256": "e5f2857aca1040f51376342f0fd1f6f3ac1e3aa880e108ec102abf92818f579e",
+          "bytes": 7071,
+          "physical_lines": 184,
+          "nonblank_lines": 164,
+          "code_lines": 141,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_legato.v",
+          "sha256": "af4847f1f048f0785dd08593059744430cb9e5ecb5fd8ceebe3bb631d88178c2",
+          "bytes": 12940,
+          "physical_lines": 263,
+          "nonblank_lines": 241,
+          "code_lines": 169,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_note_map.v",
+          "sha256": "6dd45eac3608e7353747a9679e2067767f93806b3156ad9a977d512b96c74ec8",
+          "bytes": 9361,
+          "physical_lines": 224,
+          "nonblank_lines": 200,
+          "code_lines": 138,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_note_music.v",
+          "sha256": "7db6b1cc2078c04d98c5de64152459da0fa42d5d4fca16c208879667ebb94d3a",
+          "bytes": 8426,
+          "physical_lines": 222,
+          "nonblank_lines": 197,
+          "code_lines": 164,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_nyq.v",
+          "sha256": "8e40252a8dd51526b967d6c5c439fa12b6281d09d23042966f90053fc8c6d8f0",
+          "bytes": 4986,
+          "physical_lines": 121,
+          "nonblank_lines": 106,
+          "code_lines": 86,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_osc_additive.v",
+          "sha256": "4e40bb9b1a7568ab5d15f22dc32069d73a28710eaa2e35309d6d9c5b6395a51f",
+          "bytes": 5918,
+          "physical_lines": 159,
+          "nonblank_lines": 134,
+          "code_lines": 96,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_osc_env.v",
+          "sha256": "6ef39da5be683cd924b66fcb26136db409222f2b77aca640c2ce6486724adb23",
+          "bytes": 13166,
+          "physical_lines": 305,
+          "nonblank_lines": 277,
+          "code_lines": 219,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_pad.v",
+          "sha256": "cdf18670e47a47d2209b12972e60fc69d33b1453249e17c0a3a86654ea90e19c",
+          "bytes": 9515,
+          "physical_lines": 212,
+          "nonblank_lines": 192,
+          "code_lines": 163,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_pad_pitch.v",
+          "sha256": "c92179b90341bc4acfbee63ed7afad41041a2033e49baa690de5cb2145a40bc4",
+          "bytes": 12179,
+          "physical_lines": 298,
+          "nonblank_lines": 270,
+          "code_lines": 226,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_padfast.v",
+          "sha256": "94f7f873f53f1ef7e56f673063a65b5c08c932b09b25c9626997419f0347812b",
+          "bytes": 11211,
+          "physical_lines": 261,
+          "nonblank_lines": 235,
+          "code_lines": 192,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_padmon.v",
+          "sha256": "9c0e47a8e727d6f9108307b4f655df3c166413ee658dc7a9ed6bad17b1df75d1",
+          "bytes": 8305,
+          "physical_lines": 208,
+          "nonblank_lines": 184,
+          "code_lines": 152,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_padoct.v",
+          "sha256": "4c562a63ba6ae6347a75ad66f590319f65ea82e85b3bd9c484f34fbb0313793a",
+          "bytes": 5161,
+          "physical_lines": 132,
+          "nonblank_lines": 114,
+          "code_lines": 85,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_padprobe.v",
+          "sha256": "1d0949bcdf991db48cc2a823d27918c151e2d31a3c8a6872a578242e34fcf8ff",
+          "bytes": 6887,
+          "physical_lines": 176,
+          "nonblank_lines": 156,
+          "code_lines": 124,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_padseq.v",
+          "sha256": "7ba0bbda93147b647718c12397cb09fd2c2ee1e116cb0459b19c36a3539b307a",
+          "bytes": 6896,
+          "physical_lines": 190,
+          "nonblank_lines": 168,
+          "code_lines": 140,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_padtop.v",
+          "sha256": "97edc88ca3650034fb569c1fea240f9e9443daa197639c7b052d52239f85ce64",
+          "bytes": 6684,
+          "physical_lines": 172,
+          "nonblank_lines": 150,
+          "code_lines": 124,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_perf.v",
+          "sha256": "5fad5dc5ff08486aee9064edf4cc444b2238e7d705e8108ec049e29cb71c2620",
+          "bytes": 16803,
+          "physical_lines": 368,
+          "nonblank_lines": 341,
+          "code_lines": 271,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_pitch_mod.v",
+          "sha256": "682c473e6e322e191cf79f72549c077db18bf4dbaf01fe864310a19248e6122a",
+          "bytes": 12514,
+          "physical_lines": 292,
+          "nonblank_lines": 258,
+          "code_lines": 194,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_pitch_mod512.v",
+          "sha256": "719f891d41ac7274ba2b19bd82b9f30483441a395a6ea5506277797bc4386d93",
+          "bytes": 13253,
+          "physical_lines": 312,
+          "nonblank_lines": 277,
+          "code_lines": 213,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_ps5.v",
+          "sha256": "87211210665c9868cca471d0a8c263a5daef063bc66a15a85ac4a371a7a1a375",
+          "bytes": 7587,
+          "physical_lines": 192,
+          "nonblank_lines": 171,
+          "code_lines": 147,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_reg_ctl.v",
+          "sha256": "7f29ff8baab96980861272cb574789257427bc3f700ba788cacbda40599dc14e",
+          "bytes": 12668,
+          "physical_lines": 281,
+          "nonblank_lines": 258,
+          "code_lines": 195,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_reg_pitch.v",
+          "sha256": "eabec3027c373b59c41d515fae1f943bbcb8de67f5d266f512f0044ddfaef1f9",
+          "bytes": 9380,
+          "physical_lines": 238,
+          "nonblank_lines": 214,
+          "code_lines": 166,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_sat.v",
+          "sha256": "130c2d877f055f59b8a9754040654cf7dc0b00d0c02e3bd55dde997d07587f2c",
+          "bytes": 6975,
+          "physical_lines": 152,
+          "nonblank_lines": 135,
+          "code_lines": 98,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_seq.v",
+          "sha256": "6d5e551f722fb8d71a16978bf481aa6e63401050f6fee810de00057f1a958407",
+          "bytes": 5084,
+          "physical_lines": 123,
+          "nonblank_lines": 104,
+          "code_lines": 78,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_show.v",
+          "sha256": "298c669946d6dd5c78adbe817a15103cc5f606b77756bee5232e86e059f08e94",
+          "bytes": 8231,
+          "physical_lines": 192,
+          "nonblank_lines": 175,
+          "code_lines": 134,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_synth_top.v",
+          "sha256": "80b5a845d1d703ae899c824e55d02644198b75cf64d66a6931439ed3612ca2bd",
+          "bytes": 7457,
+          "physical_lines": 180,
+          "nonblank_lines": 162,
+          "code_lines": 126,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_t60.v",
+          "sha256": "43a322d617ba42a8862b490c88e552bfde723204a1971421b5a3fd97480dd687",
+          "bytes": 8316,
+          "physical_lines": 191,
+          "nonblank_lines": 167,
+          "code_lines": 124,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_tdm_demo.v",
+          "sha256": "5ad7de1b9937e791f4fc942d78a227568536e47eb1aaa4d462fae83fbedf4f92",
+          "bytes": 6740,
+          "physical_lines": 180,
+          "nonblank_lines": 156,
+          "code_lines": 106,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_tdm_equiv.v",
+          "sha256": "552384abfc97b258c8c9a6af79db0fe169e4c106f6a301f326581cc9e0b62672",
+          "bytes": 17723,
+          "physical_lines": 389,
+          "nonblank_lines": 349,
+          "code_lines": 242,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_tdm_f1.v",
+          "sha256": "a933d77bc04bb5f18b0f5866a9650d52a93bdc1818391338a47aa9b7d764469e",
+          "bytes": 6124,
+          "physical_lines": 136,
+          "nonblank_lines": 119,
+          "code_lines": 83,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_tdm_top.v",
+          "sha256": "6fc9e7866e5d1f16a813b165931b01a6f10bb62da2cbe208ecb5bd3e73b213e8",
+          "bytes": 11877,
+          "physical_lines": 281,
+          "nonblank_lines": 248,
+          "code_lines": 162,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_template.v",
+          "sha256": "66b3267f4e8157a3ddeb2b9d1773a21dab8acfc90edbb3ed5ff65b92ff329fa5",
+          "bytes": 4195,
+          "physical_lines": 104,
+          "nonblank_lines": 89,
+          "code_lines": 37,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_test_mode.v",
+          "sha256": "6463cde2406a31ea447dcaacf3a614ce30d791791034f18822e17b192fd4e095",
+          "bytes": 5521,
+          "physical_lines": 145,
+          "nonblank_lines": 127,
+          "code_lines": 101,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_vel_audio.v",
+          "sha256": "7a066fa0ef063e2b99a9b125b6e9b11e7d0ab376c91e2665b679bfa9d8cec302",
+          "bytes": 5512,
+          "physical_lines": 145,
+          "nonblank_lines": 126,
+          "code_lines": 96,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_vel_shape.v",
+          "sha256": "a4e49f1a3ec2eecc792dd88f618c7be5d4fdc92f45fb2805514cc22ef2e14625",
+          "bytes": 16731,
+          "physical_lines": 361,
+          "nonblank_lines": 333,
+          "code_lines": 268,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_vel_timbre.v",
+          "sha256": "dcbbd19fe1f7bdf11d26327f40da463e1a565c5ef01e996aa5b8df2e24cf2d34",
+          "bytes": 11333,
+          "physical_lines": 228,
+          "nonblank_lines": 204,
+          "code_lines": 148,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_vib.v",
+          "sha256": "5ad4f039e7605e108ab0c93ba39ac67ad1a0e1f03b15b02c492806db06deebc4",
+          "bytes": 11386,
+          "physical_lines": 249,
+          "nonblank_lines": 228,
+          "code_lines": 167,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_voice.v",
+          "sha256": "42a0ecb47eba7be33c31aa51043334dbc7561dd6ad7f2464711857047770fa36",
+          "bytes": 13169,
+          "physical_lines": 291,
+          "nonblank_lines": 262,
+          "code_lines": 201,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_vp.v",
+          "sha256": "3559893fbda7ef97b4eafe8f32fa101ca879fe3ff6571fd3f240080980aa8cb9",
+          "bytes": 13149,
+          "physical_lines": 277,
+          "nonblank_lines": 250,
+          "code_lines": 215,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\src\\sim\\tb_vp7.v",
+          "sha256": "f33a0c034715024b57a6d5c8ae699c3ea9183201c3d2dbd46b23b3d00e52fb60",
+          "bytes": 10137,
+          "physical_lines": 212,
+          "nonblank_lines": 189,
+          "code_lines": 163,
+          "module_definitions": 1
+        }
+      ]
+    },
+    "experiment86_project_sources": {
+      "file_count": 84,
+      "unique_contents": 84,
+      "physical_lines": 15646,
+      "nonblank_lines": 14688,
+      "code_lines": 9980,
+      "bytes": 839243,
+      "module_definitions": 84,
+      "files": [
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\rtl\\uart_cfg_transport.v",
+          "sha256": "462b3571bf976dc52a15363668d0b784722eb1a34dcbec20cbd6037f0f7fccdf",
+          "bytes": 5239,
+          "physical_lines": 116,
+          "nonblank_lines": 116,
+          "code_lines": 113,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\audio_clk_en.v",
+          "sha256": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c",
+          "bytes": 6978,
+          "physical_lines": 129,
+          "nonblank_lines": 118,
+          "code_lines": 46,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\board_diag.v",
+          "sha256": "a92a314729ec29a461c2fc7aa6c022f8f8408352ef73d988d566c993061f1e7d",
+          "bytes": 5961,
+          "physical_lines": 117,
+          "nonblank_lines": 117,
+          "code_lines": 115,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\bringup_top.v",
+          "sha256": "c1658662f3c9d35b9a4af1d5fb0f20ba0a9077d34ec9474832534230509a610d",
+          "bytes": 8791,
+          "physical_lines": 195,
+          "nonblank_lines": 174,
+          "code_lines": 104,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\compat_music_probe.v",
+          "sha256": "af0a54d4788109f45140d41193f0650b77208e5c03b9f6eb4fed4a444bdbc4f3",
+          "bytes": 2547,
+          "physical_lines": 45,
+          "nonblank_lines": 45,
+          "code_lines": 44,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\event_hold.v",
+          "sha256": "ec06d3697215394354da8b3ffcdca6208c7cd5b6d8a4b8055e1d8e1a813708e4",
+          "bytes": 4270,
+          "physical_lines": 110,
+          "nonblank_lines": 95,
+          "code_lines": 72,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\finger_pitch.v",
+          "sha256": "1702ccc636619f85f65ef18f810efd5e652ab206ffcdc1d2e07fbce12d093d5a",
+          "bytes": 3939,
+          "physical_lines": 81,
+          "nonblank_lines": 81,
+          "code_lines": 68,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\fx_delay.v",
+          "sha256": "67ce4e845fbd4fa5f96efbce46d435b629425afeabdc20b3b3758f268dbce15e",
+          "bytes": 17838,
+          "physical_lines": 326,
+          "nonblank_lines": 300,
+          "code_lines": 184,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\i2c_master.v",
+          "sha256": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999",
+          "bytes": 13197,
+          "physical_lines": 282,
+          "nonblank_lines": 259,
+          "code_lines": 229,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\i2s_tx.v",
+          "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+          "bytes": 5172,
+          "physical_lines": 95,
+          "nonblank_lines": 87,
+          "code_lines": 27,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\image_rom.v",
+          "sha256": "7083c1fe352f63c950dbf5bd1de6545a6fcb28f983d8c08a0683b6f75041e198",
+          "bytes": 2413,
+          "physical_lines": 45,
+          "nonblank_lines": 40,
+          "code_lines": 11,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\image_view.v",
+          "sha256": "e45fd3de51a6a8260301d285bbbfc5384887675b2e7a8e95be6a50a0cd1f97fe",
+          "bytes": 4060,
+          "physical_lines": 86,
+          "nonblank_lines": 77,
+          "code_lines": 42,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\instrument_joint_probe.v",
+          "sha256": "5dd58082611a345fdfcfd0fa9a27d2a6d28911e9fbb4307d46fc9fcd00cdab4a",
+          "bytes": 3848,
+          "physical_lines": 53,
+          "nonblank_lines": 53,
+          "code_lines": 52,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\instrument_layer_probe.v",
+          "sha256": "85afde696d25b07973116a2a83735f6c628e32d4bbb1becd6a01ac3e87b9fbe3",
+          "bytes": 5296,
+          "physical_lines": 67,
+          "nonblank_lines": 66,
+          "code_lines": 65,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\instrument_owned_probe.v",
+          "sha256": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+          "bytes": 4541,
+          "physical_lines": 60,
+          "nonblank_lines": 60,
+          "code_lines": 59,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\instrument_sensor_probe.v",
+          "sha256": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+          "bytes": 2911,
+          "physical_lines": 44,
+          "nonblank_lines": 44,
+          "code_lines": 42,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\instrument_table.v",
+          "sha256": "2343da52dd99d883403a889caf5b5b8fd0c61c06a2f94db42e9ba319e1bd377f",
+          "bytes": 1622,
+          "physical_lines": 36,
+          "nonblank_lines": 36,
+          "code_lines": 33,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\layer_dispatch.v",
+          "sha256": "cf1f0739a324c1bea4d28734bf60b8a34366395ae199da3515ac81d5e29d7f0f",
+          "bytes": 7224,
+          "physical_lines": 136,
+          "nonblank_lines": 136,
+          "code_lines": 132,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\lcd_480x272.v",
+          "sha256": "7a4176f739123438be35837be943fb93eb355f5c8a2f36e322ef97a1546f8409",
+          "bytes": 7905,
+          "physical_lines": 157,
+          "nonblank_lines": 143,
+          "code_lines": 76,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\led_blink.v",
+          "sha256": "323ed6035f1d4f2d198eb97009c3576a53a81f3a050071f1bf976a73b3a69f6c",
+          "bytes": 2949,
+          "physical_lines": 64,
+          "nonblank_lines": 56,
+          "code_lines": 21,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\led_heartbeat.v",
+          "sha256": "ceac0e82fbaec093bcdc5d7765a6f8943c421728015d4690d2c907ec7e2de277",
+          "bytes": 2898,
+          "physical_lines": 57,
+          "nonblank_lines": 51,
+          "code_lines": 28,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\led_ind.v",
+          "sha256": "05ce8e6dced0d341c04f51edd7a9fdc136fa5a58205cf5cf79314abb8f9ce8b3",
+          "bytes": 4975,
+          "physical_lines": 117,
+          "nonblank_lines": 109,
+          "code_lines": 77,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\left_contact_bridge.v",
+          "sha256": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36",
+          "bytes": 9892,
+          "physical_lines": 190,
+          "nonblank_lines": 188,
+          "code_lines": 175,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\left_layer_music_probe.v",
+          "sha256": "5451b95b8043945a2e5815bafc97065ac606e7483a3eab69f9819baaa48f3424",
+          "bytes": 7284,
+          "physical_lines": 90,
+          "nonblank_lines": 89,
+          "code_lines": 88,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\left_music_probe.v",
+          "sha256": "ae154867537d216d177165a7d393715d9751a25214e5bc5ebc7c12e58ad0249b",
+          "bytes": 4590,
+          "physical_lines": 68,
+          "nonblank_lines": 68,
+          "code_lines": 67,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\live_audio_monitor.v",
+          "sha256": "f42a6c98c84e2ecf5fabad5b99d025932bf94feaee6b6fd022be7d935b85cd8d",
+          "bytes": 6407,
+          "physical_lines": 139,
+          "nonblank_lines": 139,
+          "code_lines": 132,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\live_observation_filter.v",
+          "sha256": "ffd3170e422cd760fb822964e7943aa46b66ff8ac43132b443ae59954f958e3f",
+          "bytes": 4591,
+          "physical_lines": 116,
+          "nonblank_lines": 116,
+          "code_lines": 114,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\mixer.v",
+          "sha256": "317ab1090976a369bcf5e60748e2f9cd861dc6ffdfad259bf93b9cd7151e8149",
+          "bytes": 3418,
+          "physical_lines": 75,
+          "nonblank_lines": 66,
+          "code_lines": 31,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\music_visualizer.v",
+          "sha256": "d35912021fee2cfbf75cbfde1cda3aae1e35355d7962b092333fd4f35086cfb7",
+          "bytes": 2214,
+          "physical_lines": 36,
+          "nonblank_lines": 36,
+          "code_lines": 34,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\mv_fft1024.v",
+          "sha256": "c55f4090d89f020b84f4bf03508cb89e5eab0328e9e371d3325603029c107329",
+          "bytes": 7042,
+          "physical_lines": 150,
+          "nonblank_lines": 150,
+          "code_lines": 146,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\mv_panel_driver.v",
+          "sha256": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+          "bytes": 5972,
+          "physical_lines": 130,
+          "nonblank_lines": 130,
+          "code_lines": 127,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\mv_renderer.v",
+          "sha256": "bc7f447e2123ce820c95cd5f83b76c56ffed7cf0c0a48641165ca3bb03d9f578",
+          "bytes": 10601,
+          "physical_lines": 208,
+          "nonblank_lines": 208,
+          "code_lines": 205,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\mv_spi_byte.v",
+          "sha256": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+          "bytes": 1883,
+          "physical_lines": 50,
+          "nonblank_lines": 50,
+          "code_lines": 48,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\mv_wave_capture.v",
+          "sha256": "368495a1805024999a7fdd9104183baa1461b72841d6d7fe63d8b23c362583ee",
+          "bytes": 1322,
+          "physical_lines": 30,
+          "nonblank_lines": 30,
+          "code_lines": 29,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\note_map.v",
+          "sha256": "6b801c2ea7f660d1a8d118653eb1262f60892e1032bdf9241ce246576c37d8be",
+          "bytes": 36248,
+          "physical_lines": 625,
+          "nonblank_lines": 580,
+          "code_lines": 323,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\note_map_owned.v",
+          "sha256": "005684fd952f51677e78855b871235e82931129becc9639bd1fb84f51063a1f3",
+          "bytes": 40725,
+          "physical_lines": 698,
+          "nonblank_lines": 651,
+          "code_lines": 389,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\osc_additive.v",
+          "sha256": "84a1a531553e68716a6711e0566655cf43acf638fcba2151338862f0a077f6c5",
+          "bytes": 12013,
+          "physical_lines": 242,
+          "nonblank_lines": 222,
+          "code_lines": 143,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\osc_additive_top.v",
+          "sha256": "3447962873a9bf9305bb02807713c349fb12a997da366563880c36cd300c475b",
+          "bytes": 16466,
+          "physical_lines": 371,
+          "nonblank_lines": 332,
+          "code_lines": 230,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\osc_core.v",
+          "sha256": "1197146dbb96d5f067e1a61852d8210ec866428609dec7a0fd5027c45facb274",
+          "bytes": 9696,
+          "physical_lines": 199,
+          "nonblank_lines": 180,
+          "code_lines": 108,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\osc_env.v",
+          "sha256": "71b4ebd4c1fb58ff4bf58d8f6f0681f915d5910605a6071eedcdcf2c5cbda00b",
+          "bytes": 9321,
+          "physical_lines": 187,
+          "nonblank_lines": 171,
+          "code_lines": 101,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\pad_pitch.v",
+          "sha256": "c8a7fc95f6bd98d14963c3c3b7b36a244de48f585711f078b5f39fbeeb353508",
+          "bytes": 5145,
+          "physical_lines": 110,
+          "nonblank_lines": 99,
+          "code_lines": 64,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\pad_scan.v",
+          "sha256": "e42adff0b0b18c5a9b1f2ce8c26b0089cd06413116f0958dc0bcdfc8b07992cb",
+          "bytes": 15827,
+          "physical_lines": 311,
+          "nonblank_lines": 287,
+          "code_lines": 217,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\perf_ctrl.v",
+          "sha256": "e20f1c96bca276042a1550e7f923590640a4965c7f158333d50b93e6a626707e",
+          "bytes": 9923,
+          "physical_lines": 194,
+          "nonblank_lines": 179,
+          "code_lines": 121,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\pitch_mod.v",
+          "sha256": "c16d1ae9d37f1daa3891dad05e67374dac716fb2148b062849df51a430ca1792",
+          "bytes": 14331,
+          "physical_lines": 241,
+          "nonblank_lines": 222,
+          "code_lines": 100,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\pitch_native_store.v",
+          "sha256": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+          "bytes": 1066,
+          "physical_lines": 21,
+          "nonblank_lines": 21,
+          "code_lines": 18,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_delta_store.v",
+          "sha256": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320",
+          "bytes": 3674,
+          "physical_lines": 80,
+          "nonblank_lines": 80,
+          "code_lines": 74,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_mux_scan.v",
+          "sha256": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+          "bytes": 4261,
+          "physical_lines": 87,
+          "nonblank_lines": 87,
+          "code_lines": 83,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rc_strip_positions.v",
+          "sha256": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+          "bytes": 4760,
+          "physical_lines": 97,
+          "nonblank_lines": 97,
+          "code_lines": 92,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\reg_bank.v",
+          "sha256": "ab40758c3cfc453328860448d921e9f17423ccc5b67fde9c6f067881c91c89c3",
+          "bytes": 9825,
+          "physical_lines": 183,
+          "nonblank_lines": 161,
+          "code_lines": 58,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\reg_bank_compact.v",
+          "sha256": "48b96835537a241bf047d1bea01850150c372e0086b243c00aff4f744f805520",
+          "bytes": 1779,
+          "physical_lines": 42,
+          "nonblank_lines": 42,
+          "code_lines": 37,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rh_fader_bank.v",
+          "sha256": "bd5af0b47a36749da5fb5fbc29e546f19e7bc00e1929873593b31f680358c2da",
+          "bytes": 6844,
+          "physical_lines": 150,
+          "nonblank_lines": 148,
+          "code_lines": 141,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rh_fader_gain_map.v",
+          "sha256": "4a15353dc921388d71dff712999b2149a7e0245ed2641462ede3e79b7a704414",
+          "bytes": 2426,
+          "physical_lines": 62,
+          "nonblank_lines": 62,
+          "code_lines": 58,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rh_fader_panel.v",
+          "sha256": "740cd8367f6e4e59431e8223b9d1d187309d78036c1b2b04bd6d4c7e692cc49a",
+          "bytes": 1764,
+          "physical_lines": 40,
+          "nonblank_lines": 40,
+          "code_lines": 38,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rh_music_probe.v",
+          "sha256": "50399fe808325f853bf3af0d31ab341d9327d1c6835606039ccf29570f19676c",
+          "bytes": 2438,
+          "physical_lines": 45,
+          "nonblank_lines": 45,
+          "code_lines": 44,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rh_performance_control.v",
+          "sha256": "52a139a2730b0824d90b1f19f40b4ab50b6a2f7b23cdc2fe05ccb31a07fd4e99",
+          "bytes": 2585,
+          "physical_lines": 49,
+          "nonblank_lines": 49,
+          "code_lines": 47,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\rh_timbre_slew.v",
+          "sha256": "317febd64da227a12726689ddc482168abe9e534cf4ee0d55e6feec42274338c",
+          "bytes": 2447,
+          "physical_lines": 60,
+          "nonblank_lines": 60,
+          "code_lines": 58,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\scan_shift595.v",
+          "sha256": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+          "bytes": 1974,
+          "physical_lines": 42,
+          "nonblank_lines": 42,
+          "code_lines": 40,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\song_seq.v",
+          "sha256": "56339052cda65f54c91061240af3fe604ca8715f34c7f31f18864606daf0db5f",
+          "bytes": 10430,
+          "physical_lines": 207,
+          "nonblank_lines": 187,
+          "code_lines": 130,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\strip_ctrl.v",
+          "sha256": "25fe3d5a6fe4bc3aaf5479a6906807e90af7e4b6ce5ecfeeb0d1c37b94903bcd",
+          "bytes": 2578,
+          "physical_lines": 64,
+          "nonblank_lines": 59,
+          "code_lines": 43,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\synth_top.v",
+          "sha256": "c782c68cc93c1c0d8cdac18a3612d28bc9859b096a8def9637b5e5c0b184e5d5",
+          "bytes": 5158,
+          "physical_lines": 124,
+          "nonblank_lines": 113,
+          "code_lines": 74,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\tdm_board_test.v",
+          "sha256": "4d0cf24ab912a41334ef6fcee35c71079eab66196805c74bec2eddc349f7af3e",
+          "bytes": 1427,
+          "physical_lines": 28,
+          "nonblank_lines": 28,
+          "code_lines": 25,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\tdm_engine.v",
+          "sha256": "ab9df08878226e0de0d3fa9ceed3ef04dc1437ea45cb7e638bc9b80546aa3aab",
+          "bytes": 57191,
+          "physical_lines": 938,
+          "nonblank_lines": 882,
+          "code_lines": 303,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\tdm_engine_rh.v",
+          "sha256": "4be8119bc228405c8a340084688d8ccf1e34a572626dcf930ffa0fc4f312ff59",
+          "bytes": 60947,
+          "physical_lines": 1012,
+          "nonblank_lines": 952,
+          "code_lines": 366,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\tdm_live_test.v",
+          "sha256": "755c158d90269157c5e1b0ddb5f86e704089201eb256e5e5206391c1e167126c",
+          "bytes": 579,
+          "physical_lines": 13,
+          "nonblank_lines": 13,
+          "code_lines": 12,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\tdm_ship.v",
+          "sha256": "bb4add15144d5a3509b51f23fcf3aeffa8025527c67387a0757991511461d72f",
+          "bytes": 2982,
+          "physical_lines": 70,
+          "nonblank_lines": 63,
+          "code_lines": 34,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\tdm_top.v",
+          "sha256": "f0682f79e7eb4b54ddb9e3c1b3f87c564e98258605b8959201b1a90d272adbec",
+          "bytes": 64144,
+          "physical_lines": 1156,
+          "nonblank_lines": 1070,
+          "code_lines": 714,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\tdm_top_owned.v",
+          "sha256": "b962db70a7c5c25a90e2f65f87e9a62012da30d5f5104ab90f4835e85e296780",
+          "bytes": 71355,
+          "physical_lines": 1274,
+          "nonblank_lines": 1184,
+          "code_lines": 819,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\tdm_top_rh.v",
+          "sha256": "bdf3b214fc3e27fe9dfa00e20bb7277665a0e69e36c12831702f999b68f95eb2",
+          "bytes": 64896,
+          "physical_lines": 1175,
+          "nonblank_lines": 1089,
+          "code_lines": 733,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\test_mode.v",
+          "sha256": "92e0ffa2348974c5f4b98418a93c6b6ae4434a3d95b59b1a0f2a6c3a417f1d8a",
+          "bytes": 5050,
+          "physical_lines": 105,
+          "nonblank_lines": 95,
+          "code_lines": 52,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\test_pattern.v",
+          "sha256": "b5eea2e1d2b16015b5af8381ccf59770fcdba5e560379416f70dbfd6bf64ecf1",
+          "bytes": 10542,
+          "physical_lines": 195,
+          "nonblank_lines": 178,
+          "code_lines": 106,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\uart_rx.v",
+          "sha256": "2812e4eea205fc4de870ddf7aa0edc9265685bb2bb0461258846bf42dcfb0518",
+          "bytes": 5186,
+          "physical_lines": 129,
+          "nonblank_lines": 116,
+          "code_lines": 81,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\uart_tx.v",
+          "sha256": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f",
+          "bytes": 3913,
+          "physical_lines": 110,
+          "nonblank_lines": 99,
+          "code_lines": 86,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\vel_shape.v",
+          "sha256": "ed66c9d539250c893e6086b65870b74a86aca1df55897f4c5c33d5e1fbb8ab8d",
+          "bytes": 6792,
+          "physical_lines": 105,
+          "nonblank_lines": 99,
+          "code_lines": 30,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\engine\\src\\video_timing.v",
+          "sha256": "04f3863aff241183776b10ea49a2dd4c4aaf0e194bd33b5521bf148fa8052281",
+          "bytes": 8112,
+          "physical_lines": 147,
+          "nonblank_lines": 133,
+          "code_lines": 64,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\joint_timing_top.v",
+          "sha256": "66d967c99b554c3f9e4f1e7242ba32ea824883bad6b84c7c2bd94e5e1e27fd51",
+          "bytes": 11543,
+          "physical_lines": 271,
+          "nonblank_lines": 270,
+          "code_lines": 264,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\pcm_sdram_arbiter.v",
+          "sha256": "04b4eca1cbc600af5f643ef35b609ac58aecaba07977034d4d8d1b25410dbbbb",
+          "bytes": 5254,
+          "physical_lines": 103,
+          "nonblank_lines": 103,
+          "code_lines": 93,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\pcm_sdram_stream.v",
+          "sha256": "c347777b2e3eddd527a264f9717dc15f8a1883683287b18e0c29052df8e8df40",
+          "bytes": 3483,
+          "physical_lines": 49,
+          "nonblank_lines": 49,
+          "code_lines": 44,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\pcm_storage_buffers.v",
+          "sha256": "b19f0c94048e678a2073e69170f6301f2c83f92180325edb37654f23c3470e93",
+          "bytes": 2046,
+          "physical_lines": 40,
+          "nonblank_lines": 40,
+          "code_lines": 35,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\pcm_sync_fifo.v",
+          "sha256": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609",
+          "bytes": 1443,
+          "physical_lines": 40,
+          "nonblank_lines": 40,
+          "code_lines": 37,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\probe_scan_store.v",
+          "sha256": "d8dbbb6f74583162dfa46a6e9542b9603076c29123621c08cec62f93f9d96168",
+          "bytes": 2398,
+          "physical_lines": 53,
+          "nonblank_lines": 53,
+          "code_lines": 49,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\sdram_storage_probe.v",
+          "sha256": "a6cdc5db7ea9bb99237b38559cafeebb95d25a95223f14807f8ecb9d03085ea8",
+          "bytes": 7197,
+          "physical_lines": 99,
+          "nonblank_lines": 92,
+          "code_lines": 89,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\sdram_stream_probe.v",
+          "sha256": "74b208655fa7e957ef1e188c49f3b59386b11be816e4a3d837e1b7bbb6ebd432",
+          "bytes": 8197,
+          "physical_lines": 114,
+          "nonblank_lines": 106,
+          "code_lines": 102,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\sdram_word_controller.v",
+          "sha256": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+          "bytes": 4779,
+          "physical_lines": 106,
+          "nonblank_lines": 106,
+          "code_lines": 99,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\FPGA-Music-project\\experiments\\joint_probe_resources_20261019\\rtl\\storage_probe.v",
+          "sha256": "26efd8c2f0c8b9e25c138349b253404e9fbcd6ad5381fd6def6e4c0503059265",
+          "bytes": 6293,
+          "physical_lines": 83,
+          "nonblank_lines": 79,
+          "code_lines": 76,
+          "module_definitions": 1
+        }
+      ]
+    },
+    "current_candidate_project_sources": {
+      "file_count": 84,
+      "unique_contents": 84,
+      "physical_lines": 15652,
+      "nonblank_lines": 14694,
+      "code_lines": 9985,
+      "bytes": 840344,
+      "module_definitions": 84,
+      "files": [
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\rtl\\uart_cfg_transport.v",
+          "sha256": "462b3571bf976dc52a15363668d0b784722eb1a34dcbec20cbd6037f0f7fccdf",
+          "bytes": 5239,
+          "physical_lines": 116,
+          "nonblank_lines": 116,
+          "code_lines": 113,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\audio_clk_en.v",
+          "sha256": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c",
+          "bytes": 6978,
+          "physical_lines": 129,
+          "nonblank_lines": 118,
+          "code_lines": 46,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\board_diag.v",
+          "sha256": "a92a314729ec29a461c2fc7aa6c022f8f8408352ef73d988d566c993061f1e7d",
+          "bytes": 5961,
+          "physical_lines": 117,
+          "nonblank_lines": 117,
+          "code_lines": 115,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\bringup_top.v",
+          "sha256": "c1658662f3c9d35b9a4af1d5fb0f20ba0a9077d34ec9474832534230509a610d",
+          "bytes": 8791,
+          "physical_lines": 195,
+          "nonblank_lines": 174,
+          "code_lines": 104,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\compat_music_probe.v",
+          "sha256": "af0a54d4788109f45140d41193f0650b77208e5c03b9f6eb4fed4a444bdbc4f3",
+          "bytes": 2547,
+          "physical_lines": 45,
+          "nonblank_lines": 45,
+          "code_lines": 44,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\event_hold.v",
+          "sha256": "ec06d3697215394354da8b3ffcdca6208c7cd5b6d8a4b8055e1d8e1a813708e4",
+          "bytes": 4270,
+          "physical_lines": 110,
+          "nonblank_lines": 95,
+          "code_lines": 72,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\finger_pitch.v",
+          "sha256": "1702ccc636619f85f65ef18f810efd5e652ab206ffcdc1d2e07fbce12d093d5a",
+          "bytes": 3939,
+          "physical_lines": 81,
+          "nonblank_lines": 81,
+          "code_lines": 68,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\fx_delay.v",
+          "sha256": "67ce4e845fbd4fa5f96efbce46d435b629425afeabdc20b3b3758f268dbce15e",
+          "bytes": 17838,
+          "physical_lines": 326,
+          "nonblank_lines": 300,
+          "code_lines": 184,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\i2c_master.v",
+          "sha256": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999",
+          "bytes": 13197,
+          "physical_lines": 282,
+          "nonblank_lines": 259,
+          "code_lines": 229,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\i2s_tx.v",
+          "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+          "bytes": 5172,
+          "physical_lines": 95,
+          "nonblank_lines": 87,
+          "code_lines": 27,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\image_rom.v",
+          "sha256": "7083c1fe352f63c950dbf5bd1de6545a6fcb28f983d8c08a0683b6f75041e198",
+          "bytes": 2413,
+          "physical_lines": 45,
+          "nonblank_lines": 40,
+          "code_lines": 11,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\image_view.v",
+          "sha256": "e45fd3de51a6a8260301d285bbbfc5384887675b2e7a8e95be6a50a0cd1f97fe",
+          "bytes": 4060,
+          "physical_lines": 86,
+          "nonblank_lines": 77,
+          "code_lines": 42,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\instrument_joint_probe.v",
+          "sha256": "5dd58082611a345fdfcfd0fa9a27d2a6d28911e9fbb4307d46fc9fcd00cdab4a",
+          "bytes": 3848,
+          "physical_lines": 53,
+          "nonblank_lines": 53,
+          "code_lines": 52,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\instrument_layer_probe.v",
+          "sha256": "85afde696d25b07973116a2a83735f6c628e32d4bbb1becd6a01ac3e87b9fbe3",
+          "bytes": 5296,
+          "physical_lines": 67,
+          "nonblank_lines": 66,
+          "code_lines": 65,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\instrument_owned_probe.v",
+          "sha256": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+          "bytes": 4541,
+          "physical_lines": 60,
+          "nonblank_lines": 60,
+          "code_lines": 59,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\instrument_sensor_probe.v",
+          "sha256": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+          "bytes": 2911,
+          "physical_lines": 44,
+          "nonblank_lines": 44,
+          "code_lines": 42,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\instrument_table.v",
+          "sha256": "2343da52dd99d883403a889caf5b5b8fd0c61c06a2f94db42e9ba319e1bd377f",
+          "bytes": 1622,
+          "physical_lines": 36,
+          "nonblank_lines": 36,
+          "code_lines": 33,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\layer_dispatch.v",
+          "sha256": "cf1f0739a324c1bea4d28734bf60b8a34366395ae199da3515ac81d5e29d7f0f",
+          "bytes": 7224,
+          "physical_lines": 136,
+          "nonblank_lines": 136,
+          "code_lines": 132,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\lcd_480x272.v",
+          "sha256": "7a4176f739123438be35837be943fb93eb355f5c8a2f36e322ef97a1546f8409",
+          "bytes": 7905,
+          "physical_lines": 157,
+          "nonblank_lines": 143,
+          "code_lines": 76,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\led_blink.v",
+          "sha256": "323ed6035f1d4f2d198eb97009c3576a53a81f3a050071f1bf976a73b3a69f6c",
+          "bytes": 2949,
+          "physical_lines": 64,
+          "nonblank_lines": 56,
+          "code_lines": 21,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\led_heartbeat.v",
+          "sha256": "ceac0e82fbaec093bcdc5d7765a6f8943c421728015d4690d2c907ec7e2de277",
+          "bytes": 2898,
+          "physical_lines": 57,
+          "nonblank_lines": 51,
+          "code_lines": 28,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\led_ind.v",
+          "sha256": "05ce8e6dced0d341c04f51edd7a9fdc136fa5a58205cf5cf79314abb8f9ce8b3",
+          "bytes": 4975,
+          "physical_lines": 117,
+          "nonblank_lines": 109,
+          "code_lines": 77,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\left_contact_bridge.v",
+          "sha256": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36",
+          "bytes": 9892,
+          "physical_lines": 190,
+          "nonblank_lines": 188,
+          "code_lines": 175,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\left_layer_music_probe.v",
+          "sha256": "5451b95b8043945a2e5815bafc97065ac606e7483a3eab69f9819baaa48f3424",
+          "bytes": 7284,
+          "physical_lines": 90,
+          "nonblank_lines": 89,
+          "code_lines": 88,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\left_music_probe.v",
+          "sha256": "ae154867537d216d177165a7d393715d9751a25214e5bc5ebc7c12e58ad0249b",
+          "bytes": 4590,
+          "physical_lines": 68,
+          "nonblank_lines": 68,
+          "code_lines": 67,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\live_audio_monitor.v",
+          "sha256": "f42a6c98c84e2ecf5fabad5b99d025932bf94feaee6b6fd022be7d935b85cd8d",
+          "bytes": 6407,
+          "physical_lines": 139,
+          "nonblank_lines": 139,
+          "code_lines": 132,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\live_observation_filter.v",
+          "sha256": "ffd3170e422cd760fb822964e7943aa46b66ff8ac43132b443ae59954f958e3f",
+          "bytes": 4591,
+          "physical_lines": 116,
+          "nonblank_lines": 116,
+          "code_lines": 114,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\mixer.v",
+          "sha256": "317ab1090976a369bcf5e60748e2f9cd861dc6ffdfad259bf93b9cd7151e8149",
+          "bytes": 3418,
+          "physical_lines": 75,
+          "nonblank_lines": 66,
+          "code_lines": 31,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\music_visualizer.v",
+          "sha256": "d35912021fee2cfbf75cbfde1cda3aae1e35355d7962b092333fd4f35086cfb7",
+          "bytes": 2214,
+          "physical_lines": 36,
+          "nonblank_lines": 36,
+          "code_lines": 34,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\mv_fft1024.v",
+          "sha256": "c55f4090d89f020b84f4bf03508cb89e5eab0328e9e371d3325603029c107329",
+          "bytes": 7042,
+          "physical_lines": 150,
+          "nonblank_lines": 150,
+          "code_lines": 146,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\mv_panel_driver.v",
+          "sha256": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+          "bytes": 5972,
+          "physical_lines": 130,
+          "nonblank_lines": 130,
+          "code_lines": 127,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\mv_renderer.v",
+          "sha256": "e45ae5bb2bafe8275f995d48a15842c8647ce6fec3e2233b993e972610db67d8",
+          "bytes": 11702,
+          "physical_lines": 214,
+          "nonblank_lines": 214,
+          "code_lines": 210,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\mv_spi_byte.v",
+          "sha256": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+          "bytes": 1883,
+          "physical_lines": 50,
+          "nonblank_lines": 50,
+          "code_lines": 48,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\mv_wave_capture.v",
+          "sha256": "368495a1805024999a7fdd9104183baa1461b72841d6d7fe63d8b23c362583ee",
+          "bytes": 1322,
+          "physical_lines": 30,
+          "nonblank_lines": 30,
+          "code_lines": 29,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\note_map.v",
+          "sha256": "6b801c2ea7f660d1a8d118653eb1262f60892e1032bdf9241ce246576c37d8be",
+          "bytes": 36248,
+          "physical_lines": 625,
+          "nonblank_lines": 580,
+          "code_lines": 323,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\note_map_owned.v",
+          "sha256": "005684fd952f51677e78855b871235e82931129becc9639bd1fb84f51063a1f3",
+          "bytes": 40725,
+          "physical_lines": 698,
+          "nonblank_lines": 651,
+          "code_lines": 389,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\osc_additive.v",
+          "sha256": "84a1a531553e68716a6711e0566655cf43acf638fcba2151338862f0a077f6c5",
+          "bytes": 12013,
+          "physical_lines": 242,
+          "nonblank_lines": 222,
+          "code_lines": 143,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\osc_additive_top.v",
+          "sha256": "3447962873a9bf9305bb02807713c349fb12a997da366563880c36cd300c475b",
+          "bytes": 16466,
+          "physical_lines": 371,
+          "nonblank_lines": 332,
+          "code_lines": 230,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\osc_core.v",
+          "sha256": "1197146dbb96d5f067e1a61852d8210ec866428609dec7a0fd5027c45facb274",
+          "bytes": 9696,
+          "physical_lines": 199,
+          "nonblank_lines": 180,
+          "code_lines": 108,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\osc_env.v",
+          "sha256": "71b4ebd4c1fb58ff4bf58d8f6f0681f915d5910605a6071eedcdcf2c5cbda00b",
+          "bytes": 9321,
+          "physical_lines": 187,
+          "nonblank_lines": 171,
+          "code_lines": 101,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\pad_pitch.v",
+          "sha256": "c8a7fc95f6bd98d14963c3c3b7b36a244de48f585711f078b5f39fbeeb353508",
+          "bytes": 5145,
+          "physical_lines": 110,
+          "nonblank_lines": 99,
+          "code_lines": 64,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\pad_scan.v",
+          "sha256": "e42adff0b0b18c5a9b1f2ce8c26b0089cd06413116f0958dc0bcdfc8b07992cb",
+          "bytes": 15827,
+          "physical_lines": 311,
+          "nonblank_lines": 287,
+          "code_lines": 217,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\perf_ctrl.v",
+          "sha256": "e20f1c96bca276042a1550e7f923590640a4965c7f158333d50b93e6a626707e",
+          "bytes": 9923,
+          "physical_lines": 194,
+          "nonblank_lines": 179,
+          "code_lines": 121,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\pitch_mod.v",
+          "sha256": "c16d1ae9d37f1daa3891dad05e67374dac716fb2148b062849df51a430ca1792",
+          "bytes": 14331,
+          "physical_lines": 241,
+          "nonblank_lines": 222,
+          "code_lines": 100,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\pitch_native_store.v",
+          "sha256": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+          "bytes": 1066,
+          "physical_lines": 21,
+          "nonblank_lines": 21,
+          "code_lines": 18,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\rc_delta_store.v",
+          "sha256": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320",
+          "bytes": 3674,
+          "physical_lines": 80,
+          "nonblank_lines": 80,
+          "code_lines": 74,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\rc_mux_scan.v",
+          "sha256": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+          "bytes": 4261,
+          "physical_lines": 87,
+          "nonblank_lines": 87,
+          "code_lines": 83,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\rc_strip_positions.v",
+          "sha256": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+          "bytes": 4760,
+          "physical_lines": 97,
+          "nonblank_lines": 97,
+          "code_lines": 92,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\reg_bank.v",
+          "sha256": "ab40758c3cfc453328860448d921e9f17423ccc5b67fde9c6f067881c91c89c3",
+          "bytes": 9825,
+          "physical_lines": 183,
+          "nonblank_lines": 161,
+          "code_lines": 58,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\reg_bank_compact.v",
+          "sha256": "48b96835537a241bf047d1bea01850150c372e0086b243c00aff4f744f805520",
+          "bytes": 1779,
+          "physical_lines": 42,
+          "nonblank_lines": 42,
+          "code_lines": 37,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\rh_fader_bank.v",
+          "sha256": "bd5af0b47a36749da5fb5fbc29e546f19e7bc00e1929873593b31f680358c2da",
+          "bytes": 6844,
+          "physical_lines": 150,
+          "nonblank_lines": 148,
+          "code_lines": 141,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\rh_fader_gain_map.v",
+          "sha256": "4a15353dc921388d71dff712999b2149a7e0245ed2641462ede3e79b7a704414",
+          "bytes": 2426,
+          "physical_lines": 62,
+          "nonblank_lines": 62,
+          "code_lines": 58,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\rh_fader_panel.v",
+          "sha256": "740cd8367f6e4e59431e8223b9d1d187309d78036c1b2b04bd6d4c7e692cc49a",
+          "bytes": 1764,
+          "physical_lines": 40,
+          "nonblank_lines": 40,
+          "code_lines": 38,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\rh_music_probe.v",
+          "sha256": "50399fe808325f853bf3af0d31ab341d9327d1c6835606039ccf29570f19676c",
+          "bytes": 2438,
+          "physical_lines": 45,
+          "nonblank_lines": 45,
+          "code_lines": 44,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\rh_performance_control.v",
+          "sha256": "52a139a2730b0824d90b1f19f40b4ab50b6a2f7b23cdc2fe05ccb31a07fd4e99",
+          "bytes": 2585,
+          "physical_lines": 49,
+          "nonblank_lines": 49,
+          "code_lines": 47,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\rh_timbre_slew.v",
+          "sha256": "317febd64da227a12726689ddc482168abe9e534cf4ee0d55e6feec42274338c",
+          "bytes": 2447,
+          "physical_lines": 60,
+          "nonblank_lines": 60,
+          "code_lines": 58,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\scan_shift595.v",
+          "sha256": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+          "bytes": 1974,
+          "physical_lines": 42,
+          "nonblank_lines": 42,
+          "code_lines": 40,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\song_seq.v",
+          "sha256": "56339052cda65f54c91061240af3fe604ca8715f34c7f31f18864606daf0db5f",
+          "bytes": 10430,
+          "physical_lines": 207,
+          "nonblank_lines": 187,
+          "code_lines": 130,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\strip_ctrl.v",
+          "sha256": "25fe3d5a6fe4bc3aaf5479a6906807e90af7e4b6ce5ecfeeb0d1c37b94903bcd",
+          "bytes": 2578,
+          "physical_lines": 64,
+          "nonblank_lines": 59,
+          "code_lines": 43,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\synth_top.v",
+          "sha256": "c782c68cc93c1c0d8cdac18a3612d28bc9859b096a8def9637b5e5c0b184e5d5",
+          "bytes": 5158,
+          "physical_lines": 124,
+          "nonblank_lines": 113,
+          "code_lines": 74,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_board_test.v",
+          "sha256": "4d0cf24ab912a41334ef6fcee35c71079eab66196805c74bec2eddc349f7af3e",
+          "bytes": 1427,
+          "physical_lines": 28,
+          "nonblank_lines": 28,
+          "code_lines": 25,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_engine.v",
+          "sha256": "ab9df08878226e0de0d3fa9ceed3ef04dc1437ea45cb7e638bc9b80546aa3aab",
+          "bytes": 57191,
+          "physical_lines": 938,
+          "nonblank_lines": 882,
+          "code_lines": 303,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_engine_rh.v",
+          "sha256": "4be8119bc228405c8a340084688d8ccf1e34a572626dcf930ffa0fc4f312ff59",
+          "bytes": 60947,
+          "physical_lines": 1012,
+          "nonblank_lines": 952,
+          "code_lines": 366,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_live_test.v",
+          "sha256": "755c158d90269157c5e1b0ddb5f86e704089201eb256e5e5206391c1e167126c",
+          "bytes": 579,
+          "physical_lines": 13,
+          "nonblank_lines": 13,
+          "code_lines": 12,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_ship.v",
+          "sha256": "bb4add15144d5a3509b51f23fcf3aeffa8025527c67387a0757991511461d72f",
+          "bytes": 2982,
+          "physical_lines": 70,
+          "nonblank_lines": 63,
+          "code_lines": 34,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_top.v",
+          "sha256": "f0682f79e7eb4b54ddb9e3c1b3f87c564e98258605b8959201b1a90d272adbec",
+          "bytes": 64144,
+          "physical_lines": 1156,
+          "nonblank_lines": 1070,
+          "code_lines": 714,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_top_owned.v",
+          "sha256": "b962db70a7c5c25a90e2f65f87e9a62012da30d5f5104ab90f4835e85e296780",
+          "bytes": 71355,
+          "physical_lines": 1274,
+          "nonblank_lines": 1184,
+          "code_lines": 819,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_top_rh.v",
+          "sha256": "bdf3b214fc3e27fe9dfa00e20bb7277665a0e69e36c12831702f999b68f95eb2",
+          "bytes": 64896,
+          "physical_lines": 1175,
+          "nonblank_lines": 1089,
+          "code_lines": 733,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\test_mode.v",
+          "sha256": "92e0ffa2348974c5f4b98418a93c6b6ae4434a3d95b59b1a0f2a6c3a417f1d8a",
+          "bytes": 5050,
+          "physical_lines": 105,
+          "nonblank_lines": 95,
+          "code_lines": 52,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\test_pattern.v",
+          "sha256": "b5eea2e1d2b16015b5af8381ccf59770fcdba5e560379416f70dbfd6bf64ecf1",
+          "bytes": 10542,
+          "physical_lines": 195,
+          "nonblank_lines": 178,
+          "code_lines": 106,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\uart_rx.v",
+          "sha256": "2812e4eea205fc4de870ddf7aa0edc9265685bb2bb0461258846bf42dcfb0518",
+          "bytes": 5186,
+          "physical_lines": 129,
+          "nonblank_lines": 116,
+          "code_lines": 81,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\uart_tx.v",
+          "sha256": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f",
+          "bytes": 3913,
+          "physical_lines": 110,
+          "nonblank_lines": 99,
+          "code_lines": 86,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\vel_shape.v",
+          "sha256": "ed66c9d539250c893e6086b65870b74a86aca1df55897f4c5c33d5e1fbb8ab8d",
+          "bytes": 6792,
+          "physical_lines": 105,
+          "nonblank_lines": 99,
+          "code_lines": 30,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\video_timing.v",
+          "sha256": "04f3863aff241183776b10ea49a2dd4c4aaf0e194bd33b5521bf148fa8052281",
+          "bytes": 8112,
+          "physical_lines": 147,
+          "nonblank_lines": 133,
+          "code_lines": 64,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\joint_timing_top.v",
+          "sha256": "66d967c99b554c3f9e4f1e7242ba32ea824883bad6b84c7c2bd94e5e1e27fd51",
+          "bytes": 11543,
+          "physical_lines": 271,
+          "nonblank_lines": 270,
+          "code_lines": 264,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\pcm_sdram_arbiter.v",
+          "sha256": "04b4eca1cbc600af5f643ef35b609ac58aecaba07977034d4d8d1b25410dbbbb",
+          "bytes": 5254,
+          "physical_lines": 103,
+          "nonblank_lines": 103,
+          "code_lines": 93,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\pcm_sdram_stream.v",
+          "sha256": "c347777b2e3eddd527a264f9717dc15f8a1883683287b18e0c29052df8e8df40",
+          "bytes": 3483,
+          "physical_lines": 49,
+          "nonblank_lines": 49,
+          "code_lines": 44,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\pcm_storage_buffers.v",
+          "sha256": "b19f0c94048e678a2073e69170f6301f2c83f92180325edb37654f23c3470e93",
+          "bytes": 2046,
+          "physical_lines": 40,
+          "nonblank_lines": 40,
+          "code_lines": 35,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\pcm_sync_fifo.v",
+          "sha256": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609",
+          "bytes": 1443,
+          "physical_lines": 40,
+          "nonblank_lines": 40,
+          "code_lines": 37,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\probe_scan_store.v",
+          "sha256": "d8dbbb6f74583162dfa46a6e9542b9603076c29123621c08cec62f93f9d96168",
+          "bytes": 2398,
+          "physical_lines": 53,
+          "nonblank_lines": 53,
+          "code_lines": 49,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\sdram_storage_probe.v",
+          "sha256": "a6cdc5db7ea9bb99237b38559cafeebb95d25a95223f14807f8ecb9d03085ea8",
+          "bytes": 7197,
+          "physical_lines": 99,
+          "nonblank_lines": 92,
+          "code_lines": 89,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\sdram_stream_probe.v",
+          "sha256": "74b208655fa7e957ef1e188c49f3b59386b11be816e4a3d837e1b7bbb6ebd432",
+          "bytes": 8197,
+          "physical_lines": 114,
+          "nonblank_lines": 106,
+          "code_lines": 102,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\sdram_word_controller.v",
+          "sha256": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+          "bytes": 4779,
+          "physical_lines": 106,
+          "nonblank_lines": 106,
+          "code_lines": 99,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\rtl\\storage_probe.v",
+          "sha256": "26efd8c2f0c8b9e25c138349b253404e9fbcd6ad5381fd6def6e4c0503059265",
+          "bytes": 6293,
+          "physical_lines": 83,
+          "nonblank_lines": 79,
+          "code_lines": 76,
+          "module_definitions": 1
+        }
+      ]
+    },
+    "current_candidate_testbenches": {
+      "file_count": 12,
+      "unique_contents": 11,
+      "physical_lines": 963,
+      "nonblank_lines": 960,
+      "code_lines": 947,
+      "bytes": 56228,
+      "module_definitions": 12,
+      "files": [
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb\\tb_delta.v",
+          "sha256": "6c0a89e37b91020f2bc672c4ca83fd4619b12687f8adc1356a9821aff6eace2f",
+          "bytes": 2777,
+          "physical_lines": 41,
+          "nonblank_lines": 41,
+          "code_lines": 41,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb\\tb_joint.v",
+          "sha256": "d866e1a318ad9f590a0da4a7ce2350d83a26e1d6d7573c1496a5866d0fdd4a8f",
+          "bytes": 8496,
+          "physical_lines": 167,
+          "nonblank_lines": 167,
+          "code_lines": 165,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb\\tb_mac_joint.v",
+          "sha256": "d866e1a318ad9f590a0da4a7ce2350d83a26e1d6d7573c1496a5866d0fdd4a8f",
+          "bytes": 8496,
+          "physical_lines": 167,
+          "nonblank_lines": 167,
+          "code_lines": 165,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb\\tb_native.v",
+          "sha256": "875b066112900601bbcd8412abf43a935efaced9f08638fe357ce2f8e8f83cab",
+          "bytes": 1241,
+          "physical_lines": 31,
+          "nonblank_lines": 31,
+          "code_lines": 31,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb\\tb_pitch_memory.v",
+          "sha256": "01e02010264296cb6f07b2b15a3458991cc2f2b7cc31dee2287ac45e70f730e9",
+          "bytes": 2986,
+          "physical_lines": 51,
+          "nonblank_lines": 51,
+          "code_lines": 50,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb\\tb_positions.v",
+          "sha256": "d8e0865f6b2f1fa14693a3bbabbec91c5a4972edaf915c11b46088b542bb5e8c",
+          "bytes": 3476,
+          "physical_lines": 58,
+          "nonblank_lines": 58,
+          "code_lines": 57,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb\\tb_renderer.v",
+          "sha256": "eb8fa0a9053a443726abb430005b166c6011dca82e639ab88e0d254a7dc15568",
+          "bytes": 703,
+          "physical_lines": 19,
+          "nonblank_lines": 19,
+          "code_lines": 19,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb\\tb_scan_store.v",
+          "sha256": "85a8bca2a724e61e36c4264b7d4e9e53b6a3cd9f8bbe49b9153fa445a4d7fe90",
+          "bytes": 1144,
+          "physical_lines": 31,
+          "nonblank_lines": 31,
+          "code_lines": 31,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb\\tb_sensor.v",
+          "sha256": "5aefa27133781785b1c3fa0ac81f68fa75ecf7c52b671459d06c5fee94663bee",
+          "bytes": 3017,
+          "physical_lines": 50,
+          "nonblank_lines": 50,
+          "code_lines": 50,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb_compat_music.v",
+          "sha256": "3b5fac0d8123b419289aec2a08f6b1549758db02ea97293300260e084293f528",
+          "bytes": 6928,
+          "physical_lines": 105,
+          "nonblank_lines": 104,
+          "code_lines": 102,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb_layers.v",
+          "sha256": "f733743982671a37dabc48e06c5d64f3af1c9739aea0d5d6d27eafda9aea8f73",
+          "bytes": 9903,
+          "physical_lines": 144,
+          "nonblank_lines": 143,
+          "code_lines": 140,
+          "module_definitions": 1
+        },
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\tb_sensor_layers.v",
+          "sha256": "87535fb487ed6043716fad316be7d1ffa1abf6f282d528eb7457309253b81f95",
+          "bytes": 7061,
+          "physical_lines": 99,
+          "nonblank_lines": 98,
+          "code_lines": 96,
+          "module_definitions": 1
+        }
+      ]
+    },
+    "current_candidate_headers": {
+      "file_count": 1,
+      "unique_contents": 1,
+      "physical_lines": 243,
+      "nonblank_lines": 243,
+      "code_lines": 243,
+      "bytes": 6911,
+      "module_definitions": 0,
+      "files": [
+        {
+          "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\mv_font.vh",
+          "sha256": "7dcd884f14a74eeef9e666e5e0d3772d64301026a72dd056a54770f4da038754",
+          "bytes": 6911,
+          "physical_lines": 243,
+          "nonblank_lines": 243,
+          "code_lines": 243,
+          "module_definitions": 0
+        }
+      ]
+    }
+  },
+  "only_changed_rtl_from86": [
+    "engine/src/mv_renderer.v"
+  ],
+  "current_largest_sources": [
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_top_owned.v",
+      "sha256": "b962db70a7c5c25a90e2f65f87e9a62012da30d5f5104ab90f4835e85e296780",
+      "bytes": 71355,
+      "physical_lines": 1274,
+      "nonblank_lines": 1184,
+      "code_lines": 819,
+      "module_definitions": 1
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_top_rh.v",
+      "sha256": "bdf3b214fc3e27fe9dfa00e20bb7277665a0e69e36c12831702f999b68f95eb2",
+      "bytes": 64896,
+      "physical_lines": 1175,
+      "nonblank_lines": 1089,
+      "code_lines": 733,
+      "module_definitions": 1
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_top.v",
+      "sha256": "f0682f79e7eb4b54ddb9e3c1b3f87c564e98258605b8959201b1a90d272adbec",
+      "bytes": 64144,
+      "physical_lines": 1156,
+      "nonblank_lines": 1070,
+      "code_lines": 714,
+      "module_definitions": 1
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_engine_rh.v",
+      "sha256": "4be8119bc228405c8a340084688d8ccf1e34a572626dcf930ffa0fc4f312ff59",
+      "bytes": 60947,
+      "physical_lines": 1012,
+      "nonblank_lines": 952,
+      "code_lines": 366,
+      "module_definitions": 1
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\tdm_engine.v",
+      "sha256": "ab9df08878226e0de0d3fa9ceed3ef04dc1437ea45cb7e638bc9b80546aa3aab",
+      "bytes": 57191,
+      "physical_lines": 938,
+      "nonblank_lines": 882,
+      "code_lines": 303,
+      "module_definitions": 1
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\note_map_owned.v",
+      "sha256": "005684fd952f51677e78855b871235e82931129becc9639bd1fb84f51063a1f3",
+      "bytes": 40725,
+      "physical_lines": 698,
+      "nonblank_lines": 651,
+      "code_lines": 389,
+      "module_definitions": 1
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\note_map.v",
+      "sha256": "6b801c2ea7f660d1a8d118653eb1262f60892e1032bdf9241ce246576c37d8be",
+      "bytes": 36248,
+      "physical_lines": 625,
+      "nonblank_lines": 580,
+      "code_lines": 323,
+      "module_definitions": 1
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\osc_additive_top.v",
+      "sha256": "3447962873a9bf9305bb02807713c349fb12a997da366563880c36cd300c475b",
+      "bytes": 16466,
+      "physical_lines": 371,
+      "nonblank_lines": 332,
+      "code_lines": 230,
+      "module_definitions": 1
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\fx_delay.v",
+      "sha256": "67ce4e845fbd4fa5f96efbce46d435b629425afeabdc20b3b3758f268dbce15e",
+      "bytes": 17838,
+      "physical_lines": 326,
+      "nonblank_lines": 300,
+      "code_lines": 184,
+      "module_definitions": 1
+    },
+    {
+      "path": "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\engine\\src\\pad_scan.v",
+      "sha256": "e42adff0b0b18c5a9b1f2ce8c26b0089cd06413116f0958dc0bcdfc8b07992cb",
+      "bytes": 15827,
+      "physical_lines": 311,
+      "nonblank_lines": 287,
+      "code_lines": 217,
+      "module_definitions": 1
+    }
+  ]
+}

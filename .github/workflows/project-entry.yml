@@ -1,0 +1,21 @@
+name: Project entry and recovery identities
+on:
+  push:
+    branches: [main, codex/project-management-20261022]
+  pull_request:
+    branches: [main, codex/project-management-20261022]
+permissions:
+  contents: read
+jobs:
+  verify-entry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Fetch immutable recovery inputs
+        run: git fetch --no-tags origin '+refs/heads/codex/preserve-*:refs/remotes/origin/codex/preserve-*'
+      # Candidate PRs must differ from the currently published entry. Fresh-entry
+      # checks are for consumers after publication, not for the publishing PR.
+      - name: Verify entry, design sources and all captured content
+        run: python3 tools/scripts/project_control.py check --full

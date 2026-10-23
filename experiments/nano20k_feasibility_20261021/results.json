@@ -1,0 +1,443 @@
+{
+  "status": "Recorded scoped probe evidence; full product NOT qualified",
+  "changed_from86": [
+    "engine/src/mv_renderer.v"
+  ],
+  "regressions": {
+    "renderer-equivalence.json": {
+      "status": "PASS",
+      "sha256": "fe7e5daed6d8f1234225634fba67267825f081eca61564cc25f9d49886ceb96d"
+    },
+    "engine-compatibility.json": {
+      "status": "PASS original 71 traces identical with default board options off",
+      "sha256": "3465572cd8410d701d542c905dcd8b0e9d63d56b78fe10ea46301eb03cfd6792"
+    },
+    "joint-model.json": {
+      "status": "PASS scoped forced-control joint RTL integration; no playable protocol or hardware qualification",
+      "sha256": "bd2a2612c368fdafeb928aa9227dfdd939edd0b780d22f4b02fb844ecbf9a7cb"
+    }
+  },
+  "builds": {
+    "build_nominal_v0": {
+      "returncode": 0,
+      "seconds": 654.58,
+      "mode": "nominal",
+      "route_completed": true,
+      "scoped_static_pass": false,
+      "errors": [],
+      "resource": {
+        "Logic": {
+          "used": 20338.0,
+          "capacity": 20736.0
+        },
+        "Register": {
+          "used": 10760.0,
+          "capacity": 15915.0
+        },
+        "CLS": {
+          "used": 10346.0,
+          "capacity": 10368.0
+        },
+        "BSRAM": {
+          "used": 32.0,
+          "capacity": 46.0
+        },
+        "DSP": {
+          "used": 22.75,
+          "capacity": 24.0
+        },
+        "I/O Port": {
+          "used": 14.0,
+          "capacity": 66.0
+        }
+      },
+      "timing": {
+        "slack_ns": {
+          "Setup": -6.397,
+          "Hold": -0.048,
+          "Recovery": 33.016,
+          "Removal": 1.876
+        },
+        "worst_paths": {
+          "Setup": [
+            "1",
+            "-6.397",
+            "system/music/core/u_tdm/sl1_5_s0/Q",
+            "system/music/core/u_tdm/phase_mem_phase_mem_0_0_s/DI[23]",
+            "core_clk:[R]",
+            "core_clk:[R]",
+            "37.037",
+            "0.000",
+            "42.899"
+          ],
+          "Hold": [
+            "1",
+            "-0.048",
+            "scan_storage/hard_register[5].cell_register/DOUT[10]",
+            "system/music/control/panel/bank/tx_q_10_s0/D",
+            "core_clk:[R]",
+            "core_clk:[R]",
+            "0.000",
+            "0.000",
+            "0.163"
+          ],
+          "Recovery": [
+            "1",
+            "33.016",
+            "reset_release_1_s0/Q",
+            "system/visualizer/u_fft/band_rom_band_rom_0_0_s/RESET",
+            "core_clk:[R]",
+            "core_clk:[R]",
+            "37.037",
+            "0.000",
+            "3.083"
+          ],
+          "Removal": [
+            "1",
+            "1.876",
+            "reset_release_1_s0/Q",
+            "system/sdram/sd_we_n_s0/PRESET",
+            "core_clk:[R]",
+            "core_clk:[R]",
+            "0.000",
+            "0.000",
+            "2.087"
+          ]
+        }
+      },
+      "hierarchy": {
+        "joint_timing_top": {
+          "logic": 20023,
+          "register": 10760,
+          "bsram": 32
+        },
+        "joint_timing_top/scan_storage": {
+          "logic": 13,
+          "register": 12,
+          "bsram": 1
+        },
+        "joint_timing_top/system": {
+          "logic": 19662,
+          "register": 10708,
+          "bsram": 31
+        },
+        "joint_timing_top/system/music": {
+          "logic": 14653,
+          "register": 7238,
+          "bsram": 20
+        },
+        "joint_timing_top/system/music/layers": {
+          "logic": 1106,
+          "register": 843,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/bridge": {
+          "logic": 1098,
+          "register": 744,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/control": {
+          "logic": 1417,
+          "register": 1210,
+          "bsram": 1
+        },
+        "joint_timing_top/system/music/control/panel": {
+          "logic": 513,
+          "register": 355,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/control/panel/bank": {
+          "logic": 513,
+          "register": 355,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/control/mapper": {
+          "logic": 149,
+          "register": 307,
+          "bsram": 1
+        },
+        "joint_timing_top/system/music/control/slew": {
+          "logic": 748,
+          "register": 498,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core": {
+          "logic": 11032,
+          "register": 4441,
+          "bsram": 19
+        },
+        "joint_timing_top/system/music/core/serial_configuration.receiver": {
+          "logic": 311,
+          "register": 207,
+          "bsram": 1
+        },
+        "joint_timing_top/system/music/core/u_uart": {
+          "logic": 46,
+          "register": 40,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_reg": {
+          "logic": 48,
+          "register": 195,
+          "bsram": 1
+        },
+        "joint_timing_top/system/music/core/u_tx": {
+          "logic": 53,
+          "register": 32,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_seq": {
+          "logic": 313,
+          "register": 75,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_uartq": {
+          "logic": 63,
+          "register": 35,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_seqq": {
+          "logic": 61,
+          "register": 35,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_padq": {
+          "logic": 10,
+          "register": 4,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_pinq": {
+          "logic": 58,
+          "register": 35,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_evhold": {
+          "logic": 35,
+          "register": 19,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_clk": {
+          "logic": 22,
+          "register": 16,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_nm": {
+          "logic": 2715,
+          "register": 1474,
+          "bsram": 5
+        },
+        "joint_timing_top/system/music/core/u_nm/table_store": {
+          "logic": 159,
+          "register": 74,
+          "bsram": 3
+        },
+        "joint_timing_top/system/music/core/u_nm/u_vshape": {
+          "logic": 147,
+          "register": 0,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/contact_expression.u_finger": {
+          "logic": 1941,
+          "register": 809,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_tdm": {
+          "logic": 3902,
+          "register": 978,
+          "bsram": 10
+        },
+        "joint_timing_top/system/music/core/u_tdm/u_env": {
+          "logic": 218,
+          "register": 0,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_tdm/u_pmod": {
+          "logic": 1004,
+          "register": 142,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_tdm/u_pmod/command_store": {
+          "logic": 125,
+          "register": 0,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_tdm/u_pmod/physical_store": {
+          "logic": 126,
+          "register": 0,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_fx": {
+          "logic": 716,
+          "register": 240,
+          "bsram": 2
+        },
+        "joint_timing_top/system/music/core/u_i2s": {
+          "logic": 33,
+          "register": 32,
+          "bsram": 0
+        },
+        "joint_timing_top/system/music/core/u_led": {
+          "logic": 99,
+          "register": 57,
+          "bsram": 0
+        },
+        "joint_timing_top/system/visualizer": {
+          "logic": 2827,
+          "register": 1648,
+          "bsram": 7
+        },
+        "joint_timing_top/system/visualizer/u_fft": {
+          "logic": 767,
+          "register": 527,
+          "bsram": 5
+        },
+        "joint_timing_top/system/visualizer/u_wave": {
+          "logic": 82,
+          "register": 65,
+          "bsram": 0
+        },
+        "joint_timing_top/system/visualizer/u_renderer": {
+          "logic": 1978,
+          "register": 1056,
+          "bsram": 2
+        },
+        "joint_timing_top/system/visualizer/u_renderer/u_panel": {
+          "logic": 321,
+          "register": 147,
+          "bsram": 0
+        },
+        "joint_timing_top/system/visualizer/u_renderer/u_panel/u_spi": {
+          "logic": 111,
+          "register": 33,
+          "bsram": 0
+        },
+        "joint_timing_top/system/sensor": {
+          "logic": 1539,
+          "register": 1458,
+          "bsram": 2
+        },
+        "joint_timing_top/system/sensor/scanner": {
+          "logic": 241,
+          "register": 297,
+          "bsram": 0
+        },
+        "joint_timing_top/system/sensor/scanner/writer": {
+          "logic": 37,
+          "register": 21,
+          "bsram": 0
+        },
+        "joint_timing_top/system/sensor/store": {
+          "logic": 523,
+          "register": 365,
+          "bsram": 2
+        },
+        "joint_timing_top/system/sensor/positions": {
+          "logic": 775,
+          "register": 796,
+          "bsram": 0
+        },
+        "joint_timing_top/system/transport": {
+          "logic": 498,
+          "register": 265,
+          "bsram": 2
+        },
+        "joint_timing_top/system/transport/buffers": {
+          "logic": 180,
+          "register": 84,
+          "bsram": 2
+        },
+        "joint_timing_top/system/transport/buffers/recording": {
+          "logic": 78,
+          "register": 32,
+          "bsram": 1
+        },
+        "joint_timing_top/system/transport/buffers/playback": {
+          "logic": 77,
+          "register": 32,
+          "bsram": 1
+        },
+        "joint_timing_top/system/transport/arbiter": {
+          "logic": 318,
+          "register": 181,
+          "bsram": 0
+        },
+        "joint_timing_top/system/sdram": {
+          "logic": 145,
+          "register": 99,
+          "bsram": 0
+        }
+      },
+      "warnings": [
+        "WARN  (EX3780) : Using initial value of 'j' since it is never assigned(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\probe_scan_store.v\":26)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 7(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\probe_scan_store.v\":22)",
+        "WARN  (EX3073) : Port 'board_wr_en' remains unconnected for this instance(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX3073) : Port 'update_done' remains unconnected for this instance(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":81)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 11(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\pad_pitch.v\":56)",
+        "WARN  (EX3073) : Port 'update_overrun' remains unconnected for this instance(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\tdm_engine_rh.v\":657)",
+        "WARN  (EX2526) : Entry size 8 at bands1024.hex:0 does not match memory width 6(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_fft1024.v\":74)",
+        "WARN  (EX3791) : Expression size 17 truncated to fit in target size 16(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_fft1024.v\":83)",
+        "WARN  (EX3791) : Expression size 11 truncated to fit in target size 10(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_fft1024.v\":106)",
+        "WARN  (EX3791) : Expression size 5 truncated to fit in target size 4(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_fft1024.v\":123)",
+        "WARN  (EX3791) : Expression size 10 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_fft1024.v\":125)",
+        "WARN  (EX3791) : Expression size 7 truncated to fit in target size 6(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_fft1024.v\":130)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 6(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_fft1024.v\":67)",
+        "WARN  (EX3791) : Expression size 10 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_fft1024.v\":140)",
+        "WARN  (EX3791) : Expression size 7 truncated to fit in target size 6(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_fft1024.v\":145)",
+        "WARN  (EX3791) : Expression size 8 truncated to fit in target size 7(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_wave_capture.v\":25)",
+        "WARN  (EX3791) : Expression size 17 truncated to fit in target size 16(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_wave_capture.v\":26)",
+        "WARN  (EX3791) : Expression size 24 truncated to fit in target size 17(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":47)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":85)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 16(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_spi_byte.v\":28)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 3(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_spi_byte.v\":36)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 16(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_spi_byte.v\":41)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 16(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_spi_byte.v\":45)",
+        "WARN  (EX3791) : Expression size 4 truncated to fit in target size 3(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_panel_driver.v\":97)",
+        "WARN  (EX3791) : Expression size 4 truncated to fit in target size 3(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_panel_driver.v\":101)",
+        "WARN  (EX3791) : Expression size 5 truncated to fit in target size 4(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_panel_driver.v\":113)",
+        "WARN  (EX3791) : Expression size 10 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_panel_driver.v\":122)",
+        "WARN  (EX3791) : Expression size 10 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_panel_driver.v\":123)",
+        "WARN  (EX3791) : Expression size 10 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":155)",
+        "WARN  (EX3791) : Expression size 10 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":155)",
+        "WARN  (EX3791) : Expression size 9 truncated to fit in target size 8(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":161)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":95)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":100)",
+        "WARN  (EX3791) : Expression size 8 truncated to fit in target size 7(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":176)",
+        "WARN  (EX3791) : Expression size 32 truncated to fit in target size 6(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":181)",
+        "WARN  (EX3791) : Expression size 7 truncated to fit in target size 6(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":189)",
+        "WARN  (EX3791) : Expression size 6 truncated to fit in target size 5(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":195)",
+        "WARN  (EX3791) : Expression size 10 truncated to fit in target size 9(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\mv_renderer.v\":208)",
+        "WARN  (EX3791) : Expression size 3 truncated to fit in target size 2(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\pcm_sdram_arbiter.v\":53)",
+        "WARN  (EX2565) : Input 'board_status[7]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_status[6]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_status[5]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_status[4]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_status[3]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_status[2]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_status[1]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_status[0]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_case[7]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_case[6]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_case[5]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_case[4]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_case[3]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_case[2]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_case[1]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (EX2565) : Input 'board_case[0]' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\sdram_stream_probe.v\":77)",
+        "WARN  (NL0002) : The module \"pad_pitch\" instantiated to \"u_pitch\" is swept in optimizing(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\tdm_top_owned.v\":648)",
+        "WARN  (NL0002) : The module \"strip_ctrl\" instantiated to \"u_strip\" is swept in optimizing(\"C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\nano20k_feasibility_20261021\\build_nominal_v0\\tdm_top_owned.v\":653)",
+        "WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew"
+      ],
+      "identities": {
+        "build_nominal_v0\\run.json": "32acb660f8cf3e024298db7190915ad6284a089ed5b5638e47add5492f0e346e",
+        "build_nominal_v0\\console.log": "0189a975b561dcb93b17543206fee746a4fea71a168aba0d8c0d947d8a63cfa3",
+        "build_nominal_v0\\sdram_board.sdc": "ee00607bd29835653d8e68e6416edc5da9538a93a8502215e0b0df111f3a7dec",
+        "build_nominal_v0\\impl\\gwsynthesis\\board_syn_rsc.xml": "cbe2688969a9e6a30d551be135948e6c9e6b88d53f4f4050a526f93db365f6a9"
+      }
+    }
+  },
+  "product_top_exists": false,
+  "product_static_pass": false,
+  "bench_gate": false,
+  "hardware_programmed": false,
+  "hardware_interface_changed": false
+}

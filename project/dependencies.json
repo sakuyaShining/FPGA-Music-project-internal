@@ -1,0 +1,35 @@
+{
+  "schema": 2,
+  "predecessor": "codex/project-version-closure:project/dependencies.json",
+  "management": {
+    "python": "3.8+",
+    "git": true,
+    "original_workspaces_required": false
+  },
+  "fpga": {
+    "device": "GW2AR-LV18QN88C8/I7 / Tang Nano20K",
+    "gowin": "V1.9.11.03 Education, per frozen build records",
+    "iverilog": "See portable handoff environment configuration",
+    "tool_installation": "Not bundled; no programming or hardware operations are part of management checks"
+  },
+  "host": {
+    "requirements": "Use the selected frozen host candidate requirements; not silently unified here"
+  },
+  "archive": {
+    "path": "project/archives/fpga-agent-handoff-20261022-v1.zip",
+    "sha256": "115f7d8f3789af99fed182ad331352e861c2795bba371567d9008df9d5458a78"
+  },
+  "publication": "Independent reviewed export; never push internal source to origin/public",
+  "additional_archives": [
+    {
+      "path": "project/archives/post-capture-wip-20261022.zip",
+      "sha256": "073e727258cebe87b42d25f8314a1f37776a5d7043c20d269dced08d36036309",
+      "role": "Unvalidated source deltas after checkpoint capture"
+    },
+    {
+      "path": "project/archives/latest-design-inputs-20261023.zip",
+      "sha256": "ac5af26401e40c727754fd7f44f143c3c7a1cf81be76e0e41704f35fa5d5f107",
+      "role": "Observed WIP source/context and listed hardware recovery ZIPs; not product acceptance"
+    }
+  ]
+}

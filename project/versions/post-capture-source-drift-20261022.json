@@ -1,0 +1,215 @@
+{
+  "checked_at": "2026-10-22T11:05:10.305862+00:00",
+  "scope": "Previously captured source/assets only; no claim about future edits or new files",
+  "checks": [
+    {
+      "id": "4d37",
+      "checked": 387,
+      "changed_since_capture": [
+        "tools/scripts/preserve_workspaces_20261022.py"
+      ],
+      "missing_since_capture": [],
+      "management_workspace": true
+    },
+    {
+      "id": "main",
+      "checked": 3572,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "06df",
+      "checked": 555,
+      "changed_since_capture": [
+        "hardware/review-manufacturing-20261019/u8-power-corridor-20261022/address3-local-recovery/reference-local-repair/apply.py",
+        "hardware/review-manufacturing-20261019/u8-power-corridor-20261022/address3-local-recovery/review-native.py"
+      ],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "4a4b",
+      "checked": 224,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "4c43",
+      "checked": 230,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "4e09",
+      "checked": 235,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "66a4",
+      "checked": 302,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "6e70",
+      "checked": 254,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "8c56",
+      "checked": 224,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "a61b",
+      "checked": 232,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "b5b8",
+      "checked": 224,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "b6d6",
+      "checked": 224,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "ca03",
+      "checked": 258,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "cec2",
+      "checked": 224,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "eb59",
+      "checked": 219,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "instrument-engine-safety",
+      "checked": 314,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "workbuddy",
+      "checked": 376,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "m1-work",
+      "checked": 186,
+      "changed_since_capture": [
+        "rtl/sdram_stream_probe.v"
+      ],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "m1-reference",
+      "checked": 176,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "native-source57",
+      "checked": 16,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "native-trial50",
+      "checked": 16,
+      "changed_since_capture": [
+        "FPGA-Music-Dualscreen-Addr3Work-20261022.eprj3",
+        "pcb/PCB1.epcb2"
+      ],
+      "missing_since_capture": [],
+      "management_workspace": false
+    },
+    {
+      "id": "native-r15",
+      "checked": 16,
+      "changed_since_capture": [],
+      "missing_since_capture": [],
+      "management_workspace": false
+    }
+  ],
+  "preserved_delta_archive": "project/archives/post-capture-wip-20261022.zip",
+  "preserved_delta_archive_sha256": "073e727258cebe87b42d25f8314a1f37776a5d7043c20d269dced08d36036309",
+  "delta_manifest": {
+    "captured_at": "2026-10-22T11:08:08.588314+00:00",
+    "role": "Unvalidated post-checkpoint source deltas, not a product or coherent native transaction",
+    "files": {
+      "06df/hardware/review-manufacturing-20261019/u8-power-corridor-20261022/address3-local-recovery/reference-local-repair/apply.py": {
+        "base_snapshot": "06d68619c5d96ffd9585012ea28102c287eac9ac",
+        "source_relative_path": "hardware/review-manufacturing-20261019/u8-power-corridor-20261022/address3-local-recovery/reference-local-repair/apply.py",
+        "sha256": "dc62a2a41dbb8f8e4f0565176e0e252dae47e5c1ca719907b92967c58d5907b1",
+        "bytes": 5602,
+        "mtime_ns": 1792666521719515600
+      },
+      "06df/hardware/review-manufacturing-20261019/u8-power-corridor-20261022/address3-local-recovery/review-native.py": {
+        "base_snapshot": "06d68619c5d96ffd9585012ea28102c287eac9ac",
+        "source_relative_path": "hardware/review-manufacturing-20261019/u8-power-corridor-20261022/address3-local-recovery/review-native.py",
+        "sha256": "a02243bec24372a0179d01290df1aaeac14df675bebcfcc318aef36570edd6e9",
+        "bytes": 7982,
+        "mtime_ns": 1792667091444972200
+      },
+      "m1-work/rtl/sdram_stream_probe.v": {
+        "base_snapshot": "187a6bf3a8a1b3f27c6a612e5efa5c28296b3e09",
+        "source_relative_path": "rtl/sdram_stream_probe.v",
+        "sha256": "74b208655fa7e957ef1e188c49f3b59386b11be816e4a3d837e1b7bbb6ebd432",
+        "bytes": 8197,
+        "mtime_ns": 1792667256734854000
+      },
+      "native-trial50/FPGA-Music-Dualscreen-Addr3Work-20261022.eprj3": {
+        "base_snapshot": "046ae1a811ebddcb6ca86997e3c4caf389bd421f",
+        "source_relative_path": "FPGA-Music-Dualscreen-Addr3Work-20261022.eprj3",
+        "sha256": "41a6aa2021f8890d7b82bf9ceb7ee36f89c7aa725ffb57d0802c3c8c101d7ae9",
+        "bytes": 6124,
+        "mtime_ns": 1792667085961866400
+      },
+      "native-trial50/pcb/PCB1.epcb2": {
+        "base_snapshot": "046ae1a811ebddcb6ca86997e3c4caf389bd421f",
+        "source_relative_path": "pcb/PCB1.epcb2",
+        "sha256": "79b5927174eba3d26bbce30af579ae1b933da877fbce8dd292f6a6c94c3c3b3e",
+        "bytes": 3711861,
+        "mtime_ns": 1792667085514130000
+      }
+    },
+    "base_registry": "project/versions/workspace-preservation-20261022.json",
+    "scope": "Only source changes observed by the drift check; no claim about subsequent edits or newly created files"
+  }
+}

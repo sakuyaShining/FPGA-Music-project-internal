@@ -1,0 +1,116 @@
+{
+  "schema": 2,
+  "updated_at": "2026-10-23T12:27:55.623546+08:00",
+  "entry": "project/CURRENT.md",
+  "predecessor_state": "codex/project-version-closure:project/state.json",
+  "implementation_boundary": "This registry does not merge or change any functional source",
+  "wip_policy": {
+    "max_active_tasks_per_owner": 1,
+    "snapshot_branches": "Immutable recovery archives; not new active tasks",
+    "start_gate": "Named owner, branch, source identity, scope and completion criterion must be registered",
+    "completion_gate": "Commit, scoped verification, remote commit check and handoff; otherwise retain explicit WIP"
+  },
+  "profiles": {
+    "music_integrated_07": {
+      "role": "music-baseline",
+      "snapshot": "66a4",
+      "source_branch": "codex/project-version-closure",
+      "entry": "project/CURRENT.md",
+      "validation": "Existing 07 records report regression/PnR/board tests; not rerun here",
+      "complete_product": false
+    },
+    "music_engine_safety": {
+      "role": "development-candidate",
+      "snapshot": "instrument-engine-safety",
+      "source_branch": "codex/instrument-engine-safety",
+      "entry": "project/CURRENT.md",
+      "validation": "Existing records report targeted tests/new PnR; not downloaded",
+      "complete_product": false
+    },
+    "nano20k_structural_probe": {
+      "role": "probe",
+      "snapshot": "4d37",
+      "entry": "experiments/nano20k_feasibility_20261021/project/CURRENT.md",
+      "validation": {
+        "basis": "Previously sealed source/evidence; not rerun here",
+        "route": true,
+        "bitstream_generated": true,
+        "sta": false,
+        "setup_ns": -6.397,
+        "hold_ns": -0.048
+      },
+      "product_accepted": false,
+      "programming_allowed": false
+    },
+    "m1_area_work": {
+      "role": "probe",
+      "snapshot": "m1-work",
+      "entry": "M1-CHANGE-NOTE.md",
+      "validation": "Mutable area experiments; no acceptance inferred; inspect captured RTL including disabled visualizer",
+      "owner": "unconfirmed independent M1 session",
+      "product_accepted": false,
+      "programming_allowed": false,
+      "status": "Historical checkpoint; latest registered source is m1_current_registered"
+    },
+    "m1_reference": {
+      "role": "reference",
+      "snapshot": "m1-reference",
+      "entry": "HANDOFF-WORKSPACE.json",
+      "validation": "Independent baseline source; results do not sign off modified M1"
+    },
+    "gui_ca03": {
+      "role": "development-source",
+      "snapshot": "ca03",
+      "source_branch": "backup/ca03-20261022",
+      "validation": "Preserved GUI plus RTL edits; no integration acceptance"
+    },
+    "gui_6e70": {
+      "role": "development-source",
+      "snapshot": "6e70",
+      "source_branch": "codex/v1-behavior-freeze",
+      "validation": "Historical GUI/protocol source with subsequent uncommitted changes"
+    },
+    "hardware_wip": {
+      "role": "hardware-construction",
+      "snapshot": "06df",
+      "entry": "hardware/review-manufacturing-20261019/REGIONAL-WORK-IN-PROGRESS.json",
+      "validation": "Preserved pointer/evidence; no new native DRC or manufacturing validation",
+      "manufacturing_release": false,
+      "native_source_snapshot": "native-source57",
+      "native_pending_snapshot": "native-trial50",
+      "native_active_r15_snapshot": "native-r15",
+      "current_context_manifest": "project/versions/latest-design-inputs-20261023.json",
+      "snapshot_role": "Historical 20261022 recovery input; not current live hardware"
+    },
+    "complete_product_top": {
+      "role": "product",
+      "snapshot": null,
+      "status": "not_implemented_and_validated",
+      "product_accepted": false,
+      "programming_allowed": false
+    },
+    "m1_current_registered": {
+      "role": "development-candidate",
+      "snapshot": "m1-work",
+      "source_delta_archive": "project/archives/post-capture-wip-20261022.zip",
+      "source_delta_sha256": "073e727258cebe87b42d25f8314a1f37776a5d7043c20d269dced08d36036309",
+      "effective_source_identity": "project/handoff.json:fpga_handoff.effective_build_inputs",
+      "entry": "project/AGENT-START.md",
+      "validation": "Scoped handoff regression records only; no new route/STA/board qualification",
+      "product_accepted": false,
+      "programming_allowed": false,
+      "status": "Historical validated checkpoint; not current mutable WIP"
+    },
+    "fpga_latest_observed_20261023": {
+      "role": "development-candidate",
+      "archive": "project/archives/latest-design-inputs-20261023.zip",
+      "manifest": "project/versions/latest-design-inputs-20261023.json",
+      "validation_inherited": false,
+      "status": "已实现待验证；仅所列新增与修改，不表示全功能产品完成",
+      "product_accepted": false,
+      "programming_allowed": false
+    }
+  },
+  "active_fpga_profile": "fpga_latest_observed_20261023",
+  "design_state": "project/design-state.json"
+}
