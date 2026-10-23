@@ -1,0 +1,45 @@
+// Internal logical interfaces, not a physical GPIO allocation or shipping top.
+module compat_music_probe #(parameter integer LEGACY_PAD=1)(
+    input wire clk,rst_n,uart_rx_pin,
+    output wire uart_tx_pin,
+    input wire ev_valid,ev_on,
+    input wire [6:0] ev_note,
+    input wire [3:0] ev_vel,
+    input wire [1:0] preset,
+    input wire finger_valid,
+    input wire [1:0] finger_cmd,
+    input wire [4:0] finger_id,finger_group,
+    input wire signed [11:0] finger_position,
+    inout wire [15:0] pad,
+    input wire touch_valid,
+    output wire touch_ready,
+    input wire [4:0] touch_active,
+    input wire [49:0] touch_x,touch_y,
+    input wire [19:0] touch_id,
+    input wire [9:0] radius,slew_step,
+    input wire [47:0] part_to_control,
+    input wire restore_valid,
+    input wire [31:0] voice_mask,
+    output wire [79:0] fader_y,
+    output wire [159:0] gains,
+    output wire touch_done,gain_done,control_error,
+    output wire [5:0] led,
+    output wire dac_din,dac_ws,dac_bck,pa_en,
+    output wire voice_valid,voice_on,
+    output wire [4:0] voice_group,
+    output wire [6:0] voice_note,
+    output wire pcm_valid,
+    output wire signed [23:0] pcm
+);
+    rh_performance_control control(.clk(clk),.rst_n(rst_n),.sample_ce(pcm_valid),
+        .touch_valid(touch_valid),.touch_ready(touch_ready),.touch_active(touch_active),.touch_x(touch_x),.touch_y(touch_y),.touch_id(touch_id),
+        .radius(radius),.part_to_control(part_to_control),.slew_step(slew_step),.restore_valid(restore_valid),
+        .fader_y(fader_y),.current_gain(gains),.frame_done(touch_done),.gain_done(gain_done),.error(control_error));
+    tdm_top_owned #(.FINGER_EXPR(1),.BOARD_DIAG(0),.LIVE_MONITOR(0),.RIGHT_TIMBRE(1),.LEGACY_PAD(LEGACY_PAD)) core(
+        .cfg_valid(1'b0),.cfg_commit(1'b0),.cfg_slot(2'd0),.cfg_part(4'd0),.cfg_word(88'd0),.own_preset(2'd0),.clk(clk),.rst_n(rst_n),.uart_rx_pin(uart_rx_pin),.uart_tx_pin(uart_tx_pin),.preset(preset),.test_mode(1'b0),
+        .ev_valid(ev_valid),.ev_on(ev_on),.ev_note(ev_note),.ev_vel(ev_vel),.pad(pad),.led(led),
+        .finger_valid(finger_valid),.finger_cmd(finger_cmd),.finger_id(finger_id),.finger_group(finger_group),.finger_position(finger_position),
+        .voice_valid(voice_valid),.voice_on(voice_on),.voice_group(voice_group),.voice_note(voice_note),
+        .timbre_gain_q8(gains),.timbre_voice_mask(voice_mask),.monitor_valid(pcm_valid),.monitor_pcm(pcm),
+        .dac_din(dac_din),.dac_ws(dac_ws),.dac_bck(dac_bck),.pa_en(pa_en));
+endmodule

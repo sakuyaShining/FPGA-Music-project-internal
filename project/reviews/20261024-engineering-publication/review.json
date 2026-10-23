@@ -1,0 +1,254 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-23T16:24:52.079650+00:00",
+  "observer_role": "User-authorized continuation of engineering publication; no functional producer ownership taken",
+  "previous_review": "project/reviews/20261023-team-handoff/review.json",
+  "previous_review_sha256": "0bb62c7f7f37e756eb60bdf72ca70a18df68d462c0cd1e4d5a3ae51e0bc5a140",
+  "raw_observation": "project/reviews/20261024-engineering-publication/observation.json",
+  "raw_observation_sha256": "e99592f9b82bf1fb69c3303f1c94689794b94b376640175a8ce5c824579b3129",
+  "producer_ids": [
+    "fpga",
+    "hardware"
+  ],
+  "changes_since_previous_review": {
+    "fpga": {
+      "added": [
+        "JLCPCB-ORDER-PACKAGE-20261023.md"
+      ],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "verdict": "REVIEWED_WITH_DECLARED_WIP",
+  "engineering_inputs": {
+    "status": "PASS",
+    "files": 341,
+    "captured_at": "2026-10-23T15:35:23.108914+00:00",
+    "scope": "Engineering input identities, not Git publication, live freshness or product acceptance",
+    "product_acceptance": false
+  },
+  "engineering_manifest_sha256": "1f32522e645feb27923a8c13f3e368e4d6434fc4ab908815f981b34732071887",
+  "upstream_source_comparison": {
+    "checked": 341,
+    "modified": [],
+    "missing": []
+  },
+  "isolated_validation": {
+    "fpga-initial": {
+      "source_inputs_match_checkpoint": false,
+      "area": "fpga",
+      "result": {
+        "tested_at": "2026-10-23T16:15:30.175188+00:00",
+        "area": "fpga",
+        "manifest_sha256": "c0e12053ebfcffcb2674533e5fa9b0834d75679a962d4caf4ed019112778ca9e",
+        "results": [
+          {
+            "name": "velocity-table",
+            "command": [
+              "C:\\Program Files\\python\\python.exe",
+              "tools/scripts/gen_vel_wtab.py",
+              "--check"
+            ],
+            "returncode": 0,
+            "passed": true,
+            "log_sha256": "9847b842187126fcdae00d2dea0ed1337a844d806054873087d2240d2c699cbb"
+          },
+          {
+            "name": "seven-simulations",
+            "command": [
+              "C:\\Program Files\\python\\python.exe",
+              "tools/run_sims.py",
+              "-v"
+            ],
+            "returncode": 0,
+            "passed": true,
+            "log_sha256": "75200cd924ce63872c7ac3d596d490f47cf7aa82c7046eb1661170c97f97019f"
+          },
+          {
+            "name": "music-golden",
+            "command": [
+              "C:\\Program Files\\python\\python.exe",
+              "check_engine_compat.py"
+            ],
+            "returncode": 1,
+            "passed": false,
+            "log_sha256": "fdad6e2e8d8fce3d6014c9cff53f6d4c607639724810a3b5e1bda9b0bc8b049e"
+          },
+          {
+            "name": "pitch-reference",
+            "command": [
+              "C:\\Program Files\\python\\python.exe",
+              "check_pitch.py"
+            ],
+            "returncode": 0,
+            "passed": true,
+            "log_sha256": "e0fd7c97f975ac2e8996c30d701dab65d3f8d1835b543ea38a89b1b8006fce01"
+          }
+        ],
+        "status": "FAIL",
+        "product_acceptance": false,
+        "hardware_accessed": false
+      }
+    },
+    "fpga": {
+      "source_inputs_match_checkpoint": true,
+      "area": "fpga",
+      "result": {
+        "tested_at": "2026-10-23T16:20:10.555846+00:00",
+        "area": "fpga",
+        "manifest_sha256": "a71f3db82c7e436b916487b1fd330158c5fc23a9534d9e22eedf819361bf3b2e",
+        "results": [
+          {
+            "name": "velocity-table",
+            "command": [
+              "C:\\Program Files\\python\\python.exe",
+              "tools/scripts/gen_vel_wtab.py",
+              "--check"
+            ],
+            "returncode": 0,
+            "passed": true,
+            "log_sha256": "9847b842187126fcdae00d2dea0ed1337a844d806054873087d2240d2c699cbb"
+          },
+          {
+            "name": "seven-simulations",
+            "command": [
+              "C:\\Program Files\\python\\python.exe",
+              "tools/run_sims.py",
+              "-v"
+            ],
+            "returncode": 0,
+            "passed": true,
+            "log_sha256": "804459313b7aabbb17dd321b7ed345fc109365f079424b7e07574f0059e66b49"
+          },
+          {
+            "name": "music-golden",
+            "command": [
+              "C:\\Program Files\\python\\python.exe",
+              "check_engine_compat.py"
+            ],
+            "returncode": 1,
+            "passed": false,
+            "log_sha256": "6757d604606da51a12627eff0f3c0a92c93167b9c6af81f039db3476c8f7fc18"
+          },
+          {
+            "name": "pitch-reference",
+            "command": [
+              "C:\\Program Files\\python\\python.exe",
+              "check_pitch.py"
+            ],
+            "returncode": 0,
+            "passed": true,
+            "log_sha256": "8c813ef9340184a0e53a5d2a037c7403aec56365bb72f2a2ba32b873e1b7a83c"
+          }
+        ],
+        "status": "FAIL",
+        "product_acceptance": false,
+        "hardware_accessed": false
+      }
+    },
+    "host-initial": {
+      "source_inputs_match_checkpoint": false,
+      "area": "host",
+      "result": {
+        "tested_at": "2026-10-23T16:15:48.810921+00:00",
+        "area": "host",
+        "manifest_sha256": "c0e12053ebfcffcb2674533e5fa9b0834d75679a962d4caf4ed019112778ca9e",
+        "results": [
+          {
+            "name": "host-offline",
+            "command": [
+              "C:\\Users\\Sakuya\\.codex\\outputs\\collaboration-20261024-venv\\Scripts\\python.exe",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tools/host",
+              "-p",
+              "test_*.py",
+              "-v"
+            ],
+            "returncode": 1,
+            "passed": false,
+            "log_sha256": "0dda7143d05ceb22c9d5fe4b4e1384e8af87d36f2bb5efe26b49f5b7417e03d0"
+          }
+        ],
+        "status": "FAIL",
+        "product_acceptance": false,
+        "hardware_accessed": false
+      }
+    },
+    "host": {
+      "source_inputs_match_checkpoint": true,
+      "area": "host",
+      "result": {
+        "tested_at": "2026-10-23T16:18:57.021551+00:00",
+        "area": "host",
+        "manifest_sha256": "1f32522e645feb27923a8c13f3e368e4d6434fc4ab908815f981b34732071887",
+        "results": [
+          {
+            "name": "host-offline",
+            "command": [
+              "C:\\Users\\Sakuya\\.codex\\outputs\\collaboration-20261024-venv\\Scripts\\python.exe",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tools/host",
+              "-p",
+              "test_*.py",
+              "-v"
+            ],
+            "returncode": 0,
+            "passed": true,
+            "log_sha256": "cda08b2a2034b29e9d459f8572e60e6836a58129786bb2ff5f15d3b038651bd4"
+          }
+        ],
+        "status": "PASS",
+        "product_acceptance": false,
+        "hardware_accessed": false
+      }
+    },
+    "hardware": {
+      "source_inputs_match_checkpoint": true,
+      "area": "hardware"
+    }
+  },
+  "evidence": {
+    "project/reviews/20261024-engineering-publication/validation/upstream-source-comparison.json": "5fd3841d60cce122cd1145c2d73280d3016fda6709c8079e83f2b83e5824f9f1",
+    "project/reviews/20261024-engineering-publication/validation/fpga/music-golden.log": "6757d604606da51a12627eff0f3c0a92c93167b9c6af81f039db3476c8f7fc18",
+    "project/reviews/20261024-engineering-publication/validation/fpga/pitch-reference.log": "8c813ef9340184a0e53a5d2a037c7403aec56365bb72f2a2ba32b873e1b7a83c",
+    "project/reviews/20261024-engineering-publication/validation/fpga/results.json": "9392d4410206e24cd79174a4a685e6a9d3d608df4f600f8b402b79b6148473ac",
+    "project/reviews/20261024-engineering-publication/validation/fpga/seven-simulations.log": "804459313b7aabbb17dd321b7ed345fc109365f079424b7e07574f0059e66b49",
+    "project/reviews/20261024-engineering-publication/validation/fpga/SOURCE-ORIGIN.json": "9b61d05a82f9d76c11c482881246b46ca2497282e4150f2b227c3c22e65d676f",
+    "project/reviews/20261024-engineering-publication/validation/fpga/velocity-table.log": "9847b842187126fcdae00d2dea0ed1337a844d806054873087d2240d2c699cbb",
+    "project/reviews/20261024-engineering-publication/validation/fpga-initial/music-golden.log": "fdad6e2e8d8fce3d6014c9cff53f6d4c607639724810a3b5e1bda9b0bc8b049e",
+    "project/reviews/20261024-engineering-publication/validation/fpga-initial/pitch-reference.log": "e0fd7c97f975ac2e8996c30d701dab65d3f8d1835b543ea38a89b1b8006fce01",
+    "project/reviews/20261024-engineering-publication/validation/fpga-initial/results.json": "5bca21299ca72e735450524ed9a90f6c5995e4fbf793c536827ca415617ee5e1",
+    "project/reviews/20261024-engineering-publication/validation/fpga-initial/seven-simulations.log": "75200cd924ce63872c7ac3d596d490f47cf7aa82c7046eb1661170c97f97019f",
+    "project/reviews/20261024-engineering-publication/validation/fpga-initial/SOURCE-ORIGIN.json": "f45c64d8a6f2b2166197cac76edcc4d31ad329305836ef00dd709bdeb032c10c",
+    "project/reviews/20261024-engineering-publication/validation/fpga-initial/velocity-table.log": "9847b842187126fcdae00d2dea0ed1337a844d806054873087d2240d2c699cbb",
+    "project/reviews/20261024-engineering-publication/validation/hardware/SOURCE-ORIGIN.json": "802f2f3a806cbd00d3261fa9ae1ad284748d8a6825fe1096b65a182e80277f1d",
+    "project/reviews/20261024-engineering-publication/validation/host/host-offline.log": "cda08b2a2034b29e9d459f8572e60e6836a58129786bb2ff5f15d3b038651bd4",
+    "project/reviews/20261024-engineering-publication/validation/host/results.json": "a138d295be6978e255667c7851352be61ae8d25ec284c3d9e3d7f7cf35253701",
+    "project/reviews/20261024-engineering-publication/validation/host/SOURCE-ORIGIN.json": "52f4ee10d5852203a4d8f84bf8fe2326b774f21e874793be3f623e5d3db2ddf5",
+    "project/reviews/20261024-engineering-publication/validation/host-initial/host-offline.log": "0dda7143d05ceb22c9d5fe4b4e1384e8af87d36f2bb5efe26b49f5b7417e03d0",
+    "project/reviews/20261024-engineering-publication/validation/host-initial/results.json": "26a90c9379b37c124c41549c6b5f7f713b2c6db6afaf9544f4765e8b3978a110",
+    "project/reviews/20261024-engineering-publication/validation/host-initial/SOURCE-ORIGIN.json": "dc9cdc49d5bf981f8029a028ece20638ba3e66c7ebefa8e152d6bd2f939d324b"
+  },
+  "assessment": {
+    "fpga": "Seven focused simulations, velocity generator and pitch reference/fault tests pass. Historical music golden regression fails at compat cycle6662. Later layer/sensor golden cases were not run by the fail-fast script. One declaration-order-only adaptation enables elaboration; no PnR/STA/board acceptance.",
+    "host": "100 offline tests pass after capturing missing retrigger measurement helper; hardware/FPGA protocol compatibility unverified.",
+    "hardware": "Native byte export verified; author-recorded e098c5db47 connections13nets227components616vias. Retained aaa37 baseline is separate. No CAD execution/fabrication acceptance.",
+    "procurement": "New JLCPCB order document reads old53-component prototype and cannot describe the active227-component carrier; do not adopt missing-power/AUX assumptions, pin remaps or estimated totals.",
+    "publication": "Named task branch packages editable candidates. Actual remote head/PR determines publication; main merge still requires user approval. Producer future changes are not included.",
+    "product": "J11 cancellation/J10 retention and other existing goals unchanged. No new music semantics or circuit decisions adopted."
+  },
+  "product_acceptance": false,
+  "new_cad_operations": false,
+  "hardware_accessed": false
+}

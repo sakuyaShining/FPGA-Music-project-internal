@@ -1,5 +1,7 @@
 # 快速取得当前已发布设计
 
+当前可开发的工程、依赖和验证命令见[ENGINEERING.md](ENGINEERING.md)。克隆后先执行`python tools/scripts/engineering.py check`，再按[协作检查点](COLLABORATION-CHECKPOINT-20261024.md)选择一个领域；不要直接在历史`src/rtl`或`tools/host`继续最新实现。
+
 多人协作或不授予仓库权限的离线任务，见[COLLABORATING.md](COLLABORATING.md)。
 
 仓库：`https://github.com/sakuyaShining/FPGA-Music-project-internal.git`（已核对private）。

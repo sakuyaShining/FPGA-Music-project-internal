@@ -1,0 +1,27 @@
+{
+  "tested_at": "2026-10-23T16:18:57.021551+00:00",
+  "area": "host",
+  "manifest_sha256": "1f32522e645feb27923a8c13f3e368e4d6434fc4ab908815f981b34732071887",
+  "results": [
+    {
+      "name": "host-offline",
+      "command": [
+        "C:\\Users\\Sakuya\\.codex\\outputs\\collaboration-20261024-venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/host",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "log_sha256": "cda08b2a2034b29e9d459f8572e60e6836a58129786bb2ff5f15d3b038651bd4"
+    }
+  ],
+  "status": "PASS",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

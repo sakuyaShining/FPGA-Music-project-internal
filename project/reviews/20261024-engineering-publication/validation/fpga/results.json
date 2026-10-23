@@ -1,0 +1,52 @@
+{
+  "tested_at": "2026-10-23T16:20:10.555846+00:00",
+  "area": "fpga",
+  "manifest_sha256": "a71f3db82c7e436b916487b1fd330158c5fc23a9534d9e22eedf819361bf3b2e",
+  "results": [
+    {
+      "name": "velocity-table",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "tools/scripts/gen_vel_wtab.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "log_sha256": "9847b842187126fcdae00d2dea0ed1337a844d806054873087d2240d2c699cbb"
+    },
+    {
+      "name": "seven-simulations",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "tools/run_sims.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "log_sha256": "804459313b7aabbb17dd321b7ed345fc109365f079424b7e07574f0059e66b49"
+    },
+    {
+      "name": "music-golden",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "check_engine_compat.py"
+      ],
+      "returncode": 1,
+      "passed": false,
+      "log_sha256": "6757d604606da51a12627eff0f3c0a92c93167b9c6af81f039db3476c8f7fc18"
+    },
+    {
+      "name": "pitch-reference",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "check_pitch.py"
+      ],
+      "returncode": 0,
+      "passed": true,
+      "log_sha256": "8c813ef9340184a0e53a5d2a037c7403aec56365bb72f2a2ba32b873e1b7a83c"
+    }
+  ],
+  "status": "FAIL",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

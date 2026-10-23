@@ -94,6 +94,13 @@ PCB 打样、贴片与物流需要日历时间。施工数量只在相应review�
 
 ## 6. 交接记录
 
+### 2026-10-24 · Codex · 管理与工程交接
+- 做了什么：接续4d37的工程整理，将FPGA、保存硬件、主机11版展开为current候选；清单341项，来源、恢复入口和隔离验证可追溯，详见project/ENGINEERING.md。
+- 在飞什么：管理分支codex/current-engineering-sources-20261023，提交及实际远程身份以本次PR为准；未接管原owner目录。
+- 卡在哪：历史音乐黄金对照存在差异；硬件47项未连通/13网，实体协议和完整产品未验收。
+- 需要对方什么：在独立任务分支认领限定路径，按清单复现并交回结果，不用旧小样采购判断替代当前整板。
+- 下一手从哪读：project/COLLABORATION-CHECKPOINT-20261024.md、project/reviews/20261024-engineering-publication/review.json；精确版本取包含本记录的Git提交与PR head，不预填未产生的远程SHA。
+
 ### 2026-10-22 00:55 · WorkBuddy · 建立协作板
 - 做了什么：建立本板；确认 `agent-collaboration-log.md` 是评分素材不是协调板；认领 B 轴（PCB）。
 - 在飞什么：无。

@@ -6,6 +6,7 @@ Requires Python 3.8+ and Git; does not use the original workspace paths.
 from pathlib import Path, PurePosixPath
 import argparse, gzip, hashlib, json, subprocess, sys
 import design_governance as governance
+import engineering
 
 ROOT=Path(__file__).resolve().parents[2]
 ENTRY_FILES=['.gitattributes','.github/workflows/project-entry.yml','README.md','AGENTS.md','project/CURRENT.md','project/AGENT-START.md',
@@ -16,7 +17,9 @@ ENTRY_FILES=['.gitattributes','.github/workflows/project-entry.yml','README.md',
     'project/versions/workspace-preservation-20261022.json',
     'docs/00-协作/AGENT-BOARD.md','tools/scripts/project_control.py',
     'tools/scripts/design_governance.py','project/governance.json',
-    'project/decisions.json','project/producers.json','project/MAINTAINING-MAIN.md']
+    'project/decisions.json','project/producers.json','project/MAINTAINING-MAIN.md',
+    'project/ENGINEERING.md','project/COLLABORATION-CHECKPOINT-20261024.md',
+    'project/versions/engineering-sources-20261023.json','tools/scripts/engineering.py']
 
 def git(*args):
     return subprocess.check_output(['git','-C',str(ROOT),*args])
@@ -54,6 +57,10 @@ def check(full=False,remote=False,fresh=False):
     required=ENTRY_FILES
     tracked=set(git('ls-files','-z').decode('utf-8').split('\0'))
     errors=['entry is absent or untracked: '+p for p in required if not (ROOT/p).is_file() or p not in tracked]
+    try:
+        engineering.check(ROOT)
+    except (OSError, ValueError) as error:
+        errors.append('Engineering checkpoint: ' + str(error))
     errors.extend(governance.validate(ROOT))
     policy=governance.read_json(ROOT/'project/governance.json')
     for name in list(policy['controlled_files'])+[policy['review_record']]:

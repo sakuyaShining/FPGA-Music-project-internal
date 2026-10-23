@@ -1,5 +1,7 @@
 # 当前设计与实现入口
 
+**2026-10-24工程交接更新**：[ENGINEERING.md](ENGINEERING.md)及[协作检查点](COLLABORATION-CHECKPOINT-20261024.md)提供展开的FPGA/硬件/主机候选；v2仍是12:23的历史恢复，不再作为本批工程接手源。341项工程输入含力度旧表与补齐的主机重奏测试依赖。一处RTL声明顺序做了有来源记录的编译适配；七项专项与音高参考通过，历史音乐黄金轨迹存在差异，未签收整机。主机100项离线测试通过，实体兼容未验证。实际来源与失败日志见本批review；下文旧审阅事实按其截止时间解释。
+
 **唯一发布入口：私有仓库的实际远程main。**设计登记见[design-state.json](design-state.json)，已确认决定与沿革见[decisions.json](decisions.json)，实时性与审阅期限见[governance.json](governance.json)。跨会话维护流程见[MAINTAINING-MAIN.md](MAINTAINING-MAIN.md)。日期分支与冻结标签用于兼容/追溯，不定义最新。
 
 当前审阅记录以`governance.json`指向的观察时间为准；13:07初审、显示路线澄清及晚间协作接手审阅分别保留。先运行`python tools/scripts/design_governance.py status --remote`；本机能访问活跃源时加`--live`，否则不能声称实时源已同步。新变化或到期会要求重新审阅。源码可恢复归档仍是12:23的v2，不把新观察自动写成新代码验收。多人协作与离线任务见[COLLABORATING.md](COLLABORATING.md)。
@@ -46,7 +48,7 @@
 - `INFO-BASELINE-20261023.md`仍写双屏、旧GPIO零余量和旧Git状态；它是被保留的历史说明，**不能因标题日期较新就凌驾本入口**。新顶层CST的reset/LED/pad与载板接口也不能直接混用。
 - 晚间新增的`AUX-SCREEN-PRODUCT-BOM-20261023.md`用旧四滑条小样推断“PCB为空”，与当前载板施工不符；其GPIO重排、缩减sense通道、按键扩展和AUX单路建议不构成已批准接口。采购价格/SKU和元件配置也未经本轮验证，不据此下单或修改PCB。
 - `ACCEPTANCE-CRITERIA`及`DERISK-PLAN`中的Q1–Q6选择、阶段裁剪和降险建议尚缺本入口可追溯的直接人类确认；保持提案身份。`LAYER4-RULES-DRAFT`对双bank的解释还与`EDIT-MODE-DESIGN`冲突，实施前核对RTL。逐槽力度表作者报告的PnR数字仅属于受限包装，不签收完整产品，也未由本轮复验。
-- 接手依赖缺口：新`gen_vel_wtab.py`读取`engine/src/vel_wtab.hex.bak-20261023`保留slot0；该后缀未包含在当前producer观察白名单及旧v2归档中。需要owner交回此确切基线及哈希，不能让协作者用新表代替旧表重新生成。观察清单是声明范围，不能声称全部依赖已齐备。新`POST-PCB-BOM`关于电源/接口的缺失断言亦须与当前原生工程核对，不自动加入或重做现有电路。
+- 力度生成器依赖：本批工程清单已经包含`engine/src/vel_wtab.hex.bak-20261023`及确切哈希，slot0生成校验通过；旧v2仍缺此依赖，不允许用新表替代旧表。新`POST-PCB-BOM`和`JLCPCB-ORDER-PACKAGE`关于电源/接口的缺失断言使用旧小样，必须按本批227件原生整板与采购机器清单解释，不自动加入或重做现有电路。
 
 ## 4. 快速取得已发布设计及源码
 

@@ -1,0 +1,6 @@
+PASS music cycles=193471 samples=374 events=8 changed_pcm=180 released_tail_pcm=40 fader_to_sound restore_exact state_preserved
+D:\FPGA-Project\review\collaboration-fpga-20261024-02\tb_compat_music.v:86: $finish called at 1934750000 (1ps)
+Traceback (most recent call last):
+  File "check_engine_compat.py", line 15, in <module>
+    assert filecmp.cmp(reference,trace,shallow=False),('engine behavior changed with default boot scrub off',name)
+AssertionError: ('engine behavior changed with default boot scrub off', 'compat')

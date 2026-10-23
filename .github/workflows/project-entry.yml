@@ -26,6 +26,10 @@ jobs:
         run: python3 tools/scripts/design_governance.py status
       - name: Verify stale-entry, expiry and live-drift rejection
         run: python3 -m unittest discover -s tools/tests -p 'test_design_governance.py' -v
+      - name: Verify current engineering input identities
+        run: python3 tools/scripts/engineering.py check
+      - name: Verify engineering corruption and isolated export rejection
+        run: python3 -m unittest discover -s tools/tests -p 'test_engineering.py' -v
   maintain-legacy-entry:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest

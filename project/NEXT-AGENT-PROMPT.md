@@ -1,5 +1,7 @@
 # 可直接交给下一位Agent的启动指令
 
+最新协作工程入口是project/ENGINEERING.md与project/COLLABORATION-CHECKPOINT-20261024.md；执行`python tools/scripts/engineering.py check`，从fpga/current、hardware/current或host/current选择任务源并导出到自己的新目录。完整产品未验收，音乐黄金对照有已记录差异。下文v1/v2流程是历史恢复，不覆盖本批工程检查点。
+
 接续FPGA-Music-project。内部仓库为https://github.com/sakuyaShining/FPGA-Music-project-internal.git；唯一发布入口是实际远程main，先fetch再核对。日期分支只兼容旧工具，v1/v2标签仅用于固定复现，不能定义实时最新。
 
 按project/QUICKSTART.md在新目录取得main，执行`python tools/scripts/project_control.py check --full --remote --fresh-entry`和`python tools/scripts/design_governance.py status --remote`。先读project/DESIGN-CURRENT.md、governance.json、decisions.json、producers.json、MAINTAINING-MAIN.md及AGENT-START/handoff/CURRENT、AGENTS和协作板，再读38/39/49号。不可用旧版本、过期记录或reset/clean覆盖来通过检查。
