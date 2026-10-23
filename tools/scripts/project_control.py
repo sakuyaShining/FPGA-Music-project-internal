@@ -7,6 +7,13 @@ from pathlib import Path, PurePosixPath
 import argparse, gzip, hashlib, json, subprocess, sys
 
 ROOT=Path(__file__).resolve().parents[2]
+ENTRY_FILES=['.gitattributes','.github/workflows/project-entry.yml','README.md','AGENTS.md','project/CURRENT.md','project/AGENT-START.md',
+    'project/handoff.json','project/NEXT-AGENT-PROMPT.md','project/state.json',
+    'project/catalog.json','project/dependencies.json','project/DESIGN-CURRENT.md',
+    'project/design-state.json','project/QUICKSTART.md','project/versions/design-decision-20261023.json',
+    'project/versions/latest-design-inputs-20261023.json',
+    'project/versions/workspace-preservation-20261022.json',
+    'docs/00-协作/AGENT-BOARD.md','tools/scripts/project_control.py']
 
 def git(*args):
     return subprocess.check_output(['git','-C',str(ROOT),*args])
@@ -41,11 +48,11 @@ def tree(commit):
 def check(full=False,remote=False,fresh=False):
     registry=json.loads((ROOT/'project/versions/workspace-preservation-20261022.json').read_text(encoding='utf-8'))
     state=json.loads((ROOT/'project/state.json').read_text(encoding='utf-8'))
-    required=['README.md','AGENTS.md','project/CURRENT.md','project/AGENT-START.md','project/handoff.json','project/NEXT-AGENT-PROMPT.md','project/state.json','project/catalog.json','project/dependencies.json','project/versions/workspace-preservation-20261022.json','docs/00-协作/AGENT-BOARD.md','tools/scripts/project_control.py']
+    required=ENTRY_FILES
     tracked=set(git('ls-files','-z').decode('utf-8').split('\0'))
     errors=['entry is absent or untracked: '+p for p in required if not (ROOT/p).is_file() or p not in tracked]
     if fresh:
-        if git('diff','HEAD','--','project/handoff.json','project/CURRENT.md','project/state.json').strip():
+        if git('diff','HEAD','--',*ENTRY_FILES).strip():
             errors.append('Unpublished entry changes: commit and synchronize the handoff before passing it to another agent')
         handoff=json.loads((ROOT/'project/handoff.json').read_text(encoding='utf-8'))
         lines=git('ls-remote','--heads',registry['remote_url'],'refs/heads/'+handoff['entry_branch']).decode().splitlines()
@@ -53,16 +60,43 @@ def check(full=False,remote=False,fresh=False):
         else:
             latest=lines[0].split()[0]
             p=subprocess.run(['git','-C',str(ROOT),'merge-base','--is-ancestor',latest,'HEAD'],capture_output=True)
-            if p.returncode:errors.append('STALE ENTRY: fetch and read the current management branch before implementation')
+            available=subprocess.run(['git','-C',str(ROOT),'cat-file','-e',latest+'^{commit}'],capture_output=True)
+            if available.returncode:errors.append('STALE ENTRY: fetch and read the current management branch before implementation')
             else:
-                entry_files=['README.md','AGENTS.md','project/CURRENT.md','project/AGENT-START.md','project/handoff.json','project/state.json','tools/scripts/project_control.py']
+                entry_files=ENTRY_FILES
                 if git('ls-tree','-r','HEAD','--',*entry_files)!=git('ls-tree','-r',latest,'--',*entry_files):
-                    errors.append('UNPUBLISHED ENTRY: local handoff content differs from the published entry; synchronize before another agent uses it')
+                    if p.returncode:errors.append('STALE ENTRY: fetch and read the current management branch before implementation')
+                    else:errors.append('UNPUBLISHED ENTRY: local handoff content differs from the published entry; synchronize before another agent uses it')
+                # A squash/rebase merge may have equal entry content without
+                # containing the original PR commit. Compare all entry blobs;
+                # ancestry alone must not reject the correctly integrated main.
     dep=json.loads((ROOT/'project/dependencies.json').read_text(encoding='utf-8'))
     for archive in [dep['archive']]+dep.get('additional_archives',[]):
         ap=ROOT/archive['path']
         if archive['path'] not in tracked or not ap.is_file() or hashlib.sha256(ap.read_bytes()).hexdigest()!=archive['sha256']:
             errors.append('Registered archive is absent, untracked or modified: '+archive['path'])
+    design=json.loads((ROOT/'project/design-state.json').read_text(encoding='utf-8'))
+    for name,expected in design['reviewed_design_sources'].items():
+        safe_relative(name)
+        if name not in tracked or not (ROOT/name).is_file() or hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
+            errors.append('Reviewed design source changed without updating design identity: '+name)
+    current=json.loads((ROOT/design['current_inputs_manifest']).read_text(encoding='utf-8'))
+    safe_relative(current['archive'])
+    if hashlib.sha256((ROOT/current['archive']).read_bytes()).hexdigest()!=current['archive_sha256']:
+        errors.append('Current input manifest archive identity mismatch')
+    if full:
+        import zipfile
+        with zipfile.ZipFile(ROOT/current['archive']) as z:
+            expected_members=set(current['files'])|{'CAPTURE-MANIFEST.json'}
+            if set(z.namelist())!=expected_members or len(z.namelist())!=len(expected_members):
+                errors.append('Current input archive member mismatch')
+            inside=json.loads(z.read('CAPTURE-MANIFEST.json'))
+            outside=dict(current);outside.pop('archive_sha256',None)
+            if inside!=outside:errors.append('Current input archive manifest mismatch')
+            for name,item in current['files'].items():
+                safe_relative(name);data=z.read(name)
+                if len(data)!=item['bytes'] or hashlib.sha256(data).hexdigest()!=item['sha256']:
+                    errors.append('Current input identity mismatch: '+name)
     if remote:
         live={line.split()[1]:line.split()[0] for line in git('ls-remote','--heads',registry['remote_url']).decode().splitlines()}
         for r in registry['snapshots']:
@@ -93,7 +127,7 @@ def check(full=False,remote=False,fresh=False):
             if profile.get('snapshot') and profile['snapshot'] not in ids:errors.append(label+': unregistered snapshot')
             if profile.get('role')=='probe' and profile.get('product_accepted'):errors.append(label+': probe marked accepted')
     finally:reader.close()
-    result=dict(status='FAIL' if errors else 'PASS',scope='Full captured content hashes' if full else 'Entry tracking and captured file availability',snapshots=len(ids),inputs=files,unique_verified_blobs=len(cache),remote_checked_now=remote,entry_freshness_checked=fresh,errors=errors,product_acceptance=False)
+    result=dict(status='FAIL' if errors else 'PASS',scope='Full captured content hashes' if full else 'Entry tracking and captured file availability',snapshots=len(ids),inputs=files,unique_verified_blobs=len(cache),current_design=design['design_version'],current_wip_files=len(current['files']),current_wip_captured_at=current['captured_at'],live_workspaces_checked=False,remote_checked_now=remote,entry_freshness_checked=fresh,errors=errors,product_acceptance=False)
     print(json.dumps(result,ensure_ascii=False,indent=2))
     return 1 if errors else 0
 
@@ -144,12 +178,64 @@ def restore(ident,output,with_delta=False):
         print(json.dumps(dict(status='RESTORED',id=ident,files=restored,source_delta=with_delta,output=str(output),product_acceptance=False),ensure_ascii=False))
     finally:reader.close()
 
+
+def get_latest(output):
+    """Clone the published entry into a NEW directory, without touching a worktree."""
+    output=output.resolve()
+    if output.exists():raise ValueError('Refuse to overwrite an existing path: '+str(output))
+    registry=json.loads((ROOT/'project/versions/workspace-preservation-20261022.json').read_text(encoding='utf-8'))
+    handoff=json.loads((ROOT/'project/handoff.json').read_text(encoding='utf-8'))
+    subprocess.run(['git','clone','--origin','internal','--branch',handoff['entry_branch'],
+                    '--no-single-branch',registry['remote_url'],str(output)],check=True)
+    subprocess.run(['git','-C',str(output),'config','remote.pushDefault','internal'],check=True)
+    subprocess.run(['git','-C',str(output),'config','push.default','simple'],check=True)
+    subprocess.run([sys.executable,str(output/'tools/scripts/project_control.py'),'check',
+                    '--full','--remote','--fresh-entry'],check=True)
+    print('Read '+str(output/'project/DESIGN-CURRENT.md')+' before implementation.')
+
+
+def restore_design(output,area):
+    """Restore selected observed inputs, never apply CAD changes or program hardware."""
+    import zipfile
+    output=output.resolve()
+    if output.exists():raise ValueError('Refuse to overwrite an existing path: '+str(output))
+    design=json.loads((ROOT/'project/design-state.json').read_text(encoding='utf-8'))
+    manifest=json.loads((ROOT/design['current_inputs_manifest']).read_text(encoding='utf-8'))
+    archive=ROOT/manifest['archive']
+    if hashlib.sha256(archive.read_bytes()).hexdigest()!=manifest['archive_sha256']:
+        raise ValueError('Observed input archive hash mismatch')
+    prefix='fpga/' if area=='fpga' else 'hardware/'
+    selected={n:i for n,i in manifest['files'].items() if n.startswith(prefix)}
+    with zipfile.ZipFile(archive) as z:
+        # Verify every selected member before creating any output files.
+        data={}
+        for name,item in selected.items():
+            safe_relative(name);rel=name[len(prefix):];safe_relative(rel)
+            raw=z.read(name)
+            if len(raw)!=item['bytes'] or hashlib.sha256(raw).hexdigest()!=item['sha256']:
+                raise ValueError('Observed input hash mismatch: '+name)
+            data[rel]=raw
+        output.mkdir(parents=True)
+        for rel,raw in data.items():
+            p=output/Path(*safe_relative(rel).parts);p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(raw)
+    provenance=dict(design_version=design['design_version'],captured_at=manifest['captured_at'],
+                    archive=manifest['archive'],archive_sha256=manifest['archive_sha256'],area=area,
+                    files={n[len(prefix):]:i for n,i in selected.items()},validation_inherited=False,
+                    original_readmes_are_historical=True,product_accepted=False)
+    (output/'PRESERVATION-ORIGIN.json').write_text(json.dumps(provenance,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (output/'AGENTS.md').write_text('# Observed WIP recovery\n\nRead PRESERVATION-ORIGIN.json and the published project/DESIGN-CURRENT.md first. This is a selected source/context capture, not an accepted complete product. Original README, project/CURRENT and source-identity files are historical. Do not execute inherited absolute-path scripts, program hardware, replay CAD transactions, or overwrite another owner. Import chosen inputs into a named task branch, review dependencies, then validate that exact source. Hardware ZIPs are recovery context only, never a manufacturing release.\n',encoding='utf-8')
+    print(json.dumps(dict(status='RESTORED',area=area,files=len(selected),output=str(output),validation_inherited=False)))
+
 def main():
     ap=argparse.ArgumentParser(description=__doc__);sub=ap.add_subparsers(dest='command',required=True)
     c=sub.add_parser('check');c.add_argument('--full',action='store_true');c.add_argument('--remote',action='store_true',help='Read-only verification of actual remote branch commits');c.add_argument('--fresh-entry',action='store_true',help='Reject checkouts that do not contain the current published management entry')
     r=sub.add_parser('restore');r.add_argument('--snapshot',required=True);r.add_argument('--output',type=Path,required=True);r.add_argument('--with-source-delta',action='store_true')
+    l=sub.add_parser('get-latest',help='Clone and verify published entry into a NEW directory');l.add_argument('--output',type=Path,required=True)
+    d=sub.add_parser('restore-design',help='Recover observed WIP inputs, without accepting or applying them');d.add_argument('--output',type=Path,required=True);d.add_argument('--area',choices=['fpga','hardware-context'],default='fpga')
     a=ap.parse_args()
     if a.command=='check':return check(a.full,a.remote,a.fresh_entry)
+    if a.command=='get-latest':get_latest(a.output);return 0
+    if a.command=='restore-design':restore_design(a.output,a.area);return 0
     restore(a.snapshot,a.output,a.with_source_delta);return 0
 
 if __name__=='__main__':sys.exit(main())

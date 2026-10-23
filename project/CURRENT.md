@@ -1,8 +1,10 @@
 # 全项目当前入口
 
+**最新设计先读[DESIGN-CURRENT.md](DESIGN-CURRENT.md)和`design-state.json`；快速取得版本见[QUICKSTART.md](QUICKSTART.md)。2026-10-23已核对用户取消J11实体音乐可视化屏、保留J10泛音触控屏的决定。以下历史版本分工不能覆盖该决定。**
+
 本入口管理全项目的版本和工作起点。**当前没有已经实现并通过验收的完整功能产品顶层。** 保存了源码、通过音乐回归、完成结构探针路由、通过STA、完成板验，是不同层级的事实。
 
-新Agent先读`project/AGENT-START.md`和`project/handoff.json`。可直接转交的启动指令在`project/NEXT-AGENT-PROMPT.md`。本批交接分支为`codex/project-management-20261022`，标签为`handoff/20261022-management-v1`；入口检查加`--fresh-entry`会拒绝未包含当前已发布管理入口的旧工作区。
+新Agent先读`project/AGENT-START.md`和`project/handoff.json`。可直接转交的启动指令在`project/NEXT-AGENT-PROMPT.md`。当前发布分支为`codex/project-management-20261022`，本批标签为`handoff/20261023-design-v2`；入口检查加`--fresh-entry`会拒绝未包含当前已发布管理入口的旧工作区。
 
 ## 从哪里开始
 
@@ -13,7 +15,7 @@
 
 ## 目标与约束
 
-保持Tang Nano20K、32组×16分量、四层目标、左手两排逐音滑条与独立八度条、右手全局控制/保持/复位、双独立显示、音色非易失存储、录制/播放与现场演奏。组织整理不授权削减功能、换平台或改变PCB接口；禁止把临时移除子树的面积实验升级为产品方案。
+保持Tang Nano20K、32组×16分量、四层目标、左手两排逐音滑条与独立八度条、右手全和弦控制/保持/复位、J10泛音触控显示、音色非易失存储、录制/播放与现场演奏。用户明确取消J11实体音乐可视化屏，直接决定出处见design-state；本轮不改产品RTL、不改其他功能或PCB接口。临时面积实验仍不是产品验收。
 
 ## 有效版本的分工
 
@@ -25,9 +27,10 @@
 | 频率/重奏修复候选 | `codex/instrument-engine-safety`及其快照 | 既有记录：专项覆盖与新PnR通过，未下载；不继承07板验为本版板验 |
 | Nano20K结构探针 | 4d37快照，`experiments/nano20k_feasibility_20261021/project/CURRENT.md` | 原音乐逐拍等价、renderer穷举、完整路由/码流完成；setup−6.397ns、hold−0.048ns，STA失败；不是可下载产品 |
 | M1历史检查点与面积实验 | m1-work、m1-reference快照 | 当时可能含关闭视觉化等临时配置，只是固定检查点；不作为本次最新源码入口 |
-| 本次最新登记M1候选 | handoff.json的fpga_handoff：m1-work + 登记增量 | 按100个有效构建输入哈希确定身份；专项结果单独记录，新完整路由/STA未签收。负责人身份仍需登记 |
+| 历史已登记M1候选 | handoff.json的fpga_handoff：m1-work + v1登记增量 | 原100输入与旧专项结果固定，不签收新增代码，不再称实时最新 |
+| 最新观察FPGA候选 | design-state.json → latest-design-inputs-20261023.json → 归档 | 105项构建输入及源码/测试/设计说明；复位、力度、strike和新包装未合并，本次只验恢复身份，不签收产品或继承旧PASS |
 | GUI/协议来源 | 6e70、ca03快照及backup/ca03分支 | 存在多个来源，不视为已经与最新FPGA探针接合 |
-| 硬件推进 | 06df快照中的`hardware/review-manufacturing-20261019/REGIONAL-WORK-IN-PROGRESS.json` | verified来源、pending_trial、ACTIVE-ROUTING候选分别保留；快照不是制造放行 |
+| 硬件推进 | design-state所列06df实时入口及本批归档上下文 | 当前J10单屏范围；37项保留基线与U9施工副本分开，总/分入口可能不同步，须核对原生源。旧06df快照仅恢复历史 |
 | CAD原生输入 | native-source57、native-trial50、native-r15快照 | 分别保存当前来源、待验试作和旧稳定候选。ID中的数字是历史标签，真实状态由原始哈希/记录解释 |
 | main | 根目录已提交历史 | 导航和集成主线；不等同所有工作树最新成果，也不代表完整产品已验收 |
 

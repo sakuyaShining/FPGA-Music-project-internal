@@ -1,10 +1,14 @@
-# 新Agent启动入口：先确认版本，再实施
+# 新Agent启动入口：先确认设计，再确认源版本
+
+**先读[当前设计](DESIGN-CURRENT.md)与`design-state.json`。2026-10-23 v2已核对用户取消J11实体可视化屏、保留J10泛音触控屏的决定。旧双屏说明不能覆盖它。**
+
+快速克隆及完整检查见[QUICKSTART.md](QUICKSTART.md)。本轮新观察FPGA候选用`project_control.py restore-design --area fpga --output <新目录>`恢复；所列硬件上下文用`--area hardware-context`。恢复先读新生成的来源清单，旧README/source-identity不定义本次验收。
 
 本次交接以`project/handoff.json`为机器入口，以本页为启动流程。**“最新”指总入口登记并保全的检查点，不是任意目录的最后修改时间。活跃目录之后的修改必须另行登记。**
 
 ## 1. 避免读到旧入口
 
-此批入口分支为`codex/project-management-20261022`，冻结交接标签为`handoff/20261022-management-v1`。main在本管理PR合并前仍是旧入口；不能只读main旧README就开始实现。
+当前发布入口分支为`codex/project-management-20261022`，本批冻结标签为`handoff/20261023-design-v2`。v1仅复现旧100输入检查点。main在本管理PR合并前仍是旧入口；不能只读main旧README就开始实现。
 
 先核对远程URL。当前老仓库的origin/public是对外地址，internal才是内部开发仓库；新克隆的origin则可能就是内部仓库。不要凭remote名称判断。
 
@@ -26,14 +30,15 @@ python tools/scripts/project_control.py check --full --remote --fresh-entry
 | 任务 | 使用的来源 | 不得混用 |
 |---|---|---|
 | 已验音乐行为与主机基线 | 66a4的07记录；安全候选另看instrument-engine-safety | 旧板验不能签收新安全修复或M1 |
-| 继续M1资源/时序工作 | m1-work检查点 + 已登记的M1源增量 | 4d37原probe不是M1最新版；M1原README和旧报告不定义当前源身份 |
+| 继续最新观察FPGA候选 | design-state.json登记的105输入源码/测试/说明归档 | 新候选未合并；原作者结果须绑定实际source/run，不继承旧100输入PASS |
+| 重现10月22日M1检查点 | m1-work检查点 + v1已登记源增量 | 这是历史100输入，不再称实时最新；M1原README和旧报告不定义新源身份 |
 | 重现87号原结果 | 4d37检查点或v1便携包 | 原路由完成但STA失败，不是完整产品 |
 | GUI/协议 | ca03、6e70的明确源版本 | 不默认已与M1接合 |
-| 硬件/CAD | 06df入口、native来源/试作/R15检查点及后续增量记录 | pending原生文件、verified来源、旧R15不得合称同一版；禁止自动重放事务 |
+| 硬件/CAD | 先读当前design-state所列06df活跃入口和本批硬件上下文 | 旧06df/native/R15是历史恢复；总入口缓存与下级施工源可有差异，须由owner核对真实原生哈希，禁止自动重放 |
 
 负责人和接口边界见协作板。若同一目录仍有owner在写，另建隔离任务分支；不得直接接管其工作目录。每个owner同时只推进一个任务。
 
-## 3. FPGA侧直接取得本次最新已保全源码
+## 3. 复现历史100输入FPGA检查点
 
 先读handoff.json中的`fpga_handoff`及源截止时间，再恢复到**新的审阅目录**：
 
@@ -50,7 +55,7 @@ python tools/scripts/project_control.py restore --snapshot m1-work --with-source
 3. 将新实验源码、约束、配置、验证入口与来源清单提交为起点检查点，再做功能或优化修改。大黄金数据可从受跟踪交接ZIP重建；不得让其唯一副本留在被忽略目录。
 4. 在新的证据/run ID下运行相应回归；新RTL/profile需要新的完整PnR与STA。没有新结果就写待验证，不引用旧source/profile的PASS。
 
-这是结构/音乐候选的继续开发入口，仍不是完整功能产品顶层。保留Nano20K、32×16、四层、双屏、逐音滑条、录放与非易失目标；不改PCB接口，不擅自削减功能、下载或制造放行。
+这是历史结构/音乐候选的恢复流程，仍不是完整功能产品顶层。当前目标以DESIGN-CURRENT.md为准：保留Nano20K、32×16、四层、J10触控屏、逐音滑条、录放与非易失；用户已取消J11实体音乐可视化屏。本流程不自动改RTL或PCB接口，不擅自削减其他功能、下载或制造放行。
 
 ## 4. 每次收工
 

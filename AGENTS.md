@@ -1,6 +1,8 @@
 # 项目工作入口
 
-新Agent先读`project/AGENT-START.md`与`project/handoff.json`，执行`python tools/scripts/project_control.py check --remote --fresh-entry`。main在本管理PR合并前可能仍是旧入口；本批交接以`codex/project-management-20261022`及`handoff/20261022-management-v1`为准。不能只看旧README、目录时间戳或继承的source-identity就开始实施。
+**2026-10-23 v2：先读`project/DESIGN-CURRENT.md`及`project/design-state.json`。用户在硬件会话已明确取消J11实体音乐可视化屏，保留J10泛音构造触控屏；旧双屏红线仅这一项被覆盖。最新观察FPGA候选与旧已验证源必须分开，不把任何旧PASS继承到新源。快速获取见`project/QUICKSTART.md`。**
+
+新Agent先读`project/AGENT-START.md`与`project/handoff.json`，执行`python tools/scripts/project_control.py check --remote --fresh-entry`。main在本管理PR合并前可能仍是旧入口；本批交接以`codex/project-management-20261022`及`handoff/20261023-design-v2`为准。不能只看旧README、目录时间戳或继承的source-identity就开始实施。
 
 先读 `project/CURRENT.md` 和 `project/state.json`，再读协作板。入口身份检查：`python tools/scripts/project_control.py check`；完整保全内容核验加 `--full`。源码捕获不等于产品验收。
 

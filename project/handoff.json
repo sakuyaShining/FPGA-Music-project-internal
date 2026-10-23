@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "updated_at": "2026-10-22T14:50:52.051026+00:00",
+  "updated_at": "2026-10-23T12:27:55.623546+08:00",
   "entry_branch": "codex/project-management-20261022",
-  "entry_tag": "handoff/20261022-management-v1",
+  "entry_tag": "handoff/20261023-design-v2",
   "entry_commit_resolution": "Fetch actual published entry branch; tag is minted only after verification",
   "start": "project/AGENT-START.md",
   "copyable_prompt": "project/NEXT-AGENT-PROMPT.md",
-  "current_scope": "Latest registered preserved checkpoints plus explicitly unvalidated deltas; not future live edits",
+  "current_scope": "Latest published reviewed design plus captured WIP; excludes future live edits",
   "fpga_handoff": {
     "profile": "M1 checkpoint plus registered source delta",
     "base_snapshot_id": "m1-work",
@@ -136,7 +136,8 @@
       "record": "project/versions/management-validation-20261022.json",
       "full_pnr_sta": "not rerun for this handoff",
       "hardware_programmed": false
-    }
+    },
+    "current_role": "Historical validated 100-input checkpoint; newer observed WIP is separate"
   },
   "other_sources": {
     "music_baseline": "66a4",
@@ -153,14 +154,28 @@
   },
   "rules": {
     "platform": "Tang Nano20K",
-    "feature_reduction": false,
+    "feature_reduction": "Only direct human cancellation of physical visualization screen; no other management reduction",
     "pcb_interface_change": false,
     "programming": false,
     "manufacturing_release": false,
-    "old_reports_are_not_current_acceptance": true
+    "old_reports_are_not_current_acceptance": true,
+    "physical_visualization_display": false,
+    "right_harmonic_touchscreen": "J10 retained"
   },
   "main_status": "Entry integration PR must be merged by the user under existing collaboration rule; use the explicit entry branch until then",
   "validated_handoff_implementation_commit": "a151d1059febabb8ab3fa165fa654aff40494782",
   "validation_record": "project/versions/management-validation-20261022.json",
-  "recording_rule": "The frozen handoff tag may additionally include verification receipts; implementation source is identified separately above"
+  "recording_rule": "The frozen handoff tag may additionally include verification receipts; implementation source is identified separately above",
+  "design_entry": "project/DESIGN-CURRENT.md",
+  "design_state": "project/design-state.json",
+  "previous_frozen_tag": "handoff/20261022-management-v1",
+  "latest_observed_fpga": {
+    "manifest": "project/versions/latest-design-inputs-20261023.json",
+    "archive": "project/archives/latest-design-inputs-20261023.zip",
+    "archive_sha256": "ac5af26401e40c727754fd7f44f143c3c7a1cf81be76e0e41704f35fa5d5f107",
+    "captured_at": "2026-10-23T12:23:42.173413+08:00",
+    "validation_inherited": false
+  },
+  "management_v2_validation_record": "project/versions/design-management-validation-20261023.json",
+  "v1_validation_scope": "validated_handoff_implementation_commit and validation_record below refer only to the original v1 implementation and 100-input checkpoint"
 }

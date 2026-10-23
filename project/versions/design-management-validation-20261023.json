@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "design_version": "design-20261023-v2",
+  "management_scope": "Entry, context capture, Git publication and identity/recovery checks only",
+  "historical_snapshots_full_hash_check": {"status": "PASS", "snapshots": 22, "inputs": 18277, "unique_content_codec_pairs": 5845},
+  "historical_remote_refs": "PASS",
+  "current_archive_full_content": {"status": "PASS", "files": 586},
+  "restored_files": {"fpga": 575, "hardware_context": 11, "sha256_check": "PASS"},
+  "existing_destination_guard": "PASS for both restore areas and get-latest; existing files unchanged",
+  "github_fresh_clone": "pending publication",
+  "fresh_entry_negative_checks": "pending published consumer clone",
+  "github_workflow_run": "pending publication",
+  "new_rtl_regression_pnr_sta_or_board_work": false,
+  "product_acceptance": false,
+  "main_integration": "Pending user merge under collaboration rule"
+}

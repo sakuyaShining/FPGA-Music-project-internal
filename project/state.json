@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated_at": "2026-10-22T11:00:17.040340+00:00",
+  "updated_at": "2026-10-23T12:27:55.623546+08:00",
   "entry": "project/CURRENT.md",
   "predecessor_state": "codex/project-version-closure:project/state.json",
   "implementation_boundary": "This registry does not merge or change any functional source",
@@ -78,7 +78,9 @@
       "manufacturing_release": false,
       "native_source_snapshot": "native-source57",
       "native_pending_snapshot": "native-trial50",
-      "native_active_r15_snapshot": "native-r15"
+      "native_active_r15_snapshot": "native-r15",
+      "current_context_manifest": "project/versions/latest-design-inputs-20261023.json",
+      "snapshot_role": "Historical 20261022 recovery input; not current live hardware"
     },
     "complete_product_top": {
       "role": "product",
@@ -96,8 +98,19 @@
       "entry": "project/AGENT-START.md",
       "validation": "Scoped handoff regression records only; no new route/STA/board qualification",
       "product_accepted": false,
+      "programming_allowed": false,
+      "status": "Historical validated checkpoint; not current mutable WIP"
+    },
+    "fpga_latest_observed_20261023": {
+      "role": "development-candidate",
+      "archive": "project/archives/latest-design-inputs-20261023.zip",
+      "manifest": "project/versions/latest-design-inputs-20261023.json",
+      "validation_inherited": false,
+      "status": "已实现待验证；仅所列新增与修改，不表示全功能产品完成",
+      "product_accepted": false,
       "programming_allowed": false
     }
   },
-  "active_fpga_profile": "m1_current_registered"
+  "active_fpga_profile": "fpga_latest_observed_20261023",
+  "design_state": "project/design-state.json"
 }

@@ -37,7 +37,8 @@
         "native-trial50",
         "native-r15"
       ],
-      "role": "construction source, reference and pending native projects"
+      "role": "construction source, reference and pending native projects",
+      "scope": "Current J10 retained/J11 cancelled; old listed snapshots are recovery history. Read current_design before selecting source."
     },
     {
       "id": "historical-sources",
@@ -55,5 +56,7 @@
       ],
       "role": "Preserved history, not redundant/deletable by inference"
     }
-  ]
+  ],
+  "current_design": "project/design-state.json",
+  "current_observed_inputs": "project/versions/latest-design-inputs-20261023.json"
 }
