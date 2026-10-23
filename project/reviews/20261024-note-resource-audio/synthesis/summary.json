@@ -1,0 +1,17 @@
+{
+  "resources": {
+    "logic": 9749,
+    "LUT": 8434,
+    "ALU": 667,
+    "RAM16": 108,
+    "REG": 4122,
+    "BSRAM": 11,
+    "DSP": 5
+  },
+  "scope": "32-group resource coordinator plus transactional 512-partial real TDM/envelope path. External partial-data provider; no full renderer, peripherals, PnR/STA, bitstream or hardware.",
+  "integrated_product_fit": false,
+  "pnr": false,
+  "valid_sta": false,
+  "bitstream": false,
+  "preflight_failure": "First script invocation rejected relative __file__ before output creation or Gowin launch; resolved path then started only this fresh synthesis job."
+}

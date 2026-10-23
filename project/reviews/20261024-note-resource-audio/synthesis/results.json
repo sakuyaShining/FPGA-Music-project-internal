@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "tested_at": "2026-10-23T19:42:17.993409+00:00",
+  "elapsed_seconds": 40.31,
+  "inputs": {
+    "experiments/note_resource_20261024/audio/rtl/note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+    "experiments/note_resource_20261024/audio/rtl/note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+    "experiments/note_resource_20261024/audio/rtl/tdm_engine_transactional.v": "0c356db56097529f6b735f7ca0489bc8e7ae9fbc0b0d75533944c1b33eed71ab",
+    "experiments/note_resource_20261024/rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+    "fpga/current/engine/src/osc_env.v": "9485d37ad07da973257668de80e79dfb10cbf63ea66863f9deb90e1a0260a5f2",
+    "fpga/current/engine/src/pitch_mod.v": "6855fafe33b2942216f53738bf9d1c986c1d4151e5e4e6a5ef22ae8d79d85f02",
+    "fpga/current/engine/src/pitch_native_store.v": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+    "fpga/current/engine/src/sine256.hex": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+    "experiments/note_resource_20261024/audio/synthesize_audio.py": "224b1b8c0c6fea60360c3f9f4029202b36fb446090d382624417070d6cff280f"
+  },
+  "tool": {
+    "path": "D:\\FPGA-Project\\Gowin\\Gowin_V1.9.11.03_Education\\Gowin_V1.9.11.03_Education_x64\\IDE\\bin\\gw_sh.exe",
+    "sha256": "4c172d4c0d2a4c7ef5c764d091a315cbcde2127573554bfd7d09ac6f2e5ea535"
+  },
+  "returncode": 0,
+  "report": "D:\\FPGA-Project\\review\\note-resource-audio-synthesis-20261024-01\\impl\\gwsynthesis\\audio_syn_resource.html",
+  "report_sha256": "674b364166c7252f372a2d3c41a192e1d288bf68998b1e52c33ebb08a8ba69fd",
+  "console_sha256": "3db544918bdaea817a48863e85097dabab5ddaa86183ea5a34a73be0d995cac2",
+  "warnings": [],
+  "source_changes": [],
+  "status": "PASS_SYNTHESIS_ONLY",
+  "scope": "32-group resource coordinator plus transactional 512-partial real TDM/envelope path. External partial-data provider; no full renderer, peripherals, PnR/STA, bitstream or hardware.",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

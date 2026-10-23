@@ -1,0 +1,298 @@
+{
+  "schema": 1,
+  "tested_at": "2026-10-23T19:41:45.010965+00:00",
+  "inputs": {
+    "experiments/note_resource_20261024/audio/rtl/note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+    "experiments/note_resource_20261024/audio/rtl/note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+    "experiments/note_resource_20261024/audio/rtl/tdm_engine_transactional.v": "0c356db56097529f6b735f7ca0489bc8e7ae9fbc0b0d75533944c1b33eed71ab",
+    "experiments/note_resource_20261024/audio/tb/tb_audio_compat.v": "f2e4dc8f0d964c9a7a8fc3710858803a0f059320b4805812aa9b352cba2348e8",
+    "experiments/note_resource_20261024/audio/tb/tb_note_audio.v": "ac2d636b330967d4457ecf3d4590213566eaf6fe5feec9806ec3905db577d75e",
+    "experiments/note_resource_20261024/audio/verify_audio.py": "f6381ec9ec105b58bff7a9189456132414fc5967fa18a56205116a1fec29cc30",
+    "experiments/note_resource_20261024/audio/ENGINE-SOURCE.json": "766a310d634f427ddb64b847b47e93636060be20ca8709d9b9258665e61722df",
+    "experiments/note_resource_20261024/rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+    "fpga/current/engine/src/tdm_engine_rh.v": "9290a473fca973750194915cae8d0f36622c9631f4dfeada7019d482314e409c",
+    "fpga/current/engine/src/osc_env.v": "9485d37ad07da973257668de80e79dfb10cbf63ea66863f9deb90e1a0260a5f2",
+    "fpga/current/engine/src/pitch_mod.v": "6855fafe33b2942216f53738bf9d1c986c1d4151e5e4e6a5ef22ae8d79d85f02",
+    "fpga/current/engine/src/pitch_native_store.v": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+    "fpga/current/engine/src/vel_shape.v": "5bedde0793a2afbb22f45f6fcde503e7e1b03842091dcc2a96841f450a75ddcd",
+    "fpga/current/engine/src/sine256.hex": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+    "fpga/current/engine/src/note_inc.hex": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+    "fpga/current/engine/src/preset_part.hex": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+    "fpga/current/engine/src/vel_wtab.hex": "5daaea0d56b0e88ccbfc5161821dbafd7f9439315ef4c3d32a2007f4fd6f7160",
+    "fpga/current/tb/vendor_ram16sdp4.v": "8ca2165b7d833f4db03edbe1291b8faafb50096c9622f4397dc7cca3d1244670"
+  },
+  "tools": {
+    "D:\\iverilog\\bin\\iverilog.exe": "f8bad18d279f8c63ab041bd292606f21fc0e8b9cc0edb37a311158f756c35eb0",
+    "D:\\iverilog\\bin\\vvp.exe": "c3b28a3a088851fc3396a30a7c781c4b126c61dbbb7cead7c00644cc7afaa4d4"
+  },
+  "results": [
+    {
+      "case": "legacy",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_audio_compat",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\legacy\\audio.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\legacy\\note_audio_backend.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\legacy\\note_resource_audio_probe.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\legacy\\tdm_engine_transactional.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\rtl\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_audio_compat.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\tdm_engine_rh.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\osc_env.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_mod.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_native_store.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\vel_shape.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\tb\\vendor_ram16sdp4.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_rtl": {
+        "note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+        "note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+        "tdm_engine_transactional.v": "0c356db56097529f6b735f7ca0489bc8e7ae9fbc0b0d75533944c1b33eed71ab"
+      },
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\legacy\\audio.vvp",
+          "+trace=D:/FPGA-Project/review/note-resource-audio-20261024-02/legacy/trace.tsv"
+        ],
+        "returncode": 0,
+        "log_sha256": "8ebff466bef2b3bca69fc4ee24909fa12b65b09c6d7d5fd2e33594c3982ce7bd",
+        "text": "PASS legacy_audio checked_clocks=177951\r\nC:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_audio_compat.v:65: $finish called at 1800080000 (1ps)\r\n"
+      }
+    },
+    {
+      "case": "candidate",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_audio",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\candidate\\audio.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\candidate\\note_audio_backend.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\candidate\\note_resource_audio_probe.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\candidate\\tdm_engine_transactional.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\rtl\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\tdm_engine_rh.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\osc_env.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_mod.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_native_store.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\vel_shape.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\tb\\vendor_ram16sdp4.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_rtl": {
+        "note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+        "note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+        "tdm_engine_transactional.v": "0c356db56097529f6b735f7ca0489bc8e7ae9fbc0b0d75533944c1b33eed71ab"
+      },
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\candidate\\audio.vvp",
+          "+trace=D:/FPGA-Project/review/note-resource-audio-20261024-02/candidate/trace.tsv"
+        ],
+        "returncode": 0,
+        "log_sha256": "cdd72bf70a7339c38419ac4a2d70f05dd559bd32ba43eee10b6e0196cdfe76d1",
+        "text": "PASS real_audio requests=546 frames=4093 nonzero_pcm=4059 publishes=551 retires=6 max_request_cycles=3547\r\nC:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v:230: $finish called at 20977040000 (1ps)\r\n"
+      },
+      "trace_sha256": "6a08975335c493634ffc7f289d3aebc70dfa00ce4be582b6be8461cf96748ba2"
+    },
+    {
+      "case": "early-consume",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_audio",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-consume\\audio.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-consume\\note_audio_backend.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-consume\\note_resource_audio_probe.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-consume\\tdm_engine_transactional.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\rtl\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\tdm_engine_rh.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\osc_env.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_mod.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_native_store.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\vel_shape.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\tb\\vendor_ram16sdp4.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_rtl": {
+        "note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+        "note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+        "tdm_engine_transactional.v": "d39d0ef8e180b7b0e1c7ec495d4396376c15254b0fb1b16ba4c5bb79fcba4745"
+      },
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-consume\\audio.vvp",
+          "+trace=D:/FPGA-Project/review/note-resource-audio-20261024-02/early-consume/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "ceba727b22583986c5dd7a23bbfc9f0aa88a6bce2da668a8e0df31c39500d2b8",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v:101: unpublished partial consumed\r\n       Time: 35935000  Scope: tb_note_audio\r\n"
+      },
+      "trace_sha256": "ecf8649cd2230490c1b68b46aec9f7669c91d61f286c42c6a17577b7d931f2d4"
+    },
+    {
+      "case": "ignore-kill",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_audio",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\ignore-kill\\audio.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\ignore-kill\\note_audio_backend.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\ignore-kill\\note_resource_audio_probe.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\ignore-kill\\tdm_engine_transactional.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\rtl\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\tdm_engine_rh.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\osc_env.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_mod.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_native_store.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\vel_shape.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\tb\\vendor_ram16sdp4.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_rtl": {
+        "note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+        "note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+        "tdm_engine_transactional.v": "2db46dfc3c1746064577c75eccddf4c7393a3441a6860757765e928fc5a43b6b"
+      },
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\ignore-kill\\audio.vvp",
+          "+trace=D:/FPGA-Project/review/note-resource-audio-20261024-02/ignore-kill/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "915120ce5786a210bcae8883675cbfb20c42d9e5a1598a85fb69963e22a7ca4b",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v:128: retirement acknowledged before silence\r\n       Time: 558225000  Scope: tb_note_audio\r\n"
+      },
+      "trace_sha256": "f5d2d395990e30936e1e870187248736314f61a1c0ab1a58e25931dc3d3b73eb"
+    },
+    {
+      "case": "early-finish",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_audio",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-finish\\audio.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-finish\\note_audio_backend.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-finish\\note_resource_audio_probe.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-finish\\tdm_engine_transactional.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\rtl\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\tdm_engine_rh.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\osc_env.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_mod.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_native_store.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\vel_shape.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\tb\\vendor_ram16sdp4.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_rtl": {
+        "note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+        "note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+        "tdm_engine_transactional.v": "a2796f205cd9983d093c3b63e81dce6b82f4d466080a81976e1e02d234e92aa2"
+      },
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\early-finish\\audio.vvp",
+          "+trace=D:/FPGA-Project/review/note-resource-audio-20261024-02/early-finish/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "5d4fda58efd6c550120e0b81801b8d526acd748db08cd68bde684590f63d2119",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v:114: false natural completion\r\n       Time: 225715000  Scope: tb_note_audio\r\n"
+      },
+      "trace_sha256": "6ed9b20475fde2af032463143a7afe8b0f4dcdc3e0d5e4ac62f17edd57977022"
+    },
+    {
+      "case": "partial-token",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_audio",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\partial-token\\audio.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\partial-token\\note_audio_backend.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\partial-token\\note_resource_audio_probe.v",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\partial-token\\tdm_engine_transactional.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\rtl\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\tdm_engine_rh.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\osc_env.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_mod.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\pitch_native_store.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\vel_shape.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\tb\\vendor_ram16sdp4.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_rtl": {
+        "note_audio_backend.v": "ad56dfc48358543dc7e73dc9c8264207b9e720317b2e1f33df2b923e0cd344a4",
+        "note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+        "tdm_engine_transactional.v": "0c356db56097529f6b735f7ca0489bc8e7ae9fbc0b0d75533944c1b33eed71ab"
+      },
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-audio-20261024-02\\partial-token\\audio.vvp",
+          "+trace=D:/FPGA-Project/review/note-resource-audio-20261024-02/partial-token/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "27590b9e8452475681d6b9173d6f91f703817488e96132ee5b38258ef9c043fc",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\tb\\tb_note_audio.v:108: stale partial response consumed\r\n       Time: 31415000  Scope: tb_note_audio\r\n"
+      },
+      "trace_sha256": "ecf8649cd2230490c1b68b46aec9f7669c91d61f286c42c6a17577b7d931f2d4"
+    }
+  ],
+  "source_changes": [],
+  "status": "PASS",
+  "scope": "Real TDM arithmetic/envelopes plus staged partial provider. No full live/score renderer, physical sensor, PnR/STA or bitstream acceptance.",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

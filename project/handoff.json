@@ -8,7 +8,7 @@
     "role": "Editable collaboration candidates with explicit failed music golden regression; not a full product",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-23T19:18:43.470Z",
+  "updated_at": "2026-10-23T23:05:58.760Z",
   "entry_branch": "main",
   "entry_tag": null,
   "entry_commit_resolution": "Query actual target repository main and compare controlled entry content; dated branch is compatibility only; repository is now public.",
@@ -178,7 +178,7 @@
   "design_state": "project/design-state.json",
   "previous_frozen_tag": "handoff/20261022-management-v1",
   "latest_observed_fpga": {
-    "review_record": "project/reviews/20261024-music-profiles-allocation/hardware-update-review.json",
+    "review_record": "project/reviews/20261024-note-resource-audio/review.json",
     "producer": "fpga",
     "validation_inherited": false
   },
@@ -204,13 +204,21 @@
   "music_diagnosis": "project/MUSIC-GOLDEN-DIAGNOSIS.md",
   "note_resource_contract": "project/NOTE-RESOURCE-CONTRACT.md",
   "music_profile_validation": "project/reviews/20261024-music-profiles-allocation/review.json",
-  "hardware_context_review": "project/reviews/20261024-music-profiles-allocation/hardware-update-review.json",
+  "hardware_context_review": "project/reviews/20261024-note-resource-audio/review.json",
   "note_resource_candidate": {
     "manifest": "project/versions/note-resource-candidate-20261024.json",
     "review": "project/reviews/20261024-note-resource-candidate/review.json",
     "role": "Incremental unit candidate with mock backend; NR07 pending",
     "source_branch": "codex/current-engineering-sources-20261023",
     "base_commit": "fd3feda55a32ba36c9dbbeac75938cd673745b91",
+    "product_acceptance": false
+  },
+  "note_resource_audio_candidate": {
+    "manifest": "project/versions/note-resource-audio-20261024.json",
+    "review": "project/reviews/20261024-note-resource-audio/review.json",
+    "source_branch": "codex/current-engineering-sources-20261023",
+    "base_commit": "33a18189f4a5268498666d66c68dd7fbc032a071",
+    "role": "Real TDM/envelope audio probe with external synthetic partial provider; not full device",
     "product_acceptance": false
   }
 }

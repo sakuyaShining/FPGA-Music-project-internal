@@ -2,8 +2,8 @@
   "schema": 1,
   "engineering_inputs_manifest": "project/versions/engineering-sources-20261023.json",
   "engineering_entry": "project/ENGINEERING.md",
-  "design_version": "design-20261024-resource-unit-candidate",
-  "updated_at": "2026-10-23T19:18:43.470Z",
+  "design_version": "design-20261024-resource-real-audio-candidate",
+  "updated_at": "2026-10-23T23:05:58.760Z",
   "entry_branch": "main",
   "entry": "project/DESIGN-CURRENT.md",
   "quickstart": "project/QUICKSTART.md",
@@ -36,7 +36,7 @@
     "complete_note_admission": true
   },
   "latest_observed_fpga": {
-    "review_record": "project/reviews/20261024-music-profiles-allocation/hardware-update-review.json",
+    "review_record": "project/reviews/20261024-note-resource-audio/review.json",
     "producer": "fpga",
     "status": "MAIN_CHECKPOINT_WITH_SEPARATELY_OBSERVED_LIVE_SOURCE",
     "validation_inherited": false,
@@ -49,7 +49,7 @@
     "observation": "Top cached construction pointer and lower-level state can differ; verify actual native hash before work",
     "manufacturing_release": false,
     "physical_tests": "UNMEASURED",
-    "latest_context_review": "project/reviews/20261024-music-profiles-allocation/hardware-update-review.json"
+    "latest_context_review": "project/reviews/20261024-note-resource-audio/review.json"
   },
   "freshness": {
     "authority": "actual remote main",
@@ -61,17 +61,17 @@
     ]
   },
   "reviewed_design_sources": {
-    "project/DESIGN-CURRENT.md": "2fe765ad250f653c8aed484ca914ebcb42d5423d97d1eca1c6dee4468232ab18",
+    "project/DESIGN-CURRENT.md": "23fbc67a6acdbf827b3c34b63714b128d8dcdc24f45e4faf242e0e17645402a2",
     "project/versions/design-decision-20261023.json": "1d0994293691ac34b85348d0929ecda0ac68ace57c560f7b34a9449dd81ae4fc",
     "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "a147411a85f37d22c82228dfbbe836e98c3c116d4c9d158d43426c09a90f1e2e",
     "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "644e245f816a9d98ce962365791cca4a5295f538094775908f45a021a5f8b61c",
     "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
     "project/PRODUCT-SPEC.md": "357b765c05574133430432747eeb9d91635901e78c1728e8bd4ac45be6d048e4",
-    "project/SOURCE-MAP.md": "fb0d2574480c8ae12b13b8cbf1ef9fb11f5ba82623fecceebe495607bf6e0bb7",
-    "project/WORK-PLAN.md": "be9979ea24288ad6492e7efb653886672af2a55590456a339760395e54cc6007",
-    "project/OPEN-RULES.md": "876c80590018b9863a02559443fe346a192bb52d3ef976f2e4fd8959fa9d3546",
+    "project/SOURCE-MAP.md": "88e99ce5422e858c2ee548d1ad93401fbaea564cb9d105dd398799523abfa774",
+    "project/WORK-PLAN.md": "9631636c415378a7a5c934c0f06f7e3e85720af0de488476e2ece3389d02b19f",
+    "project/OPEN-RULES.md": "e04d4f2465815891b742d40b024a45a23ea04a9973905a2b9f963936b583f20c",
     "project/MUSIC-GOLDEN-DIAGNOSIS.md": "276ad5d74e0f4aa4cb3dfe9898594117e08e643b56b6005e6e354488e6a8d709",
-    "project/NOTE-RESOURCE-CONTRACT.md": "367edc6c4824e36a8034124cadead9d591bdcb59f550cc440ada1715f775c36c"
+    "project/NOTE-RESOURCE-CONTRACT.md": "0e9b1b85c457414b2bc54476fe195d0d0ab45521f964d9766a0fb91c99902a1b"
   },
   "governance": "project/governance.json",
   "decision_ledger": "project/decisions.json",
@@ -85,5 +85,6 @@
   "music_diagnosis": "project/MUSIC-GOLDEN-DIAGNOSIS.md",
   "note_resource_contract": "project/NOTE-RESOURCE-CONTRACT.md",
   "music_profile_tool": "tools/scripts/music_profiles.py",
-  "note_resource_candidate": "project/versions/note-resource-candidate-20261024.json"
+  "note_resource_candidate": "project/versions/note-resource-candidate-20261024.json",
+  "note_resource_audio_candidate": "project/versions/note-resource-audio-20261024.json"
 }

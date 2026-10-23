@@ -1,0 +1,12 @@
+{
+  "status": "RUNNER_EXCEPTION_NOT_PASS",
+  "terminal_exit_code": 1,
+  "positive_cases": [
+    "legacy",
+    "candidate"
+  ],
+  "exception": "ValueError: Mutation anchor changed: early-consume",
+  "cause": "Fault was applied to every RTL file instead of only the intended target; no mutant result was accepted.",
+  "recovery": "Target routing fixed; five guard unit tests added; all six cases rerun in new attempt02.",
+  "identity_limit": "Attempt01 verifier was saved after exit. Full start-time input record was not emitted by that old runner; use final02 for acceptance."
+}

@@ -7,7 +7,7 @@
     "source_branch": "codex/current-engineering-sources-20261023",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-23T19:18:43.470Z",
+  "updated_at": "2026-10-23T23:05:58.760Z",
   "entry": "project/CURRENT.md",
   "predecessor_state": "codex/project-version-closure:project/state.json",
   "implementation_boundary": "This registry does not merge or change any functional source",
@@ -131,6 +131,15 @@
       "entry": "experiments/note_resource_20261024/README.md",
       "review": "project/reviews/20261024-note-resource-candidate/review.json",
       "status": "UNIT_VERIFIED_MOCK_BACKEND_ONLY",
+      "product_accepted": false,
+      "programming_allowed": false
+    },
+    "note_resource_audio_candidate": {
+      "role": "isolated-development-candidate",
+      "manifest": "project/versions/note-resource-audio-20261024.json",
+      "entry": "experiments/note_resource_20261024/audio/README.md",
+      "review": "project/reviews/20261024-note-resource-audio/review.json",
+      "status": "REAL_AUDIO_DIGITAL_PROBE_VERIFIED_RENDERER_AND_TIMING_PENDING",
       "product_accepted": false,
       "programming_allowed": false
     }

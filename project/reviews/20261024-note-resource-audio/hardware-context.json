@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "changed_sources": {
+    "AUTONOMOUS-CURRENT.md": {
+      "bytes": 58878,
+      "sha256": "38452a08aac126fbce22b912ae29bbd05cc3ff83d7f3cc0534e568f34761c454"
+    },
+    "REGIONAL-WORK-IN-PROGRESS.json": {
+      "bytes": 18264,
+      "sha256": "976234fdee1230569e6112648ab672295f84bfdea4b120d8d9680658ef603af7"
+    },
+    "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md": {
+      "bytes": 13809,
+      "sha256": "874cb8a203d6c588b12e60b09a67f9b00f588426a7270e7c1afe613286778138"
+    },
+    "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json": {
+      "bytes": 14317,
+      "sha256": "b285d646ea0ccd3ac04a07d4ad8cdb1c5c389fe45ac5a1899f45f1df5d48b846"
+    }
+  },
+  "selected_state": {
+    "updated_at": "2026-10-24T04:32:34.034107+08:00",
+    "phase": "MOSI_MAIN_CLOSED_47_13NETS_616VIAS_NOT_FAB",
+    "pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+    "drc": {
+      "Connection Error": 47
+    },
+    "open_nets": [
+      "BUS_SCK",
+      "PRESET1",
+      "PRESET2",
+      "EDIT",
+      "ENC_A",
+      "ENC_B",
+      "ENC_PUSH",
+      "INPUT_LOAD_N",
+      "ADDR1",
+      "ADDR2",
+      "MUX_DISABLE",
+      "ADDR0",
+      "KEY_QH"
+    ],
+    "physical_tests": "UNMEASURED",
+    "manufacturing_release": false,
+    "native_changed_this_heartbeat": false,
+    "native_apply_allowed": false,
+    "offline_candidate_note": "Top90 C9 local pocket passes; full203-object restoration has25 physical conflicts. No native changes, no full candidate acceptance. All jobs terminal."
+  },
+  "reviewed_update": "Original-control/Top90 candidate remains offline. Latest context explores P2/clock/PDN and independent ADDR1 fanout; local physical reachability fails the actual ground/reference gates. Original e098/47issues/13nets unchanged, no native adoption or manufacturing release. Cached regional37/6 is not latest saved construction state.",
+  "privacy": "Selected technical fields only; no live CAD session handles, UUIDs or full conversations copied.",
+  "native_recovery_archive_changes": []
+}

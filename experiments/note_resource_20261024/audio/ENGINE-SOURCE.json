@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "source": "fpga/current/engine/src/tdm_engine_rh.v",
+  "source_sha256": "9290a473fca973750194915cae8d0f36622c9631f4dfeada7019d482314e409c",
+  "variant": "audio/rtl/tdm_engine_transactional.v",
+  "purpose": "Opt-in transactional pending-buffer consume, common audio-frame publication, kill and conservative full-frame quiet feedback. Default TRANSACTIONAL=0 must remain bit-exact to captured source.",
+  "unchanged_producer_roots": true
+}

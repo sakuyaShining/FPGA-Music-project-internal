@@ -8,6 +8,7 @@
 | 硬件 | `hardware/current/` | 当前保存原生工程、施工证据、接口和采购上下文；未放行制造 |
 | 上位机 | `host/current/` | ca03 11版源码/字体/离线测试；与当前FPGA的实体兼容尚未验证 |
 | 增量资源候选 | `experiments/note_resource_20261024/` | D-019共享32组协调器与模拟后端；限定仿真/独立综合通过，未接真实音乐顶层；独立版本清单为`versions/note-resource-candidate-20261024.json` |
+| 后续真实音频增量 | `experiments/note_resource_20261024/audio/` | 资源事务已接真实512分量TDM/包络；仍为测试台提供分量，实际音符/槽生成器、手指/曲谱和完整时序待接；清单`versions/note-resource-audio-20261024.json` |
 
 旧`src/rtl`、`src/gowin`、`tools/host`保留历史可复现性，不能作为新任务的默认入口。历史实验、v1/v2恢复包不覆盖本次工程检查点。具体来源、逐文件哈希和捕获时间见`versions/engineering-sources-20261023.json`；补充的主机测试依赖和一处RTL声明顺序适配均有单独来源记录，未改原owner目录。
 
