@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-23T05:07:01.343945+00:00",
+  "observer_thread": "01a15f25-dfc1-7442-988a-322c7fc7911b",
+  "baseline_main_commit": "a056ec44a819b9acfaab295063764905e3393711",
+  "scope": "Declared FPGA input/context directories and listed hardware entries/recovery ZIPs; not every file or unknown session",
+  "verdict": "REVIEWED_WITH_DECLARED_WIP",
+  "raw_observation": "project/reviews/20261023-main-authority/observation.json",
+  "raw_observation_sha256": "389588bfcef043d1f2ff951793fee707053c7b426783a523785bd6adc52b301c",
+  "evidence": {
+    "project/reviews/20261023-main-authority/evidence/fpga/DECAY2-20261023.md": {
+      "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\DECAY2-20261023.md",
+      "sha256": "6043da93da33d1eb34939cf2da52e29b39ade4b372a7727cec3511c2675f464f"
+    },
+    "project/reviews/20261023-main-authority/evidence/hardware/AUTONOMOUS-CURRENT.md": {
+      "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\AUTONOMOUS-CURRENT.md",
+      "sha256": "6792a92996a8882a319460b548ec1775a534bc937f1b5205eaf28d7cd63b359f"
+    },
+    "project/reviews/20261023-main-authority/evidence/hardware/REGIONAL-WORK-IN-PROGRESS.json": {
+      "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\REGIONAL-WORK-IN-PROGRESS.json",
+      "sha256": "2787c7230a0128cb16cdcf7f793350f3bbc0916ed2861cad4dfcabc4c10d1fe2"
+    },
+    "project/reviews/20261023-main-authority/evidence/hardware/u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md": {
+      "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\README.md",
+      "sha256": "9a8b2cc220b49746345c1ae7450e5c706732f8d7b92683d55ad80bae3d946edb"
+    },
+    "project/reviews/20261023-main-authority/evidence/hardware/u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json": {
+      "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-state.json",
+      "sha256": "f6b5c75c4aaae089363a8b814e5e570bd0f94d70e76c0807f528b30cdf2cee6f"
+    }
+  },
+  "assessment": {
+    "fpga": "New decay2 candidate observed in source and design note; author claims 7/7 tests. No new functional validation inherited or performed here; new source not promoted into v2 archive.",
+    "hardware": "Observed construction-state 40c8175b /54 connection errors/14 nets/602 vias and PRESET0 progress; 9 control nets pending. Top narrative/cache can be older. No CAD/DRC/SI/physical verification run here.",
+    "decisions": "No new confirmed product-scope change found in the inspected recent hardware messages/documents beyond recorded J11 cancellation; decay2 global design remains a proposal.",
+    "owner_gaps": "FPGA session identity still unregistered. Both active producer branches are unpublished. Host is dormant, requiring review before activation."
+  },
+  "product_acceptance": false,
+  "new_rtl_tests": false,
+  "new_cad_operations": false,
+  "publication_gaps": [
+    "New active FPGA changes are not a new recoverable source archive",
+    "Active hardware copy is not promoted over retained baseline or released for fabrication"
+  ],
+  "producer_ids": [
+    "fpga",
+    "hardware"
+  ]
+}

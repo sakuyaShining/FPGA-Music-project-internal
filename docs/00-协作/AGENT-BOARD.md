@@ -3,9 +3,9 @@
 > **这是什么**：多个 agent 同时推进本项目时的唯一协调入口。
 > **不是什么**：`notes/agent-collaboration-log.md` 是给评委看的人机协作评分素材（AMD 2026「大模型协作与技能包 15 分」），记录的是"用户采纳/否决了什么"，**不要**往里写 agent 之间的调度信息。
 >
-> 本文件必须**提交在 `main`**。本管理PR合入前，新工作树从已发布`codex/project-management-20261022`起步；合入后可用包含该入口的main。禁止从旧提交（如`2770e63`）推断当前设计。
+> 本文件必须**提交在 `main`**。新工作树先fetch核对私有内部仓库实际main；日期分支仅兼容，候选管理PR须明确尚未发布。禁止从旧提交（如`2770e63`）推断当前设计。
 
-管理覆盖更新：2026-10-23（见§10）。§1及旧交接中的计数/所有者标签为历史，接手先查当前设计与版本身份。
+管理覆盖更新：2026-10-23（见§11）。接手先查main、governance及producer登记；旧交接的施工数字与日期分支不是实时状态。
 
 最初建立：2026-10-22 00:55（WorkBuddy）
 
@@ -17,15 +17,15 @@
 
 | 轴 | 内容 | 当前所有者 | 独占路径（只有所有者可写） |
 |---|---|---|---|
-| **A · 逻辑时序与资源** | `u_tdm` 关键路径、M1/M2、真实产品顶层 | **Codex**（`4d37`） | `experiments/nano20k_feasibility_*/`、`src/rtl/`、`experiments/joint_probe_resources_*/` |
-| **B · PCB 与硬件制造** | 63 项未连通 → 0、DRC、Gerber、制造放行 | **WorkBuddy** | `hardware/`（06df）、`C:/Users/Sakuya/Documents/LCEDA-Pro/projects/FPGA-Music-Dualscreen-RegionalRecovery-20261021-r21` |
-| **C · 显示与交互驱动** | RA8875 命令层、双屏仲裁、推子/曲谱界面 | 待认领 | `experiments/ra8875_driver_*/` |
+| **A · 逻辑时序与资源** | 音乐、M1、复位/力度/激发候选与完整载板顶层 | 独立FPGA会话，准确ID未登记；D盘源见producers.json | 未明确owner前不接管；4d37当前只做管理，不继续认领功能实现 |
+| **B · PCB 与硬件制造** | 持续施工、DRC、Gerber、制造放行 | 会话“查看 huangyongtao 最新进展”，ID `01a15ee5-fa24-7501-8475-ad28a0f08939` | `hardware/`（06df）、当前U9ControlWork原生施工副本；实际入口由producer/review及实时原生身份确定 |
+| **C · 显示与交互驱动** | J10命令层/触控服务、推子/曲谱界面 | 待认领 | `experiments/ra8875_driver_*/` |
 
-**A 与 B 的交界只有一个**：`hardware/review-manufacturing-20261019/expected-pin-nets.json` 与 17 脚面板 GPIO 表。**这一份是双方共读、只读**。谁要改引脚分配，先在本板登记，另一方确认后才能动。
+**A 与 B 的接口合同**：由硬件入口登记的`expected-pin-nets.json`及当前GPIO映射，双方共读、只读。旧17脚/双屏表不能自动签收取消J11后的接口；先核对所选原生源身份。谁要改引脚分配，先登记并由双方确认，不能根据其他会话的显示控制器误解重排引脚。
 
 ### 为什么 B 必须有人做
 
-PCB 打样 + 贴片 + 物流是**日历时间**，加算力压不下来；FPGA 逻辑可以加 agent 压。所以 B 是真正的关键路径。当前状态：14 网 / 63 个未连通对象，未放行制造。
+PCB 打样、贴片与物流需要日历时间。施工数量只在相应review的观察时间有效；当前入口为producers.json → 硬件源/最新审阅，仍未放行制造。旧63项等数字仅为历史。
 
 ---
 
@@ -112,7 +112,7 @@ PCB 打样 + 贴片 + 物流是**日历时间**，加算力压不下来；FPGA �
 
 ---
 
-## 8. 远程与备份（2026-10-22 核实，两个坑）
+## 8. 远程与备份（2026-10-22历史盘点，统计不代表当前）
 
 ### 坑一：`origin` 与 `public` 指向同一个公开仓库
 
@@ -189,3 +189,12 @@ internal  https://github.com/sakuyaShining/FPGA-Music-project-internal.git
 - 卡在哪：没有完整产品顶层验收；原100输入的旧专项PASS不签收新候选；硬件总入口缓存与下级施工状态存在先后差异，必须核对实际原生哈希。
 - 需要对方什么：各owner收工提交命名分支、精确输入/结果身份和源截止时间；未来修改不能隐含纳入本批已发布检查点。main继续按§4由用户合并。
 - 下一手从哪读：`project/DESIGN-CURRENT.md`、`project/design-state.json`、`project/QUICKSTART.md`，发布分支`codex/project-management-20261022`；提交由实际远程分支及v2冻结标签解析，禁止凭日期冒充当前。
+
+
+## 11. 2026-10-23 main authority and review freshness
+
+- Management owner: current 4d37 session, branch codex/main-design-authority-20261023; no functional/CAD ownership taken.
+- Authoritative publication: actual private remote main. Dated branch is fast-forward compatibility only; v1/v2 tags remain immutable.
+- Decisions: project/decisions.json records accepted/proposed/superseded items with evidence; D-010 directly confirms retain J10 and existing controller route, superseding the external RA8875 cancellation interpretation.
+- Freshness: project/governance.json/current review, 24h design review and6h active observations; --live detects actual local drift, missing roots are not green. Observe does not renew a review.
+- Handoff: project/MAINTAINING-MAIN.md and NEXT-AGENT-PROMPT.md. Active unpublished code, FPGA owner identity gap and unvalidated hardware remain explicit. main merge still needs user approval for this new PR.

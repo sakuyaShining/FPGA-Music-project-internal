@@ -1,36 +1,40 @@
 # 新Agent启动入口：先确认设计，再确认源版本
 
-**先读[当前设计](DESIGN-CURRENT.md)与`design-state.json`。2026-10-23 v2已核对用户取消J11实体可视化屏、保留J10泛音触控屏的决定。旧双屏说明不能覆盖它。**
+外部成员和离线补丁接手方式、任务卡及交回要求见[COLLABORATING.md](COLLABORATING.md)。
 
-快速克隆及完整检查见[QUICKSTART.md](QUICKSTART.md)。本轮新观察FPGA候选用`project_control.py restore-design --area fpga --output <新目录>`恢复；所列硬件上下文用`--area hardware-context`。恢复先读新生成的来源清单，旧README/source-identity不定义本次验收。
+**先读[当前设计](DESIGN-CURRENT.md)、`governance.json`与`decisions.json`。实际远程main为唯一已发布入口。用户取消J11实体可视化屏、保留J10泛音触控屏的决定继续有效；旧双屏说明不能覆盖它。**
+
+快速克隆及完整检查见[QUICKSTART.md](QUICKSTART.md)。`restore-design`恢复的是v2固定检查点，不能称为活跃源最新；13:07审阅已发现后续双段衰减及硬件施工变化，见governance当前review。恢复先读新生成的来源清单，旧README/source-identity不定义本次验收。
 
 本次交接以`project/handoff.json`为机器入口，以本页为启动流程。**“最新”指总入口登记并保全的检查点，不是任意目录的最后修改时间。活跃目录之后的修改必须另行登记。**
 
 ## 1. 避免读到旧入口
 
-当前发布入口分支为`codex/project-management-20261022`，本批冻结标签为`handoff/20261023-design-v2`。v1仅复现旧100输入检查点。main在本管理PR合并前仍是旧入口；不能只读main旧README就开始实现。
+发布入口为实际远程`main`。v1/v2标签复现旧检查点，日期管理分支仅兼容旧工具。新工具不得再用日期分支代替main检查。
 
 先核对远程URL。当前老仓库的origin/public是对外地址，internal才是内部开发仓库；新克隆的origin则可能就是内部仓库。不要凭remote名称判断。
 
 ```powershell
-git ls-remote --heads https://github.com/sakuyaShining/FPGA-Music-project-internal.git refs/heads/codex/project-management-20261022
+git ls-remote --heads https://github.com/sakuyaShining/FPGA-Music-project-internal.git refs/heads/main
 ```
 
-在独立的管理入口工作区取回并读取该分支。已有脏工作区先保全，禁止reset --hard、clean或强制checkout。需要新工作区时使用已核对的管理分支作为来源，创建自己的命名任务分支，避免覆盖其他owner。
+在独立入口工作区fetch并读取main。已有脏工作区先保全，禁止reset --hard、clean或强制checkout。需要新工作区时使用已核对main作为来源，创建自己的命名任务分支，避免覆盖其他owner。
 
 ```powershell
 python tools/scripts/project_control.py check --remote --fresh-entry
 python tools/scripts/project_control.py check --full --remote --fresh-entry
+python tools/scripts/design_governance.py status --remote
+python tools/scripts/design_governance.py status --remote --live
 ```
 
-检查失败时停止实施，先修复版本归属。旧入口不含该检查参数而报错，同样不能视为通过。标签固定本次交接；未来交接需要更新登记和新标签，旧标签不能冒充实时最新。
+检查失败先修复归属/审阅，不直接实施。`--live`在本机比对声明范围内的新增/修改/删除；不可访问或源已变化时报告UNOBSERVED/UNREVIEWED_DRIFT。跨机器阅读可用已发布记录，但不得把未观察源写成已同步。过期也非通过；observe仅生成新观察，不续期。更新合同见MAINTAINING-MAIN.md。
 
 ## 2. 接手哪个领域
 
 | 任务 | 使用的来源 | 不得混用 |
 |---|---|---|
 | 已验音乐行为与主机基线 | 66a4的07记录；安全候选另看instrument-engine-safety | 旧板验不能签收新安全修复或M1 |
-| 继续最新观察FPGA候选 | design-state.json登记的105输入源码/测试/说明归档 | 新候选未合并；原作者结果须绑定实际source/run，不继承旧100输入PASS |
+| 继续活跃FPGA工作 | producers.json的owner/源与当前review；未登记的新源由owner交回 | v2的105输入只是固定可恢复源；后续双段衰减未因此获得新归档或验收 |
 | 重现10月22日M1检查点 | m1-work检查点 + v1已登记源增量 | 这是历史100输入，不再称实时最新；M1原README和旧报告不定义新源身份 |
 | 重现87号原结果 | 4d37检查点或v1便携包 | 原路由完成但STA失败，不是完整产品 |
 | GUI/协议 | ca03、6e70的明确源版本 | 不默认已与M1接合 |

@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-23T05:20:22.818487+00:00",
+  "observer_thread": "01a15f25-dfc1-7442-988a-322c7fc7911b",
+  "previous_review": "project/reviews/20261023-main-authority/review.json",
+  "previous_review_sha256": "e73b5de3936afc7b71313eb15b796a3ed85634d10f6484f5a4dbd8ec2658d2a7",
+  "raw_observation": "project/reviews/20261023-display-clarification/observation.json",
+  "raw_observation_sha256": "f6018acbb8659eac801bb702be5f10af8520c65c2923c270422e8736850c233c",
+  "changes_since_previous_review": {
+    "fpga": {
+      "added": [
+        "DECISIONS-20261023.md"
+      ],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": [
+        "AUTONOMOUS-CURRENT.md",
+        "REGIONAL-WORK-IN-PROGRESS.json",
+        "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md",
+        "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json"
+      ]
+    }
+  },
+  "verdict": "REVIEWED_WITH_DECLARED_WIP",
+  "assessment": {
+    "design": "New external DECISIONS document detected automatically. Human explicitly confirmed retain J10 and existing controller route; external RA8875-abandonment interpretation is superseded.",
+    "layering": "External note says layering rules need serious design; this agrees with existing four-layer target and unresolved switching/tail/stealing rules, not full implementation or a reduced target.",
+    "schedule": "External document estimates minimal demo/full-product schedules. These are author proposals/estimates, not human-approved scope reduction or completion evidence.",
+    "source": "Compare exact changes list; no current RTL/CAD tests rerun or source archive promoted.",
+    "hardware": "Follow-up source still40c8175b/54/14nets/602vias. ENC_A fixed-layout detours rejected; proposed8-component relocation and six-neighbor restoration are offline screening only, not native moves. Four changed context files copied only after matching observation hashes; no CAD operations performed."
+  },
+  "known_inconsistent_producer_documents": [
+    "fpga/DECISIONS-20261023.md: RA8875 cancellation interpretation superseded by D-010; original owned document left unchanged"
+  ],
+  "product_acceptance": false,
+  "new_rtl_tests": false,
+  "new_cad_operations": false,
+  "producer_ids": [
+    "fpga",
+    "hardware"
+  ]
+}

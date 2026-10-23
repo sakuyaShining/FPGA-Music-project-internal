@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated_at": "2026-10-23T12:27:55.623546+08:00",
+  "updated_at": "2026-10-23T15:02:03.630221+00:00",
   "entry": "project/CURRENT.md",
   "predecessor_state": "codex/project-version-closure:project/state.json",
   "implementation_boundary": "This registry does not merge or change any functional source",
@@ -106,11 +106,20 @@
       "archive": "project/archives/latest-design-inputs-20261023.zip",
       "manifest": "project/versions/latest-design-inputs-20261023.json",
       "validation_inherited": false,
-      "status": "已实现待验证；仅所列新增与修改，不表示全功能产品完成",
+      "status": "Historical v2 recovery archive; later live changes recorded separately",
       "product_accepted": false,
+      "programming_allowed": false
+    },
+    "fpga_live_unpublished": {
+      "role": "development-wip",
+      "review_record": "project/reviews/20261023-team-handoff/review.json",
+      "producer_registry": "project/producers.json",
+      "product_accepted": false,
+      "validation_inherited": false,
       "programming_allowed": false
     }
   },
-  "active_fpga_profile": "fpga_latest_observed_20261023",
-  "design_state": "project/design-state.json"
+  "active_fpga_profile": "fpga_live_unpublished",
+  "design_state": "project/design-state.json",
+  "governance": "project/governance.json"
 }

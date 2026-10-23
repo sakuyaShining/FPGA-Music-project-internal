@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-23T15:02:03.630221+00:00",
+  "observer_thread": "01a15f25-dfc1-7442-988a-322c7fc7911b",
+  "previous_review": "project/reviews/20261023-display-clarification/review.json",
+  "previous_review_sha256": "d34fe3219b4d62895ea296e875c06e4056064f412950ff918747e5a2bba6ddd6",
+  "raw_observation": "project/reviews/20261023-team-handoff/observation.json",
+  "raw_observation_sha256": "c145b3a4bfb6fb8959f5cbebfffd82c4df3a9ff280fb5a5b5c052d283d82610b",
+  "producer_ids": [
+    "fpga",
+    "hardware"
+  ],
+  "changes_since_previous_review": {
+    "fpga": {
+      "added": [
+        "ACCEPTANCE-CRITERIA-20261023.md",
+        "AUX-SCREEN-PRODUCT-BOM-20261023.md",
+        "CUSTOM-INSTRUMENT-STATUS-20261023.md",
+        "DERISK-PLAN-20261023.md",
+        "EDIT-MODE-DESIGN-20261023.md",
+        "INSTRUMENT-MODEL-20261023.md",
+        "INTERACTION-AND-DEADCODE-20261023.md",
+        "KNIFE1-VELTAB-20261023.md",
+        "KNIFE1B-VTAB4-20261023.md",
+        "LAYER4-RULES-DRAFT-20261023.md",
+        "POST-PCB-BOM-20261023.md",
+        "PROCUREMENT-20261023.md",
+        "PROCUREMENT-ORDER-20261023.csv",
+        "tools/play_note.py",
+        "tools/scripts/gen_vel_wtab.py"
+      ],
+      "removed": [],
+      "modified": [
+        "engine/src/note_map.v",
+        "engine/src/note_map_owned.v",
+        "engine/src/vel_shape.v",
+        "engine/src/vel_wtab.hex",
+        "sim/tb_vel_shape.v"
+      ]
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": [
+        "AUTONOMOUS-CURRENT.md",
+        "REGIONAL-WORK-IN-PROGRESS.json",
+        "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md",
+        "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-native-NOT-FOR-FAB.zip",
+        "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json"
+      ]
+    }
+  },
+  "verdict": "REVIEWED_WITH_DECLARED_WIP",
+  "assessment": {
+    "fpga": "Per-slot velocity table candidate, table generator, note tool and design/procurement proposals added. Five RTL/table/test files changed. Raw evidence preserved, identity checked; no functional regression/PnR/programming performed by this review. Author-reported reduced-wrapper 12562 Logic/8265 CLS/15 BSRAM/10 DSP and +11.300ns setup do not budget the full product.",
+    "product": "Full product top, four-layer behavior, device editing/save, J10 and 84-node integration remain unaccepted. A/B/C milestone scopes and derisk cuts are proposals, not authorized removal of full goals. Q1..Q6 human-choice assertions require their original direct evidence before adoption.",
+    "hardware": "Observed construction e098c5db /47 connection errors/13 nets/227 components/616 vias; retained aaa37 baseline distinct. BUS_MOSI author-recorded closed; nine control nets unfinished. Three Bottom SMT components mean old single-side assembly outputs are stale. Offline U9/C9 relocation/clock/PDN candidates are not native acceptance. No CAD operations or fabrication release.",
+    "collaboration": "Direct private GitHub collaboration requires repository access; offline source/task packages and returned patches do not. No invitations, external transmissions or new collaborator package produced. Exact active FPGA owner identity and branch remain unregistered."
+  },
+  "known_inconsistent_producer_documents": [
+    "DECISIONS-20261023.md: RA8875 abandonment superseded by direct human D-010.",
+    "AUX-SCREEN-PRODUCT-BOM-20261023.md: empty-PCB claim reads old four-strip prototype, not active carrier construction. Proposed pin remapping, reduced sense lanes, PCF8575/buttons and AUX-only scope are not authorized by this review; current hardware contract controls.",
+    "LAYER4-RULES-DRAFT-20261023.md: two instrument banks described as strike/sustain, while EDIT-MODE-DESIGN describes atomic update buffering; resolve against actual RTL before implementation.",
+    "Author-reported all-green checks, programmed build and GUI never-tested claims have not been bound to exact inputs or independently reconciled in this management review."
+  ],
+  "publication_gaps": [
+    "Latest full source recovery archive remains v2, before these live changes.",
+    "Neither active producer has a registered published source branch/commit."
+  ],
+  "product_acceptance": false,
+  "new_rtl_tests": false,
+  "new_cad_operations": false
+}
