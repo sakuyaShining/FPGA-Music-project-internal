@@ -17,7 +17,8 @@
 
 | 轴 | 内容 | 当前所有者 | 独占路径（只有所有者可写） |
 |---|---|---|---|
-| **A · 逻辑时序与资源** | 音乐、M1、复位/力度/激发候选与完整载板顶层 | 独立FPGA会话，准确ID未登记；D盘源见producers.json | 未明确owner前不接管；4d37当前只做管理，不继续认领功能实现 |
+| **A · 原生产逻辑时序与资源** | 音乐、M1、复位/力度/激发候选与完整载板顶层 | 独立FPGA会话，准确ID未登记；D盘源见producers.json | 未明确owner前不接管D盘原源；4d37对已捕获候选的限定副本范围另列，不覆盖原生产目录 |
+| **A · 已捕获候选的验证与资源合同** | T02显式profile、独立幅度参考、NR01–NR07及后续隔离资源管理候选 | 本4d37会话，用户授权继续长任务 | `tools/scripts/music_profiles.py`、`tools/tests/test_music_profiles.py`、后续`experiments/note_resource_20261024/`；D盘原源只读，未授权覆盖其他owner。当前未修改三个current目录 |
 | **B · PCB 与硬件制造** | 持续施工、DRC、Gerber、制造放行 | 会话“查看 huangyongtao 最新进展”，ID `01a15ee5-fa24-7501-8475-ad28a0f08939` | `hardware/`（06df）、当前U9ControlWork原生施工副本；实际入口由producer/review及实时原生身份确定 |
 | **C · 显示与交互驱动** | J10命令层/触控服务、推子/曲谱界面 | 待认领 | `experiments/ra8875_driver_*/` |
 
@@ -93,6 +94,13 @@ PCB 打样、贴片与物流需要日历时间。施工数量只在相应review�
 ---
 
 ## 6. 交接记录
+
+### 2026-10-24 · Codex · 资源规则确认与明确音乐profile
+- 做了什么：用户逐项确认同等共享32组、整音符回收/新音完整起音、尾音优先例外；D-019替代旧严格FIFO，合同与NR判据见NOTE-RESOURCE-CONTRACT。
+- 在飞什么：显式historical/current profile与三项定向故障反例；只在隔离导出目录执行。当前探针最多两层，不把四槽地址覆盖说成四层并奏已完成。
+- 卡在哪：首轮current测试台存在声明顺序elaboration失败，保留attempt01后修复重跑；最终结果以本批review为准，不用编译失败冒充反例检出。
+- 需要对方什么：保留D盘原owner边界；后续资源管理需真实包络结束/装载完成反馈及整机接合，不能只调整最多两层的数字。
+- 下一手从哪读：project/NOTE-RESOURCE-CONTRACT.md、tools/scripts/music_profiles.py及governance当前review；不下载、无CAD/制造放行。
 
 ### 2026-10-24 · Codex · 长任务与T02隔离诊断
 - 做了什么：用户确认产品复述准确；登记曲谱播放与现场并奏、溢出丢最早发声音符。每60分钟本线程续接，额度不足保全断点、不绕过。

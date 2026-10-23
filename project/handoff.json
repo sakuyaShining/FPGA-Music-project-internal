@@ -8,7 +8,7 @@
     "role": "Editable collaboration candidates with explicit failed music golden regression; not a full product",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-23T17:58:31.208638+00:00",
+  "updated_at": "2026-10-23T18:31:58.752360+00:00",
   "entry_branch": "main",
   "entry_tag": null,
   "entry_commit_resolution": "Query actual target repository main and compare controlled entry content; dated branch is compatibility only; repository is now public.",
@@ -178,7 +178,7 @@
   "design_state": "project/design-state.json",
   "previous_frozen_tag": "handoff/20261022-management-v1",
   "latest_observed_fpga": {
-    "review_record": "project/reviews/20261024-music-golden-diagnosis/review.json",
+    "review_record": "project/reviews/20261024-music-profiles-allocation/hardware-update-review.json",
     "producer": "fpga",
     "validation_inherited": false
   },
@@ -201,5 +201,8 @@
   "work_plan": "project/WORK-PLAN.md",
   "corrections": "project/corrections.json",
   "open_rules": "project/OPEN-RULES.md",
-  "music_diagnosis": "project/MUSIC-GOLDEN-DIAGNOSIS.md"
+  "music_diagnosis": "project/MUSIC-GOLDEN-DIAGNOSIS.md",
+  "note_resource_contract": "project/NOTE-RESOURCE-CONTRACT.md",
+  "music_profile_validation": "project/reviews/20261024-music-profiles-allocation/review.json",
+  "hardware_context_review": "project/reviews/20261024-music-profiles-allocation/hardware-update-review.json"
 }

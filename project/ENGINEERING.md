@@ -24,4 +24,6 @@ python tools/scripts/design_governance.py status --remote --live
 
 FPGA回归需要Python、Icarus Verilog和vvp；可设置`FPGA_IVERILOG`和`FPGA_VVP`。上位机离线回归依赖见`../tools/requirements-engineering-host.txt`，在独立虚拟环境安装后执行。硬件export核对保存工程的字节身份，不启动CAD，也不重新证明DRC。
 
+原`engineering.py test --area fpga`保留原默认/旧黄金检查及已知失败，不静默换判据。新增明确profile入口：`python tools/scripts/music_profiles.py --profile all --fault-checks --output <不存在的新目录>`。历史profile显式配置vscale=0并要求三组旧黄金逐字节相等；当前profile不关闭力度，以Python整数参考检查当前默认下的分层幅度，并保留与旧黄金的差异。三项故障反例必须在指定幅度判据被检测；编译错误/超时或无关断言失败不算反例通过。槽号反例仅在负向导出副本修改力度ROM地址并登记变异身份，不改仓库产品源。该入口仍只覆盖现有逻辑探针，不签收新资源合同、四层整机或实体链路。
+
 本轮管理owner负责发布检查点及工具，不接管原owner工作区。新协作者在命名任务分支中认领一个领域，修改对应current目录；同一领域多个任务须划定文件边界。收工交回源清单、实际远程commit、相应验证和未验证项。当前输入变化应重新登记与验证，禁止仅更新哈希来掩盖未审阅改动。

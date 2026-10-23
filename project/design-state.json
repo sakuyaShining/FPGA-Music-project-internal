@@ -2,8 +2,8 @@
   "schema": 1,
   "engineering_inputs_manifest": "project/versions/engineering-sources-20261023.json",
   "engineering_entry": "project/ENGINEERING.md",
-  "design_version": "design-20261024-score-live-overflow",
-  "updated_at": "2026-10-23T17:58:31.208638+00:00",
+  "design_version": "design-20261024-shared-instance-tail-first",
+  "updated_at": "2026-10-23T18:31:58.752360+00:00",
   "entry_branch": "main",
   "entry": "project/DESIGN-CURRENT.md",
   "quickstart": "project/QUICKSTART.md",
@@ -30,10 +30,13 @@
     "score_guidance_display": "J10",
     "complete_product_target": true,
     "score_playback_with_live_performance": true,
-    "overflow_note_order": "discard earliest-started sounding note"
+    "overflow_note_order": "free groups -> released-tail instances -> oldest held instance",
+    "allocation_source_priority": "equal score and live",
+    "whole_note_retirement": true,
+    "complete_note_admission": true
   },
   "latest_observed_fpga": {
-    "review_record": "project/reviews/20261024-music-golden-diagnosis/review.json",
+    "review_record": "project/reviews/20261024-music-profiles-allocation/hardware-update-review.json",
     "producer": "fpga",
     "status": "MAIN_CHECKPOINT_WITH_SEPARATELY_OBSERVED_LIVE_SOURCE",
     "validation_inherited": false,
@@ -45,7 +48,8 @@
     "scope": "Saved native engineering checkpoint and selected construction context are captured in engineering manifest; unsaved CAD and full producer tree are not included.",
     "observation": "Top cached construction pointer and lower-level state can differ; verify actual native hash before work",
     "manufacturing_release": false,
-    "physical_tests": "UNMEASURED"
+    "physical_tests": "UNMEASURED",
+    "latest_context_review": "project/reviews/20261024-music-profiles-allocation/hardware-update-review.json"
   },
   "freshness": {
     "authority": "actual remote main",
@@ -57,16 +61,17 @@
     ]
   },
   "reviewed_design_sources": {
-    "project/DESIGN-CURRENT.md": "927a6f8461207ee7ebafa3fa467de0959d33f89ae0d7ab061895a87f8eb8b830",
+    "project/DESIGN-CURRENT.md": "75dfda03853ea095057bf9757a26276ce298bd2fba58d057ca28e7007c9770f8",
     "project/versions/design-decision-20261023.json": "1d0994293691ac34b85348d0929ecda0ac68ace57c560f7b34a9449dd81ae4fc",
     "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "a147411a85f37d22c82228dfbbe836e98c3c116d4c9d158d43426c09a90f1e2e",
     "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "644e245f816a9d98ce962365791cca4a5295f538094775908f45a021a5f8b61c",
     "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
-    "project/PRODUCT-SPEC.md": "e7bf3cd5c68c028442de8c5e2a20616418c7e5bd376fc0b1c76b44b98e516cc7",
+    "project/PRODUCT-SPEC.md": "357b765c05574133430432747eeb9d91635901e78c1728e8bd4ac45be6d048e4",
     "project/SOURCE-MAP.md": "48c23f08f00c5d7c2c73df957e805a787f70d68218c38fa1d002a93c8d0205d8",
-    "project/WORK-PLAN.md": "60549c1d140c99bf293f58bec11cb2d37d704cb79a4665f2f8c4e467fe2ea0cd",
-    "project/OPEN-RULES.md": "b938399921c88986d3f04133740ca23795aa0857b37bbdff58e0df836f3ee9c1",
-    "project/MUSIC-GOLDEN-DIAGNOSIS.md": "6f4edaf9210d0ba8dd577a9466cb9aa963600ddd1882ed1734e45b9fe9d44b28"
+    "project/WORK-PLAN.md": "e4d5269aaa2d0c00fe5abfb580d1e4f5238f1ca83c217090bc866b9d3acc582b",
+    "project/OPEN-RULES.md": "876c80590018b9863a02559443fe346a192bb52d3ef976f2e4fd8959fa9d3546",
+    "project/MUSIC-GOLDEN-DIAGNOSIS.md": "276ad5d74e0f4aa4cb3dfe9898594117e08e643b56b6005e6e354488e6a8d709",
+    "project/NOTE-RESOURCE-CONTRACT.md": "3d5c551fdcc49d88e8fbe177c4b0dcc96e00e397fab7d834a00e3dcf9dd013ee"
   },
   "governance": "project/governance.json",
   "decision_ledger": "project/decisions.json",
@@ -77,5 +82,7 @@
   "work_plan": "project/WORK-PLAN.md",
   "corrections": "project/corrections.json",
   "open_rules": "project/OPEN-RULES.md",
-  "music_diagnosis": "project/MUSIC-GOLDEN-DIAGNOSIS.md"
+  "music_diagnosis": "project/MUSIC-GOLDEN-DIAGNOSIS.md",
+  "note_resource_contract": "project/NOTE-RESOURCE-CONTRACT.md",
+  "music_profile_tool": "tools/scripts/music_profiles.py"
 }

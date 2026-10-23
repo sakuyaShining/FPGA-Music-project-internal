@@ -116,10 +116,10 @@
         "fpga/current/upstream-notes/ACCEPTANCE-CRITERIA-20261023.md"
       ],
       "obsolete_claim": "Completeness-weighted stealing or automatic playback/live reduction to two layers is final product policy",
-      "correction": "D-018 requires score playback plus live performance and dropping the earliest-started sounding note at resource capacity; no automatic two-layer playback cap is approved. Exact implementation boundaries remain in OPEN-RULES.",
+      "correction": "D-019 refines D-018: equal shared score/live resources, free then released tails then oldest held note; whole-instance retirement and complete new admission. No completeness weighting, source reservation or automatic two-layer playback cap.",
       "current_evidence": [
-        "project/reviews/20261024-music-golden-diagnosis/evidence/score-live-overflow.json",
-        "project/OPEN-RULES.md"
+        "project/reviews/20261024-music-profiles-allocation/evidence/shared-resource-confirmation.json",
+        "project/NOTE-RESOURCE-CONTRACT.md"
       ],
       "status": "CORRECTED_FOR_CURRENT_USE"
     }

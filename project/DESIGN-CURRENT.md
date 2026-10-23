@@ -20,7 +20,7 @@
 
 原始验证见[工程检查点审阅](reviews/20261024-engineering-publication/review.json)。本轮规格审阅、直接用户原话及新增观察由`governance.json`指向；旧审阅不可覆盖。
 
-后续隔离诊断已把compat/layers/sensor分别跑完，历史vscale=0配置对照均逐字节匹配旧黄金；当前默认下的差异和分层断言失败仍保留，不能称为全部回归已修复，详见MUSIC-GOLDEN-DIAGNOSIS.md。用户另明确曲谱播放时现场演奏、溢出丢最早发声音符，D-018覆盖旧抢占方向；仍未完成完整曲谱/现场/四层产品接合。
+后续隔离诊断已把compat/layers/sensor分别跑完，历史vscale=0配置对照均逐字节匹配旧黄金；当前默认旧判据下的差异和分层断言失败仍保留，详见MUSIC-GOLDEN-DIAGNOSIS.md。用户进一步确认D-019：曲谱与现场同等共享32组，空闲→松键尾音→最早按住音，整音符回收/完整起音；其细化并替代D-018严格FIFO，合同见NOTE-RESOURCE-CONTRACT.md。仍未完成完整曲谱/现场/四层产品接合。
 
 ## 防止旧设计回流
 

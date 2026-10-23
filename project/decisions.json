@@ -200,7 +200,8 @@
         "excerpt": "q-combination"
       },
       "later_constraints": [
-        "D-018-SCORE-LIVE-OLDEST"
+        "D-018-SCORE-LIVE-OLDEST",
+        "D-019-SHARED-INSTANCE-TAIL-FIRST"
       ]
     },
     {
@@ -219,7 +220,7 @@
     },
     {
       "id": "D-018-SCORE-LIVE-OLDEST",
-      "status": "accepted",
+      "status": "superseded",
       "statement": "Score playback and live performance coexist like four-hand playing. When polyphony or group capacity is reached, discard the first sounding note by start order; no automatic two-layer playback cap is approved.",
       "facts": {
         "score_playback_with_live_performance": true,
@@ -229,6 +230,24 @@
         "path": "project/reviews/20261024-music-golden-diagnosis/evidence/score-live-overflow.json",
         "sha256": "546bef63973d84a7d0c179317bfa77720a56d566e4b42e8a602c19c33ba1b6f0",
         "authority": "Direct human confirmation and added requirement in the current conversation"
+      }
+    },
+    {
+      "id": "D-019-SHARED-INSTANCE-TAIL-FIRST",
+      "status": "accepted",
+      "supersedes": "D-018-SCORE-LIVE-OLDEST",
+      "statement": "Score and live performance share the32-group budget equally; retire whole multi-layer note instances and start new notes completely. Prefer truly free resources, then released tails, then earliest-started held notes. No fixed source partition or automatic two-layer cap.",
+      "facts": {
+        "score_playback_with_live_performance": true,
+        "overflow_note_order": "free groups -> released-tail instances -> oldest held instance",
+        "allocation_source_priority": "equal score and live",
+        "whole_note_retirement": true,
+        "complete_note_admission": true
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-music-profiles-allocation/evidence/shared-resource-confirmation.json",
+        "sha256": "fc03b58fececdd9822d400ac95beca14524c7254008ca24813ceff703e498d46",
+        "authority": "Three direct human choices in the current conversation"
       }
     }
   ]

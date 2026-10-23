@@ -30,6 +30,8 @@ jobs:
         run: python3 tools/scripts/engineering.py check
       - name: Verify engineering corruption and isolated export rejection
         run: python3 -m unittest discover -s tools/tests -p 'test_engineering.py' -v
+      - name: Verify explicit music profiles and independent amplitude guards
+        run: python3 -m unittest discover -s tools/tests -p 'test_music_profiles.py' -v
   maintain-legacy-entry:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest

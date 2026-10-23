@@ -1,5 +1,13 @@
 # 音乐黄金差异诊断
 
+## 后续：明确配置的回归入口
+
+`python tools/scripts/music_profiles.py --profile all --fault-checks --output <不存在的新目录>`已经在全新导出attempt03执行：历史profile的compat/layers/sensor全轨迹匹配旧黄金；当前profile保持0x6E=0x80/vscale=256，三组功能探针通过，其中分层的7次快照/112个分量幅度由独立Python整数参考核验。旧默认测试及旧黄金不覆盖、不改写。
+
+篡改参考值、测试台关闭力度、负向副本把力度ROM槽号地址绑0，均在指定幅度判据触发失败，反例检出成功。最后一项只修改隔离负向导出的vel_shape地址，变异前后哈希明确登记；仓库产品源不改。
+
+attempt01声明顺序elaboration失败、attempt02端口force先触发无关包络断言均保留，不计为幅度反例检出。最终证据由governance当前review指向。上述通过不等于四层并奏、共享尾音优先分配、独立完整PCM参考、实体编辑/录放或产品听感已验收；当前仅是现有最多两层探针的明确profile验证。
+
 输入为341项工程检查点中的FPGA候选，源提交374a84d；本轮不改产品RTL、参数表、原黄金或原owner工作区。所有编译/仿真在新导出目录执行。
 
 ## 实验与实际结果
