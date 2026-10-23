@@ -162,7 +162,7 @@
     "physical_visualization_display": false,
     "right_harmonic_touchscreen": "J10 retained"
   },
-  "main_status": "Entry integration PR must be merged by the user under existing collaboration rule; use the explicit entry branch until then",
+  "main_status": "User explicitly authorized merging PR #1 in this conversation, retaining the entry branch. Query actual GitHub PR state and remote main; once merged, default main contains this entry. Existing dirty local main is not automatically updated.",
   "validated_handoff_implementation_commit": "a151d1059febabb8ab3fa165fa654aff40494782",
   "validation_record": "project/versions/management-validation-20261022.json",
   "recording_rule": "The frozen handoff tag may additionally include verification receipts; implementation source is identified separately above",

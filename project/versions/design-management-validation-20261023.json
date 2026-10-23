@@ -47,7 +47,11 @@
   },
   "new_rtl_regression_pnr_sta_or_board_work": false,
   "product_acceptance": false,
-  "main_integration": "Pending user merge under collaboration rule",
+  "main_integration": {
+    "authorization": "Explicit human approval in current conversation: merge PR #1 and retain entry branch",
+    "actual_state": "Query GitHub PR #1 and remote main; no prefilled merge result",
+    "primary_worktree": "53 status entries (2 tracked modifications, 51 untracked); not overwritten"
+  },
   "validated_implementation_commit": "d3c0b7f1c268911f5658eca1b69b71747f9acb78",
   "text_portability": "PASS: canonical LF for fingerprinted design sources; Windows clone and Linux CI",
   "receipt_rule": "Later commits may add receipts without changing the validated implementation"

@@ -20,4 +20,4 @@ python tools/scripts/project_control.py check --full --remote --fresh-entry
 
 更新专门用于阅读、没有本地修改的入口工作区时，先看`git status --short`，再`git fetch internal`与`git merge --ff-only internal/codex/project-management-20261022`。存在本地修改或分叉则另取新目录，保留原任务分支；禁止reset/clean/强推来通过检查。
 
-冻结标签仅用于复现，不能当作永远最新。main等待用户合入PR #1，普通默认clone暂不能替代上面的显式分支。
+冻结标签仅用于复现，不能当作永远最新。用户已授权本次代理合并PR #1；是否已经合入以GitHub实际PR状态和main提交为准。main包含当前入口后，普通默认clone可直接使用；读取旧本地main仍必须取回远程并通过fresh-entry检查。
