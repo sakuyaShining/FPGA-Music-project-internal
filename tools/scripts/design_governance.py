@@ -126,7 +126,7 @@ def validate(root=ROOT):
     policy = read_json(root / 'project/governance.json')
     errors = []
     if policy.get('authority') != dict(remote=REMOTE, branch=BRANCH):
-        errors.append('Design authority must be the verified private repository main')
+        errors.append('Design authority must be the verified target repository main')
     for name in ('project/handoff.json', 'project/design-state.json'):
         if read_json(root / name).get('entry_branch') != BRANCH:
             errors.append('Non-main entry branch in ' + name)

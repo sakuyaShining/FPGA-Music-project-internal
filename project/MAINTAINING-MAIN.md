@@ -2,7 +2,7 @@
 
 ## 权威与启动
 
-私有仓库`FPGA-Music-project-internal`的实际远程`main`是唯一已发布设计入口。日期分支、冻结标签、文件mtime和会话记忆均不能替代它。新Agent先fetch实际main，再读`AGENTS.md`、`DESIGN-CURRENT.md`、`governance.json`、`decisions.json`、`producers.json`及协作板。
+仓库`FPGA-Music-project-internal`（用户已公开）的实际远程`main`是唯一已发布设计入口。日期分支、冻结标签、文件mtime和会话记忆均不能替代它。新Agent先检查本地状态，在干净入口目录`git pull --ff-only internal main`，再读`AGENTS.md`、`DESIGN-CURRENT.md`、`PRODUCT-SPEC.md`、`SOURCE-MAP.md`、`WORK-PLAN.md`、`governance.json`、`decisions.json`、`producers.json`及协作板。不得提交完整会话、令牌或账号配置。
 
 ```powershell
 python tools/scripts/project_control.py check --full --remote --fresh-entry
@@ -23,7 +23,7 @@ python tools/scripts/design_governance.py status --remote --live
 ## 新信息怎样进入main
 
 - 用户在任何会话改变目标：记录直接原话或明确来源，更新决定账本、当前设计、机器scope和冲突标记。未决项写“讨论中/待实现”，不能把Agent建议直接批准为产品语义。
-- 功能owner收工：使用命名任务分支提交RTL、表、约束、主机协议、构建/验证脚本及输入清单；推到核实private的内部仓库，登记实际远程commit和对应结果。旧source/profile的PASS不能继承。
+- 功能owner收工：使用命名任务分支提交RTL、表、约束、主机协议、构建/验证脚本及输入清单；核实目标仓库URL后推送有权限的任务分支，或经fork提交PR，登记实际远程commit和对应结果。旧source/profile的PASS不能继承。
 - 先产生新观察（不会续期）：
 
 ```powershell
@@ -37,6 +37,6 @@ python tools/scripts/design_governance.py observe --output <新的审阅目录>/
 
 GitHub在main push、PR和手动运行时检查；另每6小时计划检查一次审阅有效期。到期会失败，**不会自动改日期、采纳设计、重写归档或替owner验收**。计划任务实际运行受GitHub调度影响，手动命令直接按当前时间判断，不能以最近一次CI绿灯永久放行。
 
-main push还将旧`codex/project-management-20261022`兼容入口只快进到实际main，使v2旧工具不会永远盯住不动的日期分支。该job只对核实private的本仓库运行；分叉则失败，禁止force-push。新工具始终直接核对main，旧标签不移动。
+main push还将旧`codex/project-management-20261022`兼容入口只快进到实际main，使v2旧工具不会永远盯住不动的日期分支。该job核对完整仓库名及不可变仓库ID `1404161021`，不再要求private；分叉则失败，禁止force-push。新工具始终直接核对main，旧标签不移动。
 
 GitHub检查不能发现从未登记、也未提交的新会话决定；长期可靠需要每个会话履行上述交回合同。当前不把服务器合并保护、多人owner确认或完整备份默认视为已经落实。

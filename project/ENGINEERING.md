@@ -10,7 +10,7 @@
 
 旧`src/rtl`、`src/gowin`、`tools/host`保留历史可复现性，不能作为新任务的默认入口。历史实验、v1/v2恢复包不覆盖本次工程检查点。具体来源、逐文件哈希和捕获时间见`versions/engineering-sources-20261023.json`；补充的主机测试依赖和一处RTL声明顺序适配均有单独来源记录，未改原owner目录。
 
-从私有内部仓库实际main读取本页及DESIGN-CURRENT，再执行：
+先读[产品规格](PRODUCT-SPEC.md)、[工程分布](SOURCE-MAP.md)及[工作计划](WORK-PLAN.md)。从已公开的目标仓库实际main读取本页及DESIGN-CURRENT，再执行：
 
 ```powershell
 python tools/scripts/project_control.py check --remote --fresh-entry

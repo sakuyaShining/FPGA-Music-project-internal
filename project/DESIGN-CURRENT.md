@@ -1,76 +1,31 @@
-# 当前设计与实现入口
+# 当前设计与接手导航
 
-**2026-10-24工程交接更新**：[ENGINEERING.md](ENGINEERING.md)及[协作检查点](COLLABORATION-CHECKPOINT-20261024.md)提供展开的FPGA/硬件/主机候选；v2仍是12:23的历史恢复，不再作为本批工程接手源。341项工程输入含力度旧表与补齐的主机重奏测试依赖。一处RTL声明顺序做了有来源记录的编译适配；七项专项与音高参考通过，历史音乐黄金轨迹存在差异，未签收整机。主机100项离线测试通过，实体兼容未验证。实际来源与失败日志见本批review；下文旧审阅事实按其截止时间解释。
+唯一已发布入口是仓库`FPGA-Music-project-internal`的实际远程`main`。仓库已由用户公开，名称中的internal不表示私有。待合并PR是候选，不自动成为main。
 
-**唯一发布入口：私有仓库的实际远程main。**设计登记见[design-state.json](design-state.json)，已确认决定与沿革见[decisions.json](decisions.json)，实时性与审阅期限见[governance.json](governance.json)。跨会话维护流程见[MAINTAINING-MAIN.md](MAINTAINING-MAIN.md)。日期分支与冻结标签用于兼容/追溯，不定义最新。
+## 接手顺序
 
-当前审阅记录以`governance.json`指向的观察时间为准；13:07初审、显示路线澄清及晚间协作接手审阅分别保留。先运行`python tools/scripts/design_governance.py status --remote`；本机能访问活跃源时加`--live`，否则不能声称实时源已同步。新变化或到期会要求重新审阅。源码可恢复归档仍是12:23的v2，不把新观察自动写成新代码验收。多人协作与离线任务见[COLLABORATING.md](COLLABORATING.md)。
+1. [PRODUCT-SPEC.md](PRODUCT-SPEC.md)：产品/制造目的、需求与实现差距、未冻结行为。
+2. [SOURCE-MAP.md](SOURCE-MAP.md)：三个current目录、活跃owner源与历史资料的关系。
+3. [ENGINEERING.md](ENGINEERING.md)：341项输入清单、依赖、隔离导出与验证入口。
+4. [WORK-PLAN.md](WORK-PLAN.md)：音乐回归、硬件制造及后续功能的任务卡与完成条件。
+5. `decisions.json`、`corrections.json`、`governance.json`、`producers.json`：决定出处、旧说明勘误、审阅期限和活跃源边界。
 
-**本会话最新直接确认**：“取消独立可视化小屏，保留 J10 触控屏及现有显示控制器路线”。[原话记录](reviews/20261023-display-clarification/evidence/current-user-confirmation.json)覆盖另一会话`DECISIONS-20261023.md`中“RA8875已放弃”的解释。RA8875继续作为现有J10路线候选，具体SKU/CTP、电气/机械仍待签收；不据该外部记录重排PCB接口或取消右手图形交互。
+## 当前已知状态
 
-## 1. 已核对的最新产品范围
+- `fpga/current/`保存253项候选输入，其中106项构建输入；七项专项、力度表及音高参考通过属于既有工程检查点验证。历史音乐黄金对照在cycle6662失败，后续分层/传感黄金项尚未由该fail-fast流程执行。旧PASS不覆盖当前失败。
+- `tdm_ship_owned`默认关闭逐指表达和右手音色接口、保留16路旧pad；`layer_dispatch`仍限制最多两层。完整84节点/J10/编辑/存储/录放载板顶层未接成，未签收完整产品资源和时序。
+- `hardware/current/`保存50项原生工程及上下文。e098施工版记录227器件、47项未连通/13网；非制造放行。另存aaa37历史基线不可混用。
+- `host/current/`保存38项ca03 11版源码及依赖；100项离线通过不证明当前FPGA实物协议兼容。
+- 原owner工作区后续修改不自动进入上述检查点；实时状态须按当前review和只读live检查判断。本轮规范整理不重跑RTL、PnR、板测或CAD，不刷新上述验证日期。
 
-| 项目 | 当前决定与边界 |
-|---|---|
-| 平台与合成 | Tang Nano20K；32组×16分量，各乐器层共享32组；保留四槽分层目标，不变成每层32组 |
-| 左手 | 两排逐音滑条＋独立八度档条；逐指音高表达。硬件保持84电极能力；25/26音位及端点映射须按已登记接口核对，不凭84反推最终音符规则 |
-| 右手 | 保留J10泛音构造触控显示链；7英寸候选、分区竖直推子、全和弦连续修饰、松手保持、RESET平滑恢复。具体模组SKU/CTP/电气/线束和机械尚未全部签收 |
-| 实体音乐可视化屏 | **用户已取消。J11/MSP2401及视觉专用支路不再属于当前实体范围。**旧双屏预算、双屏红线与不许取消小屏的旧文字在这一项被覆盖；不是把两屏合并，也不取消J10 |
-| 编辑与保存 | 自定义乐器、实体编辑、断电保留目标继续；编辑草稿、保存定义、运行修饰、在响实例分离 |
-| 录放 | 演奏实际声音录制/播放、播放期间现场演奏目标继续；SDRAM仅缓冲，TF文件和事件配对仍有缺口 |
-| 接口与权限 | 按最新已授权硬件接口继续，不能把旧J11接口重新接回；本轮管理整理不再改电路或产品RTL，不下载、不制造放行 |
+原始验证见[工程检查点审阅](reviews/20261024-engineering-publication/review.json)。本轮规格审阅、直接用户原话及新增观察由`governance.json`指向；旧审阅不可覆盖。
 
-取消小屏的直接人类原话、会话与turn ID已保存在[决定出处](versions/design-decision-20261023.json)。该决定比38/39/49/87号及旧协作板的双屏要求更新；其他功能不由本次整理裁减。PC辅助可视化也不能据此自动删去。
+## 防止旧设计回流
 
-## 2. 实现版本必须分开读取
+用户已取消J11实体音乐可视化屏，保留J10；RA8875仍为候选路线。核心演奏/编辑/保存不应依赖上位机。编辑键后选预设槽、编辑激发方式和音色、保留独立操作键有直接用户出处；这些不批准新GPIO表、16键扩展、功能裁剪或延期。
 
-| 来源 | 当前事实 | 不得推导的结论 |
-|---|---|---|
-| 66a4 / 07及安全修复候选 | 已有音乐/主机基线与各自专项验证记录 | 不代表当前实体功能完整，也不继承到新源 |
-| 4d37原87号结构探针 | 路由完成、setup −6.397ns / hold −0.048ns；历史双屏输入 | 不作为当前产品预算或合格码流 |
-| 10月22日M1登记源 | 原100项输入，engine/pitch专项曾通过；仍可按v1恢复 | 不叫今天实时最新，不签收后续新增代码 |
-| v2可恢复FPGA候选 | 复位/POR、逐通道力度、启动默认值、strike/hybrid和`tdm_ship_owned`包装；12:23归档105项构建输入 | 固定恢复检查点，不叫当前活跃源；不继承旧100输入PASS |
-| **D盘活跃FPGA源，截止当前review时间** | v2之后新增双段衰减、逐槽力度表及生成器、UART试听工具和设计/采购提案；完整观察与差异见当前review | 尚未发布为新的完整源码归档/产品顶层；本轮只读审阅，未重跑作者仿真/PnR/板测 |
-| 硬件保留检查点 | `aaa62f2…`，记录为37项未连通/6网，已有原生恢复ZIP | 仍未放行，不是可制造整板 |
-| 硬件活跃施工副本 | 晚间review观察：`FPGA-Music-U9ControlWork-20261023`、`e098c5db…`、47项未连通/13网、227件616孔；作者记录BUS_MOSI闭合，仍有9个控制网待恢复，3件Bottom SMT | 该数量有截止时间；不与37版混用或晋升，不表示制造放行/实物验证；旧单面装配输出已过时，禁止重放历史事务 |
+四层规则中的bank说明、编辑草稿完整性、衰减公式和旧小样采购问题，均以`corrections.json`的勘误及当前RTL为准。原作者材料保留原始字节，不改写历史以掩盖差异。
 
-**`tdm_ship_owned`这个名字不证明完整产品顶层已完成。**源码默认`FINGER_EXPR=0`、`RIGHT_TIMBRE=0`、`LEGACY_PAD=1`，暴露16路直连pad并把外部控制接口接常量；尚未接成84节点MUX、J10、EEPROM/TF和全部实体交互的完整载板顶层。原探针仍含`music_visualizer`；取消实体屏尚未在全部RTL/profile中落地。不能直接删除子树后沿用原音乐、布线或板测结论。
+38/39/49号文档、v1/v2恢复归档、22项工作区保全、结构探针及根目录旧RTL继续用于对应版本的历史复现，不再作为当前工程的默认源码。后续用户决定通过证据及supersedes登记；不能据此自行削减32×16、四槽、逐音滑条、84节点、录放和非易失目标。
 
-## 3. 最近会话新增的设计信息
-
-本次归档含`ARTICULATION-AS-NOTE-PROPERTY`、`ARTICULATION-RUNTIME-SPEC`、`RUNTIME-EDIT-AND-ARTICULATION`、`GENERAL-INSTRUMENT-GAPS`、`NIGHT-20261023-VELOCITY`和`STRIKE-MODE-20261023`等原文。
-
-- 激发模式文档记载sustain/strike/hybrid作为演奏态音符属性、与音色频谱区分，strike按分量序号生成衰减梯度；候选RTL使用0x38–0x3F，默认关闭，新音装载/显式刷新行为另列。这里保存原作者方案和实现，不替用户冻结全部参数与音乐语义。
-- 新候选有复位生成、逐通道力度和寄存器启动修复。电容测量值不等于已验证的物理压力；16路直连测试不签收84节点MUX载板。
-- **双段衰减状态已更新**：新源增加`d2_lvl/d2_k`及0x5D–0x5F全局参数、默认关闭，作者报告7/7仿真及反例。原文保存在[DECAY2记录](reviews/20261023-main-authority/evidence/fpga/DECAY2-20261023.md)。本轮未复验；全局第二段及参数值是该候选的实现选择，不替用户批准音乐语义或裁减逐分量能力。状态为“已实现待验证”。
-- A6短命令、编译器至主机设备通路、EEPROM等缺口继续跟踪，不能用新包络功能代表实体编辑/录放完成。
-- 编辑是否可依赖电脑、尾音/抢占、激发默认值、现场/回放修饰对象等仍需原始用户决定或验收。文档中的“做不出来”“唯一可行形态”和优先级建议不自动成为用户批准的功能降级。
-- `INFO-BASELINE-20261023.md`仍写双屏、旧GPIO零余量和旧Git状态；它是被保留的历史说明，**不能因标题日期较新就凌驾本入口**。新顶层CST的reset/LED/pad与载板接口也不能直接混用。
-- 晚间新增的`AUX-SCREEN-PRODUCT-BOM-20261023.md`用旧四滑条小样推断“PCB为空”，与当前载板施工不符；其GPIO重排、缩减sense通道、按键扩展和AUX单路建议不构成已批准接口。采购价格/SKU和元件配置也未经本轮验证，不据此下单或修改PCB。
-- `ACCEPTANCE-CRITERIA`及`DERISK-PLAN`中的Q1–Q6选择、阶段裁剪和降险建议尚缺本入口可追溯的直接人类确认；保持提案身份。`LAYER4-RULES-DRAFT`对双bank的解释还与`EDIT-MODE-DESIGN`冲突，实施前核对RTL。逐槽力度表作者报告的PnR数字仅属于受限包装，不签收完整产品，也未由本轮复验。
-- 力度生成器依赖：本批工程清单已经包含`engine/src/vel_wtab.hex.bak-20261023`及确切哈希，slot0生成校验通过；旧v2仍缺此依赖，不允许用新表替代旧表。新`POST-PCB-BOM`和`JLCPCB-ORDER-PACKAGE`关于电源/接口的缺失断言使用旧小样，必须按本批227件原生整板与采购机器清单解释，不自动加入或重做现有电路。
-
-## 4. 快速取得已发布设计及源码
-
-首次克隆，目标目录必须不存在：
-
-```powershell
-git clone --origin internal --branch main --no-single-branch https://github.com/sakuyaShining/FPGA-Music-project-internal.git D:/FPGA-Project/review/current-design
-```
-
-已有当前入口工具时，可一步克隆并完整核验到新目录：
-
-```powershell
-python tools/scripts/project_control.py get-latest --output D:/FPGA-Project/review/current-design-verified
-```
-
-在取得的目录执行`python tools/scripts/project_control.py check --full --remote --fresh-entry`。需要恢复**12:23的v2固定源**时：
-
-```powershell
-python tools/scripts/project_control.py restore-design --area fpga --output D:/FPGA-Project/review/fpga-observed-20261023
-python tools/scripts/project_control.py restore-design --area hardware-context --output D:/FPGA-Project/review/hardware-context-20261023
-```
-
-恢复目录先读新生成的`AGENTS.md`与`PRESERVATION-ORIGIN.json`。硬件输出只含所列上下文和既有原生恢复ZIP，不是完整活跃硬件目录，也不会导入CAD。FPGA原始构建脚本含绝对路径；先在自己的命名分支适配新输出目录，再实施或验证。回归黄金数据仍从v1包恢复，不用新候选测试覆盖旧黄金。
-
-**“最新”指实际main已经登记且仍在审阅有效期内的设计信息，不包括未登记会话或未来修改。**检查输出分别报告发布身份、审阅到期、活跃源可见性及未发布WIP。活跃源变化需owner交回后审阅，不能只改日期或覆盖快照消除漂移。v1/v2标签保持固定；旧管理分支由兼容job只快进同步main，新工具直接核对main。
+获取、pull和校验见[QUICKSTART.md](QUICKSTART.md)，跨会话交回见[MAINTAINING-MAIN.md](MAINTAINING-MAIN.md)。观察新源不会自动续期或签收产品。

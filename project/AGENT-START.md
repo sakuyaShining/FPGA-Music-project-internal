@@ -1,5 +1,7 @@
 # 新Agent启动入口：先确认设计，再确认源版本
 
+先读[产品规格](PRODUCT-SPEC.md)、[工程分布](SOURCE-MAP.md)及[工作计划](WORK-PLAN.md)。用户已公开目标仓库；干净入口先`git pull --ff-only internal main`，有修改/分叉则保全，不强制覆盖。
+
 当前工程候选已展开到`fpga/current/`、`hardware/current/`和`host/current/`。先读[ENGINEERING.md](ENGINEERING.md)与[协作检查点](COLLABORATION-CHECKPOINT-20261024.md)，校验输入并选择限定任务。以下v1/v2恢复步骤仅用于历史复现，不是本批最新工程。
 
 外部成员和离线补丁接手方式、任务卡及交回要求见[COLLABORATING.md](COLLABORATING.md)。

@@ -11,7 +11,7 @@
   "updated_at": "2026-10-23T15:02:03.630221+00:00",
   "entry_branch": "main",
   "entry_tag": null,
-  "entry_commit_resolution": "Query actual private remote main and compare controlled entry content; dated branch is compatibility only",
+  "entry_commit_resolution": "Query actual target repository main and compare controlled entry content; dated branch is compatibility only; repository is now public.",
   "start": "project/AGENT-START.md",
   "copyable_prompt": "project/NEXT-AGENT-PROMPT.md",
   "current_scope": "Reviewed decisions, explicit recovery checkpoints and observed unpublished WIP; expiry and live visibility are separate checks",
@@ -170,7 +170,7 @@
     "physical_visualization_display": false,
     "right_harmonic_touchscreen": "J10 retained"
   },
-  "main_status": "PR #1 merged. Subsequent management changes require main integration; actual remote main is authoritative.",
+  "main_status": "PR3 merged at100b35bd93cbde6d604a289d990f208622e94646. This specification alignment is a new PR candidate until user merges it.",
   "validated_handoff_implementation_commit": "a151d1059febabb8ab3fa165fa654aff40494782",
   "validation_record": "project/versions/management-validation-20261022.json",
   "recording_rule": "The frozen handoff tag may additionally include verification receipts; implementation source is identified separately above",
@@ -178,7 +178,7 @@
   "design_state": "project/design-state.json",
   "previous_frozen_tag": "handoff/20261022-management-v1",
   "latest_observed_fpga": {
-    "review_record": "project/reviews/20261023-team-handoff/review.json",
+    "review_record": "project/reviews/20261024-specification-alignment/review.json",
     "producer": "fpga",
     "validation_inherited": false
   },
@@ -195,5 +195,9 @@
   "historical_tags": [
     "handoff/20261022-management-v1",
     "handoff/20261023-design-v2"
-  ]
+  ],
+  "product_specification": "project/PRODUCT-SPEC.md",
+  "source_map": "project/SOURCE-MAP.md",
+  "work_plan": "project/WORK-PLAN.md",
+  "corrections": "project/corrections.json"
 }

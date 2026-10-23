@@ -39,14 +39,14 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
-      - name: Keep old entry consumers following actual private main
+      - name: Keep old entry consumers following verified repository main
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
           test "$GITHUB_REPOSITORY" = 'sakuyaShining/FPGA-Music-project-internal'
-          test "$(gh api "repos/$GITHUB_REPOSITORY" --jq .private)" = true
+          test "$(gh api "repos/$GITHUB_REPOSITORY" --jq .id)" = 1404161021
           git fetch origin main codex/project-management-20261022
           git merge-base --is-ancestor origin/codex/project-management-20261022 origin/main
           git push origin refs/remotes/origin/main:refs/heads/codex/project-management-20261022

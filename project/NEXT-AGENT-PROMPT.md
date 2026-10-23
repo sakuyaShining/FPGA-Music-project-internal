@@ -2,7 +2,7 @@
 
 最新协作工程入口是project/ENGINEERING.md与project/COLLABORATION-CHECKPOINT-20261024.md；执行`python tools/scripts/engineering.py check`，从fpga/current、hardware/current或host/current选择任务源并导出到自己的新目录。完整产品未验收，音乐黄金对照有已记录差异。下文v1/v2流程是历史恢复，不覆盖本批工程检查点。
 
-接续FPGA-Music-project。内部仓库为https://github.com/sakuyaShining/FPGA-Music-project-internal.git；唯一发布入口是实际远程main，先fetch再核对。日期分支只兼容旧工具，v1/v2标签仅用于固定复现，不能定义实时最新。
+接续FPGA-Music-project。已公开的目标仓库为https://github.com/sakuyaShining/FPGA-Music-project-internal.git；唯一发布入口是实际远程main，先检查Git状态，在干净入口目录pull --ff-only再核对。先读PRODUCT-SPEC、SOURCE-MAP及WORK-PLAN，按任务卡接手。日期分支只兼容旧工具，v1/v2标签仅用于固定复现，不能定义实时最新。
 
 按project/QUICKSTART.md在新目录取得main，执行`python tools/scripts/project_control.py check --full --remote --fresh-entry`和`python tools/scripts/design_governance.py status --remote`。先读project/DESIGN-CURRENT.md、governance.json、decisions.json、producers.json、MAINTAINING-MAIN.md及AGENT-START/handoff/CURRENT、AGENTS和协作板，再读38/39/49号。不可用旧版本、过期记录或reset/clean覆盖来通过检查。
 
@@ -12,4 +12,4 @@
 
 当前用户决定：取消J11实体音乐可视化屏，保留J10右手泛音触控屏；原话及会话turn已归档，覆盖旧双屏红线。保持Nano20K、32×16、四层、逐音滑条与独立八度条、84节点硬件能力、录放与非易失等其他目标。不擅自改音乐语义、减其他功能、改PCB接口、下载或制造放行。
 
-在自己的命名任务分支导入选定源并先提交起点，适配独立输出。说明源提交、归档SHA、验证边界、owner和下一步；不覆盖其他owner。收工commit并核对private internal远程，再更新入口；未登记的未来变化不属于本批已发布版本。
+在自己的命名任务分支导入选定源并先提交起点，适配独立输出。说明源提交、归档SHA、验证边界、owner和下一步；不覆盖其他owner。收工commit并核对目标远程URL，再通过PR更新入口；未登记的未来变化不属于本批已发布版本。

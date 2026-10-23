@@ -3,7 +3,7 @@
 > **这是什么**：多个 agent 同时推进本项目时的唯一协调入口。
 > **不是什么**：`notes/agent-collaboration-log.md` 是给评委看的人机协作评分素材（AMD 2026「大模型协作与技能包 15 分」），记录的是"用户采纳/否决了什么"，**不要**往里写 agent 之间的调度信息。
 >
-> 本文件必须**提交在 `main`**。新工作树先fetch核对私有内部仓库实际main；日期分支仅兼容，候选管理PR须明确尚未发布。禁止从旧提交（如`2770e63`）推断当前设计。
+> 本文件必须**提交在 `main`**。新工作树先fetch核对目标仓库实际main；用户已公开该仓库，名称internal不表示私有。日期分支仅兼容，候选管理PR须明确尚未发布。禁止从旧提交（如`2770e63`）推断当前设计。
 
 管理覆盖更新：2026-10-23（见§11）。接手先查main、governance及producer登记；旧交接的施工数字与日期分支不是实时状态。
 
@@ -94,6 +94,13 @@ PCB 打样、贴片与物流需要日历时间。施工数量只在相应review�
 
 ## 6. 交接记录
 
+### 2026-10-24 · Codex · 规格与接手入口收口
+- 做了什么：先pull --ff-only internal main到100b35b；建立PRODUCT-SPEC、SOURCE-MAP、WORK-PLAN，登记直接用户出处与旧提案勘误，修复公开后旧入口同步的private断言。
+- 在飞什么：仍在codex/current-engineering-sources-20261023管理分支；本轮通过新PR交回，main由用户合并。
+- 卡在哪：T02音乐黄金差异、T03/T04硬件及制造闭环仍未解决；不把文档修正称作这些实现已完成。
+- 需要对方什么：按WORK-PLAN认领单一任务与路径；FPGA原owner身份、硬件接口和音乐未决规则分别确认。
+- 下一手从哪读：project/DESIGN-CURRENT.md及governance当前review；精确版本以包含本记录的Git提交及实际PR head为准。原owner目录和341项工程源未修改。
+
 ### 2026-10-24 · Codex · 管理与工程交接
 - 做了什么：接续4d37的工程整理，将FPGA、保存硬件、主机11版展开为current候选；清单341项，来源、恢复入口和隔离验证可追溯，详见project/ENGINEERING.md。
 - 在飞什么：管理分支codex/current-engineering-sources-20261023，提交及实际远程身份以本次PR为准；未接管原owner目录。
@@ -144,7 +151,7 @@ internal  https://github.com/sakuyaShining/FPGA-Music-project-internal.git
 | `origin` | 126 | 2 | 双向分叉，禁止推 |
 | `public` | 126 | 1 | 双向分叉，禁止推 |
 
-推之前需确认 `FPGA-Music-project-internal` 在 GitHub 上确实是 **private**。
+当时要求推之前确认private；该历史要求已被用户2026-10-24公开仓库的决定替代。现在核对实际URL和仓库身份，不以private作为推送前提。
 
 ### 坑二：push 不等于备份
 
@@ -205,7 +212,7 @@ internal  https://github.com/sakuyaShining/FPGA-Music-project-internal.git
 ## 11. 2026-10-23 main authority and review freshness
 
 - Management owner: current 4d37 session, branch codex/main-design-authority-20261023; no functional/CAD ownership taken.
-- Authoritative publication: actual private remote main. Dated branch is fast-forward compatibility only; v1/v2 tags remain immutable.
+- Authoritative publication: actual target repository main (public since the user changed visibility on2026-10-24). Dated branch is fast-forward compatibility only; v1/v2 tags remain immutable.
 - Decisions: project/decisions.json records accepted/proposed/superseded items with evidence; D-010 directly confirms retain J10 and existing controller route, superseding the external RA8875 cancellation interpretation.
 - Freshness: project/governance.json/current review, 24h design review and6h active observations; --live detects actual local drift, missing roots are not green. Observe does not renew a review.
 - Handoff: project/MAINTAINING-MAIN.md and NEXT-AGENT-PROMPT.md. Active unpublished code, FPGA owner identity gap and unvalidated hardware remain explicit. main merge still needs user approval for this new PR.

@@ -10,7 +10,7 @@
         "thread_id": null,
         "label": "Independent FPGA session; exact session identity not registered"
       },
-      "publication_status": "UNMERGED_WIP_WITH_OLDER_RECOVERY_ARCHIVE",
+      "publication_status": "CHECKPOINT_ON_MAIN_FUTURE_LIVE_CHANGES_REQUIRE_REVIEW",
       "observation_max_hours": 6,
       "recovery_manifest": "project/versions/latest-design-inputs-20261023.json",
       "published_ref": null,
@@ -255,8 +255,17 @@
             ".txt"
           ],
           "max_bytes": 200000
+        },
+        {
+          "path": "engine/src/vel_wtab.hex.bak-20261023"
         }
-      ]
+      ],
+      "engineering_manifest": "project/versions/engineering-sources-20261023.json",
+      "published_checkpoint": {
+        "branch": "main",
+        "commit": "100b35bd93cbde6d604a289d990f208622e94646",
+        "limits": "Fixed engineering checkpoint merged via PR3; future live edits are not automatically published."
+      }
     },
     {
       "id": "hardware",
@@ -309,7 +318,13 @@
         {
           "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/native-touch-reset-WORK-IN-PROGRESS.zip"
         }
-      ]
+      ],
+      "engineering_manifest": "project/versions/engineering-sources-20261023.json",
+      "published_checkpoint": {
+        "branch": "main",
+        "commit": "100b35bd93cbde6d604a289d990f208622e94646",
+        "limits": "Fixed engineering checkpoint merged via PR3; future live edits are not automatically published."
+      }
     },
     {
       "id": "host",

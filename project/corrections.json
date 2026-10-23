@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-23T17:30:16.125097+00:00",
+  "rule": "Sidecar corrections govern current use; imported and historical raw bytes are preserved.",
+  "corrections": [
+    {
+      "id": "C01",
+      "affected_paths": [
+        "fpga/current/upstream-notes/LAYER4-RULES-DRAFT-20261023.md"
+      ],
+      "obsolete_claim": "Two banks described as strike/sustain parameter sets",
+      "correction": "Banks are atomic double buffers. Writes go to the inactive bank; all sixteen words must be present before commit. No additional user timbre bank is implied.",
+      "current_evidence": [
+        "fpga/current/engine/src/instrument_table.v"
+      ],
+      "status": "CORRECTED_FOR_CURRENT_USE"
+    },
+    {
+      "id": "C02",
+      "affected_paths": [
+        "fpga/current/upstream-notes/EDIT-MODE-DESIGN-20261023.md"
+      ],
+      "obsolete_claim": "Replace written bitmap with dirty flag for editing",
+      "correction": "Do not remove the sixteen-word completeness guard. Draft/preview/apply/save/cancel require a separately reviewed state contract and tests; an inactive bank alone is not a complete editor.",
+      "current_evidence": [
+        "fpga/current/engine/src/instrument_table.v",
+        "project/PRODUCT-SPEC.md"
+      ],
+      "status": "CORRECTED_FOR_CURRENT_USE"
+    },
+    {
+      "id": "C03",
+      "affected_paths": [
+        "fpga/current/upstream-notes/EDIT-MODE-DESIGN-20261023.md"
+      ],
+      "obsolete_claim": "No touchscreen; macro-only editor, sixteen-key PCF8575 plan",
+      "correction": "J10 is retained. Macro-only scope and PCF8575/sixteen-key pin changes are proposals, not accepted limitations or interface changes.",
+      "current_evidence": [
+        "project/decisions.json"
+      ],
+      "status": "CORRECTED_FOR_CURRENT_USE"
+    },
+    {
+      "id": "C04",
+      "affected_paths": [
+        "fpga/current/upstream-notes/INSTRUMENT-MODEL-20261023.md"
+      ],
+      "obsolete_claim": "d_m and d_k both increase decay duration",
+      "correction": "For lvl - ((lvl*d_m)>>d_k), at fixed other inputs increasing d_m increases the decrement (faster decay); increasing d_k reduces it (slower), subject to integer quantization and minimum-decrement logic. Do not infer a complete musical model from this correction.",
+      "current_evidence": [
+        "fpga/current/engine/src/osc_env.v"
+      ],
+      "status": "CORRECTED_FOR_CURRENT_USE"
+    },
+    {
+      "id": "C05",
+      "affected_paths": [
+        "fpga/current/upstream-notes/ACCEPTANCE-CRITERIA-20261023.md",
+        "fpga/current/upstream-notes/DERISK-PLAN-20261023.md"
+      ],
+      "obsolete_claim": "Q choices lack any direct human source; check marks or derisk recommendations constitute acceptance",
+      "correction": "A direct human Q-combination question exists in this review. Later cuts/delays, test check marks and implementation advice are not blanket approval. Current music golden failure and untested product integration remain explicit.",
+      "current_evidence": [
+        "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "project/reviews/20261024-engineering-publication/review.json"
+      ],
+      "status": "CORRECTED_FOR_CURRENT_USE"
+    },
+    {
+      "id": "C06",
+      "affected_paths": [
+        "fpga/current/upstream-notes/JLCPCB-ORDER-PACKAGE-20261023.md",
+        "fpga/current/upstream-notes/POST-PCB-BOM-20261023.md",
+        "fpga/current/upstream-notes/AUX-SCREEN-PRODUCT-BOM-20261023.md"
+      ],
+      "obsolete_claim": "Old small prototype quantities, CPL and procurement assumptions describe the current instrument",
+      "correction": "Use the saved e098 227-component carrier identity. Current evidence records 215 SMT,12 TH,36 part numbers and47 connection issues/13nets. Final matched BOM/CPL, two-sided/TH assembly, screen/CTP, power/AUX and mechanical contracts remain open; no old total or deletion recommendation is adopted.",
+      "current_evidence": [
+        "project/COLLABORATION-CHECKPOINT-20261024.md",
+        "project/WORK-PLAN.md"
+      ],
+      "status": "CORRECTED_FOR_CURRENT_USE"
+    },
+    {
+      "id": "C07",
+      "affected_paths": [
+        "project/versions/latest-design-inputs-20261023.json",
+        "project/handoff.json"
+      ],
+      "obsolete_claim": "v2 or old embedded handoff fields are latest engineering source",
+      "correction": "v2 and original handoff fields remain historical recovery. Current editable sources are the341-file engineering manifest and three current directories; live producer changes need separate review.",
+      "current_evidence": [
+        "project/SOURCE-MAP.md",
+        "project/versions/engineering-sources-20261023.json"
+      ],
+      "status": "CORRECTED_FOR_CURRENT_USE"
+    },
+    {
+      "id": "C08",
+      "affected_paths": [
+        "docs/00-协作/AGENT-BOARD.md",
+        "project/reviews/20261023-main-authority/review.json"
+      ],
+      "obsolete_claim": "Historical private-only publication instructions still govern after user made repository public",
+      "correction": "Current policy and workflow verify the target URL/name/immutable repository ID, not private visibility. Historical private observations remain time-scoped; public access does not authorize unrelated local disclosure.",
+      "current_evidence": [
+        "project/reviews/20261024-specification-alignment/evidence/repository-visibility.json",
+        ".github/workflows/project-entry.yml"
+      ],
+      "status": "CORRECTED_FOR_CURRENT_USE"
+    }
+  ]
+}

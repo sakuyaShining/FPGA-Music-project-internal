@@ -2,8 +2,8 @@
   "schema": 1,
   "engineering_inputs_manifest": "project/versions/engineering-sources-20261023.json",
   "engineering_entry": "project/ENGINEERING.md",
-  "design_version": "design-20261023-v3",
-  "updated_at": "2026-10-23T15:02:03.630221+00:00",
+  "design_version": "design-20261024-specification-alignment",
+  "updated_at": "2026-10-23T17:30:16.125097+00:00",
   "entry_branch": "main",
   "entry": "project/DESIGN-CURRENT.md",
   "quickstart": "project/QUICKSTART.md",
@@ -23,19 +23,24 @@
     "sensor_capacity": 84,
     "other_features_reduced_by_management": false,
     "rtl_scope_alignment": "not completed across all profiles",
-    "right_display_controller_route": "Existing J10 / RA8875 candidate retained"
+    "right_display_controller_route": "Existing J10 / RA8875 candidate retained",
+    "standalone_core": true,
+    "edit_entry": "edit button -> preset slot -> excitation and timbre",
+    "independent_controls": true,
+    "score_guidance_display": "J10",
+    "complete_product_target": true
   },
   "latest_observed_fpga": {
-    "review_record": "project/reviews/20261023-team-handoff/review.json",
+    "review_record": "project/reviews/20261024-specification-alignment/review.json",
     "producer": "fpga",
-    "status": "UNPUBLISHED_LIVE_WIP",
+    "status": "MAIN_CHECKPOINT_WITH_SEPARATELY_OBSERVED_LIVE_SOURCE",
     "validation_inherited": false,
     "complete_product_top": false
   },
   "hardware": {
     "owner_thread": "01a15ee5-fa24-7501-8475-ad28a0f08939",
     "live_entry": "C:/Users/Sakuya/.codex/worktrees/06df/FPGA-Music-project/hardware/review-manufacturing-20261019/REGIONAL-WORK-IN-PROGRESS.json",
-    "scope": "Listed context and existing native recovery ZIPs only, not full current hardware tree",
+    "scope": "Saved native engineering checkpoint and selected construction context are captured in engineering manifest; unsaved CAD and full producer tree are not included.",
     "observation": "Top cached construction pointer and lower-level state can differ; verify actual native hash before work",
     "manufacturing_release": false,
     "physical_tests": "UNMEASURED"
@@ -50,14 +55,21 @@
     ]
   },
   "reviewed_design_sources": {
-    "project/DESIGN-CURRENT.md": "2fcf62696e8210b260481aac8c498110d688eea6427e69602c4133f7636dbdd3",
+    "project/DESIGN-CURRENT.md": "c7dab887bb68dee3d89cbef9d81cc8264335a6e6883b7000e9d211ddf0d1d344",
     "project/versions/design-decision-20261023.json": "1d0994293691ac34b85348d0929ecda0ac68ace57c560f7b34a9449dd81ae4fc",
     "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "a147411a85f37d22c82228dfbbe836e98c3c116d4c9d158d43426c09a90f1e2e",
     "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "644e245f816a9d98ce962365791cca4a5295f538094775908f45a021a5f8b61c",
-    "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0"
+    "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
+    "project/PRODUCT-SPEC.md": "2ae5156c946cd8c0a869e6c6a2427fcc5b40c6e9ddaaec28ad22ddf8c924b314",
+    "project/SOURCE-MAP.md": "48c23f08f00c5d7c2c73df957e805a787f70d68218c38fa1d002a93c8d0205d8",
+    "project/WORK-PLAN.md": "b8095c515c1b18d1082ad2b85ba089d6a9a93a8fe77cf7216f516ce7d6e0af05"
   },
   "governance": "project/governance.json",
   "decision_ledger": "project/decisions.json",
   "producer_registry": "project/producers.json",
-  "current_inputs_manifest_role": "Historical v2 recoverable candidate, not current live source"
+  "current_inputs_manifest_role": "Historical v2 recoverable candidate, not current live source",
+  "product_specification": "project/PRODUCT-SPEC.md",
+  "source_map": "project/SOURCE-MAP.md",
+  "work_plan": "project/WORK-PLAN.md",
+  "corrections": "project/corrections.json"
 }

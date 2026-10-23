@@ -119,6 +119,100 @@
         "sha256": "e21161fe8152fc07a9ccb533250167fa1d4335ee2d680e54f9fa0627dc277565",
         "authority": "Direct human reply to the explicit controller-route ambiguity in this conversation"
       }
+    },
+    {
+      "id": "D-011-STANDALONE",
+      "status": "accepted",
+      "statement": "Core instrument functions must not strongly depend on a host; music visualization may use a host.",
+      "facts": {
+        "standalone_core": true
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a1644e-8f4a-7759-8d10-0d9b7ca38b98",
+        "excerpt": "standalone"
+      }
+    },
+    {
+      "id": "D-012-EDIT-FLOW",
+      "status": "accepted",
+      "statement": "Press edit, choose a preset slot, then edit excitation and timbre; detailed preview/apply/save behavior remains open.",
+      "facts": {
+        "edit_entry": "edit button -> preset slot -> excitation and timbre"
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a168a3-685d-7039-bcb2-69335fd11a4d",
+        "excerpt": "editing-flow"
+      }
+    },
+    {
+      "id": "D-013-INDEPENDENT-CONTROLS",
+      "status": "accepted",
+      "statement": "Keep independent operation controls; specific key count, controller and pin map are not approved by this statement.",
+      "facts": {
+        "independent_controls": true
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a16817-386a-7baa-9671-ca98c4989eef",
+        "excerpt": "independent-controls"
+      }
+    },
+    {
+      "id": "D-014-SCORE-ON-J10",
+      "status": "accepted",
+      "statement": "Score guidance uses the retained touchscreen; playback must allow simultaneous live performance. Older controller-cancellation wording does not override D-010.",
+      "facts": {
+        "score_guidance_display": "J10"
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a1670c-d261-729b-9f2f-d9bbe0d022f6",
+        "excerpt": "score-and-playback"
+      }
+    },
+    {
+      "id": "P-015-AUX-PREFERENCE",
+      "status": "proposed",
+      "statement": "User favors AUX and no internal speaker; output scope and physical implementation require closure, no amplifier branch deletion authorized.",
+      "facts": {},
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a168ce-a129-78ef-bbf2-99886a911f34",
+        "excerpt": "aux-and-product"
+      }
+    },
+    {
+      "id": "P-016-Q-COMBINATION",
+      "status": "proposed",
+      "statement": "Direct human discussion of Q2=A/Q1=C/Q3=B/Q4=B/Q5=A/Q6=A is located; the question asks to lower engineering risk, not to accept later cuts or all rule drafts.",
+      "facts": {},
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a16764-5c57-7561-bd53-e302c2cd7dca",
+        "excerpt": "q-combination"
+      }
+    },
+    {
+      "id": "D-017-COMPLETE-PRODUCT",
+      "status": "accepted",
+      "statement": "Deliver a complete instrument rather than a prototype experiment; manufacturing remains separately gated.",
+      "facts": {
+        "complete_product_target": true
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a168ce-a129-78ef-bbf2-99886a911f34",
+        "excerpt": "aux-and-product"
+      }
     }
   ]
 }
