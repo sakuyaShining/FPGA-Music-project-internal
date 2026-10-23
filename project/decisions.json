@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "rule": "Accepted decisions persist until explicitly superseded with evidence; proposals do not change scope",
+  "decisions": [
+    {
+      "id": "D-001-CORE",
+      "status": "accepted",
+      "statement": "Tang Nano20K, 32 groups x16 partials shared across four target layers",
+      "facts": {
+        "platform": "Tang Nano20K",
+        "groups": 32,
+        "partials_per_group": 16,
+        "layer_target": 4
+      },
+      "evidence": {
+        "path": "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md",
+        "sha256": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
+        "authority": "Existing user-confirmed product definition in 49; no new architecture approval inferred"
+      }
+    },
+    {
+      "id": "D-002-LEFT",
+      "status": "accepted",
+      "statement": "Two rows of per-note pitch strips plus independent octave selector; per-finger expression; 25/26 endpoint details remain open",
+      "evidence": {
+        "path": "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md",
+        "sha256": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
+        "authority": "Existing user-confirmed panel direction in 49"
+      }
+    },
+    {
+      "id": "D-003-RIGHT",
+      "status": "accepted",
+      "statement": "Whole-chord continuous harmonic modification, release holds state, RESET restores smoothly; precise SKU/CTP and defaults remain open",
+      "evidence": {
+        "path": "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md",
+        "sha256": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
+        "authority": "Existing later interaction decisions summarized in 49; no return-to-centre rollback"
+      }
+    },
+    {
+      "id": "D-004-DUAL-SCREEN",
+      "status": "superseded",
+      "statement": "Historical requirement to preserve both physical displays",
+      "evidence": {
+        "path": "project/reviews/20261023-main-authority/evidence/historical-dual-screen.md",
+        "sha256": "360ab7782660b100bb7718d42b0499fb1f59f4f1809cb16555466626c0e4df53",
+        "authority": "Historical 87 requirement, superseded only in the physical visualization display scope"
+      }
+    },
+    {
+      "id": "D-005-J10-ONLY",
+      "status": "accepted",
+      "supersedes": "D-004-DUAL-SCREEN",
+      "statement": "Cancel physical music visualization display J11; retain harmonic construction touchscreen J10",
+      "facts": {
+        "physical_music_visualization_display": false,
+        "right_harmonic_touchscreen": "J10 retained"
+      },
+      "evidence": {
+        "path": "project/versions/design-decision-20261023.json",
+        "sha256": "1d0994293691ac34b85348d0929ecda0ac68ace57c560f7b34a9449dd81ae4fc",
+        "authority": "Direct human message, thread 01a15ee5-fa24-7501-8475-ad28a0f08939 / turn 01a1640c-8a1b-7771-bd4c-f3e81fa500f3"
+      }
+    },
+    {
+      "id": "D-006-SENSOR-CAPACITY",
+      "status": "accepted",
+      "statement": "Preserve 84 sensor capability in current hardware scope; not measured touch/pressure capability",
+      "facts": {
+        "sensor_capacity": 84
+      },
+      "evidence": {
+        "path": "project/reviews/20261023-main-authority/evidence/single-touch-scope.md",
+        "sha256": "3e203c4963ab340bab3cf5ebcb79c49bb7006f48fa378bfcc22b11be00c7fb9f",
+        "authority": "Recorded retained hardware scope accompanying the human single-screen change"
+      }
+    },
+    {
+      "id": "D-007-SAVE-RECORD",
+      "status": "accepted",
+      "statement": "Retain custom instrument/device editing/nonvolatile save and actual audio recording/playback plus live performance; detailed workflow remains open",
+      "evidence": {
+        "path": "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md",
+        "sha256": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
+        "authority": "Existing confirmed targets in 49; no management feature reduction"
+      }
+    },
+    {
+      "id": "P-008-DECAY2-GLOBAL",
+      "status": "proposed",
+      "statement": "Candidate uses global second-decay breakpoint/slope, default disabled; implementation choice and author tests are not a new accepted product rule",
+      "evidence": {
+        "path": "project/reviews/20261023-main-authority/evidence/fpga/DECAY2-20261023.md",
+        "sha256": "6043da93da33d1eb34939cf2da52e29b39ade4b372a7727cec3511c2675f464f",
+        "authority": "Independent FPGA author implementation note; no direct human acceptance located in this review"
+      }
+    },
+    {
+      "id": "P-009-EXTERNAL-RA8875-CANCEL",
+      "status": "superseded",
+      "statement": "External FPGA document interpreted the old statement as RA8875 cancellation",
+      "evidence": {
+        "path": "project/reviews/20261023-display-clarification/evidence/DECISIONS-20261023.md",
+        "sha256": "b3ae41af9deb074b0124f301779849e8ff75fbba886bc0bbd4853e8e59066554",
+        "authority": "Independent session author record; disputed interpretation, not accepted here"
+      }
+    },
+    {
+      "id": "D-010-J10-ROUTE-CLARIFIED",
+      "status": "accepted",
+      "supersedes": "P-009-EXTERNAL-RA8875-CANCEL",
+      "statement": "Cancel independent visualization screen; retain J10 touchscreen and existing controller route. RA8875 remains a candidate, exact module qualification pending.",
+      "facts": {
+        "right_display_controller_route": "Existing J10 / RA8875 candidate retained"
+      },
+      "evidence": {
+        "path": "project/reviews/20261023-display-clarification/evidence/current-user-confirmation.json",
+        "sha256": "e21161fe8152fc07a9ccb533250167fa1d4335ee2d680e54f9fa0627dc277565",
+        "authority": "Direct human reply to the explicit controller-route ambiguity in this conversation"
+      }
+    }
+  ]
+}

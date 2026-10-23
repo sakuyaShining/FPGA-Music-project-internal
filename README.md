@@ -8,6 +8,7 @@
 - 已保全源码及恢复身份：[版本清单](project/versions/workspace-preservation-20261022.json)
 - 开工规则：[AGENTS.md](AGENTS.md) · [协作板](docs/00-协作/AGENT-BOARD.md)
 - 核对命令：`python tools/scripts/project_control.py check --full --remote --fresh-entry`
+- 审阅期限、活跃源与未发布WIP：`python tools/scripts/design_governance.py status --remote`，本机核对加`--live`；长期维护见[MAINTAINING-MAIN](project/MAINTAINING-MAIN.md)
 
 当前完整功能产品顶层尚未实现并验收。GitHub保存的WIP不代表功能完成；路由完成也不代表STA通过。
 

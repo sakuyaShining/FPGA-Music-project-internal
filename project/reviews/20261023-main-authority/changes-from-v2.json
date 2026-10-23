@@ -1,0 +1,66 @@
+{
+  "observed_at": "2026-10-23T05:07:01.343945+00:00",
+  "summary": {
+    "fpga": {
+      "compared_to_archive": {
+        "added": [
+          "DECAY2-20261023.md",
+          "engine/src/synth_top.v",
+          "sim/tb_decay2.v"
+        ],
+        "removed": [],
+        "modified": [
+          "engine/src/osc_additive.v",
+          "engine/src/osc_env.v",
+          "engine/src/reg_bank.v",
+          "engine/src/tdm_engine.v",
+          "engine/src/tdm_engine_rh.v",
+          "engine/src/tdm_top_owned.v",
+          "sim/tb_strike.v",
+          "sim/tb_vel_shape.v",
+          "tools/run_sims.py"
+        ]
+      },
+      "observed_files": 578,
+      "omissions": []
+    },
+    "hardware": {
+      "compared_to_archive": {
+        "added": [],
+        "removed": [],
+        "modified": [
+          "AUTONOMOUS-CURRENT.md",
+          "REGIONAL-WORK-IN-PROGRESS.json",
+          "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md",
+          "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-native-NOT-FOR-FAB.zip",
+          "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json"
+        ]
+      },
+      "observed_files": 11,
+      "omissions": []
+    }
+  },
+  "evidence": {
+    "project/reviews/20261023-main-authority/evidence/fpga/DECAY2-20261023.md": {
+      "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\DECAY2-20261023.md",
+      "sha256": "6043da93da33d1eb34939cf2da52e29b39ade4b372a7727cec3511c2675f464f"
+    },
+    "project/reviews/20261023-main-authority/evidence/hardware/AUTONOMOUS-CURRENT.md": {
+      "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\AUTONOMOUS-CURRENT.md",
+      "sha256": "6792a92996a8882a319460b548ec1775a534bc937f1b5205eaf28d7cd63b359f"
+    },
+    "project/reviews/20261023-main-authority/evidence/hardware/REGIONAL-WORK-IN-PROGRESS.json": {
+      "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\REGIONAL-WORK-IN-PROGRESS.json",
+      "sha256": "2787c7230a0128cb16cdcf7f793350f3bbc0916ed2861cad4dfcabc4c10d1fe2"
+    },
+    "project/reviews/20261023-main-authority/evidence/hardware/u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md": {
+      "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\README.md",
+      "sha256": "9a8b2cc220b49746345c1ae7450e5c706732f8d7b92683d55ad80bae3d946edb"
+    },
+    "project/reviews/20261023-main-authority/evidence/hardware/u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json": {
+      "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-state.json",
+      "sha256": "f6b5c75c4aaae089363a8b814e5e570bd0f94d70e76c0807f528b30cdf2cee6f"
+    }
+  },
+  "scope": "Observed changes need review; archive remains immutable and no source acceptance is inherited"
+}

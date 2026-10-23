@@ -5,6 +5,7 @@ Requires Python 3.8+ and Git; does not use the original workspace paths.
 """
 from pathlib import Path, PurePosixPath
 import argparse, gzip, hashlib, json, subprocess, sys
+import design_governance as governance
 
 ROOT=Path(__file__).resolve().parents[2]
 ENTRY_FILES=['.gitattributes','.github/workflows/project-entry.yml','README.md','AGENTS.md','project/CURRENT.md','project/AGENT-START.md',
@@ -13,7 +14,9 @@ ENTRY_FILES=['.gitattributes','.github/workflows/project-entry.yml','README.md',
     'project/design-state.json','project/QUICKSTART.md','project/versions/design-decision-20261023.json',
     'project/versions/latest-design-inputs-20261023.json',
     'project/versions/workspace-preservation-20261022.json',
-    'docs/00-协作/AGENT-BOARD.md','tools/scripts/project_control.py']
+    'docs/00-协作/AGENT-BOARD.md','tools/scripts/project_control.py',
+    'tools/scripts/design_governance.py','project/governance.json',
+    'project/decisions.json','project/producers.json','project/MAINTAINING-MAIN.md']
 
 def git(*args):
     return subprocess.check_output(['git','-C',str(ROOT),*args])
@@ -51,25 +54,16 @@ def check(full=False,remote=False,fresh=False):
     required=ENTRY_FILES
     tracked=set(git('ls-files','-z').decode('utf-8').split('\0'))
     errors=['entry is absent or untracked: '+p for p in required if not (ROOT/p).is_file() or p not in tracked]
+    errors.extend(governance.validate(ROOT))
+    policy=governance.read_json(ROOT/'project/governance.json')
+    for name in list(policy['controlled_files'])+[policy['review_record']]:
+        if name not in tracked:errors.append('Governed review/evidence is untracked: '+name)
     if fresh:
-        if git('diff','HEAD','--',*ENTRY_FILES).strip():
-            errors.append('Unpublished entry changes: commit and synchronize the handoff before passing it to another agent')
-        handoff=json.loads((ROOT/'project/handoff.json').read_text(encoding='utf-8'))
-        lines=git('ls-remote','--heads',registry['remote_url'],'refs/heads/'+handoff['entry_branch']).decode().splitlines()
-        if len(lines)!=1:errors.append('Current management entry branch is unavailable')
-        else:
-            latest=lines[0].split()[0]
-            p=subprocess.run(['git','-C',str(ROOT),'merge-base','--is-ancestor',latest,'HEAD'],capture_output=True)
-            available=subprocess.run(['git','-C',str(ROOT),'cat-file','-e',latest+'^{commit}'],capture_output=True)
-            if available.returncode:errors.append('STALE ENTRY: fetch and read the current management branch before implementation')
-            else:
-                entry_files=ENTRY_FILES
-                if git('ls-tree','-r','HEAD','--',*entry_files)!=git('ls-tree','-r',latest,'--',*entry_files):
-                    if p.returncode:errors.append('STALE ENTRY: fetch and read the current management branch before implementation')
-                    else:errors.append('UNPUBLISHED ENTRY: local handoff content differs from the published entry; synchronize before another agent uses it')
-                # A squash/rebase merge may have equal entry content without
-                # containing the original PR commit. Compare all entry blobs;
-                # ancestry alone must not reject the correctly integrated main.
+        published=governance.published_entry(ROOT)
+        if published['status']!='CURRENT_PUBLISHED_MAIN':
+            errors.append('Published main: '+published['status']+'; '+published.get('reason',''))
+        freshness=governance.status(ROOT)
+        errors.extend(freshness['errors'])
     dep=json.loads((ROOT/'project/dependencies.json').read_text(encoding='utf-8'))
     for archive in [dep['archive']]+dep.get('additional_archives',[]):
         ap=ROOT/archive['path']
@@ -127,7 +121,7 @@ def check(full=False,remote=False,fresh=False):
             if profile.get('snapshot') and profile['snapshot'] not in ids:errors.append(label+': unregistered snapshot')
             if profile.get('role')=='probe' and profile.get('product_accepted'):errors.append(label+': probe marked accepted')
     finally:reader.close()
-    result=dict(status='FAIL' if errors else 'PASS',scope='Full captured content hashes' if full else 'Entry tracking and captured file availability',snapshots=len(ids),inputs=files,unique_verified_blobs=len(cache),current_design=design['design_version'],current_wip_files=len(current['files']),current_wip_captured_at=current['captured_at'],live_workspaces_checked=False,remote_checked_now=remote,entry_freshness_checked=fresh,errors=errors,product_acceptance=False)
+    result=dict(status='FAIL' if errors else 'PASS',scope='Full captured content hashes' if full else 'Entry tracking and captured file availability',snapshots=len(ids),inputs=files,unique_verified_blobs=len(cache),current_design=design['design_version'],recovery_archive_files=len(current['files']),recovery_captured_at=current['captured_at'],live_workspaces_checked=False,remote_checked_now=remote,entry_freshness_checked=fresh,published_authority='main',review_freshness=freshness['status'] if fresh else 'NOT_CHECKED',implementation_start_authorized=False,errors=errors,product_acceptance=False)
     print(json.dumps(result,ensure_ascii=False,indent=2))
     return 1 if errors else 0
 
@@ -184,9 +178,8 @@ def get_latest(output):
     output=output.resolve()
     if output.exists():raise ValueError('Refuse to overwrite an existing path: '+str(output))
     registry=json.loads((ROOT/'project/versions/workspace-preservation-20261022.json').read_text(encoding='utf-8'))
-    handoff=json.loads((ROOT/'project/handoff.json').read_text(encoding='utf-8'))
-    subprocess.run(['git','clone','--origin','internal','--branch',handoff['entry_branch'],
-                    '--no-single-branch',registry['remote_url'],str(output)],check=True)
+    subprocess.run(['git','clone','--origin','internal','--branch',governance.BRANCH,
+                    '--no-single-branch',governance.REMOTE,str(output)],check=True)
     subprocess.run(['git','-C',str(output),'config','remote.pushDefault','internal'],check=True)
     subprocess.run(['git','-C',str(output),'config','push.default','simple'],check=True)
     subprocess.run([sys.executable,str(output/'tools/scripts/project_control.py'),'check',

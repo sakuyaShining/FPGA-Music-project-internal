@@ -1,9 +1,12 @@
 name: Project entry and recovery identities
 on:
   push:
-    branches: [main, codex/project-management-20261022]
+    branches: [main]
   pull_request:
-    branches: [main, codex/project-management-20261022]
+    branches: [main]
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
@@ -19,3 +22,27 @@ jobs:
       # checks are for consumers after publication, not for the publishing PR.
       - name: Verify entry, design sources and all captured content
         run: python3 tools/scripts/project_control.py check --full
+      - name: Verify authority, decision conflicts and review deadlines
+        run: python3 tools/scripts/design_governance.py status
+      - name: Verify stale-entry, expiry and live-drift rejection
+        run: python3 -m unittest discover -s tools/tests -p 'test_design_governance.py' -v
+  maintain-legacy-entry:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Keep old entry consumers following actual private main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = 'sakuyaShining/FPGA-Music-project-internal'
+          test "$(gh api "repos/$GITHUB_REPOSITORY" --jq .private)" = true
+          git fetch origin main codex/project-management-20261022
+          git merge-base --is-ancestor origin/codex/project-management-20261022 origin/main
+          git push origin refs/remotes/origin/main:refs/heads/codex/project-management-20261022

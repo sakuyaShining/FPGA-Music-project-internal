@@ -1,0 +1,325 @@
+{
+  "schema": 1,
+  "scope": "Declared active roots only; inaccessible roots are UNOBSERVED. Dormant sources require review before activation.",
+  "producers": [
+    {
+      "id": "fpga",
+      "activity": "active",
+      "root": "D:/FPGA-Project/codex-builds/fpga-m1-agent-work",
+      "owner": {
+        "thread_id": null,
+        "label": "Independent FPGA session; exact session identity not registered"
+      },
+      "publication_status": "UNMERGED_WIP_WITH_OLDER_RECOVERY_ARCHIVE",
+      "observation_max_hours": 6,
+      "recovery_manifest": "project/versions/latest-design-inputs-20261023.json",
+      "published_ref": null,
+      "exclude_dirs": [
+        "sim_build",
+        "sim_work",
+        "__pycache__",
+        "node_modules",
+        ".git"
+      ],
+      "exclude_prefixes": [
+        "build_",
+        "synth_"
+      ],
+      "watch": [
+        {
+          "path": ".",
+          "recursive": false,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "engine/src",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "engine/rtl",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "rtl",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "constraints",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "tb",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "sim",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "tools",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "project",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "reference",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "handoff_support",
+          "recursive": true,
+          "suffixes": [
+            ".v",
+            ".sv",
+            ".vh",
+            ".hex",
+            ".cst",
+            ".sdc",
+            ".py",
+            ".md",
+            ".json",
+            ".csv",
+            ".txt",
+            ".log",
+            ".toml"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "evidence",
+          "recursive": true,
+          "suffixes": [
+            ".json",
+            ".log",
+            ".txt"
+          ],
+          "max_bytes": 200000
+        }
+      ]
+    },
+    {
+      "id": "hardware",
+      "activity": "active",
+      "root": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019",
+      "owner": {
+        "thread_id": "01a15ee5-fa24-7501-8475-ad28a0f08939",
+        "label": "查看 huangyongtao 最新进展"
+      },
+      "publication_status": "LIVE_CONSTRUCTION_NOT_MANUFACTURING_RELEASE",
+      "observation_max_hours": 6,
+      "recovery_manifest": "project/versions/latest-design-inputs-20261023.json",
+      "published_ref": null,
+      "exclude_dirs": [
+        ".git",
+        "__pycache__"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": "AUTONOMOUS-CURRENT.md"
+        },
+        {
+          "path": "REGIONAL-WORK-IN-PROGRESS.json"
+        },
+        {
+          "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md"
+        },
+        {
+          "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-native-NOT-FOR-FAB.zip"
+        },
+        {
+          "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json"
+        },
+        {
+          "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/control-branches-native-review.json"
+        },
+        {
+          "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/regional-native-review.json"
+        },
+        {
+          "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/three-component-check.json"
+        },
+        {
+          "path": "u8-power-corridor-20261022/address3-local-recovery/single-touch-scope/README.md"
+        },
+        {
+          "path": "u8-power-corridor-20261022/address3-local-recovery/single-touch-scope/SCOPE-CHANGE.md"
+        },
+        {
+          "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/native-touch-reset-WORK-IN-PROGRESS.zip"
+        }
+      ]
+    },
+    {
+      "id": "host",
+      "activity": "dormant",
+      "owner": "No current owner registered",
+      "sources": [
+        "ca03",
+        "6e70"
+      ],
+      "activation_requires_review": true
+    }
+  ]
+}
