@@ -94,6 +94,13 @@ PCB 打样、贴片与物流需要日历时间。施工数量只在相应review�
 
 ## 6. 交接记录
 
+### 2026-10-24 · Codex · 长任务与T02隔离诊断
+- 做了什么：用户确认产品复述准确；登记曲谱播放与现场并奏、溢出丢最早发声音符。每60分钟本线程续接，额度不足保全断点、不绕过。
+- 在飞什么：本轮仅对已捕获候选做隔离T02诊断；不是认领D盘原FPGA实现路径。管理PR4仍由用户合入main。
+- 卡在哪：当前默认力度配置使旧黄金不同且layers旧固定幅度断言失败；测试台vscale=0对照三组完全匹配，不能据此关闭产品力度或称新默认已验收。
+- 需要对方什么：按OPEN-RULES关闭边界；新默认独立参考与完整产品接合仍需验证；不自动采用旧完整度加权抢占或播放降两层。
+- 下一手从哪读：project/MUSIC-GOLDEN-DIAGNOSIS.md、project/OPEN-RULES.md及governance当前review；Git/额度/实验断点另存本机outputs/long-task-20261024/RESUME.md。
+
 ### 2026-10-24 · Codex · 规格与接手入口收口
 - 做了什么：先pull --ff-only internal main到100b35b；建立PRODUCT-SPEC、SOURCE-MAP、WORK-PLAN，登记直接用户出处与旧提案勘误，修复公开后旧入口同步的private断言。
 - 在飞什么：仍在codex/current-engineering-sources-20261023管理分支；本轮通过新PR交回，main由用户合并。

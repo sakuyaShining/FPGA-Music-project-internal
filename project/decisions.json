@@ -198,7 +198,10 @@
         "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
         "authority": "Direct human WorkBuddy user_query; message 01a16764-5c57-7561-bd53-e302c2cd7dca",
         "excerpt": "q-combination"
-      }
+      },
+      "later_constraints": [
+        "D-018-SCORE-LIVE-OLDEST"
+      ]
     },
     {
       "id": "D-017-COMPLETE-PRODUCT",
@@ -212,6 +215,20 @@
         "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
         "authority": "Direct human WorkBuddy user_query; message 01a168ce-a129-78ef-bbf2-99886a911f34",
         "excerpt": "aux-and-product"
+      }
+    },
+    {
+      "id": "D-018-SCORE-LIVE-OLDEST",
+      "status": "accepted",
+      "statement": "Score playback and live performance coexist like four-hand playing. When polyphony or group capacity is reached, discard the first sounding note by start order; no automatic two-layer playback cap is approved.",
+      "facts": {
+        "score_playback_with_live_performance": true,
+        "overflow_note_order": "discard earliest-started sounding note"
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-music-golden-diagnosis/evidence/score-live-overflow.json",
+        "sha256": "546bef63973d84a7d0c179317bfa77720a56d566e4b42e8a602c19c33ba1b6f0",
+        "authority": "Direct human confirmation and added requirement in the current conversation"
       }
     }
   ]

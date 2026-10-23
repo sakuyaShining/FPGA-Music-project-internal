@@ -7,7 +7,7 @@
 1. [PRODUCT-SPEC.md](PRODUCT-SPEC.md)：产品/制造目的、需求与实现差距、未冻结行为。
 2. [SOURCE-MAP.md](SOURCE-MAP.md)：三个current目录、活跃owner源与历史资料的关系。
 3. [ENGINEERING.md](ENGINEERING.md)：341项输入清单、依赖、隔离导出与验证入口。
-4. [WORK-PLAN.md](WORK-PLAN.md)：音乐回归、硬件制造及后续功能的任务卡与完成条件。
+4. [WORK-PLAN.md](WORK-PLAN.md)：音乐回归、硬件制造及后续功能的任务卡与完成条件；[OPEN-RULES.md](OPEN-RULES.md)列出尚需冻结的边界。
 5. `decisions.json`、`corrections.json`、`governance.json`、`producers.json`：决定出处、旧说明勘误、审阅期限和活跃源边界。
 
 ## 当前已知状态
@@ -16,9 +16,11 @@
 - `tdm_ship_owned`默认关闭逐指表达和右手音色接口、保留16路旧pad；`layer_dispatch`仍限制最多两层。完整84节点/J10/编辑/存储/录放载板顶层未接成，未签收完整产品资源和时序。
 - `hardware/current/`保存50项原生工程及上下文。e098施工版记录227器件、47项未连通/13网；非制造放行。另存aaa37历史基线不可混用。
 - `host/current/`保存38项ca03 11版源码及依赖；100项离线通过不证明当前FPGA实物协议兼容。
-- 原owner工作区后续修改不自动进入上述检查点；实时状态须按当前review和只读live检查判断。本轮规范整理不重跑RTL、PnR、板测或CAD，不刷新上述验证日期。
+- 原owner工作区后续修改不自动进入上述检查点；实时状态须按当前review和只读live检查判断。规格整理阶段未重跑RTL/PnR/板测/CAD；后续独立诊断另有来源与结果，不刷新旧验证日期。
 
 原始验证见[工程检查点审阅](reviews/20261024-engineering-publication/review.json)。本轮规格审阅、直接用户原话及新增观察由`governance.json`指向；旧审阅不可覆盖。
+
+后续隔离诊断已把compat/layers/sensor分别跑完，历史vscale=0配置对照均逐字节匹配旧黄金；当前默认下的差异和分层断言失败仍保留，不能称为全部回归已修复，详见MUSIC-GOLDEN-DIAGNOSIS.md。用户另明确曲谱播放时现场演奏、溢出丢最早发声音符，D-018覆盖旧抢占方向；仍未完成完整曲谱/现场/四层产品接合。
 
 ## 防止旧设计回流
 

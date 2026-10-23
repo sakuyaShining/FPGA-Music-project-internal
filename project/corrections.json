@@ -108,6 +108,20 @@
         ".github/workflows/project-entry.yml"
       ],
       "status": "CORRECTED_FOR_CURRENT_USE"
+    },
+    {
+      "id": "C09",
+      "affected_paths": [
+        "fpga/current/upstream-notes/LAYER4-RULES-DRAFT-20261023.md",
+        "fpga/current/upstream-notes/ACCEPTANCE-CRITERIA-20261023.md"
+      ],
+      "obsolete_claim": "Completeness-weighted stealing or automatic playback/live reduction to two layers is final product policy",
+      "correction": "D-018 requires score playback plus live performance and dropping the earliest-started sounding note at resource capacity; no automatic two-layer playback cap is approved. Exact implementation boundaries remain in OPEN-RULES.",
+      "current_evidence": [
+        "project/reviews/20261024-music-golden-diagnosis/evidence/score-live-overflow.json",
+        "project/OPEN-RULES.md"
+      ],
+      "status": "CORRECTED_FOR_CURRENT_USE"
     }
   ]
 }
