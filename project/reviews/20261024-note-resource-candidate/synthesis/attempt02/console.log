@@ -1,0 +1,32 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project D:/FPGA-Project/review/note-resource-synthesis-20261024-02/resource.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'D:\FPGA-Project\review\note-resource-synthesis-20261024-02\note_resource_mgr.v'
+Compiling module 'note_resource_mgr'("D:\FPGA-Project\review\note-resource-synthesis-20261024-02\note_resource_mgr.v":1)
+Extracting RAM for identifier 'entry_tokens'("D:\FPGA-Project\review\note-resource-synthesis-20261024-02\note_resource_mgr.v":48)
+Extracting RAM for identifier 'entry_masks'("D:\FPGA-Project\review\note-resource-synthesis-20261024-02\note_resource_mgr.v":48)
+Extracting RAM for identifier 'entry_layers'("D:\FPGA-Project\review\note-resource-synthesis-20261024-02\note_resource_mgr.v":49)
+Extracting RAM for identifier 'entry_maps'("D:\FPGA-Project\review\note-resource-synthesis-20261024-02\note_resource_mgr.v":50)
+Extracting RAM for identifier 'order'("D:\FPGA-Project\review\note-resource-synthesis-20261024-02\note_resource_mgr.v":51)
+Extracting RAM for identifier 'source_serial'("D:\FPGA-Project\review\note-resource-synthesis-20261024-02\note_resource_mgr.v":58)
+NOTE  (EX0101) : Current top module is "note_resource_mgr"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "D:\FPGA-Project\review\note-resource-synthesis-20261024-02\impl\gwsynthesis\resource.vg" completed
+[100%] Generate report file "D:\FPGA-Project\review\note-resource-synthesis-20261024-02\impl\gwsynthesis\resource_syn.rpt.html" completed
+GowinSynthesis finish

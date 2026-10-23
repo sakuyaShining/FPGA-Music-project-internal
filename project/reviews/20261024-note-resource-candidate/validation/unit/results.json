@@ -1,0 +1,72 @@
+{
+  "suites": [
+    {
+      "name": "governance",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_design_governance.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-resource-candidate/validation/unit/governance.log",
+      "sha256": "77d1ea414466f1855a293adefb35cbefe38f2f80cb366b1e76923de3b49fc27f"
+    },
+    {
+      "name": "engineering",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_engineering.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-resource-candidate/validation/unit/engineering.log",
+      "sha256": "5c7055d32b005aa60f1dc81e425cab2ac69dd98d318981b01b51da7bba38ff27"
+    },
+    {
+      "name": "music-profiles",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_music_profiles.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-resource-candidate/validation/unit/music-profiles.log",
+      "sha256": "2664996325afefc93a5d5d4d43a4b5960dbcdfa35a5ad9728d1b867e4a71931f"
+    },
+    {
+      "name": "resource-model",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-resource-candidate/validation/unit/resource-model.log",
+      "sha256": "a9820f138dd2f874bc041d952ecb4d6a9c1753e49b4e46c59e46097b49638321"
+    }
+  ],
+  "status": "PASS",
+  "expected_total_tests": 48
+}

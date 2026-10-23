@@ -8,6 +8,7 @@
 | 当前保存硬件候选 | `hardware/current/native/`、`context/`，50项 | 06df/U9ControlWork保存源e098c5db… | 47项未连通/13网，不能直接制造；37项保留基线是另一份源；旧会话句柄禁止复用 |
 | 当前主机候选 | `host/current/`，38项 | ca03，host-workbench-20261015-11 | 已含重奏测量测试依赖；离线100项通过，当前FPGA协议兼容未板验；其他GUI分支未批量合并 |
 | 活跃生产目录 | `producers.json`声明的FPGA和硬件根 | 原owner继续工作，实施前运行`status --live` | 只读比较声明范围；本地图谱不授权接管原目录，不宣称包含未保存CAD状态 |
+| 资源管理增量候选 | `experiments/note_resource_20261024/`及`versions/note-resource-candidate-20261024.json` | 4d37限定副本，D-019资源合同 | 32组/四层分配协调器单元与独立综合，不改341项工程源；尚缺真实音乐后端、包络结束和曲谱/触摸接合，不能替代完整顶层 |
 | 历史已接合音乐/主机 | 66a4/07及各自清单 | `workspace-preservation-20261022.json` | 旧板验只绑定旧输入；安全修复候选另看instrument-engine-safety |
 | 其他候选 | 6e70、a61b、4c43、WorkBuddy分支等 | 22个preserve分支及原工作树 | 未提交文件需与快照逐项比对；保全不是合入产品，禁止批量merge代替审查 |
 | 旧根源码 | `src/rtl`、`src/gowin`、`tools/host` | 历史复现入口 | 不能代替三个current目录，不删除其旧证据 |

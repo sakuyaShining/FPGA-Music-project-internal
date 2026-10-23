@@ -22,6 +22,7 @@ ENTRY_PATHS = ['.gitattributes', '.github/workflows/project-entry.yml', 'README.
                'fpga/current', 'hardware/current', 'host/current',
                'tools/scripts/engineering.py', 'tools/requirements-engineering-host.txt']
 ENTRY_PATHS += ['tools/scripts/music_profiles.py', 'tools/tests/test_music_profiles.py']
+ENTRY_PATHS += ['experiments/note_resource_20261024']
 
 
 def read_json(path):

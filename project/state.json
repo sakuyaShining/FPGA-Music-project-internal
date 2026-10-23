@@ -7,7 +7,7 @@
     "source_branch": "codex/current-engineering-sources-20261023",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-23T15:02:03.630221+00:00",
+  "updated_at": "2026-10-23T19:18:43.470Z",
   "entry": "project/CURRENT.md",
   "predecessor_state": "codex/project-version-closure:project/state.json",
   "implementation_boundary": "This registry does not merge or change any functional source",
@@ -123,6 +123,15 @@
       "producer_registry": "project/producers.json",
       "product_accepted": false,
       "validation_inherited": false,
+      "programming_allowed": false
+    },
+    "note_resource_unit_candidate": {
+      "role": "isolated-development-candidate",
+      "manifest": "project/versions/note-resource-candidate-20261024.json",
+      "entry": "experiments/note_resource_20261024/README.md",
+      "review": "project/reviews/20261024-note-resource-candidate/review.json",
+      "status": "UNIT_VERIFIED_MOCK_BACKEND_ONLY",
+      "product_accepted": false,
       "programming_allowed": false
     }
   },
