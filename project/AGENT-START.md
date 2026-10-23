@@ -1,5 +1,7 @@
 # 新Agent启动入口：先确认设计，再确认源版本
 
+当前工程候选已展开到`fpga/current/`、`hardware/current/`和`host/current/`。先读[ENGINEERING.md](ENGINEERING.md)与[协作检查点](COLLABORATION-CHECKPOINT-20261024.md)，校验输入并选择限定任务。以下v1/v2恢复步骤仅用于历史复现，不是本批最新工程。
+
 外部成员和离线补丁接手方式、任务卡及交回要求见[COLLABORATING.md](COLLABORATING.md)。
 
 **先读[当前设计](DESIGN-CURRENT.md)、`governance.json`与`decisions.json`。实际远程main为唯一已发布入口。用户取消J11实体可视化屏、保留J10泛音触控屏的决定继续有效；旧双屏说明不能覆盖它。**

@@ -1,5 +1,7 @@
 # FPGA Music 项目总入口
 
+当前协作工程见[工程入口](project/ENGINEERING.md)与[2026-10-24协作检查点](project/COLLABORATION-CHECKPOINT-20261024.md)：`fpga/current/`、`hardware/current/`、`host/current/`。这是有输入身份和验证边界的开发候选，完整产品未验收；历史根目录源码不作为最新开发入口。
+
 **先读[当前设计](project/DESIGN-CURRENT.md)与[快速取得版本](project/QUICKSTART.md)，再读 [project/CURRENT.md](project/CURRENT.md)。** 该页统一导航音乐基线、开发候选、临时探针、GUI与硬件版本。
 
 **新Agent直接读[启动入口](project/AGENT-START.md)和[交接身份](project/handoff.json)**；可转交的完整指令见[NEXT-AGENT-PROMPT](project/NEXT-AGENT-PROMPT.md)。

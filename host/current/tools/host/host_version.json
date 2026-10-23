@@ -1,0 +1,63 @@
+{
+  "version": "host-workbench-20261015-11",
+  "design_zip_sha256": "5829f77058782fed347af97d8fcedbe7b685f3563af03a19f97a8ad240b36734",
+  "host_baseline": "66a4/codex/project-version-closure, integration-20261011-07 host files",
+  "rtl_modified": false,
+  "device_firmware_binding": null,
+  "inputs": {
+    "tools/host/audio_observer.py": "54e22d5703401df5f8ac5fe90d586d7769c4af9cd8689f04991f9a1d55f6ac1d",
+    "tools/host/build_exe.py": "d87a95ac0375e9a9ba23c3713bfad9f38ae5f7dfac2ef20bce2e9ff1142a7d0c",
+    "tools/host/config_editor.py": "0c6d5da5cba91f5f966ae82267609db9c9825dc7b3e25f0354751e2c6d79c7e2",
+    "tools/host/device_config.py": "b01f83772785acffed2903e06c607b9c70e87ce69120c5a2f9ac78a1f672c916",
+    "tools/host/dsp_gui.py": "2370ffe1d6cd1d0fc51a825d40200d1d24ac945e3f8c1556072b84f0319f4971",
+    "tools/host/evidence_export.py": "0c0a00d508d777313e9f3910aa2718572f64a00f2b71a630706d65c7dc2e4406",
+    "tools/host/fonts/lolita.ttf": "d91f680b870855d50619f72a1e597d2af5f068535e610a4fc95e5e53bab93449",
+    "tools/host/fonts/LolitaMono.ttf": "c8363198ffa98440b863a0835f7e6c8864e5d079694ee542e70f6210f86b2492",
+    "tools/host/instrument_config.py": "f28d87fec7eaf42f3d6b5e6961a2975c73f02cd0e5812f7337c5b096a5906538",
+    "tools/host/live_visualizer.py": "625d9a4a15c1747d9f85db788d08cd7d176a45951be88c8e0ffb4c60361749a3",
+    "tools/host/serial_link.py": "3f06f76862f7e973f1051e7109a044345132dcf701f5d4abc5aba33a0a6a8888",
+    "tools/host/studio_fonts.py": "9b531eccd1f0d1b0936ef155ba5cd82056b1517ba93447c49449ebe28196c7b5",
+    "tools/host/studio_theme.py": "88fd168c5bdec4df53d4941f03d5333a4315bde13f61159245ca59961e1b2bab",
+    "tools/host/theme.qss": "992e61c8615b3dfaf1d25a4b28c0651b11dac3f00c80e15968b7bae1fac2bf7b",
+    "tools/host/ui_preferences.py": "8b226933fa181cd54d80ea4cf548a32553a9c529cf60fcc7c49cfdc3676f302a",
+    "tools/host/workbench.py": "f7691a88690d4d37ccfd63f0c58472a0e1e515068bdd1ec74eb0a55e0f5b724a",
+    "tools/scripts/dsp_host.py": "06519fcca3373121f72c1137dcb2a9a69d667552da4804a912f9bb10876a36ee",
+    "tools/scripts/check_workbench_live.py": "10dd3a57e4164a097cbc57f5bda49c674a97b8297c1d4a08dc11d41c8f0f9afc",
+    "tools/scripts/check_workbench_presets.py": "6a1f2f29dc3bf2821009100e31660d323905d53a20d61150860509d0481d4b5e",
+    "tools/host/tone_panel.py": "dc64b629d5d837f6589d38405708d96d1a19f05ce4c311f832424b51a349e435",
+    "tools/host/piano_keyboard.py": "3763a259e75e95b9df351f783c6c70ac987803724ba56124c00141e59879372d",
+    "tools/host/score_control.py": "1efa1742c6d7a2ebfeaf26aefae190eaf00499f971cba039dd377c1911a08a5c",
+    "tools/scripts/check_workbench_score.py": "3a8ba23cdc8ba093bb96b838d8f6d1ed69464c8a867b86cfef5660c3e0daa0cd",
+    "tools/host/advanced_tools.py": "68fc31c8f45fb305fa7d51536cd1c6073d11ce0b64723a7d696c01868c6b6b43",
+    "tools/host/test_advanced_tools.py": "56e9e877ae7bc153a4434f5385bf53785762aadfee466bdd77bb391fe02d8fd1",
+    "tools/host/test_audio_observer.py": "5e9f954c54b922c12c7c407505d605c6710bd3b39eae355e0c86133304a0660c",
+    "tools/host/test_config_editor.py": "9b94d58b4a30f98680a787cec22f13686f11d1cfccb027dbca3756bd9e1ac630",
+    "tools/host/test_instrument_config.py": "3ce4f4ed8242937f7327823d8454416f0bebeff50e87f1239bb23aec3a781a80",
+    "tools/host/test_live_visualizer.py": "da20e715fd537f3413b9bbfcdbd83dd42c9e221a640de34ad8659ab61fa56eae",
+    "tools/host/test_normal_startup.py": "844aaf5071a098d72c15a6a814d6efbefc03b827830227357998e9237c133101",
+    "tools/host/test_retrigger_measurement.py": "aec0d58b689e0708481d4c86e4b95bc360d31607a1e4ba4f4020ec859a3199fd",
+    "tools/host/test_score_control.py": "5011fe4ab8802584ee9e6287612b032a49e598c8ed22ce223f5f0402eb39f415",
+    "tools/host/test_serial_link.py": "db35f6477d20cdffc55fd1d2bee8fe94c110432b0c7643e2dee974c60aee274a",
+    "tools/host/test_tone_panel.py": "5b10532570229bfbaddc30e6e8721bdaec1aebb832475436a7abb30e1d29a3e3",
+    "tools/host/test_workbench.py": "3744bfc71fd1be6a6bf242d6bc02ec701ff44632b0f7ad9a99ce978b8f76e491"
+  },
+  "verified_compatible_firmware": {
+    "build_record": "D:/FPGA-Project/retrigger-20261015-09/build-record.json",
+    "bitstream_sha256": "ae99d7ba7c5101184e6792ae9de2bc5e6215c1a4b0aaf01775c3fb09450c5563",
+    "note": "recorded SRAM download and PCM tests, not a readable device cryptographic identity"
+  },
+  "previous_version": "host-workbench-20261015-10",
+  "change_scope": "高级工具窗口自适应、固定关闭/部分应用、草稿文件菜单及状态；不改变RTL或音频协议",
+  "verification": {
+    "offline_host_tests": 100,
+    "layout_dpi": [
+      1,
+      1.25,
+      1.5,
+      2
+    ],
+    "device_tested_this_release": false,
+    "scope": "离线Qt布局、模拟协议与主机回归；非板测",
+    "protected_files": 186
+  }
+}

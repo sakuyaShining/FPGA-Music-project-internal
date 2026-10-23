@@ -18,7 +18,9 @@ REMOTE = 'https://github.com/sakuyaShining/FPGA-Music-project-internal.git'
 BRANCH = 'main'
 ENTRY_PATHS = ['.gitattributes', '.github/workflows/project-entry.yml', 'README.md',
                'AGENTS.md', 'project', 'docs/00-协作/AGENT-BOARD.md',
-               'tools/scripts/project_control.py', 'tools/scripts/design_governance.py']
+               'tools/scripts/project_control.py', 'tools/scripts/design_governance.py',
+               'fpga/current', 'hardware/current', 'host/current',
+               'tools/scripts/engineering.py', 'tools/requirements-engineering-host.txt']
 
 
 def read_json(path):

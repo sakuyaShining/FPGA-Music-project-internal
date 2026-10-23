@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "check_engine_compat.py", line 12, in <module>
+    run([IV,'-g2012','-DTIMING_RTL_SIM','-I',str(R/'engine/src'),'-s',top,'-o',str(E/(name+'-compat.vvp')),*map(str,files)],'compile-engine-'+name)
+  File "D:\FPGA-Project\review\collaboration-fpga-20261024-01\common.py", line 17, in run
+    log=out.stdout+out.stderr;(E/(name+'.log')).write_text(log,encoding='utf-8');assert out.returncode==0,(name,log)
+AssertionError: ('compile-engine-compat', "D:\\FPGA-Project\\review\\collaboration-fpga-20261024-01\\engine\\src\\tdm_top_owned.v:596: error: Unable to bind wire/reg/memory `r_vel_sens' in `tb_music.dut.core'\nD:\\FPGA-Project\\review\\collaboration-fpga-20261024-01\\engine\\src\\tdm_top_owned.v:777:      : A symbol with that name was declared here. Check for declaration after use.\n1 error(s) during elaboration.\n")

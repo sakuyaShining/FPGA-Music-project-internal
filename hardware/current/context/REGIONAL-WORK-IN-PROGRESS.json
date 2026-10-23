@@ -1,0 +1,166 @@
+{
+  "updated_at": "2026-10-23T22:59:02.407042+08:00",
+  "role": "VERIFIED_AAA37_BASELINE_PLUS_ACTIVE_REGIONAL_CONSTRUCTION",
+  "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+  "session": "50c7434a-3f4d-4707-8544-b1fd2a8ce3a8",
+  "session_owner_windows_profile": "Sakuya",
+  "session_warning": "A session belongs to its Windows account. From another account, open the saved descriptor through that account CLI; do not reuse this handle.",
+  "pcb_sha256": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e",
+  "native_wrapper": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\native_project.py",
+  "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\checkpoint-capture.json",
+  "drc": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\checkpoint-drc.json",
+  "review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\checkpoint-review.json",
+  "readme": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\README.md",
+  "native_drc": {
+    "Connection Error": 37
+  },
+  "status": "SAVED_REOPENED_37_CONNECTIONS_6_NETS_NO_NEW_REFERENCE_DEGRADATION_NOT_FAB",
+  "router_status": "Current source unchanged; central90 coupled control restoration is offline only. Inspect real process and work-state; never replay terminal runs.",
+  "closed_nets_this_recovery": [
+    "VIS_CS_N",
+    "VIS_BL_EN",
+    "DISP_MOSI",
+    "TP_RESET_N",
+    "3V3_IO",
+    "3V3_PERIPH",
+    "BUS_RETURN",
+    "BUS_SCK",
+    "INV2",
+    "DISP_RESET_N",
+    "TP_RESET_MOD_N",
+    "HARM_CS_N"
+  ],
+  "manufacturing_release": false,
+  "next_action": "原生仍e098c5db/47未连通13网/227件616孔，未做本轮CAD铜或器件变更。先读取central90-controls-work-state.json并核对真实进程/工具句柄；当前批次是完整13网及TP_RESET_N联合恢复的离线候选，不重开终态作业，不重放旧apply。读取central90-clock-result.json、central90-pdn-island-source-result.json及其expected：U9 Top74/42mm90度、C9 Bottom71/35.5mm0度仅候选，时钟在两条Top连接后已离线同岛、47供电脚在整岛源/目标法下已离线恢复；所有新增铜完整四层物理、最近实际接地、回流、敏感网和受影响GND焊盘复核尚未完成，绝非原生通过。供电连接含绕行，不能把本地去耦短支路长度当整条母线长度。继续恢复TP_RESET_N/LOAD/QH/编码器/P1/P2/EDIT/P0/P3，保持MOSI全网实际地门。全部13网及邻近复位完整候选通过后，扩展精确U9/C9非铜/焊盘/标注验证，再在同一自有工程原生联合改位、四层重铺、严格DRC、保存关闭重开；未通过前实际U9北方91/19mm180和C9 Top99.25/16mm0不动。270度42mm、北移36/34mm、固定点源PDN失败已终态；90度候选只用最新明确路径接续。旧原生e098/aaa37包完整保留。当前CAD会话已恢复为construction-state.session，冷启动首次枚举超时后只读工程身份和已知PCB打开成功，不能复用707旧句柄。采购当前入口purchase-preparation-20261021-r1/current-board-procurement.json覆盖227件/215SMT+12TH/36料号，30SMT型号逐一原生匹配，SW1仅明确C码后缀归一；current-catalog-20261023.json为LCSC供货快照，不是PCBA库存/报价/交期。C50984快照5只，板数/备用及工厂备料待核。旧CPL的R30/U9/C9/C8/R63/R64六行无效，实际仍3件Bottom SMT，未假设手焊。屏/线束/机械/电源/84附件和最终同版制造包未冻结；实物UNMEASURED，不可投板，不下单不外发，自动继续。",
+  "offline_review_updated_at": "2026-10-22T04:55:21.909658+08:00",
+  "latest_offline_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\native-stage-review.json",
+  "stale_offline_candidates": {
+    "source_pcb_sha256": "8b9b68a5f42a446b2c716e41d6693f480fb9c8048e6c1c7080b151244978aa19",
+    "entry": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address-next-checkpoint.json",
+    "native_replay_forbidden": true
+  },
+  "latest_offline_candidate": {
+    "entry": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\native-state.json",
+    "working_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\reference-local-repair\\u1-tail-detour\\expected-capture.json",
+    "source_pcb_sha256": "6509803e7afca781b7f71ad69183cc10d8f6413312701eb16a2cdc46dfe83afd",
+    "native_candidate_sha256": "aabad01a9531f933fff39907fd2be6a1b4d17e17fbc9912fd385d659c1191b38",
+    "native_candidate_drc": {
+      "Connection Error": 50
+    }
+  },
+  "rejected_layout_attempt": {
+    "entry": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\u8-reposition\\route\\classification.json",
+    "reason": "U8/C8/R63 joint relocation did not restore 3V3_IO, BUS_SCK, RC_DRIVE, LCD_RESET_N, TP_RESET_N; ADDR0 still two pad islands. Preserve source57; do not import."
+  },
+  "rejected_display_reset_attempt": {
+    "entry": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\interface-closure\\reference-preflight.json",
+    "reason": "Initial complete reset route has2.5376mm closest-ground projection gap; plane-aware mature, top-only and corrected-endpoint bounded grid did not close it. No native import."
+  },
+  "pending_trial": {
+    "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+    "session": "50c7434a-3f4d-4707-8544-b1fd2a8ce3a8",
+    "pcb_sha256": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e",
+    "native_wrapper": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\native_project.py",
+    "status": "HISTORICAL_AAA37_BASELINE_NOT_PENDING",
+    "native_drc": {
+      "Connection Error": 37
+    },
+    "native_netlist_errors": 0,
+    "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\checkpoint-capture.json",
+    "review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\checkpoint-review.json",
+    "readme": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\README.md",
+    "native_package": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\native-touch-reset-WORK-IN-PROGRESS.zip",
+    "reference_repair_pending": false,
+    "reference_degradation": [],
+    "running_tasks": [],
+    "next_action": "Do not execute this historical baseline entry; current regional construction is active_native_construction.state and its own native wrapper.",
+    "reference_gate_pass": true,
+    "reference_report": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\mosi-closure\\actual-reference-review.json"
+  },
+  "scope_override": {
+    "authority": "Human latest message in this chat",
+    "requirement": "Cancel music-visualization physical display (J11/MSP2401); retain right-hand harmonic construction touchscreen (J10)",
+    "preserve": [
+      "Nano20K",
+      "84 sensor capability",
+      "140x100mm four-layer board",
+      "retained J10 touch/display chain"
+    ],
+    "supersedes": "Historical dual-screen requirement and visual-only BOM requirements",
+    "product_rtl_edited": false
+  },
+  "verified_pre_scope_reference": {
+    "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-U8BusWork-20261022",
+    "pcb_sha256": "6509803e7afca781b7f71ad69183cc10d8f6413312701eb16a2cdc46dfe83afd",
+    "review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\inv2-coupled\\checkpoint-review.json",
+    "readme": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\inv2-coupled\\README.md",
+    "native_drc": {
+      "clearance": 0,
+      "physical": 0,
+      "connection": 57
+    }
+  },
+  "previous_native_checkpoint": {
+    "pcb_sha256": "30eb69888d19dfbf2792fa6183af7a118fb013ad59a24dfbb1585bd8e857d085",
+    "entry": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\single-touch-scope\\README.md",
+    "role": "Historical single-touch46 checkpoint; no longer current"
+  },
+  "reference_gate_pass": true,
+  "reference_failures": [],
+  "previous_verified_reference_checkpoint": {
+    "pcb_sha256": "6a1363c7f189b533ee5b434331ad562948d3c06838b1a73897ebf995fb75e5a7",
+    "native_archive": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\mosi-closure\\source-native.zip",
+    "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\mosi-closure\\source-capture.json",
+    "native_drc": {
+      "Connection Error": 39
+    },
+    "role": "Previous scoped no-added-reference-loss WIP, not fab"
+  },
+  "reference_gate_scope": "No added reference regressions; inherited/reference-exception gates remain open",
+  "whole_board_reference_complete": false,
+  "latest_reference_repair": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\mosi-closure\\actual-reference-review.json",
+  "historical_reference_checkpoint_f09": {
+    "pcb_sha256": "f09bf4628c56f3033fc891859e9ae0336d521c274db7ce418e7ddb7b3f251679",
+    "native_archive": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\touch-reset-closure\\source-native-WORK-IN-PROGRESS.zip",
+    "source_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\touch-reset-closure\\source-capture.json",
+    "native_drc": {
+      "Connection Error": 44
+    },
+    "role": "All scoped reference comparisons no-regression before TP candidate; WIP, not fab"
+  },
+  "continue_from": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\next-entry.json",
+  "latest_offline_layout": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\work-state.json",
+  "active_native_construction": {
+    "state": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-state.json",
+    "readme": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\README.md",
+    "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+    "pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+    "session": "a367084e-a21d-4082-8b70-50052c68a272",
+    "drc": {
+      "Connection Error": 47
+    },
+    "actual_vias": 616,
+    "pdn_stage_pass": true,
+    "PRESET3_closed": true,
+    "PRESET0_closed": true,
+    "MOSI_closed": true,
+    "reference_gate_pass_for_declared_current_checks": true,
+    "reference_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\mosi-main-native-review.json",
+    "connected_ground_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\mosi-main-connected-ground-review.json",
+    "all_control_nets_restored": false,
+    "role": "Temporary regional work copy, not promoted over verified aaa37",
+    "do_not_duplicate": true,
+    "assembly_side_counts": {
+      "Top_components": 224,
+      "Bottom_components": 3,
+      "Top_SMT": 212,
+      "Bottom_SMT": 3,
+      "TH": 12
+    },
+    "assembly_and_bottom_clearance_release_pending": true,
+    "next_action": "原生仍e098c5db/47未连通13网/227件616孔，未做本轮CAD铜或器件变更。先读取central90-controls-work-state.json并核对真实进程/工具句柄；当前批次是完整13网及TP_RESET_N联合恢复的离线候选，不重开终态作业，不重放旧apply。读取central90-clock-result.json、central90-pdn-island-source-result.json及其expected：U9 Top74/42mm90度、C9 Bottom71/35.5mm0度仅候选，时钟在两条Top连接后已离线同岛、47供电脚在整岛源/目标法下已离线恢复；所有新增铜完整四层物理、最近实际接地、回流、敏感网和受影响GND焊盘复核尚未完成，绝非原生通过。供电连接含绕行，不能把本地去耦短支路长度当整条母线长度。继续恢复TP_RESET_N/LOAD/QH/编码器/P1/P2/EDIT/P0/P3，保持MOSI全网实际地门。全部13网及邻近复位完整候选通过后，扩展精确U9/C9非铜/焊盘/标注验证，再在同一自有工程原生联合改位、四层重铺、严格DRC、保存关闭重开；未通过前实际U9北方91/19mm180和C9 Top99.25/16mm0不动。270度42mm、北移36/34mm、固定点源PDN失败已终态；90度候选只用最新明确路径接续。旧原生e098/aaa37包完整保留。当前CAD会话已恢复为construction-state.session，冷启动首次枚举超时后只读工程身份和已知PCB打开成功，不能复用707旧句柄。采购当前入口purchase-preparation-20261021-r1/current-board-procurement.json覆盖227件/215SMT+12TH/36料号，30SMT型号逐一原生匹配，SW1仅明确C码后缀归一；current-catalog-20261023.json为LCSC供货快照，不是PCBA库存/报价/交期。C50984快照5只，板数/备用及工厂备料待核。旧CPL的R30/U9/C9/C8/R63/R64六行无效，实际仍3件Bottom SMT，未假设手焊。屏/线束/机械/电源/84附件和最终同版制造包未冻结；实物UNMEASURED，不可投板，不下单不外发，自动继续。",
+    "offline_checkpoint": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\next-entry.json"
+  },
+  "running_tasks": [],
+  "active_native_pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7"
+}

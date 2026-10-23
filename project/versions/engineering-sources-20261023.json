@@ -1,0 +1,2763 @@
+{
+  "schema": 1,
+  "captured_at": "2026-10-23T15:35:23.108914+00:00",
+  "source_branch": "codex/current-engineering-sources-20261023",
+  "role": "Editable development candidates; no full-product acceptance",
+  "areas": {
+    "fpga": {
+      "files": {
+        "engine/rtl/uart_cfg_transport.v": {
+          "stored": "fpga/current/engine/rtl/uart_cfg_transport.v",
+          "bytes": 5239,
+          "sha256": "462b3571bf976dc52a15363668d0b784722eb1a34dcbec20cbd6037f0f7fccdf",
+          "stored_sha256": "462b3571bf976dc52a15363668d0b784722eb1a34dcbec20cbd6037f0f7fccdf",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\rtl\\uart_cfg_transport.v"
+        },
+        "engine/src/audio_clk_en.v": {
+          "stored": "fpga/current/engine/src/audio_clk_en.v",
+          "bytes": 6978,
+          "sha256": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c",
+          "stored_sha256": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\audio_clk_en.v"
+        },
+        "engine/src/bands1024.hex": {
+          "stored": "fpga/current/engine/src/bands1024.hex",
+          "bytes": 2048,
+          "sha256": "01cdaaa2843dab6417522a5bb913e60b17e4daac675fe1c4ff99250a6e64123f",
+          "stored_sha256": "01cdaaa2843dab6417522a5bb913e60b17e4daac675fe1c4ff99250a6e64123f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\bands1024.hex"
+        },
+        "engine/src/board_diag.v": {
+          "stored": "fpga/current/engine/src/board_diag.v",
+          "bytes": 5961,
+          "sha256": "a92a314729ec29a461c2fc7aa6c022f8f8408352ef73d988d566c993061f1e7d",
+          "stored_sha256": "a92a314729ec29a461c2fc7aa6c022f8f8408352ef73d988d566c993061f1e7d",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\board_diag.v"
+        },
+        "engine/src/board_slots.hex": {
+          "stored": "fpga/current/engine/src/board_slots.hex",
+          "bytes": 448,
+          "sha256": "db61040e0c62fb2a1342c9c59787a1522dd98d07e8776c98e0a51bf943e1ac53",
+          "stored_sha256": "db61040e0c62fb2a1342c9c59787a1522dd98d07e8776c98e0a51bf943e1ac53",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\board_slots.hex"
+        },
+        "engine/src/bringup_top.v": {
+          "stored": "fpga/current/engine/src/bringup_top.v",
+          "bytes": 8791,
+          "sha256": "c1658662f3c9d35b9a4af1d5fb0f20ba0a9077d34ec9474832534230509a610d",
+          "stored_sha256": "c1658662f3c9d35b9a4af1d5fb0f20ba0a9077d34ec9474832534230509a610d",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\bringup_top.v"
+        },
+        "engine/src/compat_music_probe.v": {
+          "stored": "fpga/current/engine/src/compat_music_probe.v",
+          "bytes": 2547,
+          "sha256": "af0a54d4788109f45140d41193f0650b77208e5c03b9f6eb4fed4a444bdbc4f3",
+          "stored_sha256": "af0a54d4788109f45140d41193f0650b77208e5c03b9f6eb4fed4a444bdbc4f3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\compat_music_probe.v"
+        },
+        "engine/src/cos1024.hex": {
+          "stored": "fpga/current/engine/src/cos1024.hex",
+          "bytes": 3072,
+          "sha256": "706d4136e1d62d92d5a1052b077e8cf338f30590f728501853dde8f7bb9adf90",
+          "stored_sha256": "706d4136e1d62d92d5a1052b077e8cf338f30590f728501853dde8f7bb9adf90",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\cos1024.hex"
+        },
+        "engine/src/event_hold.v": {
+          "stored": "fpga/current/engine/src/event_hold.v",
+          "bytes": 4270,
+          "sha256": "ec06d3697215394354da8b3ffcdca6208c7cd5b6d8a4b8055e1d8e1a813708e4",
+          "stored_sha256": "ec06d3697215394354da8b3ffcdca6208c7cd5b6d8a4b8055e1d8e1a813708e4",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\event_hold.v"
+        },
+        "engine/src/fader_gain_q8.hex": {
+          "stored": "fpga/current/engine/src/fader_gain_q8.hex",
+          "bytes": 5120,
+          "sha256": "38a644d29b92c5b3267bab5931966a033e35b75973ad84b7af362be74194f6a5",
+          "stored_sha256": "38a644d29b92c5b3267bab5931966a033e35b75973ad84b7af362be74194f6a5",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\fader_gain_q8.hex"
+        },
+        "engine/src/finger_pitch.v": {
+          "stored": "fpga/current/engine/src/finger_pitch.v",
+          "bytes": 3939,
+          "sha256": "1702ccc636619f85f65ef18f810efd5e652ab206ffcdc1d2e07fbce12d093d5a",
+          "stored_sha256": "1702ccc636619f85f65ef18f810efd5e652ab206ffcdc1d2e07fbce12d093d5a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\finger_pitch.v"
+        },
+        "engine/src/finger_ratio.hex": {
+          "stored": "fpga/current/engine/src/finger_ratio.hex",
+          "bytes": 3591,
+          "sha256": "fbb875cffffd1f044971de6ceb47a5b90898a154229f1e29937b3a742f757ca3",
+          "stored_sha256": "fbb875cffffd1f044971de6ceb47a5b90898a154229f1e29937b3a742f757ca3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\finger_ratio.hex"
+        },
+        "engine/src/fx_delay.v": {
+          "stored": "fpga/current/engine/src/fx_delay.v",
+          "bytes": 17838,
+          "sha256": "67ce4e845fbd4fa5f96efbce46d435b629425afeabdc20b3b3758f268dbce15e",
+          "stored_sha256": "67ce4e845fbd4fa5f96efbce46d435b629425afeabdc20b3b3758f268dbce15e",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\fx_delay.v"
+        },
+        "engine/src/hann1024.hex": {
+          "stored": "fpga/current/engine/src/hann1024.hex",
+          "bytes": 6144,
+          "sha256": "a65ee44f5eaacc8237a2dc9f1b2d58998f197efa0377e2a7d76cdc9268591abc",
+          "stored_sha256": "a65ee44f5eaacc8237a2dc9f1b2d58998f197efa0377e2a7d76cdc9268591abc",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\hann1024.hex"
+        },
+        "engine/src/i2c_master.v": {
+          "stored": "fpga/current/engine/src/i2c_master.v",
+          "bytes": 13197,
+          "sha256": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999",
+          "stored_sha256": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\i2c_master.v"
+        },
+        "engine/src/i2s_tx.v": {
+          "stored": "fpga/current/engine/src/i2s_tx.v",
+          "bytes": 5172,
+          "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+          "stored_sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\i2s_tx.v"
+        },
+        "engine/src/image_rom.v": {
+          "stored": "fpga/current/engine/src/image_rom.v",
+          "bytes": 2413,
+          "sha256": "7083c1fe352f63c950dbf5bd1de6545a6fcb28f983d8c08a0683b6f75041e198",
+          "stored_sha256": "7083c1fe352f63c950dbf5bd1de6545a6fcb28f983d8c08a0683b6f75041e198",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\image_rom.v"
+        },
+        "engine/src/image_view.v": {
+          "stored": "fpga/current/engine/src/image_view.v",
+          "bytes": 4060,
+          "sha256": "e45fd3de51a6a8260301d285bbbfc5384887675b2e7a8e95be6a50a0cd1f97fe",
+          "stored_sha256": "e45fd3de51a6a8260301d285bbbfc5384887675b2e7a8e95be6a50a0cd1f97fe",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\image_view.v"
+        },
+        "engine/src/instrument_joint_probe.v": {
+          "stored": "fpga/current/engine/src/instrument_joint_probe.v",
+          "bytes": 3848,
+          "sha256": "5dd58082611a345fdfcfd0fa9a27d2a6d28911e9fbb4307d46fc9fcd00cdab4a",
+          "stored_sha256": "5dd58082611a345fdfcfd0fa9a27d2a6d28911e9fbb4307d46fc9fcd00cdab4a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_joint_probe.v"
+        },
+        "engine/src/instrument_layer_probe.v": {
+          "stored": "fpga/current/engine/src/instrument_layer_probe.v",
+          "bytes": 5296,
+          "sha256": "85afde696d25b07973116a2a83735f6c628e32d4bbb1becd6a01ac3e87b9fbe3",
+          "stored_sha256": "85afde696d25b07973116a2a83735f6c628e32d4bbb1becd6a01ac3e87b9fbe3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_layer_probe.v"
+        },
+        "engine/src/instrument_owned_probe.v": {
+          "stored": "fpga/current/engine/src/instrument_owned_probe.v",
+          "bytes": 4541,
+          "sha256": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+          "stored_sha256": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_owned_probe.v"
+        },
+        "engine/src/instrument_sensor_probe.v": {
+          "stored": "fpga/current/engine/src/instrument_sensor_probe.v",
+          "bytes": 2911,
+          "sha256": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+          "stored_sha256": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_sensor_probe.v"
+        },
+        "engine/src/instrument_table.v": {
+          "stored": "fpga/current/engine/src/instrument_table.v",
+          "bytes": 1622,
+          "sha256": "2343da52dd99d883403a889caf5b5b8fd0c61c06a2f94db42e9ba319e1bd377f",
+          "stored_sha256": "2343da52dd99d883403a889caf5b5b8fd0c61c06a2f94db42e9ba319e1bd377f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_table.v"
+        },
+        "engine/src/layer_dispatch.v": {
+          "stored": "fpga/current/engine/src/layer_dispatch.v",
+          "bytes": 7224,
+          "sha256": "cf1f0739a324c1bea4d28734bf60b8a34366395ae199da3515ac81d5e29d7f0f",
+          "stored_sha256": "cf1f0739a324c1bea4d28734bf60b8a34366395ae199da3515ac81d5e29d7f0f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\layer_dispatch.v"
+        },
+        "engine/src/lcd_480x272.v": {
+          "stored": "fpga/current/engine/src/lcd_480x272.v",
+          "bytes": 7905,
+          "sha256": "7a4176f739123438be35837be943fb93eb355f5c8a2f36e322ef97a1546f8409",
+          "stored_sha256": "7a4176f739123438be35837be943fb93eb355f5c8a2f36e322ef97a1546f8409",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\lcd_480x272.v"
+        },
+        "engine/src/led_blink.v": {
+          "stored": "fpga/current/engine/src/led_blink.v",
+          "bytes": 2949,
+          "sha256": "323ed6035f1d4f2d198eb97009c3576a53a81f3a050071f1bf976a73b3a69f6c",
+          "stored_sha256": "323ed6035f1d4f2d198eb97009c3576a53a81f3a050071f1bf976a73b3a69f6c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\led_blink.v"
+        },
+        "engine/src/led_heartbeat.v": {
+          "stored": "fpga/current/engine/src/led_heartbeat.v",
+          "bytes": 2898,
+          "sha256": "ceac0e82fbaec093bcdc5d7765a6f8943c421728015d4690d2c907ec7e2de277",
+          "stored_sha256": "ceac0e82fbaec093bcdc5d7765a6f8943c421728015d4690d2c907ec7e2de277",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\led_heartbeat.v"
+        },
+        "engine/src/led_ind.v": {
+          "stored": "fpga/current/engine/src/led_ind.v",
+          "bytes": 4975,
+          "sha256": "05ce8e6dced0d341c04f51edd7a9fdc136fa5a58205cf5cf79314abb8f9ce8b3",
+          "stored_sha256": "05ce8e6dced0d341c04f51edd7a9fdc136fa5a58205cf5cf79314abb8f9ce8b3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\led_ind.v"
+        },
+        "engine/src/left_contact_bridge.v": {
+          "stored": "fpga/current/engine/src/left_contact_bridge.v",
+          "bytes": 9892,
+          "sha256": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36",
+          "stored_sha256": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\left_contact_bridge.v"
+        },
+        "engine/src/left_layer_music_probe.v": {
+          "stored": "fpga/current/engine/src/left_layer_music_probe.v",
+          "bytes": 7284,
+          "sha256": "5451b95b8043945a2e5815bafc97065ac606e7483a3eab69f9819baaa48f3424",
+          "stored_sha256": "5451b95b8043945a2e5815bafc97065ac606e7483a3eab69f9819baaa48f3424",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\left_layer_music_probe.v"
+        },
+        "engine/src/left_music_probe.v": {
+          "stored": "fpga/current/engine/src/left_music_probe.v",
+          "bytes": 4590,
+          "sha256": "ae154867537d216d177165a7d393715d9751a25214e5bc5ebc7c12e58ad0249b",
+          "stored_sha256": "ae154867537d216d177165a7d393715d9751a25214e5bc5ebc7c12e58ad0249b",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\left_music_probe.v"
+        },
+        "engine/src/live_audio_monitor.v": {
+          "stored": "fpga/current/engine/src/live_audio_monitor.v",
+          "bytes": 6407,
+          "sha256": "f42a6c98c84e2ecf5fabad5b99d025932bf94feaee6b6fd022be7d935b85cd8d",
+          "stored_sha256": "f42a6c98c84e2ecf5fabad5b99d025932bf94feaee6b6fd022be7d935b85cd8d",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\live_audio_monitor.v"
+        },
+        "engine/src/live_observation_filter.v": {
+          "stored": "fpga/current/engine/src/live_observation_filter.v",
+          "bytes": 4591,
+          "sha256": "ffd3170e422cd760fb822964e7943aa46b66ff8ac43132b443ae59954f958e3f",
+          "stored_sha256": "ffd3170e422cd760fb822964e7943aa46b66ff8ac43132b443ae59954f958e3f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\live_observation_filter.v"
+        },
+        "engine/src/mixer.v": {
+          "stored": "fpga/current/engine/src/mixer.v",
+          "bytes": 3418,
+          "sha256": "317ab1090976a369bcf5e60748e2f9cd861dc6ffdfad259bf93b9cd7151e8149",
+          "stored_sha256": "317ab1090976a369bcf5e60748e2f9cd861dc6ffdfad259bf93b9cd7151e8149",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mixer.v"
+        },
+        "engine/src/music_visualizer.v": {
+          "stored": "fpga/current/engine/src/music_visualizer.v",
+          "bytes": 2214,
+          "sha256": "d35912021fee2cfbf75cbfde1cda3aae1e35355d7962b092333fd4f35086cfb7",
+          "stored_sha256": "d35912021fee2cfbf75cbfde1cda3aae1e35355d7962b092333fd4f35086cfb7",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\music_visualizer.v"
+        },
+        "engine/src/mv_fft1024.v": {
+          "stored": "fpga/current/engine/src/mv_fft1024.v",
+          "bytes": 7042,
+          "sha256": "c55f4090d89f020b84f4bf03508cb89e5eab0328e9e371d3325603029c107329",
+          "stored_sha256": "c55f4090d89f020b84f4bf03508cb89e5eab0328e9e371d3325603029c107329",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_fft1024.v"
+        },
+        "engine/src/mv_font.vh": {
+          "stored": "fpga/current/engine/src/mv_font.vh",
+          "bytes": 6911,
+          "sha256": "7dcd884f14a74eeef9e666e5e0d3772d64301026a72dd056a54770f4da038754",
+          "stored_sha256": "7dcd884f14a74eeef9e666e5e0d3772d64301026a72dd056a54770f4da038754",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_font.vh"
+        },
+        "engine/src/mv_panel_driver.v": {
+          "stored": "fpga/current/engine/src/mv_panel_driver.v",
+          "bytes": 5972,
+          "sha256": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+          "stored_sha256": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_panel_driver.v"
+        },
+        "engine/src/mv_renderer.v": {
+          "stored": "fpga/current/engine/src/mv_renderer.v",
+          "bytes": 11702,
+          "sha256": "e45ae5bb2bafe8275f995d48a15842c8647ce6fec3e2233b993e972610db67d8",
+          "stored_sha256": "e45ae5bb2bafe8275f995d48a15842c8647ce6fec3e2233b993e972610db67d8",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_renderer.v"
+        },
+        "engine/src/mv_spi_byte.v": {
+          "stored": "fpga/current/engine/src/mv_spi_byte.v",
+          "bytes": 1883,
+          "sha256": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+          "stored_sha256": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_spi_byte.v"
+        },
+        "engine/src/mv_wave_capture.v": {
+          "stored": "fpga/current/engine/src/mv_wave_capture.v",
+          "bytes": 1322,
+          "sha256": "368495a1805024999a7fdd9104183baa1461b72841d6d7fe63d8b23c362583ee",
+          "stored_sha256": "368495a1805024999a7fdd9104183baa1461b72841d6d7fe63d8b23c362583ee",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_wave_capture.v"
+        },
+        "engine/src/note_inc.hex": {
+          "stored": "fpga/current/engine/src/note_inc.hex",
+          "bytes": 1024,
+          "sha256": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+          "stored_sha256": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\note_inc.hex"
+        },
+        "engine/src/note_map.v": {
+          "stored": "fpga/current/engine/src/note_map.v",
+          "bytes": 36513,
+          "sha256": "abb4db0652840fd1947ac06ff13eae2b04dc7bad0ca8a16bdbb1f1bf4cc58538",
+          "stored_sha256": "abb4db0652840fd1947ac06ff13eae2b04dc7bad0ca8a16bdbb1f1bf4cc58538",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\note_map.v"
+        },
+        "engine/src/note_map_owned.v": {
+          "stored": "fpga/current/engine/src/note_map_owned.v",
+          "bytes": 52925,
+          "sha256": "b7564c842766c3ee25f19db121c4652d73969240f5963606e2b5bf00049efe6f",
+          "stored_sha256": "b7564c842766c3ee25f19db121c4652d73969240f5963606e2b5bf00049efe6f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\note_map_owned.v"
+        },
+        "engine/src/osc_additive.v": {
+          "stored": "fpga/current/engine/src/osc_additive.v",
+          "bytes": 12381,
+          "sha256": "662461bbe6a53f60ed733c05c18d705a3bd85731f9d860dd6eb43d938f99e181",
+          "stored_sha256": "662461bbe6a53f60ed733c05c18d705a3bd85731f9d860dd6eb43d938f99e181",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\osc_additive.v"
+        },
+        "engine/src/osc_additive_top.v": {
+          "stored": "fpga/current/engine/src/osc_additive_top.v",
+          "bytes": 16466,
+          "sha256": "3447962873a9bf9305bb02807713c349fb12a997da366563880c36cd300c475b",
+          "stored_sha256": "3447962873a9bf9305bb02807713c349fb12a997da366563880c36cd300c475b",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\osc_additive_top.v"
+        },
+        "engine/src/osc_core.v": {
+          "stored": "fpga/current/engine/src/osc_core.v",
+          "bytes": 9696,
+          "sha256": "1197146dbb96d5f067e1a61852d8210ec866428609dec7a0fd5027c45facb274",
+          "stored_sha256": "1197146dbb96d5f067e1a61852d8210ec866428609dec7a0fd5027c45facb274",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\osc_core.v"
+        },
+        "engine/src/osc_env.v": {
+          "stored": "fpga/current/engine/src/osc_env.v",
+          "bytes": 11668,
+          "sha256": "9485d37ad07da973257668de80e79dfb10cbf63ea66863f9deb90e1a0260a5f2",
+          "stored_sha256": "9485d37ad07da973257668de80e79dfb10cbf63ea66863f9deb90e1a0260a5f2",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\osc_env.v"
+        },
+        "engine/src/pad_pitch.v": {
+          "stored": "fpga/current/engine/src/pad_pitch.v",
+          "bytes": 5642,
+          "sha256": "964ae87ed7c8b1b54210be6c0f6710a134a09fb68ece177d9d29c98299a594be",
+          "stored_sha256": "964ae87ed7c8b1b54210be6c0f6710a134a09fb68ece177d9d29c98299a594be",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\pad_pitch.v"
+        },
+        "engine/src/pad_scan.v": {
+          "stored": "fpga/current/engine/src/pad_scan.v",
+          "bytes": 19617,
+          "sha256": "f6d44051e734fbd0e7bf3152f52cbb9ed1e0ebf5b29c46931adbea41b5783fb6",
+          "stored_sha256": "f6d44051e734fbd0e7bf3152f52cbb9ed1e0ebf5b29c46931adbea41b5783fb6",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\pad_scan.v"
+        },
+        "engine/src/perf_ctrl.v": {
+          "stored": "fpga/current/engine/src/perf_ctrl.v",
+          "bytes": 9923,
+          "sha256": "e20f1c96bca276042a1550e7f923590640a4965c7f158333d50b93e6a626707e",
+          "stored_sha256": "e20f1c96bca276042a1550e7f923590640a4965c7f158333d50b93e6a626707e",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\perf_ctrl.v"
+        },
+        "engine/src/pitch_mod.v": {
+          "stored": "fpga/current/engine/src/pitch_mod.v",
+          "bytes": 15183,
+          "sha256": "6855fafe33b2942216f53738bf9d1c986c1d4151e5e4e6a5ef22ae8d79d85f02",
+          "stored_sha256": "6855fafe33b2942216f53738bf9d1c986c1d4151e5e4e6a5ef22ae8d79d85f02",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\pitch_mod.v"
+        },
+        "engine/src/pitch_native_store.v": {
+          "stored": "fpga/current/engine/src/pitch_native_store.v",
+          "bytes": 1066,
+          "sha256": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+          "stored_sha256": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\pitch_native_store.v"
+        },
+        "engine/src/preset_part.hex": {
+          "stored": "fpga/current/engine/src/preset_part.hex",
+          "bytes": 896,
+          "sha256": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+          "stored_sha256": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\preset_part.hex"
+        },
+        "engine/src/rc_delta_store.v": {
+          "stored": "fpga/current/engine/src/rc_delta_store.v",
+          "bytes": 3674,
+          "sha256": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320",
+          "stored_sha256": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_delta_store.v"
+        },
+        "engine/src/rc_mux_scan.v": {
+          "stored": "fpga/current/engine/src/rc_mux_scan.v",
+          "bytes": 4261,
+          "sha256": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+          "stored_sha256": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_mux_scan.v"
+        },
+        "engine/src/rc_strip_positions.v": {
+          "stored": "fpga/current/engine/src/rc_strip_positions.v",
+          "bytes": 4760,
+          "sha256": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+          "stored_sha256": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_strip_positions.v"
+        },
+        "engine/src/recip_inc.hex": {
+          "stored": "fpga/current/engine/src/recip_inc.hex",
+          "bytes": 896,
+          "sha256": "a9ea597f8b2ae211baa82c264796c4d118393863435c33aac9edb5ee71802002",
+          "stored_sha256": "a9ea597f8b2ae211baa82c264796c4d118393863435c33aac9edb5ee71802002",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\recip_inc.hex"
+        },
+        "engine/src/reg_bank.v": {
+          "stored": "fpga/current/engine/src/reg_bank.v",
+          "bytes": 14107,
+          "sha256": "2a375f8aa2c092a60d9410bd4506704df03a2d51e7b53c50b434272e2f5662af",
+          "stored_sha256": "2a375f8aa2c092a60d9410bd4506704df03a2d51e7b53c50b434272e2f5662af",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\reg_bank.v"
+        },
+        "engine/src/reg_bank_compact.v": {
+          "stored": "fpga/current/engine/src/reg_bank_compact.v",
+          "bytes": 3164,
+          "sha256": "91d56430e99419823ac37f1bf13df83d8853bc6b76bcff9503681fd99b4f304e",
+          "stored_sha256": "91d56430e99419823ac37f1bf13df83d8853bc6b76bcff9503681fd99b4f304e",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\reg_bank_compact.v"
+        },
+        "engine/src/rh_fader_bank.v": {
+          "stored": "fpga/current/engine/src/rh_fader_bank.v",
+          "bytes": 6844,
+          "sha256": "bd5af0b47a36749da5fb5fbc29e546f19e7bc00e1929873593b31f680358c2da",
+          "stored_sha256": "bd5af0b47a36749da5fb5fbc29e546f19e7bc00e1929873593b31f680358c2da",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rh_fader_bank.v"
+        },
+        "engine/src/rh_fader_gain_map.v": {
+          "stored": "fpga/current/engine/src/rh_fader_gain_map.v",
+          "bytes": 2426,
+          "sha256": "4a15353dc921388d71dff712999b2149a7e0245ed2641462ede3e79b7a704414",
+          "stored_sha256": "4a15353dc921388d71dff712999b2149a7e0245ed2641462ede3e79b7a704414",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rh_fader_gain_map.v"
+        },
+        "engine/src/rh_fader_panel.v": {
+          "stored": "fpga/current/engine/src/rh_fader_panel.v",
+          "bytes": 1764,
+          "sha256": "740cd8367f6e4e59431e8223b9d1d187309d78036c1b2b04bd6d4c7e692cc49a",
+          "stored_sha256": "740cd8367f6e4e59431e8223b9d1d187309d78036c1b2b04bd6d4c7e692cc49a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rh_fader_panel.v"
+        },
+        "engine/src/rh_music_probe.v": {
+          "stored": "fpga/current/engine/src/rh_music_probe.v",
+          "bytes": 2438,
+          "sha256": "50399fe808325f853bf3af0d31ab341d9327d1c6835606039ccf29570f19676c",
+          "stored_sha256": "50399fe808325f853bf3af0d31ab341d9327d1c6835606039ccf29570f19676c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rh_music_probe.v"
+        },
+        "engine/src/rh_performance_control.v": {
+          "stored": "fpga/current/engine/src/rh_performance_control.v",
+          "bytes": 2585,
+          "sha256": "52a139a2730b0824d90b1f19f40b4ab50b6a2f7b23cdc2fe05ccb31a07fd4e99",
+          "stored_sha256": "52a139a2730b0824d90b1f19f40b4ab50b6a2f7b23cdc2fe05ccb31a07fd4e99",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rh_performance_control.v"
+        },
+        "engine/src/rh_timbre_slew.v": {
+          "stored": "fpga/current/engine/src/rh_timbre_slew.v",
+          "bytes": 2447,
+          "sha256": "317febd64da227a12726689ddc482168abe9e534cf4ee0d55e6feec42274338c",
+          "stored_sha256": "317febd64da227a12726689ddc482168abe9e534cf4ee0d55e6feec42274338c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rh_timbre_slew.v"
+        },
+        "engine/src/rst_gen.v": {
+          "stored": "fpga/current/engine/src/rst_gen.v",
+          "bytes": 4468,
+          "sha256": "3cfe6fd0d8cd1c391ee8d083810e455ee5d27f50c29078f5e6f784ec839503a2",
+          "stored_sha256": "3cfe6fd0d8cd1c391ee8d083810e455ee5d27f50c29078f5e6f784ec839503a2",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rst_gen.v"
+        },
+        "engine/src/scan_shift595.v": {
+          "stored": "fpga/current/engine/src/scan_shift595.v",
+          "bytes": 1974,
+          "sha256": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+          "stored_sha256": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\scan_shift595.v"
+        },
+        "engine/src/sin1024.hex": {
+          "stored": "fpga/current/engine/src/sin1024.hex",
+          "bytes": 3072,
+          "sha256": "b2d2b0328b8aee38c3fb7cdcd03064a6e34f1bab170bc99950ebaaf039618647",
+          "stored_sha256": "b2d2b0328b8aee38c3fb7cdcd03064a6e34f1bab170bc99950ebaaf039618647",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\sin1024.hex"
+        },
+        "engine/src/sine256.hex": {
+          "stored": "fpga/current/engine/src/sine256.hex",
+          "bytes": 1536,
+          "sha256": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+          "stored_sha256": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\sine256.hex"
+        },
+        "engine/src/song_seq.v": {
+          "stored": "fpga/current/engine/src/song_seq.v",
+          "bytes": 10430,
+          "sha256": "56339052cda65f54c91061240af3fe604ca8715f34c7f31f18864606daf0db5f",
+          "stored_sha256": "56339052cda65f54c91061240af3fe604ca8715f34c7f31f18864606daf0db5f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\song_seq.v"
+        },
+        "engine/src/strip_ctrl.v": {
+          "stored": "fpga/current/engine/src/strip_ctrl.v",
+          "bytes": 2578,
+          "sha256": "25fe3d5a6fe4bc3aaf5479a6906807e90af7e4b6ce5ecfeeb0d1c37b94903bcd",
+          "stored_sha256": "25fe3d5a6fe4bc3aaf5479a6906807e90af7e4b6ce5ecfeeb0d1c37b94903bcd",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\strip_ctrl.v"
+        },
+        "engine/src/synth_top.v": {
+          "stored": "fpga/current/engine/src/synth_top.v",
+          "bytes": 5158,
+          "sha256": "c782c68cc93c1c0d8cdac18a3612d28bc9859b096a8def9637b5e5c0b184e5d5",
+          "stored_sha256": "c782c68cc93c1c0d8cdac18a3612d28bc9859b096a8def9637b5e5c0b184e5d5",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\synth_top.v"
+        },
+        "engine/src/tdm_board_test.v": {
+          "stored": "fpga/current/engine/src/tdm_board_test.v",
+          "bytes": 1427,
+          "sha256": "4d0cf24ab912a41334ef6fcee35c71079eab66196805c74bec2eddc349f7af3e",
+          "stored_sha256": "4d0cf24ab912a41334ef6fcee35c71079eab66196805c74bec2eddc349f7af3e",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_board_test.v"
+        },
+        "engine/src/tdm_engine.v": {
+          "stored": "fpga/current/engine/src/tdm_engine.v",
+          "bytes": 57419,
+          "sha256": "117eb935fed714872ad9de70fec76a7cc21a7ad256be6db987f0c0387ae1b8bd",
+          "stored_sha256": "117eb935fed714872ad9de70fec76a7cc21a7ad256be6db987f0c0387ae1b8bd",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_engine.v"
+        },
+        "engine/src/tdm_engine_rh.v": {
+          "stored": "fpga/current/engine/src/tdm_engine_rh.v",
+          "bytes": 69551,
+          "sha256": "9290a473fca973750194915cae8d0f36622c9631f4dfeada7019d482314e409c",
+          "stored_sha256": "9290a473fca973750194915cae8d0f36622c9631f4dfeada7019d482314e409c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_engine_rh.v"
+        },
+        "engine/src/tdm_live_test.v": {
+          "stored": "fpga/current/engine/src/tdm_live_test.v",
+          "bytes": 579,
+          "sha256": "755c158d90269157c5e1b0ddb5f86e704089201eb256e5e5206391c1e167126c",
+          "stored_sha256": "755c158d90269157c5e1b0ddb5f86e704089201eb256e5e5206391c1e167126c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_live_test.v"
+        },
+        "engine/src/tdm_ship.v": {
+          "stored": "fpga/current/engine/src/tdm_ship.v",
+          "bytes": 2982,
+          "sha256": "bb4add15144d5a3509b51f23fcf3aeffa8025527c67387a0757991511461d72f",
+          "stored_sha256": "bb4add15144d5a3509b51f23fcf3aeffa8025527c67387a0757991511461d72f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship.v"
+        },
+        "engine/src/tdm_ship_beacon.v": {
+          "stored": "fpga/current/engine/src/tdm_ship_beacon.v",
+          "bytes": 1441,
+          "sha256": "3c60f21b7188883733146ce5f9b948a8896c0dcceef5f5dd6cc8311b7316e602",
+          "stored_sha256": "3c60f21b7188883733146ce5f9b948a8896c0dcceef5f5dd6cc8311b7316e602",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship_beacon.v"
+        },
+        "engine/src/tdm_ship_owned.v": {
+          "stored": "fpga/current/engine/src/tdm_ship_owned.v",
+          "bytes": 6813,
+          "sha256": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+          "stored_sha256": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship_owned.v"
+        },
+        "engine/src/tdm_top.v": {
+          "stored": "fpga/current/engine/src/tdm_top.v",
+          "bytes": 64215,
+          "sha256": "1ff9ce2737cb3cf87370772404714dc2ac901ba7128321527ea4911f9ce46dec",
+          "stored_sha256": "1ff9ce2737cb3cf87370772404714dc2ac901ba7128321527ea4911f9ce46dec",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_top.v"
+        },
+        "engine/src/tdm_top_owned.v": {
+          "stored": "fpga/current/engine/src/tdm_top_owned.v",
+          "bytes": 85480,
+          "sha256": "ea9684be4cd92419c45413aedfad50284791ac9fc86959235cb4ad1637fdd01c",
+          "stored_sha256": "ea9684be4cd92419c45413aedfad50284791ac9fc86959235cb4ad1637fdd01c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_top_owned.v",
+          "upstream_sha256": "f462384fd64aa42e236234241149ecbc6beeaaa447307a184ff985696fd692fd",
+          "adaptation": "Declare r_vel_sens before UART use; continuous assignment unchanged. Upstream is unchanged."
+        },
+        "engine/src/tdm_top_rh.v": {
+          "stored": "fpga/current/engine/src/tdm_top_rh.v",
+          "bytes": 64967,
+          "sha256": "b4364b3d59fa18623960a0e61e2f04d220e5b5bbbb90431eb03072570eda35a4",
+          "stored_sha256": "b4364b3d59fa18623960a0e61e2f04d220e5b5bbbb90431eb03072570eda35a4",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_top_rh.v"
+        },
+        "engine/src/test_mode.v": {
+          "stored": "fpga/current/engine/src/test_mode.v",
+          "bytes": 5050,
+          "sha256": "92e0ffa2348974c5f4b98418a93c6b6ae4434a3d95b59b1a0f2a6c3a417f1d8a",
+          "stored_sha256": "92e0ffa2348974c5f4b98418a93c6b6ae4434a3d95b59b1a0f2a6c3a417f1d8a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\test_mode.v"
+        },
+        "engine/src/test_pattern.v": {
+          "stored": "fpga/current/engine/src/test_pattern.v",
+          "bytes": 10542,
+          "sha256": "b5eea2e1d2b16015b5af8381ccf59770fcdba5e560379416f70dbfd6bf64ecf1",
+          "stored_sha256": "b5eea2e1d2b16015b5af8381ccf59770fcdba5e560379416f70dbfd6bf64ecf1",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\test_pattern.v"
+        },
+        "engine/src/tilt_wtab.hex": {
+          "stored": "fpga/current/engine/src/tilt_wtab.hex",
+          "bytes": 1040,
+          "sha256": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8",
+          "stored_sha256": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tilt_wtab.hex"
+        },
+        "engine/src/uart_beacon.v": {
+          "stored": "fpga/current/engine/src/uart_beacon.v",
+          "bytes": 3465,
+          "sha256": "61832e4ddf0b45c78f8cec4775587960a8beb32c25df73f5cf4f349586abe95a",
+          "stored_sha256": "61832e4ddf0b45c78f8cec4775587960a8beb32c25df73f5cf4f349586abe95a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\uart_beacon.v"
+        },
+        "engine/src/uart_rx.v": {
+          "stored": "fpga/current/engine/src/uart_rx.v",
+          "bytes": 5186,
+          "sha256": "2812e4eea205fc4de870ddf7aa0edc9265685bb2bb0461258846bf42dcfb0518",
+          "stored_sha256": "2812e4eea205fc4de870ddf7aa0edc9265685bb2bb0461258846bf42dcfb0518",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\uart_rx.v"
+        },
+        "engine/src/uart_tx.v": {
+          "stored": "fpga/current/engine/src/uart_tx.v",
+          "bytes": 3913,
+          "sha256": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f",
+          "stored_sha256": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\uart_tx.v"
+        },
+        "engine/src/vel_shape.v": {
+          "stored": "fpga/current/engine/src/vel_shape.v",
+          "bytes": 8361,
+          "sha256": "5bedde0793a2afbb22f45f6fcde503e7e1b03842091dcc2a96841f450a75ddcd",
+          "stored_sha256": "5bedde0793a2afbb22f45f6fcde503e7e1b03842091dcc2a96841f450a75ddcd",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\vel_shape.v"
+        },
+        "engine/src/vel_wtab.hex": {
+          "stored": "fpga/current/engine/src/vel_wtab.hex",
+          "bytes": 4096,
+          "sha256": "5daaea0d56b0e88ccbfc5161821dbafd7f9439315ef4c3d32a2007f4fd6f7160",
+          "stored_sha256": "5daaea0d56b0e88ccbfc5161821dbafd7f9439315ef4c3d32a2007f4fd6f7160",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\vel_wtab.hex"
+        },
+        "engine/src/vel_wtab.hex.bak-20261023": {
+          "stored": "fpga/current/engine/src/vel_wtab.hex.bak-20261023",
+          "bytes": 1040,
+          "sha256": "c394b9c488197c4c74f45e85e055af45fbf61e6dfda380f412a39d7ab4d0a1d1",
+          "stored_sha256": "c394b9c488197c4c74f45e85e055af45fbf61e6dfda380f412a39d7ab4d0a1d1",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\vel_wtab.hex.bak-20261023"
+        },
+        "engine/src/video_timing.v": {
+          "stored": "fpga/current/engine/src/video_timing.v",
+          "bytes": 8112,
+          "sha256": "04f3863aff241183776b10ea49a2dd4c4aaf0e194bd33b5521bf148fa8052281",
+          "stored_sha256": "04f3863aff241183776b10ea49a2dd4c4aaf0e194bd33b5521bf148fa8052281",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\video_timing.v"
+        },
+        "rtl/joint_timing_top.v": {
+          "stored": "fpga/current/rtl/joint_timing_top.v",
+          "bytes": 11543,
+          "sha256": "66d967c99b554c3f9e4f1e7242ba32ea824883bad6b84c7c2bd94e5e1e27fd51",
+          "stored_sha256": "66d967c99b554c3f9e4f1e7242ba32ea824883bad6b84c7c2bd94e5e1e27fd51",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\joint_timing_top.v"
+        },
+        "rtl/pcm_sdram_arbiter.v": {
+          "stored": "fpga/current/rtl/pcm_sdram_arbiter.v",
+          "bytes": 5254,
+          "sha256": "04b4eca1cbc600af5f643ef35b609ac58aecaba07977034d4d8d1b25410dbbbb",
+          "stored_sha256": "04b4eca1cbc600af5f643ef35b609ac58aecaba07977034d4d8d1b25410dbbbb",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\pcm_sdram_arbiter.v"
+        },
+        "rtl/pcm_sdram_stream.v": {
+          "stored": "fpga/current/rtl/pcm_sdram_stream.v",
+          "bytes": 3483,
+          "sha256": "c347777b2e3eddd527a264f9717dc15f8a1883683287b18e0c29052df8e8df40",
+          "stored_sha256": "c347777b2e3eddd527a264f9717dc15f8a1883683287b18e0c29052df8e8df40",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\pcm_sdram_stream.v"
+        },
+        "rtl/pcm_storage_buffers.v": {
+          "stored": "fpga/current/rtl/pcm_storage_buffers.v",
+          "bytes": 2046,
+          "sha256": "b19f0c94048e678a2073e69170f6301f2c83f92180325edb37654f23c3470e93",
+          "stored_sha256": "b19f0c94048e678a2073e69170f6301f2c83f92180325edb37654f23c3470e93",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\pcm_storage_buffers.v"
+        },
+        "rtl/pcm_sync_fifo.v": {
+          "stored": "fpga/current/rtl/pcm_sync_fifo.v",
+          "bytes": 1443,
+          "sha256": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609",
+          "stored_sha256": "10ddd4516b6f4b72812777a1123c537e0272249a298bd14e095fb2bb8555a609",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\pcm_sync_fifo.v"
+        },
+        "rtl/probe_scan_store.v": {
+          "stored": "fpga/current/rtl/probe_scan_store.v",
+          "bytes": 2398,
+          "sha256": "d8dbbb6f74583162dfa46a6e9542b9603076c29123621c08cec62f93f9d96168",
+          "stored_sha256": "d8dbbb6f74583162dfa46a6e9542b9603076c29123621c08cec62f93f9d96168",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\probe_scan_store.v"
+        },
+        "rtl/sdram_storage_probe.v": {
+          "stored": "fpga/current/rtl/sdram_storage_probe.v",
+          "bytes": 7197,
+          "sha256": "a6cdc5db7ea9bb99237b38559cafeebb95d25a95223f14807f8ecb9d03085ea8",
+          "stored_sha256": "a6cdc5db7ea9bb99237b38559cafeebb95d25a95223f14807f8ecb9d03085ea8",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\sdram_storage_probe.v"
+        },
+        "rtl/sdram_stream_probe.v": {
+          "stored": "fpga/current/rtl/sdram_stream_probe.v",
+          "bytes": 8197,
+          "sha256": "74b208655fa7e957ef1e188c49f3b59386b11be816e4a3d837e1b7bbb6ebd432",
+          "stored_sha256": "74b208655fa7e957ef1e188c49f3b59386b11be816e4a3d837e1b7bbb6ebd432",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\sdram_stream_probe.v"
+        },
+        "rtl/sdram_word_controller.v": {
+          "stored": "fpga/current/rtl/sdram_word_controller.v",
+          "bytes": 4779,
+          "sha256": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+          "stored_sha256": "e1263dc1e2984441e16366b32a55925e1f2d5da975d99a3762a25b0c4f93c64e",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\sdram_word_controller.v"
+        },
+        "rtl/storage_probe.v": {
+          "stored": "fpga/current/rtl/storage_probe.v",
+          "bytes": 6293,
+          "sha256": "26efd8c2f0c8b9e25c138349b253404e9fbcd6ad5381fd6def6e4c0503059265",
+          "stored_sha256": "26efd8c2f0c8b9e25c138349b253404e9fbcd6ad5381fd6def6e4c0503059265",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\rtl\\storage_probe.v"
+        },
+        "constraints/sdram_board.cst": {
+          "stored": "fpga/current/constraints/sdram_board.cst",
+          "bytes": 922,
+          "sha256": "859bb22c9668f9a415e9b04050ce137071d474b4e10f1eaee8db9839174540ef",
+          "stored_sha256": "859bb22c9668f9a415e9b04050ce137071d474b4e10f1eaee8db9839174540ef",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\constraints\\sdram_board.cst"
+        },
+        "constraints/sdram_board.sdc": {
+          "stored": "fpga/current/constraints/sdram_board.sdc",
+          "bytes": 1399,
+          "sha256": "ee00607bd29835653d8e68e6416edc5da9538a93a8502215e0b0df111f3a7dec",
+          "stored_sha256": "ee00607bd29835653d8e68e6416edc5da9538a93a8502215e0b0df111f3a7dec",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\constraints\\sdram_board.sdc"
+        },
+        "constraints/tdm_ship_owned.cst": {
+          "stored": "fpga/current/constraints/tdm_ship_owned.cst",
+          "bytes": 8903,
+          "sha256": "b2e997a09a8b3f1d7ac9762fd955b56ca8bc9216b977b1f5d26780d5169690c4",
+          "stored_sha256": "b2e997a09a8b3f1d7ac9762fd955b56ca8bc9216b977b1f5d26780d5169690c4",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\constraints\\tdm_ship_owned.cst"
+        },
+        "constraints/tdm_ship_owned.sdc": {
+          "stored": "fpga/current/constraints/tdm_ship_owned.sdc",
+          "bytes": 1414,
+          "sha256": "7b9ba70c0bcd4350dd7bee346c73f5abe811c5c2930f7defd3d62b4cc3faaff3",
+          "stored_sha256": "7b9ba70c0bcd4350dd7bee346c73f5abe811c5c2930f7defd3d62b4cc3faaff3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\constraints\\tdm_ship_owned.sdc"
+        },
+        "tb/sdram_timing_model.v": {
+          "stored": "fpga/current/tb/sdram_timing_model.v",
+          "bytes": 2984,
+          "sha256": "9e87cacd52e1b674c3cf8b2d647c7c4bdbc0609c5087c84b05a572a965d766e3",
+          "stored_sha256": "9e87cacd52e1b674c3cf8b2d647c7c4bdbc0609c5087c84b05a572a965d766e3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\sdram_timing_model.v"
+        },
+        "tb/tb_delta.v": {
+          "stored": "fpga/current/tb/tb_delta.v",
+          "bytes": 2777,
+          "sha256": "6c0a89e37b91020f2bc672c4ca83fd4619b12687f8adc1356a9821aff6eace2f",
+          "stored_sha256": "6c0a89e37b91020f2bc672c4ca83fd4619b12687f8adc1356a9821aff6eace2f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_delta.v"
+        },
+        "tb/tb_joint.v": {
+          "stored": "fpga/current/tb/tb_joint.v",
+          "bytes": 8496,
+          "sha256": "d866e1a318ad9f590a0da4a7ce2350d83a26e1d6d7573c1496a5866d0fdd4a8f",
+          "stored_sha256": "d866e1a318ad9f590a0da4a7ce2350d83a26e1d6d7573c1496a5866d0fdd4a8f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_joint.v"
+        },
+        "tb/tb_mac_joint.v": {
+          "stored": "fpga/current/tb/tb_mac_joint.v",
+          "bytes": 8496,
+          "sha256": "d866e1a318ad9f590a0da4a7ce2350d83a26e1d6d7573c1496a5866d0fdd4a8f",
+          "stored_sha256": "d866e1a318ad9f590a0da4a7ce2350d83a26e1d6d7573c1496a5866d0fdd4a8f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_mac_joint.v"
+        },
+        "tb/tb_native.v": {
+          "stored": "fpga/current/tb/tb_native.v",
+          "bytes": 1241,
+          "sha256": "875b066112900601bbcd8412abf43a935efaced9f08638fe357ce2f8e8f83cab",
+          "stored_sha256": "875b066112900601bbcd8412abf43a935efaced9f08638fe357ce2f8e8f83cab",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_native.v"
+        },
+        "tb/tb_pitch_memory.v": {
+          "stored": "fpga/current/tb/tb_pitch_memory.v",
+          "bytes": 2986,
+          "sha256": "01e02010264296cb6f07b2b15a3458991cc2f2b7cc31dee2287ac45e70f730e9",
+          "stored_sha256": "01e02010264296cb6f07b2b15a3458991cc2f2b7cc31dee2287ac45e70f730e9",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_pitch_memory.v"
+        },
+        "tb/tb_positions.v": {
+          "stored": "fpga/current/tb/tb_positions.v",
+          "bytes": 3476,
+          "sha256": "d8e0865f6b2f1fa14693a3bbabbec91c5a4972edaf915c11b46088b542bb5e8c",
+          "stored_sha256": "d8e0865f6b2f1fa14693a3bbabbec91c5a4972edaf915c11b46088b542bb5e8c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_positions.v"
+        },
+        "tb/tb_renderer.v": {
+          "stored": "fpga/current/tb/tb_renderer.v",
+          "bytes": 703,
+          "sha256": "eb8fa0a9053a443726abb430005b166c6011dca82e639ab88e0d254a7dc15568",
+          "stored_sha256": "eb8fa0a9053a443726abb430005b166c6011dca82e639ab88e0d254a7dc15568",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_renderer.v"
+        },
+        "tb/tb_scan_store.v": {
+          "stored": "fpga/current/tb/tb_scan_store.v",
+          "bytes": 1144,
+          "sha256": "85a8bca2a724e61e36c4264b7d4e9e53b6a3cd9f8bbe49b9153fa445a4d7fe90",
+          "stored_sha256": "85a8bca2a724e61e36c4264b7d4e9e53b6a3cd9f8bbe49b9153fa445a4d7fe90",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_scan_store.v"
+        },
+        "tb/tb_sensor.v": {
+          "stored": "fpga/current/tb/tb_sensor.v",
+          "bytes": 3017,
+          "sha256": "5aefa27133781785b1c3fa0ac81f68fa75ecf7c52b671459d06c5fee94663bee",
+          "stored_sha256": "5aefa27133781785b1c3fa0ac81f68fa75ecf7c52b671459d06c5fee94663bee",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\tb_sensor.v"
+        },
+        "tb/vendor_alu54d.v": {
+          "stored": "fpga/current/tb/vendor_alu54d.v",
+          "bytes": 9532,
+          "sha256": "609eabc44cd7859e9241cdf388e1964babf7536e8e40db32d4c1185febe4f568",
+          "stored_sha256": "609eabc44cd7859e9241cdf388e1964babf7536e8e40db32d4c1185febe4f568",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\vendor_alu54d.v"
+        },
+        "tb/vendor_mac18.v": {
+          "stored": "fpga/current/tb/vendor_mac18.v",
+          "bytes": 16116,
+          "sha256": "ecd650f39e598ade9e356116ceaa4a70265c97cd02b145ae83d84d0458713bd3",
+          "stored_sha256": "ecd650f39e598ade9e356116ceaa4a70265c97cd02b145ae83d84d0458713bd3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\vendor_mac18.v"
+        },
+        "tb/vendor_ram16sdp4.v": {
+          "stored": "fpga/current/tb/vendor_ram16sdp4.v",
+          "bytes": 798,
+          "sha256": "8ca2165b7d833f4db03edbe1291b8faafb50096c9622f4397dc7cca3d1244670",
+          "stored_sha256": "8ca2165b7d833f4db03edbe1291b8faafb50096c9622f4397dc7cca3d1244670",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb\\vendor_ram16sdp4.v"
+        },
+        "sim/strike_cases.hex": {
+          "stored": "fpga/current/sim/strike_cases.hex",
+          "bytes": 8704,
+          "sha256": "6eb657d39ae984c6d099fe848f987005f272a22b5de6793ae4433df38e94ea35",
+          "stored_sha256": "6eb657d39ae984c6d099fe848f987005f272a22b5de6793ae4433df38e94ea35",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sim\\strike_cases.hex"
+        },
+        "sim/strike_expect.hex": {
+          "stored": "fpga/current/sim/strike_expect.hex",
+          "bytes": 8704,
+          "sha256": "7c10d2193291e88dd0f74b264bd5d5c9f9369ccd0f6dc1f40e8fe46a9a9c9769",
+          "stored_sha256": "7c10d2193291e88dd0f74b264bd5d5c9f9369ccd0f6dc1f40e8fe46a9a9c9769",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sim\\strike_expect.hex"
+        },
+        "sim/tb_beacon.v": {
+          "stored": "fpga/current/sim/tb_beacon.v",
+          "bytes": 9768,
+          "sha256": "687109e16bdbbca977c90a81617846b8a628df8d328b753fbddfcdb6846e9de5",
+          "stored_sha256": "687109e16bdbbca977c90a81617846b8a628df8d328b753fbddfcdb6846e9de5",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sim\\tb_beacon.v"
+        },
+        "sim/tb_decay2.v": {
+          "stored": "fpga/current/sim/tb_decay2.v",
+          "bytes": 15179,
+          "sha256": "292084497c15df723516dd31a1526e0e21d23c2fa6a6802fae3935a9062ad0c3",
+          "stored_sha256": "292084497c15df723516dd31a1526e0e21d23c2fa6a6802fae3935a9062ad0c3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sim\\tb_decay2.v"
+        },
+        "sim/tb_pad_chain.v": {
+          "stored": "fpga/current/sim/tb_pad_chain.v",
+          "bytes": 11831,
+          "sha256": "8c0afa5734dec32f90093bbf29fe5f0d47c6524b5fe44af260fa4a58d98706d3",
+          "stored_sha256": "8c0afa5734dec32f90093bbf29fe5f0d47c6524b5fe44af260fa4a58d98706d3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sim\\tb_pad_chain.v"
+        },
+        "sim/tb_pad_velocity.v": {
+          "stored": "fpga/current/sim/tb_pad_velocity.v",
+          "bytes": 15302,
+          "sha256": "2ac4891afc46bab377614002b5a1165ee60101c1e5602717fb1eabed9c2e04a1",
+          "stored_sha256": "2ac4891afc46bab377614002b5a1165ee60101c1e5602717fb1eabed9c2e04a1",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sim\\tb_pad_velocity.v"
+        },
+        "sim/tb_rst_gen.v": {
+          "stored": "fpga/current/sim/tb_rst_gen.v",
+          "bytes": 6600,
+          "sha256": "d364305212b1fbccb0dbbaa74ff9eff3423a6c9d3512b9f699615bf7d73de47d",
+          "stored_sha256": "d364305212b1fbccb0dbbaa74ff9eff3423a6c9d3512b9f699615bf7d73de47d",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sim\\tb_rst_gen.v"
+        },
+        "sim/tb_strike.v": {
+          "stored": "fpga/current/sim/tb_strike.v",
+          "bytes": 24777,
+          "sha256": "ee43083a6994cd61efcb10663780d8fac0b0bca7cf2b900de7341d6710d36c44",
+          "stored_sha256": "ee43083a6994cd61efcb10663780d8fac0b0bca7cf2b900de7341d6710d36c44",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sim\\tb_strike.v"
+        },
+        "sim/tb_vel_shape.v": {
+          "stored": "fpga/current/sim/tb_vel_shape.v",
+          "bytes": 19879,
+          "sha256": "9ffea3f4b34fd1141d0786e9a63250b09ecc7d5672245afa8ceed77fe0074a89",
+          "stored_sha256": "9ffea3f4b34fd1141d0786e9a63250b09ecc7d5672245afa8ceed77fe0074a89",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sim\\tb_vel_shape.v"
+        },
+        "tools/board_velocity_check.py": {
+          "stored": "fpga/current/tools/board_velocity_check.py",
+          "bytes": 19151,
+          "sha256": "f1585a0c570ecc57c8569b5146ca819fd21ea3e5ad69df74c0e7c08f151d1050",
+          "stored_sha256": "f1585a0c570ecc57c8569b5146ca819fd21ea3e5ad69df74c0e7c08f151d1050",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tools\\board_velocity_check.py"
+        },
+        "tools/check_boot_contract.py": {
+          "stored": "fpga/current/tools/check_boot_contract.py",
+          "bytes": 6736,
+          "sha256": "72a503e513a866e99d3882d7f2eee2de2d6b2ab2c38d0e03cedd81d8c63c0545",
+          "stored_sha256": "72a503e513a866e99d3882d7f2eee2de2d6b2ab2c38d0e03cedd81d8c63c0545",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tools\\check_boot_contract.py"
+        },
+        "tools/check_live_mask.py": {
+          "stored": "fpga/current/tools/check_live_mask.py",
+          "bytes": 5440,
+          "sha256": "dc40919531906981ebbb44202903d3c58c222a45457c9f8b2112115476cc3b12",
+          "stored_sha256": "dc40919531906981ebbb44202903d3c58c222a45457c9f8b2112115476cc3b12",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tools\\check_live_mask.py"
+        },
+        "tools/gen_compact_defaults.py": {
+          "stored": "fpga/current/tools/gen_compact_defaults.py",
+          "bytes": 3255,
+          "sha256": "926b03d3e03cac24458fa48a261f688bec9a13154d50d9b90b42c300f2aa4c58",
+          "stored_sha256": "926b03d3e03cac24458fa48a261f688bec9a13154d50d9b90b42c300f2aa4c58",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tools\\gen_compact_defaults.py"
+        },
+        "tools/gen_strike_vectors.py": {
+          "stored": "fpga/current/tools/gen_strike_vectors.py",
+          "bytes": 4577,
+          "sha256": "da13dbcb92f4003a98990ebc13a4c20756b3a35bbaa7da05f0e616211bd5b0ec",
+          "stored_sha256": "da13dbcb92f4003a98990ebc13a4c20756b3a35bbaa7da05f0e616211bd5b0ec",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tools\\gen_strike_vectors.py"
+        },
+        "tools/play_note.py": {
+          "stored": "fpga/current/tools/play_note.py",
+          "bytes": 5514,
+          "sha256": "0ea60a19af72f0780ab7a2cb287b557458bad879326f64688574d92c6e64007f",
+          "stored_sha256": "0ea60a19af72f0780ab7a2cb287b557458bad879326f64688574d92c6e64007f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tools\\play_note.py"
+        },
+        "tools/run_sims.py": {
+          "stored": "fpga/current/tools/run_sims.py",
+          "bytes": 6309,
+          "sha256": "991cb8a5df428558acffad960ba9c58aa987c9bc343c77c75c1a55b28d93129d",
+          "stored_sha256": "991cb8a5df428558acffad960ba9c58aa987c9bc343c77c75c1a55b28d93129d",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tools\\run_sims.py"
+        },
+        "tools/scripts/gen_vel_wtab.py": {
+          "stored": "fpga/current/tools/scripts/gen_vel_wtab.py",
+          "bytes": 7971,
+          "sha256": "ac81e220e7d9a06e80454406b467dad2851a76b706692104ec4b959e26de4b1a",
+          "stored_sha256": "ac81e220e7d9a06e80454406b467dad2851a76b706692104ec4b959e26de4b1a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tools\\scripts\\gen_vel_wtab.py"
+        },
+        "tools/uart_probe_read.py": {
+          "stored": "fpga/current/tools/uart_probe_read.py",
+          "bytes": 3979,
+          "sha256": "4868758394b8cac1f87999ca5be717852e30a579fef3c92fff9b35eb7f30b101",
+          "stored_sha256": "4868758394b8cac1f87999ca5be717852e30a579fef3c92fff9b35eb7f30b101",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tools\\uart_probe_read.py"
+        },
+        "reference/alu-model-source.json": {
+          "stored": "fpga/current/reference/alu-model-source.json",
+          "bytes": 308,
+          "sha256": "af17b20a26425070d2453e5e9d8f958650062d7b3428b940ba8d42736362385c",
+          "stored_sha256": "af17b20a26425070d2453e5e9d8f958650062d7b3428b940ba8d42736362385c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\alu-model-source.json"
+        },
+        "reference/clock-wrapper.v": {
+          "stored": "fpga/current/reference/clock-wrapper.v",
+          "bytes": 13477,
+          "sha256": "2ad61b18787e80adf2470d3f77e412804dbe8e9304a596ac28c6dd7ff9bfd348",
+          "stored_sha256": "2ad61b18787e80adf2470d3f77e412804dbe8e9304a596ac28c6dd7ff9bfd348",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\clock-wrapper.v"
+        },
+        "reference/joint_timing_top.v": {
+          "stored": "fpga/current/reference/joint_timing_top.v",
+          "bytes": 11474,
+          "sha256": "39b48fbbcdc6d6477dced490d652249a138c0b9caf6a2e741661aaa00b536996",
+          "stored_sha256": "39b48fbbcdc6d6477dced490d652249a138c0b9caf6a2e741661aaa00b536996",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\joint_timing_top.v"
+        },
+        "reference/mac-model-source.json": {
+          "stored": "fpga/current/reference/mac-model-source.json",
+          "bytes": 308,
+          "sha256": "13c2b88f20f6554b78abd32d37365d0349b1e607d6845d602cfe29bc0c1aac7e",
+          "stored_sha256": "13c2b88f20f6554b78abd32d37365d0349b1e607d6845d602cfe29bc0c1aac7e",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\mac-model-source.json"
+        },
+        "reference/mv_renderer_before.v": {
+          "stored": "fpga/current/reference/mv_renderer_before.v",
+          "bytes": 10816,
+          "sha256": "2b40ce5767e6217d922dacb0d5a4e5bdd73c41b01075073d38bc01c4fbafe686",
+          "stored_sha256": "2b40ce5767e6217d922dacb0d5a4e5bdd73c41b01075073d38bc01c4fbafe686",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\mv_renderer_before.v"
+        },
+        "reference/pitch_mod.v": {
+          "stored": "fpga/current/reference/pitch_mod.v",
+          "bytes": 13643,
+          "sha256": "f90a31f486c021ab0a7d0232b43ca5eb1d22a3890e835feac2fbe9f4b8b5106a",
+          "stored_sha256": "f90a31f486c021ab0a7d0232b43ca5eb1d22a3890e835feac2fbe9f4b8b5106a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\pitch_mod.v"
+        },
+        "reference/pitch_mod_native_onebank.v": {
+          "stored": "fpga/current/reference/pitch_mod_native_onebank.v",
+          "bytes": 14113,
+          "sha256": "92f682c94bf834d6dc34fd84e74265293a13bd1bd6bf44510413f064c001920b",
+          "stored_sha256": "92f682c94bf834d6dc34fd84e74265293a13bd1bd6bf44510413f064c001920b",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\pitch_mod_native_onebank.v"
+        },
+        "reference/probe_scan_store_alu.v": {
+          "stored": "fpga/current/reference/probe_scan_store_alu.v",
+          "bytes": 1052,
+          "sha256": "547efb7023997dfbb7134394036c200ef1bf7f89731efac242085174f9a13331",
+          "stored_sha256": "547efb7023997dfbb7134394036c200ef1bf7f89731efac242085174f9a13331",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\probe_scan_store_alu.v"
+        },
+        "reference/probe_scan_store_mac.v": {
+          "stored": "fpga/current/reference/probe_scan_store_mac.v",
+          "bytes": 1207,
+          "sha256": "c27a1d382cf73b1589d8d0a7d754a767db9fb850e1c931585e34ea96b7ff9373",
+          "stored_sha256": "c27a1d382cf73b1589d8d0a7d754a767db9fb850e1c931585e34ea96b7ff9373",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\probe_scan_store_mac.v"
+        },
+        "reference/probe_scan_store_mac_nogap.v": {
+          "stored": "fpga/current/reference/probe_scan_store_mac_nogap.v",
+          "bytes": 1207,
+          "sha256": "c27a1d382cf73b1589d8d0a7d754a767db9fb850e1c931585e34ea96b7ff9373",
+          "stored_sha256": "c27a1d382cf73b1589d8d0a7d754a767db9fb850e1c931585e34ea96b7ff9373",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\probe_scan_store_mac_nogap.v"
+        },
+        "reference/rc_delta_store.v": {
+          "stored": "fpga/current/reference/rc_delta_store.v",
+          "bytes": 3209,
+          "sha256": "ad0c0f8bf7214fb466bdc24341fc806321e87eeb1cc351588fa04ac0e3e257f9",
+          "stored_sha256": "ad0c0f8bf7214fb466bdc24341fc806321e87eeb1cc351588fa04ac0e3e257f9",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\rc_delta_store.v"
+        },
+        "reference/stress.sdc": {
+          "stored": "fpga/current/reference/stress.sdc",
+          "bytes": 1400,
+          "sha256": "a81207e1e519aea350fa66432551dc1be6482b212888e3e338db66e607f81105",
+          "stored_sha256": "a81207e1e519aea350fa66432551dc1be6482b212888e3e338db66e607f81105",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\stress.sdc"
+        },
+        "reference/vendor-model-source.json": {
+          "stored": "fpga/current/reference/vendor-model-source.json",
+          "bytes": 312,
+          "sha256": "21e8b42d411a4dadf98559571b6b679593f6a33dacb6306dc2426851728be66f",
+          "stored_sha256": "21e8b42d411a4dadf98559571b6b679593f6a33dacb6306dc2426851728be66f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\reference\\vendor-model-source.json"
+        },
+        "handoff_support/additional_tests/check_envelope.py": {
+          "stored": "fpga/current/handoff_support/additional_tests/check_envelope.py",
+          "bytes": 4085,
+          "sha256": "6fc4581c4fc196284b5480940d4f174d37314573048fbbbe07e9491b6ba13044",
+          "stored_sha256": "6fc4581c4fc196284b5480940d4f174d37314573048fbbbe07e9491b6ba13044",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\additional_tests\\check_envelope.py"
+        },
+        "handoff_support/additional_tests/check_phase_wrap.py": {
+          "stored": "fpga/current/handoff_support/additional_tests/check_phase_wrap.py",
+          "bytes": 524,
+          "sha256": "903d4ca1eb3c7b9debb9e7f7ea4d020b5a19102fb81b578af9401a756bd4459f",
+          "stored_sha256": "903d4ca1eb3c7b9debb9e7f7ea4d020b5a19102fb81b578af9401a756bd4459f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\additional_tests\\check_phase_wrap.py"
+        },
+        "handoff_support/additional_tests/tb_envelope.v": {
+          "stored": "fpga/current/handoff_support/additional_tests/tb_envelope.v",
+          "bytes": 2904,
+          "sha256": "ec333f356fded0e57f634ca06ed504bff18f8d1b56b482ce7aef74dbecbbee7c",
+          "stored_sha256": "ec333f356fded0e57f634ca06ed504bff18f8d1b56b482ce7aef74dbecbbee7c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\additional_tests\\tb_envelope.v"
+        },
+        "handoff_support/additional_tests/tb_phase_wrap.v": {
+          "stored": "fpga/current/handoff_support/additional_tests/tb_phase_wrap.v",
+          "bytes": 1707,
+          "sha256": "d00c13ac16c83c909bdef05dbd6897a026db3dc12d27d1b5d7e6bdf5e63ddbe2",
+          "stored_sha256": "d00c13ac16c83c909bdef05dbd6897a026db3dc12d27d1b5d7e6bdf5e63ddbe2",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\additional_tests\\tb_phase_wrap.v"
+        },
+        "handoff_support/pitch_memory_20261018/tb/tb_pitch_memory.v": {
+          "stored": "fpga/current/handoff_support/pitch_memory_20261018/tb/tb_pitch_memory.v",
+          "bytes": 2986,
+          "sha256": "01e02010264296cb6f07b2b15a3458991cc2f2b7cc31dee2287ac45e70f730e9",
+          "stored_sha256": "01e02010264296cb6f07b2b15a3458991cc2f2b7cc31dee2287ac45e70f730e9",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\pitch_memory_20261018\\tb\\tb_pitch_memory.v"
+        },
+        "handoff_support/resource_safety_20261016/evidence/compat-all.tsv": {
+          "stored": "fpga/current/handoff_support/resource_safety_20261016/evidence/compat-all.tsv.gz",
+          "bytes": 38196945,
+          "sha256": "7e73583d6483c46646d1942c352b53f760ecf92962cf4859833aeefe82bae47a",
+          "stored_sha256": "dd1b640dda1551f14a0696ce3f432f244fcdb1fc6805468a02868fcb4f729888",
+          "codec": "gzip",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\resource_safety_20261016\\evidence\\compat-all.tsv"
+        },
+        "handoff_support/resource_safety_20261016/evidence/layers-all.tsv": {
+          "stored": "fpga/current/handoff_support/resource_safety_20261016/evidence/layers-all.tsv.gz",
+          "bytes": 35622153,
+          "sha256": "1c3ee5df5d46b193d3f399009e350e884988bc2d513cebdada9aaa615f7aaeaa",
+          "stored_sha256": "b2eaaf91770f37600510d42cf85e4dc12a1d37691a6f048578d1c791520ccaa0",
+          "codec": "gzip",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\resource_safety_20261016\\evidence\\layers-all.tsv"
+        },
+        "handoff_support/resource_safety_20261016/evidence/music-equivalence-all.json": {
+          "stored": "fpga/current/handoff_support/resource_safety_20261016/evidence/music-equivalence-all.json",
+          "bytes": 11223,
+          "sha256": "8f17f48344c53016e81220749dd28d28dcb69af50e8727b63a9c7fa502b018ff",
+          "stored_sha256": "8f17f48344c53016e81220749dd28d28dcb69af50e8727b63a9c7fa502b018ff",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\resource_safety_20261016\\evidence\\music-equivalence-all.json"
+        },
+        "handoff_support/resource_safety_20261016/evidence/sensor-all.tsv": {
+          "stored": "fpga/current/handoff_support/resource_safety_20261016/evidence/sensor-all.tsv.gz",
+          "bytes": 26164881,
+          "sha256": "49c751154db87968a0b4bd7310a174b3d0f81fb0194837c81804b335e0ff1c08",
+          "stored_sha256": "a90becadf7e93b5a221bfa40d48331a4ce4526c6befc9e21738bc034b160f673",
+          "codec": "gzip",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\resource_safety_20261016\\evidence\\sensor-all.tsv"
+        },
+        "handoff_support/resource_safety_20261016/strike.hex": {
+          "stored": "fpga/current/handoff_support/resource_safety_20261016/strike.hex",
+          "bytes": 224,
+          "sha256": "71c0be07225d6a8a33bf5ec4c969b8e4fe30cfc4285ab9cbb4c8c0f54e042a66",
+          "stored_sha256": "71c0be07225d6a8a33bf5ec4c969b8e4fe30cfc4285ab9cbb4c8c0f54e042a66",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\resource_safety_20261016\\strike.hex"
+        },
+        "handoff_support/resource_safety_20261016/sustain.hex": {
+          "stored": "fpga/current/handoff_support/resource_safety_20261016/sustain.hex",
+          "bytes": 224,
+          "sha256": "461d639260397c0385e1fe0e32e3b9c0b156e4d421df159eaea0369dd7a1abff",
+          "stored_sha256": "461d639260397c0385e1fe0e32e3b9c0b156e4d421df159eaea0369dd7a1abff",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\resource_safety_20261016\\sustain.hex"
+        },
+        "handoff_support/resource_safety_20261016/tb_compat_music.v": {
+          "stored": "fpga/current/handoff_support/resource_safety_20261016/tb_compat_music.v",
+          "bytes": 6928,
+          "sha256": "3b5fac0d8123b419289aec2a08f6b1549758db02ea97293300260e084293f528",
+          "stored_sha256": "3b5fac0d8123b419289aec2a08f6b1549758db02ea97293300260e084293f528",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\resource_safety_20261016\\tb_compat_music.v"
+        },
+        "handoff_support/resource_safety_20261016/tb_layers.v": {
+          "stored": "fpga/current/handoff_support/resource_safety_20261016/tb_layers.v",
+          "bytes": 9897,
+          "sha256": "efdc2248e8c0e1d4abf0550f423cf0cf95db53436604e19618a42988f5a94e3c",
+          "stored_sha256": "efdc2248e8c0e1d4abf0550f423cf0cf95db53436604e19618a42988f5a94e3c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\resource_safety_20261016\\tb_layers.v"
+        },
+        "handoff_support/resource_safety_20261016/tb_sensor_layers.v": {
+          "stored": "fpga/current/handoff_support/resource_safety_20261016/tb_sensor_layers.v",
+          "bytes": 7061,
+          "sha256": "87535fb487ed6043716fad316be7d1ffa1abf6f282d528eb7457309253b81f95",
+          "stored_sha256": "87535fb487ed6043716fad316be7d1ffa1abf6f282d528eb7457309253b81f95",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\resource_safety_20261016\\tb_sensor_layers.v"
+        },
+        "handoff_support/system_integration_20261016/expected_vectors.hex": {
+          "stored": "fpga/current/handoff_support/system_integration_20261016/expected_vectors.hex",
+          "bytes": 2240,
+          "sha256": "2abc25d6b2104c79ca38a1eddefb8561d65dbf0d7a1ea2096bb9428d61416d59",
+          "stored_sha256": "2abc25d6b2104c79ca38a1eddefb8561d65dbf0d7a1ea2096bb9428d61416d59",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\system_integration_20261016\\expected_vectors.hex"
+        },
+        "handoff_support/system_integration_20261016/meta_vectors.hex": {
+          "stored": "fpga/current/handoff_support/system_integration_20261016/meta_vectors.hex",
+          "bytes": 480,
+          "sha256": "e418abc36cf6741c42f7743cd1748341a163e8ad3b462504c7e82c080d0715c3",
+          "stored_sha256": "e418abc36cf6741c42f7743cd1748341a163e8ad3b462504c7e82c080d0715c3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\system_integration_20261016\\meta_vectors.hex"
+        },
+        "handoff_support/system_integration_20261016/row_vectors.hex": {
+          "stored": "fpga/current/handoff_support/system_integration_20261016/row_vectors.hex",
+          "bytes": 25600,
+          "sha256": "18cef1507800b016c97c339cbf87db9659892c585ee13f465cdd9f81cc70a743",
+          "stored_sha256": "18cef1507800b016c97c339cbf87db9659892c585ee13f465cdd9f81cc70a743",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\system_integration_20261016\\row_vectors.hex"
+        },
+        "handoff_support/system_integration_20261016/tb_positions.v": {
+          "stored": "fpga/current/handoff_support/system_integration_20261016/tb_positions.v",
+          "bytes": 3476,
+          "sha256": "d8e0865f6b2f1fa14693a3bbabbec91c5a4972edaf915c11b46088b542bb5e8c",
+          "stored_sha256": "d8e0865f6b2f1fa14693a3bbabbec91c5a4972edaf915c11b46088b542bb5e8c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\system_integration_20261016\\tb_positions.v"
+        },
+        "handoff_support/system_integration_20261016/tb_scan_budget.v": {
+          "stored": "fpga/current/handoff_support/system_integration_20261016/tb_scan_budget.v",
+          "bytes": 2557,
+          "sha256": "4f2a48ea74d28213de01f32b14316c9caa889d4f9d4cfc130a970ecc742ba520",
+          "stored_sha256": "4f2a48ea74d28213de01f32b14316c9caa889d4f9d4cfc130a970ecc742ba520",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\system_integration_20261016\\tb_scan_budget.v"
+        },
+        "handoff_support/system_integration_20261016/tb_sensor.v": {
+          "stored": "fpga/current/handoff_support/system_integration_20261016/tb_sensor.v",
+          "bytes": 3017,
+          "sha256": "5aefa27133781785b1c3fa0ac81f68fa75ecf7c52b671459d06c5fee94663bee",
+          "stored_sha256": "5aefa27133781785b1c3fa0ac81f68fa75ecf7c52b671459d06c5fee94663bee",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\handoff_support\\system_integration_20261016\\tb_sensor.v"
+        },
+        "upstream-notes/ACCEPTANCE-CRITERIA-20261023.md": {
+          "stored": "fpga/current/upstream-notes/ACCEPTANCE-CRITERIA-20261023.md",
+          "bytes": 17819,
+          "sha256": "ad6fd51db73f9eb39bf10e2a94470900c762cc230baebc8c53532abbf244af35",
+          "stored_sha256": "ad6fd51db73f9eb39bf10e2a94470900c762cc230baebc8c53532abbf244af35",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\ACCEPTANCE-CRITERIA-20261023.md"
+        },
+        "upstream-notes/ADDITIVE-SYNTH-DIAGNOSIS-20261022.md": {
+          "stored": "fpga/current/upstream-notes/ADDITIVE-SYNTH-DIAGNOSIS-20261022.md",
+          "bytes": 10597,
+          "sha256": "28581b3191fa2c447d952c088a9cb482506ebc80592c8838810b47e6d449e852",
+          "stored_sha256": "28581b3191fa2c447d952c088a9cb482506ebc80592c8838810b47e6d449e852",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\ADDITIVE-SYNTH-DIAGNOSIS-20261022.md"
+        },
+        "analyze_hold.py": {
+          "stored": "fpga/current/analyze_hold.py",
+          "bytes": 3941,
+          "sha256": "1b695b0be8f4e8b9a237549c2c5ee0f974756fd969c75717f8f5c83bbb4c8e17",
+          "stored_sha256": "1b695b0be8f4e8b9a237549c2c5ee0f974756fd969c75717f8f5c83bbb4c8e17",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\analyze_hold.py"
+        },
+        "analyze_paths.py": {
+          "stored": "fpga/current/analyze_paths.py",
+          "bytes": 1662,
+          "sha256": "f30b0a99c976758a10422af0e9c20126b020a5acca17ef9c2915c1f90416d131",
+          "stored_sha256": "f30b0a99c976758a10422af0e9c20126b020a5acca17ef9c2915c1f90416d131",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\analyze_paths.py"
+        },
+        "upstream-notes/ARTICULATION-AS-NOTE-PROPERTY-20261022.md": {
+          "stored": "fpga/current/upstream-notes/ARTICULATION-AS-NOTE-PROPERTY-20261022.md",
+          "bytes": 10115,
+          "sha256": "16f898c56a802eab082d09513e80dab99943d2c4bae1f09bd4cf2bd25aad3554",
+          "stored_sha256": "16f898c56a802eab082d09513e80dab99943d2c4bae1f09bd4cf2bd25aad3554",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\ARTICULATION-AS-NOTE-PROPERTY-20261022.md"
+        },
+        "upstream-notes/ARTICULATION-RUNTIME-SPEC-20261022.md": {
+          "stored": "fpga/current/upstream-notes/ARTICULATION-RUNTIME-SPEC-20261022.md",
+          "bytes": 36230,
+          "sha256": "c3beaa931b523213641d79e0b7cf3477f836ea75d2ed5c46d8a50b9c6e6a9525",
+          "stored_sha256": "c3beaa931b523213641d79e0b7cf3477f836ea75d2ed5c46d8a50b9c6e6a9525",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\ARTICULATION-RUNTIME-SPEC-20261022.md"
+        },
+        "articulation_v2.py": {
+          "stored": "fpga/current/articulation_v2.py",
+          "bytes": 34700,
+          "sha256": "204782f8a99b59ec6939aaa8ef9e59f232d705f88d63217c3ce3b481a434e3e9",
+          "stored_sha256": "204782f8a99b59ec6939aaa8ef9e59f232d705f88d63217c3ce3b481a434e3e9",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\articulation_v2.py"
+        },
+        "audit_candidate.py": {
+          "stored": "fpga/current/audit_candidate.py",
+          "bytes": 3455,
+          "sha256": "c663f7a7a20feab8207a6ed76297225df94695cd098fede99d7dd41586a04ab3",
+          "stored_sha256": "c663f7a7a20feab8207a6ed76297225df94695cd098fede99d7dd41586a04ab3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\audit_candidate.py"
+        },
+        "audit_current.py": {
+          "stored": "fpga/current/audit_current.py",
+          "bytes": 3993,
+          "sha256": "4337134486d1040331df850477060b14f494769e21da91ce5b7840ec6492968f",
+          "stored_sha256": "4337134486d1040331df850477060b14f494769e21da91ce5b7840ec6492968f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\audit_current.py"
+        },
+        "audit_history.py": {
+          "stored": "fpga/current/audit_history.py",
+          "bytes": 2734,
+          "sha256": "db0663982de616f57fdb6393c4a7437f5b7a684634faa8ebb8b31dbb1a13cfcc",
+          "stored_sha256": "db0663982de616f57fdb6393c4a7437f5b7a684634faa8ebb8b31dbb1a13cfcc",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\audit_history.py"
+        },
+        "audit_timing.py": {
+          "stored": "fpga/current/audit_timing.py",
+          "bytes": 8972,
+          "sha256": "d7ff0b4ca6c4b6003aba75b45a5eaf036701f6d5ae468b407851a568f9b539d8",
+          "stored_sha256": "d7ff0b4ca6c4b6003aba75b45a5eaf036701f6d5ae468b407851a568f9b539d8",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\audit_timing.py"
+        },
+        "upstream-notes/AUX-SCREEN-PRODUCT-BOM-20261023.md": {
+          "stored": "fpga/current/upstream-notes/AUX-SCREEN-PRODUCT-BOM-20261023.md",
+          "bytes": 13877,
+          "sha256": "6ae556a176a1e7fee6def544fb91a6ee1292294a6507581a0812c0b2404cb0c5",
+          "stored_sha256": "6ae556a176a1e7fee6def544fb91a6ee1292294a6507581a0812c0b2404cb0c5",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\AUX-SCREEN-PRODUCT-BOM-20261023.md"
+        },
+        "upstream-notes/BOM-PROTOTYPE-20261022.md": {
+          "stored": "fpga/current/upstream-notes/BOM-PROTOTYPE-20261022.md",
+          "bytes": 6057,
+          "sha256": "3e5bc1f3416ffb1dfcd7e8c474604d09dafe54cd08d1094ad78766d7e9d53f76",
+          "stored_sha256": "3e5bc1f3416ffb1dfcd7e8c474604d09dafe54cd08d1094ad78766d7e9d53f76",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\BOM-PROTOTYPE-20261022.md"
+        },
+        "upstream-notes/budget.json": {
+          "stored": "fpga/current/upstream-notes/budget.json",
+          "bytes": 16265,
+          "sha256": "fb4015fb3eed921c97e83051e03f5145d23ed44aef3795acfa735791cd13dadd",
+          "stored_sha256": "fb4015fb3eed921c97e83051e03f5145d23ed44aef3795acfa735791cd13dadd",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\budget.json"
+        },
+        "budget.py": {
+          "stored": "fpga/current/budget.py",
+          "bytes": 8730,
+          "sha256": "93422feb083d35b149c1dcbd0129e8d4d62035550cb6f69776a14395366f0aa1",
+          "stored_sha256": "93422feb083d35b149c1dcbd0129e8d4d62035550cb6f69776a14395366f0aa1",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\budget.py"
+        },
+        "build_board.py": {
+          "stored": "fpga/current/build_board.py",
+          "bytes": 3133,
+          "sha256": "ff6a7a4e981d363a26bfd5ca3a8a9f8a7b4508f5e354e168e2b1835c66dceac5",
+          "stored_sha256": "ff6a7a4e981d363a26bfd5ca3a8a9f8a7b4508f5e354e168e2b1835c66dceac5",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\build_board.py"
+        },
+        "build_product.py": {
+          "stored": "fpga/current/build_product.py",
+          "bytes": 5357,
+          "sha256": "724b88b6b223bfa31f6ae6c59724544f0132f11a12905fb82389f60cf76f98ee",
+          "stored_sha256": "724b88b6b223bfa31f6ae6c59724544f0132f11a12905fb82389f60cf76f98ee",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\build_product.py"
+        },
+        "check_delta.py": {
+          "stored": "fpga/current/check_delta.py",
+          "bytes": 1611,
+          "sha256": "58627d9c59fed8e984ab618be11055acd566b3cc2401525bf061b277582dd14d",
+          "stored_sha256": "58627d9c59fed8e984ab618be11055acd566b3cc2401525bf061b277582dd14d",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_delta.py"
+        },
+        "check_engine_compat.py": {
+          "stored": "fpga/current/check_engine_compat.py",
+          "bytes": 1784,
+          "sha256": "a65a8df323e517bb395bde8f4b3ba832ae447d3824ab8f1b1b011bf24ef2ae0d",
+          "stored_sha256": "a65a8df323e517bb395bde8f4b3ba832ae447d3824ab8f1b1b011bf24ef2ae0d",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_engine_compat.py"
+        },
+        "check_envelope.py": {
+          "stored": "fpga/current/check_envelope.py",
+          "bytes": 4209,
+          "sha256": "e0fb5d19ed24805a35f7b1aae666196b06ad41849563a4945bd976de155d34ce",
+          "stored_sha256": "e0fb5d19ed24805a35f7b1aae666196b06ad41849563a4945bd976de155d34ce",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_envelope.py"
+        },
+        "check_joint.py": {
+          "stored": "fpga/current/check_joint.py",
+          "bytes": 8171,
+          "sha256": "aad1794284db3b4e0717ec1ddbb87a92a3cd9a7a49573042a44187304a3864bb",
+          "stored_sha256": "aad1794284db3b4e0717ec1ddbb87a92a3cd9a7a49573042a44187304a3864bb",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_joint.py"
+        },
+        "check_joint_variant.py": {
+          "stored": "fpga/current/check_joint_variant.py",
+          "bytes": 8310,
+          "sha256": "57ad1016627cc79a88cd9b86bd88eb798f7e026a043f690722854150a696ea5a",
+          "stored_sha256": "57ad1016627cc79a88cd9b86bd88eb798f7e026a043f690722854150a696ea5a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_joint_variant.py"
+        },
+        "check_native.py": {
+          "stored": "fpga/current/check_native.py",
+          "bytes": 804,
+          "sha256": "9bf64262e861ccd1bfe285b654595388dab48c51388e64896f806bc023053253",
+          "stored_sha256": "9bf64262e861ccd1bfe285b654595388dab48c51388e64896f806bc023053253",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_native.py"
+        },
+        "check_phase_wrap.py": {
+          "stored": "fpga/current/check_phase_wrap.py",
+          "bytes": 597,
+          "sha256": "b6eccdbabd922fde624f222d8eb74f82a4c8c768185f50fa870363d2051995db",
+          "stored_sha256": "b6eccdbabd922fde624f222d8eb74f82a4c8c768185f50fa870363d2051995db",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_phase_wrap.py"
+        },
+        "check_pitch.py": {
+          "stored": "fpga/current/check_pitch.py",
+          "bytes": 1961,
+          "sha256": "0b6bc92dff00604df80deed5570340155083d2a7ea06c95a5d763029b47330d5",
+          "stored_sha256": "0b6bc92dff00604df80deed5570340155083d2a7ea06c95a5d763029b47330d5",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_pitch.py"
+        },
+        "check_renderer.py": {
+          "stored": "fpga/current/check_renderer.py",
+          "bytes": 3271,
+          "sha256": "fe9a9be52917f6e96b5d3265552e81dd439332d7a2609b5f9f0a0c10a9392a78",
+          "stored_sha256": "fe9a9be52917f6e96b5d3265552e81dd439332d7a2609b5f9f0a0c10a9392a78",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_renderer.py"
+        },
+        "check_scan_store.py": {
+          "stored": "fpga/current/check_scan_store.py",
+          "bytes": 2166,
+          "sha256": "8940b99369aee1d5019ae34fb783c799b69918f75f3587528678ffee693144bb",
+          "stored_sha256": "8940b99369aee1d5019ae34fb783c799b69918f75f3587528678ffee693144bb",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_scan_store.py"
+        },
+        "check_scan_variant.py": {
+          "stored": "fpga/current/check_scan_variant.py",
+          "bytes": 1482,
+          "sha256": "b917de125526258dceb71afdf896abb603276b404bc09e4beb51a5e28debaa10",
+          "stored_sha256": "b917de125526258dceb71afdf896abb603276b404bc09e4beb51a5e28debaa10",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_scan_variant.py"
+        },
+        "check_sensor.py": {
+          "stored": "fpga/current/check_sensor.py",
+          "bytes": 1047,
+          "sha256": "77383018c5c2faa9569a786cc8ee6ae9a0402ebb5b8e575803182d67f286f546",
+          "stored_sha256": "77383018c5c2faa9569a786cc8ee6ae9a0402ebb5b8e575803182d67f286f546",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\check_sensor.py"
+        },
+        "common.py": {
+          "stored": "fpga/current/common.py",
+          "bytes": 1494,
+          "sha256": "edc883dfaabf9eb122aeaf205482e48a5684e244956b0c1d8c29a9c6101a4312",
+          "stored_sha256": "edc883dfaabf9eb122aeaf205482e48a5684e244956b0c1d8c29a9c6101a4312",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\common.py"
+        },
+        "upstream-notes/critical-paths.json": {
+          "stored": "fpga/current/upstream-notes/critical-paths.json",
+          "bytes": 19526,
+          "sha256": "8289dc76b2b178c3962681e10e51988a3140bedbcde02336964bf3931566e6b9",
+          "stored_sha256": "8289dc76b2b178c3962681e10e51988a3140bedbcde02336964bf3931566e6b9",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\critical-paths.json"
+        },
+        "upstream-notes/CUSTOM-INSTRUMENT-STATUS-20261023.md": {
+          "stored": "fpga/current/upstream-notes/CUSTOM-INSTRUMENT-STATUS-20261023.md",
+          "bytes": 10119,
+          "sha256": "f03de536b52511047733dda13a3132708b746b2c7de4677ccf7aebf6205cd3f7",
+          "stored_sha256": "f03de536b52511047733dda13a3132708b746b2c7de4677ccf7aebf6205cd3f7",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\CUSTOM-INSTRUMENT-STATUS-20261023.md"
+        },
+        "upstream-notes/DECAY2-20261023.md": {
+          "stored": "fpga/current/upstream-notes/DECAY2-20261023.md",
+          "bytes": 10423,
+          "sha256": "6043da93da33d1eb34939cf2da52e29b39ade4b372a7727cec3511c2675f464f",
+          "stored_sha256": "6043da93da33d1eb34939cf2da52e29b39ade4b372a7727cec3511c2675f464f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\DECAY2-20261023.md"
+        },
+        "upstream-notes/DECISIONS-20261023.md": {
+          "stored": "fpga/current/upstream-notes/DECISIONS-20261023.md",
+          "bytes": 3863,
+          "sha256": "b3ae41af9deb074b0124f301779849e8ff75fbba886bc0bbd4853e8e59066554",
+          "stored_sha256": "b3ae41af9deb074b0124f301779849e8ff75fbba886bc0bbd4853e8e59066554",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\DECISIONS-20261023.md"
+        },
+        "upstream-notes/DERISK-PLAN-20261023.md": {
+          "stored": "fpga/current/upstream-notes/DERISK-PLAN-20261023.md",
+          "bytes": 8542,
+          "sha256": "df99fd0c324071d09b816ace63f0889edccfd93f1c2f249246bb5d466943766c",
+          "stored_sha256": "df99fd0c324071d09b816ace63f0889edccfd93f1c2f249246bb5d466943766c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\DERISK-PLAN-20261023.md"
+        },
+        "upstream-notes/EDIT-MODE-DESIGN-20261023.md": {
+          "stored": "fpga/current/upstream-notes/EDIT-MODE-DESIGN-20261023.md",
+          "bytes": 10547,
+          "sha256": "30efb038b8004297edb6bd3d07197f320f42d777a30aeb86350b31398658b345",
+          "stored_sha256": "30efb038b8004297edb6bd3d07197f320f42d777a30aeb86350b31398658b345",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\EDIT-MODE-DESIGN-20261023.md"
+        },
+        "expected_vectors.hex": {
+          "stored": "fpga/current/expected_vectors.hex",
+          "bytes": 2240,
+          "sha256": "2abc25d6b2104c79ca38a1eddefb8561d65dbf0d7a1ea2096bb9428d61416d59",
+          "stored_sha256": "2abc25d6b2104c79ca38a1eddefb8561d65dbf0d7a1ea2096bb9428d61416d59",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\expected_vectors.hex"
+        },
+        "upstream-notes/FPGA-REMAINING-20261022.md": {
+          "stored": "fpga/current/upstream-notes/FPGA-REMAINING-20261022.md",
+          "bytes": 7869,
+          "sha256": "ac83095a221775e6a9d93faa4a0d2f04ff8480c846d5eab933343ac5f036fb8b",
+          "stored_sha256": "ac83095a221775e6a9d93faa4a0d2f04ff8480c846d5eab933343ac5f036fb8b",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\FPGA-REMAINING-20261022.md"
+        },
+        "upstream-notes/GENERAL-INSTRUMENT-GAPS-20261022.md": {
+          "stored": "fpga/current/upstream-notes/GENERAL-INSTRUMENT-GAPS-20261022.md",
+          "bytes": 13046,
+          "sha256": "55ff2e282753b36e86a229532f8f2f4f18a271912574daee8572510098c1618b",
+          "stored_sha256": "55ff2e282753b36e86a229532f8f2f4f18a271912574daee8572510098c1618b",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\GENERAL-INSTRUMENT-GAPS-20261022.md"
+        },
+        "upstream-notes/HANDOFF-WORKSPACE.json": {
+          "stored": "fpga/current/upstream-notes/HANDOFF-WORKSPACE.json",
+          "bytes": 18596,
+          "sha256": "926781cc0f24ed725c484ac656326a55a07e57a80a5a296eef59b8c4eb3fbaea",
+          "stored_sha256": "926781cc0f24ed725c484ac656326a55a07e57a80a5a296eef59b8c4eb3fbaea",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\HANDOFF-WORKSPACE.json"
+        },
+        "upstream-notes/HARDWARE-ALIGNMENT-20261023.md": {
+          "stored": "fpga/current/upstream-notes/HARDWARE-ALIGNMENT-20261023.md",
+          "bytes": 13320,
+          "sha256": "0c1dad4acc2a2ee248d80df5c9e93c32c2bb5cfbac5b5d1d6384815d53a73947",
+          "stored_sha256": "0c1dad4acc2a2ee248d80df5c9e93c32c2bb5cfbac5b5d1d6384815d53a73947",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\HARDWARE-ALIGNMENT-20261023.md"
+        },
+        "upstream-notes/hold-critical-path.csv": {
+          "stored": "fpga/current/upstream-notes/hold-critical-path.csv",
+          "bytes": 226,
+          "sha256": "ac18e965279154d4a968037cbb4d14e276951b2812a7d6e1245a90e73968f185",
+          "stored_sha256": "ac18e965279154d4a968037cbb4d14e276951b2812a7d6e1245a90e73968f185",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\hold-critical-path.csv"
+        },
+        "upstream-notes/INFO-BASELINE-20261023.md": {
+          "stored": "fpga/current/upstream-notes/INFO-BASELINE-20261023.md",
+          "bytes": 17728,
+          "sha256": "22cded7bbf55d4a1f70c53a1a9802991f7bb8b31c294df7b70b08e63a7f05978",
+          "stored_sha256": "22cded7bbf55d4a1f70c53a1a9802991f7bb8b31c294df7b70b08e63a7f05978",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\INFO-BASELINE-20261023.md"
+        },
+        "upstream-notes/INSTRUMENT-MODEL-20261023.md": {
+          "stored": "fpga/current/upstream-notes/INSTRUMENT-MODEL-20261023.md",
+          "bytes": 14457,
+          "sha256": "8c90d22d4134124accb47eb9858ff11beab230a97285d7c882f894792b53b4a9",
+          "stored_sha256": "8c90d22d4134124accb47eb9858ff11beab230a97285d7c882f894792b53b4a9",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\INSTRUMENT-MODEL-20261023.md"
+        },
+        "upstream-notes/INTERACTION-AND-DEADCODE-20261023.md": {
+          "stored": "fpga/current/upstream-notes/INTERACTION-AND-DEADCODE-20261023.md",
+          "bytes": 12263,
+          "sha256": "a19f49538cfbdfaaa2c4fcdb75af7a92e2e145d9ac3d515721b3c6d17df1311d",
+          "stored_sha256": "a19f49538cfbdfaaa2c4fcdb75af7a92e2e145d9ac3d515721b3c6d17df1311d",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\INTERACTION-AND-DEADCODE-20261023.md"
+        },
+        "upstream-notes/JLCPCB-ORDER-PACKAGE-20261023.md": {
+          "stored": "fpga/current/upstream-notes/JLCPCB-ORDER-PACKAGE-20261023.md",
+          "bytes": 7540,
+          "sha256": "ab5ff7f9b940644e6b233e34fe9aeadb8911cc731120691e2760592e912d74a4",
+          "stored_sha256": "ab5ff7f9b940644e6b233e34fe9aeadb8911cc731120691e2760592e912d74a4",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\JLCPCB-ORDER-PACKAGE-20261023.md"
+        },
+        "upstream-notes/KNIFE1-VELTAB-20261023.md": {
+          "stored": "fpga/current/upstream-notes/KNIFE1-VELTAB-20261023.md",
+          "bytes": 5081,
+          "sha256": "7c320154cbd757421dc761ca6c86667ec6975d439981c0fb275957c9682a18ee",
+          "stored_sha256": "7c320154cbd757421dc761ca6c86667ec6975d439981c0fb275957c9682a18ee",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\KNIFE1-VELTAB-20261023.md"
+        },
+        "upstream-notes/KNIFE1B-VTAB4-20261023.md": {
+          "stored": "fpga/current/upstream-notes/KNIFE1B-VTAB4-20261023.md",
+          "bytes": 4646,
+          "sha256": "b01e7bfb7b1190de3b076249bf1b204733d06f2e3ab546cadd90e01d7608e48b",
+          "stored_sha256": "b01e7bfb7b1190de3b076249bf1b204733d06f2e3ab546cadd90e01d7608e48b",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\KNIFE1B-VTAB4-20261023.md"
+        },
+        "upstream-notes/LAYER4-RULES-DRAFT-20261023.md": {
+          "stored": "fpga/current/upstream-notes/LAYER4-RULES-DRAFT-20261023.md",
+          "bytes": 12063,
+          "sha256": "7b07eee41d4eb9797a1f4ab6eb5f96cedeb6571c932110eff227fa062776b7b4",
+          "stored_sha256": "7b07eee41d4eb9797a1f4ab6eb5f96cedeb6571c932110eff227fa062776b7b4",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\LAYER4-RULES-DRAFT-20261023.md"
+        },
+        "upstream-notes/M1-AREA-OPTIONS.md": {
+          "stored": "fpga/current/upstream-notes/M1-AREA-OPTIONS.md",
+          "bytes": 28392,
+          "sha256": "cc74a96f08830c7d7ece1eadca37388a08116dc7e011e249f3777e995ddb60e7",
+          "stored_sha256": "cc74a96f08830c7d7ece1eadca37388a08116dc7e011e249f3777e995ddb60e7",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\M1-AREA-OPTIONS.md"
+        },
+        "upstream-notes/M1-CHANGE-NOTE.md": {
+          "stored": "fpga/current/upstream-notes/M1-CHANGE-NOTE.md",
+          "bytes": 25102,
+          "sha256": "cc93812293fe1ff9a51445c48cd8661ed8a67faaf2599aaae6b369f3f7c80cd3",
+          "stored_sha256": "cc93812293fe1ff9a51445c48cd8661ed8a67faaf2599aaae6b369f3f7c80cd3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\M1-CHANGE-NOTE.md"
+        },
+        "upstream-notes/M1-VOICE-BEHAVIOR.md": {
+          "stored": "fpga/current/upstream-notes/M1-VOICE-BEHAVIOR.md",
+          "bytes": 11262,
+          "sha256": "ca1b866e9b20bd2a90cbde124e8796698b1bd1f5ff515830a2eb91b0eaa9eb6a",
+          "stored_sha256": "ca1b866e9b20bd2a90cbde124e8796698b1bd1f5ff515830a2eb91b0eaa9eb6a",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\M1-VOICE-BEHAVIOR.md"
+        },
+        "meta_vectors.hex": {
+          "stored": "fpga/current/meta_vectors.hex",
+          "bytes": 480,
+          "sha256": "e418abc36cf6741c42f7743cd1748341a163e8ad3b462504c7e82c080d0715c3",
+          "stored_sha256": "e418abc36cf6741c42f7743cd1748341a163e8ad3b462504c7e82c080d0715c3",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\meta_vectors.hex"
+        },
+        "upstream-notes/NIGHT-20261023-VELOCITY.md": {
+          "stored": "fpga/current/upstream-notes/NIGHT-20261023-VELOCITY.md",
+          "bytes": 30391,
+          "sha256": "e90d2b7519e450231cdc3af0399f54948e0c2e085208be3c83c5d428571e2207",
+          "stored_sha256": "e90d2b7519e450231cdc3af0399f54948e0c2e085208be3c83c5d428571e2207",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\NIGHT-20261023-VELOCITY.md"
+        },
+        "upstream-notes/NOV04-PLAN.md": {
+          "stored": "fpga/current/upstream-notes/NOV04-PLAN.md",
+          "bytes": 9731,
+          "sha256": "9dd6e25a3b5a32a79fa613a3eed7c5c5e00973e561d49c6bcd6259f9d7fff78f",
+          "stored_sha256": "9dd6e25a3b5a32a79fa613a3eed7c5c5e00973e561d49c6bcd6259f9d7fff78f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\NOV04-PLAN.md"
+        },
+        "upstream-notes/NSLOT-AND-RUNTIME-EDIT-20261022.md": {
+          "stored": "fpga/current/upstream-notes/NSLOT-AND-RUNTIME-EDIT-20261022.md",
+          "bytes": 9491,
+          "sha256": "a043c066643168d5402a0eb17651f970592f11574a00937f5d639054ce739d12",
+          "stored_sha256": "a043c066643168d5402a0eb17651f970592f11574a00937f5d639054ce739d12",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\NSLOT-AND-RUNTIME-EDIT-20261022.md"
+        },
+        "upstream-notes/POST-PCB-BOM-20261023.md": {
+          "stored": "fpga/current/upstream-notes/POST-PCB-BOM-20261023.md",
+          "bytes": 9381,
+          "sha256": "3348b52abc80ce62a1f14722839973b77543963c790d788db2557a9b38ab9d09",
+          "stored_sha256": "3348b52abc80ce62a1f14722839973b77543963c790d788db2557a9b38ab9d09",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\POST-PCB-BOM-20261023.md"
+        },
+        "prepare.py": {
+          "stored": "fpga/current/prepare.py",
+          "bytes": 2470,
+          "sha256": "5070648f3101105e85bccb716e5837e6d742bbdb41ec2e7921b787cb11d8c08e",
+          "stored_sha256": "5070648f3101105e85bccb716e5837e6d742bbdb41ec2e7921b787cb11d8c08e",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\prepare.py"
+        },
+        "prepare_probe.py": {
+          "stored": "fpga/current/prepare_probe.py",
+          "bytes": 5533,
+          "sha256": "858050abf7ee55dddef5a16858a3022d1ad012a0bd7917b2989f0d69e8f551cc",
+          "stored_sha256": "858050abf7ee55dddef5a16858a3022d1ad012a0bd7917b2989f0d69e8f551cc",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\prepare_probe.py"
+        },
+        "upstream-notes/PROCUREMENT-20261023.md": {
+          "stored": "fpga/current/upstream-notes/PROCUREMENT-20261023.md",
+          "bytes": 8402,
+          "sha256": "f45766c3e26e37034220c1d15236026a6349bf29c279a432783d910a24592ff8",
+          "stored_sha256": "f45766c3e26e37034220c1d15236026a6349bf29c279a432783d910a24592ff8",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\PROCUREMENT-20261023.md"
+        },
+        "upstream-notes/PROCUREMENT-ORDER-20261023.csv": {
+          "stored": "fpga/current/upstream-notes/PROCUREMENT-ORDER-20261023.csv",
+          "bytes": 2379,
+          "sha256": "bbdd3a3096cf89f90716e92e5d99d54d024756666df00224ddfa49b42f6a0e95",
+          "stored_sha256": "bbdd3a3096cf89f90716e92e5d99d54d024756666df00224ddfa49b42f6a0e95",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\PROCUREMENT-ORDER-20261023.csv"
+        },
+        "upstream-notes/README.md": {
+          "stored": "fpga/current/upstream-notes/README.md",
+          "bytes": 1478,
+          "sha256": "3a796e9e9baae7a0e5f3e93b62204633f161e813875d701b391be17d78a62da9",
+          "stored_sha256": "3a796e9e9baae7a0e5f3e93b62204633f161e813875d701b391be17d78a62da9",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\README.md"
+        },
+        "upstream-notes/resource-allocations.csv": {
+          "stored": "fpga/current/upstream-notes/resource-allocations.csv",
+          "bytes": 1135,
+          "sha256": "8086bc0c10903700a839d397cb187901fbaca9f40df5197cff297c21c989e089",
+          "stored_sha256": "8086bc0c10903700a839d397cb187901fbaca9f40df5197cff297c21c989e089",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\resource-allocations.csv"
+        },
+        "resource_map.py": {
+          "stored": "fpga/current/resource_map.py",
+          "bytes": 1509,
+          "sha256": "b0d2d78fd175f4d242f9b7968867d3f4f885758d1fb8fc4a556d90d225bc14b5",
+          "stored_sha256": "b0d2d78fd175f4d242f9b7968867d3f4f885758d1fb8fc4a556d90d225bc14b5",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\resource_map.py"
+        },
+        "upstream-notes/results.json": {
+          "stored": "fpga/current/upstream-notes/results.json",
+          "bytes": 26211,
+          "sha256": "ca679d7eb3cbbcf8766eee33c8e31ae27829cfaf9877915539fad8d05dc61f48",
+          "stored_sha256": "ca679d7eb3cbbcf8766eee33c8e31ae27829cfaf9877915539fad8d05dc61f48",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\results.json"
+        },
+        "row_vectors.hex": {
+          "stored": "fpga/current/row_vectors.hex",
+          "bytes": 25600,
+          "sha256": "18cef1507800b016c97c339cbf87db9659892c585ee13f465cdd9f81cc70a743",
+          "stored_sha256": "18cef1507800b016c97c339cbf87db9659892c585ee13f465cdd9f81cc70a743",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\row_vectors.hex"
+        },
+        "upstream-notes/RUNTIME-EDIT-AND-ARTICULATION-20261022.md": {
+          "stored": "fpga/current/upstream-notes/RUNTIME-EDIT-AND-ARTICULATION-20261022.md",
+          "bytes": 12705,
+          "sha256": "0e0c756bfd2f6fbf5941e1e58b0a5c4798ca6d43664cba6babf7bc2d6236be29",
+          "stored_sha256": "0e0c756bfd2f6fbf5941e1e58b0a5c4798ca6d43664cba6babf7bc2d6236be29",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\RUNTIME-EDIT-AND-ARTICULATION-20261022.md"
+        },
+        "seal_delivery.py": {
+          "stored": "fpga/current/seal_delivery.py",
+          "bytes": 2980,
+          "sha256": "da5168740adb64e123b8808a23fcbc97deec97dfad9fc9d9a2f2304c63a51d0c",
+          "stored_sha256": "da5168740adb64e123b8808a23fcbc97deec97dfad9fc9d9a2f2304c63a51d0c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\seal_delivery.py"
+        },
+        "upstream-notes/setup-critical-path.csv": {
+          "stored": "fpga/current/upstream-notes/setup-critical-path.csv",
+          "bytes": 7303,
+          "sha256": "b3ff1f52746841b4d29538230a46c39b73ff6f07b2f5cc4e8e594f38925e2a75",
+          "stored_sha256": "b3ff1f52746841b4d29538230a46c39b73ff6f07b2f5cc4e8e594f38925e2a75",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\setup-critical-path.csv"
+        },
+        "upstream-notes/source-identity.json": {
+          "stored": "fpga/current/upstream-notes/source-identity.json",
+          "bytes": 12939,
+          "sha256": "3af176962c22edef8da9383024a0e3d7e064e2959607349e0adafa104da74e7d",
+          "stored_sha256": "3af176962c22edef8da9383024a0e3d7e064e2959607349e0adafa104da74e7d",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\source-identity.json"
+        },
+        "upstream-notes/STRIKE-MODE-20261023.md": {
+          "stored": "fpga/current/upstream-notes/STRIKE-MODE-20261023.md",
+          "bytes": 16133,
+          "sha256": "c86c69a59ce6fc2f0c01f21f48dd166478130eab573f59545c82bbabc0b1748f",
+          "stored_sha256": "c86c69a59ce6fc2f0c01f21f48dd166478130eab573f59545c82bbabc0b1748f",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\STRIKE-MODE-20261023.md"
+        },
+        "strike.hex": {
+          "stored": "fpga/current/strike.hex",
+          "bytes": 224,
+          "sha256": "71c0be07225d6a8a33bf5ec4c969b8e4fe30cfc4285ab9cbb4c8c0f54e042a66",
+          "stored_sha256": "71c0be07225d6a8a33bf5ec4c969b8e4fe30cfc4285ab9cbb4c8c0f54e042a66",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\strike.hex"
+        },
+        "sustain.hex": {
+          "stored": "fpga/current/sustain.hex",
+          "bytes": 224,
+          "sha256": "461d639260397c0385e1fe0e32e3b9c0b156e4d421df159eaea0369dd7a1abff",
+          "stored_sha256": "461d639260397c0385e1fe0e32e3b9c0b156e4d421df159eaea0369dd7a1abff",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\sustain.hex"
+        },
+        "synth_area.py": {
+          "stored": "fpga/current/synth_area.py",
+          "bytes": 6063,
+          "sha256": "f5425c13e865683d07c82ba87a766d33b7bdbd0dbc3763a324a2bfff6b8e48d7",
+          "stored_sha256": "f5425c13e865683d07c82ba87a766d33b7bdbd0dbc3763a324a2bfff6b8e48d7",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\synth_area.py"
+        },
+        "tb_compat_music.v": {
+          "stored": "fpga/current/tb_compat_music.v",
+          "bytes": 6928,
+          "sha256": "3b5fac0d8123b419289aec2a08f6b1549758db02ea97293300260e084293f528",
+          "stored_sha256": "3b5fac0d8123b419289aec2a08f6b1549758db02ea97293300260e084293f528",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb_compat_music.v"
+        },
+        "tb_envelope.v": {
+          "stored": "fpga/current/tb_envelope.v",
+          "bytes": 2904,
+          "sha256": "ec333f356fded0e57f634ca06ed504bff18f8d1b56b482ce7aef74dbecbbee7c",
+          "stored_sha256": "ec333f356fded0e57f634ca06ed504bff18f8d1b56b482ce7aef74dbecbbee7c",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb_envelope.v"
+        },
+        "tb_layers.v": {
+          "stored": "fpga/current/tb_layers.v",
+          "bytes": 9903,
+          "sha256": "f733743982671a37dabc48e06c5d64f3af1c9739aea0d5d6d27eafda9aea8f73",
+          "stored_sha256": "f733743982671a37dabc48e06c5d64f3af1c9739aea0d5d6d27eafda9aea8f73",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb_layers.v"
+        },
+        "tb_phase_wrap.v": {
+          "stored": "fpga/current/tb_phase_wrap.v",
+          "bytes": 1707,
+          "sha256": "d00c13ac16c83c909bdef05dbd6897a026db3dc12d27d1b5d7e6bdf5e63ddbe2",
+          "stored_sha256": "d00c13ac16c83c909bdef05dbd6897a026db3dc12d27d1b5d7e6bdf5e63ddbe2",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb_phase_wrap.v"
+        },
+        "tb_sensor_layers.v": {
+          "stored": "fpga/current/tb_sensor_layers.v",
+          "bytes": 7061,
+          "sha256": "87535fb487ed6043716fad316be7d1ffa1abf6f282d528eb7457309253b81f95",
+          "stored_sha256": "87535fb487ed6043716fad316be7d1ffa1abf6f282d528eb7457309253b81f95",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\tb_sensor_layers.v"
+        },
+        "upstream-notes/TODO-REVIEW-20261022.md": {
+          "stored": "fpga/current/upstream-notes/TODO-REVIEW-20261022.md",
+          "bytes": 9923,
+          "sha256": "0cf2143eca295540612e98cebee84f07645d8352e11e51249e6a065d28550bed",
+          "stored_sha256": "0cf2143eca295540612e98cebee84f07645d8352e11e51249e6a065d28550bed",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\TODO-REVIEW-20261022.md"
+        },
+        "upstream-notes/VELOCITY-PATH-20261023.md": {
+          "stored": "fpga/current/upstream-notes/VELOCITY-PATH-20261023.md",
+          "bytes": 9314,
+          "sha256": "a0d97aaf41854a154c36f13fbb6e2141d60f30759c63296161182404c1948d31",
+          "stored_sha256": "a0d97aaf41854a154c36f13fbb6e2141d60f30759c63296161182404c1948d31",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\VELOCITY-PATH-20261023.md"
+        },
+        "verify_delivery.py": {
+          "stored": "fpga/current/verify_delivery.py",
+          "bytes": 1317,
+          "sha256": "087102169674c79f9f97768900c384b63160fcda8ebaf6ce171fe5f3bd151aa6",
+          "stored_sha256": "087102169674c79f9f97768900c384b63160fcda8ebaf6ce171fe5f3bd151aa6",
+          "codec": "raw",
+          "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\verify_delivery.py"
+        }
+      },
+      "validation_inherited": false,
+      "product_acceptance": false,
+      "scope": "Complete selected source/test/build/reference trees and root scripts/data; historical narratives isolated in upstream-notes. Generated builds omitted."
+    },
+    "hardware": {
+      "files": {
+        "native/eprj3-intro.md": {
+          "stored": "hardware/current/native/eprj3-intro.md",
+          "bytes": 5976,
+          "sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+          "stored_sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!eprj3-intro.md"
+        },
+        "native/FPGA-Music-U9ControlWork-20261023.eprj3": {
+          "stored": "hardware/current/native/FPGA-Music-U9ControlWork-20261023.eprj3",
+          "bytes": 6074,
+          "sha256": "aa01a91f9d8d8d4ffe86f9446f35752304f0da74a7a56d2935b124aad7a3f88a",
+          "stored_sha256": "aa01a91f9d8d8d4ffe86f9446f35752304f0da74a7a56d2935b124aad7a3f88a",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!FPGA-Music-U9ControlWork-20261023.eprj3"
+        },
+        "native/panel/Panel1.epan2": {
+          "stored": "hardware/current/native/panel/Panel1.epan2",
+          "bytes": 255,
+          "sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+          "stored_sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!panel/Panel1.epan2"
+        },
+        "native/pcb/PCB1.epcb2": {
+          "stored": "hardware/current/native/pcb/PCB1.epcb2",
+          "bytes": 3721952,
+          "sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+          "stored_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!pcb/PCB1.epcb2"
+        },
+        "native/sch/Schematic1/01_Nano_headers.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/01_Nano_headers.esch2",
+          "bytes": 418068,
+          "sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+          "stored_sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/01_Nano_headers.esch2"
+        },
+        "native/sch/Schematic1/02_Shift_and_memory.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/02_Shift_and_memory.esch2",
+          "bytes": 877290,
+          "sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+          "stored_sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/02_Shift_and_memory.esch2"
+        },
+        "native/sch/Schematic1/03_Display_harnesses.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/03_Display_harnesses.esch2",
+          "bytes": 464432,
+          "sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+          "stored_sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/03_Display_harnesses.esch2"
+        },
+        "native/sch/Schematic1/04_PCM5122_AUX.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/04_PCM5122_AUX.esch2",
+          "bytes": 642782,
+          "sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+          "stored_sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/04_PCM5122_AUX.esch2"
+        },
+        "native/sch/Schematic1/05_Power.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/05_Power.esch2",
+          "bytes": 177012,
+          "sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+          "stored_sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/05_Power.esch2"
+        },
+        "native/sch/Schematic1/06_Controls.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/06_Controls.esch2",
+          "bytes": 525340,
+          "sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+          "stored_sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/06_Controls.esch2"
+        },
+        "native/sch/Schematic1/07_Scan_lane_0.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/07_Scan_lane_0.esch2",
+          "bytes": 931456,
+          "sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+          "stored_sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/07_Scan_lane_0.esch2"
+        },
+        "native/sch/Schematic1/08_Scan_lane_1.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/08_Scan_lane_1.esch2",
+          "bytes": 931463,
+          "sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+          "stored_sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/08_Scan_lane_1.esch2"
+        },
+        "native/sch/Schematic1/09_Scan_lane_2.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/09_Scan_lane_2.esch2",
+          "bytes": 931483,
+          "sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+          "stored_sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/09_Scan_lane_2.esch2"
+        },
+        "native/sch/Schematic1/10_Scan_lane_3.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/10_Scan_lane_3.esch2",
+          "bytes": 931485,
+          "sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+          "stored_sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/10_Scan_lane_3.esch2"
+        },
+        "native/sch/Schematic1/11_Scan_lane_4.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/11_Scan_lane_4.esch2",
+          "bytes": 931485,
+          "sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+          "stored_sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/11_Scan_lane_4.esch2"
+        },
+        "native/sch/Schematic1/12_Scan_lane_5.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/12_Scan_lane_5.esch2",
+          "bytes": 931485,
+          "sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+          "stored_sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/12_Scan_lane_5.esch2"
+        },
+        "native/sch/Schematic1/13_Power_off_isolation.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/13_Power_off_isolation.esch2",
+          "bytes": 470664,
+          "sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+          "stored_sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/13_Power_off_isolation.esch2"
+        },
+        "native/sch/Schematic1/14_Protected_power_entry.esch2": {
+          "stored": "hardware/current/native/sch/Schematic1/14_Protected_power_entry.esch2",
+          "bytes": 495638,
+          "sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+          "stored_sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/14_Protected_power_entry.esch2"
+        },
+        "native/sch/Schematic1/Schematic1.ecfg": {
+          "stored": "hardware/current/native/sch/Schematic1/Schematic1.ecfg",
+          "bytes": 764,
+          "sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+          "stored_sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!sch/Schematic1/Schematic1.ecfg"
+        },
+        "native/CHECKPOINT-README.md": {
+          "stored": "hardware/current/native/CHECKPOINT-README.md",
+          "bytes": 5062,
+          "sha256": "f8b437c61d9b3a0c72ab8d54e3affaf513a9464ff4699a83562333e0709757c2",
+          "stored_sha256": "f8b437c61d9b3a0c72ab8d54e3affaf513a9464ff4699a83562333e0709757c2",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip!CHECKPOINT-README.md"
+        },
+        "context/REGIONAL-WORK-IN-PROGRESS.json": {
+          "stored": "hardware/current/context/REGIONAL-WORK-IN-PROGRESS.json",
+          "bytes": 16897,
+          "sha256": "3648979c05b46a623f1ae72845ddad73c5e27975e4a7bfeb10f61320d443a8a8",
+          "stored_sha256": "3648979c05b46a623f1ae72845ddad73c5e27975e4a7bfeb10f61320d443a8a8",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\REGIONAL-WORK-IN-PROGRESS.json"
+        },
+        "context/AUTONOMOUS-CURRENT.md": {
+          "stored": "hardware/current/context/AUTONOMOUS-CURRENT.md",
+          "bytes": 51411,
+          "sha256": "39e160d8d8a131e6c4c604a0e6dc9e63fdc2beca7507b16defe6c7f92a64f7ed",
+          "stored_sha256": "39e160d8d8a131e6c4c604a0e6dc9e63fdc2beca7507b16defe6c7f92a64f7ed",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\AUTONOMOUS-CURRENT.md"
+        },
+        "context/u9/construction-state.json": {
+          "stored": "hardware/current/context/u9/construction-state.json",
+          "bytes": 13223,
+          "sha256": "db030d8818d5f3ef70d8fd1131fc5f9ebcac0c3b02a5bd156f3117c8a4d70592",
+          "stored_sha256": "db030d8818d5f3ef70d8fd1131fc5f9ebcac0c3b02a5bd156f3117c8a4d70592",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-state.json"
+        },
+        "context/u9/README.md": {
+          "stored": "hardware/current/context/u9/README.md",
+          "bytes": 6342,
+          "sha256": "27cd86f2e5b2ff1fb1b612e38c50ad190dc8498a08beb456641b0792af33b072",
+          "stored_sha256": "27cd86f2e5b2ff1fb1b612e38c50ad190dc8498a08beb456641b0792af33b072",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\README.md"
+        },
+        "context/u9/construction-capture.json": {
+          "stored": "hardware/current/context/u9/construction-capture.json",
+          "bytes": 1084157,
+          "sha256": "c40a62f7a1704df1c77b4aa4ca7300d726209839bfc5123f70bb50814aa8c7e9",
+          "stored_sha256": "c40a62f7a1704df1c77b4aa4ca7300d726209839bfc5123f70bb50814aa8c7e9",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-capture.json"
+        },
+        "context/u9/construction-drc.json": {
+          "stored": "hardware/current/context/u9/construction-drc.json",
+          "bytes": 71944,
+          "sha256": "4aeaa18d1ffa76e8462e7efe5426169a2269d055a62f81d813c01d0915d3372b",
+          "stored_sha256": "4aeaa18d1ffa76e8462e7efe5426169a2269d055a62f81d813c01d0915d3372b",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-drc.json"
+        },
+        "context/u9/mosi-main-native-review.json": {
+          "stored": "hardware/current/context/u9/mosi-main-native-review.json",
+          "bytes": 166259,
+          "sha256": "84ac433afe952b07adb63192805117e6416fa9fbe2748ddc2e58623882afe980",
+          "stored_sha256": "84ac433afe952b07adb63192805117e6416fa9fbe2748ddc2e58623882afe980",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\mosi-main-native-review.json"
+        },
+        "context/u9/mosi-main-connected-ground-review.json": {
+          "stored": "hardware/current/context/u9/mosi-main-connected-ground-review.json",
+          "bytes": 10325,
+          "sha256": "7eea9784ed214bd3ca6879aaadd055a1a0fd7ae79ce49a762375786190f3eeef",
+          "stored_sha256": "7eea9784ed214bd3ca6879aaadd055a1a0fd7ae79ce49a762375786190f3eeef",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\mosi-main-connected-ground-review.json"
+        },
+        "context/purchase-preparation-20261021-r1/assembly-side-current.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/assembly-side-current.json",
+          "bytes": 1089,
+          "sha256": "e470a8cd786920560f7d9fed9693e3e102378fd7dbd0943fd1d931a3309a5632",
+          "stored_sha256": "e470a8cd786920560f7d9fed9693e3e102378fd7dbd0943fd1d931a3309a5632",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\assembly-side-current.json"
+        },
+        "context/purchase-preparation-20261021-r1/current-board-procurement.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/current-board-procurement.json",
+          "bytes": 12717,
+          "sha256": "d06c2c362c943230794ebc25b6c88507d896adde16c1838f44ca6ec14df621e6",
+          "stored_sha256": "d06c2c362c943230794ebc25b6c88507d896adde16c1838f44ca6ec14df621e6",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\current-board-procurement.json"
+        },
+        "context/purchase-preparation-20261021-r1/current-bom-population-audit.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/current-bom-population-audit.json",
+          "bytes": 3348,
+          "sha256": "f5c346d5240b92f2eeb33b87e81ffdda643c7dbbb8808b28f55e8ba60c759b42",
+          "stored_sha256": "f5c346d5240b92f2eeb33b87e81ffdda643c7dbbb8808b28f55e8ba60c759b42",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\current-bom-population-audit.json"
+        },
+        "context/purchase-preparation-20261021-r1/current-catalog-20261023.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/current-catalog-20261023.json",
+          "bytes": 40913,
+          "sha256": "793d6ff59ad49174175351af14012625cabc17f239286ab1fea326cbfc74f29c",
+          "stored_sha256": "793d6ff59ad49174175351af14012625cabc17f239286ab1fea326cbfc74f29c",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\current-catalog-20261023.json"
+        },
+        "context/purchase-preparation-20261021-r1/domestic-critical-checks.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/domestic-critical-checks.json",
+          "bytes": 6940,
+          "sha256": "543bece640b18e5c91a21dd38f8e14869c5eb5a9faf6aa65daf0a3e82d2249d4",
+          "stored_sha256": "543bece640b18e5c91a21dd38f8e14869c5eb5a9faf6aa65daf0a3e82d2249d4",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\domestic-critical-checks.json"
+        },
+        "context/purchase-preparation-20261021-r1/final-verification.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/final-verification.json",
+          "bytes": 1032,
+          "sha256": "880313761f34f981d54fbf19e8b421f42e07c91f13b21b55327382f81e6b1924",
+          "stored_sha256": "880313761f34f981d54fbf19e8b421f42e07c91f13b21b55327382f81e6b1924",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\final-verification.json"
+        },
+        "context/purchase-preparation-20261021-r1/fresh-catalog.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/fresh-catalog.json",
+          "bytes": 42574,
+          "sha256": "2e5bf32af75ed79f5e5f7ba69755df7d7517abd6acb416459f5ca0bdfdee6300",
+          "stored_sha256": "2e5bf32af75ed79f5e5f7ba69755df7d7517abd6acb416459f5ca0bdfdee6300",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\fresh-catalog.json"
+        },
+        "context/purchase-preparation-20261021-r1/jlc-bom-217-DRAFT-NOT-FOR-ORDER.csv": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/jlc-bom-217-DRAFT-NOT-FOR-ORDER.csv",
+          "bytes": 2281,
+          "sha256": "3b2efcd4cf80d16c9dcf60cccaee0d1e246df7cfd71642f837a7e0eb8cb96099",
+          "stored_sha256": "3b2efcd4cf80d16c9dcf60cccaee0d1e246df7cfd71642f837a7e0eb8cb96099",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\jlc-bom-217-DRAFT-NOT-FOR-ORDER.csv"
+        },
+        "context/purchase-preparation-20261021-r1/jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv",
+          "bytes": 2270,
+          "sha256": "bb9fc4657259aae8115a2b49ce5dcae1e54539f13ddf322a6a57d72ca9bd8ebe",
+          "stored_sha256": "bb9fc4657259aae8115a2b49ce5dcae1e54539f13ddf322a6a57d72ca9bd8ebe",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv"
+        },
+        "context/purchase-preparation-20261021-r1/native-cpl-217-FILTERED-HISTORICAL-NOT-FOR-ORDER.csv": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/native-cpl-217-FILTERED-HISTORICAL-NOT-FOR-ORDER.csv",
+          "bytes": 38226,
+          "sha256": "145200f8616453cf84506676c7536fa4ec1c1d34831bc2e5c6baea48240b692e",
+          "stored_sha256": "145200f8616453cf84506676c7536fa4ec1c1d34831bc2e5c6baea48240b692e",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\native-cpl-217-FILTERED-HISTORICAL-NOT-FOR-ORDER.csv"
+        },
+        "context/purchase-preparation-20261021-r1/native-cpl-export-audit.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/native-cpl-export-audit.json",
+          "bytes": 294,
+          "sha256": "293d5586bb9b22e918c3403343aa7cc657aa6e433b509e5159c73ba83255d1f5",
+          "stored_sha256": "293d5586bb9b22e918c3403343aa7cc657aa6e433b509e5159c73ba83255d1f5",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\native-cpl-export-audit.json"
+        },
+        "context/purchase-preparation-20261021-r1/placement-reconciliation.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/placement-reconciliation.json",
+          "bytes": 1023,
+          "sha256": "b894af020fb84ed32980b162b3457156d62d464e18323245dd52f15ce8e54509",
+          "stored_sha256": "b894af020fb84ed32980b162b3457156d62d464e18323245dd52f15ce8e54509",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\placement-reconciliation.json"
+        },
+        "context/purchase-preparation-20261021-r1/purchase-master.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/purchase-master.json",
+          "bytes": 39784,
+          "sha256": "4a9a33fe3f9409ccb5ca73548de9d62cdd710319e912519e837921bb9797d7ff",
+          "stored_sha256": "4a9a33fe3f9409ccb5ca73548de9d62cdd710319e912519e837921bb9797d7ff",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\purchase-master.json"
+        },
+        "context/purchase-preparation-20261021-r1/README.md": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/README.md",
+          "bytes": 5284,
+          "sha256": "7f235d26b71db6a8f0426e1624c9c3b18a38ab94b5a20ef134f05447c28c90c9",
+          "stored_sha256": "7f235d26b71db6a8f0426e1624c9c3b18a38ab94b5a20ef134f05447c28c90c9",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\README.md"
+        },
+        "context/purchase-preparation-20261021-r1/retained-interface-readiness.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/retained-interface-readiness.json",
+          "bytes": 1526,
+          "sha256": "8e039a5c6caf7b0c147f06ef5858957f38029bb0b38b884e09258e10f10cf0b9",
+          "stored_sha256": "8e039a5c6caf7b0c147f06ef5858957f38029bb0b38b884e09258e10f10cf0b9",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\retained-interface-readiness.json"
+        },
+        "context/purchase-preparation-20261021-r1/retained-screen-primary-refresh.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/retained-screen-primary-refresh.json",
+          "bytes": 5530,
+          "sha256": "c4bcb3714380537b05e70387623d4b94e42e5d65a6673b049b9efe75b3363ff0",
+          "stored_sha256": "c4bcb3714380537b05e70387623d4b94e42e5d65a6673b049b9efe75b3363ff0",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\retained-screen-primary-refresh.json"
+        },
+        "context/purchase-preparation-20261021-r1/small-screen-harness.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/small-screen-harness.json",
+          "bytes": 2447,
+          "sha256": "b36dcb138f07dcded2e701742cc464ae0a960ebd06d18ae034fc1d990ca51a17",
+          "stored_sha256": "b36dcb138f07dcded2e701742cc464ae0a960ebd06d18ae034fc1d990ca51a17",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\small-screen-harness.json"
+        },
+        "context/purchase-preparation-20261021-r1/workbook-checks.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/workbook-checks.json",
+          "bytes": 290,
+          "sha256": "951bda110ce44e7fb481461239b097ba324926fe6673d2d7d61ed1d800ea8c43",
+          "stored_sha256": "951bda110ce44e7fb481461239b097ba324926fe6673d2d7d61ed1d800ea8c43",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\workbook-checks.json"
+        },
+        "context/purchase-preparation-20261021-r1/workbook-output.json": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/workbook-output.json",
+          "bytes": 326,
+          "sha256": "2cfa51964f953ac191e8cf85db737e5a792256e8fab9265c25a11a162e227549",
+          "stored_sha256": "2cfa51964f953ac191e8cf85db737e5a792256e8fab9265c25a11a162e227549",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\workbook-output.json"
+        },
+        "context/purchase-preparation-20261021-r1/采购范围与装配分工-r1.md": {
+          "stored": "hardware/current/context/purchase-preparation-20261021-r1/采购范围与装配分工-r1.md",
+          "bytes": 12909,
+          "sha256": "2b7f7e34da398863415cd37ba4e56fa1f4fc74ce15e884200e5fc102e73763e9",
+          "stored_sha256": "2b7f7e34da398863415cd37ba4e56fa1f4fc74ce15e884200e5fc102e73763e9",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\采购范围与装配分工-r1.md"
+        },
+        "interface-references/review-manufacturing-20261019/evidence/v2/v1-text/expected-pin-nets.json": {
+          "stored": "hardware/current/interface-references/review-manufacturing-20261019/evidence/v2/v1-text/expected-pin-nets.json",
+          "bytes": 22136,
+          "sha256": "3510635a794dbade485dc5245dfab1cc5e163ffce1f06e2b96a5539fc29d973f",
+          "stored_sha256": "3510635a794dbade485dc5245dfab1cc5e163ffce1f06e2b96a5539fc29d973f",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\evidence\\v2\\v1-text\\expected-pin-nets.json"
+        },
+        "interface-references/review-manufacturing-20261019/expected-pin-nets.json": {
+          "stored": "hardware/current/interface-references/review-manufacturing-20261019/expected-pin-nets.json",
+          "bytes": 24606,
+          "sha256": "e4ce13db7ff84eb25759c9c3df8209b115141d7df329fcf534f9470dcbdab7c4",
+          "stored_sha256": "e4ce13db7ff84eb25759c9c3df8209b115141d7df329fcf534f9470dcbdab7c4",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\expected-pin-nets.json"
+        }
+      },
+      "validation_inherited": false,
+      "product_acceptance": false,
+      "scope": "Saved native project, current construction/DRC evidence and procurement context. No runtime sessions, derived routing experiments or manufacturing release; historical absolute paths are provenance only."
+    },
+    "host": {
+      "files": {
+        "tools/scripts/check_workbench_retrigger.py": {
+          "stored": "host/current/tools/scripts/check_workbench_retrigger.py",
+          "bytes": 6325,
+          "sha256": "43141296867ee7109dc9fe9aa4981696f389cc4784e9f54bf24c36c7f600e326",
+          "stored_sha256": "43141296867ee7109dc9fe9aa4981696f389cc4784e9f54bf24c36c7f600e326",
+          "codec": "raw",
+          "source": "C:/Users/Sakuya/.codex/worktrees/ca03/FPGA-Music-project/tools/scripts/check_workbench_retrigger.py",
+          "upstream_sha256": "43141296867ee7109dc9fe9aa4981696f389cc4784e9f54bf24c36c7f600e326",
+          "adaptation": "Packaging dependency; LF newline normalization only."
+        },
+        "tools/host/advanced_tools.py": {
+          "stored": "host/current/tools/host/advanced_tools.py",
+          "bytes": 6167,
+          "sha256": "68fc31c8f45fb305fa7d51536cd1c6073d11ce0b64723a7d696c01868c6b6b43",
+          "stored_sha256": "68fc31c8f45fb305fa7d51536cd1c6073d11ce0b64723a7d696c01868c6b6b43",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\advanced_tools.py"
+        },
+        "tools/host/audio_observer.py": {
+          "stored": "host/current/tools/host/audio_observer.py",
+          "bytes": 11515,
+          "sha256": "54e22d5703401df5f8ac5fe90d586d7769c4af9cd8689f04991f9a1d55f6ac1d",
+          "stored_sha256": "54e22d5703401df5f8ac5fe90d586d7769c4af9cd8689f04991f9a1d55f6ac1d",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\audio_observer.py"
+        },
+        "tools/host/build_exe.py": {
+          "stored": "host/current/tools/host/build_exe.py",
+          "bytes": 6802,
+          "sha256": "d87a95ac0375e9a9ba23c3713bfad9f38ae5f7dfac2ef20bce2e9ff1142a7d0c",
+          "stored_sha256": "d87a95ac0375e9a9ba23c3713bfad9f38ae5f7dfac2ef20bce2e9ff1142a7d0c",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\build_exe.py"
+        },
+        "tools/host/config_editor.py": {
+          "stored": "host/current/tools/host/config_editor.py",
+          "bytes": 19061,
+          "sha256": "0c6d5da5cba91f5f966ae82267609db9c9825dc7b3e25f0354751e2c6d79c7e2",
+          "stored_sha256": "0c6d5da5cba91f5f966ae82267609db9c9825dc7b3e25f0354751e2c6d79c7e2",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\config_editor.py"
+        },
+        "tools/host/device_config.py": {
+          "stored": "host/current/tools/host/device_config.py",
+          "bytes": 3654,
+          "sha256": "b01f83772785acffed2903e06c607b9c70e87ce69120c5a2f9ac78a1f672c916",
+          "stored_sha256": "b01f83772785acffed2903e06c607b9c70e87ce69120c5a2f9ac78a1f672c916",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\device_config.py"
+        },
+        "tools/host/dsp_gui.py": {
+          "stored": "host/current/tools/host/dsp_gui.py",
+          "bytes": 79747,
+          "sha256": "2370ffe1d6cd1d0fc51a825d40200d1d24ac945e3f8c1556072b84f0319f4971",
+          "stored_sha256": "2370ffe1d6cd1d0fc51a825d40200d1d24ac945e3f8c1556072b84f0319f4971",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\dsp_gui.py"
+        },
+        "tools/host/evidence_export.py": {
+          "stored": "host/current/tools/host/evidence_export.py",
+          "bytes": 1336,
+          "sha256": "0c0a00d508d777313e9f3910aa2718572f64a00f2b71a630706d65c7dc2e4406",
+          "stored_sha256": "0c0a00d508d777313e9f3910aa2718572f64a00f2b71a630706d65c7dc2e4406",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\evidence_export.py"
+        },
+        "tools/host/fonts/lolita.ttf": {
+          "stored": "host/current/tools/host/fonts/lolita.ttf",
+          "bytes": 11949844,
+          "sha256": "d91f680b870855d50619f72a1e597d2af5f068535e610a4fc95e5e53bab93449",
+          "stored_sha256": "d91f680b870855d50619f72a1e597d2af5f068535e610a4fc95e5e53bab93449",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\fonts\\lolita.ttf"
+        },
+        "tools/host/fonts/LolitaMono.ttf": {
+          "stored": "host/current/tools/host/fonts/LolitaMono.ttf",
+          "bytes": 12082220,
+          "sha256": "c8363198ffa98440b863a0835f7e6c8864e5d079694ee542e70f6210f86b2492",
+          "stored_sha256": "c8363198ffa98440b863a0835f7e6c8864e5d079694ee542e70f6210f86b2492",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\fonts\\LolitaMono.ttf"
+        },
+        "tools/host/host_version.json": {
+          "stored": "host/current/tools/host/host_version.json",
+          "bytes": 4819,
+          "sha256": "4a2aaf28d9e54fd5cd8552653fb9b605eb76eb26a032b1466eba82e079b979a8",
+          "stored_sha256": "4a2aaf28d9e54fd5cd8552653fb9b605eb76eb26a032b1466eba82e079b979a8",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\host_version.json"
+        },
+        "tools/host/instrument_config.py": {
+          "stored": "host/current/tools/host/instrument_config.py",
+          "bytes": 8387,
+          "sha256": "f28d87fec7eaf42f3d6b5e6961a2975c73f02cd0e5812f7337c5b096a5906538",
+          "stored_sha256": "f28d87fec7eaf42f3d6b5e6961a2975c73f02cd0e5812f7337c5b096a5906538",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\instrument_config.py"
+        },
+        "tools/host/live_visualizer.py": {
+          "stored": "host/current/tools/host/live_visualizer.py",
+          "bytes": 19221,
+          "sha256": "625d9a4a15c1747d9f85db788d08cd7d176a45951be88c8e0ffb4c60361749a3",
+          "stored_sha256": "625d9a4a15c1747d9f85db788d08cd7d176a45951be88c8e0ffb4c60361749a3",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\live_visualizer.py"
+        },
+        "tools/host/piano_keyboard.py": {
+          "stored": "host/current/tools/host/piano_keyboard.py",
+          "bytes": 4523,
+          "sha256": "3763a259e75e95b9df351f783c6c70ac987803724ba56124c00141e59879372d",
+          "stored_sha256": "3763a259e75e95b9df351f783c6c70ac987803724ba56124c00141e59879372d",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\piano_keyboard.py"
+        },
+        "tools/host/README.md": {
+          "stored": "host/current/tools/host/README.md",
+          "bytes": 6619,
+          "sha256": "9c3578092ae6cd674e4662f02e690bd76b8a32381cd72d66f866bba5ae536d68",
+          "stored_sha256": "9c3578092ae6cd674e4662f02e690bd76b8a32381cd72d66f866bba5ae536d68",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\README.md"
+        },
+        "tools/host/score_control.py": {
+          "stored": "host/current/tools/host/score_control.py",
+          "bytes": 2820,
+          "sha256": "1efa1742c6d7a2ebfeaf26aefae190eaf00499f971cba039dd377c1911a08a5c",
+          "stored_sha256": "1efa1742c6d7a2ebfeaf26aefae190eaf00499f971cba039dd377c1911a08a5c",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\score_control.py"
+        },
+        "tools/host/serial_link.py": {
+          "stored": "host/current/tools/host/serial_link.py",
+          "bytes": 14180,
+          "sha256": "3f06f76862f7e973f1051e7109a044345132dcf701f5d4abc5aba33a0a6a8888",
+          "stored_sha256": "3f06f76862f7e973f1051e7109a044345132dcf701f5d4abc5aba33a0a6a8888",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\serial_link.py"
+        },
+        "tools/host/studio_fonts.py": {
+          "stored": "host/current/tools/host/studio_fonts.py",
+          "bytes": 842,
+          "sha256": "9b531eccd1f0d1b0936ef155ba5cd82056b1517ba93447c49449ebe28196c7b5",
+          "stored_sha256": "9b531eccd1f0d1b0936ef155ba5cd82056b1517ba93447c49449ebe28196c7b5",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\studio_fonts.py"
+        },
+        "tools/host/studio_theme.py": {
+          "stored": "host/current/tools/host/studio_theme.py",
+          "bytes": 1833,
+          "sha256": "88fd168c5bdec4df53d4941f03d5333a4315bde13f61159245ca59961e1b2bab",
+          "stored_sha256": "88fd168c5bdec4df53d4941f03d5333a4315bde13f61159245ca59961e1b2bab",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\studio_theme.py"
+        },
+        "tools/host/test_advanced_tools.py": {
+          "stored": "host/current/tools/host/test_advanced_tools.py",
+          "bytes": 6103,
+          "sha256": "56e9e877ae7bc153a4434f5385bf53785762aadfee466bdd77bb391fe02d8fd1",
+          "stored_sha256": "56e9e877ae7bc153a4434f5385bf53785762aadfee466bdd77bb391fe02d8fd1",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_advanced_tools.py"
+        },
+        "tools/host/test_audio_observer.py": {
+          "stored": "host/current/tools/host/test_audio_observer.py",
+          "bytes": 7015,
+          "sha256": "5e9f954c54b922c12c7c407505d605c6710bd3b39eae355e0c86133304a0660c",
+          "stored_sha256": "5e9f954c54b922c12c7c407505d605c6710bd3b39eae355e0c86133304a0660c",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_audio_observer.py"
+        },
+        "tools/host/test_config_editor.py": {
+          "stored": "host/current/tools/host/test_config_editor.py",
+          "bytes": 16006,
+          "sha256": "9b94d58b4a30f98680a787cec22f13686f11d1cfccb027dbca3756bd9e1ac630",
+          "stored_sha256": "9b94d58b4a30f98680a787cec22f13686f11d1cfccb027dbca3756bd9e1ac630",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_config_editor.py"
+        },
+        "tools/host/test_instrument_config.py": {
+          "stored": "host/current/tools/host/test_instrument_config.py",
+          "bytes": 4814,
+          "sha256": "3ce4f4ed8242937f7327823d8454416f0bebeff50e87f1239bb23aec3a781a80",
+          "stored_sha256": "3ce4f4ed8242937f7327823d8454416f0bebeff50e87f1239bb23aec3a781a80",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_instrument_config.py"
+        },
+        "tools/host/test_live_visualizer.py": {
+          "stored": "host/current/tools/host/test_live_visualizer.py",
+          "bytes": 3939,
+          "sha256": "da20e715fd537f3413b9bbfcdbd83dd42c9e221a640de34ad8659ab61fa56eae",
+          "stored_sha256": "da20e715fd537f3413b9bbfcdbd83dd42c9e221a640de34ad8659ab61fa56eae",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_live_visualizer.py"
+        },
+        "tools/host/test_normal_startup.py": {
+          "stored": "host/current/tools/host/test_normal_startup.py",
+          "bytes": 1260,
+          "sha256": "844aaf5071a098d72c15a6a814d6efbefc03b827830227357998e9237c133101",
+          "stored_sha256": "844aaf5071a098d72c15a6a814d6efbefc03b827830227357998e9237c133101",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_normal_startup.py"
+        },
+        "tools/host/test_retrigger_measurement.py": {
+          "stored": "host/current/tools/host/test_retrigger_measurement.py",
+          "bytes": 1453,
+          "sha256": "aec0d58b689e0708481d4c86e4b95bc360d31607a1e4ba4f4020ec859a3199fd",
+          "stored_sha256": "aec0d58b689e0708481d4c86e4b95bc360d31607a1e4ba4f4020ec859a3199fd",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_retrigger_measurement.py"
+        },
+        "tools/host/test_score_control.py": {
+          "stored": "host/current/tools/host/test_score_control.py",
+          "bytes": 1644,
+          "sha256": "5011fe4ab8802584ee9e6287612b032a49e598c8ed22ce223f5f0402eb39f415",
+          "stored_sha256": "5011fe4ab8802584ee9e6287612b032a49e598c8ed22ce223f5f0402eb39f415",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_score_control.py"
+        },
+        "tools/host/test_serial_link.py": {
+          "stored": "host/current/tools/host/test_serial_link.py",
+          "bytes": 1194,
+          "sha256": "db35f6477d20cdffc55fd1d2bee8fe94c110432b0c7643e2dee974c60aee274a",
+          "stored_sha256": "db35f6477d20cdffc55fd1d2bee8fe94c110432b0c7643e2dee974c60aee274a",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_serial_link.py"
+        },
+        "tools/host/test_tone_panel.py": {
+          "stored": "host/current/tools/host/test_tone_panel.py",
+          "bytes": 2570,
+          "sha256": "5b10532570229bfbaddc30e6e8721bdaec1aebb832475436a7abb30e1d29a3e3",
+          "stored_sha256": "5b10532570229bfbaddc30e6e8721bdaec1aebb832475436a7abb30e1d29a3e3",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_tone_panel.py"
+        },
+        "tools/host/test_workbench.py": {
+          "stored": "host/current/tools/host/test_workbench.py",
+          "bytes": 25204,
+          "sha256": "3744bfc71fd1be6a6bf242d6bc02ec701ff44632b0f7ad9a99ce978b8f76e491",
+          "stored_sha256": "3744bfc71fd1be6a6bf242d6bc02ec701ff44632b0f7ad9a99ce978b8f76e491",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\test_workbench.py"
+        },
+        "tools/host/theme.qss": {
+          "stored": "host/current/tools/host/theme.qss",
+          "bytes": 4766,
+          "sha256": "992e61c8615b3dfaf1d25a4b28c0651b11dac3f00c80e15968b7bae1fac2bf7b",
+          "stored_sha256": "992e61c8615b3dfaf1d25a4b28c0651b11dac3f00c80e15968b7bae1fac2bf7b",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\theme.qss"
+        },
+        "tools/host/tone_panel.py": {
+          "stored": "host/current/tools/host/tone_panel.py",
+          "bytes": 7032,
+          "sha256": "dc64b629d5d837f6589d38405708d96d1a19f05ce4c311f832424b51a349e435",
+          "stored_sha256": "dc64b629d5d837f6589d38405708d96d1a19f05ce4c311f832424b51a349e435",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\tone_panel.py"
+        },
+        "tools/host/ui_preferences.py": {
+          "stored": "host/current/tools/host/ui_preferences.py",
+          "bytes": 1286,
+          "sha256": "8b226933fa181cd54d80ea4cf548a32553a9c529cf60fcc7c49cfdc3676f302a",
+          "stored_sha256": "8b226933fa181cd54d80ea4cf548a32553a9c529cf60fcc7c49cfdc3676f302a",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\ui_preferences.py"
+        },
+        "tools/host/workbench.py": {
+          "stored": "host/current/tools/host/workbench.py",
+          "bytes": 48729,
+          "sha256": "f7691a88690d4d37ccfd63f0c58472a0e1e515068bdd1ec74eb0a55e0f5b724a",
+          "stored_sha256": "f7691a88690d4d37ccfd63f0c58472a0e1e515068bdd1ec74eb0a55e0f5b724a",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\host\\workbench.py"
+        },
+        "tools/scripts/dsp_host.py": {
+          "stored": "host/current/tools/scripts/dsp_host.py",
+          "bytes": 20170,
+          "sha256": "06519fcca3373121f72c1137dcb2a9a69d667552da4804a912f9bb10876a36ee",
+          "stored_sha256": "06519fcca3373121f72c1137dcb2a9a69d667552da4804a912f9bb10876a36ee",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\scripts\\dsp_host.py"
+        },
+        "tools/scripts/check_workbench_live.py": {
+          "stored": "host/current/tools/scripts/check_workbench_live.py",
+          "bytes": 4221,
+          "sha256": "10dd3a57e4164a097cbc57f5bda49c674a97b8297c1d4a08dc11d41c8f0f9afc",
+          "stored_sha256": "10dd3a57e4164a097cbc57f5bda49c674a97b8297c1d4a08dc11d41c8f0f9afc",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\scripts\\check_workbench_live.py"
+        },
+        "tools/scripts/check_workbench_presets.py": {
+          "stored": "host/current/tools/scripts/check_workbench_presets.py",
+          "bytes": 7413,
+          "sha256": "6a1f2f29dc3bf2821009100e31660d323905d53a20d61150860509d0481d4b5e",
+          "stored_sha256": "6a1f2f29dc3bf2821009100e31660d323905d53a20d61150860509d0481d4b5e",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\scripts\\check_workbench_presets.py"
+        },
+        "tools/scripts/check_workbench_score.py": {
+          "stored": "host/current/tools/scripts/check_workbench_score.py",
+          "bytes": 5849,
+          "sha256": "3a8ba23cdc8ba093bb96b838d8f6d1ed69464c8a867b86cfef5660c3e0daa0cd",
+          "stored_sha256": "3a8ba23cdc8ba093bb96b838d8f6d1ed69464c8a867b86cfef5660c3e0daa0cd",
+          "codec": "raw",
+          "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\ca03\\FPGA-Music-project\\tools\\scripts\\check_workbench_score.py"
+        }
+      },
+      "validation_inherited": false,
+      "product_acceptance": false,
+      "scope": "ca03 host-workbench 11 source, assets, tests and protocol helper; no compatibility claim with current FPGA candidate.",
+      "source_thread": "01a130bf-52f5-7311-b486-1270b5a0e3d4",
+      "dormant": true
+    }
+  }
+}

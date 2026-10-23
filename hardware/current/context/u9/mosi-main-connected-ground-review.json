@@ -1,0 +1,387 @@
+{
+  "pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+  "anchor": "U8.8",
+  "method": "Four-layer Ground pours/pads/lines and plated via annuli same-layer copper graph; reference areas restricted to Ground component physically connected to U8.8",
+  "ground_elements": 1174,
+  "new_ground_via_checks": [
+    {
+      "id": "224f96776c9f54ef",
+      "plan_id": "mosi-2884-0-ground-0",
+      "connected_to_U8_GND": true
+    },
+    {
+      "id": "8bca0f6b7bc1307e",
+      "plan_id": "mosi-2884-0-ground-1",
+      "connected_to_U8_GND": true
+    },
+    {
+      "id": "fb99cb40ec609cd9",
+      "plan_id": "mosi-2884-0-ground-2",
+      "connected_to_U8_GND": true
+    },
+    {
+      "id": "9370500fd40b0244",
+      "plan_id": "mosi-2884-0-ground-3",
+      "connected_to_U8_GND": true
+    },
+    {
+      "id": "d4447ceacb266197",
+      "plan_id": "mosi-2884-0-ground-4",
+      "connected_to_U8_GND": true
+    },
+    {
+      "id": "5656f82e2e99999a",
+      "plan_id": "mosi-2884-1-ground-0",
+      "connected_to_U8_GND": true
+    }
+  ],
+  "new_mosi_fullwidth_reference_checks": [
+    {
+      "id": "mosi-2884-0-line-10",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-11",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-12",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-13",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-14",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-15",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-16",
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-17",
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-18",
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-19",
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-0-line-20",
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-1",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-2",
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-3",
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-4",
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-5",
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-6",
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-7",
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-8",
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-9",
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-10",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-11",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-12",
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-13",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-14",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-15",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "id": "mosi-2884-1-line-16",
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    }
+  ],
+  "own_signal_via_exclusion_radius_mm": 1,
+  "through_pad_exclusion_buffer_mm": 0.5,
+  "connected_reference_pass": true,
+  "scope": "All actual saved/reopened BUS_MOSI native copper and six newly added Ground vias, using physically U8.8-connected Ground polygons; own via1mm/PTH0.5mm exclusions explicit; inherited other nets outside this added audit.",
+  "physical_tests": "UNMEASURED",
+  "actual_entire_mosi_net_fullwidth_checks": [
+    {
+      "actual_native_line_id": "3046abffee283114",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "1d8c6af9bf673d26",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "73b4cfff8ab4ddbb",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "89e21ed5e81ab4ce",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "b9b278fd568a161d",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "6106d395a4f89214",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "6b5caed0b593700b",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "08486b6ae0f2979d",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "deece746e401430b",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "0ea9a2faad9383ad",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "db7f24a4771b4a70",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "12a8b0cdcba9d4f5",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "ecf1329baea072fa",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "cdb7678a22200b5f",
+      "layer": 16,
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "364ad5eba53a7886",
+      "layer": 16,
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "bd960a76e67be299",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "1427b88371688f73",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "51ccc86b82534468",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "1b466350b1467b61",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "3bf7144ac8a5b27b",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "a03908d06db016ac",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "6023fbcff9c692f8",
+      "layer": 16,
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "c68493378a038983",
+      "layer": 16,
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "4c75f072d8fd2317",
+      "layer": 16,
+      "reference": 2,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "cae45a8df28e1e53",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "a22cc4f47e3299a9",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "2727aaa940c89b85",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "d4df84e52c3f8963",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "f97bd6ef90f46cd1",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "84a46d4931e384c6",
+      "layer": 1,
+      "reference": 15,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "d53982d5f94be2a6",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "93c65958023b54b0",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "fd408f23e47b9f35",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    },
+    {
+      "actual_native_line_id": "7ed3b63a752a8546",
+      "layer": 2,
+      "reference": 16,
+      "missing_connected_ground_area_mm2": 0.0
+    }
+  ],
+  "actual_entire_net_connected_reference_pass": true
+}

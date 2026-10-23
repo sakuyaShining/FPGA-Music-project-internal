@@ -1,0 +1,34 @@
+{
+  "updated_at": "2026-10-23T22:55:42.442973+08:00",
+  "pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+  "components": 227,
+  "sides": {
+    "Top_components": 224,
+    "Bottom_components": 3,
+    "Top_SMT": 212,
+    "Bottom_SMT": 3,
+    "TH": 12
+  },
+  "new_bottom_components": [
+    "C8",
+    "R63",
+    "R64"
+  ],
+  "old_cpl_rows_invalid": [
+    "R30",
+    "U9",
+    "C9",
+    "C8",
+    "R63",
+    "R64"
+  ],
+  "double_side_assembly_quote_pending": true,
+  "underside_mechanical_clearance_pending": true,
+  "assume_user_hand_solder": false,
+  "manufacturing_release": false,
+  "physical_tests": "UNMEASURED",
+  "old_cpl_reason": "The historical217-SMT CPL predates all six accepted component position/rotation/side changes. Standalone TP13/14/15 are pads, not component CPL rows. Future C9 Bottom/central U9 are still only offline candidates.",
+  "factory_TH_assembly_quote_pending": true,
+  "current_board_procurement": "current-board-procurement.json",
+  "current_SMT_bom": "jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv"
+}
