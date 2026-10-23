@@ -188,6 +188,10 @@ internal  https://github.com/sakuyaShining/FPGA-Music-project-internal.git
 - 在飞什么：独立FPGA会话仍在改D盘候选，owner会话身份未完全登记；硬件会话“查看 huangyongtao 最新进展”（01a15ee5-fa24-7501-8475-ad28a0f08939）继续写06df及U9施工副本。本管理会话不接管它们。
 - 卡在哪：没有完整产品顶层验收；原100输入的旧专项PASS不签收新候选；硬件总入口缓存与下级施工状态存在先后差异，必须核对实际原生哈希。
 - 需要对方什么：各owner收工提交命名分支、精确输入/结果身份和源截止时间；未来修改不能隐含纳入本批已发布检查点。main继续按§4由用户合并。
+
+### 本次PR #2合入授权
+
+2026-10-23，本会话用户直接回答：“授权本次代为合并 PR #2，保留任务分支”。对应问题`call_9c1141282b434486bf7e2cfc891d285f`，PR为私有内部仓库`pull/2`。仅授权本次入口治理与协作说明PR，保留`codex/main-design-authority-20261023`；不构成未来PR、功能范围、码流下载或制造放行授权。实际合入与CI结果查GitHub。
 - 下一手从哪读：`project/DESIGN-CURRENT.md`、`project/design-state.json`、`project/QUICKSTART.md`，发布分支`codex/project-management-20261022`；提交由实际远程分支及v2冻结标签解析，禁止凭日期冒充当前。
 
 
