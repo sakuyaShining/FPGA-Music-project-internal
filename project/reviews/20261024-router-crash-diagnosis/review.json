@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-24T09:15:51Z",
+  "scope": "Supplemental isolated router/tool diagnosis; does not replace the product or producer review",
+  "source_base_commit": "4036d84a94c61c09aabc154b44d78d551edb29f7",
+  "summary": "project/reviews/20261024-router-crash-diagnosis/summary.json",
+  "summary_sha256": "2fd8996841565d1640ed57323727a30b5d669b5beb8ce56896d7c77d233c1f49",
+  "evidence_archive": "project/reviews/20261024-router-crash-diagnosis/diagnostic-evidence.zip",
+  "evidence_archive_sha256": "01fd301259b144787903e96a4994a6d752123294d238913de826ff58b4fb4d9d",
+  "finding": "Data-input minimum-delay coverage and automatic hold correction jointly localize the access-violation path; internal vendor mechanism is not proven.",
+  "counterexample": "With full original constraints retained and hold correction disabled, route completes but worst hold is -1.402ns. The bitstream is never a qualified product.",
+  "cases": {"pnr_total": 17, "completed_diagnostic_routes": 7, "access_violations": 9, "inconclusive_supervisor_aborted": 1},
+  "shell_equivalence": "24000 cycles, complete640bit shell state plus168bit router outputs equal original delayed one cycle; deliberately unaligned load is rejected at cycle58. Full-constraint registered-shell routing still crashes.",
+  "python_validation": {
+    "status": "PASS",
+    "total_tests": 77,
+    "logs": {
+      "validation/experiments-note_resource_20261024-audio-renderer-tests.log": "2cb24cb8818e0c7e9072de9c12a74eae6c34432d60ac9a4d10a5d04cbdb49b78",
+      "validation/experiments-note_resource_20261024-audio-tests.log": "8d2aca6e2eb8a6ab10ad9639126c0b6f614601f439c37f54d48c3a2059834d45",
+      "validation/experiments-note_resource_20261024-input-tests.log": "9499e0edbf9806d51bb9b2820679b3331790282c19214aa4ff24310e7aa0de56",
+      "validation/experiments-note_resource_20261024-tests.log": "1d74fec8462919fbcaa2b5e8a1a4e83c8298d12c481dc549481ad8f7732d80cd",
+      "validation/tools-tests.log": "00a377773e7d98ce20e932c093361a3ded630b98d624826902078ffdbb1b7a89"
+    }
+  },
+  "rejected_workarounds": ["registered shell inputs", "explicit bus-bit spelling", "alternate place/route strategy"],
+  "unchanged": ["product RTL", "original router and timing wrapper", "original CST and SDC", "three current input trees", "original golden traces", "D-019 resource rules"],
+  "global_review": "project/reviews/20261024-note-input-router/review.json",
+  "global_review_date_renewed": false,
+  "hardware_live_state": "UNREVIEWED_DRIFT; four watched context files changed. Native ZIP previously unchanged. No new CAD, native DRC or manufacturing acceptance by this reviewer.",
+  "publication": "PR4 candidate only; actual commit is determined by the remote branch head. Main100b35b remains user-merged authority.",
+  "next": "Do not remove min-delay/hold checks or rerun unchanged crashes. Preserve the full-constraint timing blocker while proceeding with the independently verifiable contact/score lifecycle adapter; any vendor-version workaround requires fresh exact-input PnR/STA.",
+  "hardware_accessed": false,
+  "programming_allowed": false,
+  "full_product_pnr": false,
+  "full_product_sta": false,
+  "product_acceptance": false
+}
