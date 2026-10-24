@@ -1,0 +1,184 @@
+//=============================================================================
+// tdm_ship_board.cst —— 载板（6 路 SENSE + 扫描链）物理约束
+//-----------------------------------------------------------------------------
+// Board : Sipeed Tang Nano 20K
+// FPGA  : GW2AR-LV18QN88C8/I7
+//
+// *** 端口名对应 engine/src/sensor_frontend_board.v ***
+//     本文件约束的是**载板前端**的信号。产品顶层（tdm_top_owned 的继任者）
+//     集成时，需要让顶层端口名与这里一致，或在此改名。
+//     没有对应的顶层之前，这份文件不能单独参与 PnR。
+//
+// *** 每一个脚号都有来源，没有一个是猜的 ***
+//     来源 1: hardware/system-candidate-20261015/nano-header-candidate.csv
+//             （2026-10-24 已逐条核对通过，见
+//              hardware/current/context/pin-map-audit-20261024.md §6.5）
+//     来源 2: Sipeed 官方引脚框图 tang_nano_20k_pinlabel.png
+//             左右两列各 20 焊盘，逐脚读出
+//     交叉验证: interface-references/expected-pin-nets.json 的 J5 记录
+//              （7=I2S_BCK, 8=I2S_DIN, 11=I2S_LRCK, 15=GND, 16=3V3）逐条吻合
+//
+// *** 3.3 V ONLY ***
+//     排针全部在 3.3 V bank。1.8 V bank 上驱动 3.3 V 信号会损伤 FPGA。
+//
+// *** 注释必须 ASCII ***
+//     Gowin 约束解析器在不同 locale 下处理非 ASCII 注释不一致。
+//=============================================================================
+
+
+//-----------------------------------------------------------------------------
+// 扫描总线 —— 595（输出）与 165（输入）共用 SCK
+//
+// 27 = J6-8  (LCD_B7)   27 同时是 FPC 座的 LCD 数据线，不插屏时干净
+// 15 = J6-6  (LED0)     ⚠ 板载 LED，输出时会闪
+// 16 = J6-7  (LED1)     ⚠ 板载 LED，输出时会闪
+// 17 = J6-15 (LED2)     ⚠ 板载 LED，输出时会闪
+// 28 = J6-9  (LCD_B6)   165 的串行回读
+//
+// LED 脚做输出：功能成立，代价是 LED 跟着总线闪 + 每根多 510 ohm 到 3V3。
+// 灌电流约 6.5 mA，在单脚 8 mA 驱动能力内。
+// LED 脚做输入：不可靠（510 ohm 上拉会抬高低电平）。本设计不这么用。
+//-----------------------------------------------------------------------------
+IO_LOC  "bus_sck"       27;
+IO_PORT "bus_sck"       IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "bus_mosi"      15;
+IO_PORT "bus_mosi"      IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "scan_latch"    16;
+IO_PORT "scan_latch"    IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "input_load_n"  17;
+IO_PORT "input_load_n"  IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "bus_return"    28;
+IO_PORT "bus_return"    IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+//-----------------------------------------------------------------------------
+// 6 路电极 SENSE —— 全部避开 15..20 那组 LED
+//
+// 载板上每路是 74HC4067 公共端 -> 施密特反相器 -> FPGA。
+// 反相语义（见 rc_mux_scan.v 注释）：discharged=1, charged=0。
+// 所以空闲时应读到 1，PULL_MODE=UP 与这个语义一致。
+//
+// 29,30,31 = J6-12/13/14 (LCD_B5/B4/B3)
+// 41,42    = J5-6/5      (LCD_R4/R3)
+// 48       = J5-10       (LCD_DE)
+//
+// 这 6 个脚都在排针上，且都不在 15..20 的 LED 组里 —— 这点已逐条核对。
+//-----------------------------------------------------------------------------
+IO_LOC  "sense_n[0]"    29;
+IO_PORT "sense_n[0]"    IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "sense_n[1]"    30;
+IO_PORT "sense_n[1]"    IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "sense_n[2]"    31;
+IO_PORT "sense_n[2]"    IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "sense_n[3]"    41;
+IO_PORT "sense_n[3]"    IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "sense_n[4]"    42;
+IO_PORT "sense_n[4]"    IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "sense_n[5]"    48;
+IO_PORT "sense_n[5]"    IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+//-----------------------------------------------------------------------------
+// 存储配置 I2C（载板上的标定/序列号 EEPROM）
+//   25 = J6-10 (LCD_HS),  26 = J6-11 (LCD_VS)
+//   开漏：需要外部上拉。载板上有 4.7k 到 3V3。
+//   当前 RTL 未实现 I2C 主机，约束先留位。
+//-----------------------------------------------------------------------------
+IO_LOC  "store_sda"     25;
+IO_PORT "store_sda"     IO_TYPE=LVCMOS33 PULL_MODE=UP OPEN_DRAIN;
+
+IO_LOC  "store_scl"     26;
+IO_PORT "store_scl"     IO_TYPE=LVCMOS33 PULL_MODE=UP OPEN_DRAIN;
+
+
+//-----------------------------------------------------------------------------
+// 双屏片选 / 数据命令（载板的 LCD_VIS / LCD_HARM）
+//   18 = J6-18 (LED3)   ⚠ 板载 LED
+//   19 = J6-17 (LED4)   ⚠ 板载 LED
+//   20 = J6-16 (LED5)   ⚠ 板载 LED
+//-----------------------------------------------------------------------------
+IO_LOC  "lcd_vis_cs_n"  18;
+IO_PORT "lcd_vis_cs_n"  IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "lcd_harm_cs_n" 19;
+IO_PORT "lcd_harm_cs_n" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "lcd_shared_dc" 20;
+IO_PORT "lcd_shared_dc" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+
+//-----------------------------------------------------------------------------
+// 触摸屏中断
+//   77 = J6-5 (LCD_CLK)
+//   注意：77 同时是 FPC 座的 LCD_CLK。载板若不插 FPC 屏，这脚只连载板。
+//-----------------------------------------------------------------------------
+IO_LOC  "tp_int"        77;
+IO_PORT "tp_int"        IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+//-----------------------------------------------------------------------------
+// 板载固定部分（与 tdm_ship_owned.cst 完全一致，来源 Sipeed 官方例程）
+//   顶层集成时直接沿用，不要重新分配。
+//-----------------------------------------------------------------------------
+IO_LOC  "clk" 4;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// S1 按键：板上外部下拉，按下为高。PULL_MODE=NONE 让外部下拉生效。
+// （早期所有 cst 都写成低有效，导致设计永远处于复位 —— 已修正）
+IO_LOC  "btn_rst" 87;
+IO_PORT "btn_rst" IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+
+// 6 个共阳极 LED：输出低 = 点亮
+//
+// ⚠ 载板方案下这 6 条**必须保持注释**：15..20 已经被 bus_mosi / scan_latch /
+//   input_load_n / lcd_vis_cs_n / lcd_harm_cs_n / lcd_shared_dc 占用，
+//   同一脚不能有两个 IO_LOC，否则 PnR 直接报重复约束。
+//   要用 LED 就得把上面那 6 个载板信号挪到 73/74/75/76/86/72/71 这 7 个
+//   干净脚上 —— 但那与现有载板走线不符，属于改板。
+//
+// IO_LOC  "led[5]" 20;
+// IO_LOC  "led[4]" 19;
+// IO_LOC  "led[3]" 18;
+// IO_LOC  "led[2]" 17;
+// IO_LOC  "led[1]" 16;
+// IO_LOC  "led[0]" 15;
+
+// MAX98357A I2S
+IO_LOC  "pa_en"   51;
+IO_PORT "pa_en"   IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "dac_din" 54;
+IO_PORT "dac_din" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "dac_ws"  55;
+IO_PORT "dac_ws"  IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC  "dac_bck" 56;
+IO_PORT "dac_bck" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+// UART（BL616 板载桥）
+IO_LOC  "uart_rx_pin" 70;
+IO_PORT "uart_rx_pin" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "uart_tx_pin" 69;
+IO_PORT "uart_tx_pin" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+
+//=============================================================================
+// ⚠ 冲突提示（写在这里是为了让 PnR 之前就被看到，而不是等报 CT1136）
+//
+//   1) led[0..5] 与 bus_mosi / scan_latch / input_load_n / lcd_*_cs_n /
+//      lcd_shared_dc 是**同一批物理引脚**（15..20）。
+//      两者不能同时出现在同一个顶层里。载板方案下必须删掉 led[] 这 6 条，
+//      或者把 LED 功能关掉 —— 否则 PnR 会直接报重复约束。
+//      本文件保留 led[] 只是为了把"这里会撞"写在明面上。
+//
+//   2) 27..42 里的 32..40 **不在排针上**（只在 FPC 座与 HDMI 座）。
+//      任何试图把 32..40 接到载板的设计都是无效的。
+//      核对记录见 pin-map-audit-20261024.md §6.3。
+//=============================================================================
