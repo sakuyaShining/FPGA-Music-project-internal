@@ -101,19 +101,19 @@ IO_PORT "store_scl"     IO_TYPE=LVCMOS33 PULL_MODE=UP OPEN_DRAIN;
 
 
 //-----------------------------------------------------------------------------
-// 双屏片选 / 数据命令（载板的 LCD_VIS / LCD_HARM）
-//   18 = J6-18 (LED3)   ⚠ 板载 LED
-//   19 = J6-17 (LED4)   ⚠ 板载 LED
-//   20 = J6-16 (LED5)   ⚠ 板载 LED
+// 屏片选 —— 载板只有一路 HARM_CS_N
+//
+// 19 = J6-17 (LED4)   ⚠ 板载 LED
+//
+// 重要修正（2026-10-24 二次核对）：
+//   nano-header-candidate.csv 里还有 LCD_VIS_CS_N=18 和 LCD_SHARED_DC=20，
+//   但载板全部 14 张原理图里搜 VIS_CS / SHARED_DC / DISP_DC 是**零命中**。
+//   01_Nano_headers.esch2 的 Nano 排针只接了 15 个信号网络，
+//   与 csv 的 17 条相比正好缺这两条 ⇒ 18 和 20 在载板上是空焊盘。
+//   所以这两条约束删除，两个脚归还给 led[3] 和 led[5]。
 //-----------------------------------------------------------------------------
-IO_LOC  "lcd_vis_cs_n"  18;
-IO_PORT "lcd_vis_cs_n"  IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
-
 IO_LOC  "lcd_harm_cs_n" 19;
 IO_PORT "lcd_harm_cs_n" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
-
-IO_LOC  "lcd_shared_dc" 20;
-IO_PORT "lcd_shared_dc" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
 
 
 //-----------------------------------------------------------------------------
@@ -139,18 +139,24 @@ IO_PORT "btn_rst" IO_TYPE=LVCMOS33 PULL_MODE=NONE;
 
 // 6 个共阳极 LED：输出低 = 点亮
 //
-// ⚠ 载板方案下这 6 条**必须保持注释**：15..20 已经被 bus_mosi / scan_latch /
-//   input_load_n / lcd_vis_cs_n / lcd_harm_cs_n / lcd_shared_dc 占用，
-//   同一脚不能有两个 IO_LOC，否则 PnR 直接报重复约束。
-//   要用 LED 就得把上面那 6 个载板信号挪到 73/74/75/76/86/72/71 这 7 个
-//   干净脚上 —— 但那与现有载板走线不符，属于改板。
+// 载板占用了其中 4 个（15/16/17/19），只剩 18 和 20 可用。
+// 巧的是这两个恰好是 led_ind.v 里最要紧的两个：
+//   led[5] (20) = 曲谱拍点 / 手弹心跳  —— 保留
+//   led[3] (18) = 定序器运行指示        —— 保留
+// 丢失的是 led[4:0] 的音高台阶与音域档图案，载板可用屏显示替代。
 //
-// IO_LOC  "led[5]" 20;
-// IO_LOC  "led[4]" 19;
-// IO_LOC  "led[3]" 18;
-// IO_LOC  "led[2]" 17;
-// IO_LOC  "led[1]" 16;
-// IO_LOC  "led[0]" 15;
+// 另 4 条必须保持注释，否则与上面的载板信号重复约束，PnR 报错。
+//
+// IO_LOC  "led[4]" 19;   // 被 lcd_harm_cs_n 占用
+// IO_LOC  "led[2]" 17;   // 被 input_load_n 占用
+// IO_LOC  "led[1]" 16;   // 被 scan_latch 占用
+// IO_LOC  "led[0]" 15;   // 被 bus_mosi 占用
+
+IO_LOC  "led[5]" 20;
+IO_PORT "led[5]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[3]" 18;
+IO_PORT "led[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
 
 // MAX98357A I2S
 IO_LOC  "pa_en"   51;
@@ -172,11 +178,14 @@ IO_PORT "uart_tx_pin" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
 //=============================================================================
 // ⚠ 冲突提示（写在这里是为了让 PnR 之前就被看到，而不是等报 CT1136）
 //
-//   1) led[0..5] 与 bus_mosi / scan_latch / input_load_n / lcd_*_cs_n /
-//      lcd_shared_dc 是**同一批物理引脚**（15..20）。
-//      两者不能同时出现在同一个顶层里。载板方案下必须删掉 led[] 这 6 条，
-//      或者把 LED 功能关掉 —— 否则 PnR 会直接报重复约束。
-//      本文件保留 led[] 只是为了把"这里会撞"写在明面上。
+//   1) led[0] / led[1] / led[2] / led[4] 与 bus_mosi / scan_latch /
+//      input_load_n / lcd_harm_cs_n 是**同一批物理引脚**（15/16/17/19）。
+//      这 4 条 LED 必须保持注释，否则 PnR 报重复约束。
+//      led[3] (18) 与 led[5] (20) 载板未连接，可以正常使用。
+//
+//      若要保住全部 6 个 LED，得把载板那 4 个信号挪到 73/74/75/76/86/72/71
+//      这 7 个干净脚上 —— 排针另有 19 个不受板载器件约束的脚，物理上够，
+//      但那与现有载板走线不符，属于改板范畴。
 //
 //   2) 27..42 里的 32..40 **不在排针上**（只在 FPC 座与 HDMI 座）。
 //      任何试图把 32..40 接到载板的设计都是无效的。
