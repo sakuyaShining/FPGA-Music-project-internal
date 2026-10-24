@@ -1,5 +1,14 @@
 # Tagged score/live input router candidate
 
+## Frame-format source increment
+
+`rtl/contact_frame_source.v` and `rtl/note_frame_transport.v` now connect the captured immutable-frame interface format to the tokenized command ledger. See `FRAME-SOURCE-CONTRACT.md` and `project/versions/note-frame-source-20261024.json`. Default26-contact and four-layer small-interface traces, backpressure, quarantine/watchdog and release-during-admission cancellation are tested against independent frame semantics. This is still not analog scanning or the full-layer finger/score/real-audio path; allocator replies remain stubs. New full-constraint diagnostic PnR also fails at routing80% with0xC0000005/no STA.
+
+```powershell
+python experiments/note_resource_20261024/input/verify_frames.py --fault-checks --output D:/FPGA-Project/review/my-frame-source
+python experiments/note_resource_20261024/input/build_frames.py --output D:/FPGA-Project/review/my-frame-unit-timing
+```
+
 `note_duet_probe` adds two equal logical ready/valid input ports ahead of the real four-slot renderer/resource/TDM candidate. This is an input transport stage, not the completed physical contact/score-file adapter or full instrument. Original current checkpoints and producer roots remain unchanged.
 
 ## Contract

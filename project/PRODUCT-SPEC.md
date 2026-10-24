@@ -50,3 +50,5 @@
 最新input增量仅完成两逻辑来源的身份/响应路由和排队取消保护，见versions/note-input-router-20261024.json。真实源适配、实体编辑与录放及全产品时序仍未签收；PnR工具进程异常不是整机fit失败的已证根因，也不是时序通过。
 
 后续contact增量已把生命周期合同落为独立RTL命令端点，见versions/note-contact-transport-20261024.json；支持完整token、全层运动掩码、被抢占按住不重触发与取消/复用竞态。它仍使用命令刺激/分配回包替身，尚未接实际帧生产者、finger_pitch消费端或曲谱源；新单元PnR同样在route80%工具异常，无STA。不得把端点仿真通过写成实体传感器接合或完整产品通过。
+
+最新帧增量见versions/note-frame-source-20261024.json：捕获接口格式的immutable-frame源已接到该命令端点，并验证默认26联系人、帧冻结、故障隔离/看门狗、背压和未完成起音取消。模拟电极扫描、完整finger消费者、真实分配/renderer及曲谱/完整顶层仍未签收，新单元PnR仍无STA；不以帧刺激替代实体输入闭环。

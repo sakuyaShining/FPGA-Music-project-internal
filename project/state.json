@@ -7,7 +7,7 @@
     "source_branch": "codex/current-engineering-sources-20261023",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-24T14:36:50.624889+00:00",
+  "updated_at": "2026-10-24T15:34:50.716774+00:00",
   "entry": "project/CURRENT.md",
   "predecessor_state": "codex/project-version-closure:project/state.json",
   "implementation_boundary": "This registry does not merge or change any functional source",
@@ -168,11 +168,20 @@
       "source_branch": "codex/current-engineering-sources-20261023",
       "product_acceptance": false,
       "programming_allowed": false
+    },
+    "note_frame_source_candidate": {
+      "manifest": "project/versions/note-frame-source-20261024.json",
+      "review": "project/reviews/20261024-frame-source/review.json",
+      "role": "Captured frame-format source plus contact ledger; allocation replies still stubs, full finger/real audio absent",
+      "source_branch": "codex/current-engineering-sources-20261023",
+      "product_acceptance": false,
+      "programming_allowed": false
     }
   },
   "active_fpga_profile": "fpga_live_unpublished",
   "design_state": "project/design-state.json",
   "governance": "project/governance.json",
   "latest_incremental_fpga_profile": "note_input_router_candidate",
-  "latest_isolated_fpga_endpoint": "note_contact_transport_candidate"
+  "latest_isolated_fpga_endpoint": "note_contact_transport_candidate",
+  "latest_frame_transport_profile": "note_frame_source_candidate"
 }

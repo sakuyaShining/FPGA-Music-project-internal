@@ -8,7 +8,7 @@
     "role": "Editable collaboration candidates with explicit failed music golden regression; not a full product",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-24T14:36:50.624889+00:00",
+  "updated_at": "2026-10-24T15:34:50.716774+00:00",
   "entry_branch": "main",
   "entry_tag": null,
   "entry_commit_resolution": "Query actual target repository main and compare controlled entry content; dated branch is compatibility only; repository is now public.",
@@ -241,6 +241,14 @@
     "manifest": "project/versions/note-contact-transport-20261024.json",
     "review": "project/reviews/20261024-contact-rtl/review.json",
     "role": "Isolated contact-command RTL endpoint; actual frame/finger/score/audio integration absent",
+    "source_branch": "codex/current-engineering-sources-20261023",
+    "product_acceptance": false,
+    "programming_allowed": false
+  },
+  "note_frame_source_candidate": {
+    "manifest": "project/versions/note-frame-source-20261024.json",
+    "review": "project/reviews/20261024-frame-source/review.json",
+    "role": "Captured frame-format source plus contact ledger; allocation replies still stubs, full finger/real audio absent",
     "source_branch": "codex/current-engineering-sources-20261023",
     "product_acceptance": false,
     "programming_allowed": false

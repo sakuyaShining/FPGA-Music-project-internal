@@ -1,5 +1,7 @@
 # 当前设计与接手导航
 
+最新限定增量：`versions/note-frame-source-20261024.json`接通捕获接口格式的immutable-frame源→完整token命令端点，保留帧冻结/故障隔离/看门狗和按住不重触发，覆盖背压与起音未完成时松手取消。并非实体扫描、完整finger消费端或真实分配/音频接合；新单元全约束PnR仍工具异常，无STA。其余产品目标、未决规则和用户main合并权不变。
+
 ## Contact命令端点后续候选
 
 新增独立contact RTL命令端点见`versions/note-contact-transport-20261024.json`与`reviews/20261024-contact-rtl/review.json`：7521拍生命周期对照、5项定向反例和97单测通过，但真实帧生产者、全层finger消费端、曲谱与音频顶层仍未接合。该端点单元全约束PnR在route80%发生0xC0000005，无STA；不能签收整机。硬件新交回文档报告951ce88a/42项12网/649孔，完整闭集铜核验仍失败，不覆盖旧a3a258恢复归档或放行制造。实际main仍唯一已发布权威，PR4只是待用户合入的候选。

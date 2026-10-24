@@ -1,5 +1,12 @@
 # Agent 协作板
 
+## 2026-10-24 Immutable-frame接合限定增量
+
+- 4d37继续同一已认领input副本/工具/入口范围：帧冻结、seen/blocked、坏帧/标定/序号/看门狗与全token接触命令端点接合；默认26联系人和四层小接口、背压与未完成起音期间松手取消均有独立语义对照。
+- 源基点82d37271751aac797c371ec5b46c8b245fd59ea9，仍使用原任务分支/PR4；新版本及证据入口project/versions/note-frame-source-20261024.json。原current、D盘owner/06df/硬件handoff只读。
+- 仍是捕获接口格式的帧刺激和分配回包替身，不是实体扫描/完整finger消费者/曲谱或真实音频顶层。新全约束单元PnR同样route80%工具0xC0000005，无STA；保留失败，不重跑旧17组。
+- 下一手必须将完整层anchor/确认映射接到实际finger消费端和真实分配/renderer，再接曲谱背压/自动OFF及全顶层时序。D-019不重问；P-020与其余未冻结产品规则不默认采纳。main仍由用户合并。
+
 ## 2026-10-24 Contact RTL命令端点限定增量
 
 - 4d37继续原A轴已认领副本：新增input/rtl/note_contact_adapter.v、周期对照/定向故障及独立PnR脚本；没有改三个current、D盘原FPGA或06df。

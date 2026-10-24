@@ -23,4 +23,6 @@
 
 ## Contact命令端点增量
 
+后续帧增量见versions/note-frame-source-20261024.json：已接捕获格式的immutable-frame源到完整token命令端点，保留坏帧/标定/序号/看门狗和seen/blocked，新增默认26联系人、四层小接口、背压与延迟起音取消语义对照；仍未接真实分配/renderer、全层finger消费端及实体模拟扫描。新单元PnR同样0xC0000005无STA；下一步不再重复帧/端点oracle-only工作，应接实际消费者与后端。
+
 T06的contact生命周期已实现为独立RTL命令端点：两来源标签/31位serial及窄位宽耗尽、全层运动、取消/回包/尾音复用竞态对照通过，另有5项指定字段反例。边界见versions/note-contact-transport-20261024.json。尚未接原帧生产者、finger_pitch、曲谱脉冲源、自动OFF或真实音频顶层；本版单元全约束PnR在route80%发生0xC0000005，无有效STA。下一步必须接真实源与消费端，不再把oracle或替身回包当接合完成。
