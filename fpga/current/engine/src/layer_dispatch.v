@@ -1,7 +1,7 @@
 // Prototype: at most two selected slots out of four. No transpose or rhythm.
 // A parent instance owns child IDs {parent,slot}; OFF uses the captured mask.
 // This adapter is the sole producer of its child domain. Ordered completion.
-module layer_dispatch #(parameter NF=26)(
+module layer_dispatch #(parameter NF=25)(
     input wire clk,rst_n,
     input wire [3:0] selection,
     input wire parent_valid,parent_on,

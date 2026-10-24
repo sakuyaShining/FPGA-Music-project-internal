@@ -1,5 +1,5 @@
 // Internal logical interfaces, not a physical GPIO allocation or shipping top.
-module left_layer_music_probe #(parameter integer CONFIG_DUAL_SOURCE=1,CONFIG_SERIAL=0,INSTRUMENT_ENV=0,NF=26,BAD_FRAMES=8,FRAME_TIMEOUT=2700000,LINK_TIMEOUT=8192,BOARD_DIAG=0,UART_BAUD=115200,DIAG_CAPTURE_SAMPLES=2048,BOARD_BOOT_SCRUB=0)(
+module left_layer_music_probe #(parameter integer CONFIG_DUAL_SOURCE=1,CONFIG_SERIAL=0,INSTRUMENT_ENV=0,NF=25,BAD_FRAMES=8,FRAME_TIMEOUT=2700000,LINK_TIMEOUT=8192,BOARD_DIAG=0,UART_BAUD=115200,DIAG_CAPTURE_SAMPLES=2048,BOARD_BOOT_SCRUB=0)(
 
     input wire [7:0] board_status,board_case,
     output wire board_wr_en,

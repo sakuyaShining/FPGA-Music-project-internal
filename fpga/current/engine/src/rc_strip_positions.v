@@ -3,7 +3,7 @@
 // Invalid nodes are reported and preserve the previous contact; upstream must
 // decide the eventual sensor-failure release policy before physical deployment.
 module rc_strip_positions #(
-    parameter integer STRIPS=26,CW=12,CONFIRM_FRAMES=2,
+    parameter integer STRIPS=25,CW=12,CONFIRM_FRAMES=2,
     parameter [STRIPS*21-1:0] NODE_MAP=0
 )(
     input wire clk,rst_n,frame_valid,

@@ -2,7 +2,7 @@
 // event port supplies acceptance AND instance-tagged allocation completion.
 // Movement never creates an on event. Sensor-fault limits are prototype knobs.
 module left_contact_bridge #(
-    parameter integer NF=26,BAD_FRAMES=8,FRAME_TIMEOUT=2700000,LINK_TIMEOUT=8192
+    parameter integer NF=25,BAD_FRAMES=8,FRAME_TIMEOUT=2700000,LINK_TIMEOUT=8192
 )(
     input wire clk,rst_n,frame_valid,
     output wire frame_ready,

@@ -1,7 +1,7 @@
-// Full raw 6x16 acquisition + calibrated 26-strip centroid report. Digital
+// Full raw 6x16 acquisition + calibrated 25-strip centroid report. Digital
 // prototype only: routing of node groups and calibration policy need real tests.
 module instrument_sensor_probe #(
-    parameter integer LANES=6,STRIPS=26,CW=12,
+    parameter integer LANES=6,STRIPS=25,CW=12,
     parameter integer DISCHARGE_CYCLES=512,TIMEOUT_CYCLES=2047,SPI_HALF_PERIOD=8,
     parameter integer CONFIRM_FRAMES=2
 )(

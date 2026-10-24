@@ -1,0 +1,100 @@
+{
+  "record": "c5-electrode-count",
+  "recorded_at": "2026-10-25",
+  "authority": "Direct human WorkBuddy user_query in the authoritative-20261024 session",
+  "verbatim": "我希望它能够表达位置和力度 复核一下题目要求和设计 我不是明确的说明了需要同时拥有力度 滑音 颤音 推弦等表情吗",
+  "decision_extracted": {
+    "c5_electrodes": 3,
+    "c5_capabilities": ["位置（格内连续位置）", "力度（接触面积）"],
+    "pitch_electrodes": 75,
+    "electrode_budget": "75 + 5 八度档 + 4 备用 = 84",
+    "rtl_parameter": "STRIPS = 25，C5 作为 strip 24 走 rc_strip_positions"
+  },
+
+  "requirement_chain": {
+    "verdict": "用户所述属实：力度/滑音/颤音/推弦既是自定规格，也被赛题点名",
+    "competition": [
+      {
+        "item": "M1（必须项）",
+        "path": "docs/01-竞赛情报/01-选题确认与约束条件.md",
+        "line": 34,
+        "text": "≥2 个独立可控演奏维度，「具备至少 2 个独立可控维度」，现场演示可分别操控"
+      },
+      {
+        "item": "E2（拓展项）",
+        "path": "docs/01-竞赛情报/01-选题确认与约束条件.md",
+        "line": 76,
+        "text": "≥3 维表情调控：「搭建 ≥3 维演奏表情调控逻辑，支持力度动态、滑音、颤音等演奏效果」"
+      },
+      {
+        "item": "E2（总览）",
+        "path": "docs/01-竞赛情报/00-竞赛选题总览-2026.md",
+        "line": 86,
+        "text": "≥3 维演奏表情调控（力度动态、滑音、颤音等）"
+      }
+    ],
+    "own_spec": {
+      "path": "docs/02-技术方案/31-演奏表情规格.md",
+      "dimensions": [
+        {"id": "D1", "name": "力度", "source": "起音瞬间的接触面积", "line": 37},
+        {"id": "D2", "name": "颤音深度（触后）", "source": "起音后面积相对起音值的变化", "line": 38},
+        {"id": "D3", "name": "滑音", "source": "键间滑动 / legato（离散事件 + 时间窗）", "line": 39},
+        {"id": "D4", "name": "音色亮度", "source": "在泛音排上滑动", "line": 40}
+      ]
+    },
+    "bend": {
+      "note": "推弦 = 连续音高，与 D3 滑音同属「连续音高」机制，赛题未单列，但自定规格里有",
+      "paths": [
+        "docs/02-技术方案/统一可表达电子乐器-交互与演奏系统规格-V1.0-2026-10-11.md:488 「拨弦式 | Impulse | 可连续推弦」",
+        "docs/02-技术方案/42-四预设音色分层与合奏实现方案-2026-10-14.md:56 「推弦候选、松手与尾音」"
+      ]
+    }
+  },
+
+  "why_three_electrodes_is_forced": {
+    "position": "rc_strip_positions.v:41 的 weighted = d1 + 2*d2，配 sum 做除法得 9 位重心 0..256。位置只能由 ≥3 个电极的重心插值得到，单电极无法给出位置 ⇒ 滑音/推弦/颤音全部依赖它",
+    "velocity": "力度 D1 与触后颤音 D2 都取自接触面积，面积 = sum = d0+d1+d2。同一组 3 电极同时提供位置与面积",
+    "one_electrode_consequence": "单电极只剩 on/off + 绝对电容幅度，能勉强给力度，但完全没有位置 ⇒ C5 会成为唯一一个不能滑音/推弦/颤音的键，破坏乐器一致性"
+  },
+
+  "implementation_gaps_found": [
+    {
+      "id": "G1",
+      "path": "fpga/current/engine/src/rc_strip_positions.v",
+      "lines": "40, 45, 76",
+      "problem": "sum（= d0+d1+d2，接触面积的直接来源）算出来了，但只用作除数和阈值比较，从未作为端口输出",
+      "impact": "力度 D1 与触后颤音 D2 在整个前端没有数据来源。规格 §4 清单第 5 条 expr_map.v 迟迟无法落地，根因在这里",
+      "fix": "增加 output [STRIPS*(CW+2)-1:0] area，STORE 时把 sum 一起存下"
+    },
+    {
+      "id": "G2",
+      "path": "fpga/current/engine/src/left_contact_bridge.v",
+      "lines": "14, 39, 141, 157, 164",
+      "problem": "只有单个 4 位 input velocity，在帧首锁存成 vel_q，然后给该帧内每一个 strip 的 note-on 都用同一个值",
+      "impact": "和弦/多指同时按下时所有音力度完全相同，逐指力度失效。这与 pad_pitch.v:32-33 明确警告的错误是同一个（那里已经改成 vel_bus 逐通道）",
+      "fix": "改成 input [NF*4-1:0] velocity，own_vel <= velocity[index*4 +: 4]"
+    },
+    {
+      "id": "G3",
+      "path": "fpga/current/engine/src/left_contact_bridge.v:98 + finger_pitch.v:3",
+      "problem": "finger_position 直接送 9 位格内重心（0..256，跨度为 1 个 3 电极格）；finger_pitch 的单位约定是「256 position units = one octave」",
+      "impact": "若直接对接，手指在一格内移动满一格宽度会产生 1 个八度的音高偏移（应为一个半音），放大 12 倍。推弦/滑音/颤音都会失控",
+      "fix": "前端换算成全局位置：global = cell_index * (256/12) + (centroid - 128) / 12，再送 finger_pitch",
+      "status": "尚未实测确认，是读码推断，需在板子上用手指标定一次"
+    },
+    {
+      "id": "G4",
+      "path": "fpga/current/engine/src/pad_pitch.v",
+      "lines": "21, 34, 57",
+      "problem": "NPIT=25 但 vel_bus 只有 64 位（16 通道 × 4 位），取值为 vel_bus[{sc[3:0],2'b00} +: 4]",
+      "impact": "通道 16..24 的力度会别名到通道 0..8，即 C5 与高音区会拿到低音区的力度",
+      "fix": "vel_bus 扩到 NPIT*4 = 100 位，索引改 sc*4"
+    }
+  ],
+
+  "open_questions_left": [
+    "哪 5 个电极是八度档（L?_E?? 编号未定）",
+    "165 两片级联后主片在低 8 位还是高 8 位（需实测）",
+    "G3 的 12 倍缩放是读码推断，需上板标定确认"
+  ]
+}

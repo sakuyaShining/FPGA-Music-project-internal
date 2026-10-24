@@ -1,5 +1,5 @@
 // Internal logical interfaces, not a physical GPIO allocation or shipping top.
-module left_music_probe #(parameter integer NF=26,BAD_FRAMES=8,FRAME_TIMEOUT=2700000,LINK_TIMEOUT=8192)(
+module left_music_probe #(parameter integer NF=25,BAD_FRAMES=8,FRAME_TIMEOUT=2700000,LINK_TIMEOUT=8192)(
     input wire left_valid,
     output wire left_ready,
     input wire [NF-1:0] left_contact,left_invalid,
