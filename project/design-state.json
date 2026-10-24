@@ -2,8 +2,8 @@
   "schema": 1,
   "engineering_inputs_manifest": "project/versions/engineering-sources-20261023.json",
   "engineering_entry": "project/ENGINEERING.md",
-  "design_version": "design-20261024-tagged-input-router-candidate",
-  "updated_at": "2026-10-24T04:19:58.780Z",
+  "design_version": "design-20261024-contact-command-endpoint-candidate",
+  "updated_at": "2026-10-24T14:36:50.624889+00:00",
   "entry_branch": "main",
   "entry": "project/DESIGN-CURRENT.md",
   "quickstart": "project/QUICKSTART.md",
@@ -36,7 +36,7 @@
     "complete_note_admission": true
   },
   "latest_observed_fpga": {
-    "review_record": "project/reviews/20261024-note-input-router/review.json",
+    "review_record": "project/reviews/20261024-contact-rtl/review.json",
     "producer": "fpga",
     "status": "MAIN_CHECKPOINT_WITH_SEPARATELY_OBSERVED_LIVE_SOURCE",
     "validation_inherited": false,
@@ -49,7 +49,7 @@
     "observation": "Top cached construction pointer and lower-level state can differ; verify actual native hash before work",
     "manufacturing_release": false,
     "physical_tests": "UNMEASURED",
-    "latest_context_review": "project/reviews/20261024-note-input-router/review.json",
+    "latest_context_review": "project/reviews/20261024-contact-rtl/review.json",
     "latest_saved_native": {
       "manifest": "project/reviews/20261024-note-partial-renderer/hardware/native-manifest.json",
       "pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
@@ -58,6 +58,16 @@
       "components": 227,
       "vias": 620,
       "captured_engineering_checkpoint_replaced": false
+    },
+    "latest_owner_reported_native": {
+      "manifest": "project/reviews/20261024-contact-rtl/hardware-intake.json",
+      "pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+      "connection_errors": 42,
+      "open_nets": 12,
+      "components": 227,
+      "vias": 649,
+      "full_review_passed": false,
+      "current_native_archive_verified": false
     }
   },
   "freshness": {
@@ -70,14 +80,14 @@
     ]
   },
   "reviewed_design_sources": {
-    "project/DESIGN-CURRENT.md": "75ca40ce31fc924386ac0ac20c1d6834a4241925a4078dd60db3ecc2a15020ba",
+    "project/DESIGN-CURRENT.md": "40f5f98f8ff5b8371a78bd8dbe874742f75f78386120f394ac67aa9c493d75e4",
     "project/versions/design-decision-20261023.json": "1d0994293691ac34b85348d0929ecda0ac68ace57c560f7b34a9449dd81ae4fc",
     "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "a147411a85f37d22c82228dfbbe836e98c3c116d4c9d158d43426c09a90f1e2e",
     "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "644e245f816a9d98ce962365791cca4a5295f538094775908f45a021a5f8b61c",
     "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
-    "project/PRODUCT-SPEC.md": "abe932b3af1b3c172b9040d8448bc77aec9615dc119956a3f5cea3901328be00",
+    "project/PRODUCT-SPEC.md": "3ec8425faa7f763c97219bbff6131fabbc73c1c69fa6bf6372baf7f200cb86d9",
     "project/SOURCE-MAP.md": "94d997fc41111bf5ce592f4bbe1df6b9a5defb4f505b2fcedd7c0c4a01033945",
-    "project/WORK-PLAN.md": "5669176f7362f395e31803492516c6685eae19b15bbd48d5ed46cd460577ef46",
+    "project/WORK-PLAN.md": "cd8810d35abfa9d98a402b8b588f844e37b6b0bfd3faf9c1cc3a56e262e32390",
     "project/OPEN-RULES.md": "e04d4f2465815891b742d40b024a45a23ea04a9973905a2b9f963936b583f20c",
     "project/MUSIC-GOLDEN-DIAGNOSIS.md": "276ad5d74e0f4aa4cb3dfe9898594117e08e643b56b6005e6e354488e6a8d709",
     "project/NOTE-RESOURCE-CONTRACT.md": "474a0f6eaf9b62a0e4c4c7998e40fbe7d3144f6e16e269eb9299dfd3265d397a"
@@ -97,5 +107,6 @@
   "note_resource_candidate": "project/versions/note-resource-candidate-20261024.json",
   "note_resource_audio_candidate": "project/versions/note-resource-audio-20261024.json",
   "note_partial_renderer_candidate": "project/versions/note-partial-renderer-20261024.json",
-  "note_input_router_candidate": "project/versions/note-input-router-20261024.json"
+  "note_input_router_candidate": "project/versions/note-input-router-20261024.json",
+  "note_contact_transport_candidate": "project/versions/note-contact-transport-20261024.json"
 }

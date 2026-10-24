@@ -1,5 +1,9 @@
 # 当前设计与接手导航
 
+## Contact命令端点后续候选
+
+新增独立contact RTL命令端点见`versions/note-contact-transport-20261024.json`与`reviews/20261024-contact-rtl/review.json`：7521拍生命周期对照、5项定向反例和97单测通过，但真实帧生产者、全层finger消费端、曲谱与音频顶层仍未接合。该端点单元全约束PnR在route80%发生0xC0000005，无STA；不能签收整机。硬件新交回文档报告951ce88a/42项12网/649孔，完整闭集铜核验仍失败，不覆盖旧a3a258恢复归档或放行制造。实际main仍唯一已发布权威，PR4只是待用户合入的候选。
+
 唯一已发布入口是仓库`FPGA-Music-project-internal`的实际远程`main`。仓库已由用户公开，名称中的internal不表示私有。待合并PR是候选，不自动成为main。
 
 ## 接手顺序

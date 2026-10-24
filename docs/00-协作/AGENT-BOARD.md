@@ -1,5 +1,13 @@
 # Agent 协作板
 
+## 2026-10-24 Contact RTL命令端点限定增量
+
+- 4d37继续原A轴已认领副本：新增input/rtl/note_contact_adapter.v、周期对照/定向故障及独立PnR脚本；没有改三个current、D盘原FPGA或06df。
+- 源基点ad57967a95f9391b74fe3e5a89ffd1b144a2bbfc，仍使用codex/current-engineering-sources-20261023/PR4；最终源提交以实际PR head解析，精确清单见project/versions/note-contact-transport-20261024.json。
+- 已实现命令级全局token、全层运动/退场、按住不重触发、取消与回包/复用竞态；三个独立RTL/oracle场景和5项指定字段反例通过。不是实际扫描器/曲谱/音频整机接合。新单元全约束PnR在route80%进程0xC0000005、无STA，失败必须交接。
+- 新硬件owner交回文档报告951ce88a/42项12网/227件649孔，但其完整审阅因ADDR2/Inner16闭集铜集合差异失败；旧entry的运行标志与终态失败不一致，不继承原a3a258检查点或签收制造。本会话只保全/登记证据，不运行CAD或复开几何作业。
+- 下一手：实际immutable-frame源和完整层finger消费端、曲谱背压/自动OFF、完整顶层与时序/实体验收。D-019不重问；P-020仍未批准。main合并仍只由用户操作。
+
 > **这是什么**：多个 agent 同时推进本项目时的唯一协调入口。
 > **不是什么**：`notes/agent-collaboration-log.md` 是给评委看的人机协作评分素材（AMD 2026「大模型协作与技能包 15 分」），记录的是"用户采纳/否决了什么"，**不要**往里写 agent 之间的调度信息。
 >

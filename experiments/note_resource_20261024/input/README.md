@@ -26,6 +26,13 @@ python experiments/note_resource_20261024/input/verify_contact_contract.py --out
 
 ## Reproduce
 
+The next bounded increment is `rtl/note_contact_adapter.v`: an implemented ready/valid contact-command ledger with frozen replies and pulse-based full-layer motion, verified against the earlier transaction oracle. It does **not** yet replace/connect the captured immutable-frame producer or `finger_pitch`, and uses stub allocation replies in these tests. See `project/versions/note-contact-transport-20261024.json` for exact inputs/results and the retained failures. The new standalone full-constraint diagnostic also reaches routing80% then exits0xC0000005; no STA is available. Do not download its scan-shell image or describe this as actual scanner/score/whole-instrument integration.
+
+```powershell
+python experiments/note_resource_20261024/input/verify_contact_rtl.py --fault-checks --output D:/FPGA-Project/review/my-contact-rtl
+python experiments/note_resource_20261024/input/build_contact.py --output D:/FPGA-Project/review/my-contact-unit-timing
+```
+
 ```powershell
 python experiments/note_resource_20261024/input/verify.py --fault-checks --output D:/FPGA-Project/review/my-input-router
 python experiments/note_resource_20261024/input/verify_audio.py --output D:/FPGA-Project/review/my-duet-audio

@@ -348,6 +348,27 @@
       ]
     },
     {
+      "id": "hardware-native-handoff",
+      "activity": "active",
+      "root": "D:/FPGA-Project/codex-deliverables/dual-screen-review-20261020-v2/u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/address1-joint-fanout",
+      "owner": {
+        "thread_id": null,
+        "label": "Native hardware handoff referenced by the registered06df producer; exact current owner thread unverified"
+      },
+      "publication_status": "OWNER_NATIVE_HANDOFF_ONLY_FULL_REVIEW_FAILED_NOT_MANUFACTURING_RELEASE",
+      "observation_max_hours": 6,
+      "recovery_manifest": "project/reviews/20261024-contact-rtl/hardware-intake.json",
+      "published_ref": null,
+      "publication_note": "Observe exact handoff metadata, not the live CAD model. Native951 source identity is an owner-reported observation; no whole-board validation or recoverable current native archive is inferred.",
+      "exclude_dirs": [".git", "__pycache__", "node_modules"],
+      "exclude_prefixes": ["build_", "synth_"],
+      "watch": [
+        {"path": "ADDR2-reference-repair-current-next.json"},
+        {"path": "ADDR2-ref-repaired-native-full-review-state.json"},
+        {"path": "ADDR2-ref-repair-readonly-recovered.json"}
+      ]
+    },
+    {
       "id": "host",
       "activity": "dormant",
       "owner": "No current owner registered",
