@@ -56,6 +56,10 @@ sim_build/show/*.hex
 #   是工具自动落盘的运行痕迹，可重跑；.vvp 已在上面排除，剩下的 json/log 一并排除
 fpga/current/evidence/
 
+#   tools/run_sims.py 的工作目录：每跑一次仿真就重建，且会复制 .hex 数据文件
+#   （实测 92 MB）。它属于上面这一类"可重跑的仿真产物"，不该进版本库。
+fpga/current/sim_work/
+
 # ---- 3. PyInstaller / Python 产物 ----
 tools/host/build/
 tools/host/dist/

@@ -326,12 +326,32 @@
       },
       "resolves": "D-021-PITCH-ENDPOINTS-25 留下的 C5 电极数未定项",
       "implementation_gaps": {
-        "G1": "rc_strip_positions.v computes sum (contact area) but never outputs it; D1 velocity and D2 aftertouch have no data source",
+        "G1": "rc_strip_positions.v computes sum (contact area) but never outputs it; D1 velocity and D2 aftertouch have no data source [FIXED: area output added, see PITCH-MAP-DEFINITION-20261024.md §5.2.1]",
         "G2": "left_contact_bridge.v has a single 4-bit velocity applied to every strip in a frame; per-finger velocity is lost",
         "G3": "left_contact_bridge.v:98 feeds per-cell centroid (0..256) into finger_pitch, whose unit is 256 per octave; 12x over-sensitive, needs on-board calibration",
-        "G4": "pad_pitch.v has NPIT=25 but vel_bus is only 64 bits (16 channels); channels 16..24 alias to 0..8"
+        "G4": "pad_pitch.v has NPIT=25 but vel_bus is only 64 bits (16 channels); channels 16..24 alias to 0..8 [FIXED: vel_bus widened to NPIT*4=100 and index uses full sc, see PITCH-MAP-DEFINITION-20261024.md §5.2.2]"
       },
-      "note": "用户所述属实：力度/滑音/颤音/推弦既是自定规格（31 号 D1-D4），也被赛题 E2 逐字点名「支持力度动态、滑音、颤音等演奏效果」；M1 的『≥2 个独立可控演奏维度』是必须项。推弦在赛题里没有单列，但与 D3 滑音同属连续音高机制，自定规格 42 号与统一规格 V1.0 都有。"
+      "note": "用户所述属实：力度/滑音/颤音/推弦既是自定规格（31 号 D1-D4），也被赛题 E2 逐字点名「支持力度动态、滑音、颤音等演奏效果」；M1 的『≥2 个独立可控演奏维度』是必须项。推弦在赛题里没有单列，但与 D3 滑音同属连续音高机制，自定规格 42 号与统一规格 V1.0 都有。",
+      "implementation_gap_state": {
+        "G1": {
+          "status": "fixed",
+          "commit": "1fca1d11",
+          "evidence": "fpga/current/tb/tb_area.v (5 frames, incl. a calibration frame with non-zero electrode readings); reverse-validated with 2 mutations"
+        },
+        "G2": {
+          "status": "open",
+          "note": "left_contact_bridge.v: single 4-bit velocity latched at frame start"
+        },
+        "G3": {
+          "status": "open",
+          "note": "left_contact_bridge.v -> finger_pitch.v unit mismatch (12x); needs on-board calibration"
+        },
+        "G4": {
+          "status": "fixed",
+          "evidence": "fpga/current/sim/tb_pad_velmap.v (83 checks) registered in tools/run_sims.py; reverse-validated with 2 mutations, 19 failures each",
+          "follow_up": "channels 16..24 still get velocity 0 in tdm_top_owned / tb_pad_chain because pad_scan is NCH=16; real data needs G2/G3"
+        }
+      }
     }
   ]
 }

@@ -58,6 +58,12 @@ CASES = {
     'tb_pad_chain': (
         [SIM / 'tb_pad_chain.v', R / 'engine/src/pad_scan.v', R / 'engine/src/pad_pitch.v'],
         VENDOR, []),
+    # 通道→力度映射（缺口 G4）：64 位 vel_bus 只装得下 16 路，而音高通道有 NPIT=25 路。
+    # 只编 pad_pitch，不拉 pad_scan —— 本台要隔离"映射"这一件事，
+    # 混进扫描器的话，一旦失败分不清是映射错还是采样时点错。
+    'tb_pad_velmap': (
+        [SIM / 'tb_pad_velmap.v', R / 'engine/src/pad_pitch.v'],
+        [], []),
     # 双段衰减：只编 osc_env（无状态组合单元），不需要 vendor 桩和数据文件。
     'tb_decay2': (
         [SIM / 'tb_decay2.v', R / 'engine/src/osc_env.v'],

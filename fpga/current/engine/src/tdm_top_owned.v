@@ -727,13 +727,17 @@ module tdm_top_owned #(
     wire [3:0]  pp_ev_vel;
     wire [7:0]  pp_harm_mask;
     wire [37:0] pp_touch = {30'b0, pad_state[7:0]};
+    // pad_scan 是 NCH=16，只能给通道 0..15 的力度；pad_pitch 的 vel_bus 是 NPIT*4=100 位
+    //   （通道 0..24）。这里**显式**补 0 而不是靠隐式宽度扩展，免得日后有人以为
+    //   通道 16..24 已经有力度来源 —— 它们要等 84 电极模拟通路接进来（缺口 G2/G3）。
+    wire [25*4-1:0] pp_vel_bus = {{(25-16)*4{1'b0}}, pd_vel_bus};
 
     wire [2:0]  oct_pos;
     wire [4:0]  strip_led;
 
     pad_pitch #(.NCH(38), .NPIT(25), .BASE(48)) u_pitch (
         .clk(clk), .rst_n(rst_n),
-        .touch(pp_touch), .pos(oct_pos), .vel_bus(pd_vel_bus),
+        .touch(pp_touch), .pos(oct_pos), .vel_bus(pp_vel_bus),
         .ev_on(pp_on_p), .ev_off(pp_off_p), .ev_note(pp_ev_note), .ev_vel(pp_ev_vel),
         .harm_mask(pp_harm_mask)
     );

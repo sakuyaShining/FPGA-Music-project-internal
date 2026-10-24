@@ -31,7 +31,9 @@ module pad_pitch #(
     // 逐通道力度总线：vel_bus[4*i +: 4] = 第 i 路的力度。
     //   为什么不用单路 4 位：本模块是【轮流扫查】的，扫到哪个通道与"谁刚按下"无关，
     //   单路值会让先按住的音拿到后按下的音的力度（和弦/连弹都会错）。
-    input  wire [63:0]    vel_bus;
+    //   位宽必须是 NPIT*4，不能写死 64：音高通道有 NPIT=25 路，64 位只装得下 16 路，
+    //   剩下 9 路会按 sc[3:0] 回绕别名到 0..8 —— C5（通道 24）读到 C3 的力度（缺口 G4）。
+    input  wire [NPIT*4-1:0] vel_bus;
     output reg            ev_on;     // 单拍：note-on
     output reg            ev_off;    // 单拍：note-off
     output reg  [6:0]     ev_note;
@@ -53,9 +55,14 @@ module pad_pitch #(
 
     wire           cur     = touch[sc];
     wire           prev    = seen[sc[4:0]];
-    // 当前扫到的通道的力度（通道号 0..15；sc 超出 15 时 touch 恒 0，取值无意义但不影响事件）
-    wire [3:0]     vel_ch  = vel_bus[{sc[3:0], 2'b00} +: 4];
     wire           is_pit  = (sc < NPIT);
+    // 当前扫到的通道的力度。索引用**完整的 sc**，不用 sc[3:0]：
+    //   截断到 4 位会让通道 16..24 回绕别名到 0..8（缺口 G4）。
+    //   扫到 25..37（音域条/泛音键）时没有力度可言，索引显式钳到 0 ——
+    //   直接用 sc 会越过 vel_bus 的 NPIT*4 位，越界读在仿真得 x、在综合里被优化，
+    //   两种都不可依赖，所以不靠"反正不会用到"来兜。
+    wire [5:0]     vel_idx = is_pit ? sc : 6'd0;
+    wire [3:0]     vel_ch  = vel_bus[{vel_idx, 2'b00} +: 4];
 
     // 该通道在"当前档位"下的音符号
     wire signed [10:0] note_of = $signed({3'b0, BASE[7:0]}) + $signed({5'b0, sc}) + (rel * 12);

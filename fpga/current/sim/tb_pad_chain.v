@@ -33,6 +33,9 @@ module tb_pad_chain;
     wire [6:0]          pd_note;
     wire                pd_on, pd_valid;
     wire [4*NCH-1:0]    vel_bus;
+    // pad_scan 是 NCH=16，只能给通道 0..15；pad_pitch 的 vel_bus 是 NPIT*4=100 位。
+    //   高位显式补 0（与 tdm_top_owned 一致），不靠隐式宽度扩展。
+    wire [25*4-1:0]     pp_vel_bus = {{(25-NCH)*4{1'b0}}, vel_bus};
     wire [CW-1:0]       dbg_raw0, dbg_base0;
     wire [1:0]          dbg_phase;
     reg  [3:0]          dbg_sel = 4'd0;
@@ -61,7 +64,7 @@ module tb_pad_chain;
         .clk(clk), .rst_n(rst_n),
         .touch({30'b0, state[7:0]}),
         .pos(pos),
-        .vel_bus(vel_bus),
+        .vel_bus(pp_vel_bus),
         .ev_on(pp_on), .ev_off(pp_off),
         .ev_note(pp_note), .ev_vel(pp_vel),
         .harm_mask(pp_harm)

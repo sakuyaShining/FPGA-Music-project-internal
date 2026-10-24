@@ -571,7 +571,9 @@ module tdm_top_rh #(
 
     pad_pitch #(.NCH(38), .NPIT(25), .BASE(48)) u_pitch (
         .clk(clk), .rst_n(rst_n),
-        .touch(pp_touch), .pos(oct_pos), .vel_bus({16{4'd12}}),   // 旧顶层：无力度通路，固定 12 保持原行为
+        // vel_bus 必须与 pad_pitch 的 NPIT*4=100 位对齐：
+        //   写死 16 路会让通道 16..24 按 sc[3:0] 回绕别名到 0..8（缺口 G4）。
+        .touch(pp_touch), .pos(oct_pos), .vel_bus({25{4'd12}}),   // 旧顶层：无力度通路，固定 12 保持原行为
         .ev_on(pp_on_p), .ev_off(pp_off_p), .ev_note(pp_ev_note), .ev_vel(pp_ev_vel),
         .harm_mask(pp_harm_mask)
     );
