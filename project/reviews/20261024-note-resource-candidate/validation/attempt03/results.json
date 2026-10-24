@@ -1,0 +1,207 @@
+{
+  "schema": 1,
+  "tested_at": "2026-10-23T19:07:07.360655+00:00",
+  "seed": 20261024,
+  "commands": 2045,
+  "inputs": {
+    "rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+    "tb/tb_note_resource.v": "8d9933bf54e398f9e5afd20f66ffc5f0fbd8a4fa527d5c9844342fd704f48fa2",
+    "reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+    "verify.py": "7b31ba8e0194535794369ef7fbcfb471017c83b0f1cc5adf3e7c7b9f63d3712d"
+  },
+  "commands_sha256": "269573bb1676d724daa36fd113698dc7ad33c08e04f1e5f523e2919e0144b9fb",
+  "expected_sha256": "6acfdf833c3cd799da80bc180e6133d9a9e2d1a89705c0356e8503332b536efd",
+  "tools": {
+    "iverilog": {
+      "path": "D:\\iverilog\\bin\\iverilog.exe",
+      "sha256": "f8bad18d279f8c63ab041bd292606f21fc0e8b9cc0edb37a311158f756c35eb0"
+    },
+    "vvp": {
+      "path": "D:\\iverilog\\bin\\vvp.exe",
+      "sha256": "c3b28a3a088851fc3396a30a7c781c4b126c61dbbb7cead7c00644cc7afaa4d4"
+    }
+  },
+  "results": [
+    {
+      "fault": null,
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_resource",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\candidate\\resource.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\candidate\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "mutant_sha256": "4bcf963a16fb36bc6e92f4d43d81a34f8d62e3ea5e724e1bcfc4ad22c497315c",
+      "passed": false,
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\candidate\\resource.vvp",
+          "+commands=D:/FPGA-Project/review/note-resource-20261024-03/commands.txt",
+          "+trace=D:/FPGA-Project/review/note-resource-20261024-03/candidate/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "08045de724308e74982b22b7bbf73b8221a0ce37a6949840f3866d3ed0871c2b",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v:115: response changed under backpressure\r\n       Time: 110000  Scope: tb_note_resource\r\n"
+      },
+      "first_difference": {
+        "command": 0,
+        "field": "snapshot",
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "observed": null
+      },
+      "trace_sha256": "dd5cf80424d3d23b9afb8fdbceac1179763d77afd8ce590c72061173fdc7a650",
+      "completed_commands": 1
+    },
+    {
+      "fault": "tail-priority",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_resource",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\tail-priority\\resource.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\tail-priority\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "mutant_sha256": "ec649104343e3aa4ff4846c88f8acf10f1da9d741305a730237aaca16b3159d0",
+      "passed": false,
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\tail-priority\\resource.vvp",
+          "+commands=D:/FPGA-Project/review/note-resource-20261024-03/commands.txt",
+          "+trace=D:/FPGA-Project/review/note-resource-20261024-03/tail-priority/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "08045de724308e74982b22b7bbf73b8221a0ce37a6949840f3866d3ed0871c2b",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v:115: response changed under backpressure\r\n       Time: 110000  Scope: tb_note_resource\r\n"
+      },
+      "first_difference": {
+        "command": 0,
+        "field": "snapshot",
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "observed": null
+      },
+      "trace_sha256": "dd5cf80424d3d23b9afb8fdbceac1179763d77afd8ce590c72061173fdc7a650",
+      "completed_commands": 1
+    },
+    {
+      "fault": "partial-retire",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_resource",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\partial-retire\\resource.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\partial-retire\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "mutant_sha256": "2ddda2fa5480e2e0819acf63740dcf4441386b4d6cf72bb855fdfab3ae1152c4",
+      "passed": false,
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\partial-retire\\resource.vvp",
+          "+commands=D:/FPGA-Project/review/note-resource-20261024-03/commands.txt",
+          "+trace=D:/FPGA-Project/review/note-resource-20261024-03/partial-retire/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "08045de724308e74982b22b7bbf73b8221a0ce37a6949840f3866d3ed0871c2b",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v:115: response changed under backpressure\r\n       Time: 110000  Scope: tb_note_resource\r\n"
+      },
+      "first_difference": {
+        "command": 0,
+        "field": "snapshot",
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "observed": null
+      },
+      "trace_sha256": "dd5cf80424d3d23b9afb8fdbceac1179763d77afd8ce590c72061173fdc7a650",
+      "completed_commands": 1
+    },
+    {
+      "fault": "completion-token",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_resource",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\completion-token\\resource.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\completion-token\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "mutant_sha256": "a24da9572188769ff3d3817f75f7e72aad0268d77399f0fcbe188e9b60946950",
+      "passed": false,
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-03\\completion-token\\resource.vvp",
+          "+commands=D:/FPGA-Project/review/note-resource-20261024-03/commands.txt",
+          "+trace=D:/FPGA-Project/review/note-resource-20261024-03/completion-token/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "08045de724308e74982b22b7bbf73b8221a0ce37a6949840f3866d3ed0871c2b",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v:115: response changed under backpressure\r\n       Time: 110000  Scope: tb_note_resource\r\n"
+      },
+      "first_difference": {
+        "command": 0,
+        "field": "snapshot",
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "observed": null
+      },
+      "trace_sha256": "dd5cf80424d3d23b9afb8fdbceac1179763d77afd8ce590c72061173fdc7a650",
+      "completed_commands": 1
+    }
+  ],
+  "source_changes": [],
+  "status": "FAIL",
+  "scope": "Resource coordinator plus mock backend, not actual audio/envelope completion, four-layer PCM or board acceptance",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

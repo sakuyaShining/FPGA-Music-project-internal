@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "tested_at": "2026-10-23T17:53:44.033197+00:00",
+  "source_origin_sha256": "c15b7ccdf5536d4fbd13d147a06c445284e28932ae3f5e51ba4197261bcc0df0",
+  "source_manifest_sha256": "1f32522e645feb27923a8c13f3e368e4d6434fc4ab908815f981b34732071887",
+  "runner_sha256": "2e439495cf85daad7bba42c1c17858f66e66e952b9cdd3d8c7ffe82f1d2cc194",
+  "helper_sha256": "590ad25fabe5af9d3e7df7bf4f6380cf2a83e655ffb90d06fc4d120d0f5daed0",
+  "results": {
+    "compat": {
+      "status": "MATCH",
+      "log": "DIAG dut.core r_vel_sens=80 native_vscale=256\nDIAG ref_top r_vel_sens=80 native_vscale=256\nPASS music cycles=193471 samples=374 events=8 changed_pcm=180 released_tail_pcm=40 fader_to_sound restore_exact state_preserved\nD:\\FPGA-Project\\review\\music-golden-20261024-legacy-vscale-01\\tb_compat_music.v:86: $finish called at 1934750000 (1ps)\n",
+      "testbench_sha256": "ed796f62b9860bc5dfa4e5ac1cea888db8e4be25784bdc5cc840212020d933d1",
+      "comparison": {
+        "equal": true,
+        "differing_lines": 0,
+        "first_difference": null,
+        "differing_column_counts": {},
+        "expected_lines": 193475,
+        "actual_lines": 193475,
+        "reference_sha256": "7e73583d6483c46646d1942c352b53f760ecf92962cf4859833aeefe82bae47a",
+        "actual_sha256": "7e73583d6483c46646d1942c352b53f760ecf92962cf4859833aeefe82bae47a"
+      }
+    },
+    "layers": {
+      "status": "MATCH",
+      "log": "DIAG dut.core r_vel_sens=80 native_vscale=256\nPASS layers cycles=180467 samples=352 nonzero=340 child_on=9 child_off=9 commits=6 rejected_cfg=2 pcm_hash=29b53767 i2s_hash=5ef7bdeb startup_unknown_pcm=1 startup_unknown_i2s_clocks=512 independent_timbre sustain_strike slide snapshot release steal invalid_mask four_slots\nD:\\FPGA-Project\\review\\music-golden-20261024-legacy-vscale-01\\tb_layers.v:125: $finish called at 1804710000 (1ps)\n",
+      "testbench_sha256": "31cebeada238bc58e1cabe56e60b04a44c530a2179a5972e502c7895eee95984",
+      "comparison": {
+        "equal": true,
+        "differing_lines": 0,
+        "first_difference": null,
+        "differing_column_counts": {},
+        "expected_lines": 180471,
+        "actual_lines": 180471,
+        "reference_sha256": "1c3ee5df5d46b193d3f399009e350e884988bc2d513cebdada9aaa615f7aaeaa",
+        "actual_sha256": "1c3ee5df5d46b193d3f399009e350e884988bc2d513cebdada9aaa615f7aaeaa"
+      }
+    },
+    "sensor": {
+      "status": "MATCH",
+      "log": "DIAG dut.music.core r_vel_sens=80 native_vscale=256\nPASS sensor_layers cycles=132707 samples=259 nonzero_pcm=145 reports=7 ons=6 offs=6 moves=1 pcm_hash=99cd9943 startup_unknown_pcm=1 physical_words_to_real_pcm same_midi_endpoints independent_pitch continuous512\nD:\\FPGA-Project\\review\\music-golden-20261024-legacy-vscale-01\\tb_sensor_layers.v:80: $finish called at 1327070000 (1ps)\n",
+      "testbench_sha256": "e44fdbc1f4a4f76f48a5618a78a1f701d4fa215e1ae51e3e8604c295d5b8b560",
+      "comparison": {
+        "equal": true,
+        "differing_lines": 0,
+        "first_difference": null,
+        "differing_column_counts": {},
+        "expected_lines": 132707,
+        "actual_lines": 132707,
+        "reference_sha256": "49c751154db87968a0b4bd7310a174b3d0f81fb0194837c81804b335e0ff1c08",
+        "actual_sha256": "49c751154db87968a0b4bd7310a174b3d0f81fb0194837c81804b335e0ff1c08"
+      }
+    }
+  },
+  "experiment": "At cycle4000 force velocity vscale off in testbenches only; leave registers, tables and all product RTL unchanged.",
+  "interpretation": "Diagnostic control, not current-default acceptance, product fix or permission to disable velocity expression.",
+  "source_changes": [
+    "tb_compat_music.v",
+    "tb_layers.v",
+    "tb_sensor_layers.v"
+  ],
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

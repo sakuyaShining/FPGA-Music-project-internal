@@ -7,10 +7,14 @@
 | FPGA | `fpga/current/` | M1当前源、表、约束、脚本、测试和压缩黄金数据；受限包装与结构探针明确分开 |
 | 硬件 | `hardware/current/` | 当前保存原生工程、施工证据、接口和采购上下文；未放行制造 |
 | 上位机 | `host/current/` | ca03 11版源码/字体/离线测试；与当前FPGA的实体兼容尚未验证 |
+| 增量资源候选 | `experiments/note_resource_20261024/` | D-019共享32组协调器与模拟后端；限定仿真/独立综合通过，未接真实音乐顶层；独立版本清单为`versions/note-resource-candidate-20261024.json` |
+| 后续真实音频增量 | `experiments/note_resource_20261024/audio/` | 资源事务已接真实512分量TDM/包络；仍为测试台提供分量，实际音符/槽生成器、手指/曲谱和完整时序待接；清单`versions/note-resource-audio-20261024.json` |
+| 最新真实分量生成增量 | `experiments/note_resource_20261024/audio/renderer/` | 四槽配置快照/真实音符分量已接512分量TDM；逻辑音符/配置刺激仍由测试台提供。修复高倍率力度回绕与配置/起音并发等待；清单`versions/note-partial-renderer-20261024.json`，非完整设备 |
+| 最新双来源路由增量 | `experiments/note_resource_20261024/input/` | 两来源token与轮转/匹配回包、排队取消保持已接真实PCM；仍缺物理contact与曲谱文件适配。清单`versions/note-input-router-20261024.json`；单元PnR工具崩溃/无STA，非合格码流 |
 
 旧`src/rtl`、`src/gowin`、`tools/host`保留历史可复现性，不能作为新任务的默认入口。历史实验、v1/v2恢复包不覆盖本次工程检查点。具体来源、逐文件哈希和捕获时间见`versions/engineering-sources-20261023.json`；补充的主机测试依赖和一处RTL声明顺序适配均有单独来源记录，未改原owner目录。
 
-从私有内部仓库实际main读取本页及DESIGN-CURRENT，再执行：
+先读[产品规格](PRODUCT-SPEC.md)、[工程分布](SOURCE-MAP.md)及[工作计划](WORK-PLAN.md)。从已公开的目标仓库实际main读取本页及DESIGN-CURRENT，再执行：
 
 ```powershell
 python tools/scripts/project_control.py check --remote --fresh-entry
@@ -24,4 +28,6 @@ python tools/scripts/design_governance.py status --remote --live
 
 FPGA回归需要Python、Icarus Verilog和vvp；可设置`FPGA_IVERILOG`和`FPGA_VVP`。上位机离线回归依赖见`../tools/requirements-engineering-host.txt`，在独立虚拟环境安装后执行。硬件export核对保存工程的字节身份，不启动CAD，也不重新证明DRC。
 
-本轮管理owner负责发布检查点及工具，不接管原owner工作区。新协作者在命名任务分支中认领一个领域，修改对应current目录；同一领域多个任务须划定文件边界。收工交回源清单、实际远程commit、相应验证和未验证项。当前输入变化应重新登记与验证，禁止仅更新哈希来掩盖未审阅改动。
+原`engineering.py test --area fpga`保留原默认/旧黄金检查及已知失败，不静默换判据。新增明确profile入口：`python tools/scripts/music_profiles.py --profile all --fault-checks --output <不存在的新目录>`。历史profile显式配置vscale=0并要求三组旧黄金逐字节相等；当前profile不关闭力度，以Python整数参考检查当前默认下的分层幅度，并保留与旧黄金的差异。三项故障反例必须在指定幅度判据被检测；编译错误/超时或无关断言失败不算反例通过。槽号反例仅在负向导出副本修改力度ROM地址并登记变异身份，不改仓库产品源。该入口仍只覆盖现有逻辑探针，不签收新资源合同、四层整机或实体链路。
+
+本轮4d37 owner负责发布检查点、工具及协作板限定的隔离资源候选，不接管原owner工作区。新协作者在命名任务分支中认领一个领域，修改对应current目录；同一领域多个任务须划定文件边界。收工交回源清单、实际远程commit、相应验证和未验证项。当前输入变化应重新登记与验证，禁止仅更新哈希来掩盖未审阅改动。

@@ -1,0 +1,291 @@
+{
+  "schema": 1,
+  "tested_at": "2026-10-23T18:59:00.431593+00:00",
+  "seed": 20261024,
+  "commands": 2045,
+  "inputs": {
+    "rtl/note_resource_mgr.v": "4fdb5e671d6051a7891ad94a07a3e01b7e8a629c2c71237646bf0800a458f165",
+    "tb/tb_note_resource.v": "c672b8137c8cd4ff420a4439d45fdb0b480eb897daf57b00ee97d82868d3dc8f",
+    "reference.py": "2b1f09ec94ac775cdd7779ecd77299ca0ac67063f8929c20ec381bc28eb1deb6",
+    "verify.py": "f36d99298505afb52a1fc5b67fd736c28a9b307c5ad479ad2ff4b683783a3917"
+  },
+  "commands_sha256": "b5fa491f24320a209643d43b7be08e7b8977583dc199e0a6bd0fe53b2048d514",
+  "expected_sha256": "6acfdf833c3cd799da80bc180e6133d9a9e2d1a89705c0356e8503332b536efd",
+  "tools": {
+    "iverilog": {
+      "path": "D:\\iverilog\\bin\\iverilog.exe",
+      "sha256": "f8bad18d279f8c63ab041bd292606f21fc0e8b9cc0edb37a311158f756c35eb0"
+    },
+    "vvp": {
+      "path": "D:\\iverilog\\bin\\vvp.exe",
+      "sha256": "c3b28a3a088851fc3396a30a7c781c4b126c61dbbb7cead7c00644cc7afaa4d4"
+    }
+  },
+  "results": [
+    {
+      "fault": null,
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_resource",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-01\\candidate\\resource.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-01\\candidate\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "mutant_sha256": "b09c515cbbe0a1e4cf7136f47776ade0c61c4f8a6466528802d59aa7f945da66",
+      "passed": true,
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-01\\candidate\\resource.vvp",
+          "+commands=D:/FPGA-Project/review/note-resource-20261024-01/commands.txt",
+          "+trace=D:/FPGA-Project/review/note-resource-20261024-01/candidate/trace.tsv"
+        ],
+        "returncode": 0,
+        "log_sha256": "77e63b904b2c8cee6cc097234088ac56324b1bb7f00aec96567c48541aceeb3c",
+        "text": "PASS resource commands=2045 ticket_width=3 tails_kept_until_finish atomic_mock_backend\r\nC:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v:161: $finish called at 889301000 (1ps)\r\n"
+      },
+      "first_difference": null,
+      "trace_sha256": "009a0b5a1716f32dcf5d427d42d6af4fe8a6e4856eabffe2a6a6df6a585ec2e0",
+      "completed_commands": 2045
+    },
+    {
+      "fault": "tail-priority",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_resource",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-01\\tail-priority\\resource.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-01\\tail-priority\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "mutant_sha256": "949663c2b65e0c711f3be864a7fc340f87fc7dee30574be672a5daf96aecfbb5",
+      "passed": true,
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-01\\tail-priority\\resource.vvp",
+          "+commands=D:/FPGA-Project/review/note-resource-20261024-01/commands.txt",
+          "+trace=D:/FPGA-Project/review/note-resource-20261024-01/tail-priority/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "37870fddbe9387900176f4065788d3984e89a2a0cf3b1281eb64b6134e9f0de7",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v:159: final resources leaked\r\n       Time: 1307661000  Scope: tb_note_resource\r\n"
+      },
+      "first_difference": {
+        "command": 51,
+        "field": "works",
+        "expected": [
+          [
+            1,
+            3,
+            5,
+            1073741824,
+            1,
+            30
+          ],
+          [
+            1,
+            4,
+            2147483655,
+            2147483648,
+            1,
+            31
+          ],
+          [
+            1,
+            5,
+            2147483638,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            6,
+            4294967288,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            7,
+            6,
+            3221225475,
+            15,
+            1046560
+          ],
+          [
+            3,
+            0,
+            6,
+            3221225475,
+            15,
+            1046560
+          ]
+        ],
+        "observed": [
+          [
+            1,
+            3,
+            2147483638,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            4,
+            4294967288,
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            2147483639,
+            4,
+            1,
+            2
+          ],
+          [
+            1,
+            6,
+            4294967289,
+            8,
+            1,
+            3
+          ],
+          [
+            2,
+            7,
+            6,
+            15,
+            15,
+            100384
+          ],
+          [
+            3,
+            0,
+            6,
+            15,
+            15,
+            100384
+          ]
+        ]
+      },
+      "trace_sha256": "3ae70bc98a297b623e2abd69051d2ef09c2fd105f24c5fae0c14aadf136e45b7",
+      "completed_commands": 2045
+    },
+    {
+      "fault": "partial-retire",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_resource",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-01\\partial-retire\\resource.vvp",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-01\\partial-retire\\note_resource_mgr.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "mutant_sha256": "41360088feb2fab9224f09aa356a0ffe3b65a21c659040fd0ff7a5dbd99096d5",
+      "passed": true,
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-resource-20261024-01\\partial-retire\\resource.vvp",
+          "+commands=D:/FPGA-Project/review/note-resource-20261024-01/commands.txt",
+          "+trace=D:/FPGA-Project/review/note-resource-20261024-01/partial-retire/trace.tsv"
+        ],
+        "returncode": 1,
+        "log_sha256": "b9ba6b765812e9ce61c6e18a4dbf01e31df0d53a0c023e8ebc316a818b79f12d",
+        "text": "FATAL: C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\tb\\tb_note_resource.v:50: prepare reused audible/reserved groups\r\n       Time: 583265000  Scope: tb_note_resource\r\n"
+      },
+      "first_difference": {
+        "command": 1508,
+        "field": "works",
+        "expected": [
+          [
+            1,
+            2,
+            234,
+            12,
+            12,
+            100384
+          ],
+          [
+            2,
+            3,
+            2147483922,
+            268435468,
+            14,
+            920640
+          ],
+          [
+            3,
+            4,
+            2147483922,
+            268435468,
+            14,
+            920640
+          ],
+          [
+            1,
+            5,
+            2147483922,
+            268435468,
+            14,
+            920640
+          ]
+        ],
+        "observed": [
+          [
+            1,
+            2,
+            234,
+            4,
+            12,
+            100384
+          ],
+          [
+            2,
+            3,
+            2147483922,
+            268435468,
+            14,
+            920640
+          ]
+        ]
+      },
+      "trace_sha256": "8fe84efe60686375d6707f9e066d10dd6d2cb2a507974b97bf6ae657f4cdcf2a",
+      "completed_commands": 1509
+    }
+  ],
+  "source_changes": [],
+  "status": "PASS",
+  "scope": "Resource coordinator plus mock backend, not actual audio/envelope completion, four-layer PCM or board acceptance",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

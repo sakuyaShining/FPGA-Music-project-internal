@@ -1,0 +1,43 @@
+{
+  "resources": {
+    "logic": 11722,
+    "LUT": 10230,
+    "ALU": 844,
+    "RAM16": 108,
+    "REG": 4974,
+    "BSRAM": 14
+  },
+  "integrated_synthesis": "Final03 same inputs PASS only",
+  "timing_attempts": [
+    {
+      "attempt": 1,
+      "status": "FAIL_OR_INCOMPLETE_TIMING",
+      "returncode": 1,
+      "slack_ns": null
+    },
+    {
+      "attempt": 2,
+      "status": "FAIL_OR_INCOMPLETE_TIMING",
+      "returncode": 1,
+      "slack_ns": null
+    },
+    {
+      "attempt": 3,
+      "status": "FAIL_OR_INCOMPLETE_TIMING",
+      "returncode": 3221225477,
+      "slack_ns": null
+    },
+    {
+      "attempt": 4,
+      "status": "FAIL_OR_INCOMPLETE_TIMING",
+      "returncode": 3221225477,
+      "slack_ns": null
+    }
+  ],
+  "diagnosis": "01/02 wrapper syntax errors;03/04 router process0xC0000005 at80% despite fixed-pin/four-bit method change. No routed timing reports; no valid STA or complete product qualification. Do not infer a resource-fit cause from this crash.",
+  "integrated02_rejection": "Vendor run exit0 but helper changed during execution, so source-change guard correctly returnedFAIL;03 rerun without changes.",
+  "full_product_fit": false,
+  "pnr": false,
+  "valid_sta": false,
+  "programming_allowed": false
+}

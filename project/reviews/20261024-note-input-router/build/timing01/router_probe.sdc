@@ -1,0 +1,7 @@
+create_clock -name sys_clk -period 37.037 -waveform {0 18.5185} [get_ports {clk}]
+set_clock_uncertainty -setup 0.5 -from [get_clocks {sys_clk}]
+set_clock_uncertainty -hold 0.2 -from [get_clocks {sys_clk}]
+set_input_delay -clock sys_clk -max 5.0 [get_ports {load shift capture data_in[*]}]
+set_input_delay -clock sys_clk -min 1.0 [get_ports {load shift capture data_in[*]}]
+set_output_delay -clock sys_clk -max 5.0 [get_ports {data_out[*]}]
+set_output_delay -clock sys_clk -min -1.0 [get_ports {data_out[*]}]

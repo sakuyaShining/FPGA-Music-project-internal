@@ -1,0 +1,72 @@
+{
+  "changed_sources": {
+    "AUTONOMOUS-CURRENT.md": {
+      "bytes": 67251,
+      "sha256": "3882ae4922b9942e717398e2127eb6671fc83297debf347a761a88f2651983d3"
+    },
+    "REGIONAL-WORK-IN-PROGRESS.json": {
+      "bytes": 22342,
+      "sha256": "d26e470c5584b52efbf3efd06b2f4d1cd897f2bf7c860f76c332b9138e652d6c"
+    },
+    "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md": {
+      "bytes": 22182,
+      "sha256": "54e02c4ed3bb24793ca33b1541638761f6d0f3a0df25fad434aff9e6c6a1550d"
+    },
+    "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json": {
+      "bytes": 19025,
+      "sha256": "b79abeade31a9300d1fc64f21ebe9084433252a2eaaeb7685cadf9bf2d47c25f"
+    }
+  },
+  "selected_state": {
+    "updated_at": "2026-10-24T12:12:23.220937+08:00",
+    "phase": "ADDR1_LOCAL_FANOUT_NATIVE_VERIFIED_49_13NETS_620VIAS_NOT_FAB",
+    "pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
+    "drc": {
+      "Connection Error": 49
+    },
+    "open_nets": [
+      "BUS_SCK",
+      "PRESET1",
+      "PRESET2",
+      "EDIT",
+      "ENC_A",
+      "ENC_B",
+      "ENC_PUSH",
+      "INPUT_LOAD_N",
+      "ADDR1",
+      "ADDR2",
+      "MUX_DISABLE",
+      "ADDR0",
+      "KEY_QH"
+    ],
+    "actual_vias": 620,
+    "physical_tests": "UNMEASURED",
+    "manufacturing_release": false,
+    "native_changed_this_heartbeat": false,
+    "all_current_routing_jobs_terminal": true
+  },
+  "supplemental_source": {
+    "relative": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/address1-joint-fanout/calibrated-local-next.json",
+    "sha256": "62cad473ab076101ae20dc18bec45170ac27b46d2094a5c182aaabe3ff4a574b",
+    "observed_at": "2026-10-24T04:17:07.493147+00:00",
+    "selected": {
+      "updated_at": "2026-10-24T12:12:23.220937+08:00",
+      "state": "LOCAL_CALIBRATED_CANDIDATE_NOT_IMPORTABLE",
+      "source_pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
+      "native_changed": false,
+      "native_connections": 49,
+      "native_open_nets": 13,
+      "summary": "原生仍a3a258d0/49项未连通13网/227件620孔，本批未改CAD，不可投板，实物UNMEASURED。已找到并校正离线删除过孔后的地铜恢复范围错误：四枚24/12mil原生孤立反焊盘边界约0.662mm，旧预测恢复半径0.4848mm留下假空隙。旧预测上界失败不能当实际原生不可达证明，也不能把全部历史失败归因于此；已接受原生重铺复核仍有效。原生规则及全部硬门未放宽。按实际孤立反焊盘、真实POUR边界和剩余异网铜校准后，U1联合ADDR3叶支路与ADDR2出线获得局部合格候选：9段6mil线、删1增2信号孔、复用原22.1992571/16.85627058mm地孔，无新地孔；必要Ground15/Bottom接触均约0.218876mm²，全宽最近实地参考无缺口、局部保留铜无新增参考损失，物理/钻孔/焊盘通过。离线ADDR3全部7脚仍同岛，ADDR2仍7个焊盘岛，尚未接通主干；MOSI/P0/P3/HARM/触控复位/47IO脚连通保持。这不是原生或整板通过，禁止直接导入。",
+      "local_review_pass": true,
+      "ADDR2_trunk_complete": false,
+      "full_board_review_pass": false,
+      "native_import_allowed": false,
+      "manufacturing_release": false,
+      "physical_tests": "UNMEASURED"
+    }
+  },
+  "assessment": "Native a3a258/49issues/13nets/620vias unchanged. Owner corrected offline removed-via ground-antipad reconstruction and reports a locally admissible U1 ADDR3/ADDR2 escape candidate; ADDR2 still7 pad islands, no native import/full-board acceptance. Historical failures are not all attributed to this model defect. All existing manufacturing gates remain. Reviewer read selected provenance only, no CAD/DRC or PCB edits.",
+  "privacy": "No live session handles/full conversations copied; supplemental file is a frozen technical observation outside the registry watch scope.",
+  "new_cad_operations": false,
+  "manufacturing_release": false
+}

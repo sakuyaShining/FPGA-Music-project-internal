@@ -2,6 +2,8 @@
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 import json
+import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -25,6 +27,54 @@ def producer(root):
 
 
 class GovernanceTests(unittest.TestCase):
+    def run_legacy_sync(self, repository, repository_id, ancestry=0):
+        bash = shutil.which('bash')
+        if os.name == 'nt':
+            git_binary = shutil.which('git')
+            candidate = Path(git_binary).parents[1] / 'bin/bash.exe' if git_binary else None
+            bash = str(candidate) if candidate and candidate.exists() else None
+        if not bash:
+            self.skipTest('Bash is required to execute the legacy sync workflow guard')
+        workflow = (Path(__file__).resolve().parents[2] / '.github/workflows/project-entry.yml').read_text(encoding='utf-8')
+        body = workflow.split('        run: |\n')[-1]
+        script = '\n'.join(line[10:] for line in body.splitlines())
+        stubs = '''
+gh() {
+  case "$*" in
+    *"--jq .id"*) printf '%s\\n' "$TEST_REPO_ID" ;;
+    *"--jq .private"*) printf 'false\\n' ;;
+    *) return 2 ;;
+  esac
+}
+git() {
+  if [ "$1" = merge-base ]; then return "$TEST_ANCESTRY"; fi
+  printf 'git:%s\\n' "$*"
+}
+'''
+        environment = dict(os.environ, GITHUB_REPOSITORY=repository,
+                           TEST_REPO_ID=str(repository_id), TEST_ANCESTRY=str(ancestry))
+        return subprocess.run([bash, '--noprofile', '--norc', '-c', stubs + script],
+                              env=environment, capture_output=True, encoding='utf-8', timeout=20)
+
+    def test_public_target_keeps_legacy_entry_fast_forward(self):
+        result = self.run_legacy_sync('sakuyaShining/FPGA-Music-project-internal', 1404161021)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn('git:push origin refs/remotes/origin/main:refs/heads/codex/project-management-20261022', result.stdout)
+        self.assertNotIn('--force', result.stdout)
+
+    def test_legacy_sync_rejects_other_repository_name_or_id(self):
+        for repository, repository_id in [('someone/fork', 1404161021),
+                                          ('sakuyaShining/FPGA-Music-project-internal', 1)]:
+            with self.subTest(repository=repository, repository_id=repository_id):
+                result = self.run_legacy_sync(repository, repository_id)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertNotIn('git:push', result.stdout)
+
+    def test_legacy_sync_rejects_diverged_compatibility_branch(self):
+        result = self.run_legacy_sync('sakuyaShining/FPGA-Music-project-internal', 1404161021, ancestry=1)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertNotIn('git:push', result.stdout)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)

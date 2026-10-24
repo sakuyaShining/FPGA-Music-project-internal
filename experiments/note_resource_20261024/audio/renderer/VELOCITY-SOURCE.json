@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "source": "fpga/current/engine/src/vel_shape.v",
+  "sha256": "5bedde0793a2afbb22f45f6fcde503e7e1b03842091dcc2a96841f450a75ddcd",
+  "variant": "rtl/vel_shape_scaled.v",
+  "correction": "Retain signed10-bit scaled delta and11-bit sum so vscale>256 cannot wrap negative deltas or positive boosts. Clamp0..511 as documented; no ROM/default curve or calibration change.",
+  "compatibility": "vscale0 and256 must remain bit exact; higher scales deliberately differ where old widths wrapped."
+}

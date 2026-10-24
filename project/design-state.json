@@ -2,8 +2,8 @@
   "schema": 1,
   "engineering_inputs_manifest": "project/versions/engineering-sources-20261023.json",
   "engineering_entry": "project/ENGINEERING.md",
-  "design_version": "design-20261023-v3",
-  "updated_at": "2026-10-23T15:02:03.630221+00:00",
+  "design_version": "design-20261024-frame-command-source-candidate",
+  "updated_at": "2026-10-24T15:34:50.716774+00:00",
   "entry_branch": "main",
   "entry": "project/DESIGN-CURRENT.md",
   "quickstart": "project/QUICKSTART.md",
@@ -23,22 +23,52 @@
     "sensor_capacity": 84,
     "other_features_reduced_by_management": false,
     "rtl_scope_alignment": "not completed across all profiles",
-    "right_display_controller_route": "Existing J10 / RA8875 candidate retained"
+    "right_display_controller_route": "Existing J10 / RA8875 candidate retained",
+    "standalone_core": true,
+    "edit_entry": "edit button -> preset slot -> excitation and timbre",
+    "independent_controls": true,
+    "score_guidance_display": "J10",
+    "complete_product_target": true,
+    "score_playback_with_live_performance": true,
+    "overflow_note_order": "free groups -> released-tail instances -> oldest held instance",
+    "allocation_source_priority": "equal score and live",
+    "whole_note_retirement": true,
+    "complete_note_admission": true
   },
   "latest_observed_fpga": {
-    "review_record": "project/reviews/20261023-team-handoff/review.json",
+    "review_record": "project/reviews/20261024-frame-source/review.json",
     "producer": "fpga",
-    "status": "UNPUBLISHED_LIVE_WIP",
+    "status": "MAIN_CHECKPOINT_WITH_SEPARATELY_OBSERVED_LIVE_SOURCE",
     "validation_inherited": false,
     "complete_product_top": false
   },
   "hardware": {
     "owner_thread": "01a15ee5-fa24-7501-8475-ad28a0f08939",
     "live_entry": "C:/Users/Sakuya/.codex/worktrees/06df/FPGA-Music-project/hardware/review-manufacturing-20261019/REGIONAL-WORK-IN-PROGRESS.json",
-    "scope": "Listed context and existing native recovery ZIPs only, not full current hardware tree",
+    "scope": "Saved native engineering checkpoint and selected construction context are captured in engineering manifest; unsaved CAD and full producer tree are not included.",
     "observation": "Top cached construction pointer and lower-level state can differ; verify actual native hash before work",
     "manufacturing_release": false,
-    "physical_tests": "UNMEASURED"
+    "physical_tests": "UNMEASURED",
+    "latest_context_review": "project/reviews/20261024-frame-source/review.json",
+    "latest_saved_native": {
+      "manifest": "project/reviews/20261024-note-partial-renderer/hardware/native-manifest.json",
+      "pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
+      "connection_errors": 49,
+      "open_nets": 13,
+      "components": 227,
+      "vias": 620,
+      "captured_engineering_checkpoint_replaced": false
+    },
+    "latest_owner_reported_native": {
+      "manifest": "project/reviews/20261024-contact-rtl/hardware-intake.json",
+      "pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+      "connection_errors": 42,
+      "open_nets": 12,
+      "components": 227,
+      "vias": 649,
+      "full_review_passed": false,
+      "current_native_archive_verified": false
+    }
   },
   "freshness": {
     "authority": "actual remote main",
@@ -50,14 +80,34 @@
     ]
   },
   "reviewed_design_sources": {
-    "project/DESIGN-CURRENT.md": "2fcf62696e8210b260481aac8c498110d688eea6427e69602c4133f7636dbdd3",
+    "project/DESIGN-CURRENT.md": "ca3b233c080b5b1ee26a59a45e2f9a36d1b50ef72faf979ae1c2f56564b50d04",
     "project/versions/design-decision-20261023.json": "1d0994293691ac34b85348d0929ecda0ac68ace57c560f7b34a9449dd81ae4fc",
     "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "a147411a85f37d22c82228dfbbe836e98c3c116d4c9d158d43426c09a90f1e2e",
     "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "644e245f816a9d98ce962365791cca4a5295f538094775908f45a021a5f8b61c",
-    "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0"
+    "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
+    "project/PRODUCT-SPEC.md": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4",
+    "project/SOURCE-MAP.md": "94d997fc41111bf5ce592f4bbe1df6b9a5defb4f505b2fcedd7c0c4a01033945",
+    "project/WORK-PLAN.md": "02a62e42ca422c9970cdd7c2ca78789009f8cbe5e685f357c900ce0c4f0daf10",
+    "project/OPEN-RULES.md": "e04d4f2465815891b742d40b024a45a23ea04a9973905a2b9f963936b583f20c",
+    "project/MUSIC-GOLDEN-DIAGNOSIS.md": "276ad5d74e0f4aa4cb3dfe9898594117e08e643b56b6005e6e354488e6a8d709",
+    "project/NOTE-RESOURCE-CONTRACT.md": "474a0f6eaf9b62a0e4c4c7998e40fbe7d3144f6e16e269eb9299dfd3265d397a"
   },
   "governance": "project/governance.json",
   "decision_ledger": "project/decisions.json",
   "producer_registry": "project/producers.json",
-  "current_inputs_manifest_role": "Historical v2 recoverable candidate, not current live source"
+  "current_inputs_manifest_role": "Historical v2 recoverable candidate, not current live source",
+  "product_specification": "project/PRODUCT-SPEC.md",
+  "source_map": "project/SOURCE-MAP.md",
+  "work_plan": "project/WORK-PLAN.md",
+  "corrections": "project/corrections.json",
+  "open_rules": "project/OPEN-RULES.md",
+  "music_diagnosis": "project/MUSIC-GOLDEN-DIAGNOSIS.md",
+  "note_resource_contract": "project/NOTE-RESOURCE-CONTRACT.md",
+  "music_profile_tool": "tools/scripts/music_profiles.py",
+  "note_resource_candidate": "project/versions/note-resource-candidate-20261024.json",
+  "note_resource_audio_candidate": "project/versions/note-resource-audio-20261024.json",
+  "note_partial_renderer_candidate": "project/versions/note-partial-renderer-20261024.json",
+  "note_input_router_candidate": "project/versions/note-input-router-20261024.json",
+  "note_contact_transport_candidate": "project/versions/note-contact-transport-20261024.json",
+  "note_frame_source_candidate": "project/versions/note-frame-source-20261024.json"
 }

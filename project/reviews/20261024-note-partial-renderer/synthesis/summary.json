@@ -1,0 +1,16 @@
+{
+  "resources": {
+    "logic": 11515,
+    "LUT": 10117,
+    "ALU": 750,
+    "RAM16": 108,
+    "REG": 4865,
+    "BSRAM": 14
+  },
+  "scope": "Four-slot runtime partial renderer and32-group transactional512-partial TDM/envelope core. Logical note/config inputs; no scan, score file, auto-release scheduler, complete peripherals, PnR/STA, bitstream or hardware.",
+  "dsp_note": "Hierarchy reports local DSP contributions; do not add a standalone module resource count to claim complete-product fit. Consult primary exact report.",
+  "pnr": false,
+  "valid_sta": false,
+  "bitstream": false,
+  "complete_product_fit": false
+}

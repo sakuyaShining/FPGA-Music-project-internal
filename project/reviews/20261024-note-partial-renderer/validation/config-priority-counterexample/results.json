@@ -1,0 +1,45 @@
+{
+  "status": "DETECTED_AT_DESIGNATED_ASSERTION",
+  "commands": [
+    [
+      "D:\\iverilog\\bin\\iverilog.exe",
+      "-g2012",
+      "-s",
+      "tb_partial_renderer",
+      "-o",
+      "D:\\FPGA-Project\\review\\renderer-config-priority-counterexample-20261024-01\\priority.vvp",
+      "D:\\FPGA-Project\\review\\renderer-config-priority-counterexample-20261024-01\\note_partial_renderer.v",
+      "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\renderer\\rtl\\vel_shape_scaled.v",
+      "D:\\FPGA-Project\\review\\renderer-config-priority-counterexample-20261024-01\\tb_partial_renderer.v",
+      "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\instrument_table.v"
+    ],
+    [
+      "D:\\iverilog\\bin\\vvp.exe",
+      "D:\\FPGA-Project\\review\\renderer-config-priority-counterexample-20261024-01\\priority.vvp",
+      "+commands=D:/FPGA-Project/review/renderer-config-priority-counterexample-20261024-01/commands.txt",
+      "+trace=D:/FPGA-Project/review/renderer-config-priority-counterexample-20261024-01/trace.tsv"
+    ]
+  ],
+  "returncodes": [
+    0,
+    1
+  ],
+  "inputs": {
+    "commands.txt": "c753fc0a3c1c09299ed1e75b56917a1597afcc683bc02a3c5114be993941bf0d",
+    "note_inc.hex": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+    "note_partial_renderer.v": "8bfca4e1d7f1456083c3d0a2c7d0f86cd4b6304d89ad926172de40ede8649ee3",
+    "preset_part.hex": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+    "tb_partial_renderer.v": "9601dce778114594bbd3aea28588950fd05b2ecdb491fc9aa71bf6a02d2eaf1d",
+    "tilt_wtab.hex": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8",
+    "vel_wtab.hex": "cf86e652cbdaf12f8ad3a3af48d78e8946231457727237a3053fcb507e2821a1"
+  },
+  "additional_inputs": {
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\audio\\renderer\\rtl\\vel_shape_scaled.v": "6af745d82b76ebca063fdced27aab6501b12b560cd45af3e9e288c98a4c89029",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\fpga\\current\\engine\\src\\instrument_table.v": "2343da52dd99d883403a889caf5b5b8fd0c61c06a2f94db42e9ba319e1bd377f"
+  },
+  "tools": {
+    "D:\\iverilog\\bin\\iverilog.exe": "f8bad18d279f8c63ab041bd292606f21fc0e8b9cc0edb37a311158f756c35eb0",
+    "D:\\iverilog\\bin\\vvp.exe": "c3b28a3a088851fc3396a30a7c781c4b126c61dbbb7cead7c00644cc7afaa4d4"
+  },
+  "reason": "Old isolated renderer rejected both configuration and note when both valid; final03 accepts configuration first. Wrapper guarded this combination, but direct renderer contract was incorrect."
+}

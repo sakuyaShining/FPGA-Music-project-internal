@@ -3,7 +3,32 @@
 experiments/nano20k_feasibility_20261021/** -text
 project/archives/*.zip -text
 project/DESIGN-CURRENT.md text eol=lf
+project/PRODUCT-SPEC.md text eol=lf
+project/SOURCE-MAP.md text eol=lf
+project/WORK-PLAN.md text eol=lf
+project/corrections.json text eol=lf
+project/OPEN-RULES.md text eol=lf
+project/MUSIC-GOLDEN-DIAGNOSIS.md text eol=lf
+project/NOTE-RESOURCE-CONTRACT.md text eol=lf
+tools/scripts/music_profiles.py text eol=lf
+tools/tests/test_music_profiles.py text eol=lf
+experiments/note_resource_20261024/** text eol=lf
+project/versions/note-resource-candidate-20261024.json text eol=lf
+project/versions/note-resource-audio-20261024.json text eol=lf
+.gitattributes text eol=lf
+.github/workflows/project-entry.yml text eol=lf
+AGENTS.md text eol=lf
+README.md text eol=lf
+docs/00-协作/AGENT-BOARD.md text eol=lf
+project/AGENT-START.md text eol=lf
+project/CURRENT.md text eol=lf
+project/NEXT-AGENT-PROMPT.md text eol=lf
+project/QUICKSTART.md text eol=lf
+project/handoff.json text eol=lf
+tools/scripts/design_governance.py text eol=lf
+tools/tests/test_design_governance.py text eol=lf
 project/design-state.json text eol=lf
+project/state.json text eol=lf
 project/versions/design-decision-20261023.json text eol=lf
 project/versions/latest-design-inputs-20261023.json text eol=lf
 project/governance.json text eol=lf
@@ -17,6 +42,10 @@ fpga/current/** -text -whitespace
 hardware/current/** -text -whitespace
 host/current/** -text -whitespace
 project/versions/engineering-sources-20261023.json text eol=lf
+project/versions/note-partial-renderer-20261024.json text eol=lf
+project/versions/note-input-router-20261024.json text eol=lf
+project/versions/note-contact-transport-20261024.json text eol=lf
+project/versions/note-frame-source-20261024.json text eol=lf
 project/ENGINEERING.md text eol=lf
 project/COLLABORATION-CHECKPOINT-20261024.md text eol=lf
 tools/scripts/engineering.py text eol=lf

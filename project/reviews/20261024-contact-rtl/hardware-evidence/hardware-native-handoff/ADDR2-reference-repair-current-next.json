@@ -1,0 +1,24 @@
+{
+  "updated_at": "2026-10-24T19:59:16.721696+08:00",
+  "native_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "native_connections": 42,
+  "native_open_nets": 12,
+  "native_vias": 649,
+  "native_components": 227,
+  "native_ADDR2_pad_islands": 1,
+  "native_stage_pass": false,
+  "summary": "唯一新增Inner16参考缺口已原生局部5um折线修复并四层重铺保存关闭重开。当前951ce88a、严格DRC0间距/0物理/0网表、42项未连通12网、227件649孔；已重新取得正确PCB身份与227行同源原生CPL。正在以10nm圆弧精度对当前全部实地参考/DC/回流/铜非铜重查，尚不接受。保护网/器件/孔均未改，禁止重放任何已执行apply。",
+  "next_action": "读取ADDR2-ref-repaired-native-full-review-state.json及其真实PID；该审核运行时不并行大几何。完成后先核其结果和当前951哈希，补全所有实际新增/拆段LINE的物理与全宽参考核验；全部门通过再运行ADDR2-reference-repaired-checkpoint-finalize.py保存完整恢复/采购草稿并更新pcb自动唤醒。不能重开终态施工，不能复用fc参考上下文为951最终证明。",
+  "read_first": [
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-ref-repaired-native-full-review-state.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-one-reference-gap-repair-plan.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-ref-repair-readonly-recovered.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-reference-repaired-combined-plan.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-one-reference-gap-repair-expected.json"
+  ],
+  "native_session": "5a243ff6-0eb1-4ae9-849f-eed29297142e",
+  "parent_project_uuid": "cba3ed8b48ff9738f156a5f5e1c9d8904b6aa35e05e0068ede400fc8c6829384",
+  "manufacturing_release": false,
+  "physical_tests": "UNMEASURED",
+  "all_current_jobs_terminal": false
+}

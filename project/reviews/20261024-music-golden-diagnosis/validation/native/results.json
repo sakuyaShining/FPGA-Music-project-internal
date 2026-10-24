@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "tested_at": "2026-10-23T17:51:18.664502+00:00",
+  "source_origin_sha256": "c15b7ccdf5536d4fbd13d147a06c445284e28932ae3f5e51ba4197261bcc0df0",
+  "source_manifest_sha256": "1f32522e645feb27923a8c13f3e368e4d6434fc4ab908815f981b34732071887",
+  "runner_sha256": "590ad25fabe5af9d3e7df7bf4f6380cf2a83e655ffb90d06fc4d120d0f5daed0",
+  "results": {
+    "compat": {
+      "status": "DIFFERENT",
+      "bench_sha256": "3b5fac0d8123b419289aec2a08f6b1549758db02ea97293300260e084293f528",
+      "log": "PASS music cycles=193471 samples=374 events=8 changed_pcm=180 released_tail_pcm=40 fader_to_sound restore_exact state_preserved\nD:\\FPGA-Project\\review\\music-golden-20261024-01\\tb_compat_music.v:86: $finish called at 1934750000 (1ps)\n",
+      "comparison": {
+        "equal": false,
+        "differing_lines": 56495,
+        "first_difference": {
+          "line": 6662,
+          "expected": "6662 0 0 0 1 0009e0 0 1 02 43 0 0 0000 0 00000000 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "actual": "6662 0 0 0 1 000890 0 1 02 43 0 0 0000 0 00000000 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "changed_columns_zero_based": [
+            5
+          ]
+        },
+        "differing_column_counts": {
+          "5": 365,
+          "1": 56320
+        },
+        "expected_lines": 193475,
+        "actual_lines": 193475,
+        "reference_sha256": "7e73583d6483c46646d1942c352b53f760ecf92962cf4859833aeefe82bae47a",
+        "actual_sha256": "38b3cc162c45ad65c69f8584cfc1884a4c5253338e7b953e6ff6639619959313"
+      }
+    },
+    "layers": {
+      "status": "ERROR",
+      "error": "Traceback (most recent call last):\n  File \"C:/Users/Sakuya/.codex/outputs/long-task-20261024/diagnose_music_golden.py\", line 73, in main\n    log = common.run([common.VVP, str(output / (name + '.vvp')), '+trace=' + trace.as_posix()],\n  File \"D:\\FPGA-Project\\review\\music-golden-20261024-01\\common.py\", line 17, in run\n    log=out.stdout+out.stderr;(E/(name+'.log')).write_text(log,encoding='utf-8');assert out.returncode==0,(name,log)\nAssertionError: ('diagnosis-run-layers', 'FATAL: D:\\\\FPGA-Project\\\\review\\\\music-golden-20261024-01\\\\tb_layers.v:92: independent custom spectrum\\n       Time: 1682850000  Scope: tb_layers\\n')\n"
+    },
+    "sensor": {
+      "status": "DIFFERENT",
+      "bench_sha256": "87535fb487ed6043716fad316be7d1ffa1abf6f282d528eb7457309253b81f95",
+      "log": "PASS sensor_layers cycles=132707 samples=259 nonzero_pcm=145 reports=7 ons=6 offs=6 moves=1 pcm_hash=c65f962d startup_unknown_pcm=1 physical_words_to_real_pcm same_midi_endpoints independent_pitch continuous512\nD:\\FPGA-Project\\review\\music-golden-20261024-01\\tb_sensor_layers.v:80: $finish called at 1327070000 (1ps)\n",
+      "comparison": {
+        "equal": false,
+        "differing_lines": 22714,
+        "first_difference": {
+          "line": 58885,
+          "expected": "58885 0 0 0 1 001280 0 1 05 3c 0 0 0000 0 0000003f 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "actual": "58885 0 0 0 1 001020 0 1 05 3c 0 0 0000 0 0000003f 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "changed_columns_zero_based": [
+            5
+          ]
+        },
+        "differing_column_counts": {
+          "5": 145,
+          "1": 22638
+        },
+        "expected_lines": 132707,
+        "actual_lines": 132707,
+        "reference_sha256": "49c751154db87968a0b4bd7310a174b3d0f81fb0194837c81804b335e0ff1c08",
+        "actual_sha256": "5dad845b3454fe022e9988536cf96653212667a83ed901f4f31ec09599f67ce7"
+      }
+    }
+  },
+  "source_changes": [],
+  "tools": {
+    "iverilog": "Icarus Verilog version 14.0 (devel) ()\r\n\r\nCopyright (c) 2000-2026 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Preprocessor version 14.0 (devel) ()\r\n\r\nCopyright (c) 1999-2026 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\nIcarus Verilog Parser/Elaborator version 14.0 (devel) ()\r\n\r\nCopyright (c) 1998-2026 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n FLAGS DLL vvp.tgt\r\nvvp.tgt: Icarus Verilog VVP Code Generator 14.0 (devel) ()\r\n\r\nCopyright (c) 2001-2026 Stephen Williams (steve@icarus.com)\r\n\r\n  This program is free software; you can redistribute it and/or modify\r\n  it under the terms of the GNU General Public License as published by\r\n  the Free Software Foundation; either version 2 of the License, or\r\n  (at your option) any later version.\r\n\r\n  This program is distributed in the hope that it will be useful,\r\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\r\n  GNU General Public License for more details.\r\n\r\n  You should have received a copy of the GNU General Public License along\r\n  with this program; if not, write to the Free Software Foundation, Inc.,\r\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\r\n\r\n",
+    "vvp": ""
+  },
+  "all_golden_equal": false,
+  "hardware_accessed": false,
+  "product_acceptance": false
+}

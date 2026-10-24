@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "captured_at": "2026-10-23T23:03:57.346922+00:00",
+  "base_commit": "33a18189f4a5268498666d66c68dd7fbc032a071",
+  "source_branch": "codex/current-engineering-sources-20261023",
+  "role": "Incremental real-TDM resource audio probe, not full product",
+  "entry": "experiments/note_resource_20261024/audio/README.md",
+  "previous_manifest": "project/versions/note-resource-candidate-20261024.json",
+  "source_inputs": {
+    "experiments/note_resource_20261024/audio/ENGINE-SOURCE.json": "766a310d634f427ddb64b847b47e93636060be20ca8709d9b9258665e61722df",
+    "experiments/note_resource_20261024/audio/README.md": "1cfdb2414e6cf945fede5c197b5ec055de91927126e924c215c7b1c02980bcfb",
+    "experiments/note_resource_20261024/audio/rtl/note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+    "experiments/note_resource_20261024/audio/rtl/note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+    "experiments/note_resource_20261024/audio/rtl/tdm_engine_transactional.v": "0c356db56097529f6b735f7ca0489bc8e7ae9fbc0b0d75533944c1b33eed71ab",
+    "experiments/note_resource_20261024/audio/synthesize_audio.py": "224b1b8c0c6fea60360c3f9f4029202b36fb446090d382624417070d6cff280f",
+    "experiments/note_resource_20261024/audio/tb/tb_audio_compat.v": "f2e4dc8f0d964c9a7a8fc3710858803a0f059320b4805812aa9b352cba2348e8",
+    "experiments/note_resource_20261024/audio/tb/tb_note_audio.v": "ac2d636b330967d4457ecf3d4590213566eaf6fe5feec9806ec3905db577d75e",
+    "experiments/note_resource_20261024/audio/tests/test_audio_guards.py": "106c754b310c4495562a70e05a391bbf96ac2b8182fc5ecfddfb836f3a4e5f7c",
+    "experiments/note_resource_20261024/audio/verify_audio.py": "f6381ec9ec105b58bff7a9189456132414fc5967fa18a56205116a1fec29cc30"
+  },
+  "tested_dependency_inputs": {
+    "experiments/note_resource_20261024/audio/rtl/note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+    "experiments/note_resource_20261024/audio/rtl/note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+    "experiments/note_resource_20261024/audio/rtl/tdm_engine_transactional.v": "0c356db56097529f6b735f7ca0489bc8e7ae9fbc0b0d75533944c1b33eed71ab",
+    "experiments/note_resource_20261024/audio/tb/tb_audio_compat.v": "f2e4dc8f0d964c9a7a8fc3710858803a0f059320b4805812aa9b352cba2348e8",
+    "experiments/note_resource_20261024/audio/tb/tb_note_audio.v": "ac2d636b330967d4457ecf3d4590213566eaf6fe5feec9806ec3905db577d75e",
+    "experiments/note_resource_20261024/audio/verify_audio.py": "f6381ec9ec105b58bff7a9189456132414fc5967fa18a56205116a1fec29cc30",
+    "experiments/note_resource_20261024/audio/ENGINE-SOURCE.json": "766a310d634f427ddb64b847b47e93636060be20ca8709d9b9258665e61722df",
+    "experiments/note_resource_20261024/rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+    "fpga/current/engine/src/tdm_engine_rh.v": "9290a473fca973750194915cae8d0f36622c9631f4dfeada7019d482314e409c",
+    "fpga/current/engine/src/osc_env.v": "9485d37ad07da973257668de80e79dfb10cbf63ea66863f9deb90e1a0260a5f2",
+    "fpga/current/engine/src/pitch_mod.v": "6855fafe33b2942216f53738bf9d1c986c1d4151e5e4e6a5ef22ae8d79d85f02",
+    "fpga/current/engine/src/pitch_native_store.v": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+    "fpga/current/engine/src/vel_shape.v": "5bedde0793a2afbb22f45f6fcde503e7e1b03842091dcc2a96841f450a75ddcd",
+    "fpga/current/engine/src/sine256.hex": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+    "fpga/current/engine/src/note_inc.hex": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+    "fpga/current/engine/src/preset_part.hex": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+    "fpga/current/engine/src/vel_wtab.hex": "5daaea0d56b0e88ccbfc5161821dbafd7f9439315ef4c3d32a2007f4fd6f7160",
+    "fpga/current/tb/vendor_ram16sdp4.v": "8ca2165b7d833f4db03edbe1291b8faafb50096c9622f4397dc7cca3d1244670"
+  },
+  "decision": "D-019-SHARED-INSTANCE-TAIL-FIRST",
+  "contract": {
+    "path": "project/NOTE-RESOURCE-CONTRACT.md",
+    "sha256": "0e9b1b85c457414b2bc54476fe195d0d0ab45521f964d9766a0fb91c99902a1b"
+  },
+  "verification": {
+    "record": "project/reviews/20261024-note-resource-audio/validation/attempt02/results.json",
+    "legacy_checked_clocks": 177951,
+    "external_requests": 546,
+    "pcm_frames": 4093,
+    "nonzero_pcm_frames": 4059,
+    "publications": 551,
+    "retirements": 6,
+    "max_request_response_clocks": 3547,
+    "unit_tests": 53,
+    "detected_faults": [
+      "early-consume",
+      "ignore-kill",
+      "early-finish",
+      "partial-token"
+    ],
+    "independent_full_pcm_oracle": false,
+    "synthetic_provider": true
+  },
+  "synthesis": {
+    "record": "project/reviews/20261024-note-resource-audio/synthesis/results.json",
+    "resources": {
+      "logic": 9749,
+      "LUT": 8434,
+      "ALU": 667,
+      "RAM16": 108,
+      "REG": 4122,
+      "BSRAM": 11,
+      "DSP": 5
+    },
+    "full_product_fit": false
+  },
+  "pending_user_rule": "About0.5ms steal fade is a proposal awaiting direct human reply, not an approved default.",
+  "incomplete": [
+    "Runtime slot/note partial-data renderer and configuration snapshot",
+    "Physical finger edge/move and live/score event routing",
+    "Independent full PCM oracle and audible stealing transients",
+    "Complete device peripherals, recording/files and nonvolatile editor",
+    "Complete-top resource budget, PnR/STA, candidate bitstream and physical acceptance"
+  ],
+  "unchanged_engineering_manifest": "project/versions/engineering-sources-20261023.json",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

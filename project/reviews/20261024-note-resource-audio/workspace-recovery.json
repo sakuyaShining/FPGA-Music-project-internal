@@ -1,0 +1,26 @@
+{
+  "c_drive_failure": "Observe wrote a truncated JSON then raised OSError28; preserved .partial, not accepted as an observation.",
+  "partial_sha256": "093ab924f0786c8f5c14a22c37a983ac8f3f5c8eaeb1935b43acb9458e00acc6",
+  "recovery": "Moved only own generated, inactive host-test virtual environment to D drive, verified all5048 file hashes; no project or historical evidence deleted.",
+  "source": "C:/Users/Sakuya/.codex/outputs/collaboration-20261024-venv",
+  "destination": "D:\\FPGA-Project\\review\\relocated-local-tools-20261024\\collaboration-20261024-venv",
+  "before_manifest": {
+    "path": "D:\\FPGA-Project\\review\\relocated-local-tools-20261024\\before.json",
+    "sha256": "f6b9c63b1d33a616f6cb268fe7896169e7882511a0b6dde39b484df93ed9bf9d"
+  },
+  "after": {
+    "path": "D:\\FPGA-Project\\review\\relocated-local-tools-20261024\\after.json",
+    "sha256": "4b82477ab240056d5e8aca54fb6b8b001d12200adb42fa2495aa2fd4a72568a4",
+    "result": {
+      "status": "ALL_FILE_HASHES_MATCH",
+      "files": 5048,
+      "source_exists": false,
+      "checked_at": "2026-10-23T22:59:18.3395851+00:00"
+    }
+  },
+  "emergency_source_archive": {
+    "path": "D:/FPGA-Project/review/note-resource-audio-uncommitted-20261024-01.zip",
+    "sha256": "2646b5173f06619d93b56a9f872a78e0200155d5130b3b360f60ee1cfee7fc67"
+  },
+  "note": "Old host-test executable path in immutable historical logs is an origin, not a current runnable environment. System disk headroom is still small."
+}

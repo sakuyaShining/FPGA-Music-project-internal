@@ -7,7 +7,7 @@
     "source_branch": "codex/current-engineering-sources-20261023",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-23T15:02:03.630221+00:00",
+  "updated_at": "2026-10-24T15:34:50.716774+00:00",
   "entry": "project/CURRENT.md",
   "predecessor_state": "codex/project-version-closure:project/state.json",
   "implementation_boundary": "This registry does not merge or change any functional source",
@@ -124,9 +124,64 @@
       "product_accepted": false,
       "validation_inherited": false,
       "programming_allowed": false
+    },
+    "note_resource_unit_candidate": {
+      "role": "isolated-development-candidate",
+      "manifest": "project/versions/note-resource-candidate-20261024.json",
+      "entry": "experiments/note_resource_20261024/README.md",
+      "review": "project/reviews/20261024-note-resource-candidate/review.json",
+      "status": "UNIT_VERIFIED_MOCK_BACKEND_ONLY",
+      "product_accepted": false,
+      "programming_allowed": false
+    },
+    "note_resource_audio_candidate": {
+      "role": "isolated-development-candidate",
+      "manifest": "project/versions/note-resource-audio-20261024.json",
+      "entry": "experiments/note_resource_20261024/audio/README.md",
+      "review": "project/reviews/20261024-note-resource-audio/review.json",
+      "status": "REAL_AUDIO_DIGITAL_PROBE_VERIFIED_RENDERER_AND_TIMING_PENDING",
+      "product_accepted": false,
+      "programming_allowed": false
+    },
+    "note_partial_renderer_candidate": {
+      "role": "isolated-development-candidate",
+      "manifest": "project/versions/note-partial-renderer-20261024.json",
+      "entry": "experiments/note_resource_20261024/audio/renderer/README.md",
+      "review": "project/reviews/20261024-note-partial-renderer/review.json",
+      "status": "REAL_PAYLOAD_AND_AUDIO_CHAIN_VERIFIED_PHYSICAL_SOURCES_AND_TIMING_PENDING",
+      "product_accepted": false,
+      "programming_allowed": false
+    },
+    "note_input_router_candidate": {
+      "role": "isolated-development-candidate",
+      "manifest": "project/versions/note-input-router-20261024.json",
+      "entry": "experiments/note_resource_20261024/input/README.md",
+      "review": "project/reviews/20261024-note-input-router/review.json",
+      "status": "LOGICAL_INPUT_AUDIO_VERIFIED_PNR_PROCESS_FAILED_PHYSICAL_ADAPTERS_PENDING",
+      "product_accepted": false,
+      "programming_allowed": false
+    },
+    "note_contact_transport_candidate": {
+      "manifest": "project/versions/note-contact-transport-20261024.json",
+      "review": "project/reviews/20261024-contact-rtl/review.json",
+      "role": "Isolated contact-command RTL endpoint; actual frame/finger/score/audio integration absent",
+      "source_branch": "codex/current-engineering-sources-20261023",
+      "product_acceptance": false,
+      "programming_allowed": false
+    },
+    "note_frame_source_candidate": {
+      "manifest": "project/versions/note-frame-source-20261024.json",
+      "review": "project/reviews/20261024-frame-source/review.json",
+      "role": "Captured frame-format source plus contact ledger; allocation replies still stubs, full finger/real audio absent",
+      "source_branch": "codex/current-engineering-sources-20261023",
+      "product_acceptance": false,
+      "programming_allowed": false
     }
   },
   "active_fpga_profile": "fpga_live_unpublished",
   "design_state": "project/design-state.json",
-  "governance": "project/governance.json"
+  "governance": "project/governance.json",
+  "latest_incremental_fpga_profile": "note_input_router_candidate",
+  "latest_isolated_fpga_endpoint": "note_contact_transport_candidate",
+  "latest_frame_transport_profile": "note_frame_source_candidate"
 }

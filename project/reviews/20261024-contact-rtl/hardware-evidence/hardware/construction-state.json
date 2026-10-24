@@ -1,0 +1,216 @@
+{
+  "phase": "ADDR2_local_reference_repaired_full_actual_review_pending",
+  "source_project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+  "source_pcb_sha256": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e",
+  "source_manifest": {
+    "eprj3-intro.md": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+    "FPGA-Music-Dualscreen-Addr3Work-20261022.eprj3": "b4f73e7755876c6d2b7f1878945f043f18f2bf07d37caa42ca52d25a93bb37bf",
+    "panel/Panel1.epan2": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+    "pcb/PCB1.epcb2": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e",
+    "sch/Schematic1/01_Nano_headers.esch2": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+    "sch/Schematic1/02_Shift_and_memory.esch2": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+    "sch/Schematic1/03_Display_harnesses.esch2": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+    "sch/Schematic1/04_PCM5122_AUX.esch2": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+    "sch/Schematic1/05_Power.esch2": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+    "sch/Schematic1/06_Controls.esch2": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+    "sch/Schematic1/07_Scan_lane_0.esch2": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+    "sch/Schematic1/08_Scan_lane_1.esch2": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+    "sch/Schematic1/09_Scan_lane_2.esch2": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+    "sch/Schematic1/10_Scan_lane_3.esch2": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+    "sch/Schematic1/11_Scan_lane_4.esch2": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+    "sch/Schematic1/12_Scan_lane_5.esch2": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+    "sch/Schematic1/13_Power_off_isolation.esch2": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+    "sch/Schematic1/14_Protected_power_entry.esch2": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+    "sch/Schematic1/Schematic1.ecfg": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c"
+  },
+  "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+  "pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "native_mutated": true,
+  "manufacturing_release": false,
+  "physical_tests": "UNMEASURED",
+  "python_pid": null,
+  "session": "5a243ff6-0eb1-4ae9-849f-eed29297142e",
+  "parent_project_uuid": "cba3ed8b48ff9738f156a5f5e1c9d8904b6aa35e05e0068ede400fc8c6829384",
+  "initial_identity_guard_stop": "Copy has its own path-derived project UUID, recorded after verifying exact new session path; no mutation occurred before stop.",
+  "native_replay_forbidden": true,
+  "drc": {
+    "Connection Error": 42
+  },
+  "open_nets": [
+    "BUS_SCK",
+    "PRESET1",
+    "PRESET2",
+    "EDIT",
+    "ENC_A",
+    "ENC_B",
+    "ENC_PUSH",
+    "INPUT_LOAD_N",
+    "ADDR1",
+    "ADDR2",
+    "MUX_DISABLE",
+    "ADDR0",
+    "KEY_QH"
+  ],
+  "pdn_stage_pass": true,
+  "pdn_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\pdn-native-review.json",
+  "exact_layout_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\native-review.json",
+  "all_affected_control_nets_restored": false,
+  "verified_baseline_remains": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\native-state.json",
+  "next_action": "读取ADDR2-ref-repaired-native-full-review-state.json及其真实PID；该审核运行时不并行大几何。完成后先核其结果和当前951哈希，补全所有实际新增/拆段LINE的物理与全宽参考核验；全部门通过再运行ADDR2-reference-repaired-checkpoint-finalize.py保存完整恢复/采购草稿并更新pcb自动唤醒。不能重开终态施工，不能复用fc参考上下文为951最终证明。",
+  "updated_at": "2026-10-24T12:57:10.463178+08:00",
+  "running_tasks": [],
+  "regional_preset3_stage_pass": true,
+  "reference_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\native-review.json",
+  "reference_degradation": [],
+  "reference_comparisons": 432,
+  "remaining_control_nets": [
+    "BUS_SCK",
+    "INPUT_LOAD_N",
+    "KEY_QH",
+    "ENC_A",
+    "ENC_B",
+    "ENC_PUSH",
+    "PRESET1",
+    "PRESET2",
+    "EDIT"
+  ],
+  "actual_vias": 649,
+  "active_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-capture.json",
+  "active_drc": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-drc.json",
+  "latest_expected_capture": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\control-next-expected.json",
+  "latest_layout_plan": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\three-component-layout.json",
+  "native_package": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native-NOT-FOR-FAB.zip",
+  "native_wrapper": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\construction-native.py",
+  "wrapper_warning": "construction-native.py owns only this actual project/session. All prior imports and repair stages terminal. Do not replay them. No real active processes. Use accepted_control_plans in later full-board checks.",
+  "control_branches_stage_pass": true,
+  "accepted_control_plans": [
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\control-PRESET0-plan.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\control-C8-bottom-accepted-plan.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\control-pulldown-accepted-plan.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\mosi-main-accepted-plan.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\accepted-plan.json"
+  ],
+  "accepted_control_nets": [
+    "PRESET0",
+    "3V3_IO",
+    "BUS_RETURN",
+    "BUS_MOSI"
+  ],
+  "PRESET0_closed": true,
+  "control_next_stage_pass": true,
+  "latest_offline_method_change": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\control-method-change-checkpoint.json",
+  "accepted_copper_cleanups": [
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\control-clock-clear-plan.json"
+  ],
+  "accepted_component_plans": [
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\control-C8-bottom-accepted-plan.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\control-pulldown-accepted-plan.json"
+  ],
+  "assembly_side_counts": {
+    "Top_components": 224,
+    "Bottom_components": 3,
+    "Top_SMT": 212,
+    "Bottom_SMT": 3,
+    "TH": 12
+  },
+  "assembly_and_bottom_clearance_release_pending": true,
+  "partial_native_connectivity": [
+    {
+      "net": "BUS_SCK",
+      "before": [
+        [
+          "1fce0b750cb3eb48e49",
+          "758e53b3da433788e35",
+          "96febe5a2a2b7f80",
+          "98a56651b3a992e2e8",
+          "bd743bdbf480b556e6"
+        ],
+        [
+          "e44fc6d6d4918699e37"
+        ]
+      ],
+      "after": [
+        [
+          "1fce0b750cb3eb48e49",
+          "758e53b3da433788e35",
+          "96febe5a2a2b7f80",
+          "98a56651b3a992e2e8",
+          "bd743bdbf480b556e6"
+        ],
+        [
+          "e44fc6d6d4918699e37"
+        ]
+      ],
+      "original_partitions_preserved": true,
+      "whole_net_closed": false
+    },
+    {
+      "net": "BUS_MOSI",
+      "before": [
+        [
+          "758e53b3da433788e33"
+        ],
+        [
+          "1fce0b750cb3eb48e46"
+        ],
+        [
+          "bd743bdbf480b556e8"
+        ],
+        [
+          "ee89b86f6f64c19be8"
+        ],
+        [
+          "c709e215469b283e"
+        ]
+      ],
+      "after": [
+        [
+          "1fce0b750cb3eb48e46",
+          "758e53b3da433788e33",
+          "bd743bdbf480b556e8",
+          "c709e215469b283e",
+          "ee89b86f6f64c19be8"
+        ]
+      ],
+      "original_partitions_preserved": true,
+      "whole_net_closed": true
+    }
+  ],
+  "pulldown_and_testpad_stage_pass": true,
+  "connected_ground_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\mosi-main-connected-ground-review.json",
+  "MOSI_closed": true,
+  "cad_session_recovered_at": "2026-10-23T22:46:42.794565",
+  "offline_candidate_checkpoint": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\original-control-method-checkpoint.json",
+  "offline_candidate_source": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+  "offline_candidate_note": "Top90 C9 local pocket passes; full203-object restoration has25 physical conflicts. No native changes, no full candidate acceptance. All jobs terminal.",
+  "offline_review_updated_at": "2026-10-24T02:15:16.601566+08:00",
+  "offline_updated_at": "2026-10-24T04:32:34.034107+08:00",
+  "offline_checkpoint": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\calibrated-local-next.json",
+  "native_apply_allowed": false,
+  "native_changed_this_heartbeat": false,
+  "current_CPL_export": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\current-native-cpl-export-a3.json",
+  "current_procurement_scope": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\current-procurement-entry.json",
+  "actual_ground_reference_review": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\actual-ground-review.json",
+  "accepted_local_fanout_only": true,
+  "whole_board_verified": false,
+  "all_current_routing_jobs_terminal": true,
+  "latest_offline_work_state": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\calibrated-local-next.json",
+  "read_first": [
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\calibrated-local-next.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\U2-normalized-local-candidate.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\U2-normalized-local-expected.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\U2-distinct-junction-review-state.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\U2-distinct-junction-review.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\U2-junction-removal-connectivity-proof.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-U1-U2-trunk-work-state.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-U1-U2-trunk-domain-proof.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-U1-U2-separator-proof.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\native-antipad-model-correction.json",
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\U2-local-source-identity.json"
+  ],
+  "current_importable_candidate": false,
+  "current_offline_candidate": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\U2-normalized-local-candidate.json",
+  "offline_progress": "实际原生仍a3a258d0/49项未连通13网/227件620孔，本轮无CAD变更或原生连通改善，不可投板，实物UNMEASURED。离线U1局部方案已保留，并完成U2共享ADDR3结点与ADDR2出线/新回流孔联合候选：U2原共享Top与两Inner16支路均纳入声明恢复，ADDR3全部7脚重新同岛；合并U1后15条非零新线、删2增5孔（4信号+1地），ADDR2仍7个焊盘岛，主干尚未连通。U2新ADDR3孔67.79999902/13.0499993mm、ADDR2孔67.99297986/15.55467184mm，新地孔67.90850672/14.52100235mm；经实际DC地筛选的所需Ground15/Bottom接触均0.218876mm²，回流均<=1.5mm，局部物理/孔焊盘/钻孔/全宽最近实地参考与保留铜参考检查通过。新地孔Ground16接触仅0.004323mm²，此孔仅用于Top↔Inner16所需Ground15/Bottom参考对，绝不泛化到需要Ground16的换层。构造器在重合的Inner16端点产生一根零长度虚线，已从normalized候选明确剔除，原结果保留，禁止将零长度对象用于原生导入。MOSI/P0/P3/HARM/触控复位/47IO脚连通保持。该候选只通过局部离线校验，未经完整四层/全网/原生重铺，禁止直接apply。",
+  "model_correction": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\native-antipad-model-correction.json",
+  "latest_authoritative_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-reference-repair-current-next.json"
+}

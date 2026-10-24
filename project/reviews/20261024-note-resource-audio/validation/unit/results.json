@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "tests": 53,
+  "suites": [
+    {
+      "name": "governance",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_design_governance.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 20,
+      "log": "project/reviews/20261024-note-resource-audio/validation/unit/governance.log",
+      "sha256": "c1c60f1b2923d9cf99286f40fe9fd896481d419f52b93703d57bf0c60af8ec62"
+    },
+    {
+      "name": "engineering",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_engineering.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 6,
+      "log": "project/reviews/20261024-note-resource-audio/validation/unit/engineering.log",
+      "sha256": "5ce3578fdb8c68562578c01c6533cc003921ff4ddf791dbd9f94aa3b537ecfa6"
+    },
+    {
+      "name": "music-profiles",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_music_profiles.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 14,
+      "log": "project/reviews/20261024-note-resource-audio/validation/unit/music-profiles.log",
+      "sha256": "ba6f31f5c391f8938a06fa8f044395a08372e10725fd30df5e436d70590ab87c"
+    },
+    {
+      "name": "resource",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/tests",
+        "-p",
+        "test_reference.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 8,
+      "log": "project/reviews/20261024-note-resource-audio/validation/unit/resource.log",
+      "sha256": "9cb6da62f63750719e20df761942dc61bb27d6f9dcb5712edd0530cb169acfcd"
+    },
+    {
+      "name": "audio-guards",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/audio/tests",
+        "-p",
+        "test_audio_guards.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 5,
+      "log": "project/reviews/20261024-note-resource-audio/validation/unit/audio-guards.log",
+      "sha256": "53fa1db2e68cf4735a4e0c2ab2d90cc61cba770a735a873d36b5b0eec9b806b1"
+    }
+  ]
+}

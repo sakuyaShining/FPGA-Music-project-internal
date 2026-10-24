@@ -12,7 +12,7 @@
 
 1. 阅读本页和根目录AGENTS.md，再读协作板，确认负责人及路径边界。
 2. 运行`python tools/scripts/project_control.py check`。需要核验全部保全内容时加`--full`。
-3. 根据下表选择版本，按`project/versions/workspace-preservation-20261022.json`中的commit和manifest取回。**不要按文件修改时间选择“最新版”。**
+3. 当前产品与任务先读PRODUCT-SPEC.md、SOURCE-MAP.md及WORK-PLAN.md，默认工程用三个current目录与engineering清单；下表和workspace-preservation仅为对应历史版本取回。**不要按文件修改时间选择“最新版”。**
 4. 具体功能目标见38、39、49号文档及其后续已确定决定；Nano20K预算与完整功能缺口见4d37快照的87、88号文档。编号撞号时必须同时标注来源分支和完整文件名。
 
 ## 目标与约束
@@ -56,7 +56,7 @@ python tools/scripts/project_control.py restore --snapshot 4d37 --output D:/FPGA
 
 ## GitHub与协作
 
-- 共享内部远程：`internal`。本次已通过GitHub API核实仓库为private。
+- 共享目标远程：`internal`。用户已将仓库公开；GitHub API核实visibility为public。核对实际URL而不是仅看名称。
 - origin/public指向对外发布地址；对外发布另走审查导出流程。
 - main按既有约定由用户合并。保存分支不等于合入main，源码捕获不等于功能验收。
 - 每个任务使用命名分支，记录owner、源清单、验证边界、远程实际提交和下一步。
@@ -71,3 +71,7 @@ python tools/scripts/project_control.py restore --snapshot 4d37 --output D:/FPGA
 3. 审查音乐安全修复、GUI/协议与当前探针的差异，按行为回归逐项接合；不批量合并全部历史提交。
 4. 向真实产品顶层与完整资源/时序预算推进，独立验证J10触控显示、录放、非易失及完整控制链；J11实体可视化屏已取消。
 5. 后续再整理目录和清理工作树。此次1—3步没有移动活跃工程或清理构建产物。
+
+最新4d37隔离增量从`experiments/note_resource_20261024/audio/renderer/README.md`及`project/versions/note-partial-renderer-20261024.json`接手：真实四槽/音符分量→PCM已限定验证，尚缺手指/曲谱源、激发自动OFF、完整顶层/PnR/STA。T02与D-019三项已收口，不重复定位或重问；P-020短淡出仍未批准。新硬件原生a3a258/49项13网的只读保全与旧hardware/current e098/47项必须分开。PR4候选不等于main。
+
+最新来源路由入口：`experiments/note_resource_20261024/input/README.md`及`project/versions/note-input-router-20261024.json`。547请求/68单测/同源综合是限定结果；物理来源仍待适配，PnR路由进程异常/无有效STA。旧goal的usageLimited登记不等于实际普通额度；每轮核实实际ordinaryUsageAllowed，不改goal状态、不消费重置券。

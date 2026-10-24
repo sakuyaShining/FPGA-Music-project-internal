@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "extracted_at": "2026-10-23T17:30:16.125097+00:00",
+  "source": "WorkBuddy local JSONL; technical user_query excerpts only",
+  "session_id": "e3deb9da-523f-4571-b7cf-7a0346ab6cb7",
+  "source_sha256": "05c0da6535883b2c9c93266ac8c6138993889e161bfae5eafed6ffbaa9ca58a7",
+  "excerpts": {
+    "standalone": {
+      "message_id": "01a1644e-8f4a-7759-8d10-0d9b7ca38b98",
+      "line": 4621,
+      "timestamp_ms": 1792684231669,
+      "role": "user",
+      "quote": "我不希望这个项目有除了音乐可视化以外的上位机强依赖功能 所以Q1应该再考虑 同时 我希望做的是一个”通用乐器“而不只是”听起来很像钟“”很像打击乐“ 当然 如果打击乐实在难以兼顾 那么 优先保证像是钢琴小提琴等乐器的效果"
+    },
+    "score-and-playback": {
+      "message_id": "01a1670c-d261-729b-9f2f-d9bbe0d022f6",
+      "line": 7199,
+      "timestamp_ms": 1792730254878,
+      "role": "user",
+      "quote": "但是PCB板已经做出改变了 RA8875 我最终选择 放弃 也就是可视化功能放弃\n曲谱指引则给到触控屏进行显示 毕竟在编辑状态 应该没人会想要构造泛音\n四槽叠加实现是否具有可行性 以及如何有更好的效果？这和曲谱录制很接近 因为我希望他在录入演奏 并播放的时候 依旧能够进行演奏\n现在进行双端衰减\nB5接rc_mux_scan给我解释清楚后再动工"
+    },
+    "q-combination": {
+      "message_id": "01a16764-5c57-7561-bd53-e302c2cd7dca",
+      "line": 7727,
+      "timestamp_ms": 1792735991632,
+      "role": "user",
+      "quote": "Q2=A + Q1=C + Q3=B + Q4=B + Q5=A + Q6=A的功能覆盖很好 那么能不能降低其工程风险？"
+    },
+    "independent-controls": {
+      "message_id": "01a16817-386a-7baa-9671-ca98c4989eef",
+      "line": 8233,
+      "timestamp_ms": 1792747714487,
+      "role": "user",
+      "quote": "好 只要能够保持独立键就行 还有那几个开关为什么关着？\n为了保持目标 根据我们目前所讨论的设计 防止功能丢失等问题 你先规划一个完整的FPGA代码最终可验证的完成验收标准吧"
+    },
+    "editing-flow": {
+      "message_id": "01a168a3-685d-7039-bcb2-69335fd11a4d",
+      "line": 8268,
+      "timestamp_ms": 1792756901329,
+      "role": "user",
+      "quote": "那么 你知道我设想的编辑模式是：按下编辑按钮后选择一个预设按钮 进行激励方式和音色的编辑吗"
+    },
+    "aux-and-product": {
+      "message_id": "01a168ce-a129-78ef-bbf2-99886a911f34",
+      "line": 8481,
+      "timestamp_ms": 1792759733655,
+      "role": "user",
+      "quote": "实体机侧我不太打算接一个喇叭了 不是说使用AUX接口吗\n触控屏你推荐哪个？\n还有 为什么我感觉你给我的清单就好像是原型实验一样 我不要做原型实验"
+    }
+  },
+  "interpretation_limits": [
+    "The older RA8875 cancellation phrase is superseded by D-010; score guidance and play-while-performing remain targets.",
+    "A Q-combination derisking question is not approval of feature removal, delays or subsequent author-specific rules.",
+    "Independent controls do not approve PCF8575, sixteen keys or a new pin map.",
+    "AUX/internal-speaker wording is a preference; no circuit deletion authorized."
+  ]
+}

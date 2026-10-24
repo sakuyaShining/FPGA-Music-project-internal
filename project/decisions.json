@@ -119,6 +119,148 @@
         "sha256": "e21161fe8152fc07a9ccb533250167fa1d4335ee2d680e54f9fa0627dc277565",
         "authority": "Direct human reply to the explicit controller-route ambiguity in this conversation"
       }
+    },
+    {
+      "id": "D-011-STANDALONE",
+      "status": "accepted",
+      "statement": "Core instrument functions must not strongly depend on a host; music visualization may use a host.",
+      "facts": {
+        "standalone_core": true
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a1644e-8f4a-7759-8d10-0d9b7ca38b98",
+        "excerpt": "standalone"
+      }
+    },
+    {
+      "id": "D-012-EDIT-FLOW",
+      "status": "accepted",
+      "statement": "Press edit, choose a preset slot, then edit excitation and timbre; detailed preview/apply/save behavior remains open.",
+      "facts": {
+        "edit_entry": "edit button -> preset slot -> excitation and timbre"
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a168a3-685d-7039-bcb2-69335fd11a4d",
+        "excerpt": "editing-flow"
+      }
+    },
+    {
+      "id": "D-013-INDEPENDENT-CONTROLS",
+      "status": "accepted",
+      "statement": "Keep independent operation controls; specific key count, controller and pin map are not approved by this statement.",
+      "facts": {
+        "independent_controls": true
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a16817-386a-7baa-9671-ca98c4989eef",
+        "excerpt": "independent-controls"
+      }
+    },
+    {
+      "id": "D-014-SCORE-ON-J10",
+      "status": "accepted",
+      "statement": "Score guidance uses the retained touchscreen; playback must allow simultaneous live performance. Older controller-cancellation wording does not override D-010.",
+      "facts": {
+        "score_guidance_display": "J10"
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a1670c-d261-729b-9f2f-d9bbe0d022f6",
+        "excerpt": "score-and-playback"
+      }
+    },
+    {
+      "id": "P-015-AUX-PREFERENCE",
+      "status": "proposed",
+      "statement": "User favors AUX and no internal speaker; output scope and physical implementation require closure, no amplifier branch deletion authorized.",
+      "facts": {},
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a168ce-a129-78ef-bbf2-99886a911f34",
+        "excerpt": "aux-and-product"
+      }
+    },
+    {
+      "id": "P-016-Q-COMBINATION",
+      "status": "proposed",
+      "statement": "Direct human discussion of Q2=A/Q1=C/Q3=B/Q4=B/Q5=A/Q6=A is located; the question asks to lower engineering risk, not to accept later cuts or all rule drafts.",
+      "facts": {},
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a16764-5c57-7561-bd53-e302c2cd7dca",
+        "excerpt": "q-combination"
+      },
+      "later_constraints": [
+        "D-018-SCORE-LIVE-OLDEST",
+        "D-019-SHARED-INSTANCE-TAIL-FIRST"
+      ]
+    },
+    {
+      "id": "D-017-COMPLETE-PRODUCT",
+      "status": "accepted",
+      "statement": "Deliver a complete instrument rather than a prototype experiment; manufacturing remains separately gated.",
+      "facts": {
+        "complete_product_target": true
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-specification-alignment/evidence/user-requirements.json",
+        "sha256": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+        "authority": "Direct human WorkBuddy user_query; message 01a168ce-a129-78ef-bbf2-99886a911f34",
+        "excerpt": "aux-and-product"
+      }
+    },
+    {
+      "id": "D-018-SCORE-LIVE-OLDEST",
+      "status": "superseded",
+      "statement": "Score playback and live performance coexist like four-hand playing. When polyphony or group capacity is reached, discard the first sounding note by start order; no automatic two-layer playback cap is approved.",
+      "facts": {
+        "score_playback_with_live_performance": true,
+        "overflow_note_order": "discard earliest-started sounding note"
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-music-golden-diagnosis/evidence/score-live-overflow.json",
+        "sha256": "546bef63973d84a7d0c179317bfa77720a56d566e4b42e8a602c19c33ba1b6f0",
+        "authority": "Direct human confirmation and added requirement in the current conversation"
+      }
+    },
+    {
+      "id": "D-019-SHARED-INSTANCE-TAIL-FIRST",
+      "status": "accepted",
+      "supersedes": "D-018-SCORE-LIVE-OLDEST",
+      "statement": "Score and live performance share the32-group budget equally; retire whole multi-layer note instances and start new notes completely. Prefer truly free resources, then released tails, then earliest-started held notes. No fixed source partition or automatic two-layer cap.",
+      "facts": {
+        "score_playback_with_live_performance": true,
+        "overflow_note_order": "free groups -> released-tail instances -> oldest held instance",
+        "allocation_source_priority": "equal score and live",
+        "whole_note_retirement": true,
+        "complete_note_admission": true
+      },
+      "evidence": {
+        "path": "project/reviews/20261024-music-profiles-allocation/evidence/shared-resource-confirmation.json",
+        "sha256": "fc03b58fececdd9822d400ac95beca14524c7254008ca24813ceff703e498d46",
+        "authority": "Three direct human choices in the current conversation"
+      }
+    },
+    {
+      "id": "P-020-STEAL-FADE",
+      "status": "proposed",
+      "blocking": false,
+      "statement": "Agent proposes about0.5ms short fade before whole-note retirement and complete new-note start; direct human answer pending. Existing immediate-kill experiment is not final click-free product behavior.",
+      "facts": {},
+      "evidence": {
+        "path": "project/reviews/20261024-note-resource-audio/steal-fade-proposal.json",
+        "sha256": "f7d36868ed623e7acf39231c1177d6bd73ad3b85caf6af580618ff136243dfde",
+        "authority": "Agent proposal, explicitly not accepted by human"
+      }
     }
   ]
 }

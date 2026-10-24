@@ -10,7 +10,7 @@
         "thread_id": null,
         "label": "Independent FPGA session; exact session identity not registered"
       },
-      "publication_status": "UNMERGED_WIP_WITH_OLDER_RECOVERY_ARCHIVE",
+      "publication_status": "CHECKPOINT_ON_MAIN_FUTURE_LIVE_CHANGES_REQUIRE_REVIEW",
       "observation_max_hours": 6,
       "recovery_manifest": "project/versions/latest-design-inputs-20261023.json",
       "published_ref": null,
@@ -255,8 +255,17 @@
             ".txt"
           ],
           "max_bytes": 200000
+        },
+        {
+          "path": "engine/src/vel_wtab.hex.bak-20261023"
         }
-      ]
+      ],
+      "engineering_manifest": "project/versions/engineering-sources-20261023.json",
+      "published_checkpoint": {
+        "branch": "main",
+        "commit": "100b35bd93cbde6d604a289d990f208622e94646",
+        "limits": "Fixed engineering checkpoint merged via PR3; future live edits are not automatically published."
+      }
     },
     {
       "id": "hardware",
@@ -309,6 +318,54 @@
         {
           "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/native-touch-reset-WORK-IN-PROGRESS.zip"
         }
+      ],
+      "engineering_manifest": "project/versions/engineering-sources-20261023.json",
+      "published_checkpoint": {
+        "branch": "main",
+        "commit": "100b35bd93cbde6d604a289d990f208622e94646",
+        "limits": "Fixed engineering checkpoint merged via PR3; future live edits are not automatically published."
+      }
+    },
+    {
+      "id": "fpga-v1-intake",
+      "activity": "active",
+      "root": "D:/FPGA-Project/authoritative-20261024",
+      "owner": {
+        "thread_id": null,
+        "label": "Separate v1 documentation intake workspace; exact owner session not verified"
+      },
+      "publication_status": "UNMERGED_V1_DOCUMENTATION_NOT_PRODUCT_OR_PROGRAMMING_APPROVAL",
+      "observation_max_hours": 6,
+      "recovery_manifest": "project/reviews/20261024-contact-contract-intake/intake-summary.json",
+      "published_ref": null,
+      "publication_note": "Observe the exact published intake ref and local HEAD separately in intake-summary; never use the directory name authoritative as a grant of main authority.",
+      "exclude_dirs": [".git", "__pycache__", "node_modules"],
+      "exclude_prefixes": ["build_", "synth_"],
+      "watch": [
+        {"path": "docs/02-技术方案/91-产品规格与使用规则-v1-20261024.md"},
+        {"path": "fpga/current/README.md"},
+        {"path": "hardware/current/context/pin-map-audit-20261024.md"}
+      ]
+    },
+    {
+      "id": "hardware-native-handoff",
+      "activity": "active",
+      "root": "D:/FPGA-Project/codex-deliverables/dual-screen-review-20261020-v2/u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/address1-joint-fanout",
+      "owner": {
+        "thread_id": null,
+        "label": "Native hardware handoff referenced by the registered06df producer; exact current owner thread unverified"
+      },
+      "publication_status": "OWNER_NATIVE_HANDOFF_ONLY_FULL_REVIEW_FAILED_NOT_MANUFACTURING_RELEASE",
+      "observation_max_hours": 6,
+      "recovery_manifest": "project/reviews/20261024-contact-rtl/hardware-intake.json",
+      "published_ref": null,
+      "publication_note": "Observe exact handoff metadata, not the live CAD model. Native951 source identity is an owner-reported observation; no whole-board validation or recoverable current native archive is inferred.",
+      "exclude_dirs": [".git", "__pycache__", "node_modules"],
+      "exclude_prefixes": ["build_", "synth_"],
+      "watch": [
+        {"path": "ADDR2-reference-repair-current-next.json"},
+        {"path": "ADDR2-ref-repaired-native-full-review-state.json"},
+        {"path": "ADDR2-ref-repair-readonly-recovered.json"}
       ]
     },
     {

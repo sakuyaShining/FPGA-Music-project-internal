@@ -1,0 +1,80 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project D:/FPGA-Project/review/rendered-instrument-synthesis-20261024-03/instrument.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_partial_renderer.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_instrument_probe.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\vel_shape_scaled.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_audio_backend.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_audio_probe.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_mgr.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\osc_env.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\pitch_mod.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\pitch_native_store.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\instrument_table.v'
+Analyzing Verilog file 'D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\vel_shape.v'
+Compiling module 'note_resource_instrument_probe'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_instrument_probe.v":1)
+Compiling module 'note_partial_renderer'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_partial_renderer.v":1)
+Extracting RAM for identifier 'note_rom'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_partial_renderer.v":69)
+Extracting RAM for identifier 'preset_rom'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_partial_renderer.v":70)
+Extracting RAM for identifier 'tilt_rom'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_partial_renderer.v":71)
+Compiling module 'instrument_table'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\instrument_table.v":3)
+Extracting RAM for identifier 'words'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\instrument_table.v":13)
+Compiling module 'vel_shape_scaled'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\vel_shape_scaled.v":27)
+Extracting RAM for identifier 'wtab'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\vel_shape_scaled.v":82)
+Compiling module 'note_resource_audio_probe'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_audio_probe.v":1)
+Compiling module 'note_resource_mgr'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_mgr.v":1)
+Extracting RAM for identifier 'entry_tokens'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_mgr.v":48)
+Extracting RAM for identifier 'entry_masks'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_mgr.v":48)
+Extracting RAM for identifier 'entry_layers'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_mgr.v":49)
+Extracting RAM for identifier 'entry_maps'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_mgr.v":50)
+Extracting RAM for identifier 'order'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_mgr.v":51)
+Extracting RAM for identifier 'source_serial'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_mgr.v":58)
+Compiling module 'note_audio_backend'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_audio_backend.v":1)
+WARN  (EX3073) : Port 'update_overrun' remains unconnected for this instance("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":701)
+Compiling module 'tdm_engine_transactional(NSLOT=512,GAIN_UP=4,PART=16,FINGER_EXPR=1,EXPLICIT_START=1,INSTRUMENT_ENV=1,TRANSACTIONAL=1,RIGHT_TIMBRE=1)'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":63)
+Extracting RAM for identifier 'phase_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":172)
+Extracting RAM for identifier 'inc_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":173)
+Extracting RAM for identifier 'env_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":174)
+Extracting RAM for identifier 'stg_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":175)
+Extracting RAM for identifier 'gcur_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":176)
+Extracting RAM for identifier 'gq_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":177)
+Extracting RAM for identifier 'amp_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":178)
+Extracting RAM for identifier 'kill_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":219)
+Extracting RAM for identifier 'pv_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":223)
+Extracting RAM for identifier 'pp_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":224)
+Extracting RAM for identifier 'pg_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":225)
+Extracting RAM for identifier 'pi_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":226)
+Extracting RAM for identifier 'pa_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":227)
+Extracting RAM for identifier 'pe_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":228)
+Extracting RAM for identifier 'epar_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":254)
+Extracting RAM for identifier 'pgq_mem'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":259)
+Extracting RAM for identifier 'sine_tab'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":261)
+Extracting RAM for identifier 'finger_held'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\tdm_engine_transactional.v":719)
+Compiling module 'osc_env'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\osc_env.v":55)
+Compiling module 'pitch_mod(CLAMP_LO=18'sb100100000000000000,CLAMP_HI=18'sb011111111111111111)'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\pitch_mod.v":42)
+Compiling module 'pitch_native_store'("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\pitch_native_store.v":4)
+NOTE  (EX0101) : Current top module is "note_resource_instrument_probe"
+[5%] Running netlist conversion ...
+WARN  (CV0020) : Input tilt[3:0] is unused("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_instrument_probe.v":29)
+WARN  (CV0016) : Input tilt_vbias is unused("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_instrument_probe.v":30)
+WARN  (CV0016) : Input tilt_vgain is unused("D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\note_resource_instrument_probe.v":31)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\impl\gwsynthesis\instrument.vg" completed
+[100%] Generate report file "D:\FPGA-Project\review\rendered-instrument-synthesis-20261024-03\impl\gwsynthesis\instrument_syn.rpt.html" completed
+GowinSynthesis finish

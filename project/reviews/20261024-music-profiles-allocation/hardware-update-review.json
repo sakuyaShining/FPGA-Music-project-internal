@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-23T18:35:07.327354+00:00",
+  "previous_review": "project/reviews/20261024-music-profiles-allocation/review.json",
+  "previous_review_sha256": "49467f905c3ef8cfd52c308394ab1436a5324ade4e7a000d29a74cbcc099604a",
+  "raw_observation": "project/reviews/20261024-music-profiles-allocation/hardware-update-observation.json",
+  "raw_observation_sha256": "159f8e339c8817f9e279ea6f89d7c79e1df93ff2211d46b43730ec24a05220f8",
+  "producer_ids": [
+    "fpga",
+    "hardware"
+  ],
+  "changes_since_previous_review": {
+    "fpga": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": [
+        "AUTONOMOUS-CURRENT.md",
+        "REGIONAL-WORK-IN-PROGRESS.json",
+        "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md",
+        "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json"
+      ]
+    }
+  },
+  "evidence": {
+    "project/reviews/20261024-music-profiles-allocation/hardware-update-evidence.json": "ec04d5e4b696635e20537f8dadc9491627ea98309f94232bf7b1a23430872381",
+    "project/reviews/20261024-music-profiles-allocation/review.json": "49467f905c3ef8cfd52c308394ab1436a5324ade4e7a000d29a74cbcc099604a"
+  },
+  "assessment": {
+    "fpga": "Declared producer inputs unchanged; profile verification and D-019 decisions remain bound to the preceding review.",
+    "hardware": "Four context/state documents changed. Recorded saved native remains e098/47issues/13nets. Offline Top90 C9/control restoration candidate still has physical conflicts and incomplete P3/MOSI; not a passed native revision. No routing job or unsaved CAD status inferred from metadata alone.",
+    "scope": "Fresh actual hash observation and read-only technical review; no file edits in producer roots. Earlier unchanged-source claims apply to captured product inputs and our non-modification, not a claim that other owners never change context.",
+    "manufacturing": "No CAD operations or fresh DRC performed here; fabrication and physical acceptance remain blocked."
+  },
+  "product_acceptance": false,
+  "hardware_accessed": false,
+  "new_cad_operations": false
+}

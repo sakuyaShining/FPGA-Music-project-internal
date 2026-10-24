@@ -1,0 +1,56 @@
+{
+  "tests": 40,
+  "results": [
+    {
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_design_governance.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 20,
+      "log": "project/reviews/20261024-music-profiles-allocation/validation/unit/test_design_governance.log",
+      "sha256": "48be5e999198ef47a47cd0e8e5235120f59bbdc2a2fcac77a7a583b41f10dc81"
+    },
+    {
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_engineering.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 6,
+      "log": "project/reviews/20261024-music-profiles-allocation/validation/unit/test_engineering.log",
+      "sha256": "b892024642f558216a9c40dd64cf9d4ed318a590dfaf84837c5b6d754f96a525"
+    },
+    {
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_music_profiles.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "tests": 14,
+      "log": "project/reviews/20261024-music-profiles-allocation/validation/unit/test_music_profiles.log",
+      "sha256": "c411d0302ccefd90e92d191eb82cac0996ac492287c37b383d3bbc442e58ad5c"
+    }
+  ]
+}
