@@ -70,3 +70,5 @@ python tools/scripts/project_control.py restore --snapshot m1-work --with-source
 提交源与清单，核对internal实际远程提交，更新当前profile/交接和下一步。新结果只绑定实际测试的源；新变化如果尚未接入总入口，明确标为未登记WIP，不能宣称下一位Agent会自动读到它。
 
 最新4d37隔离增量从`experiments/note_resource_20261024/audio/renderer/README.md`及`project/versions/note-partial-renderer-20261024.json`接手：真实四槽/音符分量→PCM已限定验证，尚缺手指/曲谱源、激发自动OFF、完整顶层/PnR/STA。T02与D-019三项已收口，不重复定位或重问；P-020短淡出仍未批准。新硬件原生a3a258/49项13网的只读保全与旧hardware/current e098/47项必须分开。PR4候选不等于main。
+
+最新来源路由入口：`experiments/note_resource_20261024/input/README.md`及`project/versions/note-input-router-20261024.json`。547请求/68单测/同源综合是限定结果；物理来源仍待适配，PnR路由进程异常/无有效STA。旧goal的usageLimited登记不等于实际普通额度；每轮核实实际ordinaryUsageAllowed，不改goal状态、不消费重置券。

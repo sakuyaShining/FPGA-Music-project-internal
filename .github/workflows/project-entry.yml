@@ -38,6 +38,8 @@ jobs:
         run: python3 -m unittest discover -s experiments/note_resource_20261024/audio/tests -v
       - name: Verify real partial renderer arithmetic and mutation guards
         run: python3 -m unittest discover -s experiments/note_resource_20261024/audio/renderer/tests -v
+      - name: Verify tagged input router and incomplete STA rejection
+        run: python3 -m unittest discover -s experiments/note_resource_20261024/input/tests -v
   maintain-legacy-entry:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest

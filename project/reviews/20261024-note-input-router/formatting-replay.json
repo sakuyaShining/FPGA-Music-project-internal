@@ -1,0 +1,8 @@
+{
+  "reason": "First staged whitespace check rejected two empty lines with spaces in the adapted audio bench. Removed only those empty lines; did not hide the warning with attributes.",
+  "retained_source": "validation/audio05/tb_duet_audio-exact.v",
+  "current_positive_replay": "validation/audio06/results.json",
+  "current_negative_replay": "validation/queued-cancel-fault02/results.json",
+  "result": "Both complete positive and designated negative rerun passed in fresh directories with the cleaned bench input SHA. Prior05/fault01 results remain historical, not silently rebound to new bytes.",
+  "rtl_changes_from_formatting": false
+}

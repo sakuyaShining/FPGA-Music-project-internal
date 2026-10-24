@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "captured_at": "2026-10-24T04:19:58.780Z",
+  "base_commit": "6e899f87a3fb1b1d601f6921a9b0a4ede31c2f75",
+  "source_branch": "codex/current-engineering-sources-20261023",
+  "role": "Incremental tagged logical score/live router and queued cancellation, not physical source/full product",
+  "entry": "experiments/note_resource_20261024/input/README.md",
+  "previous_manifest": "project/versions/note-partial-renderer-20261024.json",
+  "source_inputs": {
+    "experiments/note_resource_20261024/input/README.md": "bf45dca16b888f386519cddbcb5a5b067d63fe8d7a4b234910701bdf6e98b072",
+    "experiments/note_resource_20261024/input/SOURCE-AUDIT.json": "abbf7c53568a5eaa4776a76e619fde754b2b1c659006aae16cccb4192eb02443",
+    "experiments/note_resource_20261024/input/build.py": "07eee392a938a584c8a439203af081430982474fd7a302273301d2775a50d560",
+    "experiments/note_resource_20261024/input/constraints/router_probe.cst": "c9b6084070f18009bce5f3a4dda1be4f82b65372ebf446474b85f52b14f23113",
+    "experiments/note_resource_20261024/input/constraints/router_probe.sdc": "69f19f07ee37bdff779e24548778ad43e36d895b7fd99026ee153aea1ad94207",
+    "experiments/note_resource_20261024/input/reference.py": "c8a048586505fdafe7736a81b74acc51fb3d587a3f977a1ce9e1bec1d5a95218",
+    "experiments/note_resource_20261024/input/rtl/note_duet_probe.v": "c625d2aac150bec6c373c5aaa5d409e3f1200e6539fecfaefdf84e45fb23e662",
+    "experiments/note_resource_20261024/input/rtl/note_event_router.v": "5af4efc2453ef888de9db7e55cd18f113fd814c15515d326310065c2b992a136",
+    "experiments/note_resource_20261024/input/rtl/note_router_timing_probe.v": "012eff9131a4117a7b06829fd1532278c6ea2df5e8d07a08e475edcf433edb86",
+    "experiments/note_resource_20261024/input/tb/tb_duet_audio.v": "d31f988d56744baa550f66326c3cd1e50dd0fe8d8d3344e92186f6eb1e1b9a77",
+    "experiments/note_resource_20261024/input/tb/tb_note_event_router.v": "ede0ebc81c019a962924cf4de6367f3f4992c4763f2afbc1672d549036db7337",
+    "experiments/note_resource_20261024/input/tests/test_input_router.py": "5e18468750fa0d4b1ef3a709ae70f111c2df3315614a5a99d1ce9070b20c0684",
+    "experiments/note_resource_20261024/input/verify.py": "c87975fec4890bfe7b4838970443c8a5e030c5d0829ad8505082d144b0a0b479",
+    "experiments/note_resource_20261024/input/verify_audio.py": "fa425a437a324ae91c68302d74ace655016a221be729423f68a3d190e1e062c1"
+  },
+  "tested_router_inputs": {
+    "experiments/note_resource_20261024/input/rtl/note_event_router.v": "5af4efc2453ef888de9db7e55cd18f113fd814c15515d326310065c2b992a136",
+    "experiments/note_resource_20261024/input/tb/tb_note_event_router.v": "ede0ebc81c019a962924cf4de6367f3f4992c4763f2afbc1672d549036db7337",
+    "experiments/note_resource_20261024/input/reference.py": "c8a048586505fdafe7736a81b74acc51fb3d587a3f977a1ce9e1bec1d5a95218",
+    "experiments/note_resource_20261024/input/verify.py": "c87975fec4890bfe7b4838970443c8a5e030c5d0829ad8505082d144b0a0b479"
+  },
+  "tested_audio_inputs": {
+    "experiments/note_resource_20261024/input/rtl/note_event_router.v": "5af4efc2453ef888de9db7e55cd18f113fd814c15515d326310065c2b992a136",
+    "experiments/note_resource_20261024/input/rtl/note_duet_probe.v": "c625d2aac150bec6c373c5aaa5d409e3f1200e6539fecfaefdf84e45fb23e662",
+    "experiments/note_resource_20261024/audio/renderer/rtl/note_partial_renderer.v": "a714be03b09360e9cadae15e9a6938b15edb641b1536ae03e50153b0f07dee70",
+    "experiments/note_resource_20261024/audio/renderer/rtl/note_resource_instrument_probe.v": "2eae8fa6615b4868d7a6f565e7b1d5d7cf55fccbd0dcb338f8440df5019c9776",
+    "experiments/note_resource_20261024/audio/renderer/rtl/vel_shape_scaled.v": "6af745d82b76ebca063fdced27aab6501b12b560cd45af3e9e288c98a4c89029",
+    "experiments/note_resource_20261024/audio/rtl/note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+    "experiments/note_resource_20261024/audio/rtl/note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+    "experiments/note_resource_20261024/audio/rtl/tdm_engine_transactional.v": "0c356db56097529f6b735f7ca0489bc8e7ae9fbc0b0d75533944c1b33eed71ab",
+    "experiments/note_resource_20261024/rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+    "experiments/note_resource_20261024/input/tb/tb_duet_audio.v": "d31f988d56744baa550f66326c3cd1e50dd0fe8d8d3344e92186f6eb1e1b9a77",
+    "fpga/current/engine/src/osc_env.v": "9485d37ad07da973257668de80e79dfb10cbf63ea66863f9deb90e1a0260a5f2",
+    "fpga/current/engine/src/pitch_mod.v": "6855fafe33b2942216f53738bf9d1c986c1d4151e5e4e6a5ef22ae8d79d85f02",
+    "fpga/current/engine/src/pitch_native_store.v": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+    "fpga/current/engine/src/vel_shape.v": "5bedde0793a2afbb22f45f6fcde503e7e1b03842091dcc2a96841f450a75ddcd",
+    "fpga/current/engine/src/instrument_table.v": "2343da52dd99d883403a889caf5b5b8fd0c61c06a2f94db42e9ba319e1bd377f",
+    "fpga/current/tb/vendor_ram16sdp4.v": "8ca2165b7d833f4db03edbe1291b8faafb50096c9622f4397dc7cca3d1244670",
+    "fpga/current/engine/src/sine256.hex": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+    "fpga/current/engine/src/note_inc.hex": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+    "fpga/current/engine/src/preset_part.hex": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+    "fpga/current/engine/src/tilt_wtab.hex": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8",
+    "fpga/current/engine/src/vel_wtab.hex": "5daaea0d56b0e88ccbfc5161821dbafd7f9439315ef4c3d32a2007f4fd6f7160",
+    "experiments/note_resource_20261024/audio/renderer/reference.py": "2e3b99418a2c318328ef47c30d60b1185bb99f6b1b0febe891517390aff40468",
+    "experiments/note_resource_20261024/input/verify_audio.py": "fa425a437a324ae91c68302d74ace655016a221be729423f68a3d190e1e062c1"
+  },
+  "tested_synthesis_inputs": {
+    "experiments/note_resource_20261024/input/rtl/note_event_router.v": "5af4efc2453ef888de9db7e55cd18f113fd814c15515d326310065c2b992a136",
+    "experiments/note_resource_20261024/input/rtl/note_duet_probe.v": "c625d2aac150bec6c373c5aaa5d409e3f1200e6539fecfaefdf84e45fb23e662",
+    "experiments/note_resource_20261024/audio/renderer/rtl/note_partial_renderer.v": "a714be03b09360e9cadae15e9a6938b15edb641b1536ae03e50153b0f07dee70",
+    "experiments/note_resource_20261024/audio/renderer/rtl/note_resource_instrument_probe.v": "2eae8fa6615b4868d7a6f565e7b1d5d7cf55fccbd0dcb338f8440df5019c9776",
+    "experiments/note_resource_20261024/audio/renderer/rtl/vel_shape_scaled.v": "6af745d82b76ebca063fdced27aab6501b12b560cd45af3e9e288c98a4c89029",
+    "experiments/note_resource_20261024/audio/rtl/note_audio_backend.v": "c5230151e053af96c307f90df9ff3a7eb6d1359d6bc9e4c10c5e7b3225e84e3f",
+    "experiments/note_resource_20261024/audio/rtl/note_resource_audio_probe.v": "fcd256723796131e2bf12a6d467d3175775afce2c7991c553784b90211116bb9",
+    "experiments/note_resource_20261024/audio/rtl/tdm_engine_transactional.v": "0c356db56097529f6b735f7ca0489bc8e7ae9fbc0b0d75533944c1b33eed71ab",
+    "experiments/note_resource_20261024/rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+    "fpga/current/engine/src/osc_env.v": "9485d37ad07da973257668de80e79dfb10cbf63ea66863f9deb90e1a0260a5f2",
+    "fpga/current/engine/src/pitch_mod.v": "6855fafe33b2942216f53738bf9d1c986c1d4151e5e4e6a5ef22ae8d79d85f02",
+    "fpga/current/engine/src/pitch_native_store.v": "c66c879ab168b076766a9b1b31d73c653d399ef8534ea8f96c67a2d68fef7f4c",
+    "fpga/current/engine/src/instrument_table.v": "2343da52dd99d883403a889caf5b5b8fd0c61c06a2f94db42e9ba319e1bd377f",
+    "fpga/current/engine/src/sine256.hex": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+    "fpga/current/engine/src/note_inc.hex": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+    "fpga/current/engine/src/preset_part.hex": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+    "fpga/current/engine/src/tilt_wtab.hex": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8",
+    "fpga/current/engine/src/vel_wtab.hex": "5daaea0d56b0e88ccbfc5161821dbafd7f9439315ef4c3d32a2007f4fd6f7160",
+    "experiments/note_resource_20261024/input/build.py": "07eee392a938a584c8a439203af081430982474fd7a302273301d2775a50d560"
+  },
+  "decision": "D-019-SHARED-INSTANCE-TAIL-FIRST",
+  "contract": {
+    "path": "project/NOTE-RESOURCE-CONTRACT.md",
+    "sha256": "474a0f6eaf9b62a0e4c4c7998e40fbe7d3144f6e16e269eb9299dfd3265d397a"
+  },
+  "verification": {
+    "router": "project/reviews/20261024-note-input-router/validation/router/results.json",
+    "coverage": {
+      "accepted": [
+        858,
+        855
+      ],
+      "completed": [
+        856,
+        852
+      ],
+      "sent": 1711,
+      "collisions": 1709,
+      "wrong_responses": 314,
+      "downstream_stalls": 4901,
+      "response_stalls": 5832,
+      "resets": 18,
+      "serial_wraps": [
+        1,
+        1
+      ]
+    },
+    "designated_router_faults": [
+      "fixed-source",
+      "ignore-token",
+      "wrong-payload"
+    ],
+    "audio": "project/reviews/20261024-note-input-router/validation/audio06/results.json",
+    "logical_requests": 547,
+    "actual_loads": 5136,
+    "pcm_frames": 4080,
+    "publications": 551,
+    "retirements": 6,
+    "queued_cancel_fault": "project/reviews/20261024-note-input-router/validation/queued-cancel-fault02/results.json",
+    "unit_tests": 68,
+    "physical_source_adapters": false,
+    "independent_full_pcm_oracle": false
+  },
+  "build": {
+    "record": "project/reviews/20261024-note-input-router/build/synthesis03/results.json",
+    "resources": {
+      "logic": 11722,
+      "LUT": 10230,
+      "ALU": 844,
+      "RAM16": 108,
+      "REG": 4974,
+      "BSRAM": 14
+    },
+    "timing_record": "project/reviews/20261024-note-input-router/build/summary.json",
+    "router_pnr": "FAILED_ROUTE_PROCESS_0xC0000005",
+    "valid_sta": false,
+    "full_product_fit": false,
+    "programming_allowed": false
+  },
+  "incomplete": [
+    "Actual contact generation to global source serial and complete layer expression ownership",
+    "Pulse sequencer backpressure, score-file/time/pause semantics",
+    "Strike auto-release, continuous modifiers, automatic reuse glide",
+    "Independent complete PCM/stealing-transient/listening and physical latency",
+    "Standalone J10/84-node/editor/nonvolatile/recording files and complete-top resource/PnR/STA"
+  ],
+  "pending_user_rule": "P-020 fade unanswered; other unfrozen musical interactions unchanged",
+  "unchanged_engineering_manifest": "project/versions/engineering-sources-20261023.json",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

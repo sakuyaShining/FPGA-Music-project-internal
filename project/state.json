@@ -7,7 +7,7 @@
     "source_branch": "codex/current-engineering-sources-20261023",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-24T00:20:04.249Z",
+  "updated_at": "2026-10-24T04:19:58.780Z",
   "entry": "project/CURRENT.md",
   "predecessor_state": "codex/project-version-closure:project/state.json",
   "implementation_boundary": "This registry does not merge or change any functional source",
@@ -151,10 +151,19 @@
       "status": "REAL_PAYLOAD_AND_AUDIO_CHAIN_VERIFIED_PHYSICAL_SOURCES_AND_TIMING_PENDING",
       "product_accepted": false,
       "programming_allowed": false
+    },
+    "note_input_router_candidate": {
+      "role": "isolated-development-candidate",
+      "manifest": "project/versions/note-input-router-20261024.json",
+      "entry": "experiments/note_resource_20261024/input/README.md",
+      "review": "project/reviews/20261024-note-input-router/review.json",
+      "status": "LOGICAL_INPUT_AUDIO_VERIFIED_PNR_PROCESS_FAILED_PHYSICAL_ADAPTERS_PENDING",
+      "product_accepted": false,
+      "programming_allowed": false
     }
   },
   "active_fpga_profile": "fpga_live_unpublished",
   "design_state": "project/design-state.json",
   "governance": "project/governance.json",
-  "latest_incremental_fpga_profile": "note_partial_renderer_candidate"
+  "latest_incremental_fpga_profile": "note_input_router_candidate"
 }

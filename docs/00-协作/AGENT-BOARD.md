@@ -253,3 +253,11 @@ internal  https://github.com/sakuyaShining/FPGA-Music-project-internal.git
 - 验证：最终renderer03各16384分量×2、4幅度反例、独立5136装载/4080PCM帧；力度2097152向量、默认524288项兼容；并发互等旧RTL指定断言检出；60Python测试。同版综合11515Logic/4865REG/14BSRAM，未PnR/STA/下载/板验。
 - 在飞什么：本轮所有03仿真/综合已终态；D盘原FPGA与06df只读。原硬件owner新保存a3a258局部ADDR1/49项13网，不抢占其CAD、路由或PCB范围；恢复ZIP另保全，341个current文件不变。
 - 下一手：实际手指/曲谱事件源与身份/被抢占按住不重触发、激发自动OFF、独立PCM/瞬变、完整顶层/资源/PnR/STA；P-020短淡出待人类回复，其余未冻结边界继续成熟问答。产品未完成，main仅由用户合入。
+
+## 13. 2026-10-24 双来源身份路由增量
+
+- 做了什么：4d37只在原已认领experiments/note_resource_20261024/input及入口/证据实施两来源tag/轮转/响应路由，补排队取消；不改341个current、D盘owner或06df。
+- 版本：源基点6e899f87a3fb1b1d601f6921a9b0a4ede31c2f75，任务分支codex/current-engineering-sources-20261023/PR4，最终提交以该PR实际head解析；输入及证据见project/versions/note-input-router-20261024.json。
+- 验证：24000拍/3路由反例；547真实请求/5136独立装载与专门取消反例；68单测。最终同源综合11722Logic/4974REG/14BSRAM；PnR03/04在route80%进程0xC0000005，STA未生成，不签收。
+- 在飞什么：旧工程已有轮转，缺口是新身份/多层接口不能盲接；物理contact/曲谱文件/多层手指表达和自动OFF仍缺。硬件只读审阅新离线antipad模型校正/局部候选，原生仍a3a258/49项13网，未导入/未制造。
+- 下一手：先定位同源最小路由进程失败，保留现有反例与原约束；接contact生命周期/全部层绑定和曲谱背压，补同拍实际PCM及完整顶层验收。P-020无答复不默认实施，不重问D-019。

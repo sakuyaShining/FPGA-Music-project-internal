@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "tested_at": "2026-10-24T04:00:58.110926+00:00",
+  "inputs": {
+    "experiments/note_resource_20261024/input/rtl/note_event_router.v": "5af4efc2453ef888de9db7e55cd18f113fd814c15515d326310065c2b992a136",
+    "experiments/note_resource_20261024/input/tb/tb_note_event_router.v": "ede0ebc81c019a962924cf4de6367f3f4992c4763f2afbc1672d549036db7337",
+    "experiments/note_resource_20261024/input/reference.py": "c8a048586505fdafe7736a81b74acc51fb3d587a3f977a1ce9e1bec1d5a95218",
+    "experiments/note_resource_20261024/input/verify.py": "c87975fec4890bfe7b4838970443c8a5e030c5d0829ad8505082d144b0a0b479"
+  },
+  "source_changes": [],
+  "tools": {
+    "D:\\iverilog\\bin\\iverilog.exe": "f8bad18d279f8c63ab041bd292606f21fc0e8b9cc0edb37a311158f756c35eb0",
+    "D:\\iverilog\\bin\\vvp.exe": "c3b28a3a088851fc3396a30a7c781c4b126c61dbbb7cead7c00644cc7afaa4d4"
+  },
+  "coverage": {
+    "accepted": [
+      858,
+      855
+    ],
+    "completed": [
+      856,
+      852
+    ],
+    "sent": 1711,
+    "collisions": 1709,
+    "wrong_responses": 314,
+    "downstream_stalls": 4901,
+    "response_stalls": 5832,
+    "resets": 18,
+    "serial_wraps": [
+      1,
+      1
+    ]
+  },
+  "results": [
+    {
+      "case": "candidate",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_event_router",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\candidate\\router.vvp",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\candidate\\note_event_router.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\input\\tb\\tb_note_event_router.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_source_sha256": "5af4efc2453ef888de9db7e55cd18f113fd814c15515d326310065c2b992a136",
+      "inputs_sha256": "df406d9306365434550679e528ab62d63dd2de42c72eebf0cfcde723350ca30d",
+      "expected_sha256": "c28eacff0edb3e8418aeb17f9d90b2665f006e74e89b32a47a16b0b6371d234b",
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\candidate\\router.vvp",
+          "+inputs=D:/FPGA-Project/review/note-input-router-20261024-01/candidate/inputs.hex",
+          "+trace=D:/FPGA-Project/review/note-input-router-20261024-01/candidate/trace.tsv"
+        ],
+        "returncode": 0,
+        "log_sha256": "8ba382ab6ec62b5b2c8d3e6e834979ab9539fd9da046179a9faa7961e210d468",
+        "text": "PASS event_router cycles=24000\r\nC:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\input\\tb\\tb_note_event_router.v:36: $finish called at 240010000 (1ps)\r\n"
+      },
+      "first_difference": null,
+      "trace_sha256": "030507ccf185103a462df87a32b7e2d3fd63283d6bdf38a6bffb9c593c5f4dc0"
+    },
+    {
+      "case": "fixed-source",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_event_router",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\fixed-source\\router.vvp",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\fixed-source\\note_event_router.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\input\\tb\\tb_note_event_router.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_source_sha256": "d1dcf1845983963e0a5be8d559befd9678918b695545d1a6fd91e9df62e92035",
+      "inputs_sha256": "df406d9306365434550679e528ab62d63dd2de42c72eebf0cfcde723350ca30d",
+      "expected_sha256": "c28eacff0edb3e8418aeb17f9d90b2665f006e74e89b32a47a16b0b6371d234b",
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\fixed-source\\router.vvp",
+          "+inputs=D:/FPGA-Project/review/note-input-router-20261024-01/fixed-source/inputs.hex",
+          "+trace=D:/FPGA-Project/review/note-input-router-20261024-01/fixed-source/trace.tsv"
+        ],
+        "returncode": 0,
+        "log_sha256": "8ba382ab6ec62b5b2c8d3e6e834979ab9539fd9da046179a9faa7961e210d468",
+        "text": "PASS event_router cycles=24000\r\nC:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\input\\tb\\tb_note_event_router.v:36: $finish called at 240010000 (1ps)\r\n"
+      },
+      "first_difference": {
+        "field": "live_ready",
+        "cycle": 28,
+        "expected": 0,
+        "observed": 1
+      },
+      "trace_sha256": "f3cc323854ded996d2a7e0b9ff432f6d1b5521f6b15e0d44dcedea7a4a0517e0"
+    },
+    {
+      "case": "ignore-token",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_event_router",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\ignore-token\\router.vvp",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\ignore-token\\note_event_router.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\input\\tb\\tb_note_event_router.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_source_sha256": "7ccc9c846c05ff0106d895141411e6bf6e35a9b6d3c2d148ecb88655250097ad",
+      "inputs_sha256": "df406d9306365434550679e528ab62d63dd2de42c72eebf0cfcde723350ca30d",
+      "expected_sha256": "c28eacff0edb3e8418aeb17f9d90b2665f006e74e89b32a47a16b0b6371d234b",
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\ignore-token\\router.vvp",
+          "+inputs=D:/FPGA-Project/review/note-input-router-20261024-01/ignore-token/inputs.hex",
+          "+trace=D:/FPGA-Project/review/note-input-router-20261024-01/ignore-token/trace.tsv"
+        ],
+        "returncode": 0,
+        "log_sha256": "8ba382ab6ec62b5b2c8d3e6e834979ab9539fd9da046179a9faa7961e210d468",
+        "text": "PASS event_router cycles=24000\r\nC:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\input\\tb\\tb_note_event_router.v:36: $finish called at 240010000 (1ps)\r\n"
+      },
+      "first_difference": {
+        "field": "response_ready",
+        "cycle": 30,
+        "expected": 0,
+        "observed": 1
+      },
+      "trace_sha256": "836033dee38ab9a016511009446ae778f5f5e04842c5bbf47d3222cdb26647b1"
+    },
+    {
+      "case": "wrong-payload",
+      "compilation": {
+        "command": [
+          "D:\\iverilog\\bin\\iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_note_event_router",
+          "-o",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\wrong-payload\\router.vvp",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\wrong-payload\\note_event_router.v",
+          "C:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\input\\tb\\tb_note_event_router.v"
+        ],
+        "returncode": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "passed": true,
+      "generated_source_sha256": "ee3d4b67501facdc9d9476ae12fde1bc498e42b234e93ad4460df4a13d65b597",
+      "inputs_sha256": "df406d9306365434550679e528ab62d63dd2de42c72eebf0cfcde723350ca30d",
+      "expected_sha256": "c28eacff0edb3e8418aeb17f9d90b2665f006e74e89b32a47a16b0b6371d234b",
+      "simulation": {
+        "command": [
+          "D:\\iverilog\\bin\\vvp.exe",
+          "D:\\FPGA-Project\\review\\note-input-router-20261024-01\\wrong-payload\\router.vvp",
+          "+inputs=D:/FPGA-Project/review/note-input-router-20261024-01/wrong-payload/inputs.hex",
+          "+trace=D:/FPGA-Project/review/note-input-router-20261024-01/wrong-payload/trace.tsv"
+        ],
+        "returncode": 0,
+        "log_sha256": "8ba382ab6ec62b5b2c8d3e6e834979ab9539fd9da046179a9faa7961e210d468",
+        "text": "PASS event_router cycles=24000\r\nC:\\Users\\Sakuya\\.codex\\worktrees\\4d37\\FPGA-Music-project\\experiments\\note_resource_20261024\\input\\tb\\tb_note_event_router.v:36: $finish called at 240010000 (1ps)\r\n"
+      },
+      "first_difference": {
+        "field": "event_note",
+        "cycle": 29,
+        "expected": 60,
+        "observed": 124
+      },
+      "trace_sha256": "c77eb2c663bfff998e9d01d0a1bcbce396aae298ed89390c5f12c1ced765b347"
+    }
+  ],
+  "status": "PASS",
+  "scope": "Two tagged ready/valid logical sources; transport cycle oracle, not physical adapters or PCM acceptance",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

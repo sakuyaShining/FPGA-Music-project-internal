@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "tests": 68,
+  "suites": [
+    {
+      "name": "governance",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_design_governance.py",
+        "-v"
+      ],
+      "tests": 20,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-input-router/validation/unit/governance.log",
+      "sha256": "bfccf1a7e533a9f10d5cda80724df539aee1d1694d57c4e5edfecb1e04e9a051"
+    },
+    {
+      "name": "engineering",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_engineering.py",
+        "-v"
+      ],
+      "tests": 6,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-input-router/validation/unit/engineering.log",
+      "sha256": "9567c4104302ad237771cd69d822af52e71712724f58e08331894674277bebca"
+    },
+    {
+      "name": "profiles",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_music_profiles.py",
+        "-v"
+      ],
+      "tests": 14,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-input-router/validation/unit/profiles.log",
+      "sha256": "777c8dbf8ece98874067f8c63a6745500e9523cc7f7c1db592dbcf2cd5646f1b"
+    },
+    {
+      "name": "resource",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/tests",
+        "-p",
+        "test_reference.py",
+        "-v"
+      ],
+      "tests": 8,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-input-router/validation/unit/resource.log",
+      "sha256": "6b96b905e0fa5d3101fe73989084245e2b16b21865bc7ba659a124227846e664"
+    },
+    {
+      "name": "audio",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/audio/tests",
+        "-p",
+        "test_audio_guards.py",
+        "-v"
+      ],
+      "tests": 5,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-input-router/validation/unit/audio.log",
+      "sha256": "7783bae51b1981491bb5ac5686537838fde953c032a8ca1470d60fcdeaf25499"
+    },
+    {
+      "name": "renderer",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/audio/renderer/tests",
+        "-p",
+        "test_renderer.py",
+        "-v"
+      ],
+      "tests": 7,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-input-router/validation/unit/renderer.log",
+      "sha256": "0eeed8b08b81b655793f505406dd378572d81b57add032b2bb6b3bfe929c3c94"
+    },
+    {
+      "name": "input",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/input/tests",
+        "-p",
+        "test_input_router.py",
+        "-v"
+      ],
+      "tests": 8,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-input-router/validation/unit/input.log",
+      "sha256": "a275ba6bd1aeb85c4fdb7d8f49c78eb3f4b824c80e5a3b06869cadf10c8a2787"
+    }
+  ]
+}

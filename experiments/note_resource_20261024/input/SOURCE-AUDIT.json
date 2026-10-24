@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "source_base_commit": "6e899f87a3fb1b1d601f6921a9b0a4ede31c2f75",
+  "reviewed_original_inputs": {
+    "fpga/current/engine/src/tdm_top_owned.v": "ea9684be4cd92419c45413aedfad50284791ac9fc86959235cb4ad1637fdd01c",
+    "fpga/current/engine/src/song_seq.v": "56339052cda65f54c91061240af3fe604ca8715f34c7f31f18864606daf0db5f",
+    "fpga/current/engine/src/event_hold.v": "ec06d3697215394354da8b3ffcdca6208c7cd5b6d8a4b8055e1d8e1a813708e4",
+    "fpga/current/engine/src/left_contact_bridge.v": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36",
+    "fpga/current/engine/src/finger_pitch.v": "1702ccc636619f85f65ef18f810efd5e652ab206ffcdc1d2e07fbce12d093d5a"
+  },
+  "findings": [
+    "Actual old top already has per-source FIFOs and rotation; song_seq exclusive-mux comment is stale for that top.",
+    "Old FIFO does not transport instance token/full layer completion; contact13-bit/single-group interface needs an explicit adapter, not blind wiring.",
+    "New input transport only; no physical source or final file/interaction policy inferred."
+  ]
+}

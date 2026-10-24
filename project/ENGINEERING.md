@@ -10,6 +10,7 @@
 | 增量资源候选 | `experiments/note_resource_20261024/` | D-019共享32组协调器与模拟后端；限定仿真/独立综合通过，未接真实音乐顶层；独立版本清单为`versions/note-resource-candidate-20261024.json` |
 | 后续真实音频增量 | `experiments/note_resource_20261024/audio/` | 资源事务已接真实512分量TDM/包络；仍为测试台提供分量，实际音符/槽生成器、手指/曲谱和完整时序待接；清单`versions/note-resource-audio-20261024.json` |
 | 最新真实分量生成增量 | `experiments/note_resource_20261024/audio/renderer/` | 四槽配置快照/真实音符分量已接512分量TDM；逻辑音符/配置刺激仍由测试台提供。修复高倍率力度回绕与配置/起音并发等待；清单`versions/note-partial-renderer-20261024.json`，非完整设备 |
+| 最新双来源路由增量 | `experiments/note_resource_20261024/input/` | 两来源token与轮转/匹配回包、排队取消保持已接真实PCM；仍缺物理contact与曲谱文件适配。清单`versions/note-input-router-20261024.json`；单元PnR工具崩溃/无STA，非合格码流 |
 
 旧`src/rtl`、`src/gowin`、`tools/host`保留历史可复现性，不能作为新任务的默认入口。历史实验、v1/v2恢复包不覆盖本次工程检查点。具体来源、逐文件哈希和捕获时间见`versions/engineering-sources-20261023.json`；补充的主机测试依赖和一处RTL声明顺序适配均有单独来源记录，未改原owner目录。
 

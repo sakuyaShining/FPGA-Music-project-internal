@@ -11,6 +11,7 @@
 | 资源管理增量候选 | `experiments/note_resource_20261024/`及`versions/note-resource-candidate-20261024.json` | 4d37限定副本，D-019资源合同 | 32组/四层分配协调器单元与独立综合，不改341项工程源；尚缺真实音乐后端、包络结束和曲谱/触摸接合，不能替代完整顶层 |
 | 资源真实音频后端增量 | `experiments/note_resource_20261024/audio/`及`versions/note-resource-audio-20261024.json` | 4d37限定副本，真实TDM/包络 | 512分量事务发布/退场/自然结束局部验证；仍是测试台提供分量，实际槽/音符生成及手指/曲谱待接，无PnR/STA/实体签收 |
 | 最新真实分量生成器 | `experiments/note_resource_20261024/audio/renderer/`及`versions/note-partial-renderer-20261024.json` | 4d37限定副本，四槽定义/快照/力度算术 | 已接逻辑音符→实际分量→共享资源→PCM；16384×2参考、5136装载及2097152力度向量；手指/曲谱源、完整产品PnR/STA未完成 |
+| 最新来源身份路由 | `experiments/note_resource_20261024/input/`及`versions/note-input-router-20261024.json` | 4d37限定副本，双来源逻辑入口/回包/排队取消 | 24000拍独立参考及3反例、真实547请求/5136装载与取消丢失反例；68单测、同版综合通过；PnR路由进程异常，无STA；物理手指/曲谱文件仍待接 |
 | 新观察保存硬件增量 | `reviews/20261024-note-partial-renderer/hardware/` | 原owner局部ADDR1原生a3a258…恢复ZIP及逐项哈希 | 49项/13网/227件620孔，仅局部fanout；不覆盖hardware/current的e098/47项旧检查点，本会话无CAD/DRC或制造签收 |
 | 历史已接合音乐/主机 | 66a4/07及各自清单 | `workspace-preservation-20261022.json` | 旧板验只绑定旧输入；安全修复候选另看instrument-engine-safety |
 | 其他候选 | 6e70、a61b、4c43、WorkBuddy分支等 | 22个preserve分支及原工作树 | 未提交文件需与快照逐项比对；保全不是合入产品，禁止批量merge代替审查 |
