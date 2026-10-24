@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "received_at": "2026-10-25",
+  "package": {
+    "name": "handover(1).zip",
+    "bytes": 825074,
+    "sha256": "f181bc9565e2f374162b1b17bfb68ef8acb81bec49ccf3d7d2532539364a0a25"
+  },
+  "files": {
+    "00-说明.md": {
+      "bytes": 4377,
+      "sha256": "752e1575dc15b4f95c47e9d65099565791751c4d32e7cedaf9140c73b80e1497"
+    },
+    "bitstream/board.bin": {
+      "bytes": 907418,
+      "sha256": "ba8ade888111c2929d2a8176133a6e924e8e298a04e11ce1cfe7ee10986b3c66"
+    },
+    "bitstream/board.fs": {
+      "bytes": 7264154,
+      "sha256": "586e9a9e31d8232ed3906cfafca13c3fa350db0b1904eba614a27972eb4d2c4e"
+    },
+    "bitstream/时序报告.txt": {
+      "bytes": 51027,
+      "sha256": "472d9aeab726f0e02005a39d7012376e7e1752c3da7cabdcf3d6103d0bdf3a03"
+    },
+    "bitstream/构建记录-run.json": {
+      "bytes": 16746,
+      "sha256": "301716e6150dcc5c87947804b7dd5a9df95decda7d4a9f2a97be12c9484deb22"
+    },
+    "checksums.txt": {
+      "bytes": 942,
+      "sha256": "1ed2b0b2e6ee2fcfbd493c486289aab68a5f8e70575ee792bc01a524ad745bd6"
+    },
+    "selfcheck.ps1": {
+      "bytes": 4773,
+      "sha256": "3027ffca7e717c4df26307ed727ac47f5d10092b8a159f22f0840ac26279fb42"
+    },
+    "tools/play_note.py": {
+      "bytes": 5514,
+      "sha256": "0ea60a19af72f0780ab7a2cb287b557458bad879326f64688574d92c6e64007f"
+    },
+    "tools/requirements.txt": {
+      "bytes": 18,
+      "sha256": "9edca7dbb8e93ae21e326eb07b207e3ea295a838be2006dee4c3d89b3ab6f209"
+    }
+  },
+  "checksums_all_match": true,
+  "build": {
+    "top": "tdm_product_top",
+    "status": "ok",
+    "mode": "full",
+    "strategy": 1,
+    "seconds": 97.49,
+    "hardware_programmed": false,
+    "project_sha256": "6abfb2505d5af8143b3dcf2534879a672f0623c8a1ae0d342b597ef7ab1f59d2",
+    "tcl_sha256": "a57b8e70ce7b975e7dfd1617841d39c989292e2e0c396b7ecdf7290a96ff2174",
+    "input_count": 100
+  },
+  "timing": {
+    "setup_blocks": 25,
+    "setup_min_slack_ns": 10.413,
+    "hold_blocks": 25,
+    "hold_min_slack_ns": 0.205,
+    "negative_slack_count": 0,
+    "note": "由本文件末尾 25+25 条路径块的首字段（slack）直接取最小值；全为正 ⇒ 说明书的「违规均为 0」成立"
+  },
+  "source_identity": {
+    "matched": 83,
+    "differing": 11,
+    "missing_in_repo": 6,
+    "differing_files": {
+      "engine/src/instrument_sensor_probe.v": {
+        "bitstream_sha256": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+        "repo_head_sha256": "08ee44872990cd38ce37f97d1748ede88c208f31d27a9c2b652badc38a2c0fd0"
+      },
+      "engine/src/layer_dispatch.v": {
+        "bitstream_sha256": "cf1f0739a324c1bea4d28734bf60b8a34366395ae199da3515ac81d5e29d7f0f",
+        "repo_head_sha256": "95ba9f5df18179f70b12edaf8d5c83107352d48816725cb7bb9423df9f713fda"
+      },
+      "engine/src/left_contact_bridge.v": {
+        "bitstream_sha256": "9b6f25cfdd21460f3089a75f5e701014af499b64c04297abfeebf48861d05c36",
+        "repo_head_sha256": "74783d54fad8857d81610066d7437165beb24b57fc1e78336dd599febd08bc43"
+      },
+      "engine/src/left_layer_music_probe.v": {
+        "bitstream_sha256": "5451b95b8043945a2e5815bafc97065ac606e7483a3eab69f9819baaa48f3424",
+        "repo_head_sha256": "98f2e7a8f84b3492516940c3423440e35ee14f67569ca9e537dc25865f94f5c9"
+      },
+      "engine/src/left_music_probe.v": {
+        "bitstream_sha256": "ae154867537d216d177165a7d393715d9751a25214e5bc5ebc7c12e58ad0249b",
+        "repo_head_sha256": "e42299eb642af0ff9640e09feb6835bccfd2263d2e1959d8ce736c650d607461"
+      },
+      "engine/src/note_map_owned.v": {
+        "bitstream_sha256": "06d88d27763d803708ffd0f993830e5f21cc5d01b0b0a3b68042ded5e9f539f1",
+        "repo_head_sha256": "b7564c842766c3ee25f19db121c4652d73969240f5963606e2b5bf00049efe6f"
+      },
+      "engine/src/pad_pitch.v": {
+        "bitstream_sha256": "964ae87ed7c8b1b54210be6c0f6710a134a09fb68ece177d9d29c98299a594be",
+        "repo_head_sha256": "c661733532ef77e004b121adbf0be49f7c7925dc4ec08501d44735b043e418f9"
+      },
+      "engine/src/rc_strip_positions.v": {
+        "bitstream_sha256": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+        "repo_head_sha256": "d1b490138682d1b746d49d2d81c95f2702e245b4b81ada87536e4d4ebbb28bc7"
+      },
+      "engine/src/tdm_top.v": {
+        "bitstream_sha256": "1ff9ce2737cb3cf87370772404714dc2ac901ba7128321527ea4911f9ce46dec",
+        "repo_head_sha256": "309052d305f36892830d543f8e0548aac62a1200cd30adc71878381e361a9767"
+      },
+      "engine/src/tdm_top_owned.v": {
+        "bitstream_sha256": "ea9684be4cd92419c45413aedfad50284791ac9fc86959235cb4ad1637fdd01c",
+        "repo_head_sha256": "181fdfa23aa30870681f246ff7a9c2cbf0e4933e390af0a2dd4000303683a456"
+      },
+      "engine/src/tdm_top_rh.v": {
+        "bitstream_sha256": "b4364b3d59fa18623960a0e61e2f04d220e5b5bbbb90431eb03072570eda35a4",
+        "repo_head_sha256": "e266cecce78107898397bf8dd7f30d5ad309eac0234042b126b3386bff429aab"
+      }
+    },
+    "missing_files": {
+      "engine/src/pad_mux84.v": {
+        "bitstream_sha256": "7da81ebaaa27bcb9b4924ce8297dc2fbba2f3b1018b823bfcb78ab7361edf633",
+        "note": "本仓库任何提交中都不存在"
+      },
+      "engine/src/pad_position.v": {
+        "bitstream_sha256": "891d02b6a880b9eed1c8bce20768c15cf6c6662996e2c256dbb6bc5055a2bbfb",
+        "note": "本仓库任何提交中都不存在"
+      },
+      "engine/src/pad_scan_v2.v": {
+        "bitstream_sha256": "1d2f060c36ca19962474750b2555f572cb0c95b6438a22d49dc49d500fade541",
+        "note": "本仓库任何提交中都不存在"
+      },
+      "engine/src/strip_note_map.v": {
+        "bitstream_sha256": "91fd7e8778523008c24f97c1ae869fc9b461d64f99f9fcee6097d12241992fc5",
+        "note": "本仓库任何提交中都不存在"
+      },
+      "engine/src/tdm_product_top.v": {
+        "bitstream_sha256": "861b6d617beb8853ba1b74ed2f96f46a99ca3d54900c864d83009bb0e1b9ee27",
+        "note": "本仓库任何提交中都不存在"
+      },
+      "engine/src/tdm_product_v3.v": {
+        "bitstream_sha256": "5217964361e5b41c3ee30a18f1ce656b33e68529d9ca35c03c3f8f7dc919c4fa",
+        "note": "本仓库任何提交中都不存在"
+      }
+    },
+    "not_in_build": [
+      "scan_bus_arbiter.v",
+      "scan_shift165.v",
+      "sensor_frontend_board.v"
+    ],
+    "note": "码流并非本仓库 HEAD 构建：11 个文件哈希不同，6 个文件在本仓库任何提交中都不存在"
+  },
+  "tooling": {
+    "play_note_py": "与本仓库 fpga/current/tools/play_note.py 逐字节相同",
+    "selfcheck_boot_expectation": "7 个地址的期望值与本仓库 tdm_top_owned.v 引导表完全一致"
+  },
+  "note": "本文件只记录收到时的可核对事实，不构成对产品的验收。"
+}
