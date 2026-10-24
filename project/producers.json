@@ -327,6 +327,27 @@
       }
     },
     {
+      "id": "fpga-v1-intake",
+      "activity": "active",
+      "root": "D:/FPGA-Project/authoritative-20261024",
+      "owner": {
+        "thread_id": null,
+        "label": "Separate v1 documentation intake workspace; exact owner session not verified"
+      },
+      "publication_status": "UNMERGED_V1_DOCUMENTATION_NOT_PRODUCT_OR_PROGRAMMING_APPROVAL",
+      "observation_max_hours": 6,
+      "recovery_manifest": "project/reviews/20261024-contact-contract-intake/intake-summary.json",
+      "published_ref": null,
+      "publication_note": "Observe the exact published intake ref and local HEAD separately in intake-summary; never use the directory name authoritative as a grant of main authority.",
+      "exclude_dirs": [".git", "__pycache__", "node_modules"],
+      "exclude_prefixes": ["build_", "synth_"],
+      "watch": [
+        {"path": "docs/02-技术方案/91-产品规格与使用规则-v1-20261024.md"},
+        {"path": "fpga/current/README.md"},
+        {"path": "hardware/current/context/pin-map-audit-20261024.md"}
+      ]
+    },
+    {
       "id": "host",
       "activity": "dormant",
       "owner": "No current owner registered",

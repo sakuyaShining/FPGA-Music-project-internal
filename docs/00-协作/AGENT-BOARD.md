@@ -95,6 +95,13 @@ PCB 打样、贴片与物流需要日历时间。施工数量只在相应review�
 
 ## 6. 交接记录
 
+### 2026-10-24 · Codex · Contact合同/反例与新v1资料隔离审阅
+- 做了什么：从642b2df9干净候选安全pull main；用实际contact13位身份/完整组映射形成事务oracle，11项场景与共享资源模型交叉验证，256代次后旧OFF/移动、抢占后按住不重触发、全四层表达、取消与回绕均覆盖；三个故障版本在指定断言检出，不用导入失败或超时冒充。
+- 在飞什么：这只是CONTACT-ADAPTER-CONTRACT与Python参考，不是RTL adapter、物理扫描/PCM或新PnR签收。首轮校验器把Windows CRLF的OK误拒，原FAIL/旧工具保留，修复换行判据并完整新目录重跑。
+- 卡在哪：上游新增五份建议文档和单独91规格入档源；目录名authoritative及其分支不替代main。另登记只读fpga-v1-intake producer、未知owner明确保留；v1缺84/J10/逐指/EEPROM/TF，文件SHA匹配不构成下载授权。引脚审计后文已撤回前文测量/LED结论，不能只照前段改PCB或发出错误阻塞判断。
+- 需要对方什么：不执行上游删除/改remote/删preserve分支/授权下载或忽略verify建议；不接管D盘/06df。原生a3a258/49项13网仍未制造/实物UNMEASURED。新源审阅与功能验收分开；完整hold修复异常未解决，P-020及其他未决音乐行为不自裁。
+- 下一手从哪读：project/reviews/20261024-contact-contract-intake/ASSESSMENT.md、input/CONTACT-ADAPTER-CONTRACT.md及verify_contact_contract.py；源基线642b2df9，精确发布commit取PR4实际head。下步按oracle实现真正ready/valid/contact全层绑定并逐项回归，main仍只由用户合入。
+
 ### 2026-10-24 · Codex · 路由异常触发条件收口，未修复
 - 做了什么：从4036d84a安全fetch/pull main；17项PnR对照保留7完成/9访问异常/1不确定。原路由器的data输入min-delay触发异常；保留全部约束、关闭自动hold修复可路由但hold为-1.402ns，明确失败，不当成解决方案。
 - 在飞什么：同拍shell输入注册已做24000拍完整状态/输出的一周期对照，错位load反例cycle58检出，但完整约束仍崩溃；显式总线位名及另一布局/路由策略也失败。未修改产品RTL或三个current目录，下一步接真实contact/曲谱的逻辑生命周期与表达归属，完整时序阻塞独立保留。

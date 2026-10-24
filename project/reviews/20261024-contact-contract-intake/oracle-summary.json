@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "status": "PASS_ORACLE_ONLY",
+  "attempt01": "Verifier rejected native CRLF success text; candidate test process exited0 and all11tests passed, but case correctly retained overallFAIL. Original verifier is preserved before repair.",
+  "attempt02": "Candidate11tests PASS; legacy-token-alias/held-retrigger/first-layer-only each failed its designated assertion. Compile/import errors and timeouts are not accepted as counterexamples.",
+  "archive": {
+    "path": "project/reviews/20261024-contact-contract-intake/contact-oracle-evidence.zip",
+    "sha256": "d984dd3d2bbc5f220e273404264f9dbed0618cb0f6afe53ac8fa77b5ad0dfab8",
+    "members": {
+      "attempt01/candidate/input/contact_contract.py": "abe239cb4b79cbbdd8d4047c6d1cb55b0484ffad00ecd8226e510e6ba7670710",
+      "attempt01/candidate/input/tests/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+      "attempt01/candidate/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+      "attempt01/candidate/run.log": "f8dbfcbf3a94221b03ba9c8c2fa020af9f62bce7bf569e8be6a857a66feedff7",
+      "attempt01/first-layer-only/input/contact_contract.py": "2b410d6d6f8f836afa6f5049335d419da242a5264a402734f4bf32344502dfc5",
+      "attempt01/first-layer-only/input/tests/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+      "attempt01/first-layer-only/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+      "attempt01/first-layer-only/run.log": "ce942f6f29142a5c2c4d29d2bc4330e024552c603fa835992041bafa1419dee1",
+      "attempt01/held-retrigger/input/contact_contract.py": "04081ec1ce092e8d28109f02ce1b7997a230498bc6ca9d379f57e838badf2c8e",
+      "attempt01/held-retrigger/input/tests/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+      "attempt01/held-retrigger/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+      "attempt01/held-retrigger/run.log": "f24263e18ee5d68bd1a92d5447fb4ca13e90c1e71a22caa765a5d20d2289d6c0",
+      "attempt01/legacy-token-alias/input/contact_contract.py": "41f7de12cae1cc4c4335bc3a56f0db53bac3ea9194bcfb4883f8b469a9e75dd1",
+      "attempt01/legacy-token-alias/input/tests/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+      "attempt01/legacy-token-alias/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+      "attempt01/legacy-token-alias/run.log": "701f7af10f0dacbab4697f3b45ab195979a84d50e2243de82bc19bc4c324b6d2",
+      "attempt01/results.json": "e550c5a4badcbd4c8ab9b9b40aabd92c188acb902dd22cd22f9f9e0d3df5e8cc",
+      "attempt01/verify_contact_contract-attempt01.py": "cefb2d4d810d381ea5f6f352a1f5c647782c2c39b9a27e23559e65d3939db1d1",
+      "attempt02/candidate/input/contact_contract.py": "abe239cb4b79cbbdd8d4047c6d1cb55b0484ffad00ecd8226e510e6ba7670710",
+      "attempt02/candidate/input/tests/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+      "attempt02/candidate/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+      "attempt02/candidate/run.log": "e79d069833c392c06d55999099e28ae4f55a8e1af71c0020176a2f4fff3de6e3",
+      "attempt02/first-layer-only/input/contact_contract.py": "2b410d6d6f8f836afa6f5049335d419da242a5264a402734f4bf32344502dfc5",
+      "attempt02/first-layer-only/input/tests/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+      "attempt02/first-layer-only/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+      "attempt02/first-layer-only/run.log": "7bb305295d0fb62ac62890df97c21d001ce57c27f0f70c4b73d4680591728a95",
+      "attempt02/held-retrigger/input/contact_contract.py": "04081ec1ce092e8d28109f02ce1b7997a230498bc6ca9d379f57e838badf2c8e",
+      "attempt02/held-retrigger/input/tests/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+      "attempt02/held-retrigger/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+      "attempt02/held-retrigger/run.log": "956886f0906a61833e1cf0f2fe9c924937fa6fc33bfb971c53e821b5009dd673",
+      "attempt02/legacy-token-alias/input/contact_contract.py": "41f7de12cae1cc4c4335bc3a56f0db53bac3ea9194bcfb4883f8b469a9e75dd1",
+      "attempt02/legacy-token-alias/input/tests/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+      "attempt02/legacy-token-alias/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+      "attempt02/legacy-token-alias/run.log": "62c3c16ebfafc2c54bb034636b776d6780ab5d5fcc153628775fed39465553fd",
+      "attempt02/original-inputs/CONTACT-ADAPTER-CONTRACT.md": "70bad0e48c39bf24c81e4fbe9370de144d30ed026ee1f40304c98087d342c98d",
+      "attempt02/original-inputs/contact_contract.py": "abe239cb4b79cbbdd8d4047c6d1cb55b0484ffad00ecd8226e510e6ba7670710",
+      "attempt02/original-inputs/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+      "attempt02/original-inputs/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+      "attempt02/original-inputs/verify_contact_contract.py": "c88633662b48f4ac4e93a6864546c853e85dacfef6e2347dd852cdfe88a65559",
+      "attempt02/results.json": "7778e38b6f1efacd7e80d44218ed91488b485b56306f6b884d555346d4122726"
+    }
+  },
+  "producer_changes": {
+    "fpga": {
+      "added": [
+        "NEXT-STEPS-20261024.md",
+        "PUBLIC-GO-LIVE-PLAN-20261024.md",
+        "REMOTE-AUDIT-20261024.md",
+        "REVIEW-91-SPEC-AND-FS-20261024.md",
+        "UNCOMMITTED-AND-BASELINE-20261024.md"
+      ],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": [
+        "AUTONOMOUS-CURRENT.md",
+        "REGIONAL-WORK-IN-PROGRESS.json",
+        "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md",
+        "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json"
+      ]
+    },
+    "fpga-v1-intake": {
+      "added": [
+        "docs/02-\u6280\u672f\u65b9\u6848/91-\u4ea7\u54c1\u89c4\u683c\u4e0e\u4f7f\u7528\u89c4\u5219-v1-20261024.md",
+        "fpga/current/README.md",
+        "hardware/current/context/pin-map-audit-20261024.md"
+      ],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "observed_at": "2026-10-24T10:18:59.154110+00:00",
+  "rtl_adapter_implemented": false,
+  "product_acceptance": false
+}

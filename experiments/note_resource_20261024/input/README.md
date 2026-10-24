@@ -18,6 +18,12 @@ The captured `tdm_top_owned` already contains per-source `event_hold` queues and
 
 Pending: source adapters must create/retain global source serials, handle ON/OFF and contact generations without aliases, stop stolen-held contacts from re-triggering, fan confirmed layer maps into expression ownership, and make pulse-producing `song_seq` backpressure/overflow explicit. Physical scanner mapping,25/26 endpoints, octave-in-flight behavior, score-file/pause semantics and right-hand/edit application rules are not chosen here.
 
+The next contact interface is specified in `CONTACT-ADAPTER-CONTRACT.md` with a transaction oracle in `contact_contract.py`. Eleven tests combine it with the independent shared-resource model; separate isolated variants detect legacy13-bit token alias after256generations, stolen-held retrigger and first-layer-only movement in their designated assertions. This is **not an implemented RTL/physical source adapter** or a new PCM/timing qualification. Both the initial CRLF-verifier rejection and the corrected complete replay are retained in `project/reviews/20261024-contact-contract-intake/`. Score pulse transport, RTL handshake/cancel races, complete-layer expression fanout and actual scanner integration remain next work.
+
+```powershell
+python experiments/note_resource_20261024/input/verify_contact_contract.py --output D:/FPGA-Project/review/my-contact-contract
+```
+
 ## Reproduce
 
 ```powershell
