@@ -15,6 +15,7 @@ module instrument_sensor_probe #(
     input wire report_ready,
     output wire [STRIPS-1:0] contact,invalid,
     output wire [STRIPS*9-1:0] position,
+    output wire [STRIPS*(CW+2)-1:0] area,
     output wire [31:0] report_sequence,
     output wire report_calibration,protocol_error,grant_error
 );
@@ -40,5 +41,5 @@ module instrument_sensor_probe #(
         .frame_valid(frame_valid),.frame_ready(frame_ready),.frame_sequence(frame_sequence),.frame_calibration(frame_cal),.read_address(read_address),.read_delta(read_delta),.read_valid(read_valid),.protocol_error(protocol_error));
     rc_strip_positions #(.STRIPS(STRIPS),.CW(CW),.CONFIRM_FRAMES(CONFIRM_FRAMES),.NODE_MAP(MAP)) positions(
         .clk(clk),.rst_n(rst_n),.frame_valid(frame_valid),.frame_ready(frame_ready),.frame_sequence(frame_sequence),.frame_calibration(frame_cal),.read_address(read_address),.read_delta(read_delta),.read_valid(read_valid),
-        .threshold_on(threshold_on),.threshold_off(threshold_off),.report_valid(report_valid),.report_ready(report_ready),.contact(contact),.invalid(invalid),.position(position),.report_sequence(report_sequence),.report_calibration(report_calibration));
+        .threshold_on(threshold_on),.threshold_off(threshold_off),.report_valid(report_valid),.report_ready(report_ready),.contact(contact),.invalid(invalid),.position(position),.area(area),.report_sequence(report_sequence),.report_calibration(report_calibration));
 endmodule

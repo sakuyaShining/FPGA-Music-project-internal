@@ -2,6 +2,13 @@
 // by all strips. Thresholds/debounce are replaceable sensor test parameters.
 // Invalid nodes are reported and preserve the previous contact; upstream must
 // decide the eventual sensor-failure release policy before physical deployment.
+//
+// `area` = d0+d1+d2, the raw contact-area proxy. It is the source for both
+// velocity (D1: area at note-on) and aftertouch vibrato (D2: area drift after
+// note-on), so it must leave this module -- the centroid alone cannot express
+// either. Width is CW+2 because the sum of three CW-bit terms needs two extra
+// bits. It is forced to zero on a bad read or during calibration: a failed
+// node must not look like a light touch.
 module rc_strip_positions #(
     parameter integer STRIPS=25,CW=12,CONFIRM_FRAMES=2,
     parameter [STRIPS*21-1:0] NODE_MAP=0
@@ -18,6 +25,7 @@ module rc_strip_positions #(
     input wire report_ready,
     output reg [STRIPS-1:0] contact,invalid,
     output reg [STRIPS*9-1:0] position,
+    output reg [STRIPS*(CW+2)-1:0] area,
     output reg [31:0] report_sequence,
     output reg report_calibration
 );
@@ -30,6 +38,7 @@ module rc_strip_positions #(
     reg good,cal_q;
     reg [STRIPS-1:0] next_contact,next_invalid;
     reg [STRIPS*9-1:0] next_position;
+    reg [STRIPS*(CW+2)-1:0] next_area;
     localparam DBW=(CONFIRM_FRAMES<2)?1:$clog2(CONFIRM_FRAMES+1);
     reg [DBW-1:0] confirm[0:STRIPS-1];
     reg [CW+1:0] on_q,off_q,denom;
@@ -48,13 +57,13 @@ module rc_strip_positions #(
     always @(posedge clk or negedge rst_n)begin
         if(!rst_n)begin
             state<=IDLE;strip<=0;electrode<=0;read_address<=0;d0<=0;d1<=0;d2<=0;good<=0;cal_q<=0;
-            next_contact<=0;next_invalid<=0;next_position<=0;contact<=0;invalid<=0;position<=0;report_valid<=0;
+            next_contact<=0;next_invalid<=0;next_position<=0;next_area<=0;contact<=0;invalid<=0;position<=0;area<=0;report_valid<=0;
             on_q<=0;off_q<=0;denom<=0;dividend<=0;quotient<=0;remainder<=0;bits_left<=0;report_sequence<=0;report_calibration<=0;
             for(i=0;i<STRIPS;i=i+1)confirm[i]<=0;
         end else case(state)
             IDLE:if(frame_valid)begin
                 strip<=0;electrode<=0;good<=1;cal_q<=frame_calibration;
-                next_contact<=contact;next_position<=position;next_invalid<=0;
+                next_contact<=contact;next_position<=position;next_area<=area;next_invalid<=0;
                 on_q<=threshold_on;off_q<=(threshold_off>threshold_on)?threshold_on:threshold_off;
                 report_sequence<=frame_sequence;report_calibration<=frame_calibration;state<=REQ;
             end
@@ -68,6 +77,10 @@ module rc_strip_positions #(
             end
             CALC:begin
                 next_invalid[strip]<=!good;
+                // Area is updated every frame, unlike position which holds on a
+                // skipped divide. A bad node or a calibration frame reports 0 so
+                // upstream cannot read a stale or bogus touch size.
+                next_area[strip*(CW+2) +: (CW+2)]<=(!good||cal_q)?{(CW+2){1'b0}}:sum;
                 if(cal_q)begin next_contact[strip]<=0;confirm[strip]<=0;end
                 else if(!good)confirm[strip]<=0;
                 else if(want_contact==contact[strip])confirm[strip]<=0;
@@ -89,7 +102,7 @@ module rc_strip_positions #(
             STORE:if(strip==STRIPS-1)begin state<=PUBLISH;end
                 else begin strip<=strip+1'b1;electrode<=0;good<=1;state<=REQ;end
             PUBLISH:begin
-                if(!report_valid)begin contact<=next_contact;invalid<=next_invalid;position<=next_position;report_valid<=1;end
+                if(!report_valid)begin contact<=next_contact;invalid<=next_invalid;position<=next_position;area<=next_area;report_valid<=1;end
                 else if(report_ready)begin report_valid<=0;state<=IDLE;end
             end
         endcase
