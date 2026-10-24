@@ -13,6 +13,9 @@
 //   [2] 双音同时：通道 1 轻(3) / 通道 6 重(12) ⇒ 两个 note-on 各自带对的力度
 //   [3] 先按住 A 再按 B（相位不同）：A 的 ev_vel 仍是 A 自己的
 //   [4] note-off 不受力度影响（仍是原来的音符号）
+//   [5] 按住期间换八度档：不产生任何事件（P11）
+//   [6] 换档后松开：note-off 用【按下时锁存的】音符号，不是换档后的（P12）
+//   [7] 换档后再按同一个键：音符号按新档位算
 //=============================================================================
 module tb_pad_chain;
 
@@ -285,6 +288,80 @@ module tb_pad_chain;
         end
         else
             $display("  [4] 先后按下：A vel=2、B vel=14，互不串          OK");
+
+        //---------------------------------------------------------------------
+        // [5][6][7] 换八度档不打断正在响的音（P11 / P12）
+        //
+        //   规格要求：换档本身不发事件；已在响的音【不跟着变】，松开时按
+        //   按下时锁存的音符号发 note-off。
+        //   这三条最容易在实现上做错成"每拍用当前 pos 重算音高"——那样
+        //   换档瞬间正在响的音会整体跳档，且 note-off 与 note-on 音符号不匹配，
+        //   引擎里就会留下一个永不释放的声部（挂音）。
+        //---------------------------------------------------------------------
+        cap[0] = bases[0];
+        cap[7] = bases[7];
+        wait_state(0, 1'b0, 60000, ok);
+        wait_state(7, 1'b0, 60000, ok);
+        repeat (400) @(posedge clk);
+
+        on_cnt = 0; off_cnt = 0;
+        pos = 3'd1;                        // rel = 0
+        base_i = bases[3]; hi_i = base_i + (base_i >> 3) + (base_i >> 5);
+        cap[3] = hi_i + 7 * 32;
+        wait_state(3, 1'b1, 60000, ok);
+        repeat (300) @(posedge clk);       // 让 note-on 先发出去
+
+        checks = checks + 1;
+        if (on_cnt != 1 || on_note[0] !== 7'd51) begin
+            $display("  [5] [FAIL] 换档前应按出 51，实得 %0d 个 note-on、首个音符号 %0d",
+                     on_cnt, on_note[0]);
+            errors = errors + 1;
+        end else $display("  [5] 换档前：note = %0d（pos=1，rel=0）             OK", on_note[0]);
+
+        // 按住不放，把档位从 1 推到 3（rel 0 → +2，音符号本应 +24）
+        pos = 3'd3;
+        repeat (600) @(posedge clk);       // 远超 pad_pitch 一轮扫查（38 拍）
+
+        checks = checks + 1;
+        if (on_cnt != 1 || off_cnt != 0) begin
+            $display("  [6] [FAIL] 换档期间不该有事件，实得 note-on %0d / note-off %0d",
+                     on_cnt, off_cnt);
+            errors = errors + 1;
+        end else $display("  [6] 换档期间：0 个新事件（P11）                   OK");
+
+        // 松开：note-off 必须是 51（锁存值），不是 75
+        cap[3] = base_i;
+        wait_state(3, 1'b0, 60000, ok);
+        repeat (300) @(posedge clk);
+
+        checks = checks + 1;
+        if (off_cnt != 1) begin
+            $display("  [7] [FAIL] 期望 1 个 note-off，实得 %0d", off_cnt);
+            errors = errors + 1;
+        end
+        else if (off_note[0] !== 7'd51) begin
+            $display("  [7] [FAIL] note-off 音符号 = %0d，应为按下时锁存的 51（若为 75 说明换档改了正在响的音）",
+                     off_note[0]);
+            errors = errors + 1;
+        end else $display("  [7] 换档后松开：note-off = %0d（锁存值，不跟变）    OK", off_note[0]);
+
+        // [8] 换档后再按同一个键 → 按新档位算
+        on_cnt = 0; off_cnt = 0;
+        cap[3] = hi_i + 7 * 32;
+        wait_state(3, 1'b1, 60000, ok);
+        repeat (300) @(posedge clk);
+
+        checks = checks + 1;
+        if (on_cnt != 1 || on_note[0] !== 7'd75) begin
+            $display("  [8] [FAIL] 换档后应按出 75，实得 %0d 个 note-on、首个音符号 %0d",
+                     on_cnt, on_note[0]);
+            errors = errors + 1;
+        end else $display("  [8] 换档后再按：note = %0d（pos=3，rel=+2）        OK", on_note[0]);
+
+        cap[3] = base_i;
+        wait_state(3, 1'b0, 60000, ok);
+        pos = 3'd1;
+        repeat (300) @(posedge clk);
 
         $display("");
         $display("================================================================");

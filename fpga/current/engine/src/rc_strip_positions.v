@@ -9,9 +9,23 @@
 // either. Width is CW+2 because the sum of three CW-bit terms needs two extra
 // bits. It is forced to zero on a bad read or during calibration: a failed
 // node must not look like a light touch.
+//
+// 【八度档 5 格：单电极直读】
+//   音域条（octave strip）的 5 个格子每格只有【一个】电极 —— 它不需要位置，
+//   只需要"这一格被按住了"，所以不走三电极重心，只在本模块每帧末尾多读
+//   NSINGLE 个节点，逐个与阈值比。
+//   为什么要并进本模块、而不是另起一个读者：rc_delta_store 的读口只有一路
+//   （read_address / read_delta / read_valid），多一个读者就要加仲裁，而
+//   仲裁的失败模式（读到别的帧、读到半更新的行）恰恰最难在仿真里看出来。
+//   并进来之后仍然只有一个读者、一帧一次、顺序确定。
+//   去抖不在这里做：下游 strip_ctrl 要求按住 >= HOLD_MS(100 ms) 才生效，
+//   已经比这里强得多；再加一层反而会让"按住 100 ms"变成 100 ms + N 帧。
+//   节点号 = SINGLE_BASE + 格号（升序），见 D-023 的电极分配表。
 module rc_strip_positions #(
     parameter integer STRIPS=25,CW=12,CONFIRM_FRAMES=2,
-    parameter [STRIPS*21-1:0] NODE_MAP=0
+    parameter [STRIPS*21-1:0] NODE_MAP=0,
+    parameter integer NSINGLE=5,
+    parameter [6:0] SINGLE_BASE=7'd75
 )(
     input wire clk,rst_n,frame_valid,
     output wire frame_ready,
@@ -26,14 +40,19 @@ module rc_strip_positions #(
     output reg [STRIPS-1:0] contact,invalid,
     output reg [STRIPS*9-1:0] position,
     output reg [STRIPS*(CW+2)-1:0] area,
+    output reg [NSINGLE-1:0] single_touch,
     output reg [31:0] report_sequence,
     output reg report_calibration
 );
     localparam IDLE=0,REQ=1,WAIT=2,TAKE=3,CALC=4,DIVIDE=5,STORE=6,PUBLISH=7;
-    reg [2:0] state;
+    localparam SREQ=8,SWAIT=9,STAKE=10;
+    reg [3:0] state;
     localparam SW=(STRIPS<2)?1:$clog2(STRIPS);
     reg [SW-1:0] strip;
     reg [1:0] electrode;
+    localparam SGW=(NSINGLE<2)?1:$clog2(NSINGLE);
+    reg [SGW-1:0] single;
+    reg [NSINGLE-1:0] next_single;
     reg [CW-1:0] d0,d1,d2;
     reg good,cal_q;
     reg [STRIPS-1:0] next_contact,next_invalid;
@@ -59,11 +78,13 @@ module rc_strip_positions #(
             state<=IDLE;strip<=0;electrode<=0;read_address<=0;d0<=0;d1<=0;d2<=0;good<=0;cal_q<=0;
             next_contact<=0;next_invalid<=0;next_position<=0;next_area<=0;contact<=0;invalid<=0;position<=0;area<=0;report_valid<=0;
             on_q<=0;off_q<=0;denom<=0;dividend<=0;quotient<=0;remainder<=0;bits_left<=0;report_sequence<=0;report_calibration<=0;
+            single<=0;next_single<=0;single_touch<=0;
             for(i=0;i<STRIPS;i=i+1)confirm[i]<=0;
         end else case(state)
             IDLE:if(frame_valid)begin
                 strip<=0;electrode<=0;good<=1;cal_q<=frame_calibration;
                 next_contact<=contact;next_position<=position;next_area<=area;next_invalid<=0;
+                next_single<=single_touch;single<=0;
                 on_q<=threshold_on;off_q<=(threshold_off>threshold_on)?threshold_on:threshold_off;
                 report_sequence<=frame_sequence;report_calibration<=frame_calibration;state<=REQ;
             end
@@ -99,10 +120,21 @@ module rc_strip_positions #(
                     next_position[strip*9+:9]<={quotient[7:0],take_bit};state<=STORE;
                 end else bits_left<=bits_left-1'b1;
             end
-            STORE:if(strip==STRIPS-1)begin state<=PUBLISH;end
+            STORE:if(strip==STRIPS-1)begin single<=0;state<=SREQ;end
                 else begin strip<=strip+1'b1;electrode<=0;good<=1;state<=REQ;end
+            // 八度档：逐格读一个节点，与阈值比（带滞回），不做重心、不做帧确认
+            SREQ:begin read_address<=SINGLE_BASE+{{(7-SGW){1'b0}},single};state<=SWAIT;end
+            SWAIT:state<=STAKE;
+            STAKE:begin
+                // 读坏或标定帧一律报"没按"，避免坏节点被当成一直按住
+                next_single[single]<=(!read_valid||cal_q)?1'b0:
+                                     ({1'b0,read_delta}>=(single_touch[single]?off_q:on_q));
+                if(single==NSINGLE-1)state<=PUBLISH;
+                else begin single<=single+1'b1;state<=SREQ;end
+            end
             PUBLISH:begin
-                if(!report_valid)begin contact<=next_contact;invalid<=next_invalid;position<=next_position;area<=next_area;report_valid<=1;end
+                if(!report_valid)begin contact<=next_contact;invalid<=next_invalid;position<=next_position;area<=next_area;
+                    single_touch<=next_single;report_valid<=1;end
                 else if(report_ready)begin report_valid<=0;state<=IDLE;end
             end
         endcase

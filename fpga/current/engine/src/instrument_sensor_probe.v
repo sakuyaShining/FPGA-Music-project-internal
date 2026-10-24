@@ -1,9 +1,14 @@
 // Full raw 6x16 acquisition + calibrated 25-strip centroid report. Digital
 // prototype only: routing of node groups and calibration policy need real tests.
+//
+// `single_touch` 是八度档 5 格的按住状态（单电极直读，节点 75..79），
+// 下游接 strip_ctrl 的 cell_t。见 D-023。
 module instrument_sensor_probe #(
     parameter integer LANES=6,STRIPS=25,CW=12,
     parameter integer DISCHARGE_CYCLES=512,TIMEOUT_CYCLES=2047,SPI_HALF_PERIOD=8,
-    parameter integer CONFIRM_FRAMES=2
+    parameter integer CONFIRM_FRAMES=2,
+    parameter integer NSINGLE=5,
+    parameter [6:0] SINGLE_BASE=7'd75
 )(
     input wire clk,rst_n,calibrate,
     input wire [LANES-1:0] sense_n,
@@ -16,6 +21,7 @@ module instrument_sensor_probe #(
     output wire [STRIPS-1:0] contact,invalid,
     output wire [STRIPS*9-1:0] position,
     output wire [STRIPS*(CW+2)-1:0] area,
+    output wire [NSINGLE-1:0] single_touch,
     output wire [31:0] report_sequence,
     output wire report_calibration,protocol_error,grant_error
 );
@@ -39,7 +45,9 @@ module instrument_sensor_probe #(
     rc_delta_store #(.LANES(LANES),.CW(CW)) store(
         .clk(clk),.rst_n(rst_n),.calibrate(calibrate),.row_valid(row_valid),.row_ready(row_ready),.row_address(row_address),.row_count(row_count),.row_fault(row_fault),.row_sequence(row_sequence),
         .frame_valid(frame_valid),.frame_ready(frame_ready),.frame_sequence(frame_sequence),.frame_calibration(frame_cal),.read_address(read_address),.read_delta(read_delta),.read_valid(read_valid),.protocol_error(protocol_error));
-    rc_strip_positions #(.STRIPS(STRIPS),.CW(CW),.CONFIRM_FRAMES(CONFIRM_FRAMES),.NODE_MAP(MAP)) positions(
+    rc_strip_positions #(.STRIPS(STRIPS),.CW(CW),.CONFIRM_FRAMES(CONFIRM_FRAMES),.NODE_MAP(MAP),
+                         .NSINGLE(NSINGLE),.SINGLE_BASE(SINGLE_BASE)) positions(
         .clk(clk),.rst_n(rst_n),.frame_valid(frame_valid),.frame_ready(frame_ready),.frame_sequence(frame_sequence),.frame_calibration(frame_cal),.read_address(read_address),.read_delta(read_delta),.read_valid(read_valid),
-        .threshold_on(threshold_on),.threshold_off(threshold_off),.report_valid(report_valid),.report_ready(report_ready),.contact(contact),.invalid(invalid),.position(position),.area(area),.report_sequence(report_sequence),.report_calibration(report_calibration));
+        .threshold_on(threshold_on),.threshold_off(threshold_off),.report_valid(report_valid),.report_ready(report_ready),.contact(contact),.invalid(invalid),.position(position),.area(area),
+        .single_touch(single_touch),.report_sequence(report_sequence),.report_calibration(report_calibration));
 endmodule

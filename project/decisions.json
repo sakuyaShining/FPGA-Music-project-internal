@@ -352,6 +352,89 @@
           "follow_up": "channels 16..24 still get velocity 0 in tdm_top_owned / tb_pad_chain because pad_scan is NCH=16; real data needs G2/G3"
         }
       }
+    },
+    {
+      "id": "D-023-OCTAVE-ELECTRODES-75-79",
+      "status": "accepted",
+      "supersedes": null,
+      "statement": "The 5 octave-strip cells occupy delta-store nodes 75..79 in ascending cell order (cell 0 = -1 octave = node 75 .. cell 4 = +3 = node 79); nodes 80..83 are spare. Node numbering is the RTL one (e = row*LANES + lane, rc_delta_store.v:3), NOT the physical lane*14+ch numbering used by an earlier revision of the pitch-map document. The two conventions are related by e = ch*6 + lane and are easy to confuse, which would make the octave strip read a pitch electrode.",
+      "facts": {
+        "octave_cells": 5,
+        "octave_nodes": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ],
+        "octave_physical": [
+          "L3_E12",
+          "L4_E12",
+          "L5_E12",
+          "L0_E13",
+          "L1_E13"
+        ],
+        "spare_nodes": [
+          80,
+          81,
+          82,
+          83
+        ],
+        "spare_physical": [
+          "L2_E13",
+          "L3_E13",
+          "L4_E13",
+          "L5_E13"
+        ],
+        "node_formula": "e = row*6 + lane  (row = MUX address 0..13, lane = 0..5)",
+        "old_doc_formula_wrong": "e = lane*14 + ch  (physical only; must not be used in NODE_MAP)",
+        "pitch_nodes": "0..74 (25 positions x 3 electrodes, identity NODE_MAP)",
+        "electrode_budget": "75 + 5 + 4 = 84",
+        "cell0_is_lowest_node": true,
+        "reader": "rc_strip_positions.v tail pass, NSINGLE=5, SINGLE_BASE=75",
+        "downstream": "strip_ctrl.cell_t[4:0] (100 ms hold, one-hot resolution, never emits notes)"
+      },
+      "evidence": {
+        "path": "fpga/current/sim/tb_octave.v",
+        "authority": "Simulation criteria: 17 checks covering per-cell press, all-pressed, hysteresis, bad node, calibration frame, and an address audit asserting that exactly nodes 75..79 are read once per frame",
+        "reverse_validation": "Adding 1 to SINGLE_BASE makes 10 of 17 checks fail, including the address audit",
+        "doc": "fpga/current/PITCH-MAP-DEFINITION-20261024.md section 3.3 and section 4"
+      },
+      "hardware_impact": {
+        "carrier_not_fabricated": true,
+        "wiring": "The 5 cell wires land on 4 lane connectors (L3/L4/L5 at E12, L0/L1 at E13). The octave bar has its own harness, so this is electrically free; the carrier is un-fabricated so the assignment costs nothing.",
+        "direction": "Cell 0 must be wired to node 75. If the panel mounts the bar reversed, the harness is flipped, not the RTL.",
+        "alternative_rejected": "Putting all 5 cells on L5 E05..E09 (nodes 35/41/47/53/59) would keep one connector but breaks the identity NODE_MAP and steals an electrode from pitch position 11."
+      },
+      "note": "Two numbering systems coexist in this repo and the older pitch-map revision used the wrong one for NODE_MAP. rc_delta_store addresses memory as row*LANES+lane, and NODE_MAP is fed straight into read_address, so NODE_MAP must use that numbering. Recorded here because the failure mode is silent: the octave strip would read a pitch electrode, so pressing a key would also shift octaves, or the strip would do nothing."
+    },
+    {
+      "id": "D-024-AUDIO-SAMPLE-RATE",
+      "status": "accepted",
+      "supersedes": null,
+      "statement": "Product sample rate is 52734.375 Hz = 27 MHz / 16 / 32. DIV_BCK=16 and BCK_PER_LRCK=32 in tdm_top, tdm_top_owned and tdm_top_rh; the engine slot count NSLOT=512 equals DIV_BCK*BCK_PER_LRCK in all three. The legacy osc_additive_top keeps DIV_BCK=18 (46875 Hz). 48 kHz is not adopted: it needs a PLL or a different crystal, and the project design rule is no PLL.",
+      "facts": {
+        "sample_rate_hz": 52734.375,
+        "formula": "27e6 / DIV_BCK / BCK_PER_LRCK",
+        "product_div_bck": 16,
+        "bck_per_lrck": 32,
+        "clocks_per_sample": 512,
+        "nslot": 512,
+        "legacy_osc_additive_top_rate_hz": 46875,
+        "legacy_div_bck": 18,
+        "bit_clock_hz": 1687500,
+        "jitter": "zero (integer divider, no PLL, single clock domain, enable pulses only)",
+        "48khz_requires": "PLL or a different crystal; rejected by the no-PLL design rule",
+        "previous_documentation": "audio_clk_en.v header claimed 18 divider / 46875 Hz as the product rate, while all three product tops passed 16"
+      },
+      "evidence": {
+        "path": "fpga/current/sim/tb_audio_clk_en.v",
+        "authority": "Simulation criteria: 12 checks over two configurations (DIV_BCK=16 and 18), measuring sample_en period, full lrck period (not toggle interval), lrck high width, bck pin period, back-computed rate, and the alignment contract that sample_en coincides with the lrck 1->0 edge and that cycle's bck_en",
+        "reverse_validation": "3 mutations (drop the full-period toggle / off-by-one on the half period / move sample_en to the half period) all rejected; the third is only caught by the alignment criterion, not by any period measurement",
+        "static_check": "fpga/current/tools/check_audio_rate.py asserts the product tops pass 16/32, that all three agree, and that NSLOT == DIV_BCK*BCK_PER_LRCK; changing tdm_top to 18 reports 3 problems",
+        "doc": "fpga/current/PITCH-MAP-DEFINITION-20261024.md section 6"
+      },
+      "note": "The module header referenced a testbench 'tb_audio_clk_en' that had never existed, so the sample rate had zero coverage while the comment stated a rate that no product top used. Both are now fixed: the header states the product configuration, and the criteria exist. The alignment contract (sample_en, lrck 1->0, 32nd bck_en on the same posedge) is what i2s_tx depends on, and a period-only test cannot see it: moving sample_en to the half period keeps every period identical but shifts the frame by half a word."
     }
   ]
 }

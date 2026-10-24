@@ -64,6 +64,24 @@ CASES = {
     'tb_pad_velmap': (
         [SIM / 'tb_pad_velmap.v', R / 'engine/src/pad_pitch.v'],
         [], []),
+    # 音频时钟链（采样率定稿的守门人）：两个分频配置各查 5 项。
+    # audio_clk_en 是纯计数逻辑，不需要 vendor 桩和数据文件。
+    'tb_audio_clk_en': (
+        [SIM / 'tb_audio_clk_en.v', R / 'engine/src/audio_clk_en.v'],
+        [], []),
+    # 八度档 5 格（单电极直读）：只编 rc_strip_positions，读回用查表模型。
+    # 本台除了查"按了有没有反应"，还查"读的到底是哪几个节点"——
+    # 节点号 = row*LANES+lane，与物理的 lane*14+ch 不是一回事（D-023）。
+    'tb_octave': (
+        [SIM / 'tb_octave.v', R / 'engine/src/rc_strip_positions.v'],
+        [], []),
+    # 载板扫描前端（曾经"跑过但没人能重跑"）：位序 + 仲裁持有 + 整体连通。
+    # 三个子模块一起编 —— 本台验的正是"接起来对不对"，拆开就没意义了。
+    'tb_board_scan': (
+        [R / 'tb/tb_board_scan.v', R / 'engine/src/scan_shift165.v',
+         R / 'engine/src/scan_bus_arbiter.v', R / 'engine/src/scan_shift595.v',
+         R / 'engine/src/rc_mux_scan.v', R / 'engine/src/sensor_frontend_board.v'],
+        [], []),
     # 双段衰减：只编 osc_env（无状态组合单元），不需要 vendor 桩和数据文件。
     'tb_decay2': (
         [SIM / 'tb_decay2.v', R / 'engine/src/osc_env.v'],
@@ -111,12 +129,15 @@ def run_one(name, verbose=False):
         return name, False, '运行超时（>900 s）'
     out = r.stdout + r.stderr
 
-    # 判据要覆盖两种汇总风格：
+    # 判据要覆盖三种汇总风格：
     #   · tb_rst_gen / tb_beacon:  "RESULT(main): PASS"
-    #   · 其余 tb:                 " PASS —— N 项检查全部通过"
+    #   · sim/tb_*:                " PASS —— N 项检查全部通过"
+    #   · tb/tb_board_scan:        "ALL PASS" / "=== 结果: 0 个失败 ==="
+    # 之前只认前两种，tb_board_scan 明明全绿却被判 FAIL —— 判据读不出结果，
+    # 和测试台坏了是一个后果。
     n_fail = len(re.findall(r'\[FAIL\]', out))
-    has_fail = bool(re.search(r'RESULT[^:\n]*:\s*FAIL|^\s*FAIL\s*——', out, re.M))
-    has_pass = bool(re.search(r'RESULT[^:\n]*:\s*PASS|^\s*PASS\s*——', out, re.M))
+    has_fail = bool(re.search(r'RESULT[^:\n]*:\s*FAIL|^\s*FAIL\s*——|结果:\s*[1-9]\d*\s*个失败', out, re.M))
+    has_pass = bool(re.search(r'RESULT[^:\n]*:\s*PASS|^\s*PASS\s*——|^\s*ALL PASS\s*$', out, re.M))
     ok = (n_fail == 0) and has_pass and not has_fail
 
     if verbose or not ok:

@@ -14,8 +14,33 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
-MANIFEST = 'project/versions/engineering-sources-20261023.json'
+MANIFEST = 'project/versions/engineering-sources-20261025.json'
 sha = lambda data: hashlib.sha256(data).hexdigest()
+
+
+def ignored_paths(root, candidates):
+    """返回 candidates 里被 .gitignore 忽略的那些。
+
+    为什么需要这一步：`check()` 原本要求"area/current 下每个文件都必须在 manifest 里"，
+    而 `fpga/current/evidence/` 是 `check_*.py` 每次运行都会重写的产物目录
+    （`common.py` 往里面写编译日志和输入哈希），且已在 .gitignore:57 排除。
+    不排除的话，跑过一次测试就再也 check 不过 —— 而 manifest 该守的是"源"，
+    不是"上次跑测试留下的日志"。
+    """
+    if not candidates:
+        return set()
+    try:
+        p = subprocess.run(['git', 'check-ignore', '-z', '--stdin'],
+                           cwd=str(root), input='\0'.join(candidates) + '\0',
+                           capture_output=True, text=True)
+    except (OSError, ValueError):
+        return set()
+    if p.returncode not in (0, 1):      # 0=有命中 1=都没命中 其它=git 不可用
+        return set()
+    # 用 -z：默认模式下 git 会给含特殊字符的路径加引号并转义，
+    #   Windows 上还会混进 \r，直接按行切会得到 '"path\r"' 这种带引号的值。
+    return {x for x in p.stdout.split('\0') if x}
+
 
 
 def safe(name):
@@ -53,12 +78,19 @@ def check(root=ROOT):
             content(root, item)
             expected.add(item['stored'])
             count += 1
+        # 先收集候选，再一次性问 git 哪些被忽略（逐个起进程太慢）
+        cand = []
         for path in (root/area/'current').rglob('*'):
             if not path.is_file() or '__pycache__' in path.parts or path.suffix == '.pyc':
                 continue
-            relative = path.relative_to(root).as_posix()
-            if relative not in expected and path != root/area/'current'/'README.md':
-                raise ValueError('Unregistered engineering file: ' + relative)
+            rel = path.relative_to(root).as_posix()
+            if rel in expected or path == root/area/'current'/'README.md':
+                continue
+            cand.append(rel)
+        skip = ignored_paths(root, cand)
+        for rel in cand:
+            if rel not in skip:
+                raise ValueError('Unregistered engineering file: ' + rel)
     return dict(status='PASS', files=count, captured_at=m['captured_at'],
                 scope='Engineering input identities, not Git publication, live freshness or product acceptance',
                 product_acceptance=False)

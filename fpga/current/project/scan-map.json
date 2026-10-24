@@ -1,0 +1,982 @@
+{
+  "input_bits": 587,
+  "output_bits": 956,
+  "observer_chunks": 30,
+  "ports": [
+    {
+      "name": "rec_clear_ready",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "play_clear_ready",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "rec_clear_done",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "play_clear_done",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "rec_clearing",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "play_clearing",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "mem_busy",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "rec_ring_level",
+      "direction": "output",
+      "width": "[17:0]",
+      "signed": "",
+      "bits": 18
+    },
+    {
+      "name": "play_ring_level",
+      "direction": "output",
+      "width": "[17:0]",
+      "signed": "",
+      "bits": 18
+    },
+    {
+      "name": "sdram_req_valid",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sdram_req_write",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sdram_rsp_ready",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sdram_req_addr",
+      "direction": "input",
+      "width": "[21:0]",
+      "signed": "",
+      "bits": 22
+    },
+    {
+      "name": "sdram_req_data",
+      "direction": "input",
+      "width": "[15:0]",
+      "signed": "",
+      "bits": 16
+    },
+    {
+      "name": "sdram_req_ready",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sdram_rsp_valid",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sdram_init_done",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sdram_rsp_data",
+      "direction": "output",
+      "width": "[15:0]",
+      "signed": "",
+      "bits": 16
+    },
+    {
+      "name": "sd_clk",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sd_cke",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sd_cs_n",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sd_ras_n",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sd_cas_n",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sd_we_n",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sd_addr",
+      "direction": "output",
+      "width": "[10:0]",
+      "signed": "",
+      "bits": 11
+    },
+    {
+      "name": "sd_bank",
+      "direction": "output",
+      "width": "[1:0]",
+      "signed": "",
+      "bits": 2
+    },
+    {
+      "name": "sd_dqm",
+      "direction": "output",
+      "width": "[3:0]",
+      "signed": "",
+      "bits": 4
+    },
+    {
+      "name": "sd_dq",
+      "direction": "inout",
+      "width": "[31:0]",
+      "signed": "",
+      "bits": 32
+    },
+    {
+      "name": "rec_clear",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 0
+    },
+    {
+      "name": "rec_enable",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 1
+    },
+    {
+      "name": "rec_ready",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 2
+    },
+    {
+      "name": "play_clear",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 3
+    },
+    {
+      "name": "play_enable",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 4
+    },
+    {
+      "name": "feed_valid",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 5
+    },
+    {
+      "name": "feed_data",
+      "direction": "input",
+      "width": "[15:0]",
+      "signed": "",
+      "bits": 16,
+      "scan_offset": 6
+    },
+    {
+      "name": "feed_ready",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "rec_valid",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "rec_overflow",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "play_valid",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "play_underflow",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "play_miss",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "rec_data",
+      "direction": "output",
+      "width": "[15:0]",
+      "signed": "",
+      "bits": 16
+    },
+    {
+      "name": "play_data",
+      "direction": "output",
+      "width": "[15:0]",
+      "signed": "",
+      "bits": 16
+    },
+    {
+      "name": "rec_level",
+      "direction": "output",
+      "width": "[10:0]",
+      "signed": "",
+      "bits": 11
+    },
+    {
+      "name": "play_level",
+      "direction": "output",
+      "width": "[10:0]",
+      "signed": "",
+      "bits": 11
+    },
+    {
+      "name": "layer_selection",
+      "direction": "input",
+      "width": "[3:0]",
+      "signed": "",
+      "bits": 4,
+      "scan_offset": 22
+    },
+    {
+      "name": "cfg_valid",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 26
+    },
+    {
+      "name": "cfg_commit",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 27
+    },
+    {
+      "name": "cfg_slot",
+      "direction": "input",
+      "width": "[1:0]",
+      "signed": "",
+      "bits": 2,
+      "scan_offset": 28
+    },
+    {
+      "name": "cfg_part",
+      "direction": "input",
+      "width": "[3:0]",
+      "signed": "",
+      "bits": 4,
+      "scan_offset": 30
+    },
+    {
+      "name": "cfg_word",
+      "direction": "input",
+      "width": "[87:0]",
+      "signed": "",
+      "bits": 88,
+      "scan_offset": 34
+    },
+    {
+      "name": "cfg_ready",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "cfg_applied",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "cfg_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "layer_protocol_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "layer_selection_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sense_n",
+      "direction": "input",
+      "width": "[5:0]",
+      "signed": "",
+      "bits": 6,
+      "scan_offset": 122
+    },
+    {
+      "name": "calibrate",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 128
+    },
+    {
+      "name": "scan_bus_grant",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 129
+    },
+    {
+      "name": "sensor_report_ready",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "left_note_map",
+      "direction": "input",
+      "width": "[181:0]",
+      "signed": "",
+      "bits": 182,
+      "scan_offset": 130
+    },
+    {
+      "name": "left_velocity",
+      "direction": "input",
+      "width": "[3:0]",
+      "signed": "",
+      "bits": 4,
+      "scan_offset": 312
+    },
+    {
+      "name": "frame_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "link_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sensor_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "watchdog_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "bound_contacts",
+      "direction": "output",
+      "width": "[25:0]",
+      "signed": "",
+      "bits": 26
+    },
+    {
+      "name": "blocked_contacts",
+      "direction": "output",
+      "width": "[25:0]",
+      "signed": "",
+      "bits": 26
+    },
+    {
+      "name": "threshold_on",
+      "direction": "input",
+      "width": "[13:0]",
+      "signed": "",
+      "bits": 14,
+      "scan_offset": 316
+    },
+    {
+      "name": "threshold_off",
+      "direction": "input",
+      "width": "[13:0]",
+      "signed": "",
+      "bits": 14,
+      "scan_offset": 330
+    },
+    {
+      "name": "scan_bus_request",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "scan_bus_sck",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "scan_bus_mosi",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "scan_latch",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sensor_report_valid",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sensor_report_calibration",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sensor_protocol_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sensor_grant_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "sensor_contact",
+      "direction": "output",
+      "width": "[25:0]",
+      "signed": "",
+      "bits": 26
+    },
+    {
+      "name": "sensor_invalid",
+      "direction": "output",
+      "width": "[25:0]",
+      "signed": "",
+      "bits": 26
+    },
+    {
+      "name": "sensor_position",
+      "direction": "output",
+      "width": "[233:0]",
+      "signed": "",
+      "bits": 234
+    },
+    {
+      "name": "sensor_sequence",
+      "direction": "output",
+      "width": "[31:0]",
+      "signed": "",
+      "bits": 32
+    },
+    {
+      "name": "clk",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "rst_n",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "uart_rx_pin",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 344
+    },
+    {
+      "name": "uart_tx_pin",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "ev_valid",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 345
+    },
+    {
+      "name": "ev_on",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 346
+    },
+    {
+      "name": "ev_note",
+      "direction": "input",
+      "width": "[6:0]",
+      "signed": "",
+      "bits": 7,
+      "scan_offset": 347
+    },
+    {
+      "name": "ev_vel",
+      "direction": "input",
+      "width": "[3:0]",
+      "signed": "",
+      "bits": 4,
+      "scan_offset": 354
+    },
+    {
+      "name": "preset",
+      "direction": "input",
+      "width": "[1:0]",
+      "signed": "",
+      "bits": 2,
+      "scan_offset": 358
+    },
+    {
+      "name": "finger_valid",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "finger_cmd",
+      "direction": "output",
+      "width": "[1:0]",
+      "signed": "",
+      "bits": 2
+    },
+    {
+      "name": "finger_id",
+      "direction": "output",
+      "width": "[4:0]",
+      "signed": "",
+      "bits": 5
+    },
+    {
+      "name": "finger_group",
+      "direction": "output",
+      "width": "[4:0]",
+      "signed": "",
+      "bits": 5
+    },
+    {
+      "name": "finger_position",
+      "direction": "output",
+      "width": "[11:0]",
+      "signed": "signed ",
+      "bits": 12
+    },
+    {
+      "name": "pad",
+      "direction": "inout",
+      "width": "[15:0]",
+      "signed": "",
+      "bits": 16
+    },
+    {
+      "name": "touch_valid",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 360
+    },
+    {
+      "name": "touch_ready",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "touch_active",
+      "direction": "input",
+      "width": "[4:0]",
+      "signed": "",
+      "bits": 5,
+      "scan_offset": 361
+    },
+    {
+      "name": "touch_x",
+      "direction": "input",
+      "width": "[49:0]",
+      "signed": "",
+      "bits": 50,
+      "scan_offset": 366
+    },
+    {
+      "name": "touch_y",
+      "direction": "input",
+      "width": "[49:0]",
+      "signed": "",
+      "bits": 50,
+      "scan_offset": 416
+    },
+    {
+      "name": "touch_id",
+      "direction": "input",
+      "width": "[19:0]",
+      "signed": "",
+      "bits": 20,
+      "scan_offset": 466
+    },
+    {
+      "name": "radius",
+      "direction": "input",
+      "width": "[9:0]",
+      "signed": "",
+      "bits": 10,
+      "scan_offset": 486
+    },
+    {
+      "name": "slew_step",
+      "direction": "input",
+      "width": "[9:0]",
+      "signed": "",
+      "bits": 10,
+      "scan_offset": 496
+    },
+    {
+      "name": "part_to_control",
+      "direction": "input",
+      "width": "[47:0]",
+      "signed": "",
+      "bits": 48,
+      "scan_offset": 506
+    },
+    {
+      "name": "restore_valid",
+      "direction": "input",
+      "width": "",
+      "signed": "",
+      "bits": 1,
+      "scan_offset": 554
+    },
+    {
+      "name": "voice_mask",
+      "direction": "input",
+      "width": "[31:0]",
+      "signed": "",
+      "bits": 32,
+      "scan_offset": 555
+    },
+    {
+      "name": "fader_y",
+      "direction": "output",
+      "width": "[79:0]",
+      "signed": "",
+      "bits": 80
+    },
+    {
+      "name": "gains",
+      "direction": "output",
+      "width": "[159:0]",
+      "signed": "",
+      "bits": 160
+    },
+    {
+      "name": "touch_done",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "gain_done",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "control_error",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "led",
+      "direction": "output",
+      "width": "[5:0]",
+      "signed": "",
+      "bits": 6
+    },
+    {
+      "name": "dac_din",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "dac_ws",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "dac_bck",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "pa_en",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "voice_valid",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "voice_on",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "voice_group",
+      "direction": "output",
+      "width": "[4:0]",
+      "signed": "",
+      "bits": 5
+    },
+    {
+      "name": "voice_note",
+      "direction": "output",
+      "width": "[6:0]",
+      "signed": "",
+      "bits": 7
+    },
+    {
+      "name": "pcm_valid",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "pcm",
+      "direction": "output",
+      "width": "[23:0]",
+      "signed": "signed ",
+      "bits": 24
+    },
+    {
+      "name": "lcd_reset_n",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "lcd_cs_n",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "lcd_sck",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "lcd_mosi",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "lcd_dc",
+      "direction": "output",
+      "width": "",
+      "signed": "",
+      "bits": 1
+    },
+    {
+      "name": "rendered_frames",
+      "direction": "output",
+      "width": "[31:0]",
+      "signed": "",
+      "bits": 32
+    },
+    {
+      "name": "late_frames",
+      "direction": "output",
+      "width": "[31:0]",
+      "signed": "",
+      "bits": 32
+    },
+    {
+      "name": "analysis_gaps",
+      "direction": "output",
+      "width": "[31:0]",
+      "signed": "",
+      "bits": 32
+    },
+    {
+      "name": "spectrum_sequence",
+      "direction": "output",
+      "width": "[31:0]",
+      "signed": "",
+      "bits": 32
+    }
+  ],
+  "ignored_upstream_ports": [
+    "sdram_req_addr",
+    "sdram_req_data",
+    "sdram_req_valid",
+    "sdram_req_write",
+    "sdram_rsp_ready"
+  ],
+  "bench_gate": false
+}
