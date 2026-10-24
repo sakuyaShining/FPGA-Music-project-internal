@@ -7,7 +7,7 @@
     "source_branch": "codex/current-engineering-sources-20261023",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-23T23:05:58.760Z",
+  "updated_at": "2026-10-24T00:20:04.249Z",
   "entry": "project/CURRENT.md",
   "predecessor_state": "codex/project-version-closure:project/state.json",
   "implementation_boundary": "This registry does not merge or change any functional source",
@@ -142,9 +142,19 @@
       "status": "REAL_AUDIO_DIGITAL_PROBE_VERIFIED_RENDERER_AND_TIMING_PENDING",
       "product_accepted": false,
       "programming_allowed": false
+    },
+    "note_partial_renderer_candidate": {
+      "role": "isolated-development-candidate",
+      "manifest": "project/versions/note-partial-renderer-20261024.json",
+      "entry": "experiments/note_resource_20261024/audio/renderer/README.md",
+      "review": "project/reviews/20261024-note-partial-renderer/review.json",
+      "status": "REAL_PAYLOAD_AND_AUDIO_CHAIN_VERIFIED_PHYSICAL_SOURCES_AND_TIMING_PENDING",
+      "product_accepted": false,
+      "programming_allowed": false
     }
   },
   "active_fpga_profile": "fpga_live_unpublished",
   "design_state": "project/design-state.json",
-  "governance": "project/governance.json"
+  "governance": "project/governance.json",
+  "latest_incremental_fpga_profile": "note_partial_renderer_candidate"
 }

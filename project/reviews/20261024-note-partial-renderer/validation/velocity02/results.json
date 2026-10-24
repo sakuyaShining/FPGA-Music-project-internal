@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "tested_at": "2026-10-24T00:11:37.570246+00:00",
+  "inputs": {
+    "fpga/current/engine/src/vel_shape.v": "5bedde0793a2afbb22f45f6fcde503e7e1b03842091dcc2a96841f450a75ddcd",
+    "experiments/note_resource_20261024/audio/renderer/rtl/vel_shape_scaled.v": "6af745d82b76ebca063fdced27aab6501b12b560cd45af3e9e288c98a4c89029",
+    "experiments/note_resource_20261024/audio/renderer/tb/tb_velocity_scaling.v": "b00abc5014503d7c82d58af0910b8b9532bc694bf31574b6916b7f11d5539176",
+    "fpga/current/engine/src/vel_wtab.hex": "5daaea0d56b0e88ccbfc5161821dbafd7f9439315ef4c3d32a2007f4fd6f7160",
+    "experiments/note_resource_20261024/audio/renderer/verify_velocity.py": "740132265afeaa7c7036f18d312a58288def610d265cace674ae84e5c4b46046",
+    "experiments/note_resource_20261024/audio/renderer/verify_renderer.py": "c8534ac25da1ea0ae3f92ea436cf89653dec60a2ad18813a1950a10429e22399",
+    "experiments/note_resource_20261024/audio/renderer/reference.py": "2e3b99418a2c318328ef47c30d60b1185bb99f6b1b0febe891517390aff40468"
+  },
+  "tools": {
+    "D:\\iverilog\\bin\\iverilog.exe": "f8bad18d279f8c63ab041bd292606f21fc0e8b9cc0edb37a311158f756c35eb0",
+    "D:\\iverilog\\bin\\vvp.exe": "c3b28a3a088851fc3396a30a7c781c4b126c61dbbb7cead7c00644cc7afaa4d4"
+  },
+  "compilation": {
+    "command": [
+      "D:\\iverilog\\bin\\iverilog.exe",
+      "-g2012",
+      "-s",
+      "tb_velocity_scaling",
+      "-o",
+      "D:\\FPGA-Project\\review\\velocity-scaling-20261024-02\\velocity.vvp",
+      "D:\\FPGA-Project\\review\\velocity-scaling-20261024-02\\vel_shape.v",
+      "D:\\FPGA-Project\\review\\velocity-scaling-20261024-02\\vel_shape_scaled.v",
+      "D:\\FPGA-Project\\review\\velocity-scaling-20261024-02\\tb_velocity_scaling.v"
+    ],
+    "returncode": 0,
+    "text": "",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "simulation": {
+    "command": [
+      "D:\\iverilog\\bin\\vvp.exe",
+      "D:\\FPGA-Project\\review\\velocity-scaling-20261024-02\\velocity.vvp"
+    ],
+    "returncode": 0,
+    "text": "FIRST_LEGACY_WRAP address=3 scale=257 base=1 old=1 corrected=0\r\nPASS velocity_scaling checked=2097152 default_compatible=524288 corrected=218790\r\nD:\\FPGA-Project\\review\\velocity-scaling-20261024-02\\tb_velocity_scaling.v:41: $finish called at 2097152000 (1ps)\r\n",
+    "log_sha256": "72b7adaa760ce44bd863e3864014c8bc5da481aeb5db266edede00789688b6cf"
+  },
+  "source_changes": [],
+  "status": "PASS",
+  "scope": "All1024 captured ROM addresses x256 base amplitudes x8 explicit scales; default0/256 compatibility and signed arithmetic oracle, not full PCM or musical calibration",
+  "product_acceptance": false,
+  "hardware_accessed": false
+}

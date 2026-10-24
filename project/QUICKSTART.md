@@ -26,3 +26,5 @@ python tools/scripts/design_governance.py status --remote
 更新专门用于阅读、没有本地修改的入口工作区时，先看`git status --short`，再`git pull --ff-only internal main`。存在本地修改或分叉则先保全并另取新目录，保留原任务分支；禁止reset/clean/强推来通过检查。任务分支上有自己的提交时，不把pull失败当作覆盖本地成果的理由。
 
 PR #1已合入main；后续入口同样通过管理PR维护。冻结标签仅用于复现。旧日期分支为只快进兼容入口；新工具直接核对实际main。维护合同、有效期及owner交回步骤见`project/MAINTAINING-MAIN.md`。
+
+最新4d37隔离增量从`experiments/note_resource_20261024/audio/renderer/README.md`及`project/versions/note-partial-renderer-20261024.json`接手：真实四槽/音符分量→PCM已限定验证，尚缺手指/曲谱源、激发自动OFF、完整顶层/PnR/STA。T02与D-019三项已收口，不重复定位或重问；P-020短淡出仍未批准。新硬件原生a3a258/49项13网的只读保全与旧hardware/current e098/47项必须分开。PR4候选不等于main。

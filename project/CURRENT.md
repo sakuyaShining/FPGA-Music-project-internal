@@ -71,3 +71,5 @@ python tools/scripts/project_control.py restore --snapshot 4d37 --output D:/FPGA
 3. 审查音乐安全修复、GUI/协议与当前探针的差异，按行为回归逐项接合；不批量合并全部历史提交。
 4. 向真实产品顶层与完整资源/时序预算推进，独立验证J10触控显示、录放、非易失及完整控制链；J11实体可视化屏已取消。
 5. 后续再整理目录和清理工作树。此次1—3步没有移动活跃工程或清理构建产物。
+
+最新4d37隔离增量从`experiments/note_resource_20261024/audio/renderer/README.md`及`project/versions/note-partial-renderer-20261024.json`接手：真实四槽/音符分量→PCM已限定验证，尚缺手指/曲谱源、激发自动OFF、完整顶层/PnR/STA。T02与D-019三项已收口，不重复定位或重问；P-020短淡出仍未批准。新硬件原生a3a258/49项13网的只读保全与旧hardware/current e098/47项必须分开。PR4候选不等于main。

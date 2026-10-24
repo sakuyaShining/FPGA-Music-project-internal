@@ -245,3 +245,11 @@ internal  https://github.com/sakuyaShining/FPGA-Music-project-internal.git
 - Decisions: project/decisions.json records accepted/proposed/superseded items with evidence; D-010 directly confirms retain J10 and existing controller route, superseding the external RA8875 cancellation interpretation.
 - Freshness: project/governance.json/current review, 24h design review and6h active observations; --live detects actual local drift, missing roots are not green. Observe does not renew a review.
 - Handoff: project/MAINTAINING-MAIN.md and NEXT-AGENT-PROMPT.md. Active unpublished code, FPGA owner identity gap and unvalidated hardware remain explicit. main merge still needs user approval for this new PR.
+
+## 12. 2026-10-24 真实分量生成器限定交回
+
+- 做了什么：4d37仍只写已认领experiments/note_resource_20261024及入口/证据；真实四槽表、音符上下文快照、分量生成与32组TDM接通。修复高倍率力度符号回绕、直接生成器配置/音符同时valid互等；旧源不改。
+- 版本：任务分支codex/current-engineering-sources-20261023，源基点bff7c4e9d9de90be01ae2629a1472c78dfb29f9d；新提交由目标仓库PR4实际head解析，逐文件身份见project/versions/note-partial-renderer-20261024.json，不借main名义签候选。
+- 验证：最终renderer03各16384分量×2、4幅度反例、独立5136装载/4080PCM帧；力度2097152向量、默认524288项兼容；并发互等旧RTL指定断言检出；60Python测试。同版综合11515Logic/4865REG/14BSRAM，未PnR/STA/下载/板验。
+- 在飞什么：本轮所有03仿真/综合已终态；D盘原FPGA与06df只读。原硬件owner新保存a3a258局部ADDR1/49项13网，不抢占其CAD、路由或PCB范围；恢复ZIP另保全，341个current文件不变。
+- 下一手：实际手指/曲谱事件源与身份/被抢占按住不重触发、激发自动OFF、独立PCM/瞬变、完整顶层/资源/PnR/STA；P-020短淡出待人类回复，其余未冻结边界继续成熟问答。产品未完成，main仅由用户合入。
