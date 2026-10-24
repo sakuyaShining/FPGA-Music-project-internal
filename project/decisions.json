@@ -261,6 +261,39 @@
         "sha256": "f7d36868ed623e7acf39231c1177d6bd73ad3b85caf6af580618ff136243dfde",
         "authority": "Agent proposal, explicitly not accepted by human"
       }
+    },
+    {
+      "id": "D-021-PITCH-ENDPOINTS-25",
+      "status": "accepted",
+      "statement": "Pitch surface carries 25 distinct pitch positions: each row 12 equal-width keys (C3..B3 and C4..B4) plus one standalone C5 key (channel 24) at the top-right of the upper row. The top position is NOT duplicated across the two rows. This confirms specification v2.0 section 2 and makes the carrier board's 26 groups the outlier, not the spec.",
+      "facts": {
+        "pitch_positions": 25,
+        "layout": "12 + 12 + 1 standalone C5",
+        "pitch_semitones": "C3..C5 inclusive, chromatic",
+        "duplicated_top_endpoint": false,
+        "channel_24_standalone": true,
+        "spec_v2_2_already_25": true,
+        "previous_carrier_assumption_positions": 26,
+        "pitch_electrodes": "73 if C5 is a single pad (spec line 22) or 75 if C5 gets 3 electrodes - UNRESOLVED",
+        "octave_cells": 5,
+        "electrode_budget": "84 total; both 73+5+6 and 75+5+4 close the account"
+      },
+      "evidence": {
+        "path": "reviews/20261024-pitch-endpoints-25/evidence/user-decision.json",
+        "sha256": "fc54a567a72d480f2d0b0be2dd53702ed8c8180575d97db175f0a6fb88f0ac5f",
+        "authority": "Direct human WorkBuddy user_query, corroborated in-repo by docs/02-技术方案/25-音高与八度规格.md section 2 lines 20-22 and 29-30",
+        "excerpt": "无需两个高音位"
+      },
+      "hardware_impact": {
+        "carrier_not_fabricated": true,
+        "rtl_parameters_still_26": [
+          "fpga/current/engine/src/rc_strip_positions.v:6 (STRIPS=26)",
+          "fpga/current/engine/src/instrument_sensor_probe.v:4 (STRIPS=26)",
+          "fpga/current/engine/src/left_contact_bridge.v:5 (NF=26)"
+        ],
+        "action_required": "Drop one top group (3 electrodes) per row before fabrication. Zero cost while un-fabricated; a re-spin if changed after fabrication."
+      },
+      "note": "User's derivation '26 = 12+12+2 high positions' was not established by the evidence, but the decision it led to (no duplicated top endpoint) matches specification v2.0 section 2 verbatim, which also supplies the technical reason: two adjacent keys on the same pitch double-trigger at the boundary and burn two voices plus two note-offs. The companion claim that the 16 digital bits are 8 harmonics plus 5 octave cells is rejected: the 16 bits are 8 harmonics + 4 presets + 1 edit + 3 encoder, and the 5 octave cells are on the analog side. Open: whether channel 24 uses 1 or 3 electrodes, which sets the pitch electrode total at 73 or 75."
     }
   ]
 }

@@ -52,6 +52,10 @@ sim_build/show/*.hex
 *.lxt
 *.lxt2
 
+#   iverilog 调用记录（compile-*.json / run-*.json 里只有 command + inputs 哈希 + returncode）
+#   是工具自动落盘的运行痕迹，可重跑；.vvp 已在上面排除，剩下的 json/log 一并排除
+fpga/current/evidence/
+
 # ---- 3. PyInstaller / Python 产物 ----
 tools/host/build/
 tools/host/dist/
