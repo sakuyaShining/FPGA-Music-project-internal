@@ -28,12 +28,12 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent          # fpga/current/audio_probe
 R = HERE.parent                                  # fpga/current
 
-TOP = 'audio_selftest_top'
+TOP = os.environ.get('SELFTEST_TOP', 'audio_selftest_top')
 
-# Same source set as build_product.py, plus our own top. engine/rtl holds the
+# Same source set as build_product.py, plus our own tops. engine/rtl holds the
 # SDRAM/PCM storage subsystem; engine/src holds everything else.
 SOURCES = (
-    [HERE / 'audio_selftest_top.v']
+    [HERE / 'audio_selftest_top.v', HERE / 'audio_silent_top.v']
     + sorted((R / 'engine/src').glob('*.v'))
     + sorted((R / 'engine/rtl').glob('*.v'))
     + sorted((R / 'engine/src').glob('*.hex'))

@@ -64,7 +64,10 @@ module audio_selftest_top #(
     parameter integer LEGACY_PAD = 1,
     parameter integer UART_BAUD = 115200,
     // BEACON=1 时用 uart_tx_pin 发心跳（诊断用），默认 0 不影响产品行为
-    parameter integer BEACON = 0
+    parameter integer BEACON = 0,
+    // TEST_MODE=1 -> 走 tdm_top_owned 内置测试加载器，512 个等幅音持续发声
+    // TEST_MODE=0 -> 与产品码流一致，没有音符事件就不出声（配合 LEGACY_PAD=0 才是真静音）
+    parameter integer TEST_MODE = 1
 )(
     input  wire        clk,
     input  wire        btn_rst,      // 引脚 87：高有效（板上外部下拉）
@@ -137,7 +140,7 @@ module audio_selftest_top #(
         .ev_note(7'd0),
         .ev_vel(4'd0),
         .preset(2'd0),
-        .test_mode(1'b1),
+        .test_mode(TEST_MODE != 0),
 
         //---- 实例化演奏接口（OWNED_EVENTS=0 时不用）----
         .own_valid(1'b0),
