@@ -1,0 +1,408 @@
+{
+  "checked_at": "2026-10-25T15:07:44.309153+08:00",
+  "source_native_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "remote_main": "100b35bd93cbde6d604a289d990f208622e94646",
+  "comparisons": {
+    "internal/main": {
+      "commit": "100b35bd93cbde6d604a289d990f208622e94646",
+      "files": [
+        {
+          "path": "eprj3-intro.md",
+          "local_bytes": 5976,
+          "local_sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+          "remote_exists": true,
+          "remote_bytes": 5976,
+          "remote_sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+          "same": true
+        },
+        {
+          "path": "FPGA-Music-U9ControlWork-20261023.eprj3",
+          "local_bytes": 6074,
+          "local_sha256": "a4200b2610a1c411c8d7b27526a94039551b81807d291772a69195ae1c6d3cd9",
+          "remote_exists": true,
+          "remote_bytes": 6074,
+          "remote_sha256": "aa01a91f9d8d8d4ffe86f9446f35752304f0da74a7a56d2935b124aad7a3f88a",
+          "same": false
+        },
+        {
+          "path": "panel/Panel1.epan2",
+          "local_bytes": 255,
+          "local_sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+          "remote_exists": true,
+          "remote_bytes": 255,
+          "remote_sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+          "same": true
+        },
+        {
+          "path": "pcb/PCB1.epcb2",
+          "local_bytes": 3784690,
+          "local_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+          "remote_exists": true,
+          "remote_bytes": 3721952,
+          "remote_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+          "same": false
+        },
+        {
+          "path": "sch/Schematic1/01_Nano_headers.esch2",
+          "local_bytes": 418068,
+          "local_sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+          "remote_exists": true,
+          "remote_bytes": 418068,
+          "remote_sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/02_Shift_and_memory.esch2",
+          "local_bytes": 877290,
+          "local_sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+          "remote_exists": true,
+          "remote_bytes": 877290,
+          "remote_sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/03_Display_harnesses.esch2",
+          "local_bytes": 464432,
+          "local_sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+          "remote_exists": true,
+          "remote_bytes": 464432,
+          "remote_sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/04_PCM5122_AUX.esch2",
+          "local_bytes": 642782,
+          "local_sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+          "remote_exists": true,
+          "remote_bytes": 642782,
+          "remote_sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/05_Power.esch2",
+          "local_bytes": 177012,
+          "local_sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+          "remote_exists": true,
+          "remote_bytes": 177012,
+          "remote_sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/06_Controls.esch2",
+          "local_bytes": 525340,
+          "local_sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+          "remote_exists": true,
+          "remote_bytes": 525340,
+          "remote_sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/07_Scan_lane_0.esch2",
+          "local_bytes": 931456,
+          "local_sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+          "remote_exists": true,
+          "remote_bytes": 931456,
+          "remote_sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/08_Scan_lane_1.esch2",
+          "local_bytes": 931463,
+          "local_sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+          "remote_exists": true,
+          "remote_bytes": 931463,
+          "remote_sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/09_Scan_lane_2.esch2",
+          "local_bytes": 931483,
+          "local_sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+          "remote_exists": true,
+          "remote_bytes": 931483,
+          "remote_sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/10_Scan_lane_3.esch2",
+          "local_bytes": 931485,
+          "local_sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+          "remote_exists": true,
+          "remote_bytes": 931485,
+          "remote_sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/11_Scan_lane_4.esch2",
+          "local_bytes": 931485,
+          "local_sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+          "remote_exists": true,
+          "remote_bytes": 931485,
+          "remote_sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/12_Scan_lane_5.esch2",
+          "local_bytes": 931485,
+          "local_sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+          "remote_exists": true,
+          "remote_bytes": 931485,
+          "remote_sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/13_Power_off_isolation.esch2",
+          "local_bytes": 470664,
+          "local_sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+          "remote_exists": true,
+          "remote_bytes": 470664,
+          "remote_sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/14_Protected_power_entry.esch2",
+          "local_bytes": 495638,
+          "local_sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+          "remote_exists": true,
+          "remote_bytes": 495638,
+          "remote_sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/Schematic1.ecfg",
+          "local_bytes": 764,
+          "local_sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+          "remote_exists": true,
+          "remote_bytes": 764,
+          "remote_sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+          "same": true
+        }
+      ]
+    },
+    "internal/codex/pcb-paused-status-20261025": {
+      "commit": "83696b5577f294647424c3b7a4fbf2e7d8caf23d",
+      "files": [
+        {
+          "path": "eprj3-intro.md",
+          "local_bytes": 5976,
+          "local_sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+          "remote_exists": true,
+          "remote_bytes": 5976,
+          "remote_sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+          "same": true
+        },
+        {
+          "path": "FPGA-Music-U9ControlWork-20261023.eprj3",
+          "local_bytes": 6074,
+          "local_sha256": "a4200b2610a1c411c8d7b27526a94039551b81807d291772a69195ae1c6d3cd9",
+          "remote_exists": true,
+          "remote_bytes": 6074,
+          "remote_sha256": "aa01a91f9d8d8d4ffe86f9446f35752304f0da74a7a56d2935b124aad7a3f88a",
+          "same": false
+        },
+        {
+          "path": "panel/Panel1.epan2",
+          "local_bytes": 255,
+          "local_sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+          "remote_exists": true,
+          "remote_bytes": 255,
+          "remote_sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+          "same": true
+        },
+        {
+          "path": "pcb/PCB1.epcb2",
+          "local_bytes": 3784690,
+          "local_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+          "remote_exists": true,
+          "remote_bytes": 3721952,
+          "remote_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+          "same": false
+        },
+        {
+          "path": "sch/Schematic1/01_Nano_headers.esch2",
+          "local_bytes": 418068,
+          "local_sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+          "remote_exists": true,
+          "remote_bytes": 418068,
+          "remote_sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/02_Shift_and_memory.esch2",
+          "local_bytes": 877290,
+          "local_sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+          "remote_exists": true,
+          "remote_bytes": 877290,
+          "remote_sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/03_Display_harnesses.esch2",
+          "local_bytes": 464432,
+          "local_sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+          "remote_exists": true,
+          "remote_bytes": 464432,
+          "remote_sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/04_PCM5122_AUX.esch2",
+          "local_bytes": 642782,
+          "local_sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+          "remote_exists": true,
+          "remote_bytes": 642782,
+          "remote_sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/05_Power.esch2",
+          "local_bytes": 177012,
+          "local_sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+          "remote_exists": true,
+          "remote_bytes": 177012,
+          "remote_sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/06_Controls.esch2",
+          "local_bytes": 525340,
+          "local_sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+          "remote_exists": true,
+          "remote_bytes": 525340,
+          "remote_sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/07_Scan_lane_0.esch2",
+          "local_bytes": 931456,
+          "local_sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+          "remote_exists": true,
+          "remote_bytes": 931456,
+          "remote_sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/08_Scan_lane_1.esch2",
+          "local_bytes": 931463,
+          "local_sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+          "remote_exists": true,
+          "remote_bytes": 931463,
+          "remote_sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/09_Scan_lane_2.esch2",
+          "local_bytes": 931483,
+          "local_sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+          "remote_exists": true,
+          "remote_bytes": 931483,
+          "remote_sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/10_Scan_lane_3.esch2",
+          "local_bytes": 931485,
+          "local_sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+          "remote_exists": true,
+          "remote_bytes": 931485,
+          "remote_sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/11_Scan_lane_4.esch2",
+          "local_bytes": 931485,
+          "local_sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+          "remote_exists": true,
+          "remote_bytes": 931485,
+          "remote_sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/12_Scan_lane_5.esch2",
+          "local_bytes": 931485,
+          "local_sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+          "remote_exists": true,
+          "remote_bytes": 931485,
+          "remote_sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/13_Power_off_isolation.esch2",
+          "local_bytes": 470664,
+          "local_sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+          "remote_exists": true,
+          "remote_bytes": 470664,
+          "remote_sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/14_Protected_power_entry.esch2",
+          "local_bytes": 495638,
+          "local_sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+          "remote_exists": true,
+          "remote_bytes": 495638,
+          "remote_sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+          "same": true
+        },
+        {
+          "path": "sch/Schematic1/Schematic1.ecfg",
+          "local_bytes": 764,
+          "local_sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+          "remote_exists": true,
+          "remote_bytes": 764,
+          "remote_sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+          "same": true
+        }
+      ]
+    }
+  },
+  "all_remote_heads_known_hardware_current_PCB": {
+    "2dd85e6f38200db9eeae77ef7bf60231e3901979": {
+      "sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+      "refs": [
+        "internal",
+        "internal/codex/91-spec-intake-20261024",
+        "internal/codex/current-engineering-sources-20261023",
+        "internal/codex/pcb-paused-status-20261025",
+        "internal/codex/project-management-20261022",
+        "internal/main"
+      ]
+    }
+  },
+  "paused": true,
+  "hardware_modified": false,
+  "procurement_comparisons": [
+    {
+      "file": "jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv",
+      "local_exists": true,
+      "remote_exists": true,
+      "remote_sha256": "bb9fc4657259aae8115a2b49ce5dcae1e54539f13ddf322a6a57d72ca9bd8ebe",
+      "local_sha256": "bb9fc4657259aae8115a2b49ce5dcae1e54539f13ddf322a6a57d72ca9bd8ebe",
+      "same": true
+    },
+    {
+      "file": "assembly-side-current.json",
+      "local_exists": true,
+      "remote_exists": true,
+      "remote_sha256": "e470a8cd786920560f7d9fed9693e3e102378fd7dbd0943fd1d931a3309a5632",
+      "local_sha256": "32304c797da5485fffd6c788c2dfdb11bf29e52b655a60a9671db26f9b8fecf7",
+      "same": false
+    },
+    {
+      "file": "current-bom-population-audit.json",
+      "local_exists": true,
+      "remote_exists": true,
+      "remote_sha256": "f5c346d5240b92f2eeb33b87e81ffdda643c7dbbb8808b28f55e8ba60c759b42",
+      "local_sha256": "db784cfd3a81c1c35ac323cd4bec62b8bd2511a02898467ded092d45f5e6d62e",
+      "same": false
+    },
+    {
+      "file": "native-cpl-current-951ce88a-DRAFT-NOT-FOR-ORDER.csv",
+      "local_exists": true,
+      "remote_exists": false,
+      "remote_sha256": null,
+      "local_sha256": "0328146ebebc3440cad98f82f6af1fbf02e050a0a5c20d4ae187739c34c7df66",
+      "same": false
+    }
+  ]
+}

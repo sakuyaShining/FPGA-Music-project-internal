@@ -1,0 +1,68 @@
+{
+  "time": "2026-10-24T19:38:28.269896+08:00",
+  "actual_geometry_not_changed": true,
+  "project_reference_gate_mm2": 1e-05,
+  "method": "Only native POURED arc tessellation precision changed; actual/source records, masks, and reference gate unchanged. This diagnostic does not by itself replace full global DC reference validation.",
+  "results": [
+    {
+      "native_arc_chord_error_mm": 0.001,
+      "losses": [
+        {
+          "id": "84827c5ae5d3dd1e",
+          "net": "3V3_IO",
+          "loss_mm2": 6.082213034568481e-05
+        },
+        {
+          "id": "3496db3d9148a6db",
+          "net": "RC_DRIVE",
+          "loss_mm2": 5.7594841411241325e-05
+        },
+        {
+          "id": "d5ae44508b9b68bd",
+          "net": "RC_DRIVE",
+          "loss_mm2": 5.323918389862301e-05
+        }
+      ]
+    },
+    {
+      "native_arc_chord_error_mm": 0.0001,
+      "losses": [
+        {
+          "id": "84827c5ae5d3dd1e",
+          "net": "3V3_IO",
+          "loss_mm2": 5.484766267237455e-06
+        },
+        {
+          "id": "3496db3d9148a6db",
+          "net": "RC_DRIVE",
+          "loss_mm2": 1.196223314807076e-05
+        },
+        {
+          "id": "d5ae44508b9b68bd",
+          "net": "RC_DRIVE",
+          "loss_mm2": 1.3017383232530072e-05
+        }
+      ]
+    },
+    {
+      "native_arc_chord_error_mm": 1e-05,
+      "losses": [
+        {
+          "id": "84827c5ae5d3dd1e",
+          "net": "3V3_IO",
+          "loss_mm2": 4.895230563444764e-07
+        },
+        {
+          "id": "3496db3d9148a6db",
+          "net": "RC_DRIVE",
+          "loss_mm2": 1.9756974194565352e-07
+        },
+        {
+          "id": "d5ae44508b9b68bd",
+          "net": "RC_DRIVE",
+          "loss_mm2": 4.254500546665924e-07
+        }
+      ]
+    }
+  ]
+}
