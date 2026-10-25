@@ -15,6 +15,8 @@
 
 本轮56f7仅认领B轴的同步与闭环计划，分支codex/pcb-sync-plan-20261025，写hardware/checkpoints/pcb-951ce88a-20261025、project/PCB-RESOLUTION-PLAN-20261025.md、恢复工具及必要治理入口；06df、D盘原owner源和CAD继续只读。任务分支候选未合入main。
 
+2026-10-25多Agent规划：用户要求由其自行分配PCB任务，执行包见[START-HERE](../../project/pcb-parallel-20261025/START-HERE.md)。M0/R1/R2/E3/V4/F5均**待分配、未启动**；这是B轴内部职责拆分，不是六人共同写原生板。计划独占路径见plan.json，用户实际分配后由M0登记assignments.json、此板及producer实际owner/远程提交。M0为新隔离集成工程唯一写入者，R1/R2各写候选，V4独立验收；原owner路径及暂停状态不变。本轮仅写任务包和规划记录，不恢复施工。
+
 ## 1. 轴与所有权
 
 项目当前有三条可并行的轴。**一个 agent 在同一时间只认领一条轴**，跨轴必须先改本表。

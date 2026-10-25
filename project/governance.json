@@ -100,8 +100,20 @@
     "project/reviews/20261025-pcb-sync-plan/prior-private-only-rule.md": "540fde4c2372746402453e30da3fd0c809ef7098ec0ce275736afe75832ae67c",
     "hardware/checkpoints/pcb-951ce88a-20261025/manifest.json": "11c12da732d7ac77aaf0fb4ccbb41ab586679d9200455f36a4c053c9ac9e296e",
     "tools/scripts/pcb_checkpoint.py": "c92cffff322ace768c6543e56af6fb6863fc2646e63b6cdac78e860cfbf8e3b4",
-    "project/PCB-RESOLUTION-PLAN-20261025.md": "3d90c4db1093221033657b7b5a6b174c1674d784108789225accc7caaa460ff5",
-    "project/design-state.json": "8ef4d04b0d5eb6489f48b198c47f87ec4aec154de937beab8f41962cc8ea20ed"
+    "project/PCB-RESOLUTION-PLAN-20261025.md": "467b8d7f0b3091a8cf9fb415cfabbee85d873cc1697071ef69f57dce08fc5ebb",
+    "project/design-state.json": "8ef4d04b0d5eb6489f48b198c47f87ec4aec154de937beab8f41962cc8ea20ed",
+    "project/pcb-parallel-20261025/ACCEPTANCE.md": "1bfb59f086a357c0d9fd3b0893f89f678ac97b2324364877b490fe5ef317ef23",
+    "project/pcb-parallel-20261025/assignments.json": "da8db8b4858b5e803bae99fdfe20e8141cf9febdc3c840d0daa4f84689f71fbb",
+    "project/pcb-parallel-20261025/CONTRACT.md": "93c63e319c60aa48c68ead4ffc85e9c34d50b508cd6f184d2949041e74c1001d",
+    "project/pcb-parallel-20261025/plan.json": "b1fc12ede5e803e42df2a0545f95cedc100ea9c6b1d6f0f3f935875867fed835",
+    "project/pcb-parallel-20261025/START-HERE.md": "0de433553f884c86e9f492185c7c39b5a0b6c4da58fd02774b7bf729aec453fe",
+    "project/pcb-parallel-20261025/tasks/E3.md": "ebe34dc0b729280096b98d7e05d4604ad5be26e6952c9d0cdbe6c8961695e77a",
+    "project/pcb-parallel-20261025/tasks/F5.md": "d172cfe5c32174f9aabc27a705f16541bdde00e623964e779f32b0a97eeab400",
+    "project/pcb-parallel-20261025/tasks/M0.md": "83cff7b7cf685d1d8ef4f923b5421e3ffc9f4aa6dc20c59c2501479c7665b62f",
+    "project/pcb-parallel-20261025/tasks/R1.md": "703191f0cfae01bc844b5a95f5113fe13caf3c495c642bd9cf15d1cf5a94a88e",
+    "project/pcb-parallel-20261025/tasks/R2.md": "8398e054aa469afcf3abc2200d6f7b98bf6753ad825b9e0477c38cc5db2b0faf",
+    "project/pcb-parallel-20261025/tasks/V4.md": "b959e6f75598aecca00336c9f0f08a04dd3d086b7a852c0aee9affa6bed3527a",
+    "project/pcb-parallel-20261025/templates/handoff.json": "e5240420764331365cbee139675cb0e4f05c464ebe0ae22bbcac1602e52176b0"
   },
   "scoped_addenda": [
     {
@@ -109,6 +121,12 @@
       "sha256": "149f1a40961f632387037bb32a9df121aad75fc6b5cd12557cfe44b709d04c05",
       "global_review_renewed": false,
       "scope": "Scoped source-recovery publication and remote-policy change; not a global design or live-producer review"
+    },
+    {
+      "record": "project/reviews/20261025-pcb-parallel-plan/scoped-review.json",
+      "sha256": "a0566a94e9f5a929d4fb39f4cfdd637c05686a7fa090eaee921f56b82a93df56",
+      "global_review_renewed": false,
+      "scope": "PCB parallel execution planning only; not hardware implementation or acceptance"
     }
   ]
 }
