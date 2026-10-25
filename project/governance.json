@@ -23,7 +23,7 @@
   "source_visibility": "GitHub cannot inspect local roots; six-hour producer observations expire. No perpetual freshness inferred.",
   "controlled_files": {
     "project/decisions.json": "e1b27dbb99484c8b68d3c4d663ce0e2f4170a8f6a2b4be413ae6cf238f080859",
-    "project/producers.json": "a873ba52427b127cb7d6574373647e86f3da408306abc2e4a3d23e8178f16568",
+    "project/producers.json": "951a717768de404ddf067e59f3306d15a27fd30bf3cf09392d573a5897ffda5e",
     "project/MAINTAINING-MAIN.md": "5223ada48dc6ed02597083b96246bc7df633adec1298e8acdf8500bab7e6e302",
     "project/DESIGN-CURRENT.md": "e85cfe9b985c9a56c9343d45c38aafeb5138411682525dbc888fec953a1b3c47",
     "project/reviews/20261023-main-authority/changes-from-v2.json": "43d48b6079cb984c4762ca506ca4ea776d5e9cd0f440a880eb78d7794f872fe8",
@@ -100,12 +100,13 @@
     "project/reviews/20261025-pcb-sync-plan/prior-private-only-rule.md": "540fde4c2372746402453e30da3fd0c809ef7098ec0ce275736afe75832ae67c",
     "hardware/checkpoints/pcb-951ce88a-20261025/manifest.json": "11c12da732d7ac77aaf0fb4ccbb41ab586679d9200455f36a4c053c9ac9e296e",
     "tools/scripts/pcb_checkpoint.py": "c92cffff322ace768c6543e56af6fb6863fc2646e63b6cdac78e860cfbf8e3b4",
-    "project/PCB-RESOLUTION-PLAN-20261025.md": "3d90c4db1093221033657b7b5a6b174c1674d784108789225accc7caaa460ff5"
+    "project/PCB-RESOLUTION-PLAN-20261025.md": "3d90c4db1093221033657b7b5a6b174c1674d784108789225accc7caaa460ff5",
+    "project/design-state.json": "8ef4d04b0d5eb6489f48b198c47f87ec4aec154de937beab8f41962cc8ea20ed"
   },
   "scoped_addenda": [
     {
       "record": "project/reviews/20261025-pcb-sync-plan/scoped-review.json",
-      "sha256": "eb71b5ff5abb48a3fe79c097caa03991050913c149562a6d5019a66a663ae554",
+      "sha256": "149f1a40961f632387037bb32a9df121aad75fc6b5cd12557cfe44b709d04c05",
       "global_review_renewed": false,
       "scope": "Scoped source-recovery publication and remote-policy change; not a global design or live-producer review"
     }

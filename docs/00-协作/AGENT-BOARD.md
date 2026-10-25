@@ -100,7 +100,7 @@ PCB 打样、贴片与物流需要日历时间。施工数量只在相应review�
 
 ### 2026-10-25 · Codex 56f7 · B轴同步与计划
 - 做了什么：以main 100b35bd和硬件状态83696b55为入口，保全951完整19文件原生源、IOtail-cleanup离线候选及完整恢复ZIP分卷；新计划分P0—P5验收，用户已取消private-only同步条件。
-- 在飞什么：codex/pcb-sync-plan-20261025任务分支；精确远程提交见本次delivery记录与PR，main未合并。
+- 在飞什么：codex/pcb-sync-plan-20261025任务分支；完整源快照已推远程592da06fd64d069614ba5cb1647dad168aa4ef02；后续交付记录见本次delivery与PR，main未合并。
 - 卡在哪：原生42项/12网，离线MUX四岛不可导入；P1须分离导引裁剪与真实障碍；审阅过期及原活跃源漂移继续明示。
 - 需要对方什么：原硬件owner后续依据固定源与P1诊断接续；当前未唤醒其会话或自动化，不重放旧apply。
 - 下一手从哪读：project/PCB-RESOLUTION-PLAN-20261025.md、hardware/checkpoints/pcb-951ce88a-20261025/manifest.json、project/reviews/20261025-pcb-sync-plan/。

@@ -38,7 +38,15 @@
     "scope": "Listed context and existing native recovery ZIPs only, not full current hardware tree",
     "observation": "Top cached construction pointer and lower-level state can differ; verify actual native hash before work",
     "manufacturing_release": false,
-    "physical_tests": "UNMEASURED"
+    "physical_tests": "UNMEASURED",
+    "scoped_checkpoint": {
+      "manifest": "hardware/checkpoints/pcb-951ce88a-20261025/manifest.json",
+      "source_snapshot_remote_commit": "592da06fd64d069614ba5cb1647dad168aa4ef02",
+      "source_status_remote_commit": "83696b5577f294647424c3b7a4fbf2e7d8caf23d",
+      "role": "Complete recoverable native951 and offline recovery archive; no new functional or manufacturing acceptance",
+      "plan": "project/PCB-RESOLUTION-PLAN-20261025.md",
+      "global_review_renewed": false
+    }
   },
   "freshness": {
     "authority": "actual remote main",
@@ -50,7 +58,7 @@
     ]
   },
   "reviewed_design_sources": {
-    "project/DESIGN-CURRENT.md": "2fcf62696e8210b260481aac8c498110d688eea6427e69602c4133f7636dbdd3",
+    "project/DESIGN-CURRENT.md": "e85cfe9b985c9a56c9343d45c38aafeb5138411682525dbc888fec953a1b3c47",
     "project/versions/design-decision-20261023.json": "1d0994293691ac34b85348d0929ecda0ac68ace57c560f7b34a9449dd81ae4fc",
     "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "a147411a85f37d22c82228dfbbe836e98c3c116d4c9d158d43426c09a90f1e2e",
     "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "644e245f816a9d98ce962365791cca4a5295f538094775908f45a021a5f8b61c",
