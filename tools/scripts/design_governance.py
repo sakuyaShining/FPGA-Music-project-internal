@@ -20,6 +20,7 @@ ENTRY_PATHS = ['.gitattributes', '.github/workflows/project-entry.yml', 'README.
                'AGENTS.md', 'project', 'docs/00-协作/AGENT-BOARD.md',
                'tools/scripts/project_control.py', 'tools/scripts/design_governance.py',
                'fpga/current', 'hardware/current', 'host/current',
+               'hardware/checkpoints', 'tools/scripts/pcb_checkpoint.py',
                'tools/scripts/engineering.py', 'tools/requirements-engineering-host.txt']
 
 
@@ -126,7 +127,7 @@ def validate(root=ROOT):
     policy = read_json(root / 'project/governance.json')
     errors = []
     if policy.get('authority') != dict(remote=REMOTE, branch=BRANCH):
-        errors.append('Design authority must be the verified private repository main')
+        errors.append('Design authority must be the user-authorized repository main')
     for name in ('project/handoff.json', 'project/design-state.json'):
         if read_json(root / name).get('entry_branch') != BRANCH:
             errors.append('Non-main entry branch in ' + name)

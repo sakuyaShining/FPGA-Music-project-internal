@@ -1,5 +1,7 @@
 # 当前工程与开发入口
 
+**2026-10-25 PCB接续候选**：最新951原生施工检查点及完整恢复链见`hardware/checkpoints/pcb-951ce88a-20261025/`，计划见`project/PCB-RESOLUTION-PLAN-20261025.md`；原hardware/current的e098保留历史。此任务分支未合入main，未新增CAD/DRC/实物验收。用户已授权向当前Public internal直接同步，覆盖旧private-only推送条件。
+
 本批为[2026-10-24协作检查点](COLLABORATION-CHECKPOINT-20261024.md)。输入完整性可复核；FPGA音乐黄金对照仍有差异，硬件未完成布线，主机与当前FPGA协议兼容未实体验证。使用任务分支审阅和改进，不视为成品。
 
 | 领域 | 克隆后可读可编辑的目录 | 本次边界 |
@@ -10,7 +12,7 @@
 
 旧`src/rtl`、`src/gowin`、`tools/host`保留历史可复现性，不能作为新任务的默认入口。历史实验、v1/v2恢复包不覆盖本次工程检查点。具体来源、逐文件哈希和捕获时间见`versions/engineering-sources-20261023.json`；补充的主机测试依赖和一处RTL声明顺序适配均有单独来源记录，未改原owner目录。
 
-从私有内部仓库实际main读取本页及DESIGN-CURRENT，再执行：
+从用户授权的internal仓库实际main读取本页及DESIGN-CURRENT，再执行：
 
 ```powershell
 python tools/scripts/project_control.py check --remote --fresh-entry

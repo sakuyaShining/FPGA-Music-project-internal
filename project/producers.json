@@ -309,7 +309,20 @@
         {
           "path": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/native-touch-reset-WORK-IN-PROGRESS.zip"
         }
-      ]
+      ],
+      "checkpoint_handoff": {
+        "task_owner": "Codex current chat, worktree 56f7; sync and planning only",
+        "branch": "codex/pcb-sync-plan-20261025",
+        "source_remote_status_commit": "83696b5577f294647424c3b7a4fbf2e7d8caf23d",
+        "checkpoint_manifest": "hardware/checkpoints/pcb-951ce88a-20261025/manifest.json",
+        "source_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+        "plan": "project/PCB-RESOLUTION-PLAN-20261025.md",
+        "remote_delivery_record": "project/reviews/20261025-pcb-sync-plan/delivery.json",
+        "main_merged": false,
+        "original_producer_root_and_owner_unchanged": true,
+        "original_observation_not_renewed": true,
+        "source_snapshot_remote_commit": "592da06fd64d069614ba5cb1647dad168aa4ef02"
+      }
     },
     {
       "id": "host",

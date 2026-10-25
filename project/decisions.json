@@ -119,6 +119,27 @@
         "sha256": "e21161fe8152fc07a9ccb533250167fa1d4335ee2d680e54f9fa0627dc277565",
         "authority": "Direct human reply to the explicit controller-route ambiguity in this conversation"
       }
+    },
+    {
+      "id": "D-011-PRIVATE-ONLY-PUSH",
+      "status": "superseded",
+      "statement": "Historical shared-development policy required private internal before pushes",
+      "evidence": {
+        "path": "project/reviews/20261025-pcb-sync-plan/prior-private-only-rule.md",
+        "sha256": "540fde4c2372746402453e30da3fd0c809ef7098ec0ce275736afe75832ae67c",
+        "authority": "Published AGENTS.md at remote main 100b35bd; superseded by current direct human reply"
+      }
+    },
+    {
+      "id": "D-012-AUTHORIZED-INTERNAL-PUSH",
+      "status": "accepted",
+      "supersedes": "D-011-PRIVATE-ONLY-PUSH",
+      "statement": "User removes private-only condition and authorizes direct project synchronization to the exact existing internal repository, currently PUBLIC; origin/public push and main merge authorization are unchanged",
+      "evidence": {
+        "path": "project/reviews/20261025-pcb-sync-plan/remote-authorization.json",
+        "sha256": "a5a80bdd103c31a58cc5c34e34eb7ad1a9a32c4472e32f12339201611e77fee2",
+        "authority": "Direct human reply in this chat: 修改只为核实为私有的内部仓库推送的规则 直接同步"
+      }
     }
   ]
 }
