@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "role": "E3",
-  "version": "e3-2026-10-25.1",
+  "version": "e3-2026-10-25.3",
   "author": {
     "agent": "E3 电气/接口/可装配性",
     "owner": "本会话（由用户 2026-10-25 指派）",
@@ -1032,17 +1032,18 @@
           2
         ]
       },
-      "criterion": "M0 在 951 上布 K1（MUX_DISABLE/ADDR0/ADDR1）时必须保护该 LINE 与 C8 短去耦；不得以「该判据在 951 不存在」为由拒绝保护。IOtail 派生源另有 3 条 Top 供电线被删，与 951 拓扑不同，两者结论不得混用。",
+      "criterion": "M0 在 951 上布 K1（MUX_DISABLE/ADDR0/ADDR1）时必须保护该 LINE 与 C8 短去耦；不得以「该判据在 951 不存在」为由拒绝保护。IOtail 派生源另有 3 条 Top 供电线被删（4fb529a9717cacbd / 5ace46b533d824be / 6873aa8e0462204b），与 951 拓扑不同，两者结论不得混用；尤其「单删会把 47 脚分成 5+42」只在 IOtail 派生源成立（V4 IR-03），不得作为 951 的红线理由。反方向同样禁止：V4 有限模型给出「951 删桥后 47 端点仍同组」，但该模型不验证载流、间距、孔壁/环铜、全板参考、过孔回流和去耦阻抗，故连通性不构成删除许可。保护理由是 14.14 mil 载流截面、C8 短去耦与底部参考/回流。",
       "source_refs": [
         "S-951-PCB"
       ],
       "evidence": [
         "native/pcb/PCB1.epcb2 中 LINE id=84827c5ae5d3dd1e",
         "derived/design-facts.json#net_to_pads.3V3_IO (46)",
-        "derived/design-facts.json#board_level_pads.TP6"
+        "derived/design-facts.json#board_level_pads.TP6",
+        "hardware/pcb-parallel/verification/independent-20261025/README.md#IR-03（V4 有限模型，版本限定）"
       ],
       "blocking": true,
-      "owner_action": "M0：按真实 LINE id 保护；若要删该桥，须单独出 ECO 并说明 47 端点的供电替代路径"
+      "owner_action": "M0：按真实 LINE id 保护，保护理由是载流/去耦/参考而非连通性；若要删该桥，须单独出 ECO 并说明 47 端点的供电替代路径。合同文本中「单删分成 5+42」的版本限定待治理提交（见 E3 的 D-10）"
     }
   ],
   "summary": {
