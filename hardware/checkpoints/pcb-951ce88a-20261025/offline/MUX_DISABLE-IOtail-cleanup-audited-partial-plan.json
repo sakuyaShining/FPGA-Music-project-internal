@@ -1,0 +1,970 @@
+{
+  "source_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "source_capture_sha256": "6d48871b39f27408bd80f3a693b2a51e1895eb87111b01d152ec758c609b42da",
+  "remove_lines": [
+    "4fb529a9717cacbd",
+    "77bccf0bf9fb14bf",
+    "e1cb05e4bd68ead9",
+    "aaa7a55fc8a2cfd0",
+    "d510185daab1b6b4",
+    "5ace46b533d824be",
+    "6873aa8e0462204b"
+  ],
+  "remove_vias": [
+    "1d52c47e41a73550"
+  ],
+  "new_lines": [
+    {
+      "id": "MUX_DISABLE-current-U2-escape-0",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2673.9633858267716,
+      "y1": 714.6,
+      "x2": 2675.5542445819538,
+      "y2": 680.3824773286328
+    },
+    {
+      "id": "MUX_DISABLE-current-U2-escape-1",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2675.5542445819538,
+      "y1": 680.3824773286328,
+      "x2": 2750.2244094488196,
+      "y2": 616.130487426348
+    },
+    {
+      "id": "MUX_DISABLE-current-U4-escape-0",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 1081.4633858267719,
+      "y1": 3187.9213643867847,
+      "x2": 1056.7404831023016,
+      "y2": 3130.14784919684
+    },
+    {
+      "id": "MUX_DISABLE-current-U4-escape-1",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 1056.7404831023016,
+      "y1": 3130.14784919684,
+      "x2": 1174.0164789980417,
+      "y2": 3099.15853166876
+    },
+    {
+      "id": "MUX_DISABLE-current-U4-escape-2",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 1174.0164789980417,
+      "y1": 3099.15853166876,
+      "x2": 1197.3425277503895,
+      "y2": 3154.583808794906
+    },
+    {
+      "id": "MUX_DISABLE-current-U4-escape-3",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 1197.3425277503895,
+      "y1": 3154.583808794906,
+      "x2": 1218.6999212899782,
+      "y2": 3187.9213643867847
+    },
+    {
+      "id": "MUX_DISABLE-current-U6-escape-0",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 4624.763385826772,
+      "y1": 3160.938614173229,
+      "x2": 4621.23578706174,
+      "y2": 3265.604238053008
+    },
+    {
+      "id": "MUX_DISABLE-current-U6-escape-1",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 4621.23578706174,
+      "y1": 3265.604238053008,
+      "x2": 4841.147151986082,
+      "y2": 3250.0612734224137
+    },
+    {
+      "id": "MUX_DISABLE-current-U6-escape-2",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 4841.147151986082,
+      "y1": 3250.0612734224137,
+      "x2": 4760.914710899218,
+      "y2": 3135.8165637566526
+    },
+    {
+      "id": "MUX-joint-U1-escape-0",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 892.8866762742698,
+      "y1": 779.6000000000001,
+      "x2": 892.8866762742698,
+      "y2": 795.4622047244095
+    },
+    {
+      "id": "MUX-joint-U3-escape-0",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 4430.336614173229,
+      "y1": 779.6000000000001,
+      "x2": 4447.951763169883,
+      "y2": 875.5678176051039
+    },
+    {
+      "id": "MUX-joint-U3-escape-1",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 4447.951763169883,
+      "y1": 875.5678176051039,
+      "x2": 4244.672839818205,
+      "y2": 875.329527559055
+    },
+    {
+      "id": "MUX-joint-U5-escape-0",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2853.1633858267714,
+      "y1": 3222.3000000000006,
+      "x2": 2836.2673622131188,
+      "y2": 3276.1440899962936
+    },
+    {
+      "id": "MUX-joint-U5-escape-1",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2836.2673622131188,
+      "y1": 3276.1440899962936,
+      "x2": 2914.0797684249374,
+      "y2": 3238.836732348407
+    },
+    {
+      "id": "MUX-U56-joint-path-0",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 2922.5650497991755,
+      "y1": 3247.322013722646,
+      "x2": 2990.674196237885,
+      "y2": 3315.3806546796823
+    },
+    {
+      "id": "MUX-U56-joint-path-1",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2990.674196237885,
+      "y1": 3315.3806546796823,
+      "x2": 3085.5060151636903,
+      "y2": 3464.716735783173
+    },
+    {
+      "id": "MUX-U56-joint-path-2",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3085.5060151636903,
+      "y1": 3464.716735783173,
+      "x2": 3532.312928809667,
+      "y2": 3460.758206050833
+    },
+    {
+      "id": "MUX-U56-joint-path-3",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3532.312928809667,
+      "y1": 3460.758206050833,
+      "x2": 3813.100971259211,
+      "y2": 3036.3965907582674
+    },
+    {
+      "id": "MUX-U56-joint-path-4",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 3813.100971259211,
+      "y1": 3036.3965907582674,
+      "x2": 3626.887077751195,
+      "y2": 3091.988318806854
+    },
+    {
+      "id": "MUX-U56-joint-path-5",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 3626.887077751195,
+      "y1": 3091.988318806854,
+      "x2": 3980.1441976680103,
+      "y2": 3010.3702095253752
+    },
+    {
+      "id": "MUX-U56-joint-path-6",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 3980.1441976680103,
+      "y1": 3010.3702095253752,
+      "x2": 4242.694249532542,
+      "y2": 2841.5002714846723
+    },
+    {
+      "id": "MUX-U56-joint-path-7",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 4242.694249532542,
+      "y1": 2841.5002714846723,
+      "x2": 4894.4228842900675,
+      "y2": 2852.1873030958213
+    },
+    {
+      "id": "MUX-U56-joint-path-8",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 4894.4228842900675,
+      "y1": 2852.1873030958213,
+      "x2": 4751.537126225505,
+      "y2": 3128.3306136479
+    },
+    {
+      "id": "MUX-U456-direct-Top-0",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2978.7067107577413,
+      "y1": 3314.4978799164865,
+      "x2": 2842.8964592330963,
+      "y2": 3383.144963269007
+    },
+    {
+      "id": "MUX-U456-direct-Top-1",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2842.8964592330963,
+      "y1": 3383.144963269007,
+      "x2": 2831.286713176059,
+      "y2": 3464.55
+    },
+    {
+      "id": "MUX-U456-direct-Top-2",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2831.286713176059,
+      "y1": 3464.55,
+      "x2": 2755.9,
+      "y2": 3464.55
+    },
+    {
+      "id": "MUX-U456-direct-Top-3",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2755.9,
+      "y1": 3464.55,
+      "x2": 2752.7866829797626,
+      "y2": 3416.2103215973398
+    },
+    {
+      "id": "MUX-U456-direct-Top-4",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2752.7866829797626,
+      "y1": 3416.2103215973398,
+      "x2": 2346.5909968709952,
+      "y2": 3153.9735434035483
+    },
+    {
+      "id": "MUX-U456-direct-Top-5",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2346.5909968709952,
+      "y1": 3153.9735434035483,
+      "x2": 2060.1359205320687,
+      "y2": 3409.9115515668154
+    },
+    {
+      "id": "MUX-U456-direct-Top-6",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2060.1359205320687,
+      "y1": 3409.9115515668154,
+      "x2": 2026.7599801327535,
+      "y2": 3464.55
+    },
+    {
+      "id": "MUX-U456-direct-Top-7",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2026.7599801327535,
+      "y1": 3464.55,
+      "x2": 1770.0500000000002,
+      "y2": 3450.7999999999997
+    },
+    {
+      "id": "MUX-U456-direct-Top-8",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 1770.0500000000002,
+      "y1": 3450.7999999999997,
+      "x2": 1282.4416194345933,
+      "y2": 3152.931525235217
+    },
+    {
+      "id": "MUX-U456-direct-Top-9",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 1282.4416194345933,
+      "y1": 3152.931525235217,
+      "x2": 1230.6674067701224,
+      "y2": 3188.804139149981
+    },
+    {
+      "id": "MUX-U23-joint-path-0",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2761.522938231016,
+      "y1": 612.0878091856414,
+      "x2": 2922.387190685912,
+      "y2": 561.3340045506674
+    },
+    {
+      "id": "MUX-U23-joint-path-1",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2922.387190685912,
+      "y1": 561.3340045506674,
+      "x2": 2951.695956081169,
+      "y2": 527.9327108543476
+    },
+    {
+      "id": "MUX-U23-joint-path-2",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2951.695956081169,
+      "y1": 527.9327108543476,
+      "x2": 2985.0400198672464,
+      "y2": 472.45000000000005
+    },
+    {
+      "id": "MUX-U23-joint-path-3",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2985.0400198672464,
+      "y1": 472.45000000000005,
+      "x2": 3032.2188163869837,
+      "y2": 472.45000000000005
+    },
+    {
+      "id": "MUX-U23-joint-path-4",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3032.2188163869837,
+      "y1": 472.45000000000005,
+      "x2": 3042.0653543307085,
+      "y2": 508.55853045142715
+    },
+    {
+      "id": "MUX-U23-joint-path-5",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 3042.0653543307085,
+      "y1": 508.55853045142715,
+      "x2": 3145.6042319988323,
+      "y2": 522.7638098468582
+    },
+    {
+      "id": "MUX-U23-joint-path-6",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 3145.6042319988323,
+      "y1": 522.7638098468582,
+      "x2": 3144.9723474631123,
+      "y2": 533.3752906685128
+    },
+    {
+      "id": "MUX-U23-joint-path-7",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3144.9723474631123,
+      "y1": 533.3752906685128,
+      "x2": 3088.9636539391167,
+      "y2": 571.5691894616052
+    },
+    {
+      "id": "MUX-U23-joint-path-8",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3088.9636539391167,
+      "y1": 571.5691894616052,
+      "x2": 3065.953265979499,
+      "y2": 716.1643964412901
+    },
+    {
+      "id": "MUX-U23-joint-path-9",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3065.953265979499,
+      "y1": 716.1643964412901,
+      "x2": 3492.808800456674,
+      "y2": 460.94310405079835
+    },
+    {
+      "id": "MUX-U23-joint-path-10",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3492.808800456674,
+      "y1": 460.94310405079835,
+      "x2": 3701.142107844743,
+      "y2": 494.1437480489958
+    },
+    {
+      "id": "MUX-U23-joint-path-11",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3701.142107844743,
+      "y1": 494.1437480489958,
+      "x2": 3789.4239622411706,
+      "y2": 595.0098249729837
+    },
+    {
+      "id": "MUX-U23-joint-path-12",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3789.4239622411706,
+      "y1": 595.0098249729837,
+      "x2": 3907.4500000000003,
+      "y2": 602.8811836130161
+    },
+    {
+      "id": "MUX-U23-joint-path-13",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3907.4500000000003,
+      "y1": 602.8811836130161,
+      "x2": 3904.220666622364,
+      "y2": 776.6270589476176
+    },
+    {
+      "id": "MUX-U23-joint-path-14",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3904.220666622364,
+      "y1": 776.6270589476176,
+      "x2": 3964.260915829092,
+      "y2": 993.6950945608045
+    },
+    {
+      "id": "MUX-U23-joint-path-15",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 3964.260915829092,
+      "y1": 993.6950945608045,
+      "x2": 4096.934645669291,
+      "y2": 935.6295275590552
+    },
+    {
+      "id": "MUX-U23-joint-path-16",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 4096.934645669291,
+      "y1": 935.6295275590552,
+      "x2": 4233.58628542807,
+      "y2": 879.9217287474361
+    },
+    {
+      "id": "ADDR3-U8-joint-0-0",
+      "net": "ADDR3",
+      "layer": 1,
+      "width": 6,
+      "x1": 2442.7717024194612,
+      "y1": 1625.2611469198011,
+      "x2": 2424.171415507067,
+      "y2": 1577.0552156395363
+    },
+    {
+      "id": "ADDR3-U8-joint-0-1",
+      "net": "ADDR3",
+      "layer": 1,
+      "width": 6,
+      "x1": 2424.171415507067,
+      "y1": 1577.0552156395363,
+      "x2": 2485.5445803999864,
+      "y2": 1550.3255685523893
+    },
+    {
+      "id": "ADDR3-U8-joint-0-2",
+      "net": "ADDR3",
+      "layer": 1,
+      "width": 6,
+      "x1": 2485.5445803999864,
+      "y1": 1550.3255685523893,
+      "x2": 2515.281095310386,
+      "y2": 1560.2683437715668
+    },
+    {
+      "id": "MUX-U8-joint-new-escape-0",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2484.847085094215,
+      "y1": 1630.3664927387179,
+      "x2": 2481.5861046197865,
+      "y2": 1628.1845376545728
+    },
+    {
+      "id": "ADDR3-ground1-release-1-0",
+      "net": "ADDR3",
+      "layer": 1,
+      "width": 6,
+      "x1": 2542.2984485577854,
+      "y1": 1485.9174447714217,
+      "x2": 2554.8340495362013,
+      "y2": 1393.5899387796485
+    },
+    {
+      "id": "ADDR3-ground1-release-1-1",
+      "net": "ADDR3",
+      "layer": 1,
+      "width": 6,
+      "x1": 2554.8340495362013,
+      "y1": 1393.5899387796485,
+      "x2": 2624.179384826279,
+      "y2": 1425.4206593678562
+    },
+    {
+      "id": "ADDR3-ground1-release-15-0",
+      "net": "ADDR3",
+      "layer": 15,
+      "width": 6,
+      "x1": 2630.05369431926,
+      "y1": 1429.6666058810633,
+      "x2": 2629.492526880771,
+      "y2": 1431.4379759814433
+    },
+    {
+      "id": "MUX-ADDR2annular-saved0-line-0",
+      "net": "MUX_DISABLE",
+      "layer": 16,
+      "width": 6,
+      "x1": 2462.1483121406363,
+      "y1": 1614.1349157713698,
+      "x2": 2405.2572179025174,
+      "y2": 1569.4531732393204
+    },
+    {
+      "id": "MUX-ADDR2annular-saved0-line-1",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2396.406287155733,
+      "y1": 1572.7431564477238,
+      "x2": 2418.6778587578733,
+      "y2": 1636.867487365518
+    },
+    {
+      "id": "MUX-ADDR2annular-saved0-line-2",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2418.6778587578733,
+      "y1": 1636.867487365518,
+      "x2": 2416.337701015499,
+      "y2": 1707.157120121574
+    },
+    {
+      "id": "MUX-ADDR2annular-saved0-line-3",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2416.337701015499,
+      "y1": 1707.157120121574,
+      "x2": 2387.7026926030194,
+      "y2": 1716.0056299758298
+    },
+    {
+      "id": "MUX-ADDR2annular-saved0-line-4",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "width": 6,
+      "x1": 2387.7026926030194,
+      "y1": 1716.0056299758298,
+      "x2": 2371.455812898145,
+      "y2": 1700.30404738029
+    }
+  ],
+  "new_vias": [
+    {
+      "id": "MUX_DISABLE-current-U2-signal-via",
+      "net": "MUX_DISABLE",
+      "x": 2750.2244094488196,
+      "y": 616.130487426348,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX_DISABLE-current-U4-signal-via",
+      "net": "MUX_DISABLE",
+      "x": 1218.6999212899782,
+      "y": 3187.9213643867847,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX_DISABLE-current-U6-signal-via",
+      "net": "MUX_DISABLE",
+      "x": 4760.914710899218,
+      "y": 3135.8165637566526,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-joint-U1-signal",
+      "net": "MUX_DISABLE",
+      "x": 892.8866762742698,
+      "y": 795.4622047244095,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-joint-U1-ground",
+      "net": "GND",
+      "x": 911.6149523677874,
+      "y": 837.9118101670671,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-joint-U3-signal",
+      "net": "MUX_DISABLE",
+      "x": 4244.672839818205,
+      "y": 875.329527559055,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-joint-U3-ground",
+      "net": "GND",
+      "x": 4251.709159063896,
+      "y": 930.8723111055385,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-joint-U5-signal",
+      "net": "MUX_DISABLE",
+      "x": 2914.0797684249374,
+      "y": 3238.836732348407,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-joint-U5-ground",
+      "net": "GND",
+      "x": 2959.780531382916,
+      "y": 3249.6558158142448,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U56-joint-signal-0",
+      "net": "MUX_DISABLE",
+      "x": 2990.674196237885,
+      "y": 3315.3806546796823,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U56-joint-signal-1",
+      "net": "MUX_DISABLE",
+      "x": 3813.100971259211,
+      "y": 3036.3965907582674,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U56-joint-new-ground-0-6",
+      "net": "GND",
+      "x": 3037.3511669995055,
+      "y": 3319.2714683837607,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U56-joint-new-ground-1-2",
+      "net": "GND",
+      "x": 3830.0855138352886,
+      "y": 3087.344660978982,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U23-joint-signal-0",
+      "net": "MUX_DISABLE",
+      "x": 3042.0653543307085,
+      "y": 508.55853045142715,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U23-joint-signal-1",
+      "net": "MUX_DISABLE",
+      "x": 3144.9723474631123,
+      "y": 533.3752906685128,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U23-joint-signal-2",
+      "net": "MUX_DISABLE",
+      "x": 4096.934645669291,
+      "y": 935.6295275590552,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U23-joint-new-ground-0-0",
+      "net": "GND",
+      "x": 3072.2611218018938,
+      "y": 552.5385658234,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U23-joint-new-ground-1-2",
+      "net": "GND",
+      "x": 3093.908469714829,
+      "y": 538.0272511197064,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-U8-ADDR3-joint-new-MUX-via",
+      "net": "MUX_DISABLE",
+      "x": 2471.6084692721556,
+      "y": 1621.5176948583373,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "ADDR3-U8-ground1-release-signal",
+      "net": "ADDR3",
+      "x": 2633.8178752040467,
+      "y": 1418.2722677139468,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-ADDR2annular-saved0-signal-0",
+      "net": "MUX_DISABLE",
+      "x": 2398.162100053878,
+      "y": 1563.9160889240948,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-ADDR2annular-saved0-signal-1",
+      "net": "MUX_DISABLE",
+      "x": 2369.7,
+      "y": 1709.131114903919,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-ADDR2annular-saved0-ground-0",
+      "net": "GND",
+      "x": 2399.939145417108,
+      "y": 1527.7434995648266,
+      "diameter": 24,
+      "hole": 12
+    },
+    {
+      "id": "MUX-ADDR2annular-saved0-ground-1",
+      "net": "GND",
+      "x": 2388.3188546800434,
+      "y": 1740.194797260984,
+      "diameter": 24,
+      "hole": 12
+    }
+  ],
+  "local_ports": [
+    "U1",
+    "U2",
+    "U3",
+    "U4",
+    "U5",
+    "U6",
+    "U8"
+  ],
+  "whole_MUX_DISABLE_complete": false,
+  "native_imported": false,
+  "full_delta_audit_pass": true,
+  "full_delta_review": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-ADDR2annular-saved0-full-delta-audit.json",
+  "MUX_DISABLE_pad_islands": 4,
+  "joint_macro_record": {
+    "attempt": 1,
+    "new_lines": 17,
+    "new_signals": 3,
+    "new_grounds": 2,
+    "return_checks": [
+      {
+        "signal": "MUX-U23-joint-signal-0",
+        "ground": "new-ground-0-0",
+        "d": 1.3550436708682383,
+        "contacts_mm2": {
+          "15": 0.21887565457087266,
+          "2": 0.21887565457087266
+        }
+      },
+      {
+        "signal": "MUX-U23-joint-signal-1",
+        "ground": "new-ground-1-2",
+        "d": 1.3023935999908165,
+        "contacts_mm2": {
+          "15": 0.2188756545708721,
+          "2": 0.2188756545708721
+        }
+      },
+      {
+        "signal": "MUX-U23-joint-signal-2",
+        "ground": "a76bed63e9d79543",
+        "d": 1.0809337377008834,
+        "contacts_mm2": {
+          "15": 0.21887565457087227,
+          "2": 0.21887565457087227
+        }
+      }
+    ],
+    "pad_islands": 4,
+    "full_delta_audit_pass": false,
+    "global_DC_done": false,
+    "native_imported": false
+  },
+  "full_board_review_pass": false,
+  "base_seven_port_source_audit": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-seven-port-corrected-full-delta-audit.json",
+  "U56_connected_delta_pass": false,
+  "U456_connected_delta_pass": false,
+  "global_DC_done": false,
+  "U23_connected_delta_pass": false,
+  "ADDR3_all7_pads_restored": true,
+  "joint_outlet_record": {
+    "option": 1,
+    "xy_mm": [
+      62.778855119512755,
+      41.18654944940177
+    ],
+    "ADDR3_all7_pads_restored": true,
+    "MUX_local_escape_restored": true,
+    "new_lines": 6,
+    "new_signal_vias": 1,
+    "return_check": {
+      "id": "fb52c482c1658a75",
+      "return_mm": 0.9701453747302523,
+      "contacts_mm2": {
+        "15": 0.21887565457087368,
+        "2": 0.21887565457087368
+      }
+    },
+    "whole_MUX_complete": false,
+    "full_DC_done": false,
+    "full_delta_audit_pass": false,
+    "native_imported": false
+  },
+  "U8joint_connected_delta_pass": true,
+  "signal_required_reference_pairs": {
+    "ADDR3-U8-ground1-release-signal": [
+      15,
+      1
+    ],
+    "b809408793358b4b": [
+      1,
+      15,
+      2
+    ]
+  },
+  "ground1_release_record": {
+    "option": 3,
+    "xy_mm": [
+      66.89897403018279,
+      36.02411559993425
+    ],
+    "ADDR3_all7_restored": true,
+    "MUX4_islands": true,
+    "new_lines": 3,
+    "new_signals": 1,
+    "return_check": {
+      "ground_id": "4173d801e74db0c6",
+      "return_mm": 1.306971588613954,
+      "contacts_mm2": {
+        "15": 0.20396150741844332,
+        "1": 0.16475503223253396
+      }
+    },
+    "required_new_signal_pair": [
+      15,
+      1
+    ],
+    "North_existing_signal_return": [
+      {
+        "id": "4173d801e74db0c6",
+        "return_mm": 0.9000011197981481,
+        "contacts_mm2": {
+          "1": 0.16475503223253396,
+          "15": 0.20396150741844332,
+          "2": 0.20396150741844332
+        }
+      }
+    ],
+    "MUX_north_frontier_min_y_mm": 35.88641698289824,
+    "full_delta_audit_pass": false
+  },
+  "ground1mesh_delta_pass": true,
+  "deletion_only_stage_pass": true,
+  "source_stage_proof": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-stage-proof.json",
+  "source_stage_proof_sha256": "2404ec12928f2517fc2d299c02dacbabd6b79a1cbd25702c0d93645688791a12",
+  "ADDR2annular_saved0_delta_pass": true,
+  "IO_tail_cleanup_stage_pass": true,
+  "source_stage_parent_expected_sha256": "385cedea75a7fd7a5150b0f7d4a8ae2e4fe973e04d4086e1f75bbef2829d6ae4"
+}

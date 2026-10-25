@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-25T00:14:07.425082+08:00",
+  "evidence_kind": "Read-only registered-design entry, not a live-source or remote-main acceptance",
+  "source": "D:\\FPGA-Project\\current-design\\project\\DESIGN-CURRENT.md",
+  "source_sha256": "c86acd71174ca664c95d53519474228a9264e43e7d433645956bde39a0dee8a6",
+  "registered_decision": {
+    "platform": "Tang Nano20K",
+    "J10": "retained harmonic touch/display with RA8875 route candidate",
+    "J11": "cancelled",
+    "sensor_capacity": 84,
+    "exact_module_configuration_not_frozen": true
+  },
+  "integration_open": [
+    "Entry explicitly says tdm_ship_owned defaults FINGER_EXPR=0 RIGHT_TIMBRE=0 LEGACY_PAD=1, exposes16direct pads, and external controls are constants; complete84MUX/J10/EEPROM/TF hardware top is not accepted.",
+    "Final BUS_SCK frequency, bank voltage and final CST IO drive/slew for this board are not established by this entry.",
+    "No new acceptance of current FPGA source or proof of brownout, module reset, SPI or CTP functionality is inferred."
+  ],
+  "hardware_registry_snapshot_boundary": "The entry still cites historical e098/47 labels/13 nets from a dated review. It does not override this chat current951/42labels12nets native PCB or its D recovery entry.",
+  "no_remote_or_live_source_status_claim": true,
+  "no_other_chat_message": true,
+  "no_product_RTL_modified": true,
+  "physical_tests": "UNMEASURED",
+  "whole_product_ready": false
+}

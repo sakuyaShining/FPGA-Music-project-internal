@@ -30,6 +30,8 @@ jobs:
         run: python3 tools/scripts/engineering.py check
       - name: Verify engineering corruption and isolated export rejection
         run: python3 -m unittest discover -s tools/tests -p 'test_engineering.py' -v
+      - name: Verify complete PCB checkpoint and committed recovery bytes
+        run: python3 tools/scripts/pcb_checkpoint.py --git-ref HEAD
   maintain-legacy-entry:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -39,14 +41,12 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
-      - name: Keep old entry consumers following actual private main
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Keep old entry consumers following authorized internal main
         shell: bash
         run: |
           set -euo pipefail
           test "$GITHUB_REPOSITORY" = 'sakuyaShining/FPGA-Music-project-internal'
-          test "$(gh api "repos/$GITHUB_REPOSITORY" --jq .private)" = true
+          # User superseded private-only push policy on 2026-10-25.
           git fetch origin main codex/project-management-20261022
           git merge-base --is-ancestor origin/codex/project-management-20261022 origin/main
           git push origin refs/remotes/origin/main:refs/heads/codex/project-management-20261022

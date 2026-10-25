@@ -1,0 +1,144 @@
+{
+  "updated_at": "2026-10-25T14:36:29.479073+08:00",
+  "accepted_offline_summary": "当前离线62新线24新孔(15信号9地)/MUX4岛；本批仅完整清除3V3_IO无PAD尾支路6873+5ace两Top线共7.502592mm，新增Cu为0。严格1e-5mm/1024细分全铜证明单删横段会留5ace孤岛，完整双段清理后所有剩余IO铜与47PAD仍一个原样组件，C8五对象2.336498mm短去耦与共享IO主体全不变。全部其他Cu/PAD/孔/GND/Root参考WKB及每网真实孔mask逐对象等价，继承62源全板参考/旧接触/DC/255网PAD/MOSI34门。原生951/42项12网/227件649孔未改，不能投板，实物UNMEASURED。",
+  "source_native_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "current_accepted_candidate": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-audited-partial-plan.json",
+  "current_accepted_expected": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-expected.json",
+  "current_accepted_context": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-audited-plane-context.json",
+  "current_accepted_audit": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-stage-proof.json",
+  "consolidated_protection_proof": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-stage-proof.json",
+  "read_first": [
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-stage-proof.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-audited-partial-plan.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-expected.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-audited-plane-context.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-post-identity-check.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-west-continuous-port-IO-scope.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-west-BottomIO-scope.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-port-certificate-scope-note.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-physical-port-paired-result.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-physical-port-admitted-port-states.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-guide-input-report.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-guide-verified-input-cache.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-preflight-erratum.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-final-native-guard.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-archive-verification.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-ADDR2annular-consolidated-protection-proof.json"
+  ],
+  "files_sha256": {
+    "MUX_DISABLE-IOtail-cleanup-stage-proof.json": "4e693709121d79d4cb6a59f5300aea25a3e133b9173185ae457b66907d24d3a2",
+    "MUX_DISABLE-IOtail-cleanup-audited-partial-plan.json": "eb8338d29a09fa82306899d1e0338a3534566d607c5adb6fcf4758728f326312",
+    "MUX_DISABLE-IOtail-cleanup-expected.json": "1406a243bd5a69c60ce294a4b5e4a1904ec9384ef382fa32378588ce81dc4a8e",
+    "MUX_DISABLE-IOtail-cleanup-audited-plane-context.json": "0a071fc4545dee84a79453baa413f332e6c0eb03e12bb75eee74cf2159520d0a",
+    "MUX_DISABLE-IOtail-post-identity-check.json": "94442c0c10cace405584dbb14cb1f25ec8fc720c46d3195caf638656d8e66c1b",
+    "MUX_DISABLE-west-continuous-port-IO-scope.json": "5e4fdaccff7bf18e52f06e6f079449097ba20f81ee1866b5fd513c09efe98e7a",
+    "MUX_DISABLE-west-BottomIO-scope.json": "bb90b3a1f2e7502bf8ab8aa548196388c84008d9545bca89e99caf92bf31818a",
+    "MUX_DISABLE-IOtail-port-certificate-scope-note.json": "ad95c73062254506ea125a78505b9c5c3a79e84384a6554e87894830dc35604a",
+    "MUX_DISABLE-IOtail-physical-port-paired-result.json": "bc74ce5d850c6b30353a9523aa432523d7893a67e41d0a6836ed6ac8e640cbf3",
+    "MUX_DISABLE-IOtail-physical-port-admitted-port-states.json": "21fcda2e036c4da91388234135e4e26398620ee13f61b29b5f8114f0627b7497",
+    "MUX_DISABLE-IOtail-guide-input-report.json": "ab36789ab4c203dec3e4fc5e92bdb85879d988f107365918fe1b7a198afaf0fe",
+    "MUX_DISABLE-IOtail-guide-verified-input-cache.json": "1b63cee35a0a43c59ab5f15a980de62130c57f0a59e23f0f0be945d8d0a5a130",
+    "MUX_DISABLE-IOtail-cleanup-preflight-erratum.json": "9ad6e48bb8ad7b8030766da7c53e8e9719357a235784f16ad2f7d84e9e0fb80d",
+    "MUX_DISABLE-IOtail-final-native-guard.json": "17d698afd4cdcd8334fcab9c748a46b30432d506ec24fb956d9305cb26f6445b",
+    "MUX_DISABLE-IOtail-archive-verification.json": "61d675f38dd25fe0e8330f97f7b62a802e760b1726ab9d226814d5f533e5475e",
+    "MUX_DISABLE-ADDR2annular-consolidated-protection-proof.json": "3488476aa9bd8f4a9d07a3113531502e6077d5da3e4eae29ffd90889803f5af4"
+  },
+  "running_tasks": [],
+  "all_current_jobs_terminal": true,
+  "native_imported": false,
+  "native_repour_done": false,
+  "manufacturing_release": false,
+  "physical_tests": "UNMEASURED",
+  "next_action": "全部本批任务终态，不重开或换名同法重跑、不重放apply。当前接受源为IOtail-cleanup62/24四岛，已移除两条无PAD IO尾线，当前IOtail-guide缓存仅对该实际源有效；不得回退旧62未清理/57源缓存。先读端口scope-note，区分layer-specific导引裁剪边界与实际Cu/参考/接触屏障；当前零端口证书不是纯物理或全板无解证明。可独立比较在现有全ADDR2实铜导引联合投影范围内取消单层导引裁剪是否改变保存实际端口的连续域，保持全部实际物理/reference/return门；仅在证明导引边界误挡时改变几何导引算子，不能只扩大旧窗/采样/时间。若是实际数字Cu屏障，先证明因果及共享范围，再联合改位并完整恢复。Bottom IO848为共享供电桥，单删分5脚和42脚两组，严禁当冗余删除；任何调整须恢复全47脚供电和C8短去耦、至少原宽14.14mil及实际参考。新物理端口作业5宏/2真实联合赋值只保存两个局部状态，未合并目标、未实体化/全DC/全审，不可导入；不要把局部可接纳计数晋升。原U8/U23/U456/U1完整铜岛保留，每信号reference pair/全源参考/旧接触/U8.8地/PAD/MOSI全门通过才晋升，完整MUX和实时同一CAD身份过门前原生只读。",
+  "current_recovery_zip": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-offline-checkpoint-NOT-FOR-FAB.zip",
+  "current_recovery_sha256": "677167e4e76e2ba750bf937a01487beffba1443219469207b5757d1fb18da8bf",
+  "archive_verification": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-archive-verification.json",
+  "last_guard": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-final-native-guard.json",
+  "capacity_bytes": {
+    "C": 18304876544,
+    "D": 23560032256
+  },
+  "CAD_live_identity_available": false,
+  "CAD_identity_note": "实时38文件SHA保持，最近session list返回ok=true,value=[]；无活动CAD，不能称身份通过，未开/复制工程。",
+  "source_reference_pairs": {
+    "MUX_DISABLE-current-U2-signal-via": [
+      15,
+      2
+    ],
+    "MUX_DISABLE-current-U4-signal-via": [
+      15,
+      2
+    ],
+    "MUX_DISABLE-current-U6-signal-via": [
+      15,
+      2
+    ],
+    "MUX-joint-U1-signal": [
+      15,
+      2
+    ],
+    "MUX-joint-U3-signal": [
+      15,
+      2
+    ],
+    "MUX-joint-U5-signal": [
+      15,
+      2
+    ],
+    "MUX-U56-joint-signal-0": [
+      15,
+      2
+    ],
+    "MUX-U56-joint-signal-1": [
+      15,
+      2
+    ],
+    "MUX-U23-joint-signal-0": [
+      15,
+      2
+    ],
+    "MUX-U23-joint-signal-1": [
+      15,
+      2
+    ],
+    "MUX-U23-joint-signal-2": [
+      15,
+      2
+    ],
+    "MUX-U8-ADDR3-joint-new-MUX-via": [
+      15,
+      2
+    ],
+    "ADDR3-U8-ground1-release-signal": [
+      15,
+      1
+    ],
+    "MUX-ADDR2annular-saved0-signal-0": [
+      15,
+      2
+    ],
+    "MUX-ADDR2annular-saved0-signal-1": [
+      15,
+      2
+    ],
+    "b809408793358b4b": [
+      1,
+      15,
+      2
+    ]
+  },
+  "whole_MUX_DISABLE_complete": false,
+  "MUX_PAD_islands": 4,
+  "declared_new_lines": 62,
+  "declared_new_signal_vias": 15,
+  "declared_new_ground_vias": 9,
+  "declared_removed_native_lines": 7,
+  "pending_unaudited_candidate": null,
+  "pending_unaudited_expected": null,
+  "accepted_new_offline_stage_this_batch": true,
+  "new_stage_type": "Complete two-line noPAD digital IO-tail deletion-only full-Cu and exact-reference-identity proof; no added copper or fullDC replay",
+  "current_route_raw_states_not_audited": true,
+  "work_status": "PAUSED_BY_USER",
+  "pause_record": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\PCB-PAUSED-20261025.json",
+  "resume_requires_user_request": true
+}

@@ -1,5 +1,7 @@
 # 新Agent启动入口：先确认设计，再确认源版本
 
+**2026-10-25 PCB接续候选**：最新951原生施工检查点及完整恢复链见`hardware/checkpoints/pcb-951ce88a-20261025/`，计划见`project/PCB-RESOLUTION-PLAN-20261025.md`；原hardware/current的e098保留历史。此任务分支未合入main，未新增CAD/DRC/实物验收。用户已授权向当前Public internal直接同步，覆盖旧private-only推送条件。
+
 当前工程候选已展开到`fpga/current/`、`hardware/current/`和`host/current/`。先读[ENGINEERING.md](ENGINEERING.md)与[协作检查点](COLLABORATION-CHECKPOINT-20261024.md)，校验输入并选择限定任务。以下v1/v2恢复步骤仅用于历史复现，不是本批最新工程。
 
 外部成员和离线补丁接手方式、任务卡及交回要求见[COLLABORATING.md](COLLABORATING.md)。

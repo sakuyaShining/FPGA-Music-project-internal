@@ -16,6 +16,19 @@ project/reviews/** -text -whitespace
 fpga/current/** -text -whitespace
 hardware/current/** -text -whitespace
 host/current/** -text -whitespace
+hardware/checkpoints/pcb-951ce88a-20261025/** -text -whitespace
+# Scoped handoff documents and checksum tools use stable bytes across platforms.
+.gitattributes text eol=lf
+.github/workflows/project-entry.yml text eol=lf
+AGENTS.md text eol=lf
+docs/00-协作/AGENT-BOARD.md text eol=lf
+project/AGENT-START.md text eol=lf
+project/CURRENT.md text eol=lf
+project/NEXT-AGENT-PROMPT.md text eol=lf
+project/QUICKSTART.md text eol=lf
+project/PCB-RESOLUTION-PLAN-20261025.md text eol=lf
+tools/scripts/design_governance.py text eol=lf
+tools/scripts/pcb_checkpoint.py text eol=lf
 project/versions/engineering-sources-20261023.json text eol=lf
 project/ENGINEERING.md text eol=lf
 project/COLLABORATION-CHECKPOINT-20261024.md text eol=lf

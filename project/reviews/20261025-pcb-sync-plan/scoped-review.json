@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "scope": "Scoped source-recovery publication and remote-policy change; not a global design or live-producer review",
+  "authority_evidence": "project/reviews/20261025-pcb-sync-plan/remote-authorization.json",
+  "source_manifest": "hardware/checkpoints/pcb-951ce88a-20261025/manifest.json",
+  "reviewed_changes": {
+    "remote_policy": "Remove private visibility precondition using direct user authority; keep exact repository identity and main merge boundary",
+    "hardware": "Preserve full native951 and exact offline/complete ZIP identities in a separate immutable path; do not replace old current manifest",
+    "plan": "Record unresolved nets and P0-P5 acceptance criteria, including true physical versus guide-clipping diagnosis",
+    "producer_registry": "Add read-only source-handoff metadata; retain producer root, owner and original observation"
+  },
+  "reviewed_file_sha256": {
+    "AGENTS.md": "61285f75eb7838d112662a5dcf74acc158d10fdd4561e4c3ec1c31bd7890662a",
+    ".gitattributes": "5e78c56dd205a9cf45b4ef793fd28b0713d698caf878dab443d6b9e760b7c1ac",
+    ".github/workflows/project-entry.yml": "06ab83c40a76338cc6e1ac46caa7c3ec9641a4597ad9581f7d897643a0c27841",
+    "project/decisions.json": "e1b27dbb99484c8b68d3c4d663ce0e2f4170a8f6a2b4be413ae6cf238f080859",
+    "project/producers.json": "a873ba52427b127cb7d6574373647e86f3da408306abc2e4a3d23e8178f16568",
+    "project/MAINTAINING-MAIN.md": "5223ada48dc6ed02597083b96246bc7df633adec1298e8acdf8500bab7e6e302",
+    "project/DESIGN-CURRENT.md": "e85cfe9b985c9a56c9343d45c38aafeb5138411682525dbc888fec953a1b3c47",
+    "project/ENGINEERING.md": "3e8fb94d1f69e4b3c9b6e6f4e9a9cea45b9daf01f6d375346e812696db2fbb82",
+    "project/CURRENT.md": "53de02dc3825399e9e9cea3643ef7f23444026b30696e8aba95e5d5243ed32d3",
+    "project/AGENT-START.md": "ad7b3145124fbdd2828eb5be2135c5500a1f11017fa9ebca2c6a3e21b12ba9d4",
+    "project/QUICKSTART.md": "a15c0555bbd6f1bcc8b9e9da58cecc84e80bf94bcf102d56d824f8d0c16337ca",
+    "project/COLLABORATING.md": "69a6a665659b8bff5f30d2b6642f6ea84bbbe8076f33e84e6502630174019fff",
+    "project/NEXT-AGENT-PROMPT.md": "9218bfbb8a30fcb1217d13444eea2d891c12279d3544041fee8b0ecce7458682",
+    "docs/00-协作/AGENT-BOARD.md": "99cca26f150293b1006686191a9e4c77d1b21528a80e9a43db5d4664b6839c71",
+    "tools/scripts/design_governance.py": "3a8d1ec6e55cce83f6803d87574b9d97ceaee8f6bc2dfbb44da1e2ddde307fe3",
+    "tools/scripts/pcb_checkpoint.py": "c92cffff322ace768c6543e56af6fb6863fc2646e63b6cdac78e860cfbf8e3b4",
+    "project/PCB-RESOLUTION-PLAN-20261025.md": "3d90c4db1093221033657b7b5a6b174c1674d784108789225accc7caaa460ff5",
+    "hardware/checkpoints/pcb-951ce88a-20261025/manifest.json": "11c12da732d7ac77aaf0fb4ccbb41ab586679d9200455f36a4c053c9ac9e296e"
+  },
+  "previous_global_review_record": "project/reviews/20261024-engineering-publication/review.json",
+  "previous_global_review_sha256": "3fbb8685086a444f4342e92abf3a8e4516f69de3aa7c2fbb54e7a468e8ee304c",
+  "previous_global_reviewed_at": "2026-10-23T16:24:52.079650+00:00",
+  "global_review_renewed": false,
+  "producer_observations_renewed": false,
+  "known_remaining_status": [
+    "REVIEW_DUE",
+    "UNREVIEWED_DRIFT",
+    "UNPUBLISHED_ENTRY until main integration"
+  ],
+  "source_CAD_modified": false,
+  "physical_tests": "UNMEASURED",
+  "manufacturing_release": false
+}

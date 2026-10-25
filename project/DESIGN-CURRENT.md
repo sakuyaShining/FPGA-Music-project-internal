@@ -1,8 +1,10 @@
 # 当前设计与实现入口
 
+**2026-10-25 PCB接续候选**：最新951原生施工检查点及完整恢复链见`hardware/checkpoints/pcb-951ce88a-20261025/`，计划见`project/PCB-RESOLUTION-PLAN-20261025.md`；原hardware/current的e098保留历史。此任务分支未合入main，未新增CAD/DRC/实物验收。用户已授权向当前Public internal直接同步，覆盖旧private-only推送条件。
+
 **2026-10-24工程交接更新**：[ENGINEERING.md](ENGINEERING.md)及[协作检查点](COLLABORATION-CHECKPOINT-20261024.md)提供展开的FPGA/硬件/主机候选；v2仍是12:23的历史恢复，不再作为本批工程接手源。341项工程输入含力度旧表与补齐的主机重奏测试依赖。一处RTL声明顺序做了有来源记录的编译适配；七项专项与音高参考通过，历史音乐黄金轨迹存在差异，未签收整机。主机100项离线测试通过，实体兼容未验证。实际来源与失败日志见本批review；下文旧审阅事实按其截止时间解释。
 
-**唯一发布入口：私有仓库的实际远程main。**设计登记见[design-state.json](design-state.json)，已确认决定与沿革见[decisions.json](decisions.json)，实时性与审阅期限见[governance.json](governance.json)。跨会话维护流程见[MAINTAINING-MAIN.md](MAINTAINING-MAIN.md)。日期分支与冻结标签用于兼容/追溯，不定义最新。
+**唯一发布入口：用户授权的internal仓库实际远程main。**设计登记见[design-state.json](design-state.json)，已确认决定与沿革见[decisions.json](decisions.json)，实时性与审阅期限见[governance.json](governance.json)。跨会话维护流程见[MAINTAINING-MAIN.md](MAINTAINING-MAIN.md)。日期分支与冻结标签用于兼容/追溯，不定义最新。
 
 当前审阅记录以`governance.json`指向的观察时间为准；13:07初审、显示路线澄清及晚间协作接手审阅分别保留。先运行`python tools/scripts/design_governance.py status --remote`；本机能访问活跃源时加`--live`，否则不能声称实时源已同步。新变化或到期会要求重新审阅。源码可恢复归档仍是12:23的v2，不把新观察自动写成新代码验收。多人协作与离线任务见[COLLABORATING.md](COLLABORATING.md)。
 

@@ -1,5 +1,7 @@
 # 全项目当前入口
 
+**2026-10-25 PCB接续候选**：最新951原生施工检查点及完整恢复链见`hardware/checkpoints/pcb-951ce88a-20261025/`，计划见`project/PCB-RESOLUTION-PLAN-20261025.md`；原hardware/current的e098保留历史。此任务分支未合入main，未新增CAD/DRC/实物验收。用户已授权向当前Public internal直接同步，覆盖旧private-only推送条件。
+
 **当前工程接手**：[ENGINEERING.md](ENGINEERING.md) → [协作检查点](COLLABORATION-CHECKPOINT-20261024.md)。本批展开FPGA、硬件和上位机候选；历史恢复表继续保留，不能代替三个current目录。音乐黄金回归存在已记录差异，硬件仍未连通完整，不代表完整产品验收。
 
 **先从实际远程main读[DESIGN-CURRENT.md](DESIGN-CURRENT.md)、`governance.json`和`decisions.json`；快速取得版本见[QUICKSTART.md](QUICKSTART.md)。稳定决定与有截止时间的施工状态分开；到期或源有新变化须审阅。用户取消J11、保留J10的决定继续有效。**
@@ -56,7 +58,7 @@ python tools/scripts/project_control.py restore --snapshot 4d37 --output D:/FPGA
 
 ## GitHub与协作
 
-- 共享内部远程：`internal`。本次已通过GitHub API核实仓库为private。
+- 共享开发远程：`internal`。2026-10-25通过GitHub API核实为Public；用户直接要求取消private-only条件并同步，授权证据见本次review。
 - origin/public指向对外发布地址；对外发布另走审查导出流程。
 - main按既有约定由用户合并。保存分支不等于合入main，源码捕获不等于功能验收。
 - 每个任务使用命名分支，记录owner、源清单、验证边界、远程实际提交和下一步。
