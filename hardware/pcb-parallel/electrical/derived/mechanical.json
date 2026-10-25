@@ -1,0 +1,1470 @@
+{
+ "board": {
+  "width_mm": 140.0,
+  "height_mm": 100.0,
+  "area_mm2": 14000.0
+ },
+ "edges": {
+  "left_mm": 0.0,
+  "right_mm": 140.0,
+  "bottom_mm": 0.0,
+  "top_mm": 100.0
+ },
+ "mounting_holes": [
+  {
+   "ref": "H1",
+   "x_mm": 3.0,
+   "y_mm": 18.0,
+   "drill_mm": 2.7,
+   "plated": false
+  },
+  {
+   "ref": "H2",
+   "x_mm": 137.0,
+   "y_mm": 16.5,
+   "drill_mm": 2.7,
+   "plated": false
+  },
+  {
+   "ref": "H3",
+   "x_mm": 3.0,
+   "y_mm": 82.0,
+   "drill_mm": 2.7,
+   "plated": false
+  },
+  {
+   "ref": "H4",
+   "x_mm": 137.0,
+   "y_mm": 88.0,
+   "drill_mm": 2.7,
+   "plated": false
+  }
+ ],
+ "test_points": [
+  {
+   "ref": "TP1",
+   "net": "GND",
+   "x_mm": 8.0,
+   "y_mm": 33.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP2",
+   "net": "5V_IN",
+   "x_mm": 12.0,
+   "y_mm": 33.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP3",
+   "net": "5V_FUSED",
+   "x_mm": 16.0,
+   "y_mm": 33.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP4",
+   "net": "5V_PROTECTED",
+   "x_mm": 20.0,
+   "y_mm": 33.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP5",
+   "net": "5V_PERIPH",
+   "x_mm": 24.0,
+   "y_mm": 33.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP6",
+   "net": "3V3_IO",
+   "x_mm": 28.0,
+   "y_mm": 33.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP7",
+   "net": "3V3_PERIPH",
+   "x_mm": 32.0,
+   "y_mm": 33.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP8",
+   "net": "PWR_FAULT_N",
+   "x_mm": 36.0,
+   "y_mm": 33.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP9",
+   "net": "DAC_3V3",
+   "x_mm": 117.0,
+   "y_mm": 67.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP10",
+   "net": "GND",
+   "x_mm": 121.0,
+   "y_mm": 67.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP11",
+   "net": "I2C_SDA",
+   "x_mm": 73.0,
+   "y_mm": 49.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP12",
+   "net": "I2C_SCL",
+   "x_mm": 73.0,
+   "y_mm": 52.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP13",
+   "net": "BUS_SCK",
+   "x_mm": 66.0,
+   "y_mm": 51.5,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP14",
+   "net": "BUS_MOSI",
+   "x_mm": 62.5,
+   "y_mm": 51.5,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP15",
+   "net": "BUS_RETURN",
+   "x_mm": 69.75,
+   "y_mm": 67.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP16",
+   "net": "RC0",
+   "x_mm": 20.0,
+   "y_mm": 29.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP17",
+   "net": "RC1",
+   "x_mm": 65.0,
+   "y_mm": 29.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP18",
+   "net": "RC2",
+   "x_mm": 116.0,
+   "y_mm": 29.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP19",
+   "net": "RC3",
+   "x_mm": 20.0,
+   "y_mm": 71.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP20",
+   "net": "RC4",
+   "x_mm": 65.0,
+   "y_mm": 71.0,
+   "pad_dia_mm": 0.8128
+  },
+  {
+   "ref": "TP21",
+   "net": "RC5",
+   "x_mm": 116.0,
+   "y_mm": 71.0,
+   "pad_dia_mm": 0.8128
+  }
+ ],
+ "keepouts": [
+  {
+   "layer_id": 12,
+   "prohibit": [
+    "COMPONENT"
+   ],
+   "rect_mm": [
+    0.25,
+    15.25,
+    5.75,
+    20.75
+   ]
+  },
+  {
+   "layer_id": 1,
+   "prohibit": [
+    "TRACK",
+    "COPPER",
+    "FILL"
+   ],
+   "rect_mm": [
+    1.25,
+    16.25,
+    4.75,
+    19.75
+   ]
+  },
+  {
+   "layer_id": 2,
+   "prohibit": [
+    "TRACK",
+    "COPPER",
+    "FILL"
+   ],
+   "rect_mm": [
+    1.25,
+    16.25,
+    4.75,
+    19.75
+   ]
+  },
+  {
+   "layer_id": 12,
+   "prohibit": [
+    "COMPONENT"
+   ],
+   "rect_mm": [
+    134.25,
+    13.75,
+    139.75,
+    19.25
+   ]
+  },
+  {
+   "layer_id": 1,
+   "prohibit": [
+    "TRACK",
+    "COPPER",
+    "FILL"
+   ],
+   "rect_mm": [
+    135.25,
+    14.75,
+    138.75,
+    18.25
+   ]
+  },
+  {
+   "layer_id": 2,
+   "prohibit": [
+    "TRACK",
+    "COPPER",
+    "FILL"
+   ],
+   "rect_mm": [
+    135.25,
+    14.75,
+    138.75,
+    18.25
+   ]
+  },
+  {
+   "layer_id": 12,
+   "prohibit": [
+    "COMPONENT"
+   ],
+   "rect_mm": [
+    0.25,
+    79.25,
+    5.75,
+    84.75
+   ]
+  },
+  {
+   "layer_id": 1,
+   "prohibit": [
+    "TRACK",
+    "COPPER",
+    "FILL"
+   ],
+   "rect_mm": [
+    1.25,
+    80.25,
+    4.75,
+    83.75
+   ]
+  },
+  {
+   "layer_id": 2,
+   "prohibit": [
+    "TRACK",
+    "COPPER",
+    "FILL"
+   ],
+   "rect_mm": [
+    1.25,
+    80.25,
+    4.75,
+    83.75
+   ]
+  },
+  {
+   "layer_id": 12,
+   "prohibit": [
+    "COMPONENT"
+   ],
+   "rect_mm": [
+    134.25,
+    85.25,
+    139.75,
+    90.75
+   ]
+  },
+  {
+   "layer_id": 1,
+   "prohibit": [
+    "TRACK",
+    "COPPER",
+    "FILL"
+   ],
+   "rect_mm": [
+    135.25,
+    86.25,
+    138.75,
+    89.75
+   ]
+  },
+  {
+   "layer_id": 2,
+   "prohibit": [
+    "TRACK",
+    "COPPER",
+    "FILL"
+   ],
+   "rect_mm": [
+    135.25,
+    86.25,
+    138.75,
+    89.75
+   ]
+  }
+ ],
+ "components_top": 224,
+ "components_bottom": [
+  "C8",
+  "R63",
+  "R64"
+ ],
+ "near_edge_within_12mm": [
+  {
+   "designator": "D1",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 11.0005,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D2",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 20.0,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D3",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 28.9996,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D4",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 38.0003,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D5",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 55.9993,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D6",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 65.0001,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D7",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 73.9996,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D8",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 83.0004,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D9",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 101.0007,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D10",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 110.0002,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D11",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 118.9997,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D12",
+   "device": "TPD4E02B04DQAR",
+   "edge": "bottom",
+   "distance_mm": 8.0,
+   "x_mm": 128.0005,
+   "y_mm": 8.0003
+  },
+  {
+   "designator": "D13",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 11.0005,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D14",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 20.0,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D15",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 28.9996,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D16",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 38.0003,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D17",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 55.9993,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D18",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 65.0001,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D19",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 73.9996,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D20",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 83.0004,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D21",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 101.0007,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D22",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 110.0002,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D23",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 118.9997,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "D24",
+   "device": "TPD4E02B04DQAR",
+   "edge": "top",
+   "distance_mm": 8.0,
+   "x_mm": 128.0005,
+   "y_mm": 91.9999
+  },
+  {
+   "designator": "J10",
+   "device": "2.54-1*12P反弯针",
+   "edge": "right",
+   "distance_mm": 12.0,
+   "x_mm": 128.0008,
+   "y_mm": 35.9987
+  },
+  {
+   "designator": "J13",
+   "device": "B2B-XH-A(LF)(SN)",
+   "edge": "left",
+   "distance_mm": 5.0,
+   "x_mm": 5.0,
+   "y_mm": 50.0001
+  },
+  {
+   "designator": "J20",
+   "device": "PZ254V-11-16P",
+   "edge": "bottom",
+   "distance_mm": 4.0,
+   "x_mm": 24.9988,
+   "y_mm": 3.9995
+  },
+  {
+   "designator": "J21",
+   "device": "PZ254V-11-16P",
+   "edge": "bottom",
+   "distance_mm": 4.0,
+   "x_mm": 70.0001,
+   "y_mm": 3.9995
+  },
+  {
+   "designator": "J22",
+   "device": "PZ254V-11-16P",
+   "edge": "bottom",
+   "distance_mm": 4.0,
+   "x_mm": 114.999,
+   "y_mm": 3.9995
+  },
+  {
+   "designator": "J23",
+   "device": "PZ254V-11-16P",
+   "edge": "top",
+   "distance_mm": 4.0,
+   "x_mm": 24.9988,
+   "y_mm": 96.0007
+  },
+  {
+   "designator": "J24",
+   "device": "PZ254V-11-16P",
+   "edge": "top",
+   "distance_mm": 4.0,
+   "x_mm": 70.0001,
+   "y_mm": 96.0007
+  },
+  {
+   "designator": "J25",
+   "device": "PZ254V-11-16P",
+   "edge": "top",
+   "distance_mm": 4.0,
+   "x_mm": 114.999,
+   "y_mm": 96.0007
+  },
+  {
+   "designator": "R100",
+   "device": "RC0603FR-071KL",
+   "edge": "left",
+   "distance_mm": 5.95,
+   "x_mm": 5.9489,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R101",
+   "device": "RC0603FR-071KL",
+   "edge": "left",
+   "distance_mm": 8.49,
+   "x_mm": 8.4889,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R102",
+   "device": "RC0603FR-071KL",
+   "edge": "left",
+   "distance_mm": 11.03,
+   "x_mm": 11.0289,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R103",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 13.5689,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R104",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 16.1089,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R105",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 18.6489,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R106",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 21.1889,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R107",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 23.7289,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R108",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 26.2689,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R109",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 28.8089,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R110",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 31.3489,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R111",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 33.8889,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R112",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 36.4289,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R113",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 38.9689,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R120",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 50.9504,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R121",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 53.4904,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R122",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 56.0304,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R123",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 58.5704,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R124",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 61.1104,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R125",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 63.6504,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R126",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 66.1904,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R127",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 68.7304,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R128",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 71.2704,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R129",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 73.8104,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R130",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 76.3504,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R131",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 78.8904,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R132",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 81.4304,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R133",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 83.9704,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R140",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 95.9494,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R141",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 98.4894,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R142",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 101.0294,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R143",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 103.5694,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R144",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 106.1094,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R145",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 108.6494,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R146",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 111.1894,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R147",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 113.7294,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R148",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 116.2694,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R149",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 118.8094,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R150",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 121.3494,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R151",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 123.8894,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R152",
+   "device": "RC0603FR-071KL",
+   "edge": "bottom",
+   "distance_mm": 12.0,
+   "x_mm": 126.4294,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R153",
+   "device": "RC0603FR-071KL",
+   "edge": "right",
+   "distance_mm": 11.03,
+   "x_mm": 128.9694,
+   "y_mm": 11.9993
+  },
+  {
+   "designator": "R160",
+   "device": "RC0603FR-071KL",
+   "edge": "left",
+   "distance_mm": 5.95,
+   "x_mm": 5.9489,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R161",
+   "device": "RC0603FR-071KL",
+   "edge": "left",
+   "distance_mm": 8.49,
+   "x_mm": 8.4889,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R162",
+   "device": "RC0603FR-071KL",
+   "edge": "left",
+   "distance_mm": 11.03,
+   "x_mm": 11.0289,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R163",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 13.5689,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R164",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 16.1089,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R165",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 18.6489,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R166",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 21.1889,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R167",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 23.7289,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R168",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 26.2689,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R169",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 28.8089,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R170",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 31.3489,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R171",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 33.8889,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R172",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 36.4289,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R173",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 38.9689,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R180",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 50.9504,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R181",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 53.4904,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R182",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 56.0304,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R183",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 58.5704,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R184",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 61.1104,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R185",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 63.6504,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R186",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 66.1904,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R187",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 68.7304,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R188",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 71.2704,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R189",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 73.8104,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R190",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 76.3504,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R191",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 78.8904,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R192",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 81.4304,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R193",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 83.9704,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R200",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 95.9494,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R201",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 98.4894,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R202",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 101.0294,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R203",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 103.5694,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R204",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 106.1094,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R205",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 108.6494,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R206",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 111.1894,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R207",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 113.7294,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R208",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 116.2694,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R209",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 118.8094,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R210",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 121.3494,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R211",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 123.8894,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R212",
+   "device": "RC0603FR-071KL",
+   "edge": "top",
+   "distance_mm": 12.0,
+   "x_mm": 126.4294,
+   "y_mm": 88.0
+  },
+  {
+   "designator": "R213",
+   "device": "RC0603FR-071KL",
+   "edge": "right",
+   "distance_mm": 11.03,
+   "x_mm": 128.9694,
+   "y_mm": 88.0
+  }
+ ],
+ "stackup": [
+  {
+   "layer_id": 1,
+   "name": "Top Layer",
+   "copper": true,
+   "thickness_mm": 1.378,
+   "material": null,
+   "permittivity": null,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 2,
+   "name": "Bottom Layer",
+   "copper": true,
+   "thickness_mm": 1.378,
+   "material": null,
+   "permittivity": null,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 3,
+   "name": "Top Silkscreen",
+   "copper": false,
+   "thickness_mm": 0,
+   "material": null,
+   "permittivity": null,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 4,
+   "name": "Bottom Silkscreen",
+   "copper": false,
+   "thickness_mm": 0,
+   "material": null,
+   "permittivity": null,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 5,
+   "name": "Top Solder Mask",
+   "copper": false,
+   "thickness_mm": 0.394,
+   "material": "",
+   "permittivity": 3.3,
+   "loss_tangent": 0.02
+  },
+  {
+   "layer_id": 6,
+   "name": "Bottom Solder Mask",
+   "copper": false,
+   "thickness_mm": 0.394,
+   "material": "",
+   "permittivity": 3.3,
+   "loss_tangent": 0.02
+  },
+  {
+   "layer_id": 7,
+   "name": "Top Paste",
+   "copper": false,
+   "thickness_mm": 0,
+   "material": null,
+   "permittivity": null,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 8,
+   "name": "Bottom Paste",
+   "copper": false,
+   "thickness_mm": 0,
+   "material": null,
+   "permittivity": null,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 15,
+   "name": "15",
+   "copper": true,
+   "thickness_mm": 0.598,
+   "material": null,
+   "permittivity": null,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 16,
+   "name": "16",
+   "copper": true,
+   "thickness_mm": 0.598,
+   "material": null,
+   "permittivity": null,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 361,
+   "name": "Dielectric",
+   "copper": false,
+   "thickness_mm": 8.283,
+   "material": "7628",
+   "permittivity": 4.6,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 362,
+   "name": "Dielectric",
+   "copper": false,
+   "thickness_mm": 41.929,
+   "material": "FR4",
+   "permittivity": 4.6,
+   "loss_tangent": null
+  },
+  {
+   "layer_id": 363,
+   "name": "Dielectric",
+   "copper": false,
+   "thickness_mm": 8.283,
+   "material": "7628",
+   "permittivity": 4.6,
+   "loss_tangent": null
+  }
+ ],
+ "copper_track": {
+  "TOP": {
+   "segments": 2570,
+   "length_mm": 4847.25
+  },
+  "BOTTOM": {
+   "segments": 809,
+   "length_mm": 3151.29
+  },
+  "INNER2": {
+   "segments": 255,
+   "length_mm": 1197.25
+  },
+  "INNER1": {
+   "segments": 1,
+   "length_mm": 2.6
+  }
+ },
+ "pours": [
+  {
+   "net": "GND",
+   "layer_id": 1,
+   "name": "GND_V2_1",
+   "fineness": 8
+  },
+  {
+   "net": "GND",
+   "layer_id": 2,
+   "name": "GND_V2_2",
+   "fineness": 8
+  },
+  {
+   "net": "GND",
+   "layer_id": 15,
+   "name": "R4_CANDIDATE_GND_15",
+   "fineness": 8
+  },
+  {
+   "net": "GND",
+   "layer_id": 16,
+   "name": "R4_CANDIDATE_GND_16",
+   "fineness": 8
+  }
+ ],
+ "via_sizes": [
+  {
+   "hole_mm": 0.3048,
+   "diameter_mm": 0.6096,
+   "count": 642
+  },
+  {
+   "hole_mm": 0.6,
+   "diameter_mm": 1.2,
+   "count": 6
+  },
+  {
+   "hole_mm": 1.02,
+   "diameter_mm": 1.65,
+   "count": 1
+  }
+ ]
+}

@@ -1,0 +1,1066 @@
+{
+  "schema": 1,
+  "role": "E3",
+  "version": "e3-2026-10-25.1",
+  "author": {
+    "agent": "E3 电气/接口/可装配性",
+    "owner": "本会话（由用户 2026-10-25 指派）",
+    "assignment_evidence": "用户消息「好的 那么你进行E3工作吧」；assignments.json 仍为待分配，需 M0 或用户补登记"
+  },
+  "scope": {
+    "in_scope": "951 原生工程（SHA256 951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d）的电气/接口/可装配性约束、逐针接口表、供电计算、机械事实、工艺判据",
+    "out_of_scope": "不修改 RTL、原理图、候选 PCB、正式板；不裁定用户锁定项（平台、板外接口、保护区、板框、层数）；不下单、不询价、不联系供应商",
+    "excluded_sources": "offline/ IOtail 派生源、D:/FPGA-Project 旧工程、hardware/current 历史版本只作出处，不作为本版约束依据"
+  },
+  "status_legend": {
+    "CONFIRMED": "有官方来源或原生几何直接支撑，可直接用于判据",
+    "DERIVED_UNVERIFIED": "由原生网表/几何派生且自洽，但缺一份关键官方文档，暂不能单独作为放行依据",
+    "OPEN": "存在影响 PCB 的未知项，必须由用户或指定 owner 给出选择后才能冻结（G1 阻断）",
+    "BLOCKING_CANDIDATE": "已确认的设计缺陷，需在 G1 前处置，否则不得进入布线签收",
+    "RESOLVED_NOT_A_DEFECT": "初判疑点经官方资料核对后排除，保留记录防止重复提出"
+  },
+  "nature_legend": {
+    "user_boundary": "用户边界，任何改变须用户决定",
+    "electrical_manufacturing": "电气/制造硬约束，须有来源与判据",
+    "source_protection": "当前源保护条件，可经声明 ECO 调整但须全板复验",
+    "solver_heuristic": "求解启发式，可通过对照实验改变"
+  },
+  "constraints": [
+    {
+      "id": "E3-VIO-001",
+      "title": "3V3_IO 由 Nano20K 模块供给，板上无该轨稳压器",
+      "nature": "user_boundary",
+      "status": "DERIVED_UNVERIFIED",
+      "value": "供入点仅 J5.16 与 J6.19 两个焊盘；该网共 46 个焊盘，无 U/稳压器件作为源",
+      "unit": "pads",
+      "applies_to": {
+        "nets": [
+          "3V3_IO"
+        ],
+        "objects": [
+          "J5",
+          "J6"
+        ],
+        "layers": []
+      },
+      "criterion": "任何改线不得切断 J5.16 / J6.19 到 46 个 3V3_IO 焊盘的连通；不得把 3V3_IO 与 3V3_PERIPH / DAC_3V3 短接合并；3V3_IO 负载总和须小于模块 3V3 输出额定值（该额定值待补，见 E3-VIO-002）",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/rails.json#3V3_IO",
+        "derived/design-facts.json#net_to_pads.3V3_IO"
+      ],
+      "blocking": false,
+      "owner_action": "M0：布线时把 3V3_IO 视作外部供电域，禁止新增该轨的电源类元件；V4：独立核对 46 个焊盘清单未增减"
+    },
+    {
+      "id": "E3-VIO-002",
+      "title": "Nano20K 模块型号与 3V3 输出能力未登记",
+      "nature": "electrical_manufacturing",
+      "status": "OPEN",
+      "value": "未取得模块官方文档；本板 3V3_IO 静态负载估算约 1.0 mA、动态待测",
+      "unit": "mA",
+      "applies_to": {
+        "nets": [
+          "3V3_IO"
+        ],
+        "objects": [
+          "J5",
+          "J6"
+        ],
+        "layers": []
+      },
+      "criterion": "必须提供：模块准确型号/版本、3V3 引脚输出电流额定、bank 电压配置、上电时序。缺失时 3V3_IO 相关几何可继续，但不得签收「供电充分」结论",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "POWER-BUDGET.md"
+      ],
+      "blocking": true,
+      "owner_action": "用户：确认所用模块 SKU 与版本（见 open-decisions.md 的 D-01）；E3 收到后补 bank 电压与电流判据"
+    },
+    {
+      "id": "E3-VIO-003",
+      "title": "3V3_PERIPH 与 DAC_3V3 为两条独立 3.3V 轨，各自单点由 5V_PERIPH 降压",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "U18(AP2112K) → 3V3_PERIPH（12 焊盘）；U13(AP2112K) → DAC_3V3（12 焊盘）；两者输入均为 5V_PERIPH",
+      "unit": "V",
+      "applies_to": {
+        "nets": [
+          "3V3_PERIPH",
+          "DAC_3V3",
+          "5V_PERIPH"
+        ],
+        "objects": [
+          "U13",
+          "U18"
+        ],
+        "layers": []
+      },
+      "criterion": "两轨不得互相短接；U13/U18 的 EN(脚3) 与 VIN(脚1) 同网属既有接法，不得改为由 FPGA 控制；任一轨改线后须复核另一轨未退化",
+      "source_refs": [
+        "S-AP2112",
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/rails.json#3V3_PERIPH",
+        "derived/rails.json#DAC_3V3"
+      ],
+      "blocking": false,
+      "owner_action": "R1/R2：涉及 U13/U18 周边走线时保持输入/输出分离"
+    },
+    {
+      "id": "E3-VIO-004",
+      "title": "U15(SN74LVC244A) 为 3V3_IO→3V3_PERIPH 域间缓冲，PW 封装引脚为 A/Y 交替排列",
+      "nature": "electrical_manufacturing",
+      "status": "RESOLVED_NOT_A_DEFECT",
+      "value": "1=1OE(GND,使能)、2=1A1(BUS_SCK)→18=1Y1(DISP_SCK)、4=1A2(BUS_MOSI)→16=1Y2(DISP_MOSI)、6=1A3(LCD_RESET_N)→14=1Y3(DISP_RESET_N)、8=1A4(HARM_CS_N)→12=1Y4(DISP_HARM_CS_N)、15=2A3(TP_RESET_N)→5=2Y3(TP_RESET_MOD_N)、11/13/17 为未用输入（分别接 GND/GND/3V3_IO）对应输出 9/7/3 为 NC、19=2OE(GND,使能)、20=VCC(3V3_PERIPH)",
+      "unit": "pin",
+      "applies_to": {
+        "nets": [
+          "BUS_SCK",
+          "BUS_MOSI",
+          "LCD_RESET_N",
+          "HARM_CS_N",
+          "DISP_SCK",
+          "DISP_MOSI",
+          "DISP_RESET_N",
+          "DISP_HARM_CS_N",
+          "TP_RESET_N",
+          "TP_RESET_MOD_N"
+        ],
+        "objects": [
+          "U15"
+        ],
+        "layers": []
+      },
+      "criterion": "按官方 PW 引脚图核对后确认 4 条 1A→1Y、1 条 2A→2Y 方向正确、未用输入接固定电平、对应输出 NC，无输出对电源短路。任何重排 U15 引脚编号的封装改动须重新核对本表",
+      "source_refs": [
+        "S-LVC244",
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#components[U15]",
+        "INTERFACES.md"
+      ],
+      "blocking": false,
+      "owner_action": "V4：不得把「U15 输出接电源」作为缺陷重复提出；如换封装须重跑本核对"
+    },
+    {
+      "id": "E3-VIO-005",
+      "title": "U14(TCA9517) 两侧电压域与使能接法",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "VCCA(1)=3V3_IO、SDAA(3)/SCLA(2)=I2C_SDA/I2C_SCL、EN(5)=3V3_PERIPH、SDAB(6)/SCLB(7)=I2C_MOD_SDA/I2C_MOD_SCL、VCCB(8)=3V3_PERIPH",
+      "unit": "V",
+      "applies_to": {
+        "nets": [
+          "I2C_SDA",
+          "I2C_SCL",
+          "I2C_MOD_SDA",
+          "I2C_MOD_SCL",
+          "3V3_IO",
+          "3V3_PERIPH"
+        ],
+        "objects": [
+          "U14"
+        ],
+        "layers": []
+      },
+      "criterion": "VCCA 在 0.9–5.5V、VCCB 在 2.7–5.5V 内；EN 由 VCCB 域驱动（0.7×VCCB 阈值）；I/O 在器件未上电时对 5.5V 耐压，允许两侧不同时上电，不得据此删去 EN 上拉/下拉",
+      "source_refs": [
+        "S-TCA9517",
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#components[U14]"
+      ],
+      "blocking": false,
+      "owner_action": "R1/R2：I2C 相关走线改动须保持 A/B 侧分属不同轨"
+    },
+    {
+      "id": "E3-RST-001",
+      "title": "显示/触控复位不是 RC 网络，而是 595 输出经 U15 缓冲",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "LCD_RESET_N = U8.6(QG) → U15.6(1A3) → U15.14(1Y3) = DISP_RESET_N = J10.7；TP_RESET_N = U8.7(QH) → U15.15(2A3) → U15.5(2Y3) = TP_RESET_MOD_N = J10.11。两网均无 R/C 元件",
+      "unit": "net",
+      "applies_to": {
+        "nets": [
+          "LCD_RESET_N",
+          "DISP_RESET_N",
+          "TP_RESET_N",
+          "TP_RESET_MOD_N"
+        ],
+        "objects": [
+          "U8",
+          "U15",
+          "J10"
+        ],
+        "layers": []
+      },
+      "criterion": "J10.7 / J10.11 的复位必须由 FPGA 经 595 写入产生；不得在原理图上虚构板载 RC 复位。任务卡中「板载 RC 复位与 J10.7 实接法」在 951 上不成立，须由用户确认是否沿用旧版判据",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#net_to_pads.LCD_RESET_N",
+        "derived/design-facts.json#net_to_pads.TP_RESET_N"
+      ],
+      "blocking": true,
+      "owner_action": "用户：确认 J10.7/J10.11 是否接受「595 驱动、无 RC」；若要求上电即复位，须改硬件（超出纯走线范围）"
+    },
+    {
+      "id": "E3-RST-002",
+      "title": "595 上电状态未定义，MUX 使能与地址在上电瞬间不确定",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "U8(SRCLR=3V3_IO 常高、OE=GND 常使能)；QA..QH 驱动 ADDR0..3、MUX_DISABLE、RC_DRIVE、LCD_RESET_N、TP_RESET_N；74HC4067 E̅(U1..U6 脚15)=MUX_DISABLE，低=使能",
+      "unit": "logic",
+      "applies_to": {
+        "nets": [
+          "ADDR0",
+          "ADDR1",
+          "ADDR2",
+          "ADDR3",
+          "MUX_DISABLE",
+          "RC_DRIVE",
+          "LCD_RESET_N",
+          "TP_RESET_N"
+        ],
+        "objects": [
+          "U8",
+          "U1",
+          "U2",
+          "U3",
+          "U4",
+          "U5",
+          "U6"
+        ],
+        "layers": []
+      },
+      "criterion": "硬件未定义上电值，测试与固件必须约定：FPGA 上电后第一件事写入 MUX_DISABLE=1（禁用 6 个 MUX）与 LCD_RESET_N=0，再逐通道扫描。测试计划须含「上电即写」时序验证点；不得把上电瞬态当作已验证",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#components[U8]",
+        "derived/design-facts.json#components[U1]"
+      ],
+      "blocking": false,
+      "owner_action": "E3 已在 TEST-PLAN.md 定义判据；固件 owner 需实现上电初始化序列"
+    },
+    {
+      "id": "E3-RST-003",
+      "title": "5V_PERIPH 使能取自 3V3_IO，模块不供电时显示无电",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "U17(TPS2553) EN(脚3)=3V3_IO；PWR_FAULT_N(脚4) 仅到 TP8，无网络连到模块",
+      "unit": "logic",
+      "applies_to": {
+        "nets": [
+          "3V3_IO",
+          "5V_PERIPH",
+          "PWR_FAULT_N"
+        ],
+        "objects": [
+          "U17"
+        ],
+        "layers": []
+      },
+      "criterion": "显示供电依赖模块在位；PWR_FAULT_N 目前只能人工用 TP8 观察，固件无法读取。若要求故障可观测，须改硬件（超出纯走线范围），不得在测试计划里假定固件能看到故障",
+      "source_refs": [
+        "S-TPS2553",
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#net_to_pads.PWR_FAULT_N"
+      ],
+      "blocking": false,
+      "owner_action": "用户：确认是否接受「故障仅测试点可观测」"
+    },
+    {
+      "id": "E3-SNS-001",
+      "title": "84 路传感通道拓扑：每路 ESD→1kΩ→MUX 通道→MUX 公共→施密特反相→220Ω→模块",
+      "nature": "user_boundary",
+      "status": "CONFIRMED",
+      "value": "6 条 lane（J20..J25），每条 14 个电极脚（E00..E13）+2 个 GND；6×14=84；6 个 74HC4067 共 96 个通道，实际使用 84 个",
+      "unit": "channel",
+      "applies_to": {
+        "nets": [
+          "L0_E00",
+          "L5_E13",
+          "L0_M00",
+          "SENSE_0",
+          "SENSE_5"
+        ],
+        "objects": [
+          "J20",
+          "J21",
+          "J22",
+          "J23",
+          "J24",
+          "J25",
+          "U1",
+          "U2",
+          "U3",
+          "U4",
+          "U5",
+          "U6",
+          "U7"
+        ],
+        "layers": []
+      },
+      "criterion": "84 路数量与 6 lane × 14 脚结构不得减少；每路串联 1kΩ 与 220Ω 不得删改；每 lane 的 2 个 GND 脚（15/16）不得挪作信号",
+      "source_refs": [
+        "S-951-PCB",
+        "S-HC4067"
+      ],
+      "evidence": [
+        "derived/design-facts.json#net_to_pads.L0_E00",
+        "INTERFACES.md"
+      ],
+      "blocking": false,
+      "owner_action": "M0/R1/R2：走线不得切断任一 E 通道；V4：按 84 路清单逐路核对"
+    },
+    {
+      "id": "E3-SNS-002",
+      "title": "74HC4067 在 3.3V 下的导通电阻无官方规格",
+      "nature": "electrical_manufacturing",
+      "status": "OPEN",
+      "value": "官方仅给 VCC=4.5V 时 Ron 70Ω typ、VCC=6V 时 60Ω typ；本板 VCC=3V3_IO=3.3V，Ron 预计高于 70Ω 且无数据支撑",
+      "unit": "ohm",
+      "applies_to": {
+        "nets": [
+          "RC0",
+          "RC1",
+          "RC2",
+          "RC3",
+          "RC4",
+          "RC5"
+        ],
+        "objects": [
+          "U1",
+          "U2",
+          "U3",
+          "U4",
+          "U5",
+          "U6"
+        ],
+        "layers": []
+      },
+      "criterion": "需在 3.3V 条件下取得 Ron（厂商曲线或实测）后，才能给出传感路径总串联阻抗判据；在此之前只允许「总串联电阻不得因改线增加」这一保守判据：1kΩ(电极) + Ron + 220Ω(至 SENSE)",
+      "source_refs": [
+        "S-HC4067",
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#components[U1]"
+      ],
+      "blocking": true,
+      "owner_action": "用户/E3：确认是否接受按 4.5V 规格做保守设计；或安排样机实测 Ron"
+    },
+    {
+      "id": "E3-SNS-003",
+      "title": "MUX 公共端到施密特反相器的 RC 网络为既有源保护条件",
+      "nature": "source_protection",
+      "status": "CONFIRMED",
+      "value": "RC0..RC5 各含 47kΩ(R1..R6) 与 MUX 公共脚；U7 输出 INV0..INV5 经 220Ω(R11..R16) 到 SENSE_0..5",
+      "unit": "ohm",
+      "applies_to": {
+        "nets": [
+          "RC0",
+          "RC5",
+          "INV0",
+          "SENSE_0"
+        ],
+        "objects": [
+          "U7",
+          "R1",
+          "R11"
+        ],
+        "layers": []
+      },
+      "criterion": "47kΩ 与 220Ω 及 U7 的 6 条通道不得删减或并联合并；MUX 公共端不得直接连到模块引脚",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#net_to_pads.RC0"
+      ],
+      "blocking": false,
+      "owner_action": "R1/R2：MUX 周边走线保持该两处串联元件"
+    },
+    {
+      "id": "E3-SNS-004",
+      "title": "84 路电极均有 ESD 保护，但保护器位置与通道余量需登记",
+      "nature": "electrical_manufacturing",
+      "status": "DERIVED_UNVERIFIED",
+      "value": "D1..D24 为 TPD4E02B04（4 通道）共 96 通道；84 路电极各接一路，余 12 路未用",
+      "unit": "channel",
+      "applies_to": {
+        "nets": [
+          "L0_E00"
+        ],
+        "objects": [
+          "D1",
+          "D24"
+        ],
+        "layers": []
+      },
+      "criterion": "每个电极脚 J2x.1..14 必须仍串有 ESD 器件与 1kΩ；不得为了腾出走线空间删除 D1..D24 中任一通道；ESD 器件地须连到 GND 而非 3V3_IO",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#net_to_pads.L0_E00",
+        "derived/design-facts.json#net_to_pads.GND"
+      ],
+      "blocking": false,
+      "owner_action": "V4：逐通道核对 ESD 与串联电阻未丢"
+    },
+    {
+      "id": "E3-DSP-001",
+      "title": "J10 为 12 脚显示+触控混合接口，逐针定义已冻结",
+      "nature": "user_boundary",
+      "status": "CONFIRMED",
+      "value": "1=5V_PERIPH, 2=GND, 3=DISP_SCK, 4=DISP_MOSI, 5=RA_MISO, 6=DISP_HARM_CS_N, 7=DISP_RESET_N, 8=I2C_MOD_SDA, 9=I2C_MOD_SCL, 10=TP_INT_MOD, 11=TP_RESET_MOD_N, 12=GND",
+      "unit": "pin",
+      "applies_to": {
+        "nets": [
+          "5V_PERIPH",
+          "DISP_SCK",
+          "DISP_MOSI",
+          "RA_MISO",
+          "DISP_HARM_CS_N",
+          "DISP_RESET_N",
+          "I2C_MOD_SDA",
+          "I2C_MOD_SCL",
+          "TP_INT_MOD",
+          "TP_RESET_MOD_N"
+        ],
+        "objects": [
+          "J10"
+        ],
+        "layers": []
+      },
+      "criterion": "逐针顺序不得变更；J10.11 在 951 上是 TP_RESET_MOD_N（不是 NC），任务卡「pin11 NC」与原生网表不符，须用户裁定以哪个为准；J10.1 供 5V_PERIPH，不得改接到 3.3V",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "INTERFACES.md",
+        "derived/interfaces.json"
+      ],
+      "blocking": true,
+      "owner_action": "用户：裁定 J10.11 用途（TP 复位 vs NC）与线束针序（见 open-decisions.md 的 D-03）"
+    },
+    {
+      "id": "E3-DSP-002",
+      "title": "显示模组 SKU 未冻结，J10 电气兼容性不可判定",
+      "nature": "electrical_manufacturing",
+      "status": "OPEN",
+      "value": "接口形态为 SPI 显示 + I2C 触控 + 5V 供电 + 复位/中断，共 12 针；无模组型号、无官方针序、无背光电流数据",
+      "unit": "SKU",
+      "applies_to": {
+        "nets": [
+          "5V_PERIPH",
+          "DISP_SCK",
+          "DISP_MOSI",
+          "RA_MISO",
+          "DISP_HARM_CS_N",
+          "TP_INT_MOD"
+        ],
+        "objects": [
+          "J10"
+        ],
+        "layers": []
+      },
+      "criterion": "G1 前须给出：模组型号、官方针序、逻辑电平、背光电流、是否含触控 IC 及其 I2C 地址。候选型号不得冒充已冻结采购型号",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "POWER-BUDGET.md"
+      ],
+      "blocking": true,
+      "owner_action": "用户：提供或批准模组 SKU（见 open-decisions.md 的 D-02）"
+    },
+    {
+      "id": "E3-DSP-003",
+      "title": "RA_MISO 经 74LVC1G157 与 KEY_QH 二选一，显示 MISO 与按键链共用一路",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "U11: I0(1)=KEY_QH、I1(3)=RA_MISO、Y(4)=BUS_RETURN→J6.9、S(6)=HARM_CS_N、VCC(5)=3V3_IO",
+      "unit": "logic",
+      "applies_to": {
+        "nets": [
+          "RA_MISO",
+          "KEY_QH",
+          "BUS_RETURN",
+          "HARM_CS_N"
+        ],
+        "objects": [
+          "U11"
+        ],
+        "layers": []
+      },
+      "criterion": "S 由 HARM_CS_N 控制，二者不可同时有效；总线仲裁须由固件保证。改线不得把 RA_MISO 或 KEY_QH 直接并到 BUS_RETURN",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#components[U11]"
+      ],
+      "blocking": false,
+      "owner_action": "固件 owner：确认 HARM_CS_N 与按键扫描互斥；V4：核对 U11 三角色不变"
+    },
+    {
+      "id": "E3-DSP-004",
+      "title": "J10 侧无 ESD 保护",
+      "nature": "electrical_manufacturing",
+      "status": "OPEN",
+      "value": "TPD4E02B04(D1..D24) 仅覆盖 84 路电极；J10 的 10 条信号与 5V 均无 ESD 器件",
+      "unit": "channel",
+      "applies_to": {
+        "nets": [
+          "DISP_SCK",
+          "DISP_MOSI",
+          "RA_MISO",
+          "DISP_HARM_CS_N",
+          "DISP_RESET_N",
+          "I2C_MOD_SDA",
+          "I2C_MOD_SCL",
+          "TP_INT_MOD",
+          "TP_RESET_MOD_N"
+        ],
+        "objects": [
+          "J10"
+        ],
+        "layers": []
+      },
+      "criterion": "若显示/触控为外接线束（非板内固定连接），需评估是否新增 ESD；新增器件属原理图变更，须用户批准。未批准前不得声称该接口已具 ESD 防护",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#net_to_pads.GND"
+      ],
+      "blocking": false,
+      "owner_action": "用户：确认 J10 是否外接线束（见 open-decisions.md 的 D-04）"
+    },
+    {
+      "id": "E3-PWR-001",
+      "title": "输入保护链：XH-2P → PTC → PMOS → 限流开关",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "J13.1=5V_IN → F1(MF-MSMF110/16, Ihold 1.10A / Itrip 2.20A / 16V / 0.04–0.21Ω) → 5V_FUSED → Q1(DMP2035U, G=R66 100kΩ 到 GND) → 5V_PROTECTED → U17(TPS2553) → 5V_PERIPH",
+      "unit": "A",
+      "applies_to": {
+        "nets": [
+          "5V_IN",
+          "5V_FUSED",
+          "5V_PROTECTED",
+          "5V_PERIPH"
+        ],
+        "objects": [
+          "J13",
+          "F1",
+          "Q1",
+          "U17"
+        ],
+        "layers": []
+      },
+      "criterion": "整链任一环节不得删除；PTC 保持电流 1.10A 为本板 5V 总电流上限的设计依据；反向保护依赖 Q1 体二极管 + 栅极下拉，栅极不得改接到正电源",
+      "source_refs": [
+        "S-MSMF",
+        "S-TPS2553",
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/rails.json#5V_IN",
+        "POWER-BUDGET.md"
+      ],
+      "blocking": false,
+      "owner_action": "M0：走线宽度须按 1.1A 载流复核（见 E3-PWR-006）"
+    },
+    {
+      "id": "E3-PWR-002",
+      "title": "TPS2553 限流电阻 R67=2.37kΩ 低于数据手册 15kΩ 下限，限流点不可用",
+      "nature": "electrical_manufacturing",
+      "status": "BLOCKING_CANDIDATE",
+      "value": "R67=2.37kΩ（0603WAF2372T5E, LCSC C22912）；官方允许 R_ILIM 15k–232kΩ；官方分档：15k→1700mA、20k→1295mA、49.9k→520mA、210k→130mA（typ）。按比例外推 2.37k 远超器件 1.5A 连续能力",
+      "unit": "ohm",
+      "applies_to": {
+        "nets": [
+          "PWR_ILIM",
+          "5V_PERIPH"
+        ],
+        "objects": [
+          "U17",
+          "R67"
+        ],
+        "layers": []
+      },
+      "criterion": "R_ILIM 必须 ≥15kΩ。若要 5V_PERIPH 限流约 1.0A，R_ILIM ≈ 26kΩ；若显示模组电流已定，须按实测峰值重新取档。改值属 BOM/原理图变更，须用户批准并重新出 BOM/CPL",
+      "source_refs": [
+        "S-TPS2553",
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#components[R67]",
+        "derived/rails.json#5V_PERIPH"
+      ],
+      "blocking": true,
+      "owner_action": "用户：批准将 R67 改为 ≥15kΩ（推荐 26kΩ，见 open-decisions.md 的 D-05）；F5：改值后 BOM 须同步"
+    },
+    {
+      "id": "E3-PWR-003",
+      "title": "J10 的 5V 供电路径仅有 PTC 一级真实保护",
+      "nature": "electrical_manufacturing",
+      "status": "DERIVED_UNVERIFIED",
+      "value": "因 E3-PWR-002，J10.1(5V_PERIPH) 的过流保护退化为 F1 的 2.20A 跳脱（秒级）与 U17 自身热关断",
+      "unit": "A",
+      "applies_to": {
+        "nets": [
+          "5V_PERIPH"
+        ],
+        "objects": [
+          "J10",
+          "U17",
+          "F1"
+        ],
+        "layers": []
+      },
+      "criterion": "R67 修正前，不得在制造资料中声称 J10 具备可设定的过流保护；测试计划须含 5V_PERIPH 短路测试（限流电源供电、人工触发）",
+      "source_refs": [
+        "S-MSMF",
+        "S-TPS2553"
+      ],
+      "evidence": [
+        "POWER-BUDGET.md"
+      ],
+      "blocking": false,
+      "owner_action": "E3：R67 定案后复版本；V4：核对两处结论一致"
+    },
+    {
+      "id": "E3-PWR-004",
+      "title": "DAC_3V3 单点负载与 AP2112 裕量",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "U13(AP2112K, 600mA min, 250mV dropout @600mA) 供 PCM5122 四个供电脚(1,8,18,28)；PCM5122 最大功耗 130.8mW(@DVDD=1.8V, 48kHz, -1dBFS)，按 3.3V 折算约 40mA",
+      "unit": "mA",
+      "applies_to": {
+        "nets": [
+          "DAC_3V3"
+        ],
+        "objects": [
+          "U12",
+          "U13"
+        ],
+        "layers": []
+      },
+      "criterion": "DAC_3V3 负载估算 ≤45mA，AP2112 裕量 >10×；输入 5V_PERIPH 须 ≥3.55V 以保证 3.3V 输出不跌出调整区（250mV 压差 + 裕量）",
+      "source_refs": [
+        "S-PCM5122",
+        "S-AP2112"
+      ],
+      "evidence": [
+        "POWER-BUDGET.md"
+      ],
+      "blocking": false,
+      "owner_action": "V4：复算压差与裕量"
+    },
+    {
+      "id": "E3-PWR-005",
+      "title": "5V 输入下限由两条 LDO 压差决定",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "5V_PERIPH 经 U13/U18 各降 3.3V，压差 250mV typ @600mA；加上 F1(≤0.21Ω×1.1A≈0.23V) 与 Q1 压降，5V_IN 低于约 4.1V 时 3.3V 轨进入跌落",
+      "unit": "V",
+      "applies_to": {
+        "nets": [
+          "5V_IN",
+          "5V_PERIPH",
+          "3V3_PERIPH",
+          "DAC_3V3"
+        ],
+        "objects": [
+          "U13",
+          "U18",
+          "F1",
+          "Q1"
+        ],
+        "layers": []
+      },
+      "criterion": "测试计划须定义 5V_IN 棕断点实测：从 5.0V 缓降，记录 3V3_PERIPH / DAC_3V3 跌出 ±3% 的输入电压；该值作为电源适配器下限判据",
+      "source_refs": [
+        "S-AP2112",
+        "S-MSMF"
+      ],
+      "evidence": [
+        "POWER-BUDGET.md"
+      ],
+      "blocking": false,
+      "owner_action": "样机测试：实测棕断点，未实测前保持 UNMEASURED"
+    },
+    {
+      "id": "E3-PWR-006",
+      "title": "5V 主链载流与走线宽度判据",
+      "nature": "electrical_manufacturing",
+      "status": "DERIVED_UNVERIFIED",
+      "value": "设计规则：最小线宽 6mil(0.1524mm)、默认 8mil(0.2032mm)、1oz 铜（35µm）；PTC 保持 1.10A",
+      "unit": "mm",
+      "applies_to": {
+        "nets": [
+          "5V_IN",
+          "5V_FUSED",
+          "5V_PROTECTED",
+          "5V_PERIPH"
+        ],
+        "objects": [
+          "J13",
+          "F1",
+          "Q1",
+          "U17"
+        ],
+        "layers": []
+      },
+      "criterion": "5V 主链（J13→F1→Q1→U17→J10.1）任意一段走线在 1.1A 下的温升须 ≤10K；按 1oz 外层 1A 需 ≥0.5mm 宽的经验值，主链最小宽度不得低于 0.5mm，过孔不得少于 2 个并联。改线后由 V4 复核宽度与过孔数",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "MECHANICAL.md",
+        "derived/design-facts.json#copper_track"
+      ],
+      "blocking": false,
+      "owner_action": "M0：K1/K2/K3 批次若触及 5V 链，须按本判据加宽；V4：复核"
+    },
+    {
+      "id": "E3-PWR-007",
+      "title": "3V3_IO 静态负载清单（用于模块电流预算）",
+      "nature": "electrical_manufacturing",
+      "status": "DERIVED_UNVERIFIED",
+      "value": "6×74HC4067(静态 µA 级)、U7 LVC14、U8 LV595、U9 LV165、U10 24LC256、U11 1G157、U16 1G17、上拉 R30/R32/R50/R51/R52/R53..R57/R62/R63/R64 等；估算静态合计约 1.0mA",
+      "unit": "mA",
+      "applies_to": {
+        "nets": [
+          "3V3_IO"
+        ],
+        "objects": [
+          "U1",
+          "U7",
+          "U8",
+          "U9",
+          "U10",
+          "U11",
+          "U16"
+        ],
+        "layers": []
+      },
+      "criterion": "3V3_IO 静态负载必须 <5mA（估算 1.0mA，留 5× 裕量）；任何新增 3V3_IO 负载器件须重新计入；动态电流须由样机实测（扫描时 6 个 MUX 与 595 同时翻转）",
+      "source_refs": [
+        "S-HC4067",
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "POWER-BUDGET.md",
+        "derived/rails.json#3V3_IO"
+      ],
+      "blocking": false,
+      "owner_action": "样机测试：实测 3V3_IO 动态电流"
+    },
+    {
+      "id": "E3-MEC-001",
+      "title": "板框 140.0 × 100.0 mm 矩形，原点左下角",
+      "nature": "user_boundary",
+      "status": "CONFIRMED",
+      "value": "轮廓折点 (0,0)-(5511.811,3937.0079)mil = 140.000 × 100.000 mm；面积 14000 mm²",
+      "unit": "mm",
+      "applies_to": {
+        "nets": [],
+        "objects": [
+          "Board Outline"
+        ],
+        "layers": [
+          11
+        ]
+      },
+      "criterion": "外形不得改变；任何超出板框的铜/丝印/器件为错误；板边 0.5mm 内无 GND 铺铜（原生铺铜内缩 0.5mm，见 pours 边界）",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "MECHANICAL.md",
+        "derived/mechanical.json#board"
+      ],
+      "blocking": false,
+      "owner_action": "M0：G2 后不得改板框；V4：核对轮廓未动"
+    },
+    {
+      "id": "E3-MEC-002",
+      "title": "4 个 M3 非镀通安装孔，孔位为不对称矩形",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "H1(3.0,18.0)、H2(137.0,16.5)、H3(3.0,82.0)、H4(137.0,88.0) mm；钻孔 2.7mm NPTH；孔心距板边 3.0mm",
+      "unit": "mm",
+      "applies_to": {
+        "nets": [],
+        "objects": [
+          "H1",
+          "H2",
+          "H3",
+          "H4"
+        ],
+        "layers": [
+          12
+        ]
+      },
+      "criterion": "孔位不得移动。左侧孔距 64.0mm、右侧孔距 71.5mm，左右不同高（18/16.5 与 82/88）→ 外壳定位必须按实际孔位而非对称假设；孔边到板边 1.65mm",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "MECHANICAL.md"
+      ],
+      "blocking": false,
+      "owner_action": "用户/E3：外壳与安装柱按本表设计，勿用对称假设"
+    },
+    {
+      "id": "E3-MEC-003",
+      "title": "角部禁布区：器件 5.5mm 方形、铜 3.5mm 方形",
+      "nature": "source_protection",
+      "status": "CONFIRMED",
+      "value": "每孔中心 5.5mm 方形禁止放器件（层12）、3.5mm 方形禁止走线/铜/填充（层1、层2）",
+      "unit": "mm",
+      "applies_to": {
+        "nets": [],
+        "objects": [
+          "H1",
+          "H2",
+          "H3",
+          "H4"
+        ],
+        "layers": [
+          1,
+          2,
+          12
+        ]
+      },
+      "criterion": "K1/K2/K3 批次不得把铜或器件推进这两类禁布区；内层（15/16）无该禁布区定义，若在内层加铜须保持 3.5mm 孔周净空",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "MECHANICAL.md"
+      ],
+      "blocking": false,
+      "owner_action": "R1/R2：绕开角部；V4：复核禁布区无新铜"
+    },
+    {
+      "id": "E3-MEC-004",
+      "title": "双面贴装：顶层 224 件、底层 3 件（C8、R63、R64）",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "底层器件：C8(100nF, 3V3_IO 去耦, (60.75,50.0))、R63(100k)、R64(100k)",
+      "unit": "component",
+      "applies_to": {
+        "nets": [
+          "3V3_IO",
+          "BUS_SCK",
+          "BUS_MOSI"
+        ],
+        "objects": [
+          "C8",
+          "R63",
+          "R64"
+        ],
+        "layers": [
+          2
+        ]
+      },
+      "criterion": "BOM/CPL 必须双面；C8 是 3V3_IO 在底层的去耦，改动底层 3V3_IO 铜时须保持 C8 到过孔的短回流（≤2mm）且不得删除 C8",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "MECHANICAL.md",
+        "derived/design-facts.json#components[C8]"
+      ],
+      "blocking": false,
+      "owner_action": "F5：BOM/CPL 双面；R1/R2：底层 3V3_IO 铜改动须保 C8"
+    },
+    {
+      "id": "E3-MEC-005",
+      "title": "J11 已取消，J10 保留；连接器朝向与板边位置",
+      "nature": "user_boundary",
+      "status": "CONFIRMED",
+      "value": "951 中不存在 J11（位号跳号）；J10 为 12P 反弯针、旋转 90°、位于 (128.0,36.0) 右板边；J13 为 XH-2P 在 (5.0,50.0) 左板边；J20..J25 在 y=4.0 与 y=96.0 上下板边；J5/J6 在板中央 (38,38)/(38,62)",
+      "unit": "mm",
+      "applies_to": {
+        "nets": [],
+        "objects": [
+          "J5",
+          "J6",
+          "J10",
+          "J11",
+          "J12",
+          "J13",
+          "J20",
+          "J21",
+          "J22",
+          "J23",
+          "J24",
+          "J25"
+        ],
+        "layers": []
+      },
+      "criterion": "J11 不得复活；J10 的 90° 朝向与右板边位置不得变（弯针出线方向）；J20..J25 为板边 16P 排针，距边 4mm，不得内移出线区",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "INTERFACES.md",
+        "MECHANICAL.md"
+      ],
+      "blocking": false,
+      "owner_action": "M0：布线不得挪动上述连接器；V4：核对位号与坐标"
+    },
+    {
+      "id": "E3-MFG-001",
+      "title": "四层叠层与总厚度",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "Top(1.378mil 铜) / 7628 prepreg(8.283mil, εr4.6) / Inner1 / FR4 core(41.929mil, εr4.6) / Inner2 / 7628 prepreg(8.283mil) / Bottom(1.378mil 铜)；合计 61.251mil = 1.556mm",
+      "unit": "mm",
+      "applies_to": {
+        "nets": [],
+        "objects": [],
+        "layers": [
+          1,
+          2,
+          15,
+          16
+        ]
+      },
+      "criterion": "层数 4（Inner3..Inner32 全部未启用）；成品厚度按 1.6mm 下单（模型 1.556mm，含阻焊后接近 1.6mm）；铜厚 1oz；阻抗控制未在本轮建立，若需阻抗须新增叠层与规则并重新验证",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "MECHANICAL.md"
+      ],
+      "blocking": false,
+      "owner_action": "F5：按 1.6mm/1oz/4 层下单；E3：若用户要求阻抗控制，另立版本"
+    },
+    {
+      "id": "E3-MFG-002",
+      "title": "设计规则：线宽、间距、孔与环、阻焊",
+      "nature": "electrical_manufacturing",
+      "status": "CONFIRMED",
+      "value": "最小线宽 6mil(0.152mm)/默认 8mil(0.203mm)；铜-铜安全间距 1oz 档最小 6mil(0.152mm)；过孔最小钻孔 5.9055mil(0.150mm)/最小外径 19.685mil(0.50mm)；孔-孔净空 11.811mil(0.30mm)；器件间距 19.685mil(0.50mm)；阻焊开窗 2mil(0.05mm)；过孔盖油(-1000)；实际过孔 642×0.305/0.61mm、6×0.60/1.20mm、1×1.02/1.65mm",
+      "unit": "mm",
+      "applies_to": {
+        "nets": [],
+        "objects": [],
+        "layers": [
+          1,
+          2,
+          15,
+          16
+        ]
+      },
+      "criterion": "任何新增走线 ≥0.152mm；新增过孔钻孔 ≥0.30mm、外径 ≥0.60mm（沿用现有主过孔）；新增过孔盖油；G2/G3 候选必须用同一套规则跑原生 DRC，不得为通过而放宽规则",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#rules",
+        "MECHANICAL.md"
+      ],
+      "blocking": false,
+      "owner_action": "R1/R2：按本规则出候选；V4：核对规则文件未被改"
+    },
+    {
+      "id": "E3-MFG-003",
+      "title": "板级最大器件高度未设定",
+      "nature": "electrical_manufacturing",
+      "status": "OPEN",
+      "value": "RULE height.maxHeight = 0（未设定）；实际最高器件为 J5/J6 2.54mm 排母、J10 弯针、J20..J25 排针、SW1 编码器",
+      "unit": "mm",
+      "applies_to": {
+        "nets": [],
+        "objects": [
+          "J5",
+          "J6",
+          "J10",
+          "SW1",
+          "J20"
+        ],
+        "layers": []
+      },
+      "criterion": "外壳净空须由用户给出；在给出前，禁止在器件面新增高度 >3mm 的元件，禁止在底层 C8/R63/R64 附近新增元件",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#rules"
+      ],
+      "blocking": false,
+      "owner_action": "用户：给出外壳净空（见 open-decisions.md 的 D-06）"
+    },
+    {
+      "id": "E3-MFG-004",
+      "title": "旧「IO848 / C8 短去耦 / 47 脚供电桥」判据在 951 上无对应对象",
+      "nature": "source_protection",
+      "status": "OPEN",
+      "value": "951 原生 PCB 全文检索「IO848」命中 0 次；无 47 脚共用供电桥（3V3_IO 为 46 焊盘，GND 为 165 焊盘）；C8 存在，为 100nF 3V3_IO 去耦，位于底层 (60.75,50.0)。IO848 只出现在 offline/IOtail 派生源与旧恢复证据中",
+      "unit": "object",
+      "applies_to": {
+        "nets": [
+          "3V3_IO"
+        ],
+        "objects": [
+          "C8"
+        ],
+        "layers": [
+          2
+        ]
+      },
+      "criterion": "旧判据只对 offline IOtail 派生源有效。若 M0 在 951 上布 K1（MUX_DISABLE/ADDR0/ADDR1），不得以「保护 IO848」为由拒绝合理几何；但底层 3V3_IO 桥与 C8 短去耦仍按 E3-MEC-004 保护。适用范围须 M0 书面界定",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "derived/design-facts.json#net_to_pads.3V3_IO",
+        "grep IO848 = 0 hits in PCB1.epcb2"
+      ],
+      "blocking": true,
+      "owner_action": "M0：界定旧判据适用范围（见 open-decisions.md 的 D-07）"
+    }
+  ],
+  "summary": {
+    "total": 32,
+    "by_status": {
+      "CONFIRMED": 19,
+      "DERIVED_UNVERIFIED": 5,
+      "OPEN": 6,
+      "BLOCKING_CANDIDATE": 1,
+      "RESOLVED_NOT_A_DEFECT": 1
+    },
+    "g1_blocking_ids": [
+      "E3-VIO-002",
+      "E3-RST-001",
+      "E3-SNS-002",
+      "E3-DSP-001",
+      "E3-DSP-002",
+      "E3-PWR-002",
+      "E3-MFG-004"
+    ],
+    "note": "g1_blocking_ids 是必须由用户或 M0 处置后才能冻结约束的条目；其余 OPEN 项不影响几何施工，但影响终版签核。"
+  }
+}

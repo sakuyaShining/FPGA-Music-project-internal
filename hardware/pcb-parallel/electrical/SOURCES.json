@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "note": "E3 引用来源登记。所有条目在 2026-10-25 由本会话实际下载/读取，页码为 PDF 内页序；未能取得原始文档的条目一律标注 unverified，不得当作判据。",
+  "sources": [
+    {
+      "id": "S-EDA-FORMAT",
+      "title": "嘉立创EDA专业版文件格式 / EasyEDA Pro File Format",
+      "publisher": "LCEDA Pro 客户端内置文档",
+      "doc_id": "docs/easyeda-format.md（随 v41.2.1 安装）",
+      "revision": "v41.2.1-jlc-sa-win-x64.5 安装包内置",
+      "url": "file:///%LOCALAPPDATA%/Programs/LCEDA-Pro/docs/easyeda-format.md",
+      "accessed": "2026-10-25",
+      "used_for": "日志文档结构、|| 分隔、ticket 最终一致性、单位约定"
+    },
+    {
+      "id": "S-EDA-CLI",
+      "title": "For AI: EasyEDA Pro Command-Line Client",
+      "publisher": "LCEDA Pro 客户端内置文档",
+      "doc_id": "docs/cli-for-ai.md（1522 行）",
+      "revision": "v41.2.1 安装包内置，CLI 自报 JLCEDA Pro 4.1.71.7a7261be",
+      "url": "file:///%LOCALAPPDATA%/Programs/LCEDA-Pro/docs/cli-for-ai.md",
+      "accessed": "2026-10-25",
+      "used_for": "原生 DRC/导出能力判断；G0 工具能力证据"
+    },
+    {
+      "id": "S-TPS2553",
+      "title": "TPS2552, TPS2553 Adjustable Current-Limited Power-Distribution Switches",
+      "publisher": "Texas Instruments",
+      "doc_id": "SLVS841F",
+      "revision": "SLVS841F（44 页）",
+      "url": "https://www.ti.com/lit/ds/symlink/tps2553.pdf",
+      "accessed": "2026-10-25",
+      "used_for": "R_ILIM 允许范围 15k–232k、IOS 分档表、反向电压保护 135mV typ、1.5A 连续"
+    },
+    {
+      "id": "S-PCM5122",
+      "title": "PCM5121, PCM5122 2VRMS Audio DAC with PCM/DSD Input",
+      "publisher": "Texas Instruments",
+      "doc_id": "SLAS763C",
+      "revision": "SLAS763C – AUGUST 2012 – REVISED OCTOBER 2018（121 页）",
+      "url": "https://www.ti.com/lit/ds/symlink/pcm5122.pdf",
+      "accessed": "2026-10-25",
+      "used_for": "DVDD 1.8/3.3V、AVDD/CPVDD 3–3.6V、IDD 11–14mA、功耗 99/130.8mW、掉电 1.2mW"
+    },
+    {
+      "id": "S-AP2112",
+      "title": "AP2112 600mA CMOS LDO REGULATOR WITH ENABLE",
+      "publisher": "Diodes Incorporated",
+      "doc_id": "DS39724",
+      "revision": "Rev. 2 - 2, June 2017（18 页）",
+      "url": "https://www.diodes.com/assets/Datasheets/AP2112.pdf",
+      "accessed": "2026-10-25",
+      "used_for": "600mA(min)、压差 250mV typ @600mA、Iq 55µA、短路折返 50mA"
+    },
+    {
+      "id": "S-MSMF",
+      "title": "MF-MSMF Series – PTC Resettable Fuses",
+      "publisher": "Bourns",
+      "doc_id": "MF-MSMF series datasheet",
+      "revision": "未在页内取到修订号（unverified）",
+      "url": "https://www.bourns.com/docs/Product-Datasheets/mf-msmf.pdf",
+      "accessed": "2026-10-25",
+      "used_for": "MF-MSMF110/16：Vmax 16V、Imax 100A、Ihold 1.10A、Itrip 2.20A、Rmin 0.04Ω / Rmax 0.21Ω"
+    },
+    {
+      "id": "S-HC4067",
+      "title": "CD74HCx4067 High-Speed CMOS Logic 16-Channel Analog Multiplexer/Demultiplexer",
+      "publisher": "Texas Instruments",
+      "doc_id": "SCHS209D",
+      "revision": "SCHS209D – NOVEMBER 1998 – REVISED DECEMBER 2024（29 页）",
+      "url": "https://www.ti.com/lit/ds/symlink/cd74hc4067.pdf",
+      "accessed": "2026-10-25",
+      "used_for": "Ron 70Ω typ @4.5V、60Ω @6V、ΔRON 10Ω、off 漏电 ±0.8µA@25℃；注意未给 3.3V 规格"
+    },
+    {
+      "id": "S-LVC244",
+      "title": "SN74LVC244A Octal Buffer/Driver With 3-State Outputs",
+      "publisher": "Texas Instruments",
+      "doc_id": "SCAS414AG",
+      "revision": "SCAS414AG – NOVEMBER 1992 – REVISED JUNE 2026（48 页）",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc244a.pdf",
+      "accessed": "2026-10-25",
+      "used_for": "PW(TSSOP-20) 封装引脚图为 A/Y 交替排列：1=1OE,2=1A1,3=2Y4,4=1A2,5=2Y3,6=1A3,7=2Y2,8=1A4,9=2Y1,10=GND,11=2A1,12=1Y4,13=2A2,14=1Y3,15=2A3,16=1Y2,17=2A4,18=1Y1,19=2OE,20=VCC"
+    },
+    {
+      "id": "S-TCA9517",
+      "title": "TCA9517 Level-Translating I2C Bus Repeater",
+      "publisher": "Texas Instruments",
+      "doc_id": "SCPS242",
+      "revision": "SCPS242（28 页，页内未取到修订字母，unverified）",
+      "url": "https://www.ti.com/lit/ds/symlink/tca9517.pdf",
+      "accessed": "2026-10-25",
+      "used_for": "VCCA 0.9–5.5V、VCCB 2.7–5.5V、EN 阈值 0.7×VCCB、I/O 未上电时 5.5V 耐压、B 侧固定偏移"
+    },
+    {
+      "id": "S-951-PCB",
+      "title": "951ce88a 原生 PCB 工程（本任务唯一输入几何源）",
+      "publisher": "项目检查点",
+      "doc_id": "hardware/checkpoints/pcb-951ce88a-20261025/native/pcb/PCB1.epcb2",
+      "revision": "SHA256 951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+      "url": "repo:hardware/checkpoints/pcb-951ce88a-20261025/",
+      "accessed": "2026-10-25",
+      "used_for": "全部网表/焊盘/几何/叠层/规则事实"
+    }
+  ],
+  "unverified": [
+    "Nano20K（GW2A-18）模块的 3V3 输出电流能力与 bank 电压：本轮未取得模块官方文档，标 OPEN。",
+    "显示模组 SKU（J10 对接对象）未冻结：无官方 pin 定义可比对，标 OPEN。",
+    "SN74LV595A / SN74LV165A / SN74LVC14A / 74LVC1G157 / SN74LVC1G17 / 24LC256 的引脚定义本轮按通用 TSSOP/SOIC 标准核对且与网表自洽，但未逐份下载原始 PDF，引用时须补。",
+    "DMP2035U-7 的 Rds(on) 与 Vgs 额定未取原始 PDF，供电压降计算中按未验证处理。"
+  ]
+}
