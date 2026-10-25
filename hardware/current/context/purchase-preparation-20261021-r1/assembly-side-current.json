@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-23T22:55:42.442973+08:00",
-  "pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
+  "updated_at": "2026-10-26T02:45:22.9360158+08:00",
+  "pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
   "components": 227,
   "sides": {
     "Top_components": 224,
@@ -31,7 +31,7 @@
   "factory_TH_assembly_quote_pending": true,
   "current_board_procurement": "current-board-procurement.json",
   "current_SMT_bom": "jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv",
-  "current_native_CPL_export": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\native-cpl-current-a3-DRAFT-NOT-FOR-ORDER.csv",
+  "current_native_CPL_export": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-preparation-20261021-r1\\native-cpl-current-951ce88a-DRAFT-NOT-FOR-ORDER.csv",
   "current_SMT_CPL": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\jlc-cpl-current-DRAFT-NOT-FOR-ORDER.csv",
   "current_TH_placement": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\TH-placement-current-DRAFT-NOT-FOR-ORDER.csv",
   "current_CPL_audit": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\current-cpl-population-audit.json",
@@ -85,5 +85,6 @@
     "previous_source_pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
     "basis": "Fresh a3 native CPL export exactly equals previous native export in every field of all227 rows, including MPN/footprint/side/angle/coordinates. Existing BOM and placement audits remain applicable; no stock/quote refresh claimed.",
     "proof": "current-native-cpl-export-a3.json"
-  }
+  },
+  "current_951_rebind_proof": "current-native-cpl-export-951ce88a.json; all227 rows/all columns equal a3; no new assembly quote or physical clearance acceptance"
 }
