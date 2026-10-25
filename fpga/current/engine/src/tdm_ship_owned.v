@@ -55,8 +55,25 @@ module tdm_ship_owned #(
     //   0 = 不例化，两脚置高阻（用于 A/B 对照或省资源）
     //-------------------------------------------------------------------------
     parameter integer PCM5122_INIT = 1,
-    // 板载 MAX98357A 使能。载板做 AUX 产品时应设 0，否则板载喇叭与 AUX 同响。
-    parameter integer PA_EN_LEVEL  = 1
+    //-------------------------------------------------------------------------
+    // 板载 MAX98357A 功放使能（引脚 51 = SD_MODE，高有效）
+    //
+    //   为什么需要管它：载板把同一组 I2S_BCK/DIN/LRCK 从 J5 分给 PCM5122，
+    //   而 J5.9(PA_EN) 在载板上是 **NC** —— 载板关不掉板载功放。
+    //   不处理的话，插上载板就是「板载喇叭 + AUX」两个声源同时响。
+    //
+    //   0 = 恒低：板载喇叭永久静音（纯 AUX 产品，确定不需要喇叭时用）
+    //   1 = 恒高：原行为（裸 Nano 调试、只想听板载喇叭时用）
+    //   2 = 自动（默认）：PCM5122 报 PLL 锁定 ⇒ 判定载板在位 ⇒ 静音板载喇叭
+    //
+    //   为什么默认 2 是安全的：
+    //     · 裸 Nano 上没有 I2C 从机，所有写都 NACK ⇒ pcm_locked 恒 0
+    //       ⇒ pa_en 恒 1，与改动前行为完全一致
+    //     · 载板在位且配置成功 ⇒ pcm_locked=1 ⇒ 关板载功放，AUX 独占
+    //     · 载板在位但配置失败 ⇒ pcm_locked=0 ⇒ 退回板载喇叭
+    //       （宁可两个声源，也不要全哑）
+    //-------------------------------------------------------------------------
+    parameter integer PA_EN_MODE  = 2
 )(
     input  wire        clk,
     input  wire        btn_rst,      // 引脚 87：高有效（板上外部下拉）
@@ -165,13 +182,22 @@ module tdm_ship_owned #(
         end
     endgenerate
 
+    //-------------------------------------------------------------------------
+    // 板载功放使能门控（PA_EN_MODE 见参数注释）
+    //   pa_en_core 是 tdm_top_owned 的输出，恒为 1；这里只在自动模式下把它
+    //   与"载板在位"相与，不改变音频核心的任何行为。
+    //-------------------------------------------------------------------------
+    wire pa_en_core;
+
+    assign pa_en = (PA_EN_MODE == 2) ? (pa_en_core & ~pcm_locked)
+                 : (PA_EN_MODE != 0);
+
     tdm_top_owned #(
         .OWNER_W(OWNER_W),
         .FINGER_EXPR(FINGER_EXPR),
         .RIGHT_TIMBRE(RIGHT_TIMBRE),
         .LEGACY_PAD(LEGACY_PAD),
-        .UART_BAUD(UART_BAUD),
-        .PA_EN_LEVEL(PA_EN_LEVEL)
+        .UART_BAUD(UART_BAUD)
     ) u_top (
         .clk(clk),
         .rst_n(rst_n),
@@ -225,7 +251,7 @@ module tdm_ship_owned #(
         .dac_din(dac_din),
         .dac_ws(dac_ws),
         .dac_bck(dac_bck),
-        .pa_en(pa_en),
+        .pa_en(pa_en_core),
         .pad(pad),
 
         //---- 逐指表情（FINGER_EXPR=0 时不用）----
