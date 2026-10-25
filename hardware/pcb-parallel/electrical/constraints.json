@@ -202,7 +202,7 @@
         ],
         "layers": []
       },
-      "criterion": "J10.7 / J10.11 的复位必须由 FPGA 经 595 写入产生；不得在原理图上虚构板载 RC 复位。任务卡中「板载 RC 复位与 J10.7 实接法」在 951 上不成立，须由用户确认是否沿用旧版判据",
+      "criterion": "J10.7 / J10.11 的复位必须由 FPGA 经 595 写入产生；不得在原理图上虚构板载 RC 复位。任务卡所称「pin11 NC」指模组 40 针接口第 11 脚，与载板 J10（2.54-1*12P）第 11 脚不是同一对象；原判「任务卡与几何矛盾」系编号混淆，该矛盾结论已撤销。实际模组接法仍待线束表确定。",
       "source_refs": [
         "S-951-PCB"
       ],
@@ -211,14 +211,14 @@
         "derived/design-facts.json#net_to_pads.TP_RESET_N"
       ],
       "blocking": true,
-      "owner_action": "用户：确认 J10.7/J10.11 是否接受「595 驱动、无 RC」；若要求上电即复位，须改硬件（超出纯走线范围）"
+      "owner_action": "用户：确认 J10.7/J10.11 是否接受「595 驱动、无 RC」；模组端接法由 E3-DSP-002 的线束表关闭"
     },
     {
       "id": "E3-RST-002",
-      "title": "595 上电状态未定义，MUX 使能与地址在上电瞬间不确定",
+      "title": "595 上电状态未定义且输出常使能，MUX 使能、地址与两路复位在上电瞬间无已证明默认态",
       "nature": "electrical_manufacturing",
       "status": "CONFIRMED",
-      "value": "U8(SRCLR=3V3_IO 常高、OE=GND 常使能)；QA..QH 驱动 ADDR0..3、MUX_DISABLE、RC_DRIVE、LCD_RESET_N、TP_RESET_N；74HC4067 E̅(U1..U6 脚15)=MUX_DISABLE，低=使能",
+      "value": "U8=SN74LV595ADR：OE̅(pin13)=GND 常使能，SRCLR̅(pin10)=3V3_IO 常高不可清零，QH'(pin9) 未连接；QA(pin15)=ADDR0，QB..QH(pin1..7) 直接驱动 ADDR1/2/3、MUX_DISABLE、RC_DRIVE、LCD_RESET_N、TP_RESET_N。74HC4067 E̅(U1..U6 pin15)=MUX_DISABLE，低电平使能。结构性风险：OE̅ 接地意味着输出级始终使能，而 595 系列不提供上电默认电平保证，故在首次有效锁存前这些输出没有已证明的状态。（SN74LV595A 原始 PDF 本轮未取得，见 SOURCES.json 的 S-LV595 与 unverified 第 5 项；本结论只主张结构风险，不主张具体上电电平。）",
       "unit": "logic",
       "applies_to": {
         "nets": [
@@ -242,16 +242,17 @@
         ],
         "layers": []
       },
-      "criterion": "硬件未定义上电值，测试与固件必须约定：FPGA 上电后第一件事写入 MUX_DISABLE=1（禁用 6 个 MUX）与 LCD_RESET_N=0，再逐通道扫描。测试计划须含「上电即写」时序验证点；不得把上电瞬态当作已验证",
+      "criterion": "须由用户/M0 明确上电合同：FPGA 配置前、模组先/后上电、棕断与恢复四种情形下，MUX_DISABLE、RC_DRIVE、ADDR0..3、两路复位各自的可接受状态。可选路径：受控 OE/复位/供电顺序 ECO，或给出容忍未知态的完整证据（含最坏情形后果分析）。仅靠固件「上电即写」不足以覆盖 FPGA 配置完成前的时间窗。",
       "source_refs": [
-        "S-951-PCB"
+        "S-951-PCB",
+        "S-LV595"
       ],
       "evidence": [
         "derived/design-facts.json#components[U8]",
         "derived/design-facts.json#components[U1]"
       ],
-      "blocking": false,
-      "owner_action": "E3 已在 TEST-PLAN.md 定义判据；固件 owner 需实现上电初始化序列"
+      "blocking": true,
+      "owner_action": "用户/M0：决定是否出 ECO（受控 OE 或复位）或接受未知态并给出证据；固件上电初始化序列仍需实现"
     },
     {
       "id": "E3-RST-003",
@@ -589,10 +590,10 @@
     },
     {
       "id": "E3-PWR-002",
-      "title": "TPS2553 限流电阻 R67=2.37kΩ 低于数据手册 15kΩ 下限，限流点不可用",
+      "title": "TPS2553 限流电阻 R67=23.7kΩ 落在官方 15–232kΩ 区间内，限流点有效（原判 2.37kΩ 系误读，已撤销）",
       "nature": "electrical_manufacturing",
-      "status": "BLOCKING_CANDIDATE",
-      "value": "R67=2.37kΩ（0603WAF2372T5E, LCSC C22912）；官方允许 R_ILIM 15k–232kΩ；官方分档：15k→1700mA、20k→1295mA、49.9k→520mA、210k→130mA（typ）。按比例外推 2.37k 远超器件 1.5A 连续能力",
+      "status": "RESOLVED_NOT_A_DEFECT",
+      "value": "R67=23.7kΩ（0603WAF2372T5E, LCSC C22912）。原生原理图三处一致：14_Protected_power_entry.esch2 行 899 的 Value 属性为「23.7kΩ」；行 74 的 META 描述为「23.7KΩ (2372) ±1%」；行 1573 的设计者注释为「R67=23.7k +/-1%: TI equations give approx 1.002..1.184A limit; not a continuous-load rating」。TI 允许 R_ILIM 15k–232kΩ，23.7kΩ 在区间内，限流点约 1.002–1.184 A。",
       "unit": "ohm",
       "applies_to": {
         "nets": [
@@ -605,24 +606,24 @@
         ],
         "layers": []
       },
-      "criterion": "R_ILIM 必须 ≥15kΩ。若要 5V_PERIPH 限流约 1.0A，R_ILIM ≈ 26kΩ；若显示模组电流已定，须按实测峰值重新取档。改值属 BOM/原理图变更，须用户批准并重新出 BOM/CPL",
+      "criterion": "R_ILIM ≥15kΩ 已满足，限流功能有效。只有当显示模组峰值实测超过 1.184 A 时才需重新取档；在此之前不得以「限流不可用」为由改 R67。",
       "source_refs": [
         "S-TPS2553",
         "S-951-PCB"
       ],
       "evidence": [
-        "derived/design-facts.json#components[R67]",
+        "native/sch/Schematic1/14_Protected_power_entry.esch2 行 74、899、1573",
         "derived/rails.json#5V_PERIPH"
       ],
-      "blocking": true,
-      "owner_action": "用户：批准将 R67 改为 ≥15kΩ（推荐 26kΩ，见 open-decisions.md 的 D-05）；F5：改值后 BOM 须同步"
+      "blocking": false,
+      "owner_action": "无。撤销 open-decisions.md 的 D-05（26kΩ 改值要求）；改值仅在峰值实测超出 1.184 A 后重新评估"
     },
     {
       "id": "E3-PWR-003",
-      "title": "J10 的 5V 供电路径仅有 PTC 一级真实保护",
+      "title": "J10 的 5V 供电路径由 U17 限流与 PTC 串联，限流点与 PTC 保持电流接近",
       "nature": "electrical_manufacturing",
       "status": "DERIVED_UNVERIFIED",
-      "value": "因 E3-PWR-002，J10.1(5V_PERIPH) 的过流保护退化为 F1 的 2.20A 跳脱（秒级）与 U17 自身热关断",
+      "value": "U17(TPS2553) 限流点约 1.002–1.184 A（R67=23.7 kΩ 线性内插）；F1(MF-MSMF110) 保持 1.10 A、跳脱 2.20 A。限流点跨过 PTC 保持电流，故在 1.0–1.18 A 持续负载下 PTC 会因自热逐步接近跳脱点，两者动作次序需实测确认。",
       "unit": "A",
       "applies_to": {
         "nets": [
@@ -635,7 +636,7 @@
         ],
         "layers": []
       },
-      "criterion": "R67 修正前，不得在制造资料中声称 J10 具备可设定的过流保护；测试计划须含 5V_PERIPH 短路测试（限流电源供电、人工触发）",
+      "criterion": "制造资料可以声称 J10 具备限流保护，但必须注明：限流点为内插计算值、未实测，且与 PTC 保持电流接近；不得声称限流精度优于 ±10%。TP-04 与 TP-11 实测后定稿。",
       "source_refs": [
         "S-MSMF",
         "S-TPS2553"
@@ -644,7 +645,7 @@
         "POWER-BUDGET.md"
       ],
       "blocking": false,
-      "owner_action": "E3：R67 定案后复版本；V4：核对两处结论一致"
+      "owner_action": "E3：TP-04/TP-11 实测后定稿限流点与动作次序；V4：核对两处结论一致"
     },
     {
       "id": "E3-PWR-004",
@@ -676,10 +677,10 @@
     },
     {
       "id": "E3-PWR-005",
-      "title": "5V 输入下限由两条 LDO 压差决定",
+      "title": "5V 输入下限须同时满足 3.3V LDO 压差与 5V_PERIPH 负载，不能取 4.1V",
       "nature": "electrical_manufacturing",
       "status": "CONFIRMED",
-      "value": "5V_PERIPH 经 U13/U18 各降 3.3V，压差 250mV typ @600mA；加上 F1(≤0.21Ω×1.1A≈0.23V) 与 Q1 压降，5V_IN 低于约 4.1V 时 3.3V 轨进入跌落",
+      "value": "5V_PERIPH 经 U13/U18 各降 3.3V，压差 250mV typ @600mA；加上 F1(≤0.21Ω×1.1A≈0.23V) 与 Q1 压降，5V_IN 低于约 4.1V 时 3.3V 轨开始跌落。但 5V_PERIPH 同时直接供给 J10.1（显示/触控）、U13、U18，不经 LDO；候选模组官方索引列 5V 档为 4.8–5.2V。因此 4.1V 只是 3.3V 轨的压差下限，不是整机适配器下限。",
       "unit": "V",
       "applies_to": {
         "nets": [
@@ -696,7 +697,7 @@
         ],
         "layers": []
       },
-      "criterion": "测试计划须定义 5V_IN 棕断点实测：从 5.0V 缓降，记录 3V3_PERIPH / DAC_3V3 跌出 ±3% 的输入电压；该值作为电源适配器下限判据",
+      "criterion": "适配器下限 = max(3.3V 轨压差下限, 5V_PERIPH 各负载最低工作电压 + 保护链压降)。显示模组 SKU 未冻结（E3-DSP-002）前该值不可定；4.1V 不得作为整机放行阈值。",
       "source_refs": [
         "S-AP2112",
         "S-MSMF"
@@ -705,7 +706,7 @@
         "POWER-BUDGET.md"
       ],
       "blocking": false,
-      "owner_action": "样机测试：实测棕断点，未实测前保持 UNMEASURED"
+      "owner_action": "样机测试：显示模组 SKU 冻结后，从模组端最低电压倒算线损/保护链/输入容差，再实测棕断点；未实测前保持 UNMEASURED"
     },
     {
       "id": "E3-PWR-006",
@@ -1015,10 +1016,10 @@
     },
     {
       "id": "E3-MFG-004",
-      "title": "旧「IO848 / C8 短去耦 / 47 脚供电桥」判据在 951 上无对应对象",
+      "title": "旧「IO848 / 47 脚供电桥」判据在 951 上有对应对象：LINE 84827c5ae5d3dd1e",
       "nature": "source_protection",
-      "status": "OPEN",
-      "value": "951 原生 PCB 全文检索「IO848」命中 0 次；无 47 脚共用供电桥（3V3_IO 为 46 焊盘，GND 为 165 焊盘）；C8 存在，为 100nF 3V3_IO 去耦，位于底层 (60.75,50.0)。IO848 只出现在 offline/IOtail 派生源与旧恢复证据中",
+      "status": "CONFIRMED",
+      "value": "LINE id=84827c5ae5d3dd1e，netName=3V3_IO，layerId=2，宽 14.14 mil，坐标 (2046.0248,1496.0262)→(2346.024,1796.0254) mil。3V3_IO 共 46 个元件焊盘 + 板级测试点 TP6(28.0,33.0 mm) = 47 端点，与旧「47 脚供电桥」判据数量一致。C8 存在，为 100nF 3V3_IO 去耦，位于底层 (60.75,50.0)。原判「951 无对应对象」的成因：按文本检索「IO848」，而它是该 LINE 的 id 前缀，不是网络名或位号。",
       "unit": "object",
       "applies_to": {
         "nets": [
@@ -1031,36 +1032,37 @@
           2
         ]
       },
-      "criterion": "旧判据只对 offline IOtail 派生源有效。若 M0 在 951 上布 K1（MUX_DISABLE/ADDR0/ADDR1），不得以「保护 IO848」为由拒绝合理几何；但底层 3V3_IO 桥与 C8 短去耦仍按 E3-MEC-004 保护。适用范围须 M0 书面界定",
+      "criterion": "M0 在 951 上布 K1（MUX_DISABLE/ADDR0/ADDR1）时必须保护该 LINE 与 C8 短去耦；不得以「该判据在 951 不存在」为由拒绝保护。IOtail 派生源另有 3 条 Top 供电线被删，与 951 拓扑不同，两者结论不得混用。",
       "source_refs": [
         "S-951-PCB"
       ],
       "evidence": [
-        "derived/design-facts.json#net_to_pads.3V3_IO",
-        "grep IO848 = 0 hits in PCB1.epcb2"
+        "native/pcb/PCB1.epcb2 中 LINE id=84827c5ae5d3dd1e",
+        "derived/design-facts.json#net_to_pads.3V3_IO (46)",
+        "derived/design-facts.json#board_level_pads.TP6"
       ],
       "blocking": true,
-      "owner_action": "M0：界定旧判据适用范围（见 open-decisions.md 的 D-07）"
+      "owner_action": "M0：按真实 LINE id 保护；若要删该桥，须单独出 ECO 并说明 47 端点的供电替代路径"
     }
   ],
   "summary": {
     "total": 32,
     "by_status": {
-      "CONFIRMED": 19,
+      "CONFIRMED": 20,
       "DERIVED_UNVERIFIED": 5,
-      "OPEN": 6,
-      "BLOCKING_CANDIDATE": 1,
-      "RESOLVED_NOT_A_DEFECT": 1
+      "OPEN": 5,
+      "BLOCKING_CANDIDATE": 0,
+      "RESOLVED_NOT_A_DEFECT": 2
     },
     "g1_blocking_ids": [
       "E3-VIO-002",
       "E3-RST-001",
+      "E3-RST-002",
       "E3-SNS-002",
       "E3-DSP-001",
       "E3-DSP-002",
-      "E3-PWR-002",
       "E3-MFG-004"
     ],
-    "note": "g1_blocking_ids 是必须由用户或 M0 处置后才能冻结约束的条目；其余 OPEN 项不影响几何施工，但影响终版签核。"
+    "note": "g1_blocking_ids 是必须由用户或 M0 处置后才能冻结约束的条目；其余 OPEN 项不影响几何施工，但影响终版签核。2026-10-25 按 V4 独立审查 IR-01/IR-02/IR-04/IR-05/IR-06 修订，详见 CORRECTIONS-20261025.md。"
   }
 }

@@ -101,12 +101,23 @@
       "url": "repo:hardware/checkpoints/pcb-951ce88a-20261025/",
       "accessed": "2026-10-25",
       "used_for": "全部网表/焊盘/几何/叠层/规则事实"
+    },
+    {
+      "id": "S-LV595",
+      "title": "SN74LV595A 8-Bit Shift Registers With 3-State Output Registers",
+      "publisher": "Texas Instruments",
+      "doc_id": null,
+      "revision": "未取得原始 PDF（ti.com 直连失败）",
+      "url": "https://www.ti.com/product/SN74LV595A",
+      "accessed": "2026-10-25",
+      "used_for": "仅用于 E3-RST-002 的结构性判断（OE̅/SRCLR̅/QH' 接法），上电寄存器状态结论标 UNVERIFIED"
     }
   ],
   "unverified": [
     "Nano20K（GW2A-18）模块的 3V3 输出电流能力与 bank 电压：本轮未取得模块官方文档，标 OPEN。",
     "显示模组 SKU（J10 对接对象）未冻结：无官方 pin 定义可比对，标 OPEN。",
     "SN74LV595A / SN74LV165A / SN74LVC14A / 74LVC1G157 / SN74LVC1G17 / 24LC256 的引脚定义本轮按通用 TSSOP/SOIC 标准核对且与网表自洽，但未逐份下载原始 PDF，引用时须补。",
-    "DMP2035U-7 的 Rds(on) 与 Vgs 额定未取原始 PDF，供电压降计算中按未验证处理。"
+    "DMP2035U-7 的 Rds(on) 与 Vgs 额定未取原始 PDF，供电压降计算中按未验证处理。",
+    "SN74LV595A 的上电/复位后寄存器状态：本轮未取得原始 PDF，E3-RST-002 只主张「器件不保证上电默认态」这一结构性风险，不主张具体的上电电平。补 PDF 后须核对该手册的 Power-Up 说明，再把结论写实。"
   ]
 }
