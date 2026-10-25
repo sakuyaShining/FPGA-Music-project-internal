@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "role": "E3",
-  "version": "e3-2026-10-25.3",
+  "version": "e3-2026-10-25.4",
   "author": {
     "agent": "E3 电气/接口/可装配性",
     "owner": "本会话（由用户 2026-10-25 指派）",
@@ -1044,12 +1044,50 @@
       ],
       "blocking": true,
       "owner_action": "M0：按真实 LINE id 保护，保护理由是载流/去耦/参考而非连通性；若要删该桥，须单独出 ECO 并说明 47 端点的供电替代路径。合同文本中「单删分成 5+42」的版本限定待治理提交（见 E3 的 D-10）"
+    },
+    {
+      "id": "E3-PWR-008",
+      "title": "电源分配拓扑：四层铺铜全为 GND，无电源层；3V3_IO 47 端点仅 1 个过孔",
+      "nature": "source_protection",
+      "status": "CONFIRMED",
+      "value": "四层铺铜 GND_V2_1(L1)、GND_V2_2(L2)、R4_CANDIDATE_GND_15(L15)、R4_CANDIDATE_GND_16(L16) 全为 GND，无任何电源平面。7 个电源网络全部靠走线分配：3V3_IO 46 焊盘+TP6=47 端点、486.8mm、186 段、过孔 1 个、线宽 0.203–0.400mm；5V_PERIPH 9 端点 244.9mm/7 孔；3V3_PERIPH 12 端点 133.7mm/6 孔；DAC_3V3 12 端点 70.4mm/2 孔；5V_PROTECTED 3 端点 30.7mm/3 孔；5V_FUSED 2 端点 27.8mm/2 孔；5V_IN 2 端点 22.3mm/0 孔。3V3_IO 的 487mm 中 459mm 在 TOP、28mm 在 BOTTOM，即整条轨是 TOP 单层脊线 + 一次跨层绕行（含 14.14mil 的 84827c5ae5d3dd1e）。",
+      "unit": "topology",
+      "applies_to": {
+        "nets": [
+          "3V3_IO",
+          "5V_PERIPH",
+          "3V3_PERIPH",
+          "DAC_3V3",
+          "5V_PROTECTED",
+          "5V_FUSED",
+          "5V_IN"
+        ],
+        "objects": [],
+        "layers": [
+          1,
+          2,
+          15,
+          16
+        ]
+      },
+      "criterion": "任何候选或重构方案都必须显式说明电源分配方式。若保留无电源层的拓扑，3V3_IO 必须补缝合过孔（47 端点至少每端点 1 孔，当前仅 1 孔），否则单点断线即切掉半个网络；若改为电源平面，必须重新验证 BOTTOM 的参考层由 GND 变为电源平面后的回流路径。不得以「当前只有 1 个过孔也能连通」作为不改的依据：V4 的连通性判据不覆盖载流与缝合。",
+      "source_refs": [
+        "S-951-PCB"
+      ],
+      "evidence": [
+        "native/pcb/PCB1.epcb2 POUR 记录 4 条，net 均为 GND",
+        "derived/design-facts.json#net_to_pads 电源网络焊盘数",
+        "tools/analyze_baseline.py 输出的 layer_use 与 power_nets 两节",
+        "BASELINE-STRUCTURE-20261025.md 第一节"
+      ],
+      "blocking": false,
+      "owner_action": "M0/用户：按 D-12 选层叠与电源分配方向；无论选哪个，3V3_IO 缝合过孔都必须补。"
     }
   ],
   "summary": {
     "total": 32,
     "by_status": {
-      "CONFIRMED": 20,
+      "CONFIRMED": 21,
       "DERIVED_UNVERIFIED": 5,
       "OPEN": 5,
       "BLOCKING_CANDIDATE": 0,
