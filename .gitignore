@@ -92,3 +92,9 @@ refs/vendor-examples/
 # Archify 生成中间件（成品已归档到 docs/04-架构图）
 .archify/
 !project/reviews/20261024-engineering-publication/validation/**/*.log
+# EEPROM I2C 捕获探针的构建产物（build_01 / synth_01 ...）
+fpga/current/eeprom_probe/build_*/
+fpga/current/eeprom_probe/synth_*/
+# 探针仿真的工作目录：tb_ack_last 会把捕获写成 sim_capture_A/B.txt，
+# 基线那次与变异那次必须分目录，否则后跑的覆盖前一次的波形。
+fpga/current/eeprom_probe/sim_work/

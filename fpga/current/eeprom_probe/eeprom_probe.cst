@@ -1,0 +1,73 @@
+//=============================================================================
+// eeprom_probe.cst -- pins for eeprom_capture_top (I2C edge capture probe)
+//-----------------------------------------------------------------------------
+// Board : Sipeed Tang Nano 20K (bare board)
+// FPGA  : GW2AR-LV18QN88C8/I7
+//
+// Every pin below is copied from this repo's own audited constraint files:
+//   clk      = 4    constraints/tdm_ship_owned.cst  (official audio.cst)
+//   uart_tx  = 69   constraints/tdm_ship_owned.cst  (official uart/src/top.cst)
+//   led[5:0] = 20..15  constraints/tdm_ship_owned.cst (official blink_leds)
+//   sda/scl  = 25/26  constraints/tdm_ship_board.cst ("store_sda"/"store_scl")
+//
+// *** COMMENTS ARE ASCII-ONLY ON PURPOSE ***
+//     Gowin's constraint parser handles non-ASCII comments inconsistently
+//     across locales. Keep it ASCII here.
+//
+// 25/26 are shared with LCD_HS / LCD_VS on the carrier board (J6-10 / J6-11).
+// On a bare Nano 20K they are free header pins. Do NOT plug the LCD FPC in
+// while this bitstream is running.
+//=============================================================================
+
+
+//-----------------------------------------------------------------------------
+// Clock -- 27 MHz on-board crystal
+//-----------------------------------------------------------------------------
+IO_LOC  "clk" 4;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+//-----------------------------------------------------------------------------
+// I2C -- open-drain bus, external 4.7k pull-ups required
+//
+// IO_TYPE is LVCMOS33 (not OPEN_DRAIN) because the RTL drives SDA as 1'bz
+// and SCL as ~scl_lo; PULL_MODE=UP gives a weak internal pull-up as a backup
+// while the external 4.7k does the real work.
+//-----------------------------------------------------------------------------
+IO_LOC  "sda" 25;
+IO_PORT "sda" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "scl" 26;
+IO_PORT "scl" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+
+//-----------------------------------------------------------------------------
+// UART TX -- 115200 8N1, goes to the on-board USB serial (BL702)
+//-----------------------------------------------------------------------------
+IO_LOC  "uart_tx" 69;
+IO_PORT "uart_tx" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+
+//-----------------------------------------------------------------------------
+// LEDs -- common anode, active low
+//   led[5] = 20  read CRC ever passed
+//   led[3] = 18  err ever seen
+//   led[0] = 15  capture buffer full
+//-----------------------------------------------------------------------------
+IO_LOC  "led[5]" 20;
+IO_PORT "led[5]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[4]" 19;
+IO_PORT "led[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[3]" 18;
+IO_PORT "led[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[2]" 17;
+IO_PORT "led[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[1]" 16;
+IO_PORT "led[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led[0]" 15;
+IO_PORT "led[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;

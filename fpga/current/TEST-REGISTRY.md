@@ -64,6 +64,28 @@ python tools/run_all_checks.py --only tb_octave,check_sensor
 
 合计 26 个测试台：**21 个由能通过的驱动跑到**，5 个只在坏掉的脚本里出现（`tb_mac_joint`、`tb_envelope`、`tb_compat_music`、`tb_layers`、`tb_sensor_layers`）；`tb_scan_store` 与 `tb_joint` 各有两套驱动，坏的是「变异对照」那套。
 
+### 1.3 `eeprom_probe/tb/*.v`（驱动：`tools/run_probe_sim.py`）
+
+这一组**不放在上面两套驱动里**，因为它的通过条件不是"全绿"：
+
+| 测试台 | 守的是什么 | 判据数 | 通过条件 |
+|---|---|---|---|
+| `tb_ack_last` | `cfg_eeprom_store` 的读事务结尾：58 个读字节里前 57 个 ACK、第 58 个必须 NACK；以及"NACK 丢了会怎样" | 7 | **基线必须红在 4 条**、**变异必须全绿** |
+
+`run_probe_sim.py` 跑四步，四步都对才返回 0：
+
+1. 基线（队友原样 `cfg_eeprom_store.v`，sha256 必须等于 `ce40c936…`）→ 必须正好 4 条 `[FAIL]`，且是 `ACK=58 / NACK=0 / lastNACK=0 / B 段 STOP=1` 这四条；
+2. 变异（把 `RXACK` 的末字节改成释放 SDA）→ 必须 `失败 0 项`；
+3. 用 `tools/eeprom_capture_decode.py` 解基线导出的两路捕获 → A 必须 `ACK×58 NACK×0`、B 必须 `没有 STOP`；
+4. 三项全中才算通过。
+
+**为什么不像别的测试台那样"绿了就好"**：`tb_ack_last` 要证明的是**缺陷存在**。
+只跑基线会得到一个红，分不清"抓到真缺陷"和"测试台自己坏了"；只跑变异会得到一个绿，
+分不清"实现正确"和"判据根本没测到东西"。这和 §3 那三条教训是同一件事。
+
+基线那次与变异那次**必须分目录**（`sim_work/base`、`sim_work/mut`）：测试台把捕获写成固定的
+`sim_capture_A/B.txt`，同目录的话后跑的会覆盖前一次的波形，解码器验的就成了变异版 —— 这条踩过一次。
+
 ## 2. 四个坏掉的 check 脚本（已定位，未修）
 
 这四条都不是"少写了测试"，而是**测试设施自己烂了**。登记在此，避免下次又当成"跑一下应该没事"。
@@ -129,3 +151,24 @@ python tools/run_all_checks.py --only tb_octave,check_sensor
 | `tb/tb_board_scan.v` | `sck_a` 由 `reg` 改 `wire`（原来只有 `-g2012` 能编译，`-g2005` 报"不能由连续赋值驱动"） |
 | `check_engine_compat.py` | 参考轨迹改为"没有 `.tsv` 就从 `.tsv.gz` 解压"（原写法在干净 clone 上必然 FileNotFoundError） |
 | `tools/scripts/engineering.py` | `check()` 跳过 .gitignore 忽略的文件（否则跑过一次 `check_*.py` 就会因为 `fpga/current/evidence/` 而永远 check 不过）；`MANIFEST` 指向 `engineering-sources-20261025.json` |
+
+### 4.1 EEPROM 探针（2026-10-25）
+
+| 文件 | 变更 |
+|---|---|
+| `eeprom_probe/tb/tb_ack_last.v` | **新建**。7 项判据，专查"读事务最后一个字节有没有 NACK"。A 段用空片（`0x003A=0xFF`，缺陷隐形）、B 段把 `0x003A` 预写成 `0x00`（缺陷显形）。另导出与探针 UART 同格式的捕获文件 |
+| `eeprom_probe/tb/ee24lc256.v` | **新建**。24LC256 行为模型。第一版有两处错：① 下降沿自增 `nb`、上升沿用自增后的值 ⇒ 每字节 bit0 落进 ACK 槽分支被吃掉，`shin` 只收到 7 位，设备地址一次都没匹配上；② 主机 NACK 后仍在驱动数据位（真片此时进待机、彻底放开 SDA）⇒ 变异验证时把"已修好"的实现判成 FAIL |
+| `eeprom_probe/eeprom_capture_top.v` | **新建**。把 `eeprom_exercise_top` 的读写循环逐行照抄，只加边沿捕获（8192 条 × 32 位）+ UART 文本回放。被测 `cfg_eeprom_store.v` 是原样拷贝，sha256 由 `build_probe.py` 断言 |
+| `eeprom_probe/build_probe.py` | **新建**。与 `build_product.py` 分开，不碰产品约束文件；刻意不加 `-use_sspi_as_gpio`（探针不用 SSPI 脚），所以码流应该能正常 Verify |
+| `tools/run_probe_sim.py` | **新建**。差分驱动，见 §1.3 |
+| `tools/eeprom_capture_decode.py` | **新建**。把 `TTTTTT,S,D` 边沿流还原成 START / 重复 START / 帧 / ACK / STOP，并对读事务末字节直接下判定；`--selftest` 是解码器自己的单元测试。时间戳单位（探针 = 27 MHz 拍、仿真导出 = ns）按 SCL 周期自动判别 |
+
+**两处新发现（本轮仿真顺手抓到的，与队友代码无关）**
+
+1. `WR_WAIT = CLK_HZ / 100` 的单位是 **q 拍**（`DIV` 个时钟），不是时钟拍。
+   27 MHz 下 `DIV=68`，于是"等 10 ms"实际等了 **680 ms**，一轮 save+load 约 **1.37 s**。
+   读 readme 里"每轮约 1.5 s"的人不会觉得不对 —— 那是巧合，不是设计。
+   仿真里把时钟降到 2.7 MHz 才跑得动，测量值 75.9 ms（= 10 ms × 7）。
+2. `chk()` 的 tag 走 task 参数时，`%0s` 只认低 64 位（8 字符），中文标签会被切成半个字；
+   超过 8 字符的 ASCII 标签会被**截掉左边**（`read_bytes` → `d_bytes`）。
+   ⇒ 标签一律 ≤ 8 字符纯 ASCII，中文说明写在 `$display` 字面量里。
