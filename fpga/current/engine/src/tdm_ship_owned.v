@@ -41,7 +41,22 @@ module tdm_ship_owned #(
     parameter integer LEGACY_PAD = 1,
     parameter integer UART_BAUD = 115200,
     // BEACON=1 时用 uart_tx_pin 发心跳（诊断用），默认 0 不影响产品行为
-    parameter integer BEACON = 0
+    parameter integer BEACON = 0,
+    //-------------------------------------------------------------------------
+    // PCM5122 初始化（载板 AUX 通路）
+    //
+    //   载板 U12 是 MODE1=GND / MODE2=DAC_3V3 ⇒ I2C 软件模式，且 SCK 接地。
+    //   手册规定软件模式必须自行写 PLL/分频寄存器（硬件模式那条
+    //   "SCK 接地 16 个 LRCK 后 PLL 自动从 BCK 起来" 的兜底不存在）。
+    //   不写寄存器 ⇒ 上电即时钟错误 → standby → AUX 恒静音。
+    //
+    //   1 = 例化 pcm5122_init（默认。裸 Nano 上无 I2C 从机，
+    //       只会 NACK 后重试耗尽，不产生任何声音副作用）
+    //   0 = 不例化，两脚置高阻（用于 A/B 对照或省资源）
+    //-------------------------------------------------------------------------
+    parameter integer PCM5122_INIT = 1,
+    // 板载 MAX98357A 使能。载板做 AUX 产品时应设 0，否则板载喇叭与 AUX 同响。
+    parameter integer PA_EN_LEVEL  = 1
 )(
     input  wire        clk,
     input  wire        btn_rst,      // 引脚 87：高有效（板上外部下拉）
@@ -54,6 +69,13 @@ module tdm_ship_owned #(
     output wire        dac_ws,
     output wire        dac_bck,
     output wire        pa_en,
+
+    // PCM5122 I2C（开漏，外部 4.7k 上拉）
+    //   引脚：SDA = 25 (J6-10)，SCL = 26 (J6-11)
+    //   依据 hardware/current/context/pin-map-audit-20261024.md §6.1
+    //   与 PCB 网表 I2C_SDA/SCL 的端点 J6.10/J6.11。
+    inout  wire        i2c_sda,
+    inout  wire        i2c_scl,
 
     inout  wire [15:0] pad
 );
@@ -98,12 +120,58 @@ module tdm_ship_owned #(
         end
     endgenerate
 
+    //-------------------------------------------------------------------------
+    // PCM5122 上电初始化（I2C 软件模式）
+    //
+    //   两脚都是开漏：只拉低或放开，靠板上 4.7k 上拉到 3V3。
+    //   引脚 25/26 在本设计的 cst 里原本未分配，不与 pad[15:0]/led 冲突。
+    //
+    //   失败不阻断音频：pcm_failed 只是状态，没有任何地方用它去关 I2S。
+    //   裸 Nano 上（无从机）会 NACK → 重试 8 次后 failed=1，仅此而已。
+    //-------------------------------------------------------------------------
+    wire pcm_done;
+    wire pcm_locked;
+    wire pcm_failed;
+
+    generate
+        if (PCM5122_INIT) begin: pcm_cfg
+            wire scl_lo, sda_lo;
+
+            pcm5122_init #(
+                .CLK_HZ (27000000),
+                .SCL_HZ (100000),
+                .DEV    (7'h4C)
+            ) u_pcm (
+                .clk        (clk),
+                .rst_n      (rst_n),
+                .scl_lo     (scl_lo),
+                .sda_lo     (sda_lo),
+                .sda_in     (i2c_sda),
+                .scl_in     (i2c_scl),
+                .done       (pcm_done),
+                .pll_locked (pcm_locked),
+                .failed     (pcm_failed)
+            );
+
+            assign i2c_scl = scl_lo ? 1'b0 : 1'bz;
+            assign i2c_sda = sda_lo ? 1'b0 : 1'bz;
+        end
+        else begin: pcm_off
+            assign i2c_scl    = 1'bz;
+            assign i2c_sda    = 1'bz;
+            assign pcm_done   = 1'b1;
+            assign pcm_locked = 1'b0;
+            assign pcm_failed = 1'b0;
+        end
+    endgenerate
+
     tdm_top_owned #(
         .OWNER_W(OWNER_W),
         .FINGER_EXPR(FINGER_EXPR),
         .RIGHT_TIMBRE(RIGHT_TIMBRE),
         .LEGACY_PAD(LEGACY_PAD),
-        .UART_BAUD(UART_BAUD)
+        .UART_BAUD(UART_BAUD),
+        .PA_EN_LEVEL(PA_EN_LEVEL)
     ) u_top (
         .clk(clk),
         .rst_n(rst_n),

@@ -51,7 +51,14 @@ module tdm_top_owned #(
     parameter integer UART_BAUD = 115200,
     parameter integer RIGHT_TIMBRE = 0,
     parameter integer LEGACY_PAD = 1,
-    parameter integer OWNED_EVENTS = 0, parameter integer OWNER_W=13, MULTI_BIND=0
+    parameter integer OWNED_EVENTS = 0, parameter integer OWNER_W=13, MULTI_BIND=0,
+    // 板载 MAX98357A 的 SD_MODE（引脚 51）。
+    //   1 = 使能板载喇叭（裸 Nano 上出声靠它，默认保持原行为）
+    //   0 = 静音板载喇叭。**插在载板上做 AUX 产品时必须为 0**：
+    //       载板把同一组 I2S_BCK/DIN/LRCK 从 J5 分给 PCM5122，
+    //       而 J5.9(PA_EN) 在载板上是 NC，载板无法关掉板载功放 ⇒
+    //       不置 0 的话板载喇叭与 AUX 会同时出声。
+    parameter integer PA_EN_LEVEL = 1
 )(
     input  wire       clk,
     input  wire       rst_n,
@@ -1402,7 +1409,7 @@ module tdm_top_owned #(
     assign dac_din = sd_i;
     assign dac_ws  = ws_i;
     assign dac_bck = bck;
-    assign pa_en   = 1'b1;
+    assign pa_en   = (PA_EN_LEVEL != 0);
 
     //-------------------------------------------------------------------------
     // LED（拓展 E6 的"LED 指引"部分）

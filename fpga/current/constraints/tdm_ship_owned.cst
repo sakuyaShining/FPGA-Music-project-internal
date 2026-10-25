@@ -101,6 +101,32 @@ IO_PORT "dac_bck" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
 
 
 //-----------------------------------------------------------------------------
+// PCM5122 配置口（载板 AUX 通路）
+//
+//   引脚号不是猜的，来源两处互证：
+//     hardware/current/context/pin-map-audit-20261024.md §6.1
+//         J6-10 -> FPGA 25 (LCD_HS)，J6-11 -> FPGA 26 (LCD_VS)
+//     PCB1.epcb2 网表：I2C_SDA 端点 = J6.10 / U14.3 / U10.5 / R33.2
+//                      I2C_SCL 端点 = J6.11 / U14.2 / U10.6 / R34.2
+//     ⇒ SDA = 25，SCL = 26
+//
+//   为什么 PULL_MODE=UP：
+//     载板上有 R33/R34 = 4.7k 上拉到 3V3_IO，本来不需要内部上拉。
+//     但裸 Nano 上这两脚没有外部上拉（R33/R34 在载板上），
+//     开漏输出放开时会悬空 —— 输入缓冲悬空会自激，抬功耗、扰邻线。
+//     内部弱上拉（几十 k）与外部 4.7k 并联无影响，两种场景都安全。
+//
+//   这两脚在 20K 上同时是 FPC 屏的 LCD_HS/LCD_VS。
+//   本产品不用 RGB FPC 屏（屏走 HARM_CS_N 的 SPI），所以不冲突。
+//-----------------------------------------------------------------------------
+IO_LOC  "i2c_sda" 25;
+IO_PORT "i2c_sda" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "i2c_scl" 26;
+IO_PORT "i2c_scl" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+
+//-----------------------------------------------------------------------------
 // Note-event interface -- TEST/DEBUG ONLY（A6 冻结条款）
 //
 //   ★ 2026-10-02 步③ 之后：出货顶层改为 **tdm_ship**（src/rtl/tdm_ship.v），

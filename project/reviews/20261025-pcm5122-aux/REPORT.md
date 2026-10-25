@@ -288,6 +288,77 @@ NCP 时钟 = PLLCK/4 = 24.0 MHz → NCP = 4
 
 ---
 
+## 十 实施记录（方案 B 已落地）
+
+2026-10-25 按方案 B 实施，产出码流 `build_aux_20261025b`（详见该目录 `PROGRAM-LOG.md`）。
+
+### 10.1 改动面
+
+| 文件 | 改动 |
+|---|---|
+| `engine/src/pcm5122_init.v` | **新增**。I²C 初始化 FSM + 17 条 ROM，复用现成 `i2c_master.v` |
+| `engine/src/tdm_ship_owned.v` | 加 `PCM5122_INIT`（默认 1）、`PA_EN_LEVEL`（默认 1）两个参数；加 `i2c_sda`/`i2c_scl` 两个 inout 端口 |
+| `engine/src/tdm_top_owned.v` | `assign pa_en = 1'b1` → `(PA_EN_LEVEL != 0)`，默认值不变 |
+| `constraints/tdm_ship_owned.cst` | 新增 `i2c_sda`=25、`i2c_scl`=26 |
+
+音频路径（`i2s_tx` / `audio_clk_en` / `tdm_engine_rh`）**一个字节没动**。
+
+### 10.2 时序实测：没有引入新瓶颈
+
+| 码流 | Setup 最差 | Hold 最差 | 负 slack | 周期 |
+|---|---|---|---|---|
+| 基线 `build_ship_20261025` | +12.045 ns | +0.205 ns | 0 / 25 | 37.037 ns |
+| 本版 `build_aux_20261025b` | **+10.652 ns** | **+0.205 ns** | 0 / 25 | 37.037 ns |
+
+- Setup 掉 1.393 ns，仍有 **71% 周期余量**
+- Hold **一分没少**
+- 最差 hold 路径两版同一族：`u_top/u_tdm/sl2_*_s0/Q → u_top/u_tdm/phase_mem/ADA[*]`（寄存器直驱 BSRAM 地址），**与新逻辑无关**
+
+**为什么 I²C 对时序几乎免疫**：100 kHz 下每位有 270 个 clk 的余量。任何一条 I²C 路径哪怕跑到 20 ns，
+也远小于 2.7 µs 的位周期 —— 这与音频路径"每拍都必须满足"性质完全不同。
+所以即使 PnR 把 I²C 逻辑摆到最差位置，功能也不会失效；它唯一能造成的影响是把别人的路径挤走，
+而实测没有发生。
+
+### 10.3 资源
+
+| 项 | 基线 | 本版 | 增量 |
+|---|---|---|---|
+| LUT/ALU | 12141 | 12403 | +262 |
+| Register | 4302 (28%) | 4421 (29%) | +119 |
+| CLS | 8298 (81%) | 8361 (81%) | +63 |
+| BSRAM | 15/46 (33%) | 15/46 (33%) | 0 |
+| I/O | 30/66 | 32/66 | +2 |
+
+ROM 落在 LUT 里（`ROM16` 仍为 0），没吃 BSRAM。
+
+### 10.4 引脚零回归
+
+逐脚比对 `board.pin.html`：既有 **30 个外部端口一个没动**，只新增 25/26 两个。
+
+### 10.5 序列已做独立反算校验
+
+用脚本从 `pcm5122_init.v` 抓 ROM，按 SLAS763C 语义解码后反算时钟树：
+`PLLCK = 96.000 MHz = 2048 fs`，P/J/R/DSP/DACCK/NCP/DOSR/PLL_fS **八项与手册 Table 131 的
+`48k / 32fs` 行逐项一致**；SREF/DCAS/IDCH/IDSK/ALEN 五个关键位全部 PASS。
+
+**仍未验证**：本机无 iverilog/ModelSim，`pcm5122_init.v` 没有跑过功能仿真，
+只有代码复核 + ROM 反算。PLL 是否真锁、46875 Hz 是否被接受，只能上板读 `Reg0x04 b4`。
+
+### 10.6 码流身份
+
+| 项 | 值 |
+|---|---|
+| 目录 | `fpga/current/build_aux_20261025b/`（按 `.gitignore` 的 `build_*/` 约定不入库） |
+| 文件 | `impl/pnr/board.fs` 7,264,154 B |
+| SHA256 | `c410accd7999624c6042e2be2579e1092af7997cfb3b5174ea9492ffc6172625` |
+| UserCode | `0x0000C09B` |
+| 构建 | `python build_product.py build_aux_20261025b full 1 tdm_ship_owned`，179.86 s |
+
+同目录 `PROGRAM-LOG.md` 记录了烧录步骤与能证明/不能证明的边界（本地保留，不入库）。
+寄存器序列可随时用 `project/reviews/20261025-pcm5122-aux/verify_regs.py` 复检。
+
+---
+
 ## 附录：网表解析方法（可复用）
 
 ```
