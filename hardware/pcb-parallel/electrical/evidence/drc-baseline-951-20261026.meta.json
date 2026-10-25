@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "role": "E3",
+  "kind": "capture-metadata",
+  "subject": "drc-baseline-951-20261026.json",
+  "what_this_is": "2026-10-26 首次跑通嘉立创EDA原生 DRC 的采集元数据。drc-baseline-951-20261026.json 是被剥离信封后的纯 result 数组，本文件补回采集上下文。",
+
+  "capture": {
+    "captured_at_local": "2026-10-26T00:49:15",
+    "captured_at_source": "原始信封文件 drc_raw_envelope.json 的 mtime；非 API 返回值，秒级精度",
+    "transport": "WebSocket 桥 easyeda-api bridge-server.mjs",
+    "bridge_port": 49620,
+    "bridge_status_line": "bridge port=49620 edaConnected=True windows=1",
+    "extension": "run-api-gateway v1.0.6",
+    "eda_connected": true,
+    "windows": 1
+  },
+
+  "invocation": {
+    "api": "pcb_Drc.check(strict, userInterface, includeVerboseError)",
+    "args": [true, false, true],
+    "args_meaning": {
+      "strict": true,
+      "userInterface": false,
+      "includeVerboseError": true
+    },
+    "script": "probes/drc.js",
+    "script_body": "const r = await eda.pcb_Drc.check(true, false, true);\nreturn r;",
+    "rule_configuration_name": "自定义配置",
+    "note": "check() 在文档中标注为 beta API，官方说明为不用于生产环境"
+  },
+
+  "source_binding": {
+    "checkpoint": "hardware/checkpoints/pcb-951ce88a-20261025/native/pcb/PCB1.epcb2",
+    "pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+    "pcb_sha256_verified_by": "tools/scripts/pcb_checkpoint.py --git-ref HEAD 于同次会话返回同一 SHA",
+    "project_name": "951ce88a",
+    "pcb_document_uuid": "c3fd8656cf425e9f",
+    "read_only": true,
+    "save_called": false
+  },
+
+  "normalization": {
+    "raw_envelope_size_bytes": 52981,
+    "kept_size_bytes": 50832,
+    "kept_sha256": "53f485fedca600196d3c4cdc9f6a96dd30070b2f62be460f92fb3edc1ec30545",
+    "transformation": "取信封的 result 字段（即 pcb_Drc.check 的返回值数组），丢弃 success/窗口号等传输层字段",
+    "envelope_status_prefix_dropped": "bridge port=49620 edaConnected=True windows=1",
+    "structure_note": "保留原样：顶层 1 个类别对象 (name='Connection Error', count=42, title=['Connection Error','(42)'])；其 list 为 12 个网络对象；每个网络对象的 list 为逐条违例"
+  },
+
+  "result_summary": {
+    "violations_total": 42,
+    "declared_count_field": 42,
+    "categories": 1,
+    "category_names": ["Connection Error"],
+    "nets_affected": 12,
+    "per_net": {
+      "ADDR1": 9,
+      "ADDR0": 7,
+      "MUX_DISABLE": 7,
+      "PRESET1": 3,
+      "BUS_SCK": 2,
+      "EDIT": 2,
+      "ENC_A": 2,
+      "ENC_B": 2,
+      "ENC_PUSH": 2,
+      "INPUT_LOAD_N": 2,
+      "KEY_QH": 2,
+      "PRESET2": 2
+    },
+    "error_type_tally": { "Connection Error": 42 },
+    "error_obj_type_tally": { "SMD Pad": 35, "Via": 5, "TH Pad": 2 },
+    "other_categories_present": [],
+    "self_consistency": "per_net 合计 42；errorType 合计 42；errorObjType 合计 42；与类别对象的 count 字段 42 相等"
+  },
+
+  "probes": {
+    "facts.js": { "sha256": "55a8de71f629325b026c7f8fbb0bfee29bf61aa061a26299f6463849fa9b76dc", "purpose": "器件/焊盘/过孔/走线/铺铜/层/层叠计数" },
+    "netlen.js": { "sha256": "6b0e21cb59e592ea1cf7479893ae5828aeb1fe46493cfc8260166d2b61118c9a", "purpose": "网络清单与 pcb_Net.getNetLength 网长（mil）" },
+    "drc.js": { "sha256": "4dec5a41bd68f151a60c434b41ca0727c9e961ee23d18c1f46485193a6a600fe", "purpose": "原生 DRC" },
+    "rules.js": { "sha256": "50de12da720c79e93334a337765ba18dd08fa644ceed4999413fb9fe47282338", "purpose": "当前规则配置名/内容/网络类" }
+  },
+
+  "reproducibility": {
+    "rerun_at_local": "2026-10-26T00:57（归档后约 8 分钟，同次会话）",
+    "rerun_method": "同一 probes/drc.js、同一桥端口、同一 PCB 文档",
+    "rerun_summary_identical": {
+      "violations_total": true,
+      "nets_affected": true,
+      "per_net": true,
+      "errorType_tally": true,
+      "errorObjType_tally": true,
+      "net_order": true,
+      "object_suffixes": true,
+      "positions": true
+    },
+    "only_difference": "globalIndex（形如 errNNN）整体平移 +42，即上一次运行的违例条数",
+    "delta_distribution": { "42": 42 },
+    "verdict": "逐字段比对：除 globalIndex 外，42 条违例的所有字段（含 pos 坐标）完全一致。DRC 结果确定、可复现。",
+    "consequence": "globalIndex 是会话级单调计数器，不是稳定标识；跨次对比时不可用作键，应以 (net, obj1.suffix) 为键。",
+    "rerun_normalized_sha256": "fcc1b77da3c32fd5c5b72c372f6631734e6595cc326e810020c6d4922985a29f",
+    "rerun_payload_stored": false,
+    "rerun_payload_stored_reason": "与归档结果仅差 globalIndex 偏移，重复存 50KB 无信息增益；如需复核按 probes/drc.js 重跑即可。"
+  },
+
+  "known_limits": [
+    "pos 坐标为画布坐标，未换算为板坐标；定位对象请用 obj1.suffix。",
+    "globalIndex 是会话级单调计数器，复跑会整体平移（本次 +42）；不要用它跨次比对或作为唯一键，请用 (net, obj1.suffix)。",
+    "getCurrentRuleConfiguration() 未暴露各检查项的启用开关，故不能断言某类检查确实执行。",
+    "桥服务 REQUEST_TIMEOUT_MS 硬编码 30 秒，首次 DRC 曾超时返回 HTTP 500，重试成功；本文件记录的是成功那次。",
+    "本采集不是制造放行，也不是 M0/G0 签核。"
+  ]
+}

@@ -1,11 +1,18 @@
 # E3 电气、接口与可装配性合同（951 原生 PCB）
 
-角色：E3　版本：`e3-2026-10-25.4`　作者：本会话（用户 2026-10-25 指派）
+角色：E3　版本：`e3-2026-10-26.1`　作者：本会话（用户 2026-10-25 指派）
 输入源：`hardware/checkpoints/pcb-951ce88a-20261025/native/pcb/PCB1.epcb2`
 源 SHA256：`951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d`
 
 本目录只读设计源，不修改 RTL、原理图、候选 PCB 或正式板。所有结论绑定上述 SHA；
 源一变，本版约束全部失效，须递增版本号。
+
+> **版本 .1（2026-10-26）**：**首次跑通原生 DRC**。经 `easyeda-api` 的 WebSocket 桥驱动编辑器，
+> 引擎侧独立复核了全部事实（227 器件 / 1063 焊盘 / 649 过孔 / 256 网，逐项与解析器一致），
+> 并取得本项目第一份原生 DRC 基线：**42 项违例，全部是 `Connection Error`，分布在 12 个网上，
+> 无任何间距/线宽/孔环/短路类违例**。见 `ENGINE-BASELINE-20261026.md` 与
+> `evidence/drc-baseline-951-20261026.json`。
+> 这条链路此前一直不可用（`open --path` 返回 ok 但工程不进编辑器；扩展缺「允许外部交互」权限）。
 
 > **版本 .4（2026-10-25）**：新增**基线结构诊断** `BASELINE-STRUCTURE-20261025.md` 与可复现脚本
 > `tools/analyze_baseline.py`。实测结论：这块板**不密**（铜覆盖 14.33%、TOP 布线利用率 10.5%），
@@ -40,11 +47,15 @@
 | `constraints.json` | **主产物**。33 条约束，每条含性质/状态/单位/适用对象/判据/来源/失效条件 |
 | `open-decisions.md` | 13 项待决（D-05 已撤销、D-09…D-13 新增），含选项、影响、推荐；其中 5 项阻断 G1 |
 | `BASELINE-STRUCTURE-20261025.md` | **基线结构诊断**：密度/层使用率/电源拓扑/未连通网的铜量实测，含重构选项 A–D |
+| `ENGINE-BASELINE-20261026.md` | **引擎侧基线**：首次原生 DRC（42 项 / 12 网 / 全为 Connection Error）+ 引擎与解析器逐项交叉验证 |
+| `evidence/drc-baseline-951-20261026.json` | 原生 DRC 原始返回，42 条逐项含对象名/网络/坐标/错误说明 |
+| `evidence/drc-baseline-951-20261026.meta.json` | 采集上下文：端口/扩展版本/调用参数/源 PCB SHA/归一化方式/逐项自洽校验/复跑比对结论 |
+| `evidence/probes/*.js` | 实际执行的只读探针（`facts` / `netlen` / `drc` / `rules`），可原样复跑 |
 | `CORRECTIONS-20261025.md` | 按 V4 独立审查的逐条纠错记录：撤销 3 条、升级 1 条、修正范围 2 条（含 IR-03 下游审计） |
 | `INTERFACES.md` | J5/J6/J10/J12/J13/J20–J25 逐针网络表（脚本生成） |
 | `MECHANICAL.md` | 板框/安装孔/禁布区/叠层/过孔/测试点/贴边器件（脚本生成） |
 | `POWER-BUDGET.md` | 供电拓扑、压降、各轨负载、保护链、热、未实测项 |
-| `TEST-PLAN.md` | TP-01…TP-12 实物判据，全部 UNMEASURED |
+| `TEST-PLAN.md` | TP-01…TP-13 实物判据，全部 UNMEASURED |
 | `SOURCES.json` | 9 份来源（含官方手册编号/修订日期/URL/访问日期）与未验证清单 |
 | `derived/*.json` | 派生事实，可复现，不含手抄数据 |
 | `tools/*.py` | 解析与报表生成器（只读） |
@@ -66,6 +77,20 @@ components 227 | pads_with_net 899 | nets 256 | vias 649
 ```
 
 227 件 / 899 节点 / 649 过孔 与检查点基线一致，可作为输入未漂移的独立旁证。
+
+### 引擎侧（需 EDA + 桥）
+
+离线解析不需要 EDA。要复现**引擎侧**结果（原生 DRC、网长），另需：桥服务在 49620 运行、
+EDA 装 `run-api-gateway` 且已允许外部交互、工程已打开 PCB。
+
+```bash
+python tools/bridge_probe.py evidence/probes/facts.js    # 227 / 1063 / 649 / 3606 / 4
+python tools/bridge_probe.py evidence/probes/netlen.js   # 256 网 + 16 条网长(mil)
+python tools/bridge_probe.py evidence/probes/drc.js      # 42 项 / 12 网 / 全 Connection Error
+python tools/bridge_probe.py evidence/probes/rules.js    # 当前规则配置
+```
+
+只读，不保存、不改板。完整口径与边界见 `ENGINE-BASELINE-20261026.md`。
 
 ## 解析要点（给后续 Agent 省时间）
 

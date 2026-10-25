@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "role": "E3",
-  "version": "e3-2026-10-25.4",
+  "version": "e3-2026-10-26.1",
   "author": {
     "agent": "E3 电气/接口/可装配性",
     "owner": "本会话（由用户 2026-10-25 指派）",
@@ -1085,7 +1085,7 @@
     }
   ],
   "summary": {
-    "total": 32,
+    "total": 33,
     "by_status": {
       "CONFIRMED": 21,
       "DERIVED_UNVERIFIED": 5,
@@ -1102,6 +1102,6 @@
       "E3-DSP-002",
       "E3-MFG-004"
     ],
-    "note": "g1_blocking_ids 是必须由用户或 M0 处置后才能冻结约束的条目；其余 OPEN 项不影响几何施工，但影响终版签核。2026-10-25 按 V4 独立审查 IR-01/IR-02/IR-04/IR-05/IR-06 修订，详见 CORRECTIONS-20261025.md。"
+    "note": "g1_blocking_ids 是必须由用户或 M0 处置后才能冻结约束的条目；其余 OPEN 项不影响几何施工，但影响终版签核。2026-10-25 按 V4 独立审查 IR-01/IR-02/IR-04/IR-05/IR-06 修订，详见 CORRECTIONS-20261025.md。 2026-10-26：约束条目本身未改动；本次为证据升级——原生 DRC 首次跑通，引擎独立确认 42 项违例全为 Connection Error、分布 12 网，并逐项复核 227/1063/649/256 与解析器一致（见 ENGINE-BASELINE-20261026.md）。同次校验修正一处遗留笔误：summary.total 由 32 改为 33（条目数与 by_status 合计一直为 33，仅 total 未同步，非新增/删减条目）。"
   }
 }
