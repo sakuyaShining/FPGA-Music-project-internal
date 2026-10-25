@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-10-23T22:55:42.442973+08:00",
-  "pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+  "pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
   "components": 227,
   "sides": {
     "Top_components": 224,
@@ -30,5 +30,60 @@
   "old_cpl_reason": "The historical217-SMT CPL predates all six accepted component position/rotation/side changes. Standalone TP13/14/15 are pads, not component CPL rows. Future C9 Bottom/central U9 are still only offline candidates.",
   "factory_TH_assembly_quote_pending": true,
   "current_board_procurement": "current-board-procurement.json",
-  "current_SMT_bom": "jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv"
+  "current_SMT_bom": "jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv",
+  "current_native_CPL_export": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\native-cpl-current-a3-DRAFT-NOT-FOR-ORDER.csv",
+  "current_SMT_CPL": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\jlc-cpl-current-DRAFT-NOT-FOR-ORDER.csv",
+  "current_TH_placement": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\TH-placement-current-DRAFT-NOT-FOR-ORDER.csv",
+  "current_CPL_audit": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\purchase-preparation-20261021-r1\\current-cpl-population-audit.json",
+  "six_current_rows_now_match_actual_native": {
+    "R30": {
+      "Mid X": "68.4mm",
+      "Mid Y": "65.6mm",
+      "Layer": "T",
+      "Rotation": "90",
+      "Footprint": "R0603"
+    },
+    "U9": {
+      "Mid X": "91mm",
+      "Mid Y": "19mm",
+      "Layer": "T",
+      "Rotation": "180",
+      "Footprint": "SOIC-16_L9.9-W3.9-P1.27-LS6.0-BL"
+    },
+    "C9": {
+      "Mid X": "99.25mm",
+      "Mid Y": "16mm",
+      "Layer": "T",
+      "Rotation": "0",
+      "Footprint": "C0603"
+    },
+    "C8": {
+      "Mid X": "60.75mm",
+      "Mid Y": "50mm",
+      "Layer": "B",
+      "Rotation": "0",
+      "Footprint": "C0603"
+    },
+    "R63": {
+      "Mid X": "66.75mm",
+      "Mid Y": "50.25mm",
+      "Layer": "B",
+      "Rotation": "0",
+      "Footprint": "R0603"
+    },
+    "R64": {
+      "Mid X": "63.75mm",
+      "Mid Y": "47.75mm",
+      "Layer": "B",
+      "Rotation": "0",
+      "Footprint": "R0603"
+    }
+  },
+  "final_factory_approval_pending": true,
+  "source_rebind": {
+    "checked_at": "2026-10-24T08:23:38.266529+08:00",
+    "previous_source_pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+    "basis": "Fresh a3 native CPL export exactly equals previous native export in every field of all227 rows, including MPN/footprint/side/angle/coordinates. Existing BOM and placement audits remain applicable; no stock/quote refresh claimed.",
+    "proof": "current-native-cpl-export-a3.json"
+  }
 }

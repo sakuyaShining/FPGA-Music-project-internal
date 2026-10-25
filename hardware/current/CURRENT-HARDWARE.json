@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "observed_at": "2026-10-26T01:34:07.918860+08:00",
+  "owner_thread": "01a15ee5-fa24-7501-8475-ad28a0f08939",
+  "status": "ACTIVE_CONSTRUCTION_NOT_FOR_FAB",
+  "native_project": "native/FPGA-Music-U9ControlWork-20261023.eprj3",
+  "native_pcb": "native/pcb/PCB1.epcb2",
+  "native_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "native_components": 227,
+  "native_vias": 649,
+  "native_open_connections": 42,
+  "native_open_nets": 12,
+  "native_ADDR2_complete": true,
+  "offline_candidate": "context/offline/current-plan.json",
+  "offline_expected": "context/offline/current-expected.json",
+  "offline_plane_context_gzip": "context/offline/current-plane-context.json.gz",
+  "offline_MUX_pad_islands": 4,
+  "offline_new_lines": 62,
+  "offline_new_vias": 24,
+  "offline_candidate_imported": false,
+  "manufacturing_release": false,
+  "final_selection_frozen": false,
+  "physical_tests": "UNMEASURED",
+  "coordination": {
+    "sole_CAD_writer": "Codex",
+    "WorkBuddy": "Read-only bounded assistance; user acknowledged"
+  },
+  "constraints": {
+    "single_J10": true,
+    "J11_cancelled": true,
+    "sensors": 84,
+    "FPGA": "Tang Nano20K",
+    "board_mm": [
+      140,
+      100
+    ],
+    "copper_layers": 4
+  },
+  "history": "Git history preserves prior native versions. Large recursively nested local archives are deliberately not copied into this current delivery.",
+  "validation_scope": "Saved native951 has prior complete ADDR2 physical/reference/DC/native DRC and reopen acceptance. Current portable files freshly hash-verified; no new CAD routing or fabrication acceptance is claimed. Offline62/24 is a retained partial MUX candidate. Parent full-delta audit plus deletion-only identity stage proof are included; older historical proof chains remain indexed by those records."
+}

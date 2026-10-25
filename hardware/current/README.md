@@ -1,13 +1,11 @@
-# 当前硬件保存工程
+# 当前电路板工程与交付入口
 
-`native/`包含当前保存的U9ControlWork原生工程，包括工程描述、PCB、全部原理图及面板；逐文件身份见`../../project/versions/engineering-sources-20261023.json`。PCB身份`e098c5db…`，作者施工记录47项未连通、13网、227件、616孔。保留37项旧检查点仍可从历史档案恢复。
+先读 `CURRENT-HARDWARE.json`。本提交将远端旧 e098 施工板更新到已保存的 **951** 原生板；全部14页原理图、工程描述及面板随工程保留。227件、649孔，ADDR2整网已经原生验收；仍有42项未连通、12个网络开放，**不能投板或据此直接下单**，实物未测。
 
-`context/`保存当前施工、DRC/参考检查与采购上下文；`interface-references/`保存引脚参考。上下文中的绝对路径和session只是原工作区出处，不可复用会话或重放事务。采购文件包含历史表及草稿，按`context/purchase-preparation-20261021-r1/current-board-procurement.json`解释；旧CPL未随全部改位重导出，不能直接下单。
+`native/` 是可编辑原生工程。`context/accepted-native-review.json` 记录951的既有验收范围；旧 `context/u9/` 内容只保留历史，不能覆盖本入口。最新同源227行坐标表在 `context/purchase-preparation-20261021-r1/native-cpl-current-951ce88a-DRAFT-NOT-FOR-ORDER.csv`，物料和装配文件仍为采购草稿。
 
-```powershell
-python tools/scripts/engineering.py export --area hardware --output D:/FPGA-Project/review/my-hardware
-```
+`context/offline/` 是尚未导入原生的62线24孔候选，禁用控制网仍4个焊盘岛。保留方案、精确预期几何、已剔除浮地的参考上下文、阶段证明与父审查；大JSON仅作无损gzip压缩，清单同时记录原始与压缩字节SHA。它不是完整PCB，不应直接重放旧施工脚本。历史通过Git和证据索引保留，不再层层嵌套复制恢复压缩包。
 
-校验通过后在自己的副本中打开`native/`原生工程，创建该副本的新会话并核对实际工程身份。主机原D盘/06df目录不属于新协作者可写路径。当前施工owner为会话`01a15ee5-fa24-7501-8475-ad28a0f08939`；本次发布只核对保存文件和恢复字节，没有重新执行CAD DRC。
+仅Codex写原生板，WorkBuddy只读辅助。同一工程写入前须实时核身份、资源与全部受影响网；不复用历史会话标识。可用工程导出工具读取本提交更新后的逐文件清单，导出不会启动CAD。
 
-保留J10，取消J11；接口改动需双方确认。仍有未连通及参考/装配/屏幕线束资格缺口，实物未测，制造未放行。导出不启动CAD、不应用施工脚本。
+保留单J10、84传感、Nano20K、140×100毫米四铜层，J11取消。最终屏幕完整配置、线束机械、双面及通孔工厂装配、背面净空、供电/84电极附件和整机验收仍开放。没有新增制造放行、采购、RTL改动或其他轴验收。
