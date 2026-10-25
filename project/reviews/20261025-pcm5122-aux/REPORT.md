@@ -201,6 +201,15 @@ J12.3 ── GND (Sleeve)
 
 ## 七 若走 B：寄存器序列（已按本板实际时钟算出）
 
+> **先澄清一个容易误解的点：这一节的 "PLL" 是 PCM5122 芯片【内部】的音频 PLL，
+> 不是 FPGA 的 PLL。**
+> 本方案**不碰 FPGA 的任何时钟资源**：没有例化 rPLL/CLKDIV/DCS/CLKSEL，
+> 全部逻辑仍在既有 27 MHz 单时钟域，SDC 仍只有一条 `create_clock`。
+> 构建报告可自证：`PRIMARY 1/8`、`LW 5/8`、`GCLK_PIN 1/5`，与基线码流逐项相同。
+> 那个 96 MHz 只存在于 U12 晶片内部，不出现在板子的任何一根线上；
+> FPGA 只是用 I²C 写寄存器"告诉"它怎么从 BCK 倍频。FPGA 侧新增的动作仅是
+> 用两根 GPIO 以 100 kHz bit-bang 出 I²C 波形 —— 100 kHz 是数据速率，不是时钟域。
+
 ### 7.1 输入条件
 ```
 BCK = 27 MHz / 18      = 1,500,000 Hz
@@ -290,7 +299,7 @@ NCP 时钟 = PLLCK/4 = 24.0 MHz → NCP = 4
 
 ## 十 实施记录（方案 B 已落地）
 
-2026-10-25 按方案 B 实施，产出码流 `build_aux_20261025b`（详见该目录 `PROGRAM-LOG.md`）。
+2026-10-25 按方案 B 实施，产出码流 `build_aux_20261025c`（详见该目录 `PROGRAM-LOG.md`）。
 
 ### 10.1 改动面
 
@@ -308,7 +317,7 @@ NCP 时钟 = PLLCK/4 = 24.0 MHz → NCP = 4
 | 码流 | Setup 最差 | Hold 最差 | 负 slack | 周期 |
 |---|---|---|---|---|
 | 基线 `build_ship_20261025` | +12.045 ns | +0.205 ns | 0 / 25 | 37.037 ns |
-| 本版 `build_aux_20261025b` | **+10.652 ns** | **+0.205 ns** | 0 / 25 | 37.037 ns |
+| 本版 `build_aux_20261025c` | **+10.652 ns** | **+0.205 ns** | 0 / 25 | 37.037 ns |
 
 - Setup 掉 1.393 ns，仍有 **71% 周期余量**
 - Hold **一分没少**
@@ -331,6 +340,18 @@ NCP 时钟 = PLLCK/4 = 24.0 MHz → NCP = 4
 
 ROM 落在 LUT 里（`ROM16` 仍为 0），没吃 BSRAM。
 
+**时钟资源零变化**（构建报告 §5/§6 逐项对比）：
+
+| 项 | 基线 | 本版 |
+|---|---|---|
+| PRIMARY | 1/8 | 1/8 |
+| LW | 5/8 | 5/8 |
+| GCLK_PIN | 1/5 | 1/5 |
+| PLL / rPLL | 0（表中无此行） | 0 |
+
+全局时钟清单里 `clk_d → PRIMARY` 唯一，其余 5 条 LW 全是基线就有的使能类网络。
+**本模块没有例化任何 rPLL / CLKDIV / DCS / CLKSEL。**
+
 ### 10.4 引脚零回归
 
 逐脚比对 `board.pin.html`：既有 **30 个外部端口一个没动**，只新增 25/26 两个。
@@ -348,11 +369,11 @@ ROM 落在 LUT 里（`ROM16` 仍为 0），没吃 BSRAM。
 
 | 项 | 值 |
 |---|---|
-| 目录 | `fpga/current/build_aux_20261025b/`（按 `.gitignore` 的 `build_*/` 约定不入库） |
+| 目录 | `fpga/current/build_aux_20261025c/`（按 `.gitignore` 的 `build_*/` 约定不入库） |
 | 文件 | `impl/pnr/board.fs` 7,264,154 B |
-| SHA256 | `c410accd7999624c6042e2be2579e1092af7997cfb3b5174ea9492ffc6172625` |
+| SHA256 | `7104950438cb6f65fe30314d5f2bef355317b315580168632b49f1441a680da8` |
 | UserCode | `0x0000C09B` |
-| 构建 | `python build_product.py build_aux_20261025b full 1 tdm_ship_owned`，179.86 s |
+| 构建 | `python build_product.py build_aux_20261025c full 1 tdm_ship_owned`，190.12 s |
 
 同目录 `PROGRAM-LOG.md` 记录了烧录步骤与能证明/不能证明的边界（本地保留，不入库）。
 寄存器序列可随时用 `project/reviews/20261025-pcm5122-aux/verify_regs.py` 复检。
