@@ -79,6 +79,27 @@ def main() -> int:
         '<Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>'
         '<FileList>' + ''.join(entries) + '</FileList></Project>')
 
+    # ---- 只在构建目录里降增益，产品源文件一个字节都不动 ----------------------
+    # tdm_top_owned.v 第 1342 行把输出增益写死成 `.GAIN_UP(4), .SHIFT(0)`，
+    # 顶层没有把它做成 parameter，所以从外面改不了。512 个等幅音叠加后是满量程，
+    # 接功放会非常响。这里只改**构建目录里的那份拷贝**：
+    #     SHIFT=3 -> 右移 3 位 -> ÷8 -> 约 −18 dB
+    # 记录同时写进 run.json 的 patch 字段，源文件的 sha256 保持原值不变。
+    shift = int(os.environ.get('SELFTEST_SHIFT', '3'))
+    patch = None
+    if shift:
+        p = D / 'tdm_top_owned.v'
+        txt = p.read_text(encoding='utf-8')
+        old = '.GAIN_UP(4), .SHIFT(0)'
+        new = '.GAIN_UP(4), .SHIFT(%d)' % shift
+        assert txt.count(old) == 1, ('目标串不唯一，停止', txt.count(old))
+        p.write_text(txt.replace(old, new), encoding='utf-8')
+        patch = dict(file='tdm_top_owned.v', was=old, now=new, shift=shift,
+                     atten_db=round(-6.0206 * shift, 2),
+                     source_sha256=inputs['tdm_top_owned.v']['sha256'],
+                     built_sha256=sha(p))
+        print('已降增益: SHIFT=%d (%.1f dB)' % (shift, patch['atten_db']))
+
     run_step = 'run all' if mode == 'full' else 'run syn'
     (D / 'build.tcl').write_text(
         'open_project "' + (D / 'board.gprj').as_posix() + '"\n'
@@ -106,7 +127,7 @@ def main() -> int:
         'Synthesis' in log if mode == 'synth' else 'Bitstream generation completed' in log)
 
     data = dict(status='ok' if ok else 'FAILED', returncode=rc, mode=mode, top=TOP,
-                seconds=round(time.monotonic() - start, 2), inputs=inputs,
+                seconds=round(time.monotonic() - start, 2), inputs=inputs, patch=patch,
                 project_sha256=sha(D / 'board.gprj'), tcl_sha256=sha(D / 'build.tcl'),
                 hardware_programmed=False)
     (D / 'run.json').write_text(json.dumps(data, indent=2), encoding='utf-8')
