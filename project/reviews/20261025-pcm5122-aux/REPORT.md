@@ -13,13 +13,23 @@
 | **R1** | PCM5122 被接成 **I²C 软件模式**（MODE1=GND、MODE2=DAC_3V3） | 手册规定软件模式下 **没有** BCK-PLL 自动回退；而产品 RTL 里**一个 I²C 主机都没有** | RTL 加 I²C 初始化，或改板回硬连线模式 |
 | **R2** | I²S 是 32 BCK/帧、16 bit；芯片默认 24 bit | 位长不匹配，行为不确定 | 软件模式写 Reg40=0x00；硬连线模式必须把帧改成 64 BCK |
 | **R3** | SCK 接地 + SREF 默认选 SCK + SCK-halt 检测默认开 | 上电即"时钟错误"→ standby → **静音** | 写 Reg13 / Reg37 |
-| **R4** | `pa_en` 硬接 1（`tdm_top_owned.v:1405`） | 载板上板载 MAX98357 与 AUX **同时出声** | RTL 改 0，或做成参数 |
+| **R4** | `pa_en` 硬接 1（`tdm_top_owned.v:1405`） | 载板上板载 MAX98357 与 AUX **同时出声** | ✅ 已改：`PA_EN_MODE=2` 自动门控（§10.7） |
 | **R5** | I²S 三线无串阻，且 DAC 与 FPGA 是两个独立电源域 | 先给 FPGA 上电时，电流经 U12 输入保护二极管倒灌 | 三根线各加 22–33 Ω 串阻 |
 | **R6** | XSMT 只靠 R40(100k) 上拉到 3V3，FPGA 不可控 | 上电 pop，且无法软静音 | 引一根 GPIO 到 XSMT，或明确接受 pop |
 | **R7** | J12 是外部插孔，ESD 未定型（原理图自注） | 静电直击 U12 输出 | 加 ESD 器件 |
 
 **一句话**：AUX 现在**一定不出声**，卡在数字侧（R1 + R3），不是模拟链路。
 模拟链路本身**是对的**（§五），不需要改。
+
+**闭环状态（2026-10-25）**：
+
+| 风险 | 状态 |
+|---|---|
+| R1 / R3 | ✅ RTL 侧已解决（方案 B，码流 `build_aux_20261025d`），**待上板实测确认** |
+| R2 | ✅ 已解决（`Reg0x28 = 0x00` ⇒ I²S + 16 bit） |
+| R4 | ✅ 已解决（`PA_EN_MODE=2` 自动门控，见 §10.7） |
+| R5 / R6 / R7 | ❌ **硬件整改，未做**（板子未投，现在改最便宜） |
+
 
 ---
 
@@ -286,71 +296,94 @@ NCP 时钟 = PLLCK/4 = 24.0 MHz → NCP = 4
 - 产品 RTL 中不存在 I²C 主机
 - I²S 是 32 BCK/帧、16 bit、46875 Hz
 - AUX 模拟链路是 100Ω+1nF 到三极 TRS，且电荷泵使隔直电容不必要
-- 板上**没有** EEPROM（全板搜 `24LC`/`EEPROM`/`AT24` 零命中）—— 之前的"非易失存储"需求在硬件上没有落点
+- 板上**有** EEPROM：**U10 = 24LC256-I/SN**（32 KB，地址 `0x50`，LCSC `C411625`），见 §十一（**此条 2026-10-25 修正，原先误判为"没有 EEPROM"**）
 
 **不能证明（需要上板或改版）**
 - 96 MHz VCO 在本颗芯片上能否稳定锁定（手册表给的是 98.304 MHz，我们是等比缩放）
 - 46875 Hz 是否能通过芯片的 FS 检测（距 48 kHz −2.3%，在 ±4% 内，但未实测）
-- U14 的确切型号与使能条件（BOM 该字段为空，只能从网表推断是双向电平转换）
 - J12 插拔的 ESD 耐受（原理图自注"ESD protection not frozen"）
 - 32 BCK/16 bit 帧在 24 bit 默认下芯片到底怎么处理（R2 只能靠 Reg40 规避，不能靠"应该没事"）
+- `TCA9517` 在 `VccB = 0`（载板未供电）时是否会把 A 侧总线拉低 —— 见 §11.3 R8，**只能查手册或实测，不能靠推断**
 
 ---
 
 ## 十 实施记录（方案 B 已落地）
 
-2026-10-25 按方案 B 实施，产出码流 `build_aux_20261025c`（详见该目录 `PROGRAM-LOG.md`）。
+2026-10-25 按方案 B 实施，最终产出码流 `build_aux_20261025d`。
+中间版 `build_aux_20261025c`（用常量 `PA_EN_LEVEL` 控功放）已被 d 版取代并删除，
+其数据在下表保留为对照。
 
-### 10.1 改动面
+> 注：`fpga/current/build_*/` 被 `.gitignore` 忽略，构建目录里的 `PROGRAM-LOG.md` **不入库**
+> （`git clean` 会一并清掉）。因此**可持久引用的记录以本节为准**，构建目录里的那份只是本地副本。
+
+### 10.1 改动面（最终形态）
 
 | 文件 | 改动 |
 |---|---|
 | `engine/src/pcm5122_init.v` | **新增**。I²C 初始化 FSM + 17 条 ROM，复用现成 `i2c_master.v` |
-| `engine/src/tdm_ship_owned.v` | 加 `PCM5122_INIT`（默认 1）、`PA_EN_LEVEL`（默认 1）两个参数；加 `i2c_sda`/`i2c_scl` 两个 inout 端口 |
-| `engine/src/tdm_top_owned.v` | `assign pa_en = 1'b1` → `(PA_EN_LEVEL != 0)`，默认值不变 |
+| `engine/src/tdm_ship_owned.v` | 加 `PCM5122_INIT`（默认 1）、`PA_EN_MODE`（默认 2）两个参数；加 `i2c_sda`/`i2c_scl` 两个 inout 端口；新增 `pa_en` 门控逻辑 |
+| `engine/src/tdm_top_owned.v` | **无改动**。曾加过 `PA_EN_LEVEL`，后已还原为基线原样（`assign pa_en = 1'b1;`） |
 | `constraints/tdm_ship_owned.cst` | 新增 `i2c_sda`=25、`i2c_scl`=26 |
 
 音频路径（`i2s_tx` / `audio_clk_en` / `tdm_engine_rh`）**一个字节没动**。
+
+**为什么把 `pa_en` 放在包装层而不是音频核心**：`pa_en` 是板载 MAX98357A 的 SD_MODE（引脚 51），
+属于板级适配。放在 `tdm_ship_owned` 里，`tdm_top_owned.v` 才能与基线逐字节一致，
+音频核心将来迭代时不会带着这个板级开关一起漂移。
+
 
 ### 10.2 时序实测：没有引入新瓶颈
 
 | 码流 | Setup 最差 | Hold 最差 | 负 slack | 周期 |
 |---|---|---|---|---|
 | 基线 `build_ship_20261025` | +12.045 ns | +0.205 ns | 0 / 25 | 37.037 ns |
-| 本版 `build_aux_20261025c` | **+10.652 ns** | **+0.205 ns** | 0 / 25 | 37.037 ns |
+| `build_aux_20261025c`（中间版） | +10.652 ns | +0.205 ns | 0 / 25 | 37.037 ns |
+| **`build_aux_20261025d`（最终）** | **+9.571 ns** | **+0.205 ns** | **0 / 25** | 37.037 ns |
 
-- Setup 掉 1.393 ns，仍有 **71% 周期余量**
-- Hold **一分没少**
-- 最差 hold 路径两版同一族：`u_top/u_tdm/sl2_*_s0/Q → u_top/u_tdm/phase_mem/ADA[*]`（寄存器直驱 BSRAM 地址），**与新逻辑无关**
+- 最终版 Setup 相对基线掉 2.474 ns，仍有 **26% 周期余量**（9.571 / 37.037）
+- Hold **一分没少**（三个码流都是 +0.205 ns）
+- 最差 hold 路径三次构建同一族：`u_top/u_tdm/sl2_*_s0/Q → phase_mem_phase_mem_0_0_s/ADA[*]`
+  （寄存器直驱 BSRAM 地址），**与新逻辑无关**
+- c→d 只多了 54 个 LUT/ALU，Setup 却掉了 1.081 ns，跌幅不成比例 ⇒ 是 PnR 重新布局的抖动
+  （最差 setup 路径落在 `u_top/u_nm/load_amp_*/D`，即 note_map 内部，不在新增逻辑上），
+  不是逻辑深度增加导致
 
 **为什么 I²C 对时序几乎免疫**：100 kHz 下每位有 270 个 clk 的余量。任何一条 I²C 路径哪怕跑到 20 ns，
 也远小于 2.7 µs 的位周期 —— 这与音频路径"每拍都必须满足"性质完全不同。
 所以即使 PnR 把 I²C 逻辑摆到最差位置，功能也不会失效；它唯一能造成的影响是把别人的路径挤走，
-而实测没有发生。
+而实测没有发生（hold 完全未变，setup 跌幅可由布局抖动解释且余量充足）。
+
 
 ### 10.3 资源
 
-| 项 | 基线 | 本版 | 增量 |
-|---|---|---|---|
-| LUT/ALU | 12141 | 12403 | +262 |
-| Register | 4302 (28%) | 4421 (29%) | +119 |
-| CLS | 8298 (81%) | 8361 (81%) | +63 |
-| BSRAM | 15/46 (33%) | 15/46 (33%) | 0 |
-| I/O | 30/66 | 32/66 | +2 |
+| 项 | 基线 | c 版 | **d 版（最终）** | d 相对基线 |
+|---|---|---|---|---|
+| Logic | 12549 (61%) | 12811 (62%) | **12865/20736 (63%)** | +316 |
+| LUT/ALU | 12141 | 12403 | **12457**（8893 LUT + 3564 ALU） | +316 |
+| Register | 4302 (28%) | 4421 (29%) | **4424 (29%)** | +122 |
+| CLS | 8298 (81%) | 8361 (81%) | **8349 (81%)** | +51 |
+| BSRAM | 15/46 (33%) | 15/46 (33%) | **15/46 (33%)** | 0 |
+| DSP | 10/24 (42%) | 10/24 | **10/24 (42%)** | 0 |
+| I/O | 30/66 | 32/66 | **32/66 (49%)** | +2 |
 
 ROM 落在 LUT 里（`ROM16` 仍为 0），没吃 BSRAM。
 
-**时钟资源零变化**（构建报告 §5/§6 逐项对比）：
+**时钟资源零变化**（构建报告 §5/§6 逐项对比，三个码流相同）：
 
-| 项 | 基线 | 本版 |
-|---|---|---|
-| PRIMARY | 1/8 | 1/8 |
-| LW | 5/8 | 5/8 |
-| GCLK_PIN | 1/5 | 1/5 |
-| PLL / rPLL | 0（表中无此行） | 0 |
+| 项 | 基线 | c 版 | d 版 |
+|---|---|---|---|
+| PRIMARY | 1/8 | 1/8 | **1/8** |
+| LW | 5/8 | 5/8 | **5/8** |
+| GCLK_PIN | 1/5 | 1/5 | **1/5** |
+| PLL / rPLL | 0（表中无此行） | 0 | **0** |
 
 全局时钟清单里 `clk_d → PRIMARY` 唯一，其余 5 条 LW 全是基线就有的使能类网络。
 **本模块没有例化任何 rPLL / CLKDIV / DCS / CLKSEL。**
+
+> 易误判：`board.rpt.txt` 里 `clk` 的站点写作 `IOL7[A]/LPLL1_T_in`、`pa_en` 写作 `IOR45[A]/RPLL2_T_in`。
+> `LPLL1_T_in`/`RPLL2_T_in` 是**引脚可复用站点的命名**，不是 PLL 被占用。
+> 判据只看 §5 `Clock Resource Usage Summary` 与资源表有没有 PLL 行 —— 两处都没有。
+
 
 ### 10.4 引脚零回归
 
@@ -365,18 +398,154 @@ ROM 落在 LUT 里（`ROM16` 仍为 0），没吃 BSRAM。
 **仍未验证**：本机无 iverilog/ModelSim，`pcm5122_init.v` 没有跑过功能仿真，
 只有代码复核 + ROM 反算。PLL 是否真锁、46875 Hz 是否被接受，只能上板读 `Reg0x04 b4`。
 
-### 10.6 码流身份
+### 10.6 码流身份（最终版）
 
 | 项 | 值 |
 |---|---|
-| 目录 | `fpga/current/build_aux_20261025c/`（按 `.gitignore` 的 `build_*/` 约定不入库） |
+| 目录 | `fpga/current/build_aux_20261025d/`（按 `.gitignore` 的 `build_*/` 约定不入库） |
 | 文件 | `impl/pnr/board.fs` 7,264,154 B |
-| SHA256 | `7104950438cb6f65fe30314d5f2bef355317b315580168632b49f1441a680da8` |
-| UserCode | `0x0000C09B` |
-| 构建 | `python build_product.py build_aux_20261025c full 1 tdm_ship_owned`，190.12 s |
+| SHA256 | `abaec66ea7a8a3e5b650f4b3128bdf103c1935de92485a00d119e76a1df903ff` |
+| 码流头 | `//CheckSum: 0x58C8`、`//UserCode: 0x000058C8`、`//Device-package: GW2AR-18C-QFN88`、`//SecurityBit: ON` |
+| 构建 | `python build_product.py build_aux_20261025d full 1 tdm_ship_owned`，184.81 s |
 
-同目录 `PROGRAM-LOG.md` 记录了烧录步骤与能证明/不能证明的边界（本地保留，不入库）。
+注：本工程 `UserCode` 与 `CheckSum` 恒等（基线 `0x000019D6`、c 版 `0x0000C09B`、d 版 `0x000058C8` 都如此），
+所以"读回 UserCode 一致"等价于"校验码流本体正确装入"。
+`SecurityBit: ON` 三个码流都有，是工程级设置，不是本次引入。
+
 寄存器序列可随时用 `project/reviews/20261025-pcm5122-aux/verify_regs.py` 复检。
+
+### 10.7 功放使能自动门控（`PA_EN_MODE`）
+
+**要解决的问题**：载板把同一组 `I2S_BCK/DIN/LRCK` 从 J5 分给 PCM5122，
+而 **J5.9（PA_EN）在载板上是 NC** —— 载板关不掉板载 MAX98357A。
+不处理的话插上载板就是「板载喇叭 + AUX」两个声源同时响。
+
+**中间版的做法有设计债**：c 版用常量 `PA_EN_LEVEL=1`，要求"插载板时记得改成 0"。
+靠人记着改参数，一定会忘。而且它把板级开关塞进了音频核心 `tdm_top_owned.v`。
+
+**最终做法**：`PA_EN_MODE`（0/1/**2=自动，默认**），逻辑放回包装层：
+
+```verilog
+assign pa_en = (PA_EN_MODE == 2) ? (pa_en_core & ~pcm_locked)
+             : (PA_EN_MODE != 0);
+```
+
+`pcm_locked` 来自 PCM5122 的 `Reg0x04 b4 PLCK` 回读。三条路径互斥且完备：
+
+| 场景 | `pcm_locked` | `pa_en` | 结果 |
+|---|---|---|---|
+| 裸 Nano（无 I²C 从机，全部 NACK） | 0 | 1 | 板载喇叭出声，**与改动前完全一致** |
+| 载板在位 + 配置成功 | 1 | 0 | 板载喇叭静音，AUX 独占 |
+| 载板在位 + 配置失败 | 0 | 1 | 退回板载喇叭 |
+
+设计意图：自动判定失败时**降级到已知可用的状态**，而不是降级到静音 ——
+不存在"配错了导致整机没声"的死路。
+
+### 10.8 烧录记录（SRAM）
+
+```
+programmer_cli.exe -d GW2AR-18C -r 2 \
+  --fsFile "D:\FPGA-Project\authoritative-20261024\fpga\current\build_aux_20261025d\impl\pnr\board.fs"
+```
+
+| 项 | 结果 |
+|---|---|
+| Target Device | GW2AR-18C (0x0000081B) |
+| Operation | SRAM Program |
+| Programming | 100% |
+| **User Code 读回** | **0x000058C8** ✅ 与码流头一致 |
+| Status Code | `0x00006020`（预期，见下） |
+| 耗时 | 5.84 s |
+
+**`Status Code 0x00006020` 不是失败。** 成因是构建时 `-use_sspi_as_gpio 1`：
+本产品把 I²S 三线放在引脚 54/55/56，与 MSPI 复用，MSPI 被当 GPIO 用，
+SRAM 模式下回读校验通路走不通，必然报这个码。**判据看 User Code 读回值，不看状态码。**
+
+`-r 2` 写 SRAM，**断电即丢**；`-r 9` 才写外部 flash（Erase + Program + **Verify 真校验**）。
+当前外部 flash 里**仍是旧的静音版 `0x000039A6`**，尚未覆盖。
+
+
+---
+
+## 十一 更正：板上**有** EEPROM（2026-10-25 补）
+
+### 11.1 原先的结论是错的
+
+本报告 §九 原写「板上**没有** EEPROM（全板搜 `24LC`/`EEPROM`/`AT24` 零命中）」。
+**这条是错的，已改。**
+
+错因：我只搜了 `04_PCM5122_AUX.esch2` 这一张图纸，而 EEPROM 在**另一张图纸**
+`02_Shift_and_memory.esch2` 上。一张图纸搜不到就下了"全板没有"的结论 —— 搜索范围与结论范围不匹配。
+
+实际上 `24LC256` 一直在这两个地方写着：
+
+| 位置 | 内容 |
+|---|---|
+| `native/sch/Schematic1/02_Shift_and_memory.esch2` | 器件 `24LC256-I/SN`、注记「256K I²C串行EEPROM」 |
+| `context/purchase-preparation-20261021-r1/jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv` | `24LC256-I/SN,U10,SOIC-8,C411625` |
+| `context/purchase-preparation-20261021-r1/jlc-bom-217-DRAFT-NOT-FOR-ORDER.csv` | 同上 |
+
+另外 `project/reviews/20261025-eeprom-test/REPORT.md` §4.1 早已确认过型号与地址。
+所以这不是新发现，是**我漏查**。
+
+> 那份报告里有一句「手上只有裸 Nano 20K，**没有 24LC256**」，指的是
+> **实物还没有**（载板未投产），不是**设计上没有**。两件事别混。
+
+### 11.2 U10 引脚级连接（网表实测）
+
+| U10 脚 | 24LC256 定义 | 实际网络 |
+|---|---|---|
+| 1 | A0 | **GND** |
+| 2 | A1 | **GND** |
+| 3 | A2 | **GND** |
+| 4 | VSS | GND |
+| 5 | SDA | `I2C_SDA` |
+| 6 | SCL | `I2C_SCL` |
+| 7 | WP | **GND** ⇒ 写保护关闭，**可写** |
+| 8 | VCC | **3V3_IO**（Nano 供电，不是载板 LDO） |
+
+⇒ 7 位地址 **`0x50`**（写 `0xA0`），32 KB，页 64 B，写周期 5 ms。
+
+**U10 的供电是 `3V3_IO`，来自 J5.16（Nano）**，所以只要 Nano 插着 USB，
+即使载板 J13 没供电，EEPROM 也是活的 —— 这对"标定数据存哪"是个可用的落点。
+
+### 11.3 I²C 总线拓扑：两个器件、一条总线、中间一个缓冲器
+
+```
+FPGA 25/26 ──┬── R33/R34 4.7k ↑3V3_IO
+             ├── U10  24LC256      @ 0x50   ← 3V3_IO 侧（Nano 供电）
+             └── U14  TCA9517DGKR  ──┬── R60/R61 ↑3V3_PERIPH
+                                      ├── U12  PCM5122  @ 0x4C   ← 3V3_PERIPH/DAC 侧
+                                      └── J10.8（外接模块）
+```
+
+U14 = **TCA9517DGKR**（I²C 双向缓冲/电平转换）。引脚：1=VccA(`3V3_IO`)、
+2/3=A 侧 SCL/SDA、4=GND、5/8=VccB(`3V3_PERIPH`)、6/7=B 侧 SDA/SCL。
+
+### 11.4 对我们这套 RTL 的影响
+
+| 问题 | 结论 |
+|---|---|
+| 地址冲突？ | **没有**。EEPROM 在 `0x50`，PCM5122 在 `0x4C`，`pcm5122_init.v` 只发 `0x4C`，碰不到 EEPROM |
+| 总线上多了个器件，初始化会误写 EEPROM 吗？ | **不会**。I²C 从机只响应自己的地址，`0x4C` 的写不会落到 `0x50` |
+| 100 kHz 会不会太快？ | 不会。EEPROM 支持 400 kHz，TCA9517 支持 400 kHz 以上，4.7 kΩ 上拉在 100 kHz 下余量充足 |
+| 上拉会不会重复？ | 两侧各有 4.7 kΩ，被 TCA9517 隔开，**不是并联**，各自独立，没问题 |
+| 能不能用 EEPROM 存标定/预设？ | **可以**，32 KB 可写。注意页 64 B、跨页要拆、每次写后等 5 ms |
+
+### 11.5 新风险 R8：TCA9517 在 VccB 掉电时的行为
+
+**这是本次核对顺带发现的，之前没人提。**
+
+| 项 | 情况 |
+|---|---|
+| 现象 | `VccA = 3V3_IO` 由 Nano 供；`VccB = 3V3_PERIPH` 由载板 LDO 供。**两个域无时序控制** |
+| 场景 | 只插 Nano USB、J13 未接 ⇒ `VccA = 3.3 V`、`VccB = 0 V` |
+| 担心 | TCA9517 这类带偏移的 I²C 缓冲器，在**单侧掉电**时可能把另一侧总线钳在低电平（业界多款同类器件有此已知行为） |
+| 若成立 | 此时 **EEPROM 也读不到**（EEPROM 本身是活的，但总线被钳住） |
+| 影响面 | 只影响"仅 Nano 供电"这个调试场景，不影响载板正常供电后的使用 |
+| 处置 | **必须查 TCA9517 数据手册的 Power-Up/Power-Down 章节确认**，不能靠推断。若确实会钳低，则调试 EEPROM 必须同时给 J13 供电 |
+
+**没有实测就不能下结论**，所以这里只登记为待核实项，不写成结论。
 
 ---
 
@@ -385,9 +554,45 @@ ROM 落在 LUT 里（`ROM16` 仍为 0），没吃 BSRAM。
 ```
 .esch2  →  WIRE 记录为空壳，几何被剥离，原理图侧做不出连通性
          →  只能取符号脚号↔脚名（PIN + ATTR 'Pin Number'/'Pin Name'）
+         →  也只适合取设计注记（TEXT 记录）
 .epcb2  →  PAD_NET 记录 id = ["PAD_NET", <component-uuid>, <pad>, <padid>]
             payload = {"padNet": "..."}
-         →  COMPONENT + ATTR(Designator) 把 component-uuid 翻成位号
+         →  ATTR(key='Designator', parentId=<component-uuid>) 翻位号
          →  得到 全板 (位号, 焊盘) → 网络
 ```
+
 本报告所有网络结论均来自 `.epcb2`，`.esch2` 只用来取符号引脚名与设计注记。
+
+**已封装成工具**：`netlist_query.py`（同目录）
+
+```bash
+python netlist_query.py stats          # 227 器件 / 1038 焊盘 / 256 网络
+python netlist_query.py part U12       # 某器件全部焊盘
+python netlist_query.py net I2S_BCK    # 某网络全部焊盘
+python netlist_query.py grep DAC       # 模糊查网络名
+```
+
+### 附录 A 解析 `.epcb2` 的四个坑（都踩过）
+
+1. **不能用 `.esch2` 做连通性**：`WIRE` 记录是空壳（`{"type":"WIRE","id":"..."}|||`），
+   几何被剥离，取不到端点坐标。
+2. **位号不在 `COMPONENT` 里**：`COMPONENT.attrs` 只有
+   `Reuse Block / Group ID / Channel ID / Unique ID / DeviceName`，**没有 Designator**。
+   位号在独立的 `ATTR` 记录里，`key="Designator"`。
+3. **`ATTR` 必须过滤 `parentId`**：`parentId` 为空的是**库符号定义**，
+   `value` 形如 `U?` / `C?`，是模板不是实例。不过滤会把 286 条算进来（实际实例 227 个）。
+4. **记录有双重编码**：部分 `payload` 本身是一个 JSON 字符串，
+   一次 `json.loads` 得到的是 `str` 而不是 `dict`，要再解一次。
+   （这一条是 `U10` 那次才暴露出来的：`attrs` 有时是字符串，直接 `p["attrs"]["DeviceName"]`
+   会报 `TypeError: string indices must be integers`。）
+
+### 附录 B 一条方法论教训
+
+§九 原来那条「全板没有 EEPROM」的错误，本质不是解析技术问题，是**搜索范围 ≠ 结论范围**：
+只在 1 张图纸里搜，却下了"全板"的结论。载板有 4 张图纸，器件分散在
+`01_…` / `02_Shift_and_memory` / `03_…` / `04_PCM5122_AUX` 里。
+
+**以后凡是要下"全板有没有 X"的结论，必须走 `.epcb2` 的器件清单**
+（`netlist_query.py` 可扩展一个 `parts` 子命令列出全部 227 个位号+型号），
+而不是在某一张原理图里 grep。
+
