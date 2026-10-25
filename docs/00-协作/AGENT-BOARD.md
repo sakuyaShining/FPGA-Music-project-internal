@@ -3,13 +3,19 @@
 > **这是什么**：多个 agent 同时推进本项目时的唯一协调入口。
 > **不是什么**：`notes/agent-collaboration-log.md` 是给评委看的人机协作评分素材（AMD 2026「大模型协作与技能包 15 分」），记录的是"用户采纳/否决了什么"，**不要**往里写 agent 之间的调度信息。
 >
-> 本文件必须**提交在 `main`**。新工作树先fetch核对私有内部仓库实际main；日期分支仅兼容，候选管理PR须明确尚未发布。禁止从旧提交（如`2770e63`）推断当前设计。
+> 本文件必须**提交在 `main`**。新工作树先fetch核对用户授权internal仓库实际main；日期分支仅兼容，候选管理PR须明确尚未发布。禁止从旧提交（如`2770e63`）推断当前设计。
 
 管理覆盖更新：2026-10-23（见§11）。接手先查main、governance及producer登记；旧交接的施工数字与日期分支不是实时状态。
 
 最初建立：2026-10-22 00:55（WorkBuddy）
 
 ---
+
+2026-10-25规则覆盖：用户直接要求取消internal的private-only推送条件，并按当前Public可见性同步；精确仓库仍为FPGA-Music-project-internal，origin/public不在本次推送授权范围。证据：project/reviews/20261025-pcb-sync-plan/remote-authorization.json。下文历史private/公开标签以当前GitHub API为准。
+
+本轮56f7仅认领B轴的同步与闭环计划，分支codex/pcb-sync-plan-20261025，写hardware/checkpoints/pcb-951ce88a-20261025、project/PCB-RESOLUTION-PLAN-20261025.md、恢复工具及必要治理入口；06df、D盘原owner源和CAD继续只读。任务分支候选未合入main。
+
+2026-10-25多Agent规划：用户要求由其自行分配PCB任务，执行包见[START-HERE](../../project/pcb-parallel-20261025/START-HERE.md)。M0/R1/R2/E3/V4/F5均**待分配、未启动**；这是B轴内部职责拆分，不是六人共同写原生板。计划独占路径见plan.json，用户实际分配后由M0登记assignments.json、此板及producer实际owner/远程提交。M0为新隔离集成工程唯一写入者，R1/R2各写候选，V4独立验收；原owner路径及暂停状态不变。本轮仅写任务包和规划记录，不恢复施工。
 
 ## 1. 轴与所有权
 
@@ -93,6 +99,14 @@ PCB 打样、贴片与物流需要日历时间。施工数量只在相应review�
 ---
 
 ## 6. 交接记录
+
+### 2026-10-25 · Codex 56f7 · B轴同步与计划
+- 做了什么：以main 100b35bd和硬件状态83696b55为入口，保全951完整19文件原生源、IOtail-cleanup离线候选及完整恢复ZIP分卷；新计划分P0—P5验收，用户已取消private-only同步条件。
+- 在飞什么：codex/pcb-sync-plan-20261025任务分支；完整源快照已推远程592da06fd64d069614ba5cb1647dad168aa4ef02；后续交付记录见本次delivery与PR，main未合并。
+- 卡在哪：原生42项/12网，离线MUX四岛不可导入；P1须分离导引裁剪与真实障碍；审阅过期及原活跃源漂移继续明示。
+- 需要对方什么：原硬件owner后续依据固定源与P1诊断接续；当前未唤醒其会话或自动化，不重放旧apply。
+- 下一手从哪读：project/PCB-RESOLUTION-PLAN-20261025.md、hardware/checkpoints/pcb-951ce88a-20261025/manifest.json、project/reviews/20261025-pcb-sync-plan/。
+
 
 ### 2026-10-24 · Codex · 管理与工程交接
 - 做了什么：接续4d37的工程整理，将FPGA、保存硬件、主机11版展开为current候选；清单341项，来源、恢复入口和隔离验证可追溯，详见project/ENGINEERING.md。

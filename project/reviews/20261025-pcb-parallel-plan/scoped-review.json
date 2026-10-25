@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "scope": "PCB parallel execution planning only; not hardware implementation or acceptance",
+  "authority_evidence": "project/reviews/20261025-pcb-parallel-plan/user-request.json",
+  "reviewed_changes": {
+    "roles": "Six unassigned roles, one formal-board writer, independent V4, user-controlled dispatch",
+    "closure": "12-net coverage; G0-G6 gates and actual editable/manufacturing deliverables",
+    "anti_stall": "Independent competing hypotheses; bounded experiments and evidence-based reassignment",
+    "geometry": "Declared digital placement ECO distinguished from pure routing invariance",
+    "legacy_plan": "R1/R2 can begin independently; electrical contract moves early; product scope unchanged"
+  },
+  "reviewed_file_sha256": {
+    ".gitattributes": "757f7ac038476f25b0290b1de74ce78f2d69e87c2016a820619dc617258e5c54",
+    "docs/00-协作/AGENT-BOARD.md": "cf6e4eb6782c15c5f6f8e1a8512ab3a4e49eabeca911c4c767a5ca4741e708d1",
+    "project/pcb-parallel-20261025/ACCEPTANCE.md": "1bfb59f086a357c0d9fd3b0893f89f678ac97b2324364877b490fe5ef317ef23",
+    "project/pcb-parallel-20261025/assignments.json": "da8db8b4858b5e803bae99fdfe20e8141cf9febdc3c840d0daa4f84689f71fbb",
+    "project/pcb-parallel-20261025/CONTRACT.md": "93c63e319c60aa48c68ead4ffc85e9c34d50b508cd6f184d2949041e74c1001d",
+    "project/pcb-parallel-20261025/plan.json": "b1fc12ede5e803e42df2a0545f95cedc100ea9c6b1d6f0f3f935875867fed835",
+    "project/pcb-parallel-20261025/START-HERE.md": "0de433553f884c86e9f492185c7c39b5a0b6c4da58fd02774b7bf729aec453fe",
+    "project/pcb-parallel-20261025/tasks/E3.md": "ebe34dc0b729280096b98d7e05d4604ad5be26e6952c9d0cdbe6c8961695e77a",
+    "project/pcb-parallel-20261025/tasks/F5.md": "d172cfe5c32174f9aabc27a705f16541bdde00e623964e779f32b0a97eeab400",
+    "project/pcb-parallel-20261025/tasks/M0.md": "83cff7b7cf685d1d8ef4f923b5421e3ffc9f4aa6dc20c59c2501479c7665b62f",
+    "project/pcb-parallel-20261025/tasks/R1.md": "703191f0cfae01bc844b5a95f5113fe13caf3c495c642bd9cf15d1cf5a94a88e",
+    "project/pcb-parallel-20261025/tasks/R2.md": "8398e054aa469afcf3abc2200d6f7b98bf6753ad825b9e0477c38cc5db2b0faf",
+    "project/pcb-parallel-20261025/tasks/V4.md": "b959e6f75598aecca00336c9f0f08a04dd3d086b7a852c0aee9affa6bed3527a",
+    "project/pcb-parallel-20261025/templates/handoff.json": "e5240420764331365cbee139675cb0e4f05c464ebe0ae22bbcac1602e52176b0",
+    "project/PCB-RESOLUTION-PLAN-20261025.md": "467b8d7f0b3091a8cf9fb415cfabbee85d873cc1697071ef69f57dce08fc5ebb",
+    "project/reviews/20261025-pcb-parallel-plan/check_plan.py": "a39c281cf36562384bacfd2b67e4636757de6b459a1b1e59153ea7ad26a58733",
+    "project/reviews/20261025-pcb-parallel-plan/user-request.json": "3721820de25e4a20704fab2e31ebb480b66e6175dedd956511091815415a7296",
+    "project/reviews/20261025-pcb-parallel-plan/validation.json": "d23cfc85234485b1e78c90ab5e21c3ae544d39c3be254b6a4b5a52c3811d00ed"
+  },
+  "previous_global_review_record": "project/reviews/20261024-engineering-publication/review.json",
+  "previous_global_review_sha256": "3fbb8685086a444f4342e92abf3a8e4516f69de3aa7c2fbb54e7a468e8ee304c",
+  "previous_global_reviewed_at": "2026-10-23T16:24:52.079650+00:00",
+  "global_review_renewed": false,
+  "producer_observations_renewed": false,
+  "pcb_mutated": false,
+  "agents_assigned": false,
+  "pcb_verification": "NOT_RUN",
+  "known_remaining_status": [
+    "REVIEW_DUE",
+    "UNREVIEWED_DRIFT",
+    "42 native connection errors / 12 open nets at captured baseline",
+    "music golden differences and host/FPGA physical compatibility gaps remain"
+  ]
+}

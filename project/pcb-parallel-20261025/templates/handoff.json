@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "is_template": true,
+  "role": null,
+  "owner": null,
+  "chat_id": null,
+  "branch": null,
+  "remote_commit": null,
+  "run_id": null,
+  "started_at": null,
+  "finished_at": null,
+  "package_commit": null,
+  "source_commit": null,
+  "parent_pcb_sha256": null,
+  "candidate_pcb_sha256": null,
+  "geometry_sha256": null,
+  "constraints_revision": null,
+  "tool_versions": {},
+  "read_set": [],
+  "write_set": [],
+  "spatial_bounds_and_units": null,
+  "affected_nets": [],
+  "layers": [],
+  "shared_power_ground_reference_effects": [],
+  "eco_file": null,
+  "artifacts": [],
+  "artifact_item_fields": [
+    "relative_path",
+    "bytes",
+    "sha256",
+    "kind"
+  ],
+  "commands": [],
+  "command_item_fields": [
+    "command",
+    "exit_code",
+    "raw_log",
+    "input_sha256"
+  ],
+  "native_metrics": {
+    "status": "NOT_RUN",
+    "connection_errors": null,
+    "open_nets": null,
+    "spacing_errors": null,
+    "physical_errors": null,
+    "netlist_errors": null
+  },
+  "offline_metrics": {
+    "status": "NOT_RUN",
+    "pad_islands_by_net": {}
+  },
+  "verdict": "NOT_RUN",
+  "known_gaps": [],
+  "rerun_instructions": [],
+  "independent_review": {
+    "reviewer": null,
+    "source_sha256": null,
+    "report": null,
+    "verdict": "NOT_RUN"
+  },
+  "publication_receipt": null
+}

@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "status": "PLANNED_UNASSIGNED",
+  "assignment_authority": "human_user",
+  "source_commit": "7c344f34d7183d24bd53e2f8ceaf85a7b8f6cb2b",
+  "source_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "source_manifest": "hardware/checkpoints/pcb-951ce88a-20261025/manifest.json",
+  "task_branch": "codex/pcb-sync-plan-20261025",
+  "package_commit": "record exact fetched commit in assignment; not a self-referential placeholder for execution",
+  "formal_board_writer": "M0",
+  "max_heavy_concurrent_agents": 4,
+  "review_budget": {
+    "first_artifact_minutes": 60,
+    "checkpoint_minutes": 45,
+    "same_hypothesis_failures": 2,
+    "no_new_evidence_minutes": 90,
+    "logs_only_minutes": 120,
+    "default_compute_minutes": 30
+  },
+  "roles": {
+    "M0": {
+      "task_card": "tasks/M0.md",
+      "exclusive_write_paths": [
+        "hardware/pcb-parallel/integration/",
+        "hardware/pcb-parallel/coordination/",
+        "project/pcb-parallel-20261025/assignments.json"
+      ],
+      "required_outputs": [
+        "baseline.json",
+        "integration-ledger.json",
+        "selection.md",
+        "FINAL-HANDOFF.md"
+      ],
+      "reviewer": "V4"
+    },
+    "R1": {
+      "task_card": "tasks/R1.md",
+      "exclusive_write_paths": [
+        "hardware/pcb-parallel/candidates/R1/"
+      ],
+      "required_outputs": [
+        "hypothesis.md",
+        "handoff.json",
+        "changes.json",
+        "results.json"
+      ],
+      "reviewer": "V4"
+    },
+    "R2": {
+      "task_card": "tasks/R2.md",
+      "exclusive_write_paths": [
+        "hardware/pcb-parallel/candidates/R2/"
+      ],
+      "required_outputs": [
+        "layout-proposal.md",
+        "handoff.json",
+        "changes.json",
+        "results.json"
+      ],
+      "reviewer": "V4"
+    },
+    "E3": {
+      "task_card": "tasks/E3.md",
+      "exclusive_write_paths": [
+        "hardware/pcb-parallel/electrical/"
+      ],
+      "required_outputs": [
+        "constraints.json",
+        "open-decisions.md",
+        "final-electrical-review.json"
+      ],
+      "reviewer": "V4"
+    },
+    "V4": {
+      "task_card": "tasks/V4.md",
+      "exclusive_write_paths": [
+        "hardware/pcb-parallel/verification/"
+      ],
+      "required_outputs": [
+        "baseline-review.json",
+        "negative-fixtures",
+        "final-review.json"
+      ],
+      "reviewer": "M0 records; independent evidence required"
+    },
+    "F5": {
+      "task_card": "tasks/F5.md",
+      "exclusive_write_paths": [
+        "hardware/pcb-parallel/release/"
+      ],
+      "required_outputs": [
+        "release-manifest.json",
+        "manufacturing files",
+        "clean-restore evidence"
+      ],
+      "reviewer": "V4"
+    }
+  },
+  "batches": {
+    "K1": [
+      "MUX_DISABLE",
+      "ADDR0",
+      "ADDR1"
+    ],
+    "K2": [
+      "BUS_SCK",
+      "INPUT_LOAD_N",
+      "KEY_QH"
+    ],
+    "K3": [
+      "PRESET1",
+      "PRESET2",
+      "EDIT",
+      "ENC_A",
+      "ENC_B",
+      "ENC_PUSH"
+    ]
+  },
+  "gates": [
+    {
+      "id": "G0",
+      "depends_on": [],
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "G1",
+      "depends_on": [
+        "G0"
+      ],
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "G2",
+      "depends_on": [
+        "G1"
+      ],
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "G3",
+      "depends_on": [
+        "G2"
+      ],
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "G4",
+      "depends_on": [
+        "G3"
+      ],
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "G5",
+      "depends_on": [
+        "G4"
+      ],
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "G6",
+      "depends_on": [
+        "G5"
+      ],
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  ],
+  "release_categories": [
+    "source",
+    "fabrication",
+    "assembly",
+    "interfaces",
+    "verification",
+    "test-plan",
+    "handoff"
+  ],
+  "final_acceptance": "ACCEPTANCE.md",
+  "pcb_validated": false
+}
