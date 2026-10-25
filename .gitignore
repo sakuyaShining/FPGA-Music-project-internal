@@ -98,3 +98,6 @@ fpga/current/eeprom_probe/synth_*/
 # 探针仿真的工作目录：tb_ack_last 会把捕获写成 sim_capture_A/B.txt，
 # 基线那次与变异那次必须分目录，否则后跑的覆盖前一次的波形。
 fpga/current/eeprom_probe/sim_work/
+# 产品顶层构建产物（build_product.py 的 build_* / synth_*）—— 与 eeprom_probe 同一约定
+fpga/current/build_*/
+fpga/current/synth_*/
