@@ -1,6 +1,6 @@
 # 工程与资料地图
 
-当前main为发布入口；先pull并核对提交。产品目标读`PRODUCT-SPEC.md`，工程读`ENGINEERING.md`，任务读`WORK-PLAN.md`，勘误读`corrections.json`。不要按目录日期或旧HEAD选最新版。
+当前main为发布入口；先pull并核对提交。产品目标读`PRODUCT-SPEC.md`，工程读`ENGINEERING.md`，任务读`WORK-PLAN.md`，勘误读`corrections.json`。**模块级（每个Verilog模块是什么、被谁例化、有没有进产品顶层、有没有测试台）读`RTL-ASSET-INDEX.md`。** 不要按目录日期或旧HEAD选最新版。
 
 | 资料层级 | 接手位置 | 原来源/职责 | 不可混用的范围 |
 |---|---|---|---|
