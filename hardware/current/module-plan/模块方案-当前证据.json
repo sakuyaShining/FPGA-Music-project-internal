@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T21:20:01.872822+08:00",
+  "updated_at": "2026-10-26T22:09:54.593712+08:00",
   "requirements": {
     "confirmed_at": "2026-10-26T21:20:01.872822+08:00",
     "confirmed_by": "本聊天用户直接答复",
@@ -80,7 +80,7 @@
   ],
   "orders_payments_outbound_messages": false,
   "evidence_sha256": {
-    "module-plan-current-evidence\\firmware-readonly-interface-current.json": "5b8c78af66defcb246d2fb583c5e374df3e01ab5e02bb7aefdf1003a09fd25c6",
+    "module-plan-current-evidence\\firmware-readonly-interface-current.json": "e7c7c1c7de1f86d47399e4ed81b3aa471eeb5dcca8f5593a688ae5a52434bbb2",
     "module-plan-current-evidence\\JLCEDA-module-by-id.json": "aaedbd5ef0c78b4fb49312ec34a7bcb47e8a6b02e6c2669eb5f8f252a599b5c1",
     "module-plan-current-evidence\\JLCEDA-module-search-exact.json": "7cc02a7a7d46a36be1afdd02cf805f93d6703e8941445b0ed585f487e23e2681",
     "module-plan-current-evidence\\JLCEDA-module-search-raw.json": "e6b7577a05bf8f74d31d69954786b4a51eb20690da0eac29447e599cf1a84507",
@@ -89,6 +89,36 @@
     "module-plan-current-evidence\\Spotpear-010313400000-schematic.pdf": "3908e6255a977ca61ef69ab051c34eadaaaf53a2b27b987724adec5006252cbb",
     "module-plan-current-evidence\\Spotpear-010313400000-schematic.png": "c1f24ac165c747325e6f4f64d205b4721a96fd3a5fe5ce2ccf478b755e4942a5",
     "module-plan-current-evidence\\Spotpear-audio-detail.png": "5950496f400ec998e619787fa153fa5e3f1f0d84802fe458c97a26116eb409be",
-    "module-plan-current-evidence\\Spotpear-DAC-wires.png": "a112a56adb0031e917d2a3aee53d1c0fc928b7911b5c267209e9255241eef694"
+    "module-plan-current-evidence\\Spotpear-DAC-wires.png": "a112a56adb0031e917d2a3aee53d1c0fc928b7911b5c267209e9255241eef694",
+    "module-plan-current-evidence\\through-hole-same-device-interface-proof.json": "ec83df90b72180b47fe8848c3227b422994b01c7a2c31bbdde2d5bc0b8ff5895",
+    "module-plan-current-evidence\\Microchip-24LC256-DS20001203W.pdf": "ee9e9f15a6ce94e324c6d30f11fd3b8648741cc465feb67599e4e250868ce507",
+    "module-plan-current-evidence\\TI-SN74LVC244A-SCAS414AG.pdf": "68bbf4a4772b3ee75012d70069a7c8929e8653d05d0225540670bddc2a67c366",
+    "module-plan-current-evidence\\TI-SN74LVC244A-SCAS414AG-pinout.png": "fd30e893d79721514ea437dbd97213dc4e837fa66025826dff1cb0dc2b5a514b",
+    "module-plan-current-evidence\\Microchip-24LC256-DS20001203W-pinout.png": "efffb4947cccd9b56203bd97f8d7e9d723efd1d47dec938bbd79b8f832a2333b",
+    "module-plan-current-evidence\\JLCEDA-through-hole-control-search.json": "b95a3f1bfc9f012bb640f730fe91d04f8d5b47d31a966e17a2adc1316fe077d9",
+    "module-plan-current-evidence\\RA8875-DS-V19-manufacturer-Adafruit-mirror.pdf": "07b1ee24cc1303179ee26377fc7ea3d3571da049f6cef09f3edfd360fc8651ea"
+  },
+  "same_device_through_hole_alternatives": {
+    "proof": "module-plan-current-evidence\\through-hole-same-device-interface-proof.json",
+    "proof_sha256": "ec83df90b72180b47fe8848c3227b422994b01c7a2c31bbdde2d5bc0b8ff5895",
+    "U10": "24LC256-I/P C411624；同器件封装替换和8针已核",
+    "U15": "SN74LVC244AN C1548565；同系列20针及Ioff已核",
+    "purchase_ready": false,
+    "prewelded_modules": false,
+    "all_budget_and_delivery_closed": false
+  },
+  "firmware_contract_findings": {
+    "ids": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06"
+    ],
+    "source": "module-plan-current-evidence\\firmware-readonly-interface-current.json",
+    "ready": false,
+    "scope": "登记producer只读，非全机无实现证明",
+    "RTL_modified": false
   }
 }

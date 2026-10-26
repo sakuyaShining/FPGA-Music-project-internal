@@ -40,7 +40,7 @@
   "validation_scope": "Saved native951 has prior complete ADDR2 physical/reference/DC/native DRC and reopen acceptance. Current portable files freshly hash-verified; no new CAD routing or fabrication acceptance is claimed. Offline62/24 is a retained partial MUX candidate. Parent full-delta audit plus deletion-only identity stage proof are included; older historical proof chains remain indexed by those records.",
   "single_J10_harness": "context/purchase-preparation-20261021-r1/current-J10-harness.json",
   "single_J10_harness_scope": "Electrical12-to40 mapping checked against saved951 pads. Mechanical connector orientation, configured sale SKU and functional recovery not released.",
-  "last_metadata_update": "2026-10-26T21:29:40.703035+08:00",
+  "last_metadata_update": "2026-10-26T22:11:42.370611+08:00",
   "module_delivery_main": {
     "entry": "module-plan/模块方案-当前工作单.md",
     "requirements": "module-plan/实体模块方案约束-current.json",
@@ -50,6 +50,15 @@
     "city": "广东清远",
     "budget_upper_CNY": 700,
     "SMT_user_soldering": false,
-    "original_227_functional_baseline_retained": true
+    "original_227_functional_baseline_retained": true,
+    "firmware_interface_findings": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06"
+    ],
+    "firmware_scope": "Read-only registered producer; no build/flash or global absence claim."
   }
 }

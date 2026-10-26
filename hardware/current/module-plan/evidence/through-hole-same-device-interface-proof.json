@@ -1,0 +1,262 @@
+{
+  "updated_at": "2026-10-26T21:46:27.942228+08:00",
+  "scope": "两种同器件直插封装的电气/针号对应；不是预焊模块、完整采购清单或整机验收",
+  "source_capture": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-whole-native-capture-normalized.json",
+  "source_capture_sha256": "6d48871b39f27408bd80f3a693b2a51e1895eb87111b01d152ec758c609b42da",
+  "native_accepted_unchanged": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "original_nets": {
+    "U10": [
+      {
+        "pin": 1,
+        "net": "GND"
+      },
+      {
+        "pin": 2,
+        "net": "GND"
+      },
+      {
+        "pin": 3,
+        "net": "GND"
+      },
+      {
+        "pin": 4,
+        "net": "GND"
+      },
+      {
+        "pin": 5,
+        "net": "I2C_SDA"
+      },
+      {
+        "pin": 6,
+        "net": "I2C_SCL"
+      },
+      {
+        "pin": 7,
+        "net": "GND"
+      },
+      {
+        "pin": 8,
+        "net": "3V3_IO"
+      }
+    ],
+    "U15": [
+      {
+        "pin": 1,
+        "net": "GND"
+      },
+      {
+        "pin": 2,
+        "net": "BUS_SCK"
+      },
+      {
+        "pin": 3,
+        "net": ""
+      },
+      {
+        "pin": 4,
+        "net": "BUS_MOSI"
+      },
+      {
+        "pin": 5,
+        "net": "TP_RESET_MOD_N"
+      },
+      {
+        "pin": 6,
+        "net": "LCD_RESET_N"
+      },
+      {
+        "pin": 7,
+        "net": ""
+      },
+      {
+        "pin": 8,
+        "net": "HARM_CS_N"
+      },
+      {
+        "pin": 9,
+        "net": ""
+      },
+      {
+        "pin": 10,
+        "net": "GND"
+      },
+      {
+        "pin": 11,
+        "net": "GND"
+      },
+      {
+        "pin": 12,
+        "net": "DISP_HARM_CS_N"
+      },
+      {
+        "pin": 13,
+        "net": "GND"
+      },
+      {
+        "pin": 14,
+        "net": "DISP_RESET_N"
+      },
+      {
+        "pin": 15,
+        "net": "TP_RESET_N"
+      },
+      {
+        "pin": 16,
+        "net": "DISP_MOSI"
+      },
+      {
+        "pin": 17,
+        "net": "3V3_IO"
+      },
+      {
+        "pin": 18,
+        "net": "DISP_SCK"
+      },
+      {
+        "pin": 19,
+        "net": "GND"
+      },
+      {
+        "pin": 20,
+        "net": "3V3_PERIPH"
+      }
+    ]
+  },
+  "EEPROM": {
+    "original": "24LC256-I/SN",
+    "alternative": "24LC256-I/P",
+    "LCSC": "C411624",
+    "quantity": 1,
+    "package": "PDIP-8",
+    "electrical_core_and_original_pin_mapping_match": true,
+    "socket": "8脚2.54mm节距、7.62mm排距直插IC座，1只；具体座SKU/价待冻结",
+    "local_decoupling": "100nF X7R 直插电容1只，直接跨8/4脚；具体SKU/价待冻结",
+    "pin_map": {
+      "1": "GND A0",
+      "2": "GND A1",
+      "3": "GND A2",
+      "4": "GND VSS",
+      "5": "I2C_SDA -> Nano J6.10",
+      "6": "I2C_SCL -> Nano J6.11",
+      "7": "GND WP=0",
+      "8": "3V3_IO"
+    },
+    "I2C_address_7bit": "0x50",
+    "capacity_bytes": 32768,
+    "page_bytes": 64,
+    "clock_max_at_3V3_Hz": 400000,
+    "page_write_max_ms": 5,
+    "driver_requirements": [
+      "64字节边界拆分，跨页写会回卷覆盖",
+      "写后ACK轮询且设置超时",
+      "不能把32KiB当成任意时长音频存储；按原产品用途和格式验收",
+      "共享SDA/SCL上拉须按整条总线并联值、电容及各器件VOL核算，不能每模块盲加一对上拉"
+    ],
+    "physical_write_read_power_cycle_test": "UNMEASURED"
+  },
+  "screen_buffer": {
+    "original": "SN74LVC244APWR",
+    "alternative": "SN74LVC244AN",
+    "LCSC": "C1548565",
+    "quantity": 1,
+    "package": "PDIP-20",
+    "same_family_and_all20_pin_mapping_match": true,
+    "VCC_range_V": [
+      1.65,
+      3.6
+    ],
+    "input_tolerant_max_V": 5.5,
+    "output_high_level": "由其VCC决定；3.3V供电不会输出5V",
+    "Ioff_partial_power_down_supported": true,
+    "socket": "20脚2.54mm节距、7.62mm排距直插IC座，1只；具体座SKU/价待冻结",
+    "local_decoupling": "100nF X7R直插电容1只，跨20/10脚，靠近IC；未省略原系统其余供电和保护",
+    "wiring_scope": "逐脚保持原U15网络，不据此短接3V3_PERIPH和3V3_IO；原J10逻辑编号不是屏厂家40针物理编号",
+    "outputs": {
+      "18": "DISP_SCK -> 原J10.3",
+      "16": "DISP_MOSI -> 原J10.4",
+      "14": "DISP_RESET_N -> 原J10.7，仅原逻辑网，屏ER pin11=NC不得盲接",
+      "12": "DISP_HARM_CS_N -> 原J10.6",
+      "5": "TP_RESET_MOD_N -> 原J10.11"
+    },
+    "must_stay_open": [
+      "原U15输出3、7、9未用，禁止接地",
+      "原J10.7与选定屏完整40针定义未冻结前不接屏",
+      "全部输入按原网固定，不能悬空"
+    ],
+    "not_replaced": [
+      "TCA9517 I2C隔离/电平和断电保护",
+      "TPS2553限流/反接/保险",
+      "屏幕端实际ESD/线缆与电源",
+      "线长负载、SPI频率及实物波形验收"
+    ]
+  },
+  "lookup_observations": {
+    "tool": "lcsc/scripts/search_lcsc.py --details --json，实际工具回执摘要",
+    "C411624": {
+      "manufacturer": "MICROCHIP",
+      "MPN": "24LC256-I/P",
+      "community_assembly_stock": 52,
+      "community_assembly_price_USD": 1.8742,
+      "enriched_1plus_USD": 1.9398
+    },
+    "C1548565": {
+      "manufacturer": "TI",
+      "MPN": "SN74LVC244AN",
+      "community_assembly_stock": 77,
+      "community_assembly_price_USD": 0.8574,
+      "enriched_1plus_USD": 1.5291
+    },
+    "scope": "社区PCBA库存与价格、直连补充阶梯价不可混用；均非清远人民币含运及交期报价；器件不是预焊模块",
+    "direct_page_failure": {
+      "time": "2026-10-26T21:46:27.942228+08:00",
+      "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C1548565",
+      "HTTP": 403,
+      "retry_or_bypass": false
+    }
+  },
+  "rejected_same_family_DIP_assumptions": {
+    "parts": [
+      "SN74LV595AN",
+      "SN74LV165AN",
+      "SN74LVC14AN",
+      "SN74LVC157AN"
+    ],
+    "scope": "所读TI原厂当前手册未列PDIP封装；不采用第三方销售页的无依据替代描述，也不把未找到当历史绝对不存在。HC版本继续只是待阈值/时序/断电验证的不同系列候选。",
+    "TI_datasheets": [
+      "https://www.ti.com/lit/ds/symlink/sn74lv595a.pdf",
+      "https://www.ti.com/lit/ds/symlink/sn74lv165a.pdf",
+      "https://www.ti.com/lit/ds/symlink/sn74lvc14a.pdf",
+      "https://www.ti.com/lit/ds/symlink/sn74lvc157a.pdf"
+    ]
+  },
+  "datasheets": {
+    "Microchip-24LC256-DS20001203W.pdf": {
+      "url": "https://ww1.microchip.com/downloads/en/DeviceDoc/24AA256-24LC256-24FC256-Data-Sheet-20001203W.pdf",
+      "sha256": "ee9e9f15a6ce94e324c6d30f11fd3b8648741cc465feb67599e4e250868ce507",
+      "pages_reviewed": [
+        1,
+        10,
+        11,
+        12
+      ],
+      "pin_diagram_rendered_and_visually_reviewed": true
+    },
+    "TI-SN74LVC244A-SCAS414AG.pdf": {
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc244a.pdf",
+      "sha256": "68bbf4a4772b3ee75012d70069a7c8929e8653d05d0225540670bddc2a67c366",
+      "pages_reviewed": [
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "pin_diagram_rendered_and_visually_reviewed": true
+    }
+  },
+  "purchase_ready": false,
+  "firmware_changed": false,
+  "native_changed": false,
+  "orders_payments_or_outbound_messages": false,
+  "physical_tests": "UNMEASURED"
+}
