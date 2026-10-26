@@ -1,0 +1,163 @@
+{
+  "status": "ACTUAL_PRELIMINARY_LAYOUT_NATIVE_ZERO_PAD_CLEARANCE_ERRORS_35_SIGNAL_NETS_OPEN",
+  "time": "2026-10-27T01:46:41.791064+08:00",
+  "pcb_uuid": "f52674d6627fca6f",
+  "units": "mm, degrees",
+  "board_mm": [
+    55,
+    45
+  ],
+  "copper_layers": [
+    1,
+    2
+  ],
+  "layer_intent": "Top components/sensitive nodes/signals; Bottom intended connected GND reference, not yet filled. Any signal layer change requires actual corresponding reference and return audit.",
+  "positions": {
+    "J1": [
+      5,
+      22.5,
+      270
+    ],
+    "J2": [
+      50,
+      22.5,
+      270
+    ],
+    "U1": [
+      27.5,
+      22.5,
+      270
+    ],
+    "U2": [
+      27.5,
+      33,
+      0
+    ],
+    "R1": [
+      23.5,
+      28.1,
+      0
+    ],
+    "R2": [
+      26.2,
+      27.9,
+      0
+    ],
+    "C1": [
+      31.6,
+      27.4,
+      0
+    ],
+    "C2": [
+      22.2,
+      35.6,
+      180
+    ],
+    "C3": [
+      33,
+      21.525,
+      0
+    ],
+    "C4": [
+      33,
+      19.3,
+      0
+    ],
+    "D1": [
+      7.8,
+      37.74,
+      270
+    ],
+    "D2": [
+      7.8,
+      27.58,
+      270
+    ],
+    "D3": [
+      7.8,
+      17.42,
+      270
+    ],
+    "D4": [
+      7.8,
+      9.8,
+      270
+    ],
+    "R3": [
+      20,
+      18.8,
+      0
+    ],
+    "R4": [
+      20,
+      20.0,
+      0
+    ],
+    "R5": [
+      20,
+      21.2,
+      0
+    ],
+    "R6": [
+      20,
+      22.4,
+      0
+    ],
+    "R7": [
+      20,
+      23.6,
+      0
+    ],
+    "R8": [
+      20,
+      24.8,
+      0
+    ],
+    "R9": [
+      20,
+      26.0,
+      0
+    ],
+    "R10": [
+      20,
+      27.200000000000003,
+      0
+    ],
+    "R11": [
+      35.5,
+      27.2,
+      0
+    ],
+    "R12": [
+      35.5,
+      26.0,
+      0
+    ],
+    "R13": [
+      35.5,
+      24.8,
+      0
+    ],
+    "R14": [
+      35.5,
+      23.6,
+      0
+    ],
+    "R15": [
+      35.5,
+      22.4,
+      0
+    ],
+    "R16": [
+      35.5,
+      21.2,
+      0
+    ]
+  },
+  "mechanical_basis": "Actual1x16 2.54mm pitch headers have38.1mm center span;45mm board axis gives end margin. Separate daughterboard no user-fixed outline or manually fixed connector position existed. Candidate remains changeable.",
+  "assembly": "All26SMT onTop;2TH headers. Six copies required; factory assembly/TH and all-in cost still unquoted.",
+  "board_not_final_or_for_order": true,
+  "next": "Native placement, all150 pad-net map, actual pad/body/outline and native DRC before routing.",
+  "native_outline_id": "58022707be9889b7",
+  "initial_error_and_fix": "Initial straight-line outline API failed after all28moves. Actual28positions were queried, only missing outline created as closed nativePolyline; R2 overlap corrected at26.2/27.9. No batch placement replay."
+}

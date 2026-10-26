@@ -1,0 +1,313 @@
+{
+  "time": "2026-10-27T02:18:21.601403+08:00",
+  "scope": "PRE_SIGNAL_ROUTE_BOTTOM_REAL_GROUND_AND21_REAL_PTH_RETURNS_ONLY",
+  "source_sha256": "2f4cc697c8a4f2bc727af21205ca96f144a018298b91c98146b0fe3d43def866",
+  "pads": 150,
+  "drills_subtracted": 68,
+  "Ground_vias": 36,
+  "ground_components": 1,
+  "ground_areas_mm2": [
+    2235.980149855736
+  ],
+  "contacts": [
+    {
+      "id": "def557a360252e92",
+      "Bottom_contact_mm2": 0.29413142277970117
+    },
+    {
+      "id": "40c92bc13d817315",
+      "Bottom_contact_mm2": 0.2941314227797012
+    },
+    {
+      "id": "61573e7a50cbab28",
+      "Bottom_contact_mm2": 0.29413142277970117
+    },
+    {
+      "id": "d4dd43402248c0d4",
+      "Bottom_contact_mm2": 0.2941314227797014
+    },
+    {
+      "id": "61be36163b467bf3",
+      "Bottom_contact_mm2": 0.2941314227797012
+    },
+    {
+      "id": "658a6b2052d17252",
+      "Bottom_contact_mm2": 0.29413142277970156
+    },
+    {
+      "id": "1e98b5a76e1249ab",
+      "Bottom_contact_mm2": 0.2941314227797011
+    },
+    {
+      "id": "a47f901839ef6cc4",
+      "Bottom_contact_mm2": 0.2941314227797013
+    },
+    {
+      "id": "3c18a3e4b5f076bc",
+      "Bottom_contact_mm2": 0.29413142277970167
+    },
+    {
+      "id": "7dd370c45df77394",
+      "Bottom_contact_mm2": 0.29413142277970145
+    },
+    {
+      "id": "d4c0e3f24d4e7695",
+      "Bottom_contact_mm2": 0.2941314227797015
+    },
+    {
+      "id": "6892c65829327fa8",
+      "Bottom_contact_mm2": 0.2941314227797013
+    },
+    {
+      "id": "72d3c1cbfbdddca4",
+      "Bottom_contact_mm2": 0.29413142277970145
+    },
+    {
+      "id": "05deb90db32fb69b",
+      "Bottom_contact_mm2": 0.29413142277970117
+    },
+    {
+      "id": "0cbc828cb621fe00",
+      "Bottom_contact_mm2": 0.29413142277970106
+    },
+    {
+      "id": "d084970f837fd33e",
+      "Bottom_contact_mm2": 0.2941314227797013
+    },
+    {
+      "id": "250f83954a2d6dc4",
+      "Bottom_contact_mm2": 0.2941314227797013
+    },
+    {
+      "id": "f280d8d609bf9004",
+      "Bottom_contact_mm2": 0.2941314227797013
+    },
+    {
+      "id": "a5333efe15fa0ed2",
+      "Bottom_contact_mm2": 0.2941314227797013
+    },
+    {
+      "id": "72788069015cfed2",
+      "Bottom_contact_mm2": 0.2941314227797014
+    },
+    {
+      "id": "f8f549b3960442ab",
+      "Bottom_contact_mm2": 0.2941314227797014
+    },
+    {
+      "id": "91304e41b78a07b2",
+      "Bottom_contact_mm2": 0.29413142277970133
+    },
+    {
+      "id": "29fe4061e2ec0cb5",
+      "Bottom_contact_mm2": 0.29413142277970133
+    },
+    {
+      "id": "7a20353ac02e26a8",
+      "Bottom_contact_mm2": 0.29413142277970133
+    },
+    {
+      "id": "0ff0efb58e90de32",
+      "Bottom_contact_mm2": 0.29413142277970133
+    },
+    {
+      "id": "775e389243ca7091",
+      "Bottom_contact_mm2": 0.29413142277970117
+    },
+    {
+      "id": "5b2b6e845433dea0",
+      "Bottom_contact_mm2": 0.29413142277970117
+    },
+    {
+      "id": "e3c1949ae92b1a76",
+      "Bottom_contact_mm2": 0.29413142277970117
+    },
+    {
+      "id": "7317316c611de590",
+      "Bottom_contact_mm2": 0.29413142277970117
+    },
+    {
+      "id": "1c9e49d13908b4f0",
+      "Bottom_contact_mm2": 0.29413142277970117
+    },
+    {
+      "id": "b8f8963843ee9e78",
+      "Bottom_contact_mm2": 0.29413142277970106
+    },
+    {
+      "id": "fc1f8a9c8aac1cbe",
+      "Bottom_contact_mm2": 0.29413142277970106
+    },
+    {
+      "id": "bded4c326da01bb4",
+      "Bottom_contact_mm2": 0.29413142277970106
+    },
+    {
+      "id": "6027c7717532611a",
+      "Bottom_contact_mm2": 0.2941314227797009
+    },
+    {
+      "id": "7641831913722fda",
+      "Bottom_contact_mm2": 0.2941314227797015
+    },
+    {
+      "id": "6a654bb4b335ec79",
+      "Bottom_contact_mm2": 0.294131422779701
+    }
+  ],
+  "minimum_actual_contact_mm2": 0.2941314227797009,
+  "all_contacts_ge_0_15": true,
+  "signal_PTH_returns": [
+    {
+      "ref": "J1",
+      "pin": "14",
+      "net": "L0_E13",
+      "Ground_via_id": "7317316c611de590",
+      "distance_mm": 1.4512596773898752
+    },
+    {
+      "ref": "J1",
+      "pin": "13",
+      "net": "L0_E12",
+      "Ground_via_id": "e3c1949ae92b1a76",
+      "distance_mm": 1.4512596643645086
+    },
+    {
+      "ref": "J1",
+      "pin": "12",
+      "net": "L0_E11",
+      "Ground_via_id": "5b2b6e845433dea0",
+      "distance_mm": 1.4512596643645086
+    },
+    {
+      "ref": "J1",
+      "pin": "11",
+      "net": "L0_E10",
+      "Ground_via_id": "775e389243ca7091",
+      "distance_mm": 1.4512596643645086
+    },
+    {
+      "ref": "J1",
+      "pin": "10",
+      "net": "L0_E09",
+      "Ground_via_id": "0ff0efb58e90de32",
+      "distance_mm": 1.4512596643645077
+    },
+    {
+      "ref": "J1",
+      "pin": "9",
+      "net": "L0_E08",
+      "Ground_via_id": "7a20353ac02e26a8",
+      "distance_mm": 1.4512596643645068
+    },
+    {
+      "ref": "J1",
+      "pin": "8",
+      "net": "L0_E07",
+      "Ground_via_id": "29fe4061e2ec0cb5",
+      "distance_mm": 1.4512596517836927
+    },
+    {
+      "ref": "J1",
+      "pin": "7",
+      "net": "L0_E06",
+      "Ground_via_id": "91304e41b78a07b2",
+      "distance_mm": 1.4512596517836918
+    },
+    {
+      "ref": "J1",
+      "pin": "6",
+      "net": "L0_E05",
+      "Ground_via_id": "f8f549b3960442ab",
+      "distance_mm": 1.4512596517836909
+    },
+    {
+      "ref": "J1",
+      "pin": "5",
+      "net": "L0_E04",
+      "Ground_via_id": "72788069015cfed2",
+      "distance_mm": 1.4512596517836909
+    },
+    {
+      "ref": "J1",
+      "pin": "4",
+      "net": "L0_E03",
+      "Ground_via_id": "a5333efe15fa0ed2",
+      "distance_mm": 1.45125965178369
+    },
+    {
+      "ref": "J1",
+      "pin": "3",
+      "net": "L0_E02",
+      "Ground_via_id": "f280d8d609bf9004",
+      "distance_mm": 1.4512596396474275
+    },
+    {
+      "ref": "J1",
+      "pin": "2",
+      "net": "L0_E01",
+      "Ground_via_id": "250f83954a2d6dc4",
+      "distance_mm": 1.4512596396474275
+    },
+    {
+      "ref": "J1",
+      "pin": "1",
+      "net": "L0_E00",
+      "Ground_via_id": "d084970f837fd33e",
+      "distance_mm": 1.4512596396474267
+    },
+    {
+      "ref": "J2",
+      "pin": "13",
+      "net": "RC_DRIVE",
+      "Ground_via_id": "7641831913722fda",
+      "distance_mm": 1.4500988845120855
+    },
+    {
+      "ref": "J2",
+      "pin": "11",
+      "net": "MUX_DISABLE",
+      "Ground_via_id": "6027c7717532611a",
+      "distance_mm": 1.4500988845120855
+    },
+    {
+      "ref": "J2",
+      "pin": "9",
+      "net": "ADDR3",
+      "Ground_via_id": "bded4c326da01bb4",
+      "distance_mm": 1.4500988845120855
+    },
+    {
+      "ref": "J2",
+      "pin": "7",
+      "net": "ADDR2",
+      "Ground_via_id": "fc1f8a9c8aac1cbe",
+      "distance_mm": 1.4500988719212007
+    },
+    {
+      "ref": "J2",
+      "pin": "5",
+      "net": "ADDR1",
+      "Ground_via_id": "b8f8963843ee9e78",
+      "distance_mm": 1.4500988719212007
+    },
+    {
+      "ref": "J2",
+      "pin": "3",
+      "net": "ADDR0",
+      "Ground_via_id": "1c9e49d13908b4f0",
+      "distance_mm": 1.4500988597752233
+    },
+    {
+      "ref": "J2",
+      "pin": "15",
+      "net": "SENSE_OUT",
+      "Ground_via_id": "6a654bb4b335ec79",
+      "distance_mm": 1.450098897547878
+    }
+  ],
+  "all_returns_le_1_5": true,
+  "not_full_signal_reference_or_final_DRC_acceptance": true,
+  "physical_tests": "UNMEASURED",
+  "prior_input_error": "First inline parser encountered native DOCEND separator, next input defaultGBKdecode failed before geometry; Native false-filled thermal strokes also required unwrapping their single path list; this source uses explicitUTF8, skips DOCEND and uses documented hole offsets."
+}

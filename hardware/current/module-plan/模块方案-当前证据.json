@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T01:37:11.496949+08:00",
+  "updated_at": "2026-10-27T05:44:13.289589+08:00",
   "requirements": {
     "confirmed_at": "2026-10-26T21:20:01.872822+08:00",
     "confirmed_by": "本聊天用户直接答复",
@@ -128,8 +128,8 @@
     "sensor-front-native-pcb-verified-rule-readback.json": "11b0590e72ade63a39e55b55764ad7d3f9dda9199f6c518b91c29074ab8775d0",
     "sensor-front-native-pin-net-audit-current.json": "61ffe2da6a1b6cd96236a26eb347306b61b9aa504208ee582f9441487bf6cbd5",
     "sensor-front-native-preflight-current.json": "ba791f8ca083d1e29c454cbbc6e95b726e233cd1bceafaed3bfa638ff2c4bb6e",
-    "sensor-front-native-preservation-and-snapshot-current.json": "0fa03ae8dee14052481f8bea5d7f7cfb1efe6b8521f966748f738d8ce482b042",
-    "sensor-front-native-progress-current.json": "c268e6903e059a9c817badc5932faf662408ad2f9d711655f42138c3f60718c4",
+    "sensor-front-native-preservation-and-snapshot-current.json": "a12fec9f9d42543fad2b871dc944d3c6b5863b24437d58f6e75a0d10d2b557d6",
+    "sensor-front-native-progress-current.json": "c3505dd43c9e375a7d501138d8d39c3eb199b033a961909b081825fc06223be5",
     "sensor-front-native-schematic-drc-current.json": "7b22d726eccc11877c196915e60fd052dbe9fba27cb7337085ee0c52568bf639",
     "sensor-front-native-schematic-wiring-result.json": "d8611a7186b473a3b89d6376402d2afd65615e18c1faf8afdba515960f0a8a8c",
     "sensor-front-native-source-copy.json": "d16c09a186a5025925290e1c515469fc34cd5b09370bb340dd99b0fcb157513d",
@@ -142,7 +142,28 @@
     "sensor-front-rule-quantization-margin-result.json": "15e08f0c81e1b661cbeb1436f976745db678ede8983ed4c31a0f7ecf91ffbf6a",
     "sensor-front-source-page-components.json": "53d889bb906d37c19a1f6bbaabda6819276461abbf4e66a392c6df0013b1fcd6",
     "sensor-front-wiring-failure-state.json": "65f862fdf38a64e462bbb12bd588483f5fd4df776f267f50c4314d2281f8291d",
-    "sensor-bank-subassembly-current.json": "c32de40f5d298bbe8118cfd1b3d3aeb04cb29d37d9aa2508111f028e7d83ffc9"
+    "sensor-bank-subassembly-current.json": "e842940cab82eeecd76a9414eee17efd0e3c23099b71eb8ac75c4b060127a049",
+    "sensor-front-after-Top-route-preservation-current.json": "15dd4337b4ca1c86bb2732b2b69f40bbf520147673cdabe7566c1d0ba68773d4",
+    "sensor-front-exact-source-pads-before-route.json": "ea35271d370796b7796b47ef42b9ba0260d82c167290a1b5f343997dedcea9c3",
+    "sensor-front-layout-current.json": "05e3896d053a7a07af37fa71fa9ec0ba192a97443e28e20e377e805371b495c9",
+    "sensor-front-native-bottom-ground-create-result.json": "b16ec7093500db626a9e8dec0a6de63af838e012496eb8e1c485c937a1dfab45",
+    "sensor-front-native-closed-outline-result.json": "548797ace0d56b78aebbc4c27802c4461a090d4d8acea76f6ede7f7061dfd3c4",
+    "sensor-front-native-group-placement-result.json": "fb49c3647ae9be9e8571a85fc52276b5135ddf47391781accd11373425002372",
+    "sensor-front-native-placed-corrected-pad-DRC-current.json": "3344346fd25549dfc17555e09bb34fa958ae5e7e0e1636bc7a8fea4570bf8c91",
+    "sensor-front-native-placed-pad-and-DRC-current.json": "c810448f1945d01c7f86636eeb09049182d9891120dfe915c01b0ee5c5368c6a",
+    "sensor-front-native-power-ground-seed-result.json": "3790fa203010b013bf6faaaa5ae9ee8e46e3dd96ce68aa99b3287353d98687a5",
+    "sensor-front-native-real-ground-contact-current.json": "ce093162e11ddab2ac5e4c4328ca556b53c239f24014e4d4fa09d5941b4bba04",
+    "sensor-front-native-seeded-ground-readback-current.json": "1af99b406c98c8769845724bdca6b83d8e61b3aa2eb0e93816d1f9ee29aa7a70",
+    "sensor-front-native-Top-only-signal-route-result.json": "5139567ee7db05f4f575e16f8c3d3f047ad630d935b4d5c0de0e7da3cc46d2ac",
+    "sensor-front-native-Top-route-terminal-DRC-current.json": "ff47b954de7c34e659176da5d0f928fa54b429d6d0e96374d59eb266906534b1",
+    "sensor-front-placement-after-outline-error.json": "032719d03ae6226b9b907a9977c09498e2e69734155c6e1962f4e711bfdccdf8",
+    "sensor-front-placement-preflight-current.json": "3076601b6b0a474ebd0640c53c9e0a43b603fe9eb20f3b4c923c3c9d0c4bbd15",
+    "sensor-front-power-ground-seed-current.json": "9addccdf2103378052e72f96b423d35d580fcf7381c6597f7ff6fdd2b7a8b59e",
+    "sensor-front-signal-route-job-current.json": "cae0f744096297eb727d6dfaa24289fa6ed2b0915830dd4bd573d9dd2de81100",
+    "sensor-front-Top-route-after-invoke-timeout.json": "d8fafd95b01ed245cb7817a61c4f8688dd9677dec962b682af367b4f63555dc1",
+    "sensor-front-Top-route-live-observation-current.json": "4f8990bf98c429b1391d610319f16359fa282111846aae16b70558dcea89c03d",
+    "through-hole-control-family-current.json": "a8312a524c2a2321fcd5a2f22ea7e7a4dfc68b6988f0b3a5bab79f3a63f2a225",
+    "firmware-registered-producer-current-recheck.json": "3172951909554513ce699fa0d825717dae1514640a887f5dd7ae13d341335c77"
   },
   "same_device_through_hole_alternatives": {
     "proof": "module-plan-current-evidence\\through-hole-same-device-interface-proof.json",
@@ -168,9 +189,9 @@
     "RTL_modified": false
   },
   "sensor_subassembly_fallback": {
-    "status": "SCHEMATIC_PIN_NET_AND_PCB_PAD_MAP_VERIFIED_UNPLACED_UNROUTED_NOT_FOR_ORDER",
+    "status": "PRELIMINARY_LAYOUT_POWER_GROUND_CALIBRATION_CANDIDATE_35_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
     "native_progress": "module-plan-current-evidence/sensor-front-native-progress-current.json",
-    "native_progress_sha256": "c268e6903e059a9c817badc5932faf662408ad2f9d711655f42138c3f60718c4",
+    "native_progress_sha256": "c3505dd43c9e375a7d501138d8d39c3eb199b033a961909b081825fc06223be5",
     "source_circuit_proof_retained": "module-plan-current-evidence/sensor-bank-subassembly-current.json",
     "complete_purchasable_module": false
   },
@@ -180,5 +201,6 @@
     "owned_board": "Sensor14Bank",
     "original_board_unchanged": true,
     "working_metadata_changed": true
-  }
+  },
+  "registered_firmware_hash_recheck": "module-plan-current-evidence/firmware-registered-producer-current-recheck.json"
 }

@@ -2561,19 +2561,19 @@
         },
         "CURRENT-HARDWARE.json": {
           "stored": "hardware/current/CURRENT-HARDWARE.json",
-          "bytes": 3469,
-          "sha256": "193452666c487f5d5e8cbc3ea14c6b31bef873fbc056294a4b1cb86e1ea30706",
-          "stored_sha256": "193452666c487f5d5e8cbc3ea14c6b31bef873fbc056294a4b1cb86e1ea30706",
+          "bytes": 3753,
+          "sha256": "2f2adeb8f5f88269fa4df6fd4b2d0a3ea931ee5656f6f67006732dd880777048",
+          "stored_sha256": "2f2adeb8f5f88269fa4df6fd4b2d0a3ea931ee5656f6f67006732dd880777048",
           "codec": "raw",
-          "source": "Current delivery entry; baseline951 plus separate Sensor14Bank working candidate"
+          "source": "Current entry, sameaccepted951 baseline plus explicit unaccepted sensor candidate"
         },
         "README.md": {
           "stored": "hardware/current/README.md",
-          "bytes": 3027,
-          "sha256": "6df73498eb6f8d2c61cf8fbd58fa75d434aa316b012d2bf358927603137bbb5c",
-          "stored_sha256": "6df73498eb6f8d2c61cf8fbd58fa75d434aa316b012d2bf358927603137bbb5c",
+          "bytes": 3101,
+          "sha256": "0ee96d0096e77139cca465bfcb3b34bda78330c58f4dce270d236f3d4429df1a",
+          "stored_sha256": "0ee96d0096e77139cca465bfcb3b34bda78330c58f4dce270d236f3d4429df1a",
           "codec": "raw",
-          "source": "Current delivery guide; explicit separate sensor14 working scope"
+          "source": "Current only entry, no nested version bundles"
         },
         "context/purchase-preparation-20261021-r1/current-J10-harness.json": {
           "stored": "hardware/current/context/purchase-preparation-20261021-r1/current-J10-harness.json",
@@ -2593,11 +2593,11 @@
         },
         "module-plan/模块方案-当前工作单.md": {
           "stored": "hardware/current/module-plan/模块方案-当前工作单.md",
-          "bytes": 15645,
-          "sha256": "fb29ad1a16014e51d0c3d580eff7bc7a49b08b705a051fe22b9b404d4e7e391d",
-          "stored_sha256": "fb29ad1a16014e51d0c3d580eff7bc7a49b08b705a051fe22b9b404d4e7e391d",
+          "bytes": 16673,
+          "sha256": "481a0deadb8b53978cc393c45b75810d041f29f4408dbea71297ab3abbe4ecc0",
+          "stored_sha256": "481a0deadb8b53978cc393c45b75810d041f29f4408dbea71297ab3abbe4ecc0",
           "codec": "raw",
-          "source": "Current exact module-work checkpoint; not a complete purchase list"
+          "source": "Current incomplete module/hybrid delivery work; no purchase/manufacturing release"
         },
         "module-plan/实体模块方案约束-current.json": {
           "stored": "hardware/current/module-plan/实体模块方案约束-current.json",
@@ -2609,11 +2609,11 @@
         },
         "module-plan/模块方案-当前证据.json": {
           "stored": "hardware/current/module-plan/模块方案-当前证据.json",
-          "bytes": 12782,
-          "sha256": "6111a34e46435671a20bde93794b2d6488fb4b559c746aec0d5a876a520ff648",
-          "stored_sha256": "6111a34e46435671a20bde93794b2d6488fb4b559c746aec0d5a876a520ff648",
+          "bytes": 15550,
+          "sha256": "13d46cc2ee5f5095da86c396c6860c6013b4918517120a47677635286e4bf8e7",
+          "stored_sha256": "13d46cc2ee5f5095da86c396c6860c6013b4918517120a47677635286e4bf8e7",
           "codec": "raw",
-          "source": "Current exact module-work checkpoint; not a complete purchase list"
+          "source": "Current incomplete module/hybrid delivery work; no purchase/manufacturing release"
         },
         "module-plan/227件BOM与模块方案范围纠正.json": {
           "stored": "hardware/current/module-plan/227件BOM与模块方案范围纠正.json",
@@ -2773,7 +2773,7 @@
           "sha256": "19a4dc8e90532ef57f976b7643c737998a0db7ed4fcd46bb7f396a2905b01f45",
           "stored_sha256": "19a4dc8e90532ef57f976b7643c737998a0db7ed4fcd46bb7f396a2905b01f45",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-actual-port-pin-wire-check.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-actual-port-pin-wire-check.json",
@@ -2781,7 +2781,7 @@
           "sha256": "8e001132b07a7a7947236fa7a128974de7c43a6f3936a4913276fbf6078078b4",
           "stored_sha256": "8e001132b07a7a7947236fa7a128974de7c43a6f3936a4913276fbf6078078b4",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-construction-library-and-state.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-construction-library-and-state.json",
@@ -2789,7 +2789,7 @@
           "sha256": "dfdf63c431e647f20114747df6b77f5600af71bae610b1a3621ed12a1fe1ba8d",
           "stored_sha256": "dfdf63c431e647f20114747df6b77f5600af71bae610b1a3621ed12a1fe1ba8d",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-empty-pcb-rule-baseline.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-empty-pcb-rule-baseline.json",
@@ -2797,7 +2797,7 @@
           "sha256": "9dc1f1dab95783f0e4c4aacfcd762842e98392e83fc0a299d92b65297721798e",
           "stored_sha256": "9dc1f1dab95783f0e4c4aacfcd762842e98392e83fc0a299d92b65297721798e",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-exact-device-library.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-exact-device-library.json",
@@ -2805,7 +2805,7 @@
           "sha256": "573347091c677b96473a2c40f028cf3caaaf3a1fcd1a17806d1bdf11030fd27a",
           "stored_sha256": "573347091c677b96473a2c40f028cf3caaaf3a1fcd1a17806d1bdf11030fd27a",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-expected-pin-nets-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-expected-pin-nets-current.json",
@@ -2813,7 +2813,7 @@
           "sha256": "4499d1350fd14e57f84b74954ad8a8dfefcddf0a7de871d4122640339bdf351a",
           "stored_sha256": "4499d1350fd14e57f84b74954ad8a8dfefcddf0a7de871d4122640339bdf351a",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-label-visibility-applied.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-label-visibility-applied.json",
@@ -2821,7 +2821,7 @@
           "sha256": "75e2247d4489ca5462756e23494509920013c21f549fd1217a60f2f2a99a59be",
           "stored_sha256": "75e2247d4489ca5462756e23494509920013c21f549fd1217a60f2f2a99a59be",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-label-visibility-diagnosis.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-label-visibility-diagnosis.json",
@@ -2829,7 +2829,7 @@
           "sha256": "3f607fc359e8fd356bbb7557dc1c3912d91035f70cbeffb983ee266b3b1c0bbf",
           "stored_sha256": "3f607fc359e8fd356bbb7557dc1c3912d91035f70cbeffb983ee266b3b1c0bbf",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-last-ground-stub-instance-recovery.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-last-ground-stub-instance-recovery.json",
@@ -2837,7 +2837,7 @@
           "sha256": "677917df01496383e6ca505c2081a84ae11b366e6468c6257fc3f38d91dbf9e8",
           "stored_sha256": "677917df01496383e6ca505c2081a84ae11b366e6468c6257fc3f38d91dbf9e8",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-last-ground-stub-recovery.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-last-ground-stub-recovery.json",
@@ -2845,7 +2845,7 @@
           "sha256": "8885e5381f560c3cdabeb6f8cbf51ce668eef85fd19b0a2c385f414210efbdab",
           "stored_sha256": "8885e5381f560c3cdabeb6f8cbf51ce668eef85fd19b0a2c385f414210efbdab",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-last-ground-wire-netlist-check.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-last-ground-wire-netlist-check.json",
@@ -2853,7 +2853,7 @@
           "sha256": "4efc6f15e6afe583499045e61e37174b5bdc6f1e90546d9c7a15e54201d24667",
           "stored_sha256": "4efc6f15e6afe583499045e61e37174b5bdc6f1e90546d9c7a15e54201d24667",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-last-port-diagnosis.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-last-port-diagnosis.json",
@@ -2861,7 +2861,7 @@
           "sha256": "75afeac132c1e8895589056af8962e3ad0e7c2e137dd2054d144d6d3494f1f44",
           "stored_sha256": "75afeac132c1e8895589056af8962e3ad0e7c2e137dd2054d144d6d3494f1f44",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-last-two-pins-completed.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-last-two-pins-completed.json",
@@ -2869,7 +2869,7 @@
           "sha256": "26cced1e2178444f21590f9505afc6956503e8d76796ab07ccac5df2e35ad6ff",
           "stored_sha256": "26cced1e2178444f21590f9505afc6956503e8d76796ab07ccac5df2e35ad6ff",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-live-native-identity.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-live-native-identity.json",
@@ -2877,7 +2877,7 @@
           "sha256": "5776f2409eefcf89166571023d2a717c2ee3550b9c95d1acebe902798b69f3f4",
           "stored_sha256": "5776f2409eefcf89166571023d2a717c2ee3550b9c95d1acebe902798b69f3f4",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-board-create.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-board-create.json",
@@ -2885,7 +2885,7 @@
           "sha256": "a219bbb8be5edb3cf26503e34dd97a25817ff0dcd3337ad7f72e666347e2367a",
           "stored_sha256": "a219bbb8be5edb3cf26503e34dd97a25817ff0dcd3337ad7f72e666347e2367a",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-BOM-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-BOM-current.json",
@@ -2893,7 +2893,7 @@
           "sha256": "886e30c22fd3fb9cc413f10fbc8e8f025d3539834ae6288c46793e38fbccdd90",
           "stored_sha256": "886e30c22fd3fb9cc413f10fbc8e8f025d3539834ae6288c46793e38fbccdd90",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-components-created.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-components-created.json",
@@ -2901,7 +2901,7 @@
           "sha256": "8087ec8b7552b089e790d67d569567055ded0a437eb092cc98d6eba6bc16562f",
           "stored_sha256": "8087ec8b7552b089e790d67d569567055ded0a437eb092cc98d6eba6bc16562f",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-independent-readback.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-independent-readback.json",
@@ -2909,7 +2909,7 @@
           "sha256": "f95569f90bc4fb6384cf28c6c17b53d668da6393c8732d454914e5764f677022",
           "stored_sha256": "f95569f90bc4fb6384cf28c6c17b53d668da6393c8732d454914e5764f677022",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-label-size-correction.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-label-size-correction.json",
@@ -2917,7 +2917,7 @@
           "sha256": "896ab9f6278e820edb22c942f751ec1e4a55edfbe5c599d6f19a2a71a29c8197",
           "stored_sha256": "896ab9f6278e820edb22c942f751ec1e4a55edfbe5c599d6f19a2a71a29c8197",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-netlist-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-netlist-current.json",
@@ -2925,7 +2925,7 @@
           "sha256": "cccaa23ad99069912186f9f29327d2f0f8c7f3af59fa6e84d6af31a665384b01",
           "stored_sha256": "cccaa23ad99069912186f9f29327d2f0f8c7f3af59fa6e84d6af31a665384b01",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-pcb-applied-pads.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-pcb-applied-pads.json",
@@ -2933,7 +2933,7 @@
           "sha256": "1dc903aab1915229952df5f3f51f017b2f8ad243417e0404e98e5ab0eec5dfc6",
           "stored_sha256": "1dc903aab1915229952df5f3f51f017b2f8ad243417e0404e98e5ab0eec5dfc6",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-pcb-final-readback.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-pcb-final-readback.json",
@@ -2941,7 +2941,7 @@
           "sha256": "6e168e3100ab4784474637e809f75d7c35fb13476552901de2a184b2d4cb22af",
           "stored_sha256": "6e168e3100ab4784474637e809f75d7c35fb13476552901de2a184b2d4cb22af",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-pcb-import-result.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-pcb-import-result.json",
@@ -2949,7 +2949,7 @@
           "sha256": "5eafe14ab61dc49db3cfbf3617aa53700ff0b98df537a61adab4deef726994a0",
           "stored_sha256": "5eafe14ab61dc49db3cfbf3617aa53700ff0b98df537a61adab4deef726994a0",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-pcb-imported-pads.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-pcb-imported-pads.json",
@@ -2957,7 +2957,7 @@
           "sha256": "f549240516599c48e5b215f162f6c771b6008d0b41bfa5839d647d9cd9998a1a",
           "stored_sha256": "f549240516599c48e5b215f162f6c771b6008d0b41bfa5839d647d9cd9998a1a",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-pcb-pad-map-audit-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-pcb-pad-map-audit-current.json",
@@ -2965,7 +2965,7 @@
           "sha256": "276f02cd453bb984f5e8aab1d206c7a5e7c5f2751926e3e16ccc87967793c88e",
           "stored_sha256": "276f02cd453bb984f5e8aab1d206c7a5e7c5f2751926e3e16ccc87967793c88e",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-pcb-rule-config-only-result.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-pcb-rule-config-only-result.json",
@@ -2973,7 +2973,7 @@
           "sha256": "1c318f2e34b648e1146c89a96b6d64c0313fb5f9c5fbd66d8963b71b8119c236",
           "stored_sha256": "1c318f2e34b648e1146c89a96b6d64c0313fb5f9c5fbd66d8963b71b8119c236",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-pcb-rule-tightening.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-pcb-rule-tightening.json",
@@ -2981,7 +2981,7 @@
           "sha256": "ccdf33829a4590c0fc65ad8d2e16b7c7a3b41d90e90d9e2974cdf0b6a336770c",
           "stored_sha256": "ccdf33829a4590c0fc65ad8d2e16b7c7a3b41d90e90d9e2974cdf0b6a336770c",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-pcb-verified-rule-readback.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-pcb-verified-rule-readback.json",
@@ -2989,7 +2989,7 @@
           "sha256": "11b0590e72ade63a39e55b55764ad7d3f9dda9199f6c518b91c29074ab8775d0",
           "stored_sha256": "11b0590e72ade63a39e55b55764ad7d3f9dda9199f6c518b91c29074ab8775d0",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-pin-net-audit-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-pin-net-audit-current.json",
@@ -2997,7 +2997,7 @@
           "sha256": "61ffe2da6a1b6cd96236a26eb347306b61b9aa504208ee582f9441487bf6cbd5",
           "stored_sha256": "61ffe2da6a1b6cd96236a26eb347306b61b9aa504208ee582f9441487bf6cbd5",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-preflight-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-preflight-current.json",
@@ -3005,23 +3005,23 @@
           "sha256": "ba791f8ca083d1e29c454cbbc6e95b726e233cd1bceafaed3bfa638ff2c4bb6e",
           "stored_sha256": "ba791f8ca083d1e29c454cbbc6e95b726e233cd1bceafaed3bfa638ff2c4bb6e",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-preservation-and-snapshot-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-preservation-and-snapshot-current.json",
-          "bytes": 17093,
-          "sha256": "0fa03ae8dee14052481f8bea5d7f7cfb1efe6b8521f966748f738d8ce482b042",
-          "stored_sha256": "0fa03ae8dee14052481f8bea5d7f7cfb1efe6b8521f966748f738d8ce482b042",
+          "bytes": 18800,
+          "sha256": "a12fec9f9d42543fad2b871dc944d3c6b5863b24437d58f6e75a0d10d2b557d6",
+          "stored_sha256": "a12fec9f9d42543fad2b871dc944d3c6b5863b24437d58f6e75a0d10d2b557d6",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-progress-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-progress-current.json",
-          "bytes": 4278,
-          "sha256": "c268e6903e059a9c817badc5932faf662408ad2f9d711655f42138c3f60718c4",
-          "stored_sha256": "c268e6903e059a9c817badc5932faf662408ad2f9d711655f42138c3f60718c4",
+          "bytes": 8194,
+          "sha256": "c3505dd43c9e375a7d501138d8d39c3eb199b033a961909b081825fc06223be5",
+          "stored_sha256": "c3505dd43c9e375a7d501138d8d39c3eb199b033a961909b081825fc06223be5",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-schematic-drc-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-schematic-drc-current.json",
@@ -3029,7 +3029,7 @@
           "sha256": "7b22d726eccc11877c196915e60fd052dbe9fba27cb7337085ee0c52568bf639",
           "stored_sha256": "7b22d726eccc11877c196915e60fd052dbe9fba27cb7337085ee0c52568bf639",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-schematic-wiring-result.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-schematic-wiring-result.json",
@@ -3037,7 +3037,7 @@
           "sha256": "d8611a7186b473a3b89d6376402d2afd65615e18c1faf8afdba515960f0a8a8c",
           "stored_sha256": "d8611a7186b473a3b89d6376402d2afd65615e18c1faf8afdba515960f0a8a8c",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-source-copy.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-source-copy.json",
@@ -3045,7 +3045,7 @@
           "sha256": "d16c09a186a5025925290e1c515469fc34cd5b09370bb340dd99b0fcb157513d",
           "stored_sha256": "d16c09a186a5025925290e1c515469fc34cd5b09370bb340dd99b0fcb157513d",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-wiring-completed.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-wiring-completed.json",
@@ -3053,7 +3053,7 @@
           "sha256": "d8611a7186b473a3b89d6376402d2afd65615e18c1faf8afdba515960f0a8a8c",
           "stored_sha256": "d8611a7186b473a3b89d6376402d2afd65615e18c1faf8afdba515960f0a8a8c",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-native-wiring-port-first-result.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-native-wiring-port-first-result.json",
@@ -3061,7 +3061,7 @@
           "sha256": "d8611a7186b473a3b89d6376402d2afd65615e18c1faf8afdba515960f0a8a8c",
           "stored_sha256": "d8611a7186b473a3b89d6376402d2afd65615e18c1faf8afdba515960f0a8a8c",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-port-first-failure-state.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-port-first-failure-state.json",
@@ -3069,7 +3069,7 @@
           "sha256": "1dd2a700c4d94bfa981f41bf611f7ce91e5e216e1a60e562402fc4d472b2626c",
           "stored_sha256": "1dd2a700c4d94bfa981f41bf611f7ce91e5e216e1a60e562402fc4d472b2626c",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-port-first-wire-proof.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-port-first-wire-proof.json",
@@ -3077,7 +3077,7 @@
           "sha256": "4523344a0900877e04e0132cd15e5e8a317f9dd9c6ab58f306067f94458cee4d",
           "stored_sha256": "4523344a0900877e04e0132cd15e5e8a317f9dd9c6ab58f306067f94458cee4d",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-port-geometry-diagnosis.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-port-geometry-diagnosis.json",
@@ -3085,7 +3085,7 @@
           "sha256": "c190082b72f4d8248342baa404151d1e37ae8b31794599b35ada5ce7bc25bf2b",
           "stored_sha256": "c190082b72f4d8248342baa404151d1e37ae8b31794599b35ada5ce7bc25bf2b",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-rule-persistence-diagnosis.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-rule-persistence-diagnosis.json",
@@ -3093,7 +3093,7 @@
           "sha256": "683ccda3e9c034270682af43e736d1b244df1265a275de680532b4581d00cbd4",
           "stored_sha256": "683ccda3e9c034270682af43e736d1b244df1265a275de680532b4581d00cbd4",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-rule-quantization-margin-result.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-rule-quantization-margin-result.json",
@@ -3101,7 +3101,7 @@
           "sha256": "15e08f0c81e1b661cbeb1436f976745db678ede8983ed4c31a0f7ecf91ffbf6a",
           "stored_sha256": "15e08f0c81e1b661cbeb1436f976745db678ede8983ed4c31a0f7ecf91ffbf6a",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-source-page-components.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-source-page-components.json",
@@ -3109,7 +3109,7 @@
           "sha256": "53d889bb906d37c19a1f6bbaabda6819276461abbf4e66a392c6df0013b1fcd6",
           "stored_sha256": "53d889bb906d37c19a1f6bbaabda6819276461abbf4e66a392c6df0013b1fcd6",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-wiring-failure-state.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-wiring-failure-state.json",
@@ -3117,7 +3117,7 @@
           "sha256": "65f862fdf38a64e462bbb12bd588483f5fd4df776f267f50c4314d2281f8291d",
           "stored_sha256": "65f862fdf38a64e462bbb12bd588483f5fd4df776f267f50c4314d2281f8291d",
           "codec": "raw",
-          "source": "Actual Sensor14Bank native operation/readback/audit evidence; not for fabrication"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-build-components.js": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-build-components.js",
@@ -3125,7 +3125,7 @@
           "sha256": "957592d5c6752e4620976d406c1dd39f900d439d25543dfbd84db9ed6a0ec9f0",
           "stored_sha256": "957592d5c6752e4620976d406c1dd39f900d439d25543dfbd84db9ed6a0ec9f0",
           "codec": "raw",
-          "source": "Archived terminal native operation source; do not replay completed construction/import"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-show-net-and-part-labels.js": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-show-net-and-part-labels.js",
@@ -3133,7 +3133,7 @@
           "sha256": "db1d98462ae5139904381693ccda450a194f2f5b96fbb25ed08dad196b75a0e7",
           "stored_sha256": "db1d98462ae5139904381693ccda450a194f2f5b96fbb25ed08dad196b75a0e7",
           "codec": "raw",
-          "source": "Archived terminal native operation source; do not replay completed construction/import"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-tighten-new-pcb-config-only.js": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-tighten-new-pcb-config-only.js",
@@ -3141,7 +3141,7 @@
           "sha256": "7b430b7499aa09f0e6b155858987afb12e0d90de1fadad02f3f8a748376b5f53",
           "stored_sha256": "7b430b7499aa09f0e6b155858987afb12e0d90de1fadad02f3f8a748376b5f53",
           "codec": "raw",
-          "source": "Archived terminal native operation source; do not replay completed construction/import"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-tighten-new-pcb-rules.js": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-tighten-new-pcb-rules.js",
@@ -3149,7 +3149,7 @@
           "sha256": "015486fd19b15a15b1cb25033d0b5b719979a09cf3aafb7bb8eb7df0d20ded22",
           "stored_sha256": "015486fd19b15a15b1cb25033d0b5b719979a09cf3aafb7bb8eb7df0d20ded22",
           "codec": "raw",
-          "source": "Archived terminal native operation source; do not replay completed construction/import"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-wire-actual-port-pins.js": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-wire-actual-port-pins.js",
@@ -3157,7 +3157,7 @@
           "sha256": "e2f5863b35d31d31e08052faf0384eeed8876bf3043199260787ee4bd43d67a9",
           "stored_sha256": "e2f5863b35d31d31e08052faf0384eeed8876bf3043199260787ee4bd43d67a9",
           "codec": "raw",
-          "source": "Archived terminal native operation source; do not replay completed construction/import"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-wire-port-first-continuation.js": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-wire-port-first-continuation.js",
@@ -3165,7 +3165,7 @@
           "sha256": "4fba762221e05da58cda066e3a68e68564e83bb004fb24aacffc62b2f9bff092",
           "stored_sha256": "4fba762221e05da58cda066e3a68e68564e83bb004fb24aacffc62b2f9bff092",
           "codec": "raw",
-          "source": "Archived terminal native operation source; do not replay completed construction/import"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-front-wire-schematic.js": {
           "stored": "hardware/current/module-plan/evidence/sensor-front-wire-schematic.js",
@@ -3173,15 +3173,15 @@
           "sha256": "242f7ae4fa8a2eb4acd8125040bc8b9119ec3366411a2d4d9784720f270e5c47",
           "stored_sha256": "242f7ae4fa8a2eb4acd8125040bc8b9119ec3366411a2d4d9784720f270e5c47",
           "codec": "raw",
-          "source": "Archived terminal native operation source; do not replay completed construction/import"
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
         },
         "module-plan/evidence/sensor-bank-subassembly-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-bank-subassembly-current.json",
-          "bytes": 33315,
-          "sha256": "c32de40f5d298bbe8118cfd1b3d3aeb04cb29d37d9aa2508111f028e7d83ffc9",
-          "stored_sha256": "c32de40f5d298bbe8118cfd1b3d3aeb04cb29d37d9aa2508111f028e7d83ffc9",
+          "bytes": 33424,
+          "sha256": "e842940cab82eeecd76a9414eee17efd0e3c23099b71eb8ac75c4b060127a049",
+          "stored_sha256": "e842940cab82eeecd76a9414eee17efd0e3c23099b71eb8ac75c4b060127a049",
           "codec": "raw",
-          "source": "Retained original sensor-circuit extraction and updated native candidate scope"
+          "source": "Current source/proof or preserved routing-input evidence; unaccepted for manufacture"
         },
         "module-plan/evidence/sensor-bank-assembly-parts-current.json": {
           "stored": "hardware/current/module-plan/evidence/sensor-bank-assembly-parts-current.json",
@@ -3189,7 +3189,7 @@
           "sha256": "82edf20b7e40b1e3b5f5d41e307c5e36812123272ede072e280b55d71650182d",
           "stored_sha256": "82edf20b7e40b1e3b5f5d41e307c5e36812123272ede072e280b55d71650182d",
           "codec": "raw",
-          "source": "Actual exact assembly-part query; not a CNY retail quotation"
+          "source": "Current source/proof or preserved routing-input evidence; unaccepted for manufacture"
         },
         "module-plan/sensor14bank/Sensor14_frontend.esch2": {
           "stored": "hardware/current/module-plan/sensor14bank/Sensor14_frontend.esch2",
@@ -3197,23 +3197,23 @@
           "sha256": "fec91f7a7098abe13298a28805ab9f2d04cf80913bb2b9854dc76c0bfaa66760",
           "stored_sha256": "fec91f7a7098abe13298a28805ab9f2d04cf80913bb2b9854dc76c0bfaa66760",
           "codec": "raw",
-          "source": "Sensor14Bank actual native candidate and same-project recovery context; unplaced, unrouted, not for fabrication"
+          "source": "Current55x45 preliminary Sensor14Bank candidate;48Top localCu/36Groundvias/35signalnets84connections open"
         },
         "module-plan/sensor14bank/PCB2.epcb2": {
           "stored": "hardware/current/module-plan/sensor14bank/PCB2.epcb2",
-          "bytes": 428825,
-          "sha256": "22920e6b2c60b0f189dda16c1453603a6327b1ff0104d7af9abc581b27318606",
-          "stored_sha256": "22920e6b2c60b0f189dda16c1453603a6327b1ff0104d7af9abc581b27318606",
+          "bytes": 463255,
+          "sha256": "230103065c55dd1f151a28d993217e7b62cafa386dd043f97feeeb87cbd4af7a",
+          "stored_sha256": "230103065c55dd1f151a28d993217e7b62cafa386dd043f97feeeb87cbd4af7a",
           "codec": "raw",
-          "source": "Sensor14Bank actual native candidate and same-project recovery context; unplaced, unrouted, not for fabrication"
+          "source": "Current55x45 preliminary Sensor14Bank candidate;48Top localCu/36Groundvias/35signalnets84connections open"
         },
         "module-plan/sensor14bank/working-project-metadata.eprj3": {
           "stored": "hardware/current/module-plan/sensor14bank/working-project-metadata.eprj3",
           "bytes": 6974,
-          "sha256": "255e243e311c0772b438eeed568b9265f14d84c0881447c291524edd46027c72",
-          "stored_sha256": "255e243e311c0772b438eeed568b9265f14d84c0881447c291524edd46027c72",
+          "sha256": "3ad68ccbf45293a439f51f986721039e43926708481b51053fff1d362c2618ea",
+          "stored_sha256": "3ad68ccbf45293a439f51f986721039e43926708481b51053fff1d362c2618ea",
           "codec": "raw",
-          "source": "Sensor14Bank actual native candidate and same-project recovery context; unplaced, unrouted, not for fabrication"
+          "source": "Current55x45 preliminary Sensor14Bank candidate;48Top localCu/36Groundvias/35signalnets84connections open"
         },
         "module-plan/sensor14bank/project-metadata-before.eprj3": {
           "stored": "hardware/current/module-plan/sensor14bank/project-metadata-before.eprj3",
@@ -3221,15 +3221,239 @@
           "sha256": "a4200b2610a1c411c8d7b27526a94039551b81807d291772a69195ae1c6d3cd9",
           "stored_sha256": "a4200b2610a1c411c8d7b27526a94039551b81807d291772a69195ae1c6d3cd9",
           "codec": "raw",
-          "source": "Sensor14Bank actual native candidate and same-project recovery context; unplaced, unrouted, not for fabrication"
+          "source": "Current55x45 preliminary Sensor14Bank candidate;48Top localCu/36Groundvias/35signalnets84connections open"
         },
         "module-plan/sensor14bank/README.md": {
           "stored": "hardware/current/module-plan/sensor14bank/README.md",
-          "bytes": 1742,
-          "sha256": "af515e5dc41b3bb5b1e1b9f0a695364805c8cec8c7e56d99157014ea4b89385a",
-          "stored_sha256": "af515e5dc41b3bb5b1e1b9f0a695364805c8cec8c7e56d99157014ea4b89385a",
+          "bytes": 1925,
+          "sha256": "66d50b0e17941fec2d43de19a1c845b8543f12ae9bd56ca4696c7b2fd86e9b72",
+          "stored_sha256": "66d50b0e17941fec2d43de19a1c845b8543f12ae9bd56ca4696c7b2fd86e9b72",
           "codec": "raw",
-          "source": "Sensor14Bank actual native candidate and same-project recovery context; unplaced, unrouted, not for fabrication"
+          "source": "Current55x45 preliminary Sensor14Bank candidate;48Top localCu/36Groundvias/35signalnets84connections open"
+        },
+        "module-plan/evidence/sensor-front-after-Top-route-preservation-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-after-Top-route-preservation-current.json",
+          "bytes": 751,
+          "sha256": "15dd4337b4ca1c86bb2732b2b69f40bbf520147673cdabe7566c1d0ba68773d4",
+          "stored_sha256": "15dd4337b4ca1c86bb2732b2b69f40bbf520147673cdabe7566c1d0ba68773d4",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-exact-source-pads-before-route.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-exact-source-pads-before-route.json",
+          "bytes": 67589,
+          "sha256": "ea35271d370796b7796b47ef42b9ba0260d82c167290a1b5f343997dedcea9c3",
+          "stored_sha256": "ea35271d370796b7796b47ef42b9ba0260d82c167290a1b5f343997dedcea9c3",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-layout-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-layout-current.json",
+          "bytes": 2879,
+          "sha256": "05e3896d053a7a07af37fa71fa9ec0ba192a97443e28e20e377e805371b495c9",
+          "stored_sha256": "05e3896d053a7a07af37fa71fa9ec0ba192a97443e28e20e377e805371b495c9",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-bottom-ground-create-result.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-bottom-ground-create-result.json",
+          "bytes": 12574,
+          "sha256": "b16ec7093500db626a9e8dec0a6de63af838e012496eb8e1c485c937a1dfab45",
+          "stored_sha256": "b16ec7093500db626a9e8dec0a6de63af838e012496eb8e1c485c937a1dfab45",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-closed-outline-result.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-closed-outline-result.json",
+          "bytes": 436,
+          "sha256": "548797ace0d56b78aebbc4c27802c4461a090d4d8acea76f6ede7f7061dfd3c4",
+          "stored_sha256": "548797ace0d56b78aebbc4c27802c4461a090d4d8acea76f6ede7f7061dfd3c4",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-group-placement-result.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-group-placement-result.json",
+          "bytes": 135,
+          "sha256": "fb49c3647ae9be9e8571a85fc52276b5135ddf47391781accd11373425002372",
+          "stored_sha256": "fb49c3647ae9be9e8571a85fc52276b5135ddf47391781accd11373425002372",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-placed-corrected-pad-DRC-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-placed-corrected-pad-DRC-current.json",
+          "bytes": 229414,
+          "sha256": "3344346fd25549dfc17555e09bb34fa958ae5e7e0e1636bc7a8fea4570bf8c91",
+          "stored_sha256": "3344346fd25549dfc17555e09bb34fa958ae5e7e0e1636bc7a8fea4570bf8c91",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-placed-pad-and-DRC-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-placed-pad-and-DRC-current.json",
+          "bytes": 229958,
+          "sha256": "c810448f1945d01c7f86636eeb09049182d9891120dfe915c01b0ee5c5368c6a",
+          "stored_sha256": "c810448f1945d01c7f86636eeb09049182d9891120dfe915c01b0ee5c5368c6a",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-power-ground-seed-result.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-power-ground-seed-result.json",
+          "bytes": 4239,
+          "sha256": "3790fa203010b013bf6faaaa5ae9ee8e46e3dd96ce68aa99b3287353d98687a5",
+          "stored_sha256": "3790fa203010b013bf6faaaa5ae9ee8e46e3dd96ce68aa99b3287353d98687a5",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-real-ground-contact-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-real-ground-contact-current.json",
+          "bytes": 7840,
+          "sha256": "ce093162e11ddab2ac5e4c4328ca556b53c239f24014e4d4fa09d5941b4bba04",
+          "stored_sha256": "ce093162e11ddab2ac5e4c4328ca556b53c239f24014e4d4fa09d5941b4bba04",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-seeded-ground-readback-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-seeded-ground-readback-current.json",
+          "bytes": 234202,
+          "sha256": "1af99b406c98c8769845724bdca6b83d8e61b3aa2eb0e93816d1f9ee29aa7a70",
+          "stored_sha256": "1af99b406c98c8769845724bdca6b83d8e61b3aa2eb0e93816d1f9ee29aa7a70",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-Top-only-signal-route-result.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-Top-only-signal-route-result.json",
+          "bytes": 206,
+          "sha256": "5139567ee7db05f4f575e16f8c3d3f047ad630d935b4d5c0de0e7da3cc46d2ac",
+          "stored_sha256": "5139567ee7db05f4f575e16f8c3d3f047ad630d935b4d5c0de0e7da3cc46d2ac",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-native-Top-route-terminal-DRC-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-native-Top-route-terminal-DRC-current.json",
+          "bytes": 145415,
+          "sha256": "ff47b954de7c34e659176da5d0f928fa54b429d6d0e96374d59eb266906534b1",
+          "stored_sha256": "ff47b954de7c34e659176da5d0f928fa54b429d6d0e96374d59eb266906534b1",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-placement-after-outline-error.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-placement-after-outline-error.json",
+          "bytes": 133865,
+          "sha256": "032719d03ae6226b9b907a9977c09498e2e69734155c6e1962f4e711bfdccdf8",
+          "stored_sha256": "032719d03ae6226b9b907a9977c09498e2e69734155c6e1962f4e711bfdccdf8",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-placement-preflight-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-placement-preflight-current.json",
+          "bytes": 125510,
+          "sha256": "3076601b6b0a474ebd0640c53c9e0a43b603fe9eb20f3b4c923c3c9d0c4bbd15",
+          "stored_sha256": "3076601b6b0a474ebd0640c53c9e0a43b603fe9eb20f3b4c923c3c9d0c4bbd15",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-power-ground-seed-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-power-ground-seed-current.json",
+          "bytes": 20690,
+          "sha256": "9addccdf2103378052e72f96b423d35d580fcf7381c6597f7ff6fdd2b7a8b59e",
+          "stored_sha256": "9addccdf2103378052e72f96b423d35d580fcf7381c6597f7ff6fdd2b7a8b59e",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-signal-route-job-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-signal-route-job-current.json",
+          "bytes": 2556,
+          "sha256": "cae0f744096297eb727d6dfaa24289fa6ed2b0915830dd4bd573d9dd2de81100",
+          "stored_sha256": "cae0f744096297eb727d6dfaa24289fa6ed2b0915830dd4bd573d9dd2de81100",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-Top-route-after-invoke-timeout.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-Top-route-after-invoke-timeout.json",
+          "bytes": 688,
+          "sha256": "d8fafd95b01ed245cb7817a61c4f8688dd9677dec962b682af367b4f63555dc1",
+          "stored_sha256": "d8fafd95b01ed245cb7817a61c4f8688dd9677dec962b682af367b4f63555dc1",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-Top-route-live-observation-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-Top-route-live-observation-current.json",
+          "bytes": 703,
+          "sha256": "4f8990bf98c429b1391d610319f16359fa282111846aae16b70558dcea89c03d",
+          "stored_sha256": "4f8990bf98c429b1391d610319f16359fa282111846aae16b70558dcea89c03d",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-apply-initial-group-placement.js": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-apply-initial-group-placement.js",
+          "bytes": 1745,
+          "sha256": "b7220fe39d36f9a4a3de2a8f2830951b4598b644ad3f36bdd4018ea7df576943",
+          "stored_sha256": "b7220fe39d36f9a4a3de2a8f2830951b4598b644ad3f36bdd4018ea7df576943",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-apply-screened-power-ground-seed.js": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-apply-screened-power-ground-seed.js",
+          "bytes": 14246,
+          "sha256": "f1c34ef794899ef02ba64c3ab8d1ea506acae26773a2f416626c5bfb392a9950",
+          "stored_sha256": "f1c34ef794899ef02ba64c3ab8d1ea506acae26773a2f416626c5bfb392a9950",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-create-real-bottom-ground.js": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-create-real-bottom-ground.js",
+          "bytes": 1382,
+          "sha256": "fa06e80c3644af6e552d866666f6240aee5056fe6ebc68048cc5ea040e11ee5a",
+          "stored_sha256": "fa06e80c3644af6e552d866666f6240aee5056fe6ebc68048cc5ea040e11ee5a",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-run-Top-only-kept-signal-route.js": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-run-Top-only-kept-signal-route.js",
+          "bytes": 1584,
+          "sha256": "800f2b986ae5ef9daf60f135ac6435f98ab71702009166bd46ada8d7931054f0",
+          "stored_sha256": "800f2b986ae5ef9daf60f135ac6435f98ab71702009166bd46ada8d7931054f0",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/sensor-front-real-ground-contact-audit.py": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-real-ground-contact-audit.py",
+          "bytes": 5675,
+          "sha256": "0a967ff5c2539ac0ee4bee66e26805fe7f364c8b7d69218dfbfb109ac56af6d5",
+          "stored_sha256": "0a967ff5c2539ac0ee4bee66e26805fe7f364c8b7d69218dfbfb109ac56af6d5",
+          "codec": "raw",
+          "source": "Actual sameSensor14Bank operation/geometry/proof, archived failures retained; do not replay terminal jobs"
+        },
+        "module-plan/evidence/through-hole-control-family-current.json": {
+          "stored": "hardware/current/module-plan/evidence/through-hole-control-family-current.json",
+          "bytes": 1406,
+          "sha256": "a8312a524c2a2321fcd5a2f22ea7e7a4dfc68b6988f0b3a5bab79f3a63f2a225",
+          "stored_sha256": "a8312a524c2a2321fcd5a2f22ea7e7a4dfc68b6988f0b3a5bab79f3a63f2a225",
+          "codec": "raw",
+          "source": "Current source/proof or preserved routing-input evidence; unaccepted for manufacture"
+        },
+        "module-plan/evidence/firmware-registered-producer-current-recheck.json": {
+          "stored": "hardware/current/module-plan/evidence/firmware-registered-producer-current-recheck.json",
+          "bytes": 4373,
+          "sha256": "3172951909554513ce699fa0d825717dae1514640a887f5dd7ae13d341335c77",
+          "stored_sha256": "3172951909554513ce699fa0d825717dae1514640a887f5dd7ae13d341335c77",
+          "codec": "raw",
+          "source": "Current source/proof or preserved routing-input evidence; unaccepted for manufacture"
+        },
+        "module-plan/evidence/sensor-front-before-signal-routing.epcb2": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-before-signal-routing.epcb2",
+          "bytes": 463255,
+          "sha256": "2f4cc697c8a4f2bc727af21205ca96f144a018298b91c98146b0fe3d43def866",
+          "stored_sha256": "2f4cc697c8a4f2bc727af21205ca96f144a018298b91c98146b0fe3d43def866",
+          "codec": "raw",
+          "source": "Current source/proof or preserved routing-input evidence; unaccepted for manufacture"
+        },
+        "module-plan/evidence/sensor-front-real-bottom-ground-before-route.wkb": {
+          "stored": "hardware/current/module-plan/evidence/sensor-front-real-bottom-ground-before-route.wkb",
+          "bytes": 1343357,
+          "sha256": "2d0014d37e928f555613b6412cfc9a557a0f63be247c7d63009656bea112d318",
+          "stored_sha256": "2d0014d37e928f555613b6412cfc9a557a0f63be247c7d63009656bea112d318",
+          "codec": "raw",
+          "source": "Current source/proof or preserved routing-input evidence; unaccepted for manufacture"
         }
       },
       "validation_inherited": false,

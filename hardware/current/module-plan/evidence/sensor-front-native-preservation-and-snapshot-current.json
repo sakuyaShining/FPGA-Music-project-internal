@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-27T01:35:27.613807+08:00",
+  "observed_at": "2026-10-27T05:45:45.584703+08:00",
   "protected_native_files": [
     {
       "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\eprj3-intro.md",
@@ -11,7 +11,7 @@
     {
       "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\FPGA-Music-U9ControlWork-20261023.eprj3",
       "before": "a4200b2610a1c411c8d7b27526a94039551b81807d291772a69195ae1c6d3cd9",
-      "after": "255e243e311c0772b438eeed568b9265f14d84c0881447c291524edd46027c72",
+      "after": "3ad68ccbf45293a439f51f986721039e43926708481b51053fff1d362c2618ea",
       "unchanged": false,
       "allowed_working_project_metadata_update": true
     },
@@ -280,16 +280,41 @@
     {
       "native": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\pcb\\PCB2.epcb2",
       "copy": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\PCB2.epcb2",
-      "sha256": "22920e6b2c60b0f189dda16c1453603a6327b1ff0104d7af9abc581b27318606",
-      "bytes": 428825
+      "sha256": "230103065c55dd1f151a28d993217e7b62cafa386dd043f97feeeb87cbd4af7a",
+      "bytes": 463255
     },
     {
       "native": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\FPGA-Music-U9ControlWork-20261023.eprj3",
       "copy": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-current-working-project.eprj3",
-      "sha256": "255e243e311c0772b438eeed568b9265f14d84c0881447c291524edd46027c72",
+      "sha256": "3ad68ccbf45293a439f51f986721039e43926708481b51053fff1d362c2618ea",
       "bytes": 6974
     }
   ],
-  "pcb_unplaced_unrouted": true,
-  "not_for_fabrication": true
+  "pcb_unplaced_unrouted": false,
+  "not_for_fabrication": true,
+  "historical_unplaced_candidate_snapshots": {
+    "git_commit": "832bddfbfe9d0b66cd0d883cba0cb22bc77ba5ed",
+    "note": "Earlier candidate_files hashes refer to unplaced native stage stored in that Git commit, not the overwritten current candidate snapshot",
+    "files": [
+      {
+        "native": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Sensor14Bank_Schematic\\Sensor14_frontend.esch2",
+        "copy": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\Sensor14_frontend.esch2",
+        "sha256": "fec91f7a7098abe13298a28805ab9f2d04cf80913bb2b9854dc76c0bfaa66760",
+        "bytes": 1002911
+      },
+      {
+        "native": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\pcb\\PCB2.epcb2",
+        "copy": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\PCB2.epcb2",
+        "sha256": "22920e6b2c60b0f189dda16c1453603a6327b1ff0104d7af9abc581b27318606",
+        "bytes": 428825
+      },
+      {
+        "native": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\FPGA-Music-U9ControlWork-20261023.eprj3",
+        "copy": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-current-working-project.eprj3",
+        "sha256": "255e243e311c0772b438eeed568b9265f14d84c0881447c291524edd46027c72",
+        "bytes": 6974
+      }
+    ]
+  },
+  "current_candidate_scope": "Preliminary55x45 layout,48localTopCu/36Groundvias/actualBottomGround;35signalnets84connections open, not fabrication"
 }

@@ -18,4 +18,4 @@
 
 ## 14路前端当前候选
 
-实际原生子板位于 `module-plan/sensor14bank/`，接续见其中README和 `module-plan/evidence/sensor-front-native-progress-current.json`。28件原理图150引脚及导入封装150焊盘网络独立核对通过；未布局、未布线、未报价，不是投产版或完整购物单。原native目录仍保留951及14页基线，不能将新工作元数据混称为接受主板版本。
+见 `module-plan/sensor14bank/README.md` 和 `module-plan/evidence/sensor-front-native-progress-current.json`。当前55×45mm试排、48段局部实铜、36地孔及真实Bottom地铜；地孔接触和21个PTH回流局部门通过。仍35网84项未连接，单TopKEEP作业终态未留下新信号铜，不能重放或冒称物理无解。登记固件13文件无变化，F01～F06未解除。原951及14页基线不变，尚不可投产或直接采购完整系统。

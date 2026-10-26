@@ -1,7 +1,7 @@
 {
-  "updated_at_host": "2026-10-27T01:37:11.496949+08:00",
+  "updated_at_host": "2026-10-27T05:44:13.289589+08:00",
   "latest_trigger_time": "2026-10-26T16:28:52.495Z",
-  "status": "SCHEMATIC_PIN_NET_AND_PCB_PAD_MAP_VERIFIED_UNPLACED_UNROUTED_NOT_FOR_ORDER",
+  "status": "PRELIMINARY_LAYOUT_POWER_GROUND_CALIBRATION_CANDIDATE_35_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
   "purpose": "若继续找不到完整现货前端，只保留必要重复的14路预焊小板作混合备选；不是重开原复杂PCB。",
   "source": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-preparation-20261021-r1\\227件功能分块与混合方案映射-current.json",
   "source_sha256": "17cb6f6e068a143e446f44c672af04fb0c359bb7b9f9715cb9ea51c1be9fef02",
@@ -1140,7 +1140,7 @@
     "delta_decoupling_100nF": 5,
     "function_removed": 0
   },
-  "layout_and_fabrication_NOT_done": true,
+  "layout_and_fabrication_NOT_done": "Preliminary native layout exists; routing/full reference and manufacturing acceptance are NOT done",
   "required_next_checks": [
     "优先确认可买完整现货模块；此方案仅作必要小板备选",
     "若采用小板：同型号芯片、每电极1k/ESD、14外接+2参考、去耦和未用CMOS输入全部纳入实际原理图与布局",
