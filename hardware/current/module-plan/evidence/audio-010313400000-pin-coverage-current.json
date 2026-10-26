@@ -1,0 +1,129 @@
+{
+  "status": "PIN_AND_SCHEMATIC_RECONCILIATION_NOT_PURCHASE_RELEASE",
+  "model": "RPI-PCM5122-Audio-HIFI-HAT-A",
+  "SKU": "010313400000",
+  "listed_CNY": 55,
+  "listed_for_sale": true,
+  "shipping_and_Qingyuan_dispatch_verified": false,
+  "product_url": "https://spotpear.cn/shop/Raspberry-Pi-5-I2S-PCM5122-DAC-Audio-Card-3.5mm-Earphone-Jack-HAT-A.html",
+  "wiki_url": "https://spotpear.cn/wiki/Raspberry-Pi-5-I2S-PCM5122-DAC-Audio-Card-3.5mm-Earphone-Jack-HAT-A.html",
+  "source_pdf": "Spotpear-010313400000-schematic.pdf",
+  "source_pdf_sha256": "3908e6255a977ca61ef69ab051c34eadaaaf53a2b27b987724adec5006252cbb",
+  "TI_sources": [
+    "https://www.ti.com/lit/ds/symlink/pcm5122.pdf",
+    "https://www.ti.com/lit/ds/symlink/tpa6130a2.pdf"
+  ],
+  "straps_verified": {
+    "MODE1": "pin17 GND",
+    "MODE2": "pin18 VCC through R21 10k",
+    "ADR2": "pin16 GND",
+    "ADR1": "pin24 VCC through R14 10k",
+    "DAC_7bit_address": "0x4D",
+    "DAC_wire_write_read": [
+      "0x9A",
+      "0x9B"
+    ],
+    "headphone_amp_7bit_address": "0x60",
+    "headphone_amp_wire_write_read": [
+      "0xC0",
+      "0xC1"
+    ],
+    "SCK": "GND through R8 0R; software BCK-reference PLL/dividers required",
+    "TPA_SD": "P1.31/BCM6 to R4 0R; R3 10k pulls to VCC. Can leave P1.31 unconnected with I2C amp control."
+  },
+  "image_reading_erratum": "An initial low-resolution reading confused GPIO6 pin19 NC with MODE2 pin18 NC. Enlarged original vector PDF proves MODE2 is connected. Correct address is 0x4D. No mode defect or address0x4F claim is retained.",
+  "image_reading_proof": "Spotpear-PCM5122-mode-straps-detail-current.png",
+  "header_3V3_erratum": "P1.1/17 have a separate 3V3 label in this exact schematic; active DAC supply is VCC from U6. No 3V3-to-VCC connection is shown. Leave these header pins unconnected. Earlier parallel-regulator-output reasoning was not proven.",
+  "wiring": [
+    {
+      "signal": "5V_PERIPH",
+      "from": "Protected/current-limited peripheral5V distribution",
+      "to": "P1.2",
+      "status": "Protection/current budget unresolved; never connect to a Nano GPIO"
+    },
+    {
+      "signal": "GND",
+      "from": "Common power and signal return",
+      "to": "P1.6; return conductors P1.14/34/39 alongside BCK/LRCK/DIN",
+      "status": "Final physical harness distribution pending"
+    },
+    {
+      "signal": "I2S_BCK",
+      "from": "Nano J5.7 / FPGA56",
+      "to": "P1.12 / BCM18 -> R18 33R -> PCM5122.21",
+      "status": "Pin correspondence verified"
+    },
+    {
+      "signal": "I2S_DIN",
+      "from": "Nano J5.8 / FPGA54",
+      "to": "P1.40 / BCM21 -> R19 33R -> PCM5122.22",
+      "status": "Pin correspondence verified"
+    },
+    {
+      "signal": "I2S_LRCK",
+      "from": "Nano J5.11 / FPGA55",
+      "to": "P1.35 / BCM19 -> R16 33R -> PCM5122.23",
+      "status": "Pin correspondence verified"
+    },
+    {
+      "signal": "I2C_MOD_SDA",
+      "from": "Nano J6.10 / FPGA25 through original-function powered-off-safe I2C isolation",
+      "to": "P1.3 / SDA1 -> PCM5122.11 and TPA6130A2.7",
+      "status": "Do not bypass TCA9517-equivalent isolation with a direct Nano wire"
+    },
+    {
+      "signal": "I2C_MOD_SCL",
+      "from": "Nano J6.11 / FPGA26 through same isolated peripheral bus",
+      "to": "P1.5 / SCL1 -> PCM5122.12 and TPA6130A2.8",
+      "status": "Peripheral3.3V pullups, load and power-off isolation required"
+    }
+  ],
+  "minimum_logical_conductors": 7,
+  "physical_harness_finalized": false,
+  "unused_pins": "P1.1/17/27/28 and other unused RaspberryPi pins; P1.31 unless explicitly controlling SD",
+  "outputs": {
+    "RCA": "Stereo AUX OUT per exact vendor tutorial; whiteL/redR. A cable and an actual powered stereo speaker or other playback load still need procurement.",
+    "3_5mm": "Headphone output; exact vendor tutorial explicitly distinguishes this from AUX OUT and AUX IN.",
+    "regulator": "U6 covers DAC rail only, not original U18/shared 3V3_PERIPH rail."
+  },
+  "TPA_register_contract": {
+    "address_7bit": "0x60",
+    "read_reg4_version": "0x02 under mask0x0F",
+    "mute_reg2": "0xC0 | volume6bits",
+    "enable_stereo_reg1": "0xC0; SWS clear, stereo mode00",
+    "normal_impedance_reg3": "0x00",
+    "unmute_reg2": "Volume6bits with bits7/6 clear; start low and ramp after clock/readback checks",
+    "reserved_test_registers": "No writes to4..8; no runtime operation performed"
+  },
+  "PCM_clock_contract": {
+    "mode": "I2C software, groundedSCK, BCK-reference PLL",
+    "default": "I2S24bit; not proven compatible with current16bit stream",
+    "conditional_LTJ16_setting": "Page0Reg40=0x30, only after stream phase proof; not a full PLL recipe",
+    "registered_source_evidence": "audio-registered-source-current.json",
+    "BCK_Hz": 1687500,
+    "LRCK_Hz": 52734.375,
+    "BCKs_per_frame": 32,
+    "derivation": "tdm_top_owned DIV_BCK16/BCK_PER_LRCK32 at27MHz. Current i2s_tx puts identical16bit samples in both slots. Source timing suggests LTJ; final phase proof and full clock-divider register values remain open.",
+    "full_initialization_approved": false,
+    "physical_or_bitstream_verified": false
+  },
+  "original_audio_items": 17,
+  "schematic_subfunctions_confirmed": 11,
+  "pending_original_references": [
+    "R41",
+    "R42",
+    "C27",
+    "C28",
+    "J12",
+    "R72"
+  ],
+  "item_mapping": "audio-010313400000-original17-map-current.json",
+  "F07": "Module0x4D DAC and0x60amp, BCK PLL and sample format need producer integration. Registered wrapper has no accepted complete external I2C product interface. No assertion about unregistered workspaces.",
+  "original_functions_removed": false,
+  "purchase_ready": false,
+  "CAD_RTL_build_flash_changed": false,
+  "external_messages_orders_payments": false,
+  "physical_tests": "UNMEASURED",
+  "updated_at": "2026-10-27T07:41:43.365809+08:00",
+  "save_method_note": "Initial long shell write was rejected by tool policy before execution; explicit file patches succeeded. No CAD or RTL action was involved."
+}

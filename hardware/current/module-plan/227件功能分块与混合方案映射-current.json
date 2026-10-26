@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-26T20:44:27.786270+08:00",
+  "time": "2026-10-27T07:41:43.365809+08:00",
   "source_files_sha256": {
     "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-whole-native-capture-normalized.json": "6d48871b39f27408bd80f3a693b2a51e1895eb87111b01d152ec758c609b42da",
     "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-preparation-20261021-r1\\native-cpl-current-951ce88a-DRAFT-NOT-FOR-ORDER.csv": "0328146ebebc3440cad98f82f6af1fbf02e050a0a5c20d4ae187739c34c7df66",
@@ -629,10 +629,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "PCM5122立体声音频",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "U2 PCM5122",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "Same DAC family; enlarged schematic verifies I2C strap and0x4D address.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "C26",
@@ -653,10 +657,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C35 1uF+C36 22uF and DAC local0.1uF",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "DAC rail bulk/local bypass present; not claiming same2.2uF part.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "SW1",
@@ -4125,10 +4133,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C26 2.2uF",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "CAPP-CAPM flying capacitor.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "C21",
@@ -4149,10 +4161,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C27 2.2uF",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "VNEG-GND capacitor.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "C22",
@@ -4173,10 +4189,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C25 0.1uF",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "LDOO-GND bypass.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "C24",
@@ -4197,10 +4217,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C18/C22/C15 0.1uF network",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "DAC VCC local bypass function; shared functional mapping.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "C25",
@@ -4221,10 +4245,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C18/C22/C15 0.1uF network",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "DAC VCC local bypass function; shared functional mapping.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "R41",
@@ -4245,10 +4273,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "Headphone amp470R and U3/T1/T2/RCA path",
+      "schematic_subfunction_coverage": "PENDING_NOT_DEDUPLICATED",
+      "module_coverage_gap": "Original AUX_L series/filter/protection must be compared to actual populated RCA path; not a same-value replacement.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "R42",
@@ -4269,10 +4301,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "Headphone amp470R and U3/T1/T2/RCA path",
+      "schematic_subfunction_coverage": "PENDING_NOT_DEDUPLICATED",
+      "module_coverage_gap": "Original AUX_R series/filter/protection still needs populated-path proof.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "C27",
@@ -4293,10 +4329,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C101/C1112.2nF/NC",
+      "schematic_subfunction_coverage": "PENDING_NOT_DEDUPLICATED",
+      "module_coverage_gap": "Explicit NC/DNP capacitors do not prove original left100pF shunt is covered.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "C28",
@@ -4317,10 +4357,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C101/C1112.2nF/NC",
+      "schematic_subfunction_coverage": "PENDING_NOT_DEDUPLICATED",
+      "module_coverage_gap": "Explicit NC/DNP capacitors do not prove original right100pF shunt is covered.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "J12",
@@ -4345,10 +4389,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "PCM5122立体声音频",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "J1 dual RCA",
+      "schematic_subfunction_coverage": "PENDING_NOT_DEDUPLICATED",
+      "module_coverage_gap": "Original L/R/GND3pin connection becomes dualRCA; exact preassembled cable/adapter and playback load must be included in budget.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "R50",
@@ -6469,10 +6517,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "PCM5122立体声音频",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "U6 TPS7A4700RGWR",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "Dedicated5V-to3.3V DAC supply. Does not replace original U18 peripheral regulator.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "C30",
@@ -6517,10 +6569,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C32/C33 1uF+C34 33uF input and C35/C36 output",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "DAC regulator input/output capacitance.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "C33",
@@ -7229,10 +7285,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "R12 5.1k+R5 10k",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "XSMT normal unmute/power-sense divider;5V nominal gives3.311V. Different from original DAC3.3V10k pullup; actual limits/poweroff still require verification.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "J10",
@@ -7317,10 +7377,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": "C18/C22/C15 0.1uF network",
+      "schematic_subfunction_coverage": "CONFIRMED_TOPOLOGY_ONLY",
+      "module_coverage_gap": "DAC VCC local bypass function; shared functional mapping, not one-to-one reference equivalence.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "R3",
@@ -7365,10 +7429,14 @@
       "functional_block": "PCM5122立体声音频",
       "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
       "function_retained": true,
-      "exact_replacement_module": null,
+      "exact_replacement_module": "RPI-PCM5122-Audio-HIFI-HAT-A /010313400000 candidate",
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Audio17 individual mapping:11topology functions confirmed,6pending; no original purchase requirement removed. Module/startup/off-state/shipping not released.",
+      "module_counterpart_evidence": null,
+      "schematic_subfunction_coverage": "PENDING_NOT_DEDUPLICATED",
+      "module_coverage_gap": "Original DAC_3V3-GND1k discharge load lacks demonstrated dedicated counterpart. Device quiescent current is not output-discharge proof; preserve requirement.",
+      "coverage_evidence_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
     },
     {
       "reference": "R73",
@@ -7815,5 +7883,12 @@
   "this_stage_complete": "227件功能归属、原网及保留边界对应完成；具体模块替代覆盖尚未完成",
   "native_RTL_changed": false,
   "orders_or_payments": false,
-  "physical_tests": "UNMEASURED"
+  "physical_tests": "UNMEASURED",
+  "audio_item_reconciliation": {
+    "items": 17,
+    "schematic_subfunctions_confirmed": 11,
+    "pending": 6,
+    "fully_qualified": 0,
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
+  }
 }

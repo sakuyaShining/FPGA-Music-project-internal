@@ -1,0 +1,29 @@
+{
+  "scope":"Original227 audio block17 references; topology evidence only. No original function or purchase obligation removed.",
+  "source":"purchase-preparation-20261021-r1/227件功能分块与混合方案映射-current.json",
+  "module_SKU":"010313400000",
+  "purchase_ready":false,
+  "records":[
+    {"reference":"U12","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"U2 PCM5122","reason":"Same DAC family; enlarged schematic verifies I2C strap and0x4D address."},
+    {"reference":"C20","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"C26 2.2uF","reason":"CAPP-CAPM flying capacitor."},
+    {"reference":"C21","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"C27 2.2uF","reason":"VNEG-GND capacitor."},
+    {"reference":"C22","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"C25 0.1uF","reason":"LDOO-GND bypass."},
+    {"reference":"C23","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"C18/C22/C15 0.1uF network","reason":"DAC VCC local bypass function; shared functional mapping, not one-to-one reference equivalence."},
+    {"reference":"C24","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"C18/C22/C15 0.1uF network","reason":"DAC VCC local bypass function; shared functional mapping."},
+    {"reference":"C25","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"C18/C22/C15 0.1uF network","reason":"DAC VCC local bypass function; shared functional mapping."},
+    {"reference":"C26","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"C35 1uF+C36 22uF and DAC local0.1uF","reason":"DAC rail bulk/local bypass present; not claiming same2.2uF part."},
+    {"reference":"U13","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"U6 TPS7A4700RGWR","reason":"Dedicated5V-to3.3V DAC supply. Does not replace original U18 peripheral regulator."},
+    {"reference":"C31","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"C32/C33 1uF+C34 33uF input and C35/C36 output","reason":"DAC regulator input/output capacitance."},
+    {"reference":"R40","status":"CONFIRMED_TOPOLOGY_ONLY","counterpart":"R12 5.1k+R5 10k","reason":"XSMT normal unmute/power-sense divider;5V nominal gives3.311V. Different from original DAC3.3V10k pullup; actual limits/poweroff still require verification."},
+    {"reference":"R41","status":"PENDING_NOT_DEDUPLICATED","counterpart":"Headphone amp470R and U3/T1/T2/RCA path","reason":"Original AUX_L series/filter/protection must be compared to actual populated RCA path; not a same-value replacement."},
+    {"reference":"R42","status":"PENDING_NOT_DEDUPLICATED","counterpart":"Headphone amp470R and U3/T1/T2/RCA path","reason":"Original AUX_R series/filter/protection still needs populated-path proof."},
+    {"reference":"C27","status":"PENDING_NOT_DEDUPLICATED","counterpart":"C101/C1112.2nF/NC","reason":"Explicit NC/DNP capacitors do not prove original left100pF shunt is covered."},
+    {"reference":"C28","status":"PENDING_NOT_DEDUPLICATED","counterpart":"C101/C1112.2nF/NC","reason":"Explicit NC/DNP capacitors do not prove original right100pF shunt is covered."},
+    {"reference":"J12","status":"PENDING_NOT_DEDUPLICATED","counterpart":"J1 dual RCA","reason":"Original L/R/GND3pin connection becomes dualRCA; exact preassembled cable/adapter and playback load must be included in budget."},
+    {"reference":"R72","status":"PENDING_NOT_DEDUPLICATED","counterpart":null,"reason":"Original DAC_3V3-GND1k discharge load lacks demonstrated dedicated counterpart. Device quiescent current is not output-discharge proof; preserve requirement."}
+  ],
+  "schematic_subfunctions_confirmed":11,
+  "items_pending":6,
+  "fully_qualified_module_coverage":0,
+  "physical_tests":"UNMEASURED"
+}
