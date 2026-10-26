@@ -1,6 +1,6 @@
 {
-  "status": "CURRENT_PRELIMINARY_12_ANALOG_NETS_CLOSED_23_SIGNAL_NETS_OPEN",
-  "time": "2026-10-27T07:07:17.969878+08:00",
+  "status": "CURRENT_PRELIMINARY_14_INTERNAL_ANALOG_NETS_CLOSED_21_SIGNAL_NETS_OPEN",
+  "time": "2026-10-27T07:20:44.463149+08:00",
   "pcb_uuid": "f52674d6627fca6f",
   "units": "mm, degrees",
   "board_mm": [
@@ -144,20 +144,28 @@
       180
     ],
     "R15": [
-      35.5,
+      38,
       22.4,
-      0
+      180
     ],
     "R16": [
       35.5,
       21.2,
-      0
+      180
     ]
   },
   "mechanical_basis": "Actual1x16 2.54mm pitch headers have38.1mm center span;45mm board axis gives end margin. Separate daughterboard no user-fixed outline or manually fixed connector position existed. Candidate remains changeable.",
   "assembly": "All26SMT onTop;2TH headers. Six copies required; factory assembly/TH and all-in cost still unquoted.",
   "board_not_final_or_for_order": true,
-  "next": "Continue same Sensor14Bank PCB2 at a77aba59:83Top segments/36Groundvias;12manual analog nets closed,23signalnets60connection errors remain. Inspect L0_M12/M13 actual C3 Ground escape and remaining14 electrode/7control nets before changed group plan. Keep original48seedCu/36vias/150PAD map and rules. No replay left8/right4 apply or terminal Top35 router. Need complete all-source Ground/reference/neck/mechanical/DRC gates and exact factory six-board price/delivery, all modules/firmware compatibility and <=700 budget before purchase plan.",
+  "next": "Continue same Sensor14Bank PCB2 SHA83b238df,91TopCu/36Groundvias,14internal analog nets closed;21nets56items remain. Before electrode routing, resolve whole14net endpoint order/ESD/connector channel arrangement: current left8 monotone y-order has28inversion pairs, not globalimpossibility. Keep current43newanalog tracks referenced; C3 Groundvia05deb90db32fb69b moved33.7/20.45mm and oneGroundline intentionally revised. No replay any left8/right4/right2 apply or terminalTop35 job. Still need14electrode+7controlnets, fullsource-reference/DC/minneck/assembly, actual6board preweld quote/delivery and all modules/firmware/budget<=700. No complex original mainPCB solver.",
   "native_outline_id": "58022707be9889b7",
-  "initial_error_and_fix": "Initial straight-line outline API failed after all28moves. Actual28positions were queried, only missing outline created as closed nativePolyline; R2 overlap corrected at26.2/27.9. No batch placement replay."
+  "initial_error_and_fix": "Initial straight-line outline API failed after all28moves. Actual28positions were queried, only missing outline created as closed nativePolyline; R2 overlap corrected at26.2/27.9. No batch placement replay.",
+  "intentional_Ground_escape_change": {
+    "via": "05deb90db32fb69b",
+    "center_mm": [
+      33.7,
+      20.45
+    ],
+    "connected_line": "8a4f214bf2967f5f"
+  }
 }

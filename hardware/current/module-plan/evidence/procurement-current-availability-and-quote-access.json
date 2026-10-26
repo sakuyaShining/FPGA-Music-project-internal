@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-27T07:18:35.333613+08:00",
+  "scope": "Current bounded procurement evidence check; not exact quote or stock confirmation",
+  "queries": [
+    "SN74LV165A 模块 预焊 成品 3.3V",
+    "SN74LV595A 模块 成品 预焊",
+    "SN74LV165AN PDIP Texas Instruments"
+  ],
+  "qualified_preassembled_exact_family_module_from_this_search": null,
+  "no_global_absence_claim": true,
+  "official_sources": [
+    {
+      "url": "https://www.jlc-smt.com/order?smtOrderSource=pcb",
+      "observed": "Search index exposes quote page; direct open returned JS/security challenge rather than usable component price calculation. No upload, login, CAPTCHA or quote submission attempted.",
+      "exact_quote_obtained": false
+    },
+    {
+      "url": "https://www.jlc.com/portal/server_guide_19326.html",
+      "observed": "Official tutorial search result lists material/engineering/stencil/joint/extended components fees. Direct open returned400 timeout; do not invent current amounts from snippets.",
+      "exact_quote_obtained": false
+    },
+    {
+      "url": "https://www.jlc.com/portal/q7i36905.html",
+      "observed": "Historical official notice says20CNY extended type handling fee in2022; cannot assert current2026 fee or assume no handling cost.",
+      "current_fee_confirmed": false
+    },
+    {
+      "url": "https://www.ti.com/product/SN74LV157A",
+      "observed": "Official LV family exists; no confirmed PDIP SKU from current bounded search. LS/ALS/F-family search hits rejected as non-equivalent."
+    },
+    {
+      "url": "https://www.ti.com/product/SN74LV595A",
+      "observed": "Official LV family exists; no confirmed PDIP SKU from current bounded search. No substitution accepted."
+    }
+  ],
+  "total700_CNY_closed": false,
+  "outbound_messages_or_orders": false,
+  "remaining": "Exact six-board factory supply/TH preweld/leadtime and whole-budget quote still needed. Generic module, LS,ALS,HC/AHC parts not accepted as pin-compatible firmware/power-off substitutes without proof.",
+  "browser_followup": {
+    "at": "2026-10-27T07:22:54.250145+08:00",
+    "browser": "in-app browser tab2 hidden",
+    "url": "https://www.jlc-smt.com/order?smtOrderSource=pcb",
+    "actual_page_accessible": true,
+    "visible_quote_prerequisites": [
+      "您还没有登录，请登录后再选择PCB订单",
+      "先选择未发货或已发货PCB订单",
+      "上传或从PCB源文件提取BOM和坐标",
+      "价格：匹配选型时计算",
+      "交期预估：--"
+    ],
+    "login_dialog_visible": true,
+    "login_or_file_upload_performed": false,
+    "quote_obtained": false,
+    "exact_fee_discount_scope": "0.005元/焊点显示有嘉立创EDA设计和PCB面积超1平方米等条件；此六小板合计0.01485平方米，不当作适用费率。",
+    "correction": "Earlier rawweb tool JS response was a transport rendering limitation; normal browser loads page successfully. The remaining quote gate is login/PCBorder/BOMmatch, not an unreachable site."
+  }
+}

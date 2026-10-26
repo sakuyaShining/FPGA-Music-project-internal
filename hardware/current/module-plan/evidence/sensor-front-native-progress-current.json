@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-27T07:07:17.969878+08:00",
-  "status": "12_MANUAL_ANALOG_NETS_CLOSED_23_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
+  "updated_at": "2026-10-27T07:20:44.463149+08:00",
+  "status": "ALL14_INTERNAL_ANALOG_NETS_CLOSED_21_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
   "board": "Sensor14Bank",
   "same_owned_project": "FPGA-Music-U9ControlWork-20261023",
   "native_session": "e8d7065e-fa6a-4310-895c-0ccf40ca650d",
@@ -17,7 +17,7 @@
   "schematic_native_strict_DRC_errors": 0,
   "independent_pin_net_mismatches": 0,
   "independent_imported_PAD_net_mismatches": 0,
-  "pcb_tracks": 83,
+  "pcb_tracks": 91,
   "pcb_vias": 36,
   "placement_done": true,
   "board_outline_defined": true,
@@ -40,14 +40,14 @@
   "electrical_API_erratum": "Wiring create errors left partial committed stubs. Recovered only actual pending pins; D4.8 used orthogonal stub to existing moved port. Never replay full construction.",
   "label_erratum": "Native font-size units required actual persisted scale correction; final labels use file sizes8/10, visual review done; no net or part changes.",
   "read_first": [
-    "sensor-front-12nets-actual-Cu-audit-current.json",
-    "sensor-front-native-12nets-reopened-DRC-current.json",
-    "sensor-front-native-12nets-ground-contact-current.json",
-    "sensor-front-fill-operator-change-current.json",
-    "sensor-front-native-progress-current.json",
+    "sensor-front-14nets-actual-Cu-audit-current.json",
+    "sensor-front-native-14nets-reopened-DRC-current.json",
+    "sensor-front-native-14nets-ground-contact-current.json",
+    "sensor-front-electrode-whole-channel-order-current.json",
+    "procurement-current-availability-and-quote-access.json",
     "sensor-front-layout-current.json"
   ],
-  "next": "Continue same Sensor14Bank PCB2 at a77aba59:83Top segments/36Groundvias;12manual analog nets closed,23signalnets60connection errors remain. Inspect L0_M12/M13 actual C3 Ground escape and remaining14 electrode/7control nets before changed group plan. Keep original48seedCu/36vias/150PAD map and rules. No replay left8/right4 apply or terminal Top35 router. Need complete all-source Ground/reference/neck/mechanical/DRC gates and exact factory six-board price/delivery, all modules/firmware compatibility and <=700 budget before purchase plan.",
+  "next": "Continue same Sensor14Bank PCB2 SHA83b238df,91TopCu/36Groundvias,14internal analog nets closed;21nets56items remain. Before electrode routing, resolve whole14net endpoint order/ESD/connector channel arrangement: current left8 monotone y-order has28inversion pairs, not globalimpossibility. Keep current43newanalog tracks referenced; C3 Groundvia05deb90db32fb69b moved33.7/20.45mm and oneGroundline intentionally revised. No replay any left8/right4/right2 apply or terminalTop35 job. Still need14electrode+7controlnets, fullsource-reference/DC/minneck/assembly, actual6board preweld quote/delivery and all modules/firmware/budget<=700. No complex original mainPCB solver.",
   "physical_tests": "UNMEASURED",
   "manufacturing_release": false,
   "orders_payments_outbound_messages": false,
@@ -67,16 +67,16 @@
     45
   ],
   "native_clearance_errors": 0,
-  "native_connection_errors": 60,
-  "native_open_signal_nets": 23,
-  "bottom_ground_proof": "sensor-front-native-12nets-ground-contact-current.json",
+  "native_connection_errors": 56,
+  "native_open_signal_nets": 21,
+  "bottom_ground_proof": "sensor-front-native-14nets-ground-contact-current.json",
   "bottom_ground_components": 1,
   "new_Ground_vias": 36,
   "new_signal_vias": 0,
   "minimum_actual_Bottom_annular_ground_contact_mm2": 0.2941314227797009,
   "real_signal_PTH_returns": 21,
   "maximum_signal_PTH_return_distance_mm": 1.4512596773898752,
-  "actual_Bottom_ground_and_existing_seed_Cu_preservation": "sensor-front-12nets-actual-Cu-audit-current.json",
+  "actual_Bottom_ground_and_existing_seed_Cu_preservation": "sensor-front-14nets-actual-Cu-audit-current.json",
   "last_native_signal_route": {
     "state": "terminal_no_retained_new_signal_Cu_result_missing",
     "started_at": "2026-10-27T02:05:52.322517+08:00",
@@ -186,8 +186,8 @@
   "not_complete_PCB_or_purchase_plan": true,
   "whole_board_nearest_reference_not_accepted": true,
   "manual_group_stage": {
-    "at": "2026-10-27T07:07:17.969878+08:00",
-    "newly_closed_nets": [
+    "at": "2026-10-27T07:20:44.463149+08:00",
+    "newly_closed_nets_total": [
       "L0_M00",
       "L0_M01",
       "L0_M02",
@@ -199,21 +199,28 @@
       "L0_M08",
       "L0_M09",
       "L0_M10",
-      "L0_M11"
+      "L0_M11",
+      "L0_M12",
+      "L0_M13"
     ],
-    "new_segments": 35,
+    "this_stage_new_nets": [
+      "L0_M12",
+      "L0_M13"
+    ],
+    "new_segments_total": 43,
+    "this_stage_new_segments": 8,
     "new_signal_vias": 0,
-    "components_rotated_same_part": [
-      "R11",
-      "R12",
-      "R13",
-      "R14"
+    "Ground_modified_ids": [
+      "05deb90db32fb69b",
+      "8a4f214bf2967f5f"
     ],
-    "actual_audit": "sensor-front-12nets-actual-Cu-audit-current.json",
-    "native_reopened_DRC": "sensor-front-native-12nets-reopened-DRC-current.json",
+    "Ground_preservation_scope": "47other original seed tracks/35other Groundvias exact; intentional oneGroundvia/line change physically checked and all36contacts/21returns rechecked",
+    "actual_audit": "sensor-front-14nets-actual-Cu-audit-current.json",
+    "native_reopened_DRC": "sensor-front-native-14nets-reopened-DRC-current.json",
     "not_to_replay": [
       "sensor-front-apply-left8-manual.js",
-      "sensor-front-apply-right4-manual.js"
+      "sensor-front-apply-right4-manual.js",
+      "sensor-front-apply-right2-revised-Ground.js"
     ],
     "all_terminal": true
   }
