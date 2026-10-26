@@ -261,6 +261,17 @@
         "sha256": "f7d36868ed623e7acf39231c1177d6bd73ad3b85caf6af580618ff136243dfde",
         "authority": "Agent proposal, explicitly not accepted by human"
       }
+    },
+    {
+      "id": "D-021-REVIEW-WINDOWS",
+      "status": "accepted",
+      "statement": "Maintenance windows: design review 72h, active-source observation 30h, scheduled verification daily. Windows are maintenance thresholds, not product or hardware acceptance. GitHub cannot observe local producer roots, so a 6h window checked on a 6h schedule guaranteed failure and could not be sustained.",
+      "facts": {},
+      "evidence": {
+        "path": "project/reviews/20261026-maintenance/WINDOW-POLICY.md",
+        "sha256": "879c6e06f690073a538a058b1587ed844cbe1fee728baf95ad1b9665e55f3d29",
+        "authority": "User chose adjust-windows-plus-real-review on 2026-10-26 in the maintenance session; no product acceptance, implementation start or manufacturing release implied"
+      }
     }
   ]
 }
