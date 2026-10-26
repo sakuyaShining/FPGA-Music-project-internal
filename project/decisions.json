@@ -264,13 +264,25 @@
     },
     {
       "id": "D-021-REVIEW-WINDOWS",
-      "status": "accepted",
+      "status": "superseded",
       "statement": "Maintenance windows: design review 72h, active-source observation 30h, scheduled verification daily. Windows are maintenance thresholds, not product or hardware acceptance. GitHub cannot observe local producer roots, so a 6h window checked on a 6h schedule guaranteed failure and could not be sustained.",
       "facts": {},
       "evidence": {
         "path": "project/reviews/20261026-maintenance/WINDOW-POLICY.md",
         "sha256": "879c6e06f690073a538a058b1587ed844cbe1fee728baf95ad1b9665e55f3d29",
         "authority": "User chose adjust-windows-plus-real-review on 2026-10-26 in the maintenance session; no product acceptance, implementation start or manufacturing release implied"
+      }
+    },
+    {
+      "id": "D-022-REVIEW-WINDOWS-WEEKLY",
+      "status": "accepted",
+      "supersedes": "D-021-REVIEW-WINDOWS",
+      "statement": "Design review window and active-source observation window are both 168h (7 days); scheduled verification stays daily. A 30h window against a daily schedule still went red on the second run, so the window must be at least twice the schedule period. Weekly real observation is the sustainable cadence; the window is a maintenance threshold, not acceptance.",
+      "facts": {},
+      "evidence": {
+        "path": "project/reviews/20261026-maintenance/WINDOW-POLICY-V2.md",
+        "sha256": "17c34cb154e15b9ff61b2baf0ebfb292926c070acf540086a5fd1a0c4aa86ac5",
+        "authority": "User asked on 2026-10-26 to keep the remote repository a reliable current baseline; this corrects the arithmetic of D-021 without rewriting its record. No product acceptance implied."
       }
     }
   ]
