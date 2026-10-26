@@ -59,3 +59,7 @@ python -m venv .venv
 4. 显示与实体编辑：明确J10驱动、84节点MUX、EEPROM/TF和产品顶层的接口合同及验收条件，再实施接合。
 
 每位协作者认领一个领域、命名任务分支和文件范围，通过私有内部仓库PR交回源码、测试与未验证项。历史v1/v2仍可复现；完整产品缺口、源码身份与持续施工的新变化分别判断。
+
+## 后续增量导航
+
+T02已完成显式historical/current profile及三反例定位，不应再次从cycle6662空跑。D-019共享/尾音优先资源候选、真实TDM音频及最新四槽分量生成器分别有独立清单；最新入口`versions/note-partial-renderer-20261024.json`，不改本页341项原工程输入。最新保存硬件a3a258/49项13网/620孔另保全于`reviews/20261024-note-partial-renderer/hardware/`，不是对旧e098清单只更新hash。main仍以用户合并后的实际远程为准。

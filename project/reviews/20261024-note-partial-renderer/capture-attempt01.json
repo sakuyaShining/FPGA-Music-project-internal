@@ -1,0 +1,6 @@
+{
+  "status": "CAPTURE_EXCEPTION_NOT_TEST_FAILURE",
+  "terminal_exit_code": 1,
+  "reason": "Capture assumed initial manual velocity run had compile.log; only run.log was retained. No missing compile receipt was fabricated.",
+  "recovery": "Explicit exact-byte resume verifies already captured files, then retains only the actual manual log and its provenance limitation. Final velocity02 has full source/tool/command capture. No simulation output was overwritten or rerun by this recovery."
+}

@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-24T10:29:35.061999+00:00",
+  "previous_review": "project/reviews/20261024-note-input-router/review.json",
+  "previous_review_sha256": "005956e45529e4d49ac872e272d0cd109f397bc4df94b8414934164b576672b7",
+  "source_commit": "642b2df9a67afafc37a87d2b4009b7648599d7f2",
+  "raw_observation": "project/reviews/20261024-contact-contract-intake/observation.json",
+  "raw_observation_sha256": "8a448de40e2fb3e394bc57078ff55f26b2c7cb2f52d68b82122d83a277f99530",
+  "producer_ids": [
+    "fpga",
+    "hardware",
+    "fpga-v1-intake"
+  ],
+  "evidence": {
+    "project/reviews/20261024-contact-contract-intake/ASSESSMENT.md": "3ba70373e73e3cd68c90870add4af2e582370dd1e26b466f893a942e9e3cf350",
+    "project/reviews/20261024-contact-contract-intake/contact-oracle-evidence.zip": "d984dd3d2bbc5f220e273404264f9dbed0618cb0f6afe53ac8fa77b5ad0dfab8",
+    "project/reviews/20261024-contact-contract-intake/evidence/NEXT-STEPS-20261024.md": "5ab625c5b2510fe05fb0edd82df6be9eedc0134e6a2767f3bc62e01e332b11db",
+    "project/reviews/20261024-contact-contract-intake/evidence/PUBLIC-GO-LIVE-PLAN-20261024.md": "da9fe45bc3aad0351748450819d4d2f1c06f5f7588316f20f2b5e358f11eb367",
+    "project/reviews/20261024-contact-contract-intake/evidence/REMOTE-AUDIT-20261024.md": "8599e458f6c5470f07409697a1613c20a3bd918c905293d22cafb543dca1bbc4",
+    "project/reviews/20261024-contact-contract-intake/evidence/REVIEW-91-SPEC-AND-FS-20261024.md": "12c4c639754c290f26acb59b1988149c37e6ccdf038a76252ba18c613caf3ee8",
+    "project/reviews/20261024-contact-contract-intake/evidence/UNCOMMITTED-AND-BASELINE-20261024.md": "d1d54035680ac83becb44749e1ba7157d3c0e36af6a3a19cfac2bb5e0b8d9953",
+    "project/reviews/20261024-contact-contract-intake/evidence/v1-fpga-readme-original.md": "f74df98d2e277901bd0dadcbb6be8957565ae2154209b3cefe9a18f8bf7793c1",
+    "project/reviews/20261024-contact-contract-intake/evidence/v1-pin-audit-original.md": "f89d97a3b43c8b2dc88235dd5abc06603043d5f521249283f723a80e3292f5f9",
+    "project/reviews/20261024-contact-contract-intake/evidence/v1-spec-original.md": "bd12d493fe9f2a8452667fd32260f6e6549e0520e1e1a1847756be05e1e34dc8",
+    "project/reviews/20261024-contact-contract-intake/intake-summary.json": "1c70850bd677ea4ca0c594131249880c3e9c5da553e6dadc2b5d9d5efe671c5d",
+    "project/reviews/20261024-contact-contract-intake/observation.json": "8a448de40e2fb3e394bc57078ff55f26b2c7cb2f52d68b82122d83a277f99530",
+    "project/reviews/20261024-contact-contract-intake/oracle-summary.json": "acca3f6b201fe12bfb7e385fdd777eda41d1222babfc5cce7fb816cd1586848d",
+    "project/reviews/20261024-contact-contract-intake/remote-refs.json": "7e9c6ec0f56e77d60c6e0502b207c75bdc6d50d59f205528bdc5fd8925bf0b7f",
+    "project/reviews/20261024-contact-contract-intake/validation/experiments-note_resource_20261024-audio-renderer-tests.log": "5832b66b52ef4483d5cd0b4a881cddd30ccfa8f8bd8f61318c7d5361a4a74356",
+    "project/reviews/20261024-contact-contract-intake/validation/experiments-note_resource_20261024-audio-tests.log": "465a12174e2af6bddd352c5f210f491464c36401b9166a59a6e8c22c224035e1",
+    "project/reviews/20261024-contact-contract-intake/validation/experiments-note_resource_20261024-input-tests.log": "707b237a8d50dca23f658a557ac4c2db4daf545d54301f31882fd352188f5b96",
+    "project/reviews/20261024-contact-contract-intake/validation/experiments-note_resource_20261024-tests.log": "a387bef88a2e883b3b119aba98595f1689d552506881c00b9e00b126e43ce077",
+    "project/reviews/20261024-contact-contract-intake/validation/tools-tests.log": "2b40c07cc57ec46a7f1e0c2de818c986a25544e70a00e2ae9ef584b0dd3598db",
+    "project/reviews/20261024-contact-contract-intake/evidence/hardware/AUTONOMOUS-CURRENT.md": "4829a926abd542b1e96438ee37fbf74e6ca68f0b7983fc10e3b419d2808f12da",
+    "project/reviews/20261024-contact-contract-intake/evidence/hardware/REGIONAL-WORK-IN-PROGRESS.json": "527ba172de00892659edb76fea3fd1a34ab49a270e236ed0f06b44e891f3a3a6",
+    "project/reviews/20261024-contact-contract-intake/evidence/hardware/u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json": "9b649d8372d36711336d0c0e4b1fa019c10cc71b2ed005afd8a6ba448e646066",
+    "project/reviews/20261024-contact-contract-intake/evidence/hardware/u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md": "852680a59e60330d50ee7b6d69cf763ef77a013606634df680325cfe6ec4f9c4"
+  },
+  "source_inputs": {
+    "experiments/note_resource_20261024/input/verify_contact_contract.py": "c88633662b48f4ac4e93a6864546c853e85dacfef6e2347dd852cdfe88a65559",
+    "experiments/note_resource_20261024/input/contact_contract.py": "abe239cb4b79cbbdd8d4047c6d1cb55b0484ffad00ecd8226e510e6ba7670710",
+    "experiments/note_resource_20261024/input/tests/test_contact_contract.py": "301c128eaf42f22a2c645c71d5220d5b656b282dd4e1f54c25074d55ad172134",
+    "experiments/note_resource_20261024/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+    "experiments/note_resource_20261024/input/CONTACT-ADAPTER-CONTRACT.md": "70bad0e48c39bf24c81e4fbe9370de144d30ed026ee1f40304c98087d342c98d"
+  },
+  "assessment": [
+    "Reviewed eight newly captured advisory/v1 documents and four changed hardware context records against actual producer observations; external instructions are not adopted.",
+    "The separately advancing v1 documentation branch is a limited16-pad candidate, not main authority or full84-node standalone product. Local and remote observed heads remain separate.",
+    "The user attachment matches the recorded file hash only; complete source/constraints/timing identity and programming approval remain absent.",
+    "The pin audit later retracts its earlier wrong-mapping paragraphs; neither old alarm nor later image-derived correction is physical qualification.",
+    "Hardware native identity remains a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d with49issues13nets; no native edit, CAD/DRC acceptance or manufacturing release.",
+    "Contact lifecycle oracle and three designated counterexamples pass; attempt01 verifier CRLF failure is preserved and repaired with explicit positive/negative guard tests.",
+    "All91unit tests passed across five suites. No new RTL, PnR, STA or full audio acceptance; previous hold-repair failures are not cleared.",
+    "Review renews only actual source observation/classification after substantive review, not product/hardware acceptance. D-019 unchanged; unresolved product decisions remain unresolved."
+  ],
+  "unit_tests": 91,
+  "rtl_adapter_implemented": false,
+  "product_acceptance": false,
+  "hardware_accessed": false,
+  "programming_performed": false,
+  "manufacturing_release": false
+}

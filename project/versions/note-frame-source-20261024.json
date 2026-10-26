@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "id": "note-frame-source-20261024",
+  "source_base_commit": "82d37271751aac797c371ec5b46c8b245fd59ea9",
+  "branch": "codex/current-engineering-sources-20261023",
+  "publication": "Resolve actual PR4 head; unmerged candidate, not main",
+  "implementation_status": "FRAME_FORMAT_SOURCE_CONNECTED_TO_CONTACT_LEDGER_WITH_STUB_ALLOCATOR",
+  "inputs": {
+    "experiments/note_resource_20261024/input/verify_frames.py": "e5510a7629afd9b97d6679d189cef4deb6445dc76d7dfc5a1913e92a6ed5bebc",
+    "experiments/note_resource_20261024/input/frame_transport.py": "da16d8532892f1fad831b3ded1dbee6127a1fee4e879259d6115c279f82e1fce",
+    "experiments/note_resource_20261024/input/contact_rtl_reference.py": "b79561eb1b4909b8175e7e413c3837953aa77cf65567f4cf2074a7a083d3b647",
+    "experiments/note_resource_20261024/input/contact_contract.py": "abe239cb4b79cbbdd8d4047c6d1cb55b0484ffad00ecd8226e510e6ba7670710",
+    "experiments/note_resource_20261024/input/verify_contact_rtl.py": "49e5627a955dc89725c36578c033924c2b06eefbd84d1af094fe0a6273a43fba",
+    "experiments/note_resource_20261024/input/diagnose_timing.py": "23d12673ac61d8f843a6240859ec04ea3b7083b1e4a35fecc56ff048e989e69b",
+    "experiments/note_resource_20261024/input/build.py": "07eee392a938a584c8a439203af081430982474fd7a302273301d2775a50d560",
+    "experiments/note_resource_20261024/input/rtl/contact_frame_source.v": "6164d9c76935e90e7cdd65644f55c214a9498a922c14c286b6a1e73aca583a35",
+    "experiments/note_resource_20261024/input/rtl/note_frame_transport.v": "b050bacf54da88ca31f3ace97c5a927dcbc45d547e6a774c3d7783902f758752",
+    "experiments/note_resource_20261024/input/rtl/note_contact_adapter.v": "54edc002bce7c56c330965af1823be5b0ed20f3cba94b3e7812a1f5072e1bdcb",
+    "experiments/note_resource_20261024/input/build_frames.py": "48a85166bba0e854e17ce27aebb9b42988bbfc0514883d7ab651bd1f86b45c19",
+    "experiments/note_resource_20261024/input/constraints/router_probe.sdc": "69f19f07ee37bdff779e24548778ad43e36d895b7fd99026ee153aea1ad94207",
+    "experiments/note_resource_20261024/input/constraints/router_probe.cst": "c9b6084070f18009bce5f3a4dda1be4f82b65372ebf446474b85f52b14f23113",
+    "experiments/note_resource_20261024/input/FRAME-SOURCE-CONTRACT.md": "06e00f2b482463b62614c189240459099775977a33fa175c073c579a8c058946",
+    "experiments/note_resource_20261024/input/tests/test_frames.py": "1270853bb652e5d9e16bb6d13e6909d585ad8b0dc69fff8eead9afac7076e93a",
+    "experiments/note_resource_20261024/input/README.md": "9d0b2a9505070013dcc32a9c499fbea4ac84cee54fa16a0f6c21f9f82f3cb3f6"
+  },
+  "review": "project/reviews/20261024-frame-source/review.json",
+  "simulation": {
+    "status": "PASS",
+    "candidate_scenarios": 3,
+    "candidate_frames": 1143,
+    "designated_mutants": 5,
+    "unit_tests": 107
+  },
+  "timing": {
+    "status": "FAIL_OR_INCOMPLETE_TIMING",
+    "returncode": 3221225477,
+    "slack_ns": null
+  },
+  "physical_source_integrated": false,
+  "real_allocator_integrated": false,
+  "finger_consumer_integrated": false,
+  "score_integrated": false,
+  "full_product_pnr": false,
+  "full_product_sta": false,
+  "product_acceptance": false,
+  "programming_allowed": false,
+  "next": "Full-layer anchor/confirmed-map finger consumer and real manager/renderer, then score/backpressure/automatic OFF and full-device timing/physical qualification"
+}

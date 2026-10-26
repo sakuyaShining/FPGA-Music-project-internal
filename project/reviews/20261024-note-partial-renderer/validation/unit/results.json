@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "tests": 60,
+  "suites": [
+    {
+      "name": "governance",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_design_governance.py",
+        "-v"
+      ],
+      "tests": 20,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-partial-renderer/validation/unit/governance.log",
+      "sha256": "8294a15be5e4d6c22861ea499142bab0a712e058cec1661685b8d205d69f7128"
+    },
+    {
+      "name": "engineering",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_engineering.py",
+        "-v"
+      ],
+      "tests": 6,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-partial-renderer/validation/unit/engineering.log",
+      "sha256": "affd4bf50f2cfc14e7d0b9c208fd4fbbc6ef0c59aef8ccb90cb08cc35d4cd15b"
+    },
+    {
+      "name": "music-profiles",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_music_profiles.py",
+        "-v"
+      ],
+      "tests": 14,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-partial-renderer/validation/unit/music-profiles.log",
+      "sha256": "abc02749ba178b4cd3d5b9fb385335afb2dd7856c036c0677ef9640f35343f0f"
+    },
+    {
+      "name": "resource",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/tests",
+        "-p",
+        "test_reference.py",
+        "-v"
+      ],
+      "tests": 8,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-partial-renderer/validation/unit/resource.log",
+      "sha256": "5034dabb28ac7bc2723023d887f6fe673980a11ca6f4cddf521dd06c0891b166"
+    },
+    {
+      "name": "audio",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/audio/tests",
+        "-p",
+        "test_audio_guards.py",
+        "-v"
+      ],
+      "tests": 5,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-partial-renderer/validation/unit/audio.log",
+      "sha256": "ad7c20b1b406a930bd539de915e290ab0cee750c33c35750686522b9c844f161"
+    },
+    {
+      "name": "renderer",
+      "command": [
+        "C:\\Program Files\\python\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/audio/renderer/tests",
+        "-p",
+        "test_renderer.py",
+        "-v"
+      ],
+      "tests": 7,
+      "returncode": 0,
+      "log": "project/reviews/20261024-note-partial-renderer/validation/unit/renderer.log",
+      "sha256": "2124553a935b8568a60b73f8b35a6db0fb52d1a28ab10004b9ae3bdc6eea9fb1"
+    }
+  ]
+}

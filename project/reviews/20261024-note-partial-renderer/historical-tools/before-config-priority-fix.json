@@ -1,0 +1,20 @@
+{
+  "source": "D:\\FPGA-Project\\review\\renderer-before-config-priority-fix-20261024",
+  "files": {
+    "README.md": "4a4a6d73b1c51f7b1583c17e9861f938d218d7ab7aac9f047650f22ee9d0aa85",
+    "reference.py": "2e3b99418a2c318328ef47c30d60b1185bb99f6b1b0febe891517390aff40468",
+    "rtl/note_partial_renderer.v": "8bfca4e1d7f1456083c3d0a2c7d0f86cd4b6304d89ad926172de40ede8649ee3",
+    "rtl/note_resource_instrument_probe.v": "2eae8fa6615b4868d7a6f565e7b1d5d7cf55fccbd0dcb338f8440df5019c9776",
+    "rtl/vel_shape_scaled.v": "6af745d82b76ebca063fdced27aab6501b12b560cd45af3e9e288c98a4c89029",
+    "synthesize_instrument.py": "e72f5bfc751c9158a03af63d849c7a84a95e7d10916e7620ecfcd0347b34afea",
+    "tb/tb_partial_renderer.v": "bccb81ac23f0820179e7e875f7276469e5b60fd8645ad6e9e7e43388fd027203",
+    "tb/tb_rendered_audio.v": "b735567c47dc801282a5d31997f77e5c783210c3aa3e3e11ab45deca29272b54",
+    "tb/tb_velocity_scaling.v": "b00abc5014503d7c82d58af0910b8b9532bc694bf31574b6916b7f11d5539176",
+    "tests/test_renderer.py": "862f4cd204bb79f6551d4e139bc6a87d974ebc69a260264b20a0cb6b3a5119e8",
+    "VELOCITY-SOURCE.json": "5c7f701fd6ec470287e6fa33399257e1171e9f35eccf24cf6181d7bc468d5a8d",
+    "verify_instrument.py": "f9e96909152f6b6a818bdecf9ef915ff7e0b64cebaf6bfaa2c6ec19dbfeae2e0",
+    "verify_renderer.py": "c8534ac25da1ea0ae3f92ea436cf89653dec60a2ad18813a1950a10429e22399",
+    "verify_velocity.py": "740132265afeaa7c7036f18d312a58288def610d265cace674ae84e5c4b46046"
+  },
+  "role": "Exact pre-fix reproduction, not current acceptance; original test PASS did not cover the subsequently found defect."
+}

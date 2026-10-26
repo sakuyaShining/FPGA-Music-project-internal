@@ -1,0 +1,533 @@
+{
+  "schema": 1,
+  "captured_at": "2026-10-23T19:16:24.300209+00:00",
+  "role": "Incremental isolated unit candidate, not replacement for 341 captured product inputs",
+  "base_commit": "fd3feda55a32ba36c9dbbeac75938cd673745b91",
+  "branch": "codex/current-engineering-sources-20261023",
+  "entry": "experiments/note_resource_20261024/README.md",
+  "decision": "D-019-SHARED-INSTANCE-TAIL-FIRST",
+  "contract": {
+    "path": "project/NOTE-RESOURCE-CONTRACT.md",
+    "sha256": "367edc6c4824e36a8034124cadead9d591bdcb59f550cc440ada1715f775c36c"
+  },
+  "source_inputs": {
+    "experiments/note_resource_20261024/README.md": "e5d366171c5315d354991274f1d6d1f243359d0ebb494928ee86474736ff94f9",
+    "experiments/note_resource_20261024/reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+    "experiments/note_resource_20261024/rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+    "experiments/note_resource_20261024/synthesize.py": "cf3589c08213d4f79f5eb894027a7cd79b9a3ac2644a2efb0b5b48cf7b0746b1",
+    "experiments/note_resource_20261024/tb/tb_note_resource.v": "b2177e7b7b44f58448097547b4a92cef57fa90768c57db64976b98e3e2f98a77",
+    "experiments/note_resource_20261024/tests/test_reference.py": "e796cc85b238f298e30c9fd5f30b369e55787705254ec60fdeb124e82aaea94c",
+    "experiments/note_resource_20261024/verify.py": "7b31ba8e0194535794369ef7fbcfb471017c83b0f1cc5adf3e7c7b9f63d3712d"
+  },
+  "verification": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "status": "PASS",
+        "inputs": {
+          "rtl/note_resource_mgr.v": "4fdb5e671d6051a7891ad94a07a3e01b7e8a629c2c71237646bf0800a458f165",
+          "tb/tb_note_resource.v": "c672b8137c8cd4ff420a4439d45fdb0b480eb897daf57b00ee97d82868d3dc8f",
+          "reference.py": "2b1f09ec94ac775cdd7779ecd77299ca0ac67063f8929c20ec381bc28eb1deb6",
+          "verify.py": "f36d99298505afb52a1fc5b67fd736c28a9b307c5ad479ad2ff4b683783a3917"
+        },
+        "artifacts": [
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/results.json",
+            "sha256": "77ca6824098c6030048a5b514a76be1d2474363944d854b8033a237c27336b5f",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\results.json"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/commands.txt",
+            "sha256": "b5fa491f24320a209643d43b7be08e7b8977583dc199e0a6bd0fe53b2048d514",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\commands.txt"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/candidate/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\candidate\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/candidate/run.log",
+            "sha256": "77e63b904b2c8cee6cc097234088ac56324b1bb7f00aec96567c48541aceeb3c",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\candidate\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/candidate/note_resource_mgr.v",
+            "sha256": "b09c515cbbe0a1e4cf7136f47776ade0c61c4f8a6466528802d59aa7f945da66",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\candidate\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/candidate/trace.tsv.gz",
+            "sha256": "ea7b95e2f7e3c90d5082feb31a80fa2d6f373624dae3dfdd1ac2d2ba580f3d3e",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\candidate\\trace.tsv.gz",
+            "uncompressed_sha256": "009a0b5a1716f32dcf5d427d42d6af4fe8a6e4856eabffe2a6a6df6a585ec2e0"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/tail-priority/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\tail-priority\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/tail-priority/run.log",
+            "sha256": "37870fddbe9387900176f4065788d3984e89a2a0cf3b1281eb64b6134e9f0de7",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\tail-priority\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/tail-priority/note_resource_mgr.v",
+            "sha256": "949663c2b65e0c711f3be864a7fc340f87fc7dee30574be672a5daf96aecfbb5",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\tail-priority\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/tail-priority/trace.tsv.gz",
+            "sha256": "52a97eeedf2a562c4bd33cf9b5e7abbcd9bc7a2db744f5c3bb806db62ea7a4d6",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\tail-priority\\trace.tsv.gz",
+            "uncompressed_sha256": "3ae70bc98a297b623e2abd69051d2ef09c2fd105f24c5fae0c14aadf136e45b7"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/partial-retire/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\partial-retire\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/partial-retire/run.log",
+            "sha256": "b9ba6b765812e9ce61c6e18a4dbf01e31df0d53a0c023e8ebc316a818b79f12d",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\partial-retire\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/partial-retire/note_resource_mgr.v",
+            "sha256": "41360088feb2fab9224f09aa356a0ffe3b65a21c659040fd0ff7a5dbd99096d5",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\partial-retire\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt01/partial-retire/trace.tsv.gz",
+            "sha256": "352472b6f304c9c1c93dd958ce6a8e0fe43e98ef22d4b6626f4a4b509bc20925",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-01\\partial-retire\\trace.tsv.gz",
+            "uncompressed_sha256": "8fe84efe60686375d6707f9e066d10dd6d2cb2a507974b97bf6ae657f4cdcf2a"
+          }
+        ],
+        "original_directory": "D:\\FPGA-Project\\review\\note-resource-20261024-01",
+        "expected_sha256": "6acfdf833c3cd799da80bc180e6133d9a9e2d1a89705c0356e8503332b536efd"
+      },
+      {
+        "attempt": 2,
+        "status": "PASS",
+        "inputs": {
+          "rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+          "tb/tb_note_resource.v": "c672b8137c8cd4ff420a4439d45fdb0b480eb897daf57b00ee97d82868d3dc8f",
+          "reference.py": "2b1f09ec94ac775cdd7779ecd77299ca0ac67063f8929c20ec381bc28eb1deb6",
+          "verify.py": "4489e2fa43e58ce8c277a0f906240f60e29992b0456d3d4f2e87b54448a0d479"
+        },
+        "artifacts": [
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/results.json",
+            "sha256": "23979cfd30cf2dfe8350bd82b42bc0b71a96968c015e20774a7dbe15e1b402d4",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\results.json"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/commands.txt",
+            "sha256": "b5fa491f24320a209643d43b7be08e7b8977583dc199e0a6bd0fe53b2048d514",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\commands.txt"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/candidate/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\candidate\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/candidate/run.log",
+            "sha256": "98b67d4ab97d31e922db76be696c27bf11be6bcf0f31301ffa2d2d8afe5e78d6",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\candidate\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/candidate/note_resource_mgr.v",
+            "sha256": "4bcf963a16fb36bc6e92f4d43d81a34f8d62e3ea5e724e1bcfc4ad22c497315c",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\candidate\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/candidate/trace.tsv.gz",
+            "sha256": "ea7b95e2f7e3c90d5082feb31a80fa2d6f373624dae3dfdd1ac2d2ba580f3d3e",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\candidate\\trace.tsv.gz",
+            "uncompressed_sha256": "009a0b5a1716f32dcf5d427d42d6af4fe8a6e4856eabffe2a6a6df6a585ec2e0"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/tail-priority/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\tail-priority\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/tail-priority/run.log",
+            "sha256": "1ccf3570c0f419835a41bbedd5a2a4a8ac490ce740a00f8d23cae32574ff863b",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\tail-priority\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/tail-priority/note_resource_mgr.v",
+            "sha256": "ec649104343e3aa4ff4846c88f8acf10f1da9d741305a730237aaca16b3159d0",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\tail-priority\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/tail-priority/trace.tsv.gz",
+            "sha256": "52a97eeedf2a562c4bd33cf9b5e7abbcd9bc7a2db744f5c3bb806db62ea7a4d6",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\tail-priority\\trace.tsv.gz",
+            "uncompressed_sha256": "3ae70bc98a297b623e2abd69051d2ef09c2fd105f24c5fae0c14aadf136e45b7"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/partial-retire/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\partial-retire\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/partial-retire/run.log",
+            "sha256": "ae3ad69c0e1e5ddb46ba6df62d079764a7522f37a5b78fed389ce9cc60d3b098",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\partial-retire\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/partial-retire/note_resource_mgr.v",
+            "sha256": "2ddda2fa5480e2e0819acf63740dcf4441386b4d6cf72bb855fdfab3ae1152c4",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\partial-retire\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt02/partial-retire/trace.tsv.gz",
+            "sha256": "aa45cd9fccb96a9cd77d1674f1cf23ff5468042e074a9276d07d5e48d863aaf6",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-02\\partial-retire\\trace.tsv.gz",
+            "uncompressed_sha256": "5d9260ac4586471a89b30466c322620861a08968a383460dacc621c6f1d842a7"
+          }
+        ],
+        "original_directory": "D:\\FPGA-Project\\review\\note-resource-20261024-02",
+        "expected_sha256": "6acfdf833c3cd799da80bc180e6133d9a9e2d1a89705c0356e8503332b536efd"
+      },
+      {
+        "attempt": 3,
+        "status": "FAIL",
+        "inputs": {
+          "rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+          "tb/tb_note_resource.v": "8d9933bf54e398f9e5afd20f66ffc5f0fbd8a4fa527d5c9844342fd704f48fa2",
+          "reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+          "verify.py": "7b31ba8e0194535794369ef7fbcfb471017c83b0f1cc5adf3e7c7b9f63d3712d"
+        },
+        "artifacts": [
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/results.json",
+            "sha256": "4bfe76ade05831e57c757b4d862185a44a0ab7f2fec6d7d81844ab98b6f1bb80",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\results.json"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/commands.txt",
+            "sha256": "269573bb1676d724daa36fd113698dc7ad33c08e04f1e5f523e2919e0144b9fb",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\commands.txt"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/candidate/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\candidate\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/candidate/run.log",
+            "sha256": "08045de724308e74982b22b7bbf73b8221a0ce37a6949840f3866d3ed0871c2b",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\candidate\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/candidate/note_resource_mgr.v",
+            "sha256": "4bcf963a16fb36bc6e92f4d43d81a34f8d62e3ea5e724e1bcfc4ad22c497315c",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\candidate\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/candidate/trace.tsv.gz",
+            "sha256": "1c516c1f048cf2dcf0f0c9672e295c969f035b68d3be7fdfa6979b6fa35d3a7f",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\candidate\\trace.tsv.gz",
+            "uncompressed_sha256": "dd5cf80424d3d23b9afb8fdbceac1179763d77afd8ce590c72061173fdc7a650"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/tail-priority/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\tail-priority\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/tail-priority/run.log",
+            "sha256": "08045de724308e74982b22b7bbf73b8221a0ce37a6949840f3866d3ed0871c2b",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\tail-priority\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/tail-priority/note_resource_mgr.v",
+            "sha256": "ec649104343e3aa4ff4846c88f8acf10f1da9d741305a730237aaca16b3159d0",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\tail-priority\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/tail-priority/trace.tsv.gz",
+            "sha256": "1c516c1f048cf2dcf0f0c9672e295c969f035b68d3be7fdfa6979b6fa35d3a7f",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\tail-priority\\trace.tsv.gz",
+            "uncompressed_sha256": "dd5cf80424d3d23b9afb8fdbceac1179763d77afd8ce590c72061173fdc7a650"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/partial-retire/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\partial-retire\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/partial-retire/run.log",
+            "sha256": "08045de724308e74982b22b7bbf73b8221a0ce37a6949840f3866d3ed0871c2b",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\partial-retire\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/partial-retire/note_resource_mgr.v",
+            "sha256": "2ddda2fa5480e2e0819acf63740dcf4441386b4d6cf72bb855fdfab3ae1152c4",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\partial-retire\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/partial-retire/trace.tsv.gz",
+            "sha256": "1c516c1f048cf2dcf0f0c9672e295c969f035b68d3be7fdfa6979b6fa35d3a7f",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\partial-retire\\trace.tsv.gz",
+            "uncompressed_sha256": "dd5cf80424d3d23b9afb8fdbceac1179763d77afd8ce590c72061173fdc7a650"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/completion-token/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\completion-token\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/completion-token/run.log",
+            "sha256": "08045de724308e74982b22b7bbf73b8221a0ce37a6949840f3866d3ed0871c2b",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\completion-token\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/completion-token/note_resource_mgr.v",
+            "sha256": "a24da9572188769ff3d3817f75f7e72aad0268d77399f0fcbe188e9b60946950",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\completion-token\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt03/completion-token/trace.tsv.gz",
+            "sha256": "1c516c1f048cf2dcf0f0c9672e295c969f035b68d3be7fdfa6979b6fa35d3a7f",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-03\\completion-token\\trace.tsv.gz",
+            "uncompressed_sha256": "dd5cf80424d3d23b9afb8fdbceac1179763d77afd8ce590c72061173fdc7a650"
+          }
+        ],
+        "original_directory": "D:\\FPGA-Project\\review\\note-resource-20261024-03",
+        "expected_sha256": "6acfdf833c3cd799da80bc180e6133d9a9e2d1a89705c0356e8503332b536efd"
+      },
+      {
+        "attempt": 4,
+        "status": "PASS",
+        "inputs": {
+          "rtl/note_resource_mgr.v": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+          "tb/tb_note_resource.v": "b2177e7b7b44f58448097547b4a92cef57fa90768c57db64976b98e3e2f98a77",
+          "reference.py": "2e747e6476d1a7b5a247e5d62c3811a5e17d7dc981c2a4945cca5ab2b7efdd3b",
+          "verify.py": "7b31ba8e0194535794369ef7fbcfb471017c83b0f1cc5adf3e7c7b9f63d3712d"
+        },
+        "artifacts": [
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/results.json",
+            "sha256": "fdd7aeda70d915644454d255ff8c46d061cc7bf04693ee67616c5e81372db56c",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\results.json"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/commands.txt",
+            "sha256": "269573bb1676d724daa36fd113698dc7ad33c08e04f1e5f523e2919e0144b9fb",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\commands.txt"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/candidate/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\candidate\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/candidate/run.log",
+            "sha256": "101325b75941f67426bba3ee54855ef1d35a2d8bfc14d4f35ed0ca5c43dcfb6d",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\candidate\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/candidate/note_resource_mgr.v",
+            "sha256": "4bcf963a16fb36bc6e92f4d43d81a34f8d62e3ea5e724e1bcfc4ad22c497315c",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\candidate\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/candidate/trace.tsv.gz",
+            "sha256": "ea7b95e2f7e3c90d5082feb31a80fa2d6f373624dae3dfdd1ac2d2ba580f3d3e",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\candidate\\trace.tsv.gz",
+            "uncompressed_sha256": "009a0b5a1716f32dcf5d427d42d6af4fe8a6e4856eabffe2a6a6df6a585ec2e0"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/tail-priority/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\tail-priority\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/tail-priority/run.log",
+            "sha256": "4ea718bfdcfd118464b5237ee52877d7497310345ed7fe77cbf5171ca51a736e",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\tail-priority\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/tail-priority/note_resource_mgr.v",
+            "sha256": "ec649104343e3aa4ff4846c88f8acf10f1da9d741305a730237aaca16b3159d0",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\tail-priority\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/tail-priority/trace.tsv.gz",
+            "sha256": "52a97eeedf2a562c4bd33cf9b5e7abbcd9bc7a2db744f5c3bb806db62ea7a4d6",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\tail-priority\\trace.tsv.gz",
+            "uncompressed_sha256": "3ae70bc98a297b623e2abd69051d2ef09c2fd105f24c5fae0c14aadf136e45b7"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/partial-retire/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\partial-retire\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/partial-retire/run.log",
+            "sha256": "3831425224469d3f23c9ce887e3fd5b85304027a595c660290f786b05ddb7476",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\partial-retire\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/partial-retire/note_resource_mgr.v",
+            "sha256": "2ddda2fa5480e2e0819acf63740dcf4441386b4d6cf72bb855fdfab3ae1152c4",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\partial-retire\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/partial-retire/trace.tsv.gz",
+            "sha256": "aa45cd9fccb96a9cd77d1674f1cf23ff5468042e074a9276d07d5e48d863aaf6",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\partial-retire\\trace.tsv.gz",
+            "uncompressed_sha256": "5d9260ac4586471a89b30466c322620861a08968a383460dacc621c6f1d842a7"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/completion-token/compile.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\completion-token\\compile.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/completion-token/run.log",
+            "sha256": "6e2b1831f428825bf7d2b72dd3f6dde910413b4269dcc706410233a7997cd8ee",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\completion-token\\run.log"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/completion-token/note_resource_mgr.v",
+            "sha256": "a24da9572188769ff3d3817f75f7e72aad0268d77399f0fcbe188e9b60946950",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\completion-token\\note_resource_mgr.v"
+          },
+          {
+            "path": "project/reviews/20261024-note-resource-candidate/validation/attempt04/completion-token/trace.tsv.gz",
+            "sha256": "25fe4f511b6b35a6ba2b7c475dc149e2a71c6a211b720a7211fff8d34272758b",
+            "origin": "D:\\FPGA-Project\\review\\note-resource-20261024-04\\completion-token\\trace.tsv.gz",
+            "uncompressed_sha256": "8c1ebca6d738b969e20d7d4b86350fa52e7f14d60890bafe3b190f160df1f0cb"
+          }
+        ],
+        "original_directory": "D:\\FPGA-Project\\review\\note-resource-20261024-04",
+        "expected_sha256": "6acfdf833c3cd799da80bc180e6133d9a9e2d1a89705c0356e8503332b536efd"
+      }
+    ],
+    "final_attempt": 4,
+    "commands": 2045,
+    "detected_faults": [
+      "tail-priority",
+      "partial-retire",
+      "completion-token"
+    ],
+    "failed_attempt03": "Response-stability monitor falsely rejected response deassertion after an accepted handshake; fixed monitor and reran all cases in04. Failure is preserved.",
+    "history_input_note": "Attempt02 exact verifier/reference/TB archived; attempt03 exact TB/reference/verifier archived; original RTL bound to synthesis01. Attempt01 original verifier script was not captured and its input SHA alone is retained, so full old-run tool reproducibility is not claimed.",
+    "coverage": "project/reviews/20261024-note-resource-candidate/coverage.json"
+  },
+  "synthesis": [
+    {
+      "attempt": 1,
+      "status": "PASS_SYNTHESIS_ONLY",
+      "resources": {
+        "REG": 2466,
+        "LUT": 6359,
+        "ALU": 209,
+        "BSRAM": 2,
+        "SSRAM": 44
+      },
+      "source_sha256": "4fdb5e671d6051a7891ad94a07a3e01b7e8a629c2c71237646bf0800a458f165",
+      "artifacts": [
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt01/results.json",
+          "sha256": "6fea8256de4675c9efc4a4ffd8573a90f3cce9607d0860fd09cfc212075c51f2",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-01\\results.json"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt01/console.log",
+          "sha256": "0204717d6010219c0a7fc7e5ba2239620467b80e687a3b43337a4c63583d620d",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-01\\console.log"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt01/note_resource_mgr.v",
+          "sha256": "4fdb5e671d6051a7891ad94a07a3e01b7e8a629c2c71237646bf0800a458f165",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-01\\note_resource_mgr.v"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt01/resource.gprj",
+          "sha256": "feac494ab977069dd588ff3faa8e929518180627186bf8d33036b370de80a5f7",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-01\\resource.gprj"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt01/synthesize.tcl",
+          "sha256": "b066036527feff31bdccd275763038f8da1a2ce4ae637972cde3c63c0c5aae1b",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-01\\synthesize.tcl"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt01/impl/gwsynthesis/resource_syn_resource.html",
+          "sha256": "4642733d5376621237b6af9345dd1b4133f5b9426f43dd55a343b281736e6817",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-01\\impl\\gwsynthesis\\resource_syn_resource.html"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "status": "PASS_SYNTHESIS_ONLY",
+      "resources": {
+        "REG": 1590,
+        "LUT": 3035,
+        "ALU": 213,
+        "BSRAM": 0,
+        "SSRAM": 42
+      },
+      "source_sha256": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+      "artifacts": [
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt02/results.json",
+          "sha256": "b37a20f5ca0b649b40e01eb9a40138edbf8f9d99db4cbc41ddd832d9c6a77a9a",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-02\\results.json"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt02/console.log",
+          "sha256": "752e70f35e3cc8755cd34d28c46a7246b481f7830c962535035895841399c2b3",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-02\\console.log"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt02/note_resource_mgr.v",
+          "sha256": "c4f769dadd0743bf02529971266e7f4e2ddecf10e88e19b74ccbcaf76dd76bc7",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-02\\note_resource_mgr.v"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt02/resource.gprj",
+          "sha256": "feac494ab977069dd588ff3faa8e929518180627186bf8d33036b370de80a5f7",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-02\\resource.gprj"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt02/synthesize.tcl",
+          "sha256": "73cda492421f557238296667f083e4b8ee9dd244c65cc057ba431db94b4f81c5",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-02\\synthesize.tcl"
+        },
+        {
+          "path": "project/reviews/20261024-note-resource-candidate/synthesis/attempt02/impl/gwsynthesis/resource_syn_resource.html",
+          "sha256": "195e0cfbee329ba9b9c271e5db84e11de24f97b34df0dfdfe88201ac218d4bd9",
+          "origin": "D:\\FPGA-Project\\review\\note-resource-synthesis-20261024-02\\impl\\gwsynthesis\\resource_syn_resource.html"
+        }
+      ]
+    }
+  ],
+  "product_acceptance": false,
+  "hardware_accessed": false,
+  "no_changes_to": [
+    "fpga/current",
+    "hardware/current",
+    "host/current",
+    "D:/FPGA-Project/codex-builds/fpga-m1-agent-work",
+    "06df hardware workspace"
+  ],
+  "unverified": [
+    "Real audio backend PREPARE/PUBLISH and envelope completion",
+    "Physical finger edge/retrigger and score/live input arbitration",
+    "NR07 integrated four-layer product acceptance",
+    "Complete-top resource budget, PnR/STA",
+    "Steal transients and physical latency",
+    "Final bitstream and board acceptance"
+  ]
+}

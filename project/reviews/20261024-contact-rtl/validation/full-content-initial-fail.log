@@ -1,0 +1,43 @@
+CHECK 4d37 9f9ad9de61e2 inputs=702
+CHECK main 79b96d078dbd inputs=5731
+CHECK 06df 06d68619c5d9 inputs=2598
+CHECK 4a4b 32d53c410e52 inputs=509
+CHECK 4c43 33f060d9b0bd inputs=482
+CHECK 4e09 51966c0d7638 inputs=476
+CHECK 66a4 9ec04f419c9e inputs=1234
+CHECK 6e70 217f6be2507d inputs=500
+CHECK 8c56 c7711637f827 inputs=455
+CHECK a61b 94920ccf6ec8 inputs=476
+CHECK b5b8 96704e7f7c08 inputs=455
+CHECK b6d6 d8a2e9bb7907 inputs=456
+CHECK ca03 1f37cf59a630 inputs=507
+CHECK cec2 ff63edd68257 inputs=455
+CHECK eb59 5298c4b4ca55 inputs=451
+CHECK instrument-engine-safety d965607c3bc0 inputs=1281
+CHECK workbuddy b08952baf80b inputs=673
+CHECK m1-work 187a6bf3a8a1 inputs=533
+CHECK m1-reference fecbdfb58764 inputs=252
+CHECK native-source57 8291780596a0 inputs=17
+CHECK native-trial50 046ae1a811eb inputs=17
+CHECK native-r15 64934b04c6ec inputs=17
+{
+  "status": "FAIL",
+  "scope": "Full captured content hashes",
+  "snapshots": 22,
+  "inputs": 18277,
+  "unique_verified_blobs": 5845,
+  "current_design": "design-20261024-tagged-input-router-candidate",
+  "recovery_archive_files": 586,
+  "recovery_captured_at": "2026-10-23T12:23:42.173413+08:00",
+  "live_workspaces_checked": false,
+  "remote_checked_now": false,
+  "entry_freshness_checked": false,
+  "published_authority": "main",
+  "review_freshness": "NOT_CHECKED",
+  "implementation_start_authorized": false,
+  "errors": [
+    "Reviewed design source changed without updating design identity: project/PRODUCT-SPEC.md",
+    "Reviewed design source changed without updating design identity: project/WORK-PLAN.md"
+  ],
+  "product_acceptance": false
+}

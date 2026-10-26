@@ -8,10 +8,10 @@
     "role": "Editable collaboration candidates with explicit failed music golden regression; not a full product",
     "product_acceptance": false
   },
-  "updated_at": "2026-10-23T15:02:03.630221+00:00",
+  "updated_at": "2026-10-24T15:34:50.716774+00:00",
   "entry_branch": "main",
   "entry_tag": null,
-  "entry_commit_resolution": "Query actual private remote main and compare controlled entry content; dated branch is compatibility only",
+  "entry_commit_resolution": "Query actual target repository main and compare controlled entry content; dated branch is compatibility only; repository is now public.",
   "start": "project/AGENT-START.md",
   "copyable_prompt": "project/NEXT-AGENT-PROMPT.md",
   "current_scope": "Reviewed decisions, explicit recovery checkpoints and observed unpublished WIP; expiry and live visibility are separate checks",
@@ -170,7 +170,7 @@
     "physical_visualization_display": false,
     "right_harmonic_touchscreen": "J10 retained"
   },
-  "main_status": "PR #1 merged. Subsequent management changes require main integration; actual remote main is authoritative.",
+  "main_status": "PR3 merged at100b35bd93cbde6d604a289d990f208622e94646. This specification alignment is a new PR candidate until user merges it.",
   "validated_handoff_implementation_commit": "a151d1059febabb8ab3fa165fa654aff40494782",
   "validation_record": "project/versions/management-validation-20261022.json",
   "recording_rule": "The frozen handoff tag may additionally include verification receipts; implementation source is identified separately above",
@@ -178,7 +178,7 @@
   "design_state": "project/design-state.json",
   "previous_frozen_tag": "handoff/20261022-management-v1",
   "latest_observed_fpga": {
-    "review_record": "project/reviews/20261023-team-handoff/review.json",
+    "review_record": "project/reviews/20261024-note-input-router/review.json",
     "producer": "fpga",
     "validation_inherited": false
   },
@@ -195,5 +195,62 @@
   "historical_tags": [
     "handoff/20261022-management-v1",
     "handoff/20261023-design-v2"
-  ]
+  ],
+  "product_specification": "project/PRODUCT-SPEC.md",
+  "source_map": "project/SOURCE-MAP.md",
+  "work_plan": "project/WORK-PLAN.md",
+  "corrections": "project/corrections.json",
+  "open_rules": "project/OPEN-RULES.md",
+  "music_diagnosis": "project/MUSIC-GOLDEN-DIAGNOSIS.md",
+  "note_resource_contract": "project/NOTE-RESOURCE-CONTRACT.md",
+  "music_profile_validation": "project/reviews/20261024-music-profiles-allocation/review.json",
+  "hardware_context_review": "project/reviews/20261024-note-input-router/review.json",
+  "note_resource_candidate": {
+    "manifest": "project/versions/note-resource-candidate-20261024.json",
+    "review": "project/reviews/20261024-note-resource-candidate/review.json",
+    "role": "Incremental unit candidate with mock backend; NR07 pending",
+    "source_branch": "codex/current-engineering-sources-20261023",
+    "base_commit": "fd3feda55a32ba36c9dbbeac75938cd673745b91",
+    "product_acceptance": false
+  },
+  "note_resource_audio_candidate": {
+    "manifest": "project/versions/note-resource-audio-20261024.json",
+    "review": "project/reviews/20261024-note-resource-audio/review.json",
+    "source_branch": "codex/current-engineering-sources-20261023",
+    "base_commit": "33a18189f4a5268498666d66c68dd7fbc032a071",
+    "role": "Real TDM/envelope audio probe with external synthetic partial provider; not full device",
+    "product_acceptance": false
+  },
+  "note_partial_renderer_candidate": {
+    "manifest": "project/versions/note-partial-renderer-20261024.json",
+    "review": "project/reviews/20261024-note-partial-renderer/review.json",
+    "source_branch": "codex/current-engineering-sources-20261023",
+    "base_commit": "bff7c4e9d9de90be01ae2629a1472c78dfb29f9d",
+    "role": "Incremental real four-slot partial generator and transactional TDM, logical note/config stimuli, not complete device",
+    "product_acceptance": false
+  },
+  "note_input_router_candidate": {
+    "manifest": "project/versions/note-input-router-20261024.json",
+    "review": "project/reviews/20261024-note-input-router/review.json",
+    "source_branch": "codex/current-engineering-sources-20261023",
+    "base_commit": "6e899f87a3fb1b1d601f6921a9b0a4ede31c2f75",
+    "role": "Tagged logical-source routing/queued cancellation; physical adapters/timing pending",
+    "product_acceptance": false
+  },
+  "note_contact_transport_candidate": {
+    "manifest": "project/versions/note-contact-transport-20261024.json",
+    "review": "project/reviews/20261024-contact-rtl/review.json",
+    "role": "Isolated contact-command RTL endpoint; actual frame/finger/score/audio integration absent",
+    "source_branch": "codex/current-engineering-sources-20261023",
+    "product_acceptance": false,
+    "programming_allowed": false
+  },
+  "note_frame_source_candidate": {
+    "manifest": "project/versions/note-frame-source-20261024.json",
+    "review": "project/reviews/20261024-frame-source/review.json",
+    "role": "Captured frame-format source plus contact ledger; allocation replies still stubs, full finger/real audio absent",
+    "source_branch": "codex/current-engineering-sources-20261023",
+    "product_acceptance": false,
+    "programming_allowed": false
+  }
 }

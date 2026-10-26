@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-23T17:30:16.125097+00:00",
+  "observer_role": "Specification and handoff management only; no source-owner implementation takeover",
+  "previous_review": "project/reviews/20261024-engineering-publication/review.json",
+  "previous_review_sha256": "3fbb8685086a444f4342e92abf3a8e4516f69de3aa7c2fbb54e7a468e8ee304c",
+  "raw_observation": "project/reviews/20261024-specification-alignment/observation.json",
+  "raw_observation_sha256": "0aebb0869f508dae066e9bd70f79dc70635047c3738201b2cbc351c92bf220ea",
+  "producer_ids": [
+    "fpga",
+    "hardware"
+  ],
+  "changes_since_previous_review": {
+    "fpga": {
+      "added": [
+        "engine/src/vel_wtab.hex.bak-20261023"
+      ],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "observation_scope_change": "Explicitly watch the retained velocity baseline .bak file excluded by suffix filtering; no producer roots removed or hidden.",
+  "evidence": {
+    "project/reviews/20261024-specification-alignment/evidence/user-requirements.json": "5c182f74cd5da28ecc7a7a438f8a4e254717fd021ba61c1f7f2c07638717d9e1",
+    "project/reviews/20261024-specification-alignment/evidence/repository-visibility.json": "8463c1a961d2d4bc7eff0a2bf6b8ac19ca2bc56a3b2ab58751e6ce47cd1a96d1",
+    "project/corrections.json": "bca650ccdb397de9bb8be78d5e9bcc015610fd52ab1f10e5e1fc2ba5926e6631"
+  },
+  "assessment": {
+    "requirements": "Recovered six direct technical user requests, separated accepted workflows from preferences and derisking proposals. No new music semantics approved.",
+    "source_changes": "Inspect changes_since_previous_review; snapshot remains the engineering-publication manifest. Any live changes are not signed off as product behavior.",
+    "retained_baseline": "Added .bak observation covers the baseline already captured in the341-file manifest; not a newly invented golden.",
+    "errors": "Atomic banks, completeness, decay direction, touchscreen/key proposal and old procurement applicability corrected through a sidecar; original evidence untouched.",
+    "verification": "Prior engineering-publication verification remains source-bound historical evidence. This review runs management/identity tests only, not fresh RTL/CAD/board/STA tests.",
+    "manufacturing": "47 connection issues/13nets remain a prior saved-source finding, not a new DRC result; no manufacturing release.",
+    "publication": "User made repository public; legacy sync now checks immutable target identity rather than private visibility."
+  },
+  "inherited_validation": false,
+  "product_acceptance": false,
+  "new_cad_operations": false,
+  "hardware_accessed": false
+}

@@ -1,5 +1,7 @@
 # FPGA Music 项目总入口
 
+**快速接手**：[产品规格与差距](project/PRODUCT-SPEC.md) → [工程分布](project/SOURCE-MAP.md) → [待办与验收](project/WORK-PLAN.md)。仓库现已公开；实际远程main是发布入口，未合并PR仍是候选。
+
 当前协作工程见[工程入口](project/ENGINEERING.md)与[2026-10-24协作检查点](project/COLLABORATION-CHECKPOINT-20261024.md)：`fpga/current/`、`hardware/current/`、`host/current/`。这是有输入身份和验证边界的开发候选，完整产品未验收；历史根目录源码不作为最新开发入口。
 
 **先读[当前设计](project/DESIGN-CURRENT.md)与[快速取得版本](project/QUICKSTART.md)，再读 [project/CURRENT.md](project/CURRENT.md)。** 该页统一导航音乐基线、开发候选、临时探针、GUI与硬件版本。

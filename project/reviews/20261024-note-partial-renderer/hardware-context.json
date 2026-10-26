@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "changed_sources": {
+    "AUTONOMOUS-CURRENT.md": {
+      "bytes": 63332,
+      "sha256": "9e2924485869120e4f11358f96a0224b9af1fce57f76c2d2b31a95e92dd4ef36"
+    },
+    "REGIONAL-WORK-IN-PROGRESS.json": {
+      "bytes": 19818,
+      "sha256": "f4e612741136f05fba7cef26ec096cb20beeb49e29056e6308749d059d76a58b"
+    },
+    "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md": {
+      "bytes": 18263,
+      "sha256": "655760f5c0407b7e6f8acf1070023ea5dcf0951c6c84740575a1fa6a9e7916e1"
+    },
+    "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-native-NOT-FOR-FAB.zip": {
+      "bytes": 1692278,
+      "sha256": "49001269b9d7a4d0aca6053fa9dd820cf588b96080932ebd9c0147f5cc3455d5"
+    },
+    "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json": {
+      "bytes": 14720,
+      "sha256": "8330b1935f85f85cc3d7f757edbcb60165a7a6ff9c0ff534bf91b8be34ddb8cc"
+    }
+  },
+  "selected_state": {
+    "updated_at": "2026-10-24T08:07:13.108930+08:00",
+    "phase": "ADDR1_LOCAL_FANOUT_NATIVE_VERIFIED_49_13NETS_620VIAS_NOT_FAB",
+    "pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
+    "drc": {
+      "Connection Error": 49
+    },
+    "open_nets": [
+      "BUS_SCK",
+      "PRESET1",
+      "PRESET2",
+      "EDIT",
+      "ENC_A",
+      "ENC_B",
+      "ENC_PUSH",
+      "INPUT_LOAD_N",
+      "ADDR1",
+      "ADDR2",
+      "MUX_DISABLE",
+      "ADDR0",
+      "KEY_QH"
+    ],
+    "actual_vias": 620,
+    "physical_tests": "UNMEASURED",
+    "manufacturing_release": false,
+    "accepted_local_fanout_only": true,
+    "whole_board_verified": false,
+    "all_current_routing_jobs_terminal": true,
+    "latest_offline_work_state": "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\conditional-port-next.json",
+    "offline_candidate_note": "Top90 C9 local pocket passes; full203-object restoration has25 physical conflicts. No native changes, no full candidate acceptance. All jobs terminal."
+  },
+  "assessment": "Owner saved/reopened local ADDR1 U8.1/U2.11 fanout, +2signal/+2ground vias. Actual saved native a3a258/49issues/13nets/227components/620vias;49 includes2 pending trunk-via objects, not evidence of pad-island split. ADDR1 still7 pad islands. Trunk routing attempt failed and was not imported; do not retry unchanged bottleneck. Full native closure and manufacturing remain blocked. Original captured e098/47issues stays unchanged.",
+  "privacy": "Selected technical context only, no live CAD/session handles or full private conversations.",
+  "new_cad_operations": false,
+  "manufacturing_release": false
+}

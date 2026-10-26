@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-24T14:36:50.624889+00:00",
+  "previous_review": "project/reviews/20261024-contact-contract-intake/review.json",
+  "previous_review_sha256": "5b5ea6aefef814689dfbef42a88c78c9c0dc3d125f6afd4e198f2f73fb145afa",
+  "source_base_commit": "ad57967a95f9391b74fe3e5a89ffd1b144a2bbfc",
+  "raw_observation": "project/reviews/20261024-contact-rtl/observation.json",
+  "raw_observation_sha256": "42562592d6df57e3265600252a502c8e9cdf06aae923e73b5001f09512a5596c",
+  "producer_ids": [
+    "fpga",
+    "hardware",
+    "fpga-v1-intake",
+    "hardware-native-handoff"
+  ],
+  "evidence": {
+    "project/reviews/20261024-contact-rtl/ASSESSMENT.md": "5ffd90dcb72894b3102d6a7b57b3a89ba496c5f0a08d4cf53fb36007c18c677c",
+    "project/reviews/20261024-contact-rtl/contact-rtl-evidence.zip": "35729b46fc0b34e04bf4ec49685f486b82dd07a4ca60443e08083660da129e26",
+    "project/reviews/20261024-contact-rtl/crash-event.json": "b305226c748eaa2050cd68c9a3baf1df98db733e33eee0b91a8fb5440f3dc2f7",
+    "project/reviews/20261024-contact-rtl/evidence-summary.json": "7d67e2fafb94f59d800c0f6949b18232c886de480a0f12b7850138d2a541c286",
+    "project/reviews/20261024-contact-rtl/hardware-evidence/hardware/construction-state.json": "0cb10a29dc55df46f28291661162c3298acb64b26c523f1fbb5a7d2f398d708e",
+    "project/reviews/20261024-contact-rtl/hardware-evidence/hardware-native-handoff/ADDR2-ref-repair-readonly-recovered.json": "46e9ea7f0dd8bc70607232ac27618ad0b90e3060f1203602251eff079a990e1e",
+    "project/reviews/20261024-contact-rtl/hardware-evidence/hardware-native-handoff/ADDR2-ref-repaired-native-full-review-state.json": "7f6d06463b062a3750fb9873ba5740b46b2f41d9a0c68526e2fa704a5261e988",
+    "project/reviews/20261024-contact-rtl/hardware-evidence/hardware-native-handoff/ADDR2-reference-repair-current-next.json": "e001210353645e06e5f620ca037536f1e26340c9d6e6e40aa078210431e23333",
+    "project/reviews/20261024-contact-rtl/hardware-intake.json": "64383c399f3cc4a832e3e145f381ab2c3afa2572cf43c6972612a8fb40afa5cc",
+    "project/reviews/20261024-contact-rtl/observation.json": "42562592d6df57e3265600252a502c8e9cdf06aae923e73b5001f09512a5596c",
+    "project/reviews/20261024-contact-rtl/validation/experiments-note_resource_20261024-audio-renderer-tests.log": "bce180f35e84be547f714862704cb7a6a5f1594f0b26ff8701e2ed6543b2a960",
+    "project/reviews/20261024-contact-rtl/validation/experiments-note_resource_20261024-audio-tests.log": "b2ed1f49f8f43b9a7911368c204e9c7116743c0688a4ee18be74cf6dedd37b02",
+    "project/reviews/20261024-contact-rtl/validation/experiments-note_resource_20261024-input-tests.log": "82e149d1cfcc67496d234e02cdd07f94ce0bff4bdee1602b25b0ff4731b4bc32",
+    "project/reviews/20261024-contact-rtl/validation/experiments-note_resource_20261024-tests.log": "84885e5c1e015853ad8b07acfc41789553e2d9ff154720ebafcef5c102a6209a",
+    "project/reviews/20261024-contact-rtl/validation/full-content-initial-fail.log": "3e55173f3c45e53f3de281a1d698e643996ed6a617194bd877ceb732bbba0cc8",
+    "project/reviews/20261024-contact-rtl/validation/tools-tests.log": "a74c0898e2ccddc5b56872b44af2f450b50be4e9a40b95cb1a9ae61a83937f0e"
+  },
+  "version_manifest": "project/versions/note-contact-transport-20261024.json",
+  "version_manifest_sha256": "9ee9e213a76352bd6d5be0263bcc75db3e94f06c16697c0f38d3a9c7406a1bb7",
+  "source_inputs": {
+    "experiments/note_resource_20261024/input/rtl/note_contact_adapter.v": "54edc002bce7c56c330965af1823be5b0ed20f3cba94b3e7812a1f5072e1bdcb",
+    "experiments/note_resource_20261024/input/contact_rtl_reference.py": "b79561eb1b4909b8175e7e413c3837953aa77cf65567f4cf2074a7a083d3b647",
+    "experiments/note_resource_20261024/input/verify_contact_rtl.py": "49e5627a955dc89725c36578c033924c2b06eefbd84d1af094fe0a6273a43fba",
+    "experiments/note_resource_20261024/input/build_contact.py": "275cd1f40513a91fe84811b2f0ca7deba5123b710cb94b5ceb3c677a13964c57",
+    "experiments/note_resource_20261024/input/tests/test_contact_rtl.py": "3b9c76cffa3131bff70cf3a41908f336c61f7239670647e6dbf20a14d105a9ee",
+    "experiments/note_resource_20261024/input/contact_contract.py": "abe239cb4b79cbbdd8d4047c6d1cb55b0484ffad00ecd8226e510e6ba7670710",
+    "experiments/note_resource_20261024/input/CONTACT-ADAPTER-CONTRACT.md": "9ae7c30c2a32275f9ee7d167f0515078400006231bdc41f2ed6588f2be74ffe6",
+    "experiments/note_resource_20261024/input/constraints/router_probe.sdc": "69f19f07ee37bdff779e24548778ad43e36d895b7fd99026ee153aea1ad94207",
+    "experiments/note_resource_20261024/input/constraints/router_probe.cst": "c9b6084070f18009bce5f3a4dda1be4f82b65372ebf446474b85f52b14f23113",
+    "experiments/note_resource_20261024/input/build.py": "07eee392a938a584c8a439203af081430982474fd7a302273301d2775a50d560",
+    "experiments/note_resource_20261024/input/diagnose_timing.py": "23d12673ac61d8f843a6240859ec04ea3b7083b1e4a35fecc56ff048e989e69b"
+  },
+  "assessment": [
+    "Contact command ledger implemented in isolated RTL,7521 cycle comparisons and5 designated mutants passed;97 unit tests passed. Actual frame/finger/score/audio integration remains absent.",
+    "Original compile-generator and negative-qualification failures retained; final05 reruns exact final simulation inputs.",
+    "Standalone full-constraint diagnostic synthesis completed but PnR exited0xC0000005 at routing80%; matching Windows event identifies gowin.dll offset0x1c9f10 for process23560. No STA, unit timing not qualified.",
+    "Final RTL and generated wrapper exactly match failed timing01 export; later fixture-only reference additions are explicitly recorded, not used to manufacture a timing PASS.",
+    "One changed06df state now references a separate native hardware handoff root, registered as a fourth active metadata producer with current thread/native-archive identity gaps explicit.",
+    "Owner reports951ce88a/42issues12nets227components649vias; full-review-state is terminal AssertionError on ADDR2/Inner16 closed-set copper checks, despite a stale entry running flag. No hardware closure inherited.",
+    "Only actual metadata/source observation is renewed after this substantive review; actual live CAD model not inspected or modified. No whole-board acceptance, programming or manufacturing release.",
+    "D-019 and full product unchanged; unmerged PR4 is not main. Pending P-020 and other product rules remain unapproved."
+  ],
+  "unit_tests": 97,
+  "physical_source_integrated": false,
+  "product_acceptance": false,
+  "full_product_pnr": false,
+  "full_product_sta": false,
+  "hardware_cad_accessed": false,
+  "programming_performed": false,
+  "manufacturing_release": false,
+  "entry_identity_update": {
+    "project/DESIGN-CURRENT.md": "40f5f98f8ff5b8371a78bd8dbe874742f75f78386120f394ac67aa9c493d75e4",
+    "project/design-state.json": "3204e13596df7539453a96d2315d3e767af585e7ccf5230662c72a0521004a53",
+    "project/state.json": "2a00e0d5568138c493e69815e076cdd6c54936a91dc97449d979ba6c0ff6aacb",
+    "project/handoff.json": "e318d8680633dd8594d85dfc8a788ec89ea8ce8c13835962e591741e42340ea1"
+  }
+}

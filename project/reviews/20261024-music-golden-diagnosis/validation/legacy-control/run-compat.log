@@ -1,0 +1,4 @@
+DIAG dut.core r_vel_sens=80 native_vscale=256
+DIAG ref_top r_vel_sens=80 native_vscale=256
+PASS music cycles=193471 samples=374 events=8 changed_pcm=180 released_tail_pcm=40 fader_to_sound restore_exact state_preserved
+D:\FPGA-Project\review\music-golden-20261024-legacy-vscale-01\tb_compat_music.v:86: $finish called at 1934750000 (1ps)

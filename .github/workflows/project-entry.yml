@@ -30,6 +30,16 @@ jobs:
         run: python3 tools/scripts/engineering.py check
       - name: Verify engineering corruption and isolated export rejection
         run: python3 -m unittest discover -s tools/tests -p 'test_engineering.py' -v
+      - name: Verify explicit music profiles and independent amplitude guards
+        run: python3 -m unittest discover -s tools/tests -p 'test_music_profiles.py' -v
+      - name: Verify shared resource reference and mutation guards
+        run: python3 -m unittest discover -s experiments/note_resource_20261024/tests -v
+      - name: Verify audio-backend mutation routing and failure guards
+        run: python3 -m unittest discover -s experiments/note_resource_20261024/audio/tests -v
+      - name: Verify real partial renderer arithmetic and mutation guards
+        run: python3 -m unittest discover -s experiments/note_resource_20261024/audio/renderer/tests -v
+      - name: Verify tagged input router and incomplete STA rejection
+        run: python3 -m unittest discover -s experiments/note_resource_20261024/input/tests -v
   maintain-legacy-entry:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -39,14 +49,14 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
-      - name: Keep old entry consumers following actual private main
+      - name: Keep old entry consumers following verified repository main
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
           test "$GITHUB_REPOSITORY" = 'sakuyaShining/FPGA-Music-project-internal'
-          test "$(gh api "repos/$GITHUB_REPOSITORY" --jq .private)" = true
+          test "$(gh api "repos/$GITHUB_REPOSITORY" --jq .id)" = 1404161021
           git fetch origin main codex/project-management-20261022
           git merge-base --is-ancestor origin/codex/project-management-20261022 origin/main
           git push origin refs/remotes/origin/main:refs/heads/codex/project-management-20261022

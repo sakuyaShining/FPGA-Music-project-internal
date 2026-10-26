@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "source_files": {
+    "AUTONOMOUS-CURRENT.md": {
+      "bytes": 54615,
+      "sha256": "b178f13dd45fcd4eb9fef305e744c4518fd62208ea67362005bdd3d20f3052e2"
+    },
+    "REGIONAL-WORK-IN-PROGRESS.json": {
+      "bytes": 17308,
+      "sha256": "f42cf24f46e1e3b9f29bfa123eb97ff53261c7d114f021905e59882a22627011"
+    },
+    "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md": {
+      "bytes": 9546,
+      "sha256": "63d63c50b7375773e5d43212aa0108b8f6add3e58bbb37191d08e42772f04346"
+    },
+    "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json": {
+      "bytes": 13286,
+      "sha256": "76debbf8ddc290d5b26c3676bdce011a67231870e846e88f1f2b0c1aa9af86af"
+    }
+  },
+  "saved_native_claim": {
+    "pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+    "drc": {
+      "Connection Error": 47
+    },
+    "physical_tests": "UNMEASURED",
+    "manufacturing_release": false
+  },
+  "next_action_excerpt": "原生仍e098c5db/47项13网/227件616孔，无本轮CAD变更；23日可下单目标已错过。先读original-control-method-checkpoint.json及Top90-C9-local-plan/Top90-full-physical和其expected。central90 LOAD/地走廊、Bottom C9固定电源场、固定时钟移孔及clock-correct-target的两层重接均终态失败，不重跑。clock-joint的零线结果选错同一目标岛已明确拒绝，不能算时钟通过。当前改为原U9控制拓扑+现有底面布局，C9改Top57.5/58.5mm90度仅离线候选，原U9仍63.99962054/56.00061952mm0度仅候选；Top新供电2.256960mm/地2.905408mm、间距0.396448/0.662988mm、器件实际轮廓通过，无新增孔，原时钟保持同岛，不再用C9 Bottom/时钟断开试算。9控制/时钟/IO离线同岛，但四层203项变动审计仍有25条物理冲突记录，涉及恢复的P1/P2/ENC_B/EDIT/P0与新Bottom C8/R63/TP13、PDN/地孔，以及两个0.15688mm原间距，不能称整批通过；12个新MOSI铜孔对象和1个冲突GND孔仅从候选移除，P3/MOSI尚未闭合，原生MOSI仍完整。下一步按full-physical逐对象联合调整这些局部控制铜/孔与数字PDN/地，优先保留已通过C8/R63/R64及Top90短去耦，不再盲目换远方U9或固定端点全板寻路；保持Ground所有焊盘/孔实接地及完整供电。之后在同一完整候选恢复P3及受影响MOSI主干，继承全网MOSI实地参考门。所有13网及邻近TP_RESET_N/原47供电脚/原已闭合网、四层物理/最近实际参考/回流/器件及精确非铜通过后才原生整批改位重铺、严格DRC、保存重开，当前实际北方U9/C9不动。当前全部作业终态，无活动路由。采购227件=215SMT+12TH/36料号已原生对齐，供应商快照不是PCBA库存/报价/交期；屏配置复位/线束机械/供电84附件/双面及TH装配/同版制造包仍开放。保留e098与aaa37原生包；自动继续、不下单不外发、实物UNMEASURED。",
+  "privacy": "Selected technical fields only; no live CAD session UUIDs, handles or full owner conversations copied.",
+  "interpretation": "Owner context and offline candidate/next-action updates, not new native DRC or fabrication approval. Watched native recovery ZIP identities did not change. Unsaved CAD state not inspected."
+}

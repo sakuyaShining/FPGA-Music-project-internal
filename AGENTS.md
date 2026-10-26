@@ -2,13 +2,13 @@
 
 **当前协作工程：先读`project/ENGINEERING.md`及`project/COLLABORATION-CHECKPOINT-20261024.md`，执行`python tools/scripts/engineering.py check`。最新开发候选位于`fpga/current/`、`hardware/current/`、`host/current/`；根目录旧源码及v1/v2恢复只作历史。音乐黄金差异、硬件未连通和实体兼容缺口必须随任务交接。**
 
-**main长期入口：先fetch核实private的内部仓库实际main，再读`project/DESIGN-CURRENT.md`、`project/governance.json`、`project/decisions.json`及`project/producers.json`。用户已取消J11实体音乐可视化屏、保留J10；此项覆盖旧双屏红线。固定源码归档、活跃未发布源和已验证源必须分开，旧PASS不继承。快速获取见`project/QUICKSTART.md`。**
+**main长期入口：先fetch核实目标仓库实际main，再读`project/DESIGN-CURRENT.md`、`project/PRODUCT-SPEC.md`、`project/governance.json`、`project/decisions.json`及`project/producers.json`。仓库已由用户公开，名称internal不表示私有。用户已取消J11实体音乐可视化屏、保留J10；此项覆盖旧双屏红线。固定源码归档、活跃未发布源和已验证源必须分开，旧PASS不继承。快速获取见`project/QUICKSTART.md`。**
 
 新Agent读`project/AGENT-START.md`与`project/handoff.json`，执行`python tools/scripts/project_control.py check --remote --fresh-entry`及`python tools/scripts/design_governance.py status --remote`。在本机继续功能工作前加`--live`核对声明的活跃源；源不可访问/变化/审阅过期必须明示并处理，不视为通过。日期分支仅兼容，v1/v2标签仅复现；实际main唯一权威。不能只看旧README、目录时间戳或继承的source-identity就实施。
 
 先读 `project/CURRENT.md` 和 `project/state.json`，再读协作板。入口身份检查：`python tools/scripts/project_control.py check`；完整保全内容核验加 `--full`。源码捕获不等于产品验收。
 
-命名分支与远程提交是交接必填项。共享开发只推已核实为private的internal；origin/public用于独立对外发布。
+命名分支与远程提交是交接必填项。共享开发核实internal的实际URL与仓库身份后推送；旧origin/public指向另一个仓库，不能按remote名称混用。公开仓库不得提交令牌、完整私聊或账号配置。
 
 **本项目由多个 agent 并行推进。开工前必须先读 `docs/00-协作/AGENT-BOARD.md`**，确认：
 你被分配到哪条轴、哪些路径只有你能写、哪些决定不可回退、上一个 agent 在飞什么。

@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "owner_reported_native_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "owner_reported_connections": 42,
+  "owner_reported_open_nets": 12,
+  "owner_reported_vias": 649,
+  "owner_reported_components": 227,
+  "native_stage_pass": false,
+  "source_native_archive_verified": false,
+  "physical_tests": "UNMEASURED",
+  "full_review_state": "terminal",
+  "full_review_error": {
+    "type": "AssertionError",
+    "message": "[{'net': 'ADDR2', 'layer': 16, 'expected_outside_actual_mm2': 0.0036121815845052696, 'actual_outside_expected_mm2': 0.0036064612899178172, 'pass_closed_set_containment': False}]",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-ref-repaired-native-full-review.py\", line 32, in <module>\n    closed_copper_bound=3e-6;closed_checks=[dict(net=k[0],layer=k[1],expected_outside_actual_mm2=eg[k].difference(ag[k].buffer(closed_copper_bound,quad_segs=64)).area,actual_outside_expected_mm2=ag[k].difference(eg[k].buffer(closed_copper_bound,quad_segs=64)).area,pass_closed_set_containment=eg[k].difference(ag[k].buffer(closed_copper_bound,quad_segs=64)).is_empty and ag[k].difference(eg[k].buffer(closed_copper_bound,quad_segs=64)).is_empty) for k in eg];assert all(z['pass_closed_set_containment'] for z in closed_checks),[z for z in closed_checks if not z['pass_closed_set_containment']]\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: [{'net': 'ADDR2', 'layer': 16, 'expected_outside_actual_mm2': 0.0036121815845052696, 'actual_outside_expected_mm2': 0.0036064612899178172, 'pass_closed_set_containment': False}]\n"
+  },
+  "entry_all_jobs_terminal": false,
+  "scope": "Read-only handoff metadata, not an independently accessed CAD model or manufacturing release",
+  "cad_accessed": false,
+  "changed_06df_metadata": "project/reviews/20261024-contact-rtl/hardware-evidence/hardware/construction-state.json"
+}

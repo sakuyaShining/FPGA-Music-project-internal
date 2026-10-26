@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "tested_at": "2026-10-24T04:11:21.700352+00:00",
+  "mode": "timing",
+  "inputs": {
+    "experiments/note_resource_20261024/input/rtl/note_event_router.v": "5af4efc2453ef888de9db7e55cd18f113fd814c15515d326310065c2b992a136",
+    "experiments/note_resource_20261024/input/rtl/note_router_timing_probe.v": "012eff9131a4117a7b06829fd1532278c6ea2df5e8d07a08e475edcf433edb86",
+    "experiments/note_resource_20261024/input/constraints/router_probe.sdc": "69f19f07ee37bdff779e24548778ad43e36d895b7fd99026ee153aea1ad94207",
+    "experiments/note_resource_20261024/input/constraints/router_probe.cst": "c9b6084070f18009bce5f3a4dda1be4f82b65372ebf446474b85f52b14f23113",
+    "experiments/note_resource_20261024/input/build.py": "cc17eab937a67d3235a93f5490917af1be28d9e56d8b0a02eeb776cc06806512"
+  },
+  "source_changes": [],
+  "tool": {
+    "path": "D:\\FPGA-Project\\Gowin\\Gowin_V1.9.11.03_Education\\Gowin_V1.9.11.03_Education_x64\\IDE\\bin\\gw_sh.exe",
+    "sha256": "4c172d4c0d2a4c7ef5c764d091a315cbcde2127573554bfd7d09ac6f2e5ea535"
+  },
+  "returncode": 3221225477,
+  "elapsed_seconds": 12.56,
+  "console_sha256": "4e1ba5ee120b5c1a45f80e88aa583dace781c61107c59b05f60bb8899ce6ccff",
+  "warnings": [],
+  "reports": {
+    "impl/gwsynthesis/router_syn.rpt.html": "6701347520428a0c2107ec7e9a46c661ae065f68742cac8b3b8f58f37dd1b71d",
+    "impl/gwsynthesis/router_syn_resource.html": "ccb81902040e9a9a44ba206a4af4c62b763581070c882774796bba18a6a6860e"
+  },
+  "slack_ns": null,
+  "status": "FAIL_OR_INCOMPLETE_TIMING",
+  "scope": "Register-driven router-only four-bit scan shell with explicit27MHz I/O envelope and fixed diagnostic pins; NOT product pinout/bitstream",
+  "full_product_pnr": false,
+  "full_product_sta": false,
+  "product_acceptance": false,
+  "hardware_accessed": false,
+  "programming_allowed": false
+}

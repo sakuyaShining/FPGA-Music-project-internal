@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "status": "PROPOSED_AWAITING_HUMAN_REPLY",
+  "authority": "Agent recommendation only, not human approval",
+  "question": "抢占发声音符时，是否先约0.5毫秒固定短淡出，确认旧音退场后再完整起新音，以减轻爆音，并纳入整机不超过10毫秒延迟预算？",
+  "options": [
+    "采用约0.5毫秒短淡出，再完整起新音（推荐）",
+    "立即切断旧音，优先最低抢占延迟",
+    "先比较不同淡出长度的音频，再确定"
+  ],
+  "human_answer": null,
+  "current_experiment": "Immediate retirement at a common audio frame; no click-free or final musical acceptance claimed",
+  "does_not_change": "D-019 resource sharing, priority and whole-instance decisions"
+}

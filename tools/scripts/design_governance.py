@@ -21,6 +21,8 @@ ENTRY_PATHS = ['.gitattributes', '.github/workflows/project-entry.yml', 'README.
                'tools/scripts/project_control.py', 'tools/scripts/design_governance.py',
                'fpga/current', 'hardware/current', 'host/current',
                'tools/scripts/engineering.py', 'tools/requirements-engineering-host.txt']
+ENTRY_PATHS += ['tools/scripts/music_profiles.py', 'tools/tests/test_music_profiles.py']
+ENTRY_PATHS += ['experiments/note_resource_20261024']
 
 
 def read_json(path):
@@ -126,7 +128,7 @@ def validate(root=ROOT):
     policy = read_json(root / 'project/governance.json')
     errors = []
     if policy.get('authority') != dict(remote=REMOTE, branch=BRANCH):
-        errors.append('Design authority must be the verified private repository main')
+        errors.append('Design authority must be the verified target repository main')
     for name in ('project/handoff.json', 'project/design-state.json'):
         if read_json(root / name).get('entry_branch') != BRANCH:
             errors.append('Non-main entry branch in ' + name)
