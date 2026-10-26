@@ -1,0 +1,7819 @@
+{
+  "time": "2026-10-26T20:44:27.786270+08:00",
+  "source_files_sha256": {
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-whole-native-capture-normalized.json": "6d48871b39f27408bd80f3a693b2a51e1895eb87111b01d152ec758c609b42da",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-preparation-20261021-r1\\native-cpl-current-951ce88a-DRAFT-NOT-FOR-ORDER.csv": "0328146ebebc3440cad98f82f6af1fbf02e050a0a5c20d4ae187739c34c7df66",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-preparation-20261021-r1\\current-board-procurement.json": "d4ede0815c39f18ef207b824cada136013063069c67866663a18cccf00db89cf",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-preparation-20261021-r1\\current-source-binding-951ce88a.json": "3184ec4529c25b1e5033bf273712a1fcfb04f6baab92f115a2ed017d71bc69b4"
+  },
+  "accepted_native_identity": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "provenance": "原料号归组表仍标a3；以951同源227行CPL全部列相同的绑定证据继承，不冒充新库存报价。",
+  "total": 227,
+  "SMT": 215,
+  "TH": 12,
+  "functional_block_counts": {
+    "84路传感前端": 152,
+    "扫描控制输出": 2,
+    "实体按键编码器与串行采集": 17,
+    "断电保存EEPROM": 2,
+    "PCM5122立体声音频": 17,
+    "共享总线及触控屏接口适配": 21,
+    "电源入口稳压与保护": 14,
+    "Nano20K插接": 2
+  },
+  "references_missing": [],
+  "references_duplicated": [],
+  "function_removed": 0,
+  "module_fully_verified_covered": 0,
+  "records": [
+    {
+      "reference": "J5",
+      "original_MPN": "2.54-1*20P母",
+      "original_LCSC": "C50984",
+      "footprint": "HDR-TH_20P-P2.54-V-F",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": ""
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "SENSE_4"
+        },
+        {
+          "pad": "6",
+          "net": "SENSE_3"
+        },
+        {
+          "pad": "7",
+          "net": "I2S_BCK"
+        },
+        {
+          "pad": "8",
+          "net": "I2S_DIN"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": "SENSE_5"
+        },
+        {
+          "pad": "11",
+          "net": "I2S_LRCK"
+        },
+        {
+          "pad": "12",
+          "net": ""
+        },
+        {
+          "pad": "13",
+          "net": ""
+        },
+        {
+          "pad": "14",
+          "net": ""
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "17",
+          "net": ""
+        },
+        {
+          "pad": "18",
+          "net": ""
+        },
+        {
+          "pad": "19",
+          "net": ""
+        },
+        {
+          "pad": "20",
+          "net": ""
+        }
+      ],
+      "functional_block": "Nano20K插接",
+      "role": "Nano20K插接",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J6",
+      "original_MPN": "2.54-1*20P母",
+      "original_LCSC": "C50984",
+      "footprint": "HDR-TH_20P-P2.54-V-F",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": ""
+        },
+        {
+          "pad": "2",
+          "net": ""
+        },
+        {
+          "pad": "3",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "TP_INT"
+        },
+        {
+          "pad": "6",
+          "net": "BUS_MOSI"
+        },
+        {
+          "pad": "7",
+          "net": "SCAN_LATCH"
+        },
+        {
+          "pad": "8",
+          "net": "BUS_SCK"
+        },
+        {
+          "pad": "9",
+          "net": "BUS_RETURN"
+        },
+        {
+          "pad": "10",
+          "net": "I2C_SDA"
+        },
+        {
+          "pad": "11",
+          "net": "I2C_SCL"
+        },
+        {
+          "pad": "12",
+          "net": "SENSE_0"
+        },
+        {
+          "pad": "13",
+          "net": "SENSE_1"
+        },
+        {
+          "pad": "14",
+          "net": "SENSE_2"
+        },
+        {
+          "pad": "15",
+          "net": "INPUT_LOAD_N"
+        },
+        {
+          "pad": "16",
+          "net": ""
+        },
+        {
+          "pad": "17",
+          "net": "HARM_CS_N"
+        },
+        {
+          "pad": "18",
+          "net": ""
+        },
+        {
+          "pad": "19",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "20",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "Nano20K插接",
+      "role": "Nano20K插接",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U8",
+      "original_MPN": "SN74LV595ADR",
+      "original_LCSC": "C205940",
+      "footprint": "SOIC-16_L9.9-W3.9-P1.27-LS6.0-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "ADDR1"
+        },
+        {
+          "pad": "2",
+          "net": "ADDR2"
+        },
+        {
+          "pad": "3",
+          "net": "ADDR3"
+        },
+        {
+          "pad": "4",
+          "net": "MUX_DISABLE"
+        },
+        {
+          "pad": "5",
+          "net": "RC_DRIVE"
+        },
+        {
+          "pad": "6",
+          "net": "LCD_RESET_N"
+        },
+        {
+          "pad": "7",
+          "net": "TP_RESET_N"
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "15",
+          "net": "ADDR0"
+        },
+        {
+          "pad": "14",
+          "net": "BUS_MOSI"
+        },
+        {
+          "pad": "13",
+          "net": "GND"
+        },
+        {
+          "pad": "12",
+          "net": "SCAN_LATCH"
+        },
+        {
+          "pad": "11",
+          "net": "BUS_SCK"
+        },
+        {
+          "pad": "10",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        }
+      ],
+      "functional_block": "扫描控制输出",
+      "role": "扫描控制输出",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U11",
+      "original_MPN": "74LVC1G157GV,125",
+      "original_LCSC": "C503437",
+      "footprint": "TSOP-6_L3.0-W1.5-P0.95-LS2.8-BR",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "KEY_QH"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": "RA_MISO"
+        },
+        {
+          "pad": "4",
+          "net": "BUS_RETURN"
+        },
+        {
+          "pad": "5",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "6",
+          "net": "HARM_CS_N"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享读回选择、I2C适配、SPI/复位缓冲或触控中断整形；非通用GPIO直连替代",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R11",
+      "original_MPN": "0603WAF2200T5E",
+      "original_LCSC": "C22962",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "SENSE_0"
+        },
+        {
+          "pad": "1",
+          "net": "INV0"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "施密特输出至SENSE通道220欧串联",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R12",
+      "original_MPN": "0603WAF2200T5E",
+      "original_LCSC": "C22962",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "SENSE_1"
+        },
+        {
+          "pad": "1",
+          "net": "INV1"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "施密特输出至SENSE通道220欧串联",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R13",
+      "original_MPN": "0603WAF2200T5E",
+      "original_LCSC": "C22962",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "SENSE_2"
+        },
+        {
+          "pad": "1",
+          "net": "INV2"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "施密特输出至SENSE通道220欧串联",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R14",
+      "original_MPN": "0603WAF2200T5E",
+      "original_LCSC": "C22962",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "SENSE_3"
+        },
+        {
+          "pad": "1",
+          "net": "INV3"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "施密特输出至SENSE通道220欧串联",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R15",
+      "original_MPN": "0603WAF2200T5E",
+      "original_LCSC": "C22962",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "SENSE_4"
+        },
+        {
+          "pad": "1",
+          "net": "INV4"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "施密特输出至SENSE通道220欧串联",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R16",
+      "original_MPN": "0603WAF2200T5E",
+      "original_LCSC": "C22962",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "SENSE_5"
+        },
+        {
+          "pad": "1",
+          "net": "INV5"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "施密特输出至SENSE通道220欧串联",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C11",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U12",
+      "original_MPN": "PCM5122PWR",
+      "original_LCSC": "C962071",
+      "footprint": "TSSOP-28_L9.8-W6.6-P0.65-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "DAC_3V3"
+        },
+        {
+          "pad": "2",
+          "net": "DAC_CAPP"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "DAC_CAPM"
+        },
+        {
+          "pad": "5",
+          "net": "DAC_VNEG"
+        },
+        {
+          "pad": "6",
+          "net": "DAC_L_RAW"
+        },
+        {
+          "pad": "7",
+          "net": "DAC_R_RAW"
+        },
+        {
+          "pad": "8",
+          "net": "DAC_3V3"
+        },
+        {
+          "pad": "9",
+          "net": "GND"
+        },
+        {
+          "pad": "10",
+          "net": "GND"
+        },
+        {
+          "pad": "11",
+          "net": "I2C_MOD_SDA"
+        },
+        {
+          "pad": "12",
+          "net": "I2C_MOD_SCL"
+        },
+        {
+          "pad": "13",
+          "net": ""
+        },
+        {
+          "pad": "14",
+          "net": ""
+        },
+        {
+          "pad": "15",
+          "net": ""
+        },
+        {
+          "pad": "16",
+          "net": "GND"
+        },
+        {
+          "pad": "17",
+          "net": "GND"
+        },
+        {
+          "pad": "18",
+          "net": "DAC_3V3"
+        },
+        {
+          "pad": "19",
+          "net": ""
+        },
+        {
+          "pad": "20",
+          "net": "GND"
+        },
+        {
+          "pad": "21",
+          "net": "I2S_BCK"
+        },
+        {
+          "pad": "22",
+          "net": "I2S_DIN"
+        },
+        {
+          "pad": "23",
+          "net": "I2S_LRCK"
+        },
+        {
+          "pad": "24",
+          "net": "GND"
+        },
+        {
+          "pad": "25",
+          "net": "DAC_XSMT"
+        },
+        {
+          "pad": "26",
+          "net": "DAC_LDOO"
+        },
+        {
+          "pad": "27",
+          "net": "GND"
+        },
+        {
+          "pad": "28",
+          "net": "DAC_3V3"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "PCM5122立体声音频",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C26",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_3V3"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "SW1",
+      "original_MPN": "EC11E15244B2",
+      "original_LCSC": "C470754",
+      "footprint": "SW-TH_EC11XXXXXXXX",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "A",
+          "net": "ENC_A"
+        },
+        {
+          "pad": "C",
+          "net": "GND"
+        },
+        {
+          "pad": "B",
+          "net": "ENC_B"
+        },
+        {
+          "pad": "D",
+          "net": "ENC_PUSH"
+        },
+        {
+          "pad": "E",
+          "net": "GND"
+        },
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R1",
+      "original_MPN": "RC0603FR-0747KL",
+      "original_LCSC": "C105579",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "RC0"
+        },
+        {
+          "pad": "1",
+          "net": "RC_DRIVE"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "RC_DRIVE至公共RC节点47k充放电路径",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C1",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C100",
+      "original_MPN": "CL10C100JB8NNNC",
+      "original_LCSC": "C1634",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L0_M14"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C101",
+      "original_MPN": "CL10C101JB8NNNC",
+      "original_LCSC": "C14858",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L0_M15"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J20",
+      "original_MPN": "PZ254V-11-16P",
+      "original_LCSC": "C22465876",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "14",
+          "net": "L0_E13"
+        },
+        {
+          "pad": "13",
+          "net": "L0_E12"
+        },
+        {
+          "pad": "12",
+          "net": "L0_E11"
+        },
+        {
+          "pad": "11",
+          "net": "L0_E10"
+        },
+        {
+          "pad": "10",
+          "net": "L0_E09"
+        },
+        {
+          "pad": "9",
+          "net": "L0_E08"
+        },
+        {
+          "pad": "8",
+          "net": "L0_E07"
+        },
+        {
+          "pad": "7",
+          "net": "L0_E06"
+        },
+        {
+          "pad": "6",
+          "net": "L0_E05"
+        },
+        {
+          "pad": "5",
+          "net": "L0_E04"
+        },
+        {
+          "pad": "4",
+          "net": "L0_E03"
+        },
+        {
+          "pad": "3",
+          "net": "L0_E02"
+        },
+        {
+          "pad": "2",
+          "net": "L0_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E00"
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "84路传感前端",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D1",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L0_E03"
+        },
+        {
+          "pad": "4",
+          "net": "L0_E02"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L0_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D2",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L0_E07"
+        },
+        {
+          "pad": "4",
+          "net": "L0_E06"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L0_E05"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D3",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L0_E11"
+        },
+        {
+          "pad": "4",
+          "net": "L0_E10"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L0_E09"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D4",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L0_E13"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R2",
+      "original_MPN": "RC0603FR-0747KL",
+      "original_LCSC": "C105579",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "RC1"
+        },
+        {
+          "pad": "1",
+          "net": "RC_DRIVE"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "RC_DRIVE至公共RC节点47k充放电路径",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C2",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C102",
+      "original_MPN": "CL10C100JB8NNNC",
+      "original_LCSC": "C1634",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L1_M14"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C103",
+      "original_MPN": "CL10C101JB8NNNC",
+      "original_LCSC": "C14858",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L1_M15"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J21",
+      "original_MPN": "PZ254V-11-16P",
+      "original_LCSC": "C22465876",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "14",
+          "net": "L1_E13"
+        },
+        {
+          "pad": "13",
+          "net": "L1_E12"
+        },
+        {
+          "pad": "12",
+          "net": "L1_E11"
+        },
+        {
+          "pad": "11",
+          "net": "L1_E10"
+        },
+        {
+          "pad": "10",
+          "net": "L1_E09"
+        },
+        {
+          "pad": "9",
+          "net": "L1_E08"
+        },
+        {
+          "pad": "8",
+          "net": "L1_E07"
+        },
+        {
+          "pad": "7",
+          "net": "L1_E06"
+        },
+        {
+          "pad": "6",
+          "net": "L1_E05"
+        },
+        {
+          "pad": "5",
+          "net": "L1_E04"
+        },
+        {
+          "pad": "4",
+          "net": "L1_E03"
+        },
+        {
+          "pad": "3",
+          "net": "L1_E02"
+        },
+        {
+          "pad": "2",
+          "net": "L1_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E00"
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "84路传感前端",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D5",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L1_E03"
+        },
+        {
+          "pad": "4",
+          "net": "L1_E02"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L1_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D6",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L1_E07"
+        },
+        {
+          "pad": "4",
+          "net": "L1_E06"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L1_E05"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D7",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L1_E11"
+        },
+        {
+          "pad": "4",
+          "net": "L1_E10"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L1_E09"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D8",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L1_E13"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C3",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C104",
+      "original_MPN": "CL10C100JB8NNNC",
+      "original_LCSC": "C1634",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L2_M14"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C105",
+      "original_MPN": "CL10C101JB8NNNC",
+      "original_LCSC": "C14858",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L2_M15"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J22",
+      "original_MPN": "PZ254V-11-16P",
+      "original_LCSC": "C22465876",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "14",
+          "net": "L2_E13"
+        },
+        {
+          "pad": "13",
+          "net": "L2_E12"
+        },
+        {
+          "pad": "12",
+          "net": "L2_E11"
+        },
+        {
+          "pad": "11",
+          "net": "L2_E10"
+        },
+        {
+          "pad": "10",
+          "net": "L2_E09"
+        },
+        {
+          "pad": "9",
+          "net": "L2_E08"
+        },
+        {
+          "pad": "8",
+          "net": "L2_E07"
+        },
+        {
+          "pad": "7",
+          "net": "L2_E06"
+        },
+        {
+          "pad": "6",
+          "net": "L2_E05"
+        },
+        {
+          "pad": "5",
+          "net": "L2_E04"
+        },
+        {
+          "pad": "4",
+          "net": "L2_E03"
+        },
+        {
+          "pad": "3",
+          "net": "L2_E02"
+        },
+        {
+          "pad": "2",
+          "net": "L2_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E00"
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "84路传感前端",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D9",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L2_E03"
+        },
+        {
+          "pad": "4",
+          "net": "L2_E02"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L2_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D10",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L2_E07"
+        },
+        {
+          "pad": "4",
+          "net": "L2_E06"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L2_E05"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D11",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L2_E11"
+        },
+        {
+          "pad": "4",
+          "net": "L2_E10"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L2_E09"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D12",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L2_E13"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U4",
+      "original_MPN": "74HC4067PW,118",
+      "original_LCSC": "C179326",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": "L3_M03"
+        },
+        {
+          "pad": "5",
+          "net": "L3_M04"
+        },
+        {
+          "pad": "4",
+          "net": "L3_M05"
+        },
+        {
+          "pad": "3",
+          "net": "L3_M06"
+        },
+        {
+          "pad": "2",
+          "net": "L3_M07"
+        },
+        {
+          "pad": "1",
+          "net": "RC3"
+        },
+        {
+          "pad": "7",
+          "net": "L3_M02"
+        },
+        {
+          "pad": "12",
+          "net": "GND"
+        },
+        {
+          "pad": "11",
+          "net": "ADDR1"
+        },
+        {
+          "pad": "10",
+          "net": "ADDR0"
+        },
+        {
+          "pad": "9",
+          "net": "L3_M00"
+        },
+        {
+          "pad": "8",
+          "net": "L3_M01"
+        },
+        {
+          "pad": "20",
+          "net": "L3_M11"
+        },
+        {
+          "pad": "21",
+          "net": "L3_M10"
+        },
+        {
+          "pad": "22",
+          "net": "L3_M09"
+        },
+        {
+          "pad": "23",
+          "net": "L3_M08"
+        },
+        {
+          "pad": "24",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "19",
+          "net": "L3_M12"
+        },
+        {
+          "pad": "13",
+          "net": "ADDR3"
+        },
+        {
+          "pad": "14",
+          "net": "ADDR2"
+        },
+        {
+          "pad": "15",
+          "net": "MUX_DISABLE"
+        },
+        {
+          "pad": "16",
+          "net": "L3_M15"
+        },
+        {
+          "pad": "17",
+          "net": "L3_M14"
+        },
+        {
+          "pad": "18",
+          "net": "L3_M13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "14电极及两校准通道的16选1模拟复用",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R4",
+      "original_MPN": "RC0603FR-0747KL",
+      "original_LCSC": "C105579",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "RC3"
+        },
+        {
+          "pad": "1",
+          "net": "RC_DRIVE"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "RC_DRIVE至公共RC节点47k充放电路径",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C4",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C106",
+      "original_MPN": "CL10C100JB8NNNC",
+      "original_LCSC": "C1634",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L3_M14"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C107",
+      "original_MPN": "CL10C101JB8NNNC",
+      "original_LCSC": "C14858",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L3_M15"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J23",
+      "original_MPN": "PZ254V-11-16P",
+      "original_LCSC": "C22465876",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "14",
+          "net": "L3_E13"
+        },
+        {
+          "pad": "13",
+          "net": "L3_E12"
+        },
+        {
+          "pad": "12",
+          "net": "L3_E11"
+        },
+        {
+          "pad": "11",
+          "net": "L3_E10"
+        },
+        {
+          "pad": "10",
+          "net": "L3_E09"
+        },
+        {
+          "pad": "9",
+          "net": "L3_E08"
+        },
+        {
+          "pad": "8",
+          "net": "L3_E07"
+        },
+        {
+          "pad": "7",
+          "net": "L3_E06"
+        },
+        {
+          "pad": "6",
+          "net": "L3_E05"
+        },
+        {
+          "pad": "5",
+          "net": "L3_E04"
+        },
+        {
+          "pad": "4",
+          "net": "L3_E03"
+        },
+        {
+          "pad": "3",
+          "net": "L3_E02"
+        },
+        {
+          "pad": "2",
+          "net": "L3_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E00"
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "84路传感前端",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D13",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L3_E03"
+        },
+        {
+          "pad": "4",
+          "net": "L3_E02"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L3_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D14",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L3_E07"
+        },
+        {
+          "pad": "4",
+          "net": "L3_E06"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L3_E05"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D15",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L3_E11"
+        },
+        {
+          "pad": "4",
+          "net": "L3_E10"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L3_E09"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D16",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L3_E13"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U5",
+      "original_MPN": "74HC4067PW,118",
+      "original_LCSC": "C179326",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": "L4_M03"
+        },
+        {
+          "pad": "5",
+          "net": "L4_M04"
+        },
+        {
+          "pad": "4",
+          "net": "L4_M05"
+        },
+        {
+          "pad": "3",
+          "net": "L4_M06"
+        },
+        {
+          "pad": "2",
+          "net": "L4_M07"
+        },
+        {
+          "pad": "1",
+          "net": "RC4"
+        },
+        {
+          "pad": "7",
+          "net": "L4_M02"
+        },
+        {
+          "pad": "12",
+          "net": "GND"
+        },
+        {
+          "pad": "11",
+          "net": "ADDR1"
+        },
+        {
+          "pad": "10",
+          "net": "ADDR0"
+        },
+        {
+          "pad": "9",
+          "net": "L4_M00"
+        },
+        {
+          "pad": "8",
+          "net": "L4_M01"
+        },
+        {
+          "pad": "20",
+          "net": "L4_M11"
+        },
+        {
+          "pad": "21",
+          "net": "L4_M10"
+        },
+        {
+          "pad": "22",
+          "net": "L4_M09"
+        },
+        {
+          "pad": "23",
+          "net": "L4_M08"
+        },
+        {
+          "pad": "24",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "19",
+          "net": "L4_M12"
+        },
+        {
+          "pad": "13",
+          "net": "ADDR3"
+        },
+        {
+          "pad": "14",
+          "net": "ADDR2"
+        },
+        {
+          "pad": "15",
+          "net": "MUX_DISABLE"
+        },
+        {
+          "pad": "16",
+          "net": "L4_M15"
+        },
+        {
+          "pad": "17",
+          "net": "L4_M14"
+        },
+        {
+          "pad": "18",
+          "net": "L4_M13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "14电极及两校准通道的16选1模拟复用",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R5",
+      "original_MPN": "RC0603FR-0747KL",
+      "original_LCSC": "C105579",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "RC4"
+        },
+        {
+          "pad": "1",
+          "net": "RC_DRIVE"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "RC_DRIVE至公共RC节点47k充放电路径",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C5",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C108",
+      "original_MPN": "CL10C100JB8NNNC",
+      "original_LCSC": "C1634",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L4_M14"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C109",
+      "original_MPN": "CL10C101JB8NNNC",
+      "original_LCSC": "C14858",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L4_M15"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J24",
+      "original_MPN": "PZ254V-11-16P",
+      "original_LCSC": "C22465876",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "14",
+          "net": "L4_E13"
+        },
+        {
+          "pad": "13",
+          "net": "L4_E12"
+        },
+        {
+          "pad": "12",
+          "net": "L4_E11"
+        },
+        {
+          "pad": "11",
+          "net": "L4_E10"
+        },
+        {
+          "pad": "10",
+          "net": "L4_E09"
+        },
+        {
+          "pad": "9",
+          "net": "L4_E08"
+        },
+        {
+          "pad": "8",
+          "net": "L4_E07"
+        },
+        {
+          "pad": "7",
+          "net": "L4_E06"
+        },
+        {
+          "pad": "6",
+          "net": "L4_E05"
+        },
+        {
+          "pad": "5",
+          "net": "L4_E04"
+        },
+        {
+          "pad": "4",
+          "net": "L4_E03"
+        },
+        {
+          "pad": "3",
+          "net": "L4_E02"
+        },
+        {
+          "pad": "2",
+          "net": "L4_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E00"
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "84路传感前端",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D17",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L4_E03"
+        },
+        {
+          "pad": "4",
+          "net": "L4_E02"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L4_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D18",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L4_E07"
+        },
+        {
+          "pad": "4",
+          "net": "L4_E06"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L4_E05"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D19",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L4_E11"
+        },
+        {
+          "pad": "4",
+          "net": "L4_E10"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L4_E09"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D20",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L4_E13"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U6",
+      "original_MPN": "74HC4067PW,118",
+      "original_LCSC": "C179326",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": "L5_M03"
+        },
+        {
+          "pad": "5",
+          "net": "L5_M04"
+        },
+        {
+          "pad": "4",
+          "net": "L5_M05"
+        },
+        {
+          "pad": "3",
+          "net": "L5_M06"
+        },
+        {
+          "pad": "2",
+          "net": "L5_M07"
+        },
+        {
+          "pad": "1",
+          "net": "RC5"
+        },
+        {
+          "pad": "7",
+          "net": "L5_M02"
+        },
+        {
+          "pad": "12",
+          "net": "GND"
+        },
+        {
+          "pad": "11",
+          "net": "ADDR1"
+        },
+        {
+          "pad": "10",
+          "net": "ADDR0"
+        },
+        {
+          "pad": "9",
+          "net": "L5_M00"
+        },
+        {
+          "pad": "8",
+          "net": "L5_M01"
+        },
+        {
+          "pad": "20",
+          "net": "L5_M11"
+        },
+        {
+          "pad": "21",
+          "net": "L5_M10"
+        },
+        {
+          "pad": "22",
+          "net": "L5_M09"
+        },
+        {
+          "pad": "23",
+          "net": "L5_M08"
+        },
+        {
+          "pad": "24",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "19",
+          "net": "L5_M12"
+        },
+        {
+          "pad": "13",
+          "net": "ADDR3"
+        },
+        {
+          "pad": "14",
+          "net": "ADDR2"
+        },
+        {
+          "pad": "15",
+          "net": "MUX_DISABLE"
+        },
+        {
+          "pad": "16",
+          "net": "L5_M15"
+        },
+        {
+          "pad": "17",
+          "net": "L5_M14"
+        },
+        {
+          "pad": "18",
+          "net": "L5_M13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "14电极及两校准通道的16选1模拟复用",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C6",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C110",
+      "original_MPN": "CL10C100JB8NNNC",
+      "original_LCSC": "C1634",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L5_M14"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C111",
+      "original_MPN": "CL10C101JB8NNNC",
+      "original_LCSC": "C14858",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "L5_M15"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "每组CH14的10pF或CH15的100pF校准；以原料号及网络为准",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J25",
+      "original_MPN": "PZ254V-11-16P",
+      "original_LCSC": "C22465876",
+      "footprint": "HDR-TH_PZ254V-11-16P",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "14",
+          "net": "L5_E13"
+        },
+        {
+          "pad": "13",
+          "net": "L5_E12"
+        },
+        {
+          "pad": "12",
+          "net": "L5_E11"
+        },
+        {
+          "pad": "11",
+          "net": "L5_E10"
+        },
+        {
+          "pad": "10",
+          "net": "L5_E09"
+        },
+        {
+          "pad": "9",
+          "net": "L5_E08"
+        },
+        {
+          "pad": "8",
+          "net": "L5_E07"
+        },
+        {
+          "pad": "7",
+          "net": "L5_E06"
+        },
+        {
+          "pad": "6",
+          "net": "L5_E05"
+        },
+        {
+          "pad": "5",
+          "net": "L5_E04"
+        },
+        {
+          "pad": "4",
+          "net": "L5_E03"
+        },
+        {
+          "pad": "3",
+          "net": "L5_E02"
+        },
+        {
+          "pad": "2",
+          "net": "L5_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E00"
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "84路传感前端",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D21",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L5_E03"
+        },
+        {
+          "pad": "4",
+          "net": "L5_E02"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L5_E01"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D22",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L5_E07"
+        },
+        {
+          "pad": "4",
+          "net": "L5_E06"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L5_E05"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D23",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "L5_E11"
+        },
+        {
+          "pad": "4",
+          "net": "L5_E10"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L5_E09"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "D24",
+      "original_MPN": "TPD4E02B04DQAR",
+      "original_LCSC": "C106794",
+      "footprint": "USON-10_L2.5-W1.0-P0.50-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "L5_E13"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "电极输入低电容ESD保护；未证明模块包含前必须保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U14",
+      "original_MPN": "TCA9517DGKR",
+      "original_LCSC": "C544515",
+      "footprint": "VSSOP-8_L3.0-W3.0-P0.65-LS5.0-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "2",
+          "net": "I2C_SCL"
+        },
+        {
+          "pad": "3",
+          "net": "I2C_SDA"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        },
+        {
+          "pad": "8",
+          "net": "3V3_PERIPH"
+        },
+        {
+          "pad": "7",
+          "net": "I2C_MOD_SCL"
+        },
+        {
+          "pad": "6",
+          "net": "I2C_MOD_SDA"
+        },
+        {
+          "pad": "5",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享读回选择、I2C适配、SPI/复位缓冲或触控中断整形；非通用GPIO直连替代",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U16",
+      "original_MPN": "SN74LVC1G17DBVR",
+      "original_LCSC": "C7836",
+      "footprint": "SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "5",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "4",
+          "net": "TP_INT"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "TP_INT_MOD"
+        },
+        {
+          "pad": "1",
+          "net": ""
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享读回选择、I2C适配、SPI/复位缓冲或触控中断整形；非通用GPIO直连替代",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R61",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "I2C_MOD_SCL"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R62",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "TP_INT_MOD"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J13",
+      "original_MPN": "B2B-XH-A(LF)(SN)",
+      "original_LCSC": "C158012",
+      "footprint": "CONN-TH_B2B-XH-A-LF-SN",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "5V_IN"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "电源入口稳压与保护",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "F1",
+      "original_MPN": "MF-MSMF110/16-2",
+      "original_LCSC": "C210834",
+      "footprint": "F1812",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "5V_FUSED"
+        },
+        {
+          "pad": "1",
+          "net": "5V_IN"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "电源入口稳压与保护",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "Q1",
+      "original_MPN": "DMP2035U-7",
+      "original_LCSC": "C110499",
+      "footprint": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "PWR_GATE"
+        },
+        {
+          "pad": "2",
+          "net": "5V_PROTECTED"
+        },
+        {
+          "pad": "3",
+          "net": "5V_FUSED"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "电源入口稳压与保护",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R66",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "PWR_GATE"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U17",
+      "original_MPN": "TPS2553DBVR",
+      "original_LCSC": "C55266",
+      "footprint": "SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "3",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PROTECTED"
+        },
+        {
+          "pad": "6",
+          "net": "5V_PERIPH"
+        },
+        {
+          "pad": "5",
+          "net": "PWR_ILIM"
+        },
+        {
+          "pad": "4",
+          "net": "PWR_FAULT_N"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "电源入口稳压与保护",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R67",
+      "original_MPN": "0603WAF2372T5E",
+      "original_LCSC": "C22912",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "PWR_ILIM"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R68",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "PWR_FAULT_N"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R69",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R70",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C37",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PROTECTED"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C38",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C39",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U18",
+      "original_MPN": "AP2112K-3.3TRG1",
+      "original_LCSC": "C51118",
+      "footprint": "SOT-25-5_L2.9-W1.6-P0.95-LS2.8-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "3V3_PERIPH"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": "5V_PERIPH"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享总线及触控屏接口适配",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U7",
+      "original_MPN": "SN74LVC14ADR",
+      "original_LCSC": "C133541",
+      "footprint": "SOIC-14_L8.7-W3.9-P1.27-LS6.0-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "8",
+          "net": "INV3"
+        },
+        {
+          "pad": "9",
+          "net": "RC3"
+        },
+        {
+          "pad": "10",
+          "net": "INV4"
+        },
+        {
+          "pad": "11",
+          "net": "RC4"
+        },
+        {
+          "pad": "12",
+          "net": "INV5"
+        },
+        {
+          "pad": "13",
+          "net": "RC5"
+        },
+        {
+          "pad": "14",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "7",
+          "net": "GND"
+        },
+        {
+          "pad": "6",
+          "net": "INV2"
+        },
+        {
+          "pad": "5",
+          "net": "RC2"
+        },
+        {
+          "pad": "4",
+          "net": "INV1"
+        },
+        {
+          "pad": "3",
+          "net": "RC1"
+        },
+        {
+          "pad": "2",
+          "net": "INV0"
+        },
+        {
+          "pad": "1",
+          "net": "RC0"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "六路3.3V施密特整形",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U10",
+      "original_MPN": "24LC256-I/SN",
+      "original_LCSC": "C411625",
+      "footprint": "SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        },
+        {
+          "pad": "8",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "7",
+          "net": "GND"
+        },
+        {
+          "pad": "6",
+          "net": "I2C_SCL"
+        },
+        {
+          "pad": "5",
+          "net": "I2C_SDA"
+        }
+      ],
+      "functional_block": "断电保存EEPROM",
+      "role": "断电保存EEPROM",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C7",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C10",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "断电保存EEPROM",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C32",
+      "original_MPN": "CL10A105KO8NNNC",
+      "original_LCSC": "C1592",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C34",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C36",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C20",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "DAC_CAPM"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_CAPP"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C21",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_VNEG"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C22",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_LDOO"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C24",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_3V3"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C25",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_3V3"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R41",
+      "original_MPN": "0603WAF1000T5E",
+      "original_LCSC": "C22775",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "AUX_L"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_L_RAW"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R42",
+      "original_MPN": "0603WAF1000T5E",
+      "original_LCSC": "C22775",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "AUX_R"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_R_RAW"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C27",
+      "original_MPN": "CL10C101JB8NNNC",
+      "original_LCSC": "C14858",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "AUX_L"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C28",
+      "original_MPN": "CL10C101JB8NNNC",
+      "original_LCSC": "C14858",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "AUX_R"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J12",
+      "original_MPN": "2.54-1*3P针",
+      "original_LCSC": "C49257",
+      "footprint": "HDR-TH_3P-P2.54-V-M-1",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "AUX_R"
+        },
+        {
+          "pad": "1",
+          "net": "AUX_L"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "PCM5122立体声音频",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R50",
+      "original_MPN": "0603WAF2201T5E",
+      "original_LCSC": "C4190",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "ENC_A"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R51",
+      "original_MPN": "0603WAF2201T5E",
+      "original_LCSC": "C4190",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "ENC_B"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R52",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "ENC_PUSH"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R100",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M00"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R101",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M01"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E01"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R102",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M02"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E02"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R103",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M03"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E03"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R104",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M04"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R105",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M05"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E05"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R106",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M06"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E06"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R107",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M07"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E07"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R108",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M08"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R109",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M09"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E09"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R110",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M10"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E10"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R111",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M11"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E11"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R112",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M12"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R113",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L0_M13"
+        },
+        {
+          "pad": "1",
+          "net": "L0_E13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R120",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M00"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R121",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M01"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E01"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R122",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M02"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E02"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R123",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M03"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E03"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R124",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M04"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R125",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M05"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E05"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R126",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M06"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E06"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R127",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M07"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E07"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R128",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M08"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R129",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M09"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E09"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R130",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M10"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E10"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R131",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M11"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E11"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R132",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M12"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R133",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L1_M13"
+        },
+        {
+          "pad": "1",
+          "net": "L1_E13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R140",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M00"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R141",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M01"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E01"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R142",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M02"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E02"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R143",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M03"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E03"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R144",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M04"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R145",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M05"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E05"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R146",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M06"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E06"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R147",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M07"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E07"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R148",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M08"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R149",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M09"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E09"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R150",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M10"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E10"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R151",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M11"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E11"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R152",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M12"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R153",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L2_M13"
+        },
+        {
+          "pad": "1",
+          "net": "L2_E13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R160",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M00"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R161",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M01"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E01"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R162",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M02"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E02"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R163",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M03"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E03"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R164",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M04"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R165",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M05"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E05"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R166",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M06"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E06"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R167",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M07"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E07"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R168",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M08"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R169",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M09"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E09"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R170",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M10"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E10"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R171",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M11"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E11"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R172",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M12"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R173",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L3_M13"
+        },
+        {
+          "pad": "1",
+          "net": "L3_E13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R180",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M00"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R181",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M01"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E01"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R182",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M02"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E02"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R183",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M03"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E03"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R184",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M04"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R185",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M05"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E05"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R186",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M06"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E06"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R187",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M07"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E07"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R188",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M08"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R189",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M09"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E09"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R190",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M10"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E10"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R191",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M11"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E11"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R192",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M12"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R193",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L4_M13"
+        },
+        {
+          "pad": "1",
+          "net": "L4_E13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R200",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M00"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E00"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R201",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M01"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E01"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R202",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M02"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E02"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R203",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M03"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E03"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R204",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M04"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E04"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R205",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M05"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E05"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R206",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M06"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E06"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R207",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M07"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E07"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R208",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M08"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E08"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R209",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M09"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E09"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R210",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M10"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E10"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R211",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M11"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E11"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R212",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M12"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E12"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R213",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "L5_M13"
+        },
+        {
+          "pad": "1",
+          "net": "L5_E13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "独立电极1k串联保护/隔离",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U13",
+      "original_MPN": "AP2112K-3.3TRG1",
+      "original_LCSC": "C51118",
+      "footprint": "SOT-25-5_L2.9-W1.6-P0.95-LS2.8-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "DAC_3V3"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": "5V_PERIPH"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "PCM5122立体声音频",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C30",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C31",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_3V3"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C33",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R60",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "I2C_MOD_SDA"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R6",
+      "original_MPN": "RC0603FR-0747KL",
+      "original_LCSC": "C105579",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "RC5"
+        },
+        {
+          "pad": "1",
+          "net": "RC_DRIVE"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "RC_DRIVE至公共RC节点47k充放电路径",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "SW2",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "PRESET0"
+        },
+        {
+          "pad": "2",
+          "net": "PRESET0"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R53",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "PRESET0"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "SW3",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "PRESET1"
+        },
+        {
+          "pad": "2",
+          "net": "PRESET1"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R54",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "PRESET1"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "SW4",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "PRESET2"
+        },
+        {
+          "pad": "2",
+          "net": "PRESET2"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R55",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "PRESET2"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "SW5",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "PRESET3"
+        },
+        {
+          "pad": "2",
+          "net": "PRESET3"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R56",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "PRESET3"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "SW6",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "footprint": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "EDIT"
+        },
+        {
+          "pad": "2",
+          "net": "EDIT"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R57",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "EDIT"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U1",
+      "original_MPN": "74HC4067PW,118",
+      "original_LCSC": "C179326",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": "L0_M03"
+        },
+        {
+          "pad": "5",
+          "net": "L0_M04"
+        },
+        {
+          "pad": "4",
+          "net": "L0_M05"
+        },
+        {
+          "pad": "3",
+          "net": "L0_M06"
+        },
+        {
+          "pad": "2",
+          "net": "L0_M07"
+        },
+        {
+          "pad": "1",
+          "net": "RC0"
+        },
+        {
+          "pad": "7",
+          "net": "L0_M02"
+        },
+        {
+          "pad": "12",
+          "net": "GND"
+        },
+        {
+          "pad": "11",
+          "net": "ADDR1"
+        },
+        {
+          "pad": "10",
+          "net": "ADDR0"
+        },
+        {
+          "pad": "9",
+          "net": "L0_M00"
+        },
+        {
+          "pad": "8",
+          "net": "L0_M01"
+        },
+        {
+          "pad": "20",
+          "net": "L0_M11"
+        },
+        {
+          "pad": "21",
+          "net": "L0_M10"
+        },
+        {
+          "pad": "22",
+          "net": "L0_M09"
+        },
+        {
+          "pad": "23",
+          "net": "L0_M08"
+        },
+        {
+          "pad": "24",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "19",
+          "net": "L0_M12"
+        },
+        {
+          "pad": "13",
+          "net": "ADDR3"
+        },
+        {
+          "pad": "14",
+          "net": "ADDR2"
+        },
+        {
+          "pad": "15",
+          "net": "MUX_DISABLE"
+        },
+        {
+          "pad": "16",
+          "net": "L0_M15"
+        },
+        {
+          "pad": "17",
+          "net": "L0_M14"
+        },
+        {
+          "pad": "18",
+          "net": "L0_M13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "14电极及两校准通道的16选1模拟复用",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U2",
+      "original_MPN": "74HC4067PW,118",
+      "original_LCSC": "C179326",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": "L1_M03"
+        },
+        {
+          "pad": "5",
+          "net": "L1_M04"
+        },
+        {
+          "pad": "4",
+          "net": "L1_M05"
+        },
+        {
+          "pad": "3",
+          "net": "L1_M06"
+        },
+        {
+          "pad": "2",
+          "net": "L1_M07"
+        },
+        {
+          "pad": "1",
+          "net": "RC1"
+        },
+        {
+          "pad": "7",
+          "net": "L1_M02"
+        },
+        {
+          "pad": "12",
+          "net": "GND"
+        },
+        {
+          "pad": "11",
+          "net": "ADDR1"
+        },
+        {
+          "pad": "10",
+          "net": "ADDR0"
+        },
+        {
+          "pad": "9",
+          "net": "L1_M00"
+        },
+        {
+          "pad": "8",
+          "net": "L1_M01"
+        },
+        {
+          "pad": "20",
+          "net": "L1_M11"
+        },
+        {
+          "pad": "21",
+          "net": "L1_M10"
+        },
+        {
+          "pad": "22",
+          "net": "L1_M09"
+        },
+        {
+          "pad": "23",
+          "net": "L1_M08"
+        },
+        {
+          "pad": "24",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "19",
+          "net": "L1_M12"
+        },
+        {
+          "pad": "13",
+          "net": "ADDR3"
+        },
+        {
+          "pad": "14",
+          "net": "ADDR2"
+        },
+        {
+          "pad": "15",
+          "net": "MUX_DISABLE"
+        },
+        {
+          "pad": "16",
+          "net": "L1_M15"
+        },
+        {
+          "pad": "17",
+          "net": "L1_M14"
+        },
+        {
+          "pad": "18",
+          "net": "L1_M13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "14电极及两校准通道的16选1模拟复用",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U3",
+      "original_MPN": "74HC4067PW,118",
+      "original_LCSC": "C179326",
+      "footprint": "TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "6",
+          "net": "L2_M03"
+        },
+        {
+          "pad": "5",
+          "net": "L2_M04"
+        },
+        {
+          "pad": "4",
+          "net": "L2_M05"
+        },
+        {
+          "pad": "3",
+          "net": "L2_M06"
+        },
+        {
+          "pad": "2",
+          "net": "L2_M07"
+        },
+        {
+          "pad": "1",
+          "net": "RC2"
+        },
+        {
+          "pad": "7",
+          "net": "L2_M02"
+        },
+        {
+          "pad": "12",
+          "net": "GND"
+        },
+        {
+          "pad": "11",
+          "net": "ADDR1"
+        },
+        {
+          "pad": "10",
+          "net": "ADDR0"
+        },
+        {
+          "pad": "9",
+          "net": "L2_M00"
+        },
+        {
+          "pad": "8",
+          "net": "L2_M01"
+        },
+        {
+          "pad": "20",
+          "net": "L2_M11"
+        },
+        {
+          "pad": "21",
+          "net": "L2_M10"
+        },
+        {
+          "pad": "22",
+          "net": "L2_M09"
+        },
+        {
+          "pad": "23",
+          "net": "L2_M08"
+        },
+        {
+          "pad": "24",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "19",
+          "net": "L2_M12"
+        },
+        {
+          "pad": "13",
+          "net": "ADDR3"
+        },
+        {
+          "pad": "14",
+          "net": "ADDR2"
+        },
+        {
+          "pad": "15",
+          "net": "MUX_DISABLE"
+        },
+        {
+          "pad": "16",
+          "net": "L2_M15"
+        },
+        {
+          "pad": "17",
+          "net": "L2_M14"
+        },
+        {
+          "pad": "18",
+          "net": "L2_M13"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "14电极及两校准通道的16选1模拟复用",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R40",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "DAC_XSMT"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_3V3"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "J10",
+      "original_MPN": "2.54-1*12P反弯针",
+      "original_LCSC": "C247920",
+      "footprint": "HDR-TH_12P-P2.54-H-M-W10.5",
+      "mount": "TH",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": "DISP_SCK"
+        },
+        {
+          "pad": "4",
+          "net": "DISP_MOSI"
+        },
+        {
+          "pad": "5",
+          "net": "RA_MISO"
+        },
+        {
+          "pad": "6",
+          "net": "DISP_HARM_CS_N"
+        },
+        {
+          "pad": "7",
+          "net": "DISP_RESET_N"
+        },
+        {
+          "pad": "8",
+          "net": "I2C_MOD_SDA"
+        },
+        {
+          "pad": "9",
+          "net": "I2C_MOD_SCL"
+        },
+        {
+          "pad": "10",
+          "net": "TP_INT_MOD"
+        },
+        {
+          "pad": "11",
+          "net": "TP_RESET_MOD_N"
+        },
+        {
+          "pad": "12",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享总线及触控屏接口适配",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C23",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_3V3"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R3",
+      "original_MPN": "RC0603FR-0747KL",
+      "original_LCSC": "C105579",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "RC2"
+        },
+        {
+          "pad": "1",
+          "net": "RC_DRIVE"
+        }
+      ],
+      "functional_block": "84路传感前端",
+      "role": "RC_DRIVE至公共RC节点47k充放电路径",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R72",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "DAC_3V3"
+        }
+      ],
+      "functional_block": "PCM5122立体声音频",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R73",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R71",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U15",
+      "original_MPN": "SN74LVC244APWR",
+      "original_LCSC": "C7668",
+      "footprint": "TSSOP-20_L6.5-W4.4-P0.65-LS6.4-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "BUS_SCK"
+        },
+        {
+          "pad": "3",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": "BUS_MOSI"
+        },
+        {
+          "pad": "5",
+          "net": "TP_RESET_MOD_N"
+        },
+        {
+          "pad": "6",
+          "net": "LCD_RESET_N"
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "HARM_CS_N"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": "GND"
+        },
+        {
+          "pad": "20",
+          "net": "3V3_PERIPH"
+        },
+        {
+          "pad": "19",
+          "net": "GND"
+        },
+        {
+          "pad": "18",
+          "net": "DISP_SCK"
+        },
+        {
+          "pad": "17",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "16",
+          "net": "DISP_MOSI"
+        },
+        {
+          "pad": "15",
+          "net": "TP_RESET_N"
+        },
+        {
+          "pad": "14",
+          "net": "DISP_RESET_N"
+        },
+        {
+          "pad": "13",
+          "net": "GND"
+        },
+        {
+          "pad": "12",
+          "net": "DISP_HARM_CS_N"
+        },
+        {
+          "pad": "11",
+          "net": "GND"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享读回选择、I2C适配、SPI/复位缓冲或触控中断整形；非通用GPIO直连替代",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C35",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R32",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "INPUT_LOAD_N"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R33",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "I2C_SDA"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R34",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "I2C_SCL"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R30",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "HARM_CS_N"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "U9",
+      "original_MPN": "SN74LV165ADR",
+      "original_LCSC": "C273656",
+      "footprint": "SOIC-16_L9.9-W3.9-P1.27-LS6.0-BL",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "1",
+          "net": "INPUT_LOAD_N"
+        },
+        {
+          "pad": "2",
+          "net": "BUS_SCK"
+        },
+        {
+          "pad": "3",
+          "net": "PRESET1"
+        },
+        {
+          "pad": "4",
+          "net": "PRESET2"
+        },
+        {
+          "pad": "5",
+          "net": "PRESET3"
+        },
+        {
+          "pad": "6",
+          "net": "EDIT"
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "14",
+          "net": "PRESET0"
+        },
+        {
+          "pad": "13",
+          "net": "ENC_PUSH"
+        },
+        {
+          "pad": "12",
+          "net": "ENC_B"
+        },
+        {
+          "pad": "11",
+          "net": "ENC_A"
+        },
+        {
+          "pad": "10",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": "KEY_QH"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C9",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "C8",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "footprint": "C0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "functional_block": "扫描控制输出",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R63",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "BUS_SCK"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    },
+    {
+      "reference": "R64",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "footprint": "R0603",
+      "mount": "SMT",
+      "original_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "BUS_MOSI"
+        }
+      ],
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "function_retained": true,
+      "exact_replacement_module": null,
+      "verified_module_coverage": false,
+      "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
+      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+    }
+  ],
+  "module_mapping_complete": false,
+  "this_stage_complete": "227件功能归属、原网及保留边界对应完成；具体模块替代覆盖尚未完成",
+  "native_RTL_changed": false,
+  "orders_or_payments": false,
+  "physical_tests": "UNMEASURED"
+}

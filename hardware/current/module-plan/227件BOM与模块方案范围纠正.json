@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-10-26T20:18:54.520984+08:00",
+  "reason": "纠正助手将旧227件BOM排除演示采购基线的过度表述；用户只允许不自制PCB，没有授权删功能或必要电路",
+  "original_227_BOM_role": "继续保留为全部原功能/接口/电源/保护电路的核对基线，不作废",
+  "module_reconciliation_required": "原BOM每项须标明原作用、具体模块覆盖证据、仍需单买、待核实；只能对已证明模块内含同功能的裸件采购去重",
+  "not_authorized_to_drop": [
+    "84传感及校准/RC前端",
+    "单触控屏及泛音交互",
+    "实体按键编码器及编辑",
+    "存储/录放等既定产品功能",
+    "电源/电平转换/缓冲/ESD等必要电路"
+  ],
+  "onboard_audio_scope": "仅首轮板载单声道发声验证路线；不默认替代PCM5122最终音频链或任何声道/音质要求",
+  "mapping_status": "NOT_COMPLETE",
+  "native_schematic_RTL_BOM_files_deleted": false,
+  "orders_or_payments": false
+}

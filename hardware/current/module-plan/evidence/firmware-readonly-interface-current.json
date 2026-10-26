@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-10-26T21:20:01.872822+08:00",
+  "scope": "仅检查登记producer路径engine/src及constraints；未修改、构建或烧录；不声称看到未登记或远程未取得源",
+  "inputs": {
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship_owned.v": {
+      "sha256": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+      "mtime": "2026-10-23T08:20:55.357077+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_owned_probe.v": {
+      "sha256": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+      "mtime": "2026-10-22T10:19:21.436274+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_sensor_probe.v": {
+      "sha256": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+      "mtime": "2026-10-22T10:19:21.438273+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_mux_scan.v": {
+      "sha256": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+      "mtime": "2026-10-22T10:19:21.502847+08:00"
+    }
+  },
+  "observations": [
+    "tdm_ship_owned端口仍为16直连pad和音频/UART等；未包含完整84MUX/J10物理接口",
+    "rc_mux_scan确实存在，6x16扫描，经instrument_sensor_probe等内部probe使用；不是声称未写扫描逻辑",
+    "instrument_owned_probe首行明确为内部逻辑接口，非物理GPIO或shipping top",
+    "音频CST实际dac_bck=56,dac_din=54,dac_ws=55，与官方J5.7/J5.8/J5.11相符",
+    "整机SPI显示、触控、存储、84节点功能和具体码流未在本轮实物签收"
+  ],
+  "all_product_firmware_ready": false,
+  "not_a_global_absence_proof": true,
+  "RTL_changed": false,
+  "physical_tests": "UNMEASURED"
+}

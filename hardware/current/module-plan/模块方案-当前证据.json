@@ -1,0 +1,94 @@
+{
+  "updated_at": "2026-10-26T21:20:01.872822+08:00",
+  "requirements": {
+    "confirmed_at": "2026-10-26T21:20:01.872822+08:00",
+    "confirmed_by": "本聊天用户直接答复",
+    "shipping_city": "广东清远",
+    "new_hardware_budget_CNY": [
+      500,
+      700
+    ],
+    "hard_upper_limit_CNY": 700,
+    "budget_includes": [
+      "必要模块",
+      "转接与配线",
+      "电极和固定材料",
+      "电源",
+      "代焊",
+      "运费"
+    ],
+    "owned": [
+      "Tang Nano20K"
+    ],
+    "assembly_preference": [
+      "全部预焊",
+      "只能自行焊排针或导线"
+    ],
+    "user_can_solder_SMT": false,
+    "functional_reduction_authorized": false,
+    "latest_task": "查找完整模块/简单混合方案；不重开复杂PCB求解；最终交付精确可购买、可组装的完整清单与接线方案",
+    "JLC_tools_preferred": true,
+    "screen_quote_user_is_checking": true
+  },
+  "canonical_work_document": "模块方案-当前工作单.md",
+  "complete_purchase_and_assembly_plan": false,
+  "native_PCB_unchanged_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "exact_I2S_header_map_verified": {
+    "BCK": {
+      "header": "J5.7",
+      "FPGA": 56
+    },
+    "DIN": {
+      "header": "J5.8",
+      "FPGA": 54
+    },
+    "LRCK": {
+      "header": "J5.11",
+      "FPGA": 55
+    }
+  },
+  "old_I2S_not_on_headers_claim_rejected": true,
+  "audio_candidate": {
+    "model": "RPI-PCM5122-Audio-HIFI-HAT-A",
+    "sku": "010313400000",
+    "seller": "斑梨电子",
+    "listed_CNY": 55,
+    "listing_state": "在售",
+    "same_SKU_schematic_downloaded_and_visually_reviewed": true,
+    "source_pdf_sha256": "3908e6255a977ca61ef69ab051c34eadaaaf53a2b27b987724adec5006252cbb",
+    "not_same_as_59_CNY_SKU_010314600000": true,
+    "initialization_and_shipping_and_full_coverage_unaccepted": true
+  },
+  "excluded_JLC_module": {
+    "model": "SparkFun BOB-09056",
+    "LCSC": "C17435222",
+    "JLC_page_stock": 0,
+    "JLC_page_single_USD": 16.7128,
+    "not_standalone_shipping_in_PCBA_library": true,
+    "source": "https://jlcpcb.com/partdetail/SparkFunElectronics-BOB09056/C17435222"
+  },
+  "JLCEDA_actual_library_search_completed": true,
+  "JLCEDA_search_scope_note": "实际搜索回执保存；查询中含空格的模块关键词返回无线模块等无关结果，已逐条拒绝；直接C号批量查询空数组不证明商城无货。器件库图符不证明预焊板现货/价格。",
+  "community_search_error_scope": "CD74HC4067查询曾返回ZX-QC44按键，拒绝使用该结果。无关结果没有进入采购候选。",
+  "screen_complete_quote_and_dispatch_pending_user": true,
+  "blocking_gaps": [
+    "84路完整预焊前端及全部保护/校准的具体可买实现与含运价",
+    "控制/存储/电源隔离保护的完整预焊实现与费用",
+    "屏幕完整配置价、已焊排针及线束、清远发货证据",
+    "整机固件物理端口/码流与最终接线一致性；此聊天不修改RTL",
+    "全部附件和运费入账后总价<=700；实物组装测试仍未发生"
+  ],
+  "orders_payments_outbound_messages": false,
+  "evidence_sha256": {
+    "module-plan-current-evidence\\firmware-readonly-interface-current.json": "5b8c78af66defcb246d2fb583c5e374df3e01ab5e02bb7aefdf1003a09fd25c6",
+    "module-plan-current-evidence\\JLCEDA-module-by-id.json": "aaedbd5ef0c78b4fb49312ec34a7bcb47e8a6b02e6c2669eb5f8f252a599b5c1",
+    "module-plan-current-evidence\\JLCEDA-module-search-exact.json": "7cc02a7a7d46a36be1afdd02cf805f93d6703e8941445b0ed585f487e23e2681",
+    "module-plan-current-evidence\\JLCEDA-module-search-raw.json": "e6b7577a05bf8f74d31d69954786b4a51eb20690da0eac29447e599cf1a84507",
+    "module-plan-current-evidence\\Nano20K-2.png": "f384bbe51aa722ee06d4e8b139e1eac0c5e62eed7c54faeb8f0724569a8fab3a",
+    "module-plan-current-evidence\\Nano20K-3921-official-schematic.pdf": "c3c85c579c446a29cc2bcd77f54c285d8c60f01ecf725a185e2fb1e6a56fdcc5",
+    "module-plan-current-evidence\\Spotpear-010313400000-schematic.pdf": "3908e6255a977ca61ef69ab051c34eadaaaf53a2b27b987724adec5006252cbb",
+    "module-plan-current-evidence\\Spotpear-010313400000-schematic.png": "c1f24ac165c747325e6f4f64d205b4721a96fd3a5fe5ce2ccf478b755e4942a5",
+    "module-plan-current-evidence\\Spotpear-audio-detail.png": "5950496f400ec998e619787fa153fa5e3f1f0d84802fe458c97a26116eb409be",
+    "module-plan-current-evidence\\Spotpear-DAC-wires.png": "a112a56adb0031e917d2a3aee53d1c0fc928b7911b5c267209e9255241eef694"
+  }
+}

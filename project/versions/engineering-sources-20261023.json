@@ -2561,19 +2561,19 @@
         },
         "CURRENT-HARDWARE.json": {
           "stored": "hardware/current/CURRENT-HARDWARE.json",
-          "bytes": 2220,
-          "sha256": "5dc8c13469c0cc63e4ffd955553484315fa18be0a6c291e6f20ae630e5807d9e",
-          "stored_sha256": "5dc8c13469c0cc63e4ffd955553484315fa18be0a6c291e6f20ae630e5807d9e",
+          "bytes": 2634,
+          "sha256": "e7f4aebc9f3ed2c633ea185082ead60bc2604d4d1e1cc87857a871fb0c61d4e6",
+          "stored_sha256": "e7f4aebc9f3ed2c633ea185082ead60bc2604d4d1e1cc87857a871fb0c61d4e6",
           "codec": "raw",
-          "source": "Current951 identity;single-J10 draft pointer only"
+          "source": "Current hardware entry"
         },
         "README.md": {
           "stored": "hardware/current/README.md",
-          "bytes": 1641,
-          "sha256": "93f413e3460e551ba38ace331f9ec73208873340a4ddb8144b69e0657b3e3198",
-          "stored_sha256": "93f413e3460e551ba38ace331f9ec73208873340a4ddb8144b69e0657b3e3198",
+          "bytes": 2145,
+          "sha256": "6f9e427bcee2fe293388ec14eb58323c016275ffbd41f88f403b6e51d514f786",
+          "stored_sha256": "6f9e427bcee2fe293388ec14eb58323c016275ffbd41f88f403b6e51d514f786",
           "codec": "raw",
-          "source": "Current delivery description"
+          "source": "Current hardware entry"
         },
         "context/purchase-preparation-20261021-r1/current-J10-harness.json": {
           "stored": "hardware/current/context/purchase-preparation-20261021-r1/current-J10-harness.json",
@@ -2590,12 +2590,92 @@
           "stored_sha256": "b26e4bd35a18462aa2dbd3f28793906d013580c1759927a2c4f897006861d8c1",
           "codec": "raw",
           "source": "Current single-J10 electrical draft;951 native unchanged/current-J10-harness.csv"
+        },
+        "module-plan/模块方案-当前工作单.md": {
+          "stored": "hardware/current/module-plan/模块方案-当前工作单.md",
+          "bytes": 8685,
+          "sha256": "04d30fabedacb527c4da6f4194855c90ea6740325628691a099410d2e92e0024",
+          "stored_sha256": "04d30fabedacb527c4da6f4194855c90ea6740325628691a099410d2e92e0024",
+          "codec": "raw",
+          "source": "Current module research"
+        },
+        "module-plan/实体模块方案约束-current.json": {
+          "stored": "hardware/current/module-plan/实体模块方案约束-current.json",
+          "bytes": 827,
+          "sha256": "26c88e576eb5b95b37657ec240fe62e2902549d8f6dda426af75de745e6507a2",
+          "stored_sha256": "26c88e576eb5b95b37657ec240fe62e2902549d8f6dda426af75de745e6507a2",
+          "codec": "raw",
+          "source": "Current module research"
+        },
+        "module-plan/模块方案-当前证据.json": {
+          "stored": "hardware/current/module-plan/模块方案-当前证据.json",
+          "bytes": 4613,
+          "sha256": "fe4cfb468a7b0e6bc0d4c97da0eddc1cc00cddf985263e4731b56231cb1682b0",
+          "stored_sha256": "fe4cfb468a7b0e6bc0d4c97da0eddc1cc00cddf985263e4731b56231cb1682b0",
+          "codec": "raw",
+          "source": "Current module research"
+        },
+        "module-plan/227件BOM与模块方案范围纠正.json": {
+          "stored": "hardware/current/module-plan/227件BOM与模块方案范围纠正.json",
+          "bytes": 1016,
+          "sha256": "d088a2e0475808f688d1056a76d4aa026c6baaf730063a21fd9a6b739182a7c8",
+          "stored_sha256": "d088a2e0475808f688d1056a76d4aa026c6baaf730063a21fd9a6b739182a7c8",
+          "codec": "raw",
+          "source": "Current module research"
+        },
+        "module-plan/227件功能分块与混合方案映射-current.json": {
+          "stored": "hardware/current/module-plan/227件功能分块与混合方案映射-current.json",
+          "bytes": 226880,
+          "sha256": "17cb6f6e068a143e446f44c672af04fb0c359bb7b9f9715cb9ea51c1be9fef02",
+          "stored_sha256": "17cb6f6e068a143e446f44c672af04fb0c359bb7b9f9715cb9ea51c1be9fef02",
+          "codec": "raw",
+          "source": "Current module research"
+        },
+        "module-plan/evidence/Spotpear-010313400000-schematic.pdf": {
+          "stored": "hardware/current/module-plan/evidence/Spotpear-010313400000-schematic.pdf",
+          "bytes": 121608,
+          "sha256": "3908e6255a977ca61ef69ab051c34eadaaaf53a2b27b987724adec5006252cbb",
+          "stored_sha256": "3908e6255a977ca61ef69ab051c34eadaaaf53a2b27b987724adec5006252cbb",
+          "codec": "raw",
+          "source": "Current module research"
+        },
+        "module-plan/evidence/Nano20K-3921-official-schematic.pdf": {
+          "stored": "hardware/current/module-plan/evidence/Nano20K-3921-official-schematic.pdf",
+          "bytes": 761438,
+          "sha256": "c3c85c579c446a29cc2bcd77f54c285d8c60f01ecf725a185e2fb1e6a56fdcc5",
+          "stored_sha256": "c3c85c579c446a29cc2bcd77f54c285d8c60f01ecf725a185e2fb1e6a56fdcc5",
+          "codec": "raw",
+          "source": "Current module research"
+        },
+        "module-plan/evidence/firmware-readonly-interface-current.json": {
+          "stored": "hardware/current/module-plan/evidence/firmware-readonly-interface-current.json",
+          "bytes": 1859,
+          "sha256": "5b8c78af66defcb246d2fb583c5e374df3e01ab5e02bb7aefdf1003a09fd25c6",
+          "stored_sha256": "5b8c78af66defcb246d2fb583c5e374df3e01ab5e02bb7aefdf1003a09fd25c6",
+          "codec": "raw",
+          "source": "Current module research"
+        },
+        "module-plan/evidence/JLCEDA-module-search-raw.json": {
+          "stored": "hardware/current/module-plan/evidence/JLCEDA-module-search-raw.json",
+          "bytes": 80969,
+          "sha256": "e6b7577a05bf8f74d31d69954786b4a51eb20690da0eac29447e599cf1a84507",
+          "stored_sha256": "e6b7577a05bf8f74d31d69954786b4a51eb20690da0eac29447e599cf1a84507",
+          "codec": "raw",
+          "source": "Current module research"
+        },
+        "module-plan/evidence/JLCEDA-module-search-exact.json": {
+          "stored": "hardware/current/module-plan/evidence/JLCEDA-module-search-exact.json",
+          "bytes": 18704,
+          "sha256": "7cc02a7a7d46a36be1afdd02cf805f93d6703e8941445b0ed585f487e23e2681",
+          "stored_sha256": "7cc02a7a7d46a36be1afdd02cf805f93d6703e8941445b0ed585f487e23e2681",
+          "codec": "raw",
+          "source": "Current module research"
         }
       },
       "validation_inherited": false,
       "product_acceptance": false,
-      "scope": "Fresh byte-level capture of saved native951, all14 schematic pages, same-source227-row CPL draft, current62/24 offline candidate and acceptance-boundary evidence. No runtime configuration, no executable old apply transaction, no fabrication release.",
-      "updated_at": "2026-10-26T01:34:07.918860+08:00",
+      "scope": "Fresh byte-level capture of saved native951, all14 schematic pages, same-source227-row CPL draft, current62/24 offline candidate and acceptance-boundary evidence. No runtime configuration, no executable old apply transaction, no fabrication release. Module candidate research and user budget/soldering constraints appended; not a complete purchase plan or PCB acceptance.",
+      "updated_at": "2026-10-26T21:29:40.703035+08:00",
       "source_native_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d"
     },
     "host": {
