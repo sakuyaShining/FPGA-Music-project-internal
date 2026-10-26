@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-26T13:29:27.204296+00:00",
+  "previous_review": "project/reviews/20261024-frame-source/review.json",
+  "previous_review_sha256": "be07b61fdd767729909988d247d4076483dcb106fce114780259bd0058042b0a",
+  "raw_observation": "project/reviews/20261026-maintenance/observation.json",
+  "raw_observation_sha256": "44dfff8bb48e56bb949d127652cb93f16ef346e756309e07a806a7adadf0d7e9",
+  "producer_ids": [
+    "fpga",
+    "hardware",
+    "fpga-v1-intake",
+    "hardware-native-handoff"
+  ],
+  "source_base_commit": "1c23a79354ff9675e394ac2061abeb626da72414",
+  "evidence": {
+    "project/reviews/20261026-maintenance/observation.json": "44dfff8bb48e56bb949d127652cb93f16ef346e756309e07a806a7adadf0d7e9",
+    "project/reviews/20261026-maintenance/WINDOW-POLICY.md": "879c6e06f690073a538a058b1587ed844cbe1fee728baf95ad1b9665e55f3d29"
+  },
+  "producer_changes": {
+    "fpga": {
+      "added": [],
+      "modified": [],
+      "removed": []
+    },
+    "hardware": {
+      "added": [],
+      "modified": [],
+      "removed": []
+    },
+    "fpga-v1-intake": {
+      "added": [],
+      "modified": [],
+      "removed": []
+    },
+    "hardware-native-handoff": {
+      "added": [],
+      "modified": [],
+      "removed": []
+    }
+  },
+  "assessment": [
+    "Live observation at 2026-10-26T13:27:46Z covered 618 declared files across four active producers; added0 removed0 modified0 against the 2026-10-24T15:21:18Z observation. No unregistered drift.",
+    "Renewal is grounded in that observation: observe wrote UNREVIEWED_OBSERVATION with renews_review=false, and this record was written afterwards. reviewed_at was not edited on the old record.",
+    "Maintenance thresholds changed (review 24h->72h, producer observation 6h->30h, schedule 6h->daily) because all four producer roots are local-only and a 6h window against a 6h schedule cannot stay green. See WINDOW-POLICY.md; this is a process threshold, not a product acceptance change.",
+    "No product acceptance, no PnR/STA, no board test, no programming, no hardware CAD access in this review. product_acceptance and implementation_start_authorized remain false.",
+    "D-019 and P-020 unchanged. Producer publication statuses carried forward as recorded and not upgraded: hardware remains live construction, native handoff remains failed/unqualified, v1 intake remains documentation only.",
+    "Still not verified here: real sensor scanning, analog audio output, end-to-end <=10ms, entity three-view, full product top-level. Frame-format and maintenance checks are not physical qualification."
+  ],
+  "unit_tests": null,
+  "physical_source_integrated": false,
+  "real_allocator_integrated": false,
+  "finger_consumer_integrated": false,
+  "full_product_pnr": false,
+  "full_product_sta": false,
+  "product_acceptance": false,
+  "programming_performed": false,
+  "hardware_cad_accessed": false
+}
