@@ -1,6 +1,6 @@
 {
-  "status": "ACTUAL_PRELIMINARY_LAYOUT_NATIVE_ZERO_PAD_CLEARANCE_ERRORS_35_SIGNAL_NETS_OPEN",
-  "time": "2026-10-27T01:46:41.791064+08:00",
+  "status": "CURRENT_PRELIMINARY_12_ANALOG_NETS_CLOSED_23_SIGNAL_NETS_OPEN",
+  "time": "2026-10-27T07:07:17.969878+08:00",
   "pcb_uuid": "f52674d6627fca6f",
   "units": "mm, degrees",
   "board_mm": [
@@ -11,7 +11,7 @@
     1,
     2
   ],
-  "layer_intent": "Top components/sensitive nodes/signals; Bottom intended connected GND reference, not yet filled. Any signal layer change requires actual corresponding reference and return audit.",
+  "layer_intent": "Top components and signals; actual Bottom one connected GND plane. No signal layer changes made; all36vias are Ground. Fullboard acceptance pending.",
   "positions": {
     "J1": [
       5,
@@ -126,22 +126,22 @@
     "R11": [
       35.5,
       27.2,
-      0
+      180
     ],
     "R12": [
       35.5,
       26.0,
-      0
+      180
     ],
     "R13": [
       35.5,
       24.8,
-      0
+      180
     ],
     "R14": [
       35.5,
       23.6,
-      0
+      180
     ],
     "R15": [
       35.5,
@@ -157,7 +157,7 @@
   "mechanical_basis": "Actual1x16 2.54mm pitch headers have38.1mm center span;45mm board axis gives end margin. Separate daughterboard no user-fixed outline or manually fixed connector position existed. Candidate remains changeable.",
   "assembly": "All26SMT onTop;2TH headers. Six copies required; factory assembly/TH and all-in cost still unquoted.",
   "board_not_final_or_for_order": true,
-  "next": "Native placement, all150 pad-net map, actual pad/body/outline and native DRC before routing.",
+  "next": "Continue same Sensor14Bank PCB2 at a77aba59:83Top segments/36Groundvias;12manual analog nets closed,23signalnets60connection errors remain. Inspect L0_M12/M13 actual C3 Ground escape and remaining14 electrode/7control nets before changed group plan. Keep original48seedCu/36vias/150PAD map and rules. No replay left8/right4 apply or terminal Top35 router. Need complete all-source Ground/reference/neck/mechanical/DRC gates and exact factory six-board price/delivery, all modules/firmware compatibility and <=700 budget before purchase plan.",
   "native_outline_id": "58022707be9889b7",
   "initial_error_and_fix": "Initial straight-line outline API failed after all28moves. Actual28positions were queried, only missing outline created as closed nativePolyline; R2 overlap corrected at26.2/27.9. No batch placement replay."
 }

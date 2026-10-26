@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T05:44:13.289589+08:00",
+  "updated_at": "2026-10-27T07:07:17.969878+08:00",
   "requirements": {
     "confirmed_at": "2026-10-26T21:20:01.872822+08:00",
     "confirmed_by": "本聊天用户直接答复",
@@ -128,8 +128,8 @@
     "sensor-front-native-pcb-verified-rule-readback.json": "11b0590e72ade63a39e55b55764ad7d3f9dda9199f6c518b91c29074ab8775d0",
     "sensor-front-native-pin-net-audit-current.json": "61ffe2da6a1b6cd96236a26eb347306b61b9aa504208ee582f9441487bf6cbd5",
     "sensor-front-native-preflight-current.json": "ba791f8ca083d1e29c454cbbc6e95b726e233cd1bceafaed3bfa638ff2c4bb6e",
-    "sensor-front-native-preservation-and-snapshot-current.json": "a12fec9f9d42543fad2b871dc944d3c6b5863b24437d58f6e75a0d10d2b557d6",
-    "sensor-front-native-progress-current.json": "c3505dd43c9e375a7d501138d8d39c3eb199b033a961909b081825fc06223be5",
+    "sensor-front-native-preservation-and-snapshot-current.json": "6b9842342f5f7c3a7103063200fa36924b7524aaf31b8aefb91c7fe0259ca672",
+    "sensor-front-native-progress-current.json": "00de02ee6c814ef9d088c96aa27a08ce265fb8df14576f7afd0ae0bdbfac2160",
     "sensor-front-native-schematic-drc-current.json": "7b22d726eccc11877c196915e60fd052dbe9fba27cb7337085ee0c52568bf639",
     "sensor-front-native-schematic-wiring-result.json": "d8611a7186b473a3b89d6376402d2afd65615e18c1faf8afdba515960f0a8a8c",
     "sensor-front-native-source-copy.json": "d16c09a186a5025925290e1c515469fc34cd5b09370bb340dd99b0fcb157513d",
@@ -145,7 +145,7 @@
     "sensor-bank-subassembly-current.json": "e842940cab82eeecd76a9414eee17efd0e3c23099b71eb8ac75c4b060127a049",
     "sensor-front-after-Top-route-preservation-current.json": "15dd4337b4ca1c86bb2732b2b69f40bbf520147673cdabe7566c1d0ba68773d4",
     "sensor-front-exact-source-pads-before-route.json": "ea35271d370796b7796b47ef42b9ba0260d82c167290a1b5f343997dedcea9c3",
-    "sensor-front-layout-current.json": "05e3896d053a7a07af37fa71fa9ec0ba192a97443e28e20e377e805371b495c9",
+    "sensor-front-layout-current.json": "4aa68a5996e2f8e74d5e58eb436c64d545f1e5d669cded63a36e99717bb3ba3f",
     "sensor-front-native-bottom-ground-create-result.json": "b16ec7093500db626a9e8dec0a6de63af838e012496eb8e1c485c937a1dfab45",
     "sensor-front-native-closed-outline-result.json": "548797ace0d56b78aebbc4c27802c4461a090d4d8acea76f6ede7f7061dfd3c4",
     "sensor-front-native-group-placement-result.json": "fb49c3647ae9be9e8571a85fc52276b5135ddf47391781accd11373425002372",
@@ -163,7 +163,36 @@
     "sensor-front-Top-route-after-invoke-timeout.json": "d8fafd95b01ed245cb7817a61c4f8688dd9677dec962b682af367b4f63555dc1",
     "sensor-front-Top-route-live-observation-current.json": "4f8990bf98c429b1391d610319f16359fa282111846aae16b70558dcea89c03d",
     "through-hole-control-family-current.json": "a8312a524c2a2321fcd5a2f22ea7e7a4dfc68b6988f0b3a5bab79f3a63f2a225",
-    "firmware-registered-producer-current-recheck.json": "3172951909554513ce699fa0d825717dae1514640a887f5dd7ae13d341335c77"
+    "firmware-registered-producer-current-recheck.json": "3172951909554513ce699fa0d825717dae1514640a887f5dd7ae13d341335c77",
+    "sensor-front-before-fill-operator-change.epcb2": "230103065c55dd1f151a28d993217e7b62cafa386dd043f97feeeb87cbd4af7a",
+    "sensor-front-fill-operator-change-current.json": "ab93883e0890344a6e48cba12a6401c94ce5e4e4720acb46a750f7d4c30e66f2",
+    "sensor-front-resume-identity-current.json": "ca1d3648904153305928a6c78a004bebaafce3ae40be96069f36fcc9be987ba1",
+    "sensor-front-native-fill0-readback-serialization-error.json": "eb3a412daead33a09e4d06932a4e51c98c3486e1c1e494025b0b1b9196dcc77d",
+    "sensor-front-native-fill0-readback-current.json": "85269329af9e43cc77f54af3cb40ab7bd17e3ba97487bb5a0a49e52ad24a9c44",
+    "sensor-front-fill0-current.epcb2": "96986a2f20591125aef253b8cb532d73f4bb7a51074c88807377e3e006955ca4",
+    "sensor-front-fill0-ground-audit.py": "b56d25296a8bc7b6c03e99071f3475314692f3198303c099e0644fcb453d7e3e",
+    "sensor-front-fill0-reference-diagnosis-current.json": "d80907e4e2624b7f2302939c907dd8211c09ed5e3ca419e081421f502ecb8b06",
+    "sensor-front-native-fill0-ground-contact-current.json": "d0320199b79338ace456c54f0964ee0699c92bc2997a847e007b4153ecaef67e",
+    "sensor-front-exact-source-pads-fill0-current.json": "822c5d9c0c6e34c588a0635b2d59d7733e12e44ed97e5301d80e2ff424314b66",
+    "sensor-front-real-bottom-ground-fill0-current.wkb": "750a8183089ed872fc0170ec3edac8b89acbf984b99536950aa87b71d61d1a81",
+    "sensor-front-left8-manual-plan-current.json": "221f373fe41c5226ac9d4cd532564d87a519005ea4a5c8dd9689a739e7f0c024",
+    "sensor-front-apply-left8-manual.js": "5266f588d8ad40d1ddfbaf63b5a78d16b7e870695bdcd52580cc4e5bb7829f18",
+    "sensor-front-native-left8-apply-result.json": "f6b9489115cd9c30be95d740b0000612a3a2ed90406ded798f7db163235f9820",
+    "sensor-front-native-left8-readback-current.json": "92ce11cb5fd592ab0e3734a14125904800bbc3825ed39a98f98252a2bbf22eff",
+    "sensor-front-right6-manual-plan-current.json": "5e3ffc0a5e8d14604be88f05a598ede0f79e23e117b5a7cc9944246ee82e7f57",
+    "sensor-front-right6-preflight.py": "49b0e5eed934d0aac3402c88a08de596632acc369a60cf3eeaacea738bbe63a5",
+    "sensor-front-right4-preflight.py": "d61ee596ae6a2b5ab28bf67b423540c8a89fe8b3ad06c616b0dbd15d7c0f3ff7",
+    "sensor-front-right4-manual-plan-current.json": "45997f4ed44c2b28b8059c662facf1489f7064988e0b156b1efd78cc89c7e0b8",
+    "sensor-front-apply-right4-manual.js": "f972ab0e6c3fd4ee656d83c5da92e478482034d1ff0feb8f9878e8a7d4985046",
+    "sensor-front-native-right4-apply-result.json": "c59ae5e45c30179c94a3cd3641d5ff1c2595731f6e5df8019eba13b9811580d2",
+    "sensor-front-native-12nets-reopened-DRC-current.json": "5f7e753f04efeccb37d0cb1cbaa0e589197bbffa00d92edf24bb6a9e53450d10",
+    "sensor-front-12nets-current.epcb2": "a77aba59257c2ba0a15e3225407c2563680550c3e2585b71b054f8d315022534",
+    "sensor-front-12nets-ground-audit.py": "f916696d4e28438a48809c340e1d0dba1ccc72ff4bac32f57c577a4c27952cb3",
+    "sensor-front-native-12nets-ground-contact-current.json": "42590eddde233681313239fb1593615d6e22093c7831e23a68f9459a0388accc",
+    "sensor-front-exact-source-pads-12nets-current.json": "9049f090d87e87614a4831ae09b256668f788571fb3f2fbdebdef35a8918c9a0",
+    "sensor-front-real-bottom-ground-12nets-current.wkb": "750a8183089ed872fc0170ec3edac8b89acbf984b99536950aa87b71d61d1a81",
+    "sensor-front-12nets-actual-Cu-audit.py": "34e849dd553980c1adcc9e7fdea709481b4dad9760b8a6de28539ce0323142a0",
+    "sensor-front-12nets-actual-Cu-audit-current.json": "68c81033a256d609c270129daf553d77112294d16273800b16541338a9bc18e7"
   },
   "same_device_through_hole_alternatives": {
     "proof": "module-plan-current-evidence\\through-hole-same-device-interface-proof.json",
@@ -189,9 +218,9 @@
     "RTL_modified": false
   },
   "sensor_subassembly_fallback": {
-    "status": "PRELIMINARY_LAYOUT_POWER_GROUND_CALIBRATION_CANDIDATE_35_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
+    "status": "12_MANUAL_ANALOG_NETS_CLOSED_23_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
     "native_progress": "module-plan-current-evidence/sensor-front-native-progress-current.json",
-    "native_progress_sha256": "c3505dd43c9e375a7d501138d8d39c3eb199b033a961909b081825fc06223be5",
+    "native_progress_sha256": "00de02ee6c814ef9d088c96aa27a08ce265fb8df14576f7afd0ae0bdbfac2160",
     "source_circuit_proof_retained": "module-plan-current-evidence/sensor-bank-subassembly-current.json",
     "complete_purchasable_module": false
   },
@@ -200,7 +229,31 @@
     "project": "6b570f10a9004c2a7374c39b14185fbbe64449a767876fe377667e630fc1e3c7",
     "owned_board": "Sensor14Bank",
     "original_board_unchanged": true,
-    "working_metadata_changed": true
+    "working_metadata_changed": true,
+    "current_smallboard_stage": {
+      "state": "TERMINAL_REBUILT_SAVED_CLOSED_REOPENED_CHECKED",
+      "at": "2026-10-27T07:07:17.969878+08:00",
+      "current_PCB_sha256": "a77aba59257c2ba0a15e3225407c2563680550c3e2585b71b054f8d315022534",
+      "newly_closed_nets": [
+        "L0_M00",
+        "L0_M01",
+        "L0_M02",
+        "L0_M03",
+        "L0_M04",
+        "L0_M05",
+        "L0_M06",
+        "L0_M07",
+        "L0_M08",
+        "L0_M09",
+        "L0_M10",
+        "L0_M11"
+      ],
+      "all_source_48_seedCu_and36GNDvias_preserved": true,
+      "remaining_signal_nets": 23,
+      "connection_errors": 60,
+      "other_DRC_errors": 0,
+      "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-12nets-actual-Cu-audit-current.json"
+    }
   },
   "registered_firmware_hash_recheck": "module-plan-current-evidence/firmware-registered-producer-current-recheck.json"
 }

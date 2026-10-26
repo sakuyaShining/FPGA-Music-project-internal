@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-27T05:44:13.289589+08:00",
-  "status": "PRELIMINARY_LAYOUT_POWER_GROUND_CALIBRATION_CANDIDATE_35_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
+  "updated_at": "2026-10-27T07:07:17.969878+08:00",
+  "status": "12_MANUAL_ANALOG_NETS_CLOSED_23_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
   "board": "Sensor14Bank",
   "same_owned_project": "FPGA-Music-U9ControlWork-20261023",
   "native_session": "e8d7065e-fa6a-4310-895c-0ccf40ca650d",
@@ -17,7 +17,7 @@
   "schematic_native_strict_DRC_errors": 0,
   "independent_pin_net_mismatches": 0,
   "independent_imported_PAD_net_mismatches": 0,
-  "pcb_tracks": 48,
+  "pcb_tracks": 83,
   "pcb_vias": 36,
   "placement_done": true,
   "board_outline_defined": true,
@@ -35,20 +35,19 @@
   "original_PCB1_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
   "original_PCB_and_14_schematics_unchanged": true,
   "only_original_manifest_file_intentionally_changed": "working .eprj3 now includes additional Sensor14Bank; prior .eprj3 saved, original accepted portable source remains intact",
-  "rules_scope": "New PCB2 only; saved custom rules independently reread; spacing>=0.165mm, via-to-Cu>=0.25mm, track>=6mil, drill>=0.35mm, via_OD>=0.7mm. Native quantization handled by upward 0.0001mm margin. No routing done.",
+  "rules_scope": "Current persisted native RULE/RULE_SELECTOR/RULE_TEMPLATE unchanged exactly versus pre-fill source; hard spacing/drill/via gates retained. Full-width Bottomreference checked for35newTopsegments. No fullboard acceptance.",
   "rule_api_erratum": "First wrapper argument was not accepted as config; config-only write succeeded. Initial strict numeric guard failed at native quantized 0.6999986mm; corrected upward, independent guard now passes. All raw failures retained.",
   "electrical_API_erratum": "Wiring create errors left partial committed stubs. Recovered only actual pending pins; D4.8 used orthogonal stub to existing moved port. Never replay full construction.",
   "label_erratum": "Native font-size units required actual persisted scale correction; final labels use file sizes8/10, visual review done; no net or part changes.",
   "read_first": [
-    "sensor-front-signal-route-job-current.json",
-    "sensor-front-native-Top-route-terminal-DRC-current.json",
-    "sensor-front-after-Top-route-preservation-current.json",
-    "sensor-front-native-real-ground-contact-current.json",
-    "sensor-front-layout-current.json",
-    "sensor-front-native-pin-net-audit-current.json",
-    "sensor-front-native-pcb-pad-map-audit-current.json"
+    "sensor-front-12nets-actual-Cu-audit-current.json",
+    "sensor-front-native-12nets-reopened-DRC-current.json",
+    "sensor-front-native-12nets-ground-contact-current.json",
+    "sensor-front-fill-operator-change-current.json",
+    "sensor-front-native-progress-current.json",
+    "sensor-front-layout-current.json"
   ],
-  "next": "Continue sameSensor14Bank/PCB2 from actual48Top Cu segments,36Ground vias and realBottom Ground. Prior Top35-only native KEEP job is terminal, returned no result and retained no new signal Cu; not a physical impossibility proof. Do not restart it or increase time. Need changed actual channel/layout/layer method for remaining35nets, then full reference/DC/all PAD/source preservation/strictDRC/save-reopen before fabrication. Keep exactMPNs and six-board factory-preweld budget/lead-time unresolved.",
+  "next": "Continue same Sensor14Bank PCB2 at a77aba59:83Top segments/36Groundvias;12manual analog nets closed,23signalnets60connection errors remain. Inspect L0_M12/M13 actual C3 Ground escape and remaining14 electrode/7control nets before changed group plan. Keep original48seedCu/36vias/150PAD map and rules. No replay left8/right4 apply or terminal Top35 router. Need complete all-source Ground/reference/neck/mechanical/DRC gates and exact factory six-board price/delivery, all modules/firmware compatibility and <=700 budget before purchase plan.",
   "physical_tests": "UNMEASURED",
   "manufacturing_release": false,
   "orders_payments_outbound_messages": false,
@@ -68,16 +67,16 @@
     45
   ],
   "native_clearance_errors": 0,
-  "native_connection_errors": 84,
-  "native_open_signal_nets": 35,
-  "bottom_ground_proof": "sensor-front-native-real-ground-contact-current.json",
+  "native_connection_errors": 60,
+  "native_open_signal_nets": 23,
+  "bottom_ground_proof": "sensor-front-native-12nets-ground-contact-current.json",
   "bottom_ground_components": 1,
   "new_Ground_vias": 36,
   "new_signal_vias": 0,
   "minimum_actual_Bottom_annular_ground_contact_mm2": 0.2941314227797009,
   "real_signal_PTH_returns": 21,
   "maximum_signal_PTH_return_distance_mm": 1.4512596773898752,
-  "actual_Bottom_ground_and_existing_seed_Cu_preservation": "sensor-front-after-Top-route-preservation-current.json",
+  "actual_Bottom_ground_and_existing_seed_Cu_preservation": "sensor-front-12nets-actual-Cu-audit-current.json",
   "last_native_signal_route": {
     "state": "terminal_no_retained_new_signal_Cu_result_missing",
     "started_at": "2026-10-27T02:05:52.322517+08:00",
@@ -185,5 +184,37 @@
     "next": "Do not replay this Top35 KEEP job or just extend time. Inspect real terminal geometry and change actual group layout/layer approach before any new routing."
   },
   "not_complete_PCB_or_purchase_plan": true,
-  "whole_board_nearest_reference_not_accepted": true
+  "whole_board_nearest_reference_not_accepted": true,
+  "manual_group_stage": {
+    "at": "2026-10-27T07:07:17.969878+08:00",
+    "newly_closed_nets": [
+      "L0_M00",
+      "L0_M01",
+      "L0_M02",
+      "L0_M03",
+      "L0_M04",
+      "L0_M05",
+      "L0_M06",
+      "L0_M07",
+      "L0_M08",
+      "L0_M09",
+      "L0_M10",
+      "L0_M11"
+    ],
+    "new_segments": 35,
+    "new_signal_vias": 0,
+    "components_rotated_same_part": [
+      "R11",
+      "R12",
+      "R13",
+      "R14"
+    ],
+    "actual_audit": "sensor-front-12nets-actual-Cu-audit-current.json",
+    "native_reopened_DRC": "sensor-front-native-12nets-reopened-DRC-current.json",
+    "not_to_replay": [
+      "sensor-front-apply-left8-manual.js",
+      "sensor-front-apply-right4-manual.js"
+    ],
+    "all_terminal": true
+  }
 }
