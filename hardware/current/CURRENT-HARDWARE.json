@@ -40,7 +40,7 @@
   "validation_scope": "Saved native951 has prior complete ADDR2 physical/reference/DC/native DRC and reopen acceptance. Current portable files freshly hash-verified; no new CAD routing or fabrication acceptance is claimed. Offline62/24 is a retained partial MUX candidate. Parent full-delta audit plus deletion-only identity stage proof are included; older historical proof chains remain indexed by those records.",
   "single_J10_harness": "context/purchase-preparation-20261021-r1/current-J10-harness.json",
   "single_J10_harness_scope": "Electrical12-to40 mapping checked against saved951 pads. Mechanical connector orientation, configured sale SKU and functional recovery not released.",
-  "last_metadata_update": "2026-10-26T22:11:42.370611+08:00",
+  "last_metadata_update": "2026-10-27T01:39:36.660999+08:00",
   "module_delivery_main": {
     "entry": "module-plan/模块方案-当前工作单.md",
     "requirements": "module-plan/实体模块方案约束-current.json",
@@ -59,6 +59,11 @@
       "F05",
       "F06"
     ],
-    "firmware_scope": "Read-only registered producer; no build/flash or global absence claim."
-  }
+    "firmware_scope": "Read-only registered producer; no build/flash or global absence claim.",
+    "sensor_frontend": "module-plan/evidence/sensor-front-native-progress-current.json",
+    "sensor_candidate_schematic": "module-plan/sensor14bank/Sensor14_frontend.esch2",
+    "sensor_candidate_PCB": "module-plan/sensor14bank/PCB2.epcb2",
+    "sensor_stage": "150-pin schematic and 150-pad import map independently passed;28 footprints unplaced/unrouted;quote pending"
+  },
+  "working_project_scope": "Accepted951 PCB1 and14 originalschematics preserved. Same working project now contains independent Sensor14Bank subboard; its working metadata differs intentionally. Original native/ folder stays accepted baseline."
 }
