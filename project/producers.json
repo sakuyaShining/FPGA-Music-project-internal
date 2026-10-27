@@ -468,6 +468,53 @@
         }
       ],
       "scope": "Only these eight handoff documents; not all CAD state, external quotes, firmware or the full live producer tree. Fixed published copy may differ by this explicit sensor35 decision overlay."
+    },
+    {
+      "id": "hardware-delivery",
+      "activity": "active",
+      "root": "D:/FPGA-Project/hardware-delivery-20261027",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Hardware-delivery continuation: reviewed manufacturing drafts and supply candidates"
+      },
+      "publication_status": "TASK_BRANCH_CANDIDATE_NOT_MAIN_NOT_MANUFACTURING_RELEASE",
+      "observation_max_hours": 168,
+      "published_ref": null,
+      "published_checkpoint": {
+        "commit": "41caf84414f40649b2d52f98ecced9d2efc35b01",
+        "tree": "e6a45441c175cd913a52d7720d7cb4b24d99259b",
+        "repository": "sakuyaShining/FPGA-Music-project-internal",
+        "branch": "codex/hardware-delivery-20261027",
+        "note": "Connector-created initial source checkpoint; final PR head includes subsequent reviewed receipt/newline-portability changes. Resolve actual PR head for current remote commit."
+      },
+      "exclude_dirs": [
+        ".git",
+        "__pycache__"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": "hardware/current/module-plan/manufacturing",
+          "recursive": false,
+          "suffixes": [
+            ".md",
+            ".json",
+            ".csv",
+            ".py"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "hardware/current/module-plan/evidence/edit-control-interface-current.json"
+        },
+        {
+          "path": "hardware/current/module-plan/evidence/edit-control-interface-current.md"
+        },
+        {
+          "path": "hardware/current/module-plan/evidence/edit-control-interface-current.py"
+        }
+      ],
+      "scope": "Only task manufacturing/sourcing files and three corrected control contract copies. No claim of owning/observing all CAD, vendor quotes or firmware."
     }
   ]
 }

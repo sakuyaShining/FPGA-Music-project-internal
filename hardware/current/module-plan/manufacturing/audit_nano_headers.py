@@ -34,7 +34,7 @@ def main():
  with (OUT/'nano-header-netmap-current.csv').open('w',encoding='utf-8-sig',newline='') as f:
   w=csv.DictWriter(f,fieldnames=['header','pin','FPGA_pin','power','net']);w.writeheader();w.writerows(rows)
  report=dict(status='PASS_SAVED_CARRIER_TO_REVIEWED_OFFICIAL_HEADER_TABLE',source_PCB_sha256=hashlib.sha256(PCB.read_bytes()).hexdigest(),official_PDF_sha256=hashlib.sha256(PDF.read_bytes()).hexdigest(),official_PDF_page=2,official_revision='Rev1.30 2023-07-11',mapping_provenance='Visual review of official PDF page2; script joins all40 native carrier pad-net records to that transcription.',rows=rows,edit_control_pins_checked=len(contract['external_header_nets']),corrections=[dict(header='J6',pin=15,old_FPGA_pin=18,correct_FPGA_pin=17),dict(header='J6',pin=17,old_FPGA_pin=20,correct_FPGA_pin=19)],PCB_changed=False,RTL_changed=False,physical_continuity_test='UNMEASURED')
- (OUT/'nano-header-audit-current.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ (OUT/'nano-header-audit-current.json').write_bytes((json.dumps(report,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
  print(json.dumps(dict(status=report['status'],header_pads=40,edit_control_pins_checked=6,PCB_changed=False)))
 
 if __name__=='__main__':main()
