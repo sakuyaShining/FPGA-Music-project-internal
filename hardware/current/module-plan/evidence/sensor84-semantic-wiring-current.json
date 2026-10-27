@@ -1,0 +1,1502 @@
+{
+  "at": "2026-10-27T12:48:43.116214+08:00",
+  "state": "COMPLETE84_SEMANTIC_WIRING_PROPOSAL_NOT_PRODUCT_FIRMWARE_ACCEPTANCE",
+  "requires_board_candidate_acceptance": true,
+  "board_revision": "Sensor14Bank fourlayer35PADchanges; old2layerharness INVALID for this map",
+  "scan_formula": "raw_index=channel*6+bank",
+  "full84_bijection_pass": true,
+  "STRIPS_required": 25,
+  "NODE_MAP_width_bits": 525,
+  "NODE_MAP_525bit_hex": "12a4c88f05db55ea519d2e445858d01d345ca111c2c405048afdcb35a9d09b2a3c48388f9c32589901a283840286f5bb15694f99263438184f1b305490f182430300",
+  "notes": [
+    {
+      "note_index": 0,
+      "pitch": "C3",
+      "NODE_MAP_indices_A_middle_B": [
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "note_index": 1,
+      "pitch": "C#3",
+      "NODE_MAP_indices_A_middle_B": [
+        18,
+        24,
+        30
+      ]
+    },
+    {
+      "note_index": 2,
+      "pitch": "D3",
+      "NODE_MAP_indices_A_middle_B": [
+        36,
+        42,
+        48
+      ]
+    },
+    {
+      "note_index": 3,
+      "pitch": "D#3",
+      "NODE_MAP_indices_A_middle_B": [
+        54,
+        60,
+        66
+      ]
+    },
+    {
+      "note_index": 4,
+      "pitch": "E3",
+      "NODE_MAP_indices_A_middle_B": [
+        1,
+        7,
+        13
+      ]
+    },
+    {
+      "note_index": 5,
+      "pitch": "F3",
+      "NODE_MAP_indices_A_middle_B": [
+        19,
+        25,
+        31
+      ]
+    },
+    {
+      "note_index": 6,
+      "pitch": "F#3",
+      "NODE_MAP_indices_A_middle_B": [
+        37,
+        43,
+        49
+      ]
+    },
+    {
+      "note_index": 7,
+      "pitch": "G3",
+      "NODE_MAP_indices_A_middle_B": [
+        55,
+        61,
+        67
+      ]
+    },
+    {
+      "note_index": 8,
+      "pitch": "G#3",
+      "NODE_MAP_indices_A_middle_B": [
+        2,
+        8,
+        14
+      ]
+    },
+    {
+      "note_index": 9,
+      "pitch": "A3",
+      "NODE_MAP_indices_A_middle_B": [
+        20,
+        26,
+        32
+      ]
+    },
+    {
+      "note_index": 10,
+      "pitch": "A#3",
+      "NODE_MAP_indices_A_middle_B": [
+        38,
+        44,
+        50
+      ]
+    },
+    {
+      "note_index": 11,
+      "pitch": "B3",
+      "NODE_MAP_indices_A_middle_B": [
+        56,
+        62,
+        68
+      ]
+    },
+    {
+      "note_index": 12,
+      "pitch": "C4",
+      "NODE_MAP_indices_A_middle_B": [
+        3,
+        9,
+        15
+      ]
+    },
+    {
+      "note_index": 13,
+      "pitch": "C#4",
+      "NODE_MAP_indices_A_middle_B": [
+        21,
+        27,
+        33
+      ]
+    },
+    {
+      "note_index": 14,
+      "pitch": "D4",
+      "NODE_MAP_indices_A_middle_B": [
+        39,
+        45,
+        51
+      ]
+    },
+    {
+      "note_index": 15,
+      "pitch": "D#4",
+      "NODE_MAP_indices_A_middle_B": [
+        57,
+        63,
+        69
+      ]
+    },
+    {
+      "note_index": 16,
+      "pitch": "E4",
+      "NODE_MAP_indices_A_middle_B": [
+        4,
+        10,
+        16
+      ]
+    },
+    {
+      "note_index": 17,
+      "pitch": "F4",
+      "NODE_MAP_indices_A_middle_B": [
+        22,
+        28,
+        34
+      ]
+    },
+    {
+      "note_index": 18,
+      "pitch": "F#4",
+      "NODE_MAP_indices_A_middle_B": [
+        40,
+        46,
+        52
+      ]
+    },
+    {
+      "note_index": 19,
+      "pitch": "G4",
+      "NODE_MAP_indices_A_middle_B": [
+        58,
+        64,
+        70
+      ]
+    },
+    {
+      "note_index": 20,
+      "pitch": "G#4",
+      "NODE_MAP_indices_A_middle_B": [
+        5,
+        11,
+        17
+      ]
+    },
+    {
+      "note_index": 21,
+      "pitch": "A4",
+      "NODE_MAP_indices_A_middle_B": [
+        23,
+        29,
+        35
+      ]
+    },
+    {
+      "note_index": 22,
+      "pitch": "A#4",
+      "NODE_MAP_indices_A_middle_B": [
+        41,
+        47,
+        53
+      ]
+    },
+    {
+      "note_index": 23,
+      "pitch": "B4",
+      "NODE_MAP_indices_A_middle_B": [
+        59,
+        65,
+        71
+      ]
+    },
+    {
+      "note_index": 24,
+      "pitch": "C5",
+      "NODE_MAP_indices_A_middle_B": [
+        72,
+        73,
+        74
+      ]
+    }
+  ],
+  "electrodes": [
+    {
+      "kind": "pitch",
+      "note_index": 0,
+      "pitch": "C3",
+      "row": "下排",
+      "row_position": 1,
+      "electrode": "端A",
+      "bank": 0,
+      "channel": 0,
+      "raw_index": 0,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 8
+    },
+    {
+      "kind": "pitch",
+      "note_index": 0,
+      "pitch": "C3",
+      "row": "下排",
+      "row_position": 1,
+      "electrode": "中",
+      "bank": 0,
+      "channel": 1,
+      "raw_index": 6,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 7
+    },
+    {
+      "kind": "pitch",
+      "note_index": 0,
+      "pitch": "C3",
+      "row": "下排",
+      "row_position": 1,
+      "electrode": "端B",
+      "bank": 0,
+      "channel": 2,
+      "raw_index": 12,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 6
+    },
+    {
+      "kind": "pitch",
+      "note_index": 1,
+      "pitch": "C#3",
+      "row": "下排",
+      "row_position": 2,
+      "electrode": "端A",
+      "bank": 0,
+      "channel": 3,
+      "raw_index": 18,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 5
+    },
+    {
+      "kind": "pitch",
+      "note_index": 1,
+      "pitch": "C#3",
+      "row": "下排",
+      "row_position": 2,
+      "electrode": "中",
+      "bank": 0,
+      "channel": 4,
+      "raw_index": 24,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 4
+    },
+    {
+      "kind": "pitch",
+      "note_index": 1,
+      "pitch": "C#3",
+      "row": "下排",
+      "row_position": 2,
+      "electrode": "端B",
+      "bank": 0,
+      "channel": 5,
+      "raw_index": 30,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 3
+    },
+    {
+      "kind": "pitch",
+      "note_index": 2,
+      "pitch": "D3",
+      "row": "下排",
+      "row_position": 3,
+      "electrode": "端A",
+      "bank": 0,
+      "channel": 6,
+      "raw_index": 36,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 2
+    },
+    {
+      "kind": "pitch",
+      "note_index": 2,
+      "pitch": "D3",
+      "row": "下排",
+      "row_position": 3,
+      "electrode": "中",
+      "bank": 0,
+      "channel": 7,
+      "raw_index": 42,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 1
+    },
+    {
+      "kind": "pitch",
+      "note_index": 2,
+      "pitch": "D3",
+      "row": "下排",
+      "row_position": 3,
+      "electrode": "端B",
+      "bank": 0,
+      "channel": 8,
+      "raw_index": 48,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 14
+    },
+    {
+      "kind": "pitch",
+      "note_index": 3,
+      "pitch": "D#3",
+      "row": "下排",
+      "row_position": 4,
+      "electrode": "端A",
+      "bank": 0,
+      "channel": 9,
+      "raw_index": 54,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 13
+    },
+    {
+      "kind": "pitch",
+      "note_index": 3,
+      "pitch": "D#3",
+      "row": "下排",
+      "row_position": 4,
+      "electrode": "中",
+      "bank": 0,
+      "channel": 10,
+      "raw_index": 60,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 12
+    },
+    {
+      "kind": "pitch",
+      "note_index": 3,
+      "pitch": "D#3",
+      "row": "下排",
+      "row_position": 4,
+      "electrode": "端B",
+      "bank": 0,
+      "channel": 11,
+      "raw_index": 66,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 11
+    },
+    {
+      "kind": "pitch",
+      "note_index": 4,
+      "pitch": "E3",
+      "row": "下排",
+      "row_position": 5,
+      "electrode": "端A",
+      "bank": 1,
+      "channel": 0,
+      "raw_index": 1,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 8
+    },
+    {
+      "kind": "pitch",
+      "note_index": 4,
+      "pitch": "E3",
+      "row": "下排",
+      "row_position": 5,
+      "electrode": "中",
+      "bank": 1,
+      "channel": 1,
+      "raw_index": 7,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 7
+    },
+    {
+      "kind": "pitch",
+      "note_index": 4,
+      "pitch": "E3",
+      "row": "下排",
+      "row_position": 5,
+      "electrode": "端B",
+      "bank": 1,
+      "channel": 2,
+      "raw_index": 13,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 6
+    },
+    {
+      "kind": "pitch",
+      "note_index": 5,
+      "pitch": "F3",
+      "row": "下排",
+      "row_position": 6,
+      "electrode": "端A",
+      "bank": 1,
+      "channel": 3,
+      "raw_index": 19,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 5
+    },
+    {
+      "kind": "pitch",
+      "note_index": 5,
+      "pitch": "F3",
+      "row": "下排",
+      "row_position": 6,
+      "electrode": "中",
+      "bank": 1,
+      "channel": 4,
+      "raw_index": 25,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 4
+    },
+    {
+      "kind": "pitch",
+      "note_index": 5,
+      "pitch": "F3",
+      "row": "下排",
+      "row_position": 6,
+      "electrode": "端B",
+      "bank": 1,
+      "channel": 5,
+      "raw_index": 31,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 3
+    },
+    {
+      "kind": "pitch",
+      "note_index": 6,
+      "pitch": "F#3",
+      "row": "下排",
+      "row_position": 7,
+      "electrode": "端A",
+      "bank": 1,
+      "channel": 6,
+      "raw_index": 37,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 2
+    },
+    {
+      "kind": "pitch",
+      "note_index": 6,
+      "pitch": "F#3",
+      "row": "下排",
+      "row_position": 7,
+      "electrode": "中",
+      "bank": 1,
+      "channel": 7,
+      "raw_index": 43,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 1
+    },
+    {
+      "kind": "pitch",
+      "note_index": 6,
+      "pitch": "F#3",
+      "row": "下排",
+      "row_position": 7,
+      "electrode": "端B",
+      "bank": 1,
+      "channel": 8,
+      "raw_index": 49,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 14
+    },
+    {
+      "kind": "pitch",
+      "note_index": 7,
+      "pitch": "G3",
+      "row": "下排",
+      "row_position": 8,
+      "electrode": "端A",
+      "bank": 1,
+      "channel": 9,
+      "raw_index": 55,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 13
+    },
+    {
+      "kind": "pitch",
+      "note_index": 7,
+      "pitch": "G3",
+      "row": "下排",
+      "row_position": 8,
+      "electrode": "中",
+      "bank": 1,
+      "channel": 10,
+      "raw_index": 61,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 12
+    },
+    {
+      "kind": "pitch",
+      "note_index": 7,
+      "pitch": "G3",
+      "row": "下排",
+      "row_position": 8,
+      "electrode": "端B",
+      "bank": 1,
+      "channel": 11,
+      "raw_index": 67,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 11
+    },
+    {
+      "kind": "pitch",
+      "note_index": 8,
+      "pitch": "G#3",
+      "row": "下排",
+      "row_position": 9,
+      "electrode": "端A",
+      "bank": 2,
+      "channel": 0,
+      "raw_index": 2,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 8
+    },
+    {
+      "kind": "pitch",
+      "note_index": 8,
+      "pitch": "G#3",
+      "row": "下排",
+      "row_position": 9,
+      "electrode": "中",
+      "bank": 2,
+      "channel": 1,
+      "raw_index": 8,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 7
+    },
+    {
+      "kind": "pitch",
+      "note_index": 8,
+      "pitch": "G#3",
+      "row": "下排",
+      "row_position": 9,
+      "electrode": "端B",
+      "bank": 2,
+      "channel": 2,
+      "raw_index": 14,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 6
+    },
+    {
+      "kind": "pitch",
+      "note_index": 9,
+      "pitch": "A3",
+      "row": "下排",
+      "row_position": 10,
+      "electrode": "端A",
+      "bank": 2,
+      "channel": 3,
+      "raw_index": 20,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 5
+    },
+    {
+      "kind": "pitch",
+      "note_index": 9,
+      "pitch": "A3",
+      "row": "下排",
+      "row_position": 10,
+      "electrode": "中",
+      "bank": 2,
+      "channel": 4,
+      "raw_index": 26,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 4
+    },
+    {
+      "kind": "pitch",
+      "note_index": 9,
+      "pitch": "A3",
+      "row": "下排",
+      "row_position": 10,
+      "electrode": "端B",
+      "bank": 2,
+      "channel": 5,
+      "raw_index": 32,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 3
+    },
+    {
+      "kind": "pitch",
+      "note_index": 10,
+      "pitch": "A#3",
+      "row": "下排",
+      "row_position": 11,
+      "electrode": "端A",
+      "bank": 2,
+      "channel": 6,
+      "raw_index": 38,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 2
+    },
+    {
+      "kind": "pitch",
+      "note_index": 10,
+      "pitch": "A#3",
+      "row": "下排",
+      "row_position": 11,
+      "electrode": "中",
+      "bank": 2,
+      "channel": 7,
+      "raw_index": 44,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 1
+    },
+    {
+      "kind": "pitch",
+      "note_index": 10,
+      "pitch": "A#3",
+      "row": "下排",
+      "row_position": 11,
+      "electrode": "端B",
+      "bank": 2,
+      "channel": 8,
+      "raw_index": 50,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 14
+    },
+    {
+      "kind": "pitch",
+      "note_index": 11,
+      "pitch": "B3",
+      "row": "下排",
+      "row_position": 12,
+      "electrode": "端A",
+      "bank": 2,
+      "channel": 9,
+      "raw_index": 56,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 13
+    },
+    {
+      "kind": "pitch",
+      "note_index": 11,
+      "pitch": "B3",
+      "row": "下排",
+      "row_position": 12,
+      "electrode": "中",
+      "bank": 2,
+      "channel": 10,
+      "raw_index": 62,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 12
+    },
+    {
+      "kind": "pitch",
+      "note_index": 11,
+      "pitch": "B3",
+      "row": "下排",
+      "row_position": 12,
+      "electrode": "端B",
+      "bank": 2,
+      "channel": 11,
+      "raw_index": 68,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 11
+    },
+    {
+      "kind": "pitch",
+      "note_index": 12,
+      "pitch": "C4",
+      "row": "上排",
+      "row_position": 1,
+      "electrode": "端A",
+      "bank": 3,
+      "channel": 0,
+      "raw_index": 3,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 8
+    },
+    {
+      "kind": "pitch",
+      "note_index": 12,
+      "pitch": "C4",
+      "row": "上排",
+      "row_position": 1,
+      "electrode": "中",
+      "bank": 3,
+      "channel": 1,
+      "raw_index": 9,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 7
+    },
+    {
+      "kind": "pitch",
+      "note_index": 12,
+      "pitch": "C4",
+      "row": "上排",
+      "row_position": 1,
+      "electrode": "端B",
+      "bank": 3,
+      "channel": 2,
+      "raw_index": 15,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 6
+    },
+    {
+      "kind": "pitch",
+      "note_index": 13,
+      "pitch": "C#4",
+      "row": "上排",
+      "row_position": 2,
+      "electrode": "端A",
+      "bank": 3,
+      "channel": 3,
+      "raw_index": 21,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 5
+    },
+    {
+      "kind": "pitch",
+      "note_index": 13,
+      "pitch": "C#4",
+      "row": "上排",
+      "row_position": 2,
+      "electrode": "中",
+      "bank": 3,
+      "channel": 4,
+      "raw_index": 27,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 4
+    },
+    {
+      "kind": "pitch",
+      "note_index": 13,
+      "pitch": "C#4",
+      "row": "上排",
+      "row_position": 2,
+      "electrode": "端B",
+      "bank": 3,
+      "channel": 5,
+      "raw_index": 33,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 3
+    },
+    {
+      "kind": "pitch",
+      "note_index": 14,
+      "pitch": "D4",
+      "row": "上排",
+      "row_position": 3,
+      "electrode": "端A",
+      "bank": 3,
+      "channel": 6,
+      "raw_index": 39,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 2
+    },
+    {
+      "kind": "pitch",
+      "note_index": 14,
+      "pitch": "D4",
+      "row": "上排",
+      "row_position": 3,
+      "electrode": "中",
+      "bank": 3,
+      "channel": 7,
+      "raw_index": 45,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 1
+    },
+    {
+      "kind": "pitch",
+      "note_index": 14,
+      "pitch": "D4",
+      "row": "上排",
+      "row_position": 3,
+      "electrode": "端B",
+      "bank": 3,
+      "channel": 8,
+      "raw_index": 51,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 14
+    },
+    {
+      "kind": "pitch",
+      "note_index": 15,
+      "pitch": "D#4",
+      "row": "上排",
+      "row_position": 4,
+      "electrode": "端A",
+      "bank": 3,
+      "channel": 9,
+      "raw_index": 57,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 13
+    },
+    {
+      "kind": "pitch",
+      "note_index": 15,
+      "pitch": "D#4",
+      "row": "上排",
+      "row_position": 4,
+      "electrode": "中",
+      "bank": 3,
+      "channel": 10,
+      "raw_index": 63,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 12
+    },
+    {
+      "kind": "pitch",
+      "note_index": 15,
+      "pitch": "D#4",
+      "row": "上排",
+      "row_position": 4,
+      "electrode": "端B",
+      "bank": 3,
+      "channel": 11,
+      "raw_index": 69,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 11
+    },
+    {
+      "kind": "pitch",
+      "note_index": 16,
+      "pitch": "E4",
+      "row": "上排",
+      "row_position": 5,
+      "electrode": "端A",
+      "bank": 4,
+      "channel": 0,
+      "raw_index": 4,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 8
+    },
+    {
+      "kind": "pitch",
+      "note_index": 16,
+      "pitch": "E4",
+      "row": "上排",
+      "row_position": 5,
+      "electrode": "中",
+      "bank": 4,
+      "channel": 1,
+      "raw_index": 10,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 7
+    },
+    {
+      "kind": "pitch",
+      "note_index": 16,
+      "pitch": "E4",
+      "row": "上排",
+      "row_position": 5,
+      "electrode": "端B",
+      "bank": 4,
+      "channel": 2,
+      "raw_index": 16,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 6
+    },
+    {
+      "kind": "pitch",
+      "note_index": 17,
+      "pitch": "F4",
+      "row": "上排",
+      "row_position": 6,
+      "electrode": "端A",
+      "bank": 4,
+      "channel": 3,
+      "raw_index": 22,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 5
+    },
+    {
+      "kind": "pitch",
+      "note_index": 17,
+      "pitch": "F4",
+      "row": "上排",
+      "row_position": 6,
+      "electrode": "中",
+      "bank": 4,
+      "channel": 4,
+      "raw_index": 28,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 4
+    },
+    {
+      "kind": "pitch",
+      "note_index": 17,
+      "pitch": "F4",
+      "row": "上排",
+      "row_position": 6,
+      "electrode": "端B",
+      "bank": 4,
+      "channel": 5,
+      "raw_index": 34,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 3
+    },
+    {
+      "kind": "pitch",
+      "note_index": 18,
+      "pitch": "F#4",
+      "row": "上排",
+      "row_position": 7,
+      "electrode": "端A",
+      "bank": 4,
+      "channel": 6,
+      "raw_index": 40,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 2
+    },
+    {
+      "kind": "pitch",
+      "note_index": 18,
+      "pitch": "F#4",
+      "row": "上排",
+      "row_position": 7,
+      "electrode": "中",
+      "bank": 4,
+      "channel": 7,
+      "raw_index": 46,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 1
+    },
+    {
+      "kind": "pitch",
+      "note_index": 18,
+      "pitch": "F#4",
+      "row": "上排",
+      "row_position": 7,
+      "electrode": "端B",
+      "bank": 4,
+      "channel": 8,
+      "raw_index": 52,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 14
+    },
+    {
+      "kind": "pitch",
+      "note_index": 19,
+      "pitch": "G4",
+      "row": "上排",
+      "row_position": 8,
+      "electrode": "端A",
+      "bank": 4,
+      "channel": 9,
+      "raw_index": 58,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 13
+    },
+    {
+      "kind": "pitch",
+      "note_index": 19,
+      "pitch": "G4",
+      "row": "上排",
+      "row_position": 8,
+      "electrode": "中",
+      "bank": 4,
+      "channel": 10,
+      "raw_index": 64,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 12
+    },
+    {
+      "kind": "pitch",
+      "note_index": 19,
+      "pitch": "G4",
+      "row": "上排",
+      "row_position": 8,
+      "electrode": "端B",
+      "bank": 4,
+      "channel": 11,
+      "raw_index": 70,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 11
+    },
+    {
+      "kind": "pitch",
+      "note_index": 20,
+      "pitch": "G#4",
+      "row": "上排",
+      "row_position": 9,
+      "electrode": "端A",
+      "bank": 5,
+      "channel": 0,
+      "raw_index": 5,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 8
+    },
+    {
+      "kind": "pitch",
+      "note_index": 20,
+      "pitch": "G#4",
+      "row": "上排",
+      "row_position": 9,
+      "electrode": "中",
+      "bank": 5,
+      "channel": 1,
+      "raw_index": 11,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 7
+    },
+    {
+      "kind": "pitch",
+      "note_index": 20,
+      "pitch": "G#4",
+      "row": "上排",
+      "row_position": 9,
+      "electrode": "端B",
+      "bank": 5,
+      "channel": 2,
+      "raw_index": 17,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 6
+    },
+    {
+      "kind": "pitch",
+      "note_index": 21,
+      "pitch": "A4",
+      "row": "上排",
+      "row_position": 10,
+      "electrode": "端A",
+      "bank": 5,
+      "channel": 3,
+      "raw_index": 23,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 5
+    },
+    {
+      "kind": "pitch",
+      "note_index": 21,
+      "pitch": "A4",
+      "row": "上排",
+      "row_position": 10,
+      "electrode": "中",
+      "bank": 5,
+      "channel": 4,
+      "raw_index": 29,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 4
+    },
+    {
+      "kind": "pitch",
+      "note_index": 21,
+      "pitch": "A4",
+      "row": "上排",
+      "row_position": 10,
+      "electrode": "端B",
+      "bank": 5,
+      "channel": 5,
+      "raw_index": 35,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 3
+    },
+    {
+      "kind": "pitch",
+      "note_index": 22,
+      "pitch": "A#4",
+      "row": "上排",
+      "row_position": 11,
+      "electrode": "端A",
+      "bank": 5,
+      "channel": 6,
+      "raw_index": 41,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 2
+    },
+    {
+      "kind": "pitch",
+      "note_index": 22,
+      "pitch": "A#4",
+      "row": "上排",
+      "row_position": 11,
+      "electrode": "中",
+      "bank": 5,
+      "channel": 7,
+      "raw_index": 47,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 1
+    },
+    {
+      "kind": "pitch",
+      "note_index": 22,
+      "pitch": "A#4",
+      "row": "上排",
+      "row_position": 11,
+      "electrode": "端B",
+      "bank": 5,
+      "channel": 8,
+      "raw_index": 53,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 14
+    },
+    {
+      "kind": "pitch",
+      "note_index": 23,
+      "pitch": "B4",
+      "row": "上排",
+      "row_position": 12,
+      "electrode": "端A",
+      "bank": 5,
+      "channel": 9,
+      "raw_index": 59,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 13
+    },
+    {
+      "kind": "pitch",
+      "note_index": 23,
+      "pitch": "B4",
+      "row": "上排",
+      "row_position": 12,
+      "electrode": "中",
+      "bank": 5,
+      "channel": 10,
+      "raw_index": 65,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 12
+    },
+    {
+      "kind": "pitch",
+      "note_index": 23,
+      "pitch": "B4",
+      "row": "上排",
+      "row_position": 12,
+      "electrode": "端B",
+      "bank": 5,
+      "channel": 11,
+      "raw_index": 71,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 11
+    },
+    {
+      "kind": "pitch",
+      "note_index": 24,
+      "pitch": "C5",
+      "row": "上排右端独立C5",
+      "row_position": 13,
+      "electrode": "端A",
+      "bank": 0,
+      "channel": 12,
+      "raw_index": 72,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 10
+    },
+    {
+      "kind": "pitch",
+      "note_index": 24,
+      "pitch": "C5",
+      "row": "上排右端独立C5",
+      "row_position": 13,
+      "electrode": "中",
+      "bank": 1,
+      "channel": 12,
+      "raw_index": 73,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 10
+    },
+    {
+      "kind": "pitch",
+      "note_index": 24,
+      "pitch": "C5",
+      "row": "上排右端独立C5",
+      "row_position": 13,
+      "electrode": "端B",
+      "bank": 2,
+      "channel": 12,
+      "raw_index": 74,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 10
+    },
+    {
+      "kind": "octave",
+      "octave_slot": 0,
+      "octave_offset": -1,
+      "bank": 3,
+      "channel": 12,
+      "raw_index": 75,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 10
+    },
+    {
+      "kind": "octave",
+      "octave_slot": 1,
+      "octave_offset": 0,
+      "bank": 4,
+      "channel": 12,
+      "raw_index": 76,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 10
+    },
+    {
+      "kind": "octave",
+      "octave_slot": 2,
+      "octave_offset": 1,
+      "bank": 5,
+      "channel": 12,
+      "raw_index": 77,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 10
+    },
+    {
+      "kind": "octave",
+      "octave_slot": 3,
+      "octave_offset": 2,
+      "bank": 0,
+      "channel": 13,
+      "raw_index": 78,
+      "board_label": "B0",
+      "connector": "J1",
+      "pin": 9
+    },
+    {
+      "kind": "octave",
+      "octave_slot": 4,
+      "octave_offset": 3,
+      "bank": 1,
+      "channel": 13,
+      "raw_index": 79,
+      "board_label": "B1",
+      "connector": "J1",
+      "pin": 9
+    },
+    {
+      "kind": "spare",
+      "bank": 2,
+      "channel": 13,
+      "raw_index": 80,
+      "board_label": "B2",
+      "connector": "J1",
+      "pin": 9,
+      "assembly": "不接触摸电极；接线图留作备用，不可默作新功能"
+    },
+    {
+      "kind": "spare",
+      "bank": 3,
+      "channel": 13,
+      "raw_index": 81,
+      "board_label": "B3",
+      "connector": "J1",
+      "pin": 9,
+      "assembly": "不接触摸电极；接线图留作备用，不可默作新功能"
+    },
+    {
+      "kind": "spare",
+      "bank": 4,
+      "channel": 13,
+      "raw_index": 82,
+      "board_label": "B4",
+      "connector": "J1",
+      "pin": 9,
+      "assembly": "不接触摸电极；接线图留作备用，不可默作新功能"
+    },
+    {
+      "kind": "spare",
+      "bank": 5,
+      "channel": 13,
+      "raw_index": 83,
+      "board_label": "B5",
+      "connector": "J1",
+      "pin": 9,
+      "assembly": "不接触摸电极；接线图留作备用，不可默作新功能"
+    }
+  ],
+  "onboard_calibration": [
+    {
+      "bank": 0,
+      "channel": 14,
+      "raw_index": 84,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 10,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 1,
+      "channel": 14,
+      "raw_index": 85,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 10,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 2,
+      "channel": 14,
+      "raw_index": 86,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 10,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 3,
+      "channel": 14,
+      "raw_index": 87,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 10,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 4,
+      "channel": 14,
+      "raw_index": 88,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 10,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 5,
+      "channel": 14,
+      "raw_index": 89,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 10,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 0,
+      "channel": 15,
+      "raw_index": 90,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 100,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 1,
+      "channel": 15,
+      "raw_index": 91,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 100,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 2,
+      "channel": 15,
+      "raw_index": 92,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 100,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 3,
+      "channel": 15,
+      "raw_index": 93,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 100,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 4,
+      "channel": 15,
+      "raw_index": 94,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 100,
+      "external_touch_electrode": false
+    },
+    {
+      "bank": 5,
+      "channel": 15,
+      "raw_index": 95,
+      "kind": "onboard_calibration",
+      "capacitance_pF": 100,
+      "external_touch_electrode": false
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_delta_store.v",
+      "sha256": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320"
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_strip_positions.v",
+      "sha256": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e"
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_mux_scan.v",
+      "sha256": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b"
+    }
+  ],
+  "physical_direction": "端A/中/端B are electrical labels. A-to-B pitch bend direction must match panel marks and calibration; no automatic force precision or direction assertion.",
+  "firmware_changes_made": false,
+  "driver_acceptance": false,
+  "physical_tests": "UNMEASURED",
+  "scope": "75pitch+5octave+4spare retained; 12calibration slots separate and not counted as84external electrodes. Six SENSE_OUT lines remain electrically independent."
+}

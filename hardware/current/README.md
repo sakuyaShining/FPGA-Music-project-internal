@@ -43,3 +43,7 @@
 ## 完整交付可控性与十二条核对（10月27日）
 
 全部12条逐项对照与可控性倒排见module-plan/evidence/product-spec-12-comparison-current.md及delivery-risk-plan-current.md。R09本为AUX/不装机内喇叭偏好，外接试听功放/喇叭不是AUX必购门；R12按用户授权调整为模块/必要简单预焊小板，完整可装要求不降。84采集位不等于25音位表情已实现。前端/产品固件接合及供应交期均未闭合，10月28日设计检查点、30日到齐与11月3日视频均为内部倒排目标，未获供应商承诺，不保证11月4日全12条交付。不删功能、不改原生/RTL或下单。
+
+## Current Sensor14Bank fourlayer trial
+
+Real native fourlayer candidate:28parts/150PAD/223lines/48vias;35explicitPAD changes match schematic; native strictDRC0 and zero unconnected after actual pours/save-close-reopen. All91sourceCu retained. Independent Ground reference has34failedsegments; fullDC/minneck/oldcontacts/stack/assembly/purchase budget/delivery remain pending. This is NOT fabrication acceptance. Original mainPCB951 remains42connectionerrors12nets. Complete84semantic wiring proposal generated:75pitch+5octave+4spare; noRTLwrite. Read module-plan/evidence/sensor-fourlayer-progress-current.md/json first. NEVER replay terminal apply jobs.

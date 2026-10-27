@@ -1,0 +1,785 @@
+{
+  "updated_at": "2026-10-27T12:02:32.173574+08:00",
+  "native_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "native_connections": 42,
+  "native_open_nets": 12,
+  "native_project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+  "native_session": "e8d7065e-fa6a-4310-895c-0ccf40ca650d",
+  "native_changed": true,
+  "summary": "ADDR2已在同一原生施工副本整网闭合，7个焊盘岛合为1岛。当前951ce88a/42项未连通12网/227件649孔，原生四层重铺保存关闭重开，严格DRC为0间距/0物理/0网表。130根声明新线(含1根13.2mil真实Ground15接地桥)及31新孔、删除15旧数字线/2旧ADDR3孔；ADDR3/TP_RESET_N、47IO脚、原闭合网保持。全部255信号网原PAD分组无拆分，1063捕获PAD精确不变，899节点和52外部PAD核验通过。2725根保留原生信号铜全宽/实地参考比较无新增退化，167地焊盘/177地孔均连至U8.8，21新信号孔回流与所需地接触通过，旧地接触无新增退化，MOSI34实际铜实地参考保持。仍有12网未闭合，施工版不可晋升投板，实物UNMEASURED。",
+  "capacity": "当前实际作业状态以PCB-ACTIVE-WORK.json/真实PID为准；不得按旧终态或running字样重开。接受951/离线62/24未变。",
+  "next_action": "Read delivery-risk-plan-current and product-spec12 comparison first. Complete controllable84semantic/physical mapping and exact interface/evidence/assembly plan while advancing bounded full front-end and control/protection feasibility. Oct28 18:00 is design review checkpoint, NOT promised acceptance; Oct30arrival/Nov3video internal targets lack supplier commitments. Do not reduce functions, rerun terminal geometry, or message/edit other chats. Current13remaining route branches and all realGround/native gates remain.",
+  "read_first": [
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-progress-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\delivery-risk-plan-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\product-spec-12-comparison-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-AUX-scope-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-channel-plan-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-channel-plan-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-bounded-route-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\PCB-ACTIVE-WORK.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\实体交付当前入口.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\实体模块方案约束-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\模块方案-当前工作单.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\模块方案-当前证据.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\227件BOM与模块方案范围纠正.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\collaboration-20261026\\coordination.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-native-progress-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-wiring-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-playback-sourcing-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.json"
+  ],
+  "offline_work_directory": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout",
+  "current_candidate": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-audited-partial-plan.json",
+  "expected": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-expected.json",
+  "C_canonical_entries_offline_progress_stale": true,
+  "current_importable_candidate": false,
+  "native_apply_allowed": false,
+  "whole_ADDR2_complete": true,
+  "manufacturing_release": false,
+  "physical_tests": "UNMEASURED",
+  "running_tasks": [],
+  "all_current_jobs_terminal": true,
+  "native_file_checks": [
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "eprj3-intro.md",
+      "sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "FPGA-Music-U9ControlWork-20261023.eprj3",
+      "sha256": "a69c794ac5b1fa00c7e9f1342b83ce70c8bbde0e46922dad5ef86f1639f5e416",
+      "scope": "Current working project includes Sensor14Bank. Accepted baseline metadata retained separately."
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "panel/Panel1.epan2",
+      "sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "pcb/PCB1.epcb2",
+      "sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/01_Nano_headers.esch2",
+      "sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/02_Shift_and_memory.esch2",
+      "sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/03_Display_harnesses.esch2",
+      "sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/04_PCM5122_AUX.esch2",
+      "sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/05_Power.esch2",
+      "sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/06_Controls.esch2",
+      "sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/07_Scan_lane_0.esch2",
+      "sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/08_Scan_lane_1.esch2",
+      "sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/09_Scan_lane_2.esch2",
+      "sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/10_Scan_lane_3.esch2",
+      "sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/11_Scan_lane_4.esch2",
+      "sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/12_Scan_lane_5.esch2",
+      "sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/13_Power_off_isolation.esch2",
+      "sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/14_Protected_power_entry.esch2",
+      "sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/Schematic1.ecfg",
+      "sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "eprj3-intro.md",
+      "sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "FPGA-Music-Dualscreen-Addr3Work-20261022.eprj3",
+      "sha256": "b4f73e7755876c6d2b7f1878945f043f18f2bf07d37caa42ca52d25a93bb37bf"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "panel/Panel1.epan2",
+      "sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "pcb/PCB1.epcb2",
+      "sha256": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/01_Nano_headers.esch2",
+      "sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/02_Shift_and_memory.esch2",
+      "sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/03_Display_harnesses.esch2",
+      "sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/04_PCM5122_AUX.esch2",
+      "sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/05_Power.esch2",
+      "sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/06_Controls.esch2",
+      "sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/07_Scan_lane_0.esch2",
+      "sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/08_Scan_lane_1.esch2",
+      "sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/09_Scan_lane_2.esch2",
+      "sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/10_Scan_lane_3.esch2",
+      "sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/11_Scan_lane_4.esch2",
+      "sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/12_Scan_lane_5.esch2",
+      "sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/13_Power_off_isolation.esch2",
+      "sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/14_Protected_power_entry.esch2",
+      "sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/Schematic1.ecfg",
+      "sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Sensor14Bank_Schematic/Sensor14_frontend.esch2",
+      "sha256": "fec91f7a7098abe13298a28805ab9f2d04cf80913bb2b9854dc76c0bfaa66760",
+      "scope": "New Sensor14Bank unaccepted unplaced/unrouted candidate"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "pcb/PCB2.epcb2",
+      "sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+      "scope": "Sensor14Bank preliminary91TopCu36Groundvias56connectionerrors21signalnetsopen; all14internal analog nets closed, not fororder"
+    }
+  ],
+  "C_free_bytes": 4558770176,
+  "D_free_bytes": 20071874560,
+  "power_ground_computation_pass": true,
+  "optional_ground_cache_write_failed": true,
+  "optional_zero_byte_cache_removed": [
+    "C:\\Users\\Sakuya\\.codex\\worktrees\\06df\\FPGA-Music-project\\hardware\\review-manufacturing-20261019\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-contact-preserving-ground-state.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-contact-preserving-ground-state.json"
+  ],
+  "cad_live_identity_not_rechecked_after_capacity": false,
+  "last_CAD_identity_evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-whole-final-native-guard.json",
+  "automated_resume": "pcb ACTIVE; next prompt reads this D entry first; offline work can continue on D, native writes wait for C capacity recovery and fresh CAD/session guard",
+  "last_readonly_guard": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-resetbranch-cleanup-final-native-guard.json",
+  "latest_followup": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\模块方案-当前证据.json",
+  "memory_allocation_failure": false,
+  "U3_local_candidate_unaccepted": false,
+  "U3_whole_trunk_connected": true,
+  "offline_ADDR2_pad_islands": 1,
+  "U3_delta_review_pass": true,
+  "whole_U3_connection_offline_only": true,
+  "memory_method_changed": true,
+  "current_offline_recovery_zip": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-resetbranch-cleanup-offline-checkpoint-NOT-FOR-FAB.zip",
+  "current_offline_recovery_zip_sha256": "28ca698c626c3a5131bfe26142fd851af445376faaa39840c4e2885cc506db8a",
+  "plane_context": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-resetbranch-cleanup-audited-plane-context.json",
+  "offline_pad_groups": [
+    "U1",
+    "U8",
+    "U2+U3",
+    "U4+U5+U6"
+  ],
+  "U8_whole_connection_offline_only": true,
+  "U8_delta_review_pass": true,
+  "current_consolidated_protection_proof": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-resetbranch-cleanup-stage-proof.json",
+  "lower_row_Top_bounded_result": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-lower-row-current-domain-proof.json",
+  "last_native_manifest_check": "2026-10-27T05:40:28.173741+08:00",
+  "terminal_failures": "南北87线源的Top+Inner16条件端口图无路径；随后只在离线移动并完整恢复Top TP_RESET_N线875481a265f9911a(增加2线5.801471mm)的89线分支虽局部几何/参考复核通过，重算仍未接通，终态不晋升、不重跑；当前源仍87线，原Top875线保持。graph中的physical_transition_upper_path已含参考/静区/保留铜门，不是纯物理不可达或全板无解证明。另已改变为先核真实Ground1/Ground15/Bottom接触的Inner15连续端口方法：4源孔/3目标孔具合格实际回流，纯物理有共同区，但加入最近Ground1即分区，终态无候选不重跑。候选U8信号孔旁真实原生地孔1e6076aee187d194回流1.240413mm，Ground1约0.185436、Ground15/Bottom约0.185450mm²，可用于后续严格参考对求解，但这不是已完成Inner15路线。",
+  "native_reopen_identity_timeout": false,
+  "native_vias": 649,
+  "native_components": 227,
+  "native_ADDR2_pad_islands": 1,
+  "native_stage_pass": true,
+  "parent_project_uuid": "cba3ed8b48ff9738f156a5f5e1c9d8904b6aa35e05e0068ede400fc8c6829384",
+  "native_capture": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-whole-native-capture-normalized.json",
+  "native_context_review_pending": false,
+  "project_save_metadata_proof": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-project-metadata-save-time-proof.json",
+  "current_pending_native_recovery_zip": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-951-pending-audit-native-NOT-FOR-FAB.zip",
+  "current_pending_native_recovery_sha256": "fc47a737ab373197a7dfe4152841ef98e133c34b2a76b19def7ebf2e19004bff",
+  "numerical_validation": "最后一处新增Inner16最近Bottom参考缺口已保持两端点、用0.005mm偏移折线原生修复，原生将三段自动合并为两段；两段已逐段显式声明，保持原端点，无新增孔或保护网改动。原两段切地子集充分条件因9.33e-8mm²额外切地未通过，此旧证据保留；不继承其旧DC结论，而以当前实际全四层DC、全部保留铜参考及旧接触独立复核。未放宽任何门：原生自动合并/拆段后的闭合铜集合双向3e-6mm包容通过，低于既定1e-5mm铜门；原边界采样Hausdorff=1.2794e-5mm单独保留。1um弦误差解析产生3处远离新增铜的3V3_IO/RC_DRIVE假碎片，经1um/0.1um/0.01um圆弧精度收敛验证及全四层DC复核，原参考面积门1e-5mm²保持，RC/音频/传感/5V铜未动。原粗精度失败、上下文别名及零施工计数守卫失败证据均保留。",
+  "current_native_recovery_zip": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-whole-native-checkpoint-NOT-FOR-FAB.zip",
+  "current_native_recovery_zip_sha256": "2344b1ee39876facef9a598073c2c6f7198f885df5c66eece13c9c2d8fbd7f21",
+  "last_accepted_a3_recovery_zip": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-whole-guarded-preapply-a3-native.zip",
+  "C_mirror_deferred": true,
+  "current_procurement_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-preparation-20261021-r1\\current-procurement-entry.json",
+  "current_procurement_draft_package": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\current-procurement-951ce88a-DRAFT-NOT-FOR-ORDER.zip",
+  "current_procurement_draft_sha256": "da2f461ed46b139ba3e06891e5cebb20a617567fe01f8fe42b83d4930aa7e962",
+  "current_MUX_offline_followup": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-current-next.json",
+  "current_MUX_offline_screen_package": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-offline-checkpoint-NOT-FOR-FAB.zip",
+  "current_MUX_offline_screen_sha256": "677167e4e76e2ba750bf937a01487beffba1443219469207b5757d1fb18da8bf",
+  "current_MUX_offline_candidate": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-audited-partial-plan.json",
+  "current_MUX_offline_expected": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-expected.json",
+  "current_MUX_offline_context": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-audited-plane-context.json",
+  "current_MUX_offline_stage_pass": true,
+  "current_MUX_offline_PAD_islands": 4,
+  "current_MUX_consolidated_protection_proof": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-stage-proof.json",
+  "native_changed_this_batch": false,
+  "current_MUX_archive_verification": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-archive-verification.json",
+  "offline_pad_groups_net": "MUX_DISABLE",
+  "whole_MUX_DISABLE_complete": false,
+  "cad_live_identity_currently_available": true,
+  "current_offline_summary": "当前离线62新线24新孔(15信号9地)/MUX4岛；本批仅完整清除3V3_IO无PAD尾支路6873+5ace两Top线共7.502592mm，新增Cu为0。严格1e-5mm/1024细分全铜证明单删横段会留5ace孤岛，完整双段清理后所有剩余IO铜与47PAD仍一个原样组件，C8五对象2.336498mm短去耦与共享IO主体全不变。全部其他Cu/PAD/孔/GND/Root参考WKB及每网真实孔mask逐对象等价，继承62源全板参考/旧接触/DC/255网PAD/MOSI34门。原生951/42项12网/227件649孔未改，不能投板，实物UNMEASURED。",
+  "paired_corridor_terminal_evidence": {
+    "zip": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-paired-corridor-terminal-evidence.zip",
+    "sha256": "2164930c7f50da0405f6b4fd388316ffa6a302762247a8610eeb277af31a268c",
+    "CRC_pass": true,
+    "member_SHA_pass": true,
+    "members": 7
+  },
+  "latest_terminal_failure": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-ground1mesh-paired-frontier-failure-scope.json",
+  "runtime_input_failure_resolved": true,
+  "current_return_channel_evidence": {
+    "time": "2026-10-25T05:50:42.346382+08:00",
+    "zip": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-ground1mesh-overlay-return-terminal-evidence.zip",
+    "sha256": "64d0b5c0b0042199694dd7cf739cc13a0dcb7726a931a2a2329450db26dcbadf",
+    "bytes": 17327316,
+    "members": 20,
+    "CRC_pass": true,
+    "member_SHA_pass": true
+  },
+  "files_sha256": {
+    "MUX_DISABLE-IOtail-cleanup-stage-proof.json": "4e693709121d79d4cb6a59f5300aea25a3e133b9173185ae457b66907d24d3a2",
+    "MUX_DISABLE-IOtail-cleanup-audited-partial-plan.json": "eb8338d29a09fa82306899d1e0338a3534566d607c5adb6fcf4758728f326312",
+    "MUX_DISABLE-IOtail-cleanup-expected.json": "1406a243bd5a69c60ce294a4b5e4a1904ec9384ef382fa32378588ce81dc4a8e",
+    "MUX_DISABLE-IOtail-cleanup-audited-plane-context.json": "0a071fc4545dee84a79453baa413f332e6c0eb03e12bb75eee74cf2159520d0a",
+    "MUX_DISABLE-IOtail-post-identity-check.json": "94442c0c10cace405584dbb14cb1f25ec8fc720c46d3195caf638656d8e66c1b",
+    "MUX_DISABLE-west-continuous-port-IO-scope.json": "5e4fdaccff7bf18e52f06e6f079449097ba20f81ee1866b5fd513c09efe98e7a",
+    "MUX_DISABLE-west-BottomIO-scope.json": "bb90b3a1f2e7502bf8ab8aa548196388c84008d9545bca89e99caf92bf31818a",
+    "MUX_DISABLE-IOtail-port-certificate-scope-note.json": "ad95c73062254506ea125a78505b9c5c3a79e84384a6554e87894830dc35604a",
+    "MUX_DISABLE-IOtail-physical-port-paired-result.json": "bc74ce5d850c6b30353a9523aa432523d7893a67e41d0a6836ed6ac8e640cbf3",
+    "MUX_DISABLE-IOtail-physical-port-admitted-port-states.json": "21fcda2e036c4da91388234135e4e26398620ee13f61b29b5f8114f0627b7497",
+    "MUX_DISABLE-IOtail-guide-input-report.json": "ab36789ab4c203dec3e4fc5e92bdb85879d988f107365918fe1b7a198afaf0fe",
+    "MUX_DISABLE-IOtail-guide-verified-input-cache.json": "1b63cee35a0a43c59ab5f15a980de62130c57f0a59e23f0f0be945d8d0a5a130",
+    "MUX_DISABLE-IOtail-cleanup-preflight-erratum.json": "9ad6e48bb8ad7b8030766da7c53e8e9719357a235784f16ad2f7d84e9e0fb80d",
+    "MUX_DISABLE-IOtail-final-native-guard.json": "17d698afd4cdcd8334fcab9c748a46b30432d506ec24fb956d9305cb26f6445b",
+    "MUX_DISABLE-IOtail-archive-verification.json": "61d675f38dd25fe0e8330f97f7b62a802e760b1726ab9d226814d5f533e5475e",
+    "MUX_DISABLE-ADDR2annular-consolidated-protection-proof.json": "3488476aa9bd8f4a9d07a3113531502e6077d5da3e4eae29ffd90889803f5af4"
+  },
+  "last_guard": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-final-native-guard.json",
+  "capacity_bytes": {
+    "C": 18304876544,
+    "D": 23560032256
+  },
+  "automation_status": "ACTIVE",
+  "work_status": "ACTIVE_BY_USER",
+  "pause_record": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\PCB-PAUSED-20261025.json",
+  "paused_at": "2026-10-25T14:44:10.040107+08:00",
+  "resume_requires_user_request": false,
+  "collaboration_plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\collaboration-20261026\\双代理协作任务单.md",
+  "collaboration_coordination": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\collaboration-20261026\\coordination.json",
+  "resumed_at": "2026-10-26T01:13:20.458054+08:00",
+  "resume_authorization": "用户：workbuddy那边已经知道了 现在继续工作",
+  "active_work_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\PCB-ACTIVE-WORK.json",
+  "current_gateway_live_identity_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-native-pcb-verified-rule-readback.json",
+  "current_remote_delivery_publication": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-publication.json",
+  "native_trial_allowed_by_explicit_user": true,
+  "native_trial_scope": "用户已明确批准同一U9ControlWork内可回滚试摆U9/C9及明确选网KEEP原生试布。允许先形成原生候选再完整验收；旧13网全部离线预验证后才移动的顺序已被替代，所有物理、参考、回流和最终验收门保持。",
+  "native_editor_contains_unaccepted_trial": false,
+  "last_activity_note": "Sensor14Bank候选布局/局部铜及真实地铜已保存，原951和14页不变。Top35信号KEEP作业终态无新增信号铜，尚35网84项未连接，不可投产。",
+  "active_work_updated_at": "2026-10-27T01:37:11.496949+08:00",
+  "user_hard_deadline": {
+    "date": "2026-11-04",
+    "timezone": "Asia/Shanghai",
+    "deliverable": "实体组装完成并拍完视频；不是仅完成PCB文件或下单",
+    "user_source": "2026-10-26本聊天直接说明",
+    "custom_PCB_mandatory_for_acceptance": false,
+    "no_fabrication_assembly_shipping_date_guaranteed": true
+  },
+  "delivery_main_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\实体交付当前入口.json",
+  "BOM_scope_correction_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\227件BOM与模块方案范围纠正.json",
+  "module_plan_current_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\模块方案-当前证据.json",
+  "delivery_constraints_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\实体模块方案约束-current.json",
+  "retained_PCB_next_action": "全部本批任务终态，不重开或换名同法重跑、不重放apply。当前接受源为IOtail-cleanup62/24四岛，已移除两条无PAD IO尾线，当前IOtail-guide缓存仅对该实际源有效；不得回退旧62未清理/57源缓存。先读端口scope-note，区分layer-specific导引裁剪边界与实际Cu/参考/接触屏障；当前零端口证书不是纯物理或全板无解证明。可独立比较在现有全ADDR2实铜导引联合投影范围内取消单层导引裁剪是否改变保存实际端口的连续域，保持全部实际物理/reference/return门；仅在证明导引边界误挡时改变几何导引算子，不能只扩大旧窗/采样/时间。若是实际数字Cu屏障，先证明因果及共享范围，再联合改位并完整恢复。Bottom IO848为共享供电桥，单删分5脚和42脚两组，严禁当冗余删除；任何调整须恢复全47脚供电和C8短去耦、至少原宽14.14mil及实际参考。新物理端口作业5宏/2真实联合赋值只保存两个局部状态，未合并目标、未实体化/全DC/全审，不可导入；不要把局部可接纳计数晋升。原U8/U23/U456/U1完整铜岛保留，每信号reference pair/全源参考/旧接触/U8.8地/PAD/MOSI全门通过才晋升，完整MUX和实时同一CAD身份过门前原生只读。",
+  "retained_PCB_read_first": [
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-current-next.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-stage-proof.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-audited-partial-plan.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-expected.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-audited-plane-context.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-post-identity-check.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-west-continuous-port-IO-scope.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-west-BottomIO-scope.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-port-certificate-scope-note.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-physical-port-paired-result.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-physical-port-admitted-port-states.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-guide-input-report.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-guide-verified-input-cache.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-cleanup-preflight-erratum.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-final-native-guard.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-archive-verification.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-ADDR2annular-consolidated-protection-proof.json"
+  ],
+  "retained_PCB_latest_followup": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-current-next.json",
+  "main_priority": "11月4日前实体与视频：完整模块/必要简单预焊小板，84电极及原功能保持，清远含全部附件和代焊运费<=700；不默认恢复原复杂PCB求解。",
+  "latest_trigger_time": "2026-10-26T21:35:26.919Z",
+  "module_current_work_document": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\模块方案-当前工作单.md",
+  "module_remote_verified_commit": "92d682f2c32e74fc6f00656fbb3f2dd4227ec867",
+  "current_module_native_progress": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-native-progress-current.json",
+  "native_changed_this_batch_scope": "原PCB1仍951未改；另加Sensor14Bank子板，工作项目元数据与新子板原理图/PCB2实际改变",
+  "accepted_baseline_native_file_checks_before_sensor_subboard": [
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "eprj3-intro.md",
+      "sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "FPGA-Music-U9ControlWork-20261023.eprj3",
+      "sha256": "a4200b2610a1c411c8d7b27526a94039551b81807d291772a69195ae1c6d3cd9"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "panel/Panel1.epan2",
+      "sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "pcb/PCB1.epcb2",
+      "sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/01_Nano_headers.esch2",
+      "sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/02_Shift_and_memory.esch2",
+      "sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/03_Display_harnesses.esch2",
+      "sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/04_PCM5122_AUX.esch2",
+      "sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/05_Power.esch2",
+      "sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/06_Controls.esch2",
+      "sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/07_Scan_lane_0.esch2",
+      "sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/08_Scan_lane_1.esch2",
+      "sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/09_Scan_lane_2.esch2",
+      "sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/10_Scan_lane_3.esch2",
+      "sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/11_Scan_lane_4.esch2",
+      "sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/12_Scan_lane_5.esch2",
+      "sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/13_Power_off_isolation.esch2",
+      "sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/14_Protected_power_entry.esch2",
+      "sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023",
+      "file": "sch/Schematic1/Schematic1.ecfg",
+      "sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "eprj3-intro.md",
+      "sha256": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "FPGA-Music-Dualscreen-Addr3Work-20261022.eprj3",
+      "sha256": "b4f73e7755876c6d2b7f1878945f043f18f2bf07d37caa42ca52d25a93bb37bf"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "panel/Panel1.epan2",
+      "sha256": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "pcb/PCB1.epcb2",
+      "sha256": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/01_Nano_headers.esch2",
+      "sha256": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/02_Shift_and_memory.esch2",
+      "sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/03_Display_harnesses.esch2",
+      "sha256": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/04_PCM5122_AUX.esch2",
+      "sha256": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/05_Power.esch2",
+      "sha256": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/06_Controls.esch2",
+      "sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/07_Scan_lane_0.esch2",
+      "sha256": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/08_Scan_lane_1.esch2",
+      "sha256": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/09_Scan_lane_2.esch2",
+      "sha256": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/10_Scan_lane_3.esch2",
+      "sha256": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/11_Scan_lane_4.esch2",
+      "sha256": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/12_Scan_lane_5.esch2",
+      "sha256": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/13_Power_off_isolation.esch2",
+      "sha256": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/14_Protected_power_entry.esch2",
+      "sha256": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d"
+    },
+    {
+      "project": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022",
+      "file": "sch/Schematic1/Schematic1.ecfg",
+      "sha256": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c"
+    }
+  ],
+  "native_manifest_scope_erratum": "The original baseline list shared a Python object with current checks and incorrectly inherited two candidate entries. Restored exactly38 original hashes from saved preflight; current40 and accepted38 are independent. No originalPCB or schematic data change.",
+  "current_smallboard_action": {
+    "state": "TERMINAL_REBUILT_SAVED_CLOSED_REOPENED_CHECKED",
+    "at": "2026-10-27T07:20:44.463149+08:00",
+    "current_PCB_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+    "newly_closed_nets_this_stage": [
+      "L0_M12",
+      "L0_M13"
+    ],
+    "internal_analog_nets_closed_total": 14,
+    "tracks": 91,
+    "Ground_vias": 36,
+    "remaining_signal_nets": 21,
+    "connection_errors": 56,
+    "other_DRC_errors": 0,
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-14nets-actual-Cu-audit-current.json",
+    "Ground_escape_changes": [
+      "05deb90db32fb69b",
+      "8a4f214bf2967f5f"
+    ]
+  },
+  "current_native_files_change_this_stage": [
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\FPGA-Music-U9ControlWork-20261023.eprj3",
+      "before": "f726308cc553268ee71590b1c75ed318ee57769efa93a089b7381eb41538b386",
+      "after": "a69c794ac5b1fa00c7e9f1342b83ce70c8bbde0e46922dad5ef86f1639f5e416"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\pcb\\PCB2.epcb2",
+      "before": "a77aba59257c2ba0a15e3225407c2563680550c3e2585b71b054f8d315022534",
+      "after": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3"
+    }
+  ],
+  "module_plan_publication": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-publication.json",
+  "current_40_native_files_verified_at": "2026-10-27T07:24:19.121207+08:00",
+  "audio_current_stage": {
+    "at": "2026-10-27T07:50:21.122093+08:00",
+    "state": "AUDIO_PIN_AND_SUBFUNCTION_CONTRACT_SAVED_NOT_PURCHASE_RELEASE",
+    "SKU": "010313400000",
+    "listed_CNY": 55,
+    "contract": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json",
+    "readable_wiring": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-wiring-current.md",
+    "original_audio_items": 17,
+    "schematic_subfunctions_confirmed": 11,
+    "pending_original_references": [
+      "R41",
+      "R42",
+      "C27",
+      "C28",
+      "J12",
+      "R72"
+    ],
+    "all227functions_retained": true,
+    "fully_accepted_module_coverage": 0,
+    "DAC_7bit_address": "0x4D",
+    "TPA_7bit_address": "0x60",
+    "firmware_finding": "F07: registered producer clock1.6875MHz/52.734375kHz,16bit duplicatedslots; full PCM PLL/format/TPA initialization and independent stereo product acceptance pending",
+    "playback_sourcing": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-playback-sourcing-current.json",
+    "excluded": [
+      "FIT0502 actual out of stock",
+      "3525BOX low-cost speaker F0=1.5kHz, not selected as sole music playback"
+    ],
+    "candidate_only": [
+      "DFR0119-O 8.50CNY in stock, still needs compatible speakers/level/harness",
+      "R12U complete stereo analogue-input candidate, domestic quote/delivery pending"
+    ],
+    "native_file_hashes_verified": 40,
+    "native_files_changed_this_turn": false,
+    "RTL_build_flash_changed": false,
+    "messages_orders_payments": false,
+    "whole_plan_ready": false,
+    "physical_tests": "UNMEASURED"
+  },
+  "control_power_current_stage": {
+    "at": "2026-10-27T08:05:55.938673+08:00",
+    "state": "CONTROL_POWER56_FUNCTIONS_EXPANDED_AND5LINES_PRICED_NOT_COMPLETE_PLAN",
+    "plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.md",
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.json",
+    "priced_subset_CNY": "33.70",
+    "priced_items": 5,
+    "original_functions": 56,
+    "all227retained": true,
+    "native40_unchanged": true,
+    "RTL_unchanged": true,
+    "current_limit_minmax_A": [
+      1.0018032014107168,
+      1.1835578661598425
+    ],
+    "whole700budget_closed": false,
+    "physical_tests": "UNMEASURED"
+  },
+  "last_notified_event": "Control/power56function contract and5domestic price lines saved; original current threshold verified. Complete preweld purchase/700CNY/arrival still open.",
+  "electrode_current_stage": {
+    "at": "2026-10-27T11:24:56.358273+08:00",
+    "state": "OFFLINE14_HEADER_FANOUT_AND8_COMPLETE_ELECTRODE_PATHS_PASS_REALGROUND_PENDING",
+    "plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.md",
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.json",
+    "preview": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-left8-whole-candidate-current.png",
+    "header_fanout_paths": 14,
+    "NC_bridges": 14,
+    "complete_electrode_net_paths": 8,
+    "remaining_electrode_net_paths": 6,
+    "new_candidate_segments": 68,
+    "proposed_PAD_net_changes": 22,
+    "proposed_Ground_via_moves": 14,
+    "max_TH_return_distance_mm": 1.4512596396474329,
+    "native_applied": false,
+    "native40_unchanged": true,
+    "source_PCB2_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+    "native_remaining_nets": 21,
+    "native_connection_items": 56,
+    "provisional_Ground_not_accepted": true,
+    "whole700budget_closed": false,
+    "complete_purchase_plan": false,
+    "physical_tests": "UNMEASURED"
+  },
+  "audio_AUX_scope_correction": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-AUX-scope-current.json",
+  "product_spec_12_comparison": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\product-spec-12-comparison-current.json",
+  "audio_product_scope": "R09 AUX external active speaker; user preference no internal speaker. No default new amp/speaker product requirement; do not auto-delete old schematic branch.",
+  "delivery_risk_plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\delivery-risk-plan-current.json",
+  "latest_direct_work_request": {
+    "at": "2026-10-27T12:02:32.173574+08:00",
+    "request": "继续工作，今天之内完成",
+    "interpreted_deliverable": "2026-10-27 complete concrete reviewable buy-and-assemble module/hybrid plan, keeping all12 requirements; no unverified candidate/pending quote passed off as final",
+    "date": "2026-10-27",
+    "physical_assembly_video_deadline": "2026-11-04",
+    "no_function_cut": true
+  },
+  "sensor_fourlayer_trial_current": {
+    "at": "2026-10-27T15:57:22.523194+08:00",
+    "phase": "real-fourlayer-native-zero-DRC-after-save-close-reopen-independent-reference-34segments-not-pass",
+    "current_PCB2_SHA": "b92392ad6c5c9f8248b5a95ecd9759329a6f7ce421f992124cda7d450bf963ce",
+    "schematic_SHA": "7710964c5831a580909709aab0ddb271cef88779a11f585de45149c6046e12eb",
+    "lines": 223,
+    "vias": 48,
+    "parts": 28,
+    "pads": 150,
+    "active_copper_layers": [
+      1,
+      15,
+      16,
+      2
+    ],
+    "native_strict_DRC_errors": 0,
+    "native_connection_errors": 0,
+    "real_ground_layers": [
+      2,
+      15,
+      16
+    ],
+    "all_three_Ground_single_component": true,
+    "minimum_Ground_via_actual_plane_contact_mm2": 0.27856405681883856,
+    "all_TH_returns_within1_5mm": true,
+    "independent_reference_failed_segments": 34,
+    "independent_reference_pass": false,
+    "minimum_neck_old_contacts_manufacturer_stack_pending": true,
+    "accepted": false,
+    "manufacturing_release": false,
+    "physical_tests": "UNMEASURED",
+    "whole700budget_closed": false,
+    "whole_purchase_plan_complete": false,
+    "read_first": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-progress-current.md",
+    "actual_ground_audit": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-actual-ground-reference-current.json",
+    "reopened_DRC": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-reopened-DRC-current.json",
+    "capture_manifest": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-native-capture-current.json",
+    "recovery": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-native-recovery-current\\recovery-manifest.json",
+    "semantic84map": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor84-semantic-wiring-current.json",
+    "all_prior_mutation_jobs_terminal_no_replay": true,
+    "next_actions": [
+      "Diagnose34reference deficits without reducingclearance/expandingoldterminalexceptions",
+      "FullGroundDC/oldcontacts/minimumneck/manufacturerstack then same-source BOM/CPL/Gerber",
+      "Finish control/storage/power preweld and exact AUX3.5 hardware; fullscreenquote awaitinguser as agreed",
+      "Close all accessories/freight/preweld<=700 and actual Qingyuan delivery before purchase release"
+    ]
+  },
+  "sensor84_semantic_map_current": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor84-semantic-wiring-current.json"
+}

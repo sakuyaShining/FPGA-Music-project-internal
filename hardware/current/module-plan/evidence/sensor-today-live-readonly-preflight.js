@@ -1,0 +1,13 @@
+const p=await eda.dmt_Project.getCurrentProjectInfo();
+const d=await eda.dmt_SelectControl.getCurrentDocumentInfo();
+if(p?.uuid!=="6b570f10a9004c2a7374c39b14185fbbe64449a767876fe377667e630fc1e3c7"||d?.uuid!=="f52674d6627fca6f"||d.parentProjectUuid!==p.uuid)throw Error("Unexpected project/document; no navigation or mutation performed");
+const components=await eda.pcb_PrimitiveComponent.getAll();
+const lines=await eda.pcb_PrimitiveLine.getAll();
+const vias=await eda.pcb_PrimitiveVia.getAll();
+const pads=await eda.pcb_PrimitivePad.getAll();
+const pours=await eda.pcb_PrimitivePour.getAll();
+const rules=await eda.pcb_Drc.getCurrentRuleConfiguration();
+const layers=await eda.pcb_Layer.getAllLayers();
+const stack=await eda.pcb_Layer.getCurrentPhysicalStackingConfiguration();
+if(components.length!==28||lines.length!==91||vias.length!==36)throw Error("Live object counts changed; inspect without writing");
+return {read_only:true,project:p,doc:d,components,lines,vias,pads,pours,rules,layers,stack};

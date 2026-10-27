@@ -1,0 +1,735 @@
+{
+  "updated_at": "2026-10-27T12:02:32.173574+08:00",
+  "work_status": "ACTIVE_BY_USER",
+  "goal_status": "IN_PROGRESS",
+  "native_unchanged_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "accepted_offline_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\MUX_DISABLE-IOtail-current-next.json",
+  "accepted_offline_source_unchanged": true,
+  "accepted_MUX_pad_islands": 4,
+  "gateway_live_identity": {
+    "session": "e8d7065e-fa6a-4310-895c-0ccf40ca650d",
+    "project_uuid": "6b570f10a9004c2a7374c39b14185fbbe64449a767876fe377667e630fc1e3c7",
+    "pcb_uuid": "f52674d6627fca6f",
+    "board_name": "Sensor14Bank",
+    "original_board_uuid": "c3fd8656cf425e9f"
+  },
+  "gateway_window": "80ac5baa-df4c-4c1b-8657-c1bb9700c865",
+  "gateway_note": "Websocket bridge 0 connected windows; existing editor built-in native CLI is available and used. Do not reinstall gateway or launch duplicate editor.",
+  "remote_delivery": {
+    "commit": "a5086e7212ce4607357cdbdc1f3778aa98b19a42",
+    "branch": "codex/pcb-paused-status-20261025",
+    "remote_sha_verified": true,
+    "hardware_files_verified": 221,
+    "main_untouched": true,
+    "working_HEAD_and_index_unchanged": true
+  },
+  "terminal_new_work": [
+    {
+      "file": "control-group-current-candidate.json",
+      "result": "All3 key nets remain disconnected under single-Top source field; no Cu constructed."
+    },
+    {
+      "file": "guide-boundary-current-certificate.json",
+      "result": "Artificial per-layer guide split proven; old U8 Top20 and westTop18 merge under identical saved union guide; actual Cu/ref/returns gates preserved."
+    },
+    {
+      "file": "MUX_DISABLE-union-guide-current.py",
+      "result": "Terminal5 macros/2 joint tests, no target merge; no source promotion, do not rerun/add budget."
+    },
+    {
+      "file": "control-group-channel-current-preflight.json",
+      "result": "Manual three-net6-signal/6-return draft rejected:25 physical violations, five reference gaps and two deficient returns. Not accepted Cu; no native move."
+    },
+    {
+      "file": "control-placement-current-comparison.json",
+      "result": "Exact13-net whole placement point comparisons rejected for immutable RC/audio conflicts; no native moves. Continuous feasible placement domain now calculated instead of more point guessing."
+    },
+    {
+      "file": "native-digital-current-stopped-baseline-check.json",
+      "result": "Stopped original-layout12-net native trial; original visible Cu/PADs/vias unchanged, rules restored, native strict DRC42/12 zeroother. No complete candidate; no replay."
+    },
+    {
+      "file": "native-bottom-current-clock-ui-terminal.json",
+      "result": "Single Bottom FASTER trial UI returned withzero retained Cu; original rules restored; no replay."
+    },
+    {
+      "file": "native-bottom-current-clock-escape.json",
+      "result": "Qualified6 existing Ground15/Ground16 returns, physical via domain31.794mm2, joint returns3.241mm2; zero intersection with existing Top clock reference component near source. Not global no-route proof."
+    },
+    {
+      "file": "native-bottom-central-module-domain.json",
+      "result": "90/270 central module kernels have .951/.849mm2 physical domains butzero source-center field overlap; center-only necessary-condition scope is restricted, not a complete PAD-port or global proof."
+    },
+    {
+      "file": "native-bottom-routing-engine-incident.json",
+      "result": "Two actual native WebAssembly exceptions captured in original UI log. Original Cu and positions/rules restored; strict baseline42/12 zeroother. Do not rerun."
+    },
+    {
+      "file": "native-clock-manual-current.json",
+      "result": "Restored original Top clock field: physical source-target separation, zero common referenced component, no newCu; exact field WKB saved. No global no-route claim."
+    },
+    {
+      "file": "control-reset-top-joint-current.json",
+      "result": "Scoped full-Cu deletion hypothesis of8 Inner16 reset bridge segments separates two PAD-containing islands. Top replacement field has no common component under stated construction contact reservation; no Cu constructed; not hard/global impossibility."
+    }
+  ],
+  "running_job": null,
+  "next_action": "Read delivery-risk-plan-current and product-spec12 comparison first. Complete controllable84semantic/physical mapping and exact interface/evidence/assembly plan while advancing bounded full front-end and control/protection feasibility. Oct28 18:00 is design review checkpoint, NOT promised acceptance; Oct30arrival/Nov3video internal targets lack supplier commitments. Do not reduce functions, rerun terminal geometry, or message/edit other chats. Current13remaining route branches and all realGround/native gates remain.",
+  "manufacturing_release": false,
+  "physical_tests": "UNMEASURED",
+  "placement_domain_result": "实际Bottom焊盘驱动的连续放置域见native-bottom-current-domain.json。已选择最大有效区域内点，随后以真实原生焊盘及器件包络独立复核；域不是整网或制造验收。",
+  "working_placement": {
+    "state": "ACCEPTED951_RESTORED_VERIFIED",
+    "source": "native-951-restored-final-proof.json",
+    "native_unaccepted_trial_present": false
+  },
+  "native_trial_authorization": {
+    "approved": true,
+    "plan": "原生试布线方案.md",
+    "user_reply": "允许可回滚原生试布线（建议）",
+    "supersedes_old_offline_before_move_sequence": true,
+    "final_acceptance_unchanged": true
+  },
+  "newly_observed_baseline_API_scope": {
+    "observed_before_trial_route": true,
+    "total_source_Cu_not_covered_by_remaining_source_objects_mm2": 0.08575298600385849,
+    "not_a_tolerance_relaxation": true,
+    "saved_micro_lines_absent_from_live_API": 29,
+    "acceptance_resolution_required": false,
+    "report": "native-sdk-short-copper-scope.json"
+  },
+  "rejected_native_trial": {
+    "rollback_native_DRC": "native-rollback-native-check.json",
+    "rollback_live": "native-rollback-live.json",
+    "report": "native-trial-rejection-and-rollback.json",
+    "source_file_still_951": true
+  },
+  "configuration_format_guard": "首次规则恢复/覆盖传入包装对象被守卫拒绝，未产生几何。正确接口只传config，原始记录在native-rule-input-format-erratum.json。",
+  "current_connectivity_observation": {
+    "raw_snapshot_only": true,
+    "PAD_island_counts": "ADDR1=4, MUX=6, ADDR0=5; nine U9 control nets remain2 in captured transient state",
+    "snapshot_at": "native-digital-current-live.json",
+    "selected_nets_all_closed": false,
+    "file": "native-digital-current-connectivity.json",
+    "no_acceptance_claim": true
+  },
+  "final_rule_restore": "After native job returns, use overwriteNetRules(original256-row netRules from native-routing-effective-net-rules.json), then overwriteCurrentRuleConfiguration(original.config from native-trial-baseline-live.json). Do not pass the outer{name,config}wrapper. Only then real4pour/strictDRC plus independent unchanged acceptance gates. Do not alter rules while route is active.",
+  "last_notified_event": "Control/power56function contract and5domestic price lines saved; original current threshold verified. Complete preweld purchase/700CNY/arrival still open.",
+  "current_attempt_stop_reason": "Schematic/pad-map checkpoint preserved; final purchase plan and PCB layout not complete",
+  "中文当前状态": {
+    "当前原生": "接受951恢复完成；227件/649孔/1063PAD/3606实际可见线逐字段与基线相同；U9/C9原Top位置",
+    "真实原生检查": "实际四层重铺、保存关重开、严格带UI检查返回42连接错误，0间距/物理/网表/其他；无新增通过网络",
+    "本轮失败": "既有原生SOIC原生/局部方案未验收，接受版未连通数没有下降。",
+    "保留成果": "ADDR2原生整网及离线MUX62线24孔四岛保持；14页原理图与同源CPL草稿不变",
+    "当前作业": "同一Sensor14Bank全部14个内部模拟网闭合；91段Top/36地孔，剩21网56项，重铺保存关重开其他DRC0；电极整组通道待解决。",
+    "采购": "装配官方混装能力核对已补入采购入口；本板具体供料报价/屏/线束/机械/电源84附件及整机验收仍未冻结，不能下单",
+    "实物": "UNMEASURED",
+    "候选新增成果": "19:51独立检查完成：小封装北向时钟方案中BUS_SCK六PAD全铜同岛，I2C_SDA五PAD全铜同岛，候选物理/新增参考通过；仍待整板地、旧接触、C9/13网和原生全验收。"
+  },
+  "native_editor_contains_unaccepted_trial": true,
+  "resource_checkpoint": {
+    "C_free_bytes": 4608917504,
+    "D_free_bytes": 20081029120,
+    "freePhysicalMemory_KiB": 3233224,
+    "freeVirtualMemory_KiB": 4546616,
+    "native_main_PID": 25512,
+    "active_native_routing_jobs": 0,
+    "all_terminal_jobs_not_to_replay": true
+  },
+  "actual_reference_operator": {
+    "cache": "actual-root-ground-reference-cache-current.json",
+    "omitted_GND_microline": "2452b72b6554eb1f exactly covered by remaining native Cu; uncovered area0",
+    "contact_source": "Original SHA-bound pour contexts only",
+    "scope_note": "actual-root-ground-reference-noncopper-scope-note.json"
+  },
+  "goal_status_scope": "usageLimited is historical controller metadata, not a current account denial. On 2026-10-26 current account tool explicitly ordinaryUsageAllowed=true, primary53%, weekly70%.",
+  "actual_Gerber_baseline_scope": {
+    "sha256": "9de4050412b5056233d94e8888cc258d810315f18b48593d5261b646a47e85f3",
+    "not_covered_by_actual_export_under_existing_envelope": 12,
+    "report": "native-951-Gerber-micro-copper-check.json",
+    "diagnostic_export": "native-951-actual-Cu-scope-NOT-FOR-FAB.zip",
+    "acceptance_resolution_required": false,
+    "source_micro_lines": 29,
+    "native_unchanged": true,
+    "resolution_scope": "Only input interpretation resolved: native original byte file never edited; actual native export3606 tracks matches SDK all4 layers; all affected PAD partitions and real physical via sizes verified. This does not accept a new PCB or manufacturing export."
+  },
+  "ground_channel_input_change": {
+    "eligible_Ground_lines": 157,
+    "original_overlay_input_stop": "KEY_QH-Ground-input-operator-stop-proof.json",
+    "proof": "KEY_QH-current-Ground-wire-scope.json",
+    "method": "Exact prepared covers; no tolerance or copper change",
+    "old_path_search_started": false
+  },
+  "actual_geometry_input": {
+    "sha256": "7fc2dcd7e2cb8bb5369c553ed908f7a749578e27bd9d88cfcd52203fca16b118",
+    "proof": "native-951-current-actual-Cu-interpretation-proof.json",
+    "native_file_unchanged": true,
+    "all1063_PAD_and649_vias_preserved": true,
+    "SDK_and_all4_Gerber_tracks": 3606,
+    "not_new_accepted_PCB": true,
+    "source_records": 3635,
+    "raw_source_and_current62_kept": true,
+    "all_affected_signal_PAD_groups_preserved": true,
+    "Root_reference_unchanged": true,
+    "file": "native-951-current-actual-Cu.json"
+  },
+  "latest_package_preflight": {
+    "not_global_impossibility": true,
+    "rotation": 90,
+    "native_BBoxes": "native-whole-fixed-bboxes-current.json",
+    "all_existing_native_Cu_legal_area_mm2": 0,
+    "file": "control-whole-package-joint-placement-current.json",
+    "native_changed": false,
+    "body_legal_area_mm2": 3.0091599469116717
+  },
+  "current_trial_placement_plan": {
+    "native_scope_proof": "control-Top270-moved-pin-digital-scope-current.json",
+    "U9": "Top96.10108254045727/21.163798880960226mm270deg",
+    "native_changed": false,
+    "future_U23_two_segments_need_restoration": true,
+    "native_lines_to_replace": 6,
+    "C9": "Top102.0539237815961/27.52633444360682mm90deg",
+    "supply_PAD_gap_mm": 1.936172261777518,
+    "file": "control-Top270-joint-leaf-placement-current.json"
+  },
+  "current_native_trial_counts": {
+    "current_live_is_accepted951": true,
+    "actual_live_lines": 3606,
+    "actual_live_vias": 649,
+    "components": 227,
+    "pads": 1063,
+    "strict_connection_errors": 42,
+    "strict_other_errors": 0,
+    "Top270_trial_rolled_back": true,
+    "source_saved_sha": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d"
+  },
+  "current_unaccepted_recovery_file": {
+    "file": "native-Top270-current-UNACCEPTED.epro2",
+    "sha256": "2644d9400a2e1ea363aa331d1c8b999e1d8b05931e07d98d554ed5c603d58856",
+    "proof": "native-Top270-current-export-recovery-proof.json",
+    "accepted": false,
+    "source_saved_file_still951": true,
+    "current_live": false,
+    "scope": "Historical rejected Top270 trial recovery only; live has been restored to accepted951"
+  },
+  "current_read_first": [
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\实体交付当前入口.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\模块方案-当前工作单.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-native-progress-current.json"
+  ],
+  "current_package_research": {
+    "actual_device": "SN74LV165APWR / C201716",
+    "native_or_schematic_replacement_performed": false,
+    "template": "U9-TSSOP-candidate-template.json",
+    "bottom_terminal_domain": "U9-TSSOP-package-current.json",
+    "Top_terminal_domain": "U9-TSSOP-Top-module-current.json",
+    "exact_empty_overlay_cache": "U9-TSSOP-Top-verified-input-cache.json",
+    "causal_scope": "U9-TSSOP-reference-blocker-current.json",
+    "candidate_draft": {
+      "side": 2,
+      "rotation": 180,
+      "x_mm": 65.17636581537954,
+      "y_mm": 56.38762941999999,
+      "MPN": "SN74LV165APWR",
+      "LCSC": "C201716",
+      "not_accepted": true
+    },
+    "scope": "较小TSSOP的北向时钟引脚布局已得到完整BUS_SCK离线候选，并完整恢复I2C_SDA；独立全铜/物理/新增全宽参考核对通过。仅候选，不是原生闭合或全板通过。原0deg方案及旧全段/局部/先后顺序失败均终态保留，不重开。尚未执行封装替换、原理图同步、C9/供电地/13网/全部保留参考和原生验收。",
+    "latest_independent_audit": "U9-TSSOP-clock-I2C-candidate-audit-current.json",
+    "latest_candidate_plan": "U9-TSSOP-qualified-Bottom-clock-bridge-current.json",
+    "latest_result": {
+      "BUS_SCK_all6_PAD_and_all_Cu_one_component": true,
+      "I2C_SDA_all5_PAD_and_all_Cu_one_component": true,
+      "both_native_and_accepted_future_context_checked": true,
+      "candidate_line_and_all16_PAD_physical_pass": true,
+      "genuinely_new_line_full_width_reference_pass": true,
+      "new_signal_or_ground_vias": 0,
+      "existing_via_new_required_reference_layers": [
+        15,
+        16,
+        2
+      ],
+      "qualified_actual_ground_return_distance_mm": 0.9000013917685327,
+      "all_required_contacts_mm2_min": 0.2039772417863967,
+      "native_or_schematic_changed": false,
+      "Ground_DC_and_all_source_reference_contacts_and_C9_13nets_native_acceptance_pending": true
+    }
+  },
+  "gateway_live_identity_file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-native-pcb-verified-rule-readback.json",
+  "user_hard_deadline": {
+    "date": "2026-11-04",
+    "timezone": "Asia/Shanghai",
+    "deliverable": "实体组装完成并拍完视频；不是仅完成PCB文件或下单",
+    "user_source": "2026-10-26本聊天直接说明",
+    "custom_PCB_mandatory_for_acceptance": false,
+    "no_fabrication_assembly_shipping_date_guaranteed": true
+  },
+  "user_confirmed_inventory": [
+    "Tang Nano20K"
+  ],
+  "delivery_main_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\实体交付当前入口.json",
+  "main_priority": "广东清远700元上限的完整预焊模块/简单混合实体方案，11月4日前实体和视频；不是复杂PCB续算",
+  "BOM_scope_correction": {
+    "updated_at": "2026-10-26T20:18:54.520984+08:00",
+    "reason": "纠正助手将旧227件BOM排除演示采购基线的过度表述；用户只允许不自制PCB，没有授权删功能或必要电路",
+    "original_227_BOM_role": "继续保留为全部原功能/接口/电源/保护电路的核对基线，不作废",
+    "module_reconciliation_required": "原BOM每项须标明原作用、具体模块覆盖证据、仍需单买、待核实；只能对已证明模块内含同功能的裸件采购去重",
+    "not_authorized_to_drop": [
+      "84传感及校准/RC前端",
+      "单触控屏及泛音交互",
+      "实体按键编码器及编辑",
+      "存储/录放等既定产品功能",
+      "电源/电平转换/缓冲/ESD等必要电路"
+    ],
+    "onboard_audio_scope": "仅首轮板载单声道发声验证路线；不默认替代PCM5122最终音频链或任何声道/音质要求",
+    "mapping_status": "NOT_COMPLETE",
+    "native_schematic_RTL_BOM_files_deleted": false,
+    "orders_or_payments": false
+  },
+  "current_hybrid_proposal": {
+    "status": "CANDIDATE_UNDER_USER_REVIEW",
+    "file": "混合方案功能分块对比.md",
+    "component_mapping": "purchase-preparation-20261021-r1/227件功能分块与混合方案映射-current.json",
+    "block_counts": {
+      "84路传感前端": 152,
+      "扫描控制输出": 2,
+      "实体按键编码器与串行采集": 17,
+      "断电保存EEPROM": 2,
+      "PCM5122立体声音频": 17,
+      "共享总线及触控屏接口适配": 21,
+      "电源入口稳压与保护": 14,
+      "Nano20K插接": 2
+    },
+    "227_function_ownership_complete": true,
+    "exact_module_coverage_complete": false,
+    "no_component_or_function_deleted": true,
+    "original_native_PCB_unchanged": true
+  },
+  "delivery_constraints_entry": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\实体模块方案约束-current.json",
+  "current_module_plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\模块方案-当前工作单.md",
+  "current_module_evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\模块方案-当前证据.json",
+  "module_plan_publication": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-publication.json",
+  "module_research_checkpoint": {
+    "time": "2026-10-27T05:44:13.289589+08:00",
+    "work_document_sha256": "481a0deadb8b53978cc393c45b75810d041f29f4408dbea71297ab3abbe4ecc0",
+    "evidence_sha256": "13d46cc2ee5f5095da86c396c6860c6013b4918517120a47677635286e4bf8e7",
+    "sensor_frontend_fallback": {
+      "proof": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-native-progress-current.json",
+      "proof_sha256": "c3505dd43c9e375a7d501138d8d39c3eb199b033a961909b081825fc06223be5",
+      "status": "PRELIMINARY_LAYOUT_POWER_GROUND_CALIBRATION_CANDIDATE_35_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
+      "prototype_or_quote_ready": false
+    },
+    "native_PCB1_and_14_pages_unchanged": true,
+    "working_metadata_changed_to_add_subboard": true,
+    "no_active_routing_job": true,
+    "next": "Reuse existing PCB2 with its 28 imported footprints and verified 150-pad map. Define a simple two-layer board/connector envelope and group placement, route only after actual rules/physical/reference checks. Do not recreate board or rerun finished schematic construction/import. Then factory-preweld cost/TH/shipping must fit whole-system700CNY and Nov4 deadline.",
+    "local_research_newer_than_remote_commit": false,
+    "local_research_newer_than_prepared_git_commit": false,
+    "remote_verified_commit": "831c7481e7935e7bc8ccdaa1f790837c19de1a9a"
+  },
+  "latest_trigger_time": "2026-10-26T21:35:26.919Z",
+  "sensor_front_native_current": {
+    "updated_at": "2026-10-27T07:20:44.463149+08:00",
+    "status": "ALL14_INTERNAL_ANALOG_NETS_CLOSED_21_SIGNAL_NETS_OPEN_NOT_FOR_ORDER",
+    "board": "Sensor14Bank",
+    "same_owned_project": "FPGA-Music-U9ControlWork-20261023",
+    "native_session": "e8d7065e-fa6a-4310-895c-0ccf40ca650d",
+    "runtime_project_uuid": "6b570f10a9004c2a7374c39b14185fbbe64449a767876fe377667e630fc1e3c7",
+    "pcb_uuid": "f52674d6627fca6f",
+    "schematic_uuid": "2cfb45d67dbe504d",
+    "schematic_page_uuid": "00ba33d542279ea0",
+    "native_transport": "Existing editor built-in CLI; websocket gateway has zero windows; not a CLI failure",
+    "native_main_PID": 25512,
+    "new_components": 28,
+    "pins": 150,
+    "wired_pins": 127,
+    "intentional_NC": 23,
+    "schematic_native_strict_DRC_errors": 0,
+    "independent_pin_net_mismatches": 0,
+    "independent_imported_PAD_net_mismatches": 0,
+    "pcb_tracks": 91,
+    "pcb_vias": 36,
+    "placement_done": true,
+    "board_outline_defined": true,
+    "routing_or_Ground_reference_acceptance": false,
+    "factory_quote_or_deliverable_SKU": false,
+    "required_identical_boards": 6,
+    "electrodes_per_board": 14,
+    "total_electrodes": 84,
+    "per_board_SMT": 26,
+    "per_board_TH_headers": 2,
+    "six_board_SMT": 156,
+    "six_board_TH_headers": 12,
+    "assembly_note": "All SMT must be factory soldered; six units and shipping/TH assembly must be quoted. No price or lead time assumed.",
+    "wiring_safety": "J2.15 SENSE_OUT on each board goes to its own Nano SENSE input. Never connect six SENSE_OUT outputs together.",
+    "original_PCB1_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+    "original_PCB_and_14_schematics_unchanged": true,
+    "only_original_manifest_file_intentionally_changed": "working .eprj3 now includes additional Sensor14Bank; prior .eprj3 saved, original accepted portable source remains intact",
+    "rules_scope": "Current persisted native RULE/RULE_SELECTOR/RULE_TEMPLATE unchanged exactly versus pre-fill source; hard spacing/drill/via gates retained. Full-width Bottomreference checked for35newTopsegments. No fullboard acceptance.",
+    "rule_api_erratum": "First wrapper argument was not accepted as config; config-only write succeeded. Initial strict numeric guard failed at native quantized 0.6999986mm; corrected upward, independent guard now passes. All raw failures retained.",
+    "electrical_API_erratum": "Wiring create errors left partial committed stubs. Recovered only actual pending pins; D4.8 used orthogonal stub to existing moved port. Never replay full construction.",
+    "label_erratum": "Native font-size units required actual persisted scale correction; final labels use file sizes8/10, visual review done; no net or part changes.",
+    "read_first": [
+      "sensor-front-14nets-actual-Cu-audit-current.json",
+      "sensor-front-native-14nets-reopened-DRC-current.json",
+      "sensor-front-native-14nets-ground-contact-current.json",
+      "sensor-front-electrode-whole-channel-order-current.json",
+      "procurement-current-availability-and-quote-access.json",
+      "sensor-front-layout-current.json"
+    ],
+    "next": "Continue same Sensor14Bank PCB2 SHA83b238df,91TopCu/36Groundvias,14internal analog nets closed;21nets56items remain. Before electrode routing, resolve whole14net endpoint order/ESD/connector channel arrangement: current left8 monotone y-order has28inversion pairs, not globalimpossibility. Keep current43newanalog tracks referenced; C3 Groundvia05deb90db32fb69b moved33.7/20.45mm and oneGroundline intentionally revised. No replay any left8/right4/right2 apply or terminalTop35 job. Still need14electrode+7controlnets, fullsource-reference/DC/minneck/assembly, actual6board preweld quote/delivery and all modules/firmware/budget<=700. No complex original mainPCB solver.",
+    "physical_tests": "UNMEASURED",
+    "manufacturing_release": false,
+    "orders_payments_outbound_messages": false,
+    "RTL_or_flashing_changed": false,
+    "portable_paths": {
+      "schematic": "hardware/current/module-plan/sensor14bank/Sensor14_frontend.esch2",
+      "PCB_candidate": "hardware/current/module-plan/sensor14bank/PCB2.epcb2",
+      "project_metadata_context": "hardware/current/module-plan/sensor14bank/working-project-metadata.eprj3",
+      "pin_audit": "hardware/current/module-plan/evidence/sensor-front-native-pin-net-audit-current.json",
+      "PAD_audit": "hardware/current/module-plan/evidence/sensor-front-native-pcb-pad-map-audit-current.json",
+      "netlist": "hardware/current/module-plan/evidence/sensor-front-native-netlist-current.json",
+      "BOM": "hardware/current/module-plan/evidence/sensor-front-native-BOM-current.json"
+    },
+    "placement_scope": "Preliminary55x45mm candidate; native pad clearance errors0 after actualR2 placement correction; final mechanism/assembly/3D not accepted",
+    "board_mm": [
+      55,
+      45
+    ],
+    "native_clearance_errors": 0,
+    "native_connection_errors": 56,
+    "native_open_signal_nets": 21,
+    "bottom_ground_proof": "sensor-front-native-14nets-ground-contact-current.json",
+    "bottom_ground_components": 1,
+    "new_Ground_vias": 36,
+    "new_signal_vias": 0,
+    "minimum_actual_Bottom_annular_ground_contact_mm2": 0.2941314227797009,
+    "real_signal_PTH_returns": 21,
+    "maximum_signal_PTH_return_distance_mm": 1.4512596773898752,
+    "actual_Bottom_ground_and_existing_seed_Cu_preservation": "sensor-front-14nets-actual-Cu-audit-current.json",
+    "last_native_signal_route": {
+      "state": "terminal_no_retained_new_signal_Cu_result_missing",
+      "started_at": "2026-10-27T02:05:52.322517+08:00",
+      "native_main_PID": 25512,
+      "board_uuid": "f52674d6627fca6f",
+      "native_session": "e8d7065e-fa6a-4310-895c-0ccf40ca650d",
+      "input_snapshot": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-before-signal-routing.epcb2",
+      "input_sha256": "2f4cc697c8a4f2bc727af21205ca96f144a018298b91c98146b0fe3d43def866",
+      "RoutingNets": [
+        "ADDR0",
+        "ADDR1",
+        "ADDR2",
+        "ADDR3",
+        "L0_E00",
+        "L0_E01",
+        "L0_E02",
+        "L0_E03",
+        "L0_E04",
+        "L0_E05",
+        "L0_E06",
+        "L0_E07",
+        "L0_E08",
+        "L0_E09",
+        "L0_E10",
+        "L0_E11",
+        "L0_E12",
+        "L0_E13",
+        "L0_M00",
+        "L0_M01",
+        "L0_M02",
+        "L0_M03",
+        "L0_M04",
+        "L0_M05",
+        "L0_M06",
+        "L0_M07",
+        "L0_M08",
+        "L0_M09",
+        "L0_M10",
+        "L0_M11",
+        "L0_M12",
+        "L0_M13",
+        "MUX_DISABLE",
+        "RC_DRIVE",
+        "SENSE_OUT"
+      ],
+      "layers": [
+        1
+      ],
+      "existingPrimitiveMode": "keep",
+      "do_not_restart": true,
+      "tool_exec_session_id": null,
+      "observed_terminal_at": "2026-10-27T05:44:13.289589+08:00",
+      "native_job": {
+        "phase": "terminal",
+        "started": 1793037953244,
+        "RoutingNets": [
+          "ADDR0",
+          "ADDR1",
+          "ADDR2",
+          "ADDR3",
+          "L0_E00",
+          "L0_E01",
+          "L0_E02",
+          "L0_E03",
+          "L0_E04",
+          "L0_E05",
+          "L0_E06",
+          "L0_E07",
+          "L0_E08",
+          "L0_E09",
+          "L0_E10",
+          "L0_E11",
+          "L0_E12",
+          "L0_E13",
+          "L0_M00",
+          "L0_M01",
+          "L0_M02",
+          "L0_M03",
+          "L0_M04",
+          "L0_M05",
+          "L0_M06",
+          "L0_M07",
+          "L0_M08",
+          "L0_M09",
+          "L0_M10",
+          "L0_M11",
+          "L0_M12",
+          "L0_M13",
+          "MUX_DISABLE",
+          "RC_DRIVE",
+          "SENSE_OUT"
+        ],
+        "layers": [
+          1
+        ],
+        "existingPrimitiveMode": "keep",
+        "saved": true
+      },
+      "closed_tool_exec_session_id": 10121,
+      "CLI_error": "REQUEST_TIMEOUT after89750ms; code may continue in renderer; actual later readback was terminal,savedtrue,resultundefined",
+      "remaining_native_signal_nets": 35,
+      "remaining_native_connection_errors": 84,
+      "signal_copper_retained": 0,
+      "physical_no_solution_claim": false,
+      "next": "Do not replay this Top35 KEEP job or just extend time. Inspect real terminal geometry and change actual group layout/layer approach before any new routing."
+    },
+    "not_complete_PCB_or_purchase_plan": true,
+    "whole_board_nearest_reference_not_accepted": true,
+    "manual_group_stage": {
+      "at": "2026-10-27T07:20:44.463149+08:00",
+      "newly_closed_nets_total": [
+        "L0_M00",
+        "L0_M01",
+        "L0_M02",
+        "L0_M03",
+        "L0_M04",
+        "L0_M05",
+        "L0_M06",
+        "L0_M07",
+        "L0_M08",
+        "L0_M09",
+        "L0_M10",
+        "L0_M11",
+        "L0_M12",
+        "L0_M13"
+      ],
+      "this_stage_new_nets": [
+        "L0_M12",
+        "L0_M13"
+      ],
+      "new_segments_total": 43,
+      "this_stage_new_segments": 8,
+      "new_signal_vias": 0,
+      "Ground_modified_ids": [
+        "05deb90db32fb69b",
+        "8a4f214bf2967f5f"
+      ],
+      "Ground_preservation_scope": "47other original seed tracks/35other Groundvias exact; intentional oneGroundvia/line change physically checked and all36contacts/21returns rechecked",
+      "actual_audit": "sensor-front-14nets-actual-Cu-audit-current.json",
+      "native_reopened_DRC": "sensor-front-native-14nets-reopened-DRC-current.json",
+      "not_to_replay": [
+        "sensor-front-apply-left8-manual.js",
+        "sensor-front-apply-right4-manual.js",
+        "sensor-front-apply-right2-revised-Ground.js"
+      ],
+      "all_terminal": true
+    }
+  },
+  "current_smallboard_action": {
+    "state": "TERMINAL_REBUILT_SAVED_CLOSED_REOPENED_CHECKED",
+    "at": "2026-10-27T07:20:44.463149+08:00",
+    "current_PCB_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+    "newly_closed_nets_this_stage": [
+      "L0_M12",
+      "L0_M13"
+    ],
+    "internal_analog_nets_closed_total": 14,
+    "tracks": 91,
+    "Ground_vias": 36,
+    "remaining_signal_nets": 21,
+    "connection_errors": 56,
+    "other_DRC_errors": 0,
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-14nets-actual-Cu-audit-current.json",
+    "Ground_escape_changes": [
+      "05deb90db32fb69b",
+      "8a4f214bf2967f5f"
+    ]
+  },
+  "module_remote_verified_commit": "92d682f2c32e74fc6f00656fbb3f2dd4227ec867",
+  "audio_current_stage": {
+    "at": "2026-10-27T07:50:21.122093+08:00",
+    "state": "AUDIO_PIN_AND_SUBFUNCTION_CONTRACT_SAVED_NOT_PURCHASE_RELEASE",
+    "SKU": "010313400000",
+    "listed_CNY": 55,
+    "contract": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json",
+    "readable_wiring": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-wiring-current.md",
+    "original_audio_items": 17,
+    "schematic_subfunctions_confirmed": 11,
+    "pending_original_references": [
+      "R41",
+      "R42",
+      "C27",
+      "C28",
+      "J12",
+      "R72"
+    ],
+    "all227functions_retained": true,
+    "fully_accepted_module_coverage": 0,
+    "DAC_7bit_address": "0x4D",
+    "TPA_7bit_address": "0x60",
+    "firmware_finding": "F07: registered producer clock1.6875MHz/52.734375kHz,16bit duplicatedslots; full PCM PLL/format/TPA initialization and independent stereo product acceptance pending",
+    "playback_sourcing": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-playback-sourcing-current.json",
+    "excluded": [
+      "FIT0502 actual out of stock",
+      "3525BOX low-cost speaker F0=1.5kHz, not selected as sole music playback"
+    ],
+    "candidate_only": [
+      "DFR0119-O 8.50CNY in stock, still needs compatible speakers/level/harness",
+      "R12U complete stereo analogue-input candidate, domestic quote/delivery pending"
+    ],
+    "native_file_hashes_verified": 40,
+    "native_files_changed_this_turn": false,
+    "RTL_build_flash_changed": false,
+    "messages_orders_payments": false,
+    "whole_plan_ready": false,
+    "physical_tests": "UNMEASURED"
+  },
+  "latest_followup": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\模块方案-当前证据.json",
+  "read_first": [
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-progress-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\delivery-risk-plan-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\product-spec-12-comparison-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-AUX-scope-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-channel-plan-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-channel-plan-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-bounded-route-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-wiring-current.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-playback-sourcing-current.json",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.md",
+    "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.json"
+  ],
+  "control_power_current_stage": {
+    "at": "2026-10-27T08:05:55.938673+08:00",
+    "state": "CONTROL_POWER56_FUNCTIONS_EXPANDED_AND5LINES_PRICED_NOT_COMPLETE_PLAN",
+    "plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.md",
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.json",
+    "priced_subset_CNY": "33.70",
+    "priced_items": 5,
+    "original_functions": 56,
+    "all227retained": true,
+    "native40_unchanged": true,
+    "RTL_unchanged": true,
+    "current_limit_minmax_A": [
+      1.0018032014107168,
+      1.1835578661598425
+    ],
+    "whole700budget_closed": false,
+    "physical_tests": "UNMEASURED"
+  },
+  "electrode_current_stage": {
+    "at": "2026-10-27T11:24:56.358273+08:00",
+    "state": "OFFLINE14_HEADER_FANOUT_AND8_COMPLETE_ELECTRODE_PATHS_PASS_REALGROUND_PENDING",
+    "plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.md",
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.json",
+    "preview": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-left8-whole-candidate-current.png",
+    "header_fanout_paths": 14,
+    "NC_bridges": 14,
+    "complete_electrode_net_paths": 8,
+    "remaining_electrode_net_paths": 6,
+    "new_candidate_segments": 68,
+    "proposed_PAD_net_changes": 22,
+    "proposed_Ground_via_moves": 14,
+    "max_TH_return_distance_mm": 1.4512596396474329,
+    "native_applied": false,
+    "native40_unchanged": true,
+    "source_PCB2_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+    "native_remaining_nets": 21,
+    "native_connection_items": 56,
+    "provisional_Ground_not_accepted": true,
+    "whole700budget_closed": false,
+    "complete_purchase_plan": false,
+    "physical_tests": "UNMEASURED"
+  },
+  "audio_AUX_scope_correction": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-AUX-scope-current.json",
+  "product_spec_12_comparison": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\product-spec-12-comparison-current.json",
+  "audio_product_scope": "R09 AUX external active speaker; user preference no internal speaker. No default new amp/speaker product requirement; do not auto-delete old schematic branch.",
+  "delivery_risk_plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\delivery-risk-plan-current.json",
+  "latest_direct_work_request": {
+    "at": "2026-10-27T12:02:32.173574+08:00",
+    "request": "继续工作，今天之内完成",
+    "interpreted_deliverable": "2026-10-27 complete concrete reviewable buy-and-assemble module/hybrid plan, keeping all12 requirements; no unverified candidate/pending quote passed off as final",
+    "date": "2026-10-27",
+    "physical_assembly_video_deadline": "2026-11-04",
+    "no_function_cut": true
+  },
+  "sensor_fourlayer_trial_current": {
+    "at": "2026-10-27T15:57:22.523194+08:00",
+    "phase": "real-fourlayer-native-zero-DRC-after-save-close-reopen-independent-reference-34segments-not-pass",
+    "current_PCB2_SHA": "b92392ad6c5c9f8248b5a95ecd9759329a6f7ce421f992124cda7d450bf963ce",
+    "schematic_SHA": "7710964c5831a580909709aab0ddb271cef88779a11f585de45149c6046e12eb",
+    "lines": 223,
+    "vias": 48,
+    "parts": 28,
+    "pads": 150,
+    "active_copper_layers": [
+      1,
+      15,
+      16,
+      2
+    ],
+    "native_strict_DRC_errors": 0,
+    "native_connection_errors": 0,
+    "real_ground_layers": [
+      2,
+      15,
+      16
+    ],
+    "all_three_Ground_single_component": true,
+    "minimum_Ground_via_actual_plane_contact_mm2": 0.27856405681883856,
+    "all_TH_returns_within1_5mm": true,
+    "independent_reference_failed_segments": 34,
+    "independent_reference_pass": false,
+    "minimum_neck_old_contacts_manufacturer_stack_pending": true,
+    "accepted": false,
+    "manufacturing_release": false,
+    "physical_tests": "UNMEASURED",
+    "whole700budget_closed": false,
+    "whole_purchase_plan_complete": false,
+    "read_first": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-progress-current.md",
+    "actual_ground_audit": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-actual-ground-reference-current.json",
+    "reopened_DRC": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-reopened-DRC-current.json",
+    "capture_manifest": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-native-capture-current.json",
+    "recovery": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-native-recovery-current\\recovery-manifest.json",
+    "semantic84map": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor84-semantic-wiring-current.json",
+    "all_prior_mutation_jobs_terminal_no_replay": true,
+    "next_actions": [
+      "Diagnose34reference deficits without reducingclearance/expandingoldterminalexceptions",
+      "FullGroundDC/oldcontacts/minimumneck/manufacturerstack then same-source BOM/CPL/Gerber",
+      "Finish control/storage/power preweld and exact AUX3.5 hardware; fullscreenquote awaitinguser as agreed",
+      "Close all accessories/freight/preweld<=700 and actual Qingyuan delivery before purchase release"
+    ]
+  },
+  "sensor84_semantic_map_current": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor84-semantic-wiring-current.json"
+}

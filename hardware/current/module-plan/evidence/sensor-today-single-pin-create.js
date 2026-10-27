@@ -1,0 +1,11 @@
+const d=await eda.dmt_SelectControl.getCurrentDocumentInfo();if(d?.uuid!=="00ba33d542279ea0"||d.parentProjectUuid!=="6b570f10a9004c2a7374c39b14185fbbe64449a767876fe377667e630fc1e3c7")throw Error('Wrongdocument');
+const a=__CLI__.args, st=globalThis.__sensorTodayFourLayer;if(!st)throw Error('No own stage');
+st.singlePinOperations??={};const key=a.c.ref+'.'+a.c.pin;if(st.singlePinOperations[key])throw Error('Operationalreadyattempted '+key);
+if((await eda.sch_PrimitiveWire.getAll()).length!==a.expected)throw Error('Countchanged');
+const c=a.c,part=(await eda.sch_PrimitiveComponent.getAll('part',false)).find(p=>p.getState_Designator()===c.ref),pin=(await part.getAllPins()).find(p=>p.getState_PinNumber()===c.pin);
+if(pin.getState_NoConnected())throw Error('NCstillset');
+const x=pin.getState_X(),y=pin.getState_Y(),r=pin.getState_Rotation(),end=x+(r===180?-45:45);if(r!==0&&r!==180)throw Error('rotation');
+st.singlePinOperations[key]={phase:'before-create',coords:[x,y,end,y],net:c.proposed};
+const w=await eda.sch_PrimitiveWire.create([x,y,end,y],c.proposed);st.singlePinOperations[key].wire=w.getState_PrimitiveId();
+const q=await eda.sch_PrimitiveComponent.createNetPort('BI',c.proposed,end,y,r===180?0:180,false);st.singlePinOperations[key].port=q.getState_PrimitiveId();
+const saved=await eda.sch_Document.save();st.singlePinOperations[key].phase='saved';return {key,saved,operation:st.singlePinOperations[key],wires:(await eda.sch_PrimitiveWire.getAll()).length,ports:(await eda.sch_PrimitiveComponent.getAll('netport',false)).length};

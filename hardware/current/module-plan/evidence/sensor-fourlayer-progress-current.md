@@ -1,0 +1,13 @@
+# Sensor14Bank four-layer candidate: current evidence
+
+Updated 2026-10-27T15:57:22.523194+08:00. Six identical55x45mm daughterboards are proposed, not accepted for fabrication. Original mainPCB951 and its14 schematicpages are preserved.
+
+Native candidate:28parts/150PAD/223lines/48vias. Real Bottom/Inner1/Inner2 GND pours, no floating islands. StrictDRC0 and connectionerrors0, saved/closed/reopened and rechecked0. All150schematicpins and PCBpads match the explicit35changes. Actual newCu/via/drill spacing passed at unchanged hardrules. Original91Cu retained. Native saved near-collinear first2 E13 segments as a chord; actual geometry independently rechecked, no threshold relaxation. Earlier schematic creation failures were captured and repaired only at actual missingpins; all mutationjobs terminal, NEVERREPLAY.
+
+Acceptance NOT passed: each of3Groundplanes is one connectedcomponent; all41Groundvias contact eachmainplane >=0.15mm2 (minimum0.278564); all signalTH returnpairs <=1.5mm. But34referencechecks still have missingCu outside unchanged terminalregions, including2supplysegments; max0.434643mm2. Diagnose own-net antipads versus neighboring holes versus real crossings; do not expand oldterminalexceptions or lower thresholds. Native0DRC cannot replace thisgate. Fullsource oldcontacts/DC, minimumneck/thermalpaths, actual manufacturerstack and assemblymechanics remain pending. Newinnerdefaultfineness8 and originalBottom0 are explicitly recorded, not passed off as samealgorithm or hypotheticalfill.
+
+CurrentPCB2 SHA256 b92392ad6c5c9f8248b5a95ecd9759329a6f7ce421f992124cda7d450bf963ce; schematic 7710964c5831a580909709aab0ddb271cef88779a11f585de45149c6046e12eb. Capturemanifest and recoverymanifest are adjacent. Never overwrite liveproject; close ownproject before rollback. Only daughterboardSCH/PCB2/projectindex changed; original mainPCB42errors12nets remain.
+
+Complete84semantic map:25notes x3electrodes includingC5 +5octavepositions +4spare;12onboardcalibration slots separate. See sensor84-semantic-wiring-current.md/json. Bijection is not physical/firmware acceptance. CandidateJ2.5=SENSE_OUT; oldJ2.15harness INVALID. SixboardSENSE_OUT nets remain6independentinputs, never parallel.
+
+Wholepurchase plan remains unreleased: sixboard4layerfactory-preweld price/delivery unverified; control/storage/protection lack complete preweld implementation; fullconfiguredscreen price/freight/dispatch awaiting already-agreed user inquiry. AUX3.5 adapter, ALLaccessories/wiring/fixings/freight/preweld must fit700CNY. Todaycompletion goal remains, but unverified quotes/barechips/basescreen prices cannot be called buy-and-assemble complete. All12requirements retained. NoRTL/build/flash/outboundinquiry/orders/payments. Physicaltests UNMEASURED.
