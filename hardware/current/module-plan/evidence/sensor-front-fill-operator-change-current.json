@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-27T07:07:17.969878+08:00",
+  "native_sha256": "230103065c55dd1f151a28d993217e7b62cafa386dd043f97feeeb87cbd4af7a",
+  "backup": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-before-fill-operator-change.epcb2",
+  "action": "GUI manufacturing optimization yes8mil to no/0. Existing hard spacing, neck, reference gates retained. New PCB2 only. Not acceptance.",
+  "guard_source": "sensor-front-resume-identity-current.json",
+  "all40_native_files_match": true,
+  "before_objects": {
+    "tracks": 48,
+    "vias": 36,
+    "components": 28
+  },
+  "before_rules": "sensor-front-native-Top-route-terminal-DRC-current.json",
+  "state": "GUI_CHANGED_REBUILT_SAVED_REOPENED",
+  "native_current_sha256": "a77aba59257c2ba0a15e3225407c2563680550c3e2585b71b054f8d315022534",
+  "actual_native_fineness": 0,
+  "hard_rules_source_exactly_unchanged": true,
+  "actual_ground_contact_proof": "sensor-front-native-12nets-ground-contact-current.json",
+  "reference_diagnosis": "sensor-front-fill0-reference-diagnosis-current.json",
+  "minimum_neck_scope": "Eroded realGround by0.08255mm remains1component. Complete minneck/thermal manufacturing audit still pending; no manufacturing acceptance.",
+  "native_api_errors_retained": [
+    "sensor-front-native-fill0-readback-serialization-error.json"
+  ],
+  "saved_and_reopened": true
+}

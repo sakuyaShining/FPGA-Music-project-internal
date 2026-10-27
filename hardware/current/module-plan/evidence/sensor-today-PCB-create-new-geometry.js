@@ -1,0 +1,8 @@
+const d=await eda.dmt_SelectControl.getCurrentDocumentInfo();if(d?.uuid!=="f52674d6627fca6f"||d.parentProjectUuid!=="6b570f10a9004c2a7374c39b14185fbbe64449a767876fe377667e630fc1e3c7")throw Error('WrongPCB');const a=__CLI__.args,s=globalThis.__sensorTodayFourLayer;if(!s||s.PCBGeometry||s.PCBNetSync?.phase!=='saved-await-independent-readback')throw Error('Stage');
+for(const x of a.pads){if((await eda.pcb_PrimitivePad.get(x.id)).getState_Net()!==x.proposed)throw Error('PADsyncfailed '+x.ref+'.'+x.pin);}
+for(const x of a.moves){const p=await eda.pcb_PrimitiveVia.get(x.id);if(Math.hypot(p.getState_X()*.0254-x.proposed_mm[0],p.getState_Y()*.0254-x.proposed_mm[1])>.002)throw Error('Viaupdatefailed');}
+const layers=await eda.pcb_Layer.getAllLayers();if(![1,2,15,16].every(id=>layers.some(l=>l.id===id&&l.layerStatus===1)))throw Error('Layercountwrong');
+s.PCBGeometry={phase:'creating12vias-and133segments',vias:[],lines:[]};
+for(const v of a.new_vias){const p=await eda.pcb_PrimitiveVia.create(v.net,v.xy_mm[0]/.0254,v.xy_mm[1]/.0254,v.drill_mm/.0254,v.diameter_mm/.0254,0,null,null,false);s.PCBGeometry.vias.push({candidate:v.id,id:p.getState_PrimitiveId()});}
+for(let i=0;i<a.routes.length;i++){const r=a.routes[i];s.PCBGeometry.activeRoute=i;for(let j=1;j<r.points.length;j++){const p=r.points[j-1],q=r.points[j];const l=await eda.pcb_PrimitiveLine.create(r.net,r.layer,p[0]/.0254,p[1]/.0254,q[0]/.0254,q[1]/.0254,r.width_mm/.0254,false);s.PCBGeometry.lines.push({route:i,segment:j,id:l.getState_PrimitiveId()});}}
+const saved=await eda.pcb_Document.save();s.PCBGeometry.phase='saved-await-independent-readback';return {saved,state:s.PCBGeometry};

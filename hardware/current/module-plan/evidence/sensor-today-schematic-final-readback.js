@@ -1,0 +1,1 @@
+const f=await eda.sch_ManufactureData.getNetlistFile("Sensor14Bank-fourlayer-trial","JLCEDA");return {doc:await eda.dmt_SelectControl.getCurrentDocumentInfo(),netlist:await f.text(),ports:await eda.sch_PrimitiveComponent.getAll("netport",false),drc:await eda.sch_Drc.check(true,false,true)};

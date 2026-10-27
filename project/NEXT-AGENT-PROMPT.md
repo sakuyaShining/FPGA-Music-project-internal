@@ -1,5 +1,7 @@
 # 可直接交给下一位Agent的启动指令
 
+**2026-10-27 统一接续入口**：先读 [CONSOLIDATION-20261027.md](CONSOLIDATION-20261027.md)。当前硬件已汇入951保存源、模块／传感小板／三键候选和恢复检查点；35项限定口径已批准，制造核验及实体整机仍未完成。下文带旧日期的未合并／源版本说明保留历史适用范围。
+
 最新协作工程入口是project/ENGINEERING.md与project/COLLABORATION-CHECKPOINT-20261024.md；执行`python tools/scripts/engineering.py check`，从fpga/current、hardware/current或host/current选择任务源并导出到自己的新目录。完整产品未验收，音乐黄金对照有已记录差异。下文v1/v2流程是历史恢复，不覆盖本批工程检查点。
 
 接续FPGA-Music-project。已公开的目标仓库为https://github.com/sakuyaShining/FPGA-Music-project-internal.git；唯一发布入口是实际远程main，先检查Git状态，在干净入口目录pull --ff-only再核对。先读PRODUCT-SPEC、SOURCE-MAP及WORK-PLAN，按任务卡接手。日期分支只兼容旧工具，v1/v2标签仅用于固定复现，不能定义实时最新。

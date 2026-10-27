@@ -1,0 +1,45 @@
+test_changing_date_alone_cannot_renew_review (test_design_governance.GovernanceTests) ... ok
+test_compact_review_keeps_inventory_only_in_raw_record (test_design_governance.GovernanceTests) ... ok
+test_dated_branch_cannot_be_authority (test_design_governance.GovernanceTests) ... ok
+test_evidence_mutation_and_scope_conflict_rejected (test_design_governance.GovernanceTests) ... ok
+test_expired_active_observation_requires_review (test_design_governance.GovernanceTests) ... ok
+test_expired_design_review_and_future_clock_rejected (test_design_governance.GovernanceTests) ... ok
+test_generated_tree_excluded_but_new_design_document_detected (test_design_governance.GovernanceTests) ... ok
+test_legacy_sync_rejects_diverged_compatibility_branch (test_design_governance.GovernanceTests) ... ok
+test_legacy_sync_rejects_other_repository_name_or_id (test_design_governance.GovernanceTests) ... ok
+test_missing_source_is_unobserved_not_green (test_design_governance.GovernanceTests) ... ok
+test_new_modified_and_deleted_source_requires_review (test_design_governance.GovernanceTests) ... ok
+test_new_producer_cannot_skip_observation (test_design_governance.GovernanceTests) ... ok
+test_observation_does_not_renew_review_and_refuses_overwrite (test_design_governance.GovernanceTests) ... ok
+test_public_target_keeps_legacy_entry_fast_forward (test_design_governance.GovernanceTests) ... ok
+test_recorded_review_never_claims_live_observation_or_acceptance (test_design_governance.GovernanceTests) ... ok
+test_registered_remote_producer_advancing_requires_review (test_design_governance.GovernanceTests) ... ok
+test_review_cannot_silently_replace_observed_source (test_design_governance.GovernanceTests) ... ok
+test_supersession_cycles_rejected (test_design_governance.GovernanceTests) ... ok
+test_unresolved_human_decision_conflict_is_not_ready (test_design_governance.GovernanceTests) ... ok
+test_main_advances_while_legacy_branch_stays_old (test_design_governance.PublishedMainTests) ... ok
+test_corruption_does_not_create_output (test_engineering.EngineeringTests) ... ok
+test_decoded_identity_is_checked_separately (test_engineering.EngineeringTests) ... ok
+test_existing_and_nested_outputs_are_refused (test_engineering.EngineeringTests) ... ok
+test_export_restores_exact_bytes_and_provenance (test_engineering.EngineeringTests) ... ok
+test_unregistered_source_cannot_enter_build_glob (test_engineering.EngineeringTests) ... ok
+test_unsafe_manifest_paths_are_rejected (test_engineering.EngineeringTests) ... ok
+test_counterexample_requires_targeted_failure_not_compile_error_or_timeout (test_music_profiles.MusicProfileTests) ... ok
+test_current_profile_keeps_velocity_and_checks_seven_group_snapshots (test_music_profiles.MusicProfileTests) ... ok
+test_hex_reader_checks_length_and_bounds (test_music_profiles.MusicProfileTests) ... ok
+test_historical_override_is_explicit_and_not_shared_with_current (test_music_profiles.MusicProfileTests) ... ok
+test_layer_pass_requires_all_oracle_checkpoints (test_music_profiles.MusicProfileTests) ... ok
+test_missing_historical_contract_is_not_silently_rewritten (test_music_profiles.MusicProfileTests) ... ok
+test_neutral_table_and_velocity_volume_are_separate (test_music_profiles.MusicProfileTests) ... ok
+test_protected_partials_and_integer_rounding (test_music_profiles.MusicProfileTests) ... ok
+test_reference_rejects_invalid_input (test_music_profiles.MusicProfileTests) ... ok
+test_saturation_happens_before_velocity_volume (test_music_profiles.MusicProfileTests) ... ok
+test_slot_partial_and_velocity_indexing (test_music_profiles.MusicProfileTests) ... ok
+test_trace_comparison_rejects_truncation_and_byte_changes (test_music_profiles.MusicProfileTests) ... ok
+test_wrong_slot_mutation_is_confined_to_isolated_rom_address (test_music_profiles.MusicProfileTests) ... ok
+test_zero_exit_or_pass_text_cannot_hide_fatal (test_music_profiles.MusicProfileTests) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 21.662s
+
+OK

@@ -1,0 +1,2240 @@
+{
+  "at": "2026-10-27T12:20:40.685953+08:00",
+  "state": "OFFLINE_FOURLAYER_ALTERNATIVE_NOT_COSTED_OR_NATIVE",
+  "source_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+  "input14_channel_sha256": "a01702b0279faaeeb54d57059c84b97640ab394e8299439f85769f126a781da5",
+  "explicit_layer_change": "2layer current ->4layer alternative:Top signal/Inner1 Ground/Inner2 Ground/Bottom controls. Requires actual manufacturer stack and native layer identities/real pours; not silently accepted.",
+  "board_mm": [
+    55,
+    45
+  ],
+  "rejected_prior_geometry": {
+    "route_violations": [
+      {
+        "net": "SENSE_OUT",
+        "kind": "BOTTOM_CONTROL",
+        "violations": [
+          {
+            "other": "3c18a3e4b5f076bc",
+            "kind": "SOURCE_VIA",
+            "actual_mm": 0.10693147491044144,
+            "required_mm": 0.2501
+          },
+          {
+            "other": "6892c65829327fa8",
+            "kind": "SOURCE_VIA",
+            "actual_mm": 0.0,
+            "required_mm": 0.2501
+          }
+        ]
+      },
+      {
+        "net": "ADDR2",
+        "kind": "BOTTOM_CONTROL",
+        "violations": [
+          {
+            "other": "0cbc828cb621fe00",
+            "kind": "SOURCE_VIA",
+            "actual_mm": 0.0,
+            "required_mm": 0.2501
+          },
+          {
+            "other": "signal:ADDR3",
+            "kind": "NEW_VIA",
+            "actual_mm": 0.22241513082575134,
+            "required_mm": 0.2501
+          }
+        ]
+      },
+      {
+        "net": "MUX_DISABLE",
+        "kind": "TOP_SOURCE_ESCAPE",
+        "violations": [
+          {
+            "other": "U1.16",
+            "kind": "PAD",
+            "actual_mm": 0.0150461799999988,
+            "required_mm": 0.1651
+          },
+          {
+            "other": "U1.17",
+            "kind": "PAD",
+            "actual_mm": 0.0150461799999988,
+            "required_mm": 0.1651
+          },
+          {
+            "other": "U1.18",
+            "kind": "PAD",
+            "actual_mm": 0.015046179999998799,
+            "required_mm": 0.1651
+          }
+        ]
+      }
+    ],
+    "new_via_violations": [
+      {
+        "via": "signal:ADDR3",
+        "other": "route:51",
+        "kind": "NEW_LINE",
+        "actual_mm": 0.22241513082575134,
+        "required_mm": 0.2501
+      }
+    ],
+    "reason": "Explicit revision:move MUX inner escape to29.3mm;routeSENSE below actual Ground vias;routeADDR2 aroundC4Ground andADDR3via. No rule relaxation."
+  },
+  "saved_source_rules": {
+    "track_PAD_clearance_mm": 0.1651,
+    "via_clearance_mm": 0.2501011,
+    "hole_to_hole_clearance_mm": 0.2999994,
+    "source": "sensor-front-native-pcb-verified-rule-readback.json"
+  },
+  "offline_rule_erratum": "Initial drill-only helper used0.25mm; native saved rule is0.2999994mm and is rechecked here without any native rule change. Via comparisons now also use exact saved0.2501011mm.",
+  "proposed_PAD_net_changes": [
+    {
+      "ref": "R3",
+      "pin": "1",
+      "old": "L0_E00",
+      "proposed": "L0_E07",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R4",
+      "pin": "1",
+      "old": "L0_E01",
+      "proposed": "L0_E06",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R5",
+      "pin": "1",
+      "old": "L0_E02",
+      "proposed": "L0_E05",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R6",
+      "pin": "1",
+      "old": "L0_E03",
+      "proposed": "L0_E04",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R7",
+      "pin": "1",
+      "old": "L0_E04",
+      "proposed": "L0_E03",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R8",
+      "pin": "1",
+      "old": "L0_E05",
+      "proposed": "L0_E02",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R9",
+      "pin": "1",
+      "old": "L0_E06",
+      "proposed": "L0_E01",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R10",
+      "pin": "1",
+      "old": "L0_E07",
+      "proposed": "L0_E00",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "D1",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E00",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D1",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E01",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D1",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E02",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D1",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E03",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D2",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E04",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D2",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E05",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D2",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E06",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D2",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E07",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D3",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E08",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D3",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E09",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D3",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E10",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D3",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E11",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D4",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E12",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D4",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E13",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "R11",
+      "pin": "1",
+      "old": "L0_E08",
+      "proposed": "L0_E13",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained."
+    },
+    {
+      "ref": "R12",
+      "pin": "1",
+      "old": "L0_E09",
+      "proposed": "L0_E12",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained."
+    },
+    {
+      "ref": "R13",
+      "pin": "1",
+      "old": "L0_E10",
+      "proposed": "L0_E11",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained."
+    },
+    {
+      "ref": "R14",
+      "pin": "1",
+      "old": "L0_E11",
+      "proposed": "L0_E10",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained."
+    },
+    {
+      "ref": "R15",
+      "pin": "1",
+      "old": "L0_E12",
+      "proposed": "L0_E09",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained."
+    },
+    {
+      "ref": "R16",
+      "pin": "1",
+      "old": "L0_E13",
+      "proposed": "L0_E08",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained."
+    },
+    {
+      "ref": "J2",
+      "pin": "3",
+      "old": "ADDR0",
+      "proposed": "RC_DRIVE",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised."
+    },
+    {
+      "ref": "J2",
+      "pin": "5",
+      "old": "ADDR1",
+      "proposed": "SENSE_OUT",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised."
+    },
+    {
+      "ref": "J2",
+      "pin": "7",
+      "old": "ADDR2",
+      "proposed": "ADDR0",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised."
+    },
+    {
+      "ref": "J2",
+      "pin": "9",
+      "old": "ADDR3",
+      "proposed": "MUX_DISABLE",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised."
+    },
+    {
+      "ref": "J2",
+      "pin": "11",
+      "old": "MUX_DISABLE",
+      "proposed": "ADDR1",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised."
+    },
+    {
+      "ref": "J2",
+      "pin": "13",
+      "old": "RC_DRIVE",
+      "proposed": "ADDR2",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised."
+    },
+    {
+      "ref": "J2",
+      "pin": "15",
+      "old": "SENSE_OUT",
+      "proposed": "ADDR3",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised."
+    }
+  ],
+  "proposed_PAD_change_count": 35,
+  "proposed_Ground_via_moves": [
+    {
+      "id": "d084970f837fd33e",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        41.549319999999994
+      ],
+      "proposed_mm": [
+        3.548740680000007,
+        41.549319999999994
+      ],
+      "header_pin": 1,
+      "return_distance_mm": 1.4512596396474267,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "250f83954a2d6dc4",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        39.00931999999999
+      ],
+      "proposed_mm": [
+        3.548740680000005,
+        39.00931999999999
+      ],
+      "header_pin": 2,
+      "return_distance_mm": 1.4512596396474275,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "f280d8d609bf9004",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        36.46931999999999
+      ],
+      "proposed_mm": [
+        3.548740680000005,
+        36.46931999999999
+      ],
+      "header_pin": 3,
+      "return_distance_mm": 1.4512596396474275,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "a5333efe15fa0ed2",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        33.92931999999999
+      ],
+      "proposed_mm": [
+        3.548740680000005,
+        33.92931999999999
+      ],
+      "header_pin": 4,
+      "return_distance_mm": 1.4512596396474275,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "72788069015cfed2",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        31.389319999999998
+      ],
+      "proposed_mm": [
+        3.5487406800000034,
+        31.389319999999998
+      ],
+      "header_pin": 5,
+      "return_distance_mm": 1.4512596396474284,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "f8f549b3960442ab",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        28.84932
+      ],
+      "proposed_mm": [
+        3.5487406800000034,
+        28.84932
+      ],
+      "header_pin": 6,
+      "return_distance_mm": 1.4512596396474284,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "91304e41b78a07b2",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        26.309319999999996
+      ],
+      "proposed_mm": [
+        3.5487406800000016,
+        26.309319999999996
+      ],
+      "header_pin": 7,
+      "return_distance_mm": 1.4512596396474293,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "29fe4061e2ec0cb5",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        23.769319999999997
+      ],
+      "proposed_mm": [
+        3.54874068,
+        23.769319999999997
+      ],
+      "header_pin": 8,
+      "return_distance_mm": 1.4512596396474302,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "7a20353ac02e26a8",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        21.229319999999998
+      ],
+      "proposed_mm": [
+        3.54874068,
+        21.229319999999998
+      ],
+      "header_pin": 9,
+      "return_distance_mm": 1.4512596396474302,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "0ff0efb58e90de32",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        18.68932
+      ],
+      "proposed_mm": [
+        3.548740679999998,
+        18.68932
+      ],
+      "header_pin": 10,
+      "return_distance_mm": 1.451259639647431,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "775e389243ca7091",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        16.14932
+      ],
+      "proposed_mm": [
+        3.5487406799999963,
+        16.14932
+      ],
+      "header_pin": 11,
+      "return_distance_mm": 1.451259639647432,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "5b2b6e845433dea0",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        13.609319999999999
+      ],
+      "proposed_mm": [
+        3.5487406799999963,
+        13.609319999999999
+      ],
+      "header_pin": 12,
+      "return_distance_mm": 1.451259639647432,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "e3c1949ae92b1a76",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        11.069319999999998
+      ],
+      "proposed_mm": [
+        3.5487406799999963,
+        11.069319999999998
+      ],
+      "header_pin": 13,
+      "return_distance_mm": 1.451259639647432,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "7317316c611de590",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        8.529319999999998
+      ],
+      "proposed_mm": [
+        3.5487406799999945,
+        8.529319999999998
+      ],
+      "header_pin": 14,
+      "return_distance_mm": 1.4512596396474329,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "1c9e49d13908b4f0",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        36.46931999999999
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        36.46931999999999
+      ],
+      "header": "J2",
+      "header_pin": 3,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "b8f8963843ee9e78",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        31.389319999999998
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        31.389319999999998
+      ],
+      "header": "J2",
+      "header_pin": 5,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "fc1f8a9c8aac1cbe",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        26.309319999999996
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        26.309319999999996
+      ],
+      "header": "J2",
+      "header_pin": 7,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "bded4c326da01bb4",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        21.229319999999998
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        21.229319999999998
+      ],
+      "header": "J2",
+      "header_pin": 9,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "6027c7717532611a",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        16.14932
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        16.14932
+      ],
+      "header": "J2",
+      "header_pin": 11,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "7641831913722fda",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        11.069319999999998
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        11.069319999999998
+      ],
+      "header": "J2",
+      "header_pin": 13,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "6a654bb4b335ec79",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        5.98932
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        5.98932
+      ],
+      "header": "J2",
+      "header_pin": 15,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    }
+  ],
+  "new_vias": [
+    {
+      "id": "signal:RC_DRIVE",
+      "net": "RC_DRIVE",
+      "xy_mm": [
+        21.6,
+        28.1
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "signal:SENSE_OUT",
+      "net": "SENSE_OUT",
+      "xy_mm": [
+        28.2,
+        27.9
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "signal:ADDR0",
+      "net": "ADDR0",
+      "xy_mm": [
+        26.0,
+        22.4
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "signal:ADDR1",
+      "net": "ADDR1",
+      "xy_mm": [
+        27.0,
+        21.2
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "signal:ADDR2",
+      "net": "ADDR2",
+      "xy_mm": [
+        28.0,
+        20.0
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "signal:ADDR3",
+      "net": "ADDR3",
+      "xy_mm": [
+        29.2,
+        18.8
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "signal:MUX_DISABLE",
+      "net": "MUX_DISABLE",
+      "xy_mm": [
+        29.0,
+        22.0
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "return:0",
+      "net": "GND",
+      "xy_mm": [
+        21.6,
+        29.2
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "return:1",
+      "net": "GND",
+      "xy_mm": [
+        26.0,
+        23.5
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "return:2",
+      "net": "GND",
+      "xy_mm": [
+        28.0,
+        22.0
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "return:3",
+      "net": "GND",
+      "xy_mm": [
+        28.2,
+        18.8
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    },
+    {
+      "id": "return:4",
+      "net": "GND",
+      "xy_mm": [
+        29.1,
+        28.8
+      ],
+      "diameter_mm": 0.7112,
+      "drill_mm": 0.36068
+    }
+  ],
+  "new_signal_vias": 7,
+  "new_Ground_return_vias": 5,
+  "total_vias": 48,
+  "routes": [
+    {
+      "net": "L0_E00",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.0000001600000035,
+          41.55000072
+        ],
+        [
+          7.4000004399999995,
+          38.739998719999996
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14600942307998752
+    },
+    {
+      "net": "L0_E01",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000160000003,
+          39.01000072
+        ],
+        [
+          7.4000004399999995,
+          38.23987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.047026587038491996
+    },
+    {
+      "net": "L0_E02",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000160000003,
+          36.47000072
+        ],
+        [
+          7.4000004399999995,
+          37.239874719999996
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.04682226713967563
+    },
+    {
+      "net": "L0_E03",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000160000003,
+          33.93000072
+        ],
+        [
+          7.4000004399999995,
+          36.74000272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14578223283196692
+    },
+    {
+      "net": "L0_E04",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000160000002,
+          31.39000072
+        ],
+        [
+          7.4000004399999995,
+          28.57999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14600942307999096
+    },
+    {
+      "net": "L0_E05",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000160000002,
+          28.85000072
+        ],
+        [
+          7.4000004399999995,
+          28.07987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.04702658703849538
+    },
+    {
+      "net": "L0_E06",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000160000001,
+          26.31000072
+        ],
+        [
+          7.4000004399999995,
+          27.07987472
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.04682226713967522
+    },
+    {
+      "net": "L0_E07",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.00000016,
+          23.77000072
+        ],
+        [
+          7.4000004399999995,
+          26.580002720000003
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.1457822328319667
+    },
+    {
+      "net": "L0_E08",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.00000016,
+          21.23000072
+        ],
+        [
+          7.4000004399999995,
+          18.41999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14600942307999096
+    },
+    {
+      "net": "L0_E09",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000159999999,
+          18.69000072
+        ],
+        [
+          7.4000004399999995,
+          17.91987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.04702658703849552
+    },
+    {
+      "net": "L0_E10",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000159999998,
+          16.15000072
+        ],
+        [
+          7.4000004399999995,
+          16.91987472
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.04682226713967877
+    },
+    {
+      "net": "L0_E11",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000159999998,
+          13.61000072
+        ],
+        [
+          7.4000004399999995,
+          16.42000272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14578223283197014
+    },
+    {
+      "net": "L0_E12",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000159999998,
+          11.070000720000001
+        ],
+        [
+          7.4000004399999995,
+          10.79999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.03499550596391762
+    },
+    {
+      "net": "L0_E13",
+      "kind": "HEADER_TO_ESD",
+      "layer": 1,
+      "points": [
+        [
+          5.000000159999997,
+          8.53000072
+        ],
+        [
+          5.55,
+          9.7
+        ],
+        [
+          5.9,
+          10.45
+        ],
+        [
+          6.3,
+          10.5
+        ],
+        [
+          6.8,
+          10.5
+        ],
+        [
+          7.4000004399999995,
+          10.29987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.012428900000001741
+    },
+    {
+      "net": "L0_E00",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          38.739998719999996
+        ],
+        [
+          8.19999884,
+          38.739998719999996
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14600960723634052
+    },
+    {
+      "net": "L0_E01",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          38.23987272
+        ],
+        [
+          8.19999884,
+          38.23987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.05222240000000758
+    },
+    {
+      "net": "L0_E02",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          37.239874719999996
+        ],
+        [
+          8.19999884,
+          37.239874719999996
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.05247640000000575
+    },
+    {
+      "net": "L0_E03",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          36.74000272
+        ],
+        [
+          8.19999884,
+          36.74000272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14578242676095907
+    },
+    {
+      "net": "L0_E04",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          28.57999872
+        ],
+        [
+          8.19999884,
+          28.57999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.1460096072363473
+    },
+    {
+      "net": "L0_E05",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          28.07987272
+        ],
+        [
+          8.19999884,
+          28.07987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.052222400000000446
+    },
+    {
+      "net": "L0_E06",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          27.07987472
+        ],
+        [
+          8.19999884,
+          27.07987472
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.0524764000000022
+    },
+    {
+      "net": "L0_E07",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          26.580002720000003
+        ],
+        [
+          8.19999884,
+          26.580002720000003
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14578242676096223
+    },
+    {
+      "net": "L0_E08",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          18.41999872
+        ],
+        [
+          8.19999884,
+          18.41999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14600960723634734
+    },
+    {
+      "net": "L0_E09",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          17.91987272
+        ],
+        [
+          8.19999884,
+          17.91987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.05222239999999692
+    },
+    {
+      "net": "L0_E10",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          16.91987472
+        ],
+        [
+          8.19999884,
+          16.91987472
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.052476399999998674
+    },
+    {
+      "net": "L0_E11",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          16.42000272
+        ],
+        [
+          8.19999884,
+          16.42000272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14578242676096567
+    },
+    {
+      "net": "L0_E12",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          10.79999872
+        ],
+        [
+          8.19999884,
+          10.79999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14423135726395678
+    },
+    {
+      "net": "L0_E13",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "layer": 1,
+      "points": [
+        [
+          7.4000004399999995,
+          10.29987272
+        ],
+        [
+          8.19999884,
+          10.29987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.052222400000000446
+    },
+    {
+      "net": "L0_E00",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          38.739998719999996
+        ],
+        [
+          8.7,
+          39.199998719999996
+        ],
+        [
+          10.2,
+          39.199998719999996
+        ],
+        [
+          17.5,
+          27.199998939999997
+        ],
+        [
+          19.246636640000002,
+          27.199998939999997
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.012881430578386976
+    },
+    {
+      "net": "L0_E01",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          38.23987272
+        ],
+        [
+          8.65,
+          38.23987272
+        ],
+        [
+          8.95,
+          38.53987272
+        ],
+        [
+          10.2,
+          38.53987272
+        ],
+        [
+          17.5,
+          25.999998799999997
+        ],
+        [
+          19.246636640000002,
+          25.999998799999997
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.012881430578386976
+    },
+    {
+      "net": "L0_E02",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          37.239874719999996
+        ],
+        [
+          8.65,
+          37.239874719999996
+        ],
+        [
+          8.95,
+          36.93987472
+        ],
+        [
+          10.2,
+          36.93987472
+        ],
+        [
+          17.5,
+          24.8000012
+        ],
+        [
+          19.246636640000002,
+          24.8000012
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.00985182684848912
+    },
+    {
+      "net": "L0_E03",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          36.74000272
+        ],
+        [
+          8.7,
+          36.28000272
+        ],
+        [
+          10.2,
+          36.28000272
+        ],
+        [
+          17.5,
+          23.60000106
+        ],
+        [
+          19.246636640000002,
+          23.60000106
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.00985182684848912
+    },
+    {
+      "net": "L0_E04",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          28.57999872
+        ],
+        [
+          8.7,
+          29.03999872
+        ],
+        [
+          10.2,
+          29.03999872
+        ],
+        [
+          17.5,
+          22.40000092
+        ],
+        [
+          19.246636640000002,
+          22.40000092
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.15247627058642152
+    },
+    {
+      "net": "L0_E05",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          28.07987272
+        ],
+        [
+          8.65,
+          28.07987272
+        ],
+        [
+          8.95,
+          28.37987272
+        ],
+        [
+          10.2,
+          28.37987272
+        ],
+        [
+          17.5,
+          21.20000078
+        ],
+        [
+          19.246636640000002,
+          21.20000078
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.052222400000000474
+    },
+    {
+      "net": "L0_E06",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          27.07987472
+        ],
+        [
+          8.65,
+          27.07987472
+        ],
+        [
+          8.95,
+          26.77987472
+        ],
+        [
+          10.2,
+          26.77987472
+        ],
+        [
+          17.5,
+          20.00000064
+        ],
+        [
+          19.246636640000002,
+          20.00000064
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.05247640000000223
+    },
+    {
+      "net": "L0_E07",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          26.580002720000003
+        ],
+        [
+          8.7,
+          26.120002720000002
+        ],
+        [
+          10.2,
+          26.120002720000002
+        ],
+        [
+          17.5,
+          18.8000005
+        ],
+        [
+          19.246636640000002,
+          18.8000005
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.15222227058642337
+    },
+    {
+      "net": "L0_E08",
+      "kind": "RIGHT6_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          18.41999872
+        ],
+        [
+          8.7,
+          18.87999872
+        ],
+        [
+          10.2,
+          18.87999872
+        ],
+        [
+          17.0,
+          17.0
+        ],
+        [
+          40.0,
+          17.0
+        ],
+        [
+          40.0,
+          21.20000078
+        ],
+        [
+          36.25336412,
+          21.20000078
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.15247627058642513
+    },
+    {
+      "net": "L0_E09",
+      "kind": "RIGHT6_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          17.91987272
+        ],
+        [
+          8.65,
+          17.91987272
+        ],
+        [
+          8.95,
+          18.21987272
+        ],
+        [
+          10.2,
+          18.21987272
+        ],
+        [
+          17.0,
+          16.5
+        ],
+        [
+          40.5,
+          16.5
+        ],
+        [
+          40.5,
+          22.40000092
+        ],
+        [
+          38.7533642,
+          22.40000092
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.05222239999999692
+    },
+    {
+      "net": "L0_E10",
+      "kind": "RIGHT6_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          16.91987472
+        ],
+        [
+          8.65,
+          16.91987472
+        ],
+        [
+          8.95,
+          16.61987472
+        ],
+        [
+          10.2,
+          16.61987472
+        ],
+        [
+          17.0,
+          16.0
+        ],
+        [
+          41.0,
+          16.0
+        ],
+        [
+          41.0,
+          23.60000106
+        ],
+        [
+          36.25336412,
+          23.60000106
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.052476399999998674
+    },
+    {
+      "net": "L0_E11",
+      "kind": "RIGHT6_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          16.42000272
+        ],
+        [
+          8.7,
+          15.960002719999999
+        ],
+        [
+          10.2,
+          15.960002719999999
+        ],
+        [
+          17.0,
+          15.5
+        ],
+        [
+          41.5,
+          15.5
+        ],
+        [
+          41.5,
+          24.8000012
+        ],
+        [
+          36.25336412,
+          24.8000012
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.15222227058642337
+    },
+    {
+      "net": "L0_E12",
+      "kind": "RIGHT6_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          10.79999872
+        ],
+        [
+          8.7,
+          11.25999872
+        ],
+        [
+          10.2,
+          11.25999872
+        ],
+        [
+          17.0,
+          15.0
+        ],
+        [
+          42.0,
+          15.0
+        ],
+        [
+          42.0,
+          25.999998799999997
+        ],
+        [
+          36.25336412,
+          25.999998799999997
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.10790792902602084
+    },
+    {
+      "net": "L0_E13",
+      "kind": "RIGHT6_ESD_TO_SERIES",
+      "layer": 1,
+      "points": [
+        [
+          8.19999884,
+          10.29987272
+        ],
+        [
+          8.65,
+          10.29987272
+        ],
+        [
+          8.95,
+          10.59987272
+        ],
+        [
+          10.2,
+          10.59987272
+        ],
+        [
+          17.0,
+          14.5
+        ],
+        [
+          42.5,
+          14.5
+        ],
+        [
+          42.5,
+          27.199998939999997
+        ],
+        [
+          36.25336412,
+          27.199998939999997
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.052222400000000474
+    },
+    {
+      "net": "RC_DRIVE",
+      "kind": "TOP_SOURCE_ESCAPE",
+      "layer": 1,
+      "points": [
+        [
+          22.74663726,
+          28.099999679999996
+        ],
+        [
+          21.6,
+          28.1
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.3970389527331516
+    },
+    {
+      "net": "RC_DRIVE",
+      "kind": "BOTTOM_CONTROL",
+      "layer": 2,
+      "points": [
+        [
+          21.6,
+          28.1
+        ],
+        [
+          49.99999905999999,
+          36.47000072
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.36687978246732306
+    },
+    {
+      "net": "SENSE_OUT",
+      "kind": "TOP_SOURCE_ESCAPE",
+      "layer": 1,
+      "points": [
+        [
+          26.953364940000004,
+          27.900000079999998
+        ],
+        [
+          28.2,
+          27.9
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.5845411061357859
+    },
+    {
+      "net": "SENSE_OUT",
+      "kind": "BOTTOM_CONTROL",
+      "layer": 2,
+      "points": [
+        [
+          28.2,
+          27.9
+        ],
+        [
+          31.0,
+          27.6
+        ],
+        [
+          34.0,
+          27.6
+        ],
+        [
+          49.99999905999999,
+          31.39000072
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.11174797999999891
+    },
+    {
+      "net": "ADDR0",
+      "kind": "TOP_SOURCE_ESCAPE",
+      "layer": 1,
+      "points": [
+        [
+          24.47740088,
+          20.224922720000002
+        ],
+        [
+          25.5,
+          20.224922720000002
+        ],
+        [
+          26.0,
+          20.724922720000002
+        ],
+        [
+          26.0,
+          22.4
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.20233639999999195
+    },
+    {
+      "net": "ADDR0",
+      "kind": "BOTTOM_CONTROL",
+      "layer": 2,
+      "points": [
+        [
+          26.0,
+          22.4
+        ],
+        [
+          49.99999905999999,
+          26.31000072
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.028138113357301764
+    },
+    {
+      "net": "ADDR1",
+      "kind": "TOP_SOURCE_ESCAPE",
+      "layer": 1,
+      "points": [
+        [
+          24.47740088,
+          19.57493672
+        ],
+        [
+          26.5,
+          19.57493672
+        ],
+        [
+          27.0,
+          20.07493672
+        ],
+        [
+          27.0,
+          21.2
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.2020823999999972
+    },
+    {
+      "net": "ADDR1",
+      "kind": "BOTTOM_CONTROL",
+      "layer": 2,
+      "points": [
+        [
+          27.0,
+          21.2
+        ],
+        [
+          49.99999905999999,
+          16.15000072
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.016058878171916313
+    },
+    {
+      "net": "ADDR2",
+      "kind": "TOP_SOURCE_ESCAPE",
+      "layer": 1,
+      "points": [
+        [
+          30.522600880000002,
+          19.57493672
+        ],
+        [
+          28.8,
+          19.57493672
+        ],
+        [
+          28.0,
+          20.0
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.08668561999999919
+    },
+    {
+      "net": "ADDR2",
+      "kind": "BOTTOM_CONTROL",
+      "layer": 2,
+      "points": [
+        [
+          28.0,
+          20.0
+        ],
+        [
+          30.3,
+          19.55
+        ],
+        [
+          32.5,
+          17.4
+        ],
+        [
+          35.0,
+          17.4
+        ],
+        [
+          49.99999905999999,
+          11.070000720000001
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.011748259999999344
+    },
+    {
+      "net": "ADDR3",
+      "kind": "TOP_SOURCE_ESCAPE",
+      "layer": 1,
+      "points": [
+        [
+          30.522600880000002,
+          18.92520472
+        ],
+        [
+          29.2,
+          18.8
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.20208262705247895
+    },
+    {
+      "net": "ADDR3",
+      "kind": "BOTTOM_CONTROL",
+      "layer": 2,
+      "points": [
+        [
+          29.2,
+          18.8
+        ],
+        [
+          49.99999905999999,
+          5.990000720000001
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.20823548118109578
+    },
+    {
+      "net": "MUX_DISABLE",
+      "kind": "TOP_SOURCE_ESCAPE",
+      "layer": 1,
+      "points": [
+        [
+          30.522600880000002,
+          20.224922720000002
+        ],
+        [
+          29.3,
+          20.224922720000002
+        ],
+        [
+          29.3,
+          22.0
+        ],
+        [
+          29.0,
+          22.0
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.14994617999999946
+    },
+    {
+      "net": "MUX_DISABLE",
+      "kind": "BOTTOM_CONTROL",
+      "layer": 2,
+      "points": [
+        [
+          29.0,
+          22.0
+        ],
+        [
+          49.99999905999999,
+          21.23000072
+        ]
+      ],
+      "width_mm": 0.1651,
+      "physical_pass": true,
+      "minimum_extra_clearance_mm": 0.31174890129387506
+    }
+  ],
+  "all_routes_physical_pass": true,
+  "route_violations": [],
+  "new_vias_physical_pass": true,
+  "new_via_violations": [],
+  "all_drill_spacing_pass": true,
+  "drill_violations": [],
+  "signal_to_return_pairs": [
+    {
+      "net": "RC_DRIVE",
+      "signal_via_mm": [
+        21.6,
+        28.1
+      ],
+      "Ground_via_mm": [
+        21.6,
+        29.2
+      ],
+      "distance_mm": 1.0999999999999979
+    },
+    {
+      "net": "SENSE_OUT",
+      "signal_via_mm": [
+        28.2,
+        27.9
+      ],
+      "Ground_via_mm": [
+        29.1,
+        28.8
+      ],
+      "distance_mm": 1.2727922061357886
+    },
+    {
+      "net": "ADDR0",
+      "signal_via_mm": [
+        26.0,
+        22.4
+      ],
+      "Ground_via_mm": [
+        26.0,
+        23.5
+      ],
+      "distance_mm": 1.1000000000000014
+    },
+    {
+      "net": "ADDR1",
+      "signal_via_mm": [
+        27.0,
+        21.2
+      ],
+      "Ground_via_mm": [
+        28.0,
+        22.0
+      ],
+      "distance_mm": 1.2806248474865702
+    },
+    {
+      "net": "ADDR2",
+      "signal_via_mm": [
+        28.0,
+        20.0
+      ],
+      "Ground_via_mm": [
+        28.2,
+        18.8
+      ],
+      "distance_mm": 1.2165525060596432
+    },
+    {
+      "net": "ADDR3",
+      "signal_via_mm": [
+        29.2,
+        18.8
+      ],
+      "Ground_via_mm": [
+        28.2,
+        18.8
+      ],
+      "distance_mm": 1.0
+    },
+    {
+      "net": "MUX_DISABLE",
+      "signal_via_mm": [
+        29.0,
+        22.0
+      ],
+      "Ground_via_mm": [
+        28.0,
+        22.0
+      ],
+      "distance_mm": 1.0
+    }
+  ],
+  "all_new_signal_vias_have_Ground_return_within1_5mm": true,
+  "J2_candidate_pin_nets": {
+    "3": "RC_DRIVE",
+    "5": "SENSE_OUT",
+    "7": "ADDR0",
+    "9": "MUX_DISABLE",
+    "11": "ADDR1",
+    "13": "ADDR2",
+    "15": "ADDR3"
+  },
+  "J2_scope_warning": "OldJ2.15SENSE_OUT is obsolete ONLY FOR THIS UNAPPLIED fourlayer candidate. CandidateJ2.5=SENSE_OUT;6bank outputs remain six independent GPIOs. All7odd signalpins explicitly reassigned, evenGround/pin1power unchanged. NativeJ2 unchanged.",
+  "all_new_reference_planes_actual": false,
+  "whole_reference_DC_oldcontacts_and_real_repour_pending": true,
+  "manufacturer_stack_quote_delivery_pending": true,
+  "whole700budget_accepted": false,
+  "existing91Top_lines_retained": true,
+  "native_applied": false,
+  "native40unchanged": true,
+  "physical_tests": "UNMEASURED",
+  "manufacturing_release": false
+}

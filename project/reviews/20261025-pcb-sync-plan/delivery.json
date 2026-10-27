@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-10-25T09:53:29.706245+00:00",
+  "repository": "sakuyaShining/FPGA-Music-project-internal",
+  "visibility": "PUBLIC",
+  "branch": "codex/pcb-sync-plan-20261025",
+  "source_snapshot_remote_commit": "592da06fd64d069614ba5cb1647dad168aa4ef02",
+  "hardware_status_source_remote_commit": "83696b5577f294647424c3b7a4fbf2e7d8caf23d",
+  "published_main_at_sync": "100b35bd93cbde6d604a289d990f208622e94646",
+  "pull_request": "https://github.com/sakuyaShining/FPGA-Music-project-internal/pull/5",
+  "main_merged": false,
+  "source_manifest": "hardware/checkpoints/pcb-951ce88a-20261025/manifest.json",
+  "remote_verification": "remote-verification.json",
+  "validation": "validation.json",
+  "P1_source_review": "p1-source-review.json",
+  "entry_status": "entry-check.json",
+  "governance_status": "governance-status.json",
+  "source_files_and_complete_archive_synced": true,
+  "source_CAD_modified": false,
+  "background_automation_resumed": false,
+  "remaining_work": [
+    "P1 controlled guide-boundary/actual-blocker diagnosis",
+    "P2 joint exit/channel design",
+    "P3 complete twelve networks and native full-board verification",
+    "P4 interfaces/power/mechanics/procurement",
+    "P5 same-source manufacturing output and physical tests"
+  ],
+  "known_existing_gaps": [
+    "Native42 connection errors across12nets",
+    "OfflineMUX4 islands, not importable",
+    "Global review expired and original active producer drift",
+    "Music golden mismatch",
+    "Current FPGA/host physical compatibility unverified"
+  ],
+  "initial_CI": {
+    "commit": "592da06fd64d069614ba5cb1647dad168aa4ef02",
+    "run": 40182367944,
+    "failure": "Current design notice changed but design-state binding had not yet been updated",
+    "correction": "This receipt commit binds the actual scoped document change; prior global review clock is retained",
+    "checkpoint_verification": "Dedicated independent CI job added so expired full-project governance does not skip recovery integrity checks"
+  },
+  "manufacturing_release": false,
+  "delivery_commit_resolution": "Git commit containing this record; source snapshot exact remote commit is recorded separately"
+}

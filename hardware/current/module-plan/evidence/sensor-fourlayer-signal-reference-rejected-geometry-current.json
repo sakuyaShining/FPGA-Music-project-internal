@@ -1,0 +1,156 @@
+{
+  "reason": "Initialbottomdiagonal crossedD4Groundvia and Topstub/newvias crossedE12fanout. Replaced with realbottomlowercorridor and far-rightvia into existingE13pre-seriesR net; no rulesrelaxed.",
+  "routes": [
+    {
+      "net": "L0_E13",
+      "layer": 2,
+      "points": [
+        [
+          5.000000159999997,
+          8.53000072
+        ],
+        [
+          8.5,
+          11.3
+        ]
+      ],
+      "width_mm": 0.1651,
+      "role": "BottomE13avoidsneighborJ1.13antipad; throughheaderstart"
+    },
+    {
+      "net": "L0_E13",
+      "layer": 1,
+      "points": [
+        [
+          8.5,
+          11.3
+        ],
+        [
+          8.19999884,
+          10.29987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "role": "TopESD_NC9stub_existingbridge_retained"
+    },
+    {
+      "net": "ADDR2",
+      "layer": 1,
+      "points": [
+        [
+          30.522600880000002,
+          19.57493672
+        ],
+        [
+          30.4,
+          19.65
+        ],
+        [
+          28.8,
+          19.65
+        ],
+        [
+          28.0,
+          20.0
+        ]
+      ],
+      "width_mm": 0.1651,
+      "role": "AboveactualADDR3signalviaantipad"
+    }
+  ],
+  "new_vias": [
+    {
+      "net": "L0_E13",
+      "xy": [
+        8.5,
+        11.3
+      ],
+      "OD": 0.7112,
+      "drill": 0.36068,
+      "role": "NewE13signalvia"
+    },
+    {
+      "net": "GND",
+      "xy": [
+        9.5,
+        11.5
+      ],
+      "OD": 0.7112,
+      "drill": 0.36068,
+      "role": "E13return_pair_distance1.0198mm"
+    },
+    {
+      "net": "GND",
+      "xy": [
+        51.45,
+        41.55
+      ],
+      "OD": 0.7112,
+      "drill": 0.36068,
+      "role": "3V3headerreturn_pair_distance1.45mm"
+    }
+  ],
+  "violations": [
+    {
+      "own": "newroute0",
+      "other": "1e98b5a76e1249ab",
+      "actual": 0.0,
+      "required": 0.2501011
+    },
+    {
+      "own": "newroute1",
+      "other": "12bf4152878aec78e18",
+      "actual": 0.0,
+      "required": 0.1651
+    },
+    {
+      "own": "newroute1",
+      "other": "0d0fbfbb03342092",
+      "actual": 0.0,
+      "required": 0.1651
+    },
+    {
+      "own": "newroute1",
+      "other": "21f42ed0e6fb0d88",
+      "actual": 0.0,
+      "required": 0.1651
+    },
+    {
+      "own": "newroute1",
+      "other": "146cb77a8bb533f2",
+      "actual": 0.038861852065381085,
+      "required": 0.1651
+    },
+    {
+      "own": "newvia0",
+      "other": "12bf4152878aec78e18",
+      "actual": 0.044784833483974835,
+      "required": 0.2501011
+    },
+    {
+      "own": "newvia0",
+      "other": "0d0fbfbb03342092",
+      "actual": 0.14494706943416544,
+      "required": 0.2501011
+    },
+    {
+      "own": "newvia0",
+      "other": "21f42ed0e6fb0d88",
+      "actual": 0.0,
+      "required": 0.2501011
+    },
+    {
+      "own": "newvia0",
+      "other": "146cb77a8bb533f2",
+      "actual": 0.0,
+      "required": 0.2501011
+    },
+    {
+      "own": "newvia1",
+      "other": "146cb77a8bb533f2",
+      "actual": 0.0,
+      "required": 0.2501011
+    }
+  ],
+  "native_applied": false
+}

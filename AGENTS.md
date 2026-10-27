@@ -1,5 +1,7 @@
 # 项目工作入口
 
+**2026-10-27 当前入口**：先读`project/CONSOLIDATION-20261027.md`。本次用户已直接授权整合并合入main；不扩展为其他未来PR的自动合并授权。模块方案／951载板／14路小板和恢复检查点分别判断，35段限定口径批准不等于制造放行。
+
 **当前协作工程：先读`project/ENGINEERING.md`及`project/COLLABORATION-CHECKPOINT-20261024.md`，执行`python tools/scripts/engineering.py check`。最新开发候选位于`fpga/current/`、`hardware/current/`、`host/current/`；根目录旧源码及v1/v2恢复只作历史。音乐黄金差异、硬件未连通和实体兼容缺口必须随任务交接。**
 
 **main长期入口：先fetch核实目标仓库实际main，再读`project/DESIGN-CURRENT.md`、`project/PRODUCT-SPEC.md`、`project/governance.json`、`project/decisions.json`及`project/producers.json`。仓库已由用户公开，名称internal不表示私有。用户已取消J11实体音乐可视化屏、保留J10；此项覆盖旧双屏红线。固定源码归档、活跃未发布源和已验证源必须分开，旧PASS不继承。快速获取见`project/QUICKSTART.md`。**

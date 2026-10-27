@@ -1,0 +1,7 @@
+{
+  "time": "2026-10-25T14:36:29.479073+08:00",
+  "note": "In saved diagnostics phys/physical_only_components include mandatory layer-specific nativeADDR2/MUX guide-region boundaries as well as actual foreign copper, retained-reference and old-contact constraints. Necessary physical-port zero applies to that guide-clipped component only; it is not a pure board-level physical impossibility certificate. Nearby copper lists indicate proximity, not causal obstruction. Before relocating shared Bottom IO848, separate guide-boundary clipping from actual Cu/reference/contact blockers. No geometry or accepted reference result is changed by this scope clarification.",
+  "accepted_IO_tail_cleanup_unaffected": true,
+  "reason": "Cleanup proof is strict full-Cu noPAD-tail/subset and exact reference identity, independent of guide-domain path claims",
+  "native_imported": false
+}

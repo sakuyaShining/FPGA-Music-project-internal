@@ -1,0 +1,629 @@
+{
+  "pads": [
+    {
+      "ref": "R3",
+      "pin": "1",
+      "old": "L0_E00",
+      "proposed": "L0_E07",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged",
+      "id": "bc3366bea6943780e8"
+    },
+    {
+      "ref": "R4",
+      "pin": "1",
+      "old": "L0_E01",
+      "proposed": "L0_E06",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged",
+      "id": "9f77f3fe9ec10591e8"
+    },
+    {
+      "ref": "R5",
+      "pin": "1",
+      "old": "L0_E02",
+      "proposed": "L0_E05",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged",
+      "id": "4a7750343e6bc55be8"
+    },
+    {
+      "ref": "R6",
+      "pin": "1",
+      "old": "L0_E03",
+      "proposed": "L0_E04",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged",
+      "id": "c714063498a4ab88e8"
+    },
+    {
+      "ref": "R7",
+      "pin": "1",
+      "old": "L0_E04",
+      "proposed": "L0_E03",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged",
+      "id": "01112dfdcf5a3fc6e8"
+    },
+    {
+      "ref": "R8",
+      "pin": "1",
+      "old": "L0_E05",
+      "proposed": "L0_E02",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged",
+      "id": "fe28dcabb0800725e8"
+    },
+    {
+      "ref": "R9",
+      "pin": "1",
+      "old": "L0_E06",
+      "proposed": "L0_E01",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged",
+      "id": "94f1c541789f5ca4e8"
+    },
+    {
+      "ref": "R10",
+      "pin": "1",
+      "old": "L0_E07",
+      "proposed": "L0_E00",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged",
+      "id": "9213890ce7bd231ce8"
+    },
+    {
+      "ref": "D1",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E00",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "e32980fbd1737e5de18"
+    },
+    {
+      "ref": "D1",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E01",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "e32980fbd1737e5de17"
+    },
+    {
+      "ref": "D1",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E02",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "e32980fbd1737e5de15"
+    },
+    {
+      "ref": "D1",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E03",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "e32980fbd1737e5de14"
+    },
+    {
+      "ref": "D2",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E04",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "f4d6a8b898319ac3e18"
+    },
+    {
+      "ref": "D2",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E05",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "f4d6a8b898319ac3e17"
+    },
+    {
+      "ref": "D2",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E06",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "f4d6a8b898319ac3e15"
+    },
+    {
+      "ref": "D2",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E07",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "f4d6a8b898319ac3e14"
+    },
+    {
+      "ref": "D3",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E08",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "625b35b56585c206e18"
+    },
+    {
+      "ref": "D3",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E09",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "625b35b56585c206e17"
+    },
+    {
+      "ref": "D3",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E10",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "625b35b56585c206e15"
+    },
+    {
+      "ref": "D3",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E11",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "625b35b56585c206e14"
+    },
+    {
+      "ref": "D4",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E12",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "12bf4152878aec78e18"
+    },
+    {
+      "ref": "D4",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E13",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "id": "12bf4152878aec78e17"
+    },
+    {
+      "ref": "R11",
+      "pin": "1",
+      "old": "L0_E08",
+      "proposed": "L0_E13",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "id": "fdd9b16fbfe9aad5e8"
+    },
+    {
+      "ref": "R12",
+      "pin": "1",
+      "old": "L0_E09",
+      "proposed": "L0_E12",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "id": "02b425b3e7bbe7e5e8"
+    },
+    {
+      "ref": "R13",
+      "pin": "1",
+      "old": "L0_E10",
+      "proposed": "L0_E11",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "id": "05a7638714d7d430e8"
+    },
+    {
+      "ref": "R14",
+      "pin": "1",
+      "old": "L0_E11",
+      "proposed": "L0_E10",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "id": "af1b2649b9759671e8"
+    },
+    {
+      "ref": "R15",
+      "pin": "1",
+      "old": "L0_E12",
+      "proposed": "L0_E09",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "id": "7e4b5b6ad36196f0e8"
+    },
+    {
+      "ref": "R16",
+      "pin": "1",
+      "old": "L0_E13",
+      "proposed": "L0_E08",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "id": "a1b0e8dbf6180c4ae8"
+    },
+    {
+      "ref": "J2",
+      "pin": "3",
+      "old": "ADDR0",
+      "proposed": "RC_DRIVE",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "id": "ba71119e6041a5fde36"
+    },
+    {
+      "ref": "J2",
+      "pin": "5",
+      "old": "ADDR1",
+      "proposed": "SENSE_OUT",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "id": "ba71119e6041a5fde34"
+    },
+    {
+      "ref": "J2",
+      "pin": "7",
+      "old": "ADDR2",
+      "proposed": "ADDR0",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "id": "ba71119e6041a5fde32"
+    },
+    {
+      "ref": "J2",
+      "pin": "9",
+      "old": "ADDR3",
+      "proposed": "MUX_DISABLE",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "id": "ba71119e6041a5fde30"
+    },
+    {
+      "ref": "J2",
+      "pin": "11",
+      "old": "MUX_DISABLE",
+      "proposed": "ADDR1",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "id": "ba71119e6041a5fde28"
+    },
+    {
+      "ref": "J2",
+      "pin": "13",
+      "old": "RC_DRIVE",
+      "proposed": "ADDR2",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "id": "ba71119e6041a5fde26"
+    },
+    {
+      "ref": "J2",
+      "pin": "15",
+      "old": "SENSE_OUT",
+      "proposed": "ADDR3",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "id": "ba71119e6041a5fde39"
+    }
+  ],
+  "moves": [
+    {
+      "id": "d084970f837fd33e",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        41.549319999999994
+      ],
+      "proposed_mm": [
+        3.548740680000007,
+        41.549319999999994
+      ],
+      "header_pin": 1,
+      "return_distance_mm": 1.4512596396474267,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "250f83954a2d6dc4",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        39.00931999999999
+      ],
+      "proposed_mm": [
+        3.548740680000005,
+        39.00931999999999
+      ],
+      "header_pin": 2,
+      "return_distance_mm": 1.4512596396474275,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "f280d8d609bf9004",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        36.46931999999999
+      ],
+      "proposed_mm": [
+        3.548740680000005,
+        36.46931999999999
+      ],
+      "header_pin": 3,
+      "return_distance_mm": 1.4512596396474275,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "a5333efe15fa0ed2",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        33.92931999999999
+      ],
+      "proposed_mm": [
+        3.548740680000005,
+        33.92931999999999
+      ],
+      "header_pin": 4,
+      "return_distance_mm": 1.4512596396474275,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "72788069015cfed2",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        31.389319999999998
+      ],
+      "proposed_mm": [
+        3.5487406800000034,
+        31.389319999999998
+      ],
+      "header_pin": 5,
+      "return_distance_mm": 1.4512596396474284,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "f8f549b3960442ab",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        28.84932
+      ],
+      "proposed_mm": [
+        3.5487406800000034,
+        28.84932
+      ],
+      "header_pin": 6,
+      "return_distance_mm": 1.4512596396474284,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "91304e41b78a07b2",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        26.309319999999996
+      ],
+      "proposed_mm": [
+        3.5487406800000016,
+        26.309319999999996
+      ],
+      "header_pin": 7,
+      "return_distance_mm": 1.4512596396474293,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "29fe4061e2ec0cb5",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        23.769319999999997
+      ],
+      "proposed_mm": [
+        3.54874068,
+        23.769319999999997
+      ],
+      "header_pin": 8,
+      "return_distance_mm": 1.4512596396474302,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "7a20353ac02e26a8",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        21.229319999999998
+      ],
+      "proposed_mm": [
+        3.54874068,
+        21.229319999999998
+      ],
+      "header_pin": 9,
+      "return_distance_mm": 1.4512596396474302,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "0ff0efb58e90de32",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        18.68932
+      ],
+      "proposed_mm": [
+        3.548740679999998,
+        18.68932
+      ],
+      "header_pin": 10,
+      "return_distance_mm": 1.451259639647431,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "775e389243ca7091",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        16.14932
+      ],
+      "proposed_mm": [
+        3.5487406799999963,
+        16.14932
+      ],
+      "header_pin": 11,
+      "return_distance_mm": 1.451259639647432,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "5b2b6e845433dea0",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        13.609319999999999
+      ],
+      "proposed_mm": [
+        3.5487406799999963,
+        13.609319999999999
+      ],
+      "header_pin": 12,
+      "return_distance_mm": 1.451259639647432,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "e3c1949ae92b1a76",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        11.069319999999998
+      ],
+      "proposed_mm": [
+        3.5487406799999963,
+        11.069319999999998
+      ],
+      "header_pin": 13,
+      "return_distance_mm": 1.451259639647432,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "7317316c611de590",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        8.529319999999998
+      ],
+      "proposed_mm": [
+        3.5487406799999945,
+        8.529319999999998
+      ],
+      "header_pin": 14,
+      "return_distance_mm": 1.4512596396474329,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "1c9e49d13908b4f0",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        36.46931999999999
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        36.46931999999999
+      ],
+      "header": "J2",
+      "header_pin": 3,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "b8f8963843ee9e78",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        31.389319999999998
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        31.389319999999998
+      ],
+      "header": "J2",
+      "header_pin": 5,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "fc1f8a9c8aac1cbe",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        26.309319999999996
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        26.309319999999996
+      ],
+      "header": "J2",
+      "header_pin": 7,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "bded4c326da01bb4",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        21.229319999999998
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        21.229319999999998
+      ],
+      "header": "J2",
+      "header_pin": 9,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "6027c7717532611a",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        16.14932
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        16.14932
+      ],
+      "header": "J2",
+      "header_pin": 11,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "7641831913722fda",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        11.069319999999998
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        11.069319999999998
+      ],
+      "header": "J2",
+      "header_pin": 13,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "6a654bb4b335ec79",
+      "net": "GND",
+      "old_mm": [
+        48.549900359999995,
+        5.98932
+      ],
+      "proposed_mm": [
+        51.45009775999999,
+        5.98932
+      ],
+      "header": "J2",
+      "header_pin": 15,
+      "return_distance_mm": 1.4500988597752233,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    }
+  ]
+}

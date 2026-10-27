@@ -1,0 +1,381 @@
+{
+  "schema": 1,
+  "observed_at": "2026-10-26T01:34:07.918860+08:00",
+  "owner_thread": "01a15ee5-fa24-7501-8475-ad28a0f08939",
+  "status": "ACTIVE_CONSTRUCTION_NOT_FOR_FAB",
+  "native_project": "native/FPGA-Music-U9ControlWork-20261023.eprj3",
+  "native_pcb": "native/pcb/PCB1.epcb2",
+  "native_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "native_components": 227,
+  "native_vias": 649,
+  "native_open_connections": 42,
+  "native_open_nets": 12,
+  "native_ADDR2_complete": true,
+  "offline_candidate": "context/offline/current-plan.json",
+  "offline_expected": "context/offline/current-expected.json",
+  "offline_plane_context_gzip": "context/offline/current-plane-context.json.gz",
+  "offline_MUX_pad_islands": 4,
+  "offline_new_lines": 62,
+  "offline_new_vias": 24,
+  "offline_candidate_imported": false,
+  "manufacturing_release": false,
+  "final_selection_frozen": false,
+  "physical_tests": "UNMEASURED",
+  "coordination": {
+    "sole_CAD_writer": "Codex",
+    "WorkBuddy": "Read-only bounded assistance; user acknowledged"
+  },
+  "constraints": {
+    "single_J10": true,
+    "J11_cancelled": true,
+    "sensors": 84,
+    "FPGA": "Tang Nano20K",
+    "board_mm": [
+      140,
+      100
+    ],
+    "copper_layers": 4
+  },
+  "history": "Git history preserves prior native versions. Large recursively nested local archives are deliberately not copied into this current delivery.",
+  "validation_scope": "Saved native951 has prior complete ADDR2 physical/reference/DC/native DRC and reopen acceptance. Current portable files freshly hash-verified; no new CAD routing or fabrication acceptance is claimed. Offline62/24 is a retained partial MUX candidate. Parent full-delta audit plus deletion-only identity stage proof are included; older historical proof chains remain indexed by those records.",
+  "single_J10_harness": "context/purchase-preparation-20261021-r1/current-J10-harness.json",
+  "single_J10_harness_scope": "Electrical12-to40 mapping checked against saved951 pads. Mechanical connector orientation, configured sale SKU and functional recovery not released.",
+  "last_metadata_update": "2026-10-27T17:49:11.151602+08:00",
+  "module_delivery_main": {
+    "entry": "module-plan/模块方案-当前工作单.md",
+    "requirements": "module-plan/实体模块方案约束-current.json",
+    "evidence": "module-plan/模块方案-当前证据.json",
+    "status": "IN_PROGRESS_NOT_COMPLETE_SHOPPING_LIST",
+    "deadline": "2026-11-04",
+    "city": "广东清远",
+    "budget_upper_CNY": 700,
+    "SMT_user_soldering": false,
+    "original_227_functional_baseline_retained": true,
+    "firmware_interface_findings": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06"
+    ],
+    "firmware_scope": "Read-only registered producer; no build/flash or global absence claim.",
+    "sensor_frontend": "module-plan/evidence/sensor-front-native-progress-current.json",
+    "sensor_candidate_schematic": "module-plan/evidence/sensor-fourlayer-native-current.esch2",
+    "sensor_candidate_PCB": "module-plan/evidence/sensor-fourlayer-native-current.epcb2",
+    "sensor_stage": "Current captured fourlayer617f550e/7710964c; author-recorded302lines51vias0nativeDRC0open. Scope35 accepted; manufacturing file verification/quote/physical integration pending; early sensor14bank is historical.",
+    "firmware_registered13_files_unchanged": true,
+    "sensor_route_terminal": "module-plan/evidence/sensor-front-signal-route-job-current.json",
+    "sensor_manual_stage": "module-plan/evidence/sensor-front-14nets-actual-Cu-audit-current.json",
+    "audio_contract": "module-plan/evidence/audio-010313400000-wiring-current.md",
+    "audio_stage": "Exact55CNY SKU010313400000 pins/0x4D DAC/0x60 TPA and original17item reconciliation:11schematic subfunctions,6pending, nofunction removed and no complete module acceptance. Registered producer F07 clock/format/initialization gap saved; no RTL edits. Playback sourcing includes exact unavailable/rejected items, no complete quoted purchase chain.",
+    "audio_playback_sourcing": "module-plan/evidence/audio-playback-sourcing-current.json",
+    "control_power_contract": "module-plan/evidence/control-power-current-plan.md",
+    "control_power_stage": "Original56functions retained.5domestic priced through-hole lines includingMOQ33.704CNY before carrier/assembly/wiring/freight. Original23.7k1% TPS2553 threshold1.002..1.184A; no threshold relaxation or default speaker loading. Exact remaining preweld modules/whole700budget not accepted; no CAD/RTL edits.",
+    "electrode_channel_plan": "module-plan/evidence/sensor-header-fanout-current.md",
+    "electrode_stage": "Offline explicit geometry:14header fanouts+14NCbridges+left8complete E paths physical/allPADconnectivity pass after14Ground-return-via mirrors. Right6/7controls and actualGround reference remain. Proposed22PAD changes NOT applied. Native40unchanged;21nets56items remain. No purchase/manufacturing release.",
+    "product_spec12_comparison": "module-plan/evidence/product-spec-12-comparison-current.md",
+    "delivery_risk_plan": "module-plan/evidence/delivery-risk-plan-current.md",
+    "delivery_planning_stage": "Full12 requirement comparison and AUX scope corrected. Controllable paperwork versus uncertain engineering/integration and external assembly/delivery separated. Oct28design checkpoint/Oct30arrival target/Nov3video internal target are not promised dates. No function cuts; no CAD/RTL/order changes; no purchase release.",
+    "sensor_fourlayer_trial_current": {
+      "at": "2026-10-27T17:18:13.068970+08:00",
+      "phase": "native302lines51vias-zeroDRC-after-reopen-real-body-reference-defects-repaired-scope-accepted-manufacturing-file-verification-pending",
+      "current_PCB2_SHA": "617f550eadc818ffab26a3992f2a86bb9f72ed027043c6e64a0c0428077ba643",
+      "schematic_SHA": "7710964c5831a580909709aab0ddb271cef88779a11f585de45149c6046e12eb",
+      "lines": 302,
+      "vias": 51,
+      "parts": 28,
+      "pads": 150,
+      "active_copper_layers": [
+        1,
+        15,
+        16,
+        2
+      ],
+      "native_strict_DRC_errors": 0,
+      "native_connection_errors": 0,
+      "real_ground_layers": [
+        2,
+        15,
+        16
+      ],
+      "all_three_Ground_single_component": true,
+      "minimum_Ground_via_actual_plane_contact_mm2": 0.27856405681883856,
+      "all_TH_returns_within1_5mm": true,
+      "independent_reference_failed_segments": 35,
+      "independent_reference_pass": false,
+      "minimum_neck_old_contacts_manufacturer_stack_pending": true,
+      "accepted": false,
+      "manufacturing_release": false,
+      "physical_tests": "UNMEASURED",
+      "whole700budget_closed": false,
+      "whole_purchase_plan_complete": false,
+      "read_first": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-progress-current.md",
+      "actual_ground_audit": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-actual-ground-reference-current.json",
+      "reopened_DRC": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-signal-repair-reopened-DRC-current.json",
+      "capture_manifest": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-native-capture-current.json",
+      "recovery": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-native-recovery-current\\recovery-manifest.json",
+      "semantic84map": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor84-semantic-wiring-current.json",
+      "all_prior_mutation_jobs_terminal_no_replay": true,
+      "next_actions": [
+        "Proceed with manufacturing-file verification under the exact human-approved35 transition scope; no CAD replay or fabrication release.",
+        "Finish control/storage/interface/power complete preweld implementation and same-source manufacturing/stack files without changing old spacing limits.",
+        "Await agreed user full screen quote; close exact AUX adapter, all accessories, preweld/freight <=700 and actual Qingyuan delivery.",
+        "Product physical wrapper/firmware integration and all12 requirement physical acceptance remain pending; no RTL writes in this chat."
+      ],
+      "Ground_DC_current": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-Ground-DC-current.json",
+      "Ground_reinforcement_log": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-Ground-reinforcement-native-result-current.json",
+      "all3Ground_erosion_0_1651mm_single_component": true,
+      "signal_reference_repair_plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-signal-reference-repair-plan-current.json",
+      "Ground_vias": 43,
+      "signal_vias": 8,
+      "all_actual_missing_only_in_own_exact_native_antipad": true,
+      "actual_neighbor_antipad_crossings_repaired": true,
+      "Ground_DC_pass": true,
+      "original91Cu_and_rules_source_exact_preserved": true,
+      "reference_scope_decision_pending": false,
+      "reference_scope_decision_origin": "2026-10-27 17:58 CST direct human reply accepted only the pinned35 transition scope; see project/reviews/20261027-hardware-consolidation/sensor35-approval.json",
+      "reference_scope_review": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\传感小板参考验收口径-待确认.md",
+      "reference_scope_evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-exact-antipad-scope-review-current.json",
+      "final_candidate_audit": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-fourlayer-final-candidate-audit-current.json",
+      "numeric_review_current": {
+        "at": "2026-10-27T10:43:17.650190+00:00",
+        "user_reply": "同意此限定口径，继续制造文件核验",
+        "approval": true,
+        "reference_scope_decision_pending": false,
+        "source_sha256": "617f550eadc818ffab26a3992f2a86bb9f72ed027043c6e64a0c0428077ba643",
+        "numeric_report": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor35-numeric-review-current.md",
+        "numeric_evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor35-numeric-review-current.json",
+        "purchase_assembly_review": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\purchase-assembly-user-review-current.md",
+        "summary": {
+          "min_copper_to_GND_mm": 0.21300185999999144,
+          "min_inner_via_hole_to_GND_mm": 0.46406053999999597,
+          "min_inner_PTH_hole_to_GND_mm": 0.5029174599999987,
+          "min_return_centres_mm": 1.000000539999995,
+          "max_return_centres_mm": 1.4512596773898698,
+          "min_paired_hole_edges_mm": 0.639320539999995
+        },
+        "manufacturing_release": false,
+        "complete_purchase_plan": false,
+        "whole700budget_closed": false,
+        "physical_tests": "UNMEASURED",
+        "previous_review_at": "2026-10-27T17:18:13.068970+08:00",
+        "approval_evidence": "project/reviews/20261027-hardware-consolidation/sensor35-approval.json",
+        "manufacturing_files_verified_after_approval": false
+      },
+      "numeric_review_before_approval": {
+        "at": "2026-10-27T17:18:13.068970+08:00",
+        "user_reply": "Requests all35 numeric values and manufacturer capability comparison before deciding; also requests current purchase/assembly explanation.",
+        "approval": false,
+        "reference_scope_decision_pending": false,
+        "source_sha256": "617f550eadc818ffab26a3992f2a86bb9f72ed027043c6e64a0c0428077ba643",
+        "numeric_report": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor35-numeric-review-current.md",
+        "numeric_evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor35-numeric-review-current.json",
+        "purchase_assembly_review": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\purchase-assembly-user-review-current.md",
+        "summary": {
+          "min_copper_to_GND_mm": 0.21300185999999144,
+          "min_inner_via_hole_to_GND_mm": 0.46406053999999597,
+          "min_inner_PTH_hole_to_GND_mm": 0.5029174599999987,
+          "min_return_centres_mm": 1.000000539999995,
+          "max_return_centres_mm": 1.4512596773898698,
+          "min_paired_hole_edges_mm": 0.639320539999995
+        },
+        "manufacturing_release": false,
+        "complete_purchase_plan": false,
+        "whole700budget_closed": false,
+        "physical_tests": "UNMEASURED"
+      }
+    },
+    "sensor84_semantic_map": "module-plan/evidence/sensor84-semantic-wiring-current.json",
+    "complete_purchase_plan": false,
+    "reference_diagnostic": "module-plan/evidence/sensor-fourlayer-reference-deficit-diagnosis-current.json",
+    "DFR0072_candidate": "module-plan/evidence/control-DFR0072-module-review-current.json",
+    "new_module_research_scope": "Exact25CNY5Vmodule candidate, NOT3V3qualified/notpurchaseaccepted; original34referencefailures retained; noCAD/RTLchanges",
+    "sensor35_numeric_review": "module-plan/evidence/sensor35-numeric-review-current.md",
+    "current_purchase_assembly_review": "module-plan/evidence/purchase-assembly-user-review-current.md",
+    "control_baseline_scope_correction": {
+      "at": "2026-10-27T17:26:55.132383+08:00",
+      "status": "CORRECTION_OF_UNAUTHORIZED_EXTRA_CONTROL_PURCHASE_NOT_PRODUCT_ACCEPTANCE",
+      "withdrawn": "13buttons,8additionalphysicalharmonicbuttons,andsecond165",
+      "actual_schematic_baseline": {
+        "preset_buttons": 4,
+        "EDIT_buttons": 1,
+        "encoder_with_push": 1,
+        "LV165": 1,
+        "LV595": 1,
+        "harmonic_zones_on_J10_touchscreen": 8
+      },
+      "U9_pin_nets": [
+        {
+          "pad": "1",
+          "net": "INPUT_LOAD_N"
+        },
+        {
+          "pad": "2",
+          "net": "BUS_SCK"
+        },
+        {
+          "pad": "3",
+          "net": "PRESET1"
+        },
+        {
+          "pad": "4",
+          "net": "PRESET2"
+        },
+        {
+          "pad": "5",
+          "net": "PRESET3"
+        },
+        {
+          "pad": "6",
+          "net": "EDIT"
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "14",
+          "net": "PRESET0"
+        },
+        {
+          "pad": "13",
+          "net": "ENC_PUSH"
+        },
+        {
+          "pad": "12",
+          "net": "ENC_B"
+        },
+        {
+          "pad": "11",
+          "net": "ENC_A"
+        },
+        {
+          "pad": "10",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": "KEY_QH"
+        }
+      ],
+      "U8_pin_nets": [
+        {
+          "pad": "1",
+          "net": "ADDR1"
+        },
+        {
+          "pad": "2",
+          "net": "ADDR2"
+        },
+        {
+          "pad": "3",
+          "net": "ADDR3"
+        },
+        {
+          "pad": "4",
+          "net": "MUX_DISABLE"
+        },
+        {
+          "pad": "5",
+          "net": "RC_DRIVE"
+        },
+        {
+          "pad": "6",
+          "net": "LCD_RESET_N"
+        },
+        {
+          "pad": "7",
+          "net": "TP_RESET_N"
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "15",
+          "net": "ADDR0"
+        },
+        {
+          "pad": "14",
+          "net": "BUS_MOSI"
+        },
+        {
+          "pad": "13",
+          "net": "GND"
+        },
+        {
+          "pad": "12",
+          "net": "SCAN_LATCH"
+        },
+        {
+          "pad": "11",
+          "net": "BUS_SCK"
+        },
+        {
+          "pad": "10",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        }
+      ],
+      "spec_file": "D:\\FPGA-Project\\maintenance-20261026\\repo\\project\\PRODUCT-SPEC.md",
+      "spec_sha256": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4",
+      "original_schematic_checks": [
+        {
+          "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\02_Shift_and_memory.esch2",
+          "sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+          "unchanged": true
+        },
+        {
+          "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\06_Controls.esch2",
+          "sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+          "unchanged": true
+        }
+      ],
+      "independent_edit_operations_contract": "STILL_PENDING; no automatic press reuse/key removal/newGPIO",
+      "readable_report": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-baseline-scope-review-current.md",
+      "no_CAD_RTL_changes": true,
+      "whole_purchase_ready": false,
+      "whole700budget_closed": false,
+      "reference_scope_approval": true
+    },
+    "current_readiness": "module-plan/evidence/module-readiness-current.json",
+    "edit_three_action_proposal": "module-plan/evidence/edit-control-interface-current.md",
+    "Nano_TF_scope": "module-plan/evidence/Nano-TF-storage-scope-current.md",
+    "sensor_early_snapshot_schematic": "module-plan/sensor14bank/Sensor14_frontend.esch2",
+    "sensor_early_snapshot_PCB": "module-plan/sensor14bank/PCB2.epcb2",
+    "sensor_stage_historical": "91TopCu/36Groundvias;all14internal analog nets closed.43newsignal segments actualphysical/fullwidthBottomreference pass;47otherseedCu/35otherGroundvias andrules/PADmaps exact. OneC3Groundvia/line revised.56connectionerrors21signalnetsremain;native refill-save-close-reopen otherDRC0. Wholeelectrode ordering/quote/purchase/fab pending."
+  },
+  "working_project_scope": "Accepted951 PCB1 and14 originalschematics preserved. Same working project now contains independent Sensor14Bank subboard; its working metadata differs intentionally. Original native/ folder stays accepted baseline.",
+  "latest_sensor35_decision": {
+    "evidence": "project/reviews/20261027-hardware-consolidation/sensor35-approval.json",
+    "approval": true,
+    "manufacturing_files_verified_after_approval": false,
+    "manufacturing_release": false
+  },
+  "consolidation_status": {
+    "at": "2026-10-27T10:43:17.650190+00:00",
+    "entry": "project/CONSOLIDATION-20261027.md",
+    "published_source_commit": "5354b46d83e0a0c2495469a627e40ce60fdbe12a",
+    "scope": "Published stage backup; no new CAD or physical validation"
+  }
+}

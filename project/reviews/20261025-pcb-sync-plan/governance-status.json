@@ -1,0 +1,87 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "checked_at": "2026-10-25T09:52:11.245297+00:00",
+  "authority": {
+    "remote": "https://github.com/sakuyaShining/FPGA-Music-project-internal.git",
+    "branch": "main"
+  },
+  "review_record": "project/reviews/20261024-engineering-publication/review.json",
+  "review_age_status": "REVIEW_DUE",
+  "scope": "Recorded review and declared producer scope; no automatic functional or manufacturing acceptance",
+  "live_checked": true,
+  "producers": {
+    "fpga": {
+      "observation_age_status": "REVIEW_DUE",
+      "observed_at": "2026-10-23T16:22:04.052521+00:00",
+      "publication_status": "UNMERGED_WIP_WITH_OLDER_RECOVERY_ARCHIVE",
+      "owner": {
+        "thread_id": null,
+        "label": "Independent FPGA session; exact session identity not registered"
+      },
+      "live_status": "UNREVIEWED_DRIFT",
+      "source_archive": "project/versions/latest-design-inputs-20261023.json",
+      "changes": {
+        "added": [
+          "NEXT-STEPS-20261024.md",
+          "PUBLIC-GO-LIVE-PLAN-20261024.md",
+          "REMOTE-AUDIT-20261024.md",
+          "REVIEW-91-SPEC-AND-FS-20261024.md",
+          "UNCOMMITTED-AND-BASELINE-20261024.md"
+        ],
+        "removed": [],
+        "modified": []
+      }
+    },
+    "hardware": {
+      "observation_age_status": "REVIEW_DUE",
+      "observed_at": "2026-10-23T16:22:04.052521+00:00",
+      "publication_status": "LIVE_CONSTRUCTION_NOT_MANUFACTURING_RELEASE",
+      "owner": {
+        "thread_id": "01a15ee5-fa24-7501-8475-ad28a0f08939",
+        "label": "查看 huangyongtao 最新进展"
+      },
+      "live_status": "UNREVIEWED_DRIFT",
+      "source_archive": "project/versions/latest-design-inputs-20261023.json",
+      "changes": {
+        "added": [],
+        "removed": [],
+        "modified": [
+          "AUTONOMOUS-CURRENT.md",
+          "REGIONAL-WORK-IN-PROGRESS.json",
+          "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/README.md",
+          "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-native-NOT-FOR-FAB.zip",
+          "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/construction-state.json"
+        ]
+      }
+    },
+    "host": {
+      "status": "DORMANT_SOURCE",
+      "activation_requires_review": true
+    }
+  },
+  "errors": [
+    "Design review: REVIEW_DUE",
+    "Published entry: UNPUBLISHED_ENTRY",
+    "fpga: REVIEW_DUE",
+    "fpga: UNREVIEWED_DRIFT",
+    "hardware: REVIEW_DUE",
+    "hardware: UNREVIEWED_DRIFT"
+  ],
+  "product_acceptance": false,
+  "implementation_start_authorized": false,
+  "published_entry": {
+    "branch": "main",
+    "remote": "https://github.com/sakuyaShining/FPGA-Music-project-internal.git",
+    "status": "UNPUBLISHED_ENTRY",
+    "remote_commit": "100b35bd93cbde6d604a289d990f208622e94646",
+    "reason": "Working entry differs from committed entry"
+  },
+  "command": [
+    "python",
+    "tools/scripts/design_governance.py",
+    "status",
+    "--remote",
+    "--live"
+  ],
+  "exit_code": 2
+}

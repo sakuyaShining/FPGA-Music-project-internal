@@ -1,0 +1,242 @@
+{
+  "at": "2026-10-27T11:41:19.861516+08:00",
+  "spec_source": "D:\\FPGA-Project\\maintenance-20261026\\repo\\project\\PRODUCT-SPEC.md",
+  "spec_sources": [
+    {
+      "path": "D:\\FPGA-Project\\maintenance-20261026\\repo\\project\\PRODUCT-SPEC.md",
+      "sha256": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4"
+    },
+    {
+      "path": "D:\\FPGA-Project\\wb-sync-20261026\\project\\PRODUCT-SPEC.md",
+      "sha256": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4"
+    },
+    {
+      "path": "D:\\FPGA-Project\\authoritative-20261024\\project\\PRODUCT-SPEC.md",
+      "sha256": "b0dac89cb3269f67824d37bbf72b27c4b20ed7666fd4b1f9f695a78fde6869cf"
+    }
+  ],
+  "version_resolution": "maintenance and wb-sync copies identical; authoritative copy has direct25pitch/C5 decisions and newer product annotations despite older folder name. Requirements12 body used as baseline; user-direct postbaseline authorization controls R12. Do not import old e098/a3 hardware counts as current.",
+  "pitch_decision_sources": [
+    {
+      "path": "D:\\FPGA-Project\\authoritative-20261024\\project\\reviews\\20261024-pitch-endpoints-25\\evidence\\user-decision.json",
+      "sha256": "fc54a567a72d480f2d0b0be2dd53702ed8c8180575d97db175f0a6fb88f0ac5f"
+    },
+    {
+      "path": "D:\\FPGA-Project\\authoritative-20261024\\project\\reviews\\20261024-pitch-endpoints-25\\evidence\\c5-three-electrode.json",
+      "sha256": "a29b266329462791424f2d844a5be887a5051c36190cad8705ce9ed93d03d566"
+    }
+  ],
+  "decision_ID_collision_note": "D-021/D-022 numerical prefixes are reused in separate local lines (pitch vs maintenance windows). Refer full IDs, direct evidence and source SHA; never merge by number alone.",
+  "requirements": [
+    {
+      "id": "R01",
+      "requirement": "Nano20K；共享32组，每组16分量；四槽分层目标",
+      "source_line": 15,
+      "current_plan": "目标保留；完整产品未签收",
+      "scope": "Nano20K、共享32组×16分量、四槽分层目标不改。旧两层限制不能当产品上限，已有四槽隔离候选也不是整机通过。",
+      "remaining": "四槽组合、完整资源/时序、真实物理输入和音频输出共同运行。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R02",
+      "requirement": "两排逐音滑条覆盖两八度，逐指音高表达；独立八度档条",
+      "source_line": 16,
+      "current_plan": "目标保留；物理语义/表情链未闭合",
+      "scope": "84路前端容量保留。已核直接用户记录：25音位，每音位含C5均3电极，75+5八度档+4备用=84；不采用旧26音位示例。",
+      "remaining": "现有row*6+lane只是采集索引双射，尚须明确75+5+4物理用途、25音位连续位置/逐指力度、滑音/颤音/推弦、八度行为及真实标定/串扰。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R03",
+      "requirement": "J10泛音触控屏，分区推子修饰整个和弦，松手保持、RESET平滑恢复",
+      "source_line": 17,
+      "current_plan": "目标保留；采购/驱动整链未签收",
+      "scope": "保留单J10约7英寸电容多点触控泛音屏、整和弦修饰、松手保持和RESET平滑恢复，不换成电脑或位图按键。",
+      "remaining": "完整ER-TFTM070-5V4配置报价/线束、RA8875与FT5316驱动、复位和整机效果验收。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R04",
+      "requirement": "取消J11实体可视化屏；曲谱指引交给J10触控屏",
+      "source_line": 18,
+      "current_plan": "方案遵循；曲谱页面尚未交付",
+      "scope": "不恢复J11实体可视化屏，曲谱指引由J10承接；不因此取消PC可视化。",
+      "remaining": "J10页面切换、曲谱来源/录入及演奏中指引接合。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R05",
+      "requirement": "自定义乐器的频谱/激发、包络与表情响应；四个快捷槽可组合演奏",
+      "source_line": 19,
+      "current_plan": "目标保留；完整编辑/激发未签收",
+      "scope": "频谱/激发、包络/表情响应及四快捷槽组合保留，不因模块化改成固定音色播放器。",
+      "remaining": "完整逐槽激发/参数编辑/试听/组合与实时演奏接合；不把加法合成概括成已完成通用物理建模。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R06",
+      "requirement": "编辑键→选择预设槽→编辑激发方式与音色，独立操作键",
+      "source_line": 20,
+      "current_plan": "目标保留；独立操作接口合同未闭合",
+      "scope": "保留编辑键→选槽→编辑激发和音色、独立操作键。不默认用菜单取代独立键，不引入未批准16键/PCF8575/GPIO表。",
+      "remaining": "按钮/编码器具体预焊实现、全部独立操作分配及逐针合同，与产品编辑流程一致。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R07",
+      "requirement": "正式定义、编辑草稿、运行修饰、在响实例分开；断电保存",
+      "source_line": 21,
+      "current_plan": "目标保留；存储闭环未签收",
+      "scope": "正式定义/编辑草稿/运行修饰/在响实例分离及断电保存保留，双bank仍为原子更新，16词完整性不删。",
+      "remaining": "试听/应用/保存/取消语义，24LC256两字节地址/分页/ACK轮询、提交保护与断电恢复。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R08",
+      "requirement": "录制实际声音；曲谱播放同时现场演奏，同等共享32组；空闲→松键尾音→最早按住音，整音符回收/完整起音",
+      "source_line": 22,
+      "current_plan": "目标保留；录放与曲谱两链未完成接合",
+      "scope": "保留真实声音PCM录制/回放、曲谱播放同时现场演奏；同等共享32组，空闲→松键尾音→最早按住音，整音符回收/完整起音。",
+      "remaining": "TF卡/文件/SDRAM/最终混音/音频事件配对及真实源到分配器；不能用记音符代替录声音，也不自动降两层。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R09",
+      "requirement": "AUX外接有源音箱；用户偏好不装机内喇叭",
+      "source_line": 23,
+      "current_plan": "按原规格AUX方向；物理链未完成",
+      "scope": "AUX接外部有源音箱，尊重不装机内喇叭偏好；独立功放/裸喇叭不是AUX必购。原图功放支路不据此自动删除。",
+      "remaining": "线路DAC到3.5mm TRS的准确转接/面板件、滤波保护、时钟格式/初始化/电平及上电静音；耳机口不冒充线路输出。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R10",
+      "requirement": "无上位机强依赖的核心功能",
+      "source_line": 24,
+      "current_plan": "目标保留；独立整机运行未签收",
+      "scope": "Nano承担核心演奏/编辑/保存，不新增电脑、树莓派或计算MCU依赖；PC可视化/调试仍可选。",
+      "remaining": "脱离电脑后自主启动、DAC/屏/触摸初始化、实体编辑保存及录放完整闭环。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R11",
+      "requirement": "最坏触摸到声音≤10ms目标",
+      "source_line": 25,
+      "current_plan": "目标保留；从未完成整机实测",
+      "scope": "最坏触摸到声音≤10ms目标没有放宽。扫描/滤波/全部通道/共享总线/混音/DAC均计入。",
+      "remaining": "真实84通道、触屏和录放并发最坏延迟测量；电容/面积代理不自动等于真实测力，数字力度阶数不是精度证明。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    },
+    {
+      "id": "R12",
+      "requirement": "完整同版制造/装配，而非零散实验采购",
+      "source_line": 26,
+      "current_plan": "制造形式依后续明确授权调整；完整交付未完成",
+      "scope": "用户10月26日允许不用自制主PCB，改模块/必要简单预焊小板；完整可装整机与功能要求仍保留。不能把原227件功能账直接作废。",
+      "remaining": "模块精确SKU/预焊/数量/接口与唯一采购接线版本；必要自制小板仍需同版原理图/PCB/BOM/CPL/制造装配文件、机械/线束/报价，全部费用≤700并核清远交期。",
+      "full_product_acceptance": false,
+      "function_deletion_authorized": false
+    }
+  ],
+  "registered_source_SHA_recheck": {
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship_owned.v": {
+      "expected": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+      "actual": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_owned_probe.v": {
+      "expected": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+      "actual": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_sensor_probe.v": {
+      "expected": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+      "actual": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_mux_scan.v": {
+      "expected": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+      "actual": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\scan_shift595.v": {
+      "expected": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+      "actual": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_delta_store.v": {
+      "expected": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320",
+      "actual": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_strip_positions.v": {
+      "expected": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+      "actual": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_panel_driver.v": {
+      "expected": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+      "actual": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_spi_byte.v": {
+      "expected": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+      "actual": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_renderer.v": {
+      "expected": "e45ae5bb2bafe8275f995d48a15842c8647ce6fec3e2233b993e972610db67d8",
+      "actual": "e45ae5bb2bafe8275f995d48a15842c8647ce6fec3e2233b993e972610db67d8",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\i2c_master.v": {
+      "expected": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999",
+      "actual": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\constraints\\tdm_ship_owned.cst": {
+      "expected": "b2e997a09a8b3f1d7ac9762fd955b56ca8bc9216b977b1f5d26780d5169690c4",
+      "actual": "b2e997a09a8b3f1d7ac9762fd955b56ca8bc9216b977b1f5d26780d5169690c4",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\build_prod_v5\\board.gprj": {
+      "expected": "f0e9ddb223185c59896ccccc31bb71c7b7e39f5e169b6120ccf38f8ffe40a363",
+      "actual": "f0e9ddb223185c59896ccccc31bb71c7b7e39f5e169b6120ccf38f8ffe40a363",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_top_owned.v": {
+      "expected": "f462384fd64aa42e236234241149ecbc6beeaaa447307a184ff985696fd692fd",
+      "actual": "f462384fd64aa42e236234241149ecbc6beeaaa447307a184ff985696fd692fd",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\audio_clk_en.v": {
+      "expected": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c",
+      "actual": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c",
+      "unchanged": true
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\i2s_tx.v": {
+      "expected": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+      "actual": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+      "unchanged": true
+    }
+  },
+  "registered_source_files_checked": 16,
+  "other_chat_or_unregistered_candidate_latest_state_claimed": false,
+  "main_conclusion": "R01-R11 remain targets, not accepted function-equivalence proof. R12 manufacturing form adjusted by explicit user authority; full coherent assembly still required. R09 already favors AUX/no internal speaker; previous reliance on older61spec was incomplete.",
+  "previous_schedule_scope": "Earlier rough duration ranges are not a complete R01-R12 work breakdown and cannot guarantee all12 requirements orNov4 delivery.",
+  "native_CAD_RTL_build_flash_changed": false,
+  "orders_payments_messages": false,
+  "physical_tests": "UNMEASURED",
+  "complete_purchase_plan": false
+}

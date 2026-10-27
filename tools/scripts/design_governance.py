@@ -17,9 +17,10 @@ ROOT = Path(__file__).resolve().parents[2]
 REMOTE = 'https://github.com/sakuyaShining/FPGA-Music-project-internal.git'
 BRANCH = 'main'
 ENTRY_PATHS = ['.gitattributes', '.github/workflows/project-entry.yml', 'README.md',
-               'AGENTS.md', 'project', 'docs/00-协作/AGENT-BOARD.md',
+               'AGENTS.md', 'project', 'docs/00-鍗忎綔/AGENT-BOARD.md',
                'tools/scripts/project_control.py', 'tools/scripts/design_governance.py',
                'fpga/current', 'hardware/current', 'host/current',
+               'hardware/checkpoints', 'tools/scripts/pcb_checkpoint.py',
                'tools/scripts/engineering.py', 'tools/requirements-engineering-host.txt']
 ENTRY_PATHS += ['tools/scripts/music_profiles.py', 'tools/tests/test_music_profiles.py']
 ENTRY_PATHS += ['experiments/note_resource_20261024']

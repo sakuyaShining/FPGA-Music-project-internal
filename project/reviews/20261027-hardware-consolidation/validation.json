@@ -1,0 +1,87 @@
+{
+  "scope": "Merge and recovery integrity; existing product RTL/CAD not rerun or physically accepted",
+  "checks": [
+    {
+      "name": "full-check-staged",
+      "log": "project/reviews/20261027-hardware-consolidation/validation/full-check-staged.log",
+      "sha256": "e2a40ad52d6c275eee115f6865ec7f50654852c62f8521ae166a2ba2e356b905",
+      "result": {
+        "status": "PASS",
+        "scope": "Full captured content hashes",
+        "snapshots": 22,
+        "inputs": 18277,
+        "unique_verified_blobs": 5845,
+        "current_design": "design-20261024-frame-command-source-candidate",
+        "recovery_archive_files": 586,
+        "recovery_captured_at": "2026-10-23T12:23:42.173413+08:00",
+        "live_workspaces_checked": false,
+        "remote_checked_now": false,
+        "entry_freshness_checked": false,
+        "published_authority": "main",
+        "review_freshness": "NOT_CHECKED",
+        "implementation_start_authorized": false,
+        "errors": [],
+        "product_acceptance": false
+      }
+    },
+    {
+      "name": "tools-tests",
+      "log": "project/reviews/20261027-hardware-consolidation/validation/tools-tests.log",
+      "sha256": "0628b11f335739d7968b9c9316cf5bfa8a89d35d7a14123c26f0315b67406162",
+      "tests": 40,
+      "status": "PASS"
+    },
+    {
+      "name": "checkpoint",
+      "log": "project/reviews/20261027-hardware-consolidation/validation/checkpoint.log",
+      "sha256": "b78c93603ace3ed0f8eb5dc4751f2897c1637f5bcf597b26986ee2316a50d873",
+      "result": {
+        "status": "PASS",
+        "files": 73,
+        "files_in_tree": 60,
+        "external_declared": 13,
+        "external_verified_local": 13,
+        "external_absent_local": 0,
+        "recovery_archive": "verified_local",
+        "source_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+        "archive_sha256": "677167e4e76e2ba750bf937a01487beffba1443219469207b5757d1fb18da8bf",
+        "git_ref": "HEAD",
+        "restored_archive": null,
+        "scope": "In-tree payload bytes and Git blob identity verified; release-hosted blobs pinned by sha256 and verified byte-for-byte when present locally; no new CAD/DRC/physical acceptance",
+        "manufacturing_release": false
+      }
+    },
+    {
+      "name": "resource-tests",
+      "log": "project/reviews/20261027-hardware-consolidation/validation/resource-tests.log",
+      "sha256": "a387bef88a2e883b3b119aba98595f1689d552506881c00b9e00b126e43ce077",
+      "tests": 8,
+      "status": "PASS"
+    },
+    {
+      "name": "audio-tests",
+      "log": "project/reviews/20261027-hardware-consolidation/validation/audio-tests.log",
+      "sha256": "ca9f91bdbb320e5be4d0922ec778aa561c08e2653c826b5e3bd465c22582a7c9",
+      "tests": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "renderer-tests",
+      "log": "project/reviews/20261027-hardware-consolidation/validation/renderer-tests.log",
+      "sha256": "396b27bfff9d478273b8162570856ea201ef3c567bc0751c70fa22e6fac3f311",
+      "tests": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "input-tests",
+      "log": "project/reviews/20261027-hardware-consolidation/validation/input-tests.log",
+      "sha256": "e3138795689ca9a5dacb406c900a0c9e38c066fe66b82fd0484bdead58927f59",
+      "tests": 47,
+      "status": "PASS"
+    }
+  ],
+  "initial_failure": "Full-check initially rejected untracked new review files; staging fixed it. Original output retained.",
+  "total_unit_tests": 107,
+  "product_acceptance": false,
+  "manufacturing_release": false
+}

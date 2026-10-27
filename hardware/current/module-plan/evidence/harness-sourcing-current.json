@@ -1,0 +1,84 @@
+{
+  "at": "2026-10-27T17:26:55.132383+08:00",
+  "status": "EXACT_SELLER_VARIANTS_FOUND_NOT_FINAL_HARNESS_ACCEPTANCE",
+  "source": "https://www.56dz.com/p/2839.html",
+  "source_file": "harness-56dz2839-current.html",
+  "source_SHA": "174be9bd00841371308ac554d5095836b7bd834c26d30b42e8bd74bc0d02b4bb",
+  "variants": [
+    {
+      "name": "母对母（20CM）",
+      "type": "型号",
+      "sku_price": "1.8",
+      "sku_stock": 9996,
+      "sku_weight": "",
+      "sku_code": "XC-56-37"
+    },
+    {
+      "name": "公对公（20CM）",
+      "type": "型号",
+      "sku_price": "2.8",
+      "sku_stock": 9996,
+      "sku_weight": "",
+      "sku_code": "XC-56-35"
+    },
+    {
+      "name": "公对母（20CM）",
+      "type": "型号",
+      "sku_price": "2.3",
+      "sku_stock": 9996,
+      "sku_weight": "",
+      "sku_code": "XC-56-36"
+    },
+    {
+      "name": "母对母（30CM）",
+      "type": "型号",
+      "sku_price": "2.8",
+      "sku_stock": 9997,
+      "sku_weight": "",
+      "sku_code": "XC-56-40"
+    },
+    {
+      "name": "公对公（30CM）",
+      "type": "型号",
+      "sku_price": "3.8",
+      "sku_stock": 9997,
+      "sku_weight": "",
+      "sku_code": "XC-56-42"
+    },
+    {
+      "name": "公对母（30CM）",
+      "type": "型号",
+      "sku_price": "3.3",
+      "sku_stock": 9997,
+      "sku_weight": "",
+      "sku_code": "XC-56-41"
+    }
+  ],
+  "seller_pack_conductors": 40,
+  "provisional_sensor_J2_need": 96,
+  "if_20cm_geometry_and_connector_fit_verified": {
+    "SKU": "XC-56-37",
+    "configuration": "female-female20cm40conductors",
+    "pack_quantity": 3,
+    "buy_conductors": 120,
+    "spare_after_J2": 24,
+    "listed_parts_CNY": "5.40"
+  },
+  "not_closed": [
+    "2.54mm contact dimensions absent from seller text; fit proof pending",
+    "wire gauge, contact resistance and power branch rating unspecified",
+    "20cm length and routing/parasitic budget need actual panel geometry",
+    "Qingyuan freight/dispatch not quoted; aggregate stock not delivery promise",
+    "Not complete sensor electrode/screen/control/power harness"
+  ],
+  "DFRobot_FIT0030_reference": {
+    "source": "https://www.dfrobot.com.cn/goods-366.html",
+    "configuration": "10female-female20cmwires",
+    "search_index_listed_CNY": "6.00",
+    "search_index_current_limit_mA_lt": 1000,
+    "direct_web_open": "timeout; no repeated retry or stock guarantee"
+  },
+  "search_165_595_result": "No qualified preweld compatible3V3 module found in this bounded query; unrelated schematics/community examples rejected. Not a proof that market has none.",
+  "requests_attempt": "requests module unavailable before network; urllib publicGET succeeded200 once",
+  "order_or_outbound_message": false
+}

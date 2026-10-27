@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-23T19:16:05.608506+08:00",
+  "evidence": {
+    "registered_design": "D:\\FPGA-Project\\current-design\\project\\DESIGN-CURRENT.md",
+    "sha256": "571eb4b04c9da4f2059dd1531ad9cf04efd3f4a26a5e68ba000ff9aa40ddfea1",
+    "scope": "Read-only current-design registration. No messages, no edits to the FPGA chat or source."
+  },
+  "retained_interface": {
+    "J10": "Right-hand harmonic touch/display, RA8875/FT5316 module candidate",
+    "BUS_MOSI": "Actual whole copper net closed in hardware e098; this is not firmware acceptance.",
+    "product_top": "Registered tdm_ship_owned defaults RIGHT_TIMBRE=0; registered text says external controls are tied constants and complete84MUX/J10 product integration not accepted.",
+    "unconfirmed": [
+      "Final BUS_SCK product frequency and startup sequence",
+      "Tang Nano20K bank voltage and final CST IO drive/slew against the actual board",
+      "SPI read timing/return path and module startup/reset behavior",
+      "FT5316 delivered revision/driver compatibility and live touch functions"
+    ]
+  },
+  "module_reset_inference": "Module manual marks LCD pin11 NC and onboard RC reset. IC manufacturer supports REG01h bit0 software reset1->0 once SPI works. Thus a proposed harness can reserve J10.7 instead of falsely promising LCD hardware reset. Cold boot, brownout and bus-hang recovery remain hardware/driver test gates.",
+  "no_product_rtl_modified": true,
+  "physical_tests": "UNMEASURED",
+  "whole_product_ready": false
+}

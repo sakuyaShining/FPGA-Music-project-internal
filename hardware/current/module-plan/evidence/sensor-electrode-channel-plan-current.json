@@ -1,0 +1,1396 @@
+{
+  "at": "2026-10-27T11:06:48.325656+08:00",
+  "state": "OFFLINE_CHANNEL_PLAN_ONLY_NO_NATIVE_NET_CHANGES",
+  "source_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+  "native_files_checked": 40,
+  "native_files_unchanged": true,
+  "original_pad_count": 150,
+  "source_evidence": {
+    "url": "https://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf",
+    "file": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\TI-TPD4E02B04-SLVSD85B.pdf",
+    "sha256": "73d849fe5d7c9a57bebdb08f4a70f09f818edb5f14b9f56241bf87aea6b56ef0",
+    "pages": [
+      3,
+      15
+    ],
+    "document": "SLVSD85B, July2016",
+    "reviewed_pin_table_image": "TPD4E02B04-pin-table-page3-current.png"
+  },
+  "NC_interpretation": "Pins6/7/9/10 internally NC. Optional external straight-through routing allowed. No internal 1-to10/2-to9/4-to7/5-to6 connection exists or is assumed.",
+  "proposed_pad_net_changes": [
+    {
+      "ref": "R3",
+      "pin": "1",
+      "old": "L0_E00",
+      "proposed": "L0_E07",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R4",
+      "pin": "1",
+      "old": "L0_E01",
+      "proposed": "L0_E06",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R5",
+      "pin": "1",
+      "old": "L0_E02",
+      "proposed": "L0_E05",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R6",
+      "pin": "1",
+      "old": "L0_E03",
+      "proposed": "L0_E04",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R7",
+      "pin": "1",
+      "old": "L0_E04",
+      "proposed": "L0_E03",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R8",
+      "pin": "1",
+      "old": "L0_E05",
+      "proposed": "L0_E02",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R9",
+      "pin": "1",
+      "old": "L0_E06",
+      "proposed": "L0_E01",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "R10",
+      "pin": "1",
+      "old": "L0_E07",
+      "proposed": "L0_E00",
+      "reason": "Reverse only left8 external input assignment; M00..07 remain unchanged"
+    },
+    {
+      "ref": "D1",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E00",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D1",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E01",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D1",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E02",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D1",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E03",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D2",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E04",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D2",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E05",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D2",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E06",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D2",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E07",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D3",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E08",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D3",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E09",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D3",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E10",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D3",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E11",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D4",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E12",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    },
+    {
+      "ref": "D4",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E13",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge"
+    }
+  ],
+  "proposed_pad_net_change_count": 22,
+  "proposed_empty_NC_assignments": 14,
+  "proposed_existing_input_net_changes": 8,
+  "left8_order_inversions_before": 28,
+  "left8_order_inversions_after": 0,
+  "candidate14_ESD_external_bridge_checks": [
+    {
+      "net": "L0_E00",
+      "start": [
+        7.4000004399999995,
+        38.739998719999996
+      ],
+      "end": [
+        8.19999884,
+        38.739998719999996
+      ],
+      "pads": [
+        "D1.1",
+        "D1.10"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.15247619999999776,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E01",
+      "start": [
+        7.4000004399999995,
+        38.23987272
+      ],
+      "end": [
+        8.19999884,
+        38.23987272
+      ],
+      "pads": [
+        "D1.2",
+        "D1.9"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.05222240000000758,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E02",
+      "start": [
+        7.4000004399999995,
+        37.239874719999996
+      ],
+      "end": [
+        8.19999884,
+        37.239874719999996
+      ],
+      "pads": [
+        "D1.4",
+        "D1.7"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.05247640000000575,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E03",
+      "start": [
+        7.4000004399999995,
+        36.74000272
+      ],
+      "end": [
+        8.19999884,
+        36.74000272
+      ],
+      "pads": [
+        "D1.5",
+        "D1.6"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.15222219999999956,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E04",
+      "start": [
+        7.4000004399999995,
+        28.57999872
+      ],
+      "end": [
+        8.19999884,
+        28.57999872
+      ],
+      "pads": [
+        "D2.1",
+        "D2.10"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.1524761999999942,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E05",
+      "start": [
+        7.4000004399999995,
+        28.07987272
+      ],
+      "end": [
+        8.19999884,
+        28.07987272
+      ],
+      "pads": [
+        "D2.2",
+        "D2.9"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.052222400000000446,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E06",
+      "start": [
+        7.4000004399999995,
+        27.07987472
+      ],
+      "end": [
+        8.19999884,
+        27.07987472
+      ],
+      "pads": [
+        "D2.4",
+        "D2.7"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.0524764000000022,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E07",
+      "start": [
+        7.4000004399999995,
+        26.580002720000003
+      ],
+      "end": [
+        8.19999884,
+        26.580002720000003
+      ],
+      "pads": [
+        "D2.5",
+        "D2.6"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.15222219999999595,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E08",
+      "start": [
+        7.4000004399999995,
+        18.41999872
+      ],
+      "end": [
+        8.19999884,
+        18.41999872
+      ],
+      "pads": [
+        "D3.1",
+        "D3.10"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.15247619999999776,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E09",
+      "start": [
+        7.4000004399999995,
+        17.91987272
+      ],
+      "end": [
+        8.19999884,
+        17.91987272
+      ],
+      "pads": [
+        "D3.2",
+        "D3.9"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.05222239999999692,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E10",
+      "start": [
+        7.4000004399999995,
+        16.91987472
+      ],
+      "end": [
+        8.19999884,
+        16.91987472
+      ],
+      "pads": [
+        "D3.4",
+        "D3.7"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.052476399999998674,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E11",
+      "start": [
+        7.4000004399999995,
+        16.42000272
+      ],
+      "end": [
+        8.19999884,
+        16.42000272
+      ],
+      "pads": [
+        "D3.5",
+        "D3.6"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.15222219999999595,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E12",
+      "start": [
+        7.4000004399999995,
+        10.79999872
+      ],
+      "end": [
+        8.19999884,
+        10.79999872
+      ],
+      "pads": [
+        "D4.1",
+        "D4.10"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.15247619999999953,
+      "full_width_reference_missing_mm2": 0.0
+    },
+    {
+      "net": "L0_E13",
+      "start": [
+        7.4000004399999995,
+        10.29987272
+      ],
+      "end": [
+        8.19999884,
+        10.29987272
+      ],
+      "pads": [
+        "D4.2",
+        "D4.9"
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_clearance_extra_mm": 0.052222400000000446,
+      "full_width_reference_missing_mm2": 0.0
+    }
+  ],
+  "candidate_bridge_physical_and_full_width_reference_pass": true,
+  "violations": [],
+  "full84_mapping": [
+    {
+      "lane": 0,
+      "physical_row": 0,
+      "logical_index": 0,
+      "board": "BANK0",
+      "J1_pin": 8,
+      "electrode_net": "L0_E07",
+      "series_resistor": "R3",
+      "MUX_channel": 0,
+      "internal_net": "L0_M00"
+    },
+    {
+      "lane": 0,
+      "physical_row": 1,
+      "logical_index": 6,
+      "board": "BANK0",
+      "J1_pin": 7,
+      "electrode_net": "L0_E06",
+      "series_resistor": "R4",
+      "MUX_channel": 1,
+      "internal_net": "L0_M01"
+    },
+    {
+      "lane": 0,
+      "physical_row": 2,
+      "logical_index": 12,
+      "board": "BANK0",
+      "J1_pin": 6,
+      "electrode_net": "L0_E05",
+      "series_resistor": "R5",
+      "MUX_channel": 2,
+      "internal_net": "L0_M02"
+    },
+    {
+      "lane": 0,
+      "physical_row": 3,
+      "logical_index": 18,
+      "board": "BANK0",
+      "J1_pin": 5,
+      "electrode_net": "L0_E04",
+      "series_resistor": "R6",
+      "MUX_channel": 3,
+      "internal_net": "L0_M03"
+    },
+    {
+      "lane": 0,
+      "physical_row": 4,
+      "logical_index": 24,
+      "board": "BANK0",
+      "J1_pin": 4,
+      "electrode_net": "L0_E03",
+      "series_resistor": "R7",
+      "MUX_channel": 4,
+      "internal_net": "L0_M04"
+    },
+    {
+      "lane": 0,
+      "physical_row": 5,
+      "logical_index": 30,
+      "board": "BANK0",
+      "J1_pin": 3,
+      "electrode_net": "L0_E02",
+      "series_resistor": "R8",
+      "MUX_channel": 5,
+      "internal_net": "L0_M05"
+    },
+    {
+      "lane": 0,
+      "physical_row": 6,
+      "logical_index": 36,
+      "board": "BANK0",
+      "J1_pin": 2,
+      "electrode_net": "L0_E01",
+      "series_resistor": "R9",
+      "MUX_channel": 6,
+      "internal_net": "L0_M06"
+    },
+    {
+      "lane": 0,
+      "physical_row": 7,
+      "logical_index": 42,
+      "board": "BANK0",
+      "J1_pin": 1,
+      "electrode_net": "L0_E00",
+      "series_resistor": "R10",
+      "MUX_channel": 7,
+      "internal_net": "L0_M07"
+    },
+    {
+      "lane": 0,
+      "physical_row": 8,
+      "logical_index": 48,
+      "board": "BANK0",
+      "J1_pin": 9,
+      "electrode_net": "L0_E08",
+      "series_resistor": "R11",
+      "MUX_channel": 8,
+      "internal_net": "L0_M08"
+    },
+    {
+      "lane": 0,
+      "physical_row": 9,
+      "logical_index": 54,
+      "board": "BANK0",
+      "J1_pin": 10,
+      "electrode_net": "L0_E09",
+      "series_resistor": "R12",
+      "MUX_channel": 9,
+      "internal_net": "L0_M09"
+    },
+    {
+      "lane": 0,
+      "physical_row": 10,
+      "logical_index": 60,
+      "board": "BANK0",
+      "J1_pin": 11,
+      "electrode_net": "L0_E10",
+      "series_resistor": "R13",
+      "MUX_channel": 10,
+      "internal_net": "L0_M10"
+    },
+    {
+      "lane": 0,
+      "physical_row": 11,
+      "logical_index": 66,
+      "board": "BANK0",
+      "J1_pin": 12,
+      "electrode_net": "L0_E11",
+      "series_resistor": "R14",
+      "MUX_channel": 11,
+      "internal_net": "L0_M11"
+    },
+    {
+      "lane": 0,
+      "physical_row": 12,
+      "logical_index": 72,
+      "board": "BANK0",
+      "J1_pin": 13,
+      "electrode_net": "L0_E12",
+      "series_resistor": "R15",
+      "MUX_channel": 12,
+      "internal_net": "L0_M12"
+    },
+    {
+      "lane": 0,
+      "physical_row": 13,
+      "logical_index": 78,
+      "board": "BANK0",
+      "J1_pin": 14,
+      "electrode_net": "L0_E13",
+      "series_resistor": "R16",
+      "MUX_channel": 13,
+      "internal_net": "L0_M13"
+    },
+    {
+      "lane": 1,
+      "physical_row": 0,
+      "logical_index": 1,
+      "board": "BANK1",
+      "J1_pin": 8,
+      "electrode_net": "L0_E07",
+      "series_resistor": "R3",
+      "MUX_channel": 0,
+      "internal_net": "L0_M00"
+    },
+    {
+      "lane": 1,
+      "physical_row": 1,
+      "logical_index": 7,
+      "board": "BANK1",
+      "J1_pin": 7,
+      "electrode_net": "L0_E06",
+      "series_resistor": "R4",
+      "MUX_channel": 1,
+      "internal_net": "L0_M01"
+    },
+    {
+      "lane": 1,
+      "physical_row": 2,
+      "logical_index": 13,
+      "board": "BANK1",
+      "J1_pin": 6,
+      "electrode_net": "L0_E05",
+      "series_resistor": "R5",
+      "MUX_channel": 2,
+      "internal_net": "L0_M02"
+    },
+    {
+      "lane": 1,
+      "physical_row": 3,
+      "logical_index": 19,
+      "board": "BANK1",
+      "J1_pin": 5,
+      "electrode_net": "L0_E04",
+      "series_resistor": "R6",
+      "MUX_channel": 3,
+      "internal_net": "L0_M03"
+    },
+    {
+      "lane": 1,
+      "physical_row": 4,
+      "logical_index": 25,
+      "board": "BANK1",
+      "J1_pin": 4,
+      "electrode_net": "L0_E03",
+      "series_resistor": "R7",
+      "MUX_channel": 4,
+      "internal_net": "L0_M04"
+    },
+    {
+      "lane": 1,
+      "physical_row": 5,
+      "logical_index": 31,
+      "board": "BANK1",
+      "J1_pin": 3,
+      "electrode_net": "L0_E02",
+      "series_resistor": "R8",
+      "MUX_channel": 5,
+      "internal_net": "L0_M05"
+    },
+    {
+      "lane": 1,
+      "physical_row": 6,
+      "logical_index": 37,
+      "board": "BANK1",
+      "J1_pin": 2,
+      "electrode_net": "L0_E01",
+      "series_resistor": "R9",
+      "MUX_channel": 6,
+      "internal_net": "L0_M06"
+    },
+    {
+      "lane": 1,
+      "physical_row": 7,
+      "logical_index": 43,
+      "board": "BANK1",
+      "J1_pin": 1,
+      "electrode_net": "L0_E00",
+      "series_resistor": "R10",
+      "MUX_channel": 7,
+      "internal_net": "L0_M07"
+    },
+    {
+      "lane": 1,
+      "physical_row": 8,
+      "logical_index": 49,
+      "board": "BANK1",
+      "J1_pin": 9,
+      "electrode_net": "L0_E08",
+      "series_resistor": "R11",
+      "MUX_channel": 8,
+      "internal_net": "L0_M08"
+    },
+    {
+      "lane": 1,
+      "physical_row": 9,
+      "logical_index": 55,
+      "board": "BANK1",
+      "J1_pin": 10,
+      "electrode_net": "L0_E09",
+      "series_resistor": "R12",
+      "MUX_channel": 9,
+      "internal_net": "L0_M09"
+    },
+    {
+      "lane": 1,
+      "physical_row": 10,
+      "logical_index": 61,
+      "board": "BANK1",
+      "J1_pin": 11,
+      "electrode_net": "L0_E10",
+      "series_resistor": "R13",
+      "MUX_channel": 10,
+      "internal_net": "L0_M10"
+    },
+    {
+      "lane": 1,
+      "physical_row": 11,
+      "logical_index": 67,
+      "board": "BANK1",
+      "J1_pin": 12,
+      "electrode_net": "L0_E11",
+      "series_resistor": "R14",
+      "MUX_channel": 11,
+      "internal_net": "L0_M11"
+    },
+    {
+      "lane": 1,
+      "physical_row": 12,
+      "logical_index": 73,
+      "board": "BANK1",
+      "J1_pin": 13,
+      "electrode_net": "L0_E12",
+      "series_resistor": "R15",
+      "MUX_channel": 12,
+      "internal_net": "L0_M12"
+    },
+    {
+      "lane": 1,
+      "physical_row": 13,
+      "logical_index": 79,
+      "board": "BANK1",
+      "J1_pin": 14,
+      "electrode_net": "L0_E13",
+      "series_resistor": "R16",
+      "MUX_channel": 13,
+      "internal_net": "L0_M13"
+    },
+    {
+      "lane": 2,
+      "physical_row": 0,
+      "logical_index": 2,
+      "board": "BANK2",
+      "J1_pin": 8,
+      "electrode_net": "L0_E07",
+      "series_resistor": "R3",
+      "MUX_channel": 0,
+      "internal_net": "L0_M00"
+    },
+    {
+      "lane": 2,
+      "physical_row": 1,
+      "logical_index": 8,
+      "board": "BANK2",
+      "J1_pin": 7,
+      "electrode_net": "L0_E06",
+      "series_resistor": "R4",
+      "MUX_channel": 1,
+      "internal_net": "L0_M01"
+    },
+    {
+      "lane": 2,
+      "physical_row": 2,
+      "logical_index": 14,
+      "board": "BANK2",
+      "J1_pin": 6,
+      "electrode_net": "L0_E05",
+      "series_resistor": "R5",
+      "MUX_channel": 2,
+      "internal_net": "L0_M02"
+    },
+    {
+      "lane": 2,
+      "physical_row": 3,
+      "logical_index": 20,
+      "board": "BANK2",
+      "J1_pin": 5,
+      "electrode_net": "L0_E04",
+      "series_resistor": "R6",
+      "MUX_channel": 3,
+      "internal_net": "L0_M03"
+    },
+    {
+      "lane": 2,
+      "physical_row": 4,
+      "logical_index": 26,
+      "board": "BANK2",
+      "J1_pin": 4,
+      "electrode_net": "L0_E03",
+      "series_resistor": "R7",
+      "MUX_channel": 4,
+      "internal_net": "L0_M04"
+    },
+    {
+      "lane": 2,
+      "physical_row": 5,
+      "logical_index": 32,
+      "board": "BANK2",
+      "J1_pin": 3,
+      "electrode_net": "L0_E02",
+      "series_resistor": "R8",
+      "MUX_channel": 5,
+      "internal_net": "L0_M05"
+    },
+    {
+      "lane": 2,
+      "physical_row": 6,
+      "logical_index": 38,
+      "board": "BANK2",
+      "J1_pin": 2,
+      "electrode_net": "L0_E01",
+      "series_resistor": "R9",
+      "MUX_channel": 6,
+      "internal_net": "L0_M06"
+    },
+    {
+      "lane": 2,
+      "physical_row": 7,
+      "logical_index": 44,
+      "board": "BANK2",
+      "J1_pin": 1,
+      "electrode_net": "L0_E00",
+      "series_resistor": "R10",
+      "MUX_channel": 7,
+      "internal_net": "L0_M07"
+    },
+    {
+      "lane": 2,
+      "physical_row": 8,
+      "logical_index": 50,
+      "board": "BANK2",
+      "J1_pin": 9,
+      "electrode_net": "L0_E08",
+      "series_resistor": "R11",
+      "MUX_channel": 8,
+      "internal_net": "L0_M08"
+    },
+    {
+      "lane": 2,
+      "physical_row": 9,
+      "logical_index": 56,
+      "board": "BANK2",
+      "J1_pin": 10,
+      "electrode_net": "L0_E09",
+      "series_resistor": "R12",
+      "MUX_channel": 9,
+      "internal_net": "L0_M09"
+    },
+    {
+      "lane": 2,
+      "physical_row": 10,
+      "logical_index": 62,
+      "board": "BANK2",
+      "J1_pin": 11,
+      "electrode_net": "L0_E10",
+      "series_resistor": "R13",
+      "MUX_channel": 10,
+      "internal_net": "L0_M10"
+    },
+    {
+      "lane": 2,
+      "physical_row": 11,
+      "logical_index": 68,
+      "board": "BANK2",
+      "J1_pin": 12,
+      "electrode_net": "L0_E11",
+      "series_resistor": "R14",
+      "MUX_channel": 11,
+      "internal_net": "L0_M11"
+    },
+    {
+      "lane": 2,
+      "physical_row": 12,
+      "logical_index": 74,
+      "board": "BANK2",
+      "J1_pin": 13,
+      "electrode_net": "L0_E12",
+      "series_resistor": "R15",
+      "MUX_channel": 12,
+      "internal_net": "L0_M12"
+    },
+    {
+      "lane": 2,
+      "physical_row": 13,
+      "logical_index": 80,
+      "board": "BANK2",
+      "J1_pin": 14,
+      "electrode_net": "L0_E13",
+      "series_resistor": "R16",
+      "MUX_channel": 13,
+      "internal_net": "L0_M13"
+    },
+    {
+      "lane": 3,
+      "physical_row": 0,
+      "logical_index": 3,
+      "board": "BANK3",
+      "J1_pin": 8,
+      "electrode_net": "L0_E07",
+      "series_resistor": "R3",
+      "MUX_channel": 0,
+      "internal_net": "L0_M00"
+    },
+    {
+      "lane": 3,
+      "physical_row": 1,
+      "logical_index": 9,
+      "board": "BANK3",
+      "J1_pin": 7,
+      "electrode_net": "L0_E06",
+      "series_resistor": "R4",
+      "MUX_channel": 1,
+      "internal_net": "L0_M01"
+    },
+    {
+      "lane": 3,
+      "physical_row": 2,
+      "logical_index": 15,
+      "board": "BANK3",
+      "J1_pin": 6,
+      "electrode_net": "L0_E05",
+      "series_resistor": "R5",
+      "MUX_channel": 2,
+      "internal_net": "L0_M02"
+    },
+    {
+      "lane": 3,
+      "physical_row": 3,
+      "logical_index": 21,
+      "board": "BANK3",
+      "J1_pin": 5,
+      "electrode_net": "L0_E04",
+      "series_resistor": "R6",
+      "MUX_channel": 3,
+      "internal_net": "L0_M03"
+    },
+    {
+      "lane": 3,
+      "physical_row": 4,
+      "logical_index": 27,
+      "board": "BANK3",
+      "J1_pin": 4,
+      "electrode_net": "L0_E03",
+      "series_resistor": "R7",
+      "MUX_channel": 4,
+      "internal_net": "L0_M04"
+    },
+    {
+      "lane": 3,
+      "physical_row": 5,
+      "logical_index": 33,
+      "board": "BANK3",
+      "J1_pin": 3,
+      "electrode_net": "L0_E02",
+      "series_resistor": "R8",
+      "MUX_channel": 5,
+      "internal_net": "L0_M05"
+    },
+    {
+      "lane": 3,
+      "physical_row": 6,
+      "logical_index": 39,
+      "board": "BANK3",
+      "J1_pin": 2,
+      "electrode_net": "L0_E01",
+      "series_resistor": "R9",
+      "MUX_channel": 6,
+      "internal_net": "L0_M06"
+    },
+    {
+      "lane": 3,
+      "physical_row": 7,
+      "logical_index": 45,
+      "board": "BANK3",
+      "J1_pin": 1,
+      "electrode_net": "L0_E00",
+      "series_resistor": "R10",
+      "MUX_channel": 7,
+      "internal_net": "L0_M07"
+    },
+    {
+      "lane": 3,
+      "physical_row": 8,
+      "logical_index": 51,
+      "board": "BANK3",
+      "J1_pin": 9,
+      "electrode_net": "L0_E08",
+      "series_resistor": "R11",
+      "MUX_channel": 8,
+      "internal_net": "L0_M08"
+    },
+    {
+      "lane": 3,
+      "physical_row": 9,
+      "logical_index": 57,
+      "board": "BANK3",
+      "J1_pin": 10,
+      "electrode_net": "L0_E09",
+      "series_resistor": "R12",
+      "MUX_channel": 9,
+      "internal_net": "L0_M09"
+    },
+    {
+      "lane": 3,
+      "physical_row": 10,
+      "logical_index": 63,
+      "board": "BANK3",
+      "J1_pin": 11,
+      "electrode_net": "L0_E10",
+      "series_resistor": "R13",
+      "MUX_channel": 10,
+      "internal_net": "L0_M10"
+    },
+    {
+      "lane": 3,
+      "physical_row": 11,
+      "logical_index": 69,
+      "board": "BANK3",
+      "J1_pin": 12,
+      "electrode_net": "L0_E11",
+      "series_resistor": "R14",
+      "MUX_channel": 11,
+      "internal_net": "L0_M11"
+    },
+    {
+      "lane": 3,
+      "physical_row": 12,
+      "logical_index": 75,
+      "board": "BANK3",
+      "J1_pin": 13,
+      "electrode_net": "L0_E12",
+      "series_resistor": "R15",
+      "MUX_channel": 12,
+      "internal_net": "L0_M12"
+    },
+    {
+      "lane": 3,
+      "physical_row": 13,
+      "logical_index": 81,
+      "board": "BANK3",
+      "J1_pin": 14,
+      "electrode_net": "L0_E13",
+      "series_resistor": "R16",
+      "MUX_channel": 13,
+      "internal_net": "L0_M13"
+    },
+    {
+      "lane": 4,
+      "physical_row": 0,
+      "logical_index": 4,
+      "board": "BANK4",
+      "J1_pin": 8,
+      "electrode_net": "L0_E07",
+      "series_resistor": "R3",
+      "MUX_channel": 0,
+      "internal_net": "L0_M00"
+    },
+    {
+      "lane": 4,
+      "physical_row": 1,
+      "logical_index": 10,
+      "board": "BANK4",
+      "J1_pin": 7,
+      "electrode_net": "L0_E06",
+      "series_resistor": "R4",
+      "MUX_channel": 1,
+      "internal_net": "L0_M01"
+    },
+    {
+      "lane": 4,
+      "physical_row": 2,
+      "logical_index": 16,
+      "board": "BANK4",
+      "J1_pin": 6,
+      "electrode_net": "L0_E05",
+      "series_resistor": "R5",
+      "MUX_channel": 2,
+      "internal_net": "L0_M02"
+    },
+    {
+      "lane": 4,
+      "physical_row": 3,
+      "logical_index": 22,
+      "board": "BANK4",
+      "J1_pin": 5,
+      "electrode_net": "L0_E04",
+      "series_resistor": "R6",
+      "MUX_channel": 3,
+      "internal_net": "L0_M03"
+    },
+    {
+      "lane": 4,
+      "physical_row": 4,
+      "logical_index": 28,
+      "board": "BANK4",
+      "J1_pin": 4,
+      "electrode_net": "L0_E03",
+      "series_resistor": "R7",
+      "MUX_channel": 4,
+      "internal_net": "L0_M04"
+    },
+    {
+      "lane": 4,
+      "physical_row": 5,
+      "logical_index": 34,
+      "board": "BANK4",
+      "J1_pin": 3,
+      "electrode_net": "L0_E02",
+      "series_resistor": "R8",
+      "MUX_channel": 5,
+      "internal_net": "L0_M05"
+    },
+    {
+      "lane": 4,
+      "physical_row": 6,
+      "logical_index": 40,
+      "board": "BANK4",
+      "J1_pin": 2,
+      "electrode_net": "L0_E01",
+      "series_resistor": "R9",
+      "MUX_channel": 6,
+      "internal_net": "L0_M06"
+    },
+    {
+      "lane": 4,
+      "physical_row": 7,
+      "logical_index": 46,
+      "board": "BANK4",
+      "J1_pin": 1,
+      "electrode_net": "L0_E00",
+      "series_resistor": "R10",
+      "MUX_channel": 7,
+      "internal_net": "L0_M07"
+    },
+    {
+      "lane": 4,
+      "physical_row": 8,
+      "logical_index": 52,
+      "board": "BANK4",
+      "J1_pin": 9,
+      "electrode_net": "L0_E08",
+      "series_resistor": "R11",
+      "MUX_channel": 8,
+      "internal_net": "L0_M08"
+    },
+    {
+      "lane": 4,
+      "physical_row": 9,
+      "logical_index": 58,
+      "board": "BANK4",
+      "J1_pin": 10,
+      "electrode_net": "L0_E09",
+      "series_resistor": "R12",
+      "MUX_channel": 9,
+      "internal_net": "L0_M09"
+    },
+    {
+      "lane": 4,
+      "physical_row": 10,
+      "logical_index": 64,
+      "board": "BANK4",
+      "J1_pin": 11,
+      "electrode_net": "L0_E10",
+      "series_resistor": "R13",
+      "MUX_channel": 10,
+      "internal_net": "L0_M10"
+    },
+    {
+      "lane": 4,
+      "physical_row": 11,
+      "logical_index": 70,
+      "board": "BANK4",
+      "J1_pin": 12,
+      "electrode_net": "L0_E11",
+      "series_resistor": "R14",
+      "MUX_channel": 11,
+      "internal_net": "L0_M11"
+    },
+    {
+      "lane": 4,
+      "physical_row": 12,
+      "logical_index": 76,
+      "board": "BANK4",
+      "J1_pin": 13,
+      "electrode_net": "L0_E12",
+      "series_resistor": "R15",
+      "MUX_channel": 12,
+      "internal_net": "L0_M12"
+    },
+    {
+      "lane": 4,
+      "physical_row": 13,
+      "logical_index": 82,
+      "board": "BANK4",
+      "J1_pin": 14,
+      "electrode_net": "L0_E13",
+      "series_resistor": "R16",
+      "MUX_channel": 13,
+      "internal_net": "L0_M13"
+    },
+    {
+      "lane": 5,
+      "physical_row": 0,
+      "logical_index": 5,
+      "board": "BANK5",
+      "J1_pin": 8,
+      "electrode_net": "L0_E07",
+      "series_resistor": "R3",
+      "MUX_channel": 0,
+      "internal_net": "L0_M00"
+    },
+    {
+      "lane": 5,
+      "physical_row": 1,
+      "logical_index": 11,
+      "board": "BANK5",
+      "J1_pin": 7,
+      "electrode_net": "L0_E06",
+      "series_resistor": "R4",
+      "MUX_channel": 1,
+      "internal_net": "L0_M01"
+    },
+    {
+      "lane": 5,
+      "physical_row": 2,
+      "logical_index": 17,
+      "board": "BANK5",
+      "J1_pin": 6,
+      "electrode_net": "L0_E05",
+      "series_resistor": "R5",
+      "MUX_channel": 2,
+      "internal_net": "L0_M02"
+    },
+    {
+      "lane": 5,
+      "physical_row": 3,
+      "logical_index": 23,
+      "board": "BANK5",
+      "J1_pin": 5,
+      "electrode_net": "L0_E04",
+      "series_resistor": "R6",
+      "MUX_channel": 3,
+      "internal_net": "L0_M03"
+    },
+    {
+      "lane": 5,
+      "physical_row": 4,
+      "logical_index": 29,
+      "board": "BANK5",
+      "J1_pin": 4,
+      "electrode_net": "L0_E03",
+      "series_resistor": "R7",
+      "MUX_channel": 4,
+      "internal_net": "L0_M04"
+    },
+    {
+      "lane": 5,
+      "physical_row": 5,
+      "logical_index": 35,
+      "board": "BANK5",
+      "J1_pin": 3,
+      "electrode_net": "L0_E02",
+      "series_resistor": "R8",
+      "MUX_channel": 5,
+      "internal_net": "L0_M05"
+    },
+    {
+      "lane": 5,
+      "physical_row": 6,
+      "logical_index": 41,
+      "board": "BANK5",
+      "J1_pin": 2,
+      "electrode_net": "L0_E01",
+      "series_resistor": "R9",
+      "MUX_channel": 6,
+      "internal_net": "L0_M06"
+    },
+    {
+      "lane": 5,
+      "physical_row": 7,
+      "logical_index": 47,
+      "board": "BANK5",
+      "J1_pin": 1,
+      "electrode_net": "L0_E00",
+      "series_resistor": "R10",
+      "MUX_channel": 7,
+      "internal_net": "L0_M07"
+    },
+    {
+      "lane": 5,
+      "physical_row": 8,
+      "logical_index": 53,
+      "board": "BANK5",
+      "J1_pin": 9,
+      "electrode_net": "L0_E08",
+      "series_resistor": "R11",
+      "MUX_channel": 8,
+      "internal_net": "L0_M08"
+    },
+    {
+      "lane": 5,
+      "physical_row": 9,
+      "logical_index": 59,
+      "board": "BANK5",
+      "J1_pin": 10,
+      "electrode_net": "L0_E09",
+      "series_resistor": "R12",
+      "MUX_channel": 9,
+      "internal_net": "L0_M09"
+    },
+    {
+      "lane": 5,
+      "physical_row": 10,
+      "logical_index": 65,
+      "board": "BANK5",
+      "J1_pin": 11,
+      "electrode_net": "L0_E10",
+      "series_resistor": "R13",
+      "MUX_channel": 10,
+      "internal_net": "L0_M10"
+    },
+    {
+      "lane": 5,
+      "physical_row": 11,
+      "logical_index": 71,
+      "board": "BANK5",
+      "J1_pin": 12,
+      "electrode_net": "L0_E11",
+      "series_resistor": "R14",
+      "MUX_channel": 11,
+      "internal_net": "L0_M11"
+    },
+    {
+      "lane": 5,
+      "physical_row": 12,
+      "logical_index": 77,
+      "board": "BANK5",
+      "J1_pin": 13,
+      "electrode_net": "L0_E12",
+      "series_resistor": "R15",
+      "MUX_channel": 12,
+      "internal_net": "L0_M12"
+    },
+    {
+      "lane": 5,
+      "physical_row": 13,
+      "logical_index": 83,
+      "board": "BANK5",
+      "J1_pin": 14,
+      "electrode_net": "L0_E13",
+      "series_resistor": "R16",
+      "MUX_channel": 13,
+      "internal_net": "L0_M13"
+    }
+  ],
+  "logical84_bijection_pass": true,
+  "internal14_MUX_nets_unchanged": true,
+  "calibration_channels14_15_unchanged": true,
+  "candidate_only": true,
+  "native_applied": false,
+  "complete14electrode_routing_proved": false,
+  "native_DRC_for_candidate_performed": false,
+  "unchanged_original_J1_mapping": "Original native J1.1..14 still E00..13; this report proposes a future input-side resistor mapping + compensated external electrode harness, not an accepted replacement.",
+  "pending": [
+    "All14 full J1-toESD-toR routes planned jointly, including right6 perimeter corridors and all existing Cu obstacles",
+    "Schematic/PCB/netlist explicit22PAD change audit and 84harness labels if candidate adopted",
+    "Native source identity/rules/recovery/autosave/PID/memory preflight before any mutation",
+    "Actual new Ground pours and all-source-Cu physical/reference/return/old-contact/DC/manufacturing audit",
+    "Strict native DRC, save/close/reopen and actual all150PAD map",
+    "All21 remaining nets completion, sixboard factory preweld quote and delivery within700wholebudget"
+  ],
+  "physical_tests": "UNMEASURED",
+  "manufacturing_release": false,
+  "complete_purchase_plan": false
+}

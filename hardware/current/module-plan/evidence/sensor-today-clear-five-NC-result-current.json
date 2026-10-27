@@ -1,0 +1,250 @@
+{
+  "ok": true,
+  "value": {
+    "saved": true,
+    "status": [
+      {
+        "ref": "D3",
+        "pin": "9",
+        "NC": false
+      },
+      {
+        "ref": "D3",
+        "pin": "7",
+        "NC": false
+      },
+      {
+        "ref": "D3",
+        "pin": "6",
+        "NC": false
+      },
+      {
+        "ref": "D4",
+        "pin": "10",
+        "NC": false
+      },
+      {
+        "ref": "D4",
+        "pin": "9",
+        "NC": false
+      }
+    ],
+    "state": {
+      "phase": "repair-D3.10-NC-actual-readback",
+      "changes": [
+        {
+          "ref": "R3",
+          "pin": "1",
+          "old": "L0_E00",
+          "net": "L0_E07",
+          "phase": "wired"
+        },
+        {
+          "ref": "R4",
+          "pin": "1",
+          "old": "L0_E01",
+          "net": "L0_E06",
+          "phase": "wired"
+        },
+        {
+          "ref": "R5",
+          "pin": "1",
+          "old": "L0_E02",
+          "net": "L0_E05",
+          "phase": "wired"
+        },
+        {
+          "ref": "R6",
+          "pin": "1",
+          "old": "L0_E03",
+          "net": "L0_E04",
+          "phase": "wired"
+        },
+        {
+          "ref": "R7",
+          "pin": "1",
+          "old": "L0_E04",
+          "net": "L0_E03",
+          "phase": "wired"
+        },
+        {
+          "ref": "R8",
+          "pin": "1",
+          "old": "L0_E05",
+          "net": "L0_E02",
+          "phase": "wired"
+        },
+        {
+          "ref": "R9",
+          "pin": "1",
+          "old": "L0_E06",
+          "net": "L0_E01",
+          "phase": "wired"
+        },
+        {
+          "ref": "R10",
+          "pin": "1",
+          "old": "L0_E07",
+          "net": "L0_E00",
+          "phase": "wired"
+        },
+        {
+          "ref": "D1",
+          "pin": "10",
+          "phase": "NCcleared"
+        },
+        {
+          "ref": "D1",
+          "pin": "10",
+          "old": "",
+          "net": "L0_E00",
+          "phase": "wired"
+        },
+        {
+          "ref": "D1",
+          "pin": "9",
+          "phase": "NCcleared"
+        },
+        {
+          "ref": "D1",
+          "pin": "9",
+          "old": "",
+          "net": "L0_E01",
+          "phase": "wired"
+        },
+        {
+          "ref": "D1",
+          "pin": "7",
+          "phase": "NCcleared"
+        },
+        {
+          "ref": "D1",
+          "pin": "7",
+          "old": "",
+          "net": "L0_E02",
+          "phase": "wired"
+        },
+        {
+          "ref": "D1",
+          "pin": "6",
+          "phase": "NCcleared"
+        },
+        {
+          "ref": "D1",
+          "pin": "6",
+          "old": "",
+          "net": "L0_E03",
+          "phase": "wired"
+        },
+        {
+          "ref": "D2",
+          "pin": "10",
+          "phase": "NCcleared"
+        },
+        {
+          "ref": "D2",
+          "pin": "10",
+          "old": "",
+          "net": "L0_E04",
+          "phase": "wired"
+        },
+        {
+          "ref": "D2",
+          "pin": "9",
+          "phase": "NCcleared"
+        },
+        {
+          "ref": "D2",
+          "pin": "9",
+          "old": "",
+          "net": "L0_E05",
+          "phase": "wired"
+        },
+        {
+          "ref": "D2",
+          "pin": "7",
+          "phase": "NCcleared"
+        },
+        {
+          "ref": "D2",
+          "pin": "7",
+          "old": "",
+          "net": "L0_E06",
+          "phase": "wired"
+        },
+        {
+          "ref": "D2",
+          "pin": "6",
+          "phase": "NCcleared"
+        },
+        {
+          "ref": "D2",
+          "pin": "6",
+          "old": "",
+          "net": "L0_E07",
+          "phase": "wired"
+        },
+        {
+          "ref": "D3",
+          "pin": "10",
+          "phase": "NCcleared"
+        }
+      ],
+      "newWires": [
+        "a17c240560b41e2e",
+        "5380edb6057acf5f",
+        "41340a8f778c0383",
+        "efa80118f9e77d95",
+        "f7dc1a9764936e62",
+        "7c18a95662a9a220",
+        "e545e897cd8f8103",
+        "1c353ff49225bef7"
+      ],
+      "newPorts": [
+        "fca0c6e95dcf50b8",
+        "fbe2120c85c80e64",
+        "9ba872ad00cfdda4",
+        "edf3b9acd0efe05f",
+        "977085ce76c5712c",
+        "7897b64451d50877",
+        "22e37b1b8bac8fad",
+        "efa98ef01f72c2a9"
+      ],
+      "repairPending": {
+        "phase": "finishing-only19actual-pending",
+        "done": [
+          {
+            "ref": "D3",
+            "pin": "10",
+            "net": "L0_E08"
+          }
+        ],
+        "newWires": [
+          {
+            "pin": "D3.10",
+            "id": "a5459140801877df"
+          }
+        ],
+        "newPorts": [
+          {
+            "pin": "D3.10",
+            "id": "107648a3bd696879"
+          }
+        ],
+        "active": "D3.9"
+      },
+      "clearRemainingNC": {
+        "phase": "saved-check-actual-pins",
+        "pins": [
+          "D3.9",
+          "D3.7",
+          "D3.6",
+          "D4.10",
+          "D4.9"
+        ]
+      }
+    }
+  },
+  "logs": [],
+  "durationMs": 2847
+}

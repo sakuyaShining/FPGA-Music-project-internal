@@ -1,0 +1,950 @@
+{
+  "status": "SEED_GEOMETRY_SCREENED_NOT_NATIVE_APPLIED",
+  "time": "2026-10-27T01:59:40.866859+08:00",
+  "pcb_uuid": "f52674d6627fca6f",
+  "tracks": [
+    {
+      "id": "seed-track-0",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          7.39902,
+          37.73932
+        ],
+        [
+          6.4,
+          37.73932
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "ESD ground to real plane via"
+    },
+    {
+      "id": "seed-track-1",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          8.19912,
+          37.73932
+        ],
+        [
+          9.2,
+          37.73932
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "ESD ground to real plane via"
+    },
+    {
+      "id": "seed-track-2",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          7.39902,
+          27.57932
+        ],
+        [
+          6.4,
+          27.57932
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "ESD ground to real plane via"
+    },
+    {
+      "id": "seed-track-3",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          8.19912,
+          27.57932
+        ],
+        [
+          9.2,
+          27.57932
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "ESD ground to real plane via"
+    },
+    {
+      "id": "seed-track-4",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          7.39902,
+          17.41932
+        ],
+        [
+          6.4,
+          17.41932
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "ESD ground to real plane via"
+    },
+    {
+      "id": "seed-track-5",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          8.19912,
+          17.41932
+        ],
+        [
+          9.2,
+          17.41932
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "ESD ground to real plane via"
+    },
+    {
+      "id": "seed-track-6",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          7.39902,
+          9.79932
+        ],
+        [
+          6.4,
+          9.79932
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "ESD ground to real plane via"
+    },
+    {
+      "id": "seed-track-7",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          8.19912,
+          9.79932
+        ],
+        [
+          9.2,
+          9.79932
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "ESD ground to real plane via"
+    },
+    {
+      "id": "seed-track-8",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          26.23058,
+          30.380939999999995
+        ],
+        [
+          26.23058,
+          28.95
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "Unused Schmitt inputs and GND tied, no floating CMOS inputs"
+    },
+    {
+      "id": "seed-track-9",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          28.77058,
+          30.380939999999995
+        ],
+        [
+          28.77058,
+          28.95
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "Unused Schmitt inputs and GND tied, no floating CMOS inputs"
+    },
+    {
+      "id": "seed-track-10",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          31.31058,
+          30.380939999999995
+        ],
+        [
+          31.31058,
+          28.95
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "Unused Schmitt inputs and GND tied, no floating CMOS inputs"
+    },
+    {
+      "id": "seed-track-11",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          26.23058,
+          28.95
+        ],
+        [
+          31.31058,
+          28.95
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "local GND comb outside SOIC pad ends"
+    },
+    {
+      "id": "seed-track-12",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          24.96058,
+          35.61842
+        ],
+        [
+          24.96058,
+          37.1
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "Unused Schmitt inputs and GND tied, no floating CMOS inputs"
+    },
+    {
+      "id": "seed-track-13",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          27.50058,
+          35.61842
+        ],
+        [
+          27.50058,
+          37.1
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "Unused Schmitt inputs and GND tied, no floating CMOS inputs"
+    },
+    {
+      "id": "seed-track-14",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          30.04058,
+          35.61842
+        ],
+        [
+          30.04058,
+          37.1
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "Unused Schmitt inputs and GND tied, no floating CMOS inputs"
+    },
+    {
+      "id": "seed-track-15",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          24.96058,
+          37.1
+        ],
+        [
+          30.04058,
+          37.1
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "local GND comb outside SOIC pad ends"
+    },
+    {
+      "id": "seed-track-16",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          24.47798,
+          18.92554
+        ],
+        [
+          23.1,
+          18.92554
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "MUX GND"
+    },
+    {
+      "id": "seed-track-17",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          32.30118,
+          27.39898
+        ],
+        [
+          32.3,
+          28.4
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "local capacitor return"
+    },
+    {
+      "id": "seed-track-18",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          21.501099999999997,
+          35.60064
+        ],
+        [
+          20.4,
+          35.6
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "local capacitor return"
+    },
+    {
+      "id": "seed-track-19",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          33.70072,
+          21.52396
+        ],
+        [
+          33.7,
+          22.8
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "local capacitor return"
+    },
+    {
+      "id": "seed-track-20",
+      "net": "GND",
+      "layer": 1,
+      "points_mm": [
+        [
+          33.70072,
+          19.29892
+        ],
+        [
+          33.7,
+          18.1
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "local capacitor return"
+    },
+    {
+      "id": "seed-track-21",
+      "net": "3V3_IO",
+      "layer": 1,
+      "points_mm": [
+        [
+          49.9999,
+          41.549319999999994
+        ],
+        [
+          48.8,
+          41.549319999999994
+        ],
+        [
+          47.25,
+          40.0
+        ],
+        [
+          24.4,
+          40.0
+        ],
+        [
+          22.90064,
+          38.5
+        ],
+        [
+          22.90064,
+          35.60064
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "protected3V3 input to local decoupling"
+    },
+    {
+      "id": "seed-track-22",
+      "net": "3V3_IO",
+      "layer": 1,
+      "points_mm": [
+        [
+          22.90064,
+          35.60064
+        ],
+        [
+          23.69058,
+          35.61842
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "SOIC decoupling power pin"
+    },
+    {
+      "id": "seed-track-23",
+      "net": "3V3_IO",
+      "layer": 1,
+      "points_mm": [
+        [
+          33.4,
+          40
+        ],
+        [
+          33.4,
+          26.8
+        ],
+        [
+          33.1,
+          26.5
+        ],
+        [
+          31.4,
+          26.5
+        ],
+        [
+          30.899099999999997,
+          27.0
+        ],
+        [
+          30.899099999999997,
+          27.39898
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "wide power branch approaches C1 power side below Ground pad"
+    },
+    {
+      "id": "seed-track-24",
+      "net": "3V3_IO",
+      "layer": 1,
+      "points_mm": [
+        [
+          30.899099999999997,
+          27.39898
+        ],
+        [
+          30.899099999999997,
+          26.451559999999994
+        ],
+        [
+          30.52318,
+          26.075639999999996
+        ]
+      ],
+      "width_mm": 0.359156,
+      "reason": "MUX local decoupling power pin"
+    },
+    {
+      "id": "seed-track-25",
+      "net": "RC0",
+      "layer": 1,
+      "points_mm": [
+        [
+          24.47798,
+          26.075639999999996
+        ],
+        [
+          24.254459999999998,
+          26.299159999999997
+        ],
+        [
+          24.254459999999998,
+          28.100019999999997
+        ]
+      ],
+      "width_mm": 0.1651,
+      "reason": "short local RC node"
+    },
+    {
+      "id": "seed-track-26",
+      "net": "RC0",
+      "layer": 1,
+      "points_mm": [
+        [
+          24.254459999999998,
+          28.100019999999997
+        ],
+        [
+          24.254459999999998,
+          29.817059999999998
+        ],
+        [
+          23.69058,
+          30.380939999999995
+        ]
+      ],
+      "width_mm": 0.1651,
+      "reason": "short local RC to Schmitt input"
+    },
+    {
+      "id": "seed-track-27",
+      "net": "INV0",
+      "layer": 1,
+      "points_mm": [
+        [
+          24.96058,
+          30.380939999999995
+        ],
+        [
+          25.445719999999998,
+          29.895799999999998
+        ],
+        [
+          25.445719999999998,
+          27.89936
+        ]
+      ],
+      "width_mm": 0.1651,
+      "reason": "local Schmitt output to220ohm source series resistor"
+    },
+    {
+      "id": "seed-track-28",
+      "net": "L0_M14",
+      "layer": 1,
+      "points_mm": [
+        [
+          30.52318,
+          21.52396
+        ],
+        [
+          32.30118,
+          21.52396
+        ]
+      ],
+      "width_mm": 0.1651,
+      "reason": "10pF calibration short local path"
+    },
+    {
+      "id": "seed-track-29",
+      "net": "L0_M15",
+      "layer": 1,
+      "points_mm": [
+        [
+          30.52318,
+          20.87372
+        ],
+        [
+          31.5,
+          20.87372
+        ],
+        [
+          31.9,
+          20.47372
+        ],
+        [
+          31.9,
+          19.7
+        ],
+        [
+          32.30118,
+          19.29892
+        ]
+      ],
+      "width_mm": 0.1651,
+      "reason": "100pF calibration route outside adjacent MUX pads"
+    }
+  ],
+  "ground_vias": [
+    {
+      "id": "seed-gnd-via-0",
+      "net": "GND",
+      "x_mm": 6.4,
+      "y_mm": 37.73932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "D1.3 ESD ground short local return"
+    },
+    {
+      "id": "seed-gnd-via-1",
+      "net": "GND",
+      "x_mm": 9.2,
+      "y_mm": 37.73932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "D1.8 ESD ground short local return"
+    },
+    {
+      "id": "seed-gnd-via-2",
+      "net": "GND",
+      "x_mm": 6.4,
+      "y_mm": 27.57932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "D2.3 ESD ground short local return"
+    },
+    {
+      "id": "seed-gnd-via-3",
+      "net": "GND",
+      "x_mm": 9.2,
+      "y_mm": 27.57932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "D2.8 ESD ground short local return"
+    },
+    {
+      "id": "seed-gnd-via-4",
+      "net": "GND",
+      "x_mm": 6.4,
+      "y_mm": 17.41932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "D3.3 ESD ground short local return"
+    },
+    {
+      "id": "seed-gnd-via-5",
+      "net": "GND",
+      "x_mm": 9.2,
+      "y_mm": 17.41932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "D3.8 ESD ground short local return"
+    },
+    {
+      "id": "seed-gnd-via-6",
+      "net": "GND",
+      "x_mm": 6.4,
+      "y_mm": 9.79932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "D4.3 ESD ground short local return"
+    },
+    {
+      "id": "seed-gnd-via-7",
+      "net": "GND",
+      "x_mm": 9.2,
+      "y_mm": 9.79932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "D4.8 ESD ground short local return"
+    },
+    {
+      "id": "seed-gnd-via-8",
+      "net": "GND",
+      "x_mm": 31.31058,
+      "y_mm": 28.95,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "SOIC local GND comb return"
+    },
+    {
+      "id": "seed-gnd-via-9",
+      "net": "GND",
+      "x_mm": 30.04058,
+      "y_mm": 37.1,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "SOIC local GND comb return"
+    },
+    {
+      "id": "seed-gnd-via-10",
+      "net": "GND",
+      "x_mm": 23.1,
+      "y_mm": 18.92554,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "MUX GND short return"
+    },
+    {
+      "id": "seed-gnd-via-11",
+      "net": "GND",
+      "x_mm": 32.3,
+      "y_mm": 28.4,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "C1 ground short return"
+    },
+    {
+      "id": "seed-gnd-via-12",
+      "net": "GND",
+      "x_mm": 20.4,
+      "y_mm": 35.6,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "C2 ground short return"
+    },
+    {
+      "id": "seed-gnd-via-13",
+      "net": "GND",
+      "x_mm": 33.7,
+      "y_mm": 22.8,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "C3 ground short return"
+    },
+    {
+      "id": "seed-gnd-via-14",
+      "net": "GND",
+      "x_mm": 33.7,
+      "y_mm": 18.1,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "C4 ground short return"
+    },
+    {
+      "id": "seed-gnd-via-15",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 41.549319999999994,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.1 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-16",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 39.009319999999995,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.2 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-17",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 36.469319999999996,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.3 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-18",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 33.92932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.4 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-19",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 31.389319999999998,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.5 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-20",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 28.84932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.6 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-21",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 26.309319999999996,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.7 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-22",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 23.769319999999997,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.8 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-23",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 21.229319999999998,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.9 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-24",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 18.68932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.10 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-25",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 16.14932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.11 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-26",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 13.609319999999999,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.12 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-27",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 11.06932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.13 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-28",
+      "net": "GND",
+      "x_mm": 6.45126,
+      "y_mm": 8.52932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J1.14 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-29",
+      "net": "GND",
+      "x_mm": 48.549899999999994,
+      "y_mm": 36.469319999999996,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J2.3 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-30",
+      "net": "GND",
+      "x_mm": 48.549899999999994,
+      "y_mm": 31.389319999999998,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J2.5 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-31",
+      "net": "GND",
+      "x_mm": 48.549899999999994,
+      "y_mm": 26.309319999999996,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J2.7 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-32",
+      "net": "GND",
+      "x_mm": 48.549899999999994,
+      "y_mm": 21.229319999999998,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J2.9 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-33",
+      "net": "GND",
+      "x_mm": 48.549899999999994,
+      "y_mm": 16.14932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J2.11 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-34",
+      "net": "GND",
+      "x_mm": 48.549899999999994,
+      "y_mm": 11.06932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J2.13 true signal-hole return,1.45mm center distance"
+    },
+    {
+      "id": "seed-gnd-via-35",
+      "net": "GND",
+      "x_mm": 48.549899999999994,
+      "y_mm": 5.98932,
+      "OD_mm": 0.71,
+      "drill_mm": 0.36,
+      "reason": "J2.15 true signal-hole return,1.45mm center distance"
+    }
+  ],
+  "signal_vias": 0,
+  "signal_hole_return_vias": 21,
+  "bottom_plane": "required, not yet actual copper",
+  "independent_clearance_screen_pass": true,
+  "violations": [],
+  "minimum_extra_clearance_margin_mm": 0.03823999999999805,
+  "not_for_order": true,
+  "physical_tests": "UNMEASURED",
+  "screen_history": [
+    {
+      "violations": [
+        {
+          "a": "seed-track-11",
+          "b": "U2.6",
+          "net_a": "GND",
+          "net_b": "",
+          "distance_mm": 0.08282199999999307,
+          "required_mm": 0.1651
+        },
+        {
+          "a": "seed-track-11",
+          "b": "U2.4",
+          "net_a": "GND",
+          "net_b": "",
+          "distance_mm": 0.08282199999999307,
+          "required_mm": 0.1651
+        },
+        {
+          "a": "seed-track-23",
+          "b": "C1.2",
+          "net_a": "3V3_IO",
+          "net_b": "GND",
+          "distance_mm": 0.13732604612437593,
+          "required_mm": 0.1651
+        },
+        {
+          "a": "seed-track-29",
+          "b": "C3.1",
+          "net_a": "L0_M15",
+          "net_b": "L0_M14",
+          "distance_mm": 0.14215362677127794,
+          "required_mm": 0.1651
+        }
+      ],
+      "changed_input": "Lower SOIC Ground comb0.15mm, shift power corner toclear actualC1Ground pad, route100pF outside10pF pad."
+    }
+  ]
+}

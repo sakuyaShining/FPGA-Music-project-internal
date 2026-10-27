@@ -1,0 +1,2583 @@
+{
+  "at": "2026-10-27T17:15:44.935727+08:00",
+  "source_sha256": "617f550eadc818ffab26a3992f2a86bb9f72ed027043c6e64a0c0428077ba643",
+  "units": "mm",
+  "method": "Native actual Ground polygon WKB including actual Ground tracks/pads/vias. Copper circle approximated at 4096 edges; current native Ground polygon resolution retained. Nominal CAD dimensions, not finished-board measurements. No acceptance criterion changed.",
+  "rows": [
+    {
+      "number": 1,
+      "line_id": "7a7bc3b1a46068f7",
+      "net": "3V3_IO",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.43464293628237016,
+      "terminals": [
+        {
+          "id": "J2.1",
+          "net": "3V3_IO",
+          "kind": "PTH",
+          "xy": [
+            49.99999906,
+            41.55000072
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.21300186000000565,
+          "hole_to_GND_min_mm": 0.5029936599999983,
+          "paired_GND_via": "e25385d1e8779204",
+          "paired_GND_xy_mm": [
+            51.45000124,
+            41.55000072
+          ],
+          "return_centres_mm": 1.4500021799999985,
+          "paired_hole_edges_mm": 0.7596555799999986
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "line_id": "c8fa79db0107a51c",
+      "net": "3V3_IO",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.008257818309867297,
+      "terminals": [
+        {
+          "id": "J2.1",
+          "net": "3V3_IO",
+          "kind": "PTH",
+          "xy": [
+            49.99999906,
+            41.55000072
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.21300186000000565,
+          "hole_to_GND_min_mm": 0.5029936599999983,
+          "paired_GND_via": "e25385d1e8779204",
+          "paired_GND_xy_mm": [
+            51.45000124,
+            41.55000072
+          ],
+          "return_centres_mm": 1.4500021799999985,
+          "paired_hole_edges_mm": 0.7596555799999986
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "line_id": "f167b4be974b2266",
+      "net": "L0_E00",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.23803345633774187,
+      "terminals": [
+        {
+          "id": "J1.1",
+          "net": "L0_E00",
+          "kind": "PTH",
+          "xy": [
+            5.0000001600000035,
+            41.55000072
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.2692387329052803,
+          "hole_to_GND_min_mm": 0.5592317999999964,
+          "paired_GND_via": "d084970f837fd33e",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            41.549319999999994
+          ],
+          "return_centres_mm": 1.4512596396474338,
+          "paired_hole_edges_mm": 0.7609130396474338
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "line_id": "7a3abc1004a79abc",
+      "net": "L0_E01",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.18705930847698934,
+      "terminals": [
+        {
+          "id": "J1.2",
+          "net": "L0_E01",
+          "kind": "PTH",
+          "xy": [
+            5.000000160000003,
+            39.01000072
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.26923496796047147,
+          "hole_to_GND_min_mm": 0.5592267679604727,
+          "paired_GND_via": "250f83954a2d6dc4",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            39.00931999999999
+          ],
+          "return_centres_mm": 1.4512596396474329,
+          "paired_hole_edges_mm": 0.760913039647433
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "line_id": "277a9de158e4952d",
+      "net": "L0_E02",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.18705930878862587,
+      "terminals": [
+        {
+          "id": "J1.3",
+          "net": "L0_E02",
+          "kind": "PTH",
+          "xy": [
+            5.000000160000003,
+            36.47000072
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.26923496796047164,
+          "hole_to_GND_min_mm": 0.5592267679604727,
+          "paired_GND_via": "f280d8d609bf9004",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            36.46931999999999
+          ],
+          "return_centres_mm": 1.4512596396474329,
+          "paired_hole_edges_mm": 0.760913039647433
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "line_id": "2b0f6da92c135ab4",
+      "net": "L0_E03",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.1870593055740472,
+      "terminals": [
+        {
+          "id": "J1.4",
+          "net": "L0_E03",
+          "kind": "PTH",
+          "xy": [
+            5.000000160000003,
+            33.93002612
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.26923496796047186,
+          "hole_to_GND_min_mm": 0.5592013680800193,
+          "paired_GND_via": "a5333efe15fa0ed2",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            33.92931999999999
+          ],
+          "return_centres_mm": 1.4512596517836953,
+          "paired_hole_edges_mm": 0.7609130517836954
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "line_id": "88b4cdd62b114104",
+      "net": "L0_E04",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.18705930557404127,
+      "terminals": [
+        {
+          "id": "J1.5",
+          "net": "L0_E04",
+          "kind": "PTH",
+          "xy": [
+            5.000000160000002,
+            31.390026119999998
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.269234967960473,
+          "hole_to_GND_min_mm": 0.5592013680800195,
+          "paired_GND_via": "72788069015cfed2",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            31.389319999999998
+          ],
+          "return_centres_mm": 1.4512596517836944,
+          "paired_hole_edges_mm": 0.7609130517836945
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "line_id": "33e831f706ee0f25",
+      "net": "L0_E05",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.1870593084769893,
+      "terminals": [
+        {
+          "id": "J1.6",
+          "net": "L0_E05",
+          "kind": "PTH",
+          "xy": [
+            5.000000160000002,
+            28.85002612
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.269234967960474,
+          "hole_to_GND_min_mm": 0.5592013680800195,
+          "paired_GND_via": "f8f549b3960442ab",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            28.84932
+          ],
+          "return_centres_mm": 1.4512596517836944,
+          "paired_hole_edges_mm": 0.7609130517836945
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "line_id": "a088ab05941874c5",
+      "net": "L0_E06",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.18705930878862748,
+      "terminals": [
+        {
+          "id": "J1.7",
+          "net": "L0_E06",
+          "kind": "PTH",
+          "xy": [
+            5.000000160000001,
+            26.31002612
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.26923496796047547,
+          "hole_to_GND_min_mm": 0.5592013680800195,
+          "paired_GND_via": "91304e41b78a07b2",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            26.309319999999996
+          ],
+          "return_centres_mm": 1.4512596517836935,
+          "paired_hole_edges_mm": 0.7609130517836936
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "line_id": "a61d58a6e63de756",
+      "net": "L0_E07",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.1870593055740421,
+      "terminals": [
+        {
+          "id": "J1.8",
+          "net": "L0_E07",
+          "kind": "PTH",
+          "xy": [
+            5.00000016,
+            23.77002612
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.2692349679604723,
+          "hole_to_GND_min_mm": 0.5592013680800195,
+          "paired_GND_via": "29fe4061e2ec0cb5",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            23.769319999999997
+          ],
+          "return_centres_mm": 1.4512596517836927,
+          "paired_hole_edges_mm": 0.7609130517836927
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "line_id": "009ef6dc12a79660",
+      "net": "L0_E08",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.1870593055740411,
+      "terminals": [
+        {
+          "id": "J1.9",
+          "net": "L0_E08",
+          "kind": "PTH",
+          "xy": [
+            5.00000016,
+            21.23005152
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.269234967960473,
+          "hole_to_GND_min_mm": 0.5591759681995566,
+          "paired_GND_via": "7a20353ac02e26a8",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            21.229319999999998
+          ],
+          "return_centres_mm": 1.4512596643645068,
+          "paired_hole_edges_mm": 0.7609130643645069
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "line_id": "34bf19df08980e59",
+      "net": "L0_E09",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.18705930847699082,
+      "terminals": [
+        {
+          "id": "J1.10",
+          "net": "L0_E09",
+          "kind": "PTH",
+          "xy": [
+            5.000000159999999,
+            18.69005152
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.26923496796047414,
+          "hole_to_GND_min_mm": 0.5591759681995546,
+          "paired_GND_via": "0ff0efb58e90de32",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            18.68932
+          ],
+          "return_centres_mm": 1.451259664364506,
+          "paired_hole_edges_mm": 0.760913064364506
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "line_id": "ef394bef8580edc9",
+      "net": "L0_E10",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.18705930878862717,
+      "terminals": [
+        {
+          "id": "J1.11",
+          "net": "L0_E10",
+          "kind": "PTH",
+          "xy": [
+            5.000000159999998,
+            16.150051519999998
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.26923496796047663,
+          "hole_to_GND_min_mm": 0.5591759681995584,
+          "paired_GND_via": "775e389243ca7091",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            16.14932
+          ],
+          "return_centres_mm": 1.451259664364505,
+          "paired_hole_edges_mm": 0.7609130643645051
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "line_id": "bc61668e1d8e0899",
+      "net": "L0_E11",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.18705930557404082,
+      "terminals": [
+        {
+          "id": "J1.12",
+          "net": "L0_E11",
+          "kind": "PTH",
+          "xy": [
+            5.000000159999998,
+            13.610051519999999
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.2692349679604771,
+          "hole_to_GND_min_mm": 0.5591759681995602,
+          "paired_GND_via": "5b2b6e845433dea0",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            13.609319999999999
+          ],
+          "return_centres_mm": 1.451259664364505,
+          "paired_hole_edges_mm": 0.7609130643645051
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "line_id": "9852ad22ef01a3cb",
+      "net": "L0_E12",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.18705930622962846,
+      "terminals": [
+        {
+          "id": "J1.13",
+          "net": "L0_E12",
+          "kind": "PTH",
+          "xy": [
+            5.000000159999998,
+            11.070051520000002
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.2692349679604785,
+          "hole_to_GND_min_mm": 0.5591759681995575,
+          "paired_GND_via": "e3c1949ae92b1a76",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            11.069319999999998
+          ],
+          "return_centres_mm": 1.451259664364505,
+          "paired_hole_edges_mm": 0.7609130643645051
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "line_id": "391d1ea00fc0cc3c",
+      "net": "L0_E13",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.07123417038174318,
+      "terminals": [
+        {
+          "id": "61e42088932c59f0",
+          "net": "L0_E13",
+          "kind": "via",
+          "xy": [
+            10.49999932,
+            10.34999962
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.35813664100364534,
+          "hole_to_GND_min_mm": 0.5333966410036457,
+          "paired_GND_via": "aba0521cc3a15d9c",
+          "paired_GND_xy_mm": [
+            11.499999859999999,
+            9.60000112
+          ],
+          "return_centres_mm": 1.2499995320009278,
+          "paired_hole_edges_mm": 0.889319532000928
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "line_id": "f6bcef8490603bd9",
+      "net": "L0_E13",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.1338901330253989,
+      "terminals": [
+        {
+          "id": "61e42088932c59f0",
+          "net": "L0_E13",
+          "kind": "via",
+          "xy": [
+            10.49999932,
+            10.34999962
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.35813664100364534,
+          "hole_to_GND_min_mm": 0.5333966410036457,
+          "paired_GND_via": "aba0521cc3a15d9c",
+          "paired_GND_xy_mm": [
+            11.499999859999999,
+            9.60000112
+          ],
+          "return_centres_mm": 1.2499995320009278,
+          "paired_hole_edges_mm": 0.889319532000928
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "line_id": "7e2aaa0dbf26e0a9",
+      "net": "RC_DRIVE",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.1282789825470973,
+      "terminals": [
+        {
+          "id": "868cbe0ba8c0a96f",
+          "net": "RC_DRIVE",
+          "kind": "via",
+          "xy": [
+            21.599999979999996,
+            28.099999679999996
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.3581366410036403,
+          "hole_to_GND_min_mm": 0.5333966410036408,
+          "paired_GND_via": "33ccc406ad4dcef3",
+          "paired_GND_xy_mm": [
+            21.599999979999996,
+            29.200000019999997
+          ],
+          "return_centres_mm": 1.1000003400000011,
+          "paired_hole_edges_mm": 0.7393203400000012
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "line_id": "f7ddc944265a7fc6",
+      "net": "RC_DRIVE",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.31533829116551926,
+      "terminals": [
+        {
+          "id": "J2.3",
+          "net": "RC_DRIVE",
+          "kind": "PTH",
+          "xy": [
+            49.99999905999999,
+            36.47000072
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.21300185999999144,
+          "hole_to_GND_min_mm": 0.5029936599999912,
+          "paired_GND_via": "1c9e49d13908b4f0",
+          "paired_GND_xy_mm": [
+            51.45009776,
+            36.46931999999999
+          ],
+          "return_centres_mm": 1.4500988597752305,
+          "paired_hole_edges_mm": 0.7597522597752305
+        },
+        {
+          "id": "868cbe0ba8c0a96f",
+          "net": "RC_DRIVE",
+          "kind": "via",
+          "xy": [
+            21.599999979999996,
+            28.099999679999996
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.3581366410036403,
+          "hole_to_GND_min_mm": 0.5333966410036408,
+          "paired_GND_via": "33ccc406ad4dcef3",
+          "paired_GND_xy_mm": [
+            21.599999979999996,
+            29.200000019999997
+          ],
+          "return_centres_mm": 1.1000003400000011,
+          "paired_hole_edges_mm": 0.7393203400000012
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "line_id": "4995beff698369d0",
+      "net": "SENSE_OUT",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.12827898254709638,
+      "terminals": [
+        {
+          "id": "f516b514a1b470ba",
+          "net": "SENSE_OUT",
+          "kind": "via",
+          "xy": [
+            28.19999948,
+            27.900000079999998
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.35813664100363957,
+          "hole_to_GND_min_mm": 0.5333966410036411,
+          "paired_GND_via": "eb49457431217078",
+          "paired_GND_xy_mm": [
+            29.10000022,
+            28.80000082
+          ],
+          "return_centres_mm": 1.2727932526538233,
+          "paired_hole_edges_mm": 0.9121132526538234
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "line_id": "1c2847618d4f2ec4",
+      "net": "SENSE_OUT",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.12827898490288858,
+      "terminals": [
+        {
+          "id": "f516b514a1b470ba",
+          "net": "SENSE_OUT",
+          "kind": "via",
+          "xy": [
+            28.19999948,
+            27.900000079999998
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.35813664100363957,
+          "hole_to_GND_min_mm": 0.5333966410036411,
+          "paired_GND_via": "eb49457431217078",
+          "paired_GND_xy_mm": [
+            29.10000022,
+            28.80000082
+          ],
+          "return_centres_mm": 1.2727932526538233,
+          "paired_hole_edges_mm": 0.9121132526538234
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "line_id": "f321ee1fc0c754a0",
+      "net": "SENSE_OUT",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.18705930478189595,
+      "terminals": [
+        {
+          "id": "J2.5",
+          "net": "SENSE_OUT",
+          "kind": "PTH",
+          "xy": [
+            49.99999905999999,
+            31.390026119999998
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.21300185999999144,
+          "hole_to_GND_min_mm": 0.5029682599999964,
+          "paired_GND_via": "b8f8963843ee9e78",
+          "paired_GND_xy_mm": [
+            51.45009776,
+            31.389319999999998
+          ],
+          "return_centres_mm": 1.4500988719212078,
+          "paired_hole_edges_mm": 0.7597522719212079
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "line_id": "8f394071fb7690c8",
+      "net": "ADDR0",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.12827898254709685,
+      "terminals": [
+        {
+          "id": "bb25eeeaa82ccf21",
+          "net": "ADDR0",
+          "kind": "via",
+          "xy": [
+            25.9999988,
+            22.40000092
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.3581366410036431,
+          "hole_to_GND_min_mm": 0.533396641003644,
+          "paired_GND_via": "1cf189e303b83802",
+          "paired_GND_xy_mm": [
+            25.9999988,
+            23.500001259999998
+          ],
+          "return_centres_mm": 1.1000003399999976,
+          "paired_hole_edges_mm": 0.7393203399999977
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "line_id": "a626da2d34c5e59a",
+      "net": "ADDR0",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.31533829175915895,
+      "terminals": [
+        {
+          "id": "J2.7",
+          "net": "ADDR0",
+          "kind": "PTH",
+          "xy": [
+            49.99999905999999,
+            26.31002612
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.213001859999995,
+          "hole_to_GND_min_mm": 0.5029682599999964,
+          "paired_GND_via": "fc1f8a9c8aac1cbe",
+          "paired_GND_xy_mm": [
+            51.45009776,
+            26.309319999999996
+          ],
+          "return_centres_mm": 1.4500988719212078,
+          "paired_hole_edges_mm": 0.7597522719212079
+        },
+        {
+          "id": "bb25eeeaa82ccf21",
+          "net": "ADDR0",
+          "kind": "via",
+          "xy": [
+            25.9999988,
+            22.40000092
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.3581366410036431,
+          "hole_to_GND_min_mm": 0.533396641003644,
+          "paired_GND_via": "1cf189e303b83802",
+          "paired_GND_xy_mm": [
+            25.9999988,
+            23.500001259999998
+          ],
+          "return_centres_mm": 1.1000003399999976,
+          "paired_hole_edges_mm": 0.7393203399999977
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "line_id": "b3aa3facfacd6d35",
+      "net": "ADDR1",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.12827898254709658,
+      "terminals": [
+        {
+          "id": "84accd5053c9f4a7",
+          "net": "ADDR1",
+          "kind": "via",
+          "xy": [
+            26.99999934,
+            21.20000078
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.35813664100364095,
+          "hole_to_GND_min_mm": 0.5333966410036418,
+          "paired_GND_via": "66efbb3b28bb1169",
+          "paired_GND_xy_mm": [
+            27.99999988,
+            21.99999918
+          ],
+          "return_centres_mm": 1.2806242696446353,
+          "paired_hole_edges_mm": 0.9199442696446354
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "line_id": "3f58e14dda9a8bd8",
+      "net": "ADDR1",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.3153382899020469,
+      "terminals": [
+        {
+          "id": "J2.11",
+          "net": "ADDR1",
+          "kind": "PTH",
+          "xy": [
+            49.99999905999999,
+            16.150051519999998
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.21300185999999854,
+          "hole_to_GND_min_mm": 0.5029428600000015,
+          "paired_GND_via": "6027c7717532611a",
+          "paired_GND_xy_mm": [
+            51.45009776,
+            16.14932
+          ],
+          "return_centres_mm": 1.4500988845120926,
+          "paired_hole_edges_mm": 0.7597522845120926
+        },
+        {
+          "id": "84accd5053c9f4a7",
+          "net": "ADDR1",
+          "kind": "via",
+          "xy": [
+            26.99999934,
+            21.20000078
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.35813664100364095,
+          "hole_to_GND_min_mm": 0.5333966410036418,
+          "paired_GND_via": "66efbb3b28bb1169",
+          "paired_GND_xy_mm": [
+            27.99999988,
+            21.99999918
+          ],
+          "return_centres_mm": 1.2806242696446353,
+          "paired_hole_edges_mm": 0.9199442696446354
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "line_id": "11fea39079b36262",
+      "net": "ADDR2",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.12827898504124854,
+      "terminals": [
+        {
+          "id": "3b4063e187832393",
+          "net": "ADDR2",
+          "kind": "via",
+          "xy": [
+            27.99999988,
+            20.00000064
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.3581366410036428,
+          "hole_to_GND_min_mm": 0.5333966410036434,
+          "paired_GND_via": "6148e517341dd728",
+          "paired_GND_xy_mm": [
+            28.19999948,
+            18.8000005
+          ],
+          "return_centres_mm": 1.21655257839527,
+          "paired_hole_edges_mm": 0.8558725783952701
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "line_id": "1bb9126c9cf03ff7",
+      "net": "ADDR2",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.18705930472134355,
+      "terminals": [
+        {
+          "id": "J2.13",
+          "net": "ADDR2",
+          "kind": "PTH",
+          "xy": [
+            49.99999905999999,
+            11.070051520000002
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.21300185999999854,
+          "hole_to_GND_min_mm": 0.502942859999998,
+          "paired_GND_via": "7641831913722fda",
+          "paired_GND_xy_mm": [
+            51.45009776,
+            11.069319999999998
+          ],
+          "return_centres_mm": 1.4500988845120926,
+          "paired_hole_edges_mm": 0.7597522845120926
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "line_id": "c4988d65153eeee6",
+      "net": "ADDR3",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.1282789848660249,
+      "terminals": [
+        {
+          "id": "2d1737d31135ab50",
+          "net": "ADDR3",
+          "kind": "via",
+          "xy": [
+            29.200000019999997,
+            18.8000005
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.28880054000000044,
+          "hole_to_GND_min_mm": 0.4640605399999995,
+          "paired_GND_via": "6148e517341dd728",
+          "paired_GND_xy_mm": [
+            28.19999948,
+            18.8000005
+          ],
+          "return_centres_mm": 1.0000005399999985,
+          "paired_hole_edges_mm": 0.6393205399999986
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "line_id": "e7962a1bfd13eed4",
+      "net": "ADDR3",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.3153382872067541,
+      "terminals": [
+        {
+          "id": "J2.15",
+          "net": "ADDR3",
+          "kind": "PTH",
+          "xy": [
+            49.99999905999999,
+            5.990076920000002
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.21300185999999943,
+          "hole_to_GND_min_mm": 0.5029174599999987,
+          "paired_GND_via": "6a654bb4b335ec79",
+          "paired_GND_xy_mm": [
+            51.45009776,
+            5.98932
+          ],
+          "return_centres_mm": 1.450098897547885,
+          "paired_hole_edges_mm": 0.7597522975478851
+        },
+        {
+          "id": "2d1737d31135ab50",
+          "net": "ADDR3",
+          "kind": "via",
+          "xy": [
+            29.200000019999997,
+            18.8000005
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.28880054000000044,
+          "hole_to_GND_min_mm": 0.4640605399999995,
+          "paired_GND_via": "6148e517341dd728",
+          "paired_GND_xy_mm": [
+            28.19999948,
+            18.8000005
+          ],
+          "return_centres_mm": 1.0000005399999985,
+          "paired_hole_edges_mm": 0.6393205399999986
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "line_id": "23b6dfb115328284",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.1172740342768781,
+      "terminals": [
+        {
+          "id": "1dba48fc92176907",
+          "net": "MUX_DISABLE",
+          "kind": "via",
+          "xy": [
+            29.000000419999996,
+            21.99999918
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.2888005399999969,
+          "hole_to_GND_min_mm": 0.46406053999999597,
+          "paired_GND_via": "66efbb3b28bb1169",
+          "paired_GND_xy_mm": [
+            27.99999988,
+            21.99999918
+          ],
+          "return_centres_mm": 1.000000539999995,
+          "paired_hole_edges_mm": 0.639320539999995
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "line_id": "c463f43a436a552a",
+      "net": "MUX_DISABLE",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.3153382871589219,
+      "terminals": [
+        {
+          "id": "J2.9",
+          "net": "MUX_DISABLE",
+          "kind": "PTH",
+          "xy": [
+            49.99999905999999,
+            21.23005152
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.2130018600000021,
+          "hole_to_GND_min_mm": 0.5029428600000015,
+          "paired_GND_via": "bded4c326da01bb4",
+          "paired_GND_xy_mm": [
+            51.45009776,
+            21.229319999999998
+          ],
+          "return_centres_mm": 1.4500988845120926,
+          "paired_hole_edges_mm": 0.7597522845120926
+        },
+        {
+          "id": "1dba48fc92176907",
+          "net": "MUX_DISABLE",
+          "kind": "via",
+          "xy": [
+            29.000000419999996,
+            21.99999918
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.2888005399999969,
+          "hole_to_GND_min_mm": 0.46406053999999597,
+          "paired_GND_via": "66efbb3b28bb1169",
+          "paired_GND_xy_mm": [
+            27.99999988,
+            21.99999918
+          ],
+          "return_centres_mm": 1.000000539999995,
+          "paired_hole_edges_mm": 0.639320539999995
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "line_id": "00d9af7df14350f7",
+      "net": "L0_E13",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.18705930541241067,
+      "terminals": [
+        {
+          "id": "J1.14",
+          "net": "L0_E13",
+          "kind": "PTH",
+          "xy": [
+            5.000000159999997,
+            8.530076920000003
+          ],
+          "diameter_mm": 1.5999967999999998,
+          "drill_mm": 1.0200132,
+          "annular_ring_nominal_mm": 0.2899917999999999,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.21300186000000032,
+          "hole_to_GND_min_mm": 0.5030698600000024,
+          "paired_GND_via": "7317316c611de590",
+          "paired_GND_xy_mm": [
+            3.54874068,
+            8.529319999999998
+          ],
+          "return_centres_mm": 1.4512596773898698,
+          "paired_hole_edges_mm": 0.7609130773898699
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "line_id": "5d6d5dcd69b4f106",
+      "net": "L0_E13",
+      "layer": 2,
+      "reference_layer": 16,
+      "missing_area_mm2": 0.12827898503646487,
+      "terminals": [
+        {
+          "id": "61e42088932c59f0",
+          "net": "L0_E13",
+          "kind": "via",
+          "xy": [
+            10.49999932,
+            10.34999962
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 16,
+          "copper_to_GND_min_mm": 0.35813664100364534,
+          "hole_to_GND_min_mm": 0.5333966410036457,
+          "paired_GND_via": "aba0521cc3a15d9c",
+          "paired_GND_xy_mm": [
+            11.499999859999999,
+            9.60000112
+          ],
+          "return_centres_mm": 1.2499995320009278,
+          "paired_hole_edges_mm": 0.889319532000928
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "line_id": "93dd0d999d7f9200",
+      "net": "ADDR2",
+      "layer": 1,
+      "reference_layer": 15,
+      "missing_area_mm2": 0.12827898399108364,
+      "terminals": [
+        {
+          "id": "3b4063e187832393",
+          "net": "ADDR2",
+          "kind": "via",
+          "xy": [
+            27.99999988,
+            20.00000064
+          ],
+          "diameter_mm": 0.7111999999999999,
+          "drill_mm": 0.36067999999999995,
+          "annular_ring_nominal_mm": 0.17526,
+          "reference_layer": 15,
+          "copper_to_GND_min_mm": 0.3581366410036428,
+          "hole_to_GND_min_mm": 0.5333966410036434,
+          "paired_GND_via": "6148e517341dd728",
+          "paired_GND_xy_mm": [
+            28.19999948,
+            18.8000005
+          ],
+          "return_centres_mm": 1.21655257839527,
+          "paired_hole_edges_mm": 0.8558725783952701
+        }
+      ]
+    }
+  ],
+  "all_non_GND_PTH_and_via_terminals": [
+    {
+      "id": "J1.14",
+      "net": "L0_E13",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999997,
+        8.530076920000003
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.21300186000000032,
+      "hole_to_GND_min_mm": 0.5030698600000024,
+      "paired_GND_via": "7317316c611de590",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        8.529319999999998
+      ],
+      "return_centres_mm": 1.4512596773898698,
+      "paired_hole_edges_mm": 0.7609130773898699
+    },
+    {
+      "id": "J1.13",
+      "net": "L0_E12",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999998,
+        11.070051520000002
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.2692349679604785,
+      "hole_to_GND_min_mm": 0.5591759681995575,
+      "paired_GND_via": "e3c1949ae92b1a76",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        11.069319999999998
+      ],
+      "return_centres_mm": 1.451259664364505,
+      "paired_hole_edges_mm": 0.7609130643645051
+    },
+    {
+      "id": "J1.12",
+      "net": "L0_E11",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999998,
+        13.610051519999999
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.2692349679604771,
+      "hole_to_GND_min_mm": 0.5591759681995602,
+      "paired_GND_via": "5b2b6e845433dea0",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        13.609319999999999
+      ],
+      "return_centres_mm": 1.451259664364505,
+      "paired_hole_edges_mm": 0.7609130643645051
+    },
+    {
+      "id": "J1.11",
+      "net": "L0_E10",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999998,
+        16.150051519999998
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.26923496796047663,
+      "hole_to_GND_min_mm": 0.5591759681995584,
+      "paired_GND_via": "775e389243ca7091",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        16.14932
+      ],
+      "return_centres_mm": 1.451259664364505,
+      "paired_hole_edges_mm": 0.7609130643645051
+    },
+    {
+      "id": "J1.10",
+      "net": "L0_E09",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999999,
+        18.69005152
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.26923496796047414,
+      "hole_to_GND_min_mm": 0.5591759681995546,
+      "paired_GND_via": "0ff0efb58e90de32",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        18.68932
+      ],
+      "return_centres_mm": 1.451259664364506,
+      "paired_hole_edges_mm": 0.760913064364506
+    },
+    {
+      "id": "J1.9",
+      "net": "L0_E08",
+      "kind": "PTH",
+      "xy": [
+        5.00000016,
+        21.23005152
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.269234967960473,
+      "hole_to_GND_min_mm": 0.5591759681995566,
+      "paired_GND_via": "7a20353ac02e26a8",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        21.229319999999998
+      ],
+      "return_centres_mm": 1.4512596643645068,
+      "paired_hole_edges_mm": 0.7609130643645069
+    },
+    {
+      "id": "J1.8",
+      "net": "L0_E07",
+      "kind": "PTH",
+      "xy": [
+        5.00000016,
+        23.77002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.2692349679604723,
+      "hole_to_GND_min_mm": 0.5592013680800195,
+      "paired_GND_via": "29fe4061e2ec0cb5",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        23.769319999999997
+      ],
+      "return_centres_mm": 1.4512596517836927,
+      "paired_hole_edges_mm": 0.7609130517836927
+    },
+    {
+      "id": "J1.7",
+      "net": "L0_E06",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000001,
+        26.31002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.26923496796047547,
+      "hole_to_GND_min_mm": 0.5592013680800195,
+      "paired_GND_via": "91304e41b78a07b2",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        26.309319999999996
+      ],
+      "return_centres_mm": 1.4512596517836935,
+      "paired_hole_edges_mm": 0.7609130517836936
+    },
+    {
+      "id": "J1.6",
+      "net": "L0_E05",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000002,
+        28.85002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.269234967960474,
+      "hole_to_GND_min_mm": 0.5592013680800195,
+      "paired_GND_via": "f8f549b3960442ab",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        28.84932
+      ],
+      "return_centres_mm": 1.4512596517836944,
+      "paired_hole_edges_mm": 0.7609130517836945
+    },
+    {
+      "id": "J1.5",
+      "net": "L0_E04",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000002,
+        31.390026119999998
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.269234967960473,
+      "hole_to_GND_min_mm": 0.5592013680800195,
+      "paired_GND_via": "72788069015cfed2",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        31.389319999999998
+      ],
+      "return_centres_mm": 1.4512596517836944,
+      "paired_hole_edges_mm": 0.7609130517836945
+    },
+    {
+      "id": "J1.4",
+      "net": "L0_E03",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000003,
+        33.93002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.26923496796047186,
+      "hole_to_GND_min_mm": 0.5592013680800193,
+      "paired_GND_via": "a5333efe15fa0ed2",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        33.92931999999999
+      ],
+      "return_centres_mm": 1.4512596517836953,
+      "paired_hole_edges_mm": 0.7609130517836954
+    },
+    {
+      "id": "J1.3",
+      "net": "L0_E02",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000003,
+        36.47000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.26923496796047164,
+      "hole_to_GND_min_mm": 0.5592267679604727,
+      "paired_GND_via": "f280d8d609bf9004",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        36.46931999999999
+      ],
+      "return_centres_mm": 1.4512596396474329,
+      "paired_hole_edges_mm": 0.760913039647433
+    },
+    {
+      "id": "J1.2",
+      "net": "L0_E01",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000003,
+        39.01000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.26923496796047147,
+      "hole_to_GND_min_mm": 0.5592267679604727,
+      "paired_GND_via": "250f83954a2d6dc4",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        39.00931999999999
+      ],
+      "return_centres_mm": 1.4512596396474329,
+      "paired_hole_edges_mm": 0.760913039647433
+    },
+    {
+      "id": "J1.1",
+      "net": "L0_E00",
+      "kind": "PTH",
+      "xy": [
+        5.0000001600000035,
+        41.55000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.2692387329052803,
+      "hole_to_GND_min_mm": 0.5592317999999964,
+      "paired_GND_via": "d084970f837fd33e",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        41.549319999999994
+      ],
+      "return_centres_mm": 1.4512596396474338,
+      "paired_hole_edges_mm": 0.7609130396474338
+    },
+    {
+      "id": "J2.13",
+      "net": "ADDR2",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        11.070051520000002
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.21300185999999854,
+      "hole_to_GND_min_mm": 0.502942859999998,
+      "paired_GND_via": "7641831913722fda",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        11.069319999999998
+      ],
+      "return_centres_mm": 1.4500988845120926,
+      "paired_hole_edges_mm": 0.7597522845120926
+    },
+    {
+      "id": "J2.11",
+      "net": "ADDR1",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        16.150051519999998
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.21300185999999854,
+      "hole_to_GND_min_mm": 0.5029428600000015,
+      "paired_GND_via": "6027c7717532611a",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        16.14932
+      ],
+      "return_centres_mm": 1.4500988845120926,
+      "paired_hole_edges_mm": 0.7597522845120926
+    },
+    {
+      "id": "J2.9",
+      "net": "MUX_DISABLE",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        21.23005152
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.2130018600000021,
+      "hole_to_GND_min_mm": 0.5029428600000015,
+      "paired_GND_via": "bded4c326da01bb4",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        21.229319999999998
+      ],
+      "return_centres_mm": 1.4500988845120926,
+      "paired_hole_edges_mm": 0.7597522845120926
+    },
+    {
+      "id": "J2.7",
+      "net": "ADDR0",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        26.31002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.213001859999995,
+      "hole_to_GND_min_mm": 0.5029682599999964,
+      "paired_GND_via": "fc1f8a9c8aac1cbe",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        26.309319999999996
+      ],
+      "return_centres_mm": 1.4500988719212078,
+      "paired_hole_edges_mm": 0.7597522719212079
+    },
+    {
+      "id": "J2.5",
+      "net": "SENSE_OUT",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        31.390026119999998
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.21300185999999144,
+      "hole_to_GND_min_mm": 0.5029682599999964,
+      "paired_GND_via": "b8f8963843ee9e78",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        31.389319999999998
+      ],
+      "return_centres_mm": 1.4500988719212078,
+      "paired_hole_edges_mm": 0.7597522719212079
+    },
+    {
+      "id": "J2.3",
+      "net": "RC_DRIVE",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        36.47000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.21300185999999144,
+      "hole_to_GND_min_mm": 0.5029936599999912,
+      "paired_GND_via": "1c9e49d13908b4f0",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        36.46931999999999
+      ],
+      "return_centres_mm": 1.4500988597752305,
+      "paired_hole_edges_mm": 0.7597522597752305
+    },
+    {
+      "id": "J2.1",
+      "net": "3V3_IO",
+      "kind": "PTH",
+      "xy": [
+        49.99999906,
+        41.55000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.21300186000000565,
+      "hole_to_GND_min_mm": 0.5029936599999983,
+      "paired_GND_via": "e25385d1e8779204",
+      "paired_GND_xy_mm": [
+        51.45000124,
+        41.55000072
+      ],
+      "return_centres_mm": 1.4500021799999985,
+      "paired_hole_edges_mm": 0.7596555799999986
+    },
+    {
+      "id": "J2.15",
+      "net": "ADDR3",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        5.990076920000002
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.21300185999999943,
+      "hole_to_GND_min_mm": 0.5029174599999987,
+      "paired_GND_via": "6a654bb4b335ec79",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        5.98932
+      ],
+      "return_centres_mm": 1.450098897547885,
+      "paired_hole_edges_mm": 0.7597522975478851
+    },
+    {
+      "id": "868cbe0ba8c0a96f",
+      "net": "RC_DRIVE",
+      "kind": "via",
+      "xy": [
+        21.599999979999996,
+        28.099999679999996
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.3581366410036403,
+      "hole_to_GND_min_mm": 0.5333966410036408,
+      "paired_GND_via": "33ccc406ad4dcef3",
+      "paired_GND_xy_mm": [
+        21.599999979999996,
+        29.200000019999997
+      ],
+      "return_centres_mm": 1.1000003400000011,
+      "paired_hole_edges_mm": 0.7393203400000012
+    },
+    {
+      "id": "f516b514a1b470ba",
+      "net": "SENSE_OUT",
+      "kind": "via",
+      "xy": [
+        28.19999948,
+        27.900000079999998
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.35813664100363957,
+      "hole_to_GND_min_mm": 0.5333966410036411,
+      "paired_GND_via": "eb49457431217078",
+      "paired_GND_xy_mm": [
+        29.10000022,
+        28.80000082
+      ],
+      "return_centres_mm": 1.2727932526538233,
+      "paired_hole_edges_mm": 0.9121132526538234
+    },
+    {
+      "id": "bb25eeeaa82ccf21",
+      "net": "ADDR0",
+      "kind": "via",
+      "xy": [
+        25.9999988,
+        22.40000092
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.3581366410036431,
+      "hole_to_GND_min_mm": 0.533396641003644,
+      "paired_GND_via": "1cf189e303b83802",
+      "paired_GND_xy_mm": [
+        25.9999988,
+        23.500001259999998
+      ],
+      "return_centres_mm": 1.1000003399999976,
+      "paired_hole_edges_mm": 0.7393203399999977
+    },
+    {
+      "id": "84accd5053c9f4a7",
+      "net": "ADDR1",
+      "kind": "via",
+      "xy": [
+        26.99999934,
+        21.20000078
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.35813664100364095,
+      "hole_to_GND_min_mm": 0.5333966410036418,
+      "paired_GND_via": "66efbb3b28bb1169",
+      "paired_GND_xy_mm": [
+        27.99999988,
+        21.99999918
+      ],
+      "return_centres_mm": 1.2806242696446353,
+      "paired_hole_edges_mm": 0.9199442696446354
+    },
+    {
+      "id": "3b4063e187832393",
+      "net": "ADDR2",
+      "kind": "via",
+      "xy": [
+        27.99999988,
+        20.00000064
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.3581366410036428,
+      "hole_to_GND_min_mm": 0.5333966410036434,
+      "paired_GND_via": "6148e517341dd728",
+      "paired_GND_xy_mm": [
+        28.19999948,
+        18.8000005
+      ],
+      "return_centres_mm": 1.21655257839527,
+      "paired_hole_edges_mm": 0.8558725783952701
+    },
+    {
+      "id": "2d1737d31135ab50",
+      "net": "ADDR3",
+      "kind": "via",
+      "xy": [
+        29.200000019999997,
+        18.8000005
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.28880054000000044,
+      "hole_to_GND_min_mm": 0.4640605399999995,
+      "paired_GND_via": "6148e517341dd728",
+      "paired_GND_xy_mm": [
+        28.19999948,
+        18.8000005
+      ],
+      "return_centres_mm": 1.0000005399999985,
+      "paired_hole_edges_mm": 0.6393205399999986
+    },
+    {
+      "id": "1dba48fc92176907",
+      "net": "MUX_DISABLE",
+      "kind": "via",
+      "xy": [
+        29.000000419999996,
+        21.99999918
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.2888005399999969,
+      "hole_to_GND_min_mm": 0.46406053999999597,
+      "paired_GND_via": "66efbb3b28bb1169",
+      "paired_GND_xy_mm": [
+        27.99999988,
+        21.99999918
+      ],
+      "return_centres_mm": 1.000000539999995,
+      "paired_hole_edges_mm": 0.639320539999995
+    },
+    {
+      "id": "61e42088932c59f0",
+      "net": "L0_E13",
+      "kind": "via",
+      "xy": [
+        10.49999932,
+        10.34999962
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 15,
+      "copper_to_GND_min_mm": 0.35813664100364534,
+      "hole_to_GND_min_mm": 0.5333966410036457,
+      "paired_GND_via": "aba0521cc3a15d9c",
+      "paired_GND_xy_mm": [
+        11.499999859999999,
+        9.60000112
+      ],
+      "return_centres_mm": 1.2499995320009278,
+      "paired_hole_edges_mm": 0.889319532000928
+    },
+    {
+      "id": "J1.14",
+      "net": "L0_E13",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999997,
+        8.530076920000003
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.21300186000000032,
+      "hole_to_GND_min_mm": 0.5030698600000024,
+      "paired_GND_via": "7317316c611de590",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        8.529319999999998
+      ],
+      "return_centres_mm": 1.4512596773898698,
+      "paired_hole_edges_mm": 0.7609130773898699
+    },
+    {
+      "id": "J1.13",
+      "net": "L0_E12",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999998,
+        11.070051520000002
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.2692349679604785,
+      "hole_to_GND_min_mm": 0.5591759681995575,
+      "paired_GND_via": "e3c1949ae92b1a76",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        11.069319999999998
+      ],
+      "return_centres_mm": 1.451259664364505,
+      "paired_hole_edges_mm": 0.7609130643645051
+    },
+    {
+      "id": "J1.12",
+      "net": "L0_E11",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999998,
+        13.610051519999999
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.2692349679604771,
+      "hole_to_GND_min_mm": 0.5591759681995602,
+      "paired_GND_via": "5b2b6e845433dea0",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        13.609319999999999
+      ],
+      "return_centres_mm": 1.451259664364505,
+      "paired_hole_edges_mm": 0.7609130643645051
+    },
+    {
+      "id": "J1.11",
+      "net": "L0_E10",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999998,
+        16.150051519999998
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.26923496796047663,
+      "hole_to_GND_min_mm": 0.5591759681995584,
+      "paired_GND_via": "775e389243ca7091",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        16.14932
+      ],
+      "return_centres_mm": 1.451259664364505,
+      "paired_hole_edges_mm": 0.7609130643645051
+    },
+    {
+      "id": "J1.10",
+      "net": "L0_E09",
+      "kind": "PTH",
+      "xy": [
+        5.000000159999999,
+        18.69005152
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.26923496796047414,
+      "hole_to_GND_min_mm": 0.5591759681995546,
+      "paired_GND_via": "0ff0efb58e90de32",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        18.68932
+      ],
+      "return_centres_mm": 1.451259664364506,
+      "paired_hole_edges_mm": 0.760913064364506
+    },
+    {
+      "id": "J1.9",
+      "net": "L0_E08",
+      "kind": "PTH",
+      "xy": [
+        5.00000016,
+        21.23005152
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.269234967960473,
+      "hole_to_GND_min_mm": 0.5591759681995566,
+      "paired_GND_via": "7a20353ac02e26a8",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        21.229319999999998
+      ],
+      "return_centres_mm": 1.4512596643645068,
+      "paired_hole_edges_mm": 0.7609130643645069
+    },
+    {
+      "id": "J1.8",
+      "net": "L0_E07",
+      "kind": "PTH",
+      "xy": [
+        5.00000016,
+        23.77002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.2692349679604723,
+      "hole_to_GND_min_mm": 0.5592013680800195,
+      "paired_GND_via": "29fe4061e2ec0cb5",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        23.769319999999997
+      ],
+      "return_centres_mm": 1.4512596517836927,
+      "paired_hole_edges_mm": 0.7609130517836927
+    },
+    {
+      "id": "J1.7",
+      "net": "L0_E06",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000001,
+        26.31002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.26923496796047547,
+      "hole_to_GND_min_mm": 0.5592013680800195,
+      "paired_GND_via": "91304e41b78a07b2",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        26.309319999999996
+      ],
+      "return_centres_mm": 1.4512596517836935,
+      "paired_hole_edges_mm": 0.7609130517836936
+    },
+    {
+      "id": "J1.6",
+      "net": "L0_E05",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000002,
+        28.85002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.269234967960474,
+      "hole_to_GND_min_mm": 0.5592013680800195,
+      "paired_GND_via": "f8f549b3960442ab",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        28.84932
+      ],
+      "return_centres_mm": 1.4512596517836944,
+      "paired_hole_edges_mm": 0.7609130517836945
+    },
+    {
+      "id": "J1.5",
+      "net": "L0_E04",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000002,
+        31.390026119999998
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.269234967960473,
+      "hole_to_GND_min_mm": 0.5592013680800195,
+      "paired_GND_via": "72788069015cfed2",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        31.389319999999998
+      ],
+      "return_centres_mm": 1.4512596517836944,
+      "paired_hole_edges_mm": 0.7609130517836945
+    },
+    {
+      "id": "J1.4",
+      "net": "L0_E03",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000003,
+        33.93002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.26923496796047186,
+      "hole_to_GND_min_mm": 0.5592013680800193,
+      "paired_GND_via": "a5333efe15fa0ed2",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        33.92931999999999
+      ],
+      "return_centres_mm": 1.4512596517836953,
+      "paired_hole_edges_mm": 0.7609130517836954
+    },
+    {
+      "id": "J1.3",
+      "net": "L0_E02",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000003,
+        36.47000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.26923496796047164,
+      "hole_to_GND_min_mm": 0.5592267679604727,
+      "paired_GND_via": "f280d8d609bf9004",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        36.46931999999999
+      ],
+      "return_centres_mm": 1.4512596396474329,
+      "paired_hole_edges_mm": 0.760913039647433
+    },
+    {
+      "id": "J1.2",
+      "net": "L0_E01",
+      "kind": "PTH",
+      "xy": [
+        5.000000160000003,
+        39.01000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.26923496796047147,
+      "hole_to_GND_min_mm": 0.5592267679604727,
+      "paired_GND_via": "250f83954a2d6dc4",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        39.00931999999999
+      ],
+      "return_centres_mm": 1.4512596396474329,
+      "paired_hole_edges_mm": 0.760913039647433
+    },
+    {
+      "id": "J1.1",
+      "net": "L0_E00",
+      "kind": "PTH",
+      "xy": [
+        5.0000001600000035,
+        41.55000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.2692387329052803,
+      "hole_to_GND_min_mm": 0.5592317999999964,
+      "paired_GND_via": "d084970f837fd33e",
+      "paired_GND_xy_mm": [
+        3.54874068,
+        41.549319999999994
+      ],
+      "return_centres_mm": 1.4512596396474338,
+      "paired_hole_edges_mm": 0.7609130396474338
+    },
+    {
+      "id": "J2.13",
+      "net": "ADDR2",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        11.070051520000002
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.21300185999999854,
+      "hole_to_GND_min_mm": 0.502942859999998,
+      "paired_GND_via": "7641831913722fda",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        11.069319999999998
+      ],
+      "return_centres_mm": 1.4500988845120926,
+      "paired_hole_edges_mm": 0.7597522845120926
+    },
+    {
+      "id": "J2.11",
+      "net": "ADDR1",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        16.150051519999998
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.21300185999999854,
+      "hole_to_GND_min_mm": 0.5029428600000015,
+      "paired_GND_via": "6027c7717532611a",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        16.14932
+      ],
+      "return_centres_mm": 1.4500988845120926,
+      "paired_hole_edges_mm": 0.7597522845120926
+    },
+    {
+      "id": "J2.9",
+      "net": "MUX_DISABLE",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        21.23005152
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.2130018600000021,
+      "hole_to_GND_min_mm": 0.5029428600000015,
+      "paired_GND_via": "bded4c326da01bb4",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        21.229319999999998
+      ],
+      "return_centres_mm": 1.4500988845120926,
+      "paired_hole_edges_mm": 0.7597522845120926
+    },
+    {
+      "id": "J2.7",
+      "net": "ADDR0",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        26.31002612
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.213001859999995,
+      "hole_to_GND_min_mm": 0.5029682599999964,
+      "paired_GND_via": "fc1f8a9c8aac1cbe",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        26.309319999999996
+      ],
+      "return_centres_mm": 1.4500988719212078,
+      "paired_hole_edges_mm": 0.7597522719212079
+    },
+    {
+      "id": "J2.5",
+      "net": "SENSE_OUT",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        31.390026119999998
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.21300185999999144,
+      "hole_to_GND_min_mm": 0.5029682599999964,
+      "paired_GND_via": "b8f8963843ee9e78",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        31.389319999999998
+      ],
+      "return_centres_mm": 1.4500988719212078,
+      "paired_hole_edges_mm": 0.7597522719212079
+    },
+    {
+      "id": "J2.3",
+      "net": "RC_DRIVE",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        36.47000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.21300185999999144,
+      "hole_to_GND_min_mm": 0.5029936599999912,
+      "paired_GND_via": "1c9e49d13908b4f0",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        36.46931999999999
+      ],
+      "return_centres_mm": 1.4500988597752305,
+      "paired_hole_edges_mm": 0.7597522597752305
+    },
+    {
+      "id": "J2.1",
+      "net": "3V3_IO",
+      "kind": "PTH",
+      "xy": [
+        49.99999906,
+        41.55000072
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.21300186000000565,
+      "hole_to_GND_min_mm": 0.5029936599999983,
+      "paired_GND_via": "e25385d1e8779204",
+      "paired_GND_xy_mm": [
+        51.45000124,
+        41.55000072
+      ],
+      "return_centres_mm": 1.4500021799999985,
+      "paired_hole_edges_mm": 0.7596555799999986
+    },
+    {
+      "id": "J2.15",
+      "net": "ADDR3",
+      "kind": "PTH",
+      "xy": [
+        49.99999905999999,
+        5.990076920000002
+      ],
+      "diameter_mm": 1.5999967999999998,
+      "drill_mm": 1.0200132,
+      "annular_ring_nominal_mm": 0.2899917999999999,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.21300185999999943,
+      "hole_to_GND_min_mm": 0.5029174599999987,
+      "paired_GND_via": "6a654bb4b335ec79",
+      "paired_GND_xy_mm": [
+        51.45009776,
+        5.98932
+      ],
+      "return_centres_mm": 1.450098897547885,
+      "paired_hole_edges_mm": 0.7597522975478851
+    },
+    {
+      "id": "868cbe0ba8c0a96f",
+      "net": "RC_DRIVE",
+      "kind": "via",
+      "xy": [
+        21.599999979999996,
+        28.099999679999996
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.3581366410036403,
+      "hole_to_GND_min_mm": 0.5333966410036408,
+      "paired_GND_via": "33ccc406ad4dcef3",
+      "paired_GND_xy_mm": [
+        21.599999979999996,
+        29.200000019999997
+      ],
+      "return_centres_mm": 1.1000003400000011,
+      "paired_hole_edges_mm": 0.7393203400000012
+    },
+    {
+      "id": "f516b514a1b470ba",
+      "net": "SENSE_OUT",
+      "kind": "via",
+      "xy": [
+        28.19999948,
+        27.900000079999998
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.35813664100363957,
+      "hole_to_GND_min_mm": 0.5333966410036411,
+      "paired_GND_via": "eb49457431217078",
+      "paired_GND_xy_mm": [
+        29.10000022,
+        28.80000082
+      ],
+      "return_centres_mm": 1.2727932526538233,
+      "paired_hole_edges_mm": 0.9121132526538234
+    },
+    {
+      "id": "bb25eeeaa82ccf21",
+      "net": "ADDR0",
+      "kind": "via",
+      "xy": [
+        25.9999988,
+        22.40000092
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.3581366410036431,
+      "hole_to_GND_min_mm": 0.533396641003644,
+      "paired_GND_via": "1cf189e303b83802",
+      "paired_GND_xy_mm": [
+        25.9999988,
+        23.500001259999998
+      ],
+      "return_centres_mm": 1.1000003399999976,
+      "paired_hole_edges_mm": 0.7393203399999977
+    },
+    {
+      "id": "84accd5053c9f4a7",
+      "net": "ADDR1",
+      "kind": "via",
+      "xy": [
+        26.99999934,
+        21.20000078
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.35813664100364095,
+      "hole_to_GND_min_mm": 0.5333966410036418,
+      "paired_GND_via": "66efbb3b28bb1169",
+      "paired_GND_xy_mm": [
+        27.99999988,
+        21.99999918
+      ],
+      "return_centres_mm": 1.2806242696446353,
+      "paired_hole_edges_mm": 0.9199442696446354
+    },
+    {
+      "id": "3b4063e187832393",
+      "net": "ADDR2",
+      "kind": "via",
+      "xy": [
+        27.99999988,
+        20.00000064
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.3581366410036428,
+      "hole_to_GND_min_mm": 0.5333966410036434,
+      "paired_GND_via": "6148e517341dd728",
+      "paired_GND_xy_mm": [
+        28.19999948,
+        18.8000005
+      ],
+      "return_centres_mm": 1.21655257839527,
+      "paired_hole_edges_mm": 0.8558725783952701
+    },
+    {
+      "id": "2d1737d31135ab50",
+      "net": "ADDR3",
+      "kind": "via",
+      "xy": [
+        29.200000019999997,
+        18.8000005
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.28880054000000044,
+      "hole_to_GND_min_mm": 0.4640605399999995,
+      "paired_GND_via": "6148e517341dd728",
+      "paired_GND_xy_mm": [
+        28.19999948,
+        18.8000005
+      ],
+      "return_centres_mm": 1.0000005399999985,
+      "paired_hole_edges_mm": 0.6393205399999986
+    },
+    {
+      "id": "1dba48fc92176907",
+      "net": "MUX_DISABLE",
+      "kind": "via",
+      "xy": [
+        29.000000419999996,
+        21.99999918
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.2888005399999969,
+      "hole_to_GND_min_mm": 0.46406053999999597,
+      "paired_GND_via": "66efbb3b28bb1169",
+      "paired_GND_xy_mm": [
+        27.99999988,
+        21.99999918
+      ],
+      "return_centres_mm": 1.000000539999995,
+      "paired_hole_edges_mm": 0.639320539999995
+    },
+    {
+      "id": "61e42088932c59f0",
+      "net": "L0_E13",
+      "kind": "via",
+      "xy": [
+        10.49999932,
+        10.34999962
+      ],
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995,
+      "annular_ring_nominal_mm": 0.17526,
+      "reference_layer": 16,
+      "copper_to_GND_min_mm": 0.35813664100364534,
+      "hole_to_GND_min_mm": 0.5333966410036457,
+      "paired_GND_via": "aba0521cc3a15d9c",
+      "paired_GND_xy_mm": [
+        11.499999859999999,
+        9.60000112
+      ],
+      "return_centres_mm": 1.2499995320009278,
+      "paired_hole_edges_mm": 0.889319532000928
+    }
+  ],
+  "summary": {
+    "min_copper_to_GND_mm": 0.21300185999999144,
+    "min_inner_via_hole_to_GND_mm": 0.46406053999999597,
+    "min_inner_PTH_hole_to_GND_mm": 0.5029174599999987,
+    "min_return_centres_mm": 1.000000539999995,
+    "max_return_centres_mm": 1.4512596773898698,
+    "min_paired_hole_edges_mm": 0.639320539999995
+  },
+  "manufacturer_source": "https://jlcpcb.com/capabilities/Capabilities",
+  "manufacturer_checked": "2026-10-27",
+  "manufacturer_limits_mm": {
+    "multilayer_1oz_trace_space": 0.09,
+    "via_hole_min": 0.15,
+    "via_hole_preferred": 0.2,
+    "via_hole_to_copper_inner": 0.2,
+    "PTH_hole_to_copper_inner": 0.3,
+    "via_hole_to_hole": 0.2,
+    "pad_hole_to_hole": 0.45,
+    "multilayer_1oz_PTH_ring_absolute": 0.15,
+    "multilayer_1oz_PTH_ring_recommended": 0.2
+  },
+  "acceptance_approved": false,
+  "physical_tests": "UNMEASURED"
+}

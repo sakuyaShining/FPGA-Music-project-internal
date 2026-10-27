@@ -1,0 +1,77 @@
+{
+  "record": "pitch-endpoint-count",
+  "recorded_at": "2026-10-24",
+  "authority": "Direct human WorkBuddy user_query in the authoritative-20261024 session, corroborated by specification v2.0",
+  "verbatim": "也就是说 26格指的是：12+12+（2高音位）？剩下还有16位是8个泛音推子+5个八度切换？ 我想 无需两个高音位 因为另一边自带了",
+  "decision_extracted": {
+    "pitch_positions": 25,
+    "layout": "each row 12 equal-width keys (C..B), plus one standalone C5 key at the top-right of the upper row",
+    "semitones": "C3..C5 inclusive, chromatic",
+    "duplicated_top_endpoint": false,
+    "channel_24_stands_alone": true
+  },
+  "specification_already_agrees": {
+    "path": "docs/02-技术方案/25-音高与八度规格.md",
+    "sections": [
+      {
+        "line": 20,
+        "text": "| 0 – 11 | 下排第 1–12 键 | 音高：C3 → B3 | 0 – 11 |"
+      },
+      {
+        "line": 21,
+        "text": "| 12 – 23 | 上排第 1–12 键 | 音高：C4 → B4 | 12 – 23 |"
+      },
+      {
+        "line": 22,
+        "text": "| 24 | 上排最右 | 单独的高音 C5 键 | 24 |"
+      },
+      {
+        "line": 29,
+        "text": "没有两个通道映射到同一个音。高音端点 C5 由单独的通道 24 提供，而不是让两排都包含端点——若两个相邻物理键对应同一个音，按在交界处会同时触发两个通道，白白占用两个声部并发出两条 note-off。"
+      },
+      {
+        "line": 30,
+        "text": "每排是 12 个等宽键（C 到 B），加上右侧独立的高音 C 键，构成完整的两个八度加一个端点。"
+      }
+    ],
+    "interpretation": "规格 v2.0 已经是 25 音位，且给出了技术理由（避免交界处双触发占两个声部）。用户本次的『无需两个高音位』是对规格的确认，不是新增需求。真正偏离规格的是载板原理图的 26 组。",
+    "internal_conflict": {
+      "line": 16,
+      "text": "面板为两排、每排 13 个触摸位置",
+      "verdict": "旧稿残留（该文档第 3 行已声明存在旧稿残留）。§2 表格与说明第 29–30 行是 12+12+1，应以表格为准。"
+    }
+  },
+  "corrections_to_the_users_paraphrase": [
+    {
+      "claim": "26 格 = 12 + 12 + 2 高音位",
+      "verdict": "not_established",
+      "reason": "78 = 26 x 3 只证明载板上有 26 个音位组，无法区分『每排 13 格』与『12+12+2』两种分解。用户的结论（不重复顶端格）成立，但其推导前提是推测。"
+    },
+    {
+      "claim": "剩下 16 位是 8 泛音推子 + 5 八度切换",
+      "verdict": "rejected",
+      "reason": "165 的 16 位实际为 8 泛音 + 4 预设 + 1 编辑 + 3 编码器，一位不剩。八度档 5 格走模拟侧 4067，不经 165。"
+    }
+  ],
+  "hardware_impact": {
+    "electrode_budget_total": 84,
+    "pitch_electrodes": {
+      "if_all_positions_3_electrode": 75,
+      "if_c5_is_single_pad_per_spec_line_22": 73,
+      "status": "UNRESOLVED",
+      "note": "规格 §1 把通道 24 称为『单独的高音 C5 键』，暗示单电极；但 rc_strip_positions 的三电极重心插值要求每个音位 3 电极。两种账目都能凑满 84（75+5+4 或 73+5+6），必须先确认 C5 是 1 电极还是 3 电极才能定稿。"
+    },
+    "rtl_parameters_written_for_26": [
+      "fpga/current/engine/src/rc_strip_positions.v:6  parameter integer STRIPS=26",
+      "fpga/current/engine/src/instrument_sensor_probe.v:4  parameter integer LANES=6,STRIPS=26",
+      "fpga/current/engine/src/left_contact_bridge.v:5  parameter integer NF=26"
+    ],
+    "not_yet_fabricated": true,
+    "consequence": "载板尚未投板，现在改 25 只是删掉每排顶端一组（3 条走线），成本为零；若投板后再改则需改板。"
+  },
+  "open_questions_left": [
+    "C5（通道 24）是 1 个电极还是 3 个电极——决定音位电极总数是 73 还是 75",
+    "哪 5 个电极是八度档（L?_E?? 编号未定）",
+    "165 两片级联后主片在低 8 位还是高 8 位（需实测）"
+  ]
+}

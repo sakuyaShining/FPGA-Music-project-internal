@@ -1,0 +1,31 @@
+{
+  "status": "FAIL",
+  "scope": "Entry tracking and captured file availability",
+  "snapshots": 22,
+  "inputs": 18277,
+  "unique_verified_blobs": 0,
+  "current_design": "design-20261023-v3",
+  "recovery_archive_files": 586,
+  "recovery_captured_at": "2026-10-23T12:23:42.173413+08:00",
+  "live_workspaces_checked": false,
+  "remote_checked_now": true,
+  "entry_freshness_checked": true,
+  "published_authority": "main",
+  "review_freshness": "REVIEW_REQUIRED",
+  "implementation_start_authorized": false,
+  "errors": [
+    "Published main: UNPUBLISHED_ENTRY; Working entry differs from committed entry",
+    "Design review: REVIEW_DUE",
+    "fpga: REVIEW_DUE",
+    "hardware: REVIEW_DUE"
+  ],
+  "product_acceptance": false,
+  "command": [
+    "python",
+    "tools/scripts/project_control.py",
+    "check",
+    "--remote",
+    "--fresh-entry"
+  ],
+  "exit_code": 1
+}

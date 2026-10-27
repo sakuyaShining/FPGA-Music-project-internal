@@ -1,0 +1,65 @@
+{
+  "at": "2026-10-27T16:10:40.024854+08:00",
+  "exact_SKU": "DFR0072",
+  "manufacturer": "DFRobot",
+  "role_candidate": "U8 scanning8output shiftregister module candidate ONLY",
+  "domestic_product_url": "https://www.dfrobot.com.cn/goods-123.html",
+  "official_page_SHA256": "eb2d7c035e38af7e90d902ed75e72315c9790c5fcac17bceef69815f2a7a6b76",
+  "listed_unit_CNY": 25.0,
+  "quantity_required_if_qualified": 1,
+  "Chinese_stock_field": "No positive current quantity or Qingyuan dispatch evidence",
+  "operating_voltage_official_V": 5,
+  "whole_product_3V3_qualified": false,
+  "official_schematic_url": "https://dfimg.dfrobot.com/wiki/17401/DFR0072_gravity-shiftout-module_schematics_V1.0.pdf",
+  "schematic_SHA256": "253d42081a2dc8da977d209412ed201ddf569d0a17c1c5f1ea82ca70c29292af",
+  "schematic_visual_review": {
+    "chip_label": "74HC595D",
+    "manufacturer_not_identified_on_schematic": true,
+    "SRCLR_pin10": "VCC",
+    "OE_pin13": "GND",
+    "four_decoupling_caps": "104P each betweenVCC/GND",
+    "input_IDC6": {
+      "1": "clockpin / SRCK / pin11",
+      "2": "VCC",
+      "3": "latchpin / RCK / pin12",
+      "4": "GND",
+      "5": "datapin / SER / pin14",
+      "6": "GND"
+    },
+    "cascade_IDC6": "sameclock/latch/power/GND; pin5 is QHI pin9",
+    "J1_odd_pins_QA_QD": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "J3_odd_pins_QE_QH": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "J1_J3_even_pins": "VCC",
+    "J2_J4_all_pins": "GND"
+  },
+  "important_harness_mapping": "Do not connect module J1/J3 evenpins asGround: official schematic ties themVCC. Q0..Q7 needed toADDR0..3/MUX_DISABLE/RC_DRIVE/LCD_RESET_N/TP_RESET_N. Logical outputcount is compatible but full rail/timing/reset contract not accepted.",
+  "3V3_pending": "Published module is5V. Do not run5V output into3V3 sensor/Nano. Exact populated chip and3V3 timing/offrail behavior need proof; no unapproved leveltranslator/modification added.",
+  "probe_clock_evidence": {
+    "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_sensor_probe.v",
+    "SPI_HALF_PERIOD": 8,
+    "scope": "Internal registered probe parameter only; not finalproduct clock/wrapper acceptance"
+  },
+  "not_replacement_for": [
+    "U9 input165chain",
+    "U11 sharedreadbackselector",
+    "U14 I2Coffrailbuffer",
+    "U15 screenbuffer",
+    "U16 touchinterruptconditioning",
+    "U17 protected5Vswitch",
+    "U18 peripheral3V3regulator"
+  ],
+  "whole56coverage_complete": false,
+  "purchase_released": false,
+  "orders_payments_messages": false,
+  "physical_tests": "UNMEASURED"
+}

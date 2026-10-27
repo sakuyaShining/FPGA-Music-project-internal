@@ -40,6 +40,37 @@ jobs:
         run: python3 -m unittest discover -s experiments/note_resource_20261024/audio/renderer/tests -v
       - name: Verify tagged input router and incomplete STA rejection
         run: python3 -m unittest discover -s experiments/note_resource_20261024/input/tests -v
+  verify-pcb-checkpoint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 1
+      # Bulk blobs live in release pcb-951-full-20261025; this job proves the
+      # in-tree bytes against Git and the external ones against their pinned
+      # sha256. The scheduled job below re-proves the external bytes in full.
+      - name: Verify in-tree checkpoint bytes and pinned external identities
+        run: python3 tools/scripts/pcb_checkpoint.py --git-ref HEAD
+  verify-release-blobs:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 1
+      - name: Download release-hosted checkpoint blobs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=hardware/checkpoints/pcb-951ce88a-20261025
+          gh release download pcb-951-full-20261025 --dir "$root/recovery" --pattern 'archive.part*'
+          gh release download pcb-951-full-20261025 --dir "$root/offline" \
+            --pattern 'MUX_DISABLE-IOtail-cleanup-audited-plane-context.json' \
+            --pattern 'MUX_DISABLE-IOtail-guide-verified-input-cache.json'
+      - name: Verify every sealed byte including release-hosted blobs
+        run: python3 tools/scripts/pcb_checkpoint.py --git-ref HEAD --require-external
   maintain-legacy-entry:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest

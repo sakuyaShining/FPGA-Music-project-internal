@@ -1,0 +1,1 @@
+const d=await eda.dmt_SelectControl.getCurrentDocumentInfo();if(d?.uuid!=="f52674d6627fca6f")throw Error("WrongPCB");const ps=await eda.pcb_PrimitivePad.getAll();return {doc:d,trial:globalThis.__sensorTodayFourLayer?.GroundThermalWidthTrial,pads:ps.filter(p=>p.getState_Net()==="GND").map(p=>({id:p.getState_PrimitiveId(),heat:p.getState_HeatWelding()}))};
