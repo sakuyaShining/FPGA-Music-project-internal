@@ -1,0 +1,251 @@
+{
+  "at": "2026-10-27T11:07:51.990912+08:00",
+  "source_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+  "state": "TERMINAL_OFFLINE_BOUNDED_GROUP_PROBE",
+  "elapsed_seconds": 1.3659462000068743,
+  "total_expanded": 167552,
+  "step_mm": 0.1,
+  "width_mm": 0.1651,
+  "branches": [
+    {
+      "net": "L0_E00",
+      "tag": "header_to_ESD",
+      "state": "PHYSICAL_PASS",
+      "expanded": 122,
+      "points": [
+        [
+          5.0000001600000035,
+          41.55000072
+        ],
+        [
+          5.0,
+          41.6
+        ],
+        [
+          7.1000000000000005,
+          39.5
+        ],
+        [
+          7.1000000000000005,
+          39.400000000000006
+        ],
+        [
+          7.300000000000001,
+          39.2
+        ],
+        [
+          7.300000000000001,
+          38.800000000000004
+        ],
+        [
+          7.4,
+          38.7
+        ],
+        [
+          7.4000004399999995,
+          38.739998719999996
+        ]
+      ],
+      "length_mm": 3.9841105496980953,
+      "violations": [],
+      "full_width_reference_missing_mm2": 0.23263532693399963,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E01",
+      "tag": "header_to_ESD",
+      "state": "PHYSICAL_PASS",
+      "expanded": 6107,
+      "points": [
+        [
+          5.000000160000003,
+          39.01000072
+        ],
+        [
+          5.0,
+          39.0
+        ],
+        [
+          5.0,
+          39.5
+        ],
+        [
+          3.9000000000000004,
+          40.6
+        ],
+        [
+          3.9000000000000004,
+          42.5
+        ],
+        [
+          4.0,
+          42.6
+        ],
+        [
+          6.0,
+          42.6
+        ],
+        [
+          6.300000000000001,
+          42.300000000000004
+        ],
+        [
+          6.7,
+          42.300000000000004
+        ],
+        [
+          6.800000000000001,
+          42.2
+        ],
+        [
+          6.9,
+          42.2
+        ],
+        [
+          7.1000000000000005,
+          42.0
+        ],
+        [
+          7.1000000000000005,
+          41.900000000000006
+        ],
+        [
+          7.2,
+          41.800000000000004
+        ],
+        [
+          7.2,
+          40.6
+        ],
+        [
+          8.8,
+          39.0
+        ],
+        [
+          8.8,
+          38.5
+        ],
+        [
+          8.5,
+          38.2
+        ],
+        [
+          7.4,
+          38.2
+        ],
+        [
+          7.4000004399999995,
+          38.23987272
+        ]
+      ],
+      "length_mm": 13.223884977021468,
+      "violations": [],
+      "full_width_reference_missing_mm2": 0.1851319394654261,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E02",
+      "tag": "header_to_ESD",
+      "state": "PHYSICAL_PASS",
+      "expanded": 1323,
+      "points": [
+        [
+          5.000000160000003,
+          36.47000072
+        ],
+        [
+          5.0,
+          36.5
+        ],
+        [
+          5.300000000000001,
+          36.5
+        ],
+        [
+          6.0,
+          35.800000000000004
+        ],
+        [
+          6.1000000000000005,
+          35.800000000000004
+        ],
+        [
+          6.2,
+          35.7
+        ],
+        [
+          6.7,
+          35.7
+        ],
+        [
+          6.800000000000001,
+          35.800000000000004
+        ],
+        [
+          6.9,
+          35.800000000000004
+        ],
+        [
+          7.300000000000001,
+          36.2
+        ],
+        [
+          8.5,
+          36.2
+        ],
+        [
+          8.8,
+          36.5
+        ],
+        [
+          8.8,
+          37.0
+        ],
+        [
+          8.700000000000001,
+          37.1
+        ],
+        [
+          7.5,
+          37.1
+        ],
+        [
+          7.4,
+          37.2
+        ],
+        [
+          7.4000004399999995,
+          37.239874719999996
+        ]
+      ],
+      "length_mm": 6.515458412274416,
+      "violations": [],
+      "full_width_reference_missing_mm2": 0.18719923597566443,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E03",
+      "tag": "header_to_ESD",
+      "state": "BOUNDED_NO_PATH",
+      "expanded": 160000,
+      "start": [
+        5.000000160000003,
+        33.93000072
+      ],
+      "end": [
+        7.4000004399999995,
+        36.74000272
+      ],
+      "global_time_limit_seconds": 105,
+      "per_branch_expansion_limit": 160000
+    }
+  ],
+  "all28branches_physical_pass": false,
+  "full_group_routing_accepted": false,
+  "reference_and_DC_audit_pending": true,
+  "native_applied": false,
+  "native_route_rerun": false,
+  "physical_tests": "UNMEASURED",
+  "manufacturing_release": false,
+  "stop_reason": "First failed branch or complete group; no ripup/no permutations/no parallel geometry/no retry. Failure does not prove global impossibility."
+}

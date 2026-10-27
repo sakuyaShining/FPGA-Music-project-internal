@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T08:05:55.938673+08:00",
+  "updated_at": "2026-10-27T11:09:39.471871+08:00",
   "requirements": {
     "confirmed_at": "2026-10-26T21:20:01.872822+08:00",
     "confirmed_by": "本聊天用户直接答复",
@@ -243,7 +243,11 @@
     "module-plan-current-evidence/TI-TPS2553-SLVS841F.pdf": "413aec7178e722bdeacd701a7d4d4f20e5aa09bee0c60ab2176751b6f1ae6da5",
     "module-plan-current-evidence/TPS2553-ILIM-page15-current.png": "32e33856187de68896f0098c471cd027ab8db7fd1bc880deace18df4c188b4c5",
     "module-plan-current-evidence/TPS2553-ILIM-page18-current.png": "bd6ecdeae2c8294a6f41ce543b385b7248a65ba4b82f3de0a75903fb6f2c2e62",
-    "module-plan-current-evidence/control-power-current-stage-file-map.json": "8a6df809c4185634978d023638cf0e077033613a3d111a2df7df67fed097fe1b"
+    "module-plan-current-evidence/control-power-current-stage-file-map.json": "8a6df809c4185634978d023638cf0e077033613a3d111a2df7df67fed097fe1b",
+    "sensor-electrode-channel-plan-current.json": "8ad8be9c1435f5cd7249920f06c5ee6a4f8ac5282a922fe94d19ee495872f525",
+    "sensor-electrode-channel-plan-current.md": "57badebd749faf40007f3b3f56f118c6ba9b5a11d7d09c4fd10b5e9dca5a4a73",
+    "sensor-electrode-bounded-route-current.json": "cd42db620c75ae29d22ceb94ab4a4faf3c99f1376f28bb37c518c9365e65c679",
+    "TI-TPD4E02B04-SLVSD85B.pdf": "73d849fe5d7c9a57bebdb08f4a70f09f818edb5f14b9f56241bf87aea6b56ef0"
   },
   "same_device_through_hole_alternatives": {
     "proof": "module-plan-current-evidence\\through-hole-same-device-interface-proof.json",
@@ -362,5 +366,28 @@
     ],
     "whole700budget_closed": false,
     "physical_tests": "UNMEASURED"
+  },
+  "electrode_current_stage": {
+    "at": "2026-10-27T11:09:39.471871+08:00",
+    "state": "OFFLINE_ESD14_BRIDGES_PASS_AND84_MAPPING_PROPOSAL_FULL_ROUTING_NOT_PROVED",
+    "plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-channel-plan-current.md",
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-channel-plan-current.json",
+    "bounded_probe": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-bounded-route-current.json",
+    "NC_external_bridges": 14,
+    "candidate_PAD_changes": 22,
+    "logical84_bijection_pass": true,
+    "left8_cross_order_pairs_before": 28,
+    "left8_cross_order_pairs_after": 0,
+    "full_group_route_pass": false,
+    "terminal_stop": "E03 J1.4-to-D1.5 per-branch160000 expansion cap; prefix3 physical-pass branches only; no global impossibility claim",
+    "native_applied": false,
+    "native40_unchanged": true,
+    "source_PCB2_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+    "native_remaining_nets": 21,
+    "native_connection_items": 56,
+    "native_live_identity_rechecked_this_stage": false,
+    "whole700budget_closed": false,
+    "physical_tests": "UNMEASURED",
+    "complete_purchase_plan": false
   }
 }
