@@ -2561,19 +2561,19 @@
         },
         "CURRENT-HARDWARE.json": {
           "stored": "hardware/current/CURRENT-HARDWARE.json",
-          "bytes": 5325,
-          "sha256": "41fcc0f1ba445ff5272e54b1655ff37bb8b95e3af43d88a0f3efeb7088004b97",
-          "stored_sha256": "41fcc0f1ba445ff5272e54b1655ff37bb8b95e3af43d88a0f3efeb7088004b97",
+          "bytes": 5853,
+          "sha256": "9e7091f8740124cf29ae0031c52fbe285f6b32de12cb1f5d5dc4aea2c330f65f",
+          "stored_sha256": "9e7091f8740124cf29ae0031c52fbe285f6b32de12cb1f5d5dc4aea2c330f65f",
           "codec": "raw",
-          "source": "Explicit14header fanout and left8complete paths proposal; native40 unchanged, no RTL writes"
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
         },
         "README.md": {
           "stored": "hardware/current/README.md",
-          "bytes": 5933,
-          "sha256": "b1cff6d0d806f636012e492699c5d8cbcbad70f3164403a205a168b2160446ba",
-          "stored_sha256": "b1cff6d0d806f636012e492699c5d8cbcbad70f3164403a205a168b2160446ba",
+          "bytes": 6593,
+          "sha256": "a98f218ccc6ff2cff103ab712d164f5c027aa8730f2df8798496b835a95d1c87",
+          "stored_sha256": "a98f218ccc6ff2cff103ab712d164f5c027aa8730f2df8798496b835a95d1c87",
           "codec": "raw",
-          "source": "Explicit14header fanout and left8complete paths proposal; native40 unchanged, no RTL writes"
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
         },
         "context/purchase-preparation-20261021-r1/current-J10-harness.json": {
           "stored": "hardware/current/context/purchase-preparation-20261021-r1/current-J10-harness.json",
@@ -2593,11 +2593,11 @@
         },
         "module-plan/模块方案-当前工作单.md": {
           "stored": "hardware/current/module-plan/模块方案-当前工作单.md",
-          "bytes": 24094,
-          "sha256": "bbcf487faa069ef0705f057dd95591e98f31104e694e0897c1f18fa756f76d06",
-          "stored_sha256": "bbcf487faa069ef0705f057dd95591e98f31104e694e0897c1f18fa756f76d06",
+          "bytes": 25849,
+          "sha256": "1a16777eee5907e99e5fc100b6def0aa3bd77008ad1774ed6523dbd1f38e8e9d",
+          "stored_sha256": "1a16777eee5907e99e5fc100b6def0aa3bd77008ad1774ed6523dbd1f38e8e9d",
           "codec": "raw",
-          "source": "Explicit14header fanout and left8complete paths proposal; native40 unchanged, no RTL writes"
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
         },
         "module-plan/实体模块方案约束-current.json": {
           "stored": "hardware/current/module-plan/实体模块方案约束-current.json",
@@ -2609,11 +2609,11 @@
         },
         "module-plan/模块方案-当前证据.json": {
           "stored": "hardware/current/module-plan/模块方案-当前证据.json",
-          "bytes": 30102,
-          "sha256": "504aa182f1982b2020ff73eb0cc2be7b278f53ec330e414b4f07bd2ba3a6a15f",
-          "stored_sha256": "504aa182f1982b2020ff73eb0cc2be7b278f53ec330e414b4f07bd2ba3a6a15f",
+          "bytes": 32226,
+          "sha256": "aee395de8424c3b6a17a0e4e7e91b31592b43fb7858a15fbecf5f1a057063f79",
+          "stored_sha256": "aee395de8424c3b6a17a0e4e7e91b31592b43fb7858a15fbecf5f1a057063f79",
           "codec": "raw",
-          "source": "Explicit14header fanout and left8complete paths proposal; native40 unchanged, no RTL writes"
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
         },
         "module-plan/227件BOM与模块方案范围纠正.json": {
           "stored": "hardware/current/module-plan/227件BOM与模块方案范围纠正.json",
@@ -3841,11 +3841,11 @@
         },
         "module-plan/evidence/audio-playback-sourcing-current.json": {
           "stored": "hardware/current/module-plan/evidence/audio-playback-sourcing-current.json",
-          "bytes": 6025,
-          "sha256": "ec448c3b6cc63844f7a7285faf496bb04c4e1322b58d7fd88badf93f5fe787ee",
-          "stored_sha256": "ec448c3b6cc63844f7a7285faf496bb04c4e1322b58d7fd88badf93f5fe787ee",
+          "bytes": 6407,
+          "sha256": "ed5dad258c4b5284c51aef99e2200d62e34f7913e5a168391bb20b2c3515f75a",
+          "stored_sha256": "ed5dad258c4b5284c51aef99e2200d62e34f7913e5a168391bb20b2c3515f75a",
           "codec": "raw",
-          "source": "Current audio module primary-source and registered-producer read-only review; original227 retained; no CAD/RTL edits"
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
         },
         "module-plan/evidence/Spotpear-audio-DAC-amp-review-current.png": {
           "stored": "hardware/current/module-plan/evidence/Spotpear-audio-DAC-amp-review-current.png",
@@ -4150,17 +4150,122 @@
           "stored_sha256": "d4a5f55b69af165fd2d38295cf3226e52d87853dccdcfd5bfc6c08013d8c3d42",
           "codec": "raw",
           "source": "Explicit14header fanout and left8complete paths proposal; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/delivery-risk-plan-current.py": {
+          "stored": "hardware/current/module-plan/evidence/delivery-risk-plan-current.py",
+          "bytes": 18281,
+          "sha256": "82f8c7b2690984ac9b9e94201ae25becf2808a158a5530bac0d570d433efeefe",
+          "stored_sha256": "82f8c7b2690984ac9b9e94201ae25becf2808a158a5530bac0d570d433efeefe",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/delivery-risk-plan-current.json": {
+          "stored": "hardware/current/module-plan/evidence/delivery-risk-plan-current.json",
+          "bytes": 11426,
+          "sha256": "1da5b632692efb1e5e349dc60c2a14b35324edcc2291b0de0550f548ebbd960d",
+          "stored_sha256": "1da5b632692efb1e5e349dc60c2a14b35324edcc2291b0de0550f548ebbd960d",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/delivery-risk-plan-current.md": {
+          "stored": "hardware/current/module-plan/evidence/delivery-risk-plan-current.md",
+          "bytes": 5961,
+          "sha256": "744c8d80a59880f03a81eb0e2af5ed7bad55c6b46beadb051bbb44f18b5c2378",
+          "stored_sha256": "744c8d80a59880f03a81eb0e2af5ed7bad55c6b46beadb051bbb44f18b5c2378",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/product-spec-12-comparison-current.py": {
+          "stored": "hardware/current/module-plan/evidence/product-spec-12-comparison-current.py",
+          "bytes": 11232,
+          "sha256": "9a04f88c4932f2ee5272be9e442856610ed3af55baa65c3ea09197cefb27020a",
+          "stored_sha256": "9a04f88c4932f2ee5272be9e442856610ed3af55baa65c3ea09197cefb27020a",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/product-spec-12-comparison-current.json": {
+          "stored": "hardware/current/module-plan/evidence/product-spec-12-comparison-current.json",
+          "bytes": 14687,
+          "sha256": "6d6a9c007def5f3a7d6a64d35f1993da4de27cb2d442455e25adf9d80d1e1e5a",
+          "stored_sha256": "6d6a9c007def5f3a7d6a64d35f1993da4de27cb2d442455e25adf9d80d1e1e5a",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/product-spec-12-comparison-current.md": {
+          "stored": "hardware/current/module-plan/evidence/product-spec-12-comparison-current.md",
+          "bytes": 4962,
+          "sha256": "4ddd977f556a6f1f3a377e5cbbb229664013deaca844e77d097312bfe59d3d45",
+          "stored_sha256": "4ddd977f556a6f1f3a377e5cbbb229664013deaca844e77d097312bfe59d3d45",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/audio-AUX-scope-current.json": {
+          "stored": "hardware/current/module-plan/evidence/audio-AUX-scope-current.json",
+          "bytes": 2388,
+          "sha256": "c89f2d03b7ed7fea48f6c504155d6e89c26fadfc536f2a9aa5b7907481a836a2",
+          "stored_sha256": "c89f2d03b7ed7fea48f6c504155d6e89c26fadfc536f2a9aa5b7907481a836a2",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/audio-AUX-scope-current.md": {
+          "stored": "hardware/current/module-plan/evidence/audio-AUX-scope-current.md",
+          "bytes": 1781,
+          "sha256": "54f459f7ea70d67e944cf0a66763f9efef5496bd701d9c1e3ffcb16d2011e466",
+          "stored_sha256": "54f459f7ea70d67e944cf0a66763f9efef5496bd701d9c1e3ffcb16d2011e466",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/product-spec-baseline-source-current.md": {
+          "stored": "hardware/current/module-plan/evidence/product-spec-baseline-source-current.md",
+          "bytes": 8264,
+          "sha256": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4",
+          "stored_sha256": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/pitch25-user-decision-source-current.json": {
+          "stored": "hardware/current/module-plan/evidence/pitch25-user-decision-source-current.json",
+          "bytes": 4087,
+          "sha256": "fc54a567a72d480f2d0b0be2dd53702ed8c8180575d97db175f0a6fb88f0ac5f",
+          "stored_sha256": "fc54a567a72d480f2d0b0be2dd53702ed8c8180575d97db175f0a6fb88f0ac5f",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/C5-three-electrode-source-current.json": {
+          "stored": "hardware/current/module-plan/evidence/C5-three-electrode-source-current.json",
+          "bytes": 5685,
+          "sha256": "a29b266329462791424f2d844a5be887a5051c36190cad8705ce9ed93d03d566",
+          "stored_sha256": "a29b266329462791424f2d844a5be887a5051c36190cad8705ce9ed93d03d566",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/delivery-risk-stage-file-map-current.json": {
+          "stored": "hardware/current/module-plan/evidence/delivery-risk-stage-file-map-current.json",
+          "bytes": 14056,
+          "sha256": "945c0ad3fc0b2e21ae3f5f78eeb12ac1b3148f66f5c729975776242b23b9d018",
+          "stored_sha256": "945c0ad3fc0b2e21ae3f5f78eeb12ac1b3148f66f5c729975776242b23b9d018",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
+        },
+        "module-plan/evidence/delivery-risk-publish-current.py": {
+          "stored": "hardware/current/module-plan/evidence/delivery-risk-publish-current.py",
+          "bytes": 5667,
+          "sha256": "dd1224d5d37ff1bcecba03671f71b424d302ce84e4ffac5dae411226ed5360ce",
+          "stored_sha256": "dd1224d5d37ff1bcecba03671f71b424d302ce84e4ffac5dae411226ed5360ce",
+          "codec": "raw",
+          "source": "Full12 requirement and schedule uncertainty planning; corrected AUX scope; native40 unchanged, no RTL writes"
         }
       },
       "validation_inherited": false,
       "product_acceptance": false,
       "scope": "Original951 protected. SameSensor14Bank91TopCu36GNDvias all14internal analog nets closed;21signalnets56itemsopen.43newsignalsegments actualreference/physical pass; oneC3 Groundvia/line revised and independentlychecked, all36Bottomcontacts/21PTHreturns pass. Native save-close-reopen otherDRC0. Fullgroup electrode planning/price/fab pending.",
-      "updated_at": "2026-10-27T11:25:47.951775+08:00",
+      "updated_at": "2026-10-27T11:49:59.889795+08:00",
       "source_native_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
       "sensor14bank_current_candidate": "module-plan/evidence/sensor-front-native-progress-current.json",
       "audio_review_scope": "Exact55CNY module pins and17originalitem reconciliation;11schematic subfunctions only/6pending,0fullyaccepted moduleitems. Current audio clock/init F07 documented. Native40files unchanged; whole purchasing/700CNY/delivery/physical acceptance open.",
       "control_power_scope": "56originalfunctions retained;5lines33.704CNY including MOQ only. Off-state/current-limiter/whole module readiness open. Native40file hashes unchanged.",
-      "electrode_candidate_scope": "14headerfanout+14NC+8complete E paths physical/4PAD connectivity pass;14via mirrors and22PAD candidate only. Right6/7controls/actualGround pending. Native unchanged."
+      "electrode_candidate_scope": "14headerfanout+14NC+8complete E paths physical/4PAD connectivity pass;14via mirrors and22PAD candidate only. Right6/7controls/actualGround pending. Native unchanged.",
+      "delivery_planning_scope": "Full12 retained goals; manufacturing form adjusted by directuser approval. Technical and supplier completion dates remain unproven. No complete procurement release."
     },
     "host": {
       "files": {

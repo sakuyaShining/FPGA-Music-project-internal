@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T11:24:56.358273+08:00",
+  "updated_at": "2026-10-27T11:49:09.637872+08:00",
   "requirements": {
     "confirmed_at": "2026-10-26T21:20:01.872822+08:00",
     "confirmed_by": "本聊天用户直接答复",
@@ -247,7 +247,19 @@
     "sensor-electrode-channel-plan-current.json": "8ad8be9c1435f5cd7249920f06c5ee6a4f8ac5282a922fe94d19ee495872f525",
     "sensor-electrode-channel-plan-current.md": "57badebd749faf40007f3b3f56f118c6ba9b5a11d7d09c4fd10b5e9dca5a4a73",
     "sensor-electrode-bounded-route-current.json": "cd42db620c75ae29d22ceb94ab4a4faf3c99f1376f28bb37c518c9365e65c679",
-    "TI-TPD4E02B04-SLVSD85B.pdf": "73d849fe5d7c9a57bebdb08f4a70f09f818edb5f14b9f56241bf87aea6b56ef0"
+    "TI-TPD4E02B04-SLVSD85B.pdf": "73d849fe5d7c9a57bebdb08f4a70f09f818edb5f14b9f56241bf87aea6b56ef0",
+    "audio-AUX-scope-current.json": "c89f2d03b7ed7fea48f6c504155d6e89c26fadfc536f2a9aa5b7907481a836a2",
+    "audio-AUX-scope-current.md": "54f459f7ea70d67e944cf0a66763f9efef5496bd701d9c1e3ffcb16d2011e466",
+    "audio-playback-sourcing-current.json": "ed5dad258c4b5284c51aef99e2200d62e34f7913e5a168391bb20b2c3515f75a",
+    "product-spec-12-comparison-current.py": "9a04f88c4932f2ee5272be9e442856610ed3af55baa65c3ea09197cefb27020a",
+    "product-spec-12-comparison-current.json": "6d6a9c007def5f3a7d6a64d35f1993da4de27cb2d442455e25adf9d80d1e1e5a",
+    "product-spec-12-comparison-current.md": "4ddd977f556a6f1f3a377e5cbbb229664013deaca844e77d097312bfe59d3d45",
+    "delivery-risk-plan-current.py": "82f8c7b2690984ac9b9e94201ae25becf2808a158a5530bac0d570d433efeefe",
+    "delivery-risk-plan-current.json": "1da5b632692efb1e5e349dc60c2a14b35324edcc2291b0de0550f548ebbd960d",
+    "delivery-risk-plan-current.md": "744c8d80a59880f03a81eb0e2af5ed7bad55c6b46beadb051bbb44f18b5c2378",
+    "product-spec-baseline-source-current.md": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4",
+    "pitch25-user-decision-source-current.json": "fc54a567a72d480f2d0b0be2dd53702ed8c8180575d97db175f0a6fb88f0ac5f",
+    "C5-three-electrode-source-current.json": "a29b266329462791424f2d844a5be887a5051c36190cad8705ce9ed93d03d566"
   },
   "same_device_through_hole_alternatives": {
     "proof": "module-plan-current-evidence\\through-hole-same-device-interface-proof.json",
@@ -390,5 +402,11 @@
     "whole700budget_closed": false,
     "complete_purchase_plan": false,
     "physical_tests": "UNMEASURED"
-  }
+  },
+  "audio_AUX_scope_correction": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-AUX-scope-current.json",
+  "local_AUX_scope_update_remote_pending": true,
+  "product_spec_12_comparison": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\product-spec-12-comparison-current.json",
+  "audio_product_scope": "R09 AUX external active speaker; user preference no internal speaker. No default new amp/speaker product requirement; do not auto-delete old schematic branch.",
+  "local_comparison_update_remote_pending": true,
+  "delivery_risk_plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\delivery-risk-plan-current.json"
 }

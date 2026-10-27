@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-27T11:33:19.589867+08:00",
+  "trigger": "User reasserted product3.5mm AUX output and asked remaining stages",
+  "source": "C:\\Users\\Sakuya\\.codex\\worktrees\\4a4b\\FPGA-Music-project\\docs\\02-技术方案\\61-录制伴奏与现场合奏硬件规格规划-2026-10-15.md",
+  "source_sha256": "f7ffcd4994882aff4ba45e926086db165cc6ef104ea4178fcc620063f3d4eabd",
+  "source_lines": [
+    30,
+    31,
+    32
+  ],
+  "product_output": "PCM/analogue line-output DAC and necessary coupling/filter/protection to3.5mm TRS;Tip=L,Ring=R,Sleeve=referenceGround",
+  "external_power_amp_and_passive_speaker_required_for_AUX": false,
+  "external_active_speaker_required_for_product_output": false,
+  "playback_sourcing_role": "Historical external audition/demo equipment candidates only; no longer a main procurement blocker or default mandatory product charge. If an external playback/recording device must be purchased for video, identify it and its cost separately first.",
+  "historical_onboard_speaker_branch": "R09 already records preference AUX and no internal speaker. Old61 owned-speaker assumption is historical, not current required new amp/speaker procurement. Do not auto-delete schematic branch.",
+  "module_output_scope": "Candidate010313400000 RCA line outputs need exact adapter/panel3.5mm TRS. Its existing3.5mm headphone socket must not be assumed the same line-output circuit.",
+  "F07_scope_correction": "PCM5122 BCK PLL/format/DAC0x4D initialization stays open. TPA6130A2 0x60 initialization is needed only if its headphone branch is used; it is not by itself a line-AUX blocker.",
+  "independent_stereo_scope": "Original61spec explicitly allows same mono program on both L/R line channels. Duplicated16bit slots are an observed producer behavior, not automatically a violation requiring independent stereo synthesis.",
+  "retained_functions": "Original227functional reconciliation,84electrodes/calibration/display/control/storage/recordplay/power-protection preserved",
+  "no_new_prices_claimed": true,
+  "no_CAD_RTL_build_flash_or_orders": true,
+  "physical_tests": "UNMEASURED",
+  "complete_purchase_plan": false,
+  "current_product_spec_R09": {
+    "path": "D:\\FPGA-Project\\maintenance-20261026\\repo\\project\\PRODUCT-SPEC.md",
+    "line": 23,
+    "requirement": "AUX外接有源音箱；用户偏好不装机内喇叭"
+  }
+}

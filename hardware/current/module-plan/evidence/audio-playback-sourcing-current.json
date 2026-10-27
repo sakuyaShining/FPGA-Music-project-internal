@@ -3,7 +3,7 @@
   "observed_local_date": "2026-10-27",
   "owned_playback_hardware": [],
   "DAC_candidate": "010313400000, 55 CNY; see audio-010313400000-pin-coverage-current.json",
-  "preferred_assembly_direction": "Compare a complete analogue-input stereo active speaker with a separate amplifier plus two passive speakers. A USB power plug does not by itself require a computer, but exact speaker power supply and input cable must be specified.",
+  "preferred_assembly_direction": "AUXline output is product requirement; external speaker/amplifier candidates are historical audition equipment, not mandatory product modules or a purchase-release gate.",
   "candidates": [
     {
       "SKU": "DFR0119-O",
@@ -15,11 +15,20 @@
       "quantity_for_stereo": 1,
       "SMT_assembly": "Product photograph shows IC and SMT passives assembled; 2.54mm through-hole wire/header pads are unpopulated",
       "user_assembly": "Header or wire soldering required; no user SMT soldering",
-      "supply_V": [3.3, 5.5],
+      "supply_V": [
+        3.3,
+        5.5
+      ],
       "power_condition": "3W at 4ohm, 5V; not a guarantee of clean output at arbitrary level",
       "shutdown": "Unconnected SHDN defaults to operating mode according to seller",
       "output_contract": "Separate BTL L+/L- and R+/R-. Never join channel negative outputs together or to GND.",
-      "pending": ["Exact input coupling/gain and DAC attenuation", "Two suitable speakers", "RCA input harness and output connectors", "Supply current budget and protection", "Freight and Qingyuan arrival"],
+      "pending": [
+        "Exact input coupling/gain and DAC attenuation",
+        "Two suitable speakers",
+        "RCA input harness and output connectors",
+        "Supply current budget and protection",
+        "Freight and Qingyuan arrival"
+      ],
       "purchase_ready": false
     },
     {
@@ -71,7 +80,10 @@
       "model": "Edifier R12U stereo active speaker pair",
       "manufacturer_url": "https://www.edifier.com/uk/p/computer-speakers/r12u",
       "verified_technical_scope": "USB powered, analogue 3.5mm AUX input, rotary volume, two channels",
-      "manufacturer_frequency_response_Hz": [180, 20000],
+      "manufacturer_frequency_response_Hz": [
+        180,
+        20000
+      ],
       "frequency_response_tolerance_dB": 6,
       "input_sensitivity_mVrms": 700,
       "input_sensitivity_tolerance_mV": 50,
@@ -90,8 +102,14 @@
     "ordinary_free_shipping_threshold_CNY": 99,
     "below_threshold": "Actual checkout freight, not yet known",
     "stock_dispatch_rule": "Working day paid before15:00 same day, after15:00 next working day; Fridays/holidays deferred",
-    "warehouses": ["Chengdu", "Shanghai, system assigned"],
-    "ordinary_transit_reference_days": [3, 5],
+    "warehouses": [
+      "Chengdu",
+      "Shanghai, system assigned"
+    ],
+    "ordinary_transit_reference_days": [
+      3,
+      5
+    ],
     "SF_transit_reference_days": 3,
     "Qingyuan_arrival_guaranteed": false
   },
@@ -103,5 +121,7 @@
     "whole_system_total_closed": false
   },
   "no_purchase_payment_or_message": true,
-  "physical_tests": "UNMEASURED"
+  "physical_tests": "UNMEASURED",
+  "scope_correction": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-AUX-scope-current.json",
+  "mandatory_for_AUX": false
 }
