@@ -2561,19 +2561,19 @@
         },
         "CURRENT-HARDWARE.json": {
           "stored": "hardware/current/CURRENT-HARDWARE.json",
-          "bytes": 4487,
-          "sha256": "8fc3caf16019d08c150ff34f104c6e3d7f1e7f5dbced29bbf644007d4c1ea768",
-          "stored_sha256": "8fc3caf16019d08c150ff34f104c6e3d7f1e7f5dbced29bbf644007d4c1ea768",
+          "bytes": 4907,
+          "sha256": "427b6dc107e4a338dead4bcd76c8013d719a8445eb10f0da4d64a7ce6a9aca11",
+          "stored_sha256": "427b6dc107e4a338dead4bcd76c8013d719a8445eb10f0da4d64a7ce6a9aca11",
           "codec": "raw",
-          "source": "Current audio module primary-source and registered-producer read-only review; original227 retained; no CAD/RTL edits"
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
         },
         "README.md": {
           "stored": "hardware/current/README.md",
-          "bytes": 4309,
-          "sha256": "c11667e11a8ddc79f792a9d236c2193d8f549e11ce49254648fd49613cac0054",
-          "stored_sha256": "c11667e11a8ddc79f792a9d236c2193d8f549e11ce49254648fd49613cac0054",
+          "bytes": 4881,
+          "sha256": "c8a05916dcbd88ae43b0dc9ada8b6be4dfb4d89eea7c444d2f3a5d0536973c94",
+          "stored_sha256": "c8a05916dcbd88ae43b0dc9ada8b6be4dfb4d89eea7c444d2f3a5d0536973c94",
           "codec": "raw",
-          "source": "Current audio module primary-source and registered-producer read-only review; original227 retained; no CAD/RTL edits"
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
         },
         "context/purchase-preparation-20261021-r1/current-J10-harness.json": {
           "stored": "hardware/current/context/purchase-preparation-20261021-r1/current-J10-harness.json",
@@ -2593,11 +2593,11 @@
         },
         "module-plan/模块方案-当前工作单.md": {
           "stored": "hardware/current/module-plan/模块方案-当前工作单.md",
-          "bytes": 21256,
-          "sha256": "634054eb6536c8f2609fdf2c560b8c0f9d9d1932f04e155b9cdddc013d101e3a",
-          "stored_sha256": "634054eb6536c8f2609fdf2c560b8c0f9d9d1932f04e155b9cdddc013d101e3a",
+          "bytes": 22207,
+          "sha256": "20c885bf53946ee2bf472fd4780571da018e6f0144fc54461b91b8cddac16175",
+          "stored_sha256": "20c885bf53946ee2bf472fd4780571da018e6f0144fc54461b91b8cddac16175",
           "codec": "raw",
-          "source": "Current audio module primary-source and registered-producer read-only review; original227 retained; no CAD/RTL edits"
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
         },
         "module-plan/实体模块方案约束-current.json": {
           "stored": "hardware/current/module-plan/实体模块方案约束-current.json",
@@ -2609,11 +2609,11 @@
         },
         "module-plan/模块方案-当前证据.json": {
           "stored": "hardware/current/module-plan/模块方案-当前证据.json",
-          "bytes": 26537,
-          "sha256": "bc6d7bba1a4918dbcaf76bf7fea5783573685f6012d825e6fb4aa13d3605d58e",
-          "stored_sha256": "bc6d7bba1a4918dbcaf76bf7fea5783573685f6012d825e6fb4aa13d3605d58e",
+          "bytes": 28316,
+          "sha256": "9cc1859eb6346034cbb8871855c42723d403e46c0c97c8c3ed538c1c6d20049f",
+          "stored_sha256": "9cc1859eb6346034cbb8871855c42723d403e46c0c97c8c3ed538c1c6d20049f",
           "codec": "raw",
-          "source": "Current audio module primary-source and registered-producer read-only review; original227 retained; no CAD/RTL edits"
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
         },
         "module-plan/227件BOM与模块方案范围纠正.json": {
           "stored": "hardware/current/module-plan/227件BOM与模块方案范围纠正.json",
@@ -2625,11 +2625,11 @@
         },
         "module-plan/227件功能分块与混合方案映射-current.json": {
           "stored": "hardware/current/module-plan/227件功能分块与混合方案映射-current.json",
-          "bytes": 236778,
-          "sha256": "d73fb03059a8ca13a24f65ab45915a2046c8586cd37773cc5c7d230ee3efbf9f",
-          "stored_sha256": "d73fb03059a8ca13a24f65ab45915a2046c8586cd37773cc5c7d230ee3efbf9f",
+          "bytes": 237867,
+          "sha256": "8e2461fc52effaf7ef3a850a1ed3985ac394895b1d1f95c1dd7ef1b3c8bad8b2",
+          "stored_sha256": "8e2461fc52effaf7ef3a850a1ed3985ac394895b1d1f95c1dd7ef1b3c8bad8b2",
           "codec": "raw",
-          "source": "Current audio module primary-source and registered-producer read-only review; original227 retained; no CAD/RTL edits"
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
         },
         "module-plan/evidence/Spotpear-010313400000-schematic.pdf": {
           "stored": "hardware/current/module-plan/evidence/Spotpear-010313400000-schematic.pdf",
@@ -3934,15 +3934,80 @@
           "stored_sha256": "f9c1ed3f83b3369242f021dd83f488fa8a13993ff15d7d34bdc50cff45728123",
           "codec": "raw",
           "source": "Current audio module primary-source and registered-producer read-only review; original227 retained; no CAD/RTL edits"
+        },
+        "module-plan/evidence/control-power-current-build.py": {
+          "stored": "hardware/current/module-plan/evidence/control-power-current-build.py",
+          "bytes": 17303,
+          "sha256": "869cb8caba1ff942368ba152ef0f5fc95322fc6dd359a04e6a2505829e23aa86",
+          "stored_sha256": "869cb8caba1ff942368ba152ef0f5fc95322fc6dd359a04e6a2505829e23aa86",
+          "codec": "raw",
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
+        },
+        "module-plan/evidence/control-power-current-plan.json": {
+          "stored": "hardware/current/module-plan/evidence/control-power-current-plan.json",
+          "bytes": 68629,
+          "sha256": "1b90e3af0d36aa597ed5658d06429450cf7dd053783639d24ae4e6ae94d1f0a7",
+          "stored_sha256": "1b90e3af0d36aa597ed5658d06429450cf7dd053783639d24ae4e6ae94d1f0a7",
+          "codec": "raw",
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
+        },
+        "module-plan/evidence/control-power-current-plan.md": {
+          "stored": "hardware/current/module-plan/evidence/control-power-current-plan.md",
+          "bytes": 4254,
+          "sha256": "48d46a32b67008e0af4e3f3be57e0380f8bac2988ea485a170eb8205e8a5d90b",
+          "stored_sha256": "48d46a32b67008e0af4e3f3be57e0380f8bac2988ea485a170eb8205e8a5d90b",
+          "codec": "raw",
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
+        },
+        "module-plan/evidence/TI-TPS2553-SLVS841F.pdf": {
+          "stored": "hardware/current/module-plan/evidence/TI-TPS2553-SLVS841F.pdf",
+          "bytes": 2092382,
+          "sha256": "413aec7178e722bdeacd701a7d4d4f20e5aa09bee0c60ab2176751b6f1ae6da5",
+          "stored_sha256": "413aec7178e722bdeacd701a7d4d4f20e5aa09bee0c60ab2176751b6f1ae6da5",
+          "codec": "raw",
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
+        },
+        "module-plan/evidence/TPS2553-ILIM-page15-current.png": {
+          "stored": "hardware/current/module-plan/evidence/TPS2553-ILIM-page15-current.png",
+          "bytes": 303527,
+          "sha256": "32e33856187de68896f0098c471cd027ab8db7fd1bc880deace18df4c188b4c5",
+          "stored_sha256": "32e33856187de68896f0098c471cd027ab8db7fd1bc880deace18df4c188b4c5",
+          "codec": "raw",
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
+        },
+        "module-plan/evidence/TPS2553-ILIM-page18-current.png": {
+          "stored": "hardware/current/module-plan/evidence/TPS2553-ILIM-page18-current.png",
+          "bytes": 184304,
+          "sha256": "bd6ecdeae2c8294a6f41ce543b385b7248a65ba4b82f3de0a75903fb6f2c2e62",
+          "stored_sha256": "bd6ecdeae2c8294a6f41ce543b385b7248a65ba4b82f3de0a75903fb6f2c2e62",
+          "codec": "raw",
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
+        },
+        "module-plan/evidence/control-power-current-stage-file-map.json": {
+          "stored": "hardware/current/module-plan/evidence/control-power-current-stage-file-map.json",
+          "bytes": 488,
+          "sha256": "8a6df809c4185634978d023638cf0e077033613a3d111a2df7df67fed097fe1b",
+          "stored_sha256": "8a6df809c4185634978d023638cf0e077033613a3d111a2df7df67fed097fe1b",
+          "codec": "raw",
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
+        },
+        "module-plan/evidence/control-power-publish-current.py": {
+          "stored": "hardware/current/module-plan/evidence/control-power-publish-current.py",
+          "bytes": 5733,
+          "sha256": "bec566768e6912eb9e2e33e525ab9ab849c862d365f8cea6e3d51fd2cf6845f0",
+          "stored_sha256": "bec566768e6912eb9e2e33e525ab9ab849c862d365f8cea6e3d51fd2cf6845f0",
+          "codec": "raw",
+          "source": "Current control/power primary-source procurement and original56function reconciliation; no CAD/RTL writes"
         }
       },
       "validation_inherited": false,
       "product_acceptance": false,
       "scope": "Original951 protected. SameSensor14Bank91TopCu36GNDvias all14internal analog nets closed;21signalnets56itemsopen.43newsignalsegments actualreference/physical pass; oneC3 Groundvia/line revised and independentlychecked, all36Bottomcontacts/21PTHreturns pass. Native save-close-reopen otherDRC0. Fullgroup electrode planning/price/fab pending.",
-      "updated_at": "2026-10-27T07:51:12.124524+08:00",
+      "updated_at": "2026-10-27T10:44:49.088135+08:00",
       "source_native_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
       "sensor14bank_current_candidate": "module-plan/evidence/sensor-front-native-progress-current.json",
-      "audio_review_scope": "Exact55CNY module pins and17originalitem reconciliation;11schematic subfunctions only/6pending,0fullyaccepted moduleitems. Current audio clock/init F07 documented. Native40files unchanged; whole purchasing/700CNY/delivery/physical acceptance open."
+      "audio_review_scope": "Exact55CNY module pins and17originalitem reconciliation;11schematic subfunctions only/6pending,0fullyaccepted moduleitems. Current audio clock/init F07 documented. Native40files unchanged; whole purchasing/700CNY/delivery/physical acceptance open.",
+      "control_power_scope": "56originalfunctions retained;5lines33.704CNY including MOQ only. Off-state/current-limiter/whole module readiness open. Native40file hashes unchanged."
     },
     "host": {
       "files": {

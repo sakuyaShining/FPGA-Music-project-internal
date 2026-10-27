@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T07:50:21.122093+08:00",
+  "updated_at": "2026-10-27T08:05:55.938673+08:00",
   "requirements": {
     "confirmed_at": "2026-10-26T21:20:01.872822+08:00",
     "confirmed_by": "本聊天用户直接答复",
@@ -236,7 +236,14 @@
     "module-plan-current-evidence/XHX-3525BOX-response-page5-current.png": "4fcacc7bd4f69f2f2cedb881b9fb5abb6936c0b93c974feb58a7b46b659b74b2",
     "module-plan-current-evidence/audio-contract-update-current.py": "bf84b2bc40dbb32436028f1d9c492936929a2ef6cab60ba8b6840125075d53b7",
     "module-plan-current-evidence/audio-contract-checkpoint-current.json": "a9b36cb1698ad299a1eaeb527f0c8be640dfab942e04ee2330f2f3ab8349ea9c",
-    "purchase-preparation-20261021-r1/227件功能分块与混合方案映射-current.json": "d73fb03059a8ca13a24f65ab45915a2046c8586cd37773cc5c7d230ee3efbf9f"
+    "purchase-preparation-20261021-r1/227件功能分块与混合方案映射-current.json": "8e2461fc52effaf7ef3a850a1ed3985ac394895b1d1f95c1dd7ef1b3c8bad8b2",
+    "module-plan-current-evidence/control-power-current-build.py": "869cb8caba1ff942368ba152ef0f5fc95322fc6dd359a04e6a2505829e23aa86",
+    "module-plan-current-evidence/control-power-current-plan.json": "1b90e3af0d36aa597ed5658d06429450cf7dd053783639d24ae4e6ae94d1f0a7",
+    "module-plan-current-evidence/control-power-current-plan.md": "48d46a32b67008e0af4e3f3be57e0380f8bac2988ea485a170eb8205e8a5d90b",
+    "module-plan-current-evidence/TI-TPS2553-SLVS841F.pdf": "413aec7178e722bdeacd701a7d4d4f20e5aa09bee0c60ab2176751b6f1ae6da5",
+    "module-plan-current-evidence/TPS2553-ILIM-page15-current.png": "32e33856187de68896f0098c471cd027ab8db7fd1bc880deace18df4c188b4c5",
+    "module-plan-current-evidence/TPS2553-ILIM-page18-current.png": "bd6ecdeae2c8294a6f41ce543b385b7248a65ba4b82f3de0a75903fb6f2c2e62",
+    "module-plan-current-evidence/control-power-current-stage-file-map.json": "8a6df809c4185634978d023638cf0e077033613a3d111a2df7df67fed097fe1b"
   },
   "same_device_through_hole_alternatives": {
     "proof": "module-plan-current-evidence\\through-hole-same-device-interface-proof.json",
@@ -337,5 +344,23 @@
     "whole_plan_ready": false,
     "physical_tests": "UNMEASURED"
   },
-  "audio_playback_sourcing": "module-plan-current-evidence/audio-playback-sourcing-current.json"
+  "audio_playback_sourcing": "module-plan-current-evidence/audio-playback-sourcing-current.json",
+  "control_power_current_stage": {
+    "at": "2026-10-27T08:05:55.938673+08:00",
+    "state": "CONTROL_POWER56_FUNCTIONS_EXPANDED_AND5LINES_PRICED_NOT_COMPLETE_PLAN",
+    "plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.md",
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-power-current-plan.json",
+    "priced_subset_CNY": "33.70",
+    "priced_items": 5,
+    "original_functions": 56,
+    "all227retained": true,
+    "native40_unchanged": true,
+    "RTL_unchanged": true,
+    "current_limit_minmax_A": [
+      1.0018032014107168,
+      1.1835578661598425
+    ],
+    "whole700budget_closed": false,
+    "physical_tests": "UNMEASURED"
+  }
 }

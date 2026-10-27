@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-27T07:41:43.365809+08:00",
+  "time": "2026-10-27T08:05:55.938673+08:00",
   "source_files_sha256": {
     "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-whole-native-capture-normalized.json": "6d48871b39f27408bd80f3a693b2a51e1895eb87111b01d152ec758c609b42da",
     "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\purchase-preparation-20261021-r1\\native-cpl-current-951ce88a-DRAFT-NOT-FOR-ORDER.csv": "0328146ebebc3440cad98f82f6af1fbf02e050a0a5c20d4ae187739c34c7df66",
@@ -3992,7 +3992,9 @@
       "exact_replacement_module": null,
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Same-device electrical/pin or100nF subfunction candidate + domestic price verified; not a complete preassembled purchasing release",
+      "control_power_candidate_evidence": "module-plan-current-evidence/control-power-current-plan.json",
+      "exact_replacement_candidate": "24LC256-I/P C411624 + exact8pin socket and local100nF"
     },
     {
       "reference": "C7",
@@ -4040,7 +4042,9 @@
       "exact_replacement_module": null,
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Same-device electrical/pin or100nF subfunction candidate + domestic price verified; not a complete preassembled purchasing release",
+      "control_power_candidate_evidence": "module-plan-current-evidence/control-power-current-plan.json",
+      "exact_replacement_candidate": "CCT104KC6X7RF5FH5A0 C2896145 TH100nF X7R"
     },
     {
       "reference": "C32",
@@ -7580,7 +7584,9 @@
       "exact_replacement_module": null,
       "verified_module_coverage": false,
       "purchase_disposition": "保留需求；具体模块原理图逐项覆盖后方可去重裸件采购",
-      "verification_status": "功能归属已核对；模块覆盖/现货/接线/实测未完成"
+      "verification_status": "Same-device electrical/pin or100nF subfunction candidate + domestic price verified; not a complete preassembled purchasing release",
+      "control_power_candidate_evidence": "module-plan-current-evidence/control-power-current-plan.json",
+      "exact_replacement_candidate": "SN74LVC244AN C1548565 + exact20pin socket and local100nF; existing isolation retained"
     },
     {
       "reference": "C35",
@@ -7890,5 +7896,12 @@
     "pending": 6,
     "fully_qualified": 0,
     "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json"
+  },
+  "control_power_reconciliation": {
+    "evidence": "module-plan-current-evidence/control-power-current-plan.json",
+    "original_scope": 56,
+    "all_functions_retained": true,
+    "priced_subset_CNY": "33.70",
+    "fully_verified_coverage_unchanged": true
   }
 }
