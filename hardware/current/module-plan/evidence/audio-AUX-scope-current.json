@@ -14,7 +14,7 @@
   "playback_sourcing_role": "Historical external audition/demo equipment candidates only; no longer a main procurement blocker or default mandatory product charge. If an external playback/recording device must be purchased for video, identify it and its cost separately first.",
   "historical_onboard_speaker_branch": "R09 already records preference AUX and no internal speaker. Old61 owned-speaker assumption is historical, not current required new amp/speaker procurement. Do not auto-delete schematic branch.",
   "module_output_scope": "Candidate010313400000 RCA line outputs need exact adapter/panel3.5mm TRS. Its existing3.5mm headphone socket must not be assumed the same line-output circuit.",
-  "F07_scope_correction": "PCM5122 BCK PLL/format/DAC0x4D initialization stays open. TPA6130A2 0x60 initialization is needed only if its headphone branch is used; it is not by itself a line-AUX blocker.",
+  "F07_scope_correction": "Earlier headphones-only TPA6130A2 init exemption WITHDRAWN. SameSKU schematic shows shared LOUT/ROUT, audio transformers and selection circuitry. Until populated bypass/jumpers and complete RCA path are proved, keep TPA0x60 mute/init/electricallevel requirements open alongside PCM5122 PLL/format0x4D; manufacturer RCA=AUX OUT classification alone does not prove amplifier-bypass topology.",
   "independent_stereo_scope": "Original61spec explicitly allows same mono program on both L/R line channels. Duplicated16bit slots are an observed producer behavior, not automatically a violation requiring independent stereo synthesis.",
   "retained_functions": "Original227functional reconciliation,84electrodes/calibration/display/control/storage/recordplay/power-protection preserved",
   "no_new_prices_claimed": true,
@@ -25,5 +25,11 @@
     "path": "D:\\FPGA-Project\\maintenance-20261026\\repo\\project\\PRODUCT-SPEC.md",
     "line": 23,
     "requirement": "AUX外接有源音箱；用户偏好不装机内喇叭"
-  }
+  },
+  "F07_scope_review_at": "2026-10-27T17:03:22.774380+08:00",
+  "F07_scope_review_evidence": [
+    "Spotpear-010313400000-schematic.pdf SHA3908e6255a977ca61ef69ab051c34eadaaaf53a2b27b987724adec5006252cbb",
+    "Spotpear-audio-DAC-amp-review-current.png",
+    "Spotpear-audio-routing-review-current.png"
+  ]
 }

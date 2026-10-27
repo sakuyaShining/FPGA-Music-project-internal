@@ -1349,7 +1349,7 @@
       "board_label": "B2",
       "connector": "J1",
       "pin": 9,
-      "assembly": "不接触摸电极；接线图留作备用，不可默作新功能"
+      "assembly": "安装并连接实体备用电极，标SPARE；保留采样检查，不默认为新音符或八度功能"
     },
     {
       "kind": "spare",
@@ -1359,7 +1359,7 @@
       "board_label": "B3",
       "connector": "J1",
       "pin": 9,
-      "assembly": "不接触摸电极；接线图留作备用，不可默作新功能"
+      "assembly": "安装并连接实体备用电极，标SPARE；保留采样检查，不默认为新音符或八度功能"
     },
     {
       "kind": "spare",
@@ -1369,7 +1369,7 @@
       "board_label": "B4",
       "connector": "J1",
       "pin": 9,
-      "assembly": "不接触摸电极；接线图留作备用，不可默作新功能"
+      "assembly": "安装并连接实体备用电极，标SPARE；保留采样检查，不默认为新音符或八度功能"
     },
     {
       "kind": "spare",
@@ -1379,7 +1379,7 @@
       "board_label": "B5",
       "connector": "J1",
       "pin": 9,
-      "assembly": "不接触摸电极；接线图留作备用，不可默作新功能"
+      "assembly": "安装并连接实体备用电极，标SPARE；保留采样检查，不默认为新音符或八度功能"
     }
   ],
   "onboard_calibration": [
@@ -1498,5 +1498,15 @@
   "firmware_changes_made": false,
   "driver_acceptance": false,
   "physical_tests": "UNMEASURED",
-  "scope": "75pitch+5octave+4spare retained; 12calibration slots separate and not counted as84external electrodes. Six SENSE_OUT lines remain electrically independent."
+  "scope": "75pitch+5octave+4spare retained; 12calibration slots separate and not counted as84external electrodes. Six SENSE_OUT lines remain electrically independent.",
+  "assembly_scope_correction": {
+    "at": "2026-10-27T17:18:13.068970+08:00",
+    "reason": "User requires84 physical electrodes; earlier text leaving4spares unmounted would reduce assembled count to80 and is withdrawn.",
+    "physical_electrodes": 84,
+    "pitch": 75,
+    "octave": 5,
+    "physical_spare": 4,
+    "calibration_positions_separate": 12,
+    "RTL_changes": false
+  }
 }

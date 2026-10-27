@@ -47,3 +47,7 @@
 ## Current Sensor14Bank fourlayer trial
 
 Real native fourlayer candidate:28parts/150PAD/223lines/48vias;35explicitPAD changes match schematic; native strictDRC0 and zero unconnected after actual pours/save-close-reopen. All91sourceCu retained. Independent Ground reference has34failedsegments; fullDC/minneck/oldcontacts/stack/assembly/purchase budget/delivery remain pending. This is NOT fabrication acceptance. Original mainPCB951 remains42connectionerrors12nets. Complete84semantic wiring proposal generated:75pitch+5octave+4spare; noRTLwrite. Read module-plan/evidence/sensor-fourlayer-progress-current.md/json first. NEVER replay terminal apply jobs.
+
+## Current35 numeric review and assembly status
+
+Read module-plan/evidence/sensor35-numeric-review-current.md and purchase-assembly-user-review-current.md first. Current native source617f550e:302lines51vias,0DRC/0unconnected after reopen. Actual Ground DC and0.1651mm erosion checks pass;35 legacy reference failures remain within own native antipads only. User requested numbers before deciding: no scope approval, no fabrication release. Six preweld sensor boards, complete control/storage/protection, full screen configuration, all accessories and <=700 delivered/preweld budget are not closed. AUX3.5 retained; no internal speaker requirement. Physical84 electrodes include4mounted spares. Original mainPCB951 remains unfinished. No RTL/host edits.

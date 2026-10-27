@@ -54,10 +54,20 @@ for h,po in rr.values():
    for q in f['path'][1:]:g=g.symmetric_difference(Polygon(points(q)))
   else:g=LineString(points(f['path'])).buffer(f['strokeWidth']*.254/2,quad_segs=256)
   cu.append(g)
- ground=union_all(cu).difference(hole_union);polys=list(ground.geoms) if hasattr(ground,'geoms') else [ground];main=max(polys,key=lambda p:p.area);layer=border['layerId'];planes[layer]=ground;(E/f'sensor-fourlayer-real-ground-layer{layer}-current.wkb').write_bytes(ground.wkb);contacts=[]
+ layer=border['layerId'];poured_only=union_all(cu).difference(hole_union);poured_parts=list(poured_only.geoms) if hasattr(poured_only,'geoms') else [poured_only];poured_main=max(poured_parts,key=lambda p:p.area)
+ # Actual source Ground conductors on this layer, not hypothetical fill.
+ for hh,t in rr.values():
+  if hh['type']=='LINE' and t['layerId']==layer and t['netName']=='GND':cu.append(LineString([(t['startX']*.0254,t['startY']*.0254),(t['endX']*.0254,t['endY']*.0254)]).buffer(t['width']*.0254/2,quad_segs=256))
+ for p in pads:
+  if p['layer']==12 and p['net']=='GND':
+   assert p['shape']['padType']=='ELLIPSE' and abs(p['shape']['width']-p['shape']['height'])<1e-6
+   cu.append(Point(p['x_mm'],p['y_mm']).buffer(p['shape']['width']*.0254/2,quad_segs=256))
+ for v in vs:
+  if v['netName']=='GND':cu.append(Point(v['centerX']*.0254,v['centerY']*.0254).buffer(v['viaDiameter']*.0254/2,quad_segs=256))
+ ground=union_all(cu).difference(hole_union);polys=list(ground.geoms) if hasattr(ground,'geoms') else [ground];main=max(polys,key=lambda p:p.area);planes[layer]=ground;(E/f'sensor-fourlayer-real-ground-layer{layer}-current.wkb').write_bytes(ground.wkb);contacts=[]
  for v in vs:
   if v['netName']!='GND':continue
-  p=Point(v['centerX']*.0254,v['centerY']*.0254);ann=p.buffer(v['viaDiameter']*.0254/2,quad_segs=256).difference(p.buffer(v['holeDiameter']*.0254/2,quad_segs=256));contacts.append({'id':v['id'],'main_plane_contact_mm2':main.intersection(ann).area})
+  p=Point(v['centerX']*.0254,v['centerY']*.0254);ann=p.buffer(v['viaDiameter']*.0254/2,quad_segs=256).difference(p.buffer(v['holeDiameter']*.0254/2,quad_segs=256));contacts.append({'id':v['id'],'main_plane_contact_mm2':poured_main.intersection(ann).area,'full_actual_Ground_contact_mm2':main.intersection(ann).area})
  plane_reports.append({'layer':layer,'native_fineness':border['pourType']['fineness'],'keepIsland':border['keepIsland'],'components':len(polys),'areas_mm2':sorted([p.area for p in polys],reverse=True),'Ground_via_contacts':contacts,'all_Ground_vias_contact_ge0_15':all(x['main_plane_contact_mm2']>=.15 for x in contacts),'minimum_contact_mm2':min(x['main_plane_contact_mm2'] for x in contacts)})
 
 def padshape(p):
@@ -77,5 +87,5 @@ ret=[]
 for p in pads:
  if p['layer']!=12 or p['net'] in ['GND','3V3_IO']:continue
  near=min((v for v in vs if v['netName']=='GND'),key=lambda v:math.dist([v['centerX']*.0254,v['centerY']*.0254],[p['hole_x_mm'],p['hole_y_mm']]));dist=math.dist([near['centerX']*.0254,near['centerY']*.0254],[p['hole_x_mm'],p['hole_y_mm']]);ret.append({'ref':p['ref'],'pin':p['pin'],'Ground_via':near['id'],'distance_mm':dist,'pass':dist<=1.5})
-report={'at':datetime.datetime.now().astimezone().isoformat(),'source_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),'all150PAD_matches':True,'planes':plane_reports,'signal_reference_checks':checks,'all_source_signal_reference_pass':all(x['pass'] for x in checks),'max_missing_outside_unchanged_terminal_mm2':max(x['missing_outside_unchanged_terminal_mm2'] for x in checks),'failed_reference_lines':[x for x in checks if not x['pass']],'TH_returns':ret,'all_TH_returns_within1_5mm':all(x['pass'] for x in ret),'native_saved_closed_reopened_strict_DRC_errors':0,'minimum_neck_and_old_contact_DC_full_acceptance_pending':True,'accepted':False,'physical_tests':'UNMEASURED'}
+report={'at':datetime.datetime.now().astimezone().isoformat(),'source_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),'all150PAD_matches':True,'planes':plane_reports,'signal_reference_checks':checks,'all_source_signal_reference_pass':all(x['pass'] for x in checks),'max_missing_outside_unchanged_terminal_mm2':max(x['missing_outside_unchanged_terminal_mm2'] for x in checks),'failed_reference_lines':[x for x in checks if not x['pass']],'TH_returns':ret,'all_TH_returns_within1_5mm':all(x['pass'] for x in ret),'native_saved_closed_reopened_strict_DRC_errors':0,'minimum_neck_and_old_contact_DC_full_acceptance_pending':True,'actualGround_scope':'NativePOURED plus actualsame-layerGroundtracks, physicalGroundTHPAD/viaannuli; all actualdrills subtracted. Poured-via contactgate remains purepoured area, not selfannulus.','accepted':False,'physical_tests':'UNMEASURED'}
 (E/'sensor-fourlayer-actual-ground-reference-current.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps({k:v for k,v in report.items() if k not in ['planes','signal_reference_checks','TH_returns','failed_reference_lines']},ensure_ascii=False));print('planes',[(x['layer'],x['components'],x['minimum_contact_mm2'],x['all_Ground_vias_contact_ge0_15']) for x in plane_reports]);print('failedreferences',len(report['failed_reference_lines']),report['failed_reference_lines'][:12])
