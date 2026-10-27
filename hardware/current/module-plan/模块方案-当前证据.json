@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T11:09:39.471871+08:00",
+  "updated_at": "2026-10-27T11:24:56.358273+08:00",
   "requirements": {
     "confirmed_at": "2026-10-26T21:20:01.872822+08:00",
     "confirmed_by": "本聊天用户直接答复",
@@ -368,26 +368,27 @@
     "physical_tests": "UNMEASURED"
   },
   "electrode_current_stage": {
-    "at": "2026-10-27T11:09:39.471871+08:00",
-    "state": "OFFLINE_ESD14_BRIDGES_PASS_AND84_MAPPING_PROPOSAL_FULL_ROUTING_NOT_PROVED",
-    "plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-channel-plan-current.md",
-    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-channel-plan-current.json",
-    "bounded_probe": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-electrode-bounded-route-current.json",
-    "NC_external_bridges": 14,
-    "candidate_PAD_changes": 22,
-    "logical84_bijection_pass": true,
-    "left8_cross_order_pairs_before": 28,
-    "left8_cross_order_pairs_after": 0,
-    "full_group_route_pass": false,
-    "terminal_stop": "E03 J1.4-to-D1.5 per-branch160000 expansion cap; prefix3 physical-pass branches only; no global impossibility claim",
+    "at": "2026-10-27T11:24:56.358273+08:00",
+    "state": "OFFLINE14_HEADER_FANOUT_AND8_COMPLETE_ELECTRODE_PATHS_PASS_REALGROUND_PENDING",
+    "plan": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.md",
+    "evidence": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-header-fanout-current.json",
+    "preview": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-left8-whole-candidate-current.png",
+    "header_fanout_paths": 14,
+    "NC_bridges": 14,
+    "complete_electrode_net_paths": 8,
+    "remaining_electrode_net_paths": 6,
+    "new_candidate_segments": 68,
+    "proposed_PAD_net_changes": 22,
+    "proposed_Ground_via_moves": 14,
+    "max_TH_return_distance_mm": 1.4512596396474329,
     "native_applied": false,
     "native40_unchanged": true,
     "source_PCB2_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
     "native_remaining_nets": 21,
     "native_connection_items": 56,
-    "native_live_identity_rechecked_this_stage": false,
+    "provisional_Ground_not_accepted": true,
     "whole700budget_closed": false,
-    "physical_tests": "UNMEASURED",
-    "complete_purchase_plan": false
+    "complete_purchase_plan": false,
+    "physical_tests": "UNMEASURED"
   }
 }
