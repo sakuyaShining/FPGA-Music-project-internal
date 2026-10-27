@@ -1,0 +1,308 @@
+{
+  "status": "PASS_SAVED_CARRIER_TO_REVIEWED_OFFICIAL_HEADER_TABLE",
+  "source_PCB_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "official_PDF_sha256": "c3c85c579c446a29cc2bcd77f54c285d8c60f01ecf725a185e2fb1e6a56fdcc5",
+  "official_PDF_page": 2,
+  "official_revision": "Rev1.30 2023-07-11",
+  "mapping_provenance": "Visual review of official PDF page2; script joins all40 native carrier pad-net records to that transcription.",
+  "rows": [
+    {
+      "header": "J5",
+      "pin": 1,
+      "FPGA_pin": "",
+      "power": "+5V",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 2,
+      "FPGA_pin": "",
+      "power": "GND",
+      "net": "GND"
+    },
+    {
+      "header": "J5",
+      "pin": 3,
+      "FPGA_pin": 76,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 4,
+      "FPGA_pin": 80,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 5,
+      "FPGA_pin": 42,
+      "power": "",
+      "net": "SENSE_4"
+    },
+    {
+      "header": "J5",
+      "pin": 6,
+      "FPGA_pin": 41,
+      "power": "",
+      "net": "SENSE_3"
+    },
+    {
+      "header": "J5",
+      "pin": 7,
+      "FPGA_pin": 56,
+      "power": "",
+      "net": "I2S_BCK"
+    },
+    {
+      "header": "J5",
+      "pin": 8,
+      "FPGA_pin": 54,
+      "power": "",
+      "net": "I2S_DIN"
+    },
+    {
+      "header": "J5",
+      "pin": 9,
+      "FPGA_pin": 51,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 10,
+      "FPGA_pin": 48,
+      "power": "",
+      "net": "SENSE_5"
+    },
+    {
+      "header": "J5",
+      "pin": 11,
+      "FPGA_pin": 55,
+      "power": "",
+      "net": "I2S_LRCK"
+    },
+    {
+      "header": "J5",
+      "pin": 12,
+      "FPGA_pin": 49,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 13,
+      "FPGA_pin": 86,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 14,
+      "FPGA_pin": 79,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 15,
+      "FPGA_pin": "",
+      "power": "GND",
+      "net": "GND"
+    },
+    {
+      "header": "J5",
+      "pin": 16,
+      "FPGA_pin": "",
+      "power": "+3V3",
+      "net": "3V3_IO"
+    },
+    {
+      "header": "J5",
+      "pin": 17,
+      "FPGA_pin": 72,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 18,
+      "FPGA_pin": 71,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 19,
+      "FPGA_pin": 53,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J5",
+      "pin": 20,
+      "FPGA_pin": 52,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J6",
+      "pin": 1,
+      "FPGA_pin": 73,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J6",
+      "pin": 2,
+      "FPGA_pin": 74,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J6",
+      "pin": 3,
+      "FPGA_pin": 75,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J6",
+      "pin": 4,
+      "FPGA_pin": 85,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J6",
+      "pin": 5,
+      "FPGA_pin": 77,
+      "power": "",
+      "net": "TP_INT"
+    },
+    {
+      "header": "J6",
+      "pin": 6,
+      "FPGA_pin": 15,
+      "power": "",
+      "net": "BUS_MOSI"
+    },
+    {
+      "header": "J6",
+      "pin": 7,
+      "FPGA_pin": 16,
+      "power": "",
+      "net": "SCAN_LATCH"
+    },
+    {
+      "header": "J6",
+      "pin": 8,
+      "FPGA_pin": 27,
+      "power": "",
+      "net": "BUS_SCK"
+    },
+    {
+      "header": "J6",
+      "pin": 9,
+      "FPGA_pin": 28,
+      "power": "",
+      "net": "BUS_RETURN"
+    },
+    {
+      "header": "J6",
+      "pin": 10,
+      "FPGA_pin": 25,
+      "power": "",
+      "net": "I2C_SDA"
+    },
+    {
+      "header": "J6",
+      "pin": 11,
+      "FPGA_pin": 26,
+      "power": "",
+      "net": "I2C_SCL"
+    },
+    {
+      "header": "J6",
+      "pin": 12,
+      "FPGA_pin": 29,
+      "power": "",
+      "net": "SENSE_0"
+    },
+    {
+      "header": "J6",
+      "pin": 13,
+      "FPGA_pin": 30,
+      "power": "",
+      "net": "SENSE_1"
+    },
+    {
+      "header": "J6",
+      "pin": 14,
+      "FPGA_pin": 31,
+      "power": "",
+      "net": "SENSE_2"
+    },
+    {
+      "header": "J6",
+      "pin": 15,
+      "FPGA_pin": 17,
+      "power": "",
+      "net": "INPUT_LOAD_N"
+    },
+    {
+      "header": "J6",
+      "pin": 16,
+      "FPGA_pin": 20,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J6",
+      "pin": 17,
+      "FPGA_pin": 19,
+      "power": "",
+      "net": "HARM_CS_N"
+    },
+    {
+      "header": "J6",
+      "pin": 18,
+      "FPGA_pin": 18,
+      "power": "",
+      "net": ""
+    },
+    {
+      "header": "J6",
+      "pin": 19,
+      "FPGA_pin": "",
+      "power": "+3V3",
+      "net": "3V3_IO"
+    },
+    {
+      "header": "J6",
+      "pin": 20,
+      "FPGA_pin": "",
+      "power": "GND",
+      "net": "GND"
+    }
+  ],
+  "edit_control_pins_checked": 6,
+  "corrections": [
+    {
+      "header": "J6",
+      "pin": 15,
+      "old_FPGA_pin": 18,
+      "correct_FPGA_pin": 17
+    },
+    {
+      "header": "J6",
+      "pin": 17,
+      "old_FPGA_pin": 20,
+      "correct_FPGA_pin": 19
+    }
+  ],
+  "PCB_changed": false,
+  "RTL_changed": false,
+  "physical_continuity_test": "UNMEASURED"
+}

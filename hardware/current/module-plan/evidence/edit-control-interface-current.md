@@ -29,8 +29,10 @@
 |J6.7|16|SCAN_LATCH|
 |J6.8|27|BUS_SCK|
 |J6.9|28|BUS_RETURN|
-|J6.15|18|INPUT_LOAD_N|
-|J6.17|20|HARM_CS_N|
+|J6.15|17|INPUT_LOAD_N|
+|J6.17|19|HARM_CS_N|
+
+2026-10-27排针复核：上表J6.15/J6.17原误记为FPGA18/20，现依据Nano3921官方原理图Rev1.30第2页修正为17/19。原951载板仍分别为INPUT_LOAD_N/HARM_CS_N，未改CAD或RTL；完整40针联接证据见`../manufacturing/nano-header-audit-current.json`。
 
 这些排针/网络由原951主板捕获和Nano3921官方图相互核对。没有新增外部FPGA引脚；不因此代表现有产品固件支持新增输入。
 
