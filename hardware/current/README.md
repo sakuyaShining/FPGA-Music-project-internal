@@ -51,3 +51,8 @@ Real native fourlayer candidate:28parts/150PAD/223lines/48vias;35explicitPAD cha
 ## Current35 numeric review and assembly status
 
 Read module-plan/evidence/sensor35-numeric-review-current.md and purchase-assembly-user-review-current.md first. Current native source617f550e:302lines51vias,0DRC/0unconnected after reopen. Actual Ground DC and0.1651mm erosion checks pass;35 legacy reference failures remain within own native antipads only. User requested numbers before deciding: no scope approval, no fabrication release. Six preweld sensor boards, complete control/storage/protection, full screen configuration, all accessories and <=700 delivered/preweld budget are not closed. AUX3.5 retained; no internal speaker requirement. Physical84 electrodes include4mounted spares. Original mainPCB951 remains unfinished. No RTL/host edits.
+
+
+## Control purchase scope correction
+
+Previous13buttons/two165 claim withdrawn:8harmonic zones belong onJ10 touch screen. Existing schematic5buttons+push encoder, oneLV165 with serialinput grounded. R06independent edit operations contract remains pending; no GPIO/RTL change or product acceptance. Read control-baseline-scope-review-current.md and corrected purchase-assembly-user-review-current.md. New exact cable SKU evidence remains pending connector/length/current/freight validation.
