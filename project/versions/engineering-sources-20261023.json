@@ -2561,11 +2561,11 @@
         },
         "CURRENT-HARDWARE.json": {
           "stored": "hardware/current/CURRENT-HARDWARE.json",
-          "bytes": 8739,
-          "sha256": "937b21023a3915c849b83d8b18dfc1e1c15491c9d6abb66371880b5c92ef1a40",
-          "stored_sha256": "937b21023a3915c849b83d8b18dfc1e1c15491c9d6abb66371880b5c92ef1a40",
+          "bytes": 9099,
+          "sha256": "cfef3868f23b2c1d57dead705acfc0ba50099211a24aeecc0b06b05454ac6ff8",
+          "stored_sha256": "cfef3868f23b2c1d57dead705acfc0ba50099211a24aeecc0b06b05454ac6ff8",
           "codec": "raw",
-          "source": "Own Sensor14Bank native4layer trial0DRC afterreopen, independentreference34segmentsFAIL; NOTFORFAB; all12retained, noRTL/order changes"
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
         },
         "README.md": {
           "stored": "hardware/current/README.md",
@@ -2609,11 +2609,11 @@
         },
         "module-plan/模块方案-当前证据.json": {
           "stored": "hardware/current/module-plan/模块方案-当前证据.json",
-          "bytes": 35733,
-          "sha256": "5d15331056a0d2c812a470f153a7b92fa7a083aa2309ab8659f9b29f2532ae4c",
-          "stored_sha256": "5d15331056a0d2c812a470f153a7b92fa7a083aa2309ab8659f9b29f2532ae4c",
+          "bytes": 36402,
+          "sha256": "9994d4411a2a8bda7ecddc0ae5739714524be604d6b9ead5a2e711392bfff3ae",
+          "stored_sha256": "9994d4411a2a8bda7ecddc0ae5739714524be604d6b9ead5a2e711392bfff3ae",
           "codec": "raw",
-          "source": "Own Sensor14Bank native4layer trial0DRC afterreopen, independentreference34segmentsFAIL; NOTFORFAB; all12retained, noRTL/order changes"
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
         },
         "module-plan/227件BOM与模块方案范围纠正.json": {
           "stored": "hardware/current/module-plan/227件BOM与模块方案范围纠正.json",
@@ -4889,25 +4889,73 @@
         },
         "module-plan/PCB-ACTIVE-WORK.json": {
           "stored": "hardware/current/module-plan/PCB-ACTIVE-WORK.json",
-          "bytes": 40987,
-          "sha256": "97dface302e76fd952eef279b1c710f164bbba364b09f78c131a599b6c027c00",
-          "stored_sha256": "97dface302e76fd952eef279b1c710f164bbba364b09f78c131a599b6c027c00",
+          "bytes": 41656,
+          "sha256": "a9ee5b9dfb6c6a15cc6babdc9321fd999e5b513e448a8047a0b6aa26c1e6b4e2",
+          "stored_sha256": "a9ee5b9dfb6c6a15cc6babdc9321fd999e5b513e448a8047a0b6aa26c1e6b4e2",
           "codec": "raw",
-          "source": "Own Sensor14Bank native4layer trial0DRC afterreopen, independentreference34segmentsFAIL; NOTFORFAB; all12retained, noRTL/order changes"
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
         },
         "module-plan/实体交付当前入口.json": {
           "stored": "hardware/current/module-plan/实体交付当前入口.json",
-          "bytes": 28025,
-          "sha256": "dc0a46d22e68bbe67d6a8ec78a789a3f6d401b963aa1735121ee4139756a0219",
-          "stored_sha256": "dc0a46d22e68bbe67d6a8ec78a789a3f6d401b963aa1735121ee4139756a0219",
+          "bytes": 28694,
+          "sha256": "3b998c87081b98aa79a9cc1dfbf899db490daaa0f797b9d6d97581ac37a05340",
+          "stored_sha256": "3b998c87081b98aa79a9cc1dfbf899db490daaa0f797b9d6d97581ac37a05340",
           "codec": "raw",
-          "source": "Own Sensor14Bank native4layer trial0DRC afterreopen, independentreference34segmentsFAIL; NOTFORFAB; all12retained, noRTL/order changes"
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
+        },
+        "module-plan/evidence/sensor-fourlayer-reference-deficit-diagnosis-current.py": {
+          "stored": "hardware/current/module-plan/evidence/sensor-fourlayer-reference-deficit-diagnosis-current.py",
+          "bytes": 3945,
+          "sha256": "6ede13924c73cdb775c29d25b054b610be9f7ff385d9b05df276c1a1157e5d8b",
+          "stored_sha256": "6ede13924c73cdb775c29d25b054b610be9f7ff385d9b05df276c1a1157e5d8b",
+          "codec": "raw",
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
+        },
+        "module-plan/evidence/sensor-fourlayer-reference-deficit-diagnosis-current.json": {
+          "stored": "hardware/current/module-plan/evidence/sensor-fourlayer-reference-deficit-diagnosis-current.json",
+          "bytes": 21487,
+          "sha256": "33ea6369ebd1e9866a99092d42e414c5adb38061e48c8f0260200788ba1aab2a",
+          "stored_sha256": "33ea6369ebd1e9866a99092d42e414c5adb38061e48c8f0260200788ba1aab2a",
+          "codec": "raw",
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
+        },
+        "module-plan/evidence/control-DFR0072-official-schematic.pdf": {
+          "stored": "hardware/current/module-plan/evidence/control-DFR0072-official-schematic.pdf",
+          "bytes": 43164,
+          "sha256": "253d42081a2dc8da977d209412ed201ddf569d0a17c1c5f1ea82ca70c29292af",
+          "stored_sha256": "253d42081a2dc8da977d209412ed201ddf569d0a17c1c5f1ea82ca70c29292af",
+          "codec": "raw",
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
+        },
+        "module-plan/evidence/control-DFR0072-official-schematic-page1.png": {
+          "stored": "hardware/current/module-plan/evidence/control-DFR0072-official-schematic-page1.png",
+          "bytes": 82139,
+          "sha256": "0a8a2f0563948ad812a6f5897c5dda2a65325aaefdcf33c8e1d3e9df8792e0e7",
+          "stored_sha256": "0a8a2f0563948ad812a6f5897c5dda2a65325aaefdcf33c8e1d3e9df8792e0e7",
+          "codec": "raw",
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
+        },
+        "module-plan/evidence/control-DFR0072-module-review-current.json": {
+          "stored": "hardware/current/module-plan/evidence/control-DFR0072-module-review-current.json",
+          "bytes": 2641,
+          "sha256": "940a3f0814d12b8d2198929585e6ea1c1d9291f60d2429cbc98822e4f8ef4aa7",
+          "stored_sha256": "940a3f0814d12b8d2198929585e6ea1c1d9291f60d2429cbc98822e4f8ef4aa7",
+          "codec": "raw",
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
+        },
+        "module-plan/evidence/control-DFR0072-module-review-current.md": {
+          "stored": "hardware/current/module-plan/evidence/control-DFR0072-module-review-current.md",
+          "bytes": 1453,
+          "sha256": "c14caca10a71b10ebf9cb40ab16e984d9dd2e3bff5ac349a4ebc981377b24d34",
+          "stored_sha256": "c14caca10a71b10ebf9cb40ab16e984d9dd2e3bff5ac349a4ebc981377b24d34",
+          "codec": "raw",
+          "source": "Read-only reference-deficit diagnosis and exact DFR0072 module review; candidate notqualified; noCAD/RTLwrites"
         }
       },
       "validation_inherited": false,
       "product_acceptance": false,
       "scope": "Original951 protected. SameSensor14Bank91TopCu36GNDvias all14internal analog nets closed;21signalnets56itemsopen.43newsignalsegments actualreference/physical pass; oneC3 Groundvia/line revised and independentlychecked, all36Bottomcontacts/21PTHreturns pass. Native save-close-reopen otherDRC0. Fullgroup electrode planning/price/fab pending.",
-      "updated_at": "2026-10-27T15:59:27.888085+08:00",
+      "updated_at": "2026-10-27T16:11:36.908407+08:00",
       "source_native_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
       "sensor14bank_current_candidate": "module-plan/evidence/sensor-front-native-progress-current.json",
       "audio_review_scope": "Exact55CNY module pins and17originalitem reconciliation;11schematic subfunctions only/6pending,0fullyaccepted moduleitems. Current audio clock/init F07 documented. Native40files unchanged; whole purchasing/700CNY/delivery/physical acceptance open.",

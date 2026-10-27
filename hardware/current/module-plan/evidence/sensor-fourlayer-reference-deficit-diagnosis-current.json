@@ -1,0 +1,639 @@
+{
+  "at": "2026-10-27T16:04:54.995410+08:00",
+  "source_sha256": "b92392ad6c5c9f8248b5a95ecd9759329a6f7ce421f992124cda7d450bf963ce",
+  "diagnostic_only": true,
+  "original_gate_failed_segments": 34,
+  "own_antipad_only_segments": 0,
+  "neighbor_or_residual_segments": 34,
+  "checks": [
+    {
+      "id": "7a7bc3b1a46068f7",
+      "net": "3V3_IO",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.43464293628237016,
+      "own_actual_rule_antipad_overlap_mm2": 0.4291693988423707,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.005473537439999473,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.005473537439999473,
+      "residual_bounds_mm": [
+        48.930760660000004,
+        41.369741999999995,
+        48.94600066,
+        41.728897999999994
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "c8fa79db0107a51c",
+      "net": "3V3_IO",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.008257818309867307,
+      "own_actual_rule_antipad_overlap_mm2": 0.004775796672444408,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0034820216374228845,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.0034820216374228854,
+      "residual_bounds_mm": [
+        48.930760660000004,
+        41.42623635796299,
+        48.94600066,
+        41.67240334167515
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "f167b4be974b2266",
+      "net": "L0_E00",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.01948305331200673,
+      "own_actual_rule_antipad_overlap_mm2": 0.23528166873398404,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0027517876037589793,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.00275178760375898,
+      "residual_bounds_mm": [
+        5.791650741462235,
+        40.48080299399166,
+        5.970088826741732,
+        40.55288631245817
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "7a3abc1004a79abc",
+      "net": "L0_E01",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.01721068208962156,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454080013057447,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0025185083464124218,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.0025185083464124227,
+      "residual_bounds_mm": [
+        5.9752864569806174,
+        38.605677806293954,
+        6.040289771006792,
+        38.767552632991254
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "277a9de158e4952d",
+      "net": "L0_E02",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.01721068237323091,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454080030381725,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0025185084848106214,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.0025185084848106205,
+      "residual_bounds_mm": [
+        5.975324876036507,
+        36.71235031974582,
+        6.0403135562360815,
+        36.87422870986997
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "2b0f6da92c135ab4",
+      "net": "L0_E03",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.017210679911247227,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454079694696043,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.002518508627088119,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.00251850862708812,
+      "residual_bounds_mm": [
+        5.61964636669664,
+        34.6753877279353,
+        5.7551166621054275,
+        34.79423338115143
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "88b4cdd62b114104",
+      "net": "L0_E04",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.017210679911246175,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454079694695344,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.002518508627087665,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.002518508627087667,
+      "residual_bounds_mm": [
+        5.619646366696641,
+        30.525768058848577,
+        5.755116662105421,
+        30.644613712064693
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "33e831f706ee0f25",
+      "net": "L0_E05",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.017210682089621364,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454080013057775,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.002518508346412286,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.0025185083464122873,
+      "residual_bounds_mm": [
+        5.975286456980616,
+        28.44567780629395,
+        6.040289771006791,
+        28.607552632991254
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "a088ab05941874c5",
+      "net": "L0_E06",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.01721068237323143,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454080030381728,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.002518508484810649,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.002518508484810647,
+      "residual_bounds_mm": [
+        5.975324876036503,
+        26.552350319745823,
+        6.0403135562360815,
+        26.71422870986997
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "a61d58a6e63de756",
+      "net": "L0_E07",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.017210679911247077,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454079694695338,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0025185086270886367,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.0025185086270886397,
+      "residual_bounds_mm": [
+        5.619646366696641,
+        24.515387727935302,
+        5.755116662105425,
+        24.634233381151425
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "009ef6dc12a79660",
+      "net": "L0_E08",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.017210679911246172,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454079694695305,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0025185086270876718,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.0025185086270876718,
+      "residual_bounds_mm": [
+        5.6196463666966405,
+        20.365768058848577,
+        5.75511666210542,
+        20.484613712064693
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "34bf19df08980e59",
+      "net": "L0_E09",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.017210682089621884,
+      "own_actual_rule_antipad_overlap_mm2": 0.1845408001305793,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0025185083464124855,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.0025185083464124847,
+      "residual_bounds_mm": [
+        5.975286456980613,
+        18.28567780629395,
+        6.0402897710067895,
+        18.447552632991258
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "ef394bef8580edc9",
+      "net": "L0_E10",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.017210682373231548,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454080030381662,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0025185084848107497,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.002518508484810751,
+      "residual_bounds_mm": [
+        5.975324876036502,
+        16.392350319745823,
+        6.04031355623608,
+        16.55422870986997
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "bc61668e1d8e0899",
+      "net": "L0_E11",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.017210679911247043,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454079694695236,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.002518508627088626,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.002518508627088626,
+      "residual_bounds_mm": [
+        5.619646366696642,
+        14.355387727935303,
+        5.755116662105425,
+        14.474233381151425
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "9852ad22ef01a3cb",
+      "net": "L0_E12",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.017210680282043988,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454079787687958,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0025185083527484472,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.002518508352748447,
+      "residual_bounds_mm": [
+        6.034944022503581,
+        10.86878914744136,
+        6.068588616788883,
+        11.034563250249576
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "9fcecc4174c2ec59",
+      "net": "L0_E13",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.028066443075934967,
+      "own_actual_rule_antipad_overlap_mm2": 0.1845408005370193,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.013374268992034583,
+      "neighbor_antipad_overlaps": [
+        {
+          "id": "J1.13",
+          "net": "L0_E12",
+          "kind": "TH_PAD_ANTIPAD",
+          "overlap_missing_mm2": 0.006641534477970006
+        }
+      ],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.00673273451406462,
+      "residual_bounds_mm": [
+        5.371232159953538,
+        9.44638214312345,
+        5.922514498528573,
+        10.532291324123408
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "4a92b37d9e8a57bd",
+      "net": "L0_E13",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.006786800159500819,
+      "own_actual_rule_antipad_overlap_mm2": 0.0,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.006786800159500819,
+      "neighbor_antipad_overlaps": [
+        {
+          "id": "J1.13",
+          "net": "L0_E12",
+          "kind": "TH_PAD_ANTIPAD",
+          "overlap_missing_mm2": 0.004421038114077468
+        }
+      ],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.002365762045423342,
+      "residual_bounds_mm": [
+        5.825432372823417,
+        10.400662810533289,
+        5.926642657374682,
+        10.536522061812091
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "7e2aaa0dbf26e0a9",
+      "net": "RC_DRIVE",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.03196738685487058,
+      "own_actual_rule_antipad_overlap_mm2": 0.11104032205558541,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.017238663793501505,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.017238663793501502,
+      "residual_bounds_mm": [
+        22.203983421626926,
+        28.017449679999995,
+        22.313740000000006,
+        28.182549679999997
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "f7ddc944265a7fc6",
+      "net": "RC_DRIVE",
+      "layer": 2,
+      "original_gate_failed_missing_mm2": 0.049242304831995334,
+      "own_actual_rule_antipad_overlap_mm2": 0.29558111886490457,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.019821411647130246,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.01982141164713025,
+      "residual_bounds_mm": [
+        22.156009831349753,
+        28.191560604315256,
+        49.015439734470775,
+        36.25213726842429
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "4995beff698369d0",
+      "net": "SENSE_OUT",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.031967297700880505,
+      "own_actual_rule_antipad_overlap_mm2": 0.11104032205558542,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.017238574639510906,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.017238574639510902,
+      "residual_bounds_mm": [
+        27.486259999999998,
+        27.817450079999997,
+        27.596016038373072,
+        27.98255008
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "1c2847618d4f2ec4",
+      "net": "SENSE_OUT",
+      "layer": 2,
+      "original_gate_failed_missing_mm2": 0.031967471967753486,
+      "own_actual_rule_antipad_overlap_mm2": 0.11104032004517457,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.017238751628217273,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.017238751628217273,
+      "residual_bounds_mm": [
+        28.791749963072597,
+        27.742393559942702,
+        28.91374,
+        27.917736264697215
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "f321ee1fc0c754a0",
+      "net": "SENSE_OUT",
+      "layer": 2,
+      "original_gate_failed_missing_mm2": 0.017269258835723767,
+      "own_actual_rule_antipad_overlap_mm2": 0.1845407953267396,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.002577088538021728,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.0025770885380217287,
+      "residual_bounds_mm": [
+        48.94333592014429,
+        31.063861074470744,
+        48.99656257711066,
+        31.22813124363127
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "8f394071fb7690c8",
+      "net": "ADDR0",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.03196753544471698,
+      "own_actual_rule_antipad_overlap_mm2": 0.11104032205558545,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.017238812383347374,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.017238812383347374,
+      "residual_bounds_mm": [
+        25.9174488,
+        21.68626,
+        26.0825488,
+        21.79601747837307
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "a626da2d34c5e59a",
+      "net": "ADDR0",
+      "layer": 2,
+      "original_gate_failed_missing_mm2": 0.049229206635947716,
+      "own_actual_rule_antipad_overlap_mm2": 0.2955811192397268,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.019808313219749484,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.019808313219749473,
+      "residual_bounds_mm": [
+        26.582847685612826,
+        22.41564359213262,
+        48.97618606405088,
+        26.222518272791724
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "b3aa3facfacd6d35",
+      "net": "ADDR1",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.03196751233083177,
+      "own_actual_rule_antipad_overlap_mm2": 0.11104032205558545,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.017238789269462162,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.01723878926946217,
+      "residual_bounds_mm": [
+        26.917449339999997,
+        20.486259999999998,
+        27.08254934,
+        20.59601733837307
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "3f58e14dda9a8bd8",
+      "net": "ADDR1",
+      "layer": 2,
+      "original_gate_failed_missing_mm2": 0.049186826651369676,
+      "own_actual_rule_antipad_overlap_mm2": 0.29558111813698845,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.01976593379063867,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.01976593379063867,
+      "residual_bounds_mm": [
+        27.57222552539269,
+        16.294713259684784,
+        48.99139042579042,
+        21.151101732650645
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "2760db3397b30710",
+      "net": "ADDR2",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.0049475842063506905,
+      "own_actual_rule_antipad_overlap_mm2": 0.0,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0049475842063506905,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.00494758420635069,
+      "residual_bounds_mm": [
+        29.026723421260915,
+        19.492386719999995,
+        29.37327657873909,
+        19.513740000000002
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "965f0af07ba337f9",
+      "net": "ADDR2",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.03196745228820028,
+      "own_actual_rule_antipad_overlap_mm2": 0.11104032002456415,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.017238731975121165,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.01723873197512116,
+      "residual_bounds_mm": [
+        28.494635575947854,
+        19.594456834580342,
+        28.664795408045748,
+        19.789505188783735
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "11fea39079b36262",
+      "net": "ADDR2",
+      "layer": 2,
+      "original_gate_failed_missing_mm2": 0.03196742503129013,
+      "own_actual_rule_antipad_overlap_mm2": 0.11104031991692143,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.017238704856376144,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.01723870485637614,
+      "residual_bounds_mm": [
+        28.57689279562544,
+        19.78286013544352,
+        28.71160582412039,
+        19.965042621624796
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "1bb9126c9cf03ff7",
+      "net": "ADDR2",
+      "layer": 2,
+      "original_gate_failed_missing_mm2": 0.017198809152624624,
+      "own_actual_rule_antipad_overlap_mm2": 0.18454079515487026,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.0025066389827025247,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.002506638982702524,
+      "residual_bounds_mm": [
+        48.985753313394746,
+        11.402478352732858,
+        49.06400557658183,
+        11.560483928633948
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "c4988d65153eeee6",
+      "net": "ADDR3",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.031967374103258776,
+      "own_actual_rule_antipad_overlap_mm2": 0.1110403200793498,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.017238653719857906,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.0172386537198579,
+      "residual_bounds_mm": [
+        29.793513882292167,
+        18.774739551134196,
+        29.913740000000004,
+        18.94899698336155
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "e7962a1bfd13eed4",
+      "net": "ADDR3",
+      "layer": 2,
+      "original_gate_failed_missing_mm2": 0.049149854380197526,
+      "own_actual_rule_antipad_overlap_mm2": 0.2955811168089314,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.01972896155990749,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.01972896155990749,
+      "residual_bounds_mm": [
+        29.670988675649223,
+        6.4707234351897425,
+        49.14859298757046,
+        18.55356447270689
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "23b6dfb115328284",
+      "net": "MUX_DISABLE",
+      "layer": 1,
+      "original_gate_failed_missing_mm2": 0.036975911584153316,
+      "own_actual_rule_antipad_overlap_mm2": 0.09784688312220176,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.01942698332919055,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.019426983329190534,
+      "residual_bounds_mm": [
+        29.21744982,
+        21.320194433665336,
+        29.38254982,
+        21.525378624884343
+      ],
+      "acceptance_pass": false
+    },
+    {
+      "id": "c463f43a436a552a",
+      "net": "MUX_DISABLE",
+      "layer": 2,
+      "original_gate_failed_missing_mm2": 0.04920696942716064,
+      "own_actual_rule_antipad_overlap_mm2": 0.2955811167820024,
+      "missing_outside_own_actual_rule_antipads_mm2": 0.019786076621225855,
+      "neighbor_antipad_overlaps": [],
+      "drill_overlaps": [],
+      "unclassified_residual_mm2": 0.019786076621225855,
+      "residual_bounds_mm": [
+        29.6005537008104,
+        21.18600803104492,
+        48.952971275444575,
+        22.060362607471003
+      ],
+      "acceptance_pass": false
+    }
+  ],
+  "acceptance_exclusions_unchanged": true,
+  "native_not_modified": true,
+  "accepted": false
+}

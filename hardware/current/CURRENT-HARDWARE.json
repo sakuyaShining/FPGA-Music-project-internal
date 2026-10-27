@@ -40,7 +40,7 @@
   "validation_scope": "Saved native951 has prior complete ADDR2 physical/reference/DC/native DRC and reopen acceptance. Current portable files freshly hash-verified; no new CAD routing or fabrication acceptance is claimed. Offline62/24 is a retained partial MUX candidate. Parent full-delta audit plus deletion-only identity stage proof are included; older historical proof chains remain indexed by those records.",
   "single_J10_harness": "context/purchase-preparation-20261021-r1/current-J10-harness.json",
   "single_J10_harness_scope": "Electrical12-to40 mapping checked against saved951 pads. Mechanical connector orientation, configured sale SKU and functional recovery not released.",
-  "last_metadata_update": "2026-10-27T15:59:27.888085+08:00",
+  "last_metadata_update": "2026-10-27T16:11:36.908407+08:00",
   "module_delivery_main": {
     "entry": "module-plan/模块方案-当前工作单.md",
     "requirements": "module-plan/实体模块方案约束-current.json",
@@ -125,7 +125,10 @@
       ]
     },
     "sensor84_semantic_map": "module-plan/evidence/sensor84-semantic-wiring-current.json",
-    "complete_purchase_plan": false
+    "complete_purchase_plan": false,
+    "reference_diagnostic": "module-plan/evidence/sensor-fourlayer-reference-deficit-diagnosis-current.json",
+    "DFR0072_candidate": "module-plan/evidence/control-DFR0072-module-review-current.json",
+    "new_module_research_scope": "Exact25CNY5Vmodule candidate, NOT3V3qualified/notpurchaseaccepted; original34referencefailures retained; noCAD/RTLchanges"
   },
   "working_project_scope": "Accepted951 PCB1 and14 originalschematics preserved. Same working project now contains independent Sensor14Bank subboard; its working metadata differs intentionally. Original native/ folder stays accepted baseline."
 }
