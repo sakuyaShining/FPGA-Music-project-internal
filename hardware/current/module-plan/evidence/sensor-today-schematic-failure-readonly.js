@@ -1,0 +1,3 @@
+const d=await eda.dmt_SelectControl.getCurrentDocumentInfo();if(d?.uuid!=="00ba33d542279ea0"||d.parentProjectUuid!=="6b570f10a9004c2a7374c39b14185fbbe64449a767876fe377667e630fc1e3c7")throw Error('Wrongdocument');
+const parts=await eda.sch_PrimitiveComponent.getAll('part',false);const pins=[];for(const c of parts)for(const p of await c.getAllPins())pins.push({ref:c.getState_Designator(),pin:p.getState_PinNumber(),data:p});
+return {read_only:true,doc:d,state:globalThis.__sensorTodayFourLayer,parts,pins,wires:await eda.sch_PrimitiveWire.getAll(),ports:await eda.sch_PrimitiveComponent.getAll('netport',false)};

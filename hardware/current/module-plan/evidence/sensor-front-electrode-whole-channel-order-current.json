@@ -1,0 +1,422 @@
+{
+  "at": "2026-10-27T07:17:34.261143+08:00",
+  "scope": "Necessary channel-order planning on current preliminary layout only; not global impossibility proof",
+  "board_mm": [
+    55,
+    45
+  ],
+  "nets": [
+    {
+      "net": "L0_E00",
+      "header": {
+        "ref": "J1",
+        "pin": "1",
+        "x_mm": 5.0000001600000035,
+        "y_mm": 41.55000072
+      },
+      "ESD": {
+        "ref": "D1",
+        "pin": "1",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 38.739998719999996
+      },
+      "series_resistor": {
+        "ref": "R3",
+        "pin": "1",
+        "x_mm": 19.246636640000002,
+        "y_mm": 18.8000005
+      }
+    },
+    {
+      "net": "L0_E01",
+      "header": {
+        "ref": "J1",
+        "pin": "2",
+        "x_mm": 5.000000160000003,
+        "y_mm": 39.01000072
+      },
+      "ESD": {
+        "ref": "D1",
+        "pin": "2",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 38.23987272
+      },
+      "series_resistor": {
+        "ref": "R4",
+        "pin": "1",
+        "x_mm": 19.246636640000002,
+        "y_mm": 20.00000064
+      }
+    },
+    {
+      "net": "L0_E02",
+      "header": {
+        "ref": "J1",
+        "pin": "3",
+        "x_mm": 5.000000160000003,
+        "y_mm": 36.47000072
+      },
+      "ESD": {
+        "ref": "D1",
+        "pin": "4",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 37.239874719999996
+      },
+      "series_resistor": {
+        "ref": "R5",
+        "pin": "1",
+        "x_mm": 19.246636640000002,
+        "y_mm": 21.20000078
+      }
+    },
+    {
+      "net": "L0_E03",
+      "header": {
+        "ref": "J1",
+        "pin": "4",
+        "x_mm": 5.000000160000003,
+        "y_mm": 33.93000072
+      },
+      "ESD": {
+        "ref": "D1",
+        "pin": "5",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 36.74000272
+      },
+      "series_resistor": {
+        "ref": "R6",
+        "pin": "1",
+        "x_mm": 19.246636640000002,
+        "y_mm": 22.40000092
+      }
+    },
+    {
+      "net": "L0_E04",
+      "header": {
+        "ref": "J1",
+        "pin": "5",
+        "x_mm": 5.000000160000002,
+        "y_mm": 31.39000072
+      },
+      "ESD": {
+        "ref": "D2",
+        "pin": "1",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 28.57999872
+      },
+      "series_resistor": {
+        "ref": "R7",
+        "pin": "1",
+        "x_mm": 19.246636640000002,
+        "y_mm": 23.60000106
+      }
+    },
+    {
+      "net": "L0_E05",
+      "header": {
+        "ref": "J1",
+        "pin": "6",
+        "x_mm": 5.000000160000002,
+        "y_mm": 28.85000072
+      },
+      "ESD": {
+        "ref": "D2",
+        "pin": "2",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 28.07987272
+      },
+      "series_resistor": {
+        "ref": "R8",
+        "pin": "1",
+        "x_mm": 19.246636640000002,
+        "y_mm": 24.8000012
+      }
+    },
+    {
+      "net": "L0_E06",
+      "header": {
+        "ref": "J1",
+        "pin": "7",
+        "x_mm": 5.000000160000001,
+        "y_mm": 26.31000072
+      },
+      "ESD": {
+        "ref": "D2",
+        "pin": "4",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 27.07987472
+      },
+      "series_resistor": {
+        "ref": "R9",
+        "pin": "1",
+        "x_mm": 19.246636640000002,
+        "y_mm": 25.999998799999997
+      }
+    },
+    {
+      "net": "L0_E07",
+      "header": {
+        "ref": "J1",
+        "pin": "8",
+        "x_mm": 5.00000016,
+        "y_mm": 23.77000072
+      },
+      "ESD": {
+        "ref": "D2",
+        "pin": "5",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 26.580002720000003
+      },
+      "series_resistor": {
+        "ref": "R10",
+        "pin": "1",
+        "x_mm": 19.246636640000002,
+        "y_mm": 27.199998939999997
+      }
+    },
+    {
+      "net": "L0_E08",
+      "header": {
+        "ref": "J1",
+        "pin": "9",
+        "x_mm": 5.00000016,
+        "y_mm": 21.23000072
+      },
+      "ESD": {
+        "ref": "D3",
+        "pin": "1",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 18.41999872
+      },
+      "series_resistor": {
+        "ref": "R11",
+        "pin": "1",
+        "x_mm": 36.25336412,
+        "y_mm": 27.199998939999997
+      }
+    },
+    {
+      "net": "L0_E09",
+      "header": {
+        "ref": "J1",
+        "pin": "10",
+        "x_mm": 5.000000159999999,
+        "y_mm": 18.69000072
+      },
+      "ESD": {
+        "ref": "D3",
+        "pin": "2",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 17.91987272
+      },
+      "series_resistor": {
+        "ref": "R12",
+        "pin": "1",
+        "x_mm": 36.25336412,
+        "y_mm": 25.999998799999997
+      }
+    },
+    {
+      "net": "L0_E10",
+      "header": {
+        "ref": "J1",
+        "pin": "11",
+        "x_mm": 5.000000159999998,
+        "y_mm": 16.15000072
+      },
+      "ESD": {
+        "ref": "D3",
+        "pin": "4",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 16.91987472
+      },
+      "series_resistor": {
+        "ref": "R13",
+        "pin": "1",
+        "x_mm": 36.25336412,
+        "y_mm": 24.8000012
+      }
+    },
+    {
+      "net": "L0_E11",
+      "header": {
+        "ref": "J1",
+        "pin": "12",
+        "x_mm": 5.000000159999998,
+        "y_mm": 13.61000072
+      },
+      "ESD": {
+        "ref": "D3",
+        "pin": "5",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 16.42000272
+      },
+      "series_resistor": {
+        "ref": "R14",
+        "pin": "1",
+        "x_mm": 36.25336412,
+        "y_mm": 23.60000106
+      }
+    },
+    {
+      "net": "L0_E12",
+      "header": {
+        "ref": "J1",
+        "pin": "13",
+        "x_mm": 5.000000159999998,
+        "y_mm": 11.070000720000001
+      },
+      "ESD": {
+        "ref": "D4",
+        "pin": "1",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 10.79999872
+      },
+      "series_resistor": {
+        "ref": "R15",
+        "pin": "1",
+        "x_mm": 38.7533642,
+        "y_mm": 22.40000092
+      }
+    },
+    {
+      "net": "L0_E13",
+      "header": {
+        "ref": "J1",
+        "pin": "14",
+        "x_mm": 5.000000159999997,
+        "y_mm": 8.53000072
+      },
+      "ESD": {
+        "ref": "D4",
+        "pin": "2",
+        "x_mm": 7.4000004399999995,
+        "y_mm": 10.29987272
+      },
+      "series_resistor": {
+        "ref": "R16",
+        "pin": "1",
+        "x_mm": 36.25336412,
+        "y_mm": 21.20000078
+      }
+    }
+  ],
+  "left8_ESD_to_resistor_y_order_inversions": [
+    [
+      "L0_E00",
+      "L0_E01"
+    ],
+    [
+      "L0_E00",
+      "L0_E02"
+    ],
+    [
+      "L0_E00",
+      "L0_E03"
+    ],
+    [
+      "L0_E00",
+      "L0_E04"
+    ],
+    [
+      "L0_E00",
+      "L0_E05"
+    ],
+    [
+      "L0_E00",
+      "L0_E06"
+    ],
+    [
+      "L0_E00",
+      "L0_E07"
+    ],
+    [
+      "L0_E01",
+      "L0_E02"
+    ],
+    [
+      "L0_E01",
+      "L0_E03"
+    ],
+    [
+      "L0_E01",
+      "L0_E04"
+    ],
+    [
+      "L0_E01",
+      "L0_E05"
+    ],
+    [
+      "L0_E01",
+      "L0_E06"
+    ],
+    [
+      "L0_E01",
+      "L0_E07"
+    ],
+    [
+      "L0_E02",
+      "L0_E03"
+    ],
+    [
+      "L0_E02",
+      "L0_E04"
+    ],
+    [
+      "L0_E02",
+      "L0_E05"
+    ],
+    [
+      "L0_E02",
+      "L0_E06"
+    ],
+    [
+      "L0_E02",
+      "L0_E07"
+    ],
+    [
+      "L0_E03",
+      "L0_E04"
+    ],
+    [
+      "L0_E03",
+      "L0_E05"
+    ],
+    [
+      "L0_E03",
+      "L0_E06"
+    ],
+    [
+      "L0_E03",
+      "L0_E07"
+    ],
+    [
+      "L0_E04",
+      "L0_E05"
+    ],
+    [
+      "L0_E04",
+      "L0_E06"
+    ],
+    [
+      "L0_E04",
+      "L0_E07"
+    ],
+    [
+      "L0_E05",
+      "L0_E06"
+    ],
+    [
+      "L0_E05",
+      "L0_E07"
+    ],
+    [
+      "L0_E06",
+      "L0_E07"
+    ]
+  ],
+  "left8_inversion_pairs": 28,
+  "finding": "Current first8 ESD endpoints descend in y while resistor endpoints ascend. Straight left-to-right monotone group has28inversions; do not route one electrode at a time without a whole14net channel plan. This excludes neither a changed component/group arrangement nor a non-monotone referenced plan.",
+  "constraints_retained": "No arbitrary signal-reference gap, implicit pad interchange, schematic mismatch, extra layers or feature reduction approved by this analysis. A routine candidate physical/header rearrangement needs complete synchronized pin-map/assembly audit; PCB remains unaccepted.",
+  "next": "Compare whole-group component placement / documented connector assignment candidate; must retain all14channels plus2calibration, native schematic-netlist, actual continuous reference and total6board factory budget."
+}

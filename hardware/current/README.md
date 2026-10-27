@@ -1,13 +1,65 @@
-# 当前硬件保存工程
+# 当前电路板工程与交付入口
 
-`native/`包含当前保存的U9ControlWork原生工程，包括工程描述、PCB、全部原理图及面板；逐文件身份见`../../project/versions/engineering-sources-20261023.json`。PCB身份`e098c5db…`，作者施工记录47项未连通、13网、227件、616孔。保留37项旧检查点仍可从历史档案恢复。
+**2026-10-27 当前入口**：`../../project/CONSOLIDATION-20261027.md`。原227件载板与14路传感小板候选分别保留；35项限定口径已批准，制造文件核验／报价／整机仍未完成。
 
-`context/`保存当前施工、DRC/参考检查与采购上下文；`interface-references/`保存引脚参考。上下文中的绝对路径和session只是原工作区出处，不可复用会话或重放事务。采购文件包含历史表及草稿，按`context/purchase-preparation-20261021-r1/current-board-procurement.json`解释；旧CPL未随全部改位重导出，不能直接下单。
+先读 `CURRENT-HARDWARE.json`。本提交将远端旧 e098 施工板更新到已保存的 **951** 原生板；全部14页原理图、工程描述及面板随工程保留。227件、649孔，ADDR2整网已经原生验收；仍有42项未连通、12个网络开放，**不能投板或据此直接下单**，实物未测。
 
-```powershell
-python tools/scripts/engineering.py export --area hardware --output D:/FPGA-Project/review/my-hardware
-```
+`native/` 是可编辑原生工程。`context/accepted-native-review.json` 记录951的既有验收范围；旧 `context/u9/` 内容只保留历史，不能覆盖本入口。最新同源227行坐标表在 `context/purchase-preparation-20261021-r1/native-cpl-current-951ce88a-DRAFT-NOT-FOR-ORDER.csv`，物料和装配文件仍为采购草稿。
 
-校验通过后在自己的副本中打开`native/`原生工程，创建该副本的新会话并核对实际工程身份。主机原D盘/06df目录不属于新协作者可写路径。当前施工owner为会话`01a15ee5-fa24-7501-8475-ad28a0f08939`；本次发布只核对保存文件和恢复字节，没有重新执行CAD DRC。
+`context/offline/` 是尚未导入原生的62线24孔候选，禁用控制网仍4个焊盘岛。保留方案、精确预期几何、已剔除浮地的参考上下文、阶段证明与父审查；大JSON仅作无损gzip压缩，清单同时记录原始与压缩字节SHA。它不是完整PCB，不应直接重放旧施工脚本。历史通过Git和证据索引保留，不再层层嵌套复制恢复压缩包。
 
-保留J10，取消J11；接口改动需双方确认。仍有未连通及参考/装配/屏幕线束资格缺口，实物未测，制造未放行。导出不启动CAD、不应用施工脚本。
+仅Codex写原生板，WorkBuddy只读辅助。同一工程写入前须实时核身份、资源与全部受影响网；不复用历史会话标识。可用工程导出工具读取本提交更新后的逐文件清单，导出不会启动CAD。
+
+保留单J10、84传感、Nano20K、140×100毫米四铜层，J11取消。最终屏幕完整配置、线束机械、双面及通孔工厂装配、背面净空、供电/84电极附件和整机验收仍开放。没有新增制造放行、采购、RTL改动或其他轴验收。
+
+## 实体模块方案当前入口
+
+用户确认11月4日前功能与视频达标即可，自制PCB不是前置条件。新增硬件500—700元、广东清远、优先全部预焊且不能焊贴片。先读[模块方案当前工作单](module-plan/模块方案-当前工作单.md)；同目录保留227件功能映射、约束和原始来源。模块清单尚未完整冻结，不能据此下单。此选择没有删减原227件功能/保护，也没有把原951或离线62/24升级为制造接受版。
+
+本轮补充：同器件直插存储/屏缓冲的针号证据，以及登记producer整机接口F01—F06。595扫描字高两位与原复位网冲突、RA8875显示协议、FT5316读取、EEPROM两字节地址及84节点映射/物理顶层仍需适配；详见同一模块工作单。原厂PDF与原始库回执按SHA保留。采购前须核兼容性/完整接线/费用/交期；实物验收在到货后进行。未把原PCB或候选宣称为完成版。
+
+## 14路前端当前候选
+
+见 `module-plan/sensor14bank/README.md` 和 `module-plan/evidence/sensor-front-native-progress-current.json`。当前55×45mm试排、48段局部实铜、36地孔及真实Bottom地铜；地孔接触和21个PTH回流局部门通过。仍35网84项未连接，单TopKEEP作业终态未留下新信号铜，不能重放或冒称物理无解。登记固件13文件无变化，F01～F06未解除。原951及14页基线不变，尚不可投产或直接采购完整系统。
+
+## 当前小板检查点（10月27日07:15）
+
+同一Sensor14Bank候选全部14个内部串阻到MUX模拟网已闭合。当前91TopCu/36Groundvias，剩21网56连接项，实际重铺保存关闭重开其他原生DRC0。C3一个地孔和一段引线有意改位，其他既有铜/孔和全部规则/PAD网名保持。43新增信号段实际物理/全宽地参考通过。电极整组端点顺序、剩余14电极与7控制网、全部源铜/细颈/装配及六板预焊报价/完整700元采购仍待完成；不可投产。原951主板及14页未改。
+
+## 当前音频模块核对（10月27日）
+
+55元斑梨SKU010313400000逐针接线、DAC0x4D/耳放0x60与原17件音频功能映射已保存到module-plan/evidence/audio-010313400000-wiring-current.md。11项仅有原理图子功能证据、6项仍待覆盖；227功能全部保留。F07记录当前登记producer实际时钟、格式和完整初始化缺口，没有改RTL。DFR功放有货但仍缺适配播放链；FIT0502实际缺货，低价3525BOX因1.5kHz起的原厂有效频段未选作唯一乐器扬声器。完整700元清远可买清单/交期仍未闭合，不得下单。原主板及当前Sensor14Bank本轮40项文件哈希保持。
+
+## 当前控制与供电核对（10月27日）
+
+控制/存储/接口/供电原56项功能与网络逐项保留。已核5行国内直插器件、插座和去耦实际价/现货/最小购买量，共33.704元，尚缺载体、实际组装、配线、保护和运费。原TPS2553限流按23.7kΩ±1%核为约1.002—1.184A，未放宽；音箱供电须另做完整负载预算。详见module-plan/evidence/control-power-current-plan.md。原227项无删减；本轮原生40项文件哈希未变，未改RTL、烧录或下单，完整700元可买清单/交期仍未收口。
+
+## 当前电极整组候选（10月27日）
+
+14个ESD可选外部直通短桥离线物理/参考通过；左8输入侧改网及外部补偿的84路映射一一对应，共22PAD候选差异，未原生应用。一次有界完整路径探查于E03/J1.4—D1.5达到160000节点停止，不证明全局无解，也不证明整组可布通。当前仍21网56项未连。原生40项文件未变；预焊/700元完整清单/交期未闭合。详见module-plan/evidence/sensor-electrode-channel-plan-current.md及终态probe；禁止重放终态作业。
+
+## 当前明确扇出候选（10月27日）
+
+离线镜像14个J1回流孔后，14路排针—ESD扇出、14段NC短桥及左8路完整电极路径共同物理/全PAD连通检查通过。右6电极路径及7控制网、实际Ground重铺完整参考仍未过门；假设模型TH终端外仍有0.000492292mm²缺失，未扩例外。22PAD/14孔均未原生改动，当前源仍21网56项。详见module-plan/evidence/sensor-header-fanout-current.md。完整700元可买清单/预焊交期仍未闭合。
+
+## 完整交付可控性与十二条核对（10月27日）
+
+全部12条逐项对照与可控性倒排见module-plan/evidence/product-spec-12-comparison-current.md及delivery-risk-plan-current.md。R09本为AUX/不装机内喇叭偏好，外接试听功放/喇叭不是AUX必购门；R12按用户授权调整为模块/必要简单预焊小板，完整可装要求不降。84采集位不等于25音位表情已实现。前端/产品固件接合及供应交期均未闭合，10月28日设计检查点、30日到齐与11月3日视频均为内部倒排目标，未获供应商承诺，不保证11月4日全12条交付。不删功能、不改原生/RTL或下单。
+
+## Current Sensor14Bank fourlayer trial
+
+Real native fourlayer candidate:28parts/150PAD/223lines/48vias;35explicitPAD changes match schematic; native strictDRC0 and zero unconnected after actual pours/save-close-reopen. All91sourceCu retained. Independent Ground reference has34failedsegments; fullDC/minneck/oldcontacts/stack/assembly/purchase budget/delivery remain pending. This is NOT fabrication acceptance. Original mainPCB951 remains42connectionerrors12nets. Complete84semantic wiring proposal generated:75pitch+5octave+4spare; noRTLwrite. Read module-plan/evidence/sensor-fourlayer-progress-current.md/json first. NEVER replay terminal apply jobs.
+
+## Current35 numeric review and assembly status
+
+Read module-plan/evidence/sensor35-numeric-review-current.md and purchase-assembly-user-review-current.md first. Current native source617f550e:302lines51vias,0DRC/0unconnected after reopen. Actual Ground DC and0.1651mm erosion checks pass;35 legacy reference failures remain within own native antipads only. User requested numbers before deciding: no scope approval, no fabrication release. Six preweld sensor boards, complete control/storage/protection, full screen configuration, all accessories and <=700 delivered/preweld budget are not closed. AUX3.5 retained; no internal speaker requirement. Physical84 electrodes include4mounted spares. Original mainPCB951 remains unfinished. No RTL/host edits.
+
+
+## Control purchase scope correction
+
+Previous13buttons/two165 claim withdrawn:8harmonic zones belong onJ10 touch screen. Existing schematic5buttons+push encoder, oneLV165 with serialinput grounded. R06independent edit operations contract remains pending; no GPIO/RTL change or product acceptance. Read control-baseline-scope-review-current.md and corrected purchase-assembly-user-review-current.md. New exact cable SKU evidence remains pending connector/length/current/freight validation.
+
+
+## Independent edit action proposal and actual remaining gates
+
+Read module-plan/evidence/module-readiness-current.md first: six remaining delivery gate groups, not onlySAVE/CANCEL. Three separate physical APPLY/SAVE/CANCEL candidate inputs use one additional LV165 in the same existing serial bus;8new components, no extra externalFPGA GPIO, original8-bit encoding preserved after normalization.65536offlineparallelstates checked; noRTL/CAD/board acceptance. Original56+8=64candidate component allocation excludes newconnectors andmanufacturingpreweld costs. Nano3921 page5 proves ownedTFsocket, pullups/decoupling; no separate FPGA-sideTFreader module. Card SKU and actual PCM recordplay still open; FIT0570/FIT0394 discontinued.35reference-scope decision andfull<=700preweld/freight budget remain pending.

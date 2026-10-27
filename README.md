@@ -1,5 +1,7 @@
 # FPGA Music 项目总入口
 
+**当前统一入口（2026-10-27）**：[project/CONSOLIDATION-20261027.md](project/CONSOLIDATION-20261027.md)。已整合硬件阶段成果与恢复资料；完整实体、制造文件和产品验收仍待完成。
+
 **快速接手**：[产品规格与差距](project/PRODUCT-SPEC.md) → [工程分布](project/SOURCE-MAP.md) → [待办与验收](project/WORK-PLAN.md)。仓库现已公开；实际远程main是发布入口，未合并PR仍是候选。
 
 当前协作工程见[工程入口](project/ENGINEERING.md)与[2026-10-24协作检查点](project/COLLABORATION-CHECKPOINT-20261024.md)：`fpga/current/`、`hardware/current/`、`host/current/`。这是有输入身份和验证边界的开发候选，完整产品未验收；历史根目录源码不作为最新开发入口。

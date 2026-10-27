@@ -1,0 +1,2942 @@
+{
+  "source": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\sensor-front-14nets-current.epcb2",
+  "source_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+  "source_pin_map_pass": true,
+  "pads": [
+    {
+      "ref": "C1",
+      "pin": "2",
+      "net": "GND",
+      "id": "17c1e2432cd6dc89e14",
+      "layer": 1,
+      "x_mm": 32.3000243,
+      "y_mm": 27.40000108,
+      "hole_x_mm": 32.2998973,
+      "hole_y_mm": 27.40000108,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.496,
+        "height": 35.433,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "C1",
+      "pin": "1",
+      "net": "3V3_IO",
+      "id": "17c1e2432cd6dc89e15",
+      "layer": 1,
+      "x_mm": 30.8999763,
+      "y_mm": 27.40000108,
+      "hole_x_mm": 30.900103299999994,
+      "hole_y_mm": 27.40000108,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.496,
+        "height": 35.433,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "C2",
+      "pin": "2",
+      "net": "GND",
+      "id": "49562f7c50f8fad0e14",
+      "layer": 1,
+      "x_mm": 21.499974780000002,
+      "y_mm": 35.59999992,
+      "hole_x_mm": 21.50010178,
+      "hole_y_mm": 35.59999992,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.496,
+        "height": 35.433,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "C2",
+      "pin": "1",
+      "net": "3V3_IO",
+      "id": "49562f7c50f8fad0e15",
+      "layer": 1,
+      "x_mm": 22.900022779999997,
+      "y_mm": 35.59999992,
+      "hole_x_mm": 22.899895779999998,
+      "hole_y_mm": 35.59999992,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.496,
+        "height": 35.433,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "C3",
+      "pin": "2",
+      "net": "GND",
+      "id": "99039a67c3fa63c1e14",
+      "layer": 1,
+      "x_mm": 33.70002404,
+      "y_mm": 21.52499886,
+      "hole_x_mm": 33.69989704,
+      "hole_y_mm": 21.52499886,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.496,
+        "height": 35.433,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "C3",
+      "pin": "1",
+      "net": "L0_M14",
+      "id": "99039a67c3fa63c1e15",
+      "layer": 1,
+      "x_mm": 32.299976040000004,
+      "y_mm": 21.52499886,
+      "hole_x_mm": 32.300103039999996,
+      "hole_y_mm": 21.52499886,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.496,
+        "height": 35.433,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "C4",
+      "pin": "2",
+      "net": "GND",
+      "id": "e3b224f8db6c7bbfe14",
+      "layer": 1,
+      "x_mm": 33.70002404,
+      "y_mm": 19.2999995,
+      "hole_x_mm": 33.69989704,
+      "hole_y_mm": 19.2999995,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.496,
+        "height": 35.433,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "C4",
+      "pin": "1",
+      "net": "L0_M15",
+      "id": "e3b224f8db6c7bbfe15",
+      "layer": 1,
+      "x_mm": 32.299976040000004,
+      "y_mm": 19.2999995,
+      "hole_x_mm": 32.300103039999996,
+      "hole_y_mm": 19.2999995,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.496,
+        "height": 35.433,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "6",
+      "net": "",
+      "id": "e32980fbd1737e5de14",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 36.74000272,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 36.74000272,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "7",
+      "net": "",
+      "id": "e32980fbd1737e5de15",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 37.239874719999996,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 37.24000172,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "8",
+      "net": "GND",
+      "id": "e32980fbd1737e5de16",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 37.74000072,
+      "hole_x_mm": 8.199871839999998,
+      "hole_y_mm": 37.74000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "9",
+      "net": "",
+      "id": "e32980fbd1737e5de17",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 38.23987272,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 38.23999972,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "10",
+      "net": "",
+      "id": "e32980fbd1737e5de18",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 38.739998719999996,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 38.739998719999996,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "5",
+      "net": "L0_E03",
+      "id": "e32980fbd1737e5de19",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 36.74000272,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 36.74000272,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "4",
+      "net": "L0_E02",
+      "id": "e32980fbd1737e5de20",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 37.239874719999996,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 37.24000172,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "3",
+      "net": "GND",
+      "id": "e32980fbd1737e5de21",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 37.74000072,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 37.74000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "2",
+      "net": "L0_E01",
+      "id": "e32980fbd1737e5de22",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 38.23987272,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 38.23999972,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D1",
+      "pin": "1",
+      "net": "L0_E00",
+      "id": "e32980fbd1737e5de23",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 38.739998719999996,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 38.739998719999996,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "6",
+      "net": "",
+      "id": "f4d6a8b898319ac3e14",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 26.580002720000003,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 26.580002720000003,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "7",
+      "net": "",
+      "id": "f4d6a8b898319ac3e15",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 27.07987472,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 27.080001720000002,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "8",
+      "net": "GND",
+      "id": "f4d6a8b898319ac3e16",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 27.58000072,
+      "hole_x_mm": 8.199871839999998,
+      "hole_y_mm": 27.58000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "9",
+      "net": "",
+      "id": "f4d6a8b898319ac3e17",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 28.07987272,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 28.07999972,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "10",
+      "net": "",
+      "id": "f4d6a8b898319ac3e18",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 28.57999872,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 28.57999872,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "5",
+      "net": "L0_E07",
+      "id": "f4d6a8b898319ac3e19",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 26.580002720000003,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 26.580002720000003,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "4",
+      "net": "L0_E06",
+      "id": "f4d6a8b898319ac3e20",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 27.07987472,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 27.080001720000002,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "3",
+      "net": "GND",
+      "id": "f4d6a8b898319ac3e21",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 27.58000072,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 27.58000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "2",
+      "net": "L0_E05",
+      "id": "f4d6a8b898319ac3e22",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 28.07987272,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 28.07999972,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D2",
+      "pin": "1",
+      "net": "L0_E04",
+      "id": "f4d6a8b898319ac3e23",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 28.57999872,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 28.57999872,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "6",
+      "net": "",
+      "id": "625b35b56585c206e14",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 16.42000272,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 16.42000272,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "7",
+      "net": "",
+      "id": "625b35b56585c206e15",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 16.91987472,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 16.920001720000002,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "8",
+      "net": "GND",
+      "id": "625b35b56585c206e16",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 17.42000072,
+      "hole_x_mm": 8.199871839999998,
+      "hole_y_mm": 17.42000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "9",
+      "net": "",
+      "id": "625b35b56585c206e17",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 17.91987272,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 17.91999972,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "10",
+      "net": "",
+      "id": "625b35b56585c206e18",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 18.41999872,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 18.41999872,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "5",
+      "net": "L0_E11",
+      "id": "625b35b56585c206e19",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 16.42000272,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 16.42000272,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "4",
+      "net": "L0_E10",
+      "id": "625b35b56585c206e20",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 16.91987472,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 16.920001720000002,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "3",
+      "net": "GND",
+      "id": "625b35b56585c206e21",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 17.42000072,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 17.42000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "2",
+      "net": "L0_E09",
+      "id": "625b35b56585c206e22",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 17.91987272,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 17.91999972,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D3",
+      "pin": "1",
+      "net": "L0_E08",
+      "id": "625b35b56585c206e23",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 18.41999872,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 18.41999872,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "6",
+      "net": "",
+      "id": "12bf4152878aec78e14",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 8.80000272,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 8.80000272,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "7",
+      "net": "",
+      "id": "12bf4152878aec78e15",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 9.29987472,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 9.30000172,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "8",
+      "net": "GND",
+      "id": "12bf4152878aec78e16",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 9.80000072,
+      "hole_x_mm": 8.199871839999998,
+      "hole_y_mm": 9.80000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "9",
+      "net": "",
+      "id": "12bf4152878aec78e17",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 10.29987272,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 10.299999719999999,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "10",
+      "net": "",
+      "id": "12bf4152878aec78e18",
+      "layer": 1,
+      "x_mm": 8.19999884,
+      "y_mm": 10.79999872,
+      "hole_x_mm": 8.199973439999999,
+      "hole_y_mm": 10.79999872,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "5",
+      "net": "",
+      "id": "12bf4152878aec78e19",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 8.80000272,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 8.80000272,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "4",
+      "net": "",
+      "id": "12bf4152878aec78e20",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 9.29987472,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 9.30000172,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "3",
+      "net": "GND",
+      "id": "12bf4152878aec78e21",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 9.80000072,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 9.80000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "2",
+      "net": "L0_E13",
+      "id": "12bf4152878aec78e22",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 10.29987272,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 10.299999719999999,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "D4",
+      "pin": "1",
+      "net": "L0_E12",
+      "id": "12bf4152878aec78e23",
+      "layer": 1,
+      "x_mm": 7.4000004399999995,
+      "y_mm": 10.79999872,
+      "hole_x_mm": 7.400025839999999,
+      "hole_y_mm": 10.79999872,
+      "shape": {
+        "padType": "RECT",
+        "width": 7.874,
+        "height": 22.244,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "J1",
+      "pin": "14",
+      "net": "L0_E13",
+      "id": "ef580e108521dcd9e25",
+      "layer": 12,
+      "x_mm": 5.000000159999997,
+      "y_mm": 8.53000072,
+      "hole_x_mm": 5.000000159999997,
+      "hole_y_mm": 8.530076920000003,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "13",
+      "net": "L0_E12",
+      "id": "ef580e108521dcd9e26",
+      "layer": 12,
+      "x_mm": 5.000000159999998,
+      "y_mm": 11.070000720000001,
+      "hole_x_mm": 5.000000159999998,
+      "hole_y_mm": 11.070051520000002,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "12",
+      "net": "L0_E11",
+      "id": "ef580e108521dcd9e27",
+      "layer": 12,
+      "x_mm": 5.000000159999998,
+      "y_mm": 13.61000072,
+      "hole_x_mm": 5.000000159999998,
+      "hole_y_mm": 13.610051519999999,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "11",
+      "net": "L0_E10",
+      "id": "ef580e108521dcd9e28",
+      "layer": 12,
+      "x_mm": 5.000000159999998,
+      "y_mm": 16.15000072,
+      "hole_x_mm": 5.000000159999998,
+      "hole_y_mm": 16.150051519999998,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "10",
+      "net": "L0_E09",
+      "id": "ef580e108521dcd9e29",
+      "layer": 12,
+      "x_mm": 5.000000159999999,
+      "y_mm": 18.69000072,
+      "hole_x_mm": 5.000000159999999,
+      "hole_y_mm": 18.69005152,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "9",
+      "net": "L0_E08",
+      "id": "ef580e108521dcd9e30",
+      "layer": 12,
+      "x_mm": 5.00000016,
+      "y_mm": 21.23000072,
+      "hole_x_mm": 5.00000016,
+      "hole_y_mm": 21.23005152,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "8",
+      "net": "L0_E07",
+      "id": "ef580e108521dcd9e31",
+      "layer": 12,
+      "x_mm": 5.00000016,
+      "y_mm": 23.77000072,
+      "hole_x_mm": 5.00000016,
+      "hole_y_mm": 23.77002612,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "7",
+      "net": "L0_E06",
+      "id": "ef580e108521dcd9e32",
+      "layer": 12,
+      "x_mm": 5.000000160000001,
+      "y_mm": 26.31000072,
+      "hole_x_mm": 5.000000160000001,
+      "hole_y_mm": 26.31002612,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "6",
+      "net": "L0_E05",
+      "id": "ef580e108521dcd9e33",
+      "layer": 12,
+      "x_mm": 5.000000160000002,
+      "y_mm": 28.85000072,
+      "hole_x_mm": 5.000000160000002,
+      "hole_y_mm": 28.85002612,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "5",
+      "net": "L0_E04",
+      "id": "ef580e108521dcd9e34",
+      "layer": 12,
+      "x_mm": 5.000000160000002,
+      "y_mm": 31.39000072,
+      "hole_x_mm": 5.000000160000002,
+      "hole_y_mm": 31.390026119999998,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "4",
+      "net": "L0_E03",
+      "id": "ef580e108521dcd9e35",
+      "layer": 12,
+      "x_mm": 5.000000160000003,
+      "y_mm": 33.93000072,
+      "hole_x_mm": 5.000000160000003,
+      "hole_y_mm": 33.93002612,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "3",
+      "net": "L0_E02",
+      "id": "ef580e108521dcd9e36",
+      "layer": 12,
+      "x_mm": 5.000000160000003,
+      "y_mm": 36.47000072,
+      "hole_x_mm": 5.000000160000003,
+      "hole_y_mm": 36.47000072,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "2",
+      "net": "L0_E01",
+      "id": "ef580e108521dcd9e37",
+      "layer": 12,
+      "x_mm": 5.000000160000003,
+      "y_mm": 39.01000072,
+      "hole_x_mm": 5.000000160000003,
+      "hole_y_mm": 39.01000072,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "1",
+      "net": "L0_E00",
+      "id": "ef580e108521dcd9e38",
+      "layer": 12,
+      "x_mm": 5.0000001600000035,
+      "y_mm": 41.55000072,
+      "hole_x_mm": 5.0000001600000035,
+      "hole_y_mm": 41.55000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 62.992,
+        "height": 62.992,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "15",
+      "net": "GND",
+      "id": "ef580e108521dcd9e39",
+      "layer": 12,
+      "x_mm": 5.000000159999997,
+      "y_mm": 5.990000720000001,
+      "hole_x_mm": 5.000000159999997,
+      "hole_y_mm": 5.990076920000002,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J1",
+      "pin": "16",
+      "net": "GND",
+      "id": "ef580e108521dcd9e40",
+      "layer": 12,
+      "x_mm": 5.000000159999996,
+      "y_mm": 3.450000720000001,
+      "hole_x_mm": 5.000000159999996,
+      "hole_y_mm": 3.450076920000002,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "14",
+      "net": "GND",
+      "id": "ba71119e6041a5fde25",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 8.53000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 8.530076920000003,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "13",
+      "net": "RC_DRIVE",
+      "id": "ba71119e6041a5fde26",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 11.070000720000001,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 11.070051520000002,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "12",
+      "net": "GND",
+      "id": "ba71119e6041a5fde27",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 13.61000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 13.610051519999999,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "11",
+      "net": "MUX_DISABLE",
+      "id": "ba71119e6041a5fde28",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 16.15000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 16.150051519999998,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "10",
+      "net": "GND",
+      "id": "ba71119e6041a5fde29",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 18.69000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 18.69005152,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "9",
+      "net": "ADDR3",
+      "id": "ba71119e6041a5fde30",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 21.23000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 21.23005152,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "8",
+      "net": "GND",
+      "id": "ba71119e6041a5fde31",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 23.77000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 23.77002612,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "7",
+      "net": "ADDR2",
+      "id": "ba71119e6041a5fde32",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 26.31000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 26.31002612,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "6",
+      "net": "GND",
+      "id": "ba71119e6041a5fde33",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 28.85000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 28.85002612,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "5",
+      "net": "ADDR1",
+      "id": "ba71119e6041a5fde34",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 31.39000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 31.390026119999998,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "4",
+      "net": "GND",
+      "id": "ba71119e6041a5fde35",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 33.93000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 33.93002612,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "3",
+      "net": "ADDR0",
+      "id": "ba71119e6041a5fde36",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 36.47000072,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 36.47000072,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "2",
+      "net": "GND",
+      "id": "ba71119e6041a5fde37",
+      "layer": 12,
+      "x_mm": 49.99999906,
+      "y_mm": 39.01000072,
+      "hole_x_mm": 49.99999906,
+      "hole_y_mm": 39.01000072,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "1",
+      "net": "3V3_IO",
+      "id": "ba71119e6041a5fde38",
+      "layer": 12,
+      "x_mm": 49.99999906,
+      "y_mm": 41.55000072,
+      "hole_x_mm": 49.99999906,
+      "hole_y_mm": 41.55000072,
+      "shape": {
+        "padType": "RECT",
+        "width": 62.992,
+        "height": 62.992,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "15",
+      "net": "SENSE_OUT",
+      "id": "ba71119e6041a5fde39",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 5.990000720000001,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 5.990076920000002,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "J2",
+      "pin": "16",
+      "net": "GND",
+      "id": "ba71119e6041a5fde40",
+      "layer": 12,
+      "x_mm": 49.99999905999999,
+      "y_mm": 3.450000720000001,
+      "hole_x_mm": 49.99999905999999,
+      "hole_y_mm": 3.450076920000002,
+      "shape": {
+        "padType": "ELLIPSE",
+        "width": 62.992,
+        "height": 62.992
+      },
+      "angle": 270,
+      "hole": {
+        "holeType": "ROUND",
+        "width": 40.158,
+        "height": 40.158
+      }
+    },
+    {
+      "ref": "R1",
+      "pin": "2",
+      "net": "RC0",
+      "id": "244baccba21e3c86e7",
+      "layer": 1,
+      "x_mm": 24.25336526,
+      "y_mm": 28.099999679999996,
+      "hole_x_mm": 24.25323826,
+      "hole_y_mm": 28.099999679999996,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R1",
+      "pin": "1",
+      "net": "RC_DRIVE",
+      "id": "244baccba21e3c86e8",
+      "layer": 1,
+      "x_mm": 22.74663726,
+      "y_mm": 28.099999679999996,
+      "hole_x_mm": 22.74676426,
+      "hole_y_mm": 28.099999679999996,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R2",
+      "pin": "2",
+      "net": "SENSE_OUT",
+      "id": "c726e0c47889b547e7",
+      "layer": 1,
+      "x_mm": 26.953364940000004,
+      "y_mm": 27.900000079999998,
+      "hole_x_mm": 26.95323794,
+      "hole_y_mm": 27.900000079999998,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R2",
+      "pin": "1",
+      "net": "INV0",
+      "id": "c726e0c47889b547e8",
+      "layer": 1,
+      "x_mm": 25.44663694,
+      "y_mm": 27.900000079999998,
+      "hole_x_mm": 25.44676394,
+      "hole_y_mm": 27.900000079999998,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R3",
+      "pin": "2",
+      "net": "L0_M00",
+      "id": "bc3366bea6943780e7",
+      "layer": 1,
+      "x_mm": 20.753364639999997,
+      "y_mm": 18.8000005,
+      "hole_x_mm": 20.75323764,
+      "hole_y_mm": 18.8000005,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R3",
+      "pin": "1",
+      "net": "L0_E00",
+      "id": "bc3366bea6943780e8",
+      "layer": 1,
+      "x_mm": 19.246636640000002,
+      "y_mm": 18.8000005,
+      "hole_x_mm": 19.24676364,
+      "hole_y_mm": 18.8000005,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R4",
+      "pin": "2",
+      "net": "L0_M01",
+      "id": "9f77f3fe9ec10591e7",
+      "layer": 1,
+      "x_mm": 20.753364639999997,
+      "y_mm": 20.00000064,
+      "hole_x_mm": 20.75323764,
+      "hole_y_mm": 20.00000064,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R4",
+      "pin": "1",
+      "net": "L0_E01",
+      "id": "9f77f3fe9ec10591e8",
+      "layer": 1,
+      "x_mm": 19.246636640000002,
+      "y_mm": 20.00000064,
+      "hole_x_mm": 19.24676364,
+      "hole_y_mm": 20.00000064,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R5",
+      "pin": "2",
+      "net": "L0_M02",
+      "id": "4a7750343e6bc55be7",
+      "layer": 1,
+      "x_mm": 20.753364639999997,
+      "y_mm": 21.20000078,
+      "hole_x_mm": 20.75323764,
+      "hole_y_mm": 21.20000078,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R5",
+      "pin": "1",
+      "net": "L0_E02",
+      "id": "4a7750343e6bc55be8",
+      "layer": 1,
+      "x_mm": 19.246636640000002,
+      "y_mm": 21.20000078,
+      "hole_x_mm": 19.24676364,
+      "hole_y_mm": 21.20000078,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R6",
+      "pin": "2",
+      "net": "L0_M03",
+      "id": "c714063498a4ab88e7",
+      "layer": 1,
+      "x_mm": 20.753364639999997,
+      "y_mm": 22.40000092,
+      "hole_x_mm": 20.75323764,
+      "hole_y_mm": 22.40000092,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R6",
+      "pin": "1",
+      "net": "L0_E03",
+      "id": "c714063498a4ab88e8",
+      "layer": 1,
+      "x_mm": 19.246636640000002,
+      "y_mm": 22.40000092,
+      "hole_x_mm": 19.24676364,
+      "hole_y_mm": 22.40000092,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R7",
+      "pin": "2",
+      "net": "L0_M04",
+      "id": "01112dfdcf5a3fc6e7",
+      "layer": 1,
+      "x_mm": 20.753364639999997,
+      "y_mm": 23.60000106,
+      "hole_x_mm": 20.75323764,
+      "hole_y_mm": 23.60000106,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R7",
+      "pin": "1",
+      "net": "L0_E04",
+      "id": "01112dfdcf5a3fc6e8",
+      "layer": 1,
+      "x_mm": 19.246636640000002,
+      "y_mm": 23.60000106,
+      "hole_x_mm": 19.24676364,
+      "hole_y_mm": 23.60000106,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R8",
+      "pin": "2",
+      "net": "L0_M05",
+      "id": "fe28dcabb0800725e7",
+      "layer": 1,
+      "x_mm": 20.753364639999997,
+      "y_mm": 24.8000012,
+      "hole_x_mm": 20.75323764,
+      "hole_y_mm": 24.8000012,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R8",
+      "pin": "1",
+      "net": "L0_E05",
+      "id": "fe28dcabb0800725e8",
+      "layer": 1,
+      "x_mm": 19.246636640000002,
+      "y_mm": 24.8000012,
+      "hole_x_mm": 19.24676364,
+      "hole_y_mm": 24.8000012,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R9",
+      "pin": "2",
+      "net": "L0_M06",
+      "id": "94f1c541789f5ca4e7",
+      "layer": 1,
+      "x_mm": 20.753364639999997,
+      "y_mm": 25.999998799999997,
+      "hole_x_mm": 20.75323764,
+      "hole_y_mm": 25.999998799999997,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R9",
+      "pin": "1",
+      "net": "L0_E06",
+      "id": "94f1c541789f5ca4e8",
+      "layer": 1,
+      "x_mm": 19.246636640000002,
+      "y_mm": 25.999998799999997,
+      "hole_x_mm": 19.24676364,
+      "hole_y_mm": 25.999998799999997,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R10",
+      "pin": "2",
+      "net": "L0_M07",
+      "id": "9213890ce7bd231ce7",
+      "layer": 1,
+      "x_mm": 20.753364639999997,
+      "y_mm": 27.199998939999997,
+      "hole_x_mm": 20.75323764,
+      "hole_y_mm": 27.199998939999997,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R10",
+      "pin": "1",
+      "net": "L0_E07",
+      "id": "9213890ce7bd231ce8",
+      "layer": 1,
+      "x_mm": 19.246636640000002,
+      "y_mm": 27.199998939999997,
+      "hole_x_mm": 19.24676364,
+      "hole_y_mm": 27.199998939999997,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "R11",
+      "pin": "2",
+      "net": "L0_M08",
+      "id": "fdd9b16fbfe9aad5e7",
+      "layer": 1,
+      "x_mm": 34.74663612,
+      "y_mm": 27.199998939999997,
+      "hole_x_mm": 34.74676312,
+      "hole_y_mm": 27.199998939999997,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R11",
+      "pin": "1",
+      "net": "L0_E08",
+      "id": "fdd9b16fbfe9aad5e8",
+      "layer": 1,
+      "x_mm": 36.25336412,
+      "y_mm": 27.199998939999997,
+      "hole_x_mm": 36.253237119999994,
+      "hole_y_mm": 27.199998939999997,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R12",
+      "pin": "2",
+      "net": "L0_M09",
+      "id": "02b425b3e7bbe7e5e7",
+      "layer": 1,
+      "x_mm": 34.74663612,
+      "y_mm": 25.999998799999997,
+      "hole_x_mm": 34.74676312,
+      "hole_y_mm": 25.999998799999997,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R12",
+      "pin": "1",
+      "net": "L0_E09",
+      "id": "02b425b3e7bbe7e5e8",
+      "layer": 1,
+      "x_mm": 36.25336412,
+      "y_mm": 25.999998799999997,
+      "hole_x_mm": 36.253237119999994,
+      "hole_y_mm": 25.999998799999997,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R13",
+      "pin": "2",
+      "net": "L0_M10",
+      "id": "05a7638714d7d430e7",
+      "layer": 1,
+      "x_mm": 34.74663612,
+      "y_mm": 24.8000012,
+      "hole_x_mm": 34.74676312,
+      "hole_y_mm": 24.8000012,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R13",
+      "pin": "1",
+      "net": "L0_E10",
+      "id": "05a7638714d7d430e8",
+      "layer": 1,
+      "x_mm": 36.25336412,
+      "y_mm": 24.8000012,
+      "hole_x_mm": 36.253237119999994,
+      "hole_y_mm": 24.8000012,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R14",
+      "pin": "2",
+      "net": "L0_M11",
+      "id": "af1b2649b9759671e7",
+      "layer": 1,
+      "x_mm": 34.74663612,
+      "y_mm": 23.60000106,
+      "hole_x_mm": 34.74676312,
+      "hole_y_mm": 23.60000106,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R14",
+      "pin": "1",
+      "net": "L0_E11",
+      "id": "af1b2649b9759671e8",
+      "layer": 1,
+      "x_mm": 36.25336412,
+      "y_mm": 23.60000106,
+      "hole_x_mm": 36.253237119999994,
+      "hole_y_mm": 23.60000106,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R15",
+      "pin": "2",
+      "net": "L0_M12",
+      "id": "7e4b5b6ad36196f0e7",
+      "layer": 1,
+      "x_mm": 37.2466362,
+      "y_mm": 22.40000092,
+      "hole_x_mm": 37.246763200000004,
+      "hole_y_mm": 22.40000092,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R15",
+      "pin": "1",
+      "net": "L0_E12",
+      "id": "7e4b5b6ad36196f0e8",
+      "layer": 1,
+      "x_mm": 38.7533642,
+      "y_mm": 22.40000092,
+      "hole_x_mm": 38.7532372,
+      "hole_y_mm": 22.40000092,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R16",
+      "pin": "2",
+      "net": "L0_M13",
+      "id": "a1b0e8dbf6180c4ae7",
+      "layer": 1,
+      "x_mm": 34.74663612,
+      "y_mm": 21.20000078,
+      "hole_x_mm": 34.74676312,
+      "hole_y_mm": 21.20000078,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "R16",
+      "pin": "1",
+      "net": "L0_E13",
+      "id": "a1b0e8dbf6180c4ae8",
+      "layer": 1,
+      "x_mm": 36.25336412,
+      "y_mm": 21.20000078,
+      "hole_x_mm": 36.253237119999994,
+      "hole_y_mm": 21.20000078,
+      "shape": {
+        "padType": "RECT",
+        "width": 31.751,
+        "height": 34.016,
+        "radius": 0
+      },
+      "angle": 180,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "6",
+      "net": "L0_M03",
+      "id": "83b9d600e0c44db6e52",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 22.82486672,
+      "hole_x_mm": 24.47742628,
+      "hole_y_mm": 22.82499372,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "5",
+      "net": "L0_M04",
+      "id": "83b9d600e0c44db6e53",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 23.47485272,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 23.47497972,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "4",
+      "net": "L0_M05",
+      "id": "83b9d600e0c44db6e54",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 24.12483872,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 24.124965720000002,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "3",
+      "net": "L0_M06",
+      "id": "83b9d600e0c44db6e55",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 24.774824719999998,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 24.77495172,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "2",
+      "net": "L0_M07",
+      "id": "83b9d600e0c44db6e56",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 25.42481072,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 25.42493772,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "1",
+      "net": "RC0",
+      "id": "83b9d600e0c44db6e57",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 26.074796720000002,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 26.074923720000005,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "7",
+      "net": "L0_M02",
+      "id": "83b9d600e0c44db6e58",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 22.175134720000003,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 22.17500772,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "12",
+      "net": "GND",
+      "id": "83b9d600e0c44db6e59",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 18.92520472,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 18.92507772,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "11",
+      "net": "ADDR1",
+      "id": "83b9d600e0c44db6e60",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 19.57493672,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 19.575063720000003,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "10",
+      "net": "ADDR0",
+      "id": "83b9d600e0c44db6e61",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 20.224922720000002,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 20.225049719999998,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "9",
+      "net": "L0_M00",
+      "id": "83b9d600e0c44db6e62",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 20.87490872,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 20.87503572,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "8",
+      "net": "L0_M01",
+      "id": "83b9d600e0c44db6e63",
+      "layer": 1,
+      "x_mm": 24.47740088,
+      "y_mm": 21.52489472,
+      "hole_x_mm": 24.47740088,
+      "hole_y_mm": 21.52502172,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "20",
+      "net": "L0_M11",
+      "id": "83b9d600e0c44db6e64",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 23.47485272,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 23.47497972,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "21",
+      "net": "L0_M10",
+      "id": "83b9d600e0c44db6e65",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 24.12483872,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 24.124965720000002,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "22",
+      "net": "L0_M09",
+      "id": "83b9d600e0c44db6e66",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 24.774824719999998,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 24.77495172,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "23",
+      "net": "L0_M08",
+      "id": "83b9d600e0c44db6e67",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 25.42481072,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 25.42493772,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "24",
+      "net": "3V3_IO",
+      "id": "83b9d600e0c44db6e68",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 26.074796720000002,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 26.074923720000005,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "19",
+      "net": "L0_M12",
+      "id": "83b9d600e0c44db6e69",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 22.82486672,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 22.82499372,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "13",
+      "net": "ADDR3",
+      "id": "83b9d600e0c44db6e70",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 18.92520472,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 18.92507772,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "14",
+      "net": "ADDR2",
+      "id": "83b9d600e0c44db6e71",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 19.57493672,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 19.575063720000003,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "15",
+      "net": "MUX_DISABLE",
+      "id": "83b9d600e0c44db6e72",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 20.224922720000002,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 20.225049719999998,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "16",
+      "net": "L0_M15",
+      "id": "83b9d600e0c44db6e73",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 20.87490872,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 20.87503572,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "17",
+      "net": "L0_M14",
+      "id": "83b9d600e0c44db6e74",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 21.52489472,
+      "hole_x_mm": 30.522600880000002,
+      "hole_y_mm": 21.52502172,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U1",
+      "pin": "18",
+      "net": "L0_M13",
+      "id": "83b9d600e0c44db6e75",
+      "layer": 1,
+      "x_mm": 30.522600880000002,
+      "y_mm": 22.175134720000003,
+      "hole_x_mm": 30.52257548,
+      "hole_y_mm": 22.17500772,
+      "shape": {
+        "padType": "RECT",
+        "width": 15.748,
+        "height": 64.961,
+        "radius": 0
+      },
+      "angle": 270,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "8",
+      "net": "",
+      "id": "8e8e15752fd63ac4e11",
+      "layer": 1,
+      "x_mm": 31.31000088,
+      "y_mm": 35.61899404,
+      "hole_x_mm": 31.31000088,
+      "hole_y_mm": 35.61896864,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "9",
+      "net": "GND",
+      "id": "8e8e15752fd63ac4e12",
+      "layer": 1,
+      "x_mm": 30.04000088,
+      "y_mm": 35.61899404,
+      "hole_x_mm": 30.04000088,
+      "hole_y_mm": 35.61896864,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "10",
+      "net": "",
+      "id": "8e8e15752fd63ac4e13",
+      "layer": 1,
+      "x_mm": 28.77000088,
+      "y_mm": 35.61899404,
+      "hole_x_mm": 28.77000088,
+      "hole_y_mm": 35.61896864,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "11",
+      "net": "GND",
+      "id": "8e8e15752fd63ac4e14",
+      "layer": 1,
+      "x_mm": 27.50000088,
+      "y_mm": 35.61899404,
+      "hole_x_mm": 27.50000088,
+      "hole_y_mm": 35.61896864,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "12",
+      "net": "",
+      "id": "8e8e15752fd63ac4e15",
+      "layer": 1,
+      "x_mm": 26.230000880000002,
+      "y_mm": 35.61899404,
+      "hole_x_mm": 26.230000880000002,
+      "hole_y_mm": 35.61896864,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "13",
+      "net": "GND",
+      "id": "8e8e15752fd63ac4e16",
+      "layer": 1,
+      "x_mm": 24.960000880000003,
+      "y_mm": 35.61899404,
+      "hole_x_mm": 24.960000880000003,
+      "hole_y_mm": 35.61896864,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "14",
+      "net": "3V3_IO",
+      "id": "8e8e15752fd63ac4e17",
+      "layer": 1,
+      "x_mm": 23.69000088,
+      "y_mm": 35.61899404,
+      "hole_x_mm": 23.69000088,
+      "hole_y_mm": 35.61896864,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "7",
+      "net": "GND",
+      "id": "8e8e15752fd63ac4e18",
+      "layer": 1,
+      "x_mm": 31.31000088,
+      "y_mm": 30.381006040000003,
+      "hole_x_mm": 31.31000088,
+      "hole_y_mm": 30.38118384,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "6",
+      "net": "",
+      "id": "8e8e15752fd63ac4e19",
+      "layer": 1,
+      "x_mm": 30.04000088,
+      "y_mm": 30.381006040000003,
+      "hole_x_mm": 30.04000088,
+      "hole_y_mm": 30.38115844,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "5",
+      "net": "GND",
+      "id": "8e8e15752fd63ac4e20",
+      "layer": 1,
+      "x_mm": 28.77000088,
+      "y_mm": 30.381006040000003,
+      "hole_x_mm": 28.77000088,
+      "hole_y_mm": 30.38115844,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "4",
+      "net": "",
+      "id": "8e8e15752fd63ac4e21",
+      "layer": 1,
+      "x_mm": 27.50000088,
+      "y_mm": 30.381006040000003,
+      "hole_x_mm": 27.50000088,
+      "hole_y_mm": 30.38115844,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "3",
+      "net": "GND",
+      "id": "8e8e15752fd63ac4e22",
+      "layer": 1,
+      "x_mm": 26.230000880000002,
+      "y_mm": 30.381006040000003,
+      "hole_x_mm": 26.230000880000002,
+      "hole_y_mm": 30.38115844,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "2",
+      "net": "INV0",
+      "id": "8e8e15752fd63ac4e23",
+      "layer": 1,
+      "x_mm": 24.960000880000003,
+      "y_mm": 30.381006040000003,
+      "hole_x_mm": 24.960000880000003,
+      "hole_y_mm": 30.38115844,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    },
+    {
+      "ref": "U2",
+      "pin": "1",
+      "net": "RC0",
+      "id": "8e8e15752fd63ac4e24",
+      "layer": 1,
+      "x_mm": 23.69000088,
+      "y_mm": 30.381006040000003,
+      "hole_x_mm": 23.69000088,
+      "hole_y_mm": 30.38115844,
+      "shape": {
+        "padType": "OVAL",
+        "width": 22.598,
+        "height": 80.236
+      },
+      "angle": 0,
+      "hole": null
+    }
+  ],
+  "pad_offset_scope": "hole offset per officialformat/pcb/pad_via.md; copper origin unchanged"
+}

@@ -1,0 +1,165 @@
+{
+  "at": "2026-10-27T17:26:55.132383+08:00",
+  "status": "CORRECTION_OF_UNAUTHORIZED_EXTRA_CONTROL_PURCHASE_NOT_PRODUCT_ACCEPTANCE",
+  "withdrawn": "13buttons,8additionalphysicalharmonicbuttons,andsecond165",
+  "actual_schematic_baseline": {
+    "preset_buttons": 4,
+    "EDIT_buttons": 1,
+    "encoder_with_push": 1,
+    "LV165": 1,
+    "LV595": 1,
+    "harmonic_zones_on_J10_touchscreen": 8
+  },
+  "U9_pin_nets": [
+    {
+      "pad": "1",
+      "net": "INPUT_LOAD_N"
+    },
+    {
+      "pad": "2",
+      "net": "BUS_SCK"
+    },
+    {
+      "pad": "3",
+      "net": "PRESET1"
+    },
+    {
+      "pad": "4",
+      "net": "PRESET2"
+    },
+    {
+      "pad": "5",
+      "net": "PRESET3"
+    },
+    {
+      "pad": "6",
+      "net": "EDIT"
+    },
+    {
+      "pad": "7",
+      "net": ""
+    },
+    {
+      "pad": "8",
+      "net": "GND"
+    },
+    {
+      "pad": "16",
+      "net": "3V3_IO"
+    },
+    {
+      "pad": "15",
+      "net": "GND"
+    },
+    {
+      "pad": "14",
+      "net": "PRESET0"
+    },
+    {
+      "pad": "13",
+      "net": "ENC_PUSH"
+    },
+    {
+      "pad": "12",
+      "net": "ENC_B"
+    },
+    {
+      "pad": "11",
+      "net": "ENC_A"
+    },
+    {
+      "pad": "10",
+      "net": "GND"
+    },
+    {
+      "pad": "9",
+      "net": "KEY_QH"
+    }
+  ],
+  "U8_pin_nets": [
+    {
+      "pad": "1",
+      "net": "ADDR1"
+    },
+    {
+      "pad": "2",
+      "net": "ADDR2"
+    },
+    {
+      "pad": "3",
+      "net": "ADDR3"
+    },
+    {
+      "pad": "4",
+      "net": "MUX_DISABLE"
+    },
+    {
+      "pad": "5",
+      "net": "RC_DRIVE"
+    },
+    {
+      "pad": "6",
+      "net": "LCD_RESET_N"
+    },
+    {
+      "pad": "7",
+      "net": "TP_RESET_N"
+    },
+    {
+      "pad": "8",
+      "net": "GND"
+    },
+    {
+      "pad": "16",
+      "net": "3V3_IO"
+    },
+    {
+      "pad": "15",
+      "net": "ADDR0"
+    },
+    {
+      "pad": "14",
+      "net": "BUS_MOSI"
+    },
+    {
+      "pad": "13",
+      "net": "GND"
+    },
+    {
+      "pad": "12",
+      "net": "SCAN_LATCH"
+    },
+    {
+      "pad": "11",
+      "net": "BUS_SCK"
+    },
+    {
+      "pad": "10",
+      "net": "3V3_IO"
+    },
+    {
+      "pad": "9",
+      "net": ""
+    }
+  ],
+  "spec_file": "D:\\FPGA-Project\\maintenance-20261026\\repo\\project\\PRODUCT-SPEC.md",
+  "spec_sha256": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4",
+  "original_schematic_checks": [
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\02_Shift_and_memory.esch2",
+      "sha256": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+      "unchanged": true
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\06_Controls.esch2",
+      "sha256": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+      "unchanged": true
+    }
+  ],
+  "independent_edit_operations_contract": "STILL_PENDING; no automatic press reuse/key removal/newGPIO",
+  "readable_report": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\control-baseline-scope-review-current.md",
+  "no_CAD_RTL_changes": true,
+  "whole_purchase_ready": false,
+  "whole700budget_closed": false,
+  "reference_scope_approval": false
+}

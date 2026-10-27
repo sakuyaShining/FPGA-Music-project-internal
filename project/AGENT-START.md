@@ -1,5 +1,7 @@
 # 新Agent启动入口：先确认设计，再确认源版本
 
+**2026-10-27 统一接续入口**：先读 [CONSOLIDATION-20261027.md](CONSOLIDATION-20261027.md)。当前硬件已汇入951保存源、模块／传感小板／三键候选和恢复检查点；35项限定口径已批准，制造核验及实体整机仍未完成。下文带旧日期的未合并／源版本说明保留历史适用范围。
+
 先读[产品规格](PRODUCT-SPEC.md)、[工程分布](SOURCE-MAP.md)及[工作计划](WORK-PLAN.md)。用户已公开目标仓库；干净入口先`git pull --ff-only internal main`，有修改/分叉则保全，不强制覆盖。
 
 当前工程候选已展开到`fpga/current/`、`hardware/current/`和`host/current/`。先读[ENGINEERING.md](ENGINEERING.md)与[协作检查点](COLLABORATION-CHECKPOINT-20261024.md)，校验输入并选择限定任务。以下v1/v2恢复步骤仅用于历史复现，不是本批最新工程。

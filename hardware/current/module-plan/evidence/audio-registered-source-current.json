@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-27T07:35:52.726128+08:00",
+  "read_only": true,
+  "registered13_mismatches": [],
+  "read_sources": {
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship_owned.v": {
+      "sha256": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+      "mtime": "2026-10-23T08:20:55.357077+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_top_owned.v": {
+      "sha256": "f462384fd64aa42e236234241149ecbc6beeaaa447307a184ff985696fd692fd",
+      "mtime": "2026-10-23T12:41:02.687043+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\audio_clk_en.v": {
+      "sha256": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c",
+      "mtime": "2026-10-22T10:19:21.398028+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\i2s_tx.v": {
+      "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+      "mtime": "2026-10-22T10:19:21.429276+08:00"
+    }
+  },
+  "clock_parameters_actual": {
+    "system_Hz": 27000000,
+    "DIV_BCK": 16,
+    "BCK_PER_LRCK": 32,
+    "BCK_Hz": 1687500,
+    "LRCK_Hz": 52734.375,
+    "word_bits": 16,
+    "serialized_channels": "two slots carrying identical samples in current i2s_tx, not proof of independent stereo signals"
+  },
+  "scope": "Registered producer only; no edits, compilation, flashing or communication; not evidence that other workspaces lack newer implementations."
+}

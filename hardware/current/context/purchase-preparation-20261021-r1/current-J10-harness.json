@@ -1,0 +1,187 @@
+{
+  "updated_at": "2026-10-26T02:43:40.746627+08:00",
+  "status": "ELECTRICAL_DRAFT_NOT_FOR_ORDER",
+  "source_native_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "capture_sha256": "6d48871b39f27408bd80f3a693b2a51e1895eb87111b01d152ec758c609b42da",
+  "single_J10": true,
+  "J11": "CANCELLED",
+  "target_module": "ER-TFTM070-5V4 + FT5316 capacitive touch, factory 4-wire SPI,5V,pin-header option",
+  "exact_configured_sales_SKU_verified": false,
+  "module_connector_target": "JP3,2x20,2.54mm pin-header; manufacturer indexed V4 CTP outline p9. Physical keying/pin1 mating-face drawing not yet verified.",
+  "carrier_connector": "C247920,2.54-1x12 reverse right-angle male header; cable female mating part not qualified",
+  "connections": [
+    {
+      "carrier_pin": 1,
+      "carrier_net": "5V_PERIPH",
+      "native_pad_id": "82a46a568b44795be114",
+      "module_pins": [
+        3,
+        4,
+        37,
+        38
+      ],
+      "function": "VDD，工厂5V配置"
+    },
+    {
+      "carrier_pin": 2,
+      "carrier_net": "GND",
+      "native_pad_id": "82a46a568b44795be115",
+      "module_pins": [
+        1,
+        2,
+        13
+      ],
+      "function": "GND第一分支"
+    },
+    {
+      "carrier_pin": 3,
+      "carrier_net": "DISP_SCK",
+      "native_pad_id": "82a46a568b44795be116",
+      "module_pins": [
+        8
+      ],
+      "function": "SCLK"
+    },
+    {
+      "carrier_pin": 4,
+      "carrier_net": "DISP_MOSI",
+      "native_pad_id": "82a46a568b44795be117",
+      "module_pins": [
+        7
+      ],
+      "function": "SDI"
+    },
+    {
+      "carrier_pin": 5,
+      "carrier_net": "RA_MISO",
+      "native_pad_id": "82a46a568b44795be118",
+      "module_pins": [
+        6
+      ],
+      "function": "SDO"
+    },
+    {
+      "carrier_pin": 6,
+      "carrier_net": "DISP_HARM_CS_N",
+      "native_pad_id": "82a46a568b44795be119",
+      "module_pins": [
+        5
+      ],
+      "function": "/SCS"
+    },
+    {
+      "carrier_pin": 7,
+      "carrier_net": "DISP_RESET_N",
+      "native_pad_id": "82a46a568b44795be120",
+      "module_pins": [],
+      "function": "保留，不接模块11脚"
+    },
+    {
+      "carrier_pin": 8,
+      "carrier_net": "I2C_MOD_SDA",
+      "native_pad_id": "82a46a568b44795be121",
+      "module_pins": [
+        34
+      ],
+      "function": "CTP_SDA"
+    },
+    {
+      "carrier_pin": 9,
+      "carrier_net": "I2C_MOD_SCL",
+      "native_pad_id": "82a46a568b44795be122",
+      "module_pins": [
+        35
+      ],
+      "function": "CTP_SCL"
+    },
+    {
+      "carrier_pin": 10,
+      "carrier_net": "TP_INT_MOD",
+      "native_pad_id": "82a46a568b44795be123",
+      "module_pins": [
+        33
+      ],
+      "function": "CTP_INT"
+    },
+    {
+      "carrier_pin": 11,
+      "carrier_net": "TP_RESET_MOD_N",
+      "native_pad_id": "82a46a568b44795be124",
+      "module_pins": [
+        36
+      ],
+      "function": "CTP_/RST"
+    },
+    {
+      "carrier_pin": 12,
+      "carrier_net": "GND",
+      "native_pad_id": "82a46a568b44795be125",
+      "module_pins": [
+        31,
+        39,
+        40
+      ],
+      "function": "GND第二分支"
+    }
+  ],
+  "module_NC": [
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    32
+  ],
+  "wiring_boundary": "Pin-number netlist, not a connector mating-face or wire-crimp drawing. Do not infer row order or mirror from this table.",
+  "power_distribution": "One 5V carrier conductor fans to four module VDD pins. Two separate carrier GND conductors distribute to six module GND pins. Branch connections require an insulated factory-made harness or adapter; not a straight12-to40 ribbon.",
+  "mechanical_open": [
+    "Exact factory-soldered header and keyed female connector compatibility",
+    "Pin1/mating-face orientation independently checked on actual V4 drawing",
+    "Final length, strain relief and mounting separation"
+  ],
+  "functional_open": [
+    "LCD external reset is not available on documented NC pin11; system restart/brownout recovery remains unresolved",
+    "SPI frequency/IO drive/bank-voltage acceptance",
+    "Full configured price,stock,leadtime,shipping"
+  ],
+  "evidence": [
+    {
+      "url": "https://www.buydisplay.com/download/manual/ER-TFTM070-5V4_Datasheet.pdf",
+      "kind": "Primary indexed text only",
+      "pages": [
+        9,
+        11,
+        12
+      ],
+      "facts": "V4 CTP header outline and interface signals; no complete PDF visual or delivered assembly inspection"
+    },
+    {
+      "url": "https://www.buydisplay.com/download/interfacing/ER-TFTM070-5V4_Interfacing.pdf",
+      "kind": "Primary indexed text only",
+      "facts": "JP3/CON2 and serial reference; pin11 NC with onboard RC reset; example retains legacy FT5206 text"
+    },
+    {
+      "url": "https://www.buydisplay.com/7-inch-lcd-module-capacitive-touch-screen-panel-i2c-spi-serial",
+      "kind": "Primary indexed catalog",
+      "facts": "Current catalog RA8875/FT5316; optional header/FFC. Base price and general stock label do not establish configured offer."
+    }
+  ],
+  "manufacturing_release": false,
+  "physical_tests": "UNMEASURED"
+}

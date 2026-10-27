@@ -1,0 +1,1195 @@
+{
+  "at": "2026-10-27T11:22:38.653695+08:00",
+  "state": "OFFLINE_EXPLICIT14_FANOUT_WITH14_RETURN_VIA_MIRRORS",
+  "source_sha256": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+  "method_change": "No graph search. Explicit all14 fanout geometry; reflect14 header Ground-return vias left of J1. This changes actual obstacle placement, instead of extending/repeating the stopped router.",
+  "rejected_initial_left8_diagonal_entry": {
+    "reason": "Direct steep entries clipped adjacent resistor pads. Explicit x17.5 horizontal terminal entries replace them; source remains unchanged.",
+    "violations": [
+      {
+        "net": "L0_E01",
+        "other": "R10.1",
+        "actual_mm": 0.039761057506920675,
+        "required_mm": 0.1651
+      },
+      {
+        "net": "L0_E02",
+        "other": "R9.1",
+        "actual_mm": 0.05301922278732169,
+        "required_mm": 0.1651
+      },
+      {
+        "net": "L0_E03",
+        "other": "R8.1",
+        "actual_mm": 0.03523942231745381,
+        "required_mm": 0.1651
+      }
+    ]
+  },
+  "proposed_Ground_via_moves": [
+    {
+      "id": "d084970f837fd33e",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        41.549319999999994
+      ],
+      "proposed_mm": [
+        3.548740680000007,
+        41.549319999999994
+      ],
+      "header_pin": 1,
+      "return_distance_mm": 1.4512596396474267,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "250f83954a2d6dc4",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        39.00931999999999
+      ],
+      "proposed_mm": [
+        3.548740680000005,
+        39.00931999999999
+      ],
+      "header_pin": 2,
+      "return_distance_mm": 1.4512596396474275,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "f280d8d609bf9004",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        36.46931999999999
+      ],
+      "proposed_mm": [
+        3.548740680000005,
+        36.46931999999999
+      ],
+      "header_pin": 3,
+      "return_distance_mm": 1.4512596396474275,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "a5333efe15fa0ed2",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        33.92931999999999
+      ],
+      "proposed_mm": [
+        3.548740680000005,
+        33.92931999999999
+      ],
+      "header_pin": 4,
+      "return_distance_mm": 1.4512596396474275,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "72788069015cfed2",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        31.389319999999998
+      ],
+      "proposed_mm": [
+        3.5487406800000034,
+        31.389319999999998
+      ],
+      "header_pin": 5,
+      "return_distance_mm": 1.4512596396474284,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "f8f549b3960442ab",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        28.84932
+      ],
+      "proposed_mm": [
+        3.5487406800000034,
+        28.84932
+      ],
+      "header_pin": 6,
+      "return_distance_mm": 1.4512596396474284,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "91304e41b78a07b2",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        26.309319999999996
+      ],
+      "proposed_mm": [
+        3.5487406800000016,
+        26.309319999999996
+      ],
+      "header_pin": 7,
+      "return_distance_mm": 1.4512596396474293,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "29fe4061e2ec0cb5",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        23.769319999999997
+      ],
+      "proposed_mm": [
+        3.54874068,
+        23.769319999999997
+      ],
+      "header_pin": 8,
+      "return_distance_mm": 1.4512596396474302,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "7a20353ac02e26a8",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        21.229319999999998
+      ],
+      "proposed_mm": [
+        3.54874068,
+        21.229319999999998
+      ],
+      "header_pin": 9,
+      "return_distance_mm": 1.4512596396474302,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "0ff0efb58e90de32",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        18.68932
+      ],
+      "proposed_mm": [
+        3.548740679999998,
+        18.68932
+      ],
+      "header_pin": 10,
+      "return_distance_mm": 1.451259639647431,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "775e389243ca7091",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        16.14932
+      ],
+      "proposed_mm": [
+        3.5487406799999963,
+        16.14932
+      ],
+      "header_pin": 11,
+      "return_distance_mm": 1.451259639647432,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "5b2b6e845433dea0",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        13.609319999999999
+      ],
+      "proposed_mm": [
+        3.5487406799999963,
+        13.609319999999999
+      ],
+      "header_pin": 12,
+      "return_distance_mm": 1.451259639647432,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "e3c1949ae92b1a76",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        11.069319999999998
+      ],
+      "proposed_mm": [
+        3.5487406799999963,
+        11.069319999999998
+      ],
+      "header_pin": 13,
+      "return_distance_mm": 1.451259639647432,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    },
+    {
+      "id": "7317316c611de590",
+      "net": "GND",
+      "old_mm": [
+        6.45125964,
+        8.529319999999998
+      ],
+      "proposed_mm": [
+        3.5487406799999945,
+        8.529319999999998
+      ],
+      "header_pin": 14,
+      "return_distance_mm": 1.4512596396474329,
+      "diameter_mm": 0.7111999999999999,
+      "drill_mm": 0.36067999999999995
+    }
+  ],
+  "existing91lines_unchanged": true,
+  "other22vias_unchanged": true,
+  "proposed22PAD_map_inherited": true,
+  "components_moved": 0,
+  "signal_vias_added": 0,
+  "all14_header_fanouts_physical_pass": true,
+  "all14_NC_bridges_physical_pass": true,
+  "all_left8_ESD_to_series_physical_pass": true,
+  "moved14vias_physical_pass": true,
+  "checks": [
+    {
+      "net": "L0_E00",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.0000001600000035,
+          41.55000072
+        ],
+        [
+          7.4000004399999995,
+          38.739998719999996
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 3.6954177820652543,
+      "minimum_extra_clearance_mm": 0.14600942307998752,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.21904269425555306,
+      "provisional_post_drill_model_reference_missing_mm2": 0.21904269425555306,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.0004922912298187939,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E01",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000160000003,
+          39.01000072
+        ],
+        [
+          7.4000004399999995,
+          38.23987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 2.520535355908356,
+      "minimum_extra_clearance_mm": 0.047026587038491996,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.17026673189216668,
+      "provisional_post_drill_model_reference_missing_mm2": 0.17026673189216668,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.0004181055048002665,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E02",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000160000003,
+          36.47000072
+        ],
+        [
+          7.4000004399999995,
+          37.239874719999996
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 2.520457759986478,
+      "minimum_extra_clearance_mm": 0.04682226713967563,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.17026673194433237,
+      "provisional_post_drill_model_reference_missing_mm2": 0.17026673194433237,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.00041810552893737973,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E03",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000160000003,
+          33.93000072
+        ],
+        [
+          7.4000004399999995,
+          36.74000272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 3.6954177820652494,
+      "minimum_extra_clearance_mm": 0.14578223283196692,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.17026673054371247,
+      "provisional_post_drill_model_reference_missing_mm2": 0.17026673054371247,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.0004181048809121358,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E04",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000160000002,
+          31.39000072
+        ],
+        [
+          7.4000004399999995,
+          28.57999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 3.695417782065253,
+      "minimum_extra_clearance_mm": 0.14600942307999096,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.17026673054370708,
+      "provisional_post_drill_model_reference_missing_mm2": 0.17026673054370708,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.00041810488091250086,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E05",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000160000002,
+          28.85000072
+        ],
+        [
+          7.4000004399999995,
+          28.07987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 2.5205353559083568,
+      "minimum_extra_clearance_mm": 0.04702658703849538,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.17026673189216726,
+      "provisional_post_drill_model_reference_missing_mm2": 0.17026673189216726,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.0004181055048006941,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E06",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000160000001,
+          26.31000072
+        ],
+        [
+          7.4000004399999995,
+          27.07987472
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 2.520457759986481,
+      "minimum_extra_clearance_mm": 0.04682226713967522,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.1702667319443343,
+      "provisional_post_drill_model_reference_missing_mm2": 0.1702667319443343,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.00041810552893792644,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E07",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.00000016,
+          23.77000072
+        ],
+        [
+          7.4000004399999995,
+          26.580002720000003
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 3.6954177820652565,
+      "minimum_extra_clearance_mm": 0.1457822328319667,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.1702667305437079,
+      "provisional_post_drill_model_reference_missing_mm2": 0.1702667305437079,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.000418104880913417,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E08",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.00000016,
+          21.23000072
+        ],
+        [
+          7.4000004399999995,
+          18.41999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 3.695417782065254,
+      "minimum_extra_clearance_mm": 0.14600942307999096,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.17026673054370678,
+      "provisional_post_drill_model_reference_missing_mm2": 0.17026673054370678,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.00041810488091248346,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E09",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000159999999,
+          18.69000072
+        ],
+        [
+          7.4000004399999995,
+          17.91987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 2.5205353559083594,
+      "minimum_extra_clearance_mm": 0.04702658703849552,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.17026673189216734,
+      "provisional_post_drill_model_reference_missing_mm2": 0.17026673189216734,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.000418105504800844,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E10",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000159999998,
+          16.15000072
+        ],
+        [
+          7.4000004399999995,
+          16.91987472
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 2.5204577599864835,
+      "minimum_extra_clearance_mm": 0.04682226713967877,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.17026673194433445,
+      "provisional_post_drill_model_reference_missing_mm2": 0.17026673194433445,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.00041810552893807026,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E11",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000159999998,
+          13.61000072
+        ],
+        [
+          7.4000004399999995,
+          16.42000272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 3.695417782065254,
+      "minimum_extra_clearance_mm": 0.14578223283197014,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.1702667305437079,
+      "provisional_post_drill_model_reference_missing_mm2": 0.1702667305437079,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.00041810488091309446,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E12",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000159999998,
+          11.070000720000001
+        ],
+        [
+          7.4000004399999995,
+          10.79999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 2.415140249344556,
+      "minimum_extra_clearance_mm": 0.03499550596391762,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.193655779741494,
+      "provisional_post_drill_model_reference_missing_mm2": 0.17026673107367796,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.0004181051260924697,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E13",
+      "kind": "HEADER_TO_ESD",
+      "points": [
+        [
+          5.000000159999997,
+          8.53000072
+        ],
+        [
+          5.55,
+          9.7
+        ],
+        [
+          5.9,
+          10.45
+        ],
+        [
+          6.3,
+          10.5
+        ],
+        [
+          6.8,
+          10.5
+        ],
+        [
+          7.4000004399999995,
+          10.29987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 3.656082007154854,
+      "minimum_extra_clearance_mm": 0.012430000000001773,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.1702667318490566,
+      "provisional_post_drill_model_reference_missing_mm2": 0.1702667318490566,
+      "provisional_missing_outside_TH_terminal_clearance_mm2": 0.0004181054848519754,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E00",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          38.739998719999996
+        ],
+        [
+          8.19999884,
+          38.739998719999996
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.14600960723634052,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E01",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          38.23987272
+        ],
+        [
+          8.19999884,
+          38.23987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.05222240000000758,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E02",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          37.239874719999996
+        ],
+        [
+          8.19999884,
+          37.239874719999996
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.05247640000000575,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E03",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          36.74000272
+        ],
+        [
+          8.19999884,
+          36.74000272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.14578242676095907,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E04",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          28.57999872
+        ],
+        [
+          8.19999884,
+          28.57999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.1460096072363473,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E05",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          28.07987272
+        ],
+        [
+          8.19999884,
+          28.07987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.052222400000000446,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E06",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          27.07987472
+        ],
+        [
+          8.19999884,
+          27.07987472
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.0524764000000022,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E07",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          26.580002720000003
+        ],
+        [
+          8.19999884,
+          26.580002720000003
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.14578242676096223,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E08",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          18.41999872
+        ],
+        [
+          8.19999884,
+          18.41999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.14600960723634734,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E09",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          17.91987272
+        ],
+        [
+          8.19999884,
+          17.91987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.05222239999999692,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E10",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          16.91987472
+        ],
+        [
+          8.19999884,
+          16.91987472
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.052476399999998674,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E11",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          16.42000272
+        ],
+        [
+          8.19999884,
+          16.42000272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.14578242676096567,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E12",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          10.79999872
+        ],
+        [
+          8.19999884,
+          10.79999872
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.14423135726395678,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E13",
+      "kind": "EXTERNAL_NC_BRIDGE",
+      "points": [
+        [
+          7.4000004399999995,
+          10.29987272
+        ],
+        [
+          8.19999884,
+          10.29987272
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 0.7999983999999998,
+      "minimum_extra_clearance_mm": 0.052222400000000446,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E00",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "points": [
+        [
+          8.19999884,
+          38.739998719999996
+        ],
+        [
+          8.7,
+          39.199998719999996
+        ],
+        [
+          10.2,
+          39.199998719999996
+        ],
+        [
+          17.5,
+          27.199998939999997
+        ],
+        [
+          19.246636640000002,
+          27.199998939999997
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 17.972044686494947,
+      "minimum_extra_clearance_mm": 0.012881430578386976,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E01",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "points": [
+        [
+          8.19999884,
+          38.23987272
+        ],
+        [
+          8.65,
+          38.23987272
+        ],
+        [
+          8.95,
+          38.53987272
+        ],
+        [
+          10.2,
+          38.53987272
+        ],
+        [
+          17.5,
+          25.999998799999997
+        ],
+        [
+          19.246636640000002,
+          25.999998799999997
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 18.380844595321715,
+      "minimum_extra_clearance_mm": 0.012881430578386976,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E02",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "points": [
+        [
+          8.19999884,
+          37.239874719999996
+        ],
+        [
+          8.65,
+          37.239874719999996
+        ],
+        [
+          8.95,
+          36.93987472
+        ],
+        [
+          10.2,
+          36.93987472
+        ],
+        [
+          17.5,
+          24.8000012
+        ],
+        [
+          19.246636640000002,
+          24.8000012
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 18.036583253015234,
+      "minimum_extra_clearance_mm": 0.00985182684848912,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E03",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "points": [
+        [
+          8.19999884,
+          36.74000272
+        ],
+        [
+          8.7,
+          36.28000272
+        ],
+        [
+          10.2,
+          36.28000272
+        ],
+        [
+          17.5,
+          23.60000106
+        ],
+        [
+          19.246636640000002,
+          23.60000106
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 18.557263652482327,
+      "minimum_extra_clearance_mm": 0.00985182684848912,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E04",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "points": [
+        [
+          8.19999884,
+          28.57999872
+        ],
+        [
+          8.7,
+          29.03999872
+        ],
+        [
+          10.2,
+          29.03999872
+        ],
+        [
+          17.5,
+          22.40000092
+        ],
+        [
+          19.246636640000002,
+          22.40000092
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 13.79415777817009,
+      "minimum_extra_clearance_mm": 0.15247627058642152,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E05",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "points": [
+        [
+          8.19999884,
+          28.07987272
+        ],
+        [
+          8.65,
+          28.07987272
+        ],
+        [
+          8.95,
+          28.37987272
+        ],
+        [
+          10.2,
+          28.37987272
+        ],
+        [
+          17.5,
+          21.20000078
+        ],
+        [
+          19.246636640000002,
+          21.20000078
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 14.11006985614135,
+      "minimum_extra_clearance_mm": 0.052222400000000474,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E06",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "points": [
+        [
+          8.19999884,
+          27.07987472
+        ],
+        [
+          8.65,
+          27.07987472
+        ],
+        [
+          8.95,
+          26.77987472
+        ],
+        [
+          10.2,
+          26.77987472
+        ],
+        [
+          17.5,
+          20.00000064
+        ],
+        [
+          19.246636640000002,
+          20.00000064
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 13.833667174622526,
+      "minimum_extra_clearance_mm": 0.05247640000000223,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    },
+    {
+      "net": "L0_E07",
+      "kind": "LEFT8_ESD_TO_SERIES",
+      "points": [
+        [
+          8.19999884,
+          26.580002720000003
+        ],
+        [
+          8.7,
+          26.120002720000002
+        ],
+        [
+          10.2,
+          26.120002720000002
+        ],
+        [
+          17.5,
+          18.8000005
+        ],
+        [
+          19.246636640000002,
+          18.8000005
+        ]
+      ],
+      "width_mm": 0.1651,
+      "length_mm": 14.263961389748275,
+      "minimum_extra_clearance_mm": 0.15222227058642337,
+      "physical_pass": true,
+      "actual_old_Ground_reference_missing_mm2": 0.0,
+      "provisional_post_drill_model_reference_missing_mm2": 0.0,
+      "reference_accepted": false
+    }
+  ],
+  "violations": [],
+  "moved_via_violations": [],
+  "max_signal_TH_return_distance_mm": 1.4512596396474329,
+  "Ground_model_scope": "Hypothesis only: fill old14 Ground drill holes, cut new14 drills from actual prior Bottom polygon. Not a real native repour, not acceptance of all old contacts/sourceCu/reference/DC/minimum neck.",
+  "Ground_model_components": 1,
+  "missing_reference_outside_TH_terminal_provisional_max_mm2": 0.0004922912298187939,
+  "native_files_checked": 40,
+  "native40_unchanged": true,
+  "native_applied": false,
+  "all14_electrode_complete_routes": false,
+  "remaining": "Right6 ESD-to-seriesR full paths;7control nets; real native schematic/22PAD+14via candidate and realGround repour/fullacceptance; quote/whole700budget/delivery",
+  "physical_tests": "UNMEASURED",
+  "manufacturing_release": false,
+  "candidate_E00_to_E07_all_pad_islands": {
+    "L0_E00": 1,
+    "L0_E01": 1,
+    "L0_E02": 1,
+    "L0_E03": 1,
+    "L0_E04": 1,
+    "L0_E05": 1,
+    "L0_E06": 1,
+    "L0_E07": 1,
+    "L0_E08": 2,
+    "L0_E09": 2,
+    "L0_E10": 2,
+    "L0_E11": 2,
+    "L0_E12": 2,
+    "L0_E13": 2
+  },
+  "candidate_left8_four_pad_connectivity_pass": true,
+  "candidate_geometry_terminal": true
+}

@@ -1,5 +1,5 @@
 {
-  "source_pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+  "source_pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
   "components": 227,
   "SMT": 215,
   "TH": 12,
@@ -243,5 +243,11 @@
   "new_bom": "jlc-bom-current-DRAFT-NOT-FOR-ORDER.csv",
   "bom_sha256": "bb9fc4657259aae8115a2b49ce5dcae1e54539f13ddf322a6a57d72ca9bd8ebe",
   "CPL_final": false,
-  "manufacturing_release": false
+  "manufacturing_release": false,
+  "source_rebind": {
+    "checked_at": "2026-10-24T08:23:38.266529+08:00",
+    "previous_source_pcb_sha256": "e098c5db426edb8e02a966807079db3f125332653c14a250b5521ffbb76655c7",
+    "basis": "Fresh a3 native CPL export exactly equals previous native export in every field of all227 rows, including MPN/footprint/side/angle/coordinates. Existing BOM and placement audits remain applicable; no stock/quote refresh claimed.",
+    "proof": "current-native-cpl-export-a3.json"
+  }
 }

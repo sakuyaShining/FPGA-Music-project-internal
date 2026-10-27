@@ -1,0 +1,78 @@
+{
+  "at": "2026-10-27T17:46:29.554057+08:00",
+  "state": "OWNED_NANO_TF_SOCKET_ELECTRICAL_EVIDENCE_NOT_RECORDPLAY_ACCEPTANCE",
+  "official_product": "https://wiki.sipeed.com/hardware/en/tang/tang-nano-20k/nano-20k.html",
+  "official_schematic": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\Nano20K-3921-official-schematic.pdf",
+  "schematic_SHA": "c3c85c579c446a29cc2bcd77f54c285d8c60f01ecf725a185e2fb1e6a56fdcc5",
+  "schematic_page1based": 5,
+  "visual": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\Nano20K-TF-proof-current.png",
+  "existing_socket": "J7 Micro_SD_Card_Det",
+  "pins": [
+    {
+      "J7": 1,
+      "signal": "DAT2",
+      "FPGA": 80
+    },
+    {
+      "J7": 2,
+      "signal": "DAT3/SPI_CS",
+      "FPGA": 81
+    },
+    {
+      "J7": 3,
+      "signal": "CMD/SPI_MOSI",
+      "FPGA": 82
+    },
+    {
+      "J7": 4,
+      "signal": "3V3"
+    },
+    {
+      "J7": 5,
+      "signal": "CLK",
+      "FPGA": 83,
+      "series_resistor": "R49 22ohm"
+    },
+    {
+      "J7": 6,
+      "signal": "GND"
+    },
+    {
+      "J7": 7,
+      "signal": "DAT0/SPI_MISO",
+      "FPGA": 84
+    },
+    {
+      "J7": 8,
+      "signal": "DAT1",
+      "FPGA": 85
+    }
+  ],
+  "existing_pullups": "R53,R54,R55,R56,R57=10k to3V3;C26=4.7uF",
+  "dedup": "No separate FPGA-side TFreader module required when using this ownedNano slot; card itself still required. This doesnotdedup instrument EEPROM or power protection.",
+  "recordplay": "ActualPCM recordplay, block buffering, write stalls, file format and simultaneous live/score mix still unaccepted. Bitstream flash isnotfreeaudio storage.",
+  "USB_preparation_reader": {
+    "SKU": "FIT0548",
+    "model": "C289",
+    "listed_CNY": 8,
+    "source": "https://www.dfrobot.com.cn/goods-1605.html",
+    "quantity": 1,
+    "stock_count_unknown": true,
+    "Qingyuan_dispatch_unknown": true,
+    "role": "PC card preparation/export only; not product runtime dependency"
+  },
+  "rejected_card_sources": [
+    {
+      "SKU": "FIT0570",
+      "source": "https://www.dfrobot.com.cn/goods-1708.html",
+      "reason": "Officialpage removed/discontinued; no purchaseprice"
+    },
+    {
+      "SKU": "FIT0394",
+      "source": "https://www.dfrobot.com.cn/goods-1037.html",
+      "reason": "Officialpage removed/discontinued; no purchaseprice"
+    }
+  ],
+  "whole700budget_closed": false,
+  "physical_tests": "UNMEASURED"
+}

@@ -1,0 +1,102 @@
+{
+  "checked_at": "2026-10-23T12:32:50.519292+08:00",
+  "primary_catalog_url": "https://www.buydisplay.com/7-inch-lcd-module-capacitive-touch-screen-panel-i2c-spi-serial",
+  "primary_manual_url": "https://www.buydisplay.com/download/manual/ER-TFTM070-5V4_Datasheet.pdf",
+  "direct_fetch_status": "403 on official catalog and PDF; indexed primary snippets available, no complete document or configured checkout captured",
+  "indexed_primary_facts": {
+    "module": "ER-TFTM070-5V4",
+    "display_controller": "RA8875",
+    "resolution": "800x480",
+    "touch_controller_update": "FT5316 replacing FT5206, manufacturer notice2024-05-09",
+    "manual_serial_pins": {
+      "5": "SCS",
+      "6": "SDO",
+      "7": "SDI",
+      "8": "SCLK",
+      "11": "/RESET (NC) wording remains ambiguous",
+      "33": "CTP_INT",
+      "34": "CTP_SDA",
+      "35": "CTP_SCL",
+      "36": "CTP_/RST"
+    },
+    "catalog_base_price_usd": 40.18,
+    "catalog_availability_label": "In stock"
+  },
+  "explicit_nonconclusions": [
+    "Base price is not the 5V/SPI/CTP/header/cable configured total or landed quote.",
+    "Catalog stock is not a reservation of the requested configuration.",
+    "Search returned ER-TFTM070-6_CTP_Interfacing.pdf (RA8876), which is a different module and cannot resolve V4 wiring/reset ambiguity.",
+    "No final factory-configured SKU, physical pin1 orientation, 12-to40-pin harness, or delivery date was verified.",
+    "Nothing ordered, paid or externally messaged.",
+    "Correct V4 interfacing PDF is now located, but direct access remains403 and legacy FT5206 text/reset-NC prevent closing H01 from indexed text alone. No repeated direct-fetch loops."
+  ],
+  "status": "H01_OPEN_NOT_FINAL_SELECTION",
+  "physical_tests": "UNMEASURED",
+  "indexed_V4_interfacing_source": {
+    "url": "https://www.buydisplay.com/download/interfacing/ER-TFTM070-5V4_Interfacing.pdf",
+    "document_date": "2024-06-11",
+    "evidence_kind": "primary-domain search-index text only; direct fetch403; not full document or visual inspection",
+    "findings": [
+      "V4-labelled schematic describes serial pins5/6/7/8 and RC reset/NC pin11; no confirmed usable external LCD reset input.",
+      "Indexed V4 schematic still carries FT5206 legacy text while current catalog specifies FT5316. Do not treat that example as proof of the delivered CTP revision.",
+      "PDF contents identify main interface JP3/CON2; do not copy connector names from a different model."
+    ],
+    "not_used_for_final_harness_release": true
+  },
+  "indexed_electrical_limits_p14": {
+    "evidence_kind": "primary-manual search-index excerpt only",
+    "VDD_5V_recommended_range_V": [
+      4.8,
+      5.2
+    ],
+    "VDDIO_nominal_V": 3.3,
+    "module_current_at_5V_max_mA": 300,
+    "boundary": "Not a measured configured CTP assembly load, combined system budget, or validation of GPIO reset on pin11."
+  },
+  "configuration_evidence_20261023_evening": {
+    "checked_at": "2026-10-23T19:10:06.620955+08:00",
+    "evidence_kind": "New targeted primary-domain indexed text; full PDF still not accessible, no order/configured checkout",
+    "manufacturer_default_is_not_required_SPI": "Module manual p13 describes default parallel straps. An unconfigured base module cannot be assumed to arrive in 4-wire SPI mode.",
+    "required_4wire_straps": {
+      "closed": [
+        "J10",
+        "J12",
+        "J14",
+        "J16"
+      ],
+      "open": [
+        "J9",
+        "J11",
+        "J13",
+        "J15"
+      ],
+      "R1_R2_R3": "10kohm",
+      "R35_R36_R37_R38": "0ohm",
+      "R39_R40_R41_R42": "not populated"
+    },
+    "required_5V_strap": "J8 open",
+    "reset_boundary": {
+      "module_pin11": "Manufacturer text labels NC with onboard RC power-on reset; do not assume J10.7 can reset the LCD through pin11.",
+      "ct_controller_pin36": "Separate external capacitive controller reset; not the LCD reset.",
+      "ra8875_software_reset": "IC manufacturer PWRR REG01h bit0 must be written1 then0. This requires an already functioning serial interface and does not prove recovery from an SPI hang, brownout or failed power-on RC reset.",
+      "harness_proposal": "Keep board J10.7 as a reserved unconnected cable conductor unless actual module documentation explicitly confirms a usable input. No PCB or RTL modified."
+    },
+    "ic_source": "https://www.raio.com.tw/Data_raio/Datasheet/RA88%20Series/Completed/RA8875_DS_V21_eng.pdf",
+    "module_source": "https://www.buydisplay.com/download/manual/ER-TFTM070-5V4_Datasheet.pdf",
+    "configuration_source": "https://www.buydisplay.com/7-inch-lcd-module-capacitive-touch-screen-panel-i2c-spi-serial",
+    "shield_alternative_not_selected": {
+      "sku": "ER-TFTM070-5V4-4125",
+      "manufacturer_page": "https://www.buydisplay.com/serial-spi-arduino-7-inch-tft-lcd-touch-shield-ra8875-for-mega-due-uno",
+      "indexed_default": "5V/4-wire serial",
+      "boundary": "Additional shield/mechanics/header and selected CTP total remain unverified. Not a silent BOM substitute."
+    },
+    "not_closed": [
+      "Delivered exact SKU with CTP FT5316, 5V and factory-configured four-wire SPI",
+      "Pin1 orientation/40pin connector mechanics and factory-made 12-to40 harness",
+      "Configured total/stock/shipping",
+      "Reliable cold boot, MCU-only restart, software reset and brownout recovery on real hardware"
+    ],
+    "physical_tests": "UNMEASURED",
+    "final_selection": false
+  }
+}

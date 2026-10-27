@@ -1,0 +1,2049 @@
+{
+  "at": "2026-10-27T08:05:55.938673+08:00",
+  "status": "56_FUNCTIONS_RETAINED_PARTIAL_PRICED_DIRECT_INSERT_CANDIDATE_NOT_FULL_PURCHASE_PLAN",
+  "scope_original_count": 56,
+  "parts_with_domestic_current_price": [
+    {
+      "reference": "U10 alternative",
+      "MPN": "24LC256-I/P",
+      "LCSC": "C411624",
+      "url": "https://item.szlcsc.com/403161.html",
+      "package": "PDIP-8",
+      "needed": 1,
+      "buy": 1,
+      "MOQ": 1,
+      "CNY_each": "11.81",
+      "stock": 52,
+      "availability_proof": "Normal browser actual product price sidebar and screenshot, not just SMT-stock label",
+      "line_CNY_exact": "11.81",
+      "prewelded_module": false,
+      "standalone_purchase_release": false
+    },
+    {
+      "reference": "U15 alternative",
+      "MPN": "SN74LVC244AN",
+      "LCSC": "C1548565",
+      "url": "https://item.szlcsc.com/1639371.html",
+      "package": "PDIP-20",
+      "needed": 1,
+      "buy": 1,
+      "MOQ": 1,
+      "CNY_each": "9.33",
+      "stock": 77,
+      "availability_proof": "Normal browser actual product price sidebar and screenshot",
+      "line_CNY_exact": "9.33",
+      "prewelded_module": false,
+      "standalone_purchase_release": false
+    },
+    {
+      "reference": "Local decoupling candidate; allocate per original C10 and retained rail locations",
+      "MPN": "CCT104KC6X7RF5FH5A0",
+      "LCSC": "C2896145",
+      "url": "https://item.szlcsc.com/3138694.html",
+      "package": "TH P5mm;100nF±10%,50V,X7R",
+      "needed_for_two_IC_minimum": 2,
+      "buy": 10,
+      "MOQ": 10,
+      "CNY_each": "0.4142",
+      "stock": 1830,
+      "PCBA_label_stock_separately": 1880,
+      "availability_proof": "Normal browser actual sidebar; PCBA1880 and retail1830 kept separate",
+      "line_CNY_exact": "4.1420",
+      "prewelded_module": false,
+      "standalone_purchase_release": false
+    },
+    {
+      "reference": "U10 socket candidate",
+      "MPN": "DS1009-08AT1NX-0A2",
+      "LCSC": "C72124",
+      "url": "https://item.szlcsc.com/73233.html",
+      "package": "DIP8,2.54mm pitch,7.62mm row",
+      "needed": 1,
+      "buy": 20,
+      "MOQ": 20,
+      "CNY_each": "0.2075",
+      "stock": 10860,
+      "PCBA_label_stock_separately": "14K+",
+      "availability_proof": "Actual domestic search and product screenshot; minimum20 verified",
+      "line_CNY_exact": "4.1500",
+      "prewelded_module": false,
+      "standalone_purchase_release": false
+    },
+    {
+      "reference": "U15 socket candidate",
+      "MPN": "DS1009-20AT1NX-0A2",
+      "LCSC": "C72118",
+      "url": "https://item.szlcsc.com/73227.html",
+      "package": "DIP20,2.54mm pitch,7.62mm row",
+      "needed": 1,
+      "buy": 12,
+      "MOQ": 12,
+      "CNY_each": "0.356",
+      "stock": 4428,
+      "PCBA_label_stock_separately": 4694,
+      "availability_proof": "Actual domestic search and product screenshot; minimum12 verified",
+      "line_CNY_exact": "4.272",
+      "prewelded_module": false,
+      "standalone_purchase_release": false
+    }
+  ],
+  "priced_subset_exact_CNY": "33.7040",
+  "priced_subset_display_CNY": "33.70",
+  "price_scope": "All5lines including MOQ extras; excludes carrier/protoboard, local assembly, wires/headers, pullups, power/protection, all other subsystems and freight. A9CNY shipping-coupon label is not actual Qingyuan freight.",
+  "assembly_scope": "These are loose through-hole parts, not preassembled modules. No user SMT soldering. A mechanical carrier and socket/cap assembly or actual vendor preweld service still required; do not silently expand user ability beyond headers/wires.",
+  "pin_maps": {
+    "U10": [
+      {
+        "pin": 1,
+        "net": "GND"
+      },
+      {
+        "pin": 2,
+        "net": "GND"
+      },
+      {
+        "pin": 3,
+        "net": "GND"
+      },
+      {
+        "pin": 4,
+        "net": "GND"
+      },
+      {
+        "pin": 5,
+        "net": "I2C_SDA"
+      },
+      {
+        "pin": 6,
+        "net": "I2C_SCL"
+      },
+      {
+        "pin": 7,
+        "net": "GND"
+      },
+      {
+        "pin": 8,
+        "net": "3V3_IO"
+      }
+    ],
+    "U15": [
+      {
+        "pin": 1,
+        "net": "GND"
+      },
+      {
+        "pin": 2,
+        "net": "BUS_SCK"
+      },
+      {
+        "pin": 3,
+        "net": ""
+      },
+      {
+        "pin": 4,
+        "net": "BUS_MOSI"
+      },
+      {
+        "pin": 5,
+        "net": "TP_RESET_MOD_N"
+      },
+      {
+        "pin": 6,
+        "net": "LCD_RESET_N"
+      },
+      {
+        "pin": 7,
+        "net": ""
+      },
+      {
+        "pin": 8,
+        "net": "HARM_CS_N"
+      },
+      {
+        "pin": 9,
+        "net": ""
+      },
+      {
+        "pin": 10,
+        "net": "GND"
+      },
+      {
+        "pin": 11,
+        "net": "GND"
+      },
+      {
+        "pin": 12,
+        "net": "DISP_HARM_CS_N"
+      },
+      {
+        "pin": 13,
+        "net": "GND"
+      },
+      {
+        "pin": 14,
+        "net": "DISP_RESET_N"
+      },
+      {
+        "pin": 15,
+        "net": "TP_RESET_N"
+      },
+      {
+        "pin": 16,
+        "net": "DISP_MOSI"
+      },
+      {
+        "pin": 17,
+        "net": "3V3_IO"
+      },
+      {
+        "pin": 18,
+        "net": "DISP_SCK"
+      },
+      {
+        "pin": 19,
+        "net": "GND"
+      },
+      {
+        "pin": 20,
+        "net": "3V3_PERIPH"
+      }
+    ]
+  },
+  "same_device_electrical_proof": "through-hole-same-device-interface-proof.json",
+  "EEPROM_contract": {
+    "original": "24LC256-I/SN",
+    "alternative": "24LC256-I/P",
+    "LCSC": "C411624",
+    "quantity": 1,
+    "package": "PDIP-8",
+    "electrical_core_and_original_pin_mapping_match": true,
+    "socket": "8脚2.54mm节距、7.62mm排距直插IC座，1只；具体座SKU/价待冻结",
+    "local_decoupling": "100nF X7R 直插电容1只，直接跨8/4脚；具体SKU/价待冻结",
+    "pin_map": {
+      "1": "GND A0",
+      "2": "GND A1",
+      "3": "GND A2",
+      "4": "GND VSS",
+      "5": "I2C_SDA -> Nano J6.10",
+      "6": "I2C_SCL -> Nano J6.11",
+      "7": "GND WP=0",
+      "8": "3V3_IO"
+    },
+    "I2C_address_7bit": "0x50",
+    "capacity_bytes": 32768,
+    "page_bytes": 64,
+    "clock_max_at_3V3_Hz": 400000,
+    "page_write_max_ms": 5,
+    "driver_requirements": [
+      "64字节边界拆分，跨页写会回卷覆盖",
+      "写后ACK轮询且设置超时",
+      "不能把32KiB当成任意时长音频存储；按原产品用途和格式验收",
+      "共享SDA/SCL上拉须按整条总线并联值、电容及各器件VOL核算，不能每模块盲加一对上拉"
+    ],
+    "physical_write_read_power_cycle_test": "UNMEASURED"
+  },
+  "power_contract": {
+    "original_refs": [
+      "J13",
+      "F1",
+      "Q1",
+      "R66",
+      "U17",
+      "R67",
+      "R68",
+      "R69",
+      "R70",
+      "C37",
+      "C38",
+      "C32",
+      "C30",
+      "R73"
+    ],
+    "original_topology": "5V_IN -> F1 PTC -> Q1 reverse-polarity protection -> TPS2553 active-high limiter ->5V_PERIPH; EN=3V3_IO. AP2112K U18 derives3V3_PERIPH separately. Preserve independent rail identities and off-state discharge/isolators.",
+    "U17": "TPS2553DBVR C55266, NOT a regulator and NOT a generic3A supply",
+    "R67_ohm": 23700,
+    "R67_tolerance_fraction": 0.01,
+    "source": "TI-TPS2553-SLVS841F.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps2553.pdf",
+    "pdf_sha256": "413aec7178e722bdeacd701a7d4d4f20e5aa09bee0c60ab2176751b6f1ae6da5",
+    "pages_visually_reviewed": [
+      15,
+      18
+    ],
+    "equations_R_in_kohm_I_in_mA": {
+      "min": "25230/R^1.016",
+      "nominal": "23950/R^0.977",
+      "max": "22980/R^0.94"
+    },
+    "current_limit_mA_including_R_tolerance": {
+      "minimum": 1001.8032014107167,
+      "nominal": 1086.866952477615,
+      "maximum": 1183.5578661598424
+    },
+    "design_interpretation": "About1.00A minimum threshold, not1.5A or3A guaranteed for the original resistor setting. PTC, thermal, input droop and connector limits are additional constraints, not removed by this calculation.",
+    "amplifier_power_case": "If R12U delivers its labelled2x2W total4W, even ideal5V conversion needs>=0.8A before speaker-amplifier losses and all other loads. Full screen/DAC/logic peak currents remain unknown; no actual overload claim or complete load budget accepted.",
+    "proposal_only": "Do not silently add speaker-amplifier current to the original peripheral branch or enlarge R67/F1 thresholds. Compare a separately protected5V speaker branch or externally powered active speaker; exact supply/protection/harness/price and power-off behaviour must close first.",
+    "physical_tests": "UNMEASURED",
+    "native_values_changed": false
+  },
+  "not_accepted_modules": [
+    {
+      "candidate": "DFRobot DFR0565",
+      "url": "https://www.dfrobot.com.cn/goods-1826.html",
+      "listed_CNY": 99,
+      "actual_stock_and_Qingyuan_quote_verified": false,
+      "primary_limit": "5V isolated supply output max150mA; manufacturer requires controller and module sides not shorted",
+      "decision": "Not a drop-in TCA9517/shared-common-ground peripheral replacement. Do not use its150mA output to power the screen/DAC branch."
+    },
+    {
+      "candidate": "Adafruit5159 TCA4307",
+      "url": "https://www.adafruit.com/product/5159",
+      "listed_USD": 4.95,
+      "domestic_landed_quote_verified": false,
+      "primary_warning": "Manufacturer says power passes through the breakout; it is a bus buffer, not a power isolator. QT cables not included.",
+      "decision": "Do not connect the two original independent3.3V rails to the board as-is. Pullup/EN/supply-off analysis and actual pin/schematic evidence still required; no replacement accepted."
+    },
+    {
+      "candidate": "SN74AHC595N C2872436",
+      "url": "https://www.lcsc.com/product-detail/C2872436.html",
+      "visible_catalog_state": "Out of stock; reference price only",
+      "decision": "PDIP existence confirmed previously, but not ready procurement or accepted LV595A substitution."
+    }
+  ],
+  "rejected_keyword_results": [
+    {
+      "query": "RDER71H104K0K1H03B",
+      "method": "lcsc skill search",
+      "actual_result": "C2746 KM476M450K25RR0VH2FP0 450V47uF electrolytic",
+      "decision": "Unrelated MPN and capacitor type; rejected, not priced as100nF X7R."
+    },
+    {
+      "query": "DIP-8 socket",
+      "method": "lcsc skill search",
+      "actual_result": "Digital transistor and inductors, no matching socket among4 shown",
+      "decision": "Rejected. Exact C72124/C72118 normal domestic page searches used instead; do not repeat these ineffective broad queries."
+    }
+  ],
+  "original56_allocation": [
+    {
+      "reference": "U8",
+      "original_MPN": "SN74LV595ADR",
+      "original_LCSC": "C205940",
+      "functional_block": "扫描控制输出",
+      "role": "扫描控制输出",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "ADDR1"
+        },
+        {
+          "pad": "2",
+          "net": "ADDR2"
+        },
+        {
+          "pad": "3",
+          "net": "ADDR3"
+        },
+        {
+          "pad": "4",
+          "net": "MUX_DISABLE"
+        },
+        {
+          "pad": "5",
+          "net": "RC_DRIVE"
+        },
+        {
+          "pad": "6",
+          "net": "LCD_RESET_N"
+        },
+        {
+          "pad": "7",
+          "net": "TP_RESET_N"
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "15",
+          "net": "ADDR0"
+        },
+        {
+          "pad": "14",
+          "net": "BUS_MOSI"
+        },
+        {
+          "pad": "13",
+          "net": "GND"
+        },
+        {
+          "pad": "12",
+          "net": "SCAN_LATCH"
+        },
+        {
+          "pad": "11",
+          "net": "BUS_SCK"
+        },
+        {
+          "pad": "10",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        }
+      ],
+      "candidate_disposition": "Existing SMT function has no qualified prewelded purchase item in bounded search; do not present barechip as module",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "U11",
+      "original_MPN": "74LVC1G157GV,125",
+      "original_LCSC": "C503437",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享读回选择、I2C适配、SPI/复位缓冲或触控中断整形；非通用GPIO直连替代",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "KEY_QH"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": "RA_MISO"
+        },
+        {
+          "pad": "4",
+          "net": "BUS_RETURN"
+        },
+        {
+          "pad": "5",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "6",
+          "net": "HARM_CS_N"
+        }
+      ],
+      "candidate_disposition": "Existing SMT function has no qualified prewelded purchase item in bounded search; do not present barechip as module",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C11",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "SW1",
+      "original_MPN": "EC11E15244B2",
+      "original_LCSC": "C470754",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "original_pin_nets": [
+        {
+          "pad": "A",
+          "net": "ENC_A"
+        },
+        {
+          "pad": "C",
+          "net": "GND"
+        },
+        {
+          "pad": "B",
+          "net": "ENC_B"
+        },
+        {
+          "pad": "D",
+          "net": "ENC_PUSH"
+        },
+        {
+          "pad": "E",
+          "net": "GND"
+        },
+        {
+          "pad": "6",
+          "net": ""
+        },
+        {
+          "pad": "7",
+          "net": ""
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "U14",
+      "original_MPN": "TCA9517DGKR",
+      "original_LCSC": "C544515",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享读回选择、I2C适配、SPI/复位缓冲或触控中断整形；非通用GPIO直连替代",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "2",
+          "net": "I2C_SCL"
+        },
+        {
+          "pad": "3",
+          "net": "I2C_SDA"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        },
+        {
+          "pad": "8",
+          "net": "3V3_PERIPH"
+        },
+        {
+          "pad": "7",
+          "net": "I2C_MOD_SCL"
+        },
+        {
+          "pad": "6",
+          "net": "I2C_MOD_SDA"
+        },
+        {
+          "pad": "5",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Existing SMT function has no qualified prewelded purchase item in bounded search; do not present barechip as module",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "U16",
+      "original_MPN": "SN74LVC1G17DBVR",
+      "original_LCSC": "C7836",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享读回选择、I2C适配、SPI/复位缓冲或触控中断整形；非通用GPIO直连替代",
+      "original_pin_nets": [
+        {
+          "pad": "5",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "4",
+          "net": "TP_INT"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "TP_INT_MOD"
+        },
+        {
+          "pad": "1",
+          "net": ""
+        }
+      ],
+      "candidate_disposition": "Existing SMT function has no qualified prewelded purchase item in bounded search; do not present barechip as module",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R61",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "I2C_MOD_SCL"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R62",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "TP_INT_MOD"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "J13",
+      "original_MPN": "B2B-XH-A(LF)(SN)",
+      "original_LCSC": "C158012",
+      "functional_block": "电源入口稳压与保护",
+      "role": "电源入口稳压与保护",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "5V_IN"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "F1",
+      "original_MPN": "MF-MSMF110/16-2",
+      "original_LCSC": "C210834",
+      "functional_block": "电源入口稳压与保护",
+      "role": "电源入口稳压与保护",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "5V_FUSED"
+        },
+        {
+          "pad": "1",
+          "net": "5V_IN"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "Q1",
+      "original_MPN": "DMP2035U-7",
+      "original_LCSC": "C110499",
+      "functional_block": "电源入口稳压与保护",
+      "role": "电源入口稳压与保护",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "PWR_GATE"
+        },
+        {
+          "pad": "2",
+          "net": "5V_PROTECTED"
+        },
+        {
+          "pad": "3",
+          "net": "5V_FUSED"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R66",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "PWR_GATE"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "U17",
+      "original_MPN": "TPS2553DBVR",
+      "original_LCSC": "C55266",
+      "functional_block": "电源入口稳压与保护",
+      "role": "电源入口稳压与保护",
+      "original_pin_nets": [
+        {
+          "pad": "3",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PROTECTED"
+        },
+        {
+          "pad": "6",
+          "net": "5V_PERIPH"
+        },
+        {
+          "pad": "5",
+          "net": "PWR_ILIM"
+        },
+        {
+          "pad": "4",
+          "net": "PWR_FAULT_N"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R67",
+      "original_MPN": "0603WAF2372T5E",
+      "original_LCSC": "C22912",
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "PWR_ILIM"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R68",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "PWR_FAULT_N"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R69",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R70",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C37",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "functional_block": "电源入口稳压与保护",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PROTECTED"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C38",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "functional_block": "电源入口稳压与保护",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C39",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "U18",
+      "original_MPN": "AP2112K-3.3TRG1",
+      "original_LCSC": "C51118",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享总线及触控屏接口适配",
+      "original_pin_nets": [
+        {
+          "pad": "4",
+          "net": ""
+        },
+        {
+          "pad": "5",
+          "net": "3V3_PERIPH"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": "5V_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Existing SMT function has no qualified prewelded purchase item in bounded search; do not present barechip as module",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "U10",
+      "original_MPN": "24LC256-I/SN",
+      "original_LCSC": "C411625",
+      "functional_block": "断电保存EEPROM",
+      "role": "断电保存EEPROM",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        },
+        {
+          "pad": "8",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "7",
+          "net": "GND"
+        },
+        {
+          "pad": "6",
+          "net": "I2C_SCL"
+        },
+        {
+          "pad": "5",
+          "net": "I2C_SDA"
+        }
+      ],
+      "candidate_disposition": "Same-device PDIP candidate C411624, original8pin map retained; physical assembly and full plan pending",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C10",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "functional_block": "断电保存EEPROM",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "100nF X7R through-hole candidate C2896145 locally across EEPROM8/4, placement and assembly pending",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C32",
+      "original_MPN": "CL10A105KO8NNNC",
+      "original_LCSC": "C1592",
+      "functional_block": "电源入口稳压与保护",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C34",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C36",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R50",
+      "original_MPN": "0603WAF2201T5E",
+      "original_LCSC": "C4190",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "ENC_A"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R51",
+      "original_MPN": "0603WAF2201T5E",
+      "original_LCSC": "C4190",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "ENC_B"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R52",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "ENC_PUSH"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C30",
+      "original_MPN": "CL10A225KP8NNNC",
+      "original_LCSC": "C1607",
+      "functional_block": "电源入口稳压与保护",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C33",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R60",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "I2C_MOD_SDA"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "SW2",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "PRESET0"
+        },
+        {
+          "pad": "2",
+          "net": "PRESET0"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R53",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "PRESET0"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "SW3",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "PRESET1"
+        },
+        {
+          "pad": "2",
+          "net": "PRESET1"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R54",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "PRESET1"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "SW4",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "PRESET2"
+        },
+        {
+          "pad": "2",
+          "net": "PRESET2"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R55",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "PRESET2"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "SW5",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "PRESET3"
+        },
+        {
+          "pad": "2",
+          "net": "PRESET3"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R56",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "PRESET3"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "SW6",
+      "original_MPN": "TS-1187A-B-A-B",
+      "original_LCSC": "C318884",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "EDIT"
+        },
+        {
+          "pad": "2",
+          "net": "EDIT"
+        },
+        {
+          "pad": "3",
+          "net": "GND"
+        },
+        {
+          "pad": "4",
+          "net": "GND"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R57",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "EDIT"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "J10",
+      "original_MPN": "2.54-1*12P反弯针",
+      "original_LCSC": "C247920",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享总线及触控屏接口适配",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "5V_PERIPH"
+        },
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "3",
+          "net": "DISP_SCK"
+        },
+        {
+          "pad": "4",
+          "net": "DISP_MOSI"
+        },
+        {
+          "pad": "5",
+          "net": "RA_MISO"
+        },
+        {
+          "pad": "6",
+          "net": "DISP_HARM_CS_N"
+        },
+        {
+          "pad": "7",
+          "net": "DISP_RESET_N"
+        },
+        {
+          "pad": "8",
+          "net": "I2C_MOD_SDA"
+        },
+        {
+          "pad": "9",
+          "net": "I2C_MOD_SCL"
+        },
+        {
+          "pad": "10",
+          "net": "TP_INT_MOD"
+        },
+        {
+          "pad": "11",
+          "net": "TP_RESET_MOD_N"
+        },
+        {
+          "pad": "12",
+          "net": "GND"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R73",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "functional_block": "电源入口稳压与保护",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Keep exact original protection function and threshold; no complete preassembled equivalent accepted",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R71",
+      "original_MPN": "RC0603FR-071KL",
+      "original_LCSC": "C22548",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "U15",
+      "original_MPN": "SN74LVC244APWR",
+      "original_LCSC": "C7668",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "共享读回选择、I2C适配、SPI/复位缓冲或触控中断整形；非通用GPIO直连替代",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "GND"
+        },
+        {
+          "pad": "2",
+          "net": "BUS_SCK"
+        },
+        {
+          "pad": "3",
+          "net": ""
+        },
+        {
+          "pad": "4",
+          "net": "BUS_MOSI"
+        },
+        {
+          "pad": "5",
+          "net": "TP_RESET_MOD_N"
+        },
+        {
+          "pad": "6",
+          "net": "LCD_RESET_N"
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "HARM_CS_N"
+        },
+        {
+          "pad": "9",
+          "net": ""
+        },
+        {
+          "pad": "10",
+          "net": "GND"
+        },
+        {
+          "pad": "20",
+          "net": "3V3_PERIPH"
+        },
+        {
+          "pad": "19",
+          "net": "GND"
+        },
+        {
+          "pad": "18",
+          "net": "DISP_SCK"
+        },
+        {
+          "pad": "17",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "16",
+          "net": "DISP_MOSI"
+        },
+        {
+          "pad": "15",
+          "net": "TP_RESET_N"
+        },
+        {
+          "pad": "14",
+          "net": "DISP_RESET_N"
+        },
+        {
+          "pad": "13",
+          "net": "GND"
+        },
+        {
+          "pad": "12",
+          "net": "DISP_HARM_CS_N"
+        },
+        {
+          "pad": "11",
+          "net": "GND"
+        }
+      ],
+      "candidate_disposition": "Same-family PDIP candidate C1548565, original20pin map retained; 3V3_PERIPH/isolation and full plan pending",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C35",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_PERIPH"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R32",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "INPUT_LOAD_N"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R33",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "I2C_SDA"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R34",
+      "original_MPN": "0603WAF4701T5E",
+      "original_LCSC": "C23162",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "I2C_SCL"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R30",
+      "original_MPN": "RC0603FR-0710KL",
+      "original_LCSC": "C98220",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "HARM_CS_N"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "U9",
+      "original_MPN": "SN74LV165ADR",
+      "original_LCSC": "C273656",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "实体按键编码器与串行采集",
+      "original_pin_nets": [
+        {
+          "pad": "1",
+          "net": "INPUT_LOAD_N"
+        },
+        {
+          "pad": "2",
+          "net": "BUS_SCK"
+        },
+        {
+          "pad": "3",
+          "net": "PRESET1"
+        },
+        {
+          "pad": "4",
+          "net": "PRESET2"
+        },
+        {
+          "pad": "5",
+          "net": "PRESET3"
+        },
+        {
+          "pad": "6",
+          "net": "EDIT"
+        },
+        {
+          "pad": "7",
+          "net": ""
+        },
+        {
+          "pad": "8",
+          "net": "GND"
+        },
+        {
+          "pad": "16",
+          "net": "3V3_IO"
+        },
+        {
+          "pad": "15",
+          "net": "GND"
+        },
+        {
+          "pad": "14",
+          "net": "PRESET0"
+        },
+        {
+          "pad": "13",
+          "net": "ENC_PUSH"
+        },
+        {
+          "pad": "12",
+          "net": "ENC_B"
+        },
+        {
+          "pad": "11",
+          "net": "ENC_A"
+        },
+        {
+          "pad": "10",
+          "net": "GND"
+        },
+        {
+          "pad": "9",
+          "net": "KEY_QH"
+        }
+      ],
+      "candidate_disposition": "Existing SMT function has no qualified prewelded purchase item in bounded search; do not present barechip as module",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C9",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "functional_block": "实体按键编码器与串行采集",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "C8",
+      "original_MPN": "CL10B104KB8NNNC",
+      "original_LCSC": "C1591",
+      "functional_block": "扫描控制输出",
+      "role": "充电泵/去耦/滤波功能；结合所列网络保留，不能一概当可省去耦",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "3V3_IO"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R63",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "BUS_SCK"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    },
+    {
+      "reference": "R64",
+      "original_MPN": "0603WAF1003T5E",
+      "original_LCSC": "C25803",
+      "functional_block": "共享总线及触控屏接口适配",
+      "role": "偏置/上拉下拉/串联/限流设置等功能；按原网络与阻值保留",
+      "original_pin_nets": [
+        {
+          "pad": "2",
+          "net": "GND"
+        },
+        {
+          "pad": "1",
+          "net": "BUS_MOSI"
+        }
+      ],
+      "candidate_disposition": "Original function retained; exact preassembled realization/price/assembly still open",
+      "function_retained": true,
+      "fully_verified_module_coverage": false
+    }
+  ],
+  "native_file_checks": [
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\eprj3-intro.md",
+      "expected": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+      "actual": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\FPGA-Music-U9ControlWork-20261023.eprj3",
+      "expected": "a69c794ac5b1fa00c7e9f1342b83ce70c8bbde0e46922dad5ef86f1639f5e416",
+      "actual": "a69c794ac5b1fa00c7e9f1342b83ce70c8bbde0e46922dad5ef86f1639f5e416"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\panel\\Panel1.epan2",
+      "expected": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+      "actual": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\pcb\\PCB1.epcb2",
+      "expected": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+      "actual": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\01_Nano_headers.esch2",
+      "expected": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+      "actual": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\02_Shift_and_memory.esch2",
+      "expected": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+      "actual": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\03_Display_harnesses.esch2",
+      "expected": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+      "actual": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\04_PCM5122_AUX.esch2",
+      "expected": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+      "actual": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\05_Power.esch2",
+      "expected": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+      "actual": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\06_Controls.esch2",
+      "expected": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+      "actual": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\07_Scan_lane_0.esch2",
+      "expected": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+      "actual": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\08_Scan_lane_1.esch2",
+      "expected": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+      "actual": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\09_Scan_lane_2.esch2",
+      "expected": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+      "actual": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\10_Scan_lane_3.esch2",
+      "expected": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+      "actual": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\11_Scan_lane_4.esch2",
+      "expected": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+      "actual": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\12_Scan_lane_5.esch2",
+      "expected": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+      "actual": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\13_Power_off_isolation.esch2",
+      "expected": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+      "actual": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\14_Protected_power_entry.esch2",
+      "expected": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+      "actual": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\Schematic1.ecfg",
+      "expected": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+      "actual": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\eprj3-intro.md",
+      "expected": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+      "actual": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\FPGA-Music-Dualscreen-Addr3Work-20261022.eprj3",
+      "expected": "b4f73e7755876c6d2b7f1878945f043f18f2bf07d37caa42ca52d25a93bb37bf",
+      "actual": "b4f73e7755876c6d2b7f1878945f043f18f2bf07d37caa42ca52d25a93bb37bf"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\panel\\Panel1.epan2",
+      "expected": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+      "actual": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\pcb\\PCB1.epcb2",
+      "expected": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e",
+      "actual": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\01_Nano_headers.esch2",
+      "expected": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+      "actual": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\02_Shift_and_memory.esch2",
+      "expected": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+      "actual": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\03_Display_harnesses.esch2",
+      "expected": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+      "actual": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\04_PCM5122_AUX.esch2",
+      "expected": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+      "actual": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\05_Power.esch2",
+      "expected": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+      "actual": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\06_Controls.esch2",
+      "expected": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+      "actual": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\07_Scan_lane_0.esch2",
+      "expected": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+      "actual": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\08_Scan_lane_1.esch2",
+      "expected": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+      "actual": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\09_Scan_lane_2.esch2",
+      "expected": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+      "actual": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\10_Scan_lane_3.esch2",
+      "expected": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+      "actual": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\11_Scan_lane_4.esch2",
+      "expected": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+      "actual": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\12_Scan_lane_5.esch2",
+      "expected": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+      "actual": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\13_Power_off_isolation.esch2",
+      "expected": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+      "actual": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\14_Protected_power_entry.esch2",
+      "expected": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+      "actual": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\Schematic1.ecfg",
+      "expected": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+      "actual": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Sensor14Bank_Schematic\\Sensor14_frontend.esch2",
+      "expected": "fec91f7a7098abe13298a28805ab9f2d04cf80913bb2b9854dc76c0bfaa66760",
+      "actual": "fec91f7a7098abe13298a28805ab9f2d04cf80913bb2b9854dc76c0bfaa66760"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\pcb\\PCB2.epcb2",
+      "expected": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+      "actual": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3"
+    }
+  ],
+  "all227functions_retained": true,
+  "complete_purchase_ready": false,
+  "whole_budget_CNY": null,
+  "orders_payments_messages": false,
+  "RTL_build_flash_changed": false,
+  "physical_tests": "UNMEASURED"
+}

@@ -3,7 +3,7 @@
   "engineering_inputs_manifest": "project/versions/engineering-sources-20261023.json",
   "engineering_entry": "project/ENGINEERING.md",
   "design_version": "design-20261024-frame-command-source-candidate",
-  "updated_at": "2026-10-24T15:34:50.716774+00:00",
+  "updated_at": "2026-10-27T10:43:17.650190+00:00",
   "entry_branch": "main",
   "entry": "project/DESIGN-CURRENT.md",
   "quickstart": "project/QUICKSTART.md",
@@ -51,13 +51,15 @@
     "physical_tests": "UNMEASURED",
     "latest_context_review": "project/reviews/20261024-frame-source/review.json",
     "latest_saved_native": {
-      "manifest": "project/reviews/20261024-note-partial-renderer/hardware/native-manifest.json",
-      "pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
-      "connection_errors": 49,
-      "open_nets": 13,
+      "pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+      "connection_errors": 42,
+      "open_nets": 12,
       "components": 227,
-      "vias": 620,
-      "captured_engineering_checkpoint_replaced": false
+      "vias": 649,
+      "manifest": "hardware/current/CURRENT-HARDWARE.json",
+      "capture_integrity_verified": true,
+      "manufacturing_release": false,
+      "physical_tests": "UNMEASURED"
     },
     "latest_owner_reported_native": {
       "manifest": "project/reviews/20261024-contact-rtl/hardware-intake.json",
@@ -68,6 +70,28 @@
       "vias": 649,
       "full_review_passed": false,
       "current_native_archive_verified": false
+    },
+    "scoped_checkpoint": {
+      "manifest": "hardware/checkpoints/pcb-951ce88a-20261025/manifest.json",
+      "source_snapshot_remote_commit": "592da06fd64d069614ba5cb1647dad168aa4ef02",
+      "source_status_remote_commit": "83696b5577f294647424c3b7a4fbf2e7d8caf23d",
+      "role": "Complete recoverable native951 and offline recovery archive; no new functional or manufacturing acceptance",
+      "plan": "project/PCB-RESOLUTION-PLAN-20261025.md",
+      "global_review_renewed": false,
+      "integrated_source_head": "7d5056ad37dfd73577809f765f09b48f27f3d380",
+      "current_plan": "project/CONSOLIDATION-20261027.md"
+    },
+    "current_delivery": "hardware/current/CURRENT-HARDWARE.json",
+    "module_plan": "hardware/current/module-plan/模块方案-当前工作单.md",
+    "sensor35_approval": "project/reviews/20261027-hardware-consolidation/sensor35-approval.json",
+    "latest_saved_native_history": {
+      "manifest": "project/reviews/20261024-note-partial-renderer/hardware/native-manifest.json",
+      "pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
+      "connection_errors": 49,
+      "open_nets": 13,
+      "components": 227,
+      "vias": 620,
+      "captured_engineering_checkpoint_replaced": false
     }
   },
   "freshness": {
@@ -80,17 +104,18 @@
     ]
   },
   "reviewed_design_sources": {
-    "project/DESIGN-CURRENT.md": "ca3b233c080b5b1ee26a59a45e2f9a36d1b50ef72faf979ae1c2f56564b50d04",
+    "project/DESIGN-CURRENT.md": "78d0c6f0021b9d61be1edb7b251a544264598ccc97d1cf7077504465573cec5b",
     "project/versions/design-decision-20261023.json": "1d0994293691ac34b85348d0929ecda0ac68ace57c560f7b34a9449dd81ae4fc",
     "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "a147411a85f37d22c82228dfbbe836e98c3c116d4c9d158d43426c09a90f1e2e",
     "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "644e245f816a9d98ce962365791cca4a5295f538094775908f45a021a5f8b61c",
     "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
     "project/PRODUCT-SPEC.md": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4",
-    "project/SOURCE-MAP.md": "94d997fc41111bf5ce592f4bbe1df6b9a5defb4f505b2fcedd7c0c4a01033945",
-    "project/WORK-PLAN.md": "02a62e42ca422c9970cdd7c2ca78789009f8cbe5e685f357c900ce0c4f0daf10",
+    "project/SOURCE-MAP.md": "0589f100ce0fd8f49dff1b99a0545d49846187212caa5007f8b0d308e5f9ce4b",
+    "project/WORK-PLAN.md": "e05ebe5c1b2b4184749943476bb7e8866354e7b68e9019eb61f36997e3a5c3ea",
     "project/OPEN-RULES.md": "e04d4f2465815891b742d40b024a45a23ea04a9973905a2b9f963936b583f20c",
     "project/MUSIC-GOLDEN-DIAGNOSIS.md": "276ad5d74e0f4aa4cb3dfe9898594117e08e643b56b6005e6e354488e6a8d709",
-    "project/NOTE-RESOURCE-CONTRACT.md": "474a0f6eaf9b62a0e4c4c7998e40fbe7d3144f6e16e269eb9299dfd3265d397a"
+    "project/NOTE-RESOURCE-CONTRACT.md": "474a0f6eaf9b62a0e4c4c7998e40fbe7d3144f6e16e269eb9299dfd3265d397a",
+    "project/CONSOLIDATION-20261027.md": "e1a73ab22e79439833fdd64b693c9323209b2380cd0a22c3352b7b5789ae4b8e"
   },
   "governance": "project/governance.json",
   "decision_ledger": "project/decisions.json",
@@ -109,5 +134,6 @@
   "note_partial_renderer_candidate": "project/versions/note-partial-renderer-20261024.json",
   "note_input_router_candidate": "project/versions/note-input-router-20261024.json",
   "note_contact_transport_candidate": "project/versions/note-contact-transport-20261024.json",
-  "note_frame_source_candidate": "project/versions/note-frame-source-20261024.json"
+  "note_frame_source_candidate": "project/versions/note-frame-source-20261024.json",
+  "current_consolidated_entry": "project/CONSOLIDATION-20261027.md"
 }

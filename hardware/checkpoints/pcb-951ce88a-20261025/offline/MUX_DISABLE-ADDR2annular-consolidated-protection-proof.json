@@ -1,0 +1,142 @@
+{
+  "time": "2026-10-25T06:58:47.971649+08:00",
+  "source_native_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "audited_plan_sha256": "8203d0e64f931dba61ac0a65f4329c0b781b7ac4e747a926bb17dcd5a61c4957",
+  "expected_sha256": "385cedea75a7fd7a5150b0f7d4a8ae2e4fe973e04d4086e1f75bbef2829d6ae4",
+  "context_sha256": "eabe0b29e47a5f27d5810765f489bcffc841b9e84dbb1a75c3fff652e13c9e74",
+  "source_cleanup_proof_sha256": "2404ec12928f2517fc2d299c02dacbabd6b79a1cbd25702c0d93645688791a12",
+  "full_delta_audit_sha256": "489689a3f326f411ba0f5d347fa5b4c72083e5bdf810aa55c2bd8858e28770b5",
+  "new_declared_lines": 62,
+  "new_declared_vias": 24,
+  "new_signal_vias": 15,
+  "new_ground_vias": 9,
+  "delta_added_lines": 5,
+  "delta_added_line_length_mm": 6.683135827259405,
+  "delta_added_signals": 2,
+  "delta_added_ground": 2,
+  "MUX_PAD_islands": 4,
+  "strict_all_copper": {
+    "contact_gate_mm": 1e-05,
+    "circle_quad_segs": 1024,
+    "components": 4,
+    "each_component_has_PAD": true,
+    "all_new_signal_copper_on_U8_component": true,
+    "new_object_count": 7,
+    "object_count": 77,
+    "pass": true
+  },
+  "retained_signal_lines": 2930,
+  "strict_outside_unchanged": 2916,
+  "actual_intersections": 14,
+  "retained_reference_regressions": [],
+  "old_ground_contact_regressions": [],
+  "grounded_pads": 167,
+  "grounded_vias": 186,
+  "discarded_ground_pieces": [
+    {
+      "layer": 1,
+      "area_mm2": 0.12582977552513408,
+      "bounds_mm": [
+        61.25829890215906,
+        40.21277732446916,
+        61.68667091970592,
+        41.18166074776942
+      ]
+    },
+    {
+      "layer": 1,
+      "area_mm2": 2.0578386836573025e-06,
+      "bounds_mm": [
+        60.936224222908876,
+        40.92291162780717,
+        60.938521095295236,
+        40.92952478504681
+      ]
+    },
+    {
+      "layer": 16,
+      "area_mm2": 1.900381055811217,
+      "bounds_mm": [
+        61.13209500072159,
+        40.30184149643077,
+        63.788744307406,
+        42.88683705352907
+      ]
+    }
+  ],
+  "all_signal_reference_pairs": {
+    "MUX_DISABLE-current-U2-signal-via": [
+      15,
+      2
+    ],
+    "MUX_DISABLE-current-U4-signal-via": [
+      15,
+      2
+    ],
+    "MUX_DISABLE-current-U6-signal-via": [
+      15,
+      2
+    ],
+    "MUX-joint-U1-signal": [
+      15,
+      2
+    ],
+    "MUX-joint-U3-signal": [
+      15,
+      2
+    ],
+    "MUX-joint-U5-signal": [
+      15,
+      2
+    ],
+    "MUX-U56-joint-signal-0": [
+      15,
+      2
+    ],
+    "MUX-U56-joint-signal-1": [
+      15,
+      2
+    ],
+    "MUX-U23-joint-signal-0": [
+      15,
+      2
+    ],
+    "MUX-U23-joint-signal-1": [
+      15,
+      2
+    ],
+    "MUX-U23-joint-signal-2": [
+      15,
+      2
+    ],
+    "MUX-U8-ADDR3-joint-new-MUX-via": [
+      15,
+      2
+    ],
+    "ADDR3-U8-ground1-release-signal": [
+      15,
+      1
+    ],
+    "MUX-ADDR2annular-saved0-signal-0": [
+      15,
+      2
+    ],
+    "MUX-ADDR2annular-saved0-signal-1": [
+      15,
+      2
+    ],
+    "b809408793358b4b": [
+      1,
+      15,
+      2
+    ]
+  },
+  "all_new_signals_have_required_U8_8_ground_return": true,
+  "PAD_groups_no_split": true,
+  "all_1063_PAD_exact": true,
+  "MOSI34_pass": true,
+  "accepted_local_extension": true,
+  "whole_MUX_DISABLE_complete": false,
+  "native_imported": false,
+  "physical_tests": "UNMEASURED"
+}

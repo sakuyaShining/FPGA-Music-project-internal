@@ -41,6 +41,11 @@ project/reviews/** -text -whitespace
 fpga/current/** -text -whitespace
 hardware/current/** -text -whitespace
 host/current/** -text -whitespace
+hardware/checkpoints/pcb-951ce88a-20261025/** -text -whitespace
+# Scoped handoff documents and checksum tools use stable bytes across platforms.
+project/PCB-RESOLUTION-PLAN-20261025.md text eol=lf
+project/pcb-parallel-20261025/** text eol=lf
+tools/scripts/pcb_checkpoint.py text eol=lf
 project/versions/engineering-sources-20261023.json text eol=lf
 project/versions/note-partial-renderer-20261024.json text eol=lf
 project/versions/note-input-router-20261024.json text eol=lf
@@ -53,3 +58,4 @@ tools/requirements-engineering-host.txt text eol=lf
 docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md text eol=lf
 docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md text eol=lf
 docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md text eol=lf
+project/CONSOLIDATION-20261027.md text eol=lf

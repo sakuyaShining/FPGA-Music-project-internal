@@ -1,0 +1,286 @@
+{
+  "updated_at": "2026-10-24T23:15:57.992100+08:00",
+  "source_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "scope": {
+    "J11_visualization_screen": "CANCELLED",
+    "J10_harmonic_touchscreen": "RETAINED",
+    "sensor_channels": 84,
+    "fpga": "Tang Nano20K",
+    "board_mm": [
+      140,
+      100
+    ],
+    "copper_layers": [
+      1,
+      15,
+      16,
+      2
+    ]
+  },
+  "board_population": {
+    "components": 227,
+    "SMT": 215,
+    "Top_SMT": 212,
+    "Bottom_SMT": 3,
+    "TH": 12,
+    "unique_codes": 36
+  },
+  "items": [
+    {
+      "id": "E01",
+      "item": "Tang Nano20K / 已有主计算板；不另购MCU",
+      "quantity": "1块",
+      "status": "已有，不重复买",
+      "order_gate": "核实实板版号、排针公母、USB下载通道"
+    },
+    {
+      "id": "E02",
+      "item": "4Ω / 3W 喇叭 / 只接Nano板载BTL扬声器输出",
+      "quantity": "1只",
+      "status": "已有，不重复买",
+      "order_gate": "核插头与板上座；两端不接AUX或地"
+    },
+    {
+      "id": "D01",
+      "item": "LCDWIKI MSP2401 / 2.4英寸ILI9341、无触摸、4线SPI；5V VCC、3.3V IO",
+      "quantity": "0",
+      "status": "CANCELLED_BY_USER_EXCLUDE_FROM_PURCHASE",
+      "order_gate": "J11/MSP2401音乐可视化屏及专用线束已取消；不可沿用双屏旧报价。"
+    },
+    {
+      "id": "D02",
+      "item": "保留J10泛音触控模块：ER-TFTM070-5V4/RA8875/FT5316候选；工厂4线SPI、5V配置",
+      "quantity": "1套需求",
+      "status": "CONFIGURED_SKU_NOT_FROZEN",
+      "order_gate": "V4默认并口；须明确工厂SPI5V+FT5316同一出货配置、电气/机械/线束/整价库存交期。pin11 NC+RC上电复位，不能盲接J10.7；不得用别型号资料。"
+    },
+    {
+      "id": "C01",
+      "item": "小屏转接线束 / 载板1×12母端→MSP2401模块端；至少8根有效信号，逐线错位映射",
+      "quantity": "0",
+      "status": "CANCELLED_BY_USER_EXCLUDE_FROM_PURCHASE",
+      "order_gate": "J11/MSP2401音乐可视化屏及专用线束已取消；不可沿用双屏旧报价。"
+    },
+    {
+      "id": "C02",
+      "item": "J10 1×12至保留模块40针定制线束",
+      "quantity": "1套需求",
+      "status": "PINOUT_MECHANICAL_NOT_FROZEN",
+      "order_gate": "逐线明确SPI/CTP I2C/INT/RESET/供电地；LCD pin11 NC不接方案仍待冻结；模块侧公母、长度、载流和导通待验。"
+    },
+    {
+      "id": "C03",
+      "item": "Nano短线束 / 2组1×20，载板端匹配排母；Nano端按实板排针，保留未用脚NC",
+      "quantity": "2条",
+      "status": "暂缓，实板配对待核",
+      "order_gate": "长度尽可能短并按实际支架量取；不要购买2×10 IDC冒充1×20"
+    },
+    {
+      "id": "C04",
+      "item": "电极线束 / 6组1×16；载板端母座配PZ254V-11-16P，每组14电极+2地",
+      "quantity": "6条",
+      "status": "板端针距/孔径已核，长度和配对待定",
+      "order_gate": "原厂0.64mm方针、配合长6.1mm；线端须核适配，试样先短线并记录寄生，不冻结统一长线"
+    },
+    {
+      "id": "C05",
+      "item": "JST XHP-2 配套电源线 / XH 2.5mm 2P；XHP-2壳体、SXH-001T-P0.6普通型端子、AWG22，绝缘外径0.9–1.9mm",
+      "quantity": "1套",
+      "status": "线端型号已选，成品线供方待核",
+      "order_gate": "优先成品压接线；不是低插入力N型或AWG30–26的002型；按J13.1正5V/J13.2地检验"
+    },
+    {
+      "id": "C06",
+      "item": "JST XHP-2 备用壳体 / 同C05，不是2.54mm杜邦壳",
+      "quantity": "2只",
+      "status": "按规格通用件",
+      "order_gate": "为重做极性和维修备份；不计成额外电源线"
+    },
+    {
+      "id": "C07",
+      "item": "JST SXH 配套端子 / SXH-001T-P0.6普通型；AWG22、绝缘外径0.9–1.9mm，配XHP-2",
+      "quantity": "6只",
+      "status": "型号已选，随压接方案购备件",
+      "order_gate": "成品线已含端子时可不单购；无匹配压接工具时不裸买端子"
+    },
+    {
+      "id": "P01",
+      "item": "稳压5V电源：历史登记已有5V3A，实际铭牌/插头/线长未核",
+      "quantity": "1套",
+      "status": "EXISTING_UNIT_AND_LOAD_BUDGET_NOT_VERIFIED",
+      "order_gate": "按单J10+载板实际启动/稳态/背光峰值与线损预算；适配器3A不代表板上限流可提高。实测UNMEASURED。"
+    },
+    {
+      "id": "P02",
+      "item": "Nano USB供电/下载线 / 匹配Nano实际USB接口，数据线需支持下载",
+      "quantity": "1条",
+      "status": "先核已有",
+      "order_gate": "与载板外部5V保持现有隔离；Nano J5.1 NC"
+    },
+    {
+      "id": "A01",
+      "item": "3.5mm立体声TRS面板母座 / 焊片式Tip=L、Ring=R、Sleeve=GND；独立绝缘固定",
+      "quantity": "1只",
+      "status": "规格已列，机械型号待定",
+      "order_gate": "当前载板J12是3针接口，不是3.5mm插座封装；插座外形配面板"
+    },
+    {
+      "id": "A02",
+      "item": "AUX屏蔽连接线 / J12端1×3母接头到TRS焊片，L/R及屏蔽地",
+      "quantity": "1条",
+      "status": "规格已列，长度待机械",
+      "order_gate": "J12.1=L、.2=R、.3=GND；只接有源输入"
+    },
+    {
+      "id": "A03",
+      "item": "3.5mm立体声AUX成品线 / 双端TRS公头，接有源音箱/音响",
+      "quantity": "1条",
+      "status": "先核已有",
+      "order_gate": "不把无源喇叭或耳机当线路负载；上电静音完成后连接"
+    },
+    {
+      "id": "S01",
+      "item": "microSDHC 32GB C10/U1 / 复用Nano板载TF座；FAT32目标",
+      "quantity": "1张",
+      "status": "规格已选，当前在售具体型号待核",
+      "order_gate": "旧Kingston SDCS2/32GB已停产，不作为新购首选；替代卡需SPI初始化/长停顿测试"
+    },
+    {
+      "id": "S02",
+      "item": "USB读卡器 / 支持microSDHC 32GB",
+      "quantity": "1只",
+      "status": "先核已有",
+      "order_gate": "用于格式化/文件验读；不另购TF座模块"
+    },
+    {
+      "id": "T01",
+      "item": "导电背胶铜箔 / 20mm宽×2m；用于少量三电极小样，不是最终尺寸板",
+      "quantity": "1卷",
+      "status": "按规格小样材料",
+      "order_gate": "确认背胶导电方式；避免把材料小样当最终完整电极结构"
+    },
+    {
+      "id": "T02",
+      "item": "PET覆盖片 0.125mm / A4或更大、绝缘薄片，记录厚度/胶层",
+      "quantity": "1张",
+      "status": "按规格小样材料",
+      "order_gate": "比较触摸增量、手感和漂移后选择；三种不同时叠加"
+    },
+    {
+      "id": "T03",
+      "item": "PET覆盖片 0.25mm / A4或更大、绝缘薄片，记录厚度/胶层",
+      "quantity": "1张",
+      "status": "按规格小样材料",
+      "order_gate": "比较触摸增量、手感和漂移后选择；三种不同时叠加"
+    },
+    {
+      "id": "T04",
+      "item": "PET覆盖片 0.5mm / A4或更大、绝缘薄片，记录厚度/胶层",
+      "quantity": "1张",
+      "status": "按规格小样材料",
+      "order_gate": "比较触摸增量、手感和漂移后选择；三种不同时叠加"
+    },
+    {
+      "id": "T05",
+      "item": "最终三电极面板/PCB / 84通道能力保留；25/26端点均可容纳",
+      "quantity": "1套",
+      "status": "FINAL_ELECTRODE_GEOMETRY_NOT_FROZEN",
+      "order_gate": "保留84通道；实际节点表、三电极几何、覆盖层/胶层、寄生/触摸增量与漂移须标定，不能据草图加工。"
+    },
+    {
+      "id": "M01",
+      "item": "载板支撑及螺钉 / 4个临时安装孔；规格/高度/绝缘距离待装配图",
+      "quantity": "1套",
+      "status": "暂缓，孔位与高度未审签",
+      "order_gate": "不购买固定高度整套金属柱后反向迁就布局"
+    },
+    {
+      "id": "M02",
+      "item": "单J10触控屏支架/螺钉/间隔柱",
+      "quantity": "1套需求",
+      "status": "NOT_FROZEN",
+      "order_gate": "按保留屏确切出货版的孔位、玻璃和排针高度核实；不含已取消屏支架。"
+    },
+    {
+      "id": "M03",
+      "item": "按压旋钮帽 / 匹配EC11E15244B2直径6mm平轴、20mm轴长与实际面板高度",
+      "quantity": "1只",
+      "status": "轴规格已核，帽孔/高度待核",
+      "order_gate": "平轴内孔和按压行程留量须对应；不能按外观选帽"
+    },
+    {
+      "id": "M04",
+      "item": "外壳/操作面板 / 470×220mm为空间提案；厚度/孔位未冻结",
+      "quantity": "1套",
+      "status": "暂缓，不能据草图生产",
+      "order_gate": "先纸样/模块/手姿核对，再生成机械施工图"
+    },
+    {
+      "id": "F01",
+      "item": "140×100mm四铜层主载板：Top/Inner15/Inner16/Bottom",
+      "quantity": "板数待定",
+      "status": "PCB_NOT_RELEASED",
+      "order_gate": "板数未定；当前951原生42项未连通12网，ADDR2已闭合但整板未放行；板厚/铜厚按同版最终叠层核对。"
+    },
+    {
+      "id": "F02",
+      "item": "双面SMT：每板215件=212Top+3Bottom",
+      "quantity": "装配板数待定",
+      "status": "FACTORY_QUOTE_NOT_VERIFIED",
+      "order_gate": "含C8/R63/R64背面、净空和最终CPL；旧217/单面报价及六行坐标失效。原2板仅旧假设。"
+    },
+    {
+      "id": "F03",
+      "item": "通孔装配：每板12件",
+      "quantity": "完整装配板数待定",
+      "status": "FACTORY_TH_ASSEMBLY_QUOTE_REQUIRED",
+      "order_gate": "工厂通孔装配工序/费用及完整交付须明确；不假设用户手焊，不沿用旧13件或旧分工。"
+    },
+    {
+      "id": "F04",
+      "item": "双面钢网/上料/损耗等装配费用",
+      "quantity": "按实际工单",
+      "status": "NOT_QUOTED",
+      "order_gate": "按最终215个SMT位号及工厂匹配计价，不按旧217位号或散买MOQ重复采购。"
+    },
+    {
+      "id": "F05",
+      "item": "PCB/单触控屏/线束/材料税费与运输",
+      "quantity": "按实际渠道",
+      "status": "NOT_QUOTED",
+      "order_gate": "不用旧双屏报价、273.22元基础屏价、LCSC散买库存或器件美元小计推断整机整价交期。"
+    }
+  ],
+  "complete_hardware_selection_frozen": false,
+  "board_quantity_fixed": false,
+  "manufacturing_release": false,
+  "physical_tests": "UNMEASURED",
+  "quote_stock_shipping_verified": false,
+  "evidence_files": [
+    "current-board-procurement.json",
+    "assembly-side-current.json",
+    "retained-screen-primary-refresh.json",
+    "retained-interface-readiness.json"
+  ],
+  "supersedes": "采购范围与装配分工-r1.md外部范围、双屏/2层及旧装配假设；原始内容保留为历史",
+  "current_coordinate_files": {
+    "native_all_227": "native-cpl-current-951ce88a-DRAFT-NOT-FOR-ORDER.csv",
+    "SMT_215": "jlc-cpl-current-DRAFT-NOT-FOR-ORDER.csv",
+    "TH_12": "TH-placement-current-DRAFT-NOT-FOR-ORDER.csv",
+    "audit": "current-cpl-population-audit.json"
+  },
+  "old_six_rows_replaced_only_in_current_DRAFT_files": true,
+  "source_rebind": {
+    "checked_at": "2026-10-24T23:15:57.992100+08:00",
+    "previous_source_pcb_sha256": "a3a258d05adbe7001a52b0040bc9150b2c15cfca1b8fe35bfeb8f8110b3f735d",
+    "basis": "Fresh source951 native CPL equals every field of all227 source-a3 rows; metadata and PADs unchanged. No stock/price/lead-time refresh.",
+    "proof": "current-native-cpl-export-951ce88a.json"
+  },
+  "native_state": {
+    "connection_labels": 42,
+    "open_nets": 12,
+    "components": 227,
+    "vias": 649,
+    "manufacturing_release": false
+  }
+}

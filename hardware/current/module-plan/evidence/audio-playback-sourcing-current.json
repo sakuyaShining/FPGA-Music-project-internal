@@ -1,0 +1,127 @@
+{
+  "status": "BOUNDED_SOURCING_NOT_PURCHASE_RELEASE",
+  "observed_local_date": "2026-10-27",
+  "owned_playback_hardware": [],
+  "DAC_candidate": "010313400000, 55 CNY; see audio-010313400000-pin-coverage-current.json",
+  "preferred_assembly_direction": "AUXline output is product requirement; external speaker/amplifier candidates are historical audition equipment, not mandatory product modules or a purchase-release gate.",
+  "candidates": [
+    {
+      "SKU": "DFR0119-O",
+      "seller": "DFRobot Chinese official store",
+      "url": "https://www.dfrobot.com.cn/goods-3027.html",
+      "listed_CNY_each": 8.5,
+      "visible_stock": "有货, quantity not shown",
+      "source_method": "Normal in-app browser visible product page; textual web fetch timed out but the page itself works",
+      "quantity_for_stereo": 1,
+      "SMT_assembly": "Product photograph shows IC and SMT passives assembled; 2.54mm through-hole wire/header pads are unpopulated",
+      "user_assembly": "Header or wire soldering required; no user SMT soldering",
+      "supply_V": [
+        3.3,
+        5.5
+      ],
+      "power_condition": "3W at 4ohm, 5V; not a guarantee of clean output at arbitrary level",
+      "shutdown": "Unconnected SHDN defaults to operating mode according to seller",
+      "output_contract": "Separate BTL L+/L- and R+/R-. Never join channel negative outputs together or to GND.",
+      "pending": [
+        "Exact input coupling/gain and DAC attenuation",
+        "Two suitable speakers",
+        "RCA input harness and output connectors",
+        "Supply current budget and protection",
+        "Freight and Qingyuan arrival"
+      ],
+      "purchase_ready": false
+    },
+    {
+      "SKU": "FIT0502",
+      "url": "https://www.dfrobot.com.cn/goods-1311.html",
+      "listed_CNY_each": 15,
+      "visible_stock": "该商品暂时缺货",
+      "quantity_for_stereo": 2,
+      "unit_pack": "One 8ohm3W speaker, 42cm wire, PH2.0; not a stereo pair",
+      "decision": "Excluded from ready-to-buy inventory; indexed search/category listings do not override actual product page",
+      "purchase_ready": false
+    },
+    {
+      "SKU": "3525BOX-4Ω3W-2P1.25",
+      "manufacturer": "XHX/深圳兴华鑫",
+      "seller": "云汉在库",
+      "url": "https://www.ickey.cn/detail/1003001026298286/3525BOX-4%CE%A93W-2P1.25.html",
+      "listed_CNY_each_tax_included": 2.4444,
+      "visible_stock_current": 4,
+      "search_cached_stock_rejected": 32,
+      "MOQ": 1,
+      "seller_delivery_label": "内地1工作日; this is not an arrival promise for Qingyuan",
+      "datasheet_url": "https://www.ickey.cn/static-pf/datasheet/a8/40/1b0f/a8401b0f63cf2bf88701443cee89a10b.pdf",
+      "local_datasheet": "XHX-3525BOX-4ohm3W-datasheet.pdf",
+      "datasheet_supplier_model": "XHXDZ-3525BOX-1.25-L160, 2025-06-18 RevA",
+      "rated_impedance_ohm": 4,
+      "rated_power_W": 3,
+      "resonance_Hz": 1500,
+      "resonance_tolerance_percent": 20,
+      "specified_frequency_range": "F0 to20kHz at -10dB; listing 0MHz is erroneous and rejected",
+      "decision": "Not selected as the sole musical playback speaker: manufacturer response does not cover the instrument low-frequency range. Low price does not prove functional suitability.",
+      "purchase_ready": false
+    },
+    {
+      "SKU": "CQRLB4O3W-B",
+      "url": "https://cqrobot.com/product/CQRLB4O3W-B",
+      "manufacturer": "CQRobot",
+      "listed_USD_each": 3.99,
+      "visible_stock": "In Stock, global store",
+      "interface": "4ohm3W-Dupont2.54 option, 40cm leads; exact selected option and domestic delivery not frozen",
+      "rated_power_W": 2,
+      "maximum_power_W": 3,
+      "resonance_Hz": 500,
+      "specified_frequency_range": "F0 to15kHz",
+      "decision": "Not frozen: insufficient low-frequency and domestic landed price/delivery proof",
+      "purchase_ready": false
+    },
+    {
+      "model": "Edifier R12U stereo active speaker pair",
+      "manufacturer_url": "https://www.edifier.com/uk/p/computer-speakers/r12u",
+      "verified_technical_scope": "USB powered, analogue 3.5mm AUX input, rotary volume, two channels",
+      "manufacturer_frequency_response_Hz": [
+        180,
+        20000
+      ],
+      "frequency_response_tolerance_dB": 6,
+      "input_sensitivity_mVrms": 700,
+      "input_sensitivity_tolerance_mV": 50,
+      "manufacturer_RMS_power_W_each": 2,
+      "power_measurement_condition": "THD+N10%, 1kHz; not clean continuous full-scale sound guarantee",
+      "domestic_exact_seller_price_stock_freight_delivery": "NOT_VERIFIED",
+      "connection_proposal": "DAC dualRCA lineOUT to one stereo3.5mm input, using twoRCA male to3.5mm female cable if the speaker has a captive male input; exact cable SKU and speaker supplied input lead need confirmation. USB from specified regulated5V supply, no PC audio/data dependency.",
+      "quality_scope": "180Hz lower rated frequency does not prove coverage of every intended fundamental; retain stereo AUX/headphone path and verify musical range before final selection",
+      "decision": "Assembly-simplification candidate only, not a quoted purchase item",
+      "purchase_ready": false
+    }
+  ],
+  "DFRobot_shipping_policy": {
+    "url": "https://www.dfrobot.com.cn/article-75.html",
+    "visible_read_method": "Normal in-app browser",
+    "ordinary_free_shipping_threshold_CNY": 99,
+    "below_threshold": "Actual checkout freight, not yet known",
+    "stock_dispatch_rule": "Working day paid before15:00 same day, after15:00 next working day; Fridays/holidays deferred",
+    "warehouses": [
+      "Chengdu",
+      "Shanghai, system assigned"
+    ],
+    "ordinary_transit_reference_days": [
+      3,
+      5
+    ],
+    "SF_transit_reference_days": 3,
+    "Qingyuan_arrival_guaranteed": false
+  },
+  "budget": {
+    "all_in_hard_limit_CNY": 700,
+    "DAC_only_known_subtotal_CNY": 55,
+    "DAC_plus_DFR0119_O_known_subtotal_CNY": 63.5,
+    "subtotals_exclude_speakers_harness_power_freight_other_subsystems": true,
+    "whole_system_total_closed": false
+  },
+  "no_purchase_payment_or_message": true,
+  "physical_tests": "UNMEASURED",
+  "scope_correction": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-AUX-scope-current.json",
+  "mandatory_for_AUX": false
+}

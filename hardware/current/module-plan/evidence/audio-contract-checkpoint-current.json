@@ -1,0 +1,265 @@
+{
+  "at": "2026-10-27T07:50:21.122093+08:00",
+  "event": {
+    "at": "2026-10-27T07:50:21.122093+08:00",
+    "state": "AUDIO_PIN_AND_SUBFUNCTION_CONTRACT_SAVED_NOT_PURCHASE_RELEASE",
+    "SKU": "010313400000",
+    "listed_CNY": 55,
+    "contract": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-pin-coverage-current.json",
+    "readable_wiring": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-010313400000-wiring-current.md",
+    "original_audio_items": 17,
+    "schematic_subfunctions_confirmed": 11,
+    "pending_original_references": [
+      "R41",
+      "R42",
+      "C27",
+      "C28",
+      "J12",
+      "R72"
+    ],
+    "all227functions_retained": true,
+    "fully_accepted_module_coverage": 0,
+    "DAC_7bit_address": "0x4D",
+    "TPA_7bit_address": "0x60",
+    "firmware_finding": "F07: registered producer clock1.6875MHz/52.734375kHz,16bit duplicatedslots; full PCM PLL/format/TPA initialization and independent stereo product acceptance pending",
+    "playback_sourcing": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\audio-playback-sourcing-current.json",
+    "excluded": [
+      "FIT0502 actual out of stock",
+      "3525BOX low-cost speaker F0=1.5kHz, not selected as sole music playback"
+    ],
+    "candidate_only": [
+      "DFR0119-O 8.50CNY in stock, still needs compatible speakers/level/harness",
+      "R12U complete stereo analogue-input candidate, domestic quote/delivery pending"
+    ],
+    "native_file_hashes_verified": 40,
+    "native_files_changed_this_turn": false,
+    "RTL_build_flash_changed": false,
+    "messages_orders_payments": false,
+    "whole_plan_ready": false,
+    "physical_tests": "UNMEASURED"
+  },
+  "native_file_checks": [
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\eprj3-intro.md",
+      "expected": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+      "actual": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\FPGA-Music-U9ControlWork-20261023.eprj3",
+      "expected": "a69c794ac5b1fa00c7e9f1342b83ce70c8bbde0e46922dad5ef86f1639f5e416",
+      "actual": "a69c794ac5b1fa00c7e9f1342b83ce70c8bbde0e46922dad5ef86f1639f5e416"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\panel\\Panel1.epan2",
+      "expected": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+      "actual": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\pcb\\PCB1.epcb2",
+      "expected": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+      "actual": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\01_Nano_headers.esch2",
+      "expected": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+      "actual": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\02_Shift_and_memory.esch2",
+      "expected": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+      "actual": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\03_Display_harnesses.esch2",
+      "expected": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+      "actual": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\04_PCM5122_AUX.esch2",
+      "expected": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+      "actual": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\05_Power.esch2",
+      "expected": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+      "actual": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\06_Controls.esch2",
+      "expected": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+      "actual": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\07_Scan_lane_0.esch2",
+      "expected": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+      "actual": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\08_Scan_lane_1.esch2",
+      "expected": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+      "actual": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\09_Scan_lane_2.esch2",
+      "expected": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+      "actual": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\10_Scan_lane_3.esch2",
+      "expected": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+      "actual": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\11_Scan_lane_4.esch2",
+      "expected": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+      "actual": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\12_Scan_lane_5.esch2",
+      "expected": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+      "actual": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\13_Power_off_isolation.esch2",
+      "expected": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+      "actual": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\14_Protected_power_entry.esch2",
+      "expected": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+      "actual": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Schematic1\\Schematic1.ecfg",
+      "expected": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+      "actual": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\eprj3-intro.md",
+      "expected": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b",
+      "actual": "aa51d38bb0c3cc0fe8270da65b63f16a3ee905c601212724ddbd289d5e06529b"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\FPGA-Music-Dualscreen-Addr3Work-20261022.eprj3",
+      "expected": "b4f73e7755876c6d2b7f1878945f043f18f2bf07d37caa42ca52d25a93bb37bf",
+      "actual": "b4f73e7755876c6d2b7f1878945f043f18f2bf07d37caa42ca52d25a93bb37bf"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\panel\\Panel1.epan2",
+      "expected": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3",
+      "actual": "4800524aedc50c36d94627fff84458e0b385cbc43cd0fe4ffd3177c3efdf1fc3"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\pcb\\PCB1.epcb2",
+      "expected": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e",
+      "actual": "aaa62f2192f0779e8e69e94432d5eb0daee9dab01339829d435f060e789c6c7e"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\01_Nano_headers.esch2",
+      "expected": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2",
+      "actual": "f9bfa47f2a86e84e4ab0f8025e94e95a283e484eadfc07e09f16172173ab8ab2"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\02_Shift_and_memory.esch2",
+      "expected": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0",
+      "actual": "8c47e17a3b9338aeee97d76533a98a47c05ccd3a323f4c690b7f396bcd0786f0"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\03_Display_harnesses.esch2",
+      "expected": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368",
+      "actual": "ac117b60155b59a86df5e38595aa540c6164ac05701d05ad456594aa826b8368"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\04_PCM5122_AUX.esch2",
+      "expected": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18",
+      "actual": "776361b8ae4b09b42ec406b911b2c98f401d671e23e3d314b0b4d3ba352c0b18"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\05_Power.esch2",
+      "expected": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663",
+      "actual": "5dd6a079d39e59c10f2c4d9c1fbd5a19a7bae9d16c9168b7857c646acff64663"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\06_Controls.esch2",
+      "expected": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da",
+      "actual": "13b9bef06fd6338fab9a2a6a5610c9147e99a826eaffee3e464b8c220e9901da"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\07_Scan_lane_0.esch2",
+      "expected": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18",
+      "actual": "90464f2d907b62356cc99fa4db65560e2fb877be28145fd132f4d845e22ddf18"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\08_Scan_lane_1.esch2",
+      "expected": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0",
+      "actual": "218262b94fd7a53b607c8fd85674f96beb6529ee939938aff1f368caa1ae7be0"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\09_Scan_lane_2.esch2",
+      "expected": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392",
+      "actual": "9b4fa0ba2bab8b34b4358867d617c0e7ff4b20350862979df6d2dda68afd2392"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\10_Scan_lane_3.esch2",
+      "expected": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8",
+      "actual": "3fac1e6944c7769d710dd2bb56a1e9bd778753d38b76fc79e4886a813ace21c8"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\11_Scan_lane_4.esch2",
+      "expected": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c",
+      "actual": "86d575bbcf9ce9ce4574a0548058b15c38ba85b6f41fb71f0d16248d11faed4c"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\12_Scan_lane_5.esch2",
+      "expected": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778",
+      "actual": "52f9ae96888c2b0101fd160f52f96bdcdd58974b4e5b89f65487a54824deb778"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\13_Power_off_isolation.esch2",
+      "expected": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e",
+      "actual": "8baeaf8b6cb1cdb4966a87f2b6e783a08f518b0f74b507b99094580d1a2e354e"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\14_Protected_power_entry.esch2",
+      "expected": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d",
+      "actual": "3e441e7f5828afdf4c091efd4f07bf54a27e1b4a83144f2107fcf803857cdd5d"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-Dualscreen-Addr3Work-20261022\\sch\\Schematic1\\Schematic1.ecfg",
+      "expected": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c",
+      "actual": "fc2632359eb97afb5721eb2859cba80218978a30ba23795c4fd5e8e4e20dc40c"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\sch\\Sensor14Bank_Schematic\\Sensor14_frontend.esch2",
+      "expected": "fec91f7a7098abe13298a28805ab9f2d04cf80913bb2b9854dc76c0bfaa66760",
+      "actual": "fec91f7a7098abe13298a28805ab9f2d04cf80913bb2b9854dc76c0bfaa66760"
+    },
+    {
+      "file": "C:\\Users\\Sakuya\\Documents\\LCEDA-Pro\\projects\\FPGA-Music-U9ControlWork-20261023\\pcb\\PCB2.epcb2",
+      "expected": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3",
+      "actual": "83b238dfec46b08fd8f0825804fd37d57b1d44181c30f0f27e93c53e7ddcbab3"
+    }
+  ],
+  "registered_audio_source_checks": [
+    {
+      "file": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship_owned.v",
+      "sha256": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+      "expected": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531"
+    },
+    {
+      "file": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_top_owned.v",
+      "sha256": "f462384fd64aa42e236234241149ecbc6beeaaa447307a184ff985696fd692fd",
+      "expected": "f462384fd64aa42e236234241149ecbc6beeaaa447307a184ff985696fd692fd"
+    },
+    {
+      "file": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\audio_clk_en.v",
+      "sha256": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c",
+      "expected": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c"
+    },
+    {
+      "file": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\i2s_tx.v",
+      "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+      "expected": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a"
+    }
+  ]
+}

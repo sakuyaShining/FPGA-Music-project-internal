@@ -1,0 +1,322 @@
+{
+  "observed_at": "2026-10-26T22:09:54.593712+08:00",
+  "scope": "仅检查登记producer路径engine/src及constraints；未修改、构建或烧录；不声称看到未登记或远程未取得源",
+  "inputs": {
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship_owned.v": {
+      "sha256": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+      "mtime": "2026-10-23T08:20:55.357077+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_owned_probe.v": {
+      "sha256": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+      "mtime": "2026-10-22T10:19:21.436274+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_sensor_probe.v": {
+      "sha256": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+      "mtime": "2026-10-22T10:19:21.438273+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_mux_scan.v": {
+      "sha256": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+      "mtime": "2026-10-22T10:19:21.502847+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\scan_shift595.v": {
+      "sha256": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+      "mtime": "2026-10-22T10:19:21.521397+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_delta_store.v": {
+      "sha256": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320",
+      "mtime": "2026-10-22T10:19:21.501847+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_strip_positions.v": {
+      "sha256": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+      "mtime": "2026-10-22T10:19:21.503847+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_panel_driver.v": {
+      "sha256": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+      "mtime": "2026-10-22T10:19:21.469276+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_spi_byte.v": {
+      "sha256": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+      "mtime": "2026-10-22T10:19:21.472277+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_renderer.v": {
+      "sha256": "e45ae5bb2bafe8275f995d48a15842c8647ce6fec3e2233b993e972610db67d8",
+      "mtime": "2026-10-22T21:03:24.791606+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\i2c_master.v": {
+      "sha256": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999",
+      "mtime": "2026-10-22T10:19:21.427269+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\constraints\\tdm_ship_owned.cst": {
+      "sha256": "b2e997a09a8b3f1d7ac9762fd955b56ca8bc9216b977b1f5d26780d5169690c4",
+      "mtime": "2026-10-23T08:21:11.771215+08:00"
+    },
+    "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\build_prod_v5\\board.gprj": {
+      "sha256": "f0e9ddb223185c59896ccccc31bb71c7b7e39f5e169b6120ccf38f8ffe40a363",
+      "mtime": "2026-10-23T08:44:53.583718+08:00"
+    }
+  },
+  "observations": [
+    "tdm_ship_owned端口仍为16直连pad和音频/UART等；未包含完整84MUX/J10物理接口",
+    "rc_mux_scan确实存在，6x16扫描，经instrument_sensor_probe等内部probe使用；不是声称未写扫描逻辑",
+    "instrument_owned_probe首行明确为内部逻辑接口，非物理GPIO或shipping top",
+    "音频CST实际dac_bck=56,dac_din=54,dac_ws=55，与官方J5.7/J5.8/J5.11相符",
+    "整机SPI显示、触控、存储、84节点功能和具体码流未在本轮实物签收"
+  ],
+  "all_product_firmware_ready": false,
+  "not_a_global_absence_proof": true,
+  "RTL_changed": false,
+  "physical_tests": "UNMEASURED",
+  "hardware_contract_source": {
+    "path": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\u8-power-corridor-20261022\\address3-local-recovery\\retained-control-recovery\\u9-layout\\address1-joint-fanout\\ADDR2-whole-native-capture-normalized.json",
+    "sha256": "6d48871b39f27408bd80f3a693b2a51e1895eb87111b01d152ec758c609b42da",
+    "U8_nets": [
+      {
+        "pin": 1,
+        "net": "ADDR1"
+      },
+      {
+        "pin": 2,
+        "net": "ADDR2"
+      },
+      {
+        "pin": 3,
+        "net": "ADDR3"
+      },
+      {
+        "pin": 4,
+        "net": "MUX_DISABLE"
+      },
+      {
+        "pin": 5,
+        "net": "RC_DRIVE"
+      },
+      {
+        "pin": 6,
+        "net": "LCD_RESET_N"
+      },
+      {
+        "pin": 7,
+        "net": "TP_RESET_N"
+      },
+      {
+        "pin": 8,
+        "net": "GND"
+      },
+      {
+        "pin": 9,
+        "net": ""
+      },
+      {
+        "pin": 10,
+        "net": "3V3_IO"
+      },
+      {
+        "pin": 11,
+        "net": "BUS_SCK"
+      },
+      {
+        "pin": 12,
+        "net": "SCAN_LATCH"
+      },
+      {
+        "pin": 13,
+        "net": "GND"
+      },
+      {
+        "pin": 14,
+        "net": "BUS_MOSI"
+      },
+      {
+        "pin": 15,
+        "net": "ADDR0"
+      },
+      {
+        "pin": 16,
+        "net": "3V3_IO"
+      }
+    ]
+  },
+  "concrete_integration_findings": [
+    {
+      "id": "F01",
+      "title": "595复位两位被扫描清零",
+      "severity": "BLOCKING",
+      "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_mux_scan.v",
+      "source_lines": [
+        {
+          "line": 36,
+          "text": "wire [7:0] word_data={2'b00,(state==CHARGE),(state==DISABLE||state==ADDRESS),word_address};"
+        }
+      ],
+      "fact": "扫描字高两位恒0，完整8位由scan_shift595每次锁存。原U8脚6/7为LCD_RESET_N/TP_RESET_N，直接接原电路会持续置低。ER屏LCD复位可能不接，不代表触摸复位也可忽略。",
+      "required_resolution_and_acceptance": "统一完整8位影子字及两路复位状态；各扫描地址/显示共享SPI期间不得误改复位位，仅明确复位窗口拉低。",
+      "static_enumeration": {
+        "words": 64,
+        "all_bits6_7_zero": true,
+        "scope": "组合表达式枚举，非RTL仿真/硬件测量"
+      },
+      "writer_lines": [
+        {
+          "line": 29,
+          "text": "WAIT:if(bus_grant)begin bit_index<=7;mosi<=data_q[7];timer<=0;state<=LOW;end"
+        },
+        {
+          "line": 36,
+          "text": "LATCH:if(timer==HALF_PERIOD-1)begin timer<=0;latch<=1;word_latched<=1;state<=FINISH;end else timer<=timer+1'b1;"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "title": "显示候选协议与RA8875不同",
+      "severity": "BLOCKING",
+      "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_panel_driver.v",
+      "source_lines": [
+        {
+          "line": 7,
+          "text": "parameter integer PANEL_WIDTH=320, PANEL_HEIGHT=240,"
+        },
+        {
+          "line": 15,
+          "text": "input wire [8:0] x0, y0, x1, y1,"
+        },
+        {
+          "line": 62,
+          "text": "0: begin tx_data=8'h2A; tx_dc=0; end"
+        },
+        {
+          "line": 67,
+          "text": "5: begin tx_data=8'h2B; tx_dc=0; end"
+        },
+        {
+          "line": 72,
+          "text": "10: begin tx_data=8'h2C; tx_dc=0; end"
+        }
+      ],
+      "fact": "显示候选默认320x240、9位坐标、独立DC信号且每字节释放CS。所选RA8875四线SPI有控制前缀；800x480不是只改参数即可用。",
+      "required_resolution_and_acceptance": "匹配确切模块的RA8875传输、读忙/状态、PLL/屏时序/背光初始化及800x480坐标；满屏刷新与扫描共同运行验收。",
+      "manufacturer_protocol": {
+        "pdf": "RA8875-DS-V19-manufacturer-Adafruit-mirror.pdf",
+        "sha256": "07b1ee24cc1303179ee26377fc7ea3d3571da049f6cef09f3edfd360fc8651ea",
+        "pages": [
+          63,
+          64,
+          65
+        ],
+        "revision": "RAiO V1.9 2014-10-16，协议对照，非最新模块初始化表",
+        "url": "https://cdn-shop.adafruit.com/datasheets/RA8875_DS_V19_Eng.pdf"
+      }
+    },
+    {
+      "id": "F03",
+      "title": "FT5316物理触摸输入尚未接合签收",
+      "severity": "BLOCKING",
+      "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_owned_probe.v",
+      "source_lines": [
+        {
+          "line": 27,
+          "text": "input wire touch_valid,"
+        },
+        {
+          "line": 29,
+          "text": "input wire [4:0] touch_active,"
+        },
+        {
+          "line": 30,
+          "text": "input wire [49:0] touch_x,touch_y,"
+        },
+        {
+          "line": 31,
+          "text": "input wire [19:0] touch_id,"
+        },
+        {
+          "line": 51,
+          "text": ".frame_error(frame_error),.link_error(link_error),.sensor_error(sensor_error),.watchdog_error(watchdog_error),.bound_contacts(bound_contacts),.blocked_contacts(blocked_contacts),.clk(clk),.rst_n(rst_n),.uart_rx_pin(uart_rx_pin),.uart_tx_pin(uart_tx_pin),.ev_valid(ev_valid),.ev_on(ev_on),.ev_note(ev_note),.ev_vel(ev_vel),.preset(preset),.finger_valid(finger_valid),.finger_cmd(finger_cmd),.finger_id(finger_id),.finger_group(finger_group),.finger_position(finger_position),.pad(pad),.touch_valid(touch_valid),.touch_ready(touch_ready),.touch_active(touch_active),.touch_x(touch_x),.touch_y(touch_y),.touch_id(touch_id),.radius(radius),.slew_step(slew_step),.part_to_control(part_to_control),.restore_valid(restore_valid),.voice_mask(voice_mask),.fader_y(fader_y),.gains(gains),.touch_done(touch_done),.gain_done(gain_done),.control_error(control_error),.led(led),.dac_din(dac_din),.dac_ws(dac_ws),.dac_bck(dac_bck),.pa_en(pa_en),.voice_valid(voice_valid),.voice_on(voice_on),.voice_group(voice_group),.voice_note(voice_note),.pcm_valid(pcm_valid),.pcm(pcm));"
+        }
+      ],
+      "fact": "内部probe接收已解析坐标和触点ID，不等于FT5316物理I2C驱动已接入；本次登记engine/src未检出通用i2c_master在产品中被实例化。",
+      "required_resolution_and_acceptance": "核FT5316具体寄存器/触点格式、连贯读帧、复位中断、ID/释放/故障处理并接右手逻辑。"
+    },
+    {
+      "id": "F04",
+      "title": "EEPROM需两字节存储地址",
+      "severity": "BLOCKING",
+      "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\i2c_master.v",
+      "source_lines": [
+        {
+          "line": 32,
+          "text": "input  wire [7:0]  reg_a,"
+        },
+        {
+          "line": 216,
+          "text": "Q_ADDR: begin"
+        },
+        {
+          "line": 217,
+          "text": "if (rd_q) begin"
+        }
+      ],
+      "fact": "通用master在读事务的一个reg_a字节后就重复起始；不能称已支持24LC256完整随机读/页写。",
+      "required_resolution_and_acceptance": "两字节地址、64字节页拆分、ACK轮询/超时、保存格式和断电回读；32KiB不能冒充任意时长PCM存储。"
+    },
+    {
+      "id": "F05",
+      "title": "84电极映射及尺度校准需落实",
+      "severity": "OPEN_MAPPING",
+      "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_sensor_probe.v",
+      "source_lines": [
+        {
+          "line": 4,
+          "text": "parameter integer LANES=6,STRIPS=26,CW=12,"
+        },
+        {
+          "line": 21,
+          "text": "function [STRIPS*21-1:0] example_map;"
+        },
+        {
+          "line": 24,
+          "text": "begin for(n=0;n<STRIPS*3;n=n+1)example_map[n*7+:7]=n;end"
+        },
+        {
+          "line": 26,
+          "text": "localparam [STRIPS*21-1:0] MAP=example_map(0);"
+        }
+      ],
+      "fact": "6x16=96原始节点扫描已存在；26条三电极示例映射0..77。原84外接节点是地址0..13每组6路，14/15地址共12个参考节点。delta_store仅逐节点基线扣除，不等于10pF/100pF双点尺度校准已落实。",
+      "required_resolution_and_acceptance": "按最新物理用途逐一绑定84电极、连接器、row*6+lane、逻辑位置；补参考通道尺度/异常政策，不以示例减少电极。",
+      "baseline_source_lines": [
+        {
+          "line": 51,
+          "text": "memory[index]<=cal_mode?{raw,{CW{1'b0}}}:{base,((raw>base)?raw-base:{CW{1'b0}})};"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "title": "整机物理包装及共享总线尚未签收",
+      "severity": "BLOCKING",
+      "source": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship_owned.v",
+      "source_lines": [
+        {
+          "line": 39,
+          "text": "parameter integer FINGER_EXPR = 0,"
+        },
+        {
+          "line": 40,
+          "text": "parameter integer RIGHT_TIMBRE = 0,"
+        },
+        {
+          "line": 41,
+          "text": "parameter integer LEGACY_PAD = 1,"
+        },
+        {
+          "line": 58,
+          "text": "inout  wire [15:0] pad"
+        }
+      ],
+      "fact": "登记shipping顶层仍是16直连pad/音频/UART，扫描是内部probe接口；原CST的LED引脚与新总线使用15/16/17/19有重叠，不能简单追加第二组IO_LOC。",
+      "required_resolution_and_acceptance": "提交硬件一致的整机物理顶层/唯一引脚分配、有界SPI仲裁、时序合格构建及码流身份；验满屏/触摸/扫描/存储共同运行最坏延迟。"
+    }
+  ],
+  "build_or_flash_performed": false
+}

@@ -1,0 +1,290 @@
+{
+  "plan": [
+    {
+      "ref": "D3",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E08",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "was_NC": true,
+      "pin_id": "7486a9890538a8e4-e60",
+      "pin_xy": [
+        2790,
+        640
+      ]
+    },
+    {
+      "ref": "D3",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E09",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "was_NC": true,
+      "pin_id": "7486a9890538a8e4-e56",
+      "pin_xy": [
+        2790,
+        620
+      ]
+    },
+    {
+      "ref": "D3",
+      "pin": "7",
+      "old": "",
+      "proposed": "L0_E10",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "was_NC": true,
+      "pin_id": "7486a9890538a8e4-e52",
+      "pin_xy": [
+        2790,
+        580
+      ]
+    },
+    {
+      "ref": "D3",
+      "pin": "6",
+      "old": "",
+      "proposed": "L0_E11",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "was_NC": true,
+      "pin_id": "7486a9890538a8e4-e48",
+      "pin_xy": [
+        2790,
+        560
+      ]
+    },
+    {
+      "ref": "D4",
+      "pin": "10",
+      "old": "",
+      "proposed": "L0_E12",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "was_NC": true,
+      "pin_id": "8e893e8923136280-e60",
+      "pin_xy": [
+        2790,
+        340
+      ]
+    },
+    {
+      "ref": "D4",
+      "pin": "9",
+      "old": "",
+      "proposed": "L0_E13",
+      "reason": "TI optional straight-through NC landing; requires external copper bridge",
+      "was_NC": true,
+      "pin_id": "8e893e8923136280-e56",
+      "pin_xy": [
+        2790,
+        320
+      ]
+    },
+    {
+      "ref": "R11",
+      "pin": "1",
+      "old": "L0_E08",
+      "proposed": "L0_E13",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "was_NC": false,
+      "pin_id": "120bcce5c2dc5b61-e7",
+      "pin_xy": [
+        1630,
+        1050
+      ],
+      "wire_id": "048c92e1a7497a21",
+      "wire_old_net": "",
+      "port_id": "8c8e70026c6b6302"
+    },
+    {
+      "ref": "R12",
+      "pin": "1",
+      "old": "L0_E09",
+      "proposed": "L0_E12",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "was_NC": false,
+      "pin_id": "0fdfc9eacfd94c9f-e7",
+      "pin_xy": [
+        1630,
+        900
+      ],
+      "wire_id": "140da0a04728a5a6",
+      "wire_old_net": "",
+      "port_id": "a2a60e486e96a0f7"
+    },
+    {
+      "ref": "R13",
+      "pin": "1",
+      "old": "L0_E10",
+      "proposed": "L0_E11",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "was_NC": false,
+      "pin_id": "e5a6182f2a36db7f-e7",
+      "pin_xy": [
+        1630,
+        750
+      ],
+      "wire_id": "7db9a0caff1f3e95",
+      "wire_old_net": "",
+      "port_id": "31bb84ae2f2da6a3"
+    },
+    {
+      "ref": "R14",
+      "pin": "1",
+      "old": "L0_E11",
+      "proposed": "L0_E10",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "was_NC": false,
+      "pin_id": "5b31be07fcd53923-e7",
+      "pin_xy": [
+        1630,
+        600
+      ],
+      "wire_id": "9164f0d434d0930f",
+      "wire_old_net": "",
+      "port_id": "05c940ae6da2c833"
+    },
+    {
+      "ref": "R15",
+      "pin": "1",
+      "old": "L0_E12",
+      "proposed": "L0_E09",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "was_NC": false,
+      "pin_id": "2daa0ce0e7b7e6e1-e7",
+      "pin_xy": [
+        1630,
+        450
+      ],
+      "wire_id": "2354fca4547e85a2",
+      "wire_old_net": "",
+      "port_id": "51f8030f8afb1a4b"
+    },
+    {
+      "ref": "R16",
+      "pin": "1",
+      "old": "L0_E13",
+      "proposed": "L0_E08",
+      "reason": "Right6 input-side reversal for ordered north/perimeter bus; compensate physical harness. Internal M08..13 retained.",
+      "was_NC": false,
+      "pin_id": "44768616282c207d-e7",
+      "pin_xy": [
+        1630,
+        300
+      ],
+      "wire_id": "04bc1d616d01fca0",
+      "wire_old_net": "",
+      "port_id": "39108acc8f27554f"
+    },
+    {
+      "ref": "J2",
+      "pin": "3",
+      "old": "ADDR0",
+      "proposed": "RC_DRIVE",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "was_NC": false,
+      "pin_id": "f55155af2871d564-e13",
+      "pin_xy": [
+        2180,
+        405
+      ],
+      "wire_id": "9c6e318d5408383b",
+      "wire_old_net": "",
+      "port_id": "8325f1cabeb00795"
+    },
+    {
+      "ref": "J2",
+      "pin": "5",
+      "old": "ADDR1",
+      "proposed": "SENSE_OUT",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "was_NC": false,
+      "pin_id": "f55155af2871d564-e21",
+      "pin_xy": [
+        2180,
+        385
+      ],
+      "wire_id": "3d0d7a2d054c70b4",
+      "wire_old_net": "",
+      "port_id": "52b2c94ac5d56e8d"
+    },
+    {
+      "ref": "J2",
+      "pin": "7",
+      "old": "ADDR2",
+      "proposed": "ADDR0",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "was_NC": false,
+      "pin_id": "f55155af2871d564-e29",
+      "pin_xy": [
+        2180,
+        365
+      ],
+      "wire_id": "a404cf6cab228626",
+      "wire_old_net": "",
+      "port_id": "65be7e7a4d9e37b7"
+    },
+    {
+      "ref": "J2",
+      "pin": "9",
+      "old": "ADDR3",
+      "proposed": "MUX_DISABLE",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "was_NC": false,
+      "pin_id": "f55155af2871d564-e37",
+      "pin_xy": [
+        2180,
+        345
+      ],
+      "wire_id": "feda8bd108ffdba7",
+      "wire_old_net": "",
+      "port_id": "24c4432fce56af69"
+    },
+    {
+      "ref": "J2",
+      "pin": "11",
+      "old": "MUX_DISABLE",
+      "proposed": "ADDR1",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "was_NC": false,
+      "pin_id": "f55155af2871d564-e45",
+      "pin_xy": [
+        2180,
+        325
+      ],
+      "wire_id": "36e15ccc4e6da9be",
+      "wire_old_net": "",
+      "port_id": "76f7f7cbbb1080ec"
+    },
+    {
+      "ref": "J2",
+      "pin": "13",
+      "old": "RC_DRIVE",
+      "proposed": "ADDR2",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "was_NC": false,
+      "pin_id": "f55155af2871d564-e53",
+      "pin_xy": [
+        2180,
+        305
+      ],
+      "wire_id": "1b2f9765db27cb22",
+      "wire_old_net": "",
+      "port_id": "f610286bdb737ede"
+    },
+    {
+      "ref": "J2",
+      "pin": "15",
+      "old": "SENSE_OUT",
+      "proposed": "ADDR3",
+      "reason": "Explicit odd-pin control order for fourlayer candidate; all evenGround/pin1power unchanged. Harness must be revised.",
+      "was_NC": false,
+      "pin_id": "f55155af2871d564-e61",
+      "pin_xy": [
+        2180,
+        285
+      ],
+      "wire_id": "549aee25db69eb74",
+      "wire_old_net": "",
+      "port_id": "3ace1b4ea976dcda"
+    }
+  ]
+}

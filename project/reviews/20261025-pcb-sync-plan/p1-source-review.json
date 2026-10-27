@@ -1,0 +1,84 @@
+{
+  "reviewed_at": "2026-10-25T09:46:24.599525+00:00",
+  "scope": "Read-only source analysis for P1 experimental design; no route search or geometry change executed",
+  "source_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+  "source_expected_sha256": "1406a243bd5a69c60ce294a4b5e4a1904ec9384ef382fa32378588ce81dc4a8e",
+  "complete_archive_sha256": "677167e4e76e2ba750bf937a01487beffba1443219469207b5757d1fb18da8bf",
+  "script_bytes_match_recovery_archive": true,
+  "sources": [
+    {
+      "archive_member": "MUX_DISABLE-IOtail-guide-input-preparation.py",
+      "sha256": "50ce29e1f01a02d4568a58177d101fa61688aa290727a1e9d5a5ba0b1d8fb5b8",
+      "lines": [
+        {
+          "line": 31,
+          "text": " board=box(0,0,140,100);regions={l:unary_union([unary_union(guide[l]).buffer(1.5),unary_union(mux[l]).buffer(1.25)]).intersection(board) for l in guide};viaRegion=unary_union(list(regions.values()));groundRegion=viaRegion.buffer(1.5).intersection(board);near=groundRegion.buffer(.75).intersection(board);local=viaRegion.envelope;ctx=rd(cx);refs={int(l):shapely.from_wkb(bytes.fromhex(h)).intersection(near) for l,h in ctx['predicted'].items()};reference_additions=[shapely.from_wkb(bytes.fromhex(x['actual_copper_wkb'])) for x in ctx['reference_additions']];patch=ctx['antipad_template_wkb'];origin=ctx['antipad_template_origin'];del ctx;gc.collect();foreign={1:[],16:[]};protect={1:[],16:[]};contacts={1:[],16:[]};quiet=[];allforeign=[];allnonground=[];allprotect=[];allcontacts=[];pads=[];vias=[];ground=[];masks={};refmap={1:15,15:1,16:2,2:16};checked=0;empty=0"
+        },
+        {
+          "line": 75,
+          "text": " cache=dict(source_expected_sha256=sha(cp),source_plan_sha256=sha(pl),source_context_sha256=sha(cx),native_guide_capture_sha256=sha(W/'ADDR2-whole-native-capture-normalized.json'),native_ADDR2_unchanged=True,guide_primitive_records=guide_records,guide_corridor_widths_mm=dict(ADDR2_Cu_halo=1.5,MUX_whole_island_interface_halo=1.25,return_extension=1.5),route_regions={str(l):q.wkb_hex for l,q in regions.items()},via_region=viaRegion.wkb_hex,ground_region=groundRegion.wkb_hex,forbidden_new_hole_reference_additions=[q.wkb_hex for q in reference_additions],local_bounds=list(local.bounds),near_bounds=list(near.bounds),refs={str(l):q.wkb_hex for l,q in refs.items()},foreign={str(l):[q.wkb_hex for q in rs] for l,rs in foreign.items()},protect={str(l):[q.wkb_hex for q in rs] for l,rs in protect.items()},contacts={str(l):[q.wkb_hex for q in rs] for l,rs in contacts.items()},quiet=[q.wkb_hex for q in quiet],allforeign=[q.wkb_hex for q in allforeign],allnonground=[q.wkb_hex for q in allnonground],allprotect=[q.wkb_hex for q in allprotect],allcontacts=[q.wkb_hex for q in allcontacts],pads=[q.wkb_hex for q in pads],vias=vias,qualified_ground=ground,masks={n:q.wkb_hex for n,q in masks.items()},antipad_template_wkb=patch,antipad_template_origin=origin,unresolved=[],cache_verified=True,native_imported=False)"
+        }
+      ]
+    },
+    {
+      "archive_member": "MUX_DISABLE-IOtail-physical-port-paired.py",
+      "sha256": "6ae06814dc5047f4e8389b073c05d09c3ec6f23f887ec0920368da83e7ed7475",
+      "lines": [
+        {
+          "line": 20,
+          "text": " routeRegions={int(l):shapely.from_wkb(bytes.fromhex(h)) for l,h in cache['route_regions'].items()};viaRegion=shapely.from_wkb(bytes.fromhex(cache['via_region']));groundRegion=shapely.from_wkb(bytes.fromhex(cache['ground_region']));nativeGuideSwitchBound=len(cache['guide_primitive_records']['vias'])+2;local=box(*cache['local_bounds']);near=box(*cache['near_bounds']);refs={int(l):shapely.from_wkb(bytes.fromhex(h)) for l,h in cache['refs'].items()};foreign={int(l):decode(xs) for l,xs in cache['foreign'].items()};protect={int(l):decode(xs) for l,xs in cache['protect'].items()};contacts={int(l):decode(xs) for l,xs in cache['contacts'].items()};quiet=decode(cache['quiet']);refmap={1:15,15:1,16:2,2:16};masks={n:shapely.from_wkb(bytes.fromhex(h)) for n,h in cache['masks'].items()};patch=shapely.from_wkb(bytes.fromhex(cache['antipad_template_wkb']));origin=cache['antipad_template_origin']"
+        },
+        {
+          "line": 37,
+          "text": " phys={l:routeRegions[l].difference(unary_union(foreign[l]).buffer(.2562)).difference(unary_union(protect[l]+contacts[l]).buffer(.2562)) for l in [1,16]};phys[16]=phys[16].difference(unary_union(quiet));free={l:phys[l].intersection(refs[refmap[l]].union(oldmask('MUX_DISABLE')).buffer(-.0762)) for l in phys};nodes={};bylayer={1:[],16:[]};sp={};tp={};sc={l:member_copper(sg,l) for l in phys};tc={l:member_copper(tg,l) for l in phys}"
+        },
+        {
+          "line": 44,
+          "text": " pads_u=unary_union(pads);drills=unary_union([q.buffer(v['hole']*.0127+.1524+.35,quad_segs=64) for v,q in vias]);saved=unary_union(allprotect+allcontacts);quiet_u=unary_union(quiet);sv=local.difference(unary_union(allforeign).buffer(.4848)).difference(pads_u.buffer(.4024)).difference(drills).difference(quiet_u.buffer(.3048)).difference(saved.buffer(.66296)).intersection(viaRegion);gd=local.difference(unary_union(allnonground).buffer(.4848)).difference(pads_u.buffer(.4024)).difference(drills).difference(quiet_u.buffer(.3048)).intersection(refs[15].intersection(refs[2]).buffer(-.15)).difference(saved.buffer(.1524)).intersection(groundRegion).difference(forbiddenHoleAdditions.buffer(.4698));return_cover=gd.buffer(1.48).union(unary_union([Point(g['xy']).buffer(1.48).difference(Point(g['xy']).buffer(.9)) for g in ground]));st.update(phase='strict_local_fields_built',nodes=len(nodes),source_components=list(sp),target_components=list(tp),component_diagnostics={k:dict(layer=v[0],area_mm2=v[1].area,bounds_mm=list(v[1].bounds)) for k,v in nodes.items()},signal_center_area_mm2=sv.area,new_ground_center_area_mm2=gd.area);wr(P,st)"
+        },
+        {
+          "line": 108,
+          "text": "  parent=unary_union([p for p in physical_parts[l] if p.intersection(q).area>1e-8]);grown[k]=q.buffer(.9238).intersection(parent.buffer(.2286))"
+        },
+        {
+          "line": 112,
+          "text": "  if k not in domains:domains[k]=grown[a].intersection(grown[b]).intersection(sv).intersection(return_cover)"
+        },
+        {
+          "line": 132,
+          "text": "  if len(ss['signals'])>=nativeGuideSwitchBound:continue"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    "Guide preparation builds separate layer route_regions from ADDR2 1.5mm and MUX 1.25mm halos, with via/ground regions derived from the union.",
+    "The physical-port solver starts phys from each routeRegions[layer], then subtracts actual foreign/protected/contact copper. Its phys field already includes a heuristic layer boundary.",
+    "Signal/ground via domains have additional viaRegion/groundRegion and local-domain clipping. A diagnostic must distinguish those from actual copper, reference and return constraints.",
+    "The graph also limits signal transitions using nativeGuideSwitchBound; a failed bounded search is not a general physical impossibility proof.",
+    "The observed 5 macro expansions and 2 admitted assignments did not reach a complete route or full audit."
+  ],
+  "controlled_comparison": {
+    "baseline": "Existing per-layer guide regions",
+    "alternative": "Same fixed joint projection of native ADDR2/MUX corridor on both layers; do not expand the old physical search window",
+    "keep_constant": [
+      "actual foreign and protected copper",
+      "line widths and spacings",
+      "actual layer reference and same-net real-hole masks",
+      "old contacts and ground anchor connectivity",
+      "signal/ground annular and drill clearances",
+      "physical return and reference-pair gates"
+    ],
+    "measure": [
+      "source/target connected physical and referenced components",
+      "which guide boundary removes otherwise admissible geometry",
+      "all real blockers and their exact object identity",
+      "whether any complete connection is actually constructed and globally audited"
+    ],
+    "acceptance": "Topology difference alone authorizes only a guide-operator fix experiment; it does not prove an importable route"
+  },
+  "native_modified": false,
+  "route_search_executed": false,
+  "new_feasibility_result": false,
+  "manufacturing_release": false
+}

@@ -1,0 +1,171 @@
+{
+  "status": "CURRENT_PRELIMINARY_14_INTERNAL_ANALOG_NETS_CLOSED_21_SIGNAL_NETS_OPEN",
+  "time": "2026-10-27T07:20:44.463149+08:00",
+  "pcb_uuid": "f52674d6627fca6f",
+  "units": "mm, degrees",
+  "board_mm": [
+    55,
+    45
+  ],
+  "copper_layers": [
+    1,
+    2
+  ],
+  "layer_intent": "Top components and signals; actual Bottom one connected GND plane. No signal layer changes made; all36vias are Ground. Fullboard acceptance pending.",
+  "positions": {
+    "J1": [
+      5,
+      22.5,
+      270
+    ],
+    "J2": [
+      50,
+      22.5,
+      270
+    ],
+    "U1": [
+      27.5,
+      22.5,
+      270
+    ],
+    "U2": [
+      27.5,
+      33,
+      0
+    ],
+    "R1": [
+      23.5,
+      28.1,
+      0
+    ],
+    "R2": [
+      26.2,
+      27.9,
+      0
+    ],
+    "C1": [
+      31.6,
+      27.4,
+      0
+    ],
+    "C2": [
+      22.2,
+      35.6,
+      180
+    ],
+    "C3": [
+      33,
+      21.525,
+      0
+    ],
+    "C4": [
+      33,
+      19.3,
+      0
+    ],
+    "D1": [
+      7.8,
+      37.74,
+      270
+    ],
+    "D2": [
+      7.8,
+      27.58,
+      270
+    ],
+    "D3": [
+      7.8,
+      17.42,
+      270
+    ],
+    "D4": [
+      7.8,
+      9.8,
+      270
+    ],
+    "R3": [
+      20,
+      18.8,
+      0
+    ],
+    "R4": [
+      20,
+      20.0,
+      0
+    ],
+    "R5": [
+      20,
+      21.2,
+      0
+    ],
+    "R6": [
+      20,
+      22.4,
+      0
+    ],
+    "R7": [
+      20,
+      23.6,
+      0
+    ],
+    "R8": [
+      20,
+      24.8,
+      0
+    ],
+    "R9": [
+      20,
+      26.0,
+      0
+    ],
+    "R10": [
+      20,
+      27.200000000000003,
+      0
+    ],
+    "R11": [
+      35.5,
+      27.2,
+      180
+    ],
+    "R12": [
+      35.5,
+      26.0,
+      180
+    ],
+    "R13": [
+      35.5,
+      24.8,
+      180
+    ],
+    "R14": [
+      35.5,
+      23.6,
+      180
+    ],
+    "R15": [
+      38,
+      22.4,
+      180
+    ],
+    "R16": [
+      35.5,
+      21.2,
+      180
+    ]
+  },
+  "mechanical_basis": "Actual1x16 2.54mm pitch headers have38.1mm center span;45mm board axis gives end margin. Separate daughterboard no user-fixed outline or manually fixed connector position existed. Candidate remains changeable.",
+  "assembly": "All26SMT onTop;2TH headers. Six copies required; factory assembly/TH and all-in cost still unquoted.",
+  "board_not_final_or_for_order": true,
+  "next": "Continue same Sensor14Bank PCB2 SHA83b238df,91TopCu/36Groundvias,14internal analog nets closed;21nets56items remain. Before electrode routing, resolve whole14net endpoint order/ESD/connector channel arrangement: current left8 monotone y-order has28inversion pairs, not globalimpossibility. Keep current43newanalog tracks referenced; C3 Groundvia05deb90db32fb69b moved33.7/20.45mm and oneGroundline intentionally revised. No replay any left8/right4/right2 apply or terminalTop35 job. Still need14electrode+7controlnets, fullsource-reference/DC/minneck/assembly, actual6board preweld quote/delivery and all modules/firmware/budget<=700. No complex original mainPCB solver.",
+  "native_outline_id": "58022707be9889b7",
+  "initial_error_and_fix": "Initial straight-line outline API failed after all28moves. Actual28positions were queried, only missing outline created as closed nativePolyline; R2 overlap corrected at26.2/27.9. No batch placement replay.",
+  "intentional_Ground_escape_change": {
+    "via": "05deb90db32fb69b",
+    "center_mm": [
+      33.7,
+      20.45
+    ],
+    "connected_line": "8a4f214bf2967f5f"
+  }
+}

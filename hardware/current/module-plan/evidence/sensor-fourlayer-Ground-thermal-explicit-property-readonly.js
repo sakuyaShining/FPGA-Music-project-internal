@@ -1,0 +1,1 @@
+const p=await eda.pcb_PrimitivePad.get("ef580e108521dcd9e39");const h=p.getState_HeatWelding();return {pad:p,heat:h,keys:h?Object.keys(h):null,knownProperties:h?{connectionMethod:h.connectionMethod,divergenceAngle:h.divergenceAngle,divergenceLineWidth:h.divergenceLineWidth,divergenceSpacing:h.divergenceSpacing}:null};

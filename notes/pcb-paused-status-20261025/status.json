@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "observed_at": "2026-10-25T14:44:10.040107+08:00",
+  "scope": "PCB and final hardware owner status only; not RTL/host refresh, complete engineering export, product acceptance or manufacturing release",
+  "work_status": "PAUSED_BY_USER",
+  "automation": {
+    "id": "pcb",
+    "status": "PAUSED",
+    "resume_requires_explicit_user": true
+  },
+  "remote": {
+    "repository": "sakuyaShining/FPGA-Music-project-internal",
+    "visibility": "public",
+    "branch": "codex/pcb-paused-status-20261025",
+    "base_remote_main": "100b35bd93cbde6d604a289d990f208622e94646",
+    "main_merged": false
+  },
+  "native": {
+    "project_label": "FPGA-Music-U9ControlWork-20261023",
+    "pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+    "components": 227,
+    "vias": 649,
+    "unconnected_items": 42,
+    "open_nets": [
+      "BUS_SCK",
+      "PRESET1",
+      "PRESET2",
+      "EDIT",
+      "ENC_A",
+      "ENC_B",
+      "ENC_PUSH",
+      "INPUT_LOAD_N",
+      "ADDR1",
+      "MUX_DISABLE",
+      "ADDR0",
+      "KEY_QH"
+    ],
+    "last_saved_native_DRC": {
+      "Connection Error": 42
+    },
+    "spacing_physical_netlist_errors": 0,
+    "ADDR2_pad_islands": 1,
+    "MUX_DISABLE_pad_islands": 7,
+    "MUX_DISABLE_native_tracks": 0,
+    "MUX_DISABLE_native_vias": 0,
+    "native38_file_hashes_rechecked": true,
+    "live_CAD_session_available": false
+  },
+  "accepted_offline": {
+    "stage": "MUX_DISABLE-IOtail-cleanup",
+    "declared_new_lines": 62,
+    "declared_new_vias": 24,
+    "signal_vias": 15,
+    "ground_vias": 9,
+    "MUX_DISABLE_pad_islands": [
+      [
+        "U1"
+      ],
+      [
+        "U8"
+      ],
+      [
+        "U2",
+        "U3"
+      ],
+      [
+        "U4",
+        "U5",
+        "U6"
+      ]
+    ],
+    "latest_stage_new_copper": 0,
+    "latest_stage_removed_IO_tail_lines": [
+      "6873aa8e0462204b",
+      "5ace46b533d824be"
+    ],
+    "latest_stage_removed_length_mm": 7.502592275,
+    "true_stage_scope": "Complete noPAD IO-tail deletion; exact object/reference/mask identity and retained full-Cu body proof. Inherits parent independent full-board delta checks. No re-execution of terminal global audit.",
+    "main_trunk_complete": false,
+    "native_importable": false,
+    "required_signal_pairs": {
+      "MUX_DISABLE-current-U2-signal-via": [
+        15,
+        2
+      ],
+      "MUX_DISABLE-current-U4-signal-via": [
+        15,
+        2
+      ],
+      "MUX_DISABLE-current-U6-signal-via": [
+        15,
+        2
+      ],
+      "MUX-joint-U1-signal": [
+        15,
+        2
+      ],
+      "MUX-joint-U3-signal": [
+        15,
+        2
+      ],
+      "MUX-joint-U5-signal": [
+        15,
+        2
+      ],
+      "MUX-U56-joint-signal-0": [
+        15,
+        2
+      ],
+      "MUX-U56-joint-signal-1": [
+        15,
+        2
+      ],
+      "MUX-U23-joint-signal-0": [
+        15,
+        2
+      ],
+      "MUX-U23-joint-signal-1": [
+        15,
+        2
+      ],
+      "MUX-U23-joint-signal-2": [
+        15,
+        2
+      ],
+      "MUX-U8-ADDR3-joint-new-MUX-via": [
+        15,
+        2
+      ],
+      "ADDR3-U8-ground1-release-signal": [
+        15,
+        1
+      ],
+      "MUX-ADDR2annular-saved0-signal-0": [
+        15,
+        2
+      ],
+      "MUX-ADDR2annular-saved0-signal-1": [
+        15,
+        2
+      ],
+      "b809408793358b4b": [
+        1,
+        15,
+        2
+      ]
+    },
+    "latest_port_assignments": 2,
+    "latest_port_assignments_materialized": false,
+    "latest_port_assignments_globally_audited": false
+  },
+  "procurement": {
+    "source_pcb_sha256": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+    "CPL_rows": 227,
+    "SMT": 215,
+    "Top_SMT": 212,
+    "Bottom_SMT": 3,
+    "TH": 12,
+    "unique_part_numbers": 36,
+    "package_sha256": "da2f461ed46b139ba3e06891e5cebb20a617567fe01f8fe42b83d4930aa7e962",
+    "draft_only": true,
+    "current_PCBA_quote": false,
+    "final_hardware_selection_frozen": false
+  },
+  "local_recovery": {
+    "archive_basename": "MUX_DISABLE-IOtail-cleanup-offline-checkpoint-NOT-FOR-FAB.zip",
+    "sha256": "677167e4e76e2ba750bf937a01487beffba1443219469207b5757d1fb18da8bf",
+    "bytes": 515422319,
+    "members": 37,
+    "archive_CRC_and_member_SHA_verified": true,
+    "full_archive_uploaded_in_this_status_sync": false,
+    "local_root": "D:/FPGA-Project/codex-deliverables/dual-screen-review-20261020-v2",
+    "canonical_entry": "PCB-CURRENT-CAPACITY-RECOVERY-20261024.json",
+    "followup_entry": "u8-power-corridor-20261022/address3-local-recovery/retained-control-recovery/u9-layout/address1-joint-fanout/MUX_DISABLE-IOtail-current-next.json"
+  },
+  "physical_tests": "UNMEASURED",
+  "manufacturing_release": false,
+  "orders_or_external_messages_sent": false
+}

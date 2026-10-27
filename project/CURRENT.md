@@ -1,5 +1,7 @@
 # 全项目当前入口
 
+**2026-10-27 统一接续入口**：先读 [CONSOLIDATION-20261027.md](CONSOLIDATION-20261027.md)。当前硬件已汇入951保存源、模块／传感小板／三键候选和恢复检查点；35项限定口径已批准，制造核验及实体整机仍未完成。下文带旧日期的未合并／源版本说明保留历史适用范围。
+
 **当前工程接手**：[ENGINEERING.md](ENGINEERING.md) → [协作检查点](COLLABORATION-CHECKPOINT-20261024.md)。本批展开FPGA、硬件和上位机候选；历史恢复表继续保留，不能代替三个current目录。音乐黄金回归存在已记录差异，硬件仍未连通完整，不代表完整产品验收。
 
 **先从实际远程main读[DESIGN-CURRENT.md](DESIGN-CURRENT.md)、`governance.json`和`decisions.json`；快速取得版本见[QUICKSTART.md](QUICKSTART.md)。稳定决定与有截止时间的施工状态分开；到期或源有新变化须审阅。用户取消J11、保留J10的决定继续有效。**

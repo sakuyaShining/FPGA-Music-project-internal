@@ -1,0 +1,58 @@
+{
+  "snapshot_commit": "592da06fd64d069614ba5cb1647dad168aa4ef02",
+  "source_identity": {
+    "declared_native_and_rollback_files_checked": 38,
+    "declared_offline_hashes_checked": 16,
+    "checkpoint_payload_files": 73,
+    "checkpoint_git_bytes": "PASS",
+    "controlled_committed_file_hashes": 79,
+    "scoped_review_committed_file_hashes": 18
+  },
+  "restore_roundtrip": {
+    "archive_bytes": 515422319,
+    "archive_sha256": "677167e4e76e2ba750bf937a01487beffba1443219469207b5757d1fb18da8bf",
+    "parts": 11,
+    "combined_sha": "PASS",
+    "root_zip_member_count": 37,
+    "root_zip_crc": "PASS",
+    "nested_validation": "Exact original complete ZIP preserved; nested author checks retained, not rerun"
+  },
+  "existing_tools": {
+    "design_governance_unit_tests": {
+      "tests": 17,
+      "status": "PASS"
+    },
+    "engineering_unit_tests": {
+      "tests": 6,
+      "status": "PASS"
+    },
+    "engineering_inputs": {
+      "files": 341,
+      "status": "PASS"
+    }
+  },
+  "governance": {
+    "status": "REVIEW_REQUIRED",
+    "known_errors": [
+      "Design review: REVIEW_DUE",
+      "Published entry: UNPUBLISHED_ENTRY",
+      "fpga: REVIEW_DUE",
+      "fpga: UNREVIEWED_DRIFT",
+      "hardware: REVIEW_DUE",
+      "hardware: UNREVIEWED_DRIFT"
+    ],
+    "controlled_file_identity_mismatches": [],
+    "global_review_timestamp_unchanged": true,
+    "producer_observations_unchanged": true
+  },
+  "P1_review": "p1-source-review.json",
+  "new_CAD_DRC_PnR_or_physical_tests": false,
+  "manufacturing_release": false,
+  "final_full_capture_check": {
+    "status": "PASS",
+    "snapshots": 22,
+    "inputs": 18277,
+    "unique_verified_blobs": 5845,
+    "scope": "Full captured content hashes; no freshness or product acceptance"
+  }
+}
