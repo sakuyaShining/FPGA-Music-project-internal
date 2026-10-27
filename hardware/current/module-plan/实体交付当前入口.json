@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T17:26:55.132383+08:00",
+  "updated_at": "2026-10-27T17:46:29.554057+08:00",
   "deadline": "2026-11-04",
   "deliverable": "实体组装完成并拍完视频",
   "user_confirmed_custom_PCB_not_required": true,
@@ -769,5 +769,57 @@
     "whole700budget_closed": false,
     "reference_scope_approval": false
   },
-  "harness_sourcing_current": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\harness-sourcing-current.json"
+  "harness_sourcing_current": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\harness-sourcing-current.json",
+  "module_readiness_current": {
+    "at": "2026-10-27T17:46:29.554057+08:00",
+    "trigger": "User asks whether onlySAVE/CANCEL interface remains and requests continue",
+    "only_one_remaining_item": false,
+    "all12requirements_retained": true,
+    "current_new_progress": [
+      "Three independent actions electrical/serial contract proposed;65536parallelpatterns checked, noRTL",
+      "Original56+8new=64candidate component allocation generated, excludes newconnectors andpreweldquote",
+      "OwnedNanoTFsocket verified byschematic; noextraFPGA-sideTFreader; cardstillneeded"
+    ],
+    "gates": [
+      {
+        "id": "G1",
+        "item": "84路传感前端",
+        "state": "35项数值已提交，验收口径待用户决定；同源制造、预焊报价、交期未闭合"
+      },
+      {
+        "id": "G2",
+        "item": "控制/编辑/存储/保护",
+        "state": "三独立键串接候选逐针合同与64件电气清单已生成；完整预焊板、布局/CPL、固件读回和产品动作语义未签收"
+      },
+      {
+        "id": "G3",
+        "item": "J10完整屏配置",
+        "state": "等待已约定的完整配置/含运报价/出货日；物理针序未全部冻结"
+      },
+      {
+        "id": "G4",
+        "item": "PCM5122到3.5mmAUX",
+        "state": "准确55元音频板候选保留；初始化、共享模拟路径人口、输出RC保护、准确转接件与供电仍待关闭"
+      },
+      {
+        "id": "G5",
+        "item": "全部采购附件与预算交期",
+        "state": "板载TF卡座已核可省外部FPGA读卡模块；卡SKU未选；电极、线束、结构、供电、代焊运费均须补齐，总价≤700未证"
+      },
+      {
+        "id": "G6",
+        "item": "实体整机与视频",
+        "state": "完整产品物理顶层/驱动/时序及12条实测未签收；没有将旧板测继承为新整机通过"
+      }
+    ],
+    "reference35_approval": false,
+    "complete_purchase_plan": false,
+    "whole700budget_closed": false,
+    "physical_tests": "UNMEASURED",
+    "no_CAD_RTL_orders_or_messages": true,
+    "read_first": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\edit-control-interface-current.md",
+    "storage_read_first": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\Nano-TF-storage-scope-current.md"
+  },
+  "edit_control_interface_current": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\edit-control-interface-current.json",
+  "Nano_TF_storage_scope_current": "D:\\FPGA-Project\\codex-deliverables\\dual-screen-review-20261020-v2\\module-plan-current-evidence\\Nano-TF-storage-scope-current.json"
 }

@@ -1,0 +1,266 @@
+{
+  "at": "2026-10-27T17:47:59.898453+08:00",
+  "status": "CONCRETE_PROPOSAL_NOT_IMPLEMENTED_OR_PURCHASE_RELEASED",
+  "purpose": "Three separate physical APPLY/SAVE/CANCEL controls; no extra physical harmonic8keys, no PCF8575, no new externalFPGA GPIO.",
+  "original_schematic_unchanged": true,
+  "RTL_changed": false,
+  "physical_tests": "UNMEASURED",
+  "hardware_baseline": {
+    "preset_buttons": 4,
+    "EDIT_buttons": 1,
+    "encoder_with_push": 1,
+    "LV165": 1,
+    "LV595": 1,
+    "harmonic_zones_on_J10_touchscreen": 8
+  },
+  "proposal_total": {
+    "physical_buttons": 8,
+    "encoder_with_push": 1,
+    "LV165": 2,
+    "LV595": 1
+  },
+  "proposal_delta_parts": [
+    {
+      "reference": "UX1",
+      "MPN": "SN74LV165ADR",
+      "LCSC": "C273656",
+      "quantity": 1,
+      "assembly": "factorySMT"
+    },
+    {
+      "reference": "SX1,SX2,SX3",
+      "MPN": "TS-1187A-B-A-B",
+      "LCSC": "C318884",
+      "quantity": 3,
+      "assembly": "factorySMT"
+    },
+    {
+      "reference": "RX1,RX2,RX3",
+      "MPN": "RC0603FR-0710KL",
+      "LCSC": "C98220",
+      "quantity": 3,
+      "assembly": "factorySMT"
+    },
+    {
+      "reference": "CX1",
+      "MPN": "CL10B104KB8NNNC",
+      "LCSC": "C1591",
+      "quantity": 1,
+      "assembly": "factorySMT"
+    }
+  ],
+  "delta_part_count": 8,
+  "original_control_part_allocation_count": 56,
+  "new_control_part_allocation_count_before_new_connectors": 64,
+  "external_header_nets": [
+    {
+      "header": "J6",
+      "pin": "6",
+      "net": "BUS_MOSI",
+      "FPGA_pin": 15
+    },
+    {
+      "header": "J6",
+      "pin": "7",
+      "net": "SCAN_LATCH",
+      "FPGA_pin": 16
+    },
+    {
+      "header": "J6",
+      "pin": "8",
+      "net": "BUS_SCK",
+      "FPGA_pin": 27
+    },
+    {
+      "header": "J6",
+      "pin": "9",
+      "net": "BUS_RETURN",
+      "FPGA_pin": 28
+    },
+    {
+      "header": "J6",
+      "pin": "15",
+      "net": "INPUT_LOAD_N",
+      "FPGA_pin": 18
+    },
+    {
+      "header": "J6",
+      "pin": "17",
+      "net": "HARM_CS_N",
+      "FPGA_pin": 20
+    }
+  ],
+  "UX1_pin_nets": {
+    "1": "INPUT_LOAD_N",
+    "2": "BUS_SCK",
+    "3": "3V3_IO",
+    "4": "EDIT_CANCEL_N",
+    "5": "EDIT_SAVE_N",
+    "6": "EDIT_APPLY_N",
+    "7": "NC",
+    "8": "GND",
+    "9": "U9_SER_NEW",
+    "10": "GND",
+    "11": "3V3_IO",
+    "12": "3V3_IO",
+    "13": "3V3_IO",
+    "14": "3V3_IO",
+    "15": "GND",
+    "16": "3V3_IO"
+  },
+  "U9_only_proposed_net_change": "Pin10: remove oldGNDtie, connect UX1.9; proposal only, native unmodified",
+  "wire_first8_H_to_A": [
+    "EDIT",
+    "PRESET3",
+    "PRESET2",
+    "PRESET1",
+    "PRESET0",
+    "ENC_PUSH",
+    "ENC_B",
+    "ENC_A"
+  ],
+  "wire_next8_H_to_A": [
+    "EDIT_APPLY_N",
+    "EDIT_SAVE_N",
+    "EDIT_CANCEL_N",
+    "SPARE_HIGH",
+    "SPARE_HIGH",
+    "SPARE_HIGH",
+    "SPARE_HIGH",
+    "SPARE_HIGH"
+  ],
+  "frame": "MSBfirst16bits: legacy_raw=frame[15:8], actions_raw=frame[7:0]; pressedAPPLY=~bit7,SAVE=~bit6,CANCEL=~bit5",
+  "idle_and_press_vectors": {
+    "idle": "0xFFFF",
+    "apply": "0xFF7F",
+    "save": "0xFFBF",
+    "cancel": "0xFFDF",
+    "all_three": "0xFF1F"
+  },
+  "scope": "Original8-bit firstbyte preserved electrically. Existing8bit reader cannot read new actions; final product16bit read/arbitration driver and physical wrapper remain unaccepted.",
+  "bus_contract": [
+    "Verified U11 truth table: HARM_CS_N high selectsKEY_QH and screen unselected; low selectsRA_MISO.",
+    "Own BUS grant for complete load+16clock transaction; all other SPI owners excluded",
+    "SCAN_LATCH stays low throughout key transfer; no change to595 storage outputs",
+    "Next sensor control write must replace all8bits before latch; preserve LCD_RESET_N/TP_RESET_N shadow states",
+    "Schedule key clock bursts outside RC MEASURE quiet window; old scan module alone does not enforce wholeproduct arbitration",
+    "INPUT_LOAD_N low only at stableclock to capture, high before firstsample; sample initialQH before first risingclock",
+    "Atomic16bit frame, debounce activeLow keys separately; quadrature encoder data retained, not run through button debounce",
+    "At boot discard unspecified powerup state until first complete valid parallel load; no unintended SAVE from stale input"
+  ],
+  "timing": {
+    "design_clock_Hz": 27000000,
+    "proposed_half_period_cycles": 8,
+    "serial_clock_Hz": 1687500,
+    "serial16_payload_us": 9.481481481481481,
+    "added8_payload_us": 4.7407407407407405,
+    "proposed_load_low_cycles": 8,
+    "proposed_load_release_guard_cycles": 8,
+    "payload_and_guards_us": 10.074074074074074,
+    "wholeproduct_latency_verified": false
+  },
+  "action_semantics": "APPLY/SAVE/CANCEL have separate inputs. Preview, saved/working/draft targets and playing-instance behavior still need product contract; no invented musical behavior is approved.",
+  "model_verification": {
+    "all_parallel_pairs": 65536,
+    "original_firstbyte_preserved": true,
+    "raw16_roundtrip": true,
+    "RTL_simulation": false,
+    "board_test": false
+  },
+  "manufacturer_source": "https://www.ti.com/lit/ds/symlink/sn74lv165a.pdf",
+  "lookup_results": "edit-control-parts-lookup-current.json; edit-control-parts-jlcsearch-current.json: both403, no stock/CNY price accepted",
+  "preweld_quote": false,
+  "whole700budget_closed": false,
+  "registered_producer_recheck": [
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\tdm_ship_owned.v",
+      "registered_sha": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+      "current_sha": "3bcee3697007acf42a3cd0de116b29ac158496bbc2e791e4905ee1807a081531",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_owned_probe.v",
+      "registered_sha": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+      "current_sha": "bbb488d620dfe308d1943e06161217f90b27eadd26bb7bc148b0bcafb86b779e",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\instrument_sensor_probe.v",
+      "registered_sha": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+      "current_sha": "d46462e5e05f24b4dc749e265b52b1ec6f24110ed073320b1ce84e653fe067b5",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_mux_scan.v",
+      "registered_sha": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+      "current_sha": "ac11a98551989f715222f0bc08ca19ef5e08fae8bb170632a9cb36becc8ef84b",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\scan_shift595.v",
+      "registered_sha": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+      "current_sha": "2c4b8c499f7768913b773d4ebea5bad57d775074ab030113e4cd5b599a99947f",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_delta_store.v",
+      "registered_sha": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320",
+      "current_sha": "2a963c41f1d59ecad3262fe80ef3609b6025bef7fbfc8fde43e47fe9ea830320",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\rc_strip_positions.v",
+      "registered_sha": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+      "current_sha": "c55b63dc0f62675fc14d64dbd98f1cbf8ee72f7895ebb9d4971909492ef99b5e",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_panel_driver.v",
+      "registered_sha": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+      "current_sha": "b7b93eed3623812f0511e293cb466ae9cdc57988fda8648d764fd2e862b04ab1",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_spi_byte.v",
+      "registered_sha": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+      "current_sha": "91362b921a456d4eaa27ad913777568d75e912cc165e6815c7b4edb15b6ef597",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\mv_renderer.v",
+      "registered_sha": "e45ae5bb2bafe8275f995d48a15842c8647ce6fec3e2233b993e972610db67d8",
+      "current_sha": "e45ae5bb2bafe8275f995d48a15842c8647ce6fec3e2233b993e972610db67d8",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\engine\\src\\i2c_master.v",
+      "registered_sha": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999",
+      "current_sha": "3d186718307c2aa0e46d610c20b81570e0e59251acfd8ad6e5a0d3bbeb442999",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\constraints\\tdm_ship_owned.cst",
+      "registered_sha": "b2e997a09a8b3f1d7ac9762fd955b56ca8bc9216b977b1f5d26780d5169690c4",
+      "current_sha": "b2e997a09a8b3f1d7ac9762fd955b56ca8bc9216b977b1f5d26780d5169690c4",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\FPGA-Project\\codex-builds\\fpga-m1-agent-work\\build_prod_v5\\board.gprj",
+      "registered_sha": "f0e9ddb223185c59896ccccc31bb71c7b7e39f5e169b6120ccf38f8ffe40a363",
+      "current_sha": "f0e9ddb223185c59896ccccc31bb71c7b7e39f5e169b6120ccf38f8ffe40a363",
+      "unchanged": true
+    }
+  ],
+  "hard35_reference_scope_approval": false,
+  "return_selector_proof": {
+    "source": "https://assets.nexperia.com/documents/data-sheet/74LVC1G157.pdf",
+    "version": "Rev12,2023-08-15,page3",
+    "pin1": "I1=KEY_QH",
+    "pin3": "I0=RA_MISO",
+    "pin6": "S=HARM_CS_N",
+    "pin4": "Y=BUS_RETURN",
+    "truth": "S=1 selectsI1/KEY_QH;S=0 selectsI0/RA_MISO",
+    "originalU11mapping": "control-power-current-plan.json"
+  },
+  "SIPO_latch_source": "https://www.ti.com/lit/ds/symlink/sn74lv595a.pdf"
+}

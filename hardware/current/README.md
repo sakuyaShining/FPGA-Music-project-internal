@@ -56,3 +56,8 @@ Read module-plan/evidence/sensor35-numeric-review-current.md and purchase-assemb
 ## Control purchase scope correction
 
 Previous13buttons/two165 claim withdrawn:8harmonic zones belong onJ10 touch screen. Existing schematic5buttons+push encoder, oneLV165 with serialinput grounded. R06independent edit operations contract remains pending; no GPIO/RTL change or product acceptance. Read control-baseline-scope-review-current.md and corrected purchase-assembly-user-review-current.md. New exact cable SKU evidence remains pending connector/length/current/freight validation.
+
+
+## Independent edit action proposal and actual remaining gates
+
+Read module-plan/evidence/module-readiness-current.md first: six remaining delivery gate groups, not onlySAVE/CANCEL. Three separate physical APPLY/SAVE/CANCEL candidate inputs use one additional LV165 in the same existing serial bus;8new components, no extra externalFPGA GPIO, original8-bit encoding preserved after normalization.65536offlineparallelstates checked; noRTL/CAD/board acceptance. Original56+8=64candidate component allocation excludes newconnectors andmanufacturingpreweld costs. Nano3921 page5 proves ownedTFsocket, pullups/decoupling; no separate FPGA-sideTFreader module. Card SKU and actual PCM recordplay still open; FIT0570/FIT0394 discontinued.35reference-scope decision andfull<=700preweld/freight budget remain pending.
