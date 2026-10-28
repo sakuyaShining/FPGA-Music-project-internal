@@ -1,0 +1,37 @@
+{
+  "at_utc": "2026-10-28T12:32:30.334625+00:00",
+  "status": "LIMITED_SCHEMATIC_PCB_CONNECTIVITY_AND_PLACEMENT_READBACK_PASS",
+  "schematic_components": 88,
+  "physical_pins": 444,
+  "explicit_NC": 32,
+  "PCB_components": 88,
+  "PCB_pad_bindings_match_schematic": true,
+  "new_FPGA_GPIO_allocated": false,
+  "Nano_pitch_mm": 2.54,
+  "Nano_row_spacing_mm": 20.32,
+  "component_placements_match_candidate": true,
+  "native_schematic_DRC": {
+    "fatal": 0,
+    "error": 0,
+    "warning": 0,
+    "UI_timestamp": "2026-10-28 20:07:01"
+  },
+  "native_standardization": {
+    "matched_groups": 30,
+    "pending_groups": 0
+  },
+  "PCB_native_DRC": {
+    "issues": 412,
+    "connectivity_issues": 412,
+    "classification": "FAIL_UNROUTED_PLACEMENT_ONLY"
+  },
+  "PCB_tracks": 0,
+  "PCB_vias": 0,
+  "PCB_sha256": "185fc4976a3e3531609e040ef668e25df389492fa75efee8b07296b042bebb73",
+  "stackup": "Native default2layer;4layer implementation and return-path review pending",
+  "full_product_acceptance": false,
+  "manufacturing_release": false,
+  "firmware": "PCM5122 startup7scenarios+serial alignment8patterns; not top integrated",
+  "current_procurement": "Control88-LAYOUT-plus-six-sensors-RFQ.csv;37SKU256netparts; excludes external screen/power/TF/wires/electrodes/jack",
+  "prior_36SKU_table": "SUPERSEDED_BY_37SKU_AFTER_RC_FILTER_REPAIR"
+}
