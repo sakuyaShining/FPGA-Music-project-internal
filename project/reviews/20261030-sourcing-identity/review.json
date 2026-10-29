@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T21:27:00.696758+00:00",
+  "previous_review": "project/reviews/20261030-electrode-full84-source/review.json",
+  "previous_review_sha256": "42abd61cd35b59dbc8efe8c86a193f4ef505161915d25950dca9ff0ae61e1bc6",
+  "raw_observation": "project/reviews/20261030-sourcing-identity/observation.json",
+  "raw_observation_sha256": "8a10b47e54fead690d4733d104650cb55dec24bebd7bbff801ac76f9daca225d",
+  "producer_ids": [
+    "fpga",
+    "hardware",
+    "fpga-v1-intake",
+    "hardware-native-handoff",
+    "hardware-module-plan",
+    "hardware-delivery",
+    "control88-q4-continuation",
+    "electrode-panel",
+    "sensor14-s2",
+    "electrode-full84-450",
+    "hardware-sourcing-closure"
+  ],
+  "producer_changes": {
+    "fpga": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "fpga-v1-intake": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-native-handoff": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-module-plan": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-delivery": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "control88-q4-continuation": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "electrode-panel": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "sensor14-s2": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "electrode-full84-450": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-sourcing-closure": {
+      "added": [
+        "CAP-CATALOG-SNAPSHOT.json",
+        "CONTROL88-CAP-13-READBACK.csv",
+        "CONTROL88-IDENTITY-AUDIT.json",
+        "CONTROL88-J10-POWER-READBACK.json",
+        "MANIFEST.json",
+        "MANUFACTURER-NOMINAL-COMPARISON.json",
+        "PORTABLE-VERIFICATION.json",
+        "README.md",
+        "SCREEN-PRIMARY-FACTS.md",
+        "SOURCE-RECEIPTS.json",
+        "audit_control88_identity.py"
+      ],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "evidence": {
+    "project/reviews/20261030-sourcing-identity/assessment.json": "8fc13e1a3f7b41e68a7e5d0438d09b90807df334578faba879add4f97514e100"
+  },
+  "assessment": [
+    "All ten prior active watched producers observed unchanged",
+    "Original published R2 ZIP and every original manifest member checked; PCB733e1d9c and frozen BOM/schematics unchanged",
+    "88 BOM/PCB/SCH_PAGE resolved instance MPN and LCSC identities match;13 capacitors explicitly override embedded C1591 defaults withC14663 in schematic and PCB attrs",
+    "All13 cap footprints identical across schematic/PCB; stale manufacturer Datasheet links documented without rewriting frozen files",
+    "Independent restored portable script regenerated identical CSV/JSON from published archive",
+    "YAGEO/Samsung primary nominal specs compared; current anonymous LCSC catalog snapshots separately scoped from China retail/JLCPCB reserved stock",
+    "Screen official indexed catalog facts separated from blocked PDF visual check, actual factory wiring/physical envelope and full price acceptance",
+    "C14663 global catalog stock snapshot0 does not prove JLCPCB factory stock0; actual assembly availability and quote remain open",
+    "No part substituted, frozen source edited, supplier messaged, order paid or manufacturing released",
+    "Full84 native client still offline; strict reopen DRC and actual Gerber/CAM checks pending",
+    "Screen exact configuration quote, PSU SKU, prewired harness/cover/shell fit and700CNY full budget remain open"
+  ],
+  "manufacturing_release": false,
+  "product_acceptance": false
+}

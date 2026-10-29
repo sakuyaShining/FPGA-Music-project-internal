@@ -1,0 +1,22 @@
+# 采购核查补充：C88电容身份澄清及待报价项
+
+2026-10-30。**冻结C88 R2的88个BOM料号，与PCB和原理图的实际实例属性全部一致。此前“13个电容BOM用C14663、原理图仍指定C1591”的提示，不能作为已确认的实际料号冲突。** 此次是只读核查，没有修改冻结CAD、BOM、Gerber或历史审计。
+
+直接读取仓库已发布的`hardware/delivery-baselines/20261029-r2-s1/control88-frozen-r2-20261029.zip`，校验其全部原manifest成员，并读取实际PCB和十张原理图。原理图SCH_PAGE实例ATTR、PCB的COMPONENT.attrs覆盖嵌入DEVICE库默认值；13个实例、PCB实际属性和BOM都为YAGEO CC0603KRX7R9BB104 / C14663。嵌入库原默认值、DeviceName和Datasheet链接仍保留Samsung CL10B104KB8NNNC / C1591，属于残留元数据，不能压过实例属性。详见CONTROL88-CAP-13-READBACK.csv与CONTROL88-IDENTITY-AUDIT.json，PCB源SHA733e1d9c…保持不变。
+
+对13位号C8/C9/C10/C11/C22/C23/C24/C25/C33/C34/C35/C36/CX1，各自的原理图/PCB封装UUID也一致。此次不需要为这个“实例料号冲突”重画板或再次决定已经存在的实例属性；下单仍以冻结BOM明确料号和厂家实际备料/报价为准。残留数据表链接的正确来源在下表，不静默重写封存文件。
+
+|物料|冻结BOM用途|厂家资料|
+|---|---|---|
+|C14663，YAGEO CC0603KRX7R9BB104|13个实际已选电容|[YAGEO官方规格](https://www.yageogroup.com/download/specsheet/CC0603KRX7R9BB104)|
+|C1591，Samsung CL10B104KB8NNNC|嵌入库默认值；可询价的替代候选，本次未换料|[三星官方型号页](https://product.samsungsem.com/cn/mlcc/CL10B104KB8NNN.do)|
+
+两家官方资料确认均为100nF、±10%、50V、X7R、0603/1608，L/W/T为1.6/0.8/0.8mm，名义尺寸公差0.1mm，温度范围-55～125℃。这是名义参数一致，不宣称高频/直流偏压曲线完全相同。
+
+**库存仍须厂家确认**：本次匿名LCSC国际目录快照的C14663 stockNumber=0，C1591=384000。这不是立创国内零售或嘉立创SMT库存，也没有为本项目保留库存；不能据此认定工厂一定无C14663，更不能自动改料。厂家若报C14663无法备料，可要求在报价中明确列C1591候选、13位号、差价及交期，确认后再形成独立BOM偏离记录。CATALOG中的USD阶梯价不用于人民币700元整机预算，未知CNY含运报价仍为空。
+
+其他交付状态保持：[完整84路面板](../electrode-fullpanel-450-20261030/README.md)已有布线源但原生客户端离线，未完成DRC重开/真正Gerber核验，不可下单；[Sensor S2](../sensor14-s2-20261030/README.md)工程修正已核验，可与C88分别交厂家审单。屏幕、电源、预制线束、覆盖及外壳完整配置和含运实价仍未全部闭合，未签收700元总预算。
+
+本目录另给SCREEN-PRIMARY-FACTS.md，将官方已查到的规格与仍需厂家确认的订单配置分开。没有向厂家发消息、下单付款、制造放行或main合并。
+
+独立复跑：复制本目录到临时位置后运行`python audit_control88_identity.py /path/to/repository`；只读打开仓库冻结ZIP，不依赖作者D盘施工源。输出会重写复制目录中的CSV/JSON。该核查只证明料号身份对应，不能替代PCB电气/制造、备料或实物验收。

@@ -6,9 +6,9 @@
   },
   "decision_ledger": "project/decisions.json",
   "producer_registry": "project/producers.json",
-  "review_record": "project/reviews/20261030-electrode-full84-source/review.json",
-  "review_sha256": "42abd61cd35b59dbc8efe8c86a193f4ef505161915d25950dca9ff0ae61e1bc6",
-  "reviewed_at": "2026-10-29T21:04:38.367287+00:00",
+  "review_record": "project/reviews/20261030-sourcing-identity/review.json",
+  "review_sha256": "3200fa02c445a03c576b582eec203647645bcf48afa688a195258fb8fd89b62b",
+  "reviewed_at": "2026-10-29T21:27:00.696758+00:00",
   "review_max_hours": 168,
   "required_scope_facts": [
     "platform",
@@ -32,11 +32,11 @@
   ],
   "source_visibility": "GitHub cannot inspect local roots; seven-day producer observations expire. No perpetual freshness inferred.",
   "controlled_files": {
-    ".gitattributes": "0fd4983d961a8ddca2048f38ac07d300cfbd0909e11762738d56be182d022b30",
+    ".gitattributes": "abae39e29cdde569f28379084633fdd020204087db155f21ad4c8191c5386c97",
     ".github/workflows/project-entry.yml": "d65a3546504b4f0d62511f35171d0c29d15cc8ab0a8de3fd2a413a3cb06f6290",
-    "AGENTS.md": "9271b55c96735469ea47496256caefb2452c5974aba54cb8fb6c20dd0e093286",
+    "AGENTS.md": "0326257e1fb95115fec86be83bc3b12f9911de58f82c8443640d4803e796d093",
     "README.md": "61a1f0f3d205eb67a23c0d025181d77b5d996e202423d3af26c7d595af8158a6",
-    "docs/00-协作/AGENT-BOARD.md": "b9f3457dd2be2831a64b8befaa0d44652e588ff9cbf1899b41fb359114b2fdef",
+    "docs/00-协作/AGENT-BOARD.md": "27d6f0a5182eafc07970a486c67eee05e5b05215614209b0c0f6e94e5973680f",
     "experiments/note_resource_20261024/README.md": "e5d366171c5315d354991274f1d6d1f243359d0ebb494928ee86474736ff94f9",
     "experiments/note_resource_20261024/audio/ENGINE-SOURCE.json": "766a310d634f427ddb64b847b47e93636060be20ca8709d9b9258665e61722df",
     "experiments/note_resource_20261024/audio/README.md": "1cfdb2414e6cf945fede5c197b5ec055de91927126e924c215c7b1c02980bcfb",
@@ -123,7 +123,7 @@
     "project/decisions.json": "bbc085a8cf212e1fdda05782d41bbe8ea3ec314f51179d7fe3b7dee2579e26e5",
     "project/design-state.json": "778cca8d646c332c96a03751871881d95a21206e484fa35d89b5bd54d3a07296",
     "project/handoff.json": "a1ec746bc8997463bb466dff392b2a15ed2b9461791b13cb0d766957d8d1a0a7",
-    "project/producers.json": "0e5c27be2c85e8657c163d53a505402e1d7822ad7423ff92dccd6dd79624188e",
+    "project/producers.json": "f1e6bcee54e03ee9cabf2fb3b0160f7814d4836606242d03e7861f1c1dad79ae",
     "project/reviews/20261023-display-clarification/evidence/DECISIONS-20261023.md": "b3ae41af9deb074b0124f301779849e8ff75fbba886bc0bbd4853e8e59066554",
     "project/reviews/20261023-display-clarification/evidence/current-user-confirmation.json": "e21161fe8152fc07a9ccb533250167fa1d4335ee2d680e54f9fa0627dc277565",
     "project/reviews/20261023-display-clarification/evidence/hardware/AUTONOMOUS-CURRENT.md": "7823d8b0887987668b8cfff974a1b53c050fc8ffc81adc484fcafde3834230f0",
@@ -931,7 +931,8 @@
     "hardware/team-handoff-20261030/MANIFEST.json": "a9d3ff0f1cd022b9c5ea3426c7aee2f56746afbff145eb7a94727eb4fbb146ec",
     "hardware/electrode-panel-20261029/MANIFEST.json": "7ce5498a0d9c9567af3caa1ac75cd367472614b805c548fcea36d5476f968db7",
     "hardware/sensor14-s2-20261030/MANIFEST.json": "58571c704095dd80946a1fda72a4214ceab118a80043e2d969fbb60b19212378",
-    "hardware/electrode-fullpanel-450-20261030/MANIFEST.json": "0466d727b557c93f647c029bf07d3de9b4a1e4b60bc5d992366ec9265f7002af"
+    "hardware/electrode-fullpanel-450-20261030/MANIFEST.json": "0466d727b557c93f647c029bf07d3de9b4a1e4b60bc5d992366ec9265f7002af",
+    "hardware/sourcing-closure-20261030/MANIFEST.json": "89c0605f02304330fdf3939d117c8fc2feec61bccb003e3accf7dc0c4400762a"
   },
   "repository_identity": {
     "id": 1404161021,
