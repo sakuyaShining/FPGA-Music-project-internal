@@ -1,0 +1,220 @@
+{
+  "schema": 1,
+  "status": "PARAMETRIC_ASSEMBLY_CANDIDATE_NOT_MACHINING_RELEASE",
+  "outer_mm": [
+    450,
+    190,
+    60
+  ],
+  "coordinate_datum": "bottom-left outer box in top view; z from bottom outer surface",
+  "left_panel_rect_mm": [
+    9,
+    17,
+    245,
+    173
+  ],
+  "left_panel_thickness_mm": 1.6,
+  "left_panel_top_z_mm": 57,
+  "overlay_top_z_mm": 57.3,
+  "mount_centers_global_mm": [
+    [
+      13,
+      21
+    ],
+    [
+      13,
+      89
+    ],
+    [
+      13,
+      169
+    ],
+    [
+      241,
+      21
+    ],
+    [
+      241,
+      89
+    ],
+    [
+      241,
+      169
+    ]
+  ],
+  "sensors": [
+    {
+      "bank": 0,
+      "center_global_mm": [
+        45,
+        48.5
+      ],
+      "rotation_deg": 90,
+      "outline_global_mm": [
+        22.5,
+        21.0,
+        67.5,
+        76.0
+      ],
+      "board_top_z_candidate_mm": 14,
+      "J1_global_mm": [
+        45,
+        26.0
+      ],
+      "J2_global_mm": [
+        45,
+        71.0
+      ]
+    },
+    {
+      "bank": 1,
+      "center_global_mm": [
+        117,
+        48.5
+      ],
+      "rotation_deg": 90,
+      "outline_global_mm": [
+        94.5,
+        21.0,
+        139.5,
+        76.0
+      ],
+      "board_top_z_candidate_mm": 14,
+      "J1_global_mm": [
+        117,
+        26.0
+      ],
+      "J2_global_mm": [
+        117,
+        71.0
+      ]
+    },
+    {
+      "bank": 2,
+      "center_global_mm": [
+        189,
+        48.5
+      ],
+      "rotation_deg": 90,
+      "outline_global_mm": [
+        166.5,
+        21.0,
+        211.5,
+        76.0
+      ],
+      "board_top_z_candidate_mm": 14,
+      "J1_global_mm": [
+        189,
+        26.0
+      ],
+      "J2_global_mm": [
+        189,
+        71.0
+      ]
+    },
+    {
+      "bank": 3,
+      "center_global_mm": [
+        45,
+        118.5
+      ],
+      "rotation_deg": 90,
+      "outline_global_mm": [
+        22.5,
+        91.0,
+        67.5,
+        146.0
+      ],
+      "board_top_z_candidate_mm": 14,
+      "J1_global_mm": [
+        45,
+        96.0
+      ],
+      "J2_global_mm": [
+        45,
+        141.0
+      ]
+    },
+    {
+      "bank": 4,
+      "center_global_mm": [
+        117,
+        118.5
+      ],
+      "rotation_deg": 90,
+      "outline_global_mm": [
+        94.5,
+        91.0,
+        139.5,
+        146.0
+      ],
+      "board_top_z_candidate_mm": 14,
+      "J1_global_mm": [
+        117,
+        96.0
+      ],
+      "J2_global_mm": [
+        117,
+        141.0
+      ]
+    },
+    {
+      "bank": 5,
+      "center_global_mm": [
+        189,
+        118.5
+      ],
+      "rotation_deg": 90,
+      "outline_global_mm": [
+        166.5,
+        91.0,
+        211.5,
+        146.0
+      ],
+      "board_top_z_candidate_mm": 14,
+      "J1_global_mm": [
+        189,
+        96.0
+      ],
+      "J2_global_mm": [
+        189,
+        141.0
+      ]
+    }
+  ],
+  "screen_reserved_rect_mm": [
+    255,
+    43,
+    435,
+    147
+  ],
+  "screen_rear_including_mated_cables_depth_limit_candidate_mm": 25,
+  "screen_face_z_candidate_mm": 57.3,
+  "control88_rect_candidate_mm": [
+    295,
+    45,
+    395,
+    145
+  ],
+  "control88_top_z_candidate_mm": 7.6,
+  "control88_modules_and_mated_headers_above_board_limit_candidate_mm": 16,
+  "candidate_vertical_gap_control_to_screen_mm": 8.7,
+  "electrode_to_sensor_board_surface_gap_mm": 41.4,
+  "two_mated_connector_height_allowance_each_mm": 16,
+  "remaining_vertical_bend_space_mm": 9.4,
+  "checks_completed": [
+    "six55x45mm sensor outline envelopes do not overlap",
+    "panel and nominal180x104mm screen have10mm XY separation",
+    "all six mounting centers are outside active copper with source audit clearance",
+    "outer450x190 footprint contains all nominal rectangles"
+  ],
+  "unresolved_before_enclosure_machining": [
+    "Actual screen cover dimensions, cutout, fixing holes and assembled rear depth including40pin plug",
+    "Real 1x16 harness mating height, strain relief and100mm bend routing",
+    "Control88 populated module/Nano20K height and connector exit envelope",
+    "Sensor populated underside/component envelope and cradle clamps",
+    "Exact screen/power/audio service apertures from selected parts",
+    "Overlay dielectric thickness, adhesion and real touch/noise calibration"
+  ],
+  "manufacturing_release": false
+}

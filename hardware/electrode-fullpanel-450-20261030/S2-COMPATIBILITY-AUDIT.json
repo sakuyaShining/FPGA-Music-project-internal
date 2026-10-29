@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "status": "PASS_ALL84_CONNECTIONS_AGAINST_ACTUAL_S2_J1",
+  "S2_source_sha256": "9e4b563e570f2247785a764dd4ceba188b41ed8def3ba1511d456148fbd88bee",
+  "mapping_sha256": "6fd2720a8120e628cc518e389a523ecdd15f148d446b51f8df85dbbe7d325d07",
+  "signal_pins_checked": 84,
+  "all_six_banks_same_J1_contract": true,
+  "ground_pins": [
+    15,
+    16
+  ],
+  "C5_banks": [
+    0,
+    1,
+    2
+  ],
+  "C5_channel": 12,
+  "historical_mapping_audit_column": "Original S1 tag retained byte-for-byte; actual S2 pad-net comparison performed separately here.",
+  "manufacturing_release": false
+}

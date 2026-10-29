@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "status": "PASS_FULL84_SOURCE_ELECTRICAL_GEOMETRY",
+  "source_sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+  "headers_bottom": 6,
+  "physical_header_pads": 96,
+  "electrode_polygons": 84,
+  "signal_nets": 84,
+  "local_ground_pair_nets": 6,
+  "all90_nets_connected": true,
+  "unconnected_nets": {},
+  "different_net_clearance_gate_mm": 0.25,
+  "minimum_source_different_net_gap_mm": 0.25594898929431503,
+  "minimum_pair": [
+    "e45000000000026a",
+    "81c4cb751cec4e12"
+  ],
+  "clearance_violations": [],
+  "minimum_copper_to_board_edge_mm": 3.383026,
+  "minimum_copper_to_NPTH_hole_edge_mm": 2.259486000000009,
+  "NPTH_mounting_holes": 6,
+  "minimum_trace_width_mm": 0.1905,
+  "existing_source_min_width_mm": 0.15249906,
+  "source_min_width_pass": true,
+  "additional_top_routes_touching_active_electrodes": [],
+  "mapping_all84_preserved": true,
+  "C5_B0_B1_B2_CH12": true,
+  "native_DRC": "NOT_RUN_ON_ROUTED_SOURCE",
+  "manufacturing_release": false
+}

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "method": "Fresh independent directory restoration; packaged sources/support/reference only; external Python3+Shapely2 runtime",
+  "checks": [
+    {
+      "script": "audit_full_panel.py",
+      "result": "PASS_FULL84_SOURCE_ELECTRICAL_GEOMETRY"
+    },
+    {
+      "script": "verify_assembly_contract.py",
+      "result": "PASS_DECLARED_MAPPING_OVERLAY_AND_NOMINAL_ENVELOPES"
+    },
+    {
+      "script": "compare_native_saved_routing.py",
+      "result": "PASS_NATIVE_API_SAVED_ROUTING_MATCHES_IMPORTED_SESSION"
+    }
+  ],
+  "status": "PASS_DECLARED_PORTABLE_SOURCE_AND_ASSEMBLY_CHECKS",
+  "native_DRC": "PENDING_CLIENT_REOPEN",
+  "actual_CAM": "NOT_EXPORTED",
+  "manufacturing_release": false
+}

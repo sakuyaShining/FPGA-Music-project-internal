@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "status": "PASS_NATIVE_API_SAVED_ROUTING_MATCHES_IMPORTED_SESSION",
+  "native_saved_source_sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+  "imported_source_sha256": "f94e22771bcb791c4aeea826edca5b4f60c156d074c13b462c95c8fc19320e53",
+  "imported_counts": {
+    "VIA": 102,
+    "LINE": 463
+  },
+  "native_counts": {
+    "VIA": 102,
+    "LINE": 457
+  },
+  "native_line_coalescing_note": "Native editor coalesced six redundant/collinear line records. All route and via copper unions match within0.1um. No route missing.",
+  "comparison_tolerance_mm": 0.0001,
+  "maximum_hausdorff_mm": 0,
+  "different_net_clearance_gate_mm": 0.25,
+  "clearance_tolerance_separate": true,
+  "failures": [],
+  "native_DRC": "NOT_RUN_CLIENT_DISCONNECTED",
+  "manufacturing_release": false
+}

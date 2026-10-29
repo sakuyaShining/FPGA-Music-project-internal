@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "status": "FULL84_ROUTED_SOURCE_BACKUP_NOT_FACTORY_REVIEW_RELEASE",
+  "source_sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+  "full_panel_electrodes": 84,
+  "note_positions": 25,
+  "octave_positions": 5,
+  "spare_positions": 4,
+  "six_rear_headers": true,
+  "mapping_preserved": true,
+  "native_API_routing_applied_and_source_saved": true,
+  "native_saved_route_union_matches_router_session": true,
+  "native_saved_route_segments": 457,
+  "native_saved_vias": 102,
+  "native_DRC": "PENDING_CLIENT_DISCONNECTED",
+  "real_Gerber_export": "NOT_CREATED_DO_NOT_ORDER_THIS_PANEL",
+  "actual_CAM_copper_mask_drill_outline_checks": "NOT_RUN",
+  "mechanical": "CANDIDATE_SCREEN_AND_CONNECTOR_FIT_PENDING",
+  "physical_touch_noise_and_cover": "NOT_TESTED",
+  "supplier_DFM_quote": "PENDING",
+  "manufacturing_release": false,
+  "order_payment_authorized": false,
+  "main_merged": false,
+  "client_failure": {
+    "bridge_windows": 0,
+    "lceda_processes": 0,
+    "computer_use_error": "codex app-server exited before returning response 1",
+    "routing_request_result": "HTTP500 timed out after30000ms; independent on-disk source confirmed complete route geometry saved. No native DRC result inferred."
+  },
+  "next_action": "Reopen included native project, verify project/document identity, save close reopen strict DRC, export real Gerber, check copper/net/mask/drill/outline consistency. Then physical connector/screen fit and supplier quote."
+}
