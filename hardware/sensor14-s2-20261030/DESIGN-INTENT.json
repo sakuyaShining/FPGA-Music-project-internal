@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "classification": "intermediate",
+  "triggers": [
+    "High-impedance RC acquisition",
+    "Externally touched electrode harness",
+    "Multilayer return-plane review"
+  ],
+  "scope": "Only correct actual bottom GND to22 nonGND header pad clearance; no music semantics, component, routing, net, mounting or stack redesign",
+  "source_sha256": "9e4b563e570f2247785a764dd4ceba188b41ed8def3ba1511d456148fbd88bee",
+  "retained_clearance_mm": 0.1651,
+  "nominal_keepout_margin_mm": 0.23,
+  "native_region_real_serialization": {
+    "prohibitType": [
+      "COPPER"
+    ],
+    "regionType": "PROHIBIT"
+  },
+  "source_format_document_warning": "Legacy format documentation numeric prohibitType=[7] was accepted as a primitive but native rule readback empty; native API modify(ruleType:[7]) yielded real COPPER restrictions. First failed evidence preserved.",
+  "manufacturing_release": false,
+  "physical_performance": "NOT_TESTED"
+}

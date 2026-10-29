@@ -1,0 +1,1438 @@
+{
+  "schema": 1,
+  "scope": "S2 actual native re-pour and same-source Gerber; evidence does not authorize manufacturing",
+  "source_sha256": "ffbefd843f66e0e7351debb72ae138916ebba2ab62e6b03fd7422c396bf7ab31",
+  "gerber_sha256": "6ad8d2c7a4b709afb09bdec5b617de56986781cb91100a4629a615eafbb7a909",
+  "S1_unchanged": true,
+  "record_changes": {
+    "added": [
+      "('REGION', '0800008a7fa4a1bc')",
+      "('REGION', '09113425c3955fd6')",
+      "('REGION', '19a2153d232baeca')",
+      "('REGION', '1de9b4e1c3a3ec1b')",
+      "('REGION', '20a67ad302078da5')",
+      "('REGION', '2101268688bb0c82')",
+      "('REGION', '24925d038805903e')",
+      "('REGION', '730a25ae6e350e89')",
+      "('REGION', '7b043f2a1ab76c3e')",
+      "('REGION', '8ca23122a9aab214')",
+      "('REGION', '990adf1a2d5b952f')",
+      "('REGION', '9e1c1f8497829a96')",
+      "('REGION', 'b2bd910d61dbe508')",
+      "('REGION', 'c0a862b3f15a2e22')",
+      "('REGION', 'cdf533150469ee9b')",
+      "('REGION', 'ce2e132e5387c929')",
+      "('REGION', 'd9112ae5983db479')",
+      "('REGION', 'e0949570ec74caa5')",
+      "('REGION', 'ec4f8fe43e8ab107')",
+      "('REGION', 'f3134b477b4fdda7')",
+      "('REGION', 'f33b41f831b5594d')",
+      "('REGION', 'fc0d7d579a4201ae')"
+    ],
+    "removed": [],
+    "modified": [
+      [
+        "POURED",
+        "[\"POURED\",\"0e0d364f7f765c06\"]"
+      ],
+      [
+        "POURED",
+        "[\"POURED\",\"02241c7cfc1f2185\"]"
+      ],
+      [
+        "POURED",
+        "[\"POURED\",\"1f18300f68066a9e\"]"
+      ],
+      [
+        "DOCHEAD",
+        null
+      ]
+    ]
+  },
+  "all_existing_primitives_nets_and_rules_unchanged": true,
+  "native_reopen_DRC": {
+    "success": true,
+    "result": {
+      "closed": true,
+      "tab": "f52674d6627fca6f@79821b06a0e7bc13c8bceed705b60a9be12d79e3b222544cbfdedfb9f0f50241",
+      "doc": {
+        "documentType": 3,
+        "uuid": "f52674d6627fca6f",
+        "tabId": "f52674d6627fca6f@79821b06a0e7bc13c8bceed705b60a9be12d79e3b222544cbfdedfb9f0f50241",
+        "parentProjectUuid": "79821b06a0e7bc13c8bceed705b60a9be12d79e3b222544cbfdedfb9f0f50241"
+      },
+      "violations": [],
+      "region_count": 22
+    },
+    "windowId": "61aec421-089d-4295-80f7-895a42a3ca39"
+  },
+  "source_export_equivalence": {
+    "1": {
+      "missing_mm2_at_5um": 0.0,
+      "extra_mm2_at_5um": 0.0
+    },
+    "2": {
+      "missing_mm2_at_5um": 0.0,
+      "extra_mm2_at_5um": 0.0
+    },
+    "15": {
+      "missing_mm2_at_5um": 0.0,
+      "extra_mm2_at_5um": 0.0
+    },
+    "16": {
+      "missing_mm2_at_5um": 0.0,
+      "extra_mm2_at_5um": 0.0
+    }
+  },
+  "actual_clearance_checks": [
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.14",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286072107035163,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.13",
+      "net": "L0_E12",
+      "actual_Gerber_main_GND_clearance_mm": 0.1629762225541868,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.12",
+      "net": "L0_E11",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418626,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.11",
+      "net": "L0_E10",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418828,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.10",
+      "net": "L0_E09",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418634,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.9",
+      "net": "L0_E08",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418634,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.8",
+      "net": "L0_E07",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418773,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.7",
+      "net": "L0_E06",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418445,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.6",
+      "net": "L0_E05",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418526,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.5",
+      "net": "L0_E04",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418526,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.4",
+      "net": "L0_E03",
+      "actual_Gerber_main_GND_clearance_mm": 0.1629762225541874,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.3",
+      "net": "L0_E02",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418684,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.2",
+      "net": "L0_E01",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418137,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.1",
+      "net": "L0_E00",
+      "actual_Gerber_main_GND_clearance_mm": 0.16442010041779165,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.13",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286019678880975,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.11",
+      "net": "ADDR1",
+      "actual_Gerber_main_GND_clearance_mm": 0.16285815884790691,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.9",
+      "net": "MUX_DISABLE",
+      "actual_Gerber_main_GND_clearance_mm": 0.1628603797491995,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.7",
+      "net": "ADDR0",
+      "actual_Gerber_main_GND_clearance_mm": 0.162860620539334,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.5",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286028947043127,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.3",
+      "net": "RC_DRIVE",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286109248826852,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.1",
+      "net": "3V3_IO",
+      "actual_Gerber_main_GND_clearance_mm": 0.16441977539618743,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.15",
+      "net": "ADDR3",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286003783883626,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "VIA",
+      "ref": "868cbe0ba8c0a96f",
+      "net": "RC_DRIVE",
+      "actual_Gerber_main_GND_clearance_mm": 0.2515514728651517,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "VIA",
+      "ref": "f516b514a1b470ba",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.2515523698218372,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "VIA",
+      "ref": "bb25eeeaa82ccf21",
+      "net": "ADDR0",
+      "actual_Gerber_main_GND_clearance_mm": 0.25154870992182027,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "VIA",
+      "ref": "84accd5053c9f4a7",
+      "net": "ADDR1",
+      "actual_Gerber_main_GND_clearance_mm": 0.25155075517678854,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "VIA",
+      "ref": "3b4063e187832393",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.2515515496759496,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "VIA",
+      "ref": "2d1737d31135ab50",
+      "net": "ADDR3",
+      "actual_Gerber_main_GND_clearance_mm": 0.25255615160115485,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "VIA",
+      "ref": "1dba48fc92176907",
+      "net": "MUX_DISABLE",
+      "actual_Gerber_main_GND_clearance_mm": 0.2519530398203018,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "f7ddc944265a7fc6",
+      "net": "RC_DRIVE",
+      "actual_Gerber_main_GND_clearance_mm": 0.2565362973545207,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "1c2847618d4f2ec4",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.25605861522556206,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "a79e09b373f6ea63",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.25425228992468263,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "f321ee1fc0c754a0",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.2542522799785091,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "a626da2d34c5e59a",
+      "net": "ADDR0",
+      "actual_Gerber_main_GND_clearance_mm": 0.25653569836182427,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "3f58e14dda9a8bd8",
+      "net": "ADDR1",
+      "actual_Gerber_main_GND_clearance_mm": 0.25653693769811997,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "11fea39079b36262",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.2529718282675172,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "90f92a609f006928",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.252970380391055,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "2bb16e735c204863",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.2548494516899876,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "1bb9126c9cf03ff7",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.2548495137481477,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "e7962a1bfd13eed4",
+      "net": "ADDR3",
+      "actual_Gerber_main_GND_clearance_mm": 0.25654007036550486,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "c463f43a436a552a",
+      "net": "MUX_DISABLE",
+      "actual_Gerber_main_GND_clearance_mm": 0.25653642306784963,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "VIA",
+      "ref": "61e42088932c59f0",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.2515504673240527,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "00d9af7df14350f7",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.25374354195096965,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "e4ce857df7cdf8f8",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.25254211578681846,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 2,
+      "kind": "LINE",
+      "ref": "5d6d5dcd69b4f106",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.252540640260754,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.14",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087194,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.13",
+      "net": "L0_E12",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087175,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.12",
+      "net": "L0_E11",
+      "actual_Gerber_main_GND_clearance_mm": 0.167640545660875,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.11",
+      "net": "L0_E10",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087125,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.10",
+      "net": "L0_E09",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087466,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.9",
+      "net": "L0_E08",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087444,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.8",
+      "net": "L0_E07",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087444,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.7",
+      "net": "L0_E06",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087774,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.6",
+      "net": "L0_E05",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087755,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.5",
+      "net": "L0_E04",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087822,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.4",
+      "net": "L0_E03",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087797,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.3",
+      "net": "L0_E02",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087797,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.2",
+      "net": "L0_E01",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087797,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J1.1",
+      "net": "L0_E00",
+      "actual_Gerber_main_GND_clearance_mm": 0.1676396217244039,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J2.13",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764009916513878,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J2.11",
+      "net": "ADDR1",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764009916513362,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J2.9",
+      "net": "MUX_DISABLE",
+      "actual_Gerber_main_GND_clearance_mm": 0.1676400991651358,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J2.7",
+      "net": "ADDR0",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764009916513362,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J2.5",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.1676400991651417,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J2.3",
+      "net": "RC_DRIVE",
+      "actual_Gerber_main_GND_clearance_mm": 0.1676400991651334,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J2.1",
+      "net": "3V3_IO",
+      "actual_Gerber_main_GND_clearance_mm": 0.16763939829244556,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "PAD",
+      "ref": "J2.15",
+      "net": "ADDR3",
+      "actual_Gerber_main_GND_clearance_mm": 0.167640099165131,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "VIA",
+      "ref": "868cbe0ba8c0a96f",
+      "net": "RC_DRIVE",
+      "actual_Gerber_main_GND_clearance_mm": 0.25653925800663285,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "VIA",
+      "ref": "f516b514a1b470ba",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.2565390525170398,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "VIA",
+      "ref": "bb25eeeaa82ccf21",
+      "net": "ADDR0",
+      "actual_Gerber_main_GND_clearance_mm": 0.2565380665498031,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "VIA",
+      "ref": "84accd5053c9f4a7",
+      "net": "ADDR1",
+      "actual_Gerber_main_GND_clearance_mm": 0.2565385568685805,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "VIA",
+      "ref": "3b4063e187832393",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.25653892747818846,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "VIA",
+      "ref": "2d1737d31135ab50",
+      "net": "ADDR3",
+      "actual_Gerber_main_GND_clearance_mm": 0.256539078231814,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "VIA",
+      "ref": "1dba48fc92176907",
+      "net": "MUX_DISABLE",
+      "actual_Gerber_main_GND_clearance_mm": 0.2565386573339161,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 15,
+      "kind": "VIA",
+      "ref": "61e42088932c59f0",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.25653879966448084,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.14",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087194,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.13",
+      "net": "L0_E12",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087175,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.12",
+      "net": "L0_E11",
+      "actual_Gerber_main_GND_clearance_mm": 0.167640545660875,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.11",
+      "net": "L0_E10",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087125,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.10",
+      "net": "L0_E09",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087466,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.9",
+      "net": "L0_E08",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087444,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.8",
+      "net": "L0_E07",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087444,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.7",
+      "net": "L0_E06",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087774,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.6",
+      "net": "L0_E05",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087755,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.5",
+      "net": "L0_E04",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087822,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.4",
+      "net": "L0_E03",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087797,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.3",
+      "net": "L0_E02",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087797,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.2",
+      "net": "L0_E01",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764054566087797,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J1.1",
+      "net": "L0_E00",
+      "actual_Gerber_main_GND_clearance_mm": 0.1676396217244039,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J2.13",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764009916513878,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J2.11",
+      "net": "ADDR1",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764009916513362,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J2.9",
+      "net": "MUX_DISABLE",
+      "actual_Gerber_main_GND_clearance_mm": 0.1676400991651358,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J2.7",
+      "net": "ADDR0",
+      "actual_Gerber_main_GND_clearance_mm": 0.16764009916513362,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J2.5",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.1676400991651417,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J2.3",
+      "net": "RC_DRIVE",
+      "actual_Gerber_main_GND_clearance_mm": 0.1676400991651334,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J2.1",
+      "net": "3V3_IO",
+      "actual_Gerber_main_GND_clearance_mm": 0.16763939829244556,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "PAD",
+      "ref": "J2.15",
+      "net": "ADDR3",
+      "actual_Gerber_main_GND_clearance_mm": 0.167640099165131,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "VIA",
+      "ref": "868cbe0ba8c0a96f",
+      "net": "RC_DRIVE",
+      "actual_Gerber_main_GND_clearance_mm": 0.25653925800663285,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "VIA",
+      "ref": "f516b514a1b470ba",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.2565390525170398,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "VIA",
+      "ref": "bb25eeeaa82ccf21",
+      "net": "ADDR0",
+      "actual_Gerber_main_GND_clearance_mm": 0.2565380665498031,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "VIA",
+      "ref": "84accd5053c9f4a7",
+      "net": "ADDR1",
+      "actual_Gerber_main_GND_clearance_mm": 0.2565385568685805,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "VIA",
+      "ref": "3b4063e187832393",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.25653892747818846,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "VIA",
+      "ref": "2d1737d31135ab50",
+      "net": "ADDR3",
+      "actual_Gerber_main_GND_clearance_mm": 0.256539078231814,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "VIA",
+      "ref": "1dba48fc92176907",
+      "net": "MUX_DISABLE",
+      "actual_Gerber_main_GND_clearance_mm": 0.2565386573339161,
+      "passes_retained_0p1651_mm": true
+    },
+    {
+      "layer": 16,
+      "kind": "VIA",
+      "ref": "61e42088932c59f0",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.25653879966448084,
+      "passes_retained_0p1651_mm": true
+    }
+  ],
+  "original_22_min_clearance_mm": 0.16285815884790691,
+  "all_bottom_inner_main_GND_min_clearance_mm": 0.16285815884790691,
+  "retained_clearance_failures": [
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.14",
+      "net": "L0_E13",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286072107035163,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.13",
+      "net": "L0_E12",
+      "actual_Gerber_main_GND_clearance_mm": 0.1629762225541868,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.12",
+      "net": "L0_E11",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418626,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.11",
+      "net": "L0_E10",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418828,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.10",
+      "net": "L0_E09",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418634,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.9",
+      "net": "L0_E08",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418634,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.8",
+      "net": "L0_E07",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418773,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.7",
+      "net": "L0_E06",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418445,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.6",
+      "net": "L0_E05",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418526,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.5",
+      "net": "L0_E04",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418526,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.4",
+      "net": "L0_E03",
+      "actual_Gerber_main_GND_clearance_mm": 0.1629762225541874,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.3",
+      "net": "L0_E02",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418684,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.2",
+      "net": "L0_E01",
+      "actual_Gerber_main_GND_clearance_mm": 0.16297622255418137,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J1.1",
+      "net": "L0_E00",
+      "actual_Gerber_main_GND_clearance_mm": 0.16442010041779165,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.13",
+      "net": "ADDR2",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286019678880975,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.11",
+      "net": "ADDR1",
+      "actual_Gerber_main_GND_clearance_mm": 0.16285815884790691,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.9",
+      "net": "MUX_DISABLE",
+      "actual_Gerber_main_GND_clearance_mm": 0.1628603797491995,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.7",
+      "net": "ADDR0",
+      "actual_Gerber_main_GND_clearance_mm": 0.162860620539334,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.5",
+      "net": "SENSE_OUT",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286028947043127,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.3",
+      "net": "RC_DRIVE",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286109248826852,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.1",
+      "net": "3V3_IO",
+      "actual_Gerber_main_GND_clearance_mm": 0.16441977539618743,
+      "passes_retained_0p1651_mm": false
+    },
+    {
+      "layer": 2,
+      "kind": "PAD",
+      "ref": "J2.15",
+      "net": "ADDR3",
+      "actual_Gerber_main_GND_clearance_mm": 0.16286003783883626,
+      "passes_retained_0p1651_mm": false
+    }
+  ],
+  "ground_connectivity": {
+    "planes": {
+      "15": {
+        "main_area_mm2": 2287.952768304467,
+        "component_count": 1,
+        "native_pour_area_mm2": 2275.2956116200235
+      },
+      "16": {
+        "main_area_mm2": 2287.952768304467,
+        "component_count": 1,
+        "native_pour_area_mm2": 2275.2956116200235
+      },
+      "2": {
+        "main_area_mm2": 2174.8987838110706,
+        "component_count": 1,
+        "native_pour_area_mm2": 2162.2416271266334
+      }
+    },
+    "gnd_pad_contacts": [
+      {
+        "ref": "J1.15",
+        "id": "ef580e108521dcd9e39",
+        "contact_mm2": 2.0105607904650626
+      },
+      {
+        "ref": "J1.16",
+        "id": "ef580e108521dcd9e40",
+        "contact_mm2": 2.0105607904650635
+      },
+      {
+        "ref": "J2.14",
+        "id": "ba71119e6041a5fde25",
+        "contact_mm2": 2.010560790465069
+      },
+      {
+        "ref": "J2.12",
+        "id": "ba71119e6041a5fde27",
+        "contact_mm2": 2.0105607904650697
+      },
+      {
+        "ref": "J2.10",
+        "id": "ba71119e6041a5fde29",
+        "contact_mm2": 2.0105607904650684
+      },
+      {
+        "ref": "J2.8",
+        "id": "ba71119e6041a5fde31",
+        "contact_mm2": 2.0105607904650684
+      },
+      {
+        "ref": "J2.6",
+        "id": "ba71119e6041a5fde33",
+        "contact_mm2": 2.010560790465069
+      },
+      {
+        "ref": "J2.4",
+        "id": "ba71119e6041a5fde35",
+        "contact_mm2": 2.010560790465069
+      },
+      {
+        "ref": "J2.2",
+        "id": "ba71119e6041a5fde37",
+        "contact_mm2": 2.0105607904650693
+      },
+      {
+        "ref": "J2.16",
+        "id": "ba71119e6041a5fde40",
+        "contact_mm2": 2.0105607904650626
+      }
+    ],
+    "via_contacts": [
+      {
+        "ref": null,
+        "id": "def557a360252e92",
+        "contact_mm2": 0.39591052585608333
+      },
+      {
+        "ref": null,
+        "id": "40c92bc13d817315",
+        "contact_mm2": 0.3959105258560833
+      },
+      {
+        "ref": null,
+        "id": "61573e7a50cbab28",
+        "contact_mm2": 0.39591052585608333
+      },
+      {
+        "ref": null,
+        "id": "d4dd43402248c0d4",
+        "contact_mm2": 0.3959105258560833
+      },
+      {
+        "ref": null,
+        "id": "61be36163b467bf3",
+        "contact_mm2": 0.3959105258560835
+      },
+      {
+        "ref": null,
+        "id": "658a6b2052d17252",
+        "contact_mm2": 0.3959105258560835
+      },
+      {
+        "ref": null,
+        "id": "1e98b5a76e1249ab",
+        "contact_mm2": 0.3959105258560825
+      },
+      {
+        "ref": null,
+        "id": "a47f901839ef6cc4",
+        "contact_mm2": 0.39591052585608266
+      },
+      {
+        "ref": null,
+        "id": "3c18a3e4b5f076bc",
+        "contact_mm2": 0.3959105258560835
+      },
+      {
+        "ref": null,
+        "id": "7dd370c45df77394",
+        "contact_mm2": 0.39591052585608355
+      },
+      {
+        "ref": null,
+        "id": "d4c0e3f24d4e7695",
+        "contact_mm2": 0.39591052585608333
+      },
+      {
+        "ref": null,
+        "id": "6892c65829327fa8",
+        "contact_mm2": 0.3959105258560835
+      },
+      {
+        "ref": null,
+        "id": "72d3c1cbfbdddca4",
+        "contact_mm2": 0.3959105258560833
+      },
+      {
+        "ref": null,
+        "id": "05deb90db32fb69b",
+        "contact_mm2": 0.397248692613466
+      },
+      {
+        "ref": null,
+        "id": "0cbc828cb621fe00",
+        "contact_mm2": 0.3959105258560831
+      },
+      {
+        "ref": null,
+        "id": "d084970f837fd33e",
+        "contact_mm2": 0.39724869261346574
+      },
+      {
+        "ref": null,
+        "id": "250f83954a2d6dc4",
+        "contact_mm2": 0.39724869261346574
+      },
+      {
+        "ref": null,
+        "id": "f280d8d609bf9004",
+        "contact_mm2": 0.39724869261346574
+      },
+      {
+        "ref": null,
+        "id": "a5333efe15fa0ed2",
+        "contact_mm2": 0.39724869261346574
+      },
+      {
+        "ref": null,
+        "id": "72788069015cfed2",
+        "contact_mm2": 0.39724869261346574
+      },
+      {
+        "ref": null,
+        "id": "f8f549b3960442ab",
+        "contact_mm2": 0.39724869261346574
+      },
+      {
+        "ref": null,
+        "id": "91304e41b78a07b2",
+        "contact_mm2": 0.3972486926134658
+      },
+      {
+        "ref": null,
+        "id": "29fe4061e2ec0cb5",
+        "contact_mm2": 0.39724869261346624
+      },
+      {
+        "ref": null,
+        "id": "7a20353ac02e26a8",
+        "contact_mm2": 0.39724869261346624
+      },
+      {
+        "ref": null,
+        "id": "0ff0efb58e90de32",
+        "contact_mm2": 0.39724869261346624
+      },
+      {
+        "ref": null,
+        "id": "775e389243ca7091",
+        "contact_mm2": 0.39724869261346624
+      },
+      {
+        "ref": null,
+        "id": "5b2b6e845433dea0",
+        "contact_mm2": 0.39724869261346624
+      },
+      {
+        "ref": null,
+        "id": "e3c1949ae92b1a76",
+        "contact_mm2": 0.3972486926134664
+      },
+      {
+        "ref": null,
+        "id": "7317316c611de590",
+        "contact_mm2": 0.3972486926134664
+      },
+      {
+        "ref": null,
+        "id": "1c9e49d13908b4f0",
+        "contact_mm2": 0.3972486926134658
+      },
+      {
+        "ref": null,
+        "id": "b8f8963843ee9e78",
+        "contact_mm2": 0.3972486926134658
+      },
+      {
+        "ref": null,
+        "id": "fc1f8a9c8aac1cbe",
+        "contact_mm2": 0.3972486926134658
+      },
+      {
+        "ref": null,
+        "id": "bded4c326da01bb4",
+        "contact_mm2": 0.397248692613466
+      },
+      {
+        "ref": null,
+        "id": "6027c7717532611a",
+        "contact_mm2": 0.397248692613466
+      },
+      {
+        "ref": null,
+        "id": "7641831913722fda",
+        "contact_mm2": 0.39724869261346607
+      },
+      {
+        "ref": null,
+        "id": "6a654bb4b335ec79",
+        "contact_mm2": 0.3972486926134663
+      },
+      {
+        "ref": null,
+        "id": "33ccc406ad4dcef3",
+        "contact_mm2": 0.3972486926134662
+      },
+      {
+        "ref": null,
+        "id": "1cf189e303b83802",
+        "contact_mm2": 0.3972486926134669
+      },
+      {
+        "ref": null,
+        "id": "66efbb3b28bb1169",
+        "contact_mm2": 0.3972486926134662
+      },
+      {
+        "ref": null,
+        "id": "6148e517341dd728",
+        "contact_mm2": 0.397248692613466
+      },
+      {
+        "ref": null,
+        "id": "eb49457431217078",
+        "contact_mm2": 0.3972486926134658
+      },
+      {
+        "ref": null,
+        "id": "aba0521cc3a15d9c",
+        "contact_mm2": 0.39724869261346674
+      },
+      {
+        "ref": null,
+        "id": "e25385d1e8779204",
+        "contact_mm2": 0.3972486926134658
+      }
+    ],
+    "critical_reference": [
+      {
+        "ref": "U1.12",
+        "via": "d4c0e3f24d4e7695",
+        "center_distance_mm": 1.3774014008060562,
+        "copper_edge_gap_mm": 0.19739610000000152
+      },
+      {
+        "ref": "U2.7",
+        "via": "3c18a3e4b5f076bc",
+        "center_distance_mm": 1.4310056371833273,
+        "copper_edge_gap_mm": 0.057010240258553176
+      },
+      {
+        "ref": "C1.2",
+        "via": "6892c65829327fa8",
+        "center_distance_mm": 0.9999980003226125,
+        "copper_edge_gap_mm": 0.19499834000000277
+      },
+      {
+        "ref": "C2.2",
+        "via": "72d3c1cbfbdddca4",
+        "center_distance_mm": 1.0999749400000118,
+        "copper_edge_gap_mm": 0.34497518000000177
+      }
+    ],
+    "all_ground_vias_on_inner1_main": true,
+    "all_ground_THT_pads_on_inner1_main": true,
+    "independent_trace_check": {
+      "clearance_errors": [],
+      "unconnected_nets": {
+        "GND": 24
+      },
+      "net_count": 41
+    },
+    "full_copper_including_pours_check": {
+      "clearance_errors": [],
+      "unconnected_nets": {},
+      "net_count": 41
+    }
+  },
+  "manufacturing_release": false
+}

@@ -807,6 +807,60 @@
         }
       ],
       "scope": "Only this task passive electrode coupon/layout candidate. Control88 and Sensor S1 source read-only; Sensor strict clearance hold remains active."
+    },
+    {
+      "id": "sensor14-s2",
+      "activity": "active",
+      "root": "D:/FPGA-Project/hardware-delivery-20261027/hardware/sensor14-s2-20261030",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Authorized isolated Sensor14Bank strict-clearance revision"
+      },
+      "publication_status": "S2_FACTORY_REVIEW_CANDIDATE_NOT_MAIN_NOT_PRODUCT_ACCEPTANCE",
+      "task_branch": "codex/electrode-panel-20261029",
+      "published_ref": null,
+      "observation_max_hours": 168,
+      "recovery_manifest": "hardware/sensor14-s2-20261030/MANIFEST.json",
+      "exclude_dirs": [
+        "__pycache__",
+        "node_modules",
+        ".git"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": ".",
+          "recursive": true,
+          "suffixes": [
+            ".md",
+            ".json",
+            ".csv",
+            ".py",
+            ".eprj3",
+            ".epcb2",
+            ".esch2",
+            ".zip",
+            ".js",
+            ".gtl",
+            ".gbl",
+            ".gto",
+            ".gbo",
+            ".gts",
+            ".gbs",
+            ".gtp",
+            ".gko",
+            ".gdl",
+            ".g1",
+            ".g2",
+            ".gdd",
+            ".drl",
+            ".txt",
+            ".ipc"
+          ],
+          "max_bytes": 2000000
+        }
+      ],
+      "scope": "Independent S2 source, old S1 read-only reference, exact export and factory-review evidence; no inherited physical or supplier acceptance"
     }
   ]
 }

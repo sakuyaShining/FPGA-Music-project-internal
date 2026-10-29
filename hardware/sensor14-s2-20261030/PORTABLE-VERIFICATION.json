@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "method": "Fresh independent directory copy; ran all three packaged audit scripts using only packaged supports/reference plus Shapely2 dependency",
+  "checks": [
+    "audit_s2.py",
+    "audit_s2_manufacturing.py",
+    "audit_actual_copper.py"
+  ],
+  "result": "PASS",
+  "source_sha256": "9e4b563e570f2247785a764dd4ceba188b41ed8def3ba1511d456148fbd88bee",
+  "physical_tested": false,
+  "manufacturing_release": false
+}
