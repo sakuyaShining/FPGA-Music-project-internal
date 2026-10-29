@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "scope": "Read-only source identities, explicit alternative quote and full custom-board net-consumption scopes; no manufacturing release",
+  "scope": "Read-only identities, quote options, custom-board net counts and conditional screen pinmap; supplier/physical acceptance pending",
   "files": {
     "assembly-bom-20261030/BOM-SCOPE-AUDIT.json": {
       "sha256": "f3e8aaff3eb8573cbf3981bfef295b130551e56e7d3d5d147b854b821d3a8f3a",
@@ -50,6 +50,26 @@
       "sha256": "96a946803b72a5eeff4ba885442e51b2510857ccf89e7c1a8dd27e4fc02c6790",
       "bytes": 2517
     },
+    "j10-wire-candidate-20261030/C88-SIDE-CHECK.json": {
+      "sha256": "a6635bf9560878b1e84cc9be403fa75ec5923b87e7405bc7f66b6c400c4adc6e",
+      "bytes": 334
+    },
+    "j10-wire-candidate-20261030/J10-TO-MODULE-CANDIDATE-NOT-RELEASED.csv": {
+      "sha256": "3b5e136ad108d08b0a24fd3f2e15db36318caebe4f124ad85949bd774d1a4102",
+      "bytes": 2057
+    },
+    "j10-wire-candidate-20261030/README.md": {
+      "sha256": "1781769aaea3e47e671b7f709c6ddf22e1b8282a221fc53797c3414c81022018",
+      "bytes": 3155
+    },
+    "j10-wire-candidate-20261030/SOURCE-AND-OPEN-ITEMS.json": {
+      "sha256": "bd593f375da94de32eee26a82e6d6d20ffd2f2be03f8c9b26527abaa6efff31f",
+      "bytes": 2098
+    },
+    "j10-wire-candidate-20261030/verify_c88_side.py": {
+      "sha256": "b622628aeeae9e601747f3c5198087c78d81594c99a036dae21a7fe5c64703da",
+      "bytes": 2293
+    },
     "MANUFACTURER-NOMINAL-COMPARISON.json": {
       "sha256": "85decbca9a0ca58566a741a478045424e6125adaf25200d2db79d39a5ad7587b",
       "bytes": 1139
@@ -91,8 +111,8 @@
       "bytes": 1544
     },
     "README.md": {
-      "sha256": "efe4b62c62565f69b1be2dd36efdd622c99ec39f6cb0d244bd3885984f4cbbe4",
-      "bytes": 4036
+      "sha256": "afb25270b2c12b90f0f138392488fc6a1b8157c299e541ea62b3804486e205b9",
+      "bytes": 4415
     },
     "SCREEN-PRIMARY-FACTS.md": {
       "sha256": "7e94b0951a207827daa02c34579ebe040572b7c49ceb5ae8def1a58daf36d196",

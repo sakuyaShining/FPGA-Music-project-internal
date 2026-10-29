@@ -1,0 +1,13 @@
+C88_connector,C88_pin,C88_net,module_interface,module_pins_candidate,module_function,signal_requirement,status
+J10,1,5V_PERIPH,main40pin; exact connector name/orientation pending vendor photo,"3,4,37,38",VDD,POWER_5V_MODULE_ONLY,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,2,GND,main40pin; exact connector name/orientation pending vendor photo,"1,2",VSS,GROUND,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,3,DISP_SCK,main40pin; exact connector name/orientation pending vendor photo,8,SCLK,OUTPUT_3V3,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,4,DISP_MOSI,main40pin; exact connector name/orientation pending vendor photo,7,SDI,OUTPUT_3V3,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,5,RA_MISO,main40pin; exact connector name/orientation pending vendor photo,6,SDO,INPUT_3V3,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,6,DISP_HARM_CS_N,main40pin; exact connector name/orientation pending vendor photo,5,/SCS,OUTPUT_3V3_ACTIVE_LOW,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,7,DISP_RESET_N,main40pin; exact connector name/orientation pending vendor photo,,RA8875 reset breakout must be confirmed,HOLD_DO_NOT_ASSUME_PIN11,HOLD_RESET_BREAKOUT
+J10,8,I2C_MOD_SDA,main40pin; exact connector name/orientation pending vendor photo,34,CTP_SDA,BIDIRECTIONAL_3V3,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,9,I2C_MOD_SCL,main40pin; exact connector name/orientation pending vendor photo,35,CTP_SCL,BIDIRECTIONAL_3V3,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,10,TP_INT_MOD,main40pin; exact connector name/orientation pending vendor photo,33,CTP_INT,INPUT_3V3,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,11,TP_RESET_MOD_N,main40pin; exact connector name/orientation pending vendor photo,36,CTP_/RST,OUTPUT_3V3_ACTIVE_LOW,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
+J10,12,GND,main40pin; exact connector name/orientation pending vendor photo,"39,40",VSS,GROUND,INDEXED_DOCUMENT_CANDIDATE_VENDOR_CONFIRMATION_REQUIRED
