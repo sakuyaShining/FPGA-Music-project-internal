@@ -64,3 +64,8 @@ hardware/delivery-baselines/** -text -whitespace
 project/DELIVERY-BASELINE-20261029.md text eol=lf
 project/delivery-baseline.json text eol=lf
 tools/scripts/delivery_baseline.py text eol=lf
+# Independent electrode candidates retain native/export evidence byte identity.
+hardware/electrode-panel-20261029/** -text -whitespace
+
+# Shared procurement packet and sealed bundle retain exact byte identity.
+hardware/team-handoff-20261030/** -text -whitespace

@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T17:23:12.243332+00:00",
+  "scope": "Reviewed current hardware/procurement handoff and exact artifact preservation; no PCB copper edits or manufacturing release",
+  "authority": "Current human request to synchronize all latest work for procurement teammates and their agents",
+  "source_change_assessment": {
+    "fpga": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "fpga-v1-intake": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-native-handoff": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-module-plan": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-delivery": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "control88-q4-continuation": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "electrode-panel": {
+      "added": [
+        "mechanical-envelope.json"
+      ],
+      "removed": [],
+      "modified": [
+        "CHECKPOINT.json",
+        "MANIFEST.json",
+        "README.md",
+        "design-intent.json"
+      ]
+    }
+  },
+  "checks": [
+    "Seven pre-existing external watched producers freshly observed byte-identical to prior review",
+    "Electrode additions only approved 450mm envelope; four modified files only status/size docs and manifest; native source/Gerber/mapping/scripts unchanged",
+    "C88/S1 frozen recovery bytes preserved; S1 actual-Gerber strict clearance HOLD visibly retained",
+    "USB C430908 and bare audio jack C381127 distinguished from unfinished power/screen/harness sourcing",
+    "Speaker borrowed and 450x190x60/18mm human decisions retained; no invented vendor quote or delivery date",
+    "87-member stand-alone payload checked by SHA256 and ZIP membership; historical manifest files included",
+    "LF normalized controlled source bytes before hashing so Git staged data remains verifiable"
+  ],
+  "limitations": [
+    "Full 25-note electrode panel not completed",
+    "S1 strict clearance repair not completed; S2 nonexistent",
+    "Screen configuration quote and exact power/harness/structure selections pending",
+    "Coupon physical playing-expression/noise tests not run",
+    "Task branch publication is not main merge, payment or product acceptance"
+  ],
+  "user_decision_evidence_sha256": "be9df50f46f3ec3eff166da5dda79699d64969b8f2a01d39e732daddbe739c5b"
+}

@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "status": "ENGINEERING_CANDIDATE_450MM_ENVELOPE_CONFIRMED_FULL_PANEL_PENDING",
+  "owner_thread": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+  "branch": "codex/electrode-panel-20261029",
+  "user_constraint": "450×190×60 mm：18mm音位间距，优先采用",
+  "complexity": "intermediate: externally touched, high impedance RC acquisition",
+  "architecture": "passive etched FR-4 self-capacitance electrodes connected to existing six Sensor14Bank boards",
+  "pitch_notes": 25,
+  "pitch_electrodes_per_note": 3,
+  "octave_electrodes": 5,
+  "spare_electrodes": 4,
+  "external_channels": 84,
+  "sensor_boards": 6,
+  "external_channels_per_sensor": 14,
+  "calibration_channels_per_sensor": 2,
+  "rows": [
+    "C3-B3: 12 notes",
+    "C4-C5: 13 notes"
+  ],
+  "compact_candidate_parameters_mm": {
+    "note_pitch": [
+      16,
+      18,
+      20
+    ],
+    "slider_length": [
+      40,
+      48,
+      56
+    ],
+    "slider_width": 12,
+    "edge_margin": 4,
+    "row_service_allowance": 18,
+    "auxiliary_strip_allowance": 24
+  },
+  "coupon_parameters_mm": {
+    "board_width": 46,
+    "board_height": 72,
+    "slider_length": 48,
+    "slider_width": 12,
+    "electrode_gap": 0.8,
+    "trace_width": 0.3,
+    "minimum_copper_clearance": 0.25,
+    "copper_to_edge": 0.5,
+    "board_thickness_nominal": 1.6,
+    "copper_oz": 1,
+    "overlay_trials": [
+      0.2,
+      0.5
+    ]
+  },
+  "connector": {
+    "coupon": "reuse verified PZ254V-11-16P footprint; 1x16 2.54mm; C22465876",
+    "mounting": "coupon top side service zone; connector outside touch/overlay zone; full panel side pending depth",
+    "mating": "1:1 pin-number harness, never infer from cable direction",
+    "coupon_signals": {
+      "8": "A/CH0",
+      "7": "M/CH1",
+      "6": "B/CH2",
+      "15": "GND",
+      "16": "GND"
+    },
+    "unused_coupon_signal_pins": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "quote_stock_and_harness_sku": "NOT_VERIFIED"
+  },
+  "constraints": [
+    "Preserve raw_index=channel*6+bank and every verified sensor J1 pin assignment",
+    "C5 three electrodes remain on B0/B1/B2 CH12",
+    "No active sensing chip, driven shield, supply or firmware semantic change on passive panel",
+    "No rear ground fill under active electrode area in first coupon; assess shielding after measurements",
+    "Continuous insulating cover, fully bonded without intentional air gap; final overlay SKU pending",
+    "Original sensor S1 manufacturing hold remains active",
+    "450x190x60 mm envelope and 18 mm pitch confirmed; detailed mechanical integration is not released"
+  ],
+  "pending_release_gates": [
+    "actual screen/cover drawing, internal 60 mm stack, mounting and connector/cable clearances",
+    "coupon physical test: baseline, noise, monotonic response, neighbor suppression, cover and harness",
+    "complete panel geometry, mechanical integration and exact accessory selections",
+    "factory quote including connector soldering, overlay, shipping and whole-unit 700 CNY cap"
+  ],
+  "confirmed_outer_dimensions_mm": [
+    450,
+    190,
+    60
+  ],
+  "preferred_note_pitch_mm": 18
+}

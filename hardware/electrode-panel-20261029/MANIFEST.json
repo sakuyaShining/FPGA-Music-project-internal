@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "scope": "Independent electrode candidate only; not complete product or fab release",
+  "files": {
+    "audit_gerber_candidate.py": {
+      "bytes": 7677,
+      "sha256": "f49d811970746d00093fbd9b16b63082fe9e501d2802d02283ea773df8bead8b"
+    },
+    "build_candidate.py": {
+      "bytes": 12395,
+      "sha256": "e016b7e2f2c2225b731f70542b6c332cdc6604b157e4b4b027b4f38ee56ae1ec"
+    },
+    "candidate/compact-space-studies.json": {
+      "bytes": 1778,
+      "sha256": "787720ad073dd00f3a43d93c05d59c4ac6bd3b8b3b50408c0ea757544b4e1081"
+    },
+    "candidate/coupon-source-preview.png": {
+      "bytes": 7956,
+      "sha256": "322c6708220d32f933721ac9743eb538a6f18baa7b9d2aef9be29acf7bc4f7d1"
+    },
+    "candidate/coupon-source-preview.svg": {
+      "bytes": 136445,
+      "sha256": "41676f0c7acd00d0bd5dacb8170dad0f852dcd52b96b507ad68163ade6d2c5ac"
+    },
+    "candidate/ElectrodeCoupon-CANDIDATE/ElectrodeCoupon-CANDIDATE.eprj3": {
+      "bytes": 1930,
+      "sha256": "59508c0f524c5ea18593a2f2e1d0c8e27b26e84a7bff1057b7d250b662bb37a7"
+    },
+    "candidate/ElectrodeCoupon-CANDIDATE/pcb/ElectrodeCoupon.epcb2": {
+      "bytes": 114001,
+      "sha256": "49866816334226fe96efd95cb598b25717148090feb10a9915c60f228e2b3a2a"
+    },
+    "candidate/ElectrodeCoupon-native-Gerber-CANDIDATE.zip": {
+      "bytes": 21794,
+      "sha256": "023e46ada277352a9b9a7ebb54acb9d258e3fa695aa4801e82401a8ad371c4cc"
+    },
+    "candidate/gerber-candidate/Drill_PTH_Through.DRL": {
+      "bytes": 500,
+      "sha256": "be8416c6fe06d62ac28ba3757e6cd58b884d818dc80586094425af187ce23c8f"
+    },
+    "candidate/gerber-candidate/Drill_PTH_Through_Via.DRL": {
+      "bytes": 247,
+      "sha256": "764550041559eaa60f9515163a865688c4a38d66a151a60cb486dfbc43b0273a"
+    },
+    "candidate/gerber-candidate/FlyingProbeTesting.json": {
+      "bytes": 3705,
+      "sha256": "0f1d31afd1f362578706179b7397d16a8400ff8a2c5e04b791bf1d90dfc053f1"
+    },
+    "candidate/gerber-candidate/Gerber_BoardOutlineLayer.GKO": {
+      "bytes": 736,
+      "sha256": "b9937e74b09bd0790d03b4b03b8f8b356f119c369728b0f028bc53d7d6fca6aa"
+    },
+    "candidate/gerber-candidate/Gerber_BottomLayer.GBL": {
+      "bytes": 1408,
+      "sha256": "6788a35fd8f941977e0372e12715892de12e66a9fc1ea43482e49957b3462ae6"
+    },
+    "candidate/gerber-candidate/Gerber_BottomSilkscreenLayer.GBO": {
+      "bytes": 630,
+      "sha256": "748d8a307d6a92badf6d656e8ae5dc2ab239f58884fad51a852d1aad5ee3f6fd"
+    },
+    "candidate/gerber-candidate/Gerber_BottomSolderMaskLayer.GBS": {
+      "bytes": 1307,
+      "sha256": "6babb497fd8968d385b6b30b297000b009cef632724611719224e3865fe72b64"
+    },
+    "candidate/gerber-candidate/Gerber_DrillDrawingLayer.GDD": {
+      "bytes": 51924,
+      "sha256": "a4a5e45d65cf0c52e8802dfc1caee379b2544dd32a6df1acdc133032d36f739a"
+    },
+    "candidate/gerber-candidate/Gerber_TopLayer.GTL": {
+      "bytes": 15260,
+      "sha256": "47b3da0de6fd4487da9077f5a70444f83daadccb2118e06c818d43bab4fb6013"
+    },
+    "candidate/gerber-candidate/Gerber_TopSilkscreenLayer.GTO": {
+      "bytes": 4250,
+      "sha256": "9ff9357a40a9b9d25e7be6569af6bcd0e7002568e7df1bee5224f98a4bb953e5"
+    },
+    "candidate/gerber-candidate/Gerber_TopSolderMaskLayer.GTS": {
+      "bytes": 1304,
+      "sha256": "1257f326eeea6bced300316a0908e81f3eef3c9ea32ab5360693a9fec0f77b16"
+    },
+    "candidate/gerber-candidate/PCB下单必读.txt": {
+      "bytes": 94,
+      "sha256": "dcb3ee1c645c17a009d70726ad9ab708b68a074556fabcf75a4a059d3b43ec59"
+    },
+    "candidate/Gerber-copper-audit.json": {
+      "bytes": 1622,
+      "sha256": "21616c926abfcff555f796de42a574ec8b5bb77d1f05402ef0e092a992b30100"
+    },
+    "candidate/interface-audit.json": {
+      "bytes": 528,
+      "sha256": "c1fcd2e26636c74d74a1b1631d192246116e2afc1688e6867241115b4898e9d4"
+    },
+    "candidate/native-bom.csv": {
+      "bytes": 368,
+      "sha256": "71a6014b4431e19c706e0fcf1dddbed9fed8c6d28364327fb61174179586d607"
+    },
+    "candidate/native-DRC-raw.json": {
+      "bytes": 425,
+      "sha256": "36acb04a90bdd9ede393158290b3da42ad2eb292a803db9c011eec219071fc81"
+    },
+    "candidate/native-ipc.ipc": {
+      "bytes": 2077,
+      "sha256": "91acd73e92767608afff7af8c74948b01316e274e4b239b76f322e6b725df8f6"
+    },
+    "candidate/native-reopen-export.json": {
+      "bytes": 179,
+      "sha256": "4c03def06679d2612e9a0472d13ae1a2244aa75ccc1a036677a985554308f8d3"
+    },
+    "candidate/saved-native-source-audit.json": {
+      "bytes": 18198,
+      "sha256": "7557c6306b968cbc686cb9a3fde0de9098f94328b24b1aa699797df21e63099f"
+    },
+    "candidate/source-geometry.json": {
+      "bytes": 794,
+      "sha256": "3b4c5f083d8ddeba83b9b792a35f83f857201f8cb27f46b706609bf5f03d93f9"
+    },
+    "CHECKPOINT.json": {
+      "bytes": 886,
+      "sha256": "72f5d7e91faf1bbf1ef839499f5d3151ab6c669230250be0ec8d1da68725fddb"
+    },
+    "design-intent.json": {
+      "bytes": 3165,
+      "sha256": "ef334d6887124c1450fd95403bb5fed8f4b9f148c38e595a2864651ddb911118"
+    },
+    "ELECTRODE-HARNESS-84-VERIFIED.csv": {
+      "bytes": 9210,
+      "sha256": "6fd2720a8120e628cc518e389a523ecdd15f148d446b51f8df85dbbe7d325d07"
+    },
+    "mechanical-envelope.json": {
+      "bytes": 795,
+      "sha256": "e92bd1f8b4cb7e1e771c83ea37deb622506086f8cbe79d355d613ccbe1189134"
+    },
+    "README.md": {
+      "bytes": 6192,
+      "sha256": "dbe7dea60e2710b836e4f0f8c785bd37cea03ffd140b262858cd39e4998556d6"
+    },
+    "verify_native_candidate.py": {
+      "bytes": 5448,
+      "sha256": "025bd10fb1b036bce6467100fb67b3f42551849ee0c9a661d418465adea39914"
+    }
+  }
+}

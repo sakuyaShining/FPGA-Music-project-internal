@@ -756,6 +756,57 @@
       ],
       "scope": "Exact captured Q4 source, GPRJ dependencies and selected tables/reports only; excludes build products, account settings and all unrelated workspace files. Capture does not renew old PnR or functional acceptance.",
       "recovery_manifest": "hardware/delivery-baselines/20261029-r2-s1/Q4-SOURCE-CAPTURE.json"
+    },
+    {
+      "id": "electrode-panel",
+      "activity": "active",
+      "root": "D:/FPGA-Project/hardware-delivery-20261027/hardware/electrode-panel-20261029",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Compact passive electrode panel authorized long task"
+      },
+      "publication_status": "TASK_BRANCH_CANDIDATE_NOT_MAIN",
+      "task_branch": "codex/electrode-panel-20261029",
+      "published_ref": null,
+      "observation_max_hours": 168,
+      "recovery_manifest": "hardware/electrode-panel-20261029/MANIFEST.json",
+      "exclude_dirs": [
+        "generated",
+        "__pycache__",
+        "node_modules",
+        ".git"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": ".",
+          "recursive": true,
+          "suffixes": [
+            ".md",
+            ".json",
+            ".csv",
+            ".py",
+            ".eprj3",
+            ".epcb2",
+            ".svg",
+            ".png",
+            ".zip",
+            ".gtl",
+            ".gbl",
+            ".gto",
+            ".gbo",
+            ".gts",
+            ".gbs",
+            ".gko",
+            ".gdd",
+            ".drl",
+            ".txt",
+            ".ipc"
+          ],
+          "max_bytes": 2000000
+        }
+      ],
+      "scope": "Only this task passive electrode coupon/layout candidate. Control88 and Sensor S1 source read-only; Sensor strict clearance hold remains active."
     }
   ]
 }
