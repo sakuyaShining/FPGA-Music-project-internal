@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T21:54:53.565918+00:00",
+  "scope": "Recover exact custom-board component counts and per-board refs for sourcing",
+  "checks": [
+    "Ten other active watched sources freshly observed unchanged; prior quote option files and all frozen manufacturing/native sources unchanged",
+    "Read original C88 frozen88-part BOM and six28-part S2 BOMs; current net256parts/38SKUs;SMT232parts/32SKUs,TH24parts/6SKUs",
+    "Explicit13-capC1591 quote merges existing S2 capacitor SKU:37SKUs/256parts; not an actual substitution or inferred historical task intent",
+    "Native full84b7e9ecb1 source checked for6 rear C22465876 headers; including those gives262 netparts, panel manufacturing still pending",
+    "Independent restored verification maps every aggregate board.ref back to actual frozen BOM/native embedded part identity; no missing, duplicate or extra refs",
+    "All quantities labelled net consumption only, not retail MOQ, attrition, actual pricing or complete whole-machine budget"
+  ],
+  "limits": [
+    "Screen/PSU/harness/cover/shell/fasteners/shipping remain separately required and not included in256/262 board parts",
+    "Quote option cannot substitute for approved same-source manufacturing BOM",
+    "Full84 native DRC/CAM and complete700CNY quote unresolved"
+  ],
+  "evidence": {
+    "hardware/sourcing-closure-20261030/MANIFEST.json": "1cc88b602b1b08bf97858cb073c2e44914403cf1b72fd13b1747d8301e373705",
+    "hardware/sourcing-closure-20261030/assembly-bom-20261030/BOM-SCOPE-AUDIT.json": "f3e8aaff3eb8573cbf3981bfef295b130551e56e7d3d5d147b854b821d3a8f3a",
+    "hardware/sourcing-closure-20261030/assembly-bom-20261030/SCOPE-CHECK.json": "85d7c0e19dacd8fccc0acf86e3da8847d3d622b8d533cb8a66cc3e5bb2437d91"
+  },
+  "manufacturing_release": false,
+  "product_acceptance": false
+}

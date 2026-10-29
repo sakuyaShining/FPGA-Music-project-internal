@@ -1,7 +1,35 @@
 {
   "schema": 1,
-  "scope": "Read-only frozenR2 identity clarification, official nominal comparison and catalog snapshots; no source substitution or supplier quote",
+  "scope": "Read-only source identities, explicit alternative quote and full custom-board net-consumption scopes; no manufacturing release",
   "files": {
+    "assembly-bom-20261030/BOM-SCOPE-AUDIT.json": {
+      "sha256": "f3e8aaff3eb8573cbf3981bfef295b130551e56e7d3d5d147b854b821d3a8f3a",
+      "bytes": 1580
+    },
+    "assembly-bom-20261030/C88-S2x6-ALT-C1591-QUOTE-37SKU-256pcs.csv": {
+      "sha256": "8733be5f32a3f92ab004676ea8521183914ee42b7f8d1ace69ddeaefe9102068",
+      "bytes": 3428
+    },
+    "assembly-bom-20261030/C88-S2x6-EP84-SOURCE-QUOTE-38SKU-262pcs.csv": {
+      "sha256": "69fa345bf05f3c5dc0a56737a93ad0093909cf83cb7c2baa4c6af847c0ea38c4",
+      "bytes": 3528
+    },
+    "assembly-bom-20261030/C88-S2x6-FROZEN-NET-38SKU-256pcs.csv": {
+      "sha256": "2c3cdabc361255313d061fac5359524238aa97c9927a0a7ef99e356bf3911bb9",
+      "bytes": 3474
+    },
+    "assembly-bom-20261030/README.md": {
+      "sha256": "5f4a00e99a2addb842b33a19cce73a42d2030f8225274f65432312ac4c9b9ce1",
+      "bytes": 1890
+    },
+    "assembly-bom-20261030/SCOPE-CHECK.json": {
+      "sha256": "85d7c0e19dacd8fccc0acf86e3da8847d3d622b8d533cb8a66cc3e5bb2437d91",
+      "bytes": 264
+    },
+    "assembly-bom-20261030/verify_scope.py": {
+      "sha256": "779e66a8e695137b115bfdaf99b820ecd4cb1cb5e6912fc85d6f222659ff9b86",
+      "bytes": 3068
+    },
     "audit_control88_identity.py": {
       "sha256": "8a249942964ba65255eef7bff964278f1e8edb08f4e0abad6941b253d4c43368",
       "bytes": 5524
@@ -30,9 +58,41 @@
       "sha256": "725a8bd422543b150960d9207e53b662cae619e2ee42c2f147a268ea1bca4369",
       "bytes": 374
     },
+    "quote-options-20261030/CAP-13-DEVIATION-QUOTE-ONLY.csv": {
+      "sha256": "a6ebe0ba8489573da1a433de0c1d4a4845e835f64b148a30016773ff9ca90249",
+      "bytes": 1340
+    },
+    "quote-options-20261030/Control88-R2-ALT-C1591-QUOTE-ONLY.csv": {
+      "sha256": "8249c6a25ace0cbb25a1de2e921b65dbaa61ef80ced9d493b5cbf0f810135b38",
+      "bytes": 2687
+    },
+    "quote-options-20261030/CURRENT-RECHECK-RESULT.json": {
+      "sha256": "f3180b751bfc133098057eb52cfa6051661e8b72ed07cdd8a4793044f00f8f25",
+      "bytes": 584
+    },
+    "quote-options-20261030/HISTORICAL-DOMESTIC-SNAPSHOT.json": {
+      "sha256": "bac6d84d0778d4cdb7356d0ab0f433bafd4f4c423e14db82e7248bb74c4ee2db",
+      "bytes": 1098
+    },
+    "quote-options-20261030/QUOTE-OPTION-AUDIT.json": {
+      "sha256": "001ed234787d4684525dc2c70f336ee91f3c250bc3f59f2a276c3a823869d2d0",
+      "bytes": 167
+    },
+    "quote-options-20261030/QUOTE-OPTION-CONTRACT.json": {
+      "sha256": "fedc77fa57d51361cd7063d5f8632445991fc8c57ba7dad1d388a58edb6f033c",
+      "bytes": 1473
+    },
+    "quote-options-20261030/README.md": {
+      "sha256": "3f7143b67695205c3ec736736f992d01e653dbfa4d82b61b29023edac3254db6",
+      "bytes": 3525
+    },
+    "quote-options-20261030/verify_quote_option.py": {
+      "sha256": "3966bb0b8f4cea5cee50e785f1cec5c29ad1262874e5bfc22897bbbab893ccf7",
+      "bytes": 1544
+    },
     "README.md": {
-      "sha256": "a716347da3ed6ec20a055a29cbedf64180078136e797aec16d6dd054afc2b625",
-      "bytes": 3343
+      "sha256": "efe4b62c62565f69b1be2dd36efdd622c99ec39f6cb0d244bd3885984f4cbbe4",
+      "bytes": 4036
     },
     "SCREEN-PRIMARY-FACTS.md": {
       "sha256": "7e94b0951a207827daa02c34579ebe040572b7c49ceb5ae8def1a58daf36d196",

@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "status": "ALTERNATIVE_QUOTE_OPTION_ONLY_NOT_MANUFACTURING_BOM",
+  "frozen_archive_relative_to_repo": "hardware/delivery-baselines/20261029-r2-s1/control88-frozen-r2-20261029.zip",
+  "frozen_archive_sha256": "24fe5ec56d973144bcdb217d0b1af5efbf2fd85d14ee655555ba9a2d41b1dcfd",
+  "frozen_BOM_sha256": "5c3923fe24268c49f40566e0768b4d698386cea10cc3adf17bc442ec750685a7",
+  "quote_BOM_sha256": "8249c6a25ace0cbb25a1de2e921b65dbaa61ef80ced9d493b5cbf0f810135b38",
+  "frozen_PCB_sha256": "733e1d9c33d11ef946863dca0bc9f36ae2916b9965d038b147aafea416194eb8",
+  "assembly_quantity": 1,
+  "rows": 88,
+  "changed_designators": [
+    "C10",
+    "C11",
+    "C22",
+    "C23",
+    "C24",
+    "C25",
+    "C33",
+    "C34",
+    "C35",
+    "C36",
+    "C8",
+    "C9",
+    "CX1"
+  ],
+  "changed_rows": 13,
+  "unchanged_rows": 75,
+  "changed_fields_only": [
+    "MPN",
+    "LCSC"
+  ],
+  "native_source_changed": false,
+  "CPL_coordinates_changed": false,
+  "actual_substitution_performed": false,
+  "supplier_quote_received": false,
+  "manufacturing_release": false,
+  "required_before_production": [
+    "Supplier explicitly confirms chosen MPN/stock/attrition/fees and full quote",
+    "User confirms actual quote and manufacturing choice within whole-machine budget",
+    "If alternative chosen, create new native revision with corresponding schematic/PCB instance commercial attrs and same-source BOM/export; do not mix frozen C14663 source with quote-only C1591 file"
+  ]
+}

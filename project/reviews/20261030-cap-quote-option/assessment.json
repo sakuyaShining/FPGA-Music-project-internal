@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T21:48:12.487655+00:00",
+  "scope": "Explicit non-manufacturing13-capacitor alternative quotation and retail-vs-SMT cost distinction",
+  "checks": [
+    "Ten other active watched sources freshly observed unchanged; no frozen CAD/manufacturing source changed",
+    "Sourcing research adds one isolated quote-option directory, README navigation and refreshed member manifest only",
+    "88-row quote candidate differs from published frozen BOM in exactly13 specified capacitor MPN/LCSC pairs;75 rows and all designators/Type unchanged",
+    "Historical China C14663 HTML hash and product identity verified; MOQ20000 and conditional20000x0.0207=414CNY recorded as historical retail scenario",
+    "Current domestic raw refresh HTTP405 and browser timeout retained; no fresh MOQ/price or live saving asserted",
+    "Official primary guidance distinguishes assembly inventory/sourcing/attrition from retail procurement; no international rule substituted for China order quote"
+  ],
+  "limits": [
+    "No actual supplier quote, chosen alternative or source substitution",
+    "Quote-only CSV cannot be used as same-source manufacturing BOM; needs explicit chosen-quote/source revision before production",
+    "700CNY full budget and full84 native DRC/CAM/assembly gaps remain open"
+  ],
+  "evidence": {
+    "hardware/sourcing-closure-20261030/MANIFEST.json": "9215e5a8b8c5b245175ce58a38ac498e4d425a2b9a9d95ade7794c573586d208",
+    "hardware/sourcing-closure-20261030/quote-options-20261030/QUOTE-OPTION-CONTRACT.json": "fedc77fa57d51361cd7063d5f8632445991fc8c57ba7dad1d388a58edb6f033c",
+    "hardware/sourcing-closure-20261030/quote-options-20261030/QUOTE-OPTION-AUDIT.json": "001ed234787d4684525dc2c70f336ee91f3c250bc3f59f2a276c3a823869d2d0",
+    "hardware/sourcing-closure-20261030/quote-options-20261030/HISTORICAL-DOMESTIC-SNAPSHOT.json": "bac6d84d0778d4cdb7356d0ab0f433bafd4f4c423e14db82e7248bb74c4ee2db",
+    "hardware/sourcing-closure-20261030/quote-options-20261030/CURRENT-RECHECK-RESULT.json": "f3180b751bfc133098057eb52cfa6051661e8b72ed07cdd8a4793044f00f8f25"
+  },
+  "manufacturing_release": false,
+  "product_acceptance": false
+}
