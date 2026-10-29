@@ -1,3 +1,7 @@
+**2026-10-29 基线复核更正：传感板暂停投产。** 实际S1 Gerber底层地铜到22个非地排针焊盘最小间距约0.162858mm，低于保留门限0.1651mm；此前原生DRC0、5μm图形比对与较低通用门限未覆盖该严格条件。可继续询价，先不按本版传感板付款生产。旧冻结包字节保留用于追溯，不能据其中的PASS或READY文字忽略本更正。详见基线`evidence/retained-clearance-gate-audit.json`。
+
+**2026-10-29 硬件交付接续**：先读[当前交付基线](project/DELIVERY-BASELINE-20261029.md)。冻结Control88 R2×1与Sensor14Bank S1×6及送厂资料；采购报价、固件与整机验收仍未完成。任务分支候选不自动成为main。
+
 # FPGA Music 项目总入口
 
 **当前统一入口（2026-10-27）**：[project/CONSOLIDATION-20261027.md](project/CONSOLIDATION-20261027.md)。已整合硬件阶段成果与恢复资料；完整实体、制造文件和产品验收仍待完成。

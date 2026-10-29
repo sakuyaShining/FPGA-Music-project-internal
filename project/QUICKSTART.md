@@ -1,3 +1,7 @@
+**2026-10-29 基线复核更正：传感板暂停投产。** 实际S1 Gerber底层地铜到22个非地排针焊盘最小间距约0.162858mm，低于保留门限0.1651mm；此前原生DRC0、5μm图形比对与较低通用门限未覆盖该严格条件。可继续询价，先不按本版传感板付款生产。旧冻结包字节保留用于追溯，不能据其中的PASS或READY文字忽略本更正。详见基线`evidence/retained-clearance-gate-audit.json`。
+
+**2026-10-29 硬件交付基线更新**：送厂与采购接续先读[DELIVERY-BASELINE-20261029.md](DELIVERY-BASELINE-20261029.md)。当前为Control88 R2×1 + Sensor14Bank S1×6，制造源核验已完成，可交厂家DFM/SMT审单报价；屏幕/附件报价、固件接合、实物及整机验收仍待完成。下文旧日期的951载板和早期小板状态仅适用于各自历史版本。本更新仍是任务分支候选，main发布以实际合入为准。
+
 # 快速取得当前已发布设计
 
 当前可开发的工程、依赖和验证命令见[ENGINEERING.md](ENGINEERING.md)。克隆后先执行`python tools/scripts/engineering.py check`，再按[协作检查点](COLLABORATION-CHECKPOINT-20261024.md)选择一个领域；不要直接在历史`src/rtl`或`tools/host`继续最新实现。

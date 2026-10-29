@@ -111,18 +111,18 @@
     ]
   },
   "reviewed_design_sources": {
-    "project/DESIGN-CURRENT.md": "78d0c6f0021b9d61be1edb7b251a544264598ccc97d1cf7077504465573cec5b",
+    "project/DESIGN-CURRENT.md": "5275f42a7e0a824363b6e45422e812daa06670a79b6e9022c896684110556695",
     "project/versions/design-decision-20261023.json": "1d0994293691ac34b85348d0929ecda0ac68ace57c560f7b34a9449dd81ae4fc",
     "docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md": "a147411a85f37d22c82228dfbbe836e98c3c116d4c9d158d43426c09a90f1e2e",
     "docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md": "644e245f816a9d98ce962365791cca4a5295f538094775908f45a021a5f8b61c",
     "docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md": "a052d63946a9b0dd0b601ad978cdd60c300d18e46fa378f2365319adb006bde0",
-    "project/PRODUCT-SPEC.md": "faab27dd81030726332e7cf0676cff454791be2355823fa7ef9a92271cc93ac4",
-    "project/SOURCE-MAP.md": "0589f100ce0fd8f49dff1b99a0545d49846187212caa5007f8b0d308e5f9ce4b",
-    "project/WORK-PLAN.md": "e05ebe5c1b2b4184749943476bb7e8866354e7b68e9019eb61f36997e3a5c3ea",
+    "project/PRODUCT-SPEC.md": "0ac536f5d0415e3e62abba75ce0defa6b046cc224348dd842e76929ee4667ab2",
+    "project/SOURCE-MAP.md": "c33db3966c49004ad7b119d4cb9da95a57bacfe3d8c81db4bf671346e64f729e",
+    "project/WORK-PLAN.md": "001913f70465d46d5de5a66209ea3682d89341ac9160f61f67653020c5848a86",
     "project/OPEN-RULES.md": "e04d4f2465815891b742d40b024a45a23ea04a9973905a2b9f963936b583f20c",
     "project/MUSIC-GOLDEN-DIAGNOSIS.md": "276ad5d74e0f4aa4cb3dfe9898594117e08e643b56b6005e6e354488e6a8d709",
     "project/NOTE-RESOURCE-CONTRACT.md": "474a0f6eaf9b62a0e4c4c7998e40fbe7d3144f6e16e269eb9299dfd3265d397a",
-    "project/CONSOLIDATION-20261027.md": "2e7d419ab6e2def8f2a84113c98063d8164975645eaa0614e550e0b0a15720ba"
+    "project/CONSOLIDATION-20261027.md": "3e887ebdc64dc70e5f7dd1d41b11d6e6678deaf88724c75ededdf253d864d022"
   },
   "governance": "project/governance.json",
   "decision_ledger": "project/decisions.json",
@@ -142,5 +142,20 @@
   "note_input_router_candidate": "project/versions/note-input-router-20261024.json",
   "note_contact_transport_candidate": "project/versions/note-contact-transport-20261024.json",
   "note_frame_source_candidate": "project/versions/note-frame-source-20261024.json",
-  "current_consolidated_entry": "project/CONSOLIDATION-20261027.md"
+  "current_consolidated_entry": "project/CONSOLIDATION-20261027.md",
+  "hardware_delivery_baseline": {
+    "schema": 1,
+    "id": "hardware-delivery-20261029-r2-s1",
+    "manifest": "hardware/delivery-baselines/20261029-r2-s1/MANIFEST.json",
+    "entry": "project/DELIVERY-BASELINE-20261029.md",
+    "status": "RECOVERABLE_CHECKPOINT_SENSOR_STRICT_CLEARANCE_FAB_HOLD",
+    "product_acceptance": false,
+    "publication": "TASK_BRANCH_CANDIDATE_MAIN_MERGE_PENDING",
+    "production_hold": {
+      "sensor": true,
+      "reason": "22 bottom non-ground header pads to actual Gerber ground fall below retained0.1651mm gate; min0.16285815884790691mm. Generic5.98mil check and5um source/export equivalence do not prove this stricter condition.",
+      "source_changed_during_this_task": false,
+      "report": "evidence/retained-clearance-gate-audit.json"
+    }
+  }
 }

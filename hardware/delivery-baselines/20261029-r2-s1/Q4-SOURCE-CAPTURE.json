@@ -1,0 +1,281 @@
+{
+  "captured_at": "2026-10-29T11:11:51.816803+00:00",
+  "files": {
+    "authoritative-20261024/fpga/current/engine/src/bands1024.hex": {
+      "sha256": "01cdaaa2843dab6417522a5bb913e60b17e4daac675fe1c4ff99250a6e64123f",
+      "bytes": 2048
+    },
+    "authoritative-20261024/fpga/current/engine/src/board_slots.hex": {
+      "sha256": "db61040e0c62fb2a1342c9c59787a1522dd98d07e8776c98e0a51bf943e1ac53",
+      "bytes": 448
+    },
+    "authoritative-20261024/fpga/current/engine/src/cos1024.hex": {
+      "sha256": "706d4136e1d62d92d5a1052b077e8cf338f30590f728501853dde8f7bb9adf90",
+      "bytes": 3072
+    },
+    "authoritative-20261024/fpga/current/engine/src/fader_gain_q8.hex": {
+      "sha256": "38a644d29b92c5b3267bab5931966a033e35b75973ad84b7af362be74194f6a5",
+      "bytes": 5120
+    },
+    "authoritative-20261024/fpga/current/engine/src/finger_ratio.hex": {
+      "sha256": "fbb875cffffd1f044971de6ceb47a5b90898a154229f1e29937b3a742f757ca3",
+      "bytes": 3591
+    },
+    "authoritative-20261024/fpga/current/engine/src/hann1024.hex": {
+      "sha256": "a65ee44f5eaacc8237a2dc9f1b2d58998f197efa0377e2a7d76cdc9268591abc",
+      "bytes": 6144
+    },
+    "authoritative-20261024/fpga/current/engine/src/note_inc.hex": {
+      "sha256": "d39e272b4ef1217cd13f15d03cf59f7ab46ed06cb70e95a180fab45b89e3aeac",
+      "bytes": 1024
+    },
+    "authoritative-20261024/fpga/current/engine/src/pcm5122_init.v": {
+      "sha256": "4745f266f653de3bb04d5525d67c0eb16390d3355f1c3ce7e4e0847e04ee3a2e",
+      "bytes": 14859
+    },
+    "authoritative-20261024/fpga/current/engine/src/preset_part.hex": {
+      "sha256": "01ca906802b0fed2afe4b5fbb6f89854639eb6d543932bb9b6185954a1e04850",
+      "bytes": 896
+    },
+    "authoritative-20261024/fpga/current/engine/src/recip_inc.hex": {
+      "sha256": "a9ea597f8b2ae211baa82c264796c4d118393863435c33aac9edb5ee71802002",
+      "bytes": 896
+    },
+    "authoritative-20261024/fpga/current/engine/src/sin1024.hex": {
+      "sha256": "b2d2b0328b8aee38c3fb7cdcd03064a6e34f1bab170bc99950ebaaf039618647",
+      "bytes": 3072
+    },
+    "authoritative-20261024/fpga/current/engine/src/sine256.hex": {
+      "sha256": "969483c54b36dd4cd6361994e65f302538d9184fe154e34dd71e53d400026cd8",
+      "bytes": 1536
+    },
+    "authoritative-20261024/fpga/current/engine/src/tilt_wtab.hex": {
+      "sha256": "4cc10b84169c6997ef796efb3335d257193decb7820a0d74e9c3e0e1fb2321b8",
+      "bytes": 1040
+    },
+    "authoritative-20261024/fpga/current/engine/src/vel_wtab.hex": {
+      "sha256": "5daaea0d56b0e88ccbfc5161821dbafd7f9439315ef4c3d32a2007f4fd6f7160",
+      "bytes": 4096
+    },
+    "current-design/src/rtl/audio_clk_en.v": {
+      "sha256": "900418e7f9f985d90abb141234baad971102469cc77edbdc03ad816d3492278c",
+      "bytes": 6978
+    },
+    "current-design/src/rtl/event_hold.v": {
+      "sha256": "1f94de700de599f4b5781f795d2ae4207f2a89756dda0b4c0e48cf1549337844",
+      "bytes": 6890
+    },
+    "current-design/src/rtl/fx_delay.v": {
+      "sha256": "ca16072487785866667c6f26da528603de4a0c1d8cff1299625875e6cf6881ef",
+      "bytes": 16896
+    },
+    "current-design/src/rtl/i2c_master.v": {
+      "sha256": "60f15f0ea4e6166b56e6cb7e5c61551cae447d97d7c050e119873ca6a4da5217",
+      "bytes": 12853
+    },
+    "current-design/src/rtl/i2s_tx.v": {
+      "sha256": "0ae0953e0286a6f67d168370ec5a57fe11e9db7fceccaacd4848328e9460520a",
+      "bytes": 5172
+    },
+    "current-design/src/rtl/led_ind.v": {
+      "sha256": "05ce8e6dced0d341c04f51edd7a9fdc136fa5a58205cf5cf79314abb8f9ce8b3",
+      "bytes": 4975
+    },
+    "current-design/src/rtl/note_map.v": {
+      "sha256": "569df524bda98d33f2e01685b58affdee5ee8ebf7c105d9ced59b587bedbfc98",
+      "bytes": 34276
+    },
+    "current-design/src/rtl/osc_env.v": {
+      "sha256": "170c66076c1b4993d6ce5280eabfadf71d20261d32ea52165c15a9c6ca98d65c",
+      "bytes": 9247
+    },
+    "current-design/src/rtl/pad_pitch.v": {
+      "sha256": "c8a7fc95f6bd98d14963c3c3b7b36a244de48f585711f078b5f39fbeeb353508",
+      "bytes": 5145
+    },
+    "current-design/src/rtl/pad_scan.v": {
+      "sha256": "e42adff0b0b18c5a9b1f2ce8c26b0089cd06413116f0958dc0bcdfc8b07992cb",
+      "bytes": 15827
+    },
+    "current-design/src/rtl/pitch_mod.v": {
+      "sha256": "1ef276560151929c68d934a43909e85884ee5c564b809412bdb5ab4d9e062b30",
+      "bytes": 11915
+    },
+    "current-design/src/rtl/reg_bank.v": {
+      "sha256": "785cb2fb59808a091e4d45dafd832cbe730f2a8f2f4a788ddd1af9409c0499ef",
+      "bytes": 9786
+    },
+    "current-design/src/rtl/song_seq.v": {
+      "sha256": "d2293c809468d25c0a315294fb517f4eb5d5298261dfdf7a4fdb4bb3b19100a4",
+      "bytes": 10229
+    },
+    "current-design/src/rtl/strip_ctrl.v": {
+      "sha256": "25fe3d5a6fe4bc3aaf5479a6906807e90af7e4b6ce5ecfeeb0d1c37b94903bcd",
+      "bytes": 2578
+    },
+    "current-design/src/rtl/tdm_engine.v": {
+      "sha256": "e3e3f9ea27bb297241b1af5957db573076d6414883c5b98f4c379875786384e8",
+      "bytes": 54691
+    },
+    "current-design/src/rtl/tdm_top.v": {
+      "sha256": "7beaeec6947213a353930193cb9aa41d5861b7fe6fb63ab12b1d3fc5cc1c243f",
+      "bytes": 63254
+    },
+    "current-design/src/rtl/uart_rx.v": {
+      "sha256": "2812e4eea205fc4de870ddf7aa0edc9265685bb2bb0461258846bf42dcfb0518",
+      "bytes": 5186
+    },
+    "current-design/src/rtl/uart_tx.v": {
+      "sha256": "dba68f5a18da7a3beda92b657999c011b6cc6fec54e1550a8de086d16b83259f",
+      "bytes": 3913
+    },
+    "current-design/src/rtl/vel_shape.v": {
+      "sha256": "ed66c9d539250c893e6086b65870b74a86aca1df55897f4c5c33d5e1fbb8ab8d",
+      "bytes": 6792
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/Q4-BUILD-EVIDENCE.json": {
+      "sha256": "fd29a08ecd6a6a0903a8e0d84aae375a7da7e0fe8ae4b628d4dc8be8e96e251f",
+      "bytes": 9424
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/Q4-FIRMWARE-INTEGRATION-REPORT.md": {
+      "sha256": "f4be3f8d09a315821ba86a2d6a32d3c7bd565190fbe93e67959688376252595e",
+      "bytes": 13934
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/build.tcl": {
+      "sha256": "c33398e7a6c3fb416b3ed99ea0486d2d711962f1b122554252edda4df1b254ee",
+      "bytes": 754
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/constr/control88_top.cst": {
+      "sha256": "eb772bdfcf03511108bec384da2e7dc98965ef6af191dd13cabf90fc00923a2c",
+      "bytes": 4264
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/constr/control88_top.sdc": {
+      "sha256": "0900dd09fb392cb18931f278f5f8a37815c0f80759a406f122a331101ce727de",
+      "bytes": 872
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/control88.gprj": {
+      "sha256": "32650459062f72f0571960c8d0e01e7652bb2fc91bc48e6e4e6cb5478b5def52",
+      "bytes": 3006
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/control_build.tcl": {
+      "sha256": "f5838377ee7b558d7acf5acd6f9934aa5256192be84c83c2b8689d43902a7312",
+      "bytes": 92
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/control_tdm_ship.gprj": {
+      "sha256": "71cdbe392a891e349ddbebce8f26ccb9bbc2240946357404725c0dfff5c3578c",
+      "bytes": 2405
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/note_inc.hex": {
+      "sha256": "c324baf26bda0b364aac342a572579bbff36a9837d6c987961a0b93be41f9514",
+      "bytes": 896
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/recip_inc.hex": {
+      "sha256": "5db916122e105a39d7156c50aceb0b07dba508c4eeb731cce0984a49ddf36b91",
+      "bytes": 768
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rom/note_inc.hex": {
+      "sha256": "c324baf26bda0b364aac342a572579bbff36a9837d6c987961a0b93be41f9514",
+      "bytes": 896
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rom/preset_part.hex": {
+      "sha256": "8da768e67cd655e7a10641f43e2776404f9a022f10d2b75a0fc82f28f673089c",
+      "bytes": 832
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rom/recip_inc.hex": {
+      "sha256": "5db916122e105a39d7156c50aceb0b07dba508c4eeb731cce0984a49ddf36b91",
+      "bytes": 768
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_evq.v": {
+      "sha256": "5e3bf554c059a606d3bb28eccabb701c838ac6d43c51881b6b8140cfbf12d539",
+      "bytes": 3927
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_scan.v": {
+      "sha256": "2f11d950459f1e0e4e20ea26b62133fb1131d0830d63933497a597f6f2770456",
+      "bytes": 9728
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_spi.v": {
+      "sha256": "c21be800508e7614e12180e39834efbc8dd50b3ceba7f6c7a1024e00e7c0980b",
+      "bytes": 4571
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_sr165.v": {
+      "sha256": "a7a5c97e593dd4eeec854dabb7a976f2a24bf450e6b34a619a2079f0713aa56a",
+      "bytes": 3770
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_sr595.v": {
+      "sha256": "fbfdab3ccf440ca93b660ce161c258faf6fd67a5b6ccc8bfdc75d241356401e3",
+      "bytes": 3523
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_top.v": {
+      "sha256": "f56972900b31fdb15311b09adf00069d34b94fc35a2fe945620f1edb41dba069",
+      "bytes": 8590
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/control88_top.v": {
+      "sha256": "1f3812ad7c3ccd5756624f3c375820a8f1a590a4b2b269aee5b6d06c61159ed9",
+      "bytes": 8002
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/before-fix/c88_spi.v": {
+      "sha256": "27c648e442fb3950e04097ed673765dc4c4c0438ba16ea745c816436b2031d03",
+      "bytes": 4537
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/before-fix/c88_sr595.v": {
+      "sha256": "92ed78196c626537f75ac933a8aa6d128f58e265a6b5cabc9007bfb811bcb1bb",
+      "bytes": 3435
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/run_sim.sh": {
+      "sha256": "58b51586df7198ad5c9666deb497d6aaece94fd7b26c17135293a920244853a0",
+      "bytes": 1980
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/tb_arb.v": {
+      "sha256": "caf2e8a0c5b631ba209739c4aa58d32c89e7cf8587ef8a13f6e08810e664a880",
+      "bytes": 6101
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/tb_models.v": {
+      "sha256": "7af515670aa0fa3d32251259d1fc3385a7a61dec28f315f6e0b34221b39ef1d2",
+      "bytes": 2673
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/tb_sr165.v": {
+      "sha256": "5d464f9000d9db71a0ef4bc2cdb87a13c3dc59a14228c2969537d8b9429753ba",
+      "bytes": 3766
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/tb_sr595.v": {
+      "sha256": "a69659ed559c53dca2ae1be7729a4b6cbd156f1f9b5e4f7a9a7fe74cd0da80a9",
+      "bytes": 3862
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-r1-dac-config-audit.json": {
+      "sha256": "3454276012a77a13cfdbdeae3e0ef15cd18afc65cf2f5260ca391f17bef1efa0",
+      "bytes": 7866
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-r7-sim-evidence.json": {
+      "sha256": "98b385590442472aee7bcf0cc3660ef230890fccf51b1ada8375c37bf54bfcb3",
+      "bytes": 6890
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-r9-pitch-audit.json": {
+      "sha256": "b5de4def9370d87a2982bb6aad4f8afe0fef559ed404ff954ee57d69e9b4f2d8",
+      "bytes": 12580
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-r9-pitch-fix-build-evidence.json": {
+      "sha256": "c823a51fe3601b7f975f4ef5185feedfae054c780de265398e9f58dfa5c305c4",
+      "bytes": 3441
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4-r9-readmemh-searchpath-probe.json": {
+      "sha256": "30c4c39c8fe0e19323e3913d0d0f72cf5116df31b99ed8679b6ac7e843b74978",
+      "bytes": 2247
+    },
+    "delivery-evidence-20261027/control88-routing-20261028/q4r1-pcm5122-symbol-pins.json": {
+      "sha256": "dc12285e4ef08b6a149fd65f14b50369974a25ef7ae61e4412201a00fe135daa",
+      "bytes": 445
+    }
+  },
+  "source_count": 66,
+  "source_root": "D:\\FPGA-Project",
+  "gprj": "D:\\FPGA-Project\\delivery-evidence-20261027\\control88-routing-20261028\\q4-firmware\\control88.gprj",
+  "archive_sha256": "5a1e64b476e15c0beec438342cea7a88ff3cf1217ed7772dbc88f93e3204a7d6",
+  "qualified_firmware": false,
+  "bitstream_included": false,
+  "build_and_test_rerun": false,
+  "limits": [
+    "Read-only source recovery. Original project relative paths retained; build Tcl and tests may reference original workspace and require reviewed adaptation before running.",
+    "Gowin installation is not bundled. No source identity match to old PnR inferred from a fresh snapshot.",
+    "RC-drive/SENSE implementation is not yet qualified against Sensor S1; screen/storage/full expression not accepted."
+  ]
+}

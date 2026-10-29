@@ -183,5 +183,20 @@
   "governance": "project/governance.json",
   "latest_incremental_fpga_profile": "note_input_router_candidate",
   "latest_isolated_fpga_endpoint": "note_contact_transport_candidate",
-  "latest_frame_transport_profile": "note_frame_source_candidate"
+  "latest_frame_transport_profile": "note_frame_source_candidate",
+  "hardware_delivery_baseline": {
+    "schema": 1,
+    "id": "hardware-delivery-20261029-r2-s1",
+    "manifest": "hardware/delivery-baselines/20261029-r2-s1/MANIFEST.json",
+    "entry": "project/DELIVERY-BASELINE-20261029.md",
+    "status": "RECOVERABLE_CHECKPOINT_SENSOR_STRICT_CLEARANCE_FAB_HOLD",
+    "product_acceptance": false,
+    "publication": "TASK_BRANCH_CANDIDATE_MAIN_MERGE_PENDING",
+    "production_hold": {
+      "sensor": true,
+      "reason": "22 bottom non-ground header pads to actual Gerber ground fall below retained0.1651mm gate; min0.16285815884790691mm. Generic5.98mil check and5um source/export equivalence do not prove this stricter condition.",
+      "source_changed_during_this_task": false,
+      "report": "evidence/retained-clearance-gate-audit.json"
+    }
+  }
 }

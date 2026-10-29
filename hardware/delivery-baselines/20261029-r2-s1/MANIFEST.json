@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "id": "hardware-delivery-20261029-r2-s1",
+  "captured_at": "2026-10-29T11:11:51.816803+00:00",
+  "repository": "sakuyaShining/FPGA-Music-project-internal",
+  "branch": "codex/hardware-delivery-20261027",
+  "base_main": "0f2ff18f49ec4c95889712aec4ea8ad55f2b25f2",
+  "preparation_parent": "3e6723b99585e040baa530862f695dffe6983de2",
+  "status": "RECOVERABLE_CHECKPOINT_SENSOR_STRICT_CLEARANCE_FAB_HOLD",
+  "complete_product_accepted": false,
+  "supplier_accepted": false,
+  "order_submitted": false,
+  "paid": false,
+  "physical_validation": false,
+  "finished_board_quantities": {
+    "Control88_R2": 1,
+    "Sensor14Bank_S1": 6
+  },
+  "net_quantities": {
+    "unique_C_numbers": 38,
+    "parts": 256,
+    "SMT": 232,
+    "TH": 24
+  },
+  "control_pcb_sha256": "733e1d9c33d11ef946863dca0bc9f36ae2916b9965d038b147aafea416194eb8",
+  "sensor_pcb_sha256": "2184d027643f52ff50a7bca4bf9c717ae805a099043d300855f3348be5b5b7e3",
+  "supplier_packet": "factory-handoff-20261029.zip",
+  "firmware_status": "READ_ONLY_RECOVERY_SNAPSHOT_NOT_QUALIFIED_NO_BITSTREAM",
+  "files": {
+    "control88-frozen-r2-20261029.zip": {
+      "sha256": "24fe5ec56d973144bcdb217d0b1af5efbf2fd85d14ee655555ba9a2d41b1dcfd",
+      "bytes": 1708519
+    },
+    "evidence/check_retained_clearance_gate.py": {
+      "sha256": "ce19b5ee657b9562e42b72f9df94a1f757cc0a0c3c325b0a038520d34a7380c3",
+      "bytes": 1578
+    },
+    "evidence/COMPLETION-AUDIT.json": {
+      "sha256": "146106375884dd9ee5aadc13fa920ca93fb5e0d57beebede028e448c8937bd86",
+      "bytes": 1673
+    },
+    "evidence/INSTALL-CONNECTORS-READBACK.json": {
+      "sha256": "c29b1e5c9465548679984af0c59d1b1fe279fb53f41346742b574da3bce888c6",
+      "bytes": 1202
+    },
+    "evidence/retained-clearance-gate-audit.json": {
+      "sha256": "4cd6ec0ec023b41d3582effd70e1342b0c65161131e9fd5c538d2a241649d69f",
+      "bytes": 11528
+    },
+    "evidence/SENSOR-FREEZE-RECEIPT.json": {
+      "sha256": "73b644479342cb521349b38679171b9062e1fca6e4389210ee824e7fddc8feec",
+      "bytes": 316
+    },
+    "evidence/UNIFIED-HANDOFF-RECEIPT.json": {
+      "sha256": "2fbf6c9e1fe41c38b5d55ee5168459c3f44e0a24e68d28448eb126e59cfcb659",
+      "bytes": 311
+    },
+    "factory-handoff-20261029.zip": {
+      "sha256": "187c7ca993320a456fd028ae16ec8ed05b0ab33785c0ee3e653f602743211dc7",
+      "bytes": 2468201
+    },
+    "JLC-FIRST-ORDER-TUTORIAL.md": {
+      "sha256": "41d8339b019aad69930d3541a462ec345ce75c732976e1975cfad2862046962a",
+      "bytes": 10034
+    },
+    "Q4-FIRMWARE-SOURCE-RECOVERY-NOT-QUALIFIED.zip": {
+      "sha256": "5a1e64b476e15c0beec438342cea7a88ff3cf1217ed7772dbc88f93e3204a7d6",
+      "bytes": 185378
+    },
+    "Q4-SOURCE-CAPTURE.json": {
+      "sha256": "492bd6fcf17ef04340e21e8e9fca55da4c35a1c99bf99b48c4e696c364da6978",
+      "bytes": 13028
+    },
+    "README.md": {
+      "sha256": "9a886e19ecb5fe37d7bea88e29264ff74dd03be6867f0cf9ae4f14fa377b2b43",
+      "bytes": 3059
+    },
+    "sensor14-frozen-s1-20261029.zip": {
+      "sha256": "777dc872d71403cbc39430b9ffd8a6dc05e44dd2d04ff0ebfe62cab59a97898a",
+      "bytes": 339908
+    },
+    "WHOLE-MACHINE-PURCHASE-AND-ASSEMBLY.md": {
+      "sha256": "b099bee86db596ccd9770f5cfb91e939abd0106edbf1d7932a1b829e9d99ab2f",
+      "bytes": 12579
+    }
+  },
+  "open_gates": [
+    "sensor_Gerber_22PAD_strict_0p1651mm_clearance_repair_and_reexport",
+    "supplier_DFM_SMT_preview_parts_quote_and_ship_date",
+    "screen_complete_configuration_and_delivered_quote",
+    "screen_12_to_40_pin_harness_and_touch_electrical_confirmation",
+    "exact_accessory_SKUs_and_total_700CNY_budget",
+    "RC_scan_semantics_screen_storage_expression_recordplay_firmware",
+    "physical_bringup_calibration_and_complete_product_acceptance"
+  ],
+  "historical_only": [
+    "native951_227_component_carrier",
+    "old_32SKU_232part_and_37SKU_256part_procurement",
+    "Control88_20261028_candidate_and_Q3_retail_MOQ_cost_conclusion"
+  ],
+  "validation_inherited_for_modified_sources": false,
+  "supplier_packet_role": "Historical retained packet for quotation/review only; SENSOR STRICT CLEARANCE HOLD overrides embedded READY/PASS wording",
+  "production_hold": {
+    "sensor": true,
+    "reason": "22 bottom non-ground header pads to actual Gerber ground fall below retained0.1651mm gate; min0.16285815884790691mm. Generic5.98mil check and5um source/export equivalence do not prove this stricter condition.",
+    "source_changed_during_this_task": false,
+    "report": "evidence/retained-clearance-gate-audit.json"
+  }
+}

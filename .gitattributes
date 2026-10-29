@@ -59,3 +59,8 @@ docs/02-技术方案/38-代码盘点与实现基线-2026-10-09.md text eol=lf
 docs/02-技术方案/39-最新设计构想与落地差距-2026-10-09.md text eol=lf
 docs/02-技术方案/49-最终收敛设计总纲-2026-10-15.md text eol=lf
 project/CONSOLIDATION-20261027.md text eol=lf
+# Delivery archives, manifests and captured evidence keep their exact bytes.
+hardware/delivery-baselines/** -text -whitespace
+project/DELIVERY-BASELINE-20261029.md text eol=lf
+project/delivery-baseline.json text eol=lf
+tools/scripts/delivery_baseline.py text eol=lf

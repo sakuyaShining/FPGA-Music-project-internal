@@ -28,6 +28,8 @@ jobs:
         run: python3 -m unittest discover -s tools/tests -p 'test_design_governance.py' -v
       - name: Verify current engineering input identities
         run: python3 tools/scripts/engineering.py check
+      - name: Verify delivery baseline identities and retained production holds
+        run: python3 tools/scripts/delivery_baseline.py
       - name: Verify engineering corruption and isolated export rejection
         run: python3 -m unittest discover -s tools/tests -p 'test_engineering.py' -v
       - name: Verify explicit music profiles and independent amplitude guards
