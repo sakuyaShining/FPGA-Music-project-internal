@@ -6,9 +6,9 @@
   },
   "decision_ledger": "project/decisions.json",
   "producer_registry": "project/producers.json",
-  "review_record": "project/reviews/20261030-power-harness-constraints/review.json",
-  "review_sha256": "ee0cec74242ac7cba91e75079cf91c1e843f899a5bf10e84404bb41e9b2ed0d5",
-  "reviewed_at": "2026-10-30T04:47:54.510105+00:00",
+  "review_record": "project/reviews/20261030-buying-entry/review.json",
+  "review_sha256": "8ab32807f751ec040d642d9621956abfea07a4dd265f49c3b3c1325f350d6957",
+  "reviewed_at": "2026-10-30T08:46:13.576216+00:00",
   "review_max_hours": 168,
   "required_scope_facts": [
     "platform",
@@ -34,9 +34,9 @@
   "controlled_files": {
     ".gitattributes": "84626029b4c35832bdd7999e4ce3b35868fa43f02c3cd5e11849487ee1fb7ae0",
     ".github/workflows/project-entry.yml": "d65a3546504b4f0d62511f35171d0c29d15cc8ab0a8de3fd2a413a3cb06f6290",
-    "AGENTS.md": "bc3a7c49be992c2543a261a03c54dc38fa2e64abbfc407384ff52e916f5153f4",
+    "AGENTS.md": "e0503a33d5ecf76af3ddeefcb713800e8cbfe1514df83b8b1441b3f016766e49",
     "README.md": "61a1f0f3d205eb67a23c0d025181d77b5d996e202423d3af26c7d595af8158a6",
-    "docs/00-协作/AGENT-BOARD.md": "2a318b624e3d56ac95277d03303db8f49d51a604f74e513591638feada149b39",
+    "docs/00-协作/AGENT-BOARD.md": "a994f4a6860525b910aa388efb070c0f762a20155d6cd891ac5eefbfedd92d8c",
     "experiments/note_resource_20261024/README.md": "e5d366171c5315d354991274f1d6d1f243359d0ebb494928ee86474736ff94f9",
     "experiments/note_resource_20261024/audio/ENGINE-SOURCE.json": "766a310d634f427ddb64b847b47e93636060be20ca8709d9b9258665e61722df",
     "experiments/note_resource_20261024/audio/README.md": "1cfdb2414e6cf945fede5c197b5ec055de91927126e924c215c7b1c02980bcfb",
@@ -932,8 +932,9 @@
     "hardware/electrode-panel-20261029/MANIFEST.json": "7ce5498a0d9c9567af3caa1ac75cd367472614b805c548fcea36d5476f968db7",
     "hardware/sensor14-s2-20261030/MANIFEST.json": "58571c704095dd80946a1fda72a4214ceab118a80043e2d969fbb60b19212378",
     "hardware/electrode-fullpanel-450-20261030/MANIFEST.json": "0466d727b557c93f647c029bf07d3de9b4a1e4b60bc5d992366ec9265f7002af",
-    "hardware/sourcing-closure-20261030/MANIFEST.json": "72c076f4a7de27cb4e4ec7d1b4e4e146afcf7c8b172f9a4bf1d2d101ed630d0f",
-    "hardware/electrode-fullpanel-cam-20261030/MANIFEST.json": "c8367ace71a0a0f2a13efd1294cd44587caef1ad1950552f8fe83cfd46d54b4c"
+    "hardware/sourcing-closure-20261030/MANIFEST.json": "e570325cfefffcf897807e4b3e629d2b5474319ea0ba236a4a7b328d0984047a",
+    "hardware/electrode-fullpanel-cam-20261030/MANIFEST.json": "c8367ace71a0a0f2a13efd1294cd44587caef1ad1950552f8fe83cfd46d54b4c",
+    "hardware/sourcing-closure-20261030/BUYING.md": "2035ff7e3963761061523c76c0cf0d55e31aad84d3a2a9cf3c5de2b48e2a21ba"
   },
   "repository_identity": {
     "id": 1404161021,
