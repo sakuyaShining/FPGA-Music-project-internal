@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "scope": "Read-only identities, quote options, custom-board net counts and conditional screen pinmap; supplier/physical acceptance pending",
+  "scope": "Read-only sourcing and conditional power/harness constraints; full native CAM in separate immutable checkpoint; supplier and physical acceptance pending",
   "files": {
     "assembly-bom-20261030/BOM-SCOPE-AUDIT.json": {
       "sha256": "f3e8aaff3eb8573cbf3981bfef295b130551e56e7d3d5d147b854b821d3a8f3a",
@@ -50,6 +50,22 @@
       "sha256": "96a946803b72a5eeff4ba885442e51b2510857ccf89e7c1a8dd27e4fc02c6790",
       "bytes": 2517
     },
+    "harness-geometry-20261030/check_harness_geometry.py": {
+      "sha256": "32ec6141262aad69beb8ff17fc1b94c3e1e4b01c1345b7408aeea179dcd417a7",
+      "bytes": 6246
+    },
+    "harness-geometry-20261030/HARNESS-96-PIN-GEOMETRY-CANDIDATE.csv": {
+      "sha256": "e025990ea7e92df522023142e1d6b14cf934985f57cf0b93fd48049c86ca638d",
+      "bytes": 11692
+    },
+    "harness-geometry-20261030/HARNESS-GEOMETRY-CHECK.json": {
+      "sha256": "0072a18fdf7614f2738abe8ba7b369b778cda0fd2cf83bbfefd6ff7dbc2856c6",
+      "bytes": 4080
+    },
+    "harness-geometry-20261030/README.md": {
+      "sha256": "59a421e8369cd3b8482cf594bb7f2d22afabe1a5198c67cf1ee3bb7264b5d9f1",
+      "bytes": 1271
+    },
     "j10-wire-candidate-20261030/C88-SIDE-CHECK.json": {
       "sha256": "a6635bf9560878b1e84cc9be403fa75ec5923b87e7405bc7f66b6c400c4adc6e",
       "bytes": 334
@@ -77,6 +93,30 @@
     "PORTABLE-VERIFICATION.json": {
       "sha256": "725a8bd422543b150960d9207e53b662cae619e2ee42c2f147a268ea1bca4369",
       "bytes": 374
+    },
+    "power-envelope-20261030/Bourns-derating-page9.png": {
+      "sha256": "f8e576562ea2bbe344c98a49a2c0e929592216f0257aa0fa1785af740eb415f9",
+      "bytes": 166263
+    },
+    "power-envelope-20261030/Bourns-MF-MSMF-official.pdf": {
+      "sha256": "50d80228581842471d563e28ba0f1b67ab095ee95dfac4079f4a49f7f7bbf3c8",
+      "bytes": 1327051
+    },
+    "power-envelope-20261030/extract_power_constraints.py": {
+      "sha256": "7f7b1e7d2b61b1ca3b97007f52fefd75aaa68db3c9c74a7dd38abb8ddf3c15b1",
+      "bytes": 4959
+    },
+    "power-envelope-20261030/POWER-CONSTRAINTS.json": {
+      "sha256": "4c092abeabd6b4ee32f5a9454439c416867071798adff792ac4900780b63a5e3",
+      "bytes": 7213
+    },
+    "power-envelope-20261030/README.md": {
+      "sha256": "3865b51b4307db054018991c6ae604196a27f28079cc49026fbdc524edaa04a9",
+      "bytes": 1454
+    },
+    "POWER-HARNESS-RESTORE-CHECK.json": {
+      "sha256": "e7cbc83a026cea50152850a5afab88470dc6e337b1d76241a58ff4897f822e97",
+      "bytes": 1562
     },
     "quote-options-20261030/CAP-13-DEVIATION-QUOTE-ONLY.csv": {
       "sha256": "a6ebe0ba8489573da1a433de0c1d4a4845e835f64b148a30016773ff9ca90249",
@@ -111,8 +151,8 @@
       "bytes": 1544
     },
     "README.md": {
-      "sha256": "afb25270b2c12b90f0f138392488fc6a1b8157c299e541ea62b3804486e205b9",
-      "bytes": 4415
+      "sha256": "138e67740d545c9a64e3c09d74c55f3ce3cae251c70c127705f483a0c9c8a2cc",
+      "bytes": 4968
     },
     "SCREEN-PRIMARY-FACTS.md": {
       "sha256": "7e94b0951a207827daa02c34579ebe040572b7c49ceb5ae8def1a58daf36d196",

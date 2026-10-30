@@ -1,0 +1,328 @@
+{
+  "schema": 1,
+  "status": "PARTIAL_SOURCE_AND_FUSE_TEMPERATURE_ENVELOPE_NOT_COMPLETE_LOAD_BUDGET",
+  "PCB_sha256": "733e1d9c33d11ef946863dca0bc9f36ae2916b9965d038b147aafea416194eb8",
+  "parts": {
+    "F1": {
+      "MPN": "MF-MSMF110/16-2",
+      "LCSC": "C210834",
+      "pads": {
+        "2": "5V_FUSED",
+        "1": "5V_IN"
+      }
+    },
+    "Q1": {
+      "MPN": "DMP2035U-7",
+      "LCSC": "C110499",
+      "pads": {
+        "1": "PWR_GATE",
+        "2": "5V_PROTECTED",
+        "3": "5V_FUSED"
+      }
+    },
+    "U17": {
+      "MPN": "TPS2553DBVR",
+      "LCSC": "C55266",
+      "pads": {
+        "3": "3V3_IO",
+        "2": "GND",
+        "1": "5V_PROTECTED",
+        "6": "5V_PERIPH",
+        "5": "PWR_ILIM",
+        "4": "PWR_FAULT_N"
+      }
+    },
+    "R67": {
+      "MPN": "0603WAF2372T5E",
+      "LCSC": "C22912",
+      "pads": {
+        "2": "GND",
+        "1": "PWR_ILIM"
+      }
+    },
+    "U13": {
+      "MPN": "AP2112K-3.3TRG1",
+      "LCSC": "C51118",
+      "pads": {
+        "4": "",
+        "5": "DAC_3V3",
+        "1": "5V_PERIPH",
+        "2": "GND",
+        "3": "5V_PERIPH"
+      }
+    },
+    "U18": {
+      "MPN": "AP2112K-3.3TRG1",
+      "LCSC": "C51118",
+      "pads": {
+        "4": "",
+        "5": "3V3_PERIPH",
+        "1": "5V_PERIPH",
+        "2": "GND",
+        "3": "5V_PERIPH"
+      }
+    },
+    "J13": {
+      "MPN": "B2B-XH-A(LF)(SN)",
+      "LCSC": "C158012",
+      "pads": {
+        "1": "5V_IN",
+        "2": "GND"
+      }
+    },
+    "J10": {
+      "MPN": "2.54-1*12P反弯针",
+      "LCSC": "C247920",
+      "pads": {
+        "1": "5V_PERIPH",
+        "2": "GND",
+        "3": "DISP_SCK",
+        "4": "DISP_MOSI",
+        "5": "RA_MISO",
+        "6": "DISP_HARM_CS_N",
+        "7": "DISP_RESET_N",
+        "8": "I2C_MOD_SDA",
+        "9": "I2C_MOD_SCL",
+        "10": "TP_INT_MOD",
+        "11": "TP_RESET_MOD_N",
+        "12": "GND"
+      }
+    },
+    "J5": {
+      "MPN": "2.54-1*20P母",
+      "LCSC": "C50984",
+      "pads": {
+        "1": "",
+        "2": "GND",
+        "3": "",
+        "4": "",
+        "5": "SENSE_4",
+        "6": "SENSE_3",
+        "7": "I2S_BCK",
+        "8": "I2S_DIN",
+        "9": "",
+        "10": "SENSE_5",
+        "11": "I2S_LRCK",
+        "12": "",
+        "13": "",
+        "14": "",
+        "15": "GND",
+        "16": "3V3_IO",
+        "17": "",
+        "18": "",
+        "19": "",
+        "20": ""
+      }
+    },
+    "J6": {
+      "MPN": "2.54-1*20P母",
+      "LCSC": "C50984",
+      "pads": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "TP_INT",
+        "6": "BUS_MOSI",
+        "7": "SCAN_LATCH",
+        "8": "BUS_SCK",
+        "9": "BUS_RETURN",
+        "10": "I2C_SDA",
+        "11": "I2C_SCL",
+        "12": "SENSE_0",
+        "13": "SENSE_1",
+        "14": "SENSE_2",
+        "15": "INPUT_LOAD_N",
+        "16": "",
+        "17": "HARM_CS_N",
+        "18": "",
+        "19": "3V3_IO",
+        "20": "GND"
+      }
+    }
+  },
+  "rail_incidence_not_load_currents": {
+    "5V_IN": [
+      "F1.1",
+      "J13.1"
+    ],
+    "5V_FUSED": [
+      "F1.2",
+      "Q1.3"
+    ],
+    "5V_PROTECTED": [
+      "C37.1",
+      "Q1.2",
+      "U17.1"
+    ],
+    "5V_PERIPH": [
+      "C30.1",
+      "C38.1",
+      "J10.1",
+      "R70.1",
+      "U13.1",
+      "U13.3",
+      "U17.6",
+      "U18.1",
+      "U18.3"
+    ],
+    "3V3_IO": [
+      "C8.1",
+      "C9.1",
+      "C10.1",
+      "C11.1",
+      "C32.1",
+      "C33.1",
+      "C36.1",
+      "CX1.1",
+      "J5.16",
+      "J6.19",
+      "JB0.1",
+      "JB1.1",
+      "JB2.1",
+      "JB3.1",
+      "JB4.1",
+      "JB5.1",
+      "R30.1",
+      "R32.1",
+      "R33.1",
+      "R34.1",
+      "R50.1",
+      "R51.1",
+      "R52.1",
+      "R53.1",
+      "R54.1",
+      "R55.1",
+      "R56.1",
+      "R57.1",
+      "R69.1",
+      "R73.1",
+      "RX1.1",
+      "RX2.1",
+      "RX3.1",
+      "U8.16",
+      "U8.10",
+      "U9.16",
+      "U10.8",
+      "U11.5",
+      "U14.1",
+      "U15.17",
+      "U16.5",
+      "U17.3",
+      "UX1.3",
+      "UX1.16",
+      "UX1.14",
+      "UX1.13",
+      "UX1.12",
+      "UX1.11"
+    ],
+    "3V3_PERIPH": [
+      "C34.1",
+      "C35.1",
+      "C39.1",
+      "R60.1",
+      "R61.1",
+      "R62.1",
+      "R68.1",
+      "R71.1",
+      "U14.8",
+      "U14.5",
+      "U15.20",
+      "U18.5"
+    ],
+    "DAC_3V3": [
+      "C23.1",
+      "C24.1",
+      "C25.1",
+      "C26.1",
+      "C31.1",
+      "R40.1",
+      "U12.1",
+      "U12.8",
+      "U12.18",
+      "U12.28",
+      "U13.5"
+    ]
+  },
+  "F1_derating": [
+    {
+      "ambient_C": 23,
+      "F1_hold_A": 1.1,
+      "headroom_to_candidate_steady_A": 0.6,
+      "candidate_fraction_of_hold": 0.4545
+    },
+    {
+      "ambient_C": 40,
+      "F1_hold_A": 0.95,
+      "headroom_to_candidate_steady_A": 0.45,
+      "candidate_fraction_of_hold": 0.5263
+    },
+    {
+      "ambient_C": 50,
+      "F1_hold_A": 0.87,
+      "headroom_to_candidate_steady_A": 0.37,
+      "candidate_fraction_of_hold": 0.5747
+    },
+    {
+      "ambient_C": 60,
+      "F1_hold_A": 0.8,
+      "headroom_to_candidate_steady_A": 0.3,
+      "candidate_fraction_of_hold": 0.625
+    },
+    {
+      "ambient_C": 70,
+      "F1_hold_A": 0.71,
+      "headroom_to_candidate_steady_A": 0.21,
+      "candidate_fraction_of_hold": 0.7042
+    },
+    {
+      "ambient_C": 85,
+      "F1_hold_A": 0.6,
+      "headroom_to_candidate_steady_A": 0.1,
+      "candidate_fraction_of_hold": 0.8333
+    }
+  ],
+  "limits": {
+    "candidate_C88_J13_steady_current_allocation_A": 0.5,
+    "allocation_is_measurement": false,
+    "allocation_origin": "Existing R2 IR-drop estimated load only; not a measured or guaranteed maximum",
+    "F1_hold_at_23C_A": 1.1,
+    "F1_hold_at_60C_A": 0.8,
+    "F1_R1max_23C_ohm": 0.21,
+    "F1_drop_at_candidate_and_R1max_V": 0.105,
+    "drop_bound_is_all_temperature_guarantee": false,
+    "TPS2553_previous_verified_limit_A": [
+      1.002,
+      1.184
+    ],
+    "PSU_current_rating_is_not_board_path_current_rating": true,
+    "Nano_USB_current_A": null,
+    "all_machine_peak_current_A": null,
+    "screen_complete_configuration_peak_A": null,
+    "exact_domestic_PSU_SKU": null,
+    "shipping_inclusive_price_CNY": null,
+    "budget_accepted": false
+  },
+  "sources": [
+    {
+      "url": "https://www.bourns.com/docs/product-datasheets/mf-msmf.pdf",
+      "sha256": "50d80228581842471d563e28ba0f1b67ab095ee95dfac4079f4a49f7f7bbf3c8",
+      "page_1based": 9,
+      "visual_review": "Confirmed non-X MF-MSMF110/16 row; do not use /16X row"
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/tps2553.pdf",
+      "revision_observed": "SLVS841G October2026",
+      "scope": "Original current limit retained; no threshold change"
+    }
+  ],
+  "open_items": [
+    "Actual Nano USB and Nano 3V3_IO maximum dynamic current at intended bitstream/scan rate",
+    "Exact screen variant steady/start-up current and complete touch wiring",
+    "Whole C88 protected branch start-up/transient including actual wiring voltage drop",
+    "Enclosure temperature, F1 heating and LDO thermal behavior",
+    "Domestic exact PSU product, two5V branches, polarity/current rating/voltage-drop of complete cables, shipped quote"
+  ],
+  "manufacturing_release": false,
+  "physical_power_acceptance": false
+}
