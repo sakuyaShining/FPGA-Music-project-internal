@@ -6,9 +6,9 @@
   },
   "decision_ledger": "project/decisions.json",
   "producer_registry": "project/producers.json",
-  "review_record": "project/reviews/20261030-j10-wire-candidate/review.json",
-  "review_sha256": "4321c5063fdc317ca62abaa4ab520d8fd02b1bd98b1b0bdba38940dff7a23836",
-  "reviewed_at": "2026-10-29T22:18:22.967187+00:00",
+  "review_record": "project/reviews/20261030-full84-native-cam/review.json",
+  "review_sha256": "0359d6cb4f4510efc64b5b4d42fc1213958aa2fc23016216bdf8c5e7667c558e",
+  "reviewed_at": "2026-10-30T01:54:48.688429+00:00",
   "review_max_hours": 168,
   "required_scope_facts": [
     "platform",
@@ -32,11 +32,11 @@
   ],
   "source_visibility": "GitHub cannot inspect local roots; seven-day producer observations expire. No perpetual freshness inferred.",
   "controlled_files": {
-    ".gitattributes": "abae39e29cdde569f28379084633fdd020204087db155f21ad4c8191c5386c97",
+    ".gitattributes": "84626029b4c35832bdd7999e4ce3b35868fa43f02c3cd5e11849487ee1fb7ae0",
     ".github/workflows/project-entry.yml": "d65a3546504b4f0d62511f35171d0c29d15cc8ab0a8de3fd2a413a3cb06f6290",
-    "AGENTS.md": "0326257e1fb95115fec86be83bc3b12f9911de58f82c8443640d4803e796d093",
+    "AGENTS.md": "bc3a7c49be992c2543a261a03c54dc38fa2e64abbfc407384ff52e916f5153f4",
     "README.md": "61a1f0f3d205eb67a23c0d025181d77b5d996e202423d3af26c7d595af8158a6",
-    "docs/00-协作/AGENT-BOARD.md": "27d6f0a5182eafc07970a486c67eee05e5b05215614209b0c0f6e94e5973680f",
+    "docs/00-协作/AGENT-BOARD.md": "2a318b624e3d56ac95277d03303db8f49d51a604f74e513591638feada149b39",
     "experiments/note_resource_20261024/README.md": "e5d366171c5315d354991274f1d6d1f243359d0ebb494928ee86474736ff94f9",
     "experiments/note_resource_20261024/audio/ENGINE-SOURCE.json": "766a310d634f427ddb64b847b47e93636060be20ca8709d9b9258665e61722df",
     "experiments/note_resource_20261024/audio/README.md": "1cfdb2414e6cf945fede5c197b5ec055de91927126e924c215c7b1c02980bcfb",
@@ -123,7 +123,7 @@
     "project/decisions.json": "bbc085a8cf212e1fdda05782d41bbe8ea3ec314f51179d7fe3b7dee2579e26e5",
     "project/design-state.json": "778cca8d646c332c96a03751871881d95a21206e484fa35d89b5bd54d3a07296",
     "project/handoff.json": "a1ec746bc8997463bb466dff392b2a15ed2b9461791b13cb0d766957d8d1a0a7",
-    "project/producers.json": "f1e6bcee54e03ee9cabf2fb3b0160f7814d4836606242d03e7861f1c1dad79ae",
+    "project/producers.json": "d2939812a382837d85ab0e74c4bb585413b7d063b8b4bba76d0c2571247206ed",
     "project/reviews/20261023-display-clarification/evidence/DECISIONS-20261023.md": "b3ae41af9deb074b0124f301779849e8ff75fbba886bc0bbd4853e8e59066554",
     "project/reviews/20261023-display-clarification/evidence/current-user-confirmation.json": "e21161fe8152fc07a9ccb533250167fa1d4335ee2d680e54f9fa0627dc277565",
     "project/reviews/20261023-display-clarification/evidence/hardware/AUTONOMOUS-CURRENT.md": "7823d8b0887987668b8cfff974a1b53c050fc8ffc81adc484fcafde3834230f0",
@@ -932,7 +932,8 @@
     "hardware/electrode-panel-20261029/MANIFEST.json": "7ce5498a0d9c9567af3caa1ac75cd367472614b805c548fcea36d5476f968db7",
     "hardware/sensor14-s2-20261030/MANIFEST.json": "58571c704095dd80946a1fda72a4214ceab118a80043e2d969fbb60b19212378",
     "hardware/electrode-fullpanel-450-20261030/MANIFEST.json": "0466d727b557c93f647c029bf07d3de9b4a1e4b60bc5d992366ec9265f7002af",
-    "hardware/sourcing-closure-20261030/MANIFEST.json": "388aded3dff4755ac06643f9e8b3451f5dfbfde5863e0251f66213c9e74e8fe0"
+    "hardware/sourcing-closure-20261030/MANIFEST.json": "388aded3dff4755ac06643f9e8b3451f5dfbfde5863e0251f66213c9e74e8fe0",
+    "hardware/electrode-fullpanel-cam-20261030/MANIFEST.json": "c8367ace71a0a0f2a13efd1294cd44587caef1ad1950552f8fe83cfd46d54b4c"
   },
   "repository_identity": {
     "id": 1404161021,

@@ -1,0 +1,1022 @@
+{
+  "schema": 1,
+  "status": "FAIL_FULL84_NATIVE_CAM",
+  "source_sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+  "gerber_sha256": "3bdc522565d23f47f5b51d5d23371e12e42dd71a744ea3e076f5d60c15701901",
+  "native_save_close_reopen_DRC_violations": [],
+  "layers": {
+    "1": {
+      "components": 180,
+      "minimum_different_net_gap_mm": 0.2649200000000036,
+      "minimum_pair": [
+        [
+          "E081"
+        ],
+        [
+          "E052"
+        ]
+      ],
+      "source_missing_area_beyond_5um_mm2": 0.0,
+      "extra_area_beyond_5um_mm2": 4.712381587912674e-06
+    },
+    "2": {
+      "components": 120,
+      "minimum_different_net_gap_mm": 0.25595105453660416,
+      "minimum_pair": [
+        [
+          "E062"
+        ],
+        [
+          "E074"
+        ]
+      ],
+      "source_missing_area_beyond_5um_mm2": 0.0,
+      "extra_area_beyond_5um_mm2": 4.7123815879126714e-06
+    }
+  },
+  "actual_nets": 90,
+  "unconnected_actual_nets": {},
+  "masks": {
+    "1": {
+      "active_electrode_openings": [],
+      "untented_vias": [],
+      "header_pad_openings": 96,
+      "unexplained_opening_area_mm2": 0.0
+    },
+    "2": {
+      "active_electrode_openings": [],
+      "untented_vias": [],
+      "header_pad_openings": 96,
+      "unexplained_opening_area_mm2": 0.0
+    }
+  },
+  "PTH": 198,
+  "NPTH": 6,
+  "via_PTH_subset": 102,
+  "clearance_gate_mm": 0.25,
+  "geometry_correspondence_tolerance_mm": 0.005,
+  "failures": [
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 1,
+      "labels": [],
+      "area": 7.853969313192893e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 1,
+      "labels": [],
+      "area": 7.853969313197293e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 1,
+      "labels": [],
+      "area": 7.85396931318499e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 1,
+      "labels": [],
+      "area": 7.853969313185e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 1,
+      "labels": [],
+      "area": 7.853969313189422e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 1,
+      "labels": [],
+      "area": 7.853969313177137e-07
+    },
+    {
+      "issue": "COPPER_SOURCE_EXPORT_MISMATCH",
+      "layer": 1,
+      "lost_mm2": 0.0,
+      "extra_mm2": 4.712381587912674e-06
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 2,
+      "labels": [],
+      "area": 7.853969313192889e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 2,
+      "labels": [],
+      "area": 7.853969313197293e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 2,
+      "labels": [],
+      "area": 7.85396931318499e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 2,
+      "labels": [],
+      "area": 7.853969313185e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 2,
+      "labels": [],
+      "area": 7.853969313189436e-07
+    },
+    {
+      "issue": "ACTUAL_COMPONENT_NET_LABEL",
+      "layer": 2,
+      "labels": [],
+      "area": 7.853969313177134e-07
+    },
+    {
+      "issue": "COPPER_SOURCE_EXPORT_MISMATCH",
+      "layer": 2,
+      "lost_mm2": 0.0,
+      "extra_mm2": 4.7123815879126714e-06
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        22.029999119999996,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        24.56999912,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        27.109999119999998,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        29.649999119999997,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        32.189999119999996,
+        7.00000124,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        34.729999119999995,
+        7.00000124,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        19.489999119999997,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        16.949999119999998,
+        7.000001240000002,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        94.02999989999999,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        96.5699999,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        99.10999989999999,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        101.6499999,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        104.18999989999999,
+        7.00000124,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        106.7299999,
+        7.00000124,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        109.26999989999999,
+        7.00000124,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        111.8099999,
+        7.00000124,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        114.3499999,
+        7.000001239999998,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        116.88999989999999,
+        7.000001239999998,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        119.4299999,
+        7.000001239999998,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        91.4899999,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        88.9499999,
+        7.000001240000002,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        166.03000068,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        168.57000068,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        171.11000067999998,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        173.65000068,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        176.19000068,
+        7.00000124,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        178.73000068,
+        7.00000124,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        163.49000067999998,
+        7.000001240000001,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        160.95000068,
+        7.000001240000002,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        22.029999119999996,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        24.56999912,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        27.109999119999998,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        29.649999119999997,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        32.189999119999996,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        34.729999119999995,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        19.489999119999997,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        16.949999119999998,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        94.02999989999999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        96.5699999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        99.10999989999999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        101.6499999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        104.18999989999999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        106.7299999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        109.26999989999999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        111.8099999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        114.3499999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        116.88999989999999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        119.4299999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        91.4899999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        88.9499999,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        166.03000068,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        168.57000068,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        171.11000067999998,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        173.65000068,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        176.19000068,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        178.73000068,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        163.49000067999998,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "DRILL_SOURCE_MISMATCH",
+      "kind": "PTH",
+      "expected": [
+        160.95000068,
+        77.00000093999999,
+        1.0200136
+      ],
+      "matches": 0
+    },
+    {
+      "issue": "UNEXPECTED_DRILLS",
+      "kind": "PTH",
+      "extra": [
+        [
+          22.03008,
+          7.0,
+          1.02001
+        ],
+        [
+          24.57005,
+          7.0,
+          1.02001
+        ],
+        [
+          27.11005,
+          7.0,
+          1.02001
+        ],
+        [
+          29.65005,
+          7.0,
+          1.02001
+        ],
+        [
+          32.19005,
+          7.0,
+          1.02001
+        ],
+        [
+          34.73005,
+          7.0,
+          1.02001
+        ],
+        [
+          19.49008,
+          7.0,
+          1.02001
+        ],
+        [
+          16.95008,
+          7.0,
+          1.02001
+        ],
+        [
+          94.03008,
+          7.0,
+          1.02001
+        ],
+        [
+          96.57005,
+          7.0,
+          1.02001
+        ],
+        [
+          99.11005,
+          7.0,
+          1.02001
+        ],
+        [
+          101.65005,
+          7.0,
+          1.02001
+        ],
+        [
+          104.19005,
+          7.0,
+          1.02001
+        ],
+        [
+          106.73005,
+          7.0,
+          1.02001
+        ],
+        [
+          109.27003,
+          7.0,
+          1.02001
+        ],
+        [
+          111.81003,
+          7.0,
+          1.02001
+        ],
+        [
+          114.35003,
+          7.0,
+          1.02001
+        ],
+        [
+          116.89003,
+          7.0,
+          1.02001
+        ],
+        [
+          119.43003,
+          7.0,
+          1.02001
+        ],
+        [
+          91.49008,
+          7.0,
+          1.02001
+        ],
+        [
+          88.95008,
+          7.0,
+          1.02001
+        ],
+        [
+          166.03008,
+          7.0,
+          1.02001
+        ],
+        [
+          168.57005,
+          7.0,
+          1.02001
+        ],
+        [
+          171.11005,
+          7.0,
+          1.02001
+        ],
+        [
+          173.65005,
+          7.0,
+          1.02001
+        ],
+        [
+          176.19005,
+          7.0,
+          1.02001
+        ],
+        [
+          178.73005,
+          7.0,
+          1.02001
+        ],
+        [
+          163.49008,
+          7.0,
+          1.02001
+        ],
+        [
+          160.95008,
+          7.0,
+          1.02001
+        ],
+        [
+          22.03008,
+          77.0,
+          1.02001
+        ],
+        [
+          24.57005,
+          77.0,
+          1.02001
+        ],
+        [
+          27.11005,
+          77.0,
+          1.02001
+        ],
+        [
+          29.65005,
+          77.0,
+          1.02001
+        ],
+        [
+          32.19005,
+          77.0,
+          1.02001
+        ],
+        [
+          34.73005,
+          77.0,
+          1.02001
+        ],
+        [
+          19.49008,
+          77.0,
+          1.02001
+        ],
+        [
+          16.95008,
+          77.0,
+          1.02001
+        ],
+        [
+          94.03008,
+          77.0,
+          1.02001
+        ],
+        [
+          96.57005,
+          77.0,
+          1.02001
+        ],
+        [
+          99.11005,
+          77.0,
+          1.02001
+        ],
+        [
+          101.65005,
+          77.0,
+          1.02001
+        ],
+        [
+          104.19005,
+          77.0,
+          1.02001
+        ],
+        [
+          106.73005,
+          77.0,
+          1.02001
+        ],
+        [
+          109.27003,
+          77.0,
+          1.02001
+        ],
+        [
+          111.81003,
+          77.0,
+          1.02001
+        ],
+        [
+          114.35003,
+          77.0,
+          1.02001
+        ],
+        [
+          116.89003,
+          77.0,
+          1.02001
+        ],
+        [
+          119.43003,
+          77.0,
+          1.02001
+        ],
+        [
+          91.49008,
+          77.0,
+          1.02001
+        ],
+        [
+          88.95008,
+          77.0,
+          1.02001
+        ],
+        [
+          166.03008,
+          77.0,
+          1.02001
+        ],
+        [
+          168.57005,
+          77.0,
+          1.02001
+        ],
+        [
+          171.11005,
+          77.0,
+          1.02001
+        ],
+        [
+          173.65005,
+          77.0,
+          1.02001
+        ],
+        [
+          176.19005,
+          77.0,
+          1.02001
+        ],
+        [
+          178.73005,
+          77.0,
+          1.02001
+        ],
+        [
+          163.49008,
+          77.0,
+          1.02001
+        ],
+        [
+          160.95008,
+          77.0,
+          1.02001
+        ]
+      ]
+    }
+  ],
+  "manufacturing_release": false,
+  "physical_touch_and_mechanical_fit": "NOT_VALIDATED"
+}

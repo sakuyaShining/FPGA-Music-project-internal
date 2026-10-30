@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-30T01:54:48.688429+00:00",
+  "scope": "Full84 actual native DRC and CAM; unrelated Q4 drift remains unreviewed",
+  "checks": [
+    "Ten previous watched producers freshly observed unchanged, including C88R2/S2 and full84 WIP",
+    "Q4 continuation has three externally modified files: captured exact bytes and retained earlier reviewed fingerprints/time so live governance continues to show UNREVIEWED_DRIFT",
+    "Original E working project recovered by UI then documented API; exact project/PCB guarded at native save/reopen/export",
+    "Native save=true close=true reopen same document; pcb_Drc.check(true,false,true) returned empty violations",
+    "Actual Top/Bottom Gerber all90 nets connected; min different-net gaps0.264920/0.255951mm against retained0.25mm gate; two-way source correspondence",
+    "Six source-defined1um NPTH center lands confirmed fully removed by3.2mm NPTH drills; raw first-pass preserved and no unknown copper waived",
+    "All84 active electrodes mask-covered;102 vias tented both faces;96 header pads opened both faces;198PTH and6NPTH source-by-source match",
+    "Native BOM sixC22465876/Bottom TH CPL and all96 IPC header pin/net/coordinates match native source; all90 IPC nets exact",
+    "Self-contained source/export/CAM/assembly verifiers restored independently and rerun; reports equal",
+    "Old b7e9ecb1 native source unchanged; no rerouting, S2 regeneration or capacitor substitution"
+  ],
+  "limits": [
+    "Q4 live source drift remains UNREVIEWED; no firmware dependency closure/regression/build/timing/physical acceptance inherited",
+    "Factory DFM/assembly workmanship and complete shipped quote pending; no manufacturing release or payment",
+    "Actual screen revision/reset/pin1/cover holes/rear plug depth pending vendor confirmation",
+    "Harness mating height/length, covering material and shell fit remain provisional; no physical touch/noise/calibration/playing acceptance",
+    "700CNY total budget not yet proven; task-branch backup is not main or merge permission"
+  ],
+  "evidence": {
+    "hardware/electrode-fullpanel-cam-20261030/MANIFEST.json": "c8367ace71a0a0f2a13efd1294cd44587caef1ad1950552f8fe83cfd46d54b4c",
+    "hardware/electrode-fullpanel-cam-20261030/CHECKPOINT.json": "3be0a3aea93490793403a3bfa28a60a92b3256b72c3930cdddda32e4060db57a",
+    "hardware/electrode-fullpanel-cam-20261030/FULL84-NATIVE-CAM-AUDIT.json": "9d8a4af08990dcd83d39f8b06804540f011a64fd62336ccac772d176e9d9b9f8",
+    "hardware/electrode-fullpanel-cam-20261030/FULL84-NATIVE-ASSEMBLY-AUDIT.json": "eb2858fd582cf060bd96a23437c195f4b0d48d64aac097ce91c45dc71d3d4f71",
+    "hardware/electrode-fullpanel-cam-20261030/PORTABLE-VERIFICATION.json": "ceffb6ac3ddc31645e874459722817e641e9faa3d9d88ba1c924fcc5fc9796a8",
+    "hardware/electrode-fullpanel-cam-20261030/05-save-close-reopen-drc.live-result.json": "681ca9298b2311c67bf3b76ef0ebcc9dddf1b293cdf890310d3a84f3fa6fd098",
+    "hardware/electrode-fullpanel-cam-20261030/06-export-real-gerber.live-result.json": "5ef9b67185eb8e18ba352584b4d8a711bfe8eb4e2ce19a87f9250476b8b930c4",
+    "project/reviews/20261030-full84-native-cam/observation.json": "120446c991cb883a84a4c0686b0d7229efcc61cae9d0cc428d91bed3fab996bc",
+    "project/reviews/20261030-full84-native-cam/Q4-UNREVIEWED-DRIFT.json": "d718c6b052b884b9c12b88db0836fe222bf0790f0c3c5b8d703d5ece947ffce4"
+  },
+  "manufacturing_release": false,
+  "product_acceptance": false
+}

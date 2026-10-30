@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "status": "PASS_FULL84_NATIVE_CAM",
+  "source_sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+  "gerber_sha256": "3bdc522565d23f47f5b51d5d23371e12e42dd71a744ea3e076f5d60c15701901",
+  "native_save_close_reopen_DRC_violations": [],
+  "layers": {
+    "1": {
+      "components": 174,
+      "minimum_different_net_gap_mm": 0.2649200000000036,
+      "minimum_pair": [
+        [
+          "E081"
+        ],
+        [
+          "E052"
+        ]
+      ],
+      "source_missing_area_beyond_5um_mm2": 0.0,
+      "extra_area_beyond_5um_mm2": 0.0,
+      "source_defined_1um_NPTH_lands_removed_by_drill": 6,
+      "removed_raw_copper_area_mm2": 4.712381587912674e-06
+    },
+    "2": {
+      "components": 114,
+      "minimum_different_net_gap_mm": 0.25595105453660416,
+      "minimum_pair": [
+        [
+          "E062"
+        ],
+        [
+          "E074"
+        ]
+      ],
+      "source_missing_area_beyond_5um_mm2": 0.0,
+      "extra_area_beyond_5um_mm2": 0.0,
+      "source_defined_1um_NPTH_lands_removed_by_drill": 6,
+      "removed_raw_copper_area_mm2": 4.7123815879126714e-06
+    }
+  },
+  "actual_nets": 90,
+  "unconnected_actual_nets": {},
+  "masks": {
+    "1": {
+      "active_electrode_openings": [],
+      "untented_vias": [],
+      "header_pad_openings": 96,
+      "unexplained_opening_area_mm2": 0.0
+    },
+    "2": {
+      "active_electrode_openings": [],
+      "untented_vias": [],
+      "header_pad_openings": 96,
+      "unexplained_opening_area_mm2": 0.0
+    }
+  },
+  "PTH": 198,
+  "NPTH": 6,
+  "via_PTH_subset": 102,
+  "clearance_gate_mm": 0.25,
+  "geometry_correspondence_tolerance_mm": 0.005,
+  "failures": [],
+  "manufacturing_release": false,
+  "physical_touch_and_mechanical_fit": "NOT_VALIDATED",
+  "stage": "NATIVE_DRC_AND_CAM_ENGINEERING_CHECKED_FACTORY_REVIEW_CANDIDATE",
+  "assembly_export_status": "PASS_FULL84_NATIVE_ASSEMBLY_EXPORTS",
+  "old_WIP_source_bytes_unchanged": true,
+  "supplier_DFM_quote": "PENDING",
+  "physical_fit_touch_noise": "PENDING",
+  "purchase_budget": "700CNY including shipping NOT_ACCEPTED"
+}
