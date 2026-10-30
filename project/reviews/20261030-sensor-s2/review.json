@@ -1,0 +1,153 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T18:24:17.483794+00:00",
+  "previous_review": "project/reviews/20261030-team-handoff/review.json",
+  "previous_review_sha256": "012fe1f9064c11f78e79998c4fd3ba20b30cd3b7a5d3cbab5e827616dca79a8a",
+  "raw_observation": "project/reviews/20261030-sensor-s2/observation.json",
+  "raw_observation_sha256": "d131ef077a16f728aa76dedde60056bce467795453bc6093609e73d4158a2a31",
+  "producer_ids": [
+    "fpga",
+    "hardware",
+    "fpga-v1-intake",
+    "hardware-native-handoff",
+    "hardware-module-plan",
+    "hardware-delivery",
+    "control88-q4-continuation",
+    "electrode-panel",
+    "sensor14-s2"
+  ],
+  "producer_changes": {
+    "fpga": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "fpga-v1-intake": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-native-handoff": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-module-plan": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-delivery": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "control88-q4-continuation": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "electrode-panel": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "sensor14-s2": {
+      "added": [
+        "07-region-readback.result.json",
+        "08-enable-native-region-rules.js",
+        "08-enable-native-region-rules.result.json",
+        "09-rebuild-active-rules.js",
+        "09-rebuild-active-rules.result.json",
+        "10-reopen-active-rules-drc.js",
+        "10-reopen-active-rules-drc.result.json",
+        "11-export-active-rules.js",
+        "11-export-active-rules.result.json",
+        "12-export-assembly.js",
+        "12-export-assembly.result.json",
+        "BUNDLE-RECEIPT.json",
+        "CHECKPOINT.json",
+        "DESIGN-INTENT.json",
+        "MANIFEST.json",
+        "PORTABLE-VERIFICATION.json",
+        "README.md",
+        "S2-ACTUAL-COPPER-NETS.json",
+        "S2-INDEPENDENT-AUDIT-ATTEMPT1-FAIL.json",
+        "S2-INDEPENDENT-AUDIT.json",
+        "S2-KEEP-OUT-PLAN.json",
+        "S2-MANUFACTURING-CORRESPONDENCE.json",
+        "S2-SOURCE-EDIT-AUDIT.json",
+        "Sensor14Bank-S2-BOM-FACTORY.csv",
+        "Sensor14Bank-S2-BOM-NATIVE.csv",
+        "Sensor14Bank-S2-CANDIDATE/Sensor14Bank-S2-CANDIDATE.eprj3",
+        "Sensor14Bank-S2-CANDIDATE/pcb/PCB2.epcb2",
+        "Sensor14Bank-S2-CANDIDATE/sch/Sensor14Bank_Schematic/Sensor14_frontend.esch2",
+        "Sensor14Bank-S2-CPL-NATIVE.csv",
+        "Sensor14Bank-S2-CPL-SMT-FACTORY.csv",
+        "Sensor14Bank-S2-Gerber-ACTIVE-RULES-CANDIDATE.zip",
+        "Sensor14Bank-S2-NATIVE.ipc",
+        "Sensor14Bank-S2-review-package-20261030.zip",
+        "audit_actual_copper.py",
+        "audit_s2.py",
+        "audit_s2_manufacturing.py",
+        "gerber-active-rules/Drill_PTH_Through.DRL",
+        "gerber-active-rules/Drill_PTH_Through_Via.DRL",
+        "gerber-active-rules/FlyingProbeTesting.json",
+        "gerber-active-rules/Gerber_BoardOutlineLayer.GKO",
+        "gerber-active-rules/Gerber_BottomLayer.GBL",
+        "gerber-active-rules/Gerber_BottomSilkscreenLayer.GBO",
+        "gerber-active-rules/Gerber_BottomSolderMaskLayer.GBS",
+        "gerber-active-rules/Gerber_DocumentLayer.GDL",
+        "gerber-active-rules/Gerber_DrillDrawingLayer.GDD",
+        "gerber-active-rules/Gerber_InnerLayer1.G1",
+        "gerber-active-rules/Gerber_InnerLayer2.G2",
+        "gerber-active-rules/Gerber_TopLayer.GTL",
+        "gerber-active-rules/Gerber_TopPasteMaskLayer.GTP",
+        "gerber-active-rules/Gerber_TopSilkscreenLayer.GTO",
+        "gerber-active-rules/Gerber_TopSolderMaskLayer.GTS",
+        "gerber-active-rules/PCB下单必读.txt",
+        "gerber_reader.py",
+        "verification/reference/sensor14-final-20261029/Sensor14Bank-BOM-VERIFIED.csv",
+        "verification/reference/sensor14-final-20261029/Sensor14Bank-FINAL-REVIEW/Sensor14Bank-FINAL-REVIEW.eprj3",
+        "verification/reference/sensor14-final-20261029/Sensor14Bank-FINAL-REVIEW/pcb/PCB2.epcb2",
+        "verification/reference/sensor14-final-20261029/Sensor14Bank-FINAL-REVIEW/sch/Sensor14Bank_Schematic/Sensor14_frontend.esch2",
+        "verification/reference/sensor14-final-20261029/gerber-inspection/Gerber_BoardOutlineLayer.GKO",
+        "verification/reference/sensor14-final-20261029/gerber-inspection/Gerber_BottomSolderMaskLayer.GBS",
+        "verification/reference/sensor14-final-20261029/gerber-inspection/Gerber_TopSolderMaskLayer.GTS",
+        "verification/reference/sensor14-final-20261029/retained-clearance-gate-audit.json",
+        "verification/support/cad_audit.py",
+        "verification/support/gerber_geometry.py",
+        "verification/support/native_documents.py",
+        "verification/support/pour_points.py",
+        "verification/support/sensor_geometry.py",
+        "verification/support/sensor_ground.py"
+      ],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "evidence": {
+    "project/reviews/20261030-sensor-s2/assessment.json": "979436a596edb3d7fd4a6134538692a29c541acce72e08fe2e0694df24d36582"
+  },
+  "assessment": [
+    "All eight prior active watched producers freshly observed unchanged",
+    "S1 actual exported bottom GND clearance corrected for all22 affected header pads; actual new minimum232.54um against165.1um gate",
+    "Actual native region API readback, re-pour/save/close/reopen DRC0; first failed numeric-format interpretation retained and not called PASS",
+    "All four actual-Gerber copper-component net labels unique; all different-net distances pass retained gate; no unconnected net with real ground pours",
+    "All83 drill coordinates/diameters,28 placement records,26 SMT and2TH BOM/MPN/LCSC, unchanged embedded libraries/schematic, masks and outline verified",
+    "All three packaged checks re-run from independent fresh directory with self-contained support/reference",
+    "No geometry changes to existing component/track/via/pad-net/rule records; no user musical rule changes",
+    "Supplier DFM, assembly preview, full price and order/payment pending",
+    "No physical RC/noise/cover/harness/playing acceptance",
+    "Full electrode panel and whole-machine procurement gaps remain"
+  ],
+  "manufacturing_release": false,
+  "old_S1_deprecated": true,
+  "S2_supplier_review_candidate": true,
+  "product_acceptance": false
+}

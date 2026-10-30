@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-27T11:38:36.128731+00:00",
+  "base_main": "0f2ff18f49ec4c95889712aec4ea8ad55f2b25f2",
+  "new_engineering_files": [
+    "module-plan/manufacturing/audit_nano_headers.py",
+    "module-plan/manufacturing/audit_saved_sensor.py",
+    "module-plan/manufacturing/eda-connection-observation.json",
+    "module-plan/manufacturing/nano-header-audit-current.json",
+    "module-plan/manufacturing/nano-header-netmap-current.csv",
+    "module-plan/manufacturing/README.md",
+    "module-plan/manufacturing/SCREEN-SELECTION.md",
+    "module-plan/manufacturing/sensor-35-scope-verification.json",
+    "module-plan/manufacturing/sensor-BOM-per-board-DRAFT.csv",
+    "module-plan/manufacturing/sensor-native-placement-DRAFT.csv",
+    "module-plan/manufacturing/sensor-passive-alternative-details.json",
+    "module-plan/manufacturing/sensor-passive-alternative-search.json",
+    "module-plan/manufacturing/sensor-source-manufacturing-audit.json",
+    "module-plan/manufacturing/sensor-supply-current.json",
+    "module-plan/manufacturing/STACKUP-CANDIDATE.md",
+    "module-plan/manufacturing/TONIGHT-CURRENT.json",
+    "module-plan/manufacturing/waveshare-8964-public-product.json"
+  ],
+  "corrected_engineering_files": [
+    "module-plan/evidence/edit-control-interface-current.json",
+    "module-plan/evidence/edit-control-interface-current.md",
+    "module-plan/evidence/edit-control-interface-current.py"
+  ],
+  "source_inputs": {
+    "carrier": "951ce88a1a2fcc2d758f9a53222a400cbddd3bc5b689cc2a37c98b8303d9ca4d",
+    "sensor_PCB": "617f550eadc818ffab26a3992f2a86bb9f72ed027043c6e64a0c0428077ba643",
+    "sensor_schematic": "7710964c5831a580909709aab0ddb271cef88779a11f585de45149c6046e12eb"
+  },
+  "assessment": [
+    "Reviewed all new manufacturing draft extractors/outputs; placement origin/rotation not factory validated. Full native sources unchanged.",
+    "Reviewed primary official header page2 and joined all40 carrier pads; documented two pin-number corrections, no electrical net change.",
+    "Reviewed LCSC exact MPN identities and candidates; retail stock is separate from PCBA stock and is_basic fallback false is not used to assert extended fees.",
+    "Screen remains technical preferred ER configuration with no final delivered price or ship date; public Waveshare326 price is not a qualified substitute.",
+    "Enabled4copper vs2physicalcopper records is a blocker requiring native-client confirmation. No client connected.",
+    "No new musical semantics/RTL, native CAD writes, orders, vendor messages, programming, manufacturing release or physical acceptance."
+  ],
+  "manufacturing_release": false,
+  "product_acceptance": false
+}

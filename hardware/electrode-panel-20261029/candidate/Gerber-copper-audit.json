@@ -1,0 +1,52 @@
+{
+  "status": "PASS_CANDIDATE_COPPER_MASK_DRILL_OUTLINE_GEOMETRY",
+  "source_sha256": "49866816334226fe96efd95cb598b25717148090feb10a9915c60f228e2b3a2a",
+  "Gerber_zip_sha256": "023e46ada277352a9b9a7ebb54acb9d258e3fa695aa4801e82401a8ad371c4cc",
+  "layers": {
+    "1": {
+      "gerber_sha256": "47b3da0de6fd4487da9077f5a70444f83daadccb2118e06c818d43bab4fb6013",
+      "copper_components": 19,
+      "min_different_net_gap_mm": 0.7999931400983394,
+      "min_pair": [
+        "M",
+        "B"
+      ],
+      "min_edge_mm": 1.15,
+      "source_export_hausdorff_mm": 6.050020614998849e-06
+    },
+    "2": {
+      "gerber_sha256": "6788a35fd8f941977e0372e12715892de12e66a9fc1ea43482e49957b3462ae6",
+      "copper_components": 15,
+      "min_different_net_gap_mm": 0.9399999999999977,
+      "min_pair": [
+        "A",
+        "M"
+      ],
+      "min_edge_mm": 1.15,
+      "source_export_hausdorff_mm": 1.3297644919625206e-05
+    }
+  },
+  "different_net_gate_mm": 0.25,
+  "source_equivalence_tolerance_mm": 0.005,
+  "equivalence_tolerance_does_not_relax_clearance_gate": true,
+  "mask": {
+    "TopSolderMaskLayer.GTS": {
+      "apertures": 16,
+      "active_electrode_openings": 0,
+      "header_pad_apertures_cover_copper": true
+    },
+    "BottomSolderMaskLayer.GBS": {
+      "apertures": 16,
+      "active_electrode_openings": 0,
+      "header_pad_apertures_cover_copper": true
+    }
+  },
+  "plated_drill_holes": 19,
+  "drill_coordinate_match_tolerance_mm": 0.001,
+  "outline_mm": [
+    46,
+    72
+  ],
+  "physical_validation": "PENDING",
+  "manufacturing_release": false
+}

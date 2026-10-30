@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "source_urls": {
+    "Yageo": "https://www.yageogroup.com/download/specsheet/CC0603KRX7R9BB104",
+    "Samsung": "https://product.samsungsem.com/cn/mlcc/CL10B104KB8NNN.do"
+  },
+  "parts": [
+    {
+      "MPN": "CC0603KRX7R9BB104",
+      "LCSC": "C14663"
+    },
+    {
+      "MPN": "CL10B104KB8NNNC",
+      "LCSC": "C1591"
+    }
+  ],
+  "common_confirmed_nominal_attributes": {
+    "capacitance_nF": 100,
+    "tolerance_percent": 10,
+    "rated_voltage_VDC": 50,
+    "dielectric": "X7R",
+    "temperature_C": [
+      -55,
+      125
+    ],
+    "EIA_package": "0603",
+    "size_L_W_T_mm": [
+      1.6,
+      0.8,
+      0.8
+    ],
+    "size_tolerance_mm": 0.1
+  },
+  "conclusion": "Same nominal value/voltage/dielectric/size family. This does not establish identical ESR/ESL/DC-bias curves or waive actual supplier availability and assembly approval. No CAD/BOM source changed.",
+  "frozen_BOM_current_part": "C14663 / CC0603KRX7R9BB104",
+  "alternative_for_supplier_quote_only": "C1591 / CL10B104KB8NNNC; must be explicitly returned in a deviation quote before any authorized order",
+  "actual_substitution_performed": false
+}

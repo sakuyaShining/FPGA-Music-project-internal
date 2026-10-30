@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T21:04:38.367287+00:00",
+  "scope": "Full84 routed source recovery and explicitly incomplete manufacturing/assembly handoff",
+  "source_sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+  "checks": [
+    "All nine prior active watched sources freshly observed unchanged",
+    "All84 signal-to-sensorS2 J1 pad-net mappings verified against actual9e4b563e source; C5 B0/B1/B2 CH12 unchanged",
+    "Full native saved source has457 route segments,102 vias,6 bottom headers,84 electrodes and6 NPTH; all90 source nets connected and min different-net gap0.255948989mm against0.25mm gate",
+    "Native saved route/via copper unions equal independently imported conservative Freerouting session; all34 active Top windows and washer regions protected",
+    "96-pin1:1 harness contract, continuous overlay outer/holes and nominal mechanical envelopes checked; actual fit remains pending",
+    "Three packaged checks re-run after restoration into independent directory with only packaged support/reference plus Shapely2 dependency",
+    "No new manufacturing ZIP represented as factory-ready; native HTTP timeout/disconnection and missing DRC/Gerber acceptance explicitly retained"
+  ],
+  "limits": [
+    "Native client exited after source save; strict save-close-reopen DRC result missing",
+    "Real Gerber export/copper/mask/drill/outline correspondence not yet created or checked; electrode panel cannot be ordered",
+    "Screen physical cover/holes/rear plug envelope, harness fit/length and dielectric materials pending",
+    "No supplier DFM/full quote,700CNY budget acceptance or physical touch/noise/playing acceptance"
+  ],
+  "evidence": {
+    "hardware/electrode-fullpanel-450-20261030/MANIFEST.json": "0466d727b557c93f647c029bf07d3de9b4a1e4b60bc5d992366ec9265f7002af",
+    "hardware/electrode-fullpanel-450-20261030/CHECKPOINT.json": "ff7ed2082a919a5df152405dc921c939c6ad6138df6edc94771deabb7a32ecbc",
+    "hardware/electrode-fullpanel-450-20261030/FULL84-NATIVE-SAVED-SOURCE-AUDIT.json": "e9099bf3c8fd5e15274501d007f5bca6e4b4ed794b3e8b22fe01e8bfa665dca2",
+    "hardware/electrode-fullpanel-450-20261030/NATIVE-SAVED-ROUTING-CORRESPONDENCE.json": "c648236f092d354cc73baa54b27f07cbe586184cb455e9e2cea91394ae7a496b",
+    "hardware/electrode-fullpanel-450-20261030/S2-COMPATIBILITY-AUDIT.json": "8aa5b173ad8bb79975b98edba3534f51d9e93576b54a1731625a5ca296ca244f",
+    "hardware/electrode-fullpanel-450-20261030/ASSEMBLY-CONTRACT-AUDIT.json": "5f4e9b84b3ae703620829b8f729868c7376d58ecb8102cef27b80fbf51215cdb",
+    "hardware/electrode-fullpanel-450-20261030/PORTABLE-VERIFICATION.json": "ed4e98036b38070548b18d7d29e789ffe3f52d0917903c50c84ae98aa4ca0e74"
+  },
+  "manufacturing_release": false,
+  "product_acceptance": false
+}

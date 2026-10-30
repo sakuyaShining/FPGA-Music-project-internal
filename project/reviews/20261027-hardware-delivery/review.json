@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-27T11:43:52.541054+00:00",
+  "previous_review": "project/reviews/20261027-hardware-consolidation/review.json",
+  "previous_review_sha256": "bf9d55e9b0af0d7ce660a853c1ab6f813b64a9c4ebc69e0efe9834be460d7665",
+  "raw_observation": "project/reviews/20261027-hardware-delivery/observation.json",
+  "raw_observation_sha256": "77360189cedda6042e2528a530b7c308d01f8b0f080bfbc589985ec6afe6bd4b",
+  "producer_ids": [
+    "fpga",
+    "hardware",
+    "fpga-v1-intake",
+    "hardware-native-handoff",
+    "hardware-module-plan",
+    "hardware-delivery"
+  ],
+  "source_base_commit": "0f2ff18f49ec4c95889712aec4ea8ad55f2b25f2",
+  "source_checkpoint_commit": "41caf84414f40649b2d52f98ecced9d2efc35b01",
+  "producer_changes": {
+    "fpga": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "fpga-v1-intake": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-native-handoff": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-module-plan": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-delivery": {
+      "added": [
+        "hardware/current/module-plan/evidence/edit-control-interface-current.json",
+        "hardware/current/module-plan/evidence/edit-control-interface-current.md",
+        "hardware/current/module-plan/evidence/edit-control-interface-current.py",
+        "hardware/current/module-plan/manufacturing/README.md",
+        "hardware/current/module-plan/manufacturing/SCREEN-SELECTION.md",
+        "hardware/current/module-plan/manufacturing/STACKUP-CANDIDATE.md",
+        "hardware/current/module-plan/manufacturing/TONIGHT-CURRENT.json",
+        "hardware/current/module-plan/manufacturing/audit_nano_headers.py",
+        "hardware/current/module-plan/manufacturing/audit_saved_sensor.py",
+        "hardware/current/module-plan/manufacturing/eda-connection-observation.json",
+        "hardware/current/module-plan/manufacturing/nano-header-audit-current.json",
+        "hardware/current/module-plan/manufacturing/nano-header-netmap-current.csv",
+        "hardware/current/module-plan/manufacturing/sensor-35-scope-verification.json",
+        "hardware/current/module-plan/manufacturing/sensor-BOM-per-board-DRAFT.csv",
+        "hardware/current/module-plan/manufacturing/sensor-native-placement-DRAFT.csv",
+        "hardware/current/module-plan/manufacturing/sensor-passive-alternative-details.json",
+        "hardware/current/module-plan/manufacturing/sensor-passive-alternative-search.json",
+        "hardware/current/module-plan/manufacturing/sensor-source-manufacturing-audit.json",
+        "hardware/current/module-plan/manufacturing/sensor-supply-current.json",
+        "hardware/current/module-plan/manufacturing/waveshare-8964-public-product.json"
+      ],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "evidence": {
+    "project/reviews/20261027-hardware-delivery/change-assessment.json": "8cf43eebb8a1554f868ebe00452945612b6e20ffa36a9e16c24cf962627741b1",
+    "project/reviews/20261027-hardware-delivery/validation-initial.json": "a7f182b4d5184a8cae17588a2c86b713770781760ed822417ae638d969680cf8",
+    "project/reviews/20261027-hardware-delivery/validation.json": "d72676fc733ea66b9452b400dcd725401877adfd21755b17923124bbc6603194",
+    "project/reviews/20261027-hardware-delivery/remote-observation.json": "7b2c24672726d6882903b48b31cf38e406ffff486c4e81eb94b777b4017fa85d"
+  },
+  "assessment": [
+    "Reviewed all new manufacturing draft extractors/outputs; placement origin/rotation not factory validated. Full native sources unchanged.",
+    "Reviewed primary official header page2 and joined all40 carrier pads; documented two pin-number corrections, no electrical net change.",
+    "Reviewed LCSC exact MPN identities and candidates; retail stock is separate from PCBA stock and is_basic fallback false is not used to assert extended fees.",
+    "Screen remains technical preferred ER configuration with no final delivered price or ship date; public Waveshare326 price is not a qualified substitute.",
+    "Enabled4copper vs2physicalcopper records is a blocker requiring native-client confirmation. No client connected.",
+    "No new musical semantics/RTL, native CAD writes, orders, vendor messages, programming, manufacturing release or physical acceptance.",
+    "Fresh read-only observation: existing five active sources unchanged; new hardware-delivery source explicitly registered with20 scoped files. No inherited physical or product acceptance.",
+    "Nano header audit output uses explicit UTF8 LF for reproducibility; all native input hashes remain identical. Only new/edited management receipts use LF; historical controlled evidence remains byte-identical.",
+    "Git HTTPS checks failed connectivity443. GitHub connector independently verified actual main0f2ff18f and exact initial remote tree/commit; native CLI remote freshness not represented as PASS.",
+    "Required repository suites:107 unit tests passed. Initial full-integrity check correctly rejected untracked new review and unchanged navigation fingerprint; new review staged and deliberately assessed continuation navigation registered. This does not change product scope."
+  ],
+  "physical_source_integrated": false,
+  "finger_consumer_integrated": false,
+  "full_product_pnr": false,
+  "full_product_sta": false,
+  "product_acceptance": false,
+  "implementation_start_authorized": false,
+  "manufacturing_release": false,
+  "hardware_cad_accessed": false
+}

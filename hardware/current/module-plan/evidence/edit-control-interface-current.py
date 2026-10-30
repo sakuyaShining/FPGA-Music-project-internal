@@ -13,7 +13,7 @@ assert all(x['unchanged'] for x in producer),'Changed registered producer: inspe
 hw=Path(fw['hardware_contract_source']['path']);assert sha(hw)==fw['hardware_contract_source']['sha256'];pads=json.loads(hw.read_text(encoding='utf-8-sig'))['pads']
 nets=['BUS_MOSI','SCAN_LATCH','BUS_SCK','BUS_RETURN','INPUT_LOAD_N','HARM_CS_N']
 external=[dict(header=p['ref'],pin=p['n'],net=p['net']) for p in pads if p['ref'] in ['J5','J6'] and p['net'] in nets]
-fpga_by_header={'6':15,'7':16,'8':27,'9':28,'15':18,'17':20}
+fpga_by_header={'6':15,'7':16,'8':27,'9':28,'15':17,'17':19}  # Nano3921 official schematic Rev1.30, page2
 for p in external:p['FPGA_pin']=fpga_by_header[p['pin']]
 legacy_H_to_A=['EDIT','PRESET3','PRESET2','PRESET1','PRESET0','ENC_PUSH','ENC_B','ENC_A']
 new_H_to_A=['EDIT_APPLY_N','EDIT_SAVE_N','EDIT_CANCEL_N','SPARE_HIGH','SPARE_HIGH','SPARE_HIGH','SPARE_HIGH','SPARE_HIGH']
@@ -73,8 +73,8 @@ md='''# 应用、保存、取消：独立实体操作接口候选
 |J6.7|16|SCAN_LATCH|
 |J6.8|27|BUS_SCK|
 |J6.9|28|BUS_RETURN|
-|J6.15|18|INPUT_LOAD_N|
-|J6.17|20|HARM_CS_N|
+|J6.15|17|INPUT_LOAD_N|
+|J6.17|19|HARM_CS_N|
 
 这些排针/网络由原951主板捕获和Nano3921官方图相互核对。没有新增外部FPGA引脚；不因此代表现有产品固件支持新增输入。
 

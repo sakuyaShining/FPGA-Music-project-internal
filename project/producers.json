@@ -468,6 +468,526 @@
         }
       ],
       "scope": "Only these eight handoff documents; not all CAD state, external quotes, firmware or the full live producer tree. Fixed published copy may differ by this explicit sensor35 decision overlay."
+    },
+    {
+      "id": "hardware-delivery",
+      "activity": "active",
+      "root": "D:/FPGA-Project/hardware-delivery-20261027",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Hardware-delivery continuation: reviewed manufacturing drafts and supply candidates"
+      },
+      "publication_status": "RECOVERABLE_R2_S1_BASELINE_SENSOR_FAB_HOLD_TASK_BRANCH_NOT_MAIN",
+      "observation_max_hours": 168,
+      "published_ref": null,
+      "published_checkpoint": {
+        "commit": "41caf84414f40649b2d52f98ecced9d2efc35b01",
+        "tree": "e6a45441c175cd913a52d7720d7cb4b24d99259b",
+        "repository": "sakuyaShining/FPGA-Music-project-internal",
+        "branch": "codex/hardware-delivery-20261027",
+        "note": "Connector-created initial source checkpoint; final PR head includes subsequent reviewed receipt/newline-portability changes. Resolve actual PR head for current remote commit."
+      },
+      "exclude_dirs": [
+        ".git",
+        "__pycache__"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": "hardware/current/module-plan/manufacturing",
+          "recursive": false,
+          "suffixes": [
+            ".md",
+            ".json",
+            ".csv",
+            ".py"
+          ],
+          "max_bytes": 2000000
+        },
+        {
+          "path": "hardware/current/module-plan/evidence/edit-control-interface-current.json"
+        },
+        {
+          "path": "hardware/current/module-plan/evidence/edit-control-interface-current.md"
+        },
+        {
+          "path": "hardware/current/module-plan/evidence/edit-control-interface-current.py"
+        },
+        {
+          "path": "hardware/delivery-baselines/20261029-r2-s1",
+          "recursive": true,
+          "max_bytes": 10000000,
+          "suffixes": [
+            ".zip",
+            ".md",
+            ".json",
+            ".py",
+            ".csv",
+            ".txt"
+          ]
+        },
+        {
+          "path": "hardware/delivery-baselines/CURRENT.json"
+        }
+      ],
+      "scope": "Existing task manufacturing documentation plus frozen R2/S1 delivery archives and exact tutorial/recovery files. Other producer scopes remain unchanged; no full product or supplier acceptance.",
+      "baseline_manifest": "hardware/delivery-baselines/20261029-r2-s1/MANIFEST.json",
+      "last_verified_remote_before_this_baseline": {
+        "commit": "0911243c",
+        "branch": "codex/hardware-delivery-20261027",
+        "note": "Remote ancestry retained by a non-fast-forward merge; final source commit is recorded by the publication receipt after push."
+      }
+    },
+    {
+      "id": "control88-q4-continuation",
+      "activity": "active",
+      "root": "D:\\FPGA-Project",
+      "owner": {
+        "thread_id": null,
+        "label": "WorkBuddy Q4 continuation; exact collaborator session not registered"
+      },
+      "publication_status": "READ_ONLY_SOURCE_RECOVERY_CAPTURE_NOT_QUALIFIED_FIRMWARE",
+      "observation_max_hours": 168,
+      "published_ref": null,
+      "exclude_dirs": [
+        ".git",
+        "__pycache__"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/bands1024.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/board_slots.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/cos1024.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/fader_gain_q8.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/finger_ratio.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/hann1024.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/note_inc.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/pcm5122_init.v"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/preset_part.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/recip_inc.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/sin1024.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/sine256.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/tilt_wtab.hex"
+        },
+        {
+          "path": "authoritative-20261024/fpga/current/engine/src/vel_wtab.hex"
+        },
+        {
+          "path": "current-design/src/rtl/audio_clk_en.v"
+        },
+        {
+          "path": "current-design/src/rtl/event_hold.v"
+        },
+        {
+          "path": "current-design/src/rtl/fx_delay.v"
+        },
+        {
+          "path": "current-design/src/rtl/i2c_master.v"
+        },
+        {
+          "path": "current-design/src/rtl/i2s_tx.v"
+        },
+        {
+          "path": "current-design/src/rtl/led_ind.v"
+        },
+        {
+          "path": "current-design/src/rtl/note_map.v"
+        },
+        {
+          "path": "current-design/src/rtl/osc_env.v"
+        },
+        {
+          "path": "current-design/src/rtl/pad_pitch.v"
+        },
+        {
+          "path": "current-design/src/rtl/pad_scan.v"
+        },
+        {
+          "path": "current-design/src/rtl/pitch_mod.v"
+        },
+        {
+          "path": "current-design/src/rtl/reg_bank.v"
+        },
+        {
+          "path": "current-design/src/rtl/song_seq.v"
+        },
+        {
+          "path": "current-design/src/rtl/strip_ctrl.v"
+        },
+        {
+          "path": "current-design/src/rtl/tdm_engine.v"
+        },
+        {
+          "path": "current-design/src/rtl/tdm_top.v"
+        },
+        {
+          "path": "current-design/src/rtl/uart_rx.v"
+        },
+        {
+          "path": "current-design/src/rtl/uart_tx.v"
+        },
+        {
+          "path": "current-design/src/rtl/vel_shape.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/Q4-BUILD-EVIDENCE.json"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/Q4-FIRMWARE-INTEGRATION-REPORT.md"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/build.tcl"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/constr/control88_top.cst"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/constr/control88_top.sdc"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/control88.gprj"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/control_build.tcl"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/control_tdm_ship.gprj"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/note_inc.hex"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/recip_inc.hex"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rom/note_inc.hex"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rom/preset_part.hex"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rom/recip_inc.hex"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_evq.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_scan.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_spi.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_sr165.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_sr595.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/c88_top.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/control88_top.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/before-fix/c88_spi.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/before-fix/c88_sr595.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/run_sim.sh"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/tb_arb.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/tb_models.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/tb_sr165.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/tb_sr595.v"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-r1-dac-config-audit.json"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-r7-sim-evidence.json"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-r9-pitch-audit.json"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-r9-pitch-fix-build-evidence.json"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4-r9-readmemh-searchpath-probe.json"
+        },
+        {
+          "path": "delivery-evidence-20261027/control88-routing-20261028/q4r1-pcm5122-symbol-pins.json"
+        }
+      ],
+      "scope": "Exact captured Q4 source, GPRJ dependencies and selected tables/reports only; excludes build products, account settings and all unrelated workspace files. Capture does not renew old PnR or functional acceptance.",
+      "recovery_manifest": "hardware/delivery-baselines/20261029-r2-s1/Q4-SOURCE-CAPTURE.json"
+    },
+    {
+      "id": "electrode-panel",
+      "activity": "active",
+      "root": "D:/FPGA-Project/hardware-delivery-20261027/hardware/electrode-panel-20261029",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Compact passive electrode panel authorized long task"
+      },
+      "publication_status": "TASK_BRANCH_CANDIDATE_NOT_MAIN",
+      "task_branch": "codex/electrode-panel-20261029",
+      "published_ref": null,
+      "observation_max_hours": 168,
+      "recovery_manifest": "hardware/electrode-panel-20261029/MANIFEST.json",
+      "exclude_dirs": [
+        "generated",
+        "__pycache__",
+        "node_modules",
+        ".git"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": ".",
+          "recursive": true,
+          "suffixes": [
+            ".md",
+            ".json",
+            ".csv",
+            ".py",
+            ".eprj3",
+            ".epcb2",
+            ".svg",
+            ".png",
+            ".zip",
+            ".gtl",
+            ".gbl",
+            ".gto",
+            ".gbo",
+            ".gts",
+            ".gbs",
+            ".gko",
+            ".gdd",
+            ".drl",
+            ".txt",
+            ".ipc"
+          ],
+          "max_bytes": 2000000
+        }
+      ],
+      "scope": "Only this task passive electrode coupon/layout candidate. Control88 and Sensor S1 source read-only; Sensor strict clearance hold remains active."
+    },
+    {
+      "id": "sensor14-s2",
+      "activity": "active",
+      "root": "D:/FPGA-Project/hardware-delivery-20261027/hardware/sensor14-s2-20261030",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Authorized isolated Sensor14Bank strict-clearance revision"
+      },
+      "publication_status": "S2_FACTORY_REVIEW_CANDIDATE_NOT_MAIN_NOT_PRODUCT_ACCEPTANCE",
+      "task_branch": "codex/electrode-panel-20261029",
+      "published_ref": null,
+      "observation_max_hours": 168,
+      "recovery_manifest": "hardware/sensor14-s2-20261030/MANIFEST.json",
+      "exclude_dirs": [
+        "__pycache__",
+        "node_modules",
+        ".git"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": ".",
+          "recursive": true,
+          "suffixes": [
+            ".md",
+            ".json",
+            ".csv",
+            ".py",
+            ".eprj3",
+            ".epcb2",
+            ".esch2",
+            ".zip",
+            ".js",
+            ".gtl",
+            ".gbl",
+            ".gto",
+            ".gbo",
+            ".gts",
+            ".gbs",
+            ".gtp",
+            ".gko",
+            ".gdl",
+            ".g1",
+            ".g2",
+            ".gdd",
+            ".drl",
+            ".txt",
+            ".ipc"
+          ],
+          "max_bytes": 2000000
+        }
+      ],
+      "scope": "Independent S2 source, old S1 read-only reference, exact export and factory-review evidence; no inherited physical or supplier acceptance"
+    },
+    {
+      "id": "electrode-full84-450",
+      "activity": "active",
+      "root": "D:/FPGA-Project/hardware-delivery-20261027/hardware/electrode-fullpanel-450-20261030",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Authorized450mm full84 passive electrode and candidate assembly engineering"
+      },
+      "publication_status": "FULL84_ROUTED_SOURCE_WIP_NOT_FACTORY_REVIEW_NOT_MAIN",
+      "task_branch": "codex/electrode-panel-20261029",
+      "published_ref": null,
+      "observation_max_hours": 168,
+      "recovery_manifest": "hardware/electrode-fullpanel-450-20261030/MANIFEST.json",
+      "exclude_dirs": [
+        "__pycache__",
+        "node_modules",
+        ".git"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": ".",
+          "recursive": true,
+          "suffixes": [
+            ".md",
+            ".json",
+            ".csv",
+            ".py",
+            ".eprj3",
+            ".epcb2",
+            ".zip",
+            ".svg",
+            ".png",
+            ".dxf",
+            ".dsn",
+            ".ses"
+          ],
+          "max_bytes": 2000000
+        }
+      ],
+      "scope": "All84 routed native electrodes and six rear headers, conservative route/session evidence, portable source checks and explicit provisional assembly; native DRC/CAM and physical/supplier acceptance pending"
+    },
+    {
+      "id": "hardware-sourcing-closure",
+      "activity": "active",
+      "root": "D:/FPGA-Project/hardware-delivery-20261027/hardware/sourcing-closure-20261030",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Authorized read-only source/part identity and procurement clarification"
+      },
+      "publication_status": "TASK_BRANCH_RESEARCH_NOT_FACTORY_STOCK_OR_RELEASE",
+      "task_branch": "codex/electrode-panel-20261029",
+      "published_ref": null,
+      "observation_max_hours": 168,
+      "recovery_manifest": "hardware/sourcing-closure-20261030/MANIFEST.json",
+      "exclude_dirs": [
+        "__pycache__",
+        ".git"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": ".",
+          "recursive": true,
+          "suffixes": [
+            ".md",
+            ".json",
+            ".csv",
+            ".py",
+            ".pdf",
+            ".png"
+          ],
+          "max_bytes": 2000000
+        }
+      ],
+      "scope": "FrozenC88 instance-vs-device identity clarification and manufacturer nominal/spec sourcing; all CAD/manufacturing sources read-only; no actual substitution, order or price acceptance"
+    },
+    {
+      "id": "electrode-full84-native-cam",
+      "activity": "active",
+      "root": "D:/FPGA-Project/hardware-delivery-20261027/hardware/electrode-fullpanel-cam-20261030",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Authorized full84 native manufacturing verification continuation"
+      },
+      "publication_status": "NATIVE_DRC_CAM_CHECKED_FACTORY_REVIEW_CANDIDATE_NOT_MAIN_OR_PHYSICAL_ACCEPTANCE",
+      "task_branch": "codex/electrode-panel-20261029",
+      "published_ref": null,
+      "observation_max_hours": 168,
+      "recovery_manifest": "hardware/electrode-fullpanel-cam-20261030/MANIFEST.json",
+      "exclude_dirs": [
+        "__pycache__",
+        ".git"
+      ],
+      "exclude_prefixes": [],
+      "watch": [
+        {
+          "path": ".",
+          "recursive": true,
+          "suffixes": [
+            ".md",
+            ".txt",
+            ".json",
+            ".csv",
+            ".py",
+            ".js",
+            ".eprj3",
+            ".epcb2",
+            ".zip",
+            ".svg",
+            ".dxf",
+            ".gtl",
+            ".gbl",
+            ".gto",
+            ".gbo",
+            ".gts",
+            ".gbs",
+            ".gko",
+            ".gdd",
+            ".drl",
+            ".ipc"
+          ],
+          "max_bytes": 2000000
+        }
+      ],
+      "scope": "Actual saved/reopened native source and native Gerber/BOM/CPL/IPC exports checked independently; old WIP immutable; supplier, finished harness/overlay/enclosure and physical acceptance pending"
     }
   ]
 }

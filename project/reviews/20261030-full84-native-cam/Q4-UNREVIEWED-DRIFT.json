@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "producer": "control88-q4-continuation",
+  "changes": [
+    {
+      "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/control88.gprj",
+      "previous": {
+        "bytes": 3006,
+        "sha256": "32650459062f72f0571960c8d0e01e7652bb2fc91bc48e6e4e6cb5478b5def52"
+      },
+      "observed": {
+        "bytes": 3201,
+        "sha256": "5ad7a5041def919c1a566f58ecf5ee331232610983b0b6407d5aeacd03f22844"
+      },
+      "capture": "project/reviews/20261030-full84-native-cam/q4-unreviewed-source-capture/control88.gprj",
+      "acceptance": "UNREVIEWED_NOT_FIRMWARE_ACCEPTANCE"
+    },
+    {
+      "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/rtl/control88_top.v",
+      "previous": {
+        "bytes": 8002,
+        "sha256": "1f3812ad7c3ccd5756624f3c375820a8f1a590a4b2b269aee5b6d06c61159ed9"
+      },
+      "observed": {
+        "bytes": 9865,
+        "sha256": "133548a708a0e6cf1b35d76273b30b50fc03d375ba91d6918eb721f59713fae5"
+      },
+      "capture": "project/reviews/20261030-full84-native-cam/q4-unreviewed-source-capture/control88_top.v",
+      "acceptance": "UNREVIEWED_NOT_FIRMWARE_ACCEPTANCE"
+    },
+    {
+      "path": "delivery-evidence-20261027/control88-routing-20261028/q4-firmware/tb/run_sim.sh",
+      "previous": {
+        "bytes": 1980,
+        "sha256": "58b51586df7198ad5c9666deb497d6aaece94fd7b26c17135293a920244853a0"
+      },
+      "observed": {
+        "bytes": 3393,
+        "sha256": "035c709c83fd4dee02ab635e4ec96c6bacb12d5bf2932a8c6900f51f3267ec29"
+      },
+      "capture": "project/reviews/20261030-full84-native-cam/q4-unreviewed-source-capture/run_sim.sh",
+      "acceptance": "UNREVIEWED_NOT_FIRMWARE_ACCEPTANCE"
+    }
+  ],
+  "scope": "Read-only drift detection and exact three-file recovery capture only",
+  "new_dependencies_not_captured": "Changed top and project reference c88_nvstore; full source closure/build/regression/timing not reviewed by this hardware task",
+  "preserved_previous_reviewed_producer_state": true,
+  "product_acceptance": false
+}

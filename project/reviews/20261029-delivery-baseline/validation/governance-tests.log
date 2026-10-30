@@ -1,0 +1,25 @@
+test_changing_date_alone_cannot_renew_review (test_design_governance.GovernanceTests.test_changing_date_alone_cannot_renew_review) ... ok
+test_compact_review_keeps_inventory_only_in_raw_record (test_design_governance.GovernanceTests.test_compact_review_keeps_inventory_only_in_raw_record) ... ok
+test_dated_branch_cannot_be_authority (test_design_governance.GovernanceTests.test_dated_branch_cannot_be_authority) ... ok
+test_evidence_mutation_and_scope_conflict_rejected (test_design_governance.GovernanceTests.test_evidence_mutation_and_scope_conflict_rejected) ... ok
+test_expired_active_observation_requires_review (test_design_governance.GovernanceTests.test_expired_active_observation_requires_review) ... ok
+test_expired_design_review_and_future_clock_rejected (test_design_governance.GovernanceTests.test_expired_design_review_and_future_clock_rejected) ... ok
+test_generated_tree_excluded_but_new_design_document_detected (test_design_governance.GovernanceTests.test_generated_tree_excluded_but_new_design_document_detected) ... ok
+test_legacy_sync_rejects_diverged_compatibility_branch (test_design_governance.GovernanceTests.test_legacy_sync_rejects_diverged_compatibility_branch) ... ok
+test_legacy_sync_rejects_other_repository_name_or_id (test_design_governance.GovernanceTests.test_legacy_sync_rejects_other_repository_name_or_id) ... ok
+test_missing_source_is_unobserved_not_green (test_design_governance.GovernanceTests.test_missing_source_is_unobserved_not_green) ... ok
+test_new_modified_and_deleted_source_requires_review (test_design_governance.GovernanceTests.test_new_modified_and_deleted_source_requires_review) ... ok
+test_new_producer_cannot_skip_observation (test_design_governance.GovernanceTests.test_new_producer_cannot_skip_observation) ... ok
+test_observation_does_not_renew_review_and_refuses_overwrite (test_design_governance.GovernanceTests.test_observation_does_not_renew_review_and_refuses_overwrite) ... ok
+test_public_target_keeps_legacy_entry_fast_forward (test_design_governance.GovernanceTests.test_public_target_keeps_legacy_entry_fast_forward) ... ok
+test_recorded_review_never_claims_live_observation_or_acceptance (test_design_governance.GovernanceTests.test_recorded_review_never_claims_live_observation_or_acceptance) ... ok
+test_registered_remote_producer_advancing_requires_review (test_design_governance.GovernanceTests.test_registered_remote_producer_advancing_requires_review) ... ok
+test_review_cannot_silently_replace_observed_source (test_design_governance.GovernanceTests.test_review_cannot_silently_replace_observed_source) ... ok
+test_supersession_cycles_rejected (test_design_governance.GovernanceTests.test_supersession_cycles_rejected) ... ok
+test_unresolved_human_decision_conflict_is_not_ready (test_design_governance.GovernanceTests.test_unresolved_human_decision_conflict_is_not_ready) ... ok
+test_main_advances_while_legacy_branch_stays_old (test_design_governance.PublishedMainTests.test_main_advances_while_legacy_branch_stays_old) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 10.661s
+
+OK

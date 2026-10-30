@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-30T08:46:13.576216+00:00",
+  "checks": [
+    "One buying entry consolidates actual versions/quantities/complete order contents; all local package links resolve",
+    "Three board assembly orders distinguish engineering completion from supplier DFM/quote/payment",
+    "RetailC430908 and bare jackC381127 identity rechecked from official domestic item pages; dynamic price/stock not invented",
+    "Copper foil/tape and superseded electrode samples/S1/DAC/J11/speaker excluded; board BOM not double purchased",
+    "Screen/internal cables/PSU/prewired audio/shell explicitly remain incomplete purchase deliverables; optional overlay not forced as initial debug purchase",
+    "Ten other producer roots unchanged; Q4 old reviewed identity retained rather than accepting drift; all CAD and manufacture archives unchanged"
+  ],
+  "limits": [
+    "Not a claim that all machine purchasing is complete or700CNY budget accepted",
+    "No new supplier quote/stock reservation/ready-made cable SKU or manufacturing release",
+    "No change to actual native CAD, board BOM, Gerber or physical touch/assembly acceptance"
+  ],
+  "evidence": {
+    "hardware/sourcing-closure-20261030/BUYING.md": "2035ff7e3963761061523c76c0cf0d55e31aad84d3a2a9cf3c5de2b48e2a21ba",
+    "hardware/sourcing-closure-20261030/MANIFEST.json": "e570325cfefffcf897807e4b3e629d2b5474319ea0ba236a4a7b328d0984047a",
+    "project/reviews/20261030-buying-entry/observation.json": "e723a788d598a5738c22043a802f21f088a655201cffe781034241d84b2f197a"
+  },
+  "manufacturing_release": false,
+  "product_acceptance": false
+}

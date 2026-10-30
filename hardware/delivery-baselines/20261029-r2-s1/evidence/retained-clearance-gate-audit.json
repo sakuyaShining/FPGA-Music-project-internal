@@ -1,0 +1,365 @@
+{
+  "pcb_sha256": "2184d027643f52ff50a7bca4bf9c717ae805a099043d300855f3348be5b5b7e3",
+  "retained_gate_mm": 0.1651,
+  "generic_audit_gate_mm": 0.151892,
+  "generic_audit_query_buffer_mm": 0.16002,
+  "measure": "Exact frozen source pad geometry to actual production-optimized bottom ground copper reconstructed in sensor_ground.py; actual Gerber was separately proven bidirectionally equivalent within5um.",
+  "checks": [
+    {
+      "pad": "J1.14",
+      "net": "L0_E13",
+      "bottom_ground_gap_mm": 0.16763545313522973,
+      "actual_Gerber_main_ground_gap_mm": 0.16286072107035163,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.13",
+      "net": "L0_E12",
+      "bottom_ground_gap_mm": 0.1676392110542349,
+      "actual_Gerber_main_ground_gap_mm": 0.1629762225541868,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.12",
+      "net": "L0_E11",
+      "bottom_ground_gap_mm": 0.1676392110542349,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418626,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.11",
+      "net": "L0_E10",
+      "bottom_ground_gap_mm": 0.16763921105423377,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418828,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.10",
+      "net": "L0_E09",
+      "bottom_ground_gap_mm": 0.16763921105423385,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418634,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.9",
+      "net": "L0_E08",
+      "bottom_ground_gap_mm": 0.16763921105423385,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418634,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.8",
+      "net": "L0_E07",
+      "bottom_ground_gap_mm": 0.16763921105423385,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418773,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.7",
+      "net": "L0_E06",
+      "bottom_ground_gap_mm": 0.1676392110542337,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418445,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.6",
+      "net": "L0_E05",
+      "bottom_ground_gap_mm": 0.16763921105423196,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418526,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.5",
+      "net": "L0_E04",
+      "bottom_ground_gap_mm": 0.1676392110542321,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418526,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.4",
+      "net": "L0_E03",
+      "bottom_ground_gap_mm": 0.16763921105422652,
+      "actual_Gerber_main_ground_gap_mm": 0.1629762225541874,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.3",
+      "net": "L0_E02",
+      "bottom_ground_gap_mm": 0.16763921105422694,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418684,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.2",
+      "net": "L0_E01",
+      "bottom_ground_gap_mm": 0.16763921105422694,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418137,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.1",
+      "net": "L0_E00",
+      "bottom_ground_gap_mm": 0.16763921718192593,
+      "actual_Gerber_main_ground_gap_mm": 0.16442010041779165,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.13",
+      "net": "ADDR2",
+      "bottom_ground_gap_mm": 0.16763552751446714,
+      "actual_Gerber_main_ground_gap_mm": 0.16286019678880975,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.11",
+      "net": "ADDR1",
+      "bottom_ground_gap_mm": 0.1676354531272281,
+      "actual_Gerber_main_ground_gap_mm": 0.16285815884790691,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.9",
+      "net": "MUX_DISABLE",
+      "bottom_ground_gap_mm": 0.16763568571003465,
+      "actual_Gerber_main_ground_gap_mm": 0.1628603797491995,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.7",
+      "net": "ADDR0",
+      "bottom_ground_gap_mm": 0.167635453135083,
+      "actual_Gerber_main_ground_gap_mm": 0.162860620539334,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.5",
+      "net": "SENSE_OUT",
+      "bottom_ground_gap_mm": 0.1676355023873557,
+      "actual_Gerber_main_ground_gap_mm": 0.16286028947043127,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.3",
+      "net": "RC_DRIVE",
+      "bottom_ground_gap_mm": 0.1676354531268052,
+      "actual_Gerber_main_ground_gap_mm": 0.16286109248826852,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.1",
+      "net": "3V3_IO",
+      "bottom_ground_gap_mm": 0.16763921105421944,
+      "actual_Gerber_main_ground_gap_mm": 0.16441977539618743,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.15",
+      "net": "ADDR3",
+      "bottom_ground_gap_mm": 0.16763564825721336,
+      "actual_Gerber_main_ground_gap_mm": 0.16286003783883626,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    }
+  ],
+  "retained_gate_failures": [
+    {
+      "pad": "J1.14",
+      "net": "L0_E13",
+      "bottom_ground_gap_mm": 0.16763545313522973,
+      "actual_Gerber_main_ground_gap_mm": 0.16286072107035163,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.13",
+      "net": "L0_E12",
+      "bottom_ground_gap_mm": 0.1676392110542349,
+      "actual_Gerber_main_ground_gap_mm": 0.1629762225541868,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.12",
+      "net": "L0_E11",
+      "bottom_ground_gap_mm": 0.1676392110542349,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418626,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.11",
+      "net": "L0_E10",
+      "bottom_ground_gap_mm": 0.16763921105423377,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418828,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.10",
+      "net": "L0_E09",
+      "bottom_ground_gap_mm": 0.16763921105423385,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418634,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.9",
+      "net": "L0_E08",
+      "bottom_ground_gap_mm": 0.16763921105423385,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418634,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.8",
+      "net": "L0_E07",
+      "bottom_ground_gap_mm": 0.16763921105423385,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418773,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.7",
+      "net": "L0_E06",
+      "bottom_ground_gap_mm": 0.1676392110542337,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418445,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.6",
+      "net": "L0_E05",
+      "bottom_ground_gap_mm": 0.16763921105423196,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418526,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.5",
+      "net": "L0_E04",
+      "bottom_ground_gap_mm": 0.1676392110542321,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418526,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.4",
+      "net": "L0_E03",
+      "bottom_ground_gap_mm": 0.16763921105422652,
+      "actual_Gerber_main_ground_gap_mm": 0.1629762225541874,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.3",
+      "net": "L0_E02",
+      "bottom_ground_gap_mm": 0.16763921105422694,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418684,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.2",
+      "net": "L0_E01",
+      "bottom_ground_gap_mm": 0.16763921105422694,
+      "actual_Gerber_main_ground_gap_mm": 0.16297622255418137,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J1.1",
+      "net": "L0_E00",
+      "bottom_ground_gap_mm": 0.16763921718192593,
+      "actual_Gerber_main_ground_gap_mm": 0.16442010041779165,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.13",
+      "net": "ADDR2",
+      "bottom_ground_gap_mm": 0.16763552751446714,
+      "actual_Gerber_main_ground_gap_mm": 0.16286019678880975,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.11",
+      "net": "ADDR1",
+      "bottom_ground_gap_mm": 0.1676354531272281,
+      "actual_Gerber_main_ground_gap_mm": 0.16285815884790691,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.9",
+      "net": "MUX_DISABLE",
+      "bottom_ground_gap_mm": 0.16763568571003465,
+      "actual_Gerber_main_ground_gap_mm": 0.1628603797491995,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.7",
+      "net": "ADDR0",
+      "bottom_ground_gap_mm": 0.167635453135083,
+      "actual_Gerber_main_ground_gap_mm": 0.162860620539334,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.5",
+      "net": "SENSE_OUT",
+      "bottom_ground_gap_mm": 0.1676355023873557,
+      "actual_Gerber_main_ground_gap_mm": 0.16286028947043127,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.3",
+      "net": "RC_DRIVE",
+      "bottom_ground_gap_mm": 0.1676354531268052,
+      "actual_Gerber_main_ground_gap_mm": 0.16286109248826852,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.1",
+      "net": "3V3_IO",
+      "bottom_ground_gap_mm": 0.16763921105421944,
+      "actual_Gerber_main_ground_gap_mm": 0.16441977539618743,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    },
+    {
+      "pad": "J2.15",
+      "net": "ADDR3",
+      "bottom_ground_gap_mm": 0.16763564825721336,
+      "actual_Gerber_main_ground_gap_mm": 0.16286003783883626,
+      "retained_gate_mm": 0.1651,
+      "passes_retained_gate": false
+    }
+  ],
+  "min_gap_mm": 0.1676354531268052,
+  "actual_Gerber_main_ground_min_gap_mm": 0.16285815884790691
+}

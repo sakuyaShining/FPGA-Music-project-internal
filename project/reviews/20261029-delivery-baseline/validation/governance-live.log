@@ -1,0 +1,133 @@
+{
+  "status": "REVIEWED_WITH_DECLARED_WIP",
+  "checked_at": "2026-10-29T11:20:39.435822+00:00",
+  "authority": {
+    "remote": "https://github.com/sakuyaShining/FPGA-Music-project-internal.git",
+    "branch": "main"
+  },
+  "review_record": "project/reviews/20261029-delivery-baseline/review.json",
+  "review_age_status": "WITHIN_REVIEW_WINDOW",
+  "scope": "Recorded review and declared producer scope; no automatic functional or manufacturing acceptance",
+  "live_checked": true,
+  "producers": {
+    "fpga": {
+      "observation_age_status": "WITHIN_REVIEW_WINDOW",
+      "observed_at": "2026-10-29T11:20:02.289187+00:00",
+      "publication_status": "CHECKPOINT_ON_MAIN_FUTURE_LIVE_CHANGES_REQUIRE_REVIEW",
+      "owner": {
+        "thread_id": null,
+        "label": "Independent FPGA session; exact session identity not registered"
+      },
+      "live_status": "MATCHES_REVIEWED_OBSERVATION",
+      "source_archive": "project/versions/latest-design-inputs-20261023.json",
+      "changes": {
+        "added": [],
+        "removed": [],
+        "modified": []
+      }
+    },
+    "hardware": {
+      "observation_age_status": "WITHIN_REVIEW_WINDOW",
+      "observed_at": "2026-10-29T11:20:02.289187+00:00",
+      "publication_status": "LIVE_CONSTRUCTION_NOT_MANUFACTURING_RELEASE",
+      "owner": {
+        "thread_id": "01a15ee5-fa24-7501-8475-ad28a0f08939",
+        "label": "查看 huangyongtao 最新进展"
+      },
+      "live_status": "MATCHES_REVIEWED_OBSERVATION",
+      "source_archive": "project/versions/latest-design-inputs-20261023.json",
+      "changes": {
+        "added": [],
+        "removed": [],
+        "modified": []
+      }
+    },
+    "fpga-v1-intake": {
+      "observation_age_status": "WITHIN_REVIEW_WINDOW",
+      "observed_at": "2026-10-29T11:20:02.289187+00:00",
+      "publication_status": "UNMERGED_V1_DOCUMENTATION_NOT_PRODUCT_OR_PROGRAMMING_APPROVAL",
+      "owner": {
+        "thread_id": null,
+        "label": "Separate v1 documentation intake workspace; exact owner session not verified"
+      },
+      "live_status": "MATCHES_REVIEWED_OBSERVATION",
+      "source_archive": "project/reviews/20261024-contact-contract-intake/intake-summary.json",
+      "changes": {
+        "added": [],
+        "removed": [],
+        "modified": []
+      }
+    },
+    "hardware-native-handoff": {
+      "observation_age_status": "WITHIN_REVIEW_WINDOW",
+      "observed_at": "2026-10-29T11:20:02.289187+00:00",
+      "publication_status": "OWNER_NATIVE_HANDOFF_ONLY_FULL_REVIEW_FAILED_NOT_MANUFACTURING_RELEASE",
+      "owner": {
+        "thread_id": null,
+        "label": "Native hardware handoff referenced by the registered06df producer; exact current owner thread unverified"
+      },
+      "live_status": "MATCHES_REVIEWED_OBSERVATION",
+      "source_archive": "project/reviews/20261024-contact-rtl/hardware-intake.json",
+      "changes": {
+        "added": [],
+        "removed": [],
+        "modified": []
+      }
+    },
+    "host": {
+      "status": "DORMANT_SOURCE",
+      "activation_requires_review": true
+    },
+    "hardware-module-plan": {
+      "observation_age_status": "WITHIN_REVIEW_WINDOW",
+      "observed_at": "2026-10-29T11:20:02.289187+00:00",
+      "publication_status": "PUBLISHED_FIXED_5354B46D_PLUS_SCOPED_APPROVAL_NOT_LIVE_CAD_ACCEPTANCE",
+      "owner": {
+        "thread_id": "01a15ee5-fa24-7501-8475-ad28a0f08939",
+        "label": "Registered hardware chat; module-plan handoff"
+      },
+      "live_status": "MATCHES_REVIEWED_OBSERVATION",
+      "source_archive": null,
+      "changes": {
+        "added": [],
+        "removed": [],
+        "modified": []
+      }
+    },
+    "hardware-delivery": {
+      "observation_age_status": "WITHIN_REVIEW_WINDOW",
+      "observed_at": "2026-10-29T11:20:02.289187+00:00",
+      "publication_status": "RECOVERABLE_R2_S1_BASELINE_SENSOR_FAB_HOLD_TASK_BRANCH_NOT_MAIN",
+      "owner": {
+        "thread_id": "01a17cd7-710c-7be3-be62-6537a4a702b6",
+        "label": "Hardware-delivery continuation: reviewed manufacturing drafts and supply candidates"
+      },
+      "live_status": "MATCHES_REVIEWED_OBSERVATION",
+      "source_archive": null,
+      "changes": {
+        "added": [],
+        "removed": [],
+        "modified": []
+      }
+    },
+    "control88-q4-continuation": {
+      "observation_age_status": "WITHIN_REVIEW_WINDOW",
+      "observed_at": "2026-10-29T11:20:02.289187+00:00",
+      "publication_status": "READ_ONLY_SOURCE_RECOVERY_CAPTURE_NOT_QUALIFIED_FIRMWARE",
+      "owner": {
+        "thread_id": null,
+        "label": "WorkBuddy Q4 continuation; exact collaborator session not registered"
+      },
+      "live_status": "MATCHES_REVIEWED_OBSERVATION",
+      "source_archive": "hardware/delivery-baselines/20261029-r2-s1/Q4-SOURCE-CAPTURE.json",
+      "changes": {
+        "added": [],
+        "removed": [],
+        "modified": []
+      }
+    }
+  },
+  "errors": [],
+  "product_acceptance": false,
+  "implementation_start_authorized": false
+}

@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "status": "VERIFIED_NET_CONSUMPTION_SCOPES_NOT_ORDER_QUANTITIES",
+  "inputs": {
+    "C88_frozen_archive_sha256": "24fe5ec56d973144bcdb217d0b1af5efbf2fd85d14ee655555ba9a2d41b1dcfd",
+    "C88_frozen_BOM_sha256": "5c3923fe24268c49f40566e0768b4d698386cea10cc3adf17bc442ec750685a7",
+    "S2_BOM_sha256": "110c3b3cda290c1764b67d64a4aba6bcde1725c4a8bd1b5b31fb456b0f370324",
+    "EP84_source_sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a"
+  },
+  "current_C88_plus_six_S2": {
+    "C88_boards": 1,
+    "C88_parts": 88,
+    "S2_boards": 6,
+    "S2_parts_per_board": 28,
+    "parts_total": 256,
+    "SKUs": 38,
+    "SMT_parts": 232,
+    "SMT_SKUs": 32,
+    "TH_parts": 24,
+    "TH_SKUs": 6,
+    "C14663_qty": 13,
+    "C1591_qty": 12
+  },
+  "quote_option_C88_C1591_plus_six_S2": {
+    "parts_total": 256,
+    "SKUs": 37,
+    "SMT_parts": 232,
+    "SMT_SKUs": 31,
+    "TH_parts": 24,
+    "TH_SKUs": 6,
+    "C1591_qty": 25,
+    "actual_substitution_performed": false
+  },
+  "including_EP84_source_headers": {
+    "additional_headers": 6,
+    "current_parts": 262,
+    "current_SKUs": 38,
+    "quote_option_parts": 262,
+    "quote_option_SKUs": 37,
+    "EP84_native_manufacturing_validation": "PENDING_DO_NOT_ORDER_PANEL"
+  },
+  "scope_excluded": [
+    "Already owned Tang Nano20K",
+    "J10 finished screen",
+    "Power supply/data/power/audio/sensor/control harnesses",
+    "Dielectric overlay/enclosure/fasteners",
+    "Shipping/SMT setup/minimum quantities/attrition"
+  ],
+  "supplier_quote_received": false,
+  "manufacturing_release": false
+}

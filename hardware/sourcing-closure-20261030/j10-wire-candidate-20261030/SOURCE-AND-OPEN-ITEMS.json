@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "status": "PINMAP_CANDIDATE_INDEXED_PRIMARY_TEXT_NOT_ASSEMBLY_RELEASE",
+  "Control88_source_sha256": "733e1d9c33d11ef946863dca0bc9f36ae2916b9965d038b147aafea416194eb8",
+  "manufacturer_sources": [
+    {
+      "url": "https://www.buydisplay.com/download/manual/ER-TFTM070-5V4_Datasheet.pdf",
+      "section": "4.1,p11-12",
+      "read_method": "Manufacturer-hosted search-index text; direct PDF fetch403; no full-file byte identity or visual review"
+    },
+    {
+      "url": "https://www.buydisplay.com/download/interfacing/ER-TFTM070-5V4_Interfacing.pdf",
+      "revision": "Jun11,2024 A0",
+      "section": "Serial4WireSPIReferenceExample",
+      "read_method": "Manufacturer-hosted search-index schematic text; direct PDF fetch403; drawing not visually verified"
+    }
+  ],
+  "documented_signal_pairs": {
+    "SCS": 5,
+    "SDO": 6,
+    "SDI": 7,
+    "SCLK": 8,
+    "CTP_INT": 33,
+    "CTP_SDA": 34,
+    "CTP_SCL": 35,
+    "CTP_RST": 36
+  },
+  "unresolved_before_wire_assembly": [
+    "Pin11 labelled /RESET(NC) and onboard RC; interfacing reference treats it as NC. Vendor must confirm usable RA8875 hardware reset pin11 or provide dedicated qualified3.3V reset breakout lead. Do not connect C88 J10.7 blindly.",
+    "Manual interface section heading saysJP2/CON1 while interfacing document saysJP3/CON2; exact populated40pin header identity and physical pin1/front-back view require vendor confirmation",
+    "Interfacing schematic still labels touch IC FT5206 despite newer module product requirementFT5316; actual shipped touch IC/interface/photos must be confirmed",
+    "5V module power mode,3.3V logic and touch power, exact4wireSPI solder straps, backlight behavior and complete prewiring require vendor confirmation",
+    "Connector mating type/height/length and reset breakout mechanical clearance require actual assembly drawing"
+  ],
+  "native_C88_pinmap_check": "See packaged verifier; source electrical names only",
+  "full_PDF_visual_review": false,
+  "vendor_confirmation_received": false,
+  "wire_continuity_tested": false,
+  "manufacturing_release": false
+}

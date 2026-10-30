@@ -1,0 +1,1698 @@
+{
+  "schema": 1,
+  "status": "FULL84_ROUTED_NATIVE_SAVED_SOURCE_CAM_CHECKS_PENDING",
+  "source_sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+  "outer_instrument_mm": [
+    450,
+    190,
+    60
+  ],
+  "panel_mm": [
+    236,
+    156
+  ],
+  "note_pitch_mm": 18,
+  "rows": {
+    "lower": 12,
+    "upper": 13
+  },
+  "active_slider_mm": [
+    12,
+    48
+  ],
+  "electrode_gap_mm": 0.8,
+  "trace_target_mm": 0.25,
+  "routing_clearance_target_mm": 0.25,
+  "connectors": [
+    {
+      "bank": 0,
+      "ref": "JB0",
+      "native_id": "e450000000000157",
+      "xy_mm": [
+        36,
+        7
+      ],
+      "initial_layer": 1,
+      "assembly_target": "BOTTOM verified in native saved source; factory plugin quote pending",
+      "MPN": "PZ254V-11-16P",
+      "LCSC": "C22465876",
+      "source_library_sha256": "49866816334226fe96efd95cb598b25717148090feb10a9915c60f228e2b3a2a",
+      "current_layer": 2
+    },
+    {
+      "bank": 1,
+      "ref": "JB1",
+      "native_id": "e45000000000016c",
+      "xy_mm": [
+        108,
+        7
+      ],
+      "initial_layer": 1,
+      "assembly_target": "BOTTOM verified in native saved source; factory plugin quote pending",
+      "MPN": "PZ254V-11-16P",
+      "LCSC": "C22465876",
+      "source_library_sha256": "49866816334226fe96efd95cb598b25717148090feb10a9915c60f228e2b3a2a",
+      "current_layer": 2
+    },
+    {
+      "bank": 2,
+      "ref": "JB2",
+      "native_id": "e450000000000181",
+      "xy_mm": [
+        180,
+        7
+      ],
+      "initial_layer": 1,
+      "assembly_target": "BOTTOM verified in native saved source; factory plugin quote pending",
+      "MPN": "PZ254V-11-16P",
+      "LCSC": "C22465876",
+      "source_library_sha256": "49866816334226fe96efd95cb598b25717148090feb10a9915c60f228e2b3a2a",
+      "current_layer": 2
+    },
+    {
+      "bank": 3,
+      "ref": "JB3",
+      "native_id": "e450000000000196",
+      "xy_mm": [
+        36,
+        77
+      ],
+      "initial_layer": 1,
+      "assembly_target": "BOTTOM verified in native saved source; factory plugin quote pending",
+      "MPN": "PZ254V-11-16P",
+      "LCSC": "C22465876",
+      "source_library_sha256": "49866816334226fe96efd95cb598b25717148090feb10a9915c60f228e2b3a2a",
+      "current_layer": 2
+    },
+    {
+      "bank": 4,
+      "ref": "JB4",
+      "native_id": "e4500000000001ab",
+      "xy_mm": [
+        108,
+        77
+      ],
+      "initial_layer": 1,
+      "assembly_target": "BOTTOM verified in native saved source; factory plugin quote pending",
+      "MPN": "PZ254V-11-16P",
+      "LCSC": "C22465876",
+      "source_library_sha256": "49866816334226fe96efd95cb598b25717148090feb10a9915c60f228e2b3a2a",
+      "current_layer": 2
+    },
+    {
+      "bank": 5,
+      "ref": "JB5",
+      "native_id": "e4500000000001c0",
+      "xy_mm": [
+        180,
+        77
+      ],
+      "initial_layer": 1,
+      "assembly_target": "BOTTOM verified in native saved source; factory plugin quote pending",
+      "MPN": "PZ254V-11-16P",
+      "LCSC": "C22465876",
+      "source_library_sha256": "49866816334226fe96efd95cb598b25717148090feb10a9915c60f228e2b3a2a",
+      "current_layer": 2
+    }
+  ],
+  "electrode_endpoints": [
+    {
+      "raw_index": 0,
+      "net": "E000",
+      "kind": "pitch",
+      "pitch": "C3",
+      "member": "端A",
+      "bank": 0,
+      "channel": 0,
+      "header": "JB0",
+      "header_pin": 8,
+      "fill_id": "e4500000000001d6",
+      "via_id": "e4500000000001d7",
+      "via_xy_mm": [
+        6.0,
+        23.652510693839247
+      ],
+      "area_mm2": 118.96664617426191
+    },
+    {
+      "raw_index": 1,
+      "net": "E001",
+      "kind": "pitch",
+      "pitch": "E3",
+      "member": "端A",
+      "bank": 1,
+      "channel": 0,
+      "header": "JB1",
+      "header_pin": 8,
+      "fill_id": "e4500000000001d9",
+      "via_id": "e4500000000001da",
+      "via_xy_mm": [
+        78.0,
+        23.65251069383924
+      ],
+      "area_mm2": 118.96664617426185
+    },
+    {
+      "raw_index": 2,
+      "net": "E002",
+      "kind": "pitch",
+      "pitch": "G#3",
+      "member": "端A",
+      "bank": 2,
+      "channel": 0,
+      "header": "JB2",
+      "header_pin": 8,
+      "fill_id": "e4500000000001dc",
+      "via_id": "e4500000000001dd",
+      "via_xy_mm": [
+        150.0,
+        23.652510693839236
+      ],
+      "area_mm2": 118.96664617426212
+    },
+    {
+      "raw_index": 3,
+      "net": "E003",
+      "kind": "pitch",
+      "pitch": "C4",
+      "member": "端A",
+      "bank": 3,
+      "channel": 0,
+      "header": "JB3",
+      "header_pin": 8,
+      "fill_id": "e4500000000001df",
+      "via_id": "e4500000000001e0",
+      "via_xy_mm": [
+        6.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426181
+    },
+    {
+      "raw_index": 4,
+      "net": "E004",
+      "kind": "pitch",
+      "pitch": "E4",
+      "member": "端A",
+      "bank": 4,
+      "channel": 0,
+      "header": "JB4",
+      "header_pin": 8,
+      "fill_id": "e4500000000001e2",
+      "via_id": "e4500000000001e3",
+      "via_xy_mm": [
+        78.0,
+        93.65251069383922
+      ],
+      "area_mm2": 118.96664617426174
+    },
+    {
+      "raw_index": 5,
+      "net": "E005",
+      "kind": "pitch",
+      "pitch": "G#4",
+      "member": "端A",
+      "bank": 5,
+      "channel": 0,
+      "header": "JB5",
+      "header_pin": 8,
+      "fill_id": "e4500000000001e5",
+      "via_id": "e4500000000001e6",
+      "via_xy_mm": [
+        150.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426204
+    },
+    {
+      "raw_index": 6,
+      "net": "E006",
+      "kind": "pitch",
+      "pitch": "C3",
+      "member": "中",
+      "bank": 0,
+      "channel": 1,
+      "header": "JB0",
+      "header_pin": 7,
+      "fill_id": "e4500000000001e7",
+      "via_id": "e4500000000001e8",
+      "via_xy_mm": [
+        10.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.54976330306516
+    },
+    {
+      "raw_index": 7,
+      "net": "E007",
+      "kind": "pitch",
+      "pitch": "E3",
+      "member": "中",
+      "bank": 1,
+      "channel": 1,
+      "header": "JB1",
+      "header_pin": 7,
+      "fill_id": "e4500000000001e9",
+      "via_id": "e4500000000001ea",
+      "via_xy_mm": [
+        82.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.5497633030653
+    },
+    {
+      "raw_index": 8,
+      "net": "E008",
+      "kind": "pitch",
+      "pitch": "G#3",
+      "member": "中",
+      "bank": 2,
+      "channel": 1,
+      "header": "JB2",
+      "header_pin": 7,
+      "fill_id": "e4500000000001eb",
+      "via_id": "e4500000000001ec",
+      "via_xy_mm": [
+        154.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.54976330306576
+    },
+    {
+      "raw_index": 9,
+      "net": "E009",
+      "kind": "pitch",
+      "pitch": "C4",
+      "member": "中",
+      "bank": 3,
+      "channel": 1,
+      "header": "JB3",
+      "header_pin": 7,
+      "fill_id": "e4500000000001ed",
+      "via_id": "e4500000000001ee",
+      "via_xy_mm": [
+        10.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.5497633030652
+    },
+    {
+      "raw_index": 10,
+      "net": "E010",
+      "kind": "pitch",
+      "pitch": "E4",
+      "member": "中",
+      "bank": 4,
+      "channel": 1,
+      "header": "JB4",
+      "header_pin": 7,
+      "fill_id": "e4500000000001ef",
+      "via_id": "e4500000000001f0",
+      "via_xy_mm": [
+        82.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306528
+    },
+    {
+      "raw_index": 11,
+      "net": "E011",
+      "kind": "pitch",
+      "pitch": "G#4",
+      "member": "中",
+      "bank": 5,
+      "channel": 1,
+      "header": "JB5",
+      "header_pin": 7,
+      "fill_id": "e4500000000001f1",
+      "via_id": "e4500000000001f2",
+      "via_xy_mm": [
+        154.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306573
+    },
+    {
+      "raw_index": 12,
+      "net": "E012",
+      "kind": "pitch",
+      "pitch": "C3",
+      "member": "端B",
+      "bank": 0,
+      "channel": 2,
+      "header": "JB0",
+      "header_pin": 6,
+      "fill_id": "e4500000000001f3",
+      "via_id": "e4500000000001f4",
+      "via_xy_mm": [
+        14.0,
+        63.63267437936368
+      ],
+      "area_mm2": 87.35966561934934
+    },
+    {
+      "raw_index": 13,
+      "net": "E013",
+      "kind": "pitch",
+      "pitch": "E3",
+      "member": "端B",
+      "bank": 1,
+      "channel": 2,
+      "header": "JB1",
+      "header_pin": 6,
+      "fill_id": "e4500000000001f5",
+      "via_id": "e4500000000001f6",
+      "via_xy_mm": [
+        86.0,
+        63.632674379363685
+      ],
+      "area_mm2": 87.35966561934931
+    },
+    {
+      "raw_index": 14,
+      "net": "E014",
+      "kind": "pitch",
+      "pitch": "G#3",
+      "member": "端B",
+      "bank": 2,
+      "channel": 2,
+      "header": "JB2",
+      "header_pin": 6,
+      "fill_id": "e4500000000001f7",
+      "via_id": "e4500000000001f8",
+      "via_xy_mm": [
+        158.0,
+        63.63267437936369
+      ],
+      "area_mm2": 87.3596656193495
+    },
+    {
+      "raw_index": 15,
+      "net": "E015",
+      "kind": "pitch",
+      "pitch": "C4",
+      "member": "端B",
+      "bank": 3,
+      "channel": 2,
+      "header": "JB3",
+      "header_pin": 6,
+      "fill_id": "e4500000000001f9",
+      "via_id": "e4500000000001fa",
+      "via_xy_mm": [
+        14.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.3596656193493
+    },
+    {
+      "raw_index": 16,
+      "net": "E016",
+      "kind": "pitch",
+      "pitch": "E4",
+      "member": "端B",
+      "bank": 4,
+      "channel": 2,
+      "header": "JB4",
+      "header_pin": 6,
+      "fill_id": "e4500000000001fb",
+      "via_id": "e4500000000001fc",
+      "via_xy_mm": [
+        86.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934926
+    },
+    {
+      "raw_index": 17,
+      "net": "E017",
+      "kind": "pitch",
+      "pitch": "G#4",
+      "member": "端B",
+      "bank": 5,
+      "channel": 2,
+      "header": "JB5",
+      "header_pin": 6,
+      "fill_id": "e4500000000001fd",
+      "via_id": "e4500000000001fe",
+      "via_xy_mm": [
+        158.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934949
+    },
+    {
+      "raw_index": 18,
+      "net": "E018",
+      "kind": "pitch",
+      "pitch": "C#3",
+      "member": "端A",
+      "bank": 0,
+      "channel": 3,
+      "header": "JB0",
+      "header_pin": 5,
+      "fill_id": "e450000000000200",
+      "via_id": "e450000000000201",
+      "via_xy_mm": [
+        24.0,
+        23.652510693839247
+      ],
+      "area_mm2": 118.96664617426191
+    },
+    {
+      "raw_index": 19,
+      "net": "E019",
+      "kind": "pitch",
+      "pitch": "F3",
+      "member": "端A",
+      "bank": 1,
+      "channel": 3,
+      "header": "JB1",
+      "header_pin": 5,
+      "fill_id": "e450000000000203",
+      "via_id": "e450000000000204",
+      "via_xy_mm": [
+        96.0,
+        23.65251069383924
+      ],
+      "area_mm2": 118.96664617426185
+    },
+    {
+      "raw_index": 20,
+      "net": "E020",
+      "kind": "pitch",
+      "pitch": "A3",
+      "member": "端A",
+      "bank": 2,
+      "channel": 3,
+      "header": "JB2",
+      "header_pin": 5,
+      "fill_id": "e450000000000206",
+      "via_id": "e450000000000207",
+      "via_xy_mm": [
+        168.0,
+        23.652510693839236
+      ],
+      "area_mm2": 118.96664617426212
+    },
+    {
+      "raw_index": 21,
+      "net": "E021",
+      "kind": "pitch",
+      "pitch": "C#4",
+      "member": "端A",
+      "bank": 3,
+      "channel": 3,
+      "header": "JB3",
+      "header_pin": 5,
+      "fill_id": "e450000000000209",
+      "via_id": "e45000000000020a",
+      "via_xy_mm": [
+        24.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426181
+    },
+    {
+      "raw_index": 22,
+      "net": "E022",
+      "kind": "pitch",
+      "pitch": "F4",
+      "member": "端A",
+      "bank": 4,
+      "channel": 3,
+      "header": "JB4",
+      "header_pin": 5,
+      "fill_id": "e45000000000020c",
+      "via_id": "e45000000000020d",
+      "via_xy_mm": [
+        96.0,
+        93.65251069383922
+      ],
+      "area_mm2": 118.96664617426174
+    },
+    {
+      "raw_index": 23,
+      "net": "E023",
+      "kind": "pitch",
+      "pitch": "A4",
+      "member": "端A",
+      "bank": 5,
+      "channel": 3,
+      "header": "JB5",
+      "header_pin": 5,
+      "fill_id": "e45000000000020f",
+      "via_id": "e450000000000210",
+      "via_xy_mm": [
+        168.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426204
+    },
+    {
+      "raw_index": 24,
+      "net": "E024",
+      "kind": "pitch",
+      "pitch": "C#3",
+      "member": "中",
+      "bank": 0,
+      "channel": 4,
+      "header": "JB0",
+      "header_pin": 4,
+      "fill_id": "e450000000000211",
+      "via_id": "e450000000000212",
+      "via_xy_mm": [
+        28.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.54976330306516
+    },
+    {
+      "raw_index": 25,
+      "net": "E025",
+      "kind": "pitch",
+      "pitch": "F3",
+      "member": "中",
+      "bank": 1,
+      "channel": 4,
+      "header": "JB1",
+      "header_pin": 4,
+      "fill_id": "e450000000000213",
+      "via_id": "e450000000000214",
+      "via_xy_mm": [
+        100.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.5497633030653
+    },
+    {
+      "raw_index": 26,
+      "net": "E026",
+      "kind": "pitch",
+      "pitch": "A3",
+      "member": "中",
+      "bank": 2,
+      "channel": 4,
+      "header": "JB2",
+      "header_pin": 4,
+      "fill_id": "e450000000000215",
+      "via_id": "e450000000000216",
+      "via_xy_mm": [
+        172.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.54976330306576
+    },
+    {
+      "raw_index": 27,
+      "net": "E027",
+      "kind": "pitch",
+      "pitch": "C#4",
+      "member": "中",
+      "bank": 3,
+      "channel": 4,
+      "header": "JB3",
+      "header_pin": 4,
+      "fill_id": "e450000000000217",
+      "via_id": "e450000000000218",
+      "via_xy_mm": [
+        28.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.5497633030652
+    },
+    {
+      "raw_index": 28,
+      "net": "E028",
+      "kind": "pitch",
+      "pitch": "F4",
+      "member": "中",
+      "bank": 4,
+      "channel": 4,
+      "header": "JB4",
+      "header_pin": 4,
+      "fill_id": "e450000000000219",
+      "via_id": "e45000000000021a",
+      "via_xy_mm": [
+        100.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306528
+    },
+    {
+      "raw_index": 29,
+      "net": "E029",
+      "kind": "pitch",
+      "pitch": "A4",
+      "member": "中",
+      "bank": 5,
+      "channel": 4,
+      "header": "JB5",
+      "header_pin": 4,
+      "fill_id": "e45000000000021b",
+      "via_id": "e45000000000021c",
+      "via_xy_mm": [
+        172.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306573
+    },
+    {
+      "raw_index": 30,
+      "net": "E030",
+      "kind": "pitch",
+      "pitch": "C#3",
+      "member": "端B",
+      "bank": 0,
+      "channel": 5,
+      "header": "JB0",
+      "header_pin": 3,
+      "fill_id": "e45000000000021d",
+      "via_id": "e45000000000021e",
+      "via_xy_mm": [
+        32.0,
+        63.63267437936368
+      ],
+      "area_mm2": 87.35966561934934
+    },
+    {
+      "raw_index": 31,
+      "net": "E031",
+      "kind": "pitch",
+      "pitch": "F3",
+      "member": "端B",
+      "bank": 1,
+      "channel": 5,
+      "header": "JB1",
+      "header_pin": 3,
+      "fill_id": "e45000000000021f",
+      "via_id": "e450000000000220",
+      "via_xy_mm": [
+        104.0,
+        63.632674379363685
+      ],
+      "area_mm2": 87.35966561934931
+    },
+    {
+      "raw_index": 32,
+      "net": "E032",
+      "kind": "pitch",
+      "pitch": "A3",
+      "member": "端B",
+      "bank": 2,
+      "channel": 5,
+      "header": "JB2",
+      "header_pin": 3,
+      "fill_id": "e450000000000221",
+      "via_id": "e450000000000222",
+      "via_xy_mm": [
+        176.0,
+        63.63267437936369
+      ],
+      "area_mm2": 87.3596656193495
+    },
+    {
+      "raw_index": 33,
+      "net": "E033",
+      "kind": "pitch",
+      "pitch": "C#4",
+      "member": "端B",
+      "bank": 3,
+      "channel": 5,
+      "header": "JB3",
+      "header_pin": 3,
+      "fill_id": "e450000000000223",
+      "via_id": "e450000000000224",
+      "via_xy_mm": [
+        32.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.3596656193493
+    },
+    {
+      "raw_index": 34,
+      "net": "E034",
+      "kind": "pitch",
+      "pitch": "F4",
+      "member": "端B",
+      "bank": 4,
+      "channel": 5,
+      "header": "JB4",
+      "header_pin": 3,
+      "fill_id": "e450000000000225",
+      "via_id": "e450000000000226",
+      "via_xy_mm": [
+        104.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934926
+    },
+    {
+      "raw_index": 35,
+      "net": "E035",
+      "kind": "pitch",
+      "pitch": "A4",
+      "member": "端B",
+      "bank": 5,
+      "channel": 5,
+      "header": "JB5",
+      "header_pin": 3,
+      "fill_id": "e450000000000227",
+      "via_id": "e450000000000228",
+      "via_xy_mm": [
+        176.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934949
+    },
+    {
+      "raw_index": 36,
+      "net": "E036",
+      "kind": "pitch",
+      "pitch": "D3",
+      "member": "端A",
+      "bank": 0,
+      "channel": 6,
+      "header": "JB0",
+      "header_pin": 2,
+      "fill_id": "e45000000000022a",
+      "via_id": "e45000000000022b",
+      "via_xy_mm": [
+        42.0,
+        23.65251069383924
+      ],
+      "area_mm2": 118.96664617426185
+    },
+    {
+      "raw_index": 37,
+      "net": "E037",
+      "kind": "pitch",
+      "pitch": "F#3",
+      "member": "端A",
+      "bank": 1,
+      "channel": 6,
+      "header": "JB1",
+      "header_pin": 2,
+      "fill_id": "e45000000000022d",
+      "via_id": "e45000000000022e",
+      "via_xy_mm": [
+        114.0,
+        23.65251069383924
+      ],
+      "area_mm2": 118.96664617426185
+    },
+    {
+      "raw_index": 38,
+      "net": "E038",
+      "kind": "pitch",
+      "pitch": "A#3",
+      "member": "端A",
+      "bank": 2,
+      "channel": 6,
+      "header": "JB2",
+      "header_pin": 2,
+      "fill_id": "e450000000000230",
+      "via_id": "e450000000000231",
+      "via_xy_mm": [
+        186.0,
+        23.652510693839236
+      ],
+      "area_mm2": 118.96664617426212
+    },
+    {
+      "raw_index": 39,
+      "net": "E039",
+      "kind": "pitch",
+      "pitch": "D4",
+      "member": "端A",
+      "bank": 3,
+      "channel": 6,
+      "header": "JB3",
+      "header_pin": 2,
+      "fill_id": "e450000000000233",
+      "via_id": "e450000000000234",
+      "via_xy_mm": [
+        42.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426177
+    },
+    {
+      "raw_index": 40,
+      "net": "E040",
+      "kind": "pitch",
+      "pitch": "F#4",
+      "member": "端A",
+      "bank": 4,
+      "channel": 6,
+      "header": "JB4",
+      "header_pin": 2,
+      "fill_id": "e450000000000236",
+      "via_id": "e450000000000237",
+      "via_xy_mm": [
+        114.0,
+        93.65251069383922
+      ],
+      "area_mm2": 118.96664617426174
+    },
+    {
+      "raw_index": 41,
+      "net": "E041",
+      "kind": "pitch",
+      "pitch": "A#4",
+      "member": "端A",
+      "bank": 5,
+      "channel": 6,
+      "header": "JB5",
+      "header_pin": 2,
+      "fill_id": "e450000000000239",
+      "via_id": "e45000000000023a",
+      "via_xy_mm": [
+        186.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426204
+    },
+    {
+      "raw_index": 42,
+      "net": "E042",
+      "kind": "pitch",
+      "pitch": "D3",
+      "member": "中",
+      "bank": 0,
+      "channel": 7,
+      "header": "JB0",
+      "header_pin": 1,
+      "fill_id": "e45000000000023b",
+      "via_id": "e45000000000023c",
+      "via_xy_mm": [
+        46.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.54976330306513
+    },
+    {
+      "raw_index": 43,
+      "net": "E043",
+      "kind": "pitch",
+      "pitch": "F#3",
+      "member": "中",
+      "bank": 1,
+      "channel": 7,
+      "header": "JB1",
+      "header_pin": 1,
+      "fill_id": "e45000000000023d",
+      "via_id": "e45000000000023e",
+      "via_xy_mm": [
+        118.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.5497633030653
+    },
+    {
+      "raw_index": 44,
+      "net": "E044",
+      "kind": "pitch",
+      "pitch": "A#3",
+      "member": "中",
+      "bank": 2,
+      "channel": 7,
+      "header": "JB2",
+      "header_pin": 1,
+      "fill_id": "e45000000000023f",
+      "via_id": "e450000000000240",
+      "via_xy_mm": [
+        190.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.54976330306576
+    },
+    {
+      "raw_index": 45,
+      "net": "E045",
+      "kind": "pitch",
+      "pitch": "D4",
+      "member": "中",
+      "bank": 3,
+      "channel": 7,
+      "header": "JB3",
+      "header_pin": 1,
+      "fill_id": "e450000000000241",
+      "via_id": "e450000000000242",
+      "via_xy_mm": [
+        46.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.5497633030651
+    },
+    {
+      "raw_index": 46,
+      "net": "E046",
+      "kind": "pitch",
+      "pitch": "F#4",
+      "member": "中",
+      "bank": 4,
+      "channel": 7,
+      "header": "JB4",
+      "header_pin": 1,
+      "fill_id": "e450000000000243",
+      "via_id": "e450000000000244",
+      "via_xy_mm": [
+        118.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306528
+    },
+    {
+      "raw_index": 47,
+      "net": "E047",
+      "kind": "pitch",
+      "pitch": "A#4",
+      "member": "中",
+      "bank": 5,
+      "channel": 7,
+      "header": "JB5",
+      "header_pin": 1,
+      "fill_id": "e450000000000245",
+      "via_id": "e450000000000246",
+      "via_xy_mm": [
+        190.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306573
+    },
+    {
+      "raw_index": 48,
+      "net": "E048",
+      "kind": "pitch",
+      "pitch": "D3",
+      "member": "端B",
+      "bank": 0,
+      "channel": 8,
+      "header": "JB0",
+      "header_pin": 14,
+      "fill_id": "e450000000000247",
+      "via_id": "e450000000000248",
+      "via_xy_mm": [
+        50.0,
+        63.63267437936368
+      ],
+      "area_mm2": 87.35966561934931
+    },
+    {
+      "raw_index": 49,
+      "net": "E049",
+      "kind": "pitch",
+      "pitch": "F#3",
+      "member": "端B",
+      "bank": 1,
+      "channel": 8,
+      "header": "JB1",
+      "header_pin": 14,
+      "fill_id": "e450000000000249",
+      "via_id": "e45000000000024a",
+      "via_xy_mm": [
+        122.0,
+        63.632674379363685
+      ],
+      "area_mm2": 87.35966561934931
+    },
+    {
+      "raw_index": 50,
+      "net": "E050",
+      "kind": "pitch",
+      "pitch": "A#3",
+      "member": "端B",
+      "bank": 2,
+      "channel": 8,
+      "header": "JB2",
+      "header_pin": 14,
+      "fill_id": "e45000000000024b",
+      "via_id": "e45000000000024c",
+      "via_xy_mm": [
+        194.0,
+        63.63267437936369
+      ],
+      "area_mm2": 87.3596656193495
+    },
+    {
+      "raw_index": 51,
+      "net": "E051",
+      "kind": "pitch",
+      "pitch": "D4",
+      "member": "端B",
+      "bank": 3,
+      "channel": 8,
+      "header": "JB3",
+      "header_pin": 14,
+      "fill_id": "e45000000000024d",
+      "via_id": "e45000000000024e",
+      "via_xy_mm": [
+        50.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934929
+    },
+    {
+      "raw_index": 52,
+      "net": "E052",
+      "kind": "pitch",
+      "pitch": "F#4",
+      "member": "端B",
+      "bank": 4,
+      "channel": 8,
+      "header": "JB4",
+      "header_pin": 14,
+      "fill_id": "e45000000000024f",
+      "via_id": "e450000000000250",
+      "via_xy_mm": [
+        122.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934926
+    },
+    {
+      "raw_index": 53,
+      "net": "E053",
+      "kind": "pitch",
+      "pitch": "A#4",
+      "member": "端B",
+      "bank": 5,
+      "channel": 8,
+      "header": "JB5",
+      "header_pin": 14,
+      "fill_id": "e450000000000251",
+      "via_id": "e450000000000252",
+      "via_xy_mm": [
+        194.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934949
+    },
+    {
+      "raw_index": 54,
+      "net": "E054",
+      "kind": "pitch",
+      "pitch": "D#3",
+      "member": "端A",
+      "bank": 0,
+      "channel": 9,
+      "header": "JB0",
+      "header_pin": 13,
+      "fill_id": "e450000000000254",
+      "via_id": "e450000000000255",
+      "via_xy_mm": [
+        60.0,
+        23.65251069383924
+      ],
+      "area_mm2": 118.96664617426187
+    },
+    {
+      "raw_index": 55,
+      "net": "E055",
+      "kind": "pitch",
+      "pitch": "G3",
+      "member": "端A",
+      "bank": 1,
+      "channel": 9,
+      "header": "JB1",
+      "header_pin": 13,
+      "fill_id": "e450000000000257",
+      "via_id": "e450000000000258",
+      "via_xy_mm": [
+        132.0,
+        23.652510693839236
+      ],
+      "area_mm2": 118.96664617426212
+    },
+    {
+      "raw_index": 56,
+      "net": "E056",
+      "kind": "pitch",
+      "pitch": "B3",
+      "member": "端A",
+      "bank": 2,
+      "channel": 9,
+      "header": "JB2",
+      "header_pin": 13,
+      "fill_id": "e45000000000025a",
+      "via_id": "e45000000000025b",
+      "via_xy_mm": [
+        204.0,
+        23.652510693839236
+      ],
+      "area_mm2": 118.96664617426212
+    },
+    {
+      "raw_index": 57,
+      "net": "E057",
+      "kind": "pitch",
+      "pitch": "D#4",
+      "member": "端A",
+      "bank": 3,
+      "channel": 9,
+      "header": "JB3",
+      "header_pin": 13,
+      "fill_id": "e45000000000025d",
+      "via_id": "e45000000000025e",
+      "via_xy_mm": [
+        60.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426177
+    },
+    {
+      "raw_index": 58,
+      "net": "E058",
+      "kind": "pitch",
+      "pitch": "G4",
+      "member": "端A",
+      "bank": 4,
+      "channel": 9,
+      "header": "JB4",
+      "header_pin": 13,
+      "fill_id": "e450000000000260",
+      "via_id": "e450000000000261",
+      "via_xy_mm": [
+        132.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426204
+    },
+    {
+      "raw_index": 59,
+      "net": "E059",
+      "kind": "pitch",
+      "pitch": "B4",
+      "member": "端A",
+      "bank": 5,
+      "channel": 9,
+      "header": "JB5",
+      "header_pin": 13,
+      "fill_id": "e450000000000263",
+      "via_id": "e450000000000264",
+      "via_xy_mm": [
+        204.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426204
+    },
+    {
+      "raw_index": 60,
+      "net": "E060",
+      "kind": "pitch",
+      "pitch": "D#3",
+      "member": "中",
+      "bank": 0,
+      "channel": 10,
+      "header": "JB0",
+      "header_pin": 12,
+      "fill_id": "e450000000000265",
+      "via_id": "e450000000000266",
+      "via_xy_mm": [
+        64.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.54976330306525
+    },
+    {
+      "raw_index": 61,
+      "net": "E061",
+      "kind": "pitch",
+      "pitch": "G3",
+      "member": "中",
+      "bank": 1,
+      "channel": 10,
+      "header": "JB1",
+      "header_pin": 12,
+      "fill_id": "e450000000000267",
+      "via_id": "e450000000000268",
+      "via_xy_mm": [
+        136.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.54976330306576
+    },
+    {
+      "raw_index": 62,
+      "net": "E062",
+      "kind": "pitch",
+      "pitch": "B3",
+      "member": "中",
+      "bank": 2,
+      "channel": 10,
+      "header": "JB2",
+      "header_pin": 12,
+      "fill_id": "e450000000000269",
+      "via_id": "e45000000000026a",
+      "via_xy_mm": [
+        208.0,
+        36.02022707930635
+      ],
+      "area_mm2": 126.54976330306576
+    },
+    {
+      "raw_index": 63,
+      "net": "E063",
+      "kind": "pitch",
+      "pitch": "D#4",
+      "member": "中",
+      "bank": 3,
+      "channel": 10,
+      "header": "JB3",
+      "header_pin": 12,
+      "fill_id": "e45000000000026b",
+      "via_id": "e45000000000026c",
+      "via_xy_mm": [
+        64.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306525
+    },
+    {
+      "raw_index": 64,
+      "net": "E064",
+      "kind": "pitch",
+      "pitch": "G4",
+      "member": "中",
+      "bank": 4,
+      "channel": 10,
+      "header": "JB4",
+      "header_pin": 12,
+      "fill_id": "e45000000000026d",
+      "via_id": "e45000000000026e",
+      "via_xy_mm": [
+        136.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306573
+    },
+    {
+      "raw_index": 65,
+      "net": "E065",
+      "kind": "pitch",
+      "pitch": "B4",
+      "member": "中",
+      "bank": 5,
+      "channel": 10,
+      "header": "JB5",
+      "header_pin": 12,
+      "fill_id": "e45000000000026f",
+      "via_id": "e450000000000270",
+      "via_xy_mm": [
+        208.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306573
+    },
+    {
+      "raw_index": 66,
+      "net": "E066",
+      "kind": "pitch",
+      "pitch": "D#3",
+      "member": "端B",
+      "bank": 0,
+      "channel": 11,
+      "header": "JB0",
+      "header_pin": 11,
+      "fill_id": "e450000000000271",
+      "via_id": "e450000000000272",
+      "via_xy_mm": [
+        68.0,
+        63.632674379363685
+      ],
+      "area_mm2": 87.35966561934934
+    },
+    {
+      "raw_index": 67,
+      "net": "E067",
+      "kind": "pitch",
+      "pitch": "G3",
+      "member": "端B",
+      "bank": 1,
+      "channel": 11,
+      "header": "JB1",
+      "header_pin": 11,
+      "fill_id": "e450000000000273",
+      "via_id": "e450000000000274",
+      "via_xy_mm": [
+        140.0,
+        63.63267437936369
+      ],
+      "area_mm2": 87.3596656193495
+    },
+    {
+      "raw_index": 68,
+      "net": "E068",
+      "kind": "pitch",
+      "pitch": "B3",
+      "member": "端B",
+      "bank": 2,
+      "channel": 11,
+      "header": "JB2",
+      "header_pin": 11,
+      "fill_id": "e450000000000275",
+      "via_id": "e450000000000276",
+      "via_xy_mm": [
+        212.0,
+        63.63267437936369
+      ],
+      "area_mm2": 87.3596656193495
+    },
+    {
+      "raw_index": 69,
+      "net": "E069",
+      "kind": "pitch",
+      "pitch": "D#4",
+      "member": "端B",
+      "bank": 3,
+      "channel": 11,
+      "header": "JB3",
+      "header_pin": 11,
+      "fill_id": "e450000000000277",
+      "via_id": "e450000000000278",
+      "via_xy_mm": [
+        68.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934929
+    },
+    {
+      "raw_index": 70,
+      "net": "E070",
+      "kind": "pitch",
+      "pitch": "G4",
+      "member": "端B",
+      "bank": 4,
+      "channel": 11,
+      "header": "JB4",
+      "header_pin": 11,
+      "fill_id": "e450000000000279",
+      "via_id": "e45000000000027a",
+      "via_xy_mm": [
+        140.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934949
+    },
+    {
+      "raw_index": 71,
+      "net": "E071",
+      "kind": "pitch",
+      "pitch": "B4",
+      "member": "端B",
+      "bank": 5,
+      "channel": 11,
+      "header": "JB5",
+      "header_pin": 11,
+      "fill_id": "e45000000000027b",
+      "via_id": "e45000000000027c",
+      "via_xy_mm": [
+        212.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934949
+    },
+    {
+      "raw_index": 72,
+      "net": "E072",
+      "kind": "pitch",
+      "pitch": "C5",
+      "member": "端A",
+      "bank": 0,
+      "channel": 12,
+      "header": "JB0",
+      "header_pin": 10,
+      "fill_id": "e45000000000027e",
+      "via_id": "e45000000000027f",
+      "via_xy_mm": [
+        222.0,
+        93.65251069383925
+      ],
+      "area_mm2": 118.96664617426204
+    },
+    {
+      "raw_index": 73,
+      "net": "E073",
+      "kind": "pitch",
+      "pitch": "C5",
+      "member": "中",
+      "bank": 1,
+      "channel": 12,
+      "header": "JB1",
+      "header_pin": 10,
+      "fill_id": "e450000000000280",
+      "via_id": "e450000000000281",
+      "via_xy_mm": [
+        226.0,
+        106.02022707930635
+      ],
+      "area_mm2": 126.54976330306573
+    },
+    {
+      "raw_index": 74,
+      "net": "E074",
+      "kind": "pitch",
+      "pitch": "C5",
+      "member": "端B",
+      "bank": 2,
+      "channel": 12,
+      "header": "JB2",
+      "header_pin": 10,
+      "fill_id": "e450000000000282",
+      "via_id": "e450000000000283",
+      "via_xy_mm": [
+        230.0,
+        133.63267437936366
+      ],
+      "area_mm2": 87.35966561934949
+    },
+    {
+      "raw_index": 75,
+      "net": "E075",
+      "kind": "octave",
+      "pitch": "",
+      "member": "",
+      "bank": 3,
+      "channel": 12,
+      "header": "JB3",
+      "header_pin": 10,
+      "fill_id": "e450000000000285",
+      "via_id": "e450000000000286",
+      "via_xy_mm": [
+        14,
+        145
+      ],
+      "area_mm2": 119.1393502030469
+    },
+    {
+      "raw_index": 76,
+      "net": "E076",
+      "kind": "octave",
+      "pitch": "",
+      "member": "",
+      "bank": 4,
+      "channel": 12,
+      "header": "JB4",
+      "header_pin": 10,
+      "fill_id": "e450000000000288",
+      "via_id": "e450000000000289",
+      "via_xy_mm": [
+        32,
+        145
+      ],
+      "area_mm2": 119.1393502030469
+    },
+    {
+      "raw_index": 77,
+      "net": "E077",
+      "kind": "octave",
+      "pitch": "",
+      "member": "",
+      "bank": 5,
+      "channel": 12,
+      "header": "JB5",
+      "header_pin": 10,
+      "fill_id": "e45000000000028b",
+      "via_id": "e45000000000028c",
+      "via_xy_mm": [
+        50,
+        145
+      ],
+      "area_mm2": 119.1393502030469
+    },
+    {
+      "raw_index": 78,
+      "net": "E078",
+      "kind": "octave",
+      "pitch": "",
+      "member": "",
+      "bank": 0,
+      "channel": 13,
+      "header": "JB0",
+      "header_pin": 9,
+      "fill_id": "e45000000000028e",
+      "via_id": "e45000000000028f",
+      "via_xy_mm": [
+        68,
+        145
+      ],
+      "area_mm2": 119.1393502030469
+    },
+    {
+      "raw_index": 79,
+      "net": "E079",
+      "kind": "octave",
+      "pitch": "",
+      "member": "",
+      "bank": 1,
+      "channel": 13,
+      "header": "JB1",
+      "header_pin": 9,
+      "fill_id": "e450000000000291",
+      "via_id": "e450000000000292",
+      "via_xy_mm": [
+        86,
+        145
+      ],
+      "area_mm2": 119.1393502030469
+    },
+    {
+      "raw_index": 80,
+      "net": "E080",
+      "kind": "spare",
+      "pitch": "",
+      "member": "",
+      "bank": 2,
+      "channel": 13,
+      "header": "JB2",
+      "header_pin": 9,
+      "fill_id": "e450000000000294",
+      "via_id": "e450000000000295",
+      "via_xy_mm": [
+        122,
+        145
+      ],
+      "area_mm2": 119.1393502030469
+    },
+    {
+      "raw_index": 81,
+      "net": "E081",
+      "kind": "spare",
+      "pitch": "",
+      "member": "",
+      "bank": 3,
+      "channel": 13,
+      "header": "JB3",
+      "header_pin": 9,
+      "fill_id": "e450000000000297",
+      "via_id": "e450000000000298",
+      "via_xy_mm": [
+        140,
+        145
+      ],
+      "area_mm2": 119.1393502030469
+    },
+    {
+      "raw_index": 82,
+      "net": "E082",
+      "kind": "spare",
+      "pitch": "",
+      "member": "",
+      "bank": 4,
+      "channel": 13,
+      "header": "JB4",
+      "header_pin": 9,
+      "fill_id": "e45000000000029a",
+      "via_id": "e45000000000029b",
+      "via_xy_mm": [
+        158,
+        145
+      ],
+      "area_mm2": 119.1393502030469
+    },
+    {
+      "raw_index": 83,
+      "net": "E083",
+      "kind": "spare",
+      "pitch": "",
+      "member": "",
+      "bank": 5,
+      "channel": 13,
+      "header": "JB5",
+      "header_pin": 9,
+      "fill_id": "e45000000000029d",
+      "via_id": "e45000000000029e",
+      "via_xy_mm": [
+        176,
+        145
+      ],
+      "area_mm2": 119.1393502030469
+    }
+  ],
+  "mounting_holes": [
+    {
+      "id": "e45000000000029f",
+      "xy_mm": [
+        4,
+        4
+      ],
+      "diameter_mm": 3.2,
+      "plated": false,
+      "native_validation": "PENDING"
+    },
+    {
+      "id": "e4500000000002a0",
+      "xy_mm": [
+        4,
+        72
+      ],
+      "diameter_mm": 3.2,
+      "plated": false,
+      "native_validation": "PENDING"
+    },
+    {
+      "id": "e4500000000002a1",
+      "xy_mm": [
+        4,
+        152
+      ],
+      "diameter_mm": 3.2,
+      "plated": false,
+      "native_validation": "PENDING"
+    },
+    {
+      "id": "e4500000000002a2",
+      "xy_mm": [
+        232,
+        4
+      ],
+      "diameter_mm": 3.2,
+      "plated": false,
+      "native_validation": "PENDING"
+    },
+    {
+      "id": "e4500000000002a3",
+      "xy_mm": [
+        232,
+        72
+      ],
+      "diameter_mm": 3.2,
+      "plated": false,
+      "native_validation": "PENDING"
+    },
+    {
+      "id": "e4500000000002a4",
+      "xy_mm": [
+        232,
+        152
+      ],
+      "diameter_mm": 3.2,
+      "plated": false,
+      "native_validation": "PENDING"
+    }
+  ],
+  "minimum_electrode_polygon_gap_mm": 0.799999999999977,
+  "physical_validation": "NOT_RUN",
+  "manufacturing_release": false,
+  "initial_generated_source_sha256": "bc88c2b0c3b576057926aab30367f7652e28440a0bbf98fd538a98e54c1d96c3"
+}

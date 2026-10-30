@@ -1,0 +1,44 @@
+{
+  "completed_at": "2026-10-29T13:43:43.956239+08:00",
+  "status": "PASS_SOURCE_FROZEN_READY_FOR_FACTORY_DFM_SMT_REVIEW_AND_QUOTE",
+  "checks": {
+    "Control88": {
+      "factory_bom_exact_reference_mpn_lcsc_match": true,
+      "BOM_components_per_board": 88,
+      "CPL_exact_SMT_reference_set": true,
+      "SMT_per_board": 76,
+      "finished_boards": 1,
+      "manufacturing_files_byte_identical_to_frozen": true
+    },
+    "Sensor14Bank": {
+      "factory_bom_exact_reference_mpn_lcsc_match": true,
+      "BOM_components_per_board": 28,
+      "CPL_exact_SMT_reference_set": true,
+      "SMT_per_board": 26,
+      "finished_boards": 6,
+      "manufacturing_files_byte_identical_to_frozen": true
+    },
+    "quantities": {
+      "unique_LCSC": 38,
+      "net_components": 256,
+      "SMT": 232,
+      "TH": 24,
+      "independent_recalculation_matches": true
+    },
+    "current_native_source_identity": "PASS",
+    "assembly_SVG_XML_well_formed": true,
+    "assembly_SVG_render_visual_QA": "NOT_PERFORMED; source geometry and pin-one coordinates verified separately",
+    "all_three_archives_CRC_and_exact_directory_contents": "PASS"
+  },
+  "handoff": {
+    "handoff_directory": "D:\\FPGA-Project\\delivery-evidence-20261027\\factory-handoff-20261029",
+    "archive": "D:\\FPGA-Project\\delivery-evidence-20261027\\factory-handoff-20261029.zip",
+    "sha256": "187c7ca993320a456fd028ae16ec8ed05b0ab33785c0ee3e653f602743211dc7",
+    "files": 23,
+    "bytes": 2468201
+  },
+  "supplier_review": "PENDING",
+  "order_submitted": false,
+  "physical_validation": "NOT_PERFORMED",
+  "remote_backup_of_new_delivery": "NOT_PUSHED"
+}

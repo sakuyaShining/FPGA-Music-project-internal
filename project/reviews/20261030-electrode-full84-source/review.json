@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T21:04:38.367287+00:00",
+  "previous_review": "project/reviews/20261030-sensor-s2/review.json",
+  "previous_review_sha256": "9c1fa424298bd7b65d8f83f1c27c22ddfd346f07639d5e098fd8af0710bc53e7",
+  "raw_observation": "project/reviews/20261030-electrode-full84-source/observation.json",
+  "raw_observation_sha256": "b4433c8f7922ced3925652812ed7cc7eb9ab3c3ca1278e22eaf566d53346b3d7",
+  "producer_ids": [
+    "fpga",
+    "hardware",
+    "fpga-v1-intake",
+    "hardware-native-handoff",
+    "hardware-module-plan",
+    "hardware-delivery",
+    "control88-q4-continuation",
+    "electrode-panel",
+    "sensor14-s2",
+    "electrode-full84-450"
+  ],
+  "producer_changes": {
+    "fpga": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "fpga-v1-intake": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-native-handoff": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-module-plan": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-delivery": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "control88-q4-continuation": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "electrode-panel": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "sensor14-s2": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "electrode-full84-450": {
+      "added": [
+        "ASSEMBLY-CONTRACT-AUDIT.json",
+        "BUNDLE-RECEIPT.json",
+        "CHECKPOINT.json",
+        "ELECTRODE-HARNESS-84-VERIFIED.csv",
+        "Electrode84-450-native.dsn",
+        "Electrode84-450-source-WIP-20261030.zip",
+        "FULL-PANEL-SOURCE-PLAN.json",
+        "FULL84-NATIVE-SAVED-SOURCE-AUDIT.json",
+        "MANIFEST.json",
+        "NATIVE-SAVED-ROUTING-CORRESPONDENCE.json",
+        "PORTABLE-VERIFICATION.json",
+        "README.md",
+        "ROUTER-CONTRACT.json",
+        "ROUTING-IMPORT.json",
+        "S2-COMPATIBILITY-AUDIT.json",
+        "assembly/ASSEMBLY-PARTS-STATUS.csv",
+        "assembly/ASSEMBLY.md",
+        "assembly/HARNESS-96-PINS.csv",
+        "assembly/MECHANICAL-CANDIDATE.json",
+        "assembly/full84-front-source-preview.png",
+        "assembly/full84-front-source-preview.svg",
+        "assembly/instrument-450-assembly-candidate.svg",
+        "assembly/overlay-cut-candidate-1to1.svg",
+        "assembly/overlay-cut-candidate-mm.dxf",
+        "audit_full_panel.py",
+        "candidate/Electrode84-450-CANDIDATE/Electrode84-450-CANDIDATE.eprj3",
+        "candidate/Electrode84-450-CANDIDATE/pcb/Electrode84-450.epcb2",
+        "compare_native_saved_routing.py",
+        "routed-jvm-candidate.ses",
+        "router-conservative-input.dsn",
+        "verification/events/01-open-flip-export.result.json",
+        "verification/events/03-apply-native-routing.result.json",
+        "verification/events/04-read-native-progress.result.json",
+        "verification/reference/router-imported.epcb2",
+        "verification/support/native_documents.py",
+        "verify_assembly_contract.py"
+      ],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "evidence": {
+    "project/reviews/20261030-electrode-full84-source/assessment.json": "f659cc4091ab1cd464de58f0e2ff898edd557b013a1d934ecf2eca357305d51b"
+  },
+  "assessment": [
+    "All nine prior active watched sources freshly observed unchanged",
+    "All84 signal-to-sensorS2 J1 pad-net mappings verified against actual9e4b563e source; C5 B0/B1/B2 CH12 unchanged",
+    "Full native saved source has457 route segments,102 vias,6 bottom headers,84 electrodes and6 NPTH; all90 source nets connected and min different-net gap0.255948989mm against0.25mm gate",
+    "Native saved route/via copper unions equal independently imported conservative Freerouting session; all34 active Top windows and washer regions protected",
+    "96-pin1:1 harness contract, continuous overlay outer/holes and nominal mechanical envelopes checked; actual fit remains pending",
+    "Three packaged checks re-run after restoration into independent directory with only packaged support/reference plus Shapely2 dependency",
+    "No new manufacturing ZIP represented as factory-ready; native HTTP timeout/disconnection and missing DRC/Gerber acceptance explicitly retained",
+    "Native client exited after source save; strict save-close-reopen DRC result missing",
+    "Real Gerber export/copper/mask/drill/outline correspondence not yet created or checked; electrode panel cannot be ordered",
+    "Screen physical cover/holes/rear plug envelope, harness fit/length and dielectric materials pending",
+    "No supplier DFM/full quote,700CNY budget acceptance or physical touch/noise/playing acceptance"
+  ],
+  "manufacturing_release": false,
+  "product_acceptance": false,
+  "stage": "SOURCE_WIP_BACKUP"
+}

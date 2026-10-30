@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T22:18:22.967187+00:00",
+  "scope": "Conditional J10 screen harness candidate with explicit manufacturer ambiguities",
+  "checks": [
+    "Ten other watched producers and all frozen CAD/manufacturing sources unchanged",
+    "Read indexed primary manufacturer pin definitions and2024 interfacing reference; directPDF403 and absent visual review explicitly retained",
+    "All12 C88 side pin/net labels compared with actual frozen733e1d9c source; supplier target table guards distinct power/ground/signal groups",
+    "Display reset target deliberately unassigned: manufacturer /RESET(NC)/RC reference does not prove usable external reset pin11",
+    "Manufacturer connector-name discrepancy and FT5206 legacy drawing label vs requestedFT5316 retained as vendor confirmation items",
+    "Packaged source-side/structural verifier ran from independent restored directory; no supplier/full-end-to-end/physical pass asserted"
+  ],
+  "limits": [
+    "Manufacturer must confirm actual module revision,pin1 orientation,usable hardware reset breakout andFT5316 mapping before harness assembly",
+    "No wholePDF visual proof,full quote,wire continuity,mating depth or manufacturing acceptance",
+    "Full84 native DRC/CAM still pending known client outage; no repeated user action requested"
+  ],
+  "evidence": {
+    "hardware/sourcing-closure-20261030/MANIFEST.json": "388aded3dff4755ac06643f9e8b3451f5dfbfde5863e0251f66213c9e74e8fe0",
+    "hardware/sourcing-closure-20261030/j10-wire-candidate-20261030/SOURCE-AND-OPEN-ITEMS.json": "bd593f375da94de32eee26a82e6d6d20ffd2f2be03f8c9b26527abaa6efff31f",
+    "hardware/sourcing-closure-20261030/j10-wire-candidate-20261030/C88-SIDE-CHECK.json": "a6635bf9560878b1e84cc9be403fa75ec5923b87e7405bc7f66b6c400c4adc6e"
+  },
+  "manufacturing_release": false,
+  "product_acceptance": false
+}

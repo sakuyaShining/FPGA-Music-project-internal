@@ -1,0 +1,42 @@
+C  Project Name:ElectrodeCoupon-CANDIDATE
+C  Board Name:
+C  PCB Name:ElectrodeCoupon
+C  Date:2026/10/29
+C  Time:23:20:56
+C  --------------- Layer Stackup --------------------
+C  Top Layer
+C  Bottom Layer
+C  ------------- Replace The Group ------------------
+C  --------------------------------------------------
+P  JOB 
+P  CODE  UTF-8
+P  UNITS  CUST 1
+P  TITLE  
+P  NUM   1.0
+P  REV   A
+P  VER   IPC-D-356A
+317N/C              J1    -14   D1020PA00X 007030Y 005000X1600Y         S0
+317N/C              J1    -13   D1020PA00X 009570Y 005000X1600Y         S0
+317N/C              J1    -12   D1020PA00X 012110Y 005000X1600Y         S0
+317N/C              J1    -11   D1020PA00X 014650Y 005000X1600Y         S0
+317N/C              J1    -10   D1020PA00X 017190Y 005000X1600Y         S0
+317N/C              J1    -9    D1020PA00X 019730Y 005000X1600Y         S0
+317A                J1    -8    D1020PA00X 022270Y 005000X1600Y         S0
+317M                J1    -7    D1020PA00X 024810Y 005000X1600Y         S0
+317B                J1    -6    D1020PA00X 027350Y 005000X1600Y         S0
+317N/C              J1    -5    D1020PA00X 029890Y 005000X1600Y         S0
+317N/C              J1    -4    D1020PA00X 032430Y 005000X1600Y         S0
+317N/C              J1    -3    D1020PA00X 034970Y 005000X1600Y         S0
+317N/C              J1    -2    D1020PA00X 037510Y 005000X1600Y         S0
+317N/C              J1    -1    D1020PA00X 040050Y 005000X1600Y1600R180 S0
+317GND              J1    -15   D1020PA00X 004490Y 005000X1600Y         S0
+317GND              J1    -16   D1020PA00X 001950Y 005000X1600Y         S0
+317A                VIA   -     D0400PA00X 022270Y 019149X1000Y         S3
+317M                VIA   -     D0400PA00X 024810Y 043067X1000Y         S3
+317B                VIA   -     D0400PA00X 027350Y 061739X1000Y         S3
+378A              L02 X300 X22270Y5000 Y19149
+378M              L02 X300 X24810Y5000 Y43067
+378B              L02 X300 X27350Y5000 Y61739
+378GND            L02 X300 X4490Y5000 X1950
+389BOARD_EDGE         X102Y102 X0Y0 X46000  Y72000  X0  Y0
+999

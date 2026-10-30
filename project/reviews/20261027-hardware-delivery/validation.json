@@ -1,0 +1,235 @@
+{
+  "at": "2026-10-27T11:44:57.206022+00:00",
+  "status": "PASS_AFTER_ENTRY_REGISTRATION",
+  "scope": "Source integrity, declared-source freshness, audit checks and required repository reference/guard tests; no new FPGA synthesis/STA, native manufacturing or physical product qualification",
+  "checks": [
+    {
+      "name": "sensor-audit",
+      "command": [
+        "python",
+        "hardware/current/module-plan/manufacturing/audit_saved_sensor.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.19,
+      "log": "project/reviews/20261027-hardware-delivery/validation/sensor-audit.log",
+      "log_sha256": "5f9a6fb2a7702788feb20bfa2225a733bd4d81d2c233654662e8a15af99c4381"
+    },
+    {
+      "name": "header-audit",
+      "command": [
+        "python",
+        "hardware/current/module-plan/manufacturing/audit_nano_headers.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.33,
+      "log": "project/reviews/20261027-hardware-delivery/validation/header-audit.log",
+      "log_sha256": "c5f085a8f7f0d0bce2f81d4b72a55af6ed21b9ea03e58069648ec691f1e0d46e"
+    },
+    {
+      "name": "engineering",
+      "command": [
+        "python",
+        "tools/scripts/engineering.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.56,
+      "log": "project/reviews/20261027-hardware-delivery/validation/engineering.log",
+      "log_sha256": "bf944588ed8c40e57b5aa17e02e1a3442bec5c4932ce25ed5d171ada0f655c8e"
+    },
+    {
+      "name": "full-integrity",
+      "command": [
+        "python",
+        "tools/scripts/project_control.py",
+        "check",
+        "--full"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 8.03,
+      "log": "project/reviews/20261027-hardware-delivery/validation/full-integrity.log",
+      "log_sha256": "fed0fc4f97b57c71bc74fdb1ee4fe985669ce29d0293675f59442eb34f3413b9"
+    },
+    {
+      "name": "governance-live",
+      "command": [
+        "python",
+        "tools/scripts/design_governance.py",
+        "status",
+        "--live"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.34,
+      "log": "project/reviews/20261027-hardware-delivery/validation/governance-live.log",
+      "log_sha256": "5d5e67a4bef29cb067fbbb24a82fff43d71041f6e4fce8e59f1b8470b7b51150"
+    },
+    {
+      "name": "governance-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_design_governance.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.2,
+      "log": "project/reviews/20261027-hardware-delivery/validation/governance-tests.log",
+      "log_sha256": "2fe5ccc959e8684c27534ffb5c2c0ad80ccdb249b1d2897a51f9c9866f4ecacf"
+    },
+    {
+      "name": "engineering-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_engineering.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.59,
+      "log": "project/reviews/20261027-hardware-delivery/validation/engineering-tests.log",
+      "log_sha256": "3b1c86ca58a57e69ea78377e347a281bee422e047bef005042379835b9357186"
+    },
+    {
+      "name": "music-profile-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-p",
+        "test_music_profiles.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.44,
+      "log": "project/reviews/20261027-hardware-delivery/validation/music-profile-tests.log",
+      "log_sha256": "699af7ae885cd3bbd9316001ff0e035e6ef4e1c3ca882161869210d09b31ba25"
+    },
+    {
+      "name": "resource-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/tests",
+        "-p",
+        "test*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.41,
+      "log": "project/reviews/20261027-hardware-delivery/validation/resource-tests.log",
+      "log_sha256": "618825bbb539ea757bb4dfac21b1b95de0b77f7fc6df30bdce47fba208a92180"
+    },
+    {
+      "name": "audio-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/audio/tests",
+        "-p",
+        "test*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.28,
+      "log": "project/reviews/20261027-hardware-delivery/validation/audio-tests.log",
+      "log_sha256": "f72d2a1d6a58f95d6b33f9363844489344be42d5f8b76393bc657ad3c3b5ae03"
+    },
+    {
+      "name": "renderer-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/audio/renderer/tests",
+        "-p",
+        "test*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.36,
+      "log": "project/reviews/20261027-hardware-delivery/validation/renderer-tests.log",
+      "log_sha256": "6bc7ff4dc8976aaecfaa96ed30a0a549e46e39ac51ecff5570f93d11a31c48ff"
+    },
+    {
+      "name": "router-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/note_resource_20261024/input/tests",
+        "-p",
+        "test*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.81,
+      "log": "project/reviews/20261027-hardware-delivery/validation/router-tests.log",
+      "log_sha256": "2bcc547af8e5dcd4dbff06ddc4f4cb12dbabe690b084b9927ae1d7fa5c90fec0"
+    },
+    {
+      "name": "full-integrity-final",
+      "command": [
+        "python",
+        "tools/scripts/project_control.py",
+        "check",
+        "--full"
+      ],
+      "exit_code": 0,
+      "log": "project/reviews/20261027-hardware-delivery/validation/full-integrity-final.log",
+      "log_sha256": "e2a40ad52d6c275eee115f6865ec7f50654852c62f8521ae166a2ba2e356b905",
+      "result": {
+        "status": "PASS",
+        "scope": "Full captured content hashes",
+        "snapshots": 22,
+        "inputs": 18277,
+        "unique_verified_blobs": 5845,
+        "current_design": "design-20261024-frame-command-source-candidate",
+        "recovery_archive_files": 586,
+        "recovery_captured_at": "2026-10-23T12:23:42.173413+08:00",
+        "live_workspaces_checked": false,
+        "remote_checked_now": false,
+        "entry_freshness_checked": false,
+        "published_authority": "main",
+        "review_freshness": "NOT_CHECKED",
+        "implementation_start_authorized": false,
+        "errors": [],
+        "product_acceptance": false
+      }
+    }
+  ],
+  "manufacturing_release": false,
+  "product_acceptance": false,
+  "initial_result": "validation-initial.json",
+  "initial_failures_resolved": [
+    {
+      "name": "full-integrity",
+      "reason": "New review was not yet staged and reviewed continuation navigation fingerprint was not registered; both corrected.",
+      "replacement": "full-integrity-final"
+    }
+  ],
+  "unit_tests_passed": 107,
+  "engineering_files_verified": 749
+}

@@ -1,0 +1,206 @@
+{
+  "schema": 1,
+  "scope": "Full84 native DRC/CAM checked candidate with standalone source/export/verification ZIP, supplier/physical acceptance pending",
+  "files": {
+    "05-save-close-reopen-drc.js": {
+      "bytes": 1223,
+      "sha256": "c0b375e55cc099d373ed26e78735cc45061f46305b439f7683fc368e6120c967"
+    },
+    "05-save-close-reopen-drc.live-result.json": {
+      "bytes": 913,
+      "sha256": "681ca9298b2311c67bf3b76ef0ebcc9dddf1b293cdf890310d3a84f3fa6fd098"
+    },
+    "06-export-real-gerber.js": {
+      "bytes": 796,
+      "sha256": "476d415ae782f5ab2a78f5911a00fa18b826d3692d524832f6120aa21a44873a"
+    },
+    "06-export-real-gerber.live-result.json": {
+      "bytes": 942,
+      "sha256": "5ef9b67185eb8e18ba352584b4d8a711bfe8eb4e2ce19a87f9250476b8b930c4"
+    },
+    "11-export-assembly-native.js": {
+      "bytes": 982,
+      "sha256": "9face6520cab2c59c38e4af4830acbd79bd555d48b082630c2e9b310c6f0fffb"
+    },
+    "11-export-assembly-native.live-result.json": {
+      "bytes": 1171,
+      "sha256": "c29dda8c113b3294d58e60424804be0304a8e8c17a45b1d8515db4eed445412f"
+    },
+    "assembly/ASSEMBLY-PARTS-STATUS.csv": {
+      "bytes": 1480,
+      "sha256": "c0df9ab15e2075e40ceee8fdb5d15a194a3e67abedf24a8fbab04e1f69c23436"
+    },
+    "assembly/ASSEMBLY.md": {
+      "bytes": 3116,
+      "sha256": "5db22603a783f299029c8dfde662a3d8c1d807d6660c7495ac2aa66487ffdb77"
+    },
+    "assembly/full84-front-source-preview.png": {
+      "bytes": 52809,
+      "sha256": "2e72ca3a079199eab49dc65a008dea94693d515dac254b08403d243630d7d6af"
+    },
+    "assembly/full84-front-source-preview.svg": {
+      "bytes": 299238,
+      "sha256": "474d234e500fefc6ea720efea2126605c938dea629093bd5426970e2ac21e2ec"
+    },
+    "assembly/HARNESS-96-PINS.csv": {
+      "bytes": 17598,
+      "sha256": "2d7630d5fb0d4a2d62693ec065b2a9851b14427c183c4f78ab4bf3319cb1ae63"
+    },
+    "assembly/instrument-450-assembly-candidate.svg": {
+      "bytes": 5110,
+      "sha256": "272c3febd2feff3d3722a7738a010a05a68883ebb7580ee8ee827c0485669270"
+    },
+    "assembly/MECHANICAL-CANDIDATE.json": {
+      "bytes": 4263,
+      "sha256": "f732482fcfd14aeae3e52fbe410a89223677bddfb3edbcc5a61db055e8f9d9ed"
+    },
+    "assembly/overlay-cut-candidate-1to1.svg": {
+      "bytes": 400,
+      "sha256": "c387f863ffe49e43281178a0d57f93a060393afdce19fd944c754117d585202d"
+    },
+    "assembly/overlay-cut-candidate-mm.dxf": {
+      "bytes": 486,
+      "sha256": "4fb56f966945056f5dbb27a459184a81b24c05f3e10af2472f057738dcd13952"
+    },
+    "audit_full_panel.py": {
+      "bytes": 6320,
+      "sha256": "aa07111461a68b5bcef3f8d7338bb20cd24f42cb1113f37a9040b25d402b598e"
+    },
+    "audit_native_assembly.py": {
+      "bytes": 3469,
+      "sha256": "52a568dfd8c85cea40123dbce6fbad74c384d194f26fb169437df76ab9d76ac0"
+    },
+    "audit_native_cam.py": {
+      "bytes": 8012,
+      "sha256": "a8a58c8938adda1008787f4f2dabee14ceb90805cd598324d315850a57b1b5fd"
+    },
+    "BUNDLE-RECEIPT.json": {
+      "bytes": 389,
+      "sha256": "96f89ab4ff75c119cee9149fbfde1cdfa1cb1dca1069345026f9a8f5262f74fe"
+    },
+    "CHECKPOINT.json": {
+      "bytes": 2084,
+      "sha256": "3be0a3aea93490793403a3bfa28a60a92b3256b72c3930cdddda32e4060db57a"
+    },
+    "ELECTRODE-HARNESS-84-VERIFIED.csv": {
+      "bytes": 9210,
+      "sha256": "6fd2720a8120e628cc518e389a523ecdd15f148d446b51f8df85dbbe7d325d07"
+    },
+    "Electrode84-450-CANDIDATE/Electrode84-450-CANDIDATE.eprj3": {
+      "bytes": 1970,
+      "sha256": "e0960af392f3c4e7433d008195dee2d72b5048ff6f6185d1b49295a8a8385979"
+    },
+    "Electrode84-450-CANDIDATE/pcb/Electrode84-450.epcb2": {
+      "bytes": 878999,
+      "sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a"
+    },
+    "Electrode84-450-Gerber-NATIVE-CANDIDATE.zip": {
+      "bytes": 116255,
+      "sha256": "3bdc522565d23f47f5b51d5d23371e12e42dd71a744ea3e076f5d60c15701901"
+    },
+    "Electrode84-450-native-CAM-factory-review-20261030.zip": {
+      "bytes": 502816,
+      "sha256": "ecbacb8e78eeff72e43d61cc0afedc0e71a07153f7fc962074f11db1675584d2"
+    },
+    "Electrode84-NATIVE-BOM.csv": {
+      "bytes": 410,
+      "sha256": "a3e38125dcf29e88c25bc53e3a90cb51dd263036dc1c051f469f64a5f1ed79a5"
+    },
+    "Electrode84-NATIVE-CPL.csv": {
+      "bytes": 2710,
+      "sha256": "62cab447fd112e89106dac192713bd799a89540d016124f78575ec574a18c0f0"
+    },
+    "Electrode84-NATIVE-IPC356.ipc": {
+      "bytes": 28029,
+      "sha256": "25ffca2319a60fa425945fa435419f99dbaf652d0941415fb818422abcf2aa52"
+    },
+    "FACTORY-REVIEW.txt": {
+      "bytes": 906,
+      "sha256": "467edd76240800aad37a3550a12dd651a965a3787f97697c94194a706e83e980"
+    },
+    "FULL-PANEL-SOURCE-PLAN.json": {
+      "bytes": 37005,
+      "sha256": "686ce9de4dd1e614bbf9d7e17624e85159aa77d9264be1d9f1434924a5445c38"
+    },
+    "FULL84-NATIVE-ASSEMBLY-AUDIT.json": {
+      "bytes": 437,
+      "sha256": "eb2858fd582cf060bd96a23437c195f4b0d48d64aac097ce91c45dc71d3d4f71"
+    },
+    "FULL84-NATIVE-CAM-AUDIT.json": {
+      "bytes": 1758,
+      "sha256": "9d8a4af08990dcd83d39f8b06804540f011a64fd62336ccac772d176e9d9b9f8"
+    },
+    "FULL84-NATIVE-CAM-FIRST-PASS-RAW.json": {
+      "bytes": 18914,
+      "sha256": "733c86bb5e3b8e39c4554fb87151f0cb087fc514a588175bd2eff909b4cf6945"
+    },
+    "gerber-native-verified-input/Drill_NPTH_Through.DRL": {
+      "bytes": 267,
+      "sha256": "cf9837e46c51858d59ba4b61258f4840b30d3f8450dfa617cb2239f84424a4a7"
+    },
+    "gerber-native-verified-input/Drill_PTH_Through.DRL": {
+      "bytes": 3333,
+      "sha256": "b6536363ab1ef3b9029ffcc75eaa2ab78d8f0c85c73a5e4e6722372c4aaf75db"
+    },
+    "gerber-native-verified-input/Drill_PTH_Through_Via.DRL": {
+      "bytes": 1899,
+      "sha256": "0dc6d9d8a6676d049a4963aefda4631733284180dd1cc92719d716ade58ed68a"
+    },
+    "gerber-native-verified-input/FlyingProbeTesting.json": {
+      "bytes": 20904,
+      "sha256": "a62641949284144b49c8e062b2218c86a639d6df14a931b0dab0838ad6338675"
+    },
+    "gerber-native-verified-input/Gerber_BoardOutlineLayer.GKO": {
+      "bytes": 740,
+      "sha256": "81db5694c8916038276a0bc80e1d0af538621393a6fbc39b9046bace28940c19"
+    },
+    "gerber-native-verified-input/Gerber_BottomLayer.GBL": {
+      "bytes": 18705,
+      "sha256": "141dc3ef0b11aa1d85f6feee7ce99607bb937dd9fa3183f28529852f2326e067"
+    },
+    "gerber-native-verified-input/Gerber_BottomSilkscreenLayer.GBO": {
+      "bytes": 8592,
+      "sha256": "beaa3ea9c841fb2263448861c29b46752739693ca9f004409f6c88b60ba33c1c"
+    },
+    "gerber-native-verified-input/Gerber_BottomSolderMaskLayer.GBS": {
+      "bytes": 3501,
+      "sha256": "b662f8168ed18ca9755b22a933efbee2b991afe9e04cc360c1d801db45dff53f"
+    },
+    "gerber-native-verified-input/Gerber_DrillDrawingLayer.GDD": {
+      "bytes": 81258,
+      "sha256": "e09c70bf13ac08ec734d60577a7f02bb5cb373ce0f8ba1ec39d39ac39647d0bb"
+    },
+    "gerber-native-verified-input/Gerber_TopLayer.GTL": {
+      "bytes": 398365,
+      "sha256": "47fe2b32c83d9080eff5e6e15b6d545421828a11bdbc0824f471c58d700e929c"
+    },
+    "gerber-native-verified-input/Gerber_TopSilkscreenLayer.GTO": {
+      "bytes": 56922,
+      "sha256": "7f534afd5730f10dd1136ec6034877a850db1482fc49745d29b2946ebf460308"
+    },
+    "gerber-native-verified-input/Gerber_TopSolderMaskLayer.GTS": {
+      "bytes": 3498,
+      "sha256": "ffccfc6c5f9f1dc36468689b531e0d358f99e40331fb5901151cfe3e7fba79bd"
+    },
+    "PORTABLE-VERIFICATION.json": {
+      "bytes": 558,
+      "sha256": "ceffb6ac3ddc31645e874459722817e641e9faa3d9d88ba1c924fcc5fc9796a8"
+    },
+    "README.md": {
+      "bytes": 2368,
+      "sha256": "723beed0fcebce776b24ad62f6f7043df3ef7a117df8efdcc8f10cccedbbb59f"
+    },
+    "S2-COMPATIBILITY-AUDIT.json": {
+      "bytes": 596,
+      "sha256": "8aa5b173ad8bb79975b98edba3534f51d9e93576b54a1731625a5ca296ca244f"
+    },
+    "verification/support/gerber_reader.py": {
+      "bytes": 4240,
+      "sha256": "f194fa667dbbe4a5a8cb0edf6bdb976c9256ca03109807a17bb74c6911bb7f2b"
+    },
+    "verification/support/native_documents.py": {
+      "bytes": 689,
+      "sha256": "8647fd49e79ea17fb1bca52c39be4ca37f08e832b8eaf4863d73ebd50cc39889"
+    }
+  }
+}

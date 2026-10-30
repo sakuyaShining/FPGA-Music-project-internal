@@ -1,0 +1,16 @@
+item,quantity,status,channel,source,next_action
+Control88 R2,1块组装成品,DFM_REVIEW_READY,嘉立创PCB+SMT/插件,factory-files/factory-handoff-20261029/01-Control88-R2,先审单确认预焊/报价/预览
+Sensor14Bank,6块组装成品,HOLD_S1_CLEARANCE,嘉立创,historical-recovery-HOLD/evidence/retained-clearance-gate-audit.json,只询价不付款；等待S2实际Gerber严格核验
+Tang Nano 20K,1块,ALREADY_OWNED,用户已有,,不重复购买
+完整FR-4电极面板,1套84路,FULL_PANEL_NOT_COMPLETED,嘉立创PCB/预焊,electrode-candidate/,样片不能当完整面板下单
+J10触控屏,1套,CONFIG_QUOTE_PENDING,屏幕厂家官方店,https://www.buydisplay.com/7-inch-lcd-module-capacitive-touch-screen-panel-i2c-spi-serial,4线SPI/5V/FT5316/预焊40针/全线束/含运交期
+USB-A转USB-C数据线,1条,EXACT_ITEM_VERIFIED_PRICE_CHECK,立创商城,https://item.szlcsc.com/426730.html,C430908 S100920007 1m数据线；核库存结算价
+3.5mm立体声音频面板座,1个,EXACT_BARE_JACK_SELECTED,立创商城,https://item.szlcsc.com/353359.html,C381127 PJ-301M-3-B；裸座需线束预焊
+J12音频预焊线束,1套约200mm,ASSEMBLY_QUOTE_PENDING,立创定制线束/厂家确认,audio/给嘉立创-音频接口预焊补充需求.txt,J12 L/R/GND到TRS Tip/Ring/Sleeve；通断验收
+5V电源及分线,1套,EXACT_SKU_CURRENT_BUDGET_PENDING,立创/嘉立创,,Nano USB-C与C88 J13双支路共地；J5.1 NC
+电极/传感板/控制板互联线,1整套,EXACT_HARNESS_PENDING,立创/嘉立创,electrode-candidate/ELECTRODE-HARNESS-84-VERIFIED.csv,按84路针序；各接口长度数量需随机械图定版
+屏幕及触控全部配线,1套,QUOTE_PENDING_WITH_SCREEN,屏幕厂家官方店,,与模块配套；接头和逻辑电平确认
+外壳+绝缘支撑+紧固件,1套,MECHANICAL_DESIGN_PENDING,嘉立创/立创,,450x190x60包络；尚非完整加工图
+绝缘覆盖层,1套及试片,EXACT_MATERIAL_PENDING,嘉立创/立创,,连续贴合；含胶厚度候选0.2/0.5mm待实测
+有源AUX音箱,借用1台,BORROW_DO_NOT_BUY,用户借用,,不纳入新增采购
+TF卡,待固件确认,REQUIREMENT_PENDING,立创,,Nano有卡槽；不另买TF模块；容量格式待定

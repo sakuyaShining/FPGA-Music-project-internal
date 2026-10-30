@@ -1,0 +1,37 @@
+{
+  "status": "SOURCE_GEOMETRY_ONLY_NOT_MANUFACTURING_RELEASE",
+  "pcb_sha256": "21291ec37a127ea6c3a8d3e44325b8569371bb108619fd1c370b7d5e0389b6c8",
+  "board_mm": [
+    46,
+    72
+  ],
+  "minimum_different_net_gap": {
+    "a": "A",
+    "b": "M",
+    "layer": 1,
+    "distance_mm": 0.799999999999999
+  },
+  "minimum_copper_to_edge_mm": 1.1500015999999995,
+  "electrode_areas_mm2": {
+    "A": 118.96664617426191,
+    "M": 126.54976330306516,
+    "B": 87.35966561934934
+  },
+  "via_centers_mm": {
+    "A": [
+      22.27,
+      19.148610666286146
+    ],
+    "M": [
+      24.81,
+      43.06666666666666
+    ],
+    "B": [
+      27.35,
+      61.73887611464063
+    ]
+  },
+  "native_DRC": "NOT_RUN",
+  "native_export": "NOT_RUN",
+  "physical_validation": "NOT_RUN"
+}

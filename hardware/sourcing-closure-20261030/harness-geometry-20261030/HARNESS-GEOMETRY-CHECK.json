@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "status": "PASS_SOURCE_DERIVED_COORDINATES_ONLY_NOT_HARNESS_FIT_ACCEPTANCE",
+  "source_hashes": {
+    "EP84": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+    "SensorS2": "9e4b563e570f2247785a764dd4ceba188b41ed8def3ba1511d456148fbd88bee",
+    "mechanical_candidate": "f732482fcfd14aeae3e52fbe410a89223677bddfb3edbcc5a61db055e8f9d9ed",
+    "pin_contract": "2d7630d5fb0d4a2d62693ec065b2a9851b14427c183c4f78ab4bf3319cb1ae63"
+  },
+  "all96_numbered_connections_preserved": true,
+  "sensor_J1_J2_nominal_centers_match_native_transforms": true,
+  "common_topview_pin_order_opposed_all6": true,
+  "banks": [
+    {
+      "bank": 0,
+      "pin_order_opposes_in_common_top_view": true,
+      "EP_pin1_xyz_mm": [
+        64.049999,
+        24.000001,
+        55.4
+      ],
+      "S2_pin1_xyz_mm": [
+        25.949999,
+        26.0,
+        14
+      ],
+      "max_board_straight_lower_bound_mm": 56.298934,
+      "max_exit_straight_lower_bound_mm_assuming_16mm_each": 39.293384
+    },
+    {
+      "bank": 1,
+      "pin_order_opposes_in_common_top_view": true,
+      "EP_pin1_xyz_mm": [
+        136.05,
+        24.000001,
+        55.4
+      ],
+      "S2_pin1_xyz_mm": [
+        97.949999,
+        26.0,
+        14
+      ],
+      "max_board_straight_lower_bound_mm": 56.298935,
+      "max_exit_straight_lower_bound_mm_assuming_16mm_each": 39.293384
+    },
+    {
+      "bank": 2,
+      "pin_order_opposes_in_common_top_view": true,
+      "EP_pin1_xyz_mm": [
+        208.050001,
+        24.000001,
+        55.4
+      ],
+      "S2_pin1_xyz_mm": [
+        169.949999,
+        26.0,
+        14
+      ],
+      "max_board_straight_lower_bound_mm": 56.298935,
+      "max_exit_straight_lower_bound_mm_assuming_16mm_each": 39.293385
+    },
+    {
+      "bank": 3,
+      "pin_order_opposes_in_common_top_view": true,
+      "EP_pin1_xyz_mm": [
+        64.049999,
+        94.000001,
+        55.4
+      ],
+      "S2_pin1_xyz_mm": [
+        25.949999,
+        96.0,
+        14
+      ],
+      "max_board_straight_lower_bound_mm": 56.298934,
+      "max_exit_straight_lower_bound_mm_assuming_16mm_each": 39.293384
+    },
+    {
+      "bank": 4,
+      "pin_order_opposes_in_common_top_view": true,
+      "EP_pin1_xyz_mm": [
+        136.05,
+        94.000001,
+        55.4
+      ],
+      "S2_pin1_xyz_mm": [
+        97.949999,
+        96.0,
+        14
+      ],
+      "max_board_straight_lower_bound_mm": 56.298935,
+      "max_exit_straight_lower_bound_mm_assuming_16mm_each": 39.293384
+    },
+    {
+      "bank": 5,
+      "pin_order_opposes_in_common_top_view": true,
+      "EP_pin1_xyz_mm": [
+        208.050001,
+        94.000001,
+        55.4
+      ],
+      "S2_pin1_xyz_mm": [
+        169.949999,
+        96.0,
+        14
+      ],
+      "max_board_straight_lower_bound_mm": 56.298935,
+      "max_exit_straight_lower_bound_mm_assuming_16mm_each": 39.293385
+    }
+  ],
+  "largest_board_to_board_straight_lower_bound_mm": 56.298935,
+  "hypothetical_100mm_not_ruled_out_by_straight_distance_only": true,
+  "candidate_board_surface_gap_mm": 41.4,
+  "conditional_free_vertical_gap_after_two16mm_connectors_mm": 9.399999999999999,
+  "assumptions": [
+    "S2 55x45mm board center at27.5,22.5 rotated90 as candidate drawing",
+    "EP84 local source plus global9,17 offset; connector on Bottom",
+    "Six S2 assembly top z14 and EP underside z55.4 are candidate installation coordinates",
+    "16mm mating/strain relief allowance per end is a limit hypothesis, not an actual product dimension"
+  ],
+  "open_items": [
+    "Exact female housing and terminal retention/height, wire diameter and minimum bend radius",
+    "Supplier definition of100mm: free wire length vs total assembly length and tolerance",
+    "Real face-on mating views: common top view reverses pin order but electrical contract remains1:1",
+    "Wire fanout/strain relief, cable bend envelope and sensor clamp obstruction",
+    "Complete six control-to-S2 J2 bundles also occupy the lower compartment"
+  ],
+  "manufacturing_release": false,
+  "physical_fit_accepted": false,
+  "native_source_modified": false
+}

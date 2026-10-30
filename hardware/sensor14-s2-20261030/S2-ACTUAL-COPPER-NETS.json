@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "source_sha256": "9e4b563e570f2247785a764dd4ceba188b41ed8def3ba1511d456148fbd88bee",
+  "Gerber_sha256": "2f46f656879a363db8877f302d63177794104d0bd7553b211f266475b725a9e8",
+  "retained_gate_mm": 0.1651,
+  "numerical_epsilon_mm": 1e-07,
+  "layers": {
+    "1": {
+      "actual_copper_components": 109,
+      "every_component_one_source_net": true,
+      "minimum_actual_different_net_clearance_mm": 0.17495588424840602,
+      "minimum_pair": [
+        [
+          "L0_E03"
+        ],
+        [
+          "L0_E02"
+        ]
+      ]
+    },
+    "2": {
+      "actual_copper_components": 23,
+      "every_component_one_source_net": true,
+      "minimum_actual_different_net_clearance_mm": 0.2325399999999966,
+      "minimum_pair": [
+        [
+          "ADDR0"
+        ],
+        [
+          "GND"
+        ]
+      ]
+    },
+    "15": {
+      "actual_copper_components": 31,
+      "every_component_one_source_net": true,
+      "minimum_actual_different_net_clearance_mm": 0.16763873290528397,
+      "minimum_pair": [
+        [
+          "GND"
+        ],
+        [
+          "L0_E00"
+        ]
+      ]
+    },
+    "16": {
+      "actual_copper_components": 31,
+      "every_component_one_source_net": true,
+      "minimum_actual_different_net_clearance_mm": 0.16763873290528397,
+      "minimum_pair": [
+        [
+          "GND"
+        ],
+        [
+          "L0_E00"
+        ]
+      ]
+    }
+  },
+  "failures": [],
+  "status": "PASS_ACTUAL_COPPER_NET_SEPARATION",
+  "manufacturing_release": false
+}

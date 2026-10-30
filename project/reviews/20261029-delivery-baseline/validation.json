@@ -1,0 +1,67 @@
+{
+  "checked_at": "2026-10-29T11:20:54.468881+00:00",
+  "checks": {
+    "baseline": {
+      "exit_code": 0,
+      "log": "validation/baseline.log",
+      "log_sha256": "9150ff3a9bf7dffee1b8f54472ebc191de7bd6ddff78895294a0832ad86942ea"
+    },
+    "engineering": {
+      "exit_code": 0,
+      "log": "validation/engineering.log",
+      "log_sha256": "bf944588ed8c40e57b5aa17e02e1a3442bec5c4932ce25ed5d171ada0f655c8e"
+    },
+    "entry-full": {
+      "exit_code": 0,
+      "log": "validation/entry-full.log",
+      "log_sha256": "e2a40ad52d6c275eee115f6865ec7f50654852c62f8521ae166a2ba2e356b905"
+    },
+    "governance": {
+      "exit_code": 0,
+      "log": "validation/governance.log",
+      "log_sha256": "b35a2e453ad7f174d6a3447c842b7b8a2f0cd1f64cb6da72201f441192e408a7"
+    },
+    "governance-live": {
+      "exit_code": 0,
+      "log": "validation/governance-live.log",
+      "log_sha256": "dbbcfacb809cb0a133a2124db7cb0299197de899b0d739d70f2f49312e6cc51f"
+    },
+    "governance-tests": {
+      "exit_code": 0,
+      "log": "validation/governance-tests.log",
+      "log_sha256": "45d279e5ee5c1104b5401b8dedad1a34349b71c5421efa1d3149092c8f4a7e5f"
+    },
+    "engineering-tests": {
+      "exit_code": 0,
+      "log": "validation/engineering-tests.log",
+      "log_sha256": "e1431c8979e2332fefa7aa8606620675d938830f24234cd63567a59e3e8706e2"
+    },
+    "music-profile-tests": {
+      "exit_code": 0,
+      "log": "validation/music-profile-tests.log",
+      "log_sha256": "b17e5e50c9481b4cd8e27899f143b437af5d52cee7b35526c2bc8a146acb6bf8"
+    },
+    "resource-tests": {
+      "exit_code": 0,
+      "log": "validation/resource-tests.log",
+      "log_sha256": "a198611be43a0c7b64ad0206d01ce0274f1e1933ea59c36644a7691b657d802f"
+    },
+    "audio-tests": {
+      "exit_code": 0,
+      "log": "validation/audio-tests.log",
+      "log_sha256": "3577a5e158e7ab86b454d3022063bc97ac8b702020cc189f677cd38144841954"
+    },
+    "renderer-tests": {
+      "exit_code": 0,
+      "log": "validation/renderer-tests.log",
+      "log_sha256": "d1480bd12f2ec9d9368c99ffe3faaa5bf18cd2af35bdabe3d3c1150dfeaf9636"
+    },
+    "router-tests": {
+      "exit_code": 0,
+      "log": "validation/router-tests.log",
+      "log_sha256": "5eee488978a15af31678a98185a76db3d96e3f88abf50ae07e3e926bfddde8c8"
+    }
+  },
+  "scope": "Identity, governance and required repository guards; no CAD rerun, no fresh Q4 build or product functional acceptance",
+  "sensor_fab_hold": true
+}

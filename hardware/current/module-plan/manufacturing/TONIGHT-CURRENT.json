@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-27T11:38:36.128731+00:00",
+  "base_main": "0f2ff18f49ec4c95889712aec4ea8ad55f2b25f2",
+  "branch": "codex/hardware-delivery-20261027",
+  "overall_status": "IN_PROGRESS",
+  "G1_sensor_manufacturing": {
+    "native_source": "617f550e",
+    "BOM_and_placement_extracted": true,
+    "limited35_identity_and_report_check": "PASS",
+    "native_export": "WAITING_FOR_CONNECTED_EDA",
+    "physical_stack": "4_ENABLED_COPPER_VS_2_COPPER_PHYSICAL_RECORDS_REQUIRES_NATIVE_CONFIRMATION",
+    "factory_quote": null,
+    "native_source_sha256": "617f550eadc818ffab26a3992f2a86bb9f72ed027043c6e64a0c0428077ba643"
+  },
+  "G2_control_power": {
+    "electrical_64_allocation": "EXISTING_CANDIDATE",
+    "complete_preweld_layout_and_quote": false,
+    "header_review": "40 carrier pads joined to visually reviewed official PDF; six control pins match; J6.15/17 corrected to FPGA17/19"
+  },
+  "G3_screen": {
+    "primary_technical_candidate": "ER-TFTM070-5V4:4wireSPI/5V/FT5316/preweld40pin",
+    "full_config_price": null,
+    "alternative": "Waveshare8964",
+    "alternative_public_price_CNY": 326,
+    "alternative_supply_voltage": "3.0-3.6V",
+    "alternative_touch": "GT911",
+    "alternative_default_interface": "8080parallel; SPI adaptation and supply compatibility unqualified",
+    "purchase_frozen": false,
+    "selection_record": "SCREEN-SELECTION.md",
+    "price_scope": "Waveshare official public product API; qty1 product price only, excludes unconfirmed freight/configuration; not ER quote"
+  },
+  "G4_audio": {
+    "candidate": "Spotpear010313400000",
+    "complete_init_AUX_power_qualification": false
+  },
+  "G5_budget": {
+    "hard_limit_CNY": 700,
+    "not_assumed_owned": [
+      "screen",
+      "TFcard",
+      "cables",
+      "electrodes",
+      "power",
+      "enclosure",
+      "assembly"
+    ],
+    "all_costs_closed": false
+  },
+  "G6_physical": {
+    "tests": "UNMEASURED",
+    "full_device_firmware_qualified": false,
+    "video_complete": false
+  },
+  "orders_or_payments": false,
+  "manufacturing_release": false
+}

@@ -1,0 +1,9 @@
+item,quantity,specification,status
+EP84 main PCB,1,"236x156mm FR4 1.6mm candidate; 2 layers, 1oz nominal; all84 electrodes on Top,6 rear headers",ROUTED_SOURCE_ONLY_NATIVE_DRC_GERBER_PENDING
+Rear male headers,6,PZ254V-11-16P C22465876; BOTTOM side; plugin solder by factory; match JB0..JB5,MPN_FROM_VERIFIED_EXISTING_LIBRARY_FIT_QUOTE_PENDING
+HE0..HE5 sensor electrode harness,6,16 conductors; 1x16 female 2.54mm both ends; pin1-to-pin1; candidate100mm; do not substitute2x8IDC,NO_CONFIRMED_FINISHED_SKU_OR_QUOTE
+Bonded dielectric face overlay,1,236x156mm candidate PET0.25mm + nonconductive adhesive0.05mm; six3.4mm holes; no windows over active84; thickness to be tested,MATERIAL_AND_FACTORY_QUOTE_PENDING
+EP84 M3 insulating posts,6,Target PCB underside z55.4mm from bottom datum; post length53.4mm above2mm floor; custom stack/shoulder as CAD candidate,ENCLOSURE_PROCESS_AND_PRODUCT_PENDING
+EP84 insulated fasteners and washers,6,"M3; PCB holes3.2mm; top washer OD<=7mm, insulating; screw length chosen after actual post thread depth",EXACT_SKU_PENDING_NO_DRILLING_OF_FROZEN_BOARDS
+Sensor insulating edge cradles,6,For55x45mm S2 rotated90deg; candidate board top z14mm; avoid underside pads and components; no unapproved mounting holes,PARAMETRIC_PLACEMENT_ONLY_COMPONENT_ENVELOPE_PENDING
+450x190x60 enclosure,1,"Outer envelope accepted; candidate leftpanel at9,17 and right screen nominal255,43; vendor screen drawing required before machining",ENCLOSURE_CUTOUTS_NOT_RELEASED

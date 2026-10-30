@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "status": "PASS_INDEPENDENT_INPUT_RESTORE_AND_CONDITIONAL_REPORT_REPRODUCTION",
+  "checks": [
+    {
+      "script": "hardware/sourcing-closure-20261030/power-envelope-20261030/extract_power_constraints.py",
+      "exit_code": 0,
+      "reports_equal": true
+    },
+    {
+      "script": "hardware/sourcing-closure-20261030/harness-geometry-20261030/check_harness_geometry.py",
+      "exit_code": 0,
+      "reports_equal": true
+    }
+  ],
+  "restored_source_inputs": {
+    "hardware/delivery-baselines/20261029-r2-s1/control88-frozen-r2-20261029.zip": "24fe5ec56d973144bcdb217d0b1af5efbf2fd85d14ee655555ba9a2d41b1dcfd",
+    "hardware/electrode-fullpanel-cam-20261030/verification/support/native_documents.py": "8647fd49e79ea17fb1bca52c39be4ca37f08e832b8eaf4863d73ebd50cc39889",
+    "hardware/electrode-fullpanel-cam-20261030/Electrode84-450-CANDIDATE/pcb/Electrode84-450.epcb2": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+    "hardware/sensor14-s2-20261030/Sensor14Bank-S2-CANDIDATE/pcb/PCB2.epcb2": "9e4b563e570f2247785a764dd4ceba188b41ed8def3ba1511d456148fbd88bee",
+    "hardware/electrode-fullpanel-cam-20261030/assembly/MECHANICAL-CANDIDATE.json": "f732482fcfd14aeae3e52fbe410a89223677bddfb3edbcc5a61db055e8f9d9ed",
+    "hardware/electrode-fullpanel-cam-20261030/assembly/HARNESS-96-PINS.csv": "2d7630d5fb0d4a2d62693ec065b2a9851b14427c183c4f78ab4bf3319cb1ae63"
+  },
+  "scope": "Only source wiring/geometry and fuse temperature envelope; no finished SKU/quote/physical acceptance",
+  "manufacturing_release": false
+}

@@ -5488,27 +5488,36 @@
         },
         "module-plan/evidence/edit-control-interface-current.py": {
           "stored": "hardware/current/module-plan/evidence/edit-control-interface-current.py",
-          "bytes": 12467,
-          "sha256": "107c7b6e369f1a0cb4e6e68a7e64c49306e591207fefc394f9f80132d57c0a20",
-          "stored_sha256": "107c7b6e369f1a0cb4e6e68a7e64c49306e591207fefc394f9f80132d57c0a20",
+          "bytes": 12513,
+          "sha256": "9e94a77c2d6e6c3069e7602c037e8b817f5fad073f137200cac881a44d7540bb",
+          "stored_sha256": "9e94a77c2d6e6c3069e7602c037e8b817f5fad073f137200cac881a44d7540bb",
           "codec": "raw",
-          "source": "Concrete3independent action serial-chain proposal and ownedNanoTF evidence;64candidate electrical rows, no product/preweld/purchase acceptance; native andregisteredRTL unchanged"
+          "source": "Reviewed Nano3921 official Rev1.30 page2 header correction: J6.15=FPGA17/J6.17=FPGA19; native951/RTL unchanged",
+          "pre_delivery_source_sha256": "107c7b6e369f1a0cb4e6e68a7e64c49306e591207fefc394f9f80132d57c0a20",
+          "pre_delivery_source": "Concrete3independent action serial-chain proposal and ownedNanoTF evidence;64candidate electrical rows, no product/preweld/purchase acceptance; native andregisteredRTL unchanged",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
         },
         "module-plan/evidence/edit-control-interface-current.json": {
           "stored": "hardware/current/module-plan/evidence/edit-control-interface-current.json",
           "bytes": 10216,
-          "sha256": "747634888f4e00d1f6be84c4bc77c90decafb6765143411caed02f2b504ccd65",
-          "stored_sha256": "747634888f4e00d1f6be84c4bc77c90decafb6765143411caed02f2b504ccd65",
+          "sha256": "a8aa4242de6d8b8af081d317bcb50e03321ccb34884b08a6a7eb10b782a8082f",
+          "stored_sha256": "a8aa4242de6d8b8af081d317bcb50e03321ccb34884b08a6a7eb10b782a8082f",
           "codec": "raw",
-          "source": "Concrete3independent action serial-chain proposal and ownedNanoTF evidence;64candidate electrical rows, no product/preweld/purchase acceptance; native andregisteredRTL unchanged"
+          "source": "Reviewed Nano3921 official Rev1.30 page2 header correction: J6.15=FPGA17/J6.17=FPGA19; native951/RTL unchanged",
+          "pre_delivery_source_sha256": "747634888f4e00d1f6be84c4bc77c90decafb6765143411caed02f2b504ccd65",
+          "pre_delivery_source": "Concrete3independent action serial-chain proposal and ownedNanoTF evidence;64candidate electrical rows, no product/preweld/purchase acceptance; native andregisteredRTL unchanged",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
         },
         "module-plan/evidence/edit-control-interface-current.md": {
           "stored": "hardware/current/module-plan/evidence/edit-control-interface-current.md",
-          "bytes": 5887,
-          "sha256": "b5541de09b690fbbc59d2ca696e296364c4628a54035810afd256801d000cacc",
-          "stored_sha256": "b5541de09b690fbbc59d2ca696e296364c4628a54035810afd256801d000cacc",
+          "bytes": 6165,
+          "sha256": "5fb685972ec21fd9e53c55514c9b6abbd272e7917360a1fb8a144d2e27e685ff",
+          "stored_sha256": "5fb685972ec21fd9e53c55514c9b6abbd272e7917360a1fb8a144d2e27e685ff",
           "codec": "raw",
-          "source": "Concrete3independent action serial-chain proposal and ownedNanoTF evidence;64candidate electrical rows, no product/preweld/purchase acceptance; native andregisteredRTL unchanged"
+          "source": "Reviewed Nano3921 official Rev1.30 page2 header correction: J6.15=FPGA17/J6.17=FPGA19; native951/RTL unchanged",
+          "pre_delivery_source_sha256": "b5541de09b690fbbc59d2ca696e296364c4628a54035810afd256801d000cacc",
+          "pre_delivery_source": "Concrete3independent action serial-chain proposal and ownedNanoTF evidence;64candidate electrical rows, no product/preweld/purchase acceptance; native andregisteredRTL unchanged",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
         },
         "module-plan/evidence/edit-control-parts-lookup-current.json": {
           "stored": "hardware/current/module-plan/evidence/edit-control-parts-lookup-current.json",
@@ -5605,6 +5614,159 @@
           "consolidation_review": "project/reviews/20261027-hardware-consolidation/review.json",
           "adaptation_note": "Human approval/current-entry metadata overlay only; pre-consolidation hashes retained. No native geometry or RTL changed.",
           "pre_consolidation_source_sha256": "715427c3140f8fc1ba39f7ad1a93e5e426863b848bfced268e806246f0ab87ed"
+        },
+        "module-plan/manufacturing/audit_nano_headers.py": {
+          "stored": "hardware/current/module-plan/manufacturing/audit_nano_headers.py",
+          "bytes": 2985,
+          "sha256": "662d3f59aad1d9c8bbc589debb0993c8b9e09a1f057cdc7194d463bac31cda80",
+          "stored_sha256": "662d3f59aad1d9c8bbc589debb0993c8b9e09a1f057cdc7194d463bac31cda80",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/audit_saved_sensor.py": {
+          "stored": "hardware/current/module-plan/manufacturing/audit_saved_sensor.py",
+          "bytes": 8065,
+          "sha256": "067dc4dc94814283646d0220e7c4a725caeec6a6700c30a761581460dfc33d21",
+          "stored_sha256": "067dc4dc94814283646d0220e7c4a725caeec6a6700c30a761581460dfc33d21",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/eda-connection-observation.json": {
+          "stored": "hardware/current/module-plan/manufacturing/eda-connection-observation.json",
+          "bytes": 435,
+          "sha256": "b775dff638f44f6c58ad00eea4aa6419c929eb509472040f09b46c55e5a13b2b",
+          "stored_sha256": "b775dff638f44f6c58ad00eea4aa6419c929eb509472040f09b46c55e5a13b2b",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/nano-header-audit-current.json": {
+          "stored": "hardware/current/module-plan/manufacturing/nano-header-audit-current.json",
+          "bytes": 5365,
+          "sha256": "fea686a04f9ca946964528f19f1212853df6aec7a4afeefb37234a66e3f7ef3f",
+          "stored_sha256": "fea686a04f9ca946964528f19f1212853df6aec7a4afeefb37234a66e3f7ef3f",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/nano-header-netmap-current.csv": {
+          "stored": "hardware/current/module-plan/manufacturing/nano-header-netmap-current.csv",
+          "bytes": 665,
+          "sha256": "2ea9054765208b3bb4900ec47d1d3ba9d699031eded522c72c4d15ab9bc03f6d",
+          "stored_sha256": "2ea9054765208b3bb4900ec47d1d3ba9d699031eded522c72c4d15ab9bc03f6d",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/README.md": {
+          "stored": "hardware/current/module-plan/manufacturing/README.md",
+          "bytes": 3763,
+          "sha256": "e72e4cb1286de152d421be45174d188fefeb5fdade3898013f1eaca894f81ec1",
+          "stored_sha256": "e72e4cb1286de152d421be45174d188fefeb5fdade3898013f1eaca894f81ec1",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/SCREEN-SELECTION.md": {
+          "stored": "hardware/current/module-plan/manufacturing/SCREEN-SELECTION.md",
+          "bytes": 3069,
+          "sha256": "1370905fc2bd1679df95445095a42699d6bae2522b5a8e529467f5778fe21a61",
+          "stored_sha256": "1370905fc2bd1679df95445095a42699d6bae2522b5a8e529467f5778fe21a61",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/sensor-35-scope-verification.json": {
+          "stored": "hardware/current/module-plan/manufacturing/sensor-35-scope-verification.json",
+          "bytes": 5474,
+          "sha256": "a97c5e8ca21f308ed3e60267e84cd49048c9fa0bd6c3cb43da67474870e14054",
+          "stored_sha256": "a97c5e8ca21f308ed3e60267e84cd49048c9fa0bd6c3cb43da67474870e14054",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/sensor-BOM-per-board-DRAFT.csv": {
+          "stored": "hardware/current/module-plan/manufacturing/sensor-BOM-per-board-DRAFT.csv",
+          "bytes": 709,
+          "sha256": "b056c267412d02398f9a692a82d44fc3125cdcccee8c875766fbfd6216b1412d",
+          "stored_sha256": "b056c267412d02398f9a692a82d44fc3125cdcccee8c875766fbfd6216b1412d",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/sensor-native-placement-DRAFT.csv": {
+          "stored": "hardware/current/module-plan/manufacturing/sensor-native-placement-DRAFT.csv",
+          "bytes": 3600,
+          "sha256": "52ffe5040fd259538fff893fb2c86faa751b79b0e1fc3b7eabed4c3428a0a5cb",
+          "stored_sha256": "52ffe5040fd259538fff893fb2c86faa751b79b0e1fc3b7eabed4c3428a0a5cb",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/sensor-passive-alternative-details.json": {
+          "stored": "hardware/current/module-plan/manufacturing/sensor-passive-alternative-details.json",
+          "bytes": 3531,
+          "sha256": "08dcf969b55428387e4b31b6e2b55ded1dce3e10f3f55747c700ebcc1c3e402a",
+          "stored_sha256": "08dcf969b55428387e4b31b6e2b55ded1dce3e10f3f55747c700ebcc1c3e402a",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/sensor-passive-alternative-search.json": {
+          "stored": "hardware/current/module-plan/manufacturing/sensor-passive-alternative-search.json",
+          "bytes": 998,
+          "sha256": "ed6b8038e573b2044b08348222d27a0697f5c512017412b1a72ccd68813a27fc",
+          "stored_sha256": "ed6b8038e573b2044b08348222d27a0697f5c512017412b1a72ccd68813a27fc",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/sensor-source-manufacturing-audit.json": {
+          "stored": "hardware/current/module-plan/manufacturing/sensor-source-manufacturing-audit.json",
+          "bytes": 29779,
+          "sha256": "73a96594a95e9c22e3c3f2de37f143e89d3ee1ad73c00500767729886fa13916",
+          "stored_sha256": "73a96594a95e9c22e3c3f2de37f143e89d3ee1ad73c00500767729886fa13916",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/sensor-supply-current.json": {
+          "stored": "hardware/current/module-plan/manufacturing/sensor-supply-current.json",
+          "bytes": 14161,
+          "sha256": "bb889f3c5dc7b477b9003a019a00b57071c2d24892ce3e04c5cbd57f61c50fc2",
+          "stored_sha256": "bb889f3c5dc7b477b9003a019a00b57071c2d24892ce3e04c5cbd57f61c50fc2",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/STACKUP-CANDIDATE.md": {
+          "stored": "hardware/current/module-plan/manufacturing/STACKUP-CANDIDATE.md",
+          "bytes": 1379,
+          "sha256": "60c70be4ac30594e3118c13607de90aebd9d713c8f9db2d755e68c54eb22f26a",
+          "stored_sha256": "60c70be4ac30594e3118c13607de90aebd9d713c8f9db2d755e68c54eb22f26a",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/TONIGHT-CURRENT.json": {
+          "stored": "hardware/current/module-plan/manufacturing/TONIGHT-CURRENT.json",
+          "bytes": 2100,
+          "sha256": "a1ab5333b6061eab46e2055052139cd4d84808fcb03bd25f994b7aa3946ec4dd",
+          "stored_sha256": "a1ab5333b6061eab46e2055052139cd4d84808fcb03bd25f994b7aa3946ec4dd",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
+        },
+        "module-plan/manufacturing/waveshare-8964-public-product.json": {
+          "stored": "hardware/current/module-plan/manufacturing/waveshare-8964-public-product.json",
+          "bytes": 258,
+          "sha256": "b281906ef14723cae09f665d65df76d02ba932a3ab1573ffc37dedb31ae7fea1",
+          "stored_sha256": "b281906ef14723cae09f665d65df76d02ba932a3ab1573ffc37dedb31ae7fea1",
+          "codec": "raw",
+          "source": "Hardware-delivery task at main0f2ff18f; reviewed generated inputs, sourcing evidence or candidate documentation; no manufacturing/product acceptance",
+          "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
         }
       },
       "validation_inherited": false,
@@ -5951,5 +6113,6 @@
       "dormant": true
     }
   },
-  "consolidation_review": "project/reviews/20261027-hardware-consolidation/review.json"
+  "consolidation_review": "project/reviews/20261027-hardware-consolidation/review.json",
+  "delivery_review": "project/reviews/20261027-hardware-delivery/review.json"
 }

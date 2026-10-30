@@ -1,0 +1,2960 @@
+{
+  "schema": 1,
+  "status": "ROUTER_SESSION_IMPORTED_NATIVE_AND_INDEPENDENT_VALIDATION_PENDING",
+  "base_source_sha256": "283460bb54319a3289bd1c9e2b44a5bf4d603b779196cc2078469036a84456b3",
+  "session_sha256": "ae3546f22f126a6c19cf72da3ec6c4e01bf5556de06397248f45b6eab98b5505",
+  "routed_source_sha256": "f94e22771bcb791c4aeea826edca5b4f60c156d074c13b462c95c8fc19320e53",
+  "routing_nets": 90,
+  "original_electrode_vias": 84,
+  "added_vias": 18,
+  "added_trace_segments": 463,
+  "minimum_trace_width_mm": 0.1905,
+  "source_rule_minimum_trace_width_mm": 0.15249906,
+  "default_router_width_target_mm": 0.254,
+  "router_auto_neckdown_note": "Widths below default target are explicit pin-escape neckdowns; must check actual geometry and unchanged source minimum width. No source-rule threshold changed.",
+  "lines": [
+    {
+      "id": "e45100000001fb25",
+      "net": "E000",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb26",
+      "net": "E000",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb27",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb28",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb29",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb2a",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb2b",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb2c",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb2d",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb2e",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb2f",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb30",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb31",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb32",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb33",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb34",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb35",
+      "net": "E001",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb36",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb37",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb38",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb39",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb3a",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb3b",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb3c",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb3d",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb3e",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb3f",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb40",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb41",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb42",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb43",
+      "net": "E002",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb44",
+      "net": "E003",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb45",
+      "net": "E003",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb46",
+      "net": "E003",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb47",
+      "net": "E003",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb48",
+      "net": "E003",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb49",
+      "net": "E003",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb4a",
+      "net": "E004",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb4b",
+      "net": "E004",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb4c",
+      "net": "E005",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb4d",
+      "net": "E005",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb4e",
+      "net": "E006",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb4f",
+      "net": "E006",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb50",
+      "net": "E007",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb51",
+      "net": "E007",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb52",
+      "net": "E008",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb53",
+      "net": "E008",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb54",
+      "net": "E009",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb55",
+      "net": "E009",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb56",
+      "net": "E010",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb57",
+      "net": "E010",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb58",
+      "net": "E011",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb59",
+      "net": "E011",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb5a",
+      "net": "E012",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb5b",
+      "net": "E012",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb5c",
+      "net": "E013",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb5d",
+      "net": "E013",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb5e",
+      "net": "E013",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb5f",
+      "net": "E014",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb60",
+      "net": "E014",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb61",
+      "net": "E014",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb62",
+      "net": "E015",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb63",
+      "net": "E015",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb64",
+      "net": "E015",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb65",
+      "net": "E016",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb66",
+      "net": "E016",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb67",
+      "net": "E016",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb68",
+      "net": "E017",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb69",
+      "net": "E017",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb6a",
+      "net": "E017",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb6b",
+      "net": "E018",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb6c",
+      "net": "E018",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb6d",
+      "net": "E018",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb6e",
+      "net": "E018",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb6f",
+      "net": "E018",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb70",
+      "net": "E018",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb71",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb72",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb73",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb74",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb75",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb76",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb77",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb78",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb79",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb7a",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb7b",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb7c",
+      "net": "E019",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb7d",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb7e",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb7f",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb80",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb81",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb82",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb83",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb84",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb85",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb86",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb87",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb88",
+      "net": "E020",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb89",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb8a",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb8b",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb8c",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb8d",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb8e",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb8f",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb90",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb91",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb92",
+      "net": "E021",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb93",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb94",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb95",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb96",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb97",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb98",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb99",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb9a",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fb9b",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb9c",
+      "net": "E022",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb9d",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb9e",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fb9f",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fba0",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fba1",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fba2",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fba3",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fba4",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fba5",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fba6",
+      "net": "E023",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fba7",
+      "net": "E024",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fba8",
+      "net": "E024",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fba9",
+      "net": "E025",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbaa",
+      "net": "E025",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbab",
+      "net": "E025",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbac",
+      "net": "E025",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbad",
+      "net": "E026",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbae",
+      "net": "E026",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbaf",
+      "net": "E027",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb0",
+      "net": "E027",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb1",
+      "net": "E028",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb2",
+      "net": "E028",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb3",
+      "net": "E029",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb4",
+      "net": "E029",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb5",
+      "net": "E030",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb6",
+      "net": "E030",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb7",
+      "net": "E030",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb8",
+      "net": "E031",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbb9",
+      "net": "E031",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbba",
+      "net": "E032",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbbb",
+      "net": "E032",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbbc",
+      "net": "E033",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbbd",
+      "net": "E033",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbbe",
+      "net": "E034",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbbf",
+      "net": "E034",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc0",
+      "net": "E035",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc1",
+      "net": "E035",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc2",
+      "net": "E036",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc3",
+      "net": "E036",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc4",
+      "net": "E036",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc5",
+      "net": "E037",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc6",
+      "net": "E037",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc7",
+      "net": "E037",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc8",
+      "net": "E038",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbc9",
+      "net": "E038",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbca",
+      "net": "E039",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbcb",
+      "net": "E039",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbcc",
+      "net": "E039",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbcd",
+      "net": "E040",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbce",
+      "net": "E040",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbcf",
+      "net": "E040",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd0",
+      "net": "E041",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd1",
+      "net": "E041",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd2",
+      "net": "E042",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd3",
+      "net": "E042",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd4",
+      "net": "E043",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd5",
+      "net": "E043",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd6",
+      "net": "E044",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd7",
+      "net": "E044",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd8",
+      "net": "E044",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbd9",
+      "net": "E045",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbda",
+      "net": "E045",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbdb",
+      "net": "E045",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbdc",
+      "net": "E045",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fbdd",
+      "net": "E045",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fbde",
+      "net": "E045",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbdf",
+      "net": "E045",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbe0",
+      "net": "E046",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbe1",
+      "net": "E046",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbe2",
+      "net": "E046",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbe3",
+      "net": "E047",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbe4",
+      "net": "E047",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbe5",
+      "net": "E048",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbe6",
+      "net": "E048",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbe8",
+      "net": "E048",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbe9",
+      "net": "E048",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbea",
+      "net": "E048",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbeb",
+      "net": "E049",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbec",
+      "net": "E049",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbed",
+      "net": "E049",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fbee",
+      "net": "E049",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fbef",
+      "net": "E049",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbf0",
+      "net": "E049",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbf2",
+      "net": "E049",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbf3",
+      "net": "E049",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbf4",
+      "net": "E050",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbf5",
+      "net": "E050",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbf6",
+      "net": "E050",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbf7",
+      "net": "E050",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbf8",
+      "net": "E050",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbf9",
+      "net": "E050",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbfa",
+      "net": "E050",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbfb",
+      "net": "E050",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbfd",
+      "net": "E051",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbfe",
+      "net": "E051",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fbff",
+      "net": "E051",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc00",
+      "net": "E051",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc02",
+      "net": "E052",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc03",
+      "net": "E052",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc04",
+      "net": "E052",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc05",
+      "net": "E052",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc06",
+      "net": "E052",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc08",
+      "net": "E053",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc09",
+      "net": "E053",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc0a",
+      "net": "E053",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc0b",
+      "net": "E053",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc0d",
+      "net": "E054",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc0e",
+      "net": "E054",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc0f",
+      "net": "E054",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc10",
+      "net": "E054",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc11",
+      "net": "E055",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc12",
+      "net": "E055",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc13",
+      "net": "E055",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc14",
+      "net": "E055",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc15",
+      "net": "E056",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc16",
+      "net": "E056",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc17",
+      "net": "E056",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc18",
+      "net": "E056",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc19",
+      "net": "E057",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc1a",
+      "net": "E057",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc1b",
+      "net": "E057",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc1c",
+      "net": "E057",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc1d",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc1e",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc1f",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc20",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc21",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc22",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc23",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc24",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc25",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc26",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc27",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc28",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc29",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc2a",
+      "net": "E058",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc2b",
+      "net": "E059",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc2c",
+      "net": "E059",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc2d",
+      "net": "E059",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc2e",
+      "net": "E059",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc2f",
+      "net": "E060",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc30",
+      "net": "E060",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc31",
+      "net": "E060",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc32",
+      "net": "E060",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc33",
+      "net": "E060",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc34",
+      "net": "E061",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc35",
+      "net": "E061",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc36",
+      "net": "E061",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc37",
+      "net": "E061",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc38",
+      "net": "E061",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc39",
+      "net": "E061",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc3a",
+      "net": "E061",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc3b",
+      "net": "E061",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc3c",
+      "net": "E061",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc3d",
+      "net": "E062",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc3e",
+      "net": "E062",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc3f",
+      "net": "E062",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc40",
+      "net": "E062",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc41",
+      "net": "E062",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc42",
+      "net": "E062",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc43",
+      "net": "E062",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc44",
+      "net": "E062",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc45",
+      "net": "E062",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc46",
+      "net": "E063",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc47",
+      "net": "E063",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc48",
+      "net": "E063",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc49",
+      "net": "E063",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc4b",
+      "net": "E064",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc4c",
+      "net": "E064",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc4d",
+      "net": "E064",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc4e",
+      "net": "E064",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc4f",
+      "net": "E064",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc50",
+      "net": "E065",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc51",
+      "net": "E065",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc52",
+      "net": "E065",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc53",
+      "net": "E065",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc55",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc56",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc57",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc58",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc59",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc5a",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc5b",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc5c",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc5d",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc5e",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc5f",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc60",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc61",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc62",
+      "net": "E066",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc63",
+      "net": "E067",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc64",
+      "net": "E067",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc65",
+      "net": "E067",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc66",
+      "net": "E067",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc67",
+      "net": "E067",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc68",
+      "net": "E067",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc69",
+      "net": "E067",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc6a",
+      "net": "E067",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc6b",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc6c",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc6d",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc6e",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc6f",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc70",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc71",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc72",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc73",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc74",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc75",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc76",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc77",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc78",
+      "net": "E068",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc79",
+      "net": "E069",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc7a",
+      "net": "E069",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc7c",
+      "net": "E069",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc7d",
+      "net": "E069",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc7e",
+      "net": "E069",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc7f",
+      "net": "E069",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc80",
+      "net": "E069",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc81",
+      "net": "E069",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc82",
+      "net": "E070",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc83",
+      "net": "E070",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc84",
+      "net": "E070",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc85",
+      "net": "E070",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc86",
+      "net": "E070",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc87",
+      "net": "E070",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc88",
+      "net": "E070",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc8a",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc8b",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc8c",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc8d",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc8e",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc8f",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc90",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc91",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc92",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc93",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc94",
+      "net": "E071",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc95",
+      "net": "E072",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc96",
+      "net": "E072",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc97",
+      "net": "E072",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc98",
+      "net": "E072",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc99",
+      "net": "E072",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc9a",
+      "net": "E072",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc9b",
+      "net": "E072",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fc9c",
+      "net": "E072",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc9d",
+      "net": "E072",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fc9f",
+      "net": "E073",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fca0",
+      "net": "E073",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fca1",
+      "net": "E073",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fca2",
+      "net": "E073",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fca3",
+      "net": "E073",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fca4",
+      "net": "E073",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fca5",
+      "net": "E073",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fca7",
+      "net": "E073",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fca8",
+      "net": "E073",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fca9",
+      "net": "E073",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcaa",
+      "net": "E073",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcab",
+      "net": "E074",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcac",
+      "net": "E074",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcad",
+      "net": "E074",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcae",
+      "net": "E074",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcaf",
+      "net": "E074",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcb1",
+      "net": "E074",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fcb2",
+      "net": "E074",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fcb3",
+      "net": "E074",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcb4",
+      "net": "E074",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcb5",
+      "net": "E075",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcb6",
+      "net": "E075",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcb7",
+      "net": "E075",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcb8",
+      "net": "E076",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcb9",
+      "net": "E076",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcba",
+      "net": "E076",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcbb",
+      "net": "E076",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcbd",
+      "net": "E076",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcbe",
+      "net": "E076",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcbf",
+      "net": "E076",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fcc0",
+      "net": "E076",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fcc1",
+      "net": "E076",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcc2",
+      "net": "E076",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcc3",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcc4",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcc5",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcc6",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcc7",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcc8",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcc9",
+      "net": "E077",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcca",
+      "net": "E077",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fccb",
+      "net": "E077",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fccd",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fcce",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fccf",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcd0",
+      "net": "E077",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcd1",
+      "net": "E078",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcd2",
+      "net": "E078",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcd3",
+      "net": "E078",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcd4",
+      "net": "E078",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcd5",
+      "net": "E078",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcd6",
+      "net": "E078",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcd7",
+      "net": "E078",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcd9",
+      "net": "E079",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcda",
+      "net": "E079",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcdb",
+      "net": "E079",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcdc",
+      "net": "E079",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcdd",
+      "net": "E080",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcde",
+      "net": "E080",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcdf",
+      "net": "E080",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce0",
+      "net": "E080",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce1",
+      "net": "E080",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce2",
+      "net": "E081",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce3",
+      "net": "E081",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce4",
+      "net": "E081",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce5",
+      "net": "E081",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce6",
+      "net": "E081",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce7",
+      "net": "E081",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce8",
+      "net": "E081",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fce9",
+      "net": "E081",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcea",
+      "net": "E081",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fceb",
+      "net": "E081",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fced",
+      "net": "E082",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcee",
+      "net": "E082",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcef",
+      "net": "E082",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcf1",
+      "net": "E082",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fcf2",
+      "net": "E082",
+      "layer": 1,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fcf3",
+      "net": "E082",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcf4",
+      "net": "E082",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcf5",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcf6",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcf7",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcf8",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcf9",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcfa",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcfb",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcfc",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fcfd",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.1905
+    },
+    {
+      "id": "e45100000001fcfe",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fcff",
+      "net": "E083",
+      "layer": 2,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fd00",
+      "net": "GND_B0",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fd01",
+      "net": "GND_B1",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fd02",
+      "net": "GND_B2",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fd03",
+      "net": "GND_B3",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fd04",
+      "net": "GND_B4",
+      "layer": 1,
+      "width_mm": 0.254
+    },
+    {
+      "id": "e45100000001fd05",
+      "net": "GND_B5",
+      "layer": 1,
+      "width_mm": 0.254
+    }
+  ],
+  "vias": [
+    {
+      "id": "e45100000001fbe7",
+      "net": "E048",
+      "xy_mil": [
+        1521.46,
+        763.21
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fbf1",
+      "net": "E049",
+      "xy_mil": [
+        4448.77,
+        674.0
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fbfc",
+      "net": "E050",
+      "xy_mil": [
+        7846.41,
+        702.36
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fc01",
+      "net": "E051",
+      "xy_mil": [
+        1622.04,
+        3422.11
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fc07",
+      "net": "E052",
+      "xy_mil": [
+        4331.42,
+        3546.7
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fc0c",
+      "net": "E053",
+      "xy_mil": [
+        7283.49,
+        3430.07
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fc4a",
+      "net": "E063",
+      "xy_mil": [
+        2149.04,
+        3089.59
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fc54",
+      "net": "E065",
+      "xy_mil": [
+        7915.59,
+        3089.59
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fc7b",
+      "net": "E069",
+      "xy_mil": [
+        2624.45,
+        3378.59
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fc89",
+      "net": "E070",
+      "xy_mil": [
+        5033.95,
+        3441.41
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fc9e",
+      "net": "E072",
+      "xy_mil": [
+        7877.87,
+        646.89
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fca6",
+      "net": "E073",
+      "xy_mil": [
+        7055.6,
+        900.78
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fcb0",
+      "net": "E074",
+      "xy_mil": [
+        7986.51,
+        362.05
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fcbc",
+      "net": "E076",
+      "xy_mil": [
+        2763.88,
+        2905.22
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fccc",
+      "net": "E077",
+      "xy_mil": [
+        2801.14,
+        2953.85
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fcd8",
+      "net": "E078",
+      "xy_mil": [
+        2305.68,
+        325.08
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fcec",
+      "net": "E081",
+      "xy_mil": [
+        4370.34,
+        3588.3
+      ],
+      "diameter_mm": 0.8000999999999999
+    },
+    {
+      "id": "e45100000001fcf0",
+      "net": "E082",
+      "xy_mil": [
+        5807.46,
+        3281.69
+      ],
+      "diameter_mm": 0.8000999999999999
+    }
+  ],
+  "manufacturing_release": false
+}

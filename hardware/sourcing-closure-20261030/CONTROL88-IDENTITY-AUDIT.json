@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "status": "PASS_FROZEN_R2_88_BOM_PCB_SCHEMATIC_RESOLVED_IDENTITIES",
+  "archive_relative_to_repo": "hardware/delivery-baselines/20261029-r2-s1/control88-frozen-r2-20261029.zip",
+  "archive_sha256": "24fe5ec56d973144bcdb217d0b1af5efbf2fd85d14ee655555ba9a2d41b1dcfd",
+  "all_original_manifest_file_hashes_pass": true,
+  "PCB_sha256": "733e1d9c33d11ef946863dca0bc9f36ae2916b9965d038b147aafea416194eb8",
+  "components_checked": 88,
+  "identity_mismatches": [],
+  "affected_capacitors": [
+    "C8",
+    "C9",
+    "C10",
+    "C11",
+    "C22",
+    "C23",
+    "C24",
+    "C25",
+    "C33",
+    "C34",
+    "C35",
+    "C36",
+    "CX1"
+  ],
+  "all13_instance_overrides_C14663": true,
+  "all13_PCB_BOM_C14663": true,
+  "all13_embedded_schematic_device_defaults_C1591": true,
+  "all13_same_footprint_uuid": true,
+  "stale_datasheet_URL_count": 13,
+  "conclusion": "The13 alleged BOM-vs-schematic component mismatches are not present in the frozen R2 resolved instance attributes. They arise from comparing embedded original device defaults/datasheet links with already-overridden actual instances. No new part substitution was performed. Datasheet links/default metadata remain stale documentation.",
+  "supplier_availability_and_quote": "PENDING; snapshots are separate from actual assembly reservation",
+  "source_edits": [],
+  "manufacturing_release": false,
+  "inputs": {
+    "source/pcb/PCB1.epcb2": "733e1d9c33d11ef946863dca0bc9f36ae2916b9965d038b147aafea416194eb8",
+    "source/sch/Control88/01_Nano_headers.esch2": "bfdfc0c1cf327861343976760d8748e51e56a1ef163c11566ecf137c6ffe2e50",
+    "source/sch/Control88/02_Sensor_harness.esch2": "d8c01a2681aade3d5bb8fe5f34724f8c9950d1dd3c7363f43c3c10ad39d3a888",
+    "source/sch/Control88/03_Scan_output.esch2": "c5a41a95707d8ae00a2998425ec26a5c3daa037c3636e714e644b41641305780",
+    "source/sch/Control88/04_Display_bus.esch2": "0bb3e282946ae9daf322055dfcfd2c88714bcac64ef121938e10f7e2d5edf4e5",
+    "source/sch/Control88/05_Controls.esch2": "e4e3400bf2e89029e74232ef2eab4f3a03d56bfbf880bb0f7eb53352a93dba90",
+    "source/sch/Control88/06_Power_protection.esch2": "c13efee62a93e3e836d9c13431bdce59caf2f522e5f4ff906e1f441653087525",
+    "source/sch/Control88/07_EEPROM.esch2": "15d0e1f61e3cdb2a97b4448874a56143152cba3b612770383d517d7e9d5b1c47",
+    "source/sch/Control88/08_Action_extension.esch2": "d0659837afd1dd1c8b9c890bb59bbd5f7f43ad4d553b15d24b2d09566b3f92f9",
+    "source/sch/Control88/09_PCM5122_AUX.esch2": "de59ab4b38d26e5c0c804e1b2524e589047f75e7d3c5ed363cfcae6d53dcad47",
+    "source/sch/Control88/10_DAC_power.esch2": "3b04e2beba99f68acc35878434d700c8cd61c143185471e3c7bda10a6d73fbef",
+    "manufacturing/Control88-R2-BOM.csv": "5c3923fe24268c49f40566e0768b4d698386cea10cc3adf17bc442ec750685a7"
+  },
+  "evidence": {
+    "readback_csv_sha256": "7cea7bc88ba46d19cf3870ea3ac73b6c67262754696c1043aef8de6ee2fa3800"
+  }
+}

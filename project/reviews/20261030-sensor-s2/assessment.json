@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T18:24:17.483794+00:00",
+  "scope": "Authorized independent S2 copper-clearance correction and supplier-review handoff",
+  "source_sha256": "9e4b563e570f2247785a764dd4ceba188b41ed8def3ba1511d456148fbd88bee",
+  "checks": [
+    "All eight prior active watched producers freshly observed unchanged",
+    "S1 actual exported bottom GND clearance corrected for all22 affected header pads; actual new minimum232.54um against165.1um gate",
+    "Actual native region API readback, re-pour/save/close/reopen DRC0; first failed numeric-format interpretation retained and not called PASS",
+    "All four actual-Gerber copper-component net labels unique; all different-net distances pass retained gate; no unconnected net with real ground pours",
+    "All83 drill coordinates/diameters,28 placement records,26 SMT and2TH BOM/MPN/LCSC, unchanged embedded libraries/schematic, masks and outline verified",
+    "All three packaged checks re-run from independent fresh directory with self-contained support/reference",
+    "No geometry changes to existing component/track/via/pad-net/rule records; no user musical rule changes"
+  ],
+  "limits": [
+    "Supplier DFM, assembly preview, full price and order/payment pending",
+    "No physical RC/noise/cover/harness/playing acceptance",
+    "Full electrode panel and whole-machine procurement gaps remain"
+  ],
+  "evidence": {
+    "hardware/sensor14-s2-20261030/MANIFEST.json": "58571c704095dd80946a1fda72a4214ceab118a80043e2d969fbb60b19212378",
+    "hardware/sensor14-s2-20261030/CHECKPOINT.json": "fb380c44e0d39ea832846916e72ca578b65a78c70c19ae03beb8611e65098bd2",
+    "hardware/sensor14-s2-20261030/S2-ACTUAL-COPPER-NETS.json": "90653bd6c022f9861904407ff0137c7d4e4c4456d52d6615782df623d076f3dc",
+    "hardware/sensor14-s2-20261030/S2-MANUFACTURING-CORRESPONDENCE.json": "7c0bcb6cefd0323037dfb96688fb3ccfa0e1796288f9717849888aa9948740aa",
+    "hardware/sensor14-s2-20261030/S2-INDEPENDENT-AUDIT.json": "81418f8653e7c5e272ce8489930ea438d46340e3beb86494b2e8e23a74f8d339",
+    "hardware/sensor14-s2-20261030/PORTABLE-VERIFICATION.json": "48814dbd9f4af845792e714b4c6833fcd3128933c991266c929b96d796e96e0e"
+  },
+  "manufacturing_release": false
+}

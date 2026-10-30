@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "status": "CONSERVATIVE_ROUTER_ABSTRACTION_NOT_ROUTING_ACCEPTANCE",
+  "native_dsn_sha256": "ebb85ac32af561efb187838e274c316e56b2f506430d1485a007db04c92906dc",
+  "router_dsn_sha256": "cd0b49bd6e6fa3b48f583a5fee36c7e27195754fee53397c39ab58a70626afe7",
+  "nets": 90,
+  "terminals": 180,
+  "top_touch_window_keepouts": 34,
+  "mounting_keepouts": 12,
+  "rule_width_mm": 0.254,
+  "rule_clearance_mm": 0.26035,
+  "via_outer_mm": 0.8001,
+  "copper_routing_boundary_inset_mm": 0.75,
+  "abstraction": "Native84 fill polygons excluded from router only; native84 vias retained physically but modeled as bottom-only terminals, with full top touch windows blocked. Six NPTH screw/washer zones explicitly blocked on both layers. Import only routed tracks/additional vias into original native source, never replace actual fill/hole/header geometry.",
+  "manufacturing_release": false
+}

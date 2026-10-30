@@ -1,0 +1,525 @@
+{
+  "at": "2026-10-27T11:21:55.711557+00:00",
+  "skill": "lcsc/search_lcsc.py",
+  "scope": "Public LCSC/component catalog stock and tier price, not a factory preweld quote or shipping commitment",
+  "rows": [
+    {
+      "code": "C179326",
+      "expected_MPN": "74HC4067PW,118",
+      "needed": 6,
+      "returncode": 0,
+      "data": {
+        "query": "C179326",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C179326",
+            "lcsc_id": 179326,
+            "mpn": "74HC4067PW,118",
+            "manufacturer": "Nexperia",
+            "package": "TSSOP-24",
+            "description": "-40℃~+125℃ 1 16:1 27ns 29ns 2V~10V 80Ω 9ns Bidirectional analog channel TSSOP-24 Analog Switches, Multiplexers ROHS",
+            "is_basic": false,
+            "stock": 13443,
+            "price_usd": 0.5206,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/9c2eb9e9cb7e0b1d1fe6c06334e63601.pdf?productCode=C179326",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 1,
+                "price": 0.4764
+              },
+              {
+                "min_qty": 10,
+                "price": 0.366
+              },
+              {
+                "min_qty": 30,
+                "price": 0.3132
+              },
+              {
+                "min_qty": 100,
+                "price": 0.2654
+              },
+              {
+                "min_qty": 500,
+                "price": 0.2489
+              },
+              {
+                "min_qty": 1000,
+                "price": 0.2407
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "code": "C133541",
+      "expected_MPN": "SN74LVC14ADR",
+      "needed": 6,
+      "returncode": 0,
+      "data": {
+        "query": "C133541",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C133541",
+            "lcsc_id": 133541,
+            "mpn": "SN74LVC14ADR",
+            "manufacturer": "TI",
+            "package": "SOIC-14",
+            "description": "-40℃~+125℃ 1 1.3V~2V 1.65V~3.6V 150mV~800mV 1uA 2.25V 24mA 24mA 6 6.2ns@3.3V,50pF 74LVC 800mV Schmitt trigger SOIC-14 Inverters ROHS",
+            "is_basic": false,
+            "stock": 50686,
+            "price_usd": 0.2551,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/73316a47455d4b2694a6c1c62c1aac28.pdf?productCode=C133541",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 5,
+                "price": 0.2306
+              },
+              {
+                "min_qty": 50,
+                "price": 0.1774
+              },
+              {
+                "min_qty": 150,
+                "price": 0.1545
+              },
+              {
+                "min_qty": 500,
+                "price": 0.1261
+              },
+              {
+                "min_qty": 2500,
+                "price": 0.1134
+              },
+              {
+                "min_qty": 5000,
+                "price": 0.1058
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "code": "C105579",
+      "expected_MPN": "RC0603FR-0747KL",
+      "needed": 6,
+      "returncode": 0,
+      "data": {
+        "query": "C105579",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C105579",
+            "lcsc_id": 105579,
+            "mpn": "RC0603FR-0747KL",
+            "manufacturer": "YAGEO",
+            "package": "-",
+            "description": "",
+            "is_basic": false,
+            "stock": 0,
+            "price_usd": 0.0031,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/b426be3ce22c6de3e0c3a2248e49159e.pdf?productCode=C105579",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 100,
+                "price": 0.0031
+              },
+              {
+                "min_qty": 1000,
+                "price": 0.0026
+              },
+              {
+                "min_qty": 5000,
+                "price": 0.0023
+              },
+              {
+                "min_qty": 10000,
+                "price": 0.0022
+              },
+              {
+                "min_qty": 50000,
+                "price": 0.002
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "code": "C22962",
+      "expected_MPN": "0603WAF2200T5E",
+      "needed": 6,
+      "returncode": 0,
+      "data": {
+        "query": "C22962",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C22962",
+            "lcsc_id": 22962,
+            "mpn": "0603WAF2200T5E",
+            "manufacturer": "UNI-ROYAL",
+            "package": "-",
+            "description": "220Ω ±1% 100mW 0603 Thick Film Resistor",
+            "is_basic": false,
+            "stock": 1715400,
+            "price_usd": 0.0034,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf?productCode=C22962",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 100,
+                "price": 0.0034
+              },
+              {
+                "min_qty": 1000,
+                "price": 0.0026
+              },
+              {
+                "min_qty": 5000,
+                "price": 0.0023
+              },
+              {
+                "min_qty": 10000,
+                "price": 0.002
+              },
+              {
+                "min_qty": 50000,
+                "price": 0.0018
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "code": "C1591",
+      "expected_MPN": "CL10B104KB8NNNC",
+      "needed": 12,
+      "returncode": 0,
+      "data": {
+        "query": "C1591",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C1591",
+            "lcsc_id": 1591,
+            "mpn": "CL10B104KB8NNNC",
+            "manufacturer": "Samsung Electro-Mechanics",
+            "package": "-",
+            "description": "100nF ±10% 50V Ceramic Capacitor X7R 0603",
+            "is_basic": false,
+            "stock": 0,
+            "price_usd": 0.0078,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C1591",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 100,
+                "price": 0.0078
+              },
+              {
+                "min_qty": 1000,
+                "price": 0.0058
+              },
+              {
+                "min_qty": 4000,
+                "price": 0.0049
+              },
+              {
+                "min_qty": 8000,
+                "price": 0.0043
+              },
+              {
+                "min_qty": 48000,
+                "price": 0.004
+              },
+              {
+                "min_qty": 100000,
+                "price": 0.0038
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "code": "C1634",
+      "expected_MPN": "CL10C100JB8NNNC",
+      "needed": 6,
+      "returncode": 0,
+      "data": {
+        "query": "C1634",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C1634",
+            "lcsc_id": 1634,
+            "mpn": "CL10C100JB8NNNC",
+            "manufacturer": "Samsung Electro-Mechanics",
+            "package": "-",
+            "description": "10pF ±5% 50V Ceramic Capacitor C0G 0603",
+            "is_basic": false,
+            "stock": 81600,
+            "price_usd": 0.0061,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C1634",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 100,
+                "price": 0.0061
+              },
+              {
+                "min_qty": 1000,
+                "price": 0.0047
+              },
+              {
+                "min_qty": 4000,
+                "price": 0.0041
+              },
+              {
+                "min_qty": 8000,
+                "price": 0.0036
+              },
+              {
+                "min_qty": 48000,
+                "price": 0.0035
+              },
+              {
+                "min_qty": 100000,
+                "price": 0.0033
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "code": "C14858",
+      "expected_MPN": "CL10C101JB8NNNC",
+      "needed": 6,
+      "returncode": 0,
+      "data": {
+        "query": "C14858",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C14858",
+            "lcsc_id": 14858,
+            "mpn": "CL10C101JB8NNNC",
+            "manufacturer": "Samsung Electro-Mechanics",
+            "package": "-",
+            "description": "100pF ±5% 50V Ceramic Capacitor C0G 0603",
+            "is_basic": false,
+            "stock": 1412400,
+            "price_usd": 0.0087,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf?productCode=C14858",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 50,
+                "price": 0.0087
+              },
+              {
+                "min_qty": 500,
+                "price": 0.0065
+              },
+              {
+                "min_qty": 1500,
+                "price": 0.0056
+              },
+              {
+                "min_qty": 4000,
+                "price": 0.0048
+              },
+              {
+                "min_qty": 24000,
+                "price": 0.0046
+              },
+              {
+                "min_qty": 48000,
+                "price": 0.0044
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "code": "C22465876",
+      "expected_MPN": "PZ254V-11-16P",
+      "needed": 12,
+      "returncode": 0,
+      "data": {
+        "query": "C22465876",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C22465876",
+            "lcsc_id": 22465876,
+            "mpn": "PZ254V-11-16P",
+            "manufacturer": "XFCN",
+            "package": "-",
+            "description": "",
+            "is_basic": false,
+            "stock": 5985,
+            "price_usd": 0.1037,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/83ce6ce320ccf8e54bacbe37886d78bb.pdf?productCode=C22465876",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 5,
+                "price": 0.1037
+              },
+              {
+                "min_qty": 50,
+                "price": 0.0834
+              },
+              {
+                "min_qty": 200,
+                "price": 0.0732
+              },
+              {
+                "min_qty": 400,
+                "price": 0.0655
+              },
+              {
+                "min_qty": 2400,
+                "price": 0.0594
+              },
+              {
+                "min_qty": 5000,
+                "price": 0.0564
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "code": "C22548",
+      "expected_MPN": "RC0603FR-071KL",
+      "needed": 84,
+      "returncode": 0,
+      "data": {
+        "query": "C22548",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C22548",
+            "lcsc_id": 22548,
+            "mpn": "RC0603FR-071KL",
+            "manufacturer": "YAGEO",
+            "package": "-",
+            "description": "",
+            "is_basic": false,
+            "stock": 10575700,
+            "price_usd": 0.0036,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/b426be3ce22c6de3e0c3a2248e49159e.pdf?productCode=C22548",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 100,
+                "price": 0.0036
+              },
+              {
+                "min_qty": 1000,
+                "price": 0.0027
+              },
+              {
+                "min_qty": 5000,
+                "price": 0.0022
+              },
+              {
+                "min_qty": 10000,
+                "price": 0.0019
+              },
+              {
+                "min_qty": 50000,
+                "price": 0.0017
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "code": "C106794",
+      "expected_MPN": "TPD4E02B04DQAR",
+      "needed": 24,
+      "returncode": 0,
+      "data": {
+        "query": "C106794",
+        "count": 1,
+        "total_matches": 1,
+        "components": [
+          {
+            "lcsc_code": "C106794",
+            "lcsc_id": 106794,
+            "mpn": "TPD4E02B04DQAR",
+            "manufacturer": "TI",
+            "package": "-",
+            "description": "8.8VC Clamp 2A@8/20us Ipp TVS DIODE USON-10(1x2.5)",
+            "is_basic": false,
+            "stock": 17340,
+            "price_usd": 0.316,
+            "datasheet_url": "https://datasheet.lcsc.com/datasheet/pdf/4ef6a3d8862c6d15f8a1cd3f89f406bc.pdf?productCode=C106794",
+            "attributes": {},
+            "prices": [
+              {
+                "min_qty": 5,
+                "price": 0.316
+              },
+              {
+                "min_qty": 50,
+                "price": 0.243
+              },
+              {
+                "min_qty": 150,
+                "price": 0.2074
+              },
+              {
+                "min_qty": 500,
+                "price": 0.1756
+              },
+              {
+                "min_qty": 3000,
+                "price": 0.1668
+              },
+              {
+                "min_qty": 6000,
+                "price": 0.1616
+              }
+            ]
+          }
+        ]
+      },
+      "stderr": ""
+    }
+  ]
+}

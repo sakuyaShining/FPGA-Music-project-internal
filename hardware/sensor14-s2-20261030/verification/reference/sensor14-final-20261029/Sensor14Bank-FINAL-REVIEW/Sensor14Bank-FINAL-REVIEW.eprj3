@@ -1,0 +1,96 @@
+{
+  "name": "Sensor14Bank-FINAL-REVIEW",
+  "owner_uuid": "6d17183304ab4ae0a0c8ff5e860a2d3f",
+  "creator_uuid": "6d17183304ab4ae0a0c8ff5e860a2d3f",
+  "created_at": "2026-10-15 08:43:25",
+  "updated_at": "2026-10-15 08:43:25",
+  "modifier_uuid": "6d17183304ab4ae0a0c8ff5e860a2d3f",
+  "content": "Sensor14Bank isolated final manufacturing review. Source frozen only after native reopen and manufacturing verification.",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "00ba33d542279ea0",
+  "branch_uuid": "",
+  "pcb_count": 1,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "fe7848930ae92ab0": {
+        "uuid": "fe7848930ae92ab0",
+        "title": "Sensor14Bank",
+        "zIndex": 2
+      }
+    },
+    "schematics": {
+      "2cfb45d67dbe504d": {
+        "uuid": "2cfb45d67dbe504d",
+        "name": "Sensor14Bank_Schematic",
+        "board": "fe7848930ae92ab0",
+        "source": "",
+        "version": "1793075975762",
+        "updateTime": 1793075975762
+      }
+    },
+    "sheets": {
+      "00ba33d542279ea0": {
+        "uuid": "00ba33d542279ea0",
+        "title": "Sensor14_frontend",
+        "schematic_uuid": "2cfb45d67dbe504d",
+        "zIndex": 1,
+        "source": "",
+        "version": "1793075975762",
+        "updateTime": 1793075975762
+      }
+    },
+    "pcbs": {
+      "f52674d6627fca6f": {
+        "uuid": "f52674d6627fca6f",
+        "title": "PCB2",
+        "board": "fe7848930ae92ab0",
+        "parent_uuid": "",
+        "source": "",
+        "version": "1793121014465",
+        "updateTime": 1793121014465
+      }
+    },
+    "panels": {
+      "eb5d0e6dd1d4163c": {
+        "uuid": "eb5d0e6dd1d4163c",
+        "title": "Panel1",
+        "zIndex": null
+      }
+    },
+    "blockSymbols": {},
+    "owner": {
+      "uuid": "6d17183304ab4ae0a0c8ff5e860a2d3f"
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "00ba33d542279ea0",
+    "settings": {
+      "UNIVERSAL": {
+        "dataType": "UNIVERSAL",
+        "data": {
+          "allowLibRename": true,
+          "defaultNetName": true,
+          "wireMultipleNet": true,
+          "netFlagCrossLayerConnection": true,
+          "netLabelCrossPageConnection": true,
+          "busGenerateNetClass": true,
+          "relevanceDisplayRow": "SINGLE",
+          "relevanceBelongSchPage": "NAME",
+          "relevanceLocation": "ZONE",
+          "multipartCrossLayer": true,
+          "nonElectronicAddIntoBom": false,
+          "nonElectronicUpdatePcb": false
+        }
+      }
+    }
+  }
+}

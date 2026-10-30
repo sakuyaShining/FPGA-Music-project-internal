@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-30T04:47:54.510105+00:00",
+  "checks": [
+    "Actual frozen R2 input and10 relevant part/net identities checked without modifying CAD",
+    "Bourns full primary PDF downloaded and exact non-X F1 row visually confirmed; conditional hold current versus temperature recorded without actual-load claims",
+    "All96 header pad centers transformed from native EP84/S2 sources; sensorJ1/J2 nominal placements match, opposite common-topview pin directions explicit",
+    "100mm remains unaccepted: straight distance is a lower bound, assumed connector16mm is not a measured part",
+    "Both scripts rerun with independently restored consumed inputs, reports byte-identical",
+    "Ten other reviewed producers freshly observed unchanged; Q4 previous reviewed fingerprint/time retained and current drift not accepted",
+    "Frozen native/manufacturing packages unchanged; no new completed SKU/full quote/physical acceptance claim"
+  ],
+  "limits": [
+    "Nano and actual screen dynamic/startup current, wire and enclosure thermal budgets incomplete",
+    "Exact domestic PSU, prewired housings, bend spec, total/free wire length and shipped quote unresolved",
+    "Q4 source drift remains UNREVIEWED, no firmware closure/regression/timing acceptance",
+    "Partial supplier research on task branches, not main or manufacturing release"
+  ],
+  "evidence": {
+    "hardware/sourcing-closure-20261030/MANIFEST.json": "72c076f4a7de27cb4e4ec7d1b4e4e146afcf7c8b172f9a4bf1d2d101ed630d0f",
+    "hardware/sourcing-closure-20261030/POWER-HARNESS-RESTORE-CHECK.json": "e7cbc83a026cea50152850a5afab88470dc6e337b1d76241a58ff4897f822e97",
+    "hardware/sourcing-closure-20261030/power-envelope-20261030/POWER-CONSTRAINTS.json": "4c092abeabd6b4ee32f5a9454439c416867071798adff792ac4900780b63a5e3",
+    "hardware/sourcing-closure-20261030/harness-geometry-20261030/HARNESS-GEOMETRY-CHECK.json": "0072a18fdf7614f2738abe8ba7b369b778cda0fd2cf83bbfefd6ff7dbc2856c6",
+    "project/reviews/20261030-power-harness-constraints/observation.json": "acc363bf42e7bdcbce35ff464195d10968034bb514a90d784408b7fcb6209f0b"
+  },
+  "manufacturing_release": false,
+  "product_acceptance": false
+}

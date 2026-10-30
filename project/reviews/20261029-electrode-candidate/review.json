@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T15:32:12.583458+00:00",
+  "previous_review": "project/reviews/20261029-delivery-baseline/review.json",
+  "previous_review_sha256": "66b4842854e2db244db33daf76d0946393589f75fced5645597181c147be1465",
+  "raw_observation": "project/reviews/20261029-electrode-candidate/observation.json",
+  "raw_observation_sha256": "6020942ea8b9ca6a03e0f45fc02db207161e4e69134eb4f6e71adf50040177f7",
+  "producer_ids": [
+    "fpga",
+    "hardware",
+    "fpga-v1-intake",
+    "hardware-native-handoff",
+    "hardware-module-plan",
+    "hardware-delivery",
+    "control88-q4-continuation",
+    "electrode-panel"
+  ],
+  "source_checkpoint_commit": "1b402ca1b0d0f4b29a80d71a2f6add1841cfec91",
+  "producer_changes": {
+    "fpga": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "fpga-v1-intake": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-native-handoff": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-module-plan": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "hardware-delivery": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "control88-q4-continuation": {
+      "added": [],
+      "removed": [],
+      "modified": []
+    },
+    "electrode-panel": {
+      "added": [
+        "CHECKPOINT.json",
+        "ELECTRODE-HARNESS-84-VERIFIED.csv",
+        "MANIFEST.json",
+        "README.md",
+        "audit_gerber_candidate.py",
+        "build_candidate.py",
+        "candidate/ElectrodeCoupon-CANDIDATE/ElectrodeCoupon-CANDIDATE.eprj3",
+        "candidate/ElectrodeCoupon-CANDIDATE/pcb/ElectrodeCoupon.epcb2",
+        "candidate/ElectrodeCoupon-native-Gerber-CANDIDATE.zip",
+        "candidate/Gerber-copper-audit.json",
+        "candidate/compact-space-studies.json",
+        "candidate/coupon-source-preview.png",
+        "candidate/coupon-source-preview.svg",
+        "candidate/gerber-candidate/Drill_PTH_Through.DRL",
+        "candidate/gerber-candidate/Drill_PTH_Through_Via.DRL",
+        "candidate/gerber-candidate/FlyingProbeTesting.json",
+        "candidate/gerber-candidate/Gerber_BoardOutlineLayer.GKO",
+        "candidate/gerber-candidate/Gerber_BottomLayer.GBL",
+        "candidate/gerber-candidate/Gerber_BottomSilkscreenLayer.GBO",
+        "candidate/gerber-candidate/Gerber_BottomSolderMaskLayer.GBS",
+        "candidate/gerber-candidate/Gerber_DrillDrawingLayer.GDD",
+        "candidate/gerber-candidate/Gerber_TopLayer.GTL",
+        "candidate/gerber-candidate/Gerber_TopSilkscreenLayer.GTO",
+        "candidate/gerber-candidate/Gerber_TopSolderMaskLayer.GTS",
+        "candidate/gerber-candidate/PCB下单必读.txt",
+        "candidate/interface-audit.json",
+        "candidate/native-DRC-raw.json",
+        "candidate/native-bom.csv",
+        "candidate/native-ipc.ipc",
+        "candidate/native-reopen-export.json",
+        "candidate/saved-native-source-audit.json",
+        "candidate/source-geometry.json",
+        "design-intent.json",
+        "verify_native_candidate.py"
+      ],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "evidence": {
+    "project/reviews/20261029-electrode-candidate/change-assessment.json": "85beed00f7b96862338420c94167d1aed1dbdc0e558a2943369897d53dcfb046"
+  },
+  "assessment": [
+    "25-note full panel not laid out; outer dimensions pending user",
+    "sensor S1 actual Gerber strict clearance manufacturing hold retained",
+    "coupon physical expression performance and RC/noise response untested",
+    "exact harness/overlay SKU and quotation pending",
+    "coupon has no final installation hole pattern",
+    "native schema/geometry generation is candidate source work; existing current snapshots remain immutable",
+    "All previously registered active watched sources freshly read-only observed unchanged. New source belongs only to electrode task branch. No user musical rules changed."
+  ],
+  "implementation_start_authorized": false,
+  "manufacturing_release": false,
+  "sensor_strict_clearance_hold": true,
+  "product_acceptance": false
+}

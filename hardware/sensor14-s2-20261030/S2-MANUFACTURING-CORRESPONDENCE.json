@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "status": "PASS_DECLARED_SOURCE_MANUFACTURING_CORRESPONDENCE_CHECKS",
+  "source_sha256": "9e4b563e570f2247785a764dd4ceba188b41ed8def3ba1511d456148fbd88bee",
+  "Gerber_sha256": "2f46f656879a363db8877f302d63177794104d0bd7553b211f266475b725a9e8",
+  "native_DRC_reopen_result": "10-reopen-active-rules-drc.result.json",
+  "embedded_library_metadata_unchanged": true,
+  "schematic_unchanged": [
+    {
+      "path": "sch/Sensor14Bank_Schematic/Sensor14_frontend.esch2",
+      "sha256": "7710964c5831a580909709aab0ddb271cef88779a11f585de45149c6046e12eb"
+    }
+  ],
+  "all83_PTH_positions_and_diameters_match": true,
+  "max_PTH_position_diameter_error_mm": 5.116444079808029e-06,
+  "native_CPL_placements_checked": 28,
+  "SMT_components": 26,
+  "TH_components": 2,
+  "native_BOM_all28_MPN_and_LCSC_match_verified_source": true,
+  "mask_geometry": {
+    "TopSolderMaskLayer.GTS": {
+      "actual_geometry_difference_to_S1_mm2": 0.0,
+      "aperture_macro": "Exact RoundRect macro verified by independent parser; unused apertures and D-number reindexing do not imply copper/mask geometry changes"
+    },
+    "BottomSolderMaskLayer.GBS": {
+      "actual_geometry_difference_to_S1_mm2": 0.0,
+      "aperture_macro": "Exact RoundRect macro verified by independent parser; unused apertures and D-number reindexing do not imply copper/mask geometry changes"
+    }
+  },
+  "board_outline_actual_geometry_unchanged_55x45mm": true,
+  "original_84_mapping_and_all_pin_nets": "Existing COMPONENT/ATTR/PAD_NET/LINE/VIA unchanged by independent audit; both six-board control harness and84-row electrode mapping remain applicable",
+  "physical_function_noise_current_and_factory_DFM": "NOT_ACCEPTED_BY_THIS_GEOMETRY_CHECK",
+  "manufacturing_release": false
+}

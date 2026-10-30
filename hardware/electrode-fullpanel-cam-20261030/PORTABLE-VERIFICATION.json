@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "status": "PASS_INDEPENDENT_RESTORED_NATIVE_CAM_AND_ASSEMBLY",
+  "checks": [
+    {
+      "script": "audit_native_cam.py",
+      "exit_code": 0
+    },
+    {
+      "script": "audit_native_assembly.py",
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": "b7e9ecb16e4ea0141e8bf67e942ae228f7d2daf6d877422ee6b835a3f779530a",
+  "gerber_sha256": "3bdc522565d23f47f5b51d5d23371e12e42dd71a744ea3e076f5d60c15701901",
+  "reports_equal": true,
+  "runtime": "Python3 + Shapely2, no EDA or absolute source dependency",
+  "manufacturing_release": false
+}

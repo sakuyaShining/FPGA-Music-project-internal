@@ -1,0 +1,274 @@
+{
+  "schema": 1,
+  "scope": "S2 factory-review candidate and standalone recovery archive",
+  "files": {
+    "07-region-readback.result.json": {
+      "bytes": 9131,
+      "sha256": "caa787f8b1ee4bfae59be743647d98d894bf8bb5a1f6407821cacdb09010d5d0"
+    },
+    "08-enable-native-region-rules.js": {
+      "bytes": 935,
+      "sha256": "b8c987592e254757989294e81687d445a02ee75075f9732160541d07579ddea2"
+    },
+    "08-enable-native-region-rules.result.json": {
+      "bytes": 2433,
+      "sha256": "e0ec3a088c6ed6978ad3bd63cae1468227381f4b316449ea16e4486004b5f274"
+    },
+    "09-rebuild-active-rules.js": {
+      "bytes": 982,
+      "sha256": "d8f520a136ad6223e24852767139732a491d1b9279944f6210e079b11b119ad3"
+    },
+    "09-rebuild-active-rules.result.json": {
+      "bytes": 717,
+      "sha256": "11e95ac28727aff70d732636659366262c231b1d7f38e8fbbb518a1abe91519e"
+    },
+    "10-reopen-active-rules-drc.js": {
+      "bytes": 760,
+      "sha256": "a2330a7135503618fde43b56fd28c58f7b1e023ef786cf8b5284f13278b7d35a"
+    },
+    "10-reopen-active-rules-drc.result.json": {
+      "bytes": 529,
+      "sha256": "e9c1c8a4cdf848d01bf3f2e71f76c011e61a967e322d354eccc90b86715cef78"
+    },
+    "11-export-active-rules.js": {
+      "bytes": 569,
+      "sha256": "48766f8c1a2160873c30bc51680d4155a3336423b9b65c70b8e1002e7b6f43a4"
+    },
+    "11-export-active-rules.result.json": {
+      "bytes": 626,
+      "sha256": "6804951fc5a9cb0ab7939b133c9459c84d241d56673fd40429aa83c04c44c71a"
+    },
+    "12-export-assembly.js": {
+      "bytes": 773,
+      "sha256": "9cba8db16456c72ccf8d183af8b0546d867031beb5371c24ccabd2962ebf4248"
+    },
+    "12-export-assembly.result.json": {
+      "bytes": 1139,
+      "sha256": "a56923f0886d41b83aac8c5f14eb57efe12182cc3276aa43c6fba83666e8340e"
+    },
+    "audit_actual_copper.py": {
+      "bytes": 2348,
+      "sha256": "120574d7bc859adba515b7ed5b1b9d6876550e552a268ef12b9a8e56ff243a57"
+    },
+    "audit_s2.py": {
+      "bytes": 4871,
+      "sha256": "f01ba155e7dbac13a9d20183dd76a029e6ec53953958fcd0fe4f0f0df258e4d7"
+    },
+    "audit_s2_manufacturing.py": {
+      "bytes": 6344,
+      "sha256": "0aaa8480ba08868b862971db73c6426c91413f1d99e44b7f453365d1cb8ef3ab"
+    },
+    "BUNDLE-RECEIPT.json": {
+      "bytes": 297,
+      "sha256": "4f2eef28162e17761de05f0d67b18159b9029608098ed53df8b15810b1ee1fdb"
+    },
+    "CHECKPOINT.json": {
+      "bytes": 628,
+      "sha256": "fb380c44e0d39ea832846916e72ca578b65a78c70c19ae03beb8611e65098bd2"
+    },
+    "DESIGN-INTENT.json": {
+      "bytes": 946,
+      "sha256": "daeb44ae2438dbe8929020501cc2230216261aadbed017faf295916116761478"
+    },
+    "gerber-active-rules/Drill_PTH_Through.DRL": {
+      "bytes": 1472,
+      "sha256": "514d841797692d97a95bab2cb729d86f0a13086a460c1e9e9f3e68b5dd5545f8"
+    },
+    "gerber-active-rules/Drill_PTH_Through_Via.DRL": {
+      "bytes": 990,
+      "sha256": "bd3cf2a336a96326091b28954c39c843937ac33385fe53cd14c20bec94209e7c"
+    },
+    "gerber-active-rules/FlyingProbeTesting.json": {
+      "bytes": 19489,
+      "sha256": "941580aae2ba97fcc973087f494d7e7e317d60992cc72b69e486c6d005cca02f"
+    },
+    "gerber-active-rules/Gerber_BoardOutlineLayer.GKO": {
+      "bytes": 742,
+      "sha256": "2a524b356cf9156d8ba1dee8ae3265501d4db30e1105be822051119931a4228d"
+    },
+    "gerber-active-rules/Gerber_BottomLayer.GBL": {
+      "bytes": 24971,
+      "sha256": "c82d83e511638c05edd78bcf72eb768dc13cb8d7c82c8dcb8753e4f87e9a03b7"
+    },
+    "gerber-active-rules/Gerber_BottomSilkscreenLayer.GBO": {
+      "bytes": 636,
+      "sha256": "b9c17e033dfb04accf19afb733bebbf11caa4712fef3617dd9884c167f209d80"
+    },
+    "gerber-active-rules/Gerber_BottomSolderMaskLayer.GBS": {
+      "bytes": 1713,
+      "sha256": "1bdce6e251eb4c432bfcf97d83a1b40af203c7fa768af1a58931dd3c5a220d5b"
+    },
+    "gerber-active-rules/Gerber_DocumentLayer.GDL": {
+      "bytes": 1316,
+      "sha256": "a0e7cab968a08d3a7bc3445f5c3df2c2ca11f65437cbe8f6d26ccfff44e20821"
+    },
+    "gerber-active-rules/Gerber_DrillDrawingLayer.GDD": {
+      "bytes": 67519,
+      "sha256": "8e9523df76acac6c49ceaa11a761353e8eee2819b3ffef1482977f3ec0787b0a"
+    },
+    "gerber-active-rules/Gerber_InnerLayer1.G1": {
+      "bytes": 44533,
+      "sha256": "14575468993c3a6c0e884192f72071971dda56d72a9f584984e49af55efc2c51"
+    },
+    "gerber-active-rules/Gerber_InnerLayer2.G2": {
+      "bytes": 44533,
+      "sha256": "586398d58df8f2a76b905234e8d4463e8bebc7728d50fba25296f632fb93e011"
+    },
+    "gerber-active-rules/Gerber_TopLayer.GTL": {
+      "bytes": 13077,
+      "sha256": "377ab201cd2cbd5c0dbdb2634dbd923efbc081fa3213f4e6dbf00782bb06b960"
+    },
+    "gerber-active-rules/Gerber_TopPasteMaskLayer.GTP": {
+      "bytes": 13250,
+      "sha256": "ce56294418f4d886f3f2a04bb3db39abf01b77782eab86dda4da68c0d75cbef5"
+    },
+    "gerber-active-rules/Gerber_TopSilkscreenLayer.GTO": {
+      "bytes": 27912,
+      "sha256": "4f6b1f474317890b9f49d3b43b7726e9dbfb2bcb32d501d99bf5cfd10824d20f"
+    },
+    "gerber-active-rules/Gerber_TopSolderMaskLayer.GTS": {
+      "bytes": 4981,
+      "sha256": "fc289d7e75fd794b3fdff7f0edd76369ad3eaca6dc50f2d8f0448046fb146c72"
+    },
+    "gerber-active-rules/PCB下单必读.txt": {
+      "bytes": 94,
+      "sha256": "dcb3ee1c645c17a009d70726ad9ab708b68a074556fabcf75a4a059d3b43ec59"
+    },
+    "gerber_reader.py": {
+      "bytes": 4240,
+      "sha256": "f194fa667dbbe4a5a8cb0edf6bdb976c9256ca03109807a17bb74c6911bb7f2b"
+    },
+    "PORTABLE-VERIFICATION.json": {
+      "bytes": 437,
+      "sha256": "48814dbd9f4af845792e714b4c6833fcd3128933c991266c929b96d796e96e0e"
+    },
+    "README.md": {
+      "bytes": 3918,
+      "sha256": "4ac965aeb100730c19b5eb8bfdb42b48470ea8bee58f4d220f8ac6c710e78893"
+    },
+    "S2-ACTUAL-COPPER-NETS.json": {
+      "bytes": 1506,
+      "sha256": "90653bd6c022f9861904407ff0137c7d4e4c4456d52d6615782df623d076f3dc"
+    },
+    "S2-INDEPENDENT-AUDIT-ATTEMPT1-FAIL.json": {
+      "bytes": 36860,
+      "sha256": "b57d27a74a56b1fcd28d9a0eb9c8fa9ba22569c42a977c8d421015b80707aebd"
+    },
+    "S2-INDEPENDENT-AUDIT.json": {
+      "bytes": 32355,
+      "sha256": "81418f8653e7c5e272ce8489930ea438d46340e3beb86494b2e8e23a74f8d339"
+    },
+    "S2-KEEP-OUT-PLAN.json": {
+      "bytes": 9146,
+      "sha256": "3a39d00a74919be9e7f95e3baa2675488a5bd21cabddbea3703f9d4de74b3e81"
+    },
+    "S2-MANUFACTURING-CORRESPONDENCE.json": {
+      "bytes": 1754,
+      "sha256": "7c0bcb6cefd0323037dfb96688fb3ccfa0e1796288f9717849888aa9948740aa"
+    },
+    "S2-SOURCE-EDIT-AUDIT.json": {
+      "bytes": 3599,
+      "sha256": "b5d48e33ae9b3ee1f9d96923ff76ac259fd245e13cceb76958f0458fc029c84e"
+    },
+    "Sensor14Bank-S2-BOM-FACTORY.csv": {
+      "bytes": 533,
+      "sha256": "110c3b3cda290c1764b67d64a4aba6bcde1725c4a8bd1b5b31fb456b0f370324"
+    },
+    "Sensor14Bank-S2-BOM-NATIVE.csv": {
+      "bytes": 1792,
+      "sha256": "cf1478d8c769031a30ffee916f5e06c129e6e86e3c28f020219a5e392f09e145"
+    },
+    "Sensor14Bank-S2-CANDIDATE/pcb/PCB2.epcb2": {
+      "bytes": 562127,
+      "sha256": "9e4b563e570f2247785a764dd4ceba188b41ed8def3ba1511d456148fbd88bee"
+    },
+    "Sensor14Bank-S2-CANDIDATE/sch/Sensor14Bank_Schematic/Sensor14_frontend.esch2": {
+      "bytes": 1109388,
+      "sha256": "7710964c5831a580909709aab0ddb271cef88779a11f585de45149c6046e12eb"
+    },
+    "Sensor14Bank-S2-CANDIDATE/sch/Sensor14Bank_Schematic/Sensor14Bank_Schematic.ecfg": {
+      "bytes": 364,
+      "sha256": "4224b9f6a30c1bfe268351bf6437d199d7a58b8676eb44dbb4a5ba1f0e5c3f91"
+    },
+    "Sensor14Bank-S2-CANDIDATE/Sensor14Bank-S2-CANDIDATE.eprj3": {
+      "bytes": 2475,
+      "sha256": "fc2c22dae88b8caa2a7de4cefc5f6de871c85a59b959df925ea026c52bedcd0c"
+    },
+    "Sensor14Bank-S2-CPL-NATIVE.csv": {
+      "bytes": 11410,
+      "sha256": "e428915a906c9a099ee447e0f53800bd2af9923756c4000eb34e7511802100a2"
+    },
+    "Sensor14Bank-S2-CPL-SMT-FACTORY.csv": {
+      "bytes": 667,
+      "sha256": "703f46f59910559da24d962c1862443bf40c523f0a7380be63b0c4f64a5031fb"
+    },
+    "Sensor14Bank-S2-Gerber-ACTIVE-RULES-CANDIDATE.zip": {
+      "bytes": 58355,
+      "sha256": "2f46f656879a363db8877f302d63177794104d0bd7553b211f266475b725a9e8"
+    },
+    "Sensor14Bank-S2-NATIVE.ipc": {
+      "bytes": 22353,
+      "sha256": "7bb6cd06950827f7be9de418f6f822181b1fce4a02f9a22f867c091a142586c6"
+    },
+    "Sensor14Bank-S2-review-package-20261030.zip": {
+      "bytes": 436589,
+      "sha256": "ad18be012bfa313856ef79d0f6d0a0c17ab39dc91c71004d0310c027a9019b8e"
+    },
+    "verification/reference/sensor14-final-20261029/gerber-inspection/Gerber_BoardOutlineLayer.GKO": {
+      "bytes": 742,
+      "sha256": "1fb3ca6aebbbcb794c68bda9ac9744a15779572a8ca3b5c5387715f1c8f5ec59"
+    },
+    "verification/reference/sensor14-final-20261029/gerber-inspection/Gerber_BottomSolderMaskLayer.GBS": {
+      "bytes": 1713,
+      "sha256": "6e028c5d4027d3c0c1a03bea248940308e0e580ed30ef86d3edd323491d09599"
+    },
+    "verification/reference/sensor14-final-20261029/gerber-inspection/Gerber_TopSolderMaskLayer.GTS": {
+      "bytes": 4952,
+      "sha256": "38bbec6c945713ef446a4b8b04c33b2a251ebceebcd9109cbd91c06bfdee8530"
+    },
+    "verification/reference/sensor14-final-20261029/retained-clearance-gate-audit.json": {
+      "bytes": 11528,
+      "sha256": "4cd6ec0ec023b41d3582effd70e1342b0c65161131e9fd5c538d2a241649d69f"
+    },
+    "verification/reference/sensor14-final-20261029/Sensor14Bank-BOM-VERIFIED.csv": {
+      "bytes": 1530,
+      "sha256": "ce403ebc331b2512b1c1e5dff422f587cde88aac7eed41b8e0c50d898c8f80c5"
+    },
+    "verification/reference/sensor14-final-20261029/Sensor14Bank-FINAL-REVIEW/pcb/PCB2.epcb2": {
+      "bytes": 550776,
+      "sha256": "2184d027643f52ff50a7bca4bf9c717ae805a099043d300855f3348be5b5b7e3"
+    },
+    "verification/reference/sensor14-final-20261029/Sensor14Bank-FINAL-REVIEW/sch/Sensor14Bank_Schematic/Sensor14_frontend.esch2": {
+      "bytes": 1109388,
+      "sha256": "7710964c5831a580909709aab0ddb271cef88779a11f585de45149c6046e12eb"
+    },
+    "verification/reference/sensor14-final-20261029/Sensor14Bank-FINAL-REVIEW/Sensor14Bank-FINAL-REVIEW.eprj3": {
+      "bytes": 2612,
+      "sha256": "e166554779231d99d53622932a8b2c5cf0a837d2bf5b01ce58bd51762d73ec30"
+    },
+    "verification/support/cad_audit.py": {
+      "bytes": 3980,
+      "sha256": "3abcdf863debba724f3a1228b806098630902c3840a2719e1af307e277a0e05a"
+    },
+    "verification/support/gerber_geometry.py": {
+      "bytes": 2163,
+      "sha256": "360076b0742c44391a20489a64ea742b3df4a99671cd60f307cbd0165096dfe4"
+    },
+    "verification/support/native_documents.py": {
+      "bytes": 689,
+      "sha256": "8647fd49e79ea17fb1bca52c39be4ca37f08e832b8eaf4863d73ebd50cc39889"
+    },
+    "verification/support/pour_points.py": {
+      "bytes": 1130,
+      "sha256": "00eda771b79a29ef62d72c716ce1823dd33c47f1071dd879db2052e8a7565018"
+    },
+    "verification/support/sensor_geometry.py": {
+      "bytes": 2560,
+      "sha256": "740ce98e74267c538f2b4c5af4983e61855d4a57fb18183ba1ac5aeedd831547"
+    },
+    "verification/support/sensor_ground.py": {
+      "bytes": 3258,
+      "sha256": "7555ef8b1e17a90414df18f79699216b627d3301203d9aba3f3bd761aa26de07"
+    }
+  }
+}

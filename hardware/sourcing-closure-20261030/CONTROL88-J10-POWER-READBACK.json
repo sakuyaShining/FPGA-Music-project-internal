@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "source_sha256": "733e1d9c33d11ef946863dca0bc9f36ae2916b9965d038b147aafea416194eb8",
+  "nets": {
+    "J5": {
+      "1": "",
+      "2": "GND",
+      "3": "",
+      "4": "",
+      "5": "SENSE_4",
+      "6": "SENSE_3",
+      "7": "I2S_BCK",
+      "8": "I2S_DIN",
+      "9": "",
+      "10": "SENSE_5",
+      "11": "I2S_LRCK",
+      "12": "",
+      "13": "",
+      "14": "",
+      "15": "GND",
+      "16": "3V3_IO",
+      "17": "",
+      "18": "",
+      "19": "",
+      "20": ""
+    },
+    "J10": {
+      "1": "5V_PERIPH",
+      "2": "GND",
+      "3": "DISP_SCK",
+      "4": "DISP_MOSI",
+      "5": "RA_MISO",
+      "6": "DISP_HARM_CS_N",
+      "7": "DISP_RESET_N",
+      "8": "I2C_MOD_SDA",
+      "9": "I2C_MOD_SCL",
+      "10": "TP_INT_MOD",
+      "11": "TP_RESET_MOD_N",
+      "12": "GND"
+    },
+    "J12": {
+      "3": "GND",
+      "2": "AUX_R",
+      "1": "AUX_L"
+    },
+    "J13": {
+      "1": "5V_IN",
+      "2": "GND"
+    },
+    "R33": {
+      "2": "I2C_SDA",
+      "1": "3V3_IO"
+    },
+    "R34": {
+      "2": "I2C_SCL",
+      "1": "3V3_IO"
+    },
+    "U13": {
+      "4": "",
+      "5": "DAC_3V3",
+      "1": "5V_PERIPH",
+      "2": "GND",
+      "3": "5V_PERIPH"
+    },
+    "U14": {
+      "1": "3V3_IO",
+      "2": "I2C_SCL",
+      "3": "I2C_SDA",
+      "4": "GND",
+      "8": "3V3_PERIPH",
+      "7": "I2C_MOD_SCL",
+      "6": "I2C_MOD_SDA",
+      "5": "3V3_PERIPH"
+    },
+    "U15": {
+      "1": "GND",
+      "2": "BUS_SCK",
+      "3": "",
+      "4": "BUS_MOSI",
+      "5": "TP_RESET_MOD_N",
+      "6": "LCD_RESET_N",
+      "7": "",
+      "8": "HARM_CS_N",
+      "9": "",
+      "10": "GND",
+      "20": "3V3_PERIPH",
+      "19": "GND",
+      "18": "DISP_SCK",
+      "17": "3V3_IO",
+      "16": "DISP_MOSI",
+      "15": "TP_RESET_N",
+      "14": "DISP_RESET_N",
+      "13": "GND",
+      "12": "DISP_HARM_CS_N",
+      "11": "GND"
+    },
+    "U16": {
+      "5": "3V3_IO",
+      "4": "TP_INT",
+      "3": "GND",
+      "2": "TP_INT_MOD",
+      "1": ""
+    },
+    "U17": {
+      "3": "3V3_IO",
+      "2": "GND",
+      "1": "5V_PROTECTED",
+      "6": "5V_PERIPH",
+      "5": "PWR_ILIM",
+      "4": "PWR_FAULT_N"
+    },
+    "U18": {
+      "4": "",
+      "5": "3V3_PERIPH",
+      "1": "5V_PERIPH",
+      "2": "GND",
+      "3": "5V_PERIPH"
+    }
+  },
+  "logic_rail_interpretation": "U15 supply pin20 and U14 touch-side VCC pin8 are3V3_PERIPH; J10.1 is5V_PERIPH. Confirm screen raw touch and host logic separately from module power.",
+  "supplier_harness_mapping": "PENDING",
+  "source_change": false
+}

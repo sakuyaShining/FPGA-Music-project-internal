@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "scope": "Single current buying entry plus retained read-only sourcing evidence; candidate facts do not authorize purchases",
+  "files": {
+    "assembly-bom-20261030/BOM-SCOPE-AUDIT.json": {
+      "bytes": 1580,
+      "sha256": "f3e8aaff3eb8573cbf3981bfef295b130551e56e7d3d5d147b854b821d3a8f3a"
+    },
+    "assembly-bom-20261030/C88-S2x6-ALT-C1591-QUOTE-37SKU-256pcs.csv": {
+      "bytes": 3428,
+      "sha256": "8733be5f32a3f92ab004676ea8521183914ee42b7f8d1ace69ddeaefe9102068"
+    },
+    "assembly-bom-20261030/C88-S2x6-EP84-SOURCE-QUOTE-38SKU-262pcs.csv": {
+      "bytes": 3528,
+      "sha256": "69fa345bf05f3c5dc0a56737a93ad0093909cf83cb7c2baa4c6af847c0ea38c4"
+    },
+    "assembly-bom-20261030/C88-S2x6-FROZEN-NET-38SKU-256pcs.csv": {
+      "bytes": 3474,
+      "sha256": "2c3cdabc361255313d061fac5359524238aa97c9927a0a7ef99e356bf3911bb9"
+    },
+    "assembly-bom-20261030/README.md": {
+      "bytes": 1890,
+      "sha256": "5f4a00e99a2addb842b33a19cce73a42d2030f8225274f65432312ac4c9b9ce1"
+    },
+    "assembly-bom-20261030/SCOPE-CHECK.json": {
+      "bytes": 264,
+      "sha256": "85d7c0e19dacd8fccc0acf86e3da8847d3d622b8d533cb8a66cc3e5bb2437d91"
+    },
+    "assembly-bom-20261030/verify_scope.py": {
+      "bytes": 3068,
+      "sha256": "779e66a8e695137b115bfdaf99b820ecd4cb1cb5e6912fc85d6f222659ff9b86"
+    },
+    "audit_control88_identity.py": {
+      "bytes": 5524,
+      "sha256": "8a249942964ba65255eef7bff964278f1e8edb08f4e0abad6941b253d4c43368"
+    },
+    "BUYING.md": {
+      "bytes": 5661,
+      "sha256": "2035ff7e3963761061523c76c0cf0d55e31aad84d3a2a9cf3c5de2b48e2a21ba"
+    },
+    "CAP-CATALOG-SNAPSHOT.json": {
+      "bytes": 2374,
+      "sha256": "63d0eb793b8439512e885c0af43f55e4e71cf59a1eea533dfeef8e520617cd42"
+    },
+    "CONTROL88-CAP-13-READBACK.csv": {
+      "bytes": 2930,
+      "sha256": "7cea7bc88ba46d19cf3870ea3ac73b6c67262754696c1043aef8de6ee2fa3800"
+    },
+    "CONTROL88-IDENTITY-AUDIT.json": {
+      "bytes": 2882,
+      "sha256": "ca774ce85b6a5c205e4ff815e05c52ef7e1229fa2cf6fc78709369666a3b4fff"
+    },
+    "CONTROL88-J10-POWER-READBACK.json": {
+      "bytes": 2517,
+      "sha256": "96a946803b72a5eeff4ba885442e51b2510857ccf89e7c1a8dd27e4fc02c6790"
+    },
+    "harness-geometry-20261030/check_harness_geometry.py": {
+      "bytes": 6246,
+      "sha256": "32ec6141262aad69beb8ff17fc1b94c3e1e4b01c1345b7408aeea179dcd417a7"
+    },
+    "harness-geometry-20261030/HARNESS-96-PIN-GEOMETRY-CANDIDATE.csv": {
+      "bytes": 11692,
+      "sha256": "e025990ea7e92df522023142e1d6b14cf934985f57cf0b93fd48049c86ca638d"
+    },
+    "harness-geometry-20261030/HARNESS-GEOMETRY-CHECK.json": {
+      "bytes": 4080,
+      "sha256": "0072a18fdf7614f2738abe8ba7b369b778cda0fd2cf83bbfefd6ff7dbc2856c6"
+    },
+    "harness-geometry-20261030/README.md": {
+      "bytes": 1271,
+      "sha256": "59a421e8369cd3b8482cf594bb7f2d22afabe1a5198c67cf1ee3bb7264b5d9f1"
+    },
+    "j10-wire-candidate-20261030/C88-SIDE-CHECK.json": {
+      "bytes": 334,
+      "sha256": "a6635bf9560878b1e84cc9be403fa75ec5923b87e7405bc7f66b6c400c4adc6e"
+    },
+    "j10-wire-candidate-20261030/J10-TO-MODULE-CANDIDATE-NOT-RELEASED.csv": {
+      "bytes": 2057,
+      "sha256": "3b5e136ad108d08b0a24fd3f2e15db36318caebe4f124ad85949bd774d1a4102"
+    },
+    "j10-wire-candidate-20261030/README.md": {
+      "bytes": 3155,
+      "sha256": "1781769aaea3e47e671b7f709c6ddf22e1b8282a221fc53797c3414c81022018"
+    },
+    "j10-wire-candidate-20261030/SOURCE-AND-OPEN-ITEMS.json": {
+      "bytes": 2098,
+      "sha256": "bd593f375da94de32eee26a82e6d6d20ffd2f2be03f8c9b26527abaa6efff31f"
+    },
+    "j10-wire-candidate-20261030/verify_c88_side.py": {
+      "bytes": 2293,
+      "sha256": "b622628aeeae9e601747f3c5198087c78d81594c99a036dae21a7fe5c64703da"
+    },
+    "MANUFACTURER-NOMINAL-COMPARISON.json": {
+      "bytes": 1139,
+      "sha256": "85decbca9a0ca58566a741a478045424e6125adaf25200d2db79d39a5ad7587b"
+    },
+    "PORTABLE-VERIFICATION.json": {
+      "bytes": 374,
+      "sha256": "725a8bd422543b150960d9207e53b662cae619e2ee42c2f147a268ea1bca4369"
+    },
+    "power-envelope-20261030/Bourns-derating-page9.png": {
+      "bytes": 166263,
+      "sha256": "f8e576562ea2bbe344c98a49a2c0e929592216f0257aa0fa1785af740eb415f9"
+    },
+    "power-envelope-20261030/Bourns-MF-MSMF-official.pdf": {
+      "bytes": 1327051,
+      "sha256": "50d80228581842471d563e28ba0f1b67ab095ee95dfac4079f4a49f7f7bbf3c8"
+    },
+    "power-envelope-20261030/extract_power_constraints.py": {
+      "bytes": 4959,
+      "sha256": "7f7b1e7d2b61b1ca3b97007f52fefd75aaa68db3c9c74a7dd38abb8ddf3c15b1"
+    },
+    "power-envelope-20261030/POWER-CONSTRAINTS.json": {
+      "bytes": 7213,
+      "sha256": "4c092abeabd6b4ee32f5a9454439c416867071798adff792ac4900780b63a5e3"
+    },
+    "power-envelope-20261030/README.md": {
+      "bytes": 1454,
+      "sha256": "3865b51b4307db054018991c6ae604196a27f28079cc49026fbdc524edaa04a9"
+    },
+    "POWER-HARNESS-RESTORE-CHECK.json": {
+      "bytes": 1562,
+      "sha256": "e7cbc83a026cea50152850a5afab88470dc6e337b1d76241a58ff4897f822e97"
+    },
+    "quote-options-20261030/CAP-13-DEVIATION-QUOTE-ONLY.csv": {
+      "bytes": 1340,
+      "sha256": "a6ebe0ba8489573da1a433de0c1d4a4845e835f64b148a30016773ff9ca90249"
+    },
+    "quote-options-20261030/Control88-R2-ALT-C1591-QUOTE-ONLY.csv": {
+      "bytes": 2687,
+      "sha256": "8249c6a25ace0cbb25a1de2e921b65dbaa61ef80ced9d493b5cbf0f810135b38"
+    },
+    "quote-options-20261030/CURRENT-RECHECK-RESULT.json": {
+      "bytes": 584,
+      "sha256": "f3180b751bfc133098057eb52cfa6051661e8b72ed07cdd8a4793044f00f8f25"
+    },
+    "quote-options-20261030/HISTORICAL-DOMESTIC-SNAPSHOT.json": {
+      "bytes": 1098,
+      "sha256": "bac6d84d0778d4cdb7356d0ab0f433bafd4f4c423e14db82e7248bb74c4ee2db"
+    },
+    "quote-options-20261030/QUOTE-OPTION-AUDIT.json": {
+      "bytes": 167,
+      "sha256": "001ed234787d4684525dc2c70f336ee91f3c250bc3f59f2a276c3a823869d2d0"
+    },
+    "quote-options-20261030/QUOTE-OPTION-CONTRACT.json": {
+      "bytes": 1473,
+      "sha256": "fedc77fa57d51361cd7063d5f8632445991fc8c57ba7dad1d388a58edb6f033c"
+    },
+    "quote-options-20261030/README.md": {
+      "bytes": 3525,
+      "sha256": "3f7143b67695205c3ec736736f992d01e653dbfa4d82b61b29023edac3254db6"
+    },
+    "quote-options-20261030/verify_quote_option.py": {
+      "bytes": 1544,
+      "sha256": "3966bb0b8f4cea5cee50e785f1cec5c29ad1262874e5bfc22897bbbab893ccf7"
+    },
+    "README.md": {
+      "bytes": 5238,
+      "sha256": "a76e2a9b4b8bfb4462d811d10bb3da4672c55f27b44f7d946d094b0e210aa865"
+    },
+    "SCREEN-PRIMARY-FACTS.md": {
+      "bytes": 2347,
+      "sha256": "7e94b0951a207827daa02c34579ebe040572b7c49ceb5ae8def1a58daf36d196"
+    },
+    "SOURCE-RECEIPTS.json": {
+      "bytes": 1542,
+      "sha256": "49abc81de5f8ee565ba9ab97923b06286a51b2b0ff148e9b39dda58c42e38a43"
+    }
+  }
+}

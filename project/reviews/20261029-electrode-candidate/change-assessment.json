@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "reviewed_at": "2026-10-29T15:32:12.583458+00:00",
+  "scope": "New compact electrode engineering candidate and explicit user size constraint; no product or manufacturing acceptance",
+  "authority": {
+    "user_request": "那么设定长任务完成这一工作",
+    "size_reply": "希望更紧凑，之后提供外形尺寸"
+  },
+  "native_source_sha256": "49866816334226fe96efd95cb598b25717148090feb10a9915c60f228e2b3a2a",
+  "verification": [
+    "84-row mapping and raw_index equation",
+    "native opened/saved/document closed and reopened; strict DRC zero",
+    "same native source Gerber copper topology and distance, mask openings, 19 plated drill locations and closed outline",
+    "BOM one connector matches previously verified library part"
+  ],
+  "limits": [
+    "25-note full panel not laid out; outer dimensions pending user",
+    "sensor S1 actual Gerber strict clearance manufacturing hold retained",
+    "coupon physical expression performance and RC/noise response untested",
+    "exact harness/overlay SKU and quotation pending",
+    "coupon has no final installation hole pattern",
+    "native schema/geometry generation is candidate source work; existing current snapshots remain immutable"
+  ],
+  "reviewed_file_sha256": {
+    ".gitattributes": "55cb8b58d86b408a36b3b61b92afc033a09db934d74c5ce57fa69442d5c122af",
+    "docs/00-协作/AGENT-BOARD.md": "51e1df4f38570621af71d9a346e57d69e82660b910c6c9b5ea0a3ec3952b1ce9",
+    "project/producers.json": "58eb871afd4746e8eec4785c978a463bbd41c1e20d2f95513dc4f76370d21731",
+    "hardware/electrode-panel-20261029/MANIFEST.json": "e990d66fcfe567850f5696606102d1c631a2129822a395b6b54383cf30bbe32f"
+  }
+}
