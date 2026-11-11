@@ -1,22 +1,26 @@
 # FPGA Music 项目总入口
 
-**当前统一入口（2026-10-27）**：[project/CONSOLIDATION-20261027.md](project/CONSOLIDATION-20261027.md)。已整合硬件阶段成果与恢复资料；完整实体、制造文件和产品验收仍待完成。
+基于 Tang Nano 20K 的 FPGA 加法合成电子乐器实验，包含实时音频合成 RTL、硬件设计资料和串口上位机。
 
-**快速接手**：[产品规格与差距](project/PRODUCT-SPEC.md) → [工程分布](project/SOURCE-MAP.md) → [待办与验收](project/WORK-PLAN.md)。仓库现已公开；实际远程main是发布入口，未合并PR仍是候选。
+**项目已退出竞赛，停止主动开发。** 仓库保留阶段源码、设计记录及验证证据。整机功能和实物验收尚未完成。
 
-当前协作工程见[工程入口](project/ENGINEERING.md)与[2026-10-24协作检查点](project/COLLABORATION-CHECKPOINT-20261024.md)：`fpga/current/`、`hardware/current/`、`host/current/`。这是有输入身份和验证边界的开发候选，完整产品未验收；历史根目录源码不作为最新开发入口。
+## 从哪里开始
 
-**先读[当前设计](project/DESIGN-CURRENT.md)与[快速取得版本](project/QUICKSTART.md)，再读 [project/CURRENT.md](project/CURRENT.md)。** 该页统一导航音乐基线、开发候选、临时探针、GUI与硬件版本。
+| 想找什么 | 入口 |
+| --- | --- |
+| 了解项目范围与完成度 | [产品规格与差距](project/PRODUCT-SPEC.md)、[10 月 27 日整合记录](project/CONSOLIDATION-20261027.md)、[阶段验收计划](project/WORK-PLAN.md) |
+| 查阅或复现已发布的工程版本 | [获取与复现指引](project/QUICKSTART.md)、[源码分布](project/SOURCE-MAP.md)、[版本索引](project/CURRENT.md) |
+| 阅读 FPGA、PCB 与上位机代码 | [工程与验证说明](project/ENGINEERING.md)、[`fpga/current/`](fpga/current/)、[`hardware/current/`](hardware/current/)、[`host/current/`](host/current/) |
+| 查找后续硬件候选 | [10 月 30 日硬件交接](https://github.com/sakuyaShining/FPGA-Music-project-internal/blob/9734fc60373f8d8c9e474a43378e584e684396dc/hardware/team-handoff-20261030/README.md)；[PR #9](https://github.com/sakuyaShining/FPGA-Music-project-internal/pull/9) 保留未合并的采购与硬件资料，整机采购、制造放行及实体功能仍待验收 |
+| 恢复 951 PCB 历史检查点 | [GitHub Release（约 622 MiB）](https://github.com/sakuyaShining/FPGA-Music-project-internal/releases/tag/pcb-951-full-20261025)、[文件与 SHA-256 清单](hardware/checkpoints/pcb-951ce88a-20261025/manifest.json)。仅供历史恢复，严禁作为投产资料 |
 
-**新Agent直接读[启动入口](project/AGENT-START.md)和[交接身份](project/handoff.json)**；可转交的完整指令见[NEXT-AGENT-PROMPT](project/NEXT-AGENT-PROMPT.md)。
+`main` 保存已发布的工程基线。候选资料请按 PR 或固定提交查看。GitHub 的 Latest Release 标记对应历史恢复包。
 
-- 机器版本与验证边界：[project/state.json](project/state.json)
-- 已保全源码及恢复身份：[版本清单](project/versions/workspace-preservation-20261022.json)
-- 开工规则：[AGENTS.md](AGENTS.md) · [协作板](docs/00-协作/AGENT-BOARD.md)
-- 核对命令：`python tools/scripts/project_control.py check --full --remote --fresh-entry`
-- 审阅期限、活跃源与未发布WIP：`python tools/scripts/design_governance.py status --remote`，本机核对加`--live`；长期维护见[MAINTAINING-MAIN](project/MAINTAINING-MAIN.md)
+## 维护与追溯
 
-当前完整功能产品顶层尚未实现并验收。GitHub保存的WIP不代表功能完成；路由完成也不代表STA通过。
+- [当前设计的归档记录](project/DESIGN-CURRENT.md)、[机器版本与验证边界](project/state.json)、[保全版本清单](project/versions/workspace-preservation-20261022.json)。
+- [历史协作规则](AGENTS.md)、[协作板](docs/00-协作/AGENT-BOARD.md)、[交接入口](project/AGENT-START.md)、[交接身份](project/handoff.json)、[完整交接指令](project/NEXT-AGENT-PROMPT.md)与[主分支维护说明](project/MAINTAINING-MAIN.md)。其中开发任务和验收计划属于当时的记录。
+- 复查仓库身份可运行 `python tools/scripts/project_control.py check --full --remote --fresh-entry`。审阅时效由 `python tools/scripts/design_governance.py status --remote` 检查，有本机原工程时可加 `--live`。复现阶段成果应按对应记录的版本和验证范围操作。
 
 ---
 
